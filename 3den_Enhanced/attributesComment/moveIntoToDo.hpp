@@ -9,7 +9,7 @@ class Enh_MoveIntoToDo
 	if (_value && is3DEN) then\
 	{\
 		private _allLayers = all3DENEntities # 6;\
-		if (count _allLayers == 0) then\
+		if (_allLayers isEqualTo []) then\
 		{\
 			Enh_toDoList = -1 add3DENLayer localize 'STR_ENH_toDoList';\
 		}\

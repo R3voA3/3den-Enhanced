@@ -1,0 +1,12 @@
+name = "3den Enhanced";
+author = "R3vo";
+picture = "\3denEnhanced\data\Enh_logo.paa";
+logo = "\3denEnhanced\data\Enh_logo.paa";
+logoOver = "\3denEnhanced\data\Enh_logo.paa";
+logoSmall = "\3denEnhanced\data\Enh_logoSmall.paa";
+actionName = "Workshop";
+action = "http://steamcommunity.com/sharedfiles/filedetails/?id=623475643";
+tooltipOwned = "Adds new functionalities to EDEN. Mod is not needed for the mission to be played. No dependencies are created.";
+overview = "Adds new functionalities to EDEN. Mod is not needed for the mission to be played. No dependencies are created.";
+hideName = 0;
+hidePicture = 0;

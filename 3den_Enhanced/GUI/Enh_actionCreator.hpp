@@ -6,7 +6,7 @@ class Enh_ActionCreator
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			idc = 2200;
 			x = 0.329375 * safezoneW + safezoneX;
@@ -17,7 +17,7 @@ class Enh_ActionCreator
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = "Action Creator";
 			colorBackground[] = COLOUR_USER_PRESET;
@@ -26,7 +26,7 @@ class Enh_ActionCreator
 			w = 0.321562 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Help: Enh_RscButton
+		class Help: Enh_Button
 		{
 			text = "?";
 			tooltip = $STR_ENH_actionCreator_help;
@@ -36,7 +36,7 @@ class Enh_ActionCreator
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Title: Enh_RscText
+		class Title: Enh_Text
 		{
 			text = "Title";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -44,7 +44,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Script: Enh_RscText
+		class Script: Enh_Text
 		{
 			text = "Script";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -52,7 +52,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Arguments: Enh_RscText
+		class Arguments: Enh_Text
 		{
 			text = "Arguments";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -60,7 +60,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Priority: Enh_RscText
+		class Priority: Enh_Text
 		{
 			text = "Priority";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -68,7 +68,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Window: Enh_RscText
+		class Window: Enh_Text
 		{
 			text = "Show Window?";
 			x = 0.4475 * safezoneW + safezoneX;
@@ -76,7 +76,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class HideOneUse: Enh_RscText
+		class HideOneUse: Enh_Text
 		{
 			text = "Hide on Use";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -84,7 +84,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Shortcut: Enh_RscText
+		class Shortcut: Enh_Text
 		{
 			text = "Shortcut";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -92,7 +92,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Condition: Enh_RscText
+		class Condition: Enh_Text
 		{
 			text = "Condition";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -100,7 +100,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Radius: Enh_RscText
+		class Radius: Enh_Text
 		{
 			text = "Radius";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -108,7 +108,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Unconscious: Enh_RscText
+		class Unconscious: Enh_Text
 		{
 			text = "Unconscious";
 			x = 0.559062 * safezoneW + safezoneX;
@@ -116,7 +116,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Selection: Enh_RscText
+		class Selection: Enh_Text
 		{
 			text = "Selection";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -124,7 +124,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class MemoryPoint: Enh_RscText
+		class MemoryPoint: Enh_Text
 		{
 			text = "Memory Point";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -132,7 +132,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ScriptValue: Enh_RscEdit
+		class ScriptValue: Enh_Edit
 		{
 			idc = 1400;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -140,7 +140,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.154 * safezoneH;
 		};
-		class ArgumentsValue: Enh_RscEdit
+		class ArgumentsValue: Enh_Edit
 		{
 			idc = 1401;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -148,7 +148,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PriorityValue: Enh_RscEdit
+		class PriorityValue: Enh_Edit
 		{
 			idc = 1402;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -156,7 +156,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ConditionValue: Enh_RscEdit
+		class ConditionValue: Enh_Edit
 		{
 			idc = 1403;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -164,7 +164,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RadiusValue: Enh_RscEdit
+		class RadiusValue: Enh_Edit
 		{
 			idc = 1404;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -172,7 +172,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ShortcutValue: Enh_RscEdit
+		class ShortcutValue: Enh_Edit
 		{
 			idc = 1405;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -180,7 +180,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SelectionValue: Enh_RscEdit
+		class SelectionValue: Enh_Edit
 		{
 			idc = 1406;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -188,7 +188,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class MemoryPointValue: Enh_RscEdit
+		class MemoryPointValue: Enh_Edit
 		{
 			idc = 1407;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -196,7 +196,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TitleValue: Enh_RscEdit
+		class TitleValue: Enh_Edit
 		{
 			idc = 1408;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -228,7 +228,7 @@ class Enh_ActionCreator
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Cancel: Enh_RscButton
+		class Cancel: Enh_Button
 		{
 			idc = 2;
 			text = $STR_ENH_actionCreator_cancel;
@@ -237,7 +237,7 @@ class Enh_ActionCreator
 			w = 0.1575 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Ok: Enh_RscButton
+		class Ok: Enh_Button
 		{
 			text = $STR_ENH_actionCreator_ok;
 			action = "call Enh_fnc_actionCreator_export";

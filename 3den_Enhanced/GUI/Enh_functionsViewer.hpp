@@ -6,7 +6,7 @@ class Enh_FunctionsViewer
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			idc = 333;
 			x = 0.014375 * safezoneW + safezoneX;
@@ -17,7 +17,7 @@ class Enh_FunctionsViewer
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_functionsViewer_header;
 			x = 0.014375 * safezoneW + safezoneX;
@@ -36,7 +36,7 @@ class Enh_FunctionsViewer
 			h = 0.854 * safezoneH;
 			onTreeSelChanged = "['SELCHANGED',_this] call Enh_fnc_functionsViewer";
 		};
-		class Search: Enh_RscEdit
+		class Search: Enh_Edit
 		{
 			idc = 1400;
 			tooltip = $STR_ENH_functionsViewer_search_tooltip;
@@ -54,7 +54,7 @@ class Enh_FunctionsViewer
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RecompileSelected: Enh_RscButton
+		class RecompileSelected: Enh_Button
 		{
 			idc = 1600;
 			text = $STR_ENH_functionsViewer_recompileSeletected_text;
@@ -65,7 +65,7 @@ class Enh_FunctionsViewer
 			h = 0.028 * safezoneH;
 			action = "'RECOMPILE_SELECTED' call Enh_fnc_functionsViewer";
 		};
-		class RecompileAll: Enh_RscButton
+		class RecompileAll: Enh_Button
 		{
 			idc = 1601;
 			text = $STR_ENH_functionsViewer_recompileAll_text;
@@ -76,7 +76,7 @@ class Enh_FunctionsViewer
 			h = 0.028 * safezoneH;
 			action = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";//Indication that it recompiles, button text?
 		};
-		class Close: Enh_RscButton
+		class Close: Enh_Button
 		{
 			text = "X";
 			x = 0.965937 * safezoneW + safezoneX;
@@ -85,7 +85,7 @@ class Enh_FunctionsViewer
 			h = 0.028 * safezoneH;
 			action = "'CLOSE' call Enh_fnc_functionsViewer";
 		};
-		class Copy: Enh_RscButton
+		class Copy: Enh_Button
 		{
 			text = $STR_ENH_functionsViewer_copyFunction_text;
 			tooltip = $STR_ENH_functionsViewer_copyFunction_tooltip;
@@ -95,7 +95,7 @@ class Enh_FunctionsViewer
 			h = 0.028 * safezoneH;
 			action = "'COPY' call Enh_fnc_functionsViewer";
 		};
-		class Collapse: Enh_RscButton
+		class Collapse: Enh_Button
 		{
 			tooltip = $STR_ENH_functionsViewer_collapseAll_text;
 			style = "0x02 + 0x30 + 0x800";
@@ -107,7 +107,7 @@ class Enh_FunctionsViewer
 			text = "\a3\3DEN\Data\Displays\Display3DEN\tree_collapse_ca.paa";
 			onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
 		};
-		class Expand: Enh_RscButton
+		class Expand: Enh_Button
 		{
 			tooltip = $STR_ENH_functionsViewer_expandAll_text;
 			style = "0x02 + 0x30 + 0x800";
@@ -119,7 +119,7 @@ class Enh_FunctionsViewer
 			text = "\a3\3DEN\Data\Displays\Display3DEN\tree_expand_ca.paa";
 			onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
 		};
-		class Preview: Enh_RscControlsGroup
+		class Preview: Enh_ControlsGroup
 		{
 			x = 0.2375 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
@@ -127,7 +127,7 @@ class Enh_FunctionsViewer
 			h = 0.812 * safezoneH;
 			class controls
 			{
-				class Code: Enh_RscEdit
+				class Code: Enh_Edit
 				{
 					idc = 1401;
 					canModify = false;
@@ -140,7 +140,7 @@ class Enh_FunctionsViewer
 				};
 			};
 		};
-		class Name: Enh_RscEdit
+		class Name: Enh_Edit
 		{
 			idc = 1402;
 			tooltip = $STR_ENH_functionsViewer_functionName_tooltip;
@@ -150,7 +150,7 @@ class Enh_FunctionsViewer
 			w = 0.347813 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Path: Enh_RscEdit
+		class Path: Enh_Edit
 		{
 			idc = 1403;
 			tooltip = $STR_ENH_functionsViewer_functionPath_tooltip;

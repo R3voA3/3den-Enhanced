@@ -6,7 +6,7 @@ class Enh_ModuleInformation
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.329375 * safezoneW + safezoneX;
 			y = 0.206 * safezoneH + safezoneY;
@@ -16,7 +16,7 @@ class Enh_ModuleInformation
 	};
 	class Controls
 	{
-		class Headline: Enh_RscText
+		class Headline: Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_header;
 			x = 0.329375 * safezoneW + safezoneX;
@@ -25,7 +25,7 @@ class Enh_ModuleInformation
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class DescriptionText: Enh_RscText
+		class DescriptionText: Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_description;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -33,7 +33,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DescriptionValue: Enh_RscStructuredText
+		class DescriptionValue: Enh_StructuredText
 		{
 			idc = 1400;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -41,7 +41,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.168 * safezoneH;
 		};
-		class PositionText: Enh_RscText
+		class PositionText: Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_position;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -49,7 +49,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PositionValue: Enh_RscStructuredText
+		class PositionValue: Enh_StructuredText
 		{
 			idc = 1401;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -57,7 +57,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DuplicateText: Enh_RscText
+		class DuplicateText: Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_duplicate;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -65,7 +65,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DuplicateValue: Enh_RscStructuredText
+		class DuplicateValue: Enh_StructuredText
 		{
 			idc = 1402;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -73,7 +73,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DirectionText: Enh_RscText
+		class DirectionText: Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_direction;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -81,7 +81,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DirectionValue: Enh_RscStructuredText
+		class DirectionValue: Enh_StructuredText
 		{
 			idc = 1403;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -89,7 +89,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SyncText : Enh_RscText
+		class SyncText : Enh_Text
 		{
 			text = $STR_ENH_moduleInformation_sync;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -97,7 +97,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SyncValue: Enh_RscStructuredText
+		class SyncValue: Enh_StructuredText
 		{
 			idc = 1404;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -105,7 +105,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Close: Enh_RscButton
+		class Close: Enh_Button
 		{
 			idc = 1;
 			text = $STR_ENH_moduleInformation_close;

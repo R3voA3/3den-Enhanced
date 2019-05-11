@@ -5,7 +5,7 @@ class Enh_NameObjects
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.375313 * safezoneW + safezoneX;
 			y = 0.353 * safezoneH + safezoneY;
@@ -15,7 +15,7 @@ class Enh_NameObjects
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_nameObjects_header;
 			x = 0.375313 * safezoneW + safezoneX;
@@ -24,7 +24,7 @@ class Enh_NameObjects
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class RemoveNames: Enh_RscButton
+		class RemoveNames: Enh_Button
 		{
 			text = $STR_ENH_nameObjects_removeName;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -33,7 +33,7 @@ class Enh_NameObjects
 			h = 0.028 * safezoneH;
 			action = "'UNNAME' call Enh_fnc_nameObjects";
 		};
-		class OK: Enh_RscButton
+		class OK: Enh_Button
 		{
 			text = $STR_ENH_nameObjects_OK;
 			x = 0.5525 * safezoneW + safezoneX;
@@ -42,7 +42,7 @@ class Enh_NameObjects
 			h = 0.028 * safezoneH;
 			action = "call Enh_fnc_nameObjects";
 		};
-		class VariableName: Enh_RscText
+		class VariableName: Enh_Text
 		{
 			text = $STR_ENH_briefingEditor_variableName_displayName;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -50,7 +50,7 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class IndexStart: Enh_RscText
+		class IndexStart: Enh_Text
 		{
 			text = $STR_ENH_nameObjects_startIndex;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -58,23 +58,23 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class VariableNameValue: Enh_RscEdit
+		class VariableNameValue: Enh_Edit
 		{
 			idc = 1000;
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.395 * safezoneH + safezoneY;
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
-			onLoad = "(_this select 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastVarName',profileName])";
+			onLoad = "(_this # 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastVarName',profileName])";
 		};
-		class IndexStartValue: Enh_RscEdit
+		class IndexStartValue: Enh_Edit
 		{
 			idc = 1100;
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.479 * safezoneH + safezoneY;
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
-			onLoad = "(_this select 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastIndex','0'])";
+			onLoad = "(_this # 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastIndex','0'])";
 		};
 	};
 };

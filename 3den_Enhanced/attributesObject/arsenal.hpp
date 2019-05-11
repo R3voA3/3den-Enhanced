@@ -5,6 +5,6 @@ class Enh_VirtualArsenal
 	property = "Enh_virtualArsenal";
 	control = "Checkbox";
 	expression = "if (!is3DEN && _value) then {['AmmoboxInit',[_this,true]] spawn BIS_fnc_arsenal}";
-	condition = "objectControllable + objectVehicle + objectSimulated + objectHasInventoryCargo";
+	condition = "1";
 	defaultValue = "false";
 };

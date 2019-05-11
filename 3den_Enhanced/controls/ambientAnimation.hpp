@@ -291,7 +291,7 @@ class Enh_AmbientAnimation: Title
 				};
 			};
 		};
-		class Reset: Enh_RscButton
+		class Reset: ctrlButton
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;

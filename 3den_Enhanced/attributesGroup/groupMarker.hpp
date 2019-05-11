@@ -1,7 +1,7 @@
 class Enh_GroupMarker
 {
-	displayName = "Group Marker";
-	tooltip = "Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.";
+	displayName = $STR_ENH_groupMarker_displayName;
+	tooltip = $STR_ENH_groupMarker_tooltip;
 	property = "Enh_groupMarker";
 	control = "Edit";
 	expression = "\
