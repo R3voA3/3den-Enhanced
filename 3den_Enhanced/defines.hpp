@@ -57,6 +57,7 @@ ENH_CREDITS 			200000
 
 //Eden base controls
 class ctrlEdit;
+class ctrlButton;
 class ctrlStructuredText;
 class ctrlCombo;
 class title;
@@ -92,7 +93,7 @@ class Enh_ScrollBar
 	shadow = 0;
 	scrollSpeed = 0.06;
 };
-class Enh_RscListBox
+class Enh_ListBox
 {
 	deletable = 0;
 	fade = 0;
@@ -150,7 +151,7 @@ class Enh_RscListBox
 	period = 1.2;
 	maxHistoryDelay = 1;
 };
-class Enh_IGUIBack
+class Enh_Background
 {
 	type = 0;
 	idc = -1;
@@ -167,7 +168,7 @@ class Enh_IGUIBack
 	colorBackground[] = {0.2,0.2,0.2,0.8};
 	moving = 1;
 };
-class Enh_RscButton
+class Enh_Button
 {
 	access = 0;
 	idc = -1;
@@ -203,7 +204,7 @@ class Enh_RscButton
 	offsetPressedY = 0.002;
 	borderSize = 0;
 };
-class Enh_RscEdit
+class Enh_Edit
 {
 	access = 0;
 	type = 2;
@@ -234,7 +235,7 @@ class Enh_RscEdit
 	colorDisabled[] = {1,1,1,1};
 	canModify = 1;
 };
-class Enh_RscText
+class Enh_Text
 {
 	access = 0;
 	type = 0;
@@ -259,7 +260,7 @@ class Enh_RscText
 	linespacing = 1;
 	moving = 1;
 };
-class Enh_RscStructuredText
+class Enh_StructuredText
 {
 	deletable = 0;
 	fade = 0;
@@ -285,7 +286,7 @@ class Enh_RscStructuredText
 	size = GUI_TEXT_SIZE_SMALL;
 	shadow = 1;
 };
-class Enh_RscSlider
+class Enh_Slider
 {
 	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa";
 	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
@@ -308,7 +309,7 @@ class Enh_RscSlider
 	w = 0;
 	h = 0;
 };
-class Enh_RscPicture
+class Enh_Picture
 {
 	deletable = 0;
 	fade = 0;
@@ -333,7 +334,7 @@ class Enh_RscPicture
     tooltipColorText[] = {1,1,1,1};
     tooltipColorBox[] = {0,0,0,0};
 };
-class Enh_RscControlsGroup
+class Enh_ControlsGroup
 {
 	deletable = 0;
 	fade = 0;
@@ -360,7 +361,7 @@ class Enh_RscControlsGroup
 	shadow = 0;
 	style = ST_MULTI;
 };
-class Enh_RscCombo
+class Enh_Combo
 {
 	deletable = 0;
 	fade = 0;
@@ -419,65 +420,6 @@ class Enh_RscCombo
 	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
 	wholeHeight = 0.45;
 	colorActive[] = {1,0,0,1};
-};
-class RscCheckBox
-{
-	idc = -1;
-	type = CT_CHECKBOX;
-	deletable = 0;
-	style = ST_LEFT;
-	checked = 0;
-	x = "0.375 * safezoneW + safezoneX";
-	y = "0.36 * safezoneH + safezoneY";
-	w = "0.025 * safezoneW";
-	h = "0.04 * safezoneH";
-	color[] = {1,1,1,0.7};
-	colorFocused[] = {1,1,1,1};
-	colorHover[] = {1,1,1,1};
-	colorPressed[] = {1,1,1,1};
-	colorDisabled[] = {1,1,1,0.2};
-	colorBackground[] = {0,0,0,0};
-	colorBackgroundFocused[] = {0,0,0,0};
-	colorBackgroundHover[] = {0,0,0,0};
-	colorBackgroundPressed[] = {0,0,0,0};
-	colorBackgroundDisabled[] = {0,0,0,0};
-	textureChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
-	textureUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-	textureFocusedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
-	textureFocusedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-	textureHoverChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
-	textureHoverUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-	texturePressedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
-	texturePressedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-	textureDisabledChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
-	textureDisabledUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
-	tooltipColorText[] = {1,1,1,1};
-	tooltipColorBox[] = {1,1,1,1};
-	tooltipColorShade[] = {0,0,0,0.65};
-	soundEnter[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundPush[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundClick[] =
-	{
-		"",
-		0.1,
-		1
-	};
-	soundEscape[] =
-	{
-		"",
-		0.1,
-		1
-	};
 };
 class Enh_BackgroundDisableTiles
 {
@@ -696,63 +638,6 @@ class Enh_BackgroundDisable
 #define DIK_F13             0x64    /*                     (NEC PC98) */
 #define DIK_F14             0x65    /*                     (NEC PC98) */
 #define DIK_F15             0x66    /*                     (NEC PC98) */
-
-#define DIK_KANA            0x70    /* (Japanese keyboard)            */
-#define DIK_ABNT_C1         0x73    /* / ? on Portugese (Brazilian) keyboards */
-#define DIK_CONVERT         0x79    /* (Japanese keyboard)            */
-#define DIK_NOCONVERT       0x7B    /* (Japanese keyboard)            */
-#define DIK_YEN             0x7D    /* (Japanese keyboard)            */
-#define DIK_ABNT_C2         0x7E    /* Numpad . on Portugese (Brazilian) keyboards */
-#define DIK_NUMPADEQUALS    0x8D    /* = on numeric keypad (NEC PC98) */
-#define DIK_PREVTRACK       0x90    /* Previous Track (DIK_CIRCUMFLEX on Japanese keyboard) */
-#define DIK_AT              0x91    /*                     (NEC PC98) */
-#define DIK_COLON           0x92    /*                     (NEC PC98) */
-#define DIK_UNDERLINE       0x93    /*                     (NEC PC98) */
-#define DIK_KANJI           0x94    /* (Japanese keyboard)            */
-#define DIK_STOP            0x95    /*                     (NEC PC98) */
-#define DIK_AX              0x96    /*                     (Japan AX) */
-#define DIK_UNLABELED       0x97    /*                        (J3100) */
-#define DIK_NEXTTRACK       0x99    /* Next Track */
-#define DIK_NUMPADENTER     0x9C    /* Enter on numeric keypad */
-#define DIK_RCONTROL        0x9D
-#define DIK_MUTE            0xA0    /* Mute */
-#define DIK_CALCULATOR      0xA1    /* Calculator */
-#define DIK_PLAYPAUSE       0xA2    /* Play / Pause */
-#define DIK_MEDIASTOP       0xA4    /* Media Stop */
-#define DIK_VOLUMEDOWN      0xAE    /* Volume - */
-#define DIK_VOLUMEUP        0xB0    /* Volume + */
-#define DIK_WEBHOME         0xB2    /* Web home */
-#define DIK_NUMPADCOMMA     0xB3    /* , on numeric keypad (NEC PC98) */
-#define DIK_DIVIDE          0xB5    /* / on numeric keypad */
-#define DIK_SYSRQ           0xB7
-#define DIK_RMENU           0xB8    /* right Alt */
-#define DIK_PAUSE           0xC5    /* Pause */
-#define DIK_HOME            0xC7    /* Home on arrow keypad */
-#define DIK_UP              0xC8    /* UpArrow on arrow keypad */
-#define DIK_PRIOR           0xC9    /* PgUp on arrow keypad */
-#define DIK_LEFT            0xCB    /* LeftArrow on arrow keypad */
-#define DIK_RIGHT           0xCD    /* RightArrow on arrow keypad */
-#define DIK_END             0xCF    /* End on arrow keypad */
-#define DIK_DOWN            0xD0    /* DownArrow on arrow keypad */
-#define DIK_NEXT            0xD1    /* PgDn on arrow keypad */
-#define DIK_INSERT          0xD2    /* Insert on arrow keypad */
-#define DIK_DELETE          0xD3    /* Delete on arrow keypad */
-#define DIK_LWIN            0xDB    /* Left Windows key */
-#define DIK_RWIN            0xDC    /* Right Windows key */
-#define DIK_APPS            0xDD    /* AppMenu key */
-#define DIK_POWER           0xDE    /* System Power */
-#define DIK_SLEEP           0xDF    /* System Sleep */
-#define DIK_WAKE            0xE3    /* System Wake */
-#define DIK_WEBSEARCH       0xE5    /* Web Search */
-#define DIK_WEBFAVORITES    0xE6    /* Web Favorites */
-#define DIK_WEBREFRESH      0xE7    /* Web Refresh */
-#define DIK_WEBSTOP         0xE8    /* Web Stop */
-#define DIK_WEBFORWARD      0xE9    /* Web Forward */
-#define DIK_WEBBACK         0xEA    /* Web Back */
-#define DIK_MYCOMPUTER      0xEB    /* My Computer */
-#define DIK_MAIL            0xEC    /* Mail */
-#define DIK_MEDIASELECT     0xED    /* Media Select */
-
 /*
  *  Alternate names for keys, to facilitate transition from DOS.
  */

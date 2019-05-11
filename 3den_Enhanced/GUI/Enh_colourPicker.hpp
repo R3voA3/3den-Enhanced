@@ -2,11 +2,11 @@ class Enh_ColourPicker
 {
 	idd = 110000;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_colourPicker_init";
+	onLoad = "[] spawn Enh_fnc_colourPicker_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.262 * safezoneH + safezoneY;
@@ -16,7 +16,7 @@ class Enh_ColourPicker
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_header;
 			x = 0.335936 * safezoneW + safezoneX;
@@ -25,7 +25,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class TextRed: Enh_RscText
+		class TextRed: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_red;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -33,7 +33,7 @@ class Enh_ColourPicker
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TextGreen: Enh_RscText
+		class TextGreen: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_green;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -41,7 +41,7 @@ class Enh_ColourPicker
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TextBlue: Enh_RscText
+		class TextBlue: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_blue;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -49,7 +49,7 @@ class Enh_ColourPicker
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TextAlpha: Enh_RscText
+		class TextAlpha: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_alpha;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -57,7 +57,7 @@ class Enh_ColourPicker
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SliderRed: Enh_RscSlider
+		class SliderRed: Enh_Slider
 		{
 			idc = 1900;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -66,7 +66,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1400) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1201) ctrlSetText (format ['#(argb,8,8,3)color(%1,0,0,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderGreen: Enh_RscSlider
+		class SliderGreen: Enh_Slider
 		{
 			idc = 1901;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -75,7 +75,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1401) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1202) ctrlSetText (format ['#(argb,8,8,3)color(0,%1,0,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderBlue: Enh_RscSlider
+		class SliderBlue: Enh_Slider
 		{
 			idc = 1902;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -84,7 +84,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1402) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1203) ctrlSetText (format ['#(argb,8,8,3)color(0,0,%1,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderAlpha: Enh_RscSlider
+		class SliderAlpha: Enh_Slider
 		{
 			idc = 1903;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -93,7 +93,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1403) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1204) ctrlSetText (format ['#(argb,8,8,3)color(0,0,0,%1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueRed: Enh_RscEdit
+		class ValueRed: Enh_Edit
 		{
 			idc = 1400;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -102,7 +102,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1900) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1201) ctrlSetText (format ['#(argb,8,8,3)color(%1,0,0,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueGreen: Enh_RscEdit
+		class ValueGreen: Enh_Edit
 		{
 			idc = 1401;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -111,7 +111,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1901) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1202) ctrlSetText (format ['#(argb,8,8,3)color(0,%1,0,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueBlue: Enh_RscEdit
+		class ValueBlue: Enh_Edit
 		{
 			idc = 1402;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -120,7 +120,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1902) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1203) ctrlSetText (format ['#(argb,8,8,3)color(0,0,%1,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueAlpha: Enh_RscEdit
+		class ValueAlpha: Enh_Edit
 		{
 			idc = 1403;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -129,7 +129,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1903) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1204) ctrlSetText (format ['#(argb,8,8,3)color(0,0,0,%1)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class FinalColourPreview: Enh_RscPicture
+		class FinalColourPreview: Enh_Picture
 		{
 			idc = 1200;
 			text = "#(argb,8,8,3)color(0,1,1,1)";
@@ -138,7 +138,7 @@ class Enh_ColourPicker
 			w = 0.105 * safezoneW;
 			h = 0.07 * safezoneH;
 		};
-		class TextFinalColour: Enh_RscText
+		class TextFinalColour: Enh_Text
 		{
 			text = $STR_ENH_colourPicker_finalColour;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -146,7 +146,7 @@ class Enh_ColourPicker
 			w = 0.105 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Close: Enh_RscButton
+		class Close: Enh_Button
 		{
 			text = $STR_ENH_garrison_close;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -155,7 +155,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			action = "(findDisplay 110000) closeDisplay 0";
 		};
-		class Export: Enh_RscButton
+		class Export: Enh_Button
 		{
 			text = $STR_ENH_3denRadio_exportPlaylist_text;
 			x = 0.539374 * safezoneW + safezoneX;
@@ -164,7 +164,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			action = "'export' call Enh_fnc_colourPicker";
 		};
-		class PreviewRed: Enh_RscPicture
+		class PreviewRed: Enh_Picture
 		{
 			idc = 1201;
 			text = "#(argb,8,8,3)color(1,0,0,1)";
@@ -173,7 +173,7 @@ class Enh_ColourPicker
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PreviewGreen: Enh_RscPicture
+		class PreviewGreen: Enh_Picture
 		{
 			idc = 1202;
 			text = "#(argb,8,8,3)color(0,1,0,1)";
@@ -182,7 +182,7 @@ class Enh_ColourPicker
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PreviewBlue: Enh_RscPicture
+		class PreviewBlue: Enh_Picture
 		{
 			idc = 1203;
 			text = "#(argb,8,8,3)color(0,0,1,1)";
@@ -191,7 +191,7 @@ class Enh_ColourPicker
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PreviewAlpha: Enh_RscPicture
+		class PreviewAlpha: Enh_Picture
 		{
 			idc = 1204;
 			text = "#(argb,8,8,3)color(1,1,1,0.3)";

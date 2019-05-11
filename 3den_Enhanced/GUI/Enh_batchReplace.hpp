@@ -6,7 +6,7 @@ class Enh_BatchReplace
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.3425 * safezoneW + safezoneX;
 			y = 0.36 * safezoneH + safezoneY;
@@ -16,7 +16,7 @@ class Enh_BatchReplace
 	};
 	class Controls
 	{
-		class Close: Enh_RscButton
+		class Close: Enh_Button
 		{
 			idc = 1;
 			text = $STR_ENH_batchReplace_close;
@@ -26,7 +26,7 @@ class Enh_BatchReplace
 			h = 0.028 * safezoneH;
 			action = "profileNameSpace getVariable ['Enh_batchReplace_lastUsed',ctrlText ((findDisplay 150000) displayCtrl 1400)]";
 		};
-		class Replace: Enh_RscButton
+		class Replace: Enh_Button
 		{
 			text = $STR_ENH_batchReplace_replace;
 			x = 0.52625 * safezoneW + safezoneX;
@@ -35,7 +35,7 @@ class Enh_BatchReplace
 			h = 0.028 * safezoneH;
 			action = "call Enh_fnc_batchreplace";
 		};
-		class ReplaceWithValue: Enh_RscEdit
+		class ReplaceWithValue: Enh_Edit
 		{
 			idc = 1400;
 			tooltip = $STR_ENH_batchReplace_replaceWith_tooltip;
@@ -44,7 +44,7 @@ class Enh_BatchReplace
 			w = 0.196875 * safezoneW;
 			h = 0.112 * safezoneH;
 		};
-		class ReplaceWithText: Enh_RscText
+		class ReplaceWithText: Enh_Text
 		{
 			text = $STR_ENH_batchReplace_replaceWith;
 			tooltip = $STR_ENH_batchReplace_replaceWith_tooltip;
@@ -53,7 +53,7 @@ class Enh_BatchReplace
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_batchReplace_header;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -62,7 +62,7 @@ class Enh_BatchReplace
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class Description: Enh_RscStructuredText
+		class Description: Enh_StructuredText
 		{
 			text = $STR_ENH_batchReplace_description;
 			x = 0.355625 * safezoneW + safezoneX;

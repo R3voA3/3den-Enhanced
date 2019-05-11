@@ -99,21 +99,25 @@ class Enh_MoonPhases
 {
 	text = $STR_ENH_tools_moonPhases;
 	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf'";
+	opensNewWindow = 1;
 };
 class Enh_Jukebox
 {
 	text = $STR_ENH_tools_jukebox;
 	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
+	opensNewWindow = 1;
 };
 class Enh_PrintConfig
 {
 	text = $STR_ENH_tools_printConfig;
 	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
+	opensNewWindow = 1;
 };
 class Enh_CfgDisabledCommands
 {
 	text = $STR_ENH_tools_CfgDisabledCommands;
 	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
+	opensNewWindow = 1;
 };
 class Enh_BriefingEditor
 {
@@ -121,6 +125,7 @@ class Enh_BriefingEditor
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa";
 	action = "(findDisplay 313) createDisplay 'Enh_briefingEditor'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
+	opensNewWindow = 1;
 };
 class Enh_3denRadio
 {
@@ -128,6 +133,7 @@ class Enh_3denRadio
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
 	action = "(findDisplay 313) createDisplay 'Enh_3denRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
+	opensNewWindow = 1;
 };
 class Enh_SwitchTime
 {
@@ -141,12 +147,14 @@ class Enh_NameObjects
 	text = $STR_ENH_tools_batchNaming;
 	action = "(findDisplay 313) createDisplay 'Enh_NameObjects'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
+	opensNewWindow = 1;
 };
 class Enh_ColourPicker
 {
 	text = $STR_ENH_tools_colourPicker;
 	action = "(findDisplay 313) createDisplay 'Enh_ColourPicker'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_C};
+	opensNewWindow = 1;
 };
 class Enh_TextureFinder
 {
@@ -154,6 +162,7 @@ class Enh_TextureFinder
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
 	action = "(findDisplay 313) createDisplay 'Enh_TextureFinder'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
+	opensNewWindow = 1;
 };
 class Enh_ToggleGrass
 {
@@ -180,12 +189,14 @@ class Enh_GUITestGrids
 {
 	text = $STR_ENH_tools_GUITestGrids;
 	action = "(findDisplay 313) createDisplay 'RscTestGrids'";
+	opensNewWindow = 1;
 };
 class Enh_BatchReplace
 {
 	text = $STR_ENH_tools_batchReplace;
 	action = "(findDisplay 313) createDisplay 'Enh_BatchReplace'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
+	opensNewWindow = 1;
 };
 class Enh_DeleteEmptyLayers
 {
@@ -204,11 +215,13 @@ class FunctionsViewer//Overwrites the default function viewer
 {
 	action = "(findDisplay 313) createDisplay 'Enh_FunctionsViewer'";
 	data = "";
+	opensNewWindow = 1;
 };
 class Enh_ActionCreator
 {
 	text = "Action Creator...";
 	action = "(findDisplay 313) createDisplay 'Enh_ActionCreator'";
+	opensNewWindow = 1;
 };
 class Enh_LogMissionAttributes
 {
@@ -224,6 +237,7 @@ class Enh_GenerateSteamMissionDescription
 {
 	text = $STR_ENH_tools_generateSteamMissionDescription;
 	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
+	opensNewWindow = 1;
 };
 //Loadout Tools
 class Enh_CopyLoadout
@@ -243,6 +257,7 @@ class Enh_ExportLoadoutConfig
 	text = $STR_ENH_tools_exportLoadoutConfig;
 	action = "(findDisplay 313) createDisplay 'Enh_ExportInventory'";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
+	opensNewWindow = 1;
 };
 class Enh_RemoveNVGs
 {
@@ -275,6 +290,13 @@ class Enh_RemoveWeapons
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
 };
 //Placement Tools
+class Enh_PatternTools
+{
+	text = $STR_ENH_tools_placementTools;
+	action = "(findDisplay 313) createDisplay 'Enh_PlacementTools'";
+	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
+	opensNewWindow = 1;
+};
 class Enh_SetRandomDir
 {
 	Text = $STR_ENH_tools_randomDir;
@@ -283,33 +305,6 @@ class Enh_SetRandomDir
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD3};
 };
-class Enh_PatternTools
-{
-	text = "Placement Tools...";//Translation
-	//picture = "\3denEnhanced\data\Enh_icon_linePattern.paa";
-	action = "(findDisplay 313) createDisplay 'Enh_PlacementTools'";
-	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
-};
-/* class Enh_CircularPattern
-{
-	text = $STR_ENH_tools_circularPattern;
-	picture = "\3denEnhanced\data\Enh_icon_circularPattern.paa";
-	action = "['circular'] call Enh_fnc_patternTool_init";
-	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_0};
-};
-class Enh_GridPattern
-{
-	text = $STR_ENH_tools_gridPattern;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\grid_translation_off_ca.paa";
-	action = "(findDisplay 313) createDisplay 'Enh_GridPattern'";
-	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_W};
-};
-class Enh_FillArea
-{
-	text = $STR_ENH_tools_fillArea;
-	action = "['fillArea'] call Enh_fnc_patternTool_init";
-	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_P};
-}; */
 class Enh_ReverseDirection
 {
 	text = $STR_ENH_tools_reverseDirection;

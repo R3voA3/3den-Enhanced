@@ -22,7 +22,6 @@ class Items
 	{
 		items[] +=
 		{
-			"Enh_GarrisonBuildings",
 			"Enh_DeleteCrew"
 		};
 	};
@@ -38,12 +37,6 @@ class Items
 		text = $STR_ENH_contextMenu_logFaction;
 		action = "call Enh_fnc_logFactions";
 		conditionShow = "hoverObject";
-	};
-	class Enh_GarrisonBuildings: Enh_LogFactions
-	{
-		action = "(findDisplay 313) createDisplay 'Enh_GarrisonBuildings'";
-		Text = $STR_ENH_contextMenu_garrisonHeader;
-		conditionShow = "selected";
 	};
 	class CreateComment;
 	class Enh_MeasureDistance: CreateComment

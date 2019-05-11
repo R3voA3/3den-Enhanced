@@ -19,6 +19,7 @@ class Enh_About_Forum
 	text = $STR_ENH_about_forums;
 	picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
 	weblink = "https://forums.bistudio.com/topic/188312-3den-enhanced/";
+	opensNewWindow = 1;
 };
 class Enh_About_Changelog: Enh_About_Forum
 {

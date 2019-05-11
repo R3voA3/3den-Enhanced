@@ -2,11 +2,11 @@ class Enh_TextureFinder
 {
 	idd = 140000;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_updateProgressbar";
+	onLoad = "[] spawn Enh_fnc_textureFinder_updateProgressbar";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.250625 * safezoneW + safezoneX;
 			y = 0.178 * safezoneH + safezoneY;
@@ -16,7 +16,7 @@ class Enh_TextureFinder
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_textureFinder_header;
 			x = 0.250625 * safezoneW + safezoneX;
@@ -25,16 +25,16 @@ class Enh_TextureFinder
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class ShowAll: Enh_RscButton
+		class ShowAll: Enh_Button
 		{
 			text = $STR_ENH_textureFinder_showAll;
 			x = 0.250625 * safezoneW + safezoneX;
 			y = 0.822 * safezoneH + safezoneY;
 			w = 0.144375 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "[] spawn Enh_fnc_fillTextureLB";
+			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
 		};
-		class TextureList: Enh_RscListbox
+		class TextureList: Enh_ListBox
 		{
 			idc = 1500;
 			x = 0.250625 * safezoneW + safezoneX;
@@ -42,9 +42,9 @@ class Enh_TextureFinder
 			w = 0.485625 * safezoneW;
 			h = 0.42 * safezoneH;
 			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this select 0) lbText (lbCurSel (_this select 0)))";
-			onKeyDown = "_this spawn Enh_fnc_exportTexturePath";
+			onKeyDown = "_this spawn Enh_fnc_textureFinder_exportTexturePath";
 		};
-		class TexturePreview: Enh_RscPicture
+		class TexturePreview: Enh_Picture
 		{
 			idc = 1200;
 			x = 0.26375 * safezoneW + safezoneX;
@@ -53,7 +53,7 @@ class Enh_TextureFinder
 			h = 0.168 * safezoneH;
 			text = "\A3\Ui_f\data\Logos\arma3_white_ca.paa";
 		};
-		class Close: Enh_RscButton
+		class Close: Enh_Button
 		{
 			idc = 1;
 			text = $STR_ENH_textureFinder_close;
@@ -62,16 +62,16 @@ class Enh_TextureFinder
 			w = 0.1575 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Search: Enh_RscButton
+		class Search: Enh_Button
 		{
 			text = $STR_ENH_textureFinder_searchTextures;
 			x = 0.604999 * safezoneW + safezoneX;
 			y = 0.822 * safezoneH + safezoneY;
 			w = 0.13125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "if (call Enh_fnc_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_findTextures}";
+			action = "if (call Enh_fnc_textureFinder_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_textureFinder_findTextures}";
 		};
-		class ProgessText: Enh_RscText
+		class ProgessText: Enh_Text
 		{
 			idc = 1002;
 			x = 0.250625 * safezoneW + safezoneX;

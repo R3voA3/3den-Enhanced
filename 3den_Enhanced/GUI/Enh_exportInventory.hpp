@@ -5,7 +5,7 @@ class Enh_ExportInventory
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_IGUIBack
+		class Background: Enh_Background
 		{
 			x = 0.395 * safezoneW + safezoneX;
 			y = 0.318 * safezoneH + safezoneY;
@@ -15,7 +15,7 @@ class Enh_ExportInventory
 	};
 	class Controls
 	{
-		class Header: Enh_RscText
+		class Header: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_header;
 			x = 0.395 * safezoneW + safezoneX;
@@ -24,7 +24,7 @@ class Enh_ExportInventory
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class Class: Enh_RscText
+		class Class: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_className;
 			x = 0.401563 * safezoneW + safezoneX;
@@ -32,7 +32,7 @@ class Enh_ExportInventory
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DisplayName: Enh_RscText
+		class DisplayName: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_displayName;
 			x = 0.401563 * safezoneW + safezoneX;
@@ -40,7 +40,7 @@ class Enh_ExportInventory
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Icon: Enh_RscText
+		class Icon: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_icon;
 			x = 0.401563 * safezoneW + safezoneX;
@@ -48,7 +48,7 @@ class Enh_ExportInventory
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Role: Enh_RscText
+		class Role: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_role;
 			x = 0.401563 * safezoneW + safezoneX;
@@ -56,7 +56,7 @@ class Enh_ExportInventory
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Condition: Enh_RscText
+		class Condition: Enh_Text
 		{
 			text = $STR_ENH_exportLoadout_condition;
 			x = 0.401563 * safezoneW + safezoneX;
@@ -64,7 +64,7 @@ class Enh_ExportInventory
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ClassValue: Enh_RscEdit
+		class ClassValue: Enh_Edit
 		{
 			idc = 1400;
 			text = "WEST1";
@@ -73,7 +73,7 @@ class Enh_ExportInventory
 			w = 0.118125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DisplayNameValue: Enh_RscEdit
+		class DisplayNameValue: Enh_Edit
 		{
 			idc = 1401;
 			text = "Soldier";
@@ -82,7 +82,7 @@ class Enh_ExportInventory
 			w = 0.118125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class IconValue: Enh_RscEdit
+		class IconValue: Enh_Edit
 		{
 			idc = 1402;
 			text = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
@@ -91,7 +91,7 @@ class Enh_ExportInventory
 			w = 0.118125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RoleValue: Enh_RscEdit
+		class RoleValue: Enh_Edit
 		{
 			idc = 1403;
 			text = "Default";
@@ -100,7 +100,7 @@ class Enh_ExportInventory
 			w = 0.118125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ConditionValue: Enh_RscEdit
+		class ConditionValue: Enh_Edit
 		{
 			idc = 1404;
 			text = "true";
@@ -109,7 +109,7 @@ class Enh_ExportInventory
 			w = 0.118125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Ok: Enh_RscButton
+		class Ok: Enh_Button
 		{
 			text = "Ok";
 			x = 0.395 * safezoneW + safezoneX;
