@@ -57,6 +57,6 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 130 ctrlSetText str [Enh_PlacementTools_AreaDia,["0%","100 %","50 %","33 %","25 %","20 %","16 %","14 %","12.5 %","11 %","10 %"] select Enh_PlacementTools_Coverage];
+(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText str [Enh_PlacementTools_AreaDia,["0%","100 %","50 %","33 %","25 %","20 %","16 %","14 %","12.5 %","11 %","10 %"] select Enh_PlacementTools_Coverage];
 
 true

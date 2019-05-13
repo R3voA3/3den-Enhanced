@@ -12,7 +12,7 @@
 
 params ["_control", "_newValue"];
 
-Enh_PlacementTools_Rotation = _newValue;
+Enh_PlacementTools_InitialAngle = _newValue;
 private _angle = _newValue;
 private _angleStep = Enh_PlacementTools_CentralAngle / count Enh_PlacementTools_Selected;
 
@@ -26,6 +26,6 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 130 ctrlSetText (str _newValue + " °");
+(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " °");
 
 true

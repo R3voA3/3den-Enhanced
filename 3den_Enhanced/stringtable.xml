@@ -3548,12 +3548,12 @@
 		<Polish>Start index</Polish>
 	</Key>
 	<Key ID="STR_ENH_placementTools_coverage">
-		<Original>Coverage Building Positions</Original>
-		<English>Coverage Building Positions</English>
+		<Original>Coverage</Original>
+		<English>Coverage</English>
 		<Czech>Kryté pozice v budově</Czech>
 		<French>Positions de couverture dans le bâtiment</French>
 		<Spanish>Posiciones de covertura en edificios</Spanish>
-		<German>Abdeckung Gebäudepositionen</German>
+		<German>Abdeckung</German>
 		<Chinesesimp>覆盖建筑位置</Chinesesimp>
 		<Polish>Pokrycie budynków</Polish>
 	</Key>
@@ -3807,13 +3807,13 @@
 		<Polish>Wzór siatki</Polish>
 	</Key>
 	<Key ID="STR_ENH_placementTools_numColumns">
-		<Original>Number of Colums</Original>
-		<English>Number of Colums</English>
-		<German>Anzahl der Spalten</German>
+		<Original>#Colums</Original>
+		<English>#Colums</English>
+		<German>#Spalten</German>
 		<Chinesesimp>列数</Chinesesimp>
-		<Spanish>Número de columnas</Spanish>
-		<French>Nombre de colonnes</French>
-		<Polish>Liczba kolumn</Polish>
+		<Spanish>#Columnas</Spanish>
+		<French>#Colonnes</French>
+		<Polish>#Kolumn</Polish>
 	</Key>
 	<Key ID="STR_ENH_placementTools_spacingX">
 		<Original>Spacing X</Original>

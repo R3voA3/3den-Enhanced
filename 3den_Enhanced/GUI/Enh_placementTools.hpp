@@ -2,7 +2,7 @@ class Enh_PlacementTools
 {
 	idd = -1;
 	onLoad = "call Enh_fnc_placementTools_onLoad";
-	onUnload = "delete3DENEntities [Enh_PlacementTools_AreaTrigger,Enh_PlacementTools_GarrisonTrigger]; Enh_PlacementTools_AreaTrigger = nil; Enh_PlacementTools_GarrisonTrigger = nil"
+	onUnload = "call Enh_fnc_placementTools_onUnload";
 	movingEnable = true;
 	class ControlsBackground
 	{
@@ -53,7 +53,7 @@ class Enh_PlacementTools
 		};
 		class RadiusValue: Enh_Slider
 		{
-			idc = 10;		
+			idc = 10;	
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.22 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -61,6 +61,7 @@ class Enh_PlacementTools
 			sliderPosition = 20;
 			sliderRange[] = {0,200};
 			onSliderPosChanged = "_this call Enh_fnc_placementTools_radius";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class InitialAngle: Enh_Text
 		{
@@ -80,6 +81,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,359};
 			sliderPosition = 0;
 			onSliderPosChanged = "call Enh_fnc_placementTools_initialAngle";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class CentralAngle: Enh_Text
 		{
@@ -99,6 +101,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,360};
 			sliderPosition = 360;
 			onSliderPosChanged = "call Enh_fnc_placementTools_centralAngle";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class LineHeader: Enh_Text
 		{
@@ -127,6 +130,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,50};
 			sliderPosition = 5;
 			onSliderPosChanged = "call Enh_fnc_placementTools_spacing";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class GridHeader: Enh_Text
 		{
@@ -158,7 +162,6 @@ class Enh_PlacementTools
 		};
 		class SpaceX: Enh_Text
 		{
-			idc = 60;
 			text = $STR_ENH_placementTools_spacingX;
 			x = 0.0209375 * safezoneW + safezoneX;
 			y = 0.514 * safezoneH + safezoneY;
@@ -167,7 +170,7 @@ class Enh_PlacementTools
 		};
 		class SpaceXValue: Enh_Slider
 		{
-			idc = 70;
+			idc = 60;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.514 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -175,6 +178,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,50};
 			sliderPosition = 5;
 			onSliderPosChanged = "Enh_PlacementTools_SpaceX = _this # 1; call Enh_fnc_placementTools_grid";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class SpaceY: Enh_Text
 		{
@@ -186,7 +190,7 @@ class Enh_PlacementTools
 		};
 		class SpaceYValue: Enh_Slider
 		{
-			idc = 80;
+			idc = 70;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.556 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -194,6 +198,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,50};
 			sliderPosition = 5;
 			onSliderPosChanged = "Enh_PlacementTools_SpaceY = _this # 1; call Enh_fnc_placementTools_grid";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class FillAreaHeader: Enh_Text
 		{
@@ -214,7 +219,7 @@ class Enh_PlacementTools
 		};
 		class AValue: Enh_Slider
 		{
-			idc = 90;
+			idc = 80;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.64 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -222,6 +227,7 @@ class Enh_PlacementTools
 			sliderRange[] = {1,500};
 			sliderPosition = 50;
 			onSliderPosChanged = "Enh_PlacementTools_A = _this # 1; call Enh_fnc_placementTools_fillArea";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class B: Enh_Text
 		{
@@ -233,7 +239,7 @@ class Enh_PlacementTools
 		};
 		class BValue: Enh_Slider
 		{
-			idc = 100;
+			idc = 90;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.682 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -241,6 +247,7 @@ class Enh_PlacementTools
 			sliderRange[] = {1,500};
 			sliderPosition = 50;
 			onSliderPosChanged = "Enh_PlacementTools_B = _this # 1; call Enh_fnc_placementTools_fillArea";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class GarrisonHeader: Enh_Text
 		{
@@ -259,9 +266,9 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class AreaSizeValue: Enh_Slider
+		class AreaDiaValue: Enh_Slider
 		{
-			idc = 110;
+			idc = 100;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.766 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -269,6 +276,7 @@ class Enh_PlacementTools
 			sliderRange[] = {0,500};
 			sliderPosition = 50;
 			onSliderPosChanged = "Enh_PlacementTools_AreaDia = _this # 1; call Enh_fnc_placementTools_garrison";
+			onMouseZChanged = "_this call Enh_fnc_placementTools_slowScrolling";
 		};
 		class Coverage: Enh_Text
 		{
@@ -280,7 +288,7 @@ class Enh_PlacementTools
 		};
 		class CoverageValue: Enh_Slider
 		{
-			idc = 120;
+			idc = 110;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
@@ -299,7 +307,7 @@ class Enh_PlacementTools
 		};
 		class CurrentValue: Enh_Text
 		{
-			idc = 130;
+			idc = 120;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.858 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;

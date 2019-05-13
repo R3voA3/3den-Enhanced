@@ -13,6 +13,7 @@
 params ["_control", "_newValue"];
 
 _newPos = Enh_PlacementTools_Center;
+Enh_PlacementTools_Spacing = _newValue;
 
 collect3DENHistory
 {
@@ -22,4 +23,4 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 130 ctrlSetText (str _newValue + " m");
+(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " m");

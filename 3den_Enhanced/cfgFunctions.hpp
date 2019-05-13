@@ -6,10 +6,10 @@ class CfgFunctions
 		class 3denRadio
 		{
 			file = "3denEnhanced\functions\GUI\3denRadio";
-			class 3denRadio_exportClassname;
-			class 3denRadio_playMusic;
 			class 3denRadio_onLoad;
 			class 3denRadio_onUnload;
+			class 3denRadio_exportClassname;
+			class 3denRadio_playMusic;
 			class 3denRadio_toggleRadio;
 			class 3denRadio_handlePlaylist;
 			class 3denRadio_sortBy;
@@ -63,11 +63,12 @@ class CfgFunctions
 		class PlacementTools
 		{
 			file = "3denEnhanced\functions\GUI\placementTools";
+			class placementTools_onLoad;
+			class placementTools_onUnload;
 			class placementTools_centralAngle;
 			class placementTools_fillArea;
 			class placementTools_garrison;
 			class placementTools_grid;
-			class placementTools_onLoad;
 			class placementTools_radius;
 			class placementTools_initialAngle;
 			class placementTools_spacing;

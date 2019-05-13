@@ -33,6 +33,6 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 130 ctrlSetText str [Enh_PlacementTools_A,Enh_PlacementTools_B];
+(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText str [Enh_PlacementTools_A,Enh_PlacementTools_B];
 
 true
