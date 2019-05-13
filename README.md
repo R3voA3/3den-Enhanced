@@ -9,7 +9,8 @@ Found a **bug** or have a **feature request**? Visit one of the following links.
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
 
-##[FAQ](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/?do=findComment&comment=2984094)
+##FAQ
+[BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/?do=findComment&comment=2984094)
 
 # Translation
 You can help us by adding more translations for this modification. Read below to find out how.
