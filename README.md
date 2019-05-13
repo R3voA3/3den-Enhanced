@@ -3,8 +3,8 @@ Adds new functionalities to the Eden Editor.
 
 Feel free to contribute!
 
-*BIS Forums: https://forums.bohemia.net/forums/topic/188312-3den-enhanced/
-*Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643
+* BIS Forums: https://forums.bohemia.net/forums/topic/188312-3den-enhanced/
+* Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643
 
 # Translation
 You can help us by adding more translations for this modification. Read below to find out how.
