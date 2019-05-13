@@ -1,0 +1,12 @@
+*.swp
+*.swo
+*.biprivatekey
+Thumbs.db
+*.log
+*.pbo
+*.bak
+*.json
+*.log
+*.zip
+*.7z
+.vscode
