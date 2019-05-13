@@ -5,7 +5,7 @@ Adds new functionalities to the [Eden Editor](https://community.bistudio.com/wik
 Feel free to [contribute!](https://github.com/RevoArma3/3den-Enhanced)
 
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
-* [Steam Workshop] (https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
+* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
 
 # Translation
 You can help us by adding more translations for this modification. Read below to find out how.
@@ -15,7 +15,7 @@ To ease the process of creating translations and editing stringtable.xml files, 
 
 For more information, please visit the following link:
 
-https://github.com/bux/tabler/releases
+[Download Tabler](https://github.com/bux/tabler/releases)
 
 
 ## How to?
