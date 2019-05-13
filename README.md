@@ -1,4 +1,5 @@
 # 3den-Enhanced
+[Logo](https://imgur.com/pXZliKz)
 Adds new functionalities to the Eden Editor.
 
 Feel free to contribute!
