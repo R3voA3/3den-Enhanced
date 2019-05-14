@@ -8,7 +8,7 @@ class Enh_EstablishingShot
 		{
 			property = "Enh_establisingShot";
 			control = "Enh_EstablishingShot";
-			expression = "if (!(_value select 0 isEqualTo [0,0,0]) && hasInterface && !is3DEN) then {0 = _value spawn BIS_fnc_establishingShot}";
+			expression = "if (!(_value # 0 isEqualTo [0,0,0]) && hasInterface && !is3DEN) then {0 = _value spawn BIS_fnc_establishingShot}";
 			defaultValue = "[[0,0,0],getText (configfile >> 'CfgWorlds' >> worldName >> 'description'),150,300,45]";
 		};
 	};

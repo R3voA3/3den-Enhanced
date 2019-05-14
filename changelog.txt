@@ -22,7 +22,7 @@ v4.1
 - fixed a bug which caused dynamic AI skill to not work if default values were used
 - Ambient Flyby does now use a vanilla control to set the speed
 - Ambient Flyby attribute now has default values to fall back to
-- It's now possible to export scenarios to sqf which where build with 3den Enhanced
+- It's now possible to export scenarios to sqf which were build with 3den Enhanced
 - Visibility attribute is now unlocked for all entities
 - Arsenal attribute is now unlocked for all entities
 - Complete Overhaul of the Placement Tools GUI

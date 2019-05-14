@@ -6,7 +6,7 @@ class Enh_WeaponRecoil
 	property = "Enh_weaponRecoil";
 	expression =
 	"\
-	_this setVariable ['Enh_weaponRecoil',_value];\
+	_this setVariable ['Enh_weaponRecoil',_value,true];\
 	_this setUnitRecoilCoefficient _value;\
 	_this addEventHandler\
 	[\

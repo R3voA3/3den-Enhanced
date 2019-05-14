@@ -17,9 +17,9 @@ class Enh_ambientAnimParams
 	{\
 		sleep 0.1;\
 		params ['_unit','_value'];\
-		if (!(_value select 0 == '') && !isMultiplayer) then\
+		if ((_value # 0 != '') && !isMultiplayer) then\
 		{\
-			[_unit,_value select 0,_value select 1,objNull,false,false] call BIS_fnc_ambientAnim;\
+			[_unit,_value # 0,_value # 1,objNull,false,false] call BIS_fnc_ambientAnim;\
 			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};\
 			_unit call BIS_fnc_ambientAnim__terminate;\
 		};\

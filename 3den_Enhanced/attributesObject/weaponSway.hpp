@@ -6,7 +6,7 @@ class Enh_WeaponSway
 	property = "Enh_weaponSway";
 	expression =
 	"\
-	_this setVariable ['Enh_weaponSway',_value];\
+	_this setVariable ['Enh_weaponSway',_value,true];\
 	_this setCustomAimCoef _value;\
 	_this addEventHandler\
 	[\
