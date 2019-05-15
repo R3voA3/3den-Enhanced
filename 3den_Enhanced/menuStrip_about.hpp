@@ -5,13 +5,12 @@ class Enh_About
 	text = $STR_ENH_folder_about;
 	items[] +=
 	{
-		"Enh_About_Changelog",
 		"Enh_About_Forum",
+		"Enh_About_Changelog",
 		"Enh_About_Steam",
 		"Enh_About_Translation",
 		"Enh_About_FAQ",
-		"Enh_About_Credits",
-		"Enh_About_Youtube"
+		"Enh_About_Credits"
 	};
 };
 class Enh_About_Forum
@@ -34,7 +33,7 @@ class Enh_About_Steam: Enh_About_Forum
 class Enh_About_Translation: Enh_About_Forum
 {
 	text = $STR_ENH_about_translation;
-	weblink = "https://github.com/RevoArma3/3den-Enhanced-Translation";
+	weblink = "https://github.com/RevoArma3/3den-Enhanced";
 };
 class Enh_About_FAQ: Enh_About_Forum
 {
@@ -46,9 +45,4 @@ class Enh_About_Credits: Enh_About_Forum
 	text = $STR_ENH_about_credits;
 	action = "call Enh_fnc_credits";
 	weblink = "";
-};
-class Enh_About_Youtube: Enh_About_Forum
-{
-	text = "YouTube";
-	weblink = "https://www.youtube.com/playlist?list=PLGdC30d6FYZEFa2F0MypYlwwtK4d9hP6h";
 };
