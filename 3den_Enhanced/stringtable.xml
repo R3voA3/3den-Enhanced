@@ -4567,14 +4567,14 @@
 		<Spanish>Steam</Spanish>
 	</Key>
 	<Key ID="STR_ENH_about_translation">
-		<Original>Help Translating</Original>
-		<English>Help Translating</English>
-		<German>Beim Übersetzen helfen</German>
-		<Spanish>Ayuda para traducir </Spanish>
-		<Chinesesimp>帮助翻译</Chinesesimp>
-		<Czech>Překlad </Czech>
-		<French>Aide à traduire </French>
-		<Polish>Pomóż tłumaczyć</Polish>
+		<Original>Help Translating (GitHub)</Original>
+		<English>Help Translating (GitHub)</English>
+		<German>Beim Übersetzen helfen (GitHub)</German>
+		<Spanish>Ayuda para traducir (GitHub)</Spanish>
+		<Chinesesimp>帮助翻译 (GitHub)</Chinesesimp>
+		<Czech>Překlad (GitHub)</Czech>
+		<French>Aide à traduire (GitHub)</French>
+		<Polish>Pomóż tłumaczyć (GitHub)</Polish>
 	</Key>
 	<Key ID="STR_ENH_about_FAQ">
 		<Original>FAQ</Original>
