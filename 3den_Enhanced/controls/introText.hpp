@@ -52,13 +52,13 @@ class Enh_IntroText: Title
 		class Line2Text: DelayText
 		{
 			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_introText_line1_displayName;
+			text = $STR_ENH_introText_line2_displayName;
 			tooltip = "";
 		};
 		class Line3Text: DelayText
 		{
 			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_introText_line1_displayName;
+			text = $STR_ENH_introText_line3_displayName;
 			tooltip = "";
 		};
 		class ApexIntroText: DelayText
