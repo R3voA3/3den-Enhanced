@@ -4092,7 +4092,7 @@
 		<Czech>Učiní skupinu vybrané jednotky hlídkující oblast. Hodnota definuje max. vzdálenost mezi dvěma hlídkovými body. \ n \ n-1 deaktivuje hlídku.</Czech>
 		<Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n-1 deaktywuje patrol</Polish>
 	</Key>
-	<Key ID="STR_ENH_locationList_locations">
+	<Key ID="STR_ENH_locationList_cities">
 		<Original>Cities &amp; Villages</Original>
 		<English>Cities &amp; Villages</English>
 		<German>Städte und Dörfer</German>
@@ -4101,6 +4101,11 @@
 		<Czech>Města a vesnice</Czech>
 		<French>Villes et villages</French>
 		<Polish>Miasta i wioski</Polish>
+	</Key>
+		<Key ID="STR_ENH_locationList_airports">
+		<Original>Airports</Original>
+		<English>Airports</English>
+		<German>Landebahnen</German>
 	</Key>
 	<Key ID="STR_ENH_locationList_chapels">
 		<Original>Chapels</Original>
@@ -4162,35 +4167,15 @@
 		<French>Épaves de navire</French>
 		<Polish>Wraki statków</Polish>
 	</Key>
-	<Key ID="STR_ENH_locationList_solarDieselPower">
-		<Original>Solar/Diesel Power Plants</Original>
-		<English>Solar/Diesel Power Plants</English>
-		<German>Solar/Dieselkraftwerke</German>
-		<Chinesesimp>太阳能/柴油发电厂</Chinesesimp>
-		<Spanish>Plantas de energía solar / diesel</Spanish>
-		<Czech>Solární a dieselové elektrárny</Czech>
-		<French>Centrales Solaires / Diesel</French>
-		<Polish>Elektrownie solarne/dieslowskie</Polish>
+	<Key ID="STR_ENH_locationList_powerProduction">
+		<Original>Power Production</Original>
+		<English>Power Production</English>
+		<German>Energieproduktion</German>
 	</Key>
-	<Key ID="STR_ENH_locationList_wavePower">
-		<Original>Tital Power Plants</Original>
-		<English>Tital Power Plants</English>
-		<German>Gezeitenkraftwerke</German>
-		<Chinesesimp>泰坦动力厂</Chinesesimp>
-		<Spanish>Plantas de energía de marea</Spanish>
-		<Czech>Přílivové elektrárny</Czech>
-		<French>Centrales électriques</French>
-		<Polish>Elektrownie pływowe</Polish>
-	</Key>
-	<Key ID="STR_ENH_locationList_windPower">
-		<Original>Wind Turbines</Original>
-		<English>Wind Turbines</English>
-		<German>Windkraftanlagen</German>
-		<Chinesesimp>风力发电机</Chinesesimp>
-		<Spanish>Turbinas de viento</Spanish>
-		<Czech>Větrné turbíny</Czech>
-		<French>Éoliennes</French>
-		<Polish>Turbiny wiatrowe</Polish>
+		<Key ID="STR_ENH_locationList_unknown">
+		<Original>Unknown</Original>
+		<English>Unknown</English>
+		<German>Unbekannt</German>
 	</Key>
 	<Key ID="STR_ENH_searchState_pleaseWait">
 		<Original>Still searching. Please wait.</Original>
