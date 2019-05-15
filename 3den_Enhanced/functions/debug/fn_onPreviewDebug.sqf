@@ -98,7 +98,7 @@ if (AWARENESS) then
 		{
 			_ctrlData ctrlSetStructuredText parseText format
 			[
-				"<t size='1.5'>Awareness</t><br/>WEST: %1%2<br/>EAST: %3%4<br/>INDEPENDENT: %5%6<br/>CIVILIAN: %7%8<br/>",
+				"<t size='1.2'>Awareness</t><br/>WEST: %1%2<br/>EAST: %3%4<br/>INDEPENDENT: %5%6<br/>CIVILIAN: %7%8<br/>",
 				(WEST knowsAbout player) * 100 / 4,
 				"%",
 				(EAST knowsAbout player) * 100 / 4,

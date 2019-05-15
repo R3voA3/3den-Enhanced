@@ -8,7 +8,7 @@ class Enh_GroupIndicator
 	"\
 		if (!is3DEN && _value && hasInterface) then\
 		{\
-			0 = [] spawn {waitUntil {!isNull player}; call BIS_fnc_groupIndicator};\
+			[] spawn {waitUntil {!isNull player}; call BIS_fnc_groupIndicator};\
 		}";
 	defaultValue = "false";
 };
