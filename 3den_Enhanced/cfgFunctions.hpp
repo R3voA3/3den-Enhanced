@@ -105,6 +105,7 @@ class CfgFunctions
 			class exportWithLB;
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
+			class gitHubNotification;
 		};
 		class Log
 		{
