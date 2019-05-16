@@ -4,11 +4,6 @@ Adds new functionalities to the [Eden Editor](https://community.bistudio.com/wik
 
 Feel free to [contribute!](https://github.com/RevoArma3/3den-Enhanced)
 
-Found a **bug** or have a **feature request**? Visit one of the following links.
-
-* [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
-* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
-
 # Translation
 You can help us by adding more translations for this modification. Read below to find out how.
 
@@ -26,3 +21,8 @@ For more information, please visit the following link:
 * Select a localisation and edit it (filling in missing languages)
 * Save the stringtable.xml
 * Create a pull request
+
+Found a **bug** or have a **feature request**? Visit one of the following links.
+
+* [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
+* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
