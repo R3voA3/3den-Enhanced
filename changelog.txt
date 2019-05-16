@@ -1,3 +1,14 @@
+v4.2
+*added*
+
+*changed*
+- updated credits
+*removed*
+
+*known Issues*
+- Event Code Attribute does not work on dedicated servers
+- Stay on Position attribute sometimes fails on dedicated server
+
 v4.1
 *added*
 - tools to remove heargear, googles and weapons from characters

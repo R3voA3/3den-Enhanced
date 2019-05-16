@@ -27,7 +27,8 @@ private _contributers =
 	"pokertour",
 	"Kofeina101",
 	"IllidanS4",
-	"2RIMa-PapaBear"
+	"2RIMa-PapaBear",
+	"a1044438870"
 ];
 
 private _disp = (findDisplay 313) createDisplay "Enh_Credits";
