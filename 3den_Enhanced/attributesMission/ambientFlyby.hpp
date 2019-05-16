@@ -4,7 +4,7 @@ class Enh_AmbientFlyby
 	displayName = $STR_ENH_attributeCategory_ambientFlyby;
 	class Attributes
 	{
-		class Enh_Type
+		class Enh_AmbientFlyby_Type
 		{
 			displayName = $STR_ENH_ambientFlyby_type_displayName;
 			tooltip = $STR_ENH_ambientFlyby_type_tooltip;
@@ -16,13 +16,12 @@ class Enh_AmbientFlyby
 				_value spawn\
 				{\
 					waitUntil {time > 0.2};\
-					private _startPos = missionNamespace getVariable ['Enh_ambientFlyby_startPos',[0,0,0]];\
-					private _endPos = missionNamespace getVariable ['Enh_ambientFlyby_endPos',[0,0,0]];\
-					private _speed = missionNamespace getVariable ['Enh_ambientFlyby_speed','normal'];\
-					private _iterations = missionNamespace getVariable ['Enh_ambientFlyby_iterations',1];\
-					private _delay = missionNamespace getVariable ['Enh_ambientFlyby_delay',360];\
+					private _startPos = missionNamespace getVariable ['Enh_AmbientFlyby_StartPos',[0,0,0]];\
+					private _endPos = missionNamespace getVariable ['Enh_AmbientFlyby_EndPos',[0,0,0]];\
+					private _speed = missionNamespace getVariable ['Enh_AmbientFlyby_Speed','normal'];\
+					private _delay = missionNamespace getVariable ['Enh_AmbientFlyby_Delay',360];\
 					\
-					for '_i' from 0 to _iterations do\
+					while {missionNamespace getVariable ['Enh_AmbientFlyby_Enabled',true]} do\
 					{\
 						sleep _delay;\
 						[_startPos,_endPos,_startPos # 2,_speed,selectRandom _this] call BIS_fnc_ambientFlyby;\
@@ -31,7 +30,7 @@ class Enh_AmbientFlyby
 			}";
 			defaultValue = "[]";
 		};
-		class Enh_StartPos
+		class Enh_AmbientFlyby_StartPos
 		{
 			displayName = $STR_ENH_ambientFlyby_startPosition_displayName;
 			property = "Enh_ambientFlyby_startPos";
@@ -39,7 +38,7 @@ class Enh_AmbientFlyby
 			expression = "missionNamespace setVariable ['%s',_value]";
 			defaultValue = "[0,0,0]";
 		};
-		class Enh_EndPos
+		class Enh_AmbientFlyby_EndPos
 		{
 			displayName = $STR_ENH_ambientFlyby_endPosition_displayName;
 			property = "Enh_ambientFlyby_endPos";
@@ -47,7 +46,7 @@ class Enh_AmbientFlyby
 			expression = "missionNamespace setVariable ['%s',_value]";
 			defaultValue = "[0,0,0]";
 		};
-		class Enh_Speed
+		class Enh_AmbientFlyby_Speed
 		{
 			displayName = $STR_ENH_ambientFlyby_speed_displayName;
 			tooltip = $STR_ENH_ambientFlyby_speed_tooltip;
@@ -57,16 +56,7 @@ class Enh_AmbientFlyby
 			defaultValue = "normal";
 			typeName = "STRING";
 		};
-		class Enh_Iterations
-		{
-			displayName = $STR_ENH_ambientFlyby_iterations_displayName;
-			property = "Enh_ambientFlyby_iterations";
-			control = "Edit";
-			expression = "missionNamespace setVariable ['%s',_value]";
-			defaultValue = "1";
-			typeName = "NUMBER";
-		};
-		class Enh_Delay
+		class Enh_AmbientFlyby_Delay
 		{
 			displayName = $STR_ENH_ambientFlyby_delay_displayName;
 			tooltip = $STR_ENH_ambientFlyby_delay_tooltip;
