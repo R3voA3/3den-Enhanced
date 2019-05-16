@@ -28,7 +28,8 @@ private _contributers =
 	"Kofeina101",
 	"IllidanS4",
 	"2RIMa-PapaBear",
-	"a1044438870"
+	"a1044438870",
+	"SynchronizedHD"
 ];
 
 private _disp = findDisplay 313 createDisplay "Enh_Credits";
