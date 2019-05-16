@@ -1086,8 +1086,7 @@
 		<English>Group Marker</English>
 		<German>Gruppenmarker</German>
 	</Key>
-		</Key>
-		<Key ID="STR_ENH_groupMarker_tooltip">
+	<Key ID="STR_ENH_groupMarker_tooltip">
 		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
 		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</English>
 		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.\n\nDer Eingabewert muss eine Markerklasse aus 'CfgMarkers' sein.</German>
@@ -3833,14 +3832,13 @@
 		<French>Espacement Y</French>
 		<Polish>Odstęp Y</Polish>
 	</Key>
-		<Key ID="STR_ENH_placementTools_centralAngle">
+	<Key ID="STR_ENH_placementTools_centralAngle">
 		<Original>Central Angle</Original>
 		<English>Central Angle</English>
 		<German>Öffnungswinkel</German>
 	</Key>
-		</Key>
-		<Key ID="STR_ENH_placementTools_initialAngle">
-		<Original>Initial Angle/Original>
+	<Key ID="STR_ENH_placementTools_initialAngle">
+		<Original>Initial Angle</Original>
 		<English>Initial Angle</English>
 		<German>Startwinkel</German>
 	</Key>
