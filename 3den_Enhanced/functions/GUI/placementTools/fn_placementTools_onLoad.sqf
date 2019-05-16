@@ -22,7 +22,7 @@ if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["No Entities selected!"
 
 Enh_PlacementTools_Center = if (get3DENActionState "ToggleMap" == 1) then 
 {
-   ((findDisplay 313) displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
+   (findDisplay 313 displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
 }
 else
 {

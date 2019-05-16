@@ -15,7 +15,7 @@ if (worldName isEqualTo "vr") exitWith {false};
 
 disableSerialization;
 
-private _ctrlTV = (findDisplay 313) displayCtrl 75;
+private _ctrlTV = findDisplay 313 displayCtrl 75;
 
 //Defines world size variables
 private _l = worldSize / 2;

@@ -49,7 +49,7 @@ class Items
 	};
 	class Enh_ShowModuleDescription: CreateComment
 	{
-		action = "(findDisplay 313) createDisplay 'Enh_ModuleInformation'";
+		action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
 		Text = $STR_ENH_contextMenu_getModuleDescription;
 		picture = "";
 		conditionShow = "hoverLogic";

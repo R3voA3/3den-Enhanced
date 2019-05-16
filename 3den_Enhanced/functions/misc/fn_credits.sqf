@@ -31,7 +31,7 @@ private _contributers =
 	"a1044438870"
 ];
 
-private _disp = (findDisplay 313) createDisplay "Enh_Credits";
+private _disp = findDisplay 313 createDisplay "Enh_Credits";
 
 private _ctrl = _disp displayCtrl 1000;
 

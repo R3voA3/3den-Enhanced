@@ -17,7 +17,7 @@
 if(!is3DEN) exitWith {false};
 
 disableSerialization;
-_disp = (findDisplay 313) createDisplay 'Enh_PatternTool';
+_disp = findDisplay 313 createDisplay 'Enh_PatternTool';
 
 _ctrlRad = GET_CTRL(1404);
 _ctrlSpace = GET_CTRL(1403);

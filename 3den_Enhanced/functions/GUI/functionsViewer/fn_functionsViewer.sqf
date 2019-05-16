@@ -29,7 +29,7 @@ switch (_input) do
 {
 	case "ONLOAD":
 	{
-		if (round (ctrlfade ((findDisplay 313) displayctrl 1023)) < 1) then
+		if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
 		{
 			"showinterface" call BIS_fnc_3DENInterface
 		};

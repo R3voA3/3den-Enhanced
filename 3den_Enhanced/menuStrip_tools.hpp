@@ -123,7 +123,7 @@ class Enh_BriefingEditor
 {
 	text = $STR_ENH_tools_briefingEditor;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa";
-	action = "(findDisplay 313) createDisplay 'Enh_briefingEditor'";
+	action = "findDisplay 313 createDisplay 'Enh_briefingEditor'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
 	opensNewWindow = 1;
 };
@@ -131,7 +131,7 @@ class Enh_3denRadio
 {
 	text = "3den Radio...";
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
-	action = "(findDisplay 313) createDisplay 'Enh_3denRadio'";
+	action = "findDisplay 313 createDisplay 'Enh_3denRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
 	opensNewWindow = 1;
 };
@@ -145,14 +145,14 @@ class Enh_SwitchTime
 class Enh_NameObjects
 {
 	text = $STR_ENH_tools_batchNaming;
-	action = "(findDisplay 313) createDisplay 'Enh_NameObjects'";
+	action = "findDisplay 313 createDisplay 'Enh_NameObjects'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
 	opensNewWindow = 1;
 };
 class Enh_ColourPicker
 {
 	text = $STR_ENH_tools_colourPicker;
-	action = "(findDisplay 313) createDisplay 'Enh_ColourPicker'";
+	action = "findDisplay 313 createDisplay 'Enh_ColourPicker'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_C};
 	opensNewWindow = 1;
 };
@@ -160,7 +160,7 @@ class Enh_TextureFinder
 {
 	text = $STR_ENH_tools_textureFinder;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
-	action = "(findDisplay 313) createDisplay 'Enh_TextureFinder'";
+	action = "findDisplay 313 createDisplay 'Enh_TextureFinder'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
 	opensNewWindow = 1;
 };
@@ -188,13 +188,13 @@ class Enh_ExportGUIBaseClasses3den
 class Enh_GUITestGrids
 {
 	text = $STR_ENH_tools_GUITestGrids;
-	action = "(findDisplay 313) createDisplay 'RscTestGrids'";
+	action = "findDisplay 313 createDisplay 'RscTestGrids'";
 	opensNewWindow = 1;
 };
 class Enh_BatchReplace
 {
 	text = $STR_ENH_tools_batchReplace;
-	action = "(findDisplay 313) createDisplay 'Enh_BatchReplace'";
+	action = "findDisplay 313 createDisplay 'Enh_BatchReplace'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
 	opensNewWindow = 1;
 };
@@ -213,14 +213,14 @@ class Enh_ToggleSimpleObject
 };
 class FunctionsViewer//Overwrites the default function viewer
 {
-	action = "(findDisplay 313) createDisplay 'Enh_FunctionsViewer'";
+	action = "findDisplay 313 createDisplay 'Enh_FunctionsViewer'";
 	data = "";
 	opensNewWindow = 1;
 };
 class Enh_ActionCreator
 {
 	text = "Action Creator...";
-	action = "(findDisplay 313) createDisplay 'Enh_ActionCreator'";
+	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
 	opensNewWindow = 1;
 };
 class Enh_LogMissionAttributes
@@ -255,7 +255,7 @@ class Enh_ApplyLoadout: Enh_copyLoadout
 class Enh_ExportLoadoutConfig
 {
 	text = $STR_ENH_tools_exportLoadoutConfig;
-	action = "(findDisplay 313) createDisplay 'Enh_ExportInventory'";
+	action = "findDisplay 313 createDisplay 'Enh_ExportInventory'";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
 	opensNewWindow = 1;
 };
@@ -293,7 +293,7 @@ class Enh_RemoveWeapons
 class Enh_PatternTools
 {
 	text = $STR_ENH_tools_placementTools;
-	action = "(findDisplay 313) createDisplay 'Enh_PlacementTools'";
+	action = "findDisplay 313 createDisplay 'Enh_PlacementTools'";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
 	opensNewWindow = 1;
 };

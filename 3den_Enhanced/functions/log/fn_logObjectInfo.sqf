@@ -99,6 +99,6 @@ private _text = "";
 } forEach _objects;
 //Set variable used by Display3denCopy and create the display
 uinamespace setVariable ["Display3DENCopy_data",[localize "STR_ENH_contextMenu_logObjectInfo",_text]];
-(findDisplay 313) createDisplay "Display3denCopy";
+findDisplay 313 createDisplay "Display3denCopy";
 
 true
