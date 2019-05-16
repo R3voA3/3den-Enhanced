@@ -164,19 +164,6 @@ private _getColorFromHex =
 
    [(_r/255),(_g/255),(_b/255),1];
 };
-/* 
-//sleep 0.005;
-//Close display by pressing ESC and save
-(findDisplay 50000) displayAddEventHandler
-[
-   "keyDown",
-   {
-      if (_this # 1 isEqualTo 1) then
-      {
-         call Enh_fnc_briefingEditor_onClose;
-      }
-   }
-]; */
 
 //Hide left & right tab to prevent interference
 ["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
@@ -216,8 +203,13 @@ private _allMarkers = all3DENEntities # 5;
 private _ctrlMarkerList = GET_CONTROL(50000,60);
 //Fill marker list
 {
-   _ctrlMarkerList lbAdd ((_x get3DENAttribute "text") # 0);
-   _ctrlMarkerList lbSetData [_forEachIndex,(_x get3DENAttribute "markerName") # 0];
+   //If marker has no name, use variable name instead
+   private _name = (_x get3DENAttribute "text") # 0;
+   private _varName = (_x get3DENAttribute "markerName") # 0;
+   if (_name isEqualTo "") then {_name = _varName};
+
+   _ctrlMarkerList lbAdd _name;
+   _ctrlMarkerList lbSetData [_forEachIndex,_varName];
    _ctrlMarkerList lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_addMarker_tooltip"];
    //Get icon
    private _markerType = (_x get3DENAttribute "itemClass") # 0;

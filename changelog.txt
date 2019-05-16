@@ -3,6 +3,8 @@ v4.2
 
 *changed*
 - updated credits
+- Briefing Editor: If marker has no name, the variable name is displayed instead
+
 *removed*
 
 *known Issues*
