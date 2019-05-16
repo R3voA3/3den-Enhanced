@@ -30,6 +30,9 @@ v4.1
 - many GUI related function tweaks
 - ... from translation have been removed. Entries use opensNewWindowAttribute now
 - remove ... from folders. They do not open a new window
+- Function used for the Location List was completely overhauled
+- Ambient Flyby attribute was overhauled, it can no be disabled by a missionNamespace variable, see tooltip
+
 
 
 *removed*
