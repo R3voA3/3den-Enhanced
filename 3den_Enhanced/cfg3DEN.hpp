@@ -17,7 +17,7 @@ class Cfg3DEN
 	{
 		class ENH
 		{//Statusbar and interface need to be reinitialised when game directly starts in Eden editor
-			onTerrainNew = "['init'] call BIS_fnc_3DENStatusBar; ['init'] call BIS_fnc_3DENInterface; 'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer; call Enh_fnc_locationList";
+			onTerrainNew = "['init'] call BIS_fnc_3DENStatusBar; ['init'] call BIS_fnc_3DENInterface; 'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer; call Enh_fnc_locationList; call Enh_fnc_gitHubNotification";
 			onMissionPreviewEnd = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
 			onMissionLoad = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
 			onMissionNew = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
