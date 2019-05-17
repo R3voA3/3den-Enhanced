@@ -4,11 +4,6 @@ class Enh_GroupIndicator
 	tooltip = $STR_ENH_groupIndicator_tooltip;
 	property = "Enh_GroupIndicator";
 	control = "Checkbox";
-	expression =
-	"\
-		if (!is3DEN && _value && hasInterface) then\
-		{\
-			[] spawn {waitUntil {!isNull player}; call BIS_fnc_groupIndicator};\
-		}";
+	expression = "if (!is3DEN && _value && hasInterface) then {call BIS_fnc_groupIndicator}";
 	defaultValue = "false";
 };
