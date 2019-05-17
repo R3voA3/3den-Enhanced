@@ -1,3 +1,11 @@
+
+
+<p align="center">
+    <a href="https://github.com/RevoArma3/3den-Enhanced">
+        <img src="https://img.shields.io/github/repo-size/RevoArma3/3den-Enhanced.svg?label=Repo%20Size">
+    </a>
+</p>
+
 # 3den-Enhanced
 
 Adds new functionalities to the [Eden Editor](https://community.bistudio.com/wiki/Eden_Editor).
