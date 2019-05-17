@@ -4,6 +4,8 @@ v4.2
 *changed*
 - updated credits
 - Briefing Editor: If marker has no name, the variable name is displayed instead
+- Condition for Airdrop attribute is now checked every second. Instead of every frame
+- Updated polish translation
 
 *removed*
 
