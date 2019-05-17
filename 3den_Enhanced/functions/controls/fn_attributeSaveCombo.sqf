@@ -2,7 +2,7 @@
 	Author: Bohemia Interactive, edited by Revo
 
 	Description:
-	Saves the values of the combo box when pressing OK. Additionally a 3DEN history is created
+	Saves the value of the combo attribute control.
 
 	Parameter(s):
 	-
