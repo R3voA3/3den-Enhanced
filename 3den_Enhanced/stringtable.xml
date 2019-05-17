@@ -518,6 +518,7 @@
         <Original>Contributors</Original>
         <French>Contributeurs</French>
         <Spanish>Contribuidores</Spanish>
+        <Polish>Współtwórcy</Polish>
     </Key>
     <Key ID="STR_ENH_disableAI_NVG_displayName">
         <English>Night Vision Goggles</English>
@@ -525,6 +526,7 @@
         <Original>Night Vision Goggles</Original>
         <French>Lunettes de vison nocture</French>
         <Spanish>Gafas de Visión Nocturna</Spanish>
+        <Polish>Gogle Noktowizyjne</Polish>
     </Key>
     <Key ID="STR_ENH_disableAI_lights_displayName">
         <English>Lights</English>
@@ -532,6 +534,7 @@
         <Original>Lights</Original>
         <French>Luimières</French>
         <Spanish>Luces</Spanish>
+        <Polish>Latarka/źródło światła</Polish>
     </Key>
     <Key ID="STR_ENH_tools_generateSteamMissionDescription">
         <English>Generate Steam Mission Description</English>
@@ -539,6 +542,7 @@
         <Original>Generate Steam Mission Description</Original>
         <French>Générer la description de la mission Steam</French>
         <Spanish>Generar Descripción de Misión de Steam</Spanish>
+        <Polish>Wygeneruj Opis Misji Steam.</Polish>
     </Key>
     <Key ID="STR_ENH_tools_removeGoggles">
         <English>Remove Goggles</English>
@@ -546,6 +550,7 @@
         <Original>Remove Goggles</Original>
         <French>Supprimer les lunettes</French>
         <Spanish>Remover Gafas</Spanish>
+        <Polish>Usuń gogle</Polish>
     </Key>
     <Key ID="STR_ENH_tools_removeHeadgear">
         <English>Remove Headgear</English>
@@ -553,6 +558,7 @@
         <Original>Remove Headgear</Original>
         <French>Supprimer le casque</French>
         <Spanish>Remover Casco</Spanish>
+        <Polish>Usuń nakrycie głowy</Polish>
     </Key>
     <Key ID="STR_ENH_tools_removeWeapons">
         <English>Remove Weapons</English>
@@ -560,6 +566,7 @@
         <Original>Remove Weapons</Original>
         <French>Supprimer les armes</French>
         <Spanish>Remover Carmas</Spanish>
+        <Polish>Usuń broń</Polish>
     </Key>
     <Key ID="STR_ENH_moveIntoToDo_displayName">
         <English>Move into To-do List</English>
@@ -567,6 +574,7 @@
         <Original>Move into To-do List</Original>
         <French>deplaceer dans la Liste des tâches</French>
         <Spanish>Mover a lista de Qué hacer</Spanish>
+        <Polish>Dodaj do "Do zrobienia"</Polish>
     </Key>
     <Key ID="STR_ENH_moveIntoToDo_tooltip">
         <English>Moves this comment into a special layer called 'To-do List'.</English>
@@ -574,6 +582,8 @@
         <Original>Moves this comment into a special layer called 'To-do List'.</Original>
         <French>Déplace ce commentaire dans un calque spécial appelé 'Liste des tâches'.</French>
         <Spanish>Mover este comentario en una capa especial llamada "Qué hacer"</Spanish>
+        <Polish>Dodaje ten komentarz do specjalnej warstwy zwanej "Do zrobienia"</Polish>
+
     </Key>
     <Key ID="STR_ENH_toDoList">
         <English>To-Do List</English>
@@ -581,18 +591,22 @@
         <Original>To-Do List</Original>
         <French>Liste des tâches</French>
         <Spanish>Lista de Qué hacer</Spanish>
+        <Polish>Do zrobienia</Polish>
     </Key>
     <Key ID="STR_ENH_briefingEditor_addMarker_tooltip">
         <English>Add marker by double clicking.</English>
         <German>Marker durch Doppelklick  hinzufügen.</German>
         <Original>Add marker by double clicking.</Original>
         <Spanish>Añadir Marcador haciendo Doble Click</Spanish>
+        <Polish>Dodaj marker podwójnym kliknięciem.</Polish>
     </Key>
     <Key ID="STR_ENH_briefingEditor_loadTemplate_tooltip">
         <English>Load template by double clicking. Delete it from list by pressing DELETE.</English>
         <German>Vorlage durch Doppelklicken laden. Löschen durch Drücken von ENTFERNEN.</German>
         <Original>Load template by double clicking. Delete if from list by pressing DELETE.</Original>
         <Spanish>Cargar plantilla haciendo doble click. Borrar con tecla DELETE</Spanish>
+        <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
+
     </Key>
     <Key ID="STR_ENH_ambientFlyby_type_displayName">
         <Original>Type of Aircraft</Original>
@@ -1140,12 +1154,15 @@
         <English>Group Marker</English>
         <German>Gruppenmarker</German>
         <Spanish>Marcado de Grupo</Spanish>
+        <Polish>Marker grupy</Polish>
     </Key>
     <Key ID="STR_ENH_groupMarker_tooltip">
         <Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
         <English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</English>
         <German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.\n\nDer Eingabewert muss eine Markerklasse aus 'CfgMarkers' sein.</German>
         <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "Enh_GroupMarker_</Spanish>
+        <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. \n\nAktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.\n\nWartość to classname z CfgMarkers np. 'mil_box'.</Polish>
+
     </Key>
     <Key ID="STR_ENH_advancedDamageVeh_RBWheel">
         <Original>4th axle right wheel</Original>
@@ -3617,6 +3634,7 @@
         <English>Area Size</English>
         <German>Gebietsgröße</German>
         <Spanish>Tamaño de Area</Spanish>
+        <Polish>Wielkość strefy</Polish>
     </Key>
     <Key ID="STR_ENH_garrison_notification">
         <Original>Not enough empty building positions, increase the radius or reduce the coverage.</Original>
@@ -3700,7 +3718,8 @@
         <Chinesesimp>最终颜色</Chinesesimp>
         <Spanish>Color final</Spanish>
         <French>Couleur finale</French>
-        <Polish>Finałowy kolor</Polish>
+        <Polish>Finalny kolor</Polish>
+        
     </Key>
     <Key ID="STR_ENH_colourPicker_red">
         <Original>Red</Original>
@@ -3869,7 +3888,7 @@
         <Chinesesimp>列数</Chinesesimp>
         <Spanish>#Columnas</Spanish>
         <French>#Colonnes</French>
-        <Polish>#Kolumn</Polish>
+        <Polish>#Kolumny</Polish>
     </Key>
     <Key ID="STR_ENH_placementTools_spacingX">
         <Original>Spacing X</Original>
@@ -3894,12 +3913,14 @@
         <English>Central Angle</English>
         <German>Öffnungswinkel</German>
         <Spanish>Angulo Central</Spanish>
+        <Polish>Kąt środkowy</Polish>
     </Key>
     <Key ID="STR_ENH_placementTools_initialAngle">
         <Original>Initial Angle</Original>
         <English>Initial Angle</English>
         <German>Startwinkel</German>
         <Spanish>Angulo Inicial</Spanish>
+        <Polish>Kąt początkowy</Polish>
     </Key>
     <Key ID="STR_ENH_batchReplace_header">
         <Original>Batch Replace</Original>
@@ -4164,6 +4185,7 @@
         <English>Airports</English>
         <German>Landebahnen</German>
         <Spanish>Aeropuertos</Spanish>
+        <Polish>Lotniska</Polish>
     </Key>
     <Key ID="STR_ENH_locationList_chapels">
         <Original>Chapels</Original>
@@ -4230,12 +4252,14 @@
         <English>Power Production</English>
         <German>Energieproduktion</German>
         <Spanish>Producción de Poder</Spanish>
+        <Polish>Elektrownie</Polish>
     </Key>
     <Key ID="STR_ENH_locationList_unknown">
         <Original>Unknown</Original>
         <English>Unknown</English>
         <German>Unbekannt</German>
         <Spanish>Desconocido</Spanish>
+        <Polish>Nieznane</Polish>
     </Key>
     <Key ID="STR_ENH_searchState_pleaseWait">
         <Original>Still searching. Please wait.</Original>
@@ -5145,6 +5169,7 @@
         <English>Current Value</English>
         <German>Aktueller Wert</German>
         <Spanish>Valor actual</Spanish>
+        <Polish>Aktualna wartość</Polish>
     </Key>
     <Key ID="STR_ENH_contextMenu_setTriggerOwnerPlayer">
         <Original>Set Player as Trigger Owner</Original>
@@ -5388,8 +5413,9 @@
     <Key ID="STR_ENH_help_ARMAnetEdenTutorial">
         <English>Eden Editor Video Tuturial</English>
         <German>Eden Editor Video Tuturial</German>
-        <Original>Eden Editor Video Tuturial</Original>
         <Spanish>Video Tutorial del editor Eden</Spanish>
+        <Original>Eden Editor Video Tutorial</Original>
+		<Polish>Eden- Poradnik Wideo</Polish>
     </Key>
     <Key ID="STR_ENH_tools_placementTools">
         <English>Placement Tools</English>
