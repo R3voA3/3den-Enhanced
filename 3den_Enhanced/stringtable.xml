@@ -475,70 +475,82 @@
 		<German>Mitwirkende</German>
 		<Original>Contributors</Original>
 		<French>Contributeurs</French>
+		<Polish>Współtwórcy</Polish>
 	</Key>
 	<Key ID="STR_ENH_disableAI_NVG_displayName">
 		<English>Night Vision Goggles</English>
 		<German>Nachtsichtgeräte</German>
 		<Original>Night Vision Goggles</Original>
 		<French>Lunettes de vison nocture</French>
+		<Polish>Gogle Noktowizyjne</Polish>
 	</Key>
 	<Key ID="STR_ENH_disableAI_lights_displayName">
 		<English>Lights</English>
 		<German>Lichter</German>
 		<Original>Lights</Original>
 		<French>Luimières</French>
+		<Polish>Latarka/źródło światła</Polish>
 	</Key>
 	<Key ID="STR_ENH_tools_generateSteamMissionDescription">
 		<English>Generate Steam Mission Description</English>
 		<German>Steam-Missionsbeschreibung generieren</German>
 		<Original>Generate Steam Mission Description</Original>
 		<French>Générer la description de la mission Steam</French>
+		<Polish>Wygeneruj Opis Misji Steam.</Polish>
 	</Key>
 	<Key ID="STR_ENH_tools_removeGoggles">
 		<English>Remove Goggles</English>
 		<German>Brillen entfernen</German>
 		<Original>Remove Goggles</Original>
 		<French>Supprimer les lunettes</French>
+		<Polish>Usuń gogle</Polish>
 	</Key>
 	<Key ID="STR_ENH_tools_removeHeadgear">
 		<English>Remove Headgear</English>
 		<German>Kopfbedeckung entfernen</German>
 		<Original>Remove Headgear</Original>
 		<French>Supprimer le casque</French>
+		<Polish>Usuń nakrycie głowy</Polish>
 	</Key>
 	<Key ID="STR_ENH_tools_removeWeapons">
 		<English>Remove Weapons</English>
 		<German>Waffen entfernen</German>
 		<Original>Remove Weapons</Original>
 		<French>Supprimer les armes</French>
+		<Polish>Usuń broń</Polish>
 	</Key>
 	<Key ID="STR_ENH_moveIntoToDo_displayName">
 		<English>Move into To-do List</English>
 		<German>Zu To-do Liste hinzufügen</German>
 		<Original>Move into To-do List</Original>
 		<French>deplaceer dans la Liste des tâches</French>
+		<Polish>Dodaj do "Do zrobienia"</Polish>
 	</Key>
 	<Key ID="STR_ENH_moveIntoToDo_tooltip">
 		<English>Moves this comment into a special layer called 'To-do List'.</English>
 		<German>Verschiebt dieses Kommentar in eine spezielle Ebene mit dem Namen 'To-Do-Liste'.</German>
 		<Original>Moves this comment into a special layer called 'To-do List'.</Original>
 		<French>Déplace ce commentaire dans un calque spécial appelé 'Liste des tâches'.</French>
+		<Polish>Dodaje ten komentarz do specjalnej warstwy zwanej "Do zrobienia"</Polish>
 	</Key>
 	<Key ID="STR_ENH_toDoList">
 		<English>To-Do List</English>
 		<German>To-Do Liste</German>
 		<Original>To-Do List</Original>
 		<French>Liste des tâches</French>
+		<Polish>Do zrobienia</Polish>
 	</Key>
 	<Key ID="STR_ENH_briefingEditor_addMarker_tooltip">
 		<English>Add marker by double clicking.</English>
 		<German>Marker durch Doppelklick  hinzufügen.</German>
 		<Original>Add marker by double clicking.</Original>
+		<Polish>Dodaj marker podwójnym kliknięciem.</Polish>
 	</Key>
 	<Key ID="STR_ENH_briefingEditor_loadTemplate_tooltip">
 		<English>Load template by double clicking. Delete it from list by pressing DELETE.</English>
 		<German>Vorlage durch Doppelklicken laden. Löschen durch Drücken von ENTFERNEN.</German>
 		<Original>Load template by double clicking. Delete if from list by pressing DELETE.</Original>
+		<Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_type_displayName">
 		<Original>Type of Aircraft</Original>
@@ -1081,15 +1093,17 @@
 		<Chinesesimp>第四轴左轮</Chinesesimp>
 		<Polish>4ta oś lewe koło</Polish>
 	</Key>
-		<Key ID="STR_ENH_groupMarker_displayName">
+	<Key ID="STR_ENH_groupMarker_displayName">
 		<Original>Group Marker</Original>
 		<English>Group Marker</English>
 		<German>Gruppenmarker</German>
+		<Polish>Marker grupy</Polish>
 	</Key>
 	<Key ID="STR_ENH_groupMarker_tooltip">
 		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
 		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</English>
 		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.\n\nDer Eingabewert muss eine Markerklasse aus 'CfgMarkers' sein.</German>
+		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. \n\nAktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.\n\nWartość to classname z CfgMarkers np. 'mil_box'.</Polish>
 	</Key>
 	<Key ID="STR_ENH_advancedDamageVeh_RBWheel">
 		<Original>4th axle right wheel</Original>
@@ -3560,6 +3574,7 @@
 		<Original>Area Size</Original>
 		<English>Area Size</English>
 		<German>Gebietsgröße</German>
+		<Polish>Wielkość strefy</Polish>
 	</Key>
 	<Key ID="STR_ENH_garrison_notification">
 		<Original>Not enough empty building positions, increase the radius or reduce the coverage.</Original>
@@ -3643,7 +3658,7 @@
 		<Chinesesimp>最终颜色</Chinesesimp>
 		<Spanish>Color final</Spanish>
 		<French>Couleur finale</French>
-		<Polish>Finałowy kolor</Polish>
+		<Polish>Finalny kolor</Polish>
 	</Key>
 	<Key ID="STR_ENH_colourPicker_red">
 		<Original>Red</Original>
@@ -3812,7 +3827,7 @@
 		<Chinesesimp>列数</Chinesesimp>
 		<Spanish>#Columnas</Spanish>
 		<French>#Colonnes</French>
-		<Polish>#Kolumn</Polish>
+		<Polish>#Kolumny</Polish>
 	</Key>
 	<Key ID="STR_ENH_placementTools_spacingX">
 		<Original>Spacing X</Original>
@@ -3836,11 +3851,13 @@
 		<Original>Central Angle</Original>
 		<English>Central Angle</English>
 		<German>Öffnungswinkel</German>
+		<Polish>Kąt środkowy</Polish>
 	</Key>
 	<Key ID="STR_ENH_placementTools_initialAngle">
 		<Original>Initial Angle</Original>
 		<English>Initial Angle</English>
 		<German>Startwinkel</German>
+		<Polish>Kąt początkowy</Polish>
 	</Key>
 	<Key ID="STR_ENH_batchReplace_header">
 		<Original>Batch Replace</Original>
@@ -4100,10 +4117,11 @@
 		<French>Villes et villages</French>
 		<Polish>Miasta i wioski</Polish>
 	</Key>
-		<Key ID="STR_ENH_locationList_airports">
+	<Key ID="STR_ENH_locationList_airports">
 		<Original>Airports</Original>
 		<English>Airports</English>
 		<German>Landebahnen</German>
+		<Polish>Lotniska</Polish>
 	</Key>
 	<Key ID="STR_ENH_locationList_chapels">
 		<Original>Chapels</Original>
@@ -4169,11 +4187,13 @@
 		<Original>Power Production</Original>
 		<English>Power Production</English>
 		<German>Energieproduktion</German>
+		<Polish>Elektrownie</Polish>
 	</Key>
-		<Key ID="STR_ENH_locationList_unknown">
+	<Key ID="STR_ENH_locationList_unknown">
 		<Original>Unknown</Original>
 		<English>Unknown</English>
 		<German>Unbekannt</German>
+		<Polish>Nieznane</Polish>
 	</Key>
 	<Key ID="STR_ENH_searchState_pleaseWait">
 		<Original>Still searching. Please wait.</Original>
@@ -5077,10 +5097,11 @@
 		<Chinesesimp>驻军建筑物</Chinesesimp>
 		<Polish>Obsadź budynki</Polish>
 	</Key>
-		<Key ID="STR_ENH_placementTools_currentValue">
+	<Key ID="STR_ENH_placementTools_currentValue">
 		<Original>Current Value</Original>
 		<English>Current Value</English>
 		<German>Aktueller Wert</German>
+		<Polish>Aktualna wartość</Polish>
 	</Key>
 	<Key ID="STR_ENH_contextMenu_setTriggerOwnerPlayer">
 		<Original>Set Player as Trigger Owner</Original>
@@ -5323,7 +5344,8 @@
 	<Key ID="STR_ENH_help_ARMAnetEdenTutorial">
 		<English>Eden Editor Video Tuturial</English>
 		<German>Eden Editor Video Tuturial</German>
-		<Original>Eden Editor Video Tuturial</Original>
+		<Original>Eden Editor Video Tutorial</Original>
+		<Polish>Eden- Poradnik Wideo</Polish>
 	</Key>
 	<Key ID="STR_ENH_tools_placementTools">
 		<English>Placement Tools</English>
