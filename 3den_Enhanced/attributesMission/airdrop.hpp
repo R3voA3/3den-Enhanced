@@ -17,7 +17,7 @@ class Enh_Airdrop
 					_value spawn\
 					{\
 						private _condition = compile (missionNamespace getVariable ['Enh_Airdrop_Condition',false]);\
-						waitUntil {time > 0.2 && call _condition};\
+						waitUntil {sleep 1; call _condition};\
 						private _center = missionNamespace getVariable ['Enh_Airdrop_Center',[0,0,0]];\
 						_center set [2,(_center # 2) + random 50 - random 50];\
 						private _side = call compile (missionNamespace getVariable ['Enh_Airdrop_Side','west']);\
