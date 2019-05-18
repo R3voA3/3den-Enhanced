@@ -15,7 +15,7 @@ class Cfg3DEN
 		class Enh_NoEntitiesSelected
 		{
 			isWarning = 1;
-			text = "No entities selected. Action cancelled.";
+			text = $STR_ENH_notification_noEntitiesSelected;
 		};
 	};
 	class EventHandlers

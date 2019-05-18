@@ -2426,6 +2426,11 @@
         <Chinesesimp>执行操作！</Chinesesimp>
         <Polish>Akcja wykonana!</Polish>
     </Key>
+        <Key ID="STR_ENH_notifications_noEntitiesSelected">
+        <Original>No entities selected. Action cancelled!</Original>
+        <English>No entities selected. Action cancelled!</English>
+        <German>Keine Einheiten ausgewählt. Aktion abgebrochen!</German>
+    </Key>
     <Key ID="STR_ENH_enable_displayName">
         <Original>Enable</Original>
         <English>Enable</English>
