@@ -3,5 +3,6 @@
 *.pbo
 *.log
 *.7z
+*.zip
 .vscode
 Enh_GitHub.code-workspace
