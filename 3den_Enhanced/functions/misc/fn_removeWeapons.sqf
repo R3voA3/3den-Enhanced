@@ -14,13 +14,10 @@ private _units = get3DENSelected "Object";
 
 if (_units isEqualTo [] || !is3DEN) exitWith {false};
 
-collect3DENHistory
 {
-	{
-		removeAllWeapons _x;
-	} forEach _units;
-	save3DENInventory _units;
-};
+	removeAllWeapons _x;
+} forEach _units;
+save3DENInventory _units;
 
 ["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 

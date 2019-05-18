@@ -15,34 +15,30 @@ private _input = param [0,"",[""]];
 private _units = get3DENSelected "object";
 if (_units isEqualTo []) exitWith {false};
 
-switch (toUpper _input) do
+switch (_input) do
 {
-	case "COPY":
+	case "copy":
 	{
 		Enh_copiedLoadout_gear = [];
 		{
 			if (_x isKindOf "Man") then	{Enh_copiedLoadout_gear pushBack (getUnitLoadout _x)};
-			false;
-		} count _units;
+		} forEach _units;
+
 		["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 		true;
 	};
-	case "APPLY":
+	case "apply":
 	{
 		{
 			if (_x isKindOf "Man") then
 			{
-				_x setUnitLoadout (selectRandom Enh_copiedLoadout_gear);
-				save3DENInventory [_x];
+				_x setUnitLoadout selectRandom Enh_copiedLoadout_gear;
 			};
-			false;
-		} count _units;
+		} forEach _units;
+
+		save3DENInventory _units;
 		["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 		true;
-	};
-	default
-	{
-		false;
 	};
 };
 
