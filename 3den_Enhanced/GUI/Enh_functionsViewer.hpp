@@ -2,7 +2,8 @@ class Enh_FunctionsViewer
 {
 	idd = 180000;
 	movingEnable = true;
-	onLoad = "'ONLOAD' spawn Enh_fnc_functionsViewer";
+	onLoad = "_this call  Enh_fnc_functionsViewer_onLoad";
+	onUnload = "'showinterface' call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -34,7 +35,7 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
 			h = 0.854 * safezoneH;
-			onTreeSelChanged = "['SELCHANGED',_this] call Enh_fnc_functionsViewer";
+			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_selectionChanged";
 		};
 		class Search: Enh_Edit
 		{
@@ -63,7 +64,7 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'RECOMPILE_SELECTED' call Enh_fnc_functionsViewer";
+			onButtonClick = "_this call Enh_fnc_functionsViewer_recompileSelected";
 		};
 		class RecompileAll: Enh_Button
 		{
@@ -74,16 +75,16 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";//Indication that it recompiles, button text?
+			onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
 		};
 		class Close: Enh_Button
 		{
 			text = "X";
+			idc = 1;
 			x = 0.965937 * safezoneW + safezoneX;
 			y = 0.024 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'CLOSE' call Enh_fnc_functionsViewer";
 		};
 		class Copy: Enh_Button
 		{
@@ -93,7 +94,7 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'COPY' call Enh_fnc_functionsViewer";
+			onButtonClick = "call Enh_fnc_functionsViewer_copy";
 		};
 		class Collapse: Enh_Button
 		{
@@ -125,7 +126,7 @@ class Enh_FunctionsViewer
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.741562 * safezoneW;
 			h = 0.812 * safezoneH;
-			class controls
+			class Controls
 			{
 				class Code: Enh_Edit
 				{
