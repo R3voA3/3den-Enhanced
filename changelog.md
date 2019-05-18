@@ -7,9 +7,14 @@ v4.2
 - Condition for Airdrop attribute is now checked every second. Instead of every frame
 - Updated polish translation
 - Exporting inventory to config is now possible with GUI
+- Shortcut for Remove Vest tool was removed because it was blocking a default Eden action
+- Functions Viewer performs better now
+- Debug Console now uses the Eden Enhanced Functions Viewer
+- Enh_fnc_FunctionsViewer was split into multiple function files
 
 *removed*
 - Export Inventory to Config GUI->Wasn't needed any longer
+- Removed obsolete Icons
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
