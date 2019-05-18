@@ -16,7 +16,7 @@ private _object = (get3DENSelected "Object") # 0;
 if (!is3DEN || isNil "_object") exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
 
 #define LB endl
-#define IND "    " 
+#define IND "    "
 
 private _class = typeOf _object;
 private _displayName = format ["displayName = ""%1"";",getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
