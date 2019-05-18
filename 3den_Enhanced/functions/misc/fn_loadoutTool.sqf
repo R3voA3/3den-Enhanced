@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Copies loadout from selected units and applies it to all selected onces (Tools can be selected in the menu strip).
+   Copies loadout from selected units and applies it to all selected ones (Tools can be selected in the menu strip).
 
    Parameter(s):
    _this: STRING - action ("copy" or "apply")

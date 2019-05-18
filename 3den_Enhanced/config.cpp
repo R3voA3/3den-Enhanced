@@ -11,7 +11,6 @@
 #include "GUI\Enh_moduleInformation.hpp"
 #include "GUI\Enh_textureFinder.hpp"
 #include "GUI\Enh_batchReplace.hpp"
-#include "GUI\Enh_exportInventory.hpp"
 #include "GUI\Enh_functionsViewer.hpp"
 #include "GUI\Enh_actionCreator.hpp"
 #include "GUI\Enh_credits.hpp"

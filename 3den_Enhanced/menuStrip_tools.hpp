@@ -255,7 +255,7 @@ class Enh_ApplyLoadout: Enh_copyLoadout
 class Enh_ExportLoadoutConfig
 {
 	text = $STR_ENH_tools_exportLoadoutConfig;
-	action = "findDisplay 313 createDisplay 'Enh_ExportInventory'";
+	action = "call Enh_fnc_exportInventoryConfig";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
 	opensNewWindow = 1;
 };

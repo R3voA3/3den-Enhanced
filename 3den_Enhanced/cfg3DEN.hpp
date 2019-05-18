@@ -7,10 +7,15 @@ class Cfg3DEN
 			isWarning = 0;
 			text = $STR_a3_RscDisplayArsenal_message_clipboard;
 		};
-		class Enh_actionPerformed
+		class Enh_ActionPerformed
 		{
 			isWarning = 0;
 			text = $STR_ENH_notifications_actionPerformed;
+		};
+		class Enh_NoEntitiesSelected
+		{
+			isWarning = 1;
+			text = "No entities selected. Action cancelled.";
 		};
 	};
 	class EventHandlers

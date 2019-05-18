@@ -73,15 +73,11 @@ class CfgFunctions
 			class placementTools_initialAngle;
 			class placementTools_spacing;
 		};
-		class exportInventory
-		{
-			file = "3denEnhanced\functions\GUI\exportInventory";
-			class exportInventoryConfig;
-		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
 			class loadoutTool;
+			class exportInventoryConfig;
 			class measureDistance;
 			class switchTime;
 			class toggleGrass;
