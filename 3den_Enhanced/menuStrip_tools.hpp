@@ -257,7 +257,6 @@ class Enh_ExportLoadoutConfig
 	text = $STR_ENH_tools_exportLoadoutConfig;
 	action = "call Enh_fnc_exportInventoryConfig";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
-	opensNewWindow = 1;
 };
 class Enh_RemoveNVGs
 {
@@ -269,7 +268,6 @@ class Enh_RemoveVests
 {
 	text = $STR_ENH_tools_removeVests;
 	action = "call Enh_fnc_removeVests";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_V};
 };
 class Enh_RemoveGoggles
 {
