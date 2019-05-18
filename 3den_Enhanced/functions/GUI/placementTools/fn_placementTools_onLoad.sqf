@@ -15,7 +15,7 @@ params ["_display"];
 Enh_PlacementTools_Selected = call Enh_fnc_all3DENSelected;
 uiNamespace setVariable ["Enh_PlacementTools_Display",_display];
 
-if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["No Entities selected!",1] call BIS_fnc_3DENNotification; _display closeDisplay 1; false};
+if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; _display closeDisplay 1; false};
 
 ["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
 ["ShowPanelRight",false] call BIS_fnc_3DENInterface;
