@@ -19,9 +19,9 @@ switch (_input) do
 {
 	case "copy":
 	{
-		Enh_copiedLoadout_gear = [];
+		Enh_CopiedLoadout_Gear = [];
 		{
-			if (_x isKindOf "Man") then	{Enh_copiedLoadout_gear pushBack (getUnitLoadout _x)};
+			if (_x isKindOf "Man") then	{Enh_CopiedLoadout_Gear pushBack (getUnitLoadout _x)};
 		} forEach _units;
 
 		["Enh_DataCopied"] call BIS_fnc_3DENNotification;
@@ -32,7 +32,7 @@ switch (_input) do
 		{
 			if (_x isKindOf "Man") then
 			{
-				_x setUnitLoadout selectRandom Enh_copiedLoadout_gear;
+				_x setUnitLoadout selectRandom Enh_CopiedLoadout_Gear;
 			};
 		} forEach _units;
 
