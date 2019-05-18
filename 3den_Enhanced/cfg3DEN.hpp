@@ -15,7 +15,7 @@ class Cfg3DEN
 		class Enh_NoEntitiesSelected
 		{
 			isWarning = 1;
-			text = $STR_ENH_notification_noEntitiesSelected;
+			text = $STR_ENH_notifications_noEntitiesSelected;
 		};
 	};
 	class EventHandlers
