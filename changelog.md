@@ -6,8 +6,10 @@ v4.2
 - Briefing Editor: If marker has no name, the variable name is displayed instead
 - Condition for Airdrop attribute is now checked every second. Instead of every frame
 - Updated polish translation
+- Exporting inventory to config is now possible with GUI
 
 *removed*
+- Export Inventory to Config GUI->Wasn't needed any longer
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
