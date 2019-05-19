@@ -5,6 +5,7 @@
 *.log
 *.7z
 *.zip
+*.txt
 
 #Exluded files
 .vscode
