@@ -1,3 +1,16 @@
+v4.3
+*added*
+
+*changed*
+- Functions Viewer does now restore the last viewed function
+- Functions Viewer shows mod icons again
+
+*removed*
+
+*known Issues*
+- Event Code Attribute does not work on dedicated servers
+- Stay on Position attribute sometimes fails on dedicated server
+
 v4.2
 *added*
 

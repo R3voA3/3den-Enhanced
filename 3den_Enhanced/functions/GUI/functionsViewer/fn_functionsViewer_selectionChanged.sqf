@@ -33,4 +33,6 @@ _ctrlCode ctrlSetText loadFile _fncPath;
 _ctrlCode ctrlSetPositionH (1.2 max (ctrlTextHeight _ctrlCode));
 _ctrlCode ctrlCommit 0;
 
+profileNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_path];
+
 true

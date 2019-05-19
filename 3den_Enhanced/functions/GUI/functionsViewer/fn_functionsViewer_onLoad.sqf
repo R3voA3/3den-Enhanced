@@ -42,15 +42,16 @@ if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 		_nameTAG = configName _x;
 		_valueTAG = getText (_x >> "tag");
 		_mod = configSourceMod (configfile >> "CfgFunctions" >> _nameTAG);
-		//_logo = modParams [_mod,["logoSmall"]] param [0,""];
-		//_ctrlTV tvSetPictureRight [[_indexConfig,_indexTAG],_logo];
+		_logo = modParams [_mod,["logoSmall"]] param [0,""];
+		_ctrlTV tvSetPictureRight [[_indexConfig,_indexTAG],_logo];
+
 		if (_valueTAG == "") then {_valueTag = configName _x};
-		//diag_log _valueTAG;
 		{//Categories
 			_ctrlTV tvAdd [[_indexConfig,_indexTAG],configName _x];
 			_indexCategory = _forEachIndex;
 			_nameCategory = configName _x;
 			_pathCategory= getText (_x >> "file");
+
 			{//Functions
 				_indexFnc = _ctrlTV tvAdd [[_indexConfig,_indexTAG,_indexCategory],configName _x];
 				_fileExtension = getText (_x >> "ext");
@@ -65,7 +66,6 @@ if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 				{
 					_path = _pathFunction;
 				};
-				diag_log _path;
 
 				//Data has to be string but will be split with splitString "%" to get the actual values
 				_ctrlTV tvSetData [[_indexConfig,_indexTAG,_indexCategory,_indexFnc],_valueTag + "_fnc_" + configName _x + "%" + _path];
@@ -86,7 +86,7 @@ if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 	_ctrlTV tvSort [[_indexConfig],false];//Sort
 } foreach [[configFile,"configFile"],[missionConfigFile,"missionConfigFile"],[campaignConfigFile,"campaignConfigFile"]];
 
-_ctrlTV tvExpand [0];
+_ctrlTV tvSetCurSel (profileNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[0,0,0,0]]);
 
 _disp displayAddEventHandler ["keyDown",//Focus Search
 {
