@@ -4,6 +4,7 @@ v4.3
 *changed*
 - Functions Viewer does now restore the last viewed function
 - Functions Viewer shows mod icons again
+- Functions Viewer now displays line numbers
 
 *removed*
 

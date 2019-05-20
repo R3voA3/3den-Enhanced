@@ -128,16 +128,21 @@ class Enh_FunctionsViewer
 			h = 0.812 * safezoneH;
 			class Controls
 			{
-				class Code: Enh_Edit
+				class Lines: Enh_StructuredText
 				{
-					idc = 1401;
+					idc = 1404;
 					canModify = false;
 					x = 0;
 					y = 0;
-					w = 4;
+					w = 0.070;
 					h = 2;
 					font = "EtelkaMonospacePro";
 					shadow = 0;
+				};
+				class Code: Lines
+				{
+					idc = 1401;
+					x = 0.075;
 				};
 			};
 		};
