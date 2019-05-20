@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	_value
+	ANYTHING: _value
 */
 
 params ["_ctrl","_config"];

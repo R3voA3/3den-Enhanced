@@ -7,8 +7,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 private ["_disp","_ctrlProg","_ctrlProgText","_locString"];

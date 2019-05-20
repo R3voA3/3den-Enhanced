@@ -10,8 +10,8 @@
    "test"]
 
    Parameter(s):
-   ARRAY - Array which should be modified
-   BOOLEAN - (Optional, default true) - Put output into brackets
+   0: ARRAY - Array which should be modified
+   1: BOOLEAN: (Optional, default true) - Put output into brackets
 
    Returns:
    STRING - Modified array as string

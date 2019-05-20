@@ -8,7 +8,7 @@
    -
 
    Returns:
-   BOOLEAN - true / false
+   BOOLEAN: true / false
 */
 
 #define DISPLAY (findDisplay 80000)

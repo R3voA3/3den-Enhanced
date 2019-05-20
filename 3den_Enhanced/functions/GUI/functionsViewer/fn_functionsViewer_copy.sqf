@@ -5,10 +5,10 @@
    Used by the Enh_FunctionViewer GUI. Called when the Copy button is pressed.
 
    Parameter(s):
-   0: Control - Button
+   0: CONTROL: Control - Button
 
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 private _disp = findDisplay 180000;

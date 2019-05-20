@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-    BOOLEAN - true
+    BOOLEAN: true
 */
 
 private _selection = call Enh_fnc_all3DENSelected;

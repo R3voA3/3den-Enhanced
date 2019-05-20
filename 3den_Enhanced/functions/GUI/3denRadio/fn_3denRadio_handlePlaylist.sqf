@@ -16,7 +16,7 @@
 	1: NUMBER - (Optional, default -1) - Key code used by some functionalities
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
  */
 
 disableSerialization;

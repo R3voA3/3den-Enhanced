@@ -8,7 +8,7 @@
 	-
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 private _disp = ctrlparent (_this # 0);

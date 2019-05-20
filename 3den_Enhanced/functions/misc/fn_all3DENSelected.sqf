@@ -6,6 +6,7 @@
 
    Parameter(s):
    -
+
    Returns:
    ARRAY - List of selected objects
 */

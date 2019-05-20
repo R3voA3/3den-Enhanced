@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Logs all mission attribute values to the clipboard.
+	Description:
+	Logs all mission attribute values to the clipboard.
 
-   Parameter(s):
-   -
-   Returns:
-  BOOLEAN -  true
+	Parameter(s):
+	-
+
+	Returns:
+	BOOLEAN: true
 */
 
 private _attributeValues = [];

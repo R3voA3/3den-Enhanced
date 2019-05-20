@@ -9,7 +9,7 @@
    1: ARRAY - Path
 
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 params ["_ctrlTV", "_path"];

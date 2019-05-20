@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Replaces all selected objects with the types of objects defined in the GUI "Enh_BatchReplace".
+	Description:
+	Replaces all selected objects with the types of objects defined in the GUI "Enh_BatchReplace".
 
-   Parameter(s):
-   -
-   Returns:
-  BOOLEAN -  true / false
+	Parameter(s):
+	-
+
+	Returns:
+	BOOLEAN:  true / false
 */
 
 private ["_replaceWith","_class","_replaceWithArray","_objects"];

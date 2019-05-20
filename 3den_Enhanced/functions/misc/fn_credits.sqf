@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Shows 3den Enhanced credits.
+	Description:
+	Shows 3den Enhanced credits.
 
-   Parameter(s):
-   -
-   Returns:
-   BOOLEAN - true
+	Parameter(s):
+	-
+
+	Returns:
+	BOOLEAN: true
 */
 
 disableSerialization;

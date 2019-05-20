@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 private _posClick = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;

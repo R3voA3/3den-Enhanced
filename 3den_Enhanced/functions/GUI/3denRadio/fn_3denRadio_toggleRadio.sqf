@@ -5,10 +5,10 @@
 	Enable or disables the radio and updates other controls accordingly.
 
 	Parameter(s):
-	_input: STRING: "BUTTON", "ONLOAD"
+	STRING: _input - "BUTTON", "ONLOAD"
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 disableSerialization;
 private _ctrlToggleRadio = (findDisplay 60000) displayCtrl 2300;

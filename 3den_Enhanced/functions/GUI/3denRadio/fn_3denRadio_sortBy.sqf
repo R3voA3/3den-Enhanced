@@ -5,10 +5,10 @@
 	Sorts the song list listbox according to input.
 
 	Parameter(s):
-	_sortBy: STRING: "NAME","DURATION","THEME"
+	STRING: _sortBy - "NAME","DURATION","THEME"
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 disableSerialization;

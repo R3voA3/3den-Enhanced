@@ -8,7 +8,7 @@
 	NUMBER: Direction in degrees
 
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 private _input = param [0,0,[0]];

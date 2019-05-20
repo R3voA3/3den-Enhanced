@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 private _modList = "";

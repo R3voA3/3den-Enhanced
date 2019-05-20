@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 disableSerialization;//For BIS_fnc_3DENNotification

@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   BOOLEAN - true / false
+   BOOLEAN: true / false
 */
 
 #define GET_CONTROL(IDD,IDC) ((findDisplay IDD) displayCtrl IDC)

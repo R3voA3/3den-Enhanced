@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+  Author: Revo
 
-   Description:
-   Automatically creates a mission description for Steam.
+  Description:
+  Automatically creates a mission description for Steam.
 
-   Parameter(s):
-   -
-   Returns:
-  BOOLEAN -  true
+  Parameter(s):
+  -
+
+  Returns:
+  BOOLEAN: true
 */
 
 ["Enh_DataCopied"] call BIS_fnc_3DENNotification;

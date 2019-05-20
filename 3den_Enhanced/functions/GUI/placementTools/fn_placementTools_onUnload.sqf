@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 delete3DENEntities [Enh_PlacementTools_AreaTrigger,Enh_PlacementTools_GarrisonTrigger]; 

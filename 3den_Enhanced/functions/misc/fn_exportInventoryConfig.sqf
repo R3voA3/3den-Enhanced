@@ -8,7 +8,7 @@
 	-
 
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 private _object = (get3DENSelected "Object") # 0;

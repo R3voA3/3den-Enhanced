@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   true
+   BOOLEAN: true
 */
 
 set3DENMissionAttributes call compile copyFromClipboard;

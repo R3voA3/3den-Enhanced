@@ -8,7 +8,7 @@
 	-
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 params ["_display"];

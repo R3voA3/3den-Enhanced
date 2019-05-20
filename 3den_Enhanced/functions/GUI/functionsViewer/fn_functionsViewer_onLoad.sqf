@@ -8,7 +8,7 @@
    0: DISPLAY - Display
 
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 disableSerialization;
