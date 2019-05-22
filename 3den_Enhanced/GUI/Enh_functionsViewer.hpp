@@ -9,7 +9,6 @@ class Enh_FunctionsViewer
 		DISABLE_BACKGROUND
 		class Background: Enh_Background
 		{
-			idc = 333;
 			x = 0.014375 * safezoneW + safezoneX;
 			y = 0.052 * safezoneH + safezoneY;
 			w = 0.97125 * safezoneW;
@@ -138,11 +137,16 @@ class Enh_FunctionsViewer
 					h = 2;
 					font = "EtelkaMonospacePro";
 					shadow = 0;
+					colorBackground[] = {COLOR_OVERLAY_RGBA};
 				};
-				class Code: Lines
+				class Code: Enh_Edit
 				{
 					idc = 1401;
+					canModify = false;
 					x = 0.075;
+					w = 4;
+					font = "EtelkaMonospacePro";
+					shadow = 0;
 				};
 			};
 		};
