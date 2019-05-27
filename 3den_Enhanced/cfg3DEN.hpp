@@ -40,17 +40,18 @@ class Cfg3DEN
 			{
 				class Title;
 			};
-		};
-		//Combo
-		#include "controls\terrainGrid.hpp"
-		#include "controls\featureType.hpp"
+		};		
 		//Slider
 		#include "controls\timeMultiplier.hpp"
+		//Toolbox
+		#include "controls\featureType.hpp"
+		#include "controls\terrainGrid.hpp"
 		//Misc
 		#include "controls\ambientAnimation.hpp"
 		#include "controls\introText.hpp"
 		#include "controls\establishingShot.hpp"
 		#include "controls\mapIndicators.hpp"
+		
 	};
 	class Mission
 	{
