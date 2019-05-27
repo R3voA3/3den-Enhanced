@@ -50,7 +50,11 @@ _ctrlTV tvAdd [[],"Custom Category"];
 		case "Preferences": {4};
 		default {5};
 	};
-	private _index = _ctrlTV tvAdd [[_baseIndex],_x # 1];
+	//_x # 0 => Attribute Section
+	//_x # 1 => PropertyName
+	//_x # 2 => Attribute Value
+	//_x # 3 => Attribute Display Name
+	private _index = _ctrlTV tvAdd [[_baseIndex],format ["%1 (%2)",_x # 3,_x # 1]];
 	_ctrlTV tvSetData [[_baseIndex,_index],str _x];
 	_ctrlTV tvSetTooltip [[_baseIndex,_index],str (_x # 2)];
 	_ctrlTV tvSort [[_baseIndex],false];
