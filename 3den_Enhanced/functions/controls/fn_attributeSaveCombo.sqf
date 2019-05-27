@@ -11,6 +11,6 @@
 	ANYTHING: _value
 */
 
-params ["_ctrl","_config"];
+params ["_ctrl"];
 
-_ctrl lbData lbCurSel _ctrl;
+_ctrl lbData lbCurSel _ctrl
