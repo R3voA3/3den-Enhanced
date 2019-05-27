@@ -48,6 +48,7 @@ _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
-profileNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_path];
+//profileNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_path]; Doesn't work when search was used
+//systemChat format ["Path: %1",_path];
 
 true
