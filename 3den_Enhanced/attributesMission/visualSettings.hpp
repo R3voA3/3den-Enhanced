@@ -25,8 +25,9 @@ class Enh_VisualSettings
 			displayName = $STR_ENH_disableGrass_displayName;
 			tooltip = "";
 			property = "Enh_disableGrass";
-			control = "Enh_TerrainGrid";
-			expression = "if (((parseNumber _value) > 0) && !is3DEN && hasInterface) then {setTerrainGrid (parseNumber _value)}";
+			control = "Enh_TerrainGrid";//Type check to prevent issues
+			expression = "if (_value isEqualType 0 && !is3DEN && hasInterface) then {setTerrainGrid _value};\
+			if (_value isEqualType '' && !is3DEN && hasInterface) then {setTerrainGrid parseNumber _value}";
 		};
 	};
 };
