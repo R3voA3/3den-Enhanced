@@ -97,25 +97,25 @@ class Enh_Folder_Utilities
 class Enh_MoonPhases
 {
 	text = $STR_ENH_tools_moonPhases;
-	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf'";
+	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf'";
 	opensNewWindow = 1;
 };
 class Enh_Jukebox
 {
 	text = $STR_ENH_tools_jukebox;
-	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
+	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
 	opensNewWindow = 1;
 };
 class Enh_PrintConfig
 {
 	text = $STR_ENH_tools_printConfig;
-	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
+	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
 	opensNewWindow = 1;
 };
 class Enh_CfgDisabledCommands
 {
 	text = $STR_ENH_tools_CfgDisabledCommands;
-	action = "_nil = [] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
+	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
 	opensNewWindow = 1;
 };
 class Enh_BriefingEditor
@@ -128,7 +128,7 @@ class Enh_BriefingEditor
 };
 class Enh_3denRadio
 {
-	text = "3den Radio...";
+	text = "STR_ENH_tools_3denRadio";
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
 	action = "findDisplay 313 createDisplay 'Enh_3denRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
@@ -218,13 +218,13 @@ class FunctionsViewer//Overwrites the default function viewer
 };
 class Enh_ActionCreator
 {
-	text = "Action Creator...";
+	text = "STR_ENH_tools_actionCreator";
 	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
 	opensNewWindow = 1;
 };
 class Enh_ScenarioAttributesManager
 {
-	text = "Scenario Attributes Manager";
+	text = "STR_ENH_tools_ScenarioAttributesManager";
 	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
 	opensNewWindow = 1;
 };
