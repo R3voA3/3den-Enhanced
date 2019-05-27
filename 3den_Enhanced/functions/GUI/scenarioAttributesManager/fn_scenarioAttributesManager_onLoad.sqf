@@ -1,0 +1,32 @@
+/*
+   Author: R3vo
+
+   Date:  2019-05-25
+
+   Description:
+   Used by the Enh_Enh_ScenarioAttributesManager GUI.
+   Fills listbox with templates stored in profilenamespace when UI is loaded.
+
+   Parameter(s):
+   0: DISPLAY - Display
+
+   Returns:
+   BOOLEAN: true / false
+*/
+
+params ["_display"];
+
+_ctrlLB = _display displayCtrl 1501;
+_templates = profileNamespace getVariable ["Enh_ScenarioAttributesManager_Templates",[]];
+
+if (_templates isEqualTo []) exitWith {false};
+
+{
+	private _index = _ctrlLB lbAdd (_x # 0);	//Use title as lb entry
+	_ctrlLB lbSetTooltip [_index,_x # 1];		//Use description of templates as tooltip
+	_ctrlLB lbSetData [_index,str _x];			//Store the whole template data as lb data for easy access
+} forEach _templates;
+
+lbSort [_ctrlLB,"DESC"];
+
+true

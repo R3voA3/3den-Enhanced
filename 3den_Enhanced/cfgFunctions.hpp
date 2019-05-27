@@ -76,6 +76,18 @@ class CfgFunctions
 			class placementTools_initialAngle;
 			class placementTools_spacing;
 		};
+		class ScenarioAttributesManager
+		{
+			file = "3denEnhanced\functions\GUI\scenarioAttributesManager";
+			class scenarioAttributesManager_onLoad;
+			class scenarioAttributesManager_onUnload;
+			class scenarioAttributesManager_loadTemplate;
+			class scenarioAttributesManager_deleteTemplate;
+			class scenarioAttributesManager_applyTemplate;
+			class scenarioAttributesManager_createTemplate;
+			class scenarioAttributesManager_applyAttribute;
+			class scenarioAttributesManager_getScenarioAttributes;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
