@@ -1,53 +1,31 @@
-class Enh_TerrainGrid: Title
+class Enh_TerrainDetail: Title
 {
-	attributeLoad = "[_this controlsGroupCtrl 100,_config] call Enh_fnc_attributeLoadCombo";
-	attributeSave = "[_this controlsGroupCtrl 100,_config] call Enh_fnc_attributeSaveCombo";
+    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCursel ([-1,50,25,12.5,6.25,3.125] find _value)";
+    attributeSave = "[-1,50,25,12.5,6.25,3.125] select (missionNamespace getVariable ['Enh_TerrainGrid_Value',0])";
+    h = "2 * 5 * (pixelH * pixelGrid * 0.50)";
 
-	class Controls: Controls
-	{
-		class Title: Title {};
-		class Value: ctrlCombo
-		{
-			idc = 100;
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
-
-			class Items
-			{
-				class NoChange
-				{
-					text = $STR_3den_attributes_default_unchanged_text;
-					tooltip = $STR_3den_attributes_default_unchanged_tooltip;
-					data = "-1";
-					default = 1;
-				};
-				class Low
-				{
-					text = $STR_ENH_terrainGrid_grassDisabled_displayName;
-					data = "50";
-				};
-				class Standard
-				{
-					text = $STR_ENH_terrainGrid_standard_displayName;
-					data = "25";
-				};
-				class High
-				{
-					text = $STR_ENH_terrainGrid_high_displayName;
-					data = "12.5";
-				};
-				class VeryHigh
-				{
-					text = $STR_ENH_terrainGrid_veryHigh_displayName;
-					data = "6.25";
-				};
-				class Ultra
-				{
-					text = $STR_ENH_terrainGrid_ultra_displayName;
-					data = "3.125";
-				};
-			};
-		};
-	};
+    class Controls: Controls
+    {
+        class Title: Title {};
+        class Value: ctrlToolbox
+        {
+            idc = 100;
+            x = "48 * (pixelW * pixelGrid * 0.50)";
+            w = "82 * (pixelW * pixelGrid * 0.50)";
+            h = "10 * (pixelH * pixelGrid * 0.50)";
+            rows = 2;
+            columns = 3;
+            strings[] = 
+            {
+                $STR_3den_attributes_default_unchanged_text,
+                $STR_ENH_terrainGrid_grassDisabled_displayName,
+                $STR_ENH_terrainGrid_standard_displayName,
+                $STR_ENH_terrainGrid_high_displayName,
+                $STR_ENH_terrainGrid_veryHigh_displayName,
+                $STR_ENH_terrainGrid_ultra_displayName
+            };
+            values[] = {-1,50,25,12.5,6.25,3.125};
+            onToolboxSelChanged = "Enh_TerrainGrid_Value = _this # 1";
+        };
+    };
 };
