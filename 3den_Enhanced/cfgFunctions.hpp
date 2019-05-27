@@ -113,11 +113,11 @@ class CfgFunctions
 			class credits;
 			class all3DENSelected;
 			class numberOfSelectedEntities;
-			class importMissionAttributes;
 			class exportWithLB;
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
 			class gitHubNotification;
+			class locationList;
 		};
 		class Log
 		{
@@ -137,13 +137,6 @@ class CfgFunctions
 			class toggleMapIDs;
 			class sessionTimer;
 			class onPreviewDebug;
-		};
-		class Controls
-		{
-			file = "3denEnhanced\functions\controls";
-			class attributeLoadCombo;
-			class attributeSaveCombo;
-			class locationList;
 		};
 	};
 };
