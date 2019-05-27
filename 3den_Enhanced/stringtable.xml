@@ -23,6 +23,10 @@
         <Chinesesimp>音乐音量</Chinesesimp>
         <Polish>Głośność muzyki</Polish>
     </Key>
+        <Key ID="STR_ENH_terrainDetail_displayName">
+        <Original>Terrain Detail</Original>
+        <English>Terrain Detail</English>
+    </Key>
     <Key ID="STR_ENH_radioVolume_displayName">
         <Original>Volume (Radio)</Original>
         <English>Volume (Radio)</English>
