@@ -87,6 +87,7 @@ class CfgFunctions
 			class scenarioAttributesManager_createTemplate;
 			class scenarioAttributesManager_applyAttribute;
 			class scenarioAttributesManager_getScenarioAttributes;
+			class scenarioAttributesManager_exportToClipboard;
 		};
 		class Misc
 		{
