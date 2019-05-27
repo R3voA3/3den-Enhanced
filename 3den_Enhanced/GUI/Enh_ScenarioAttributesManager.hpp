@@ -101,10 +101,10 @@ class Enh_ScenarioAttributesManager
 		};
 		class CreateTemplate: Enh_Button
 		{
-			text = "Create Template from Mission Attributes";
-			x = 0.414687 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.223125 * safezoneW;
+			text = "Create Template from Scenario";
+			x = 0.5525 * safezoneW + safezoneX;
+			y = 0.192 * safezoneH + safezoneY;
+			w = 0.203437 * safezoneW;
 			h = 0.028 * safezoneH;
 			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_ScenarioAttributesManager_TemplateData'";
 		};
@@ -121,8 +121,8 @@ class Enh_ScenarioAttributesManager
 		class Export: Enh_Button
 		{
 			text = "Export to Clipboard";
-			x = 0.644375 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
+			x = 0.414687 * safezoneW + safezoneX;
+			y = 0.85 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.028 * safezoneH;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_exportToClipboard";
@@ -130,16 +130,16 @@ class Enh_ScenarioAttributesManager
 		class Search: Enh_Edit
 		{
 			idc = 1400;
-			x = 0.690312 * safezoneW + safezoneX;
-			y = 0.192 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			x = 0.414687 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
 		class SearchIcon: Enh_Picture
 		{
 			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-			x = 0.677188 * safezoneW + safezoneX;
-			y = 0.192 * safezoneH + safezoneY;
+			x = 0.486875 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
@@ -148,8 +148,8 @@ class Enh_ScenarioAttributesManager
 			tooltip = $STR_ENH_functionsViewer_collapseAll_text;
 			style = "0x02 + 0x30 + 0x800";
 			colorBackground[] = {0,0,0,0};
-			x = 0.651688 * safezoneW + safezoneX;
-			y = 0.192 * safezoneH + safezoneY;
+			x = 0.513125 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 			text = "\a3\3DEN\Data\Displays\Display3DEN\tree_collapse_ca.paa";
@@ -160,8 +160,8 @@ class Enh_ScenarioAttributesManager
 			tooltip = $STR_ENH_functionsViewer_expandAll_text;
 			style = "0x02 + 0x30 + 0x800";
 			colorBackground[] = {0,0,0,0};
-			x = 0.664813 * safezoneW + safezoneX;
-			y = 0.192 * safezoneH + safezoneY;
+			x = 0.5 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
 			w = 0.013125 * safezoneW;
 			h = 0.028 * safezoneH;
 			text = "\a3\3DEN\Data\Displays\Display3DEN\tree_expand_ca.paa";
