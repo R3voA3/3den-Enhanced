@@ -19,11 +19,11 @@ $[
 
 class Enh_ScenarioAttributesManager
 {
-	idd = 190000;
+	idd = ENH_SCENARIOATTRIBUTESMANAGER;
 	movingEnable = true;
 	enableSimulation = true;
-	onLoad = "_this call Enh_scenarioAttributesManager_onLoad";
-	onUnload = "_this call Enh_scenarioAttributesManager_onUnload";
+	onLoad = "_this call Enh_fnc_scenarioAttributesManager_onLoad";
+	onUnload = "_this call Enh_fnc_scenarioAttributesManager_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -62,7 +62,7 @@ class Enh_ScenarioAttributesManager
 			y = 0.234 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;
 			h = 0.56 * safezoneH;
-			onLBSelChanged = "_this call Enh_scenarioAttributesManager_loadTemplate";
+			onLBSelChanged = "_this call Enh_fnc_scenarioAttributesManager_loadTemplate";
 		};
 		class AttributeList: ctrlTree
 		{
@@ -72,7 +72,7 @@ class Enh_ScenarioAttributesManager
 			y = 0.234 * safezoneH + safezoneY;
 			w = 0.34125 * safezoneW;
 			h = 0.56 * safezoneH;
-			onTreeDblClick = "_this call Enh_scenarioAttributesManager_applyAttribute";
+			onTreeDblClick = "_this call Enh_fnc_scenarioAttributesManager_applyAttribute";
 		};
 		class Templates: Enh_Text
 		{
@@ -97,7 +97,7 @@ class Enh_ScenarioAttributesManager
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "_this call Enh_scenarioAttributesManager_deleteTemplate";
+			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_deleteTemplate";
 		};
 		class CreateTemplate: Enh_Button
 		{
@@ -116,7 +116,7 @@ class Enh_ScenarioAttributesManager
 			w = 0.164062 * safezoneW;
 			h = 0.028 * safezoneH;
 			tooltip = "Applies currently selected Template to this mission. Action can be undone with the Eden undo button.";
-			onButtonClick = "_this call Enh_scenarioAttributesManager_applyTemplate";
+			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_applyTemplate";
 		};
 		class Export: Enh_Button
 		{
@@ -125,7 +125,7 @@ class Enh_ScenarioAttributesManager
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "_this call Enh_scenarioAttributesManager_exportToClipboard";
+			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_exportToClipboard";
 		};
 		class Search: Enh_Edit
 		{

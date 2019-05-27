@@ -15,7 +15,7 @@ $[
 
 class Enh_ScenarioAttributesManager_TemplateData
 {
-	idd = -1;
+	idd = ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
 	movingEnable = true;
 	enableSimulation = true;
 	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
@@ -91,7 +91,7 @@ class Enh_ScenarioAttributesManager_TemplateData
 			y = 0.584 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "_this call Enh_scenarioAttributesManager_createTemplate";
+			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_createTemplate";
 		};
 	};
 };

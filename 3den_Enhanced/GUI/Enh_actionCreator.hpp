@@ -1,6 +1,6 @@
 class Enh_ActionCreator
 {
-	idd = 190000;
+	idd = ENH_ACTIONCREATOR;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_actionCreator_onLoad";
 	class ControlsBackground

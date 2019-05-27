@@ -1,6 +1,6 @@
 class Enh_BriefingEditor
 {
-	idd = 50000;
+	idd = ENH_BRIEFINGEDITOR;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_briefingEditor_onLoad";
 	onUnload = "call Enh_fnc_briefingEditor_onUnload";

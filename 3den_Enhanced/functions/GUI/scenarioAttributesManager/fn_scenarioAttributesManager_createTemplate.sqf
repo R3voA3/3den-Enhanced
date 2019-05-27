@@ -27,12 +27,12 @@ _display closeDisplay 1;
 
 [] spawn 
 {
-	waitUntil {!(isNull findDisplay 190000)};
+	waitUntil {!(isNull findDisplay 160000)};
 
-	private _display = findDisplay 190000;
+	private _display = findDisplay 160000;
 	private _ctrlLB = _display displayCtrl 1501;
 	
-	private _attributeValues = call Enh_scenarioAttributesManager_getScenarioAttributes;
+	private _attributeValues = call Enh_fnc_scenarioAttributesManager_getScenarioAttributes;
 
 
 	private _index = _ctrlLB lbAdd Enh_ScenarioAttributesManager_TemplateTitle;

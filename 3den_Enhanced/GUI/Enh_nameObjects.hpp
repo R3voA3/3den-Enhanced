@@ -1,6 +1,6 @@
 class Enh_NameObjects
 {
-	idd = 80000;
+	idd = ENH_NAMEOBJECTS;
 	movingEnable = true;
 	class ControlsBackground
 	{

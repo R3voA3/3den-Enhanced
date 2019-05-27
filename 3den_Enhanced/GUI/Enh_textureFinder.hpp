@@ -1,6 +1,6 @@
 class Enh_TextureFinder
 {
-	idd = 140000;
+	idd = ENH_TEXTUREFINDER;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_textureFinder_updateProgressbar";
 	class ControlsBackground

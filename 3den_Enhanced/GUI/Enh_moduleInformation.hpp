@@ -1,6 +1,6 @@
 class Enh_ModuleInformation
 {
-	idd = 130000;
+	idd = ENH_MODULEINFORMATION;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_moduleInformation";
 	class ControlsBackground

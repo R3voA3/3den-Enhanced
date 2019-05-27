@@ -1,6 +1,6 @@
 class Enh_Credits
 {
-	idd = 200000;
+	idd = ENH_CREDITS;
 	movingEnable = true;
 	class ControlsBackground
 	{

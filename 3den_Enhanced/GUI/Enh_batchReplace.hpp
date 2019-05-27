@@ -1,6 +1,6 @@
 class Enh_BatchReplace
 {
-	idd = 150000;
+	idd = ENH_BATCHREPLACE;
 	movingEnable = true;
 	onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['Enh_batchReplace_lastUsed','']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
 	class ControlsBackground

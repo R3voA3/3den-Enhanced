@@ -1,6 +1,6 @@
 class Enh_ColourPicker
 {
-	idd = 110000;
+	idd = ENH_COLORPICKER;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_colourPicker_onLoad";
 	class ControlsBackground

@@ -88,6 +88,7 @@ class Enh_Folder_Utilities
 		"Enh_DeleteEmptyLayers",
 		"Enh_LogMissionAttributes",
 		"Enh_ImportMissionAttributes",
+		"Enh_ScenarioAttributesManager",
 		"Enh_GenerateSteamMissionDescription",
 		"Enh_SwitchTime",
 		"Enh_ToggleSimpleObject",
@@ -232,6 +233,12 @@ class Enh_ImportMissionAttributes
 {
 	text = $STR_ENH_tools_importMissionAttributes;
 	action = "call Enh_fnc_importMissionAttributes";
+};
+class Enh_ScenarioAttributesManager
+{
+	text = "Scenario Attributes Manager";
+	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
+	opensNewWindow = 1;
 };
 class Enh_GenerateSteamMissionDescription
 {
