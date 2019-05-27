@@ -72,6 +72,7 @@ class ctrlTree;
 class ctrlListbox;
 class ctrlStaticPictureKeepAspect;
 class ctrlStaticMulti;
+class ctrlToolbox;
 
 class Enh_ScrollBar
 {
