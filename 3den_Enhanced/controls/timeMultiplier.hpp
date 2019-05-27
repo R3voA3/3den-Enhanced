@@ -14,13 +14,12 @@ class Enh_TimeMultiplier: Title
 		_value = sliderPosition (_this controlsGroupCtrl 100);\
 		if (_value >= 1) then\
 		{\
-			_value = round _value;\
+			round _value;\
 		}\
 		else\
 		{\
-			_value = parseNumber (_value toFixed 1);\
+			parseNumber (_value toFixed 1);\
 		};\
-		_value;\
 	";
 
 	class Controls: Controls
@@ -33,7 +32,7 @@ class Enh_TimeMultiplier: Title
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 1;
-			sliderRange[] = {0,120};
+			sliderRange[] = {0.1,120};
 			onSliderPosChanged =
 			"\
 				_ctrlGroup = ctrlParentControlsGroup (_this # 0);\
@@ -52,7 +51,6 @@ class Enh_TimeMultiplier: Title
 		class Edit: ctrlEdit
 		{
 			idc = 101;
-			//canModify = 1;
 			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			w = EDIT_W * GRID_W;
 			h = SIZE_M * GRID_H;
