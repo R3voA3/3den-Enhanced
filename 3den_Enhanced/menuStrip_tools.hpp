@@ -86,8 +86,6 @@ class Enh_Folder_Utilities
 		"Enh_TextureFinder",
 		"Separator",
 		"Enh_DeleteEmptyLayers",
-		"Enh_LogMissionAttributes",
-		"Enh_ImportMissionAttributes",
 		"Enh_ScenarioAttributesManager",
 		"Enh_GenerateSteamMissionDescription",
 		"Enh_SwitchTime",
@@ -223,16 +221,6 @@ class Enh_ActionCreator
 	text = "Action Creator...";
 	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
 	opensNewWindow = 1;
-};
-class Enh_LogMissionAttributes
-{
-	Text = $STR_ENH_contextMenu_logMissionAttributes;
-	action = "call Enh_fnc_logMissionAttributes";
-};
-class Enh_ImportMissionAttributes
-{
-	text = $STR_ENH_tools_importMissionAttributes;
-	action = "call Enh_fnc_importMissionAttributes";
 };
 class Enh_ScenarioAttributesManager
 {
