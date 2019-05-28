@@ -63,7 +63,8 @@ class Enh_Folder_GUI
 		"Enh_ExportGUIBaseClassesAll",
 		"Enh_ExportGUIBaseClassesDefault",
 		"Enh_ExportGUIBaseClasses3den",
-		"Enh_GUITestGrids"
+		"Enh_GUITestGrids",
+		"Enh_ControlTypesPreview"
 	};
 };
 class Enh_Folder_Utilities
@@ -169,27 +170,6 @@ class Enh_ToggleGrass
 	action = "[] spawn Enh_fnc_toggleGrass";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
 };
-class Enh_ExportGUIBaseClassesAll
-{
-	text = $STR_ENH_tools_exportGUIBaseClasses;
-	action = "'' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class Enh_ExportGUIBaseClassesDefault
-{
-	text = $STR_ENH_tools_exportGUIBaseClasses_default;
-	action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class Enh_ExportGUIBaseClasses3den
-{
-	text = $STR_ENH_tools_exportGUIBaseClasses_3den;
-	action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class Enh_GUITestGrids
-{
-	text = $STR_ENH_tools_GUITestGrids;
-	action = "findDisplay 313 createDisplay 'RscTestGrids'";
-	opensNewWindow = 1;
-};
 class Enh_BatchReplace
 {
 	text = $STR_ENH_tools_batchReplace;
@@ -233,54 +213,6 @@ class Enh_GenerateSteamMissionDescription
 	text = $STR_ENH_tools_generateSteamMissionDescription;
 	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
-};
-//Loadout Tools
-class Enh_CopyLoadout
-{
-	text = $STR_ENH_tools_copyLoadouts;
-	action = "'copy' call Enh_fnc_loadoutTool";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_C};
-};
-class Enh_ApplyLoadout: Enh_copyLoadout
-{
-	text = $STR_ENH_tools_applyLoadouts;
-	action = "'apply' call Enh_fnc_loadoutTool";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_A};
-};
-class Enh_ExportLoadoutConfig
-{
-	text = $STR_ENH_tools_exportLoadoutConfig;
-	action = "call Enh_fnc_exportInventoryConfig";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
-};
-class Enh_RemoveNVGs
-{
-	text = $STR_ENH_tools_removeNVGs;
-	action = "call Enh_fnc_removeNVGs";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_N};
-};
-class Enh_RemoveVests
-{
-	text = $STR_ENH_tools_removeVests;
-	action = "call Enh_fnc_removeVests";
-};
-class Enh_RemoveGoggles
-{
-	text = $STR_ENH_tools_removeGoggles;
-	action = "call Enh_fnc_removeGoggles";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_G};
-};
-class Enh_RemoveHeadgear
-{
-	text = $STR_ENH_tools_removeHeadgear;
-	action = "call Enh_fnc_removeHeadgear";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_H};
-};
-class Enh_RemoveWeapons
-{
-	text = $STR_ENH_tools_removeWeapons;
-	action = "call Enh_fnc_removeWeapons";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
 };
 //Placement Tools
 class Enh_PatternTools
@@ -332,6 +264,82 @@ class Enh_OrientateWest: Enh_OrientateNorth
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\W_ca.paa";
 	action = "270 call Enh_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD4};
+};
+//Loadout Tools
+class Enh_CopyLoadout
+{
+	text = $STR_ENH_tools_copyLoadouts;
+	action = "'copy' call Enh_fnc_loadoutTool";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_C};
+};
+class Enh_ApplyLoadout: Enh_copyLoadout
+{
+	text = $STR_ENH_tools_applyLoadouts;
+	action = "'apply' call Enh_fnc_loadoutTool";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_A};
+};
+class Enh_ExportLoadoutConfig
+{
+	text = $STR_ENH_tools_exportLoadoutConfig;
+	action = "call Enh_fnc_exportInventoryConfig";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
+};
+class Enh_RemoveNVGs
+{
+	text = $STR_ENH_tools_removeNVGs;
+	action = "call Enh_fnc_removeNVGs";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_N};
+};
+class Enh_RemoveVests
+{
+	text = $STR_ENH_tools_removeVests;
+	action = "call Enh_fnc_removeVests";
+};
+class Enh_RemoveGoggles
+{
+	text = $STR_ENH_tools_removeGoggles;
+	action = "call Enh_fnc_removeGoggles";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_G};
+};
+class Enh_RemoveHeadgear
+{
+	text = $STR_ENH_tools_removeHeadgear;
+	action = "call Enh_fnc_removeHeadgear";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_H};
+};
+class Enh_RemoveWeapons
+{
+	text = $STR_ENH_tools_removeWeapons;
+	action = "call Enh_fnc_removeWeapons";
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
+};
+//GUI
+class Enh_ExportGUIBaseClassesAll
+{
+	text = $STR_ENH_tools_exportGUIBaseClasses;
+	action = "'' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
+};
+class Enh_ExportGUIBaseClassesDefault
+{
+	text = $STR_ENH_tools_exportGUIBaseClasses_default;
+	action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
+};
+class Enh_ExportGUIBaseClasses3den
+{
+	text = $STR_ENH_tools_exportGUIBaseClasses_3den;
+	action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
+};
+class Enh_GUITestGrids
+{
+	text = $STR_ENH_tools_GUITestGrids;
+	action = "findDisplay 313 createDisplay 'RscTestGrids'";
+	opensNewWindow = 1;
+};
+class Enh_ControlTypesPreview
+{
+	text = "STR_ENH_tools_ControlTypesPreview";
+	action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
+	opensNewWindow = 1;
 };
 //Debug Tools
 class Enh_ToggleMapIDs
