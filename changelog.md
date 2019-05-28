@@ -1,12 +1,16 @@
 v4.3
 *added*
+- Scenario Attributes Manager
 
 *changed*
 - Functions Viewer does now restore the last viewed function
 - Functions Viewer shows mod icons again
 - Functions Viewer now displays line numbers
+- Combo Box controls were replaced with Toolbox controls if possible
+- Code cleanup
 
 *removed*
+- Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
@@ -14,8 +18,6 @@ v4.3
 
 v4.2
 *added*
-- Scenario Attributes Manager
-- A tool to preview some common control types
 
 *changed*
 - updated credits
@@ -27,13 +29,10 @@ v4.2
 - Functions Viewer performs better now
 - Debug Console now uses the Eden Enhanced Functions Viewer
 - Enh_fnc_FunctionsViewer was split into multiple function files
-- Combo Box controls were replaced with Toolbox controls if possible
-- Code cleanup
 
 *removed*
 - Export Inventory to Config GUI->Wasn't needed any longer
 - Removed obsolete Icons
-- Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
