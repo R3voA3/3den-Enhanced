@@ -1,8 +1,8 @@
 class Enh_TerrainDetail: Title
 {
-    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCursel ([-1,50,25,12.5,6.25,3.125] find _value)";
-    attributeSave = "[-1,50,25,12.5,6.25,3.125] select (missionNamespace getVariable ['Enh_TerrainGrid_Value',0])";
-    h = "2 * 5 * (pixelH * pixelGrid * 0.50)";
+    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel ([-1,50,25,12.5,6.25,3.125] find _value)";
+    attributeSave = "[-1,50,25,12.5,6.25,3.125] select (lbCurSel (_this controlsGroupCtrl 100))";
+    h = 2 * SIZE_M * GRID_H;
 
     class Controls: Controls
     {
@@ -10,9 +10,9 @@ class Enh_TerrainDetail: Title
         class Value: ctrlToolbox
         {
             idc = 100;
-            x = "48 * (pixelW * pixelGrid * 0.50)";
-            w = "82 * (pixelW * pixelGrid * 0.50)";
-            h = "10 * (pixelH * pixelGrid * 0.50)";
+			x = ATTRIBUTE_TITLE_W * GRID_W;
+			w = ATTRIBUTE_CONTENT_W * GRID_W;
+			h = 2 * SIZE_M * GRID_H;
             rows = 2;
             columns = 3;
             strings[] = 
@@ -25,7 +25,6 @@ class Enh_TerrainDetail: Title
                 $STR_ENH_terrainGrid_ultra_displayName
             };
             values[] = {-1,50,25,12.5,6.25,3.125};
-            onToolboxSelChanged = "Enh_TerrainGrid_Value = _this # 1";
         };
     };
 };
