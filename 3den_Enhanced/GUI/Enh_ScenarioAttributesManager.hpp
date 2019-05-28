@@ -39,7 +39,7 @@ class Enh_ScenarioAttributesManager
 	{
 		class Header: Enh_Text
 		{
-			text = "3den Enhanced Scenario Attributes Manager";
+			text = $STR_ENH_ScenarioAttributesManager;
 			x = 0.2375 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.511875 * safezoneW;
@@ -76,7 +76,7 @@ class Enh_ScenarioAttributesManager
 		};
 		class Templates: Enh_Text
 		{
-			text = "Templates";
+			text = $STR_ENH_ScenarioAttributesManager_templates;
 			x = 0.244062 * safezoneW + safezoneX;
 			y = 0.192 * safezoneH + safezoneY;
 			w = 0.07875 * safezoneW;
@@ -84,7 +84,7 @@ class Enh_ScenarioAttributesManager
 		};
 		class Attributes: Enh_Text
 		{
-			text = "Attributes";
+			text = $STR_ENH_ScenarioAttributesManager_attributes;
 			x = 0.414687 * safezoneW + safezoneX;
 			y = 0.192 * safezoneH + safezoneY;
 			w = 0.0590625 * safezoneW;
@@ -92,7 +92,7 @@ class Enh_ScenarioAttributesManager
 		};
 		class DeleteTemplate: Enh_Button
 		{
-			text = "Delete Template";
+			text = $STR_ENH_ScenarioAttributesManager_deleteTemplate;
 			x = 0.244062 * safezoneW + safezoneX;
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;
@@ -101,16 +101,16 @@ class Enh_ScenarioAttributesManager
 		};
 		class CreateTemplate: Enh_Button
 		{
-			text = "Create Template from Scenario";
+			text = $STR_ENH_ScenarioAttributesManager_createTemplate;
 			x = 0.5525 * safezoneW + safezoneX;
 			y = 0.192 * safezoneH + safezoneY;
 			w = 0.203437 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_ScenarioAttributesManager_TemplateData'";
+			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_ScenarioAttributesManagerTemplateData'";
 		};
 		class ApplyTemplate: Enh_Button
 		{
-			text = "Apply Template";
+			text = $STR_ENH_ScenarioAttributesManager_applyTemplate;
 			x = 0.244062 * safezoneW + safezoneX;
 			y = 0.85 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;
@@ -120,7 +120,7 @@ class Enh_ScenarioAttributesManager
 		};
 		class Export: Enh_Button
 		{
-			text = "Export to Clipboard";
+			text = $STR_ENH_ScenarioAttributesManager_export;
 			x = 0.414687 * safezoneW + safezoneX;
 			y = 0.85 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;

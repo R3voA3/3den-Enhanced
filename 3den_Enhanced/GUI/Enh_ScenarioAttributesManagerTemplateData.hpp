@@ -13,7 +13,7 @@ $[
 ]
 */
 
-class Enh_ScenarioAttributesManager_TemplateData
+class Enh_ScenarioAttributesManagerTemplateData
 {
 	idd = ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
 	movingEnable = true;
@@ -35,7 +35,6 @@ class Enh_ScenarioAttributesManager_TemplateData
 	{
 		class Header: Enh_Text
 		{
-			text = "Template Description"; 
 			x = 0.395 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
@@ -44,7 +43,7 @@ class Enh_ScenarioAttributesManager_TemplateData
 		};
 		class Title: Enh_Text
 		{
-			text = "Title"; 
+			text = $STR_ENH_ScenarioAttributesManagerTemplateData_title;
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.388 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
@@ -52,7 +51,7 @@ class Enh_ScenarioAttributesManager_TemplateData
 		};
 		class Description: Enh_Text
 		{
-			text = "Description"; 
+			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
@@ -77,7 +76,7 @@ class Enh_ScenarioAttributesManager_TemplateData
 		class Cancel: Enh_Button
 		{
 			idc = 1;
-			text = "Cancel"; 
+			text = $STR_ENH_actionCreator_cancel; 
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.584 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;
@@ -86,7 +85,7 @@ class Enh_ScenarioAttributesManager_TemplateData
 		class OK: Enh_Button
 		{
 			idc = 2;
-			text = "OK";
+			text = $STR_ENH_actionCreator_ok;
 			x = 0.526249 * safezoneW + safezoneX;
 			y = 0.584 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;

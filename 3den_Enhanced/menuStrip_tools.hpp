@@ -128,7 +128,7 @@ class Enh_BriefingEditor
 };
 class Enh_3denRadio
 {
-	text = "STR_ENH_tools_3denRadio";
+	text = $STR_ENH_tools_3denRadio;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
 	action = "findDisplay 313 createDisplay 'Enh_3denRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
@@ -197,13 +197,13 @@ class FunctionsViewer//Overwrites the default function viewer
 };
 class Enh_ActionCreator
 {
-	text = "STR_ENH_tools_actionCreator";
+	text = $STR_ENH_tools_actionCreator;
 	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
 	opensNewWindow = 1;
 };
 class Enh_ScenarioAttributesManager
 {
-	text = "STR_ENH_tools_ScenarioAttributesManager";
+	text = $STR_ENH_tools_ScenarioAttributesManager;
 	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
 	opensNewWindow = 1;
 };
