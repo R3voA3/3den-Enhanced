@@ -15,7 +15,7 @@ $[
 
 class Enh_ScenarioAttributesManagerTemplateData
 {
-	idd = ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
+	idd = ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA;
 	movingEnable = true;
 	enableSimulation = true;
 	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
