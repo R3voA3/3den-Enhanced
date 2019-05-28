@@ -63,8 +63,7 @@ class Enh_Folder_GUI
 		"Enh_ExportGUIBaseClassesAll",
 		"Enh_ExportGUIBaseClassesDefault",
 		"Enh_ExportGUIBaseClasses3den",
-		"Enh_GUITestGrids",
-		"Enh_ControlTypesPreview"
+		"Enh_GUITestGrids"
 	};
 };
 class Enh_Folder_Utilities
@@ -333,12 +332,6 @@ class Enh_GUITestGrids
 {
 	text = $STR_ENH_tools_GUITestGrids;
 	action = "findDisplay 313 createDisplay 'RscTestGrids'";
-	opensNewWindow = 1;
-};
-class Enh_ControlTypesPreview
-{
-	text = "STR_ENH_tools_ControlTypesPreview";
-	action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
 	opensNewWindow = 1;
 };
 //Debug Tools
