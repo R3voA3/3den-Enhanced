@@ -149,7 +149,7 @@ class Cfg3DEN
 			#include "attributesObject\disableAI.hpp"
 			#include "attributesObject\advancedSkill.hpp"
 			#include "attributesObject\unitTraits.hpp"
-			#include "attributesObject\onEventCode.hpp"
+			//#include "attributesObject\onEventCode.hpp"
 			class StateSpecial
 			{
 				class Attributes

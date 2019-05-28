@@ -11,9 +11,9 @@ v4.3
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
+- removed on Event Code Attributes (Too complex for a simple attribute)
 
 *known Issues*
-- Event Code Attribute does not work on dedicated servers
 - Stay on Position attribute sometimes fails on dedicated server
 
 v4.2
