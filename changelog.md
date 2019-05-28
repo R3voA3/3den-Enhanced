@@ -15,6 +15,7 @@ v4.3
 v4.2
 *added*
 - Scenario Attributes Manager
+- A tool to preview some common control types
 
 *changed*
 - updated credits

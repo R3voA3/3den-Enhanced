@@ -1,3 +1,6 @@
+#include "\a3\3DEN\UI\macros.inc"
+#include "\a3\3DEN\UI\macroexecs.inc"
+
 //Display IDDs
 #define ENH_BRIEFINGEDITOR 							50000
 #define ENH_3DENRADIO 								60000
@@ -11,9 +14,6 @@
 #define ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA 	170000
 #define ENH_ACTIONCREATOR 							190000
 #define ENH_CREDITS 								200000 
-
-#include "\a3\3DEN\UI\macros.inc"
-#include "\a3\3DEN\UI\macroexecs.inc"
 
 //Control types
 #define CT_COMBO            4
