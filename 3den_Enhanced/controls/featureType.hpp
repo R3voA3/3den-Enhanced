@@ -1,7 +1,7 @@
 class Enh_FeatureType: Title
 {
-    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCursel ([0,1,2] find _value); Enh_FeatureType_Value = nil";
-    attributeSave = "[0,1,2] select (missionNamespace getVariable ['Enh_FeatureType_Value',0])";
+    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCursel ([0,1,2] find _value)";
+    attributeSave = "[0,1,2] select (lbCurSel (_this controlsGroupCtrl 100))";
     h = "15 * (pixelH * pixelGrid * 0.50)";
 
     class Controls: Controls
@@ -28,7 +28,6 @@ class Enh_FeatureType: Title
 				$STR_ENH_featureType_terrainViewDistance_tooltip
 			};
             values[] = {0,1,2};
-            onToolboxSelChanged = "Enh_FeatureType_Value = _this # 1";
         };
     };
 };
