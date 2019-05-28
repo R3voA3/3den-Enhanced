@@ -16,7 +16,7 @@
 #include "GUI\Enh_credits.hpp"
 #include "GUI\Enh_placementTools.hpp"
 #include "GUI\Enh_ScenarioAttributesManager.hpp"
-#include "GUI\Enh_ScenarioAttributesManager_TemplateData.hpp"
+#include "GUI\Enh_ScenarioAttributesManagerTemplateData.hpp"
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
 
