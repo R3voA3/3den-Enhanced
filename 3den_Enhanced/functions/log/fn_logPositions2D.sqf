@@ -20,7 +20,7 @@ private _export = "";
 
 private _entities = _objects + _triggers + _logics + _markers;
 
-if (count _entities == 0) exitWith {false};
+if (_entities isEqualTo []) exitWith {false};
 
 {
 	private _pos = (_x get3DENAttribute "Position") # 0;

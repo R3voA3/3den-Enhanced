@@ -15,7 +15,7 @@ private ["_replaceWith","_class","_replaceWithArray","_objects"];
 disableSerialization;//Because of BIS_fnc_3DENNotification
 
 private _objects = (get3DENSelected "Object");
-if(count _objects == 0 || !is3DEN) exitWith {false};
+if(_objects isEqualTo [] || !is3DEN) exitWith {false};
 
 private _replaceWith = ctrlText ((findDisplay 150000) displayCtrl 1400); //"sfd,2ffds,5,123"
 profileNameSpace setVariable ['Enh_batchReplace_lastUsed',_replaceWith];

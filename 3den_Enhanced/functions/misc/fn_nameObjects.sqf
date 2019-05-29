@@ -23,7 +23,7 @@ private _triggers = get3DENSelected "Trigger";
 private _logics   = get3DENSelected "Logic";
 private _toName = _objects + _markers + _triggers + _logics;
 
-if (count _toName == 0) exitWith {false; DISPLAY closeDisplay 0};
+if (_toName isEqualTo []) exitWith {false; DISPLAY closeDisplay 0};
 
 if (_input == "UNNAME") then
 {
