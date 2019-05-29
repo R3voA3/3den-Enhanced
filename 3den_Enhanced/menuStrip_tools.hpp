@@ -195,6 +195,10 @@ class FunctionsViewer//Overwrites the default function viewer
 	data = "";
 	opensNewWindow = 1;
 };
+class DebugConsole//Overwrites the default debug console to change shortcut
+{
+	shortCuts[] = {INPUT_CTRL_OFFSET + DIK_D};
+};
 class Enh_ActionCreator
 {
 	text = $STR_ENH_tools_actionCreator;
