@@ -8,6 +8,8 @@ v4.3
 - Functions Viewer now displays line numbers
 - Combo Box controls were replaced with Toolbox controls if possible
 - Code cleanup
+- Debug console now uses CTRL+D as shortcut (Same as CBA)
+- Tweaked visuals of custom GUIs (Sliders, Background)
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
