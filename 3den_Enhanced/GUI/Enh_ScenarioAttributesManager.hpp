@@ -27,7 +27,7 @@ class Enh_ScenarioAttributesManager
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			x = 0.2375 * safezoneW + safezoneX;
 			y = 0.178 * safezoneH + safezoneY;

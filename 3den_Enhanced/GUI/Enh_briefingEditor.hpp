@@ -7,7 +7,7 @@ class Enh_BriefingEditor
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class BackgroundRight: Enh_Background
+		class BackgroundRight: ctrlStaticBackground
 		{
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
@@ -15,14 +15,14 @@ class Enh_BriefingEditor
 			h = 0.42 * safezoneH;
 			colorBackground[] = {0.2,0.2,0.2,0.8};
 		};
-		class BackgroundCenter: Enh_Background
+		class BackgroundCenter: ctrlStaticBackground
 		{
 			x = 0.769063 * safezoneW + safezoneX;
 			y = 0.262 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.308 * safezoneH;
 		};
-		class BackgroundLeft: Enh_Background
+		class BackgroundLeft: ctrlStaticBackground
 		{
 			x = 0.0996875 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;

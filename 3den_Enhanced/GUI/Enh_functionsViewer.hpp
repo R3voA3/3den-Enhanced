@@ -7,7 +7,7 @@ class Enh_FunctionsViewer
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			x = 0.014375 * safezoneW + safezoneX;
 			y = 0.052 * safezoneH + safezoneY;

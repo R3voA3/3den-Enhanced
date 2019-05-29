@@ -7,14 +7,14 @@ class Enh_3denRadio
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class ButtonBackground: Enh_Background
+		class ButtonBackground: ctrlStaticBackground
 		{
 			x = 0.703437 * safezoneW + safezoneX;
 			y = 0.71 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;
 			h = 0.14 * safezoneH;
 		};
-		class SonglistBackground: Enh_Background
+		class SonglistBackground: ctrlStaticBackground
 		{
 			x = 0.1325 * safezoneW + safezoneX;
 			y = 0.178 * safezoneH + safezoneY;
@@ -33,7 +33,7 @@ class Enh_3denRadio
 			h = 0.028 * safezoneH;
 			action = "'BUTTON' call Enh_fnc_3denRadio_toggleRadio";
 		};
-		class VolumeSlider: Enh_Slider
+		class VolumeSlider: ctrlXSliderH
 		{
 			idc = 1900;
 			x = 0.703437 * safezoneW + safezoneX;

@@ -6,7 +6,7 @@ class Enh_ModuleInformation
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			x = 0.329375 * safezoneW + safezoneX;
 			y = 0.206 * safezoneH + safezoneY;

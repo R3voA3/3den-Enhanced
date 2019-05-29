@@ -6,7 +6,7 @@ class Enh_ColourPicker
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.262 * safezoneH + safezoneY;
@@ -57,7 +57,7 @@ class Enh_ColourPicker
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SliderRed: Enh_Slider
+		class SliderRed: ctrlXSliderH
 		{
 			idc = 1900;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -66,7 +66,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1400) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1201) ctrlSetText (format ['#(argb,8,8,3)color(%1,0,0,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderGreen: Enh_Slider
+		class SliderGreen: ctrlXSliderH
 		{
 			idc = 1901;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -75,7 +75,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1401) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1202) ctrlSetText (format ['#(argb,8,8,3)color(0,%1,0,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderBlue: Enh_Slider
+		class SliderBlue: ctrlXSliderH
 		{
 			idc = 1902;
 			x = 0.42125 * safezoneW + safezoneX;
@@ -84,7 +84,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1402) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1203) ctrlSetText (format ['#(argb,8,8,3)color(0,0,%1,1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class SliderAlpha: Enh_Slider
+		class SliderAlpha: ctrlXSliderH
 		{
 			idc = 1903;
 			x = 0.42125 * safezoneW + safezoneX;

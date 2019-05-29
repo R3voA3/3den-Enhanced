@@ -6,7 +6,7 @@ class Enh_BatchReplace
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			x = 0.3425 * safezoneW + safezoneX;
 			y = 0.36 * safezoneH + safezoneY;

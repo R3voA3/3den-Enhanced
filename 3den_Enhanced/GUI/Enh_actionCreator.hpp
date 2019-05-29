@@ -6,7 +6,7 @@ class Enh_ActionCreator
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
 		{
 			idc = 2200;
 			x = 0.329375 * safezoneW + safezoneX;

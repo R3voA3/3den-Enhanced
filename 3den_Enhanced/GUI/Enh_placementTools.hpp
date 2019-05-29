@@ -6,7 +6,7 @@ class Enh_PlacementTools
 	movingEnable = true;
 	class ControlsBackground
 	{
- 		class Background: Enh_Background
+ 		class Background: ctrlStaticBackground
 		{
 			x = 0.014375 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
@@ -51,7 +51,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RadiusValue: Enh_Slider
+		class RadiusValue: ctrlXSliderH
 		{
 			idc = 10;	
 			x = 0.10625 * safezoneW + safezoneX;
@@ -71,7 +71,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class InitialAngleValue: Enh_Slider
+		class InitialAngleValue: ctrlXSliderH
 		{
 			idc = 20;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -91,7 +91,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class CentralAngleValue: Enh_Slider
+		class CentralAngleValue: ctrlXSliderH
 		{
 			idc = 30;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -120,7 +120,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SpacingValue: Enh_Slider
+		class SpacingValue: ctrlXSliderH
 		{
 			idc = 40;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -149,7 +149,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class NumColumsValue: Enh_Slider
+		class NumColumsValue: ctrlXSliderH
 		{
 			idc = 50;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -168,7 +168,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SpaceXValue: Enh_Slider
+		class SpaceXValue: ctrlXSliderH
 		{
 			idc = 60;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -188,7 +188,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SpaceYValue: Enh_Slider
+		class SpaceYValue: ctrlXSliderH
 		{
 			idc = 70;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -217,7 +217,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class AValue: Enh_Slider
+		class AValue: ctrlXSliderH
 		{
 			idc = 80;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -237,7 +237,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class BValue: Enh_Slider
+		class BValue: ctrlXSliderH
 		{
 			idc = 90;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -266,7 +266,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class AreaDiaValue: Enh_Slider
+		class AreaDiaValue: ctrlXSliderH
 		{
 			idc = 100;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -286,7 +286,7 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class CoverageValue: Enh_Slider
+		class CoverageValue: ctrlXSliderH
 		{
 			idc = 110;
 			x = 0.10625 * safezoneW + safezoneX;
@@ -321,19 +321,19 @@ class Enh_PlacementTools
 $[
 	1.063,
 	["d",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
-	[1000,"Background: Enh_Background",[1,"",["0.014375 * safezoneW + safezoneX","0.15 * safezoneH + safezoneY","0.196875 * safezoneW","0.812 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 2200;"]],
+	[1000,"Background: ctrlStaticBackground",[1,"",["0.014375 * safezoneW + safezoneX","0.15 * safezoneH + safezoneY","0.196875 * safezoneW","0.812 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 2200;"]],
 	[1001,"Header: Enh_Text",[1,"Placement Tools",["0.014375 * safezoneW + safezoneX","0.122 * safezoneH + safezoneY","0.177187 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[0.13,0.54,0.21,1],[-1,-1,-1,-1],"","-1"],["idc = 1000;"]],
 	[1005,"CircularHeader: Enh_Text",[1,"Circular Pattern Settings",["0.0209375 * safezoneW + safezoneX","0.178 * safezoneH + safezoneY","0.18375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[0.13,0.54,0.21,1],[-1,-1,-1,-1],"","-1"],["idc = 1005;"]],
 	[1008,"RadiusText: Enh_Text",[1,"Radius:",["0.0209375 * safezoneW + safezoneX","0.22 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1008;"]],
-	[1010,"RadiusValue: Enh_Slider",[1,"",["0.10625 * safezoneW + safezoneX","0.22 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1901;","onSliderPosChanged = |_this call compile preprocessFileLineNumbers ^t.sqf^|;"]],
+	[1010,"RadiusValue: ctrlXSliderH",[1,"",["0.10625 * safezoneW + safezoneX","0.22 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1901;","onSliderPosChanged = |_this call compile preprocessFileLineNumbers ^t.sqf^|;"]],
 	[1022,"Close: Enh_Button",[1,"X",["0.191563 * safezoneW + safezoneX","0.122 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[0.13,0.54,0.21,1],[-1,-1,-1,-1],"","-1"],["idc = 1600;"]],
-	[1023,"RotationValue: Enh_Slider",[1,"",["0.10625 * safezoneW + safezoneX","0.262 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
-	[1024,"CentralAngleValue: Enh_Slider",[1,"",["0.10625 * safezoneW + safezoneX","0.304 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
+	[1023,"RotationValue: ctrlXSliderH",[1,"",["0.10625 * safezoneW + safezoneX","0.262 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
+	[1024,"CentralAngleValue: ctrlXSliderH",[1,"",["0.10625 * safezoneW + safezoneX","0.304 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
 	[1025,"RotationText",[1,"Rotation:",["0.0209375 * safezoneW + safezoneX","0.262 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1008;"]],
 	[1026,"CentralAngleText",[1,"Central Angle:",["0.0209375 * safezoneW + safezoneX","0.304 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1008;"]],
 	[1002,"SpacingText: Enh_Text",[1,"Spacing:",["0.0209375 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1008;"]],
 	[1003,"LineHeader: Enh_Text",[1,"Line Pattern Settings",["0.0209375 * safezoneW + safezoneX","0.346 * safezoneH + safezoneY","0.18375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[0.13,0.54,0.21,1],[-1,-1,-1,-1],"","-1"],["idc = 1005;"]],
-	[1004,"SpacingValue: Enh_Slider",[1,"",["0.10625 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
+	[1004,"SpacingValue: ctrlXSliderH",[1,"",["0.10625 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
 	[1006,"GridHeader",[1,"Grid Pattern Settings",["0.0209375 * safezoneW + safezoneX","0.43 * safezoneH + safezoneY","0.18375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[0.13,0.54,0.21,1],[-1,-1,-1,-1],"","-1"],["idc = 1005;"]],
 	[1009,"NumColumns",[1,"#Columns:",["0.0209375 * safezoneW + safezoneX","0.472 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1008;"]],
 	[1011,"NumColumsValue",[1,"",["0.10625 * safezoneW + safezoneX","0.472 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],["idc = 1900;"]],
