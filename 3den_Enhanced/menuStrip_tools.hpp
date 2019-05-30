@@ -81,7 +81,7 @@ class Enh_Folder_Utilities
 		"Enh_ActionCreator",
 		"Enh_BatchReplace",
 		"Enh_BriefingEditor",
-		"Enh_ColourPicker",
+		//"Enh_ColourPicker",
 		"Enh_NameObjects",
 		"Enh_ScenarioAttributesManager",
 		"Enh_TextureFinder",
@@ -195,6 +195,10 @@ class FunctionsViewer//Overwrites the default function viewer
 	data = "";
 	opensNewWindow = 1;
 	shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
+};
+class ConfigViewer//Overwrites the default config viewer to change shortcut
+{
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_C}
 };
 class DebugConsole//Overwrites the default debug console to change shortcut
 {

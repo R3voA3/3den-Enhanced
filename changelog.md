@@ -13,6 +13,7 @@ v4.3
 - Awareness attribute now uses hintSilent instead of custom display
 - Some attributes showed wrong tooltips
 - Functions Viewer can now be accessed by pressing ALT + F (Same as CBA)
+- Config viewer can now be opened by pressing ALT + C
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
