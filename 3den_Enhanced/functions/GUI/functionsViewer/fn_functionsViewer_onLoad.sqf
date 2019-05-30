@@ -86,8 +86,6 @@ if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 	_ctrlTV tvSort [[_indexConfig],false];//Sort
 } foreach [[configFile,"configFile"],[missionConfigFile,"missionConfigFile"],[campaignConfigFile,"campaignConfigFile"]];
 
-//_ctrlTV tvSetCurSel (profileNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[0,0,0,0]]);
-
 _disp displayAddEventHandler ["keyDown",//Focus Search
 {
 	params ["_disp", "_key", "_shift", "_ctrl"];
@@ -105,5 +103,7 @@ _disp displayAddEventHandler ["keyDown",//Copy
 		call Enh_fnc_functionsViewer_copy;
 	}
 }];
+
+_ctrlTV tvSetCurSel [0,0,0,0];
 
 true
