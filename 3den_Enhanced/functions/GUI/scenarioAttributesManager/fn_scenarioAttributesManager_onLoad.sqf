@@ -29,4 +29,13 @@ if (_templates isEqualTo []) exitWith {false};
 
 lbSort [_ctrlLB,"DESC"];
 
+_disp displayAddEventHandler ["keyDown",//Focus Search
+{
+	params ["_disp", "_key", "_shift", "_ctrl"];
+	if (_key isEqualTo 33 && _ctrl) then
+	{
+		ctrlSetFocus (_disp displayCtrl 1400);
+	}
+}];
+
 true
