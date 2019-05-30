@@ -11,6 +11,8 @@ v4.3
 - Debug console now uses CTRL+D as shortcut (Same as CBA)
 - Tweaked visuals of custom GUIs (Sliders, Background)
 - Awareness attribute now uses hintSilent instead of custom display
+- Some attributes showed wrong tooltips
+- Functions Viewer can now be accessed by pressing ALT + F (Same as CBA)
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
