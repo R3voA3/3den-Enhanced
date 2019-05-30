@@ -63,6 +63,7 @@ class Enh_OnPreviewDebug
 		class Enh_DisableStamina: Enh_ShowUnits
 		{
 			displayName = $STR_ENH_onPreviewDebug_stamina_displayName;
+			tooltip = "";
 			property = "Enh_DisableStamina";
 			defaultValue = "profileNamespace getVariable ['Enh_DisableStamina',false]";
 		};
