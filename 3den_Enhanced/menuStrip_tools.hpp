@@ -194,6 +194,7 @@ class FunctionsViewer//Overwrites the default function viewer
 	action = "findDisplay 313 createDisplay 'Enh_FunctionsViewer'";
 	data = "";
 	opensNewWindow = 1;
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
 };
 class DebugConsole//Overwrites the default debug console to change shortcut
 {
