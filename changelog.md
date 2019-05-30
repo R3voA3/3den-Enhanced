@@ -10,6 +10,7 @@ v4.3
 - Code cleanup
 - Debug console now uses CTRL+D as shortcut (Same as CBA)
 - Tweaked visuals of custom GUIs (Sliders, Background)
+- Awareness attribute now uses hintSilent instead of custom display
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
