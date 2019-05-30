@@ -185,7 +185,7 @@ class Enh_BriefingEditor
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class BriefingText_Value: Enh_Edit
+		class BriefingText_Value: ctrlEditMulti
 		{
 			idc = 10;
 			x = 0.349063 * safezoneW + safezoneX;
@@ -193,7 +193,7 @@ class Enh_BriefingEditor
 			w = 0.282187 * safezoneW;
 			h = 0.182 * safezoneH;
 		};
-		class Subject_Value: Enh_Edit
+		class Subject_Value: ctrlEdit
 		{
 			idc = 20;
 			x = 0.440937 * safezoneW + safezoneX;
@@ -201,7 +201,7 @@ class Enh_BriefingEditor
 			w = 0.190312 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Title_Value: Enh_Edit
+		class Title_Value: ctrlEdit
 		{
 			idc = 30;
 			x = 0.440937 * safezoneW + safezoneX;
@@ -209,7 +209,7 @@ class Enh_BriefingEditor
 			w = 0.190312 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Path_Value: Enh_Edit
+		class Path_Value: ctrlEdit
 		{
 			idc = 40;
 			x = 0.112813 * safezoneW + safezoneX;
@@ -217,7 +217,7 @@ class Enh_BriefingEditor
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Width_Value: Enh_Edit
+		class Width_Value: ctrlEdit
 		{
 			idc = 50;
 			x = 0.112813 * safezoneW + safezoneX;
@@ -244,7 +244,7 @@ class Enh_BriefingEditor
 			onKeyDown = "if ((_this # 1) == 211 ) then {(_this #  0) lbDelete (lbCurSel (_this # 0))}";
 			onLBDblClick = "[_this # 0,_this # 1] call Enh_fnc_briefingEditor_getTemplate";
 		};
-		class Height_Value: Enh_Edit
+		class Height_Value: ctrlEdit
 		{
 			idc = 90;
 			x = 0.112813 * safezoneW + safezoneX;
@@ -260,7 +260,7 @@ class Enh_BriefingEditor
 			w = 0.111562 * safezoneW;
 			h = 0.098 * safezoneH;
 		};
-		class CustomText_Value: Enh_Edit
+		class CustomText_Value: ctrlEditMulti
 		{
 			idc = 110;
 			x = 0.782188 * safezoneW + safezoneX;
@@ -268,7 +268,7 @@ class Enh_BriefingEditor
 			w = 0.0853125 * safezoneW;
 			h = 0.042 * safezoneH;
 		};
-		class Expression_Value: Enh_Edit
+		class Expression_Value: ctrlEditMulti
 		{
 			idc = 120;
 			x = 0.782188 * safezoneW + safezoneX;

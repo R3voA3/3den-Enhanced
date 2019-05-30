@@ -56,6 +56,7 @@
 //Eden base controls
 class title;
 class ctrlEdit;
+class ctrlEditMulti;
 class ctrlButton;
 class ctrlStructuredText;
 class ctrlCombo;
@@ -187,37 +188,6 @@ class Enh_Button
 	offsetPressedX = 0.002;
 	offsetPressedY = 0.002;
 	borderSize = 0;
-};
-class Enh_Edit
-{
-	access = 0;
-	type = 2;
-	x = 0;
-	y = 0;
-	h = 0;
-	w = 0;
-	colorBackground[] = {COLOR_OVERLAY_RGBA};
-	colorText[] = {COLOR_TEXT_RGBA};
-	colorSelection[] =
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-		1
-	};
-	autocomplete = "";
-	text = "";
-	size = 0.2;
-	style = 16 + 512;//No Border
-	font = FONT2_NORMAL;
-	shadow = 2;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-	colorDisabled[] = {1,1,1,1};
-	canModify = 1;
 };
 class Enh_Text
 {

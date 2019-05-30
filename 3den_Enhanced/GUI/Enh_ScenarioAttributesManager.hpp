@@ -127,7 +127,7 @@ class Enh_ScenarioAttributesManager
 			h = 0.028 * safezoneH;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_exportToClipboard";
 		};
-		class Search: Enh_Edit
+		class Search: ctrlEdit
 		{
 			idc = 1400;
 			x = 0.414687 * safezoneW + safezoneX;

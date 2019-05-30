@@ -198,7 +198,7 @@ class FunctionsViewer//Overwrites the default function viewer
 };
 class ConfigViewer//Overwrites the default config viewer to change shortcut
 {
-	shortCuts[] = {INPUT_ALT_OFFSET + DIK_C}
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_C};
 };
 class DebugConsole//Overwrites the default debug console to change shortcut
 {

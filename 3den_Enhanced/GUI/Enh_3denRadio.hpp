@@ -84,7 +84,7 @@ class Enh_3denRadio
 			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
 		};
-		class SearchEdit: Enh_Edit
+		class SearchEdit: ctrlEdit
 		{
 			idc = 1400;
 			x = 0.545937 * safezoneW + safezoneX;

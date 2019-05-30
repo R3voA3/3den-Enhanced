@@ -35,7 +35,7 @@ class Enh_BatchReplace
 			h = 0.028 * safezoneH;
 			action = "call Enh_fnc_batchreplace";
 		};
-		class ReplaceWithValue: Enh_Edit
+		class ReplaceWithValue: ctrlEditMulti
 		{
 			idc = 1400;
 			tooltip = $STR_ENH_batchReplace_replaceWith_tooltip;

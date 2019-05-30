@@ -132,7 +132,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ScriptValue: Enh_Edit
+		class ScriptValue: ctrlEditMulti
 		{
 			idc = 1400;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -140,7 +140,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.154 * safezoneH;
 		};
-		class ArgumentsValue: Enh_Edit
+		class ArgumentsValue: ctrlEdit
 		{
 			idc = 1401;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -148,7 +148,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PriorityValue: Enh_Edit
+		class PriorityValue: ctrlEdit
 		{
 			idc = 1402;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -156,7 +156,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ConditionValue: Enh_Edit
+		class ConditionValue: ctrlEdit
 		{
 			idc = 1403;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -164,7 +164,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RadiusValue: Enh_Edit
+		class RadiusValue: ctrlEdit
 		{
 			idc = 1404;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -172,7 +172,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ShortcutValue: Enh_Edit
+		class ShortcutValue: ctrlEdit
 		{
 			idc = 1405;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -180,7 +180,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SelectionValue: Enh_Edit
+		class SelectionValue: ctrlEdit
 		{
 			idc = 1406;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -188,7 +188,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class MemoryPointValue: Enh_Edit
+		class MemoryPointValue: ctrlEdit
 		{
 			idc = 1407;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -196,7 +196,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TitleValue: Enh_Edit
+		class TitleValue: ctrlEdit
 		{
 			idc = 1408;
 			x = 0.414687 * safezoneW + safezoneX;

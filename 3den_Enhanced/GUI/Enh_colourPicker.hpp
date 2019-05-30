@@ -93,7 +93,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onSliderPosChanged = "((findDisplay 110000) displayCtrl 1403) ctrlSetText ((_this select 1) toFixed 3); ((findDisplay 110000) displayCtrl 1204) ctrlSetText (format ['#(argb,8,8,3)color(0,0,0,%1)',((_this select 1) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueRed: Enh_Edit
+		class ValueRed: ctrlEdit
 		{
 			idc = 1400;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -102,7 +102,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1900) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1201) ctrlSetText (format ['#(argb,8,8,3)color(%1,0,0,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueGreen: Enh_Edit
+		class ValueGreen: ctrlEdit
 		{
 			idc = 1401;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -111,7 +111,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1901) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1202) ctrlSetText (format ['#(argb,8,8,3)color(0,%1,0,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueBlue: Enh_Edit
+		class ValueBlue: ctrlEdit
 		{
 			idc = 1402;
 			x = 0.565625 * safezoneW + safezoneX;
@@ -120,7 +120,7 @@ class Enh_ColourPicker
 			h = 0.028 * safezoneH;
 			onKillFocus = "((findDisplay 110000) displayCtrl 1902) sliderSetPosition (parseNumber (ctrlText (_this select 0))); ((findDisplay 110000) displayCtrl 1203) ctrlSetText (format ['#(argb,8,8,3)color(0,0,%1,0)',(parseNumber (ctrlText (_this select 0)) toFixed 3)]); 0 = '' call Enh_fnc_colourPicker";
 		};
-		class ValueAlpha: Enh_Edit
+		class ValueAlpha: ctrlEdit
 		{
 			idc = 1403;
 			x = 0.565625 * safezoneW + safezoneX;

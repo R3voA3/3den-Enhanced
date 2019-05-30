@@ -36,7 +36,7 @@ class Enh_FunctionsViewer
 			h = 0.854 * safezoneH;
 			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_selectionChanged";
 		};
-		class Search: Enh_Edit
+		class Search: ctrlEdit
 		{
 			idc = 1400;
 			tooltip = $STR_ENH_functionsViewer_search_tooltip;
@@ -139,7 +139,7 @@ class Enh_FunctionsViewer
 					shadow = 0;
 					colorBackground[] = {COLOR_OVERLAY_RGBA};
 				};
-				class Code: Enh_Edit
+				class Code: ctrlEditMulti
 				{
 					idc = 1401;
 					canModify = false;
@@ -150,7 +150,7 @@ class Enh_FunctionsViewer
 				};
 			};
 		};
-		class Name: Enh_Edit
+		class Name: ctrlEdit
 		{
 			idc = 1402;
 			tooltip = $STR_ENH_functionsViewer_functionName_tooltip;
@@ -160,7 +160,7 @@ class Enh_FunctionsViewer
 			w = 0.347813 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Path: Enh_Edit
+		class Path: ctrlEdit
 		{
 			idc = 1403;
 			tooltip = $STR_ENH_functionsViewer_functionPath_tooltip;

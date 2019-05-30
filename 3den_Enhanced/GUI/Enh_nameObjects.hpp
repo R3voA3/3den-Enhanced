@@ -58,7 +58,7 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class VariableNameValue: Enh_Edit
+		class VariableNameValue: ctrlEdit
 		{
 			idc = 1000;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -67,7 +67,7 @@ class Enh_NameObjects
 			h = 0.028 * safezoneH;
 			onLoad = "(_this # 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastVarName',profileName])";
 		};
-		class IndexStartValue: Enh_Edit
+		class IndexStartValue: ctrlEdit
 		{
 			idc = 1100;
 			x = 0.381875 * safezoneW + safezoneX;
