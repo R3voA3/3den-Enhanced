@@ -58,6 +58,7 @@ class title;
 class ctrlEdit;
 class ctrlEditMulti;
 class ctrlButton;
+class ctrlButtonPicture;
 class ctrlStructuredText;
 class ctrlCombo;
 class ctrlCheckbox;
@@ -75,6 +76,7 @@ class ctrlStaticMulti;
 class ctrlStaticTitle;
 class ctrlTree;
 class ctrlListbox;
+class ctrlListNBox;
 class ctrlToolbox;
 
 class Enh_ScrollBar

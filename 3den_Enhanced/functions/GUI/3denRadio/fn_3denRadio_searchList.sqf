@@ -19,6 +19,7 @@ private _ctrlSearch = _display displayCtrl 1400;
 private _filter = toUpper (ctrlText _ctrlSearch);
 lbClear _ctrlSongList;
 private _filteredClasses = [];
+
 //Filter all classes according to input in search control
 {
 	private _name = getText (_x >> "name");
@@ -30,11 +31,10 @@ private _filteredClasses = [];
 		private _logo = if (configSourceMod _x == '') then {[""]} else {modParams [configSourceMod  _x,["logoSmall"]]};
 		private _logo = _logo # 0;
 		private _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
-		_theme = _theme select [0,20];//Shorten text
-		_name = _name select [0,70];//Shorten text
 		_filteredClasses pushBack [_name,_configName,_duration,_theme,_logo];
 	};
 } forEach Enh_3denRadio_cfgMusic;
+
 //Add all classes to the list box, must be in two steps otherwise previewing songs and sorting the list box doesn't work anymore
 {
 	private _data = _filteredClasses # _forEachIndex;
