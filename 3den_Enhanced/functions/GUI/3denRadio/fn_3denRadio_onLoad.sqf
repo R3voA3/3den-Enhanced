@@ -45,13 +45,12 @@ switch (profileNamespace getVariable ["Enh_3denRadio_Enabled",false]) do
 	};
 };
 
-//Fill music listbox
-private _cfgMusic_1 = "!(getText (_x >> 'name') isEqualTo '')" configClasses (configFile >> "CfgMusic");
-
-//Some tracks have to be added manually
-private _cfgMusic_2 = "(configName _x in ['Fallout','Wasteland','SkyNet','MAD','Defcon'])" configClasses (configFile >> "CfgMusic");
-
-Enh_3denRadio_cfgMusic = _cfgMusic_1 + _cfgMusic_2;
+//Get all music tracks
+Enh_3denRadio_cfgMusic = 
+	("true" configClasses (configFile >> "CfgMusic")) + 
+	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
+	("true" configClasses (campaignConfigFile >> "CfgMusic"));
+// +	("(configName _x in ['Fallout','Wasteland','SkyNet','MAD','Defcon'])" configClasses (configFile >> "CfgMusic"));
 
 _ctrlSongList lnbAddColumn 0.585;
 _ctrlSongList lnbAddColumn 0.69;

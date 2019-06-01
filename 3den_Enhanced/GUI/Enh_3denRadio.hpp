@@ -64,7 +64,7 @@ class Enh_3denRadio
 			w = 0.741562 * safezoneW;
 			h = 0.868 * safezoneH;
 			type = CT_LISTNBOX;
-			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
+			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['ADDSONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist; _this call Enh_fnc_3denRadio_exportClassname";
 		};
 		class Playlist: ctrlListbox
@@ -175,17 +175,17 @@ class Enh_3denRadio
 		{
 			idc = 2400;
 			text = $STR_ENH_3denRadio_help_description;
-			x = 0.2375 * safezoneW + safezone;
+			x = 0.2375 * safezoneW + safezoneX;
 			y = 0.318 * safezoneH + safezoneY;
-			w = 0.525 * safezoneW;
+			w = 0.3 * safezoneW;
 			h = 0.168 * safezoneH;
-			onLoad = "_this # 0 ctrlSetFade 1;  _this # 0 ctrlCommit 0;";
-			backgroundColor[] = COLOUR_USER_PRESET;
+			onLoad = "_this # 0 ctrlSetFade 1;  _this # 0 ctrlCommit 0";
+			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class VolumeIcon: ctrlStaticPictureKeepAspect
 		{
 			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
-			x = 0.093125 * safezoneW + safezoneX;
+			x = 0.0471875 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
@@ -193,29 +193,47 @@ class Enh_3denRadio
 		class Volume: ctrlXSliderH
 		{
 			idc = 1900;
-			x = 0.119375 * safezoneW + safezoneX;
+			x = 0.0734375 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.124687 * safezoneW;
+			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 			sliderRange[] = {0,1.5};
 			onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0))";
 		};
 		class CurrentSongText: ctrlStatic
 		{
-			text = "Current Song:"; //--- ToDo: Localize;
-			x = 0.250625 * safezoneW + safezoneX;
+			text = "Song:"; //--- ToDo: Localize;
+			x = 0.15875 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.07875 * safezoneW;
+			w = 0.0459375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
 		class CurrentSong: ctrlStatic
 		{
 			idc = 2200;
-			x = 0.335938 * safezoneW + safezoneX;
+			x = 0.19125 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.229687 * safezoneW;
+			w = 0.2575 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
+/* 		class FastForwardIcon: ctrlStaticPictureKeepAspect
+		{
+			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa"; //--- ToDo: Localize;
+			x = 0.375313 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.0196875 * safezoneW;
+			h = 0.028 * safezoneH;
+		}; */
+/* 		class FastForward: ctrlXSliderH
+		{
+			idc = 1900;
+			sliderRange[] = {0,1.5};
+			onSliderPosChanged = "playMusic [profileNamespace getVariable ['Enh_3denRadio_CurrentSong',''],]";
+			x = 0.401563 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.07875 * safezoneW;
+			h = 0.028 * safezoneH;
+		}; */
 		//Sort buttons
 		class SortTitle: ctrlButtonPicture
 		{

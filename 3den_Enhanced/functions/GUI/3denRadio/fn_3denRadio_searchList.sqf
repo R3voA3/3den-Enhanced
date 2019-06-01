@@ -38,10 +38,12 @@ private _filteredClasses = [];
 //Add all classes to the list box, must be in two steps otherwise previewing songs and sorting the list box doesn't work anymore
 {
 	private _data = _filteredClasses # _forEachIndex;
-	_ctrlSongList lnbAddRow [_data # 0,str (_data # 2),_data # 3];//Song Name, Duration, Theme
-	_ctrlSongList lnbSetData [[_forEachIndex,0],_data # 1];//Config Name
-	_ctrlSongList lnbSetValue [[_forEachIndex,1],_data # 2];//Duration
-	_ctrlSongList lnbSetPicture [[_forEachIndex,3],_data # 4];//Logo
+	_data params ["_songName","_configName","_duration","_theme","_logo"];
+
+	_ctrlSongList lnbAddRow [_songName,str _duration,_theme];//Song Name, Duration, Theme
+	_ctrlSongList lnbSetData [[_forEachIndex,0],_configName];//Config Name
+	_ctrlSongList lnbSetValue [[_forEachIndex,1],_duration];//Duration
+	_ctrlSongList lnbSetPicture [[_forEachIndex,3],_logo];//Logo
 } forEach _filteredClasses;
 
 true
