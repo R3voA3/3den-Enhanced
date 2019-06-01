@@ -43,7 +43,7 @@ _fnc_disableRadio =
 	profileNamespace setVariable ["Enh_3denRadio_CurrentSong",""];
 
 	_ctrlCurrentSong ctrlSetText "";
-	_ctrlToggleRadio ctrlSetText "\a3\3DEN\Data\Controls\ctrlMenu\arrow_ca.paa";
+	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_play.paa";
 };
 
 if (_input isEqualTo "BUTTON" && _radioState) exitWith {call _fnc_disableRadio};

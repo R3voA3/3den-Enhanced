@@ -41,7 +41,7 @@ switch (profileNamespace getVariable ["Enh_3denRadio_Enabled",false]) do
 	};
 	case false:
 	{
-		_ctrlToggleRadio ctrlSetText "\a3\3DEN\Data\Controls\ctrlMenu\arrow_ca.paa";
+		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_play.paa";
 	};
 };
 
