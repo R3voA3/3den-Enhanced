@@ -102,14 +102,6 @@
 		<Spanish>Cancelar</Spanish>
 		<Turkish>İptal</Turkish>
 	</Key>
-	<Key ID="STR_ENH_actionCreator_ok">
-		<English>Ok</English>
-		<German>Ok</German>
-		<Original>Ok</Original>
-		<French>Ok</French>
-		<Polish>Ok</Polish>
-		<Spanish>Aceptar</Spanish>
-	</Key>
 	<Key ID="STR_ENH_debugPath_displayName">
 		<English>Debug Path</English>
 		<German>Debug Pfad</German>
@@ -3357,16 +3349,6 @@
 		<Chinesesimp>换行</Chinesesimp>
 		<Polish>Następna linia</Polish>
 	</Key>
-	<Key ID="STR_ENH_briefingEditor_close_displayName">
-		<Original>Close</Original>
-		<English>Close</English>
-		<Czech>Zavřít</Czech>
-		<French>Fermer</French>
-		<Spanish>Cerrar</Spanish>
-		<German>Schließen</German>
-		<Chinesesimp>结束</Chinesesimp>
-		<Polish>Zamknij</Polish>
-	</Key>
 	<Key ID="STR_ENH_briefingEditor_createTemplate_displayName">
 		<Original>Create Template</Original>
 		<English>Create Template</English>
@@ -3451,15 +3433,6 @@
 		<French>Expression</French>
 		<Polish>Ekspresja</Polish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_saveAndClose_text">
-		<Original>Close</Original>
-		<English>Close</English>
-		<German>Schließen</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<Spanish>Cerrar</Spanish>
-		<French>Fermer</French>
-		<Polish>Zamknij</Polish>
-	</Key>
 	<Key ID="STR_ENH_3denRadio_playlist_text">
 		<Original>Playlist</Original>
 		<English>Playlist</English>
@@ -3532,33 +3505,6 @@
 		<French>Mod</French>
 		<Polish>Mod</Polish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_enableRadio_text">
-		<Original>Turn on</Original>
-		<English>Turn on</English>
-		<Spanish>Habilitar radio</Spanish>
-		<German>Anschalten</German>
-		<Chinesesimp>打开</Chinesesimp>
-		<French>Allumer</French>
-		<Polish>Włącz</Polish>
-	</Key>
-	<Key ID="STR_ENH_3denRadio_disableRadio_text">
-		<Original>Turn off</Original>
-		<English>Turn off</English>
-		<Spanish>Deshabilitar radio</Spanish>
-		<German>Ausschalten</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<French>Éteindre</French>
-		<Polish>Wyłącz</Polish>
-	</Key>
-	<Key ID="STR_ENH_3denRadio_volume_text">
-		<Original>Vol.:</Original>
-		<English>Vol.:</English>
-		<Spanish>Vol.:</Spanish>
-		<German>Vol.:</German>
-		<Chinesesimp>体积：</Chinesesimp>
-		<French>Vol.:</French>
-		<Polish>Głoś.:</Polish>
-	</Key>
 	<Key ID="STR_ENH_3denRadio_help_text">
 		<Original>Help</Original>
 		<English>Help</English>
@@ -3577,15 +3523,6 @@
 		<French>- Double-cliquez à gauche sur une entrée de la liste pour lire immédiatement la chanson &lt;br/&gt;- Ajouter une chanson à votre liste de lecture en appuyant sur ESPACE &lt;br/&gt;- Copiez le nom de la classe d’une chanson dans le Presse-papiers en appuyant sur CTRL + C &lt;br./&gt;- Supprime une entrée de la liste de lecture en la sélectionnant et en appuyant sur SUPPRIMER</French>
 		<Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki&lt;br/&gt;-Dodaj piosenke do playlisty poprzez naciśniecie SPACE&lt;br/&gt;-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C&lt;br/&gt;Usuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_search_text">
-		<Original>Search</Original>
-		<English>Search</English>
-		<German>Durchsuchen</German>
-		<Chinesesimp>搜索</Chinesesimp>
-		<Spanish>Buscar</Spanish>
-		<French>Recherche</French>
-		<Polish>Szukaj</Polish>
-	</Key>
 	<Key ID="STR_ENH_nameObjects_header">
 		<Original>Name Objects</Original>
 		<English>Name Objects</English>
@@ -3603,18 +3540,6 @@
 		<Spanish>Quitar nombre</Spanish>
 		<French>Supprimer le nom</French>
 		<Polish>Usuń nazwe</Polish>
-	</Key>
-	<Key ID="STR_ENH_nameObjects_OK">
-		<Original>OK</Original>
-		<English>OK</English>
-		<Czech>OK</Czech>
-		<French>OK</French>
-		<Spanish>OK</Spanish>
-		<Italian>OK</Italian>
-		<Polish>OK</Polish>
-		<Portuguese>OK</Portuguese>
-		<German>OK</German>
-		<Chinesesimp>好</Chinesesimp>
 	</Key>
 	<Key ID="STR_ENH_nameObjects_startIndex">
 		<Original>Start Index</Original>
@@ -3717,60 +3642,6 @@
 		<French>B</French>
 		<Polish>B</Polish>
 	</Key>
-	<Key ID="STR_ENH_colourPicker_finalColour">
-		<Original>Final Colour</Original>
-		<English>Final Colour</English>
-		<German>Fertige Farbe</German>
-		<Chinesesimp>最终颜色</Chinesesimp>
-		<Spanish>Color final</Spanish>
-		<French>Couleur finale</French>
-		<Polish>Finalny kolor</Polish>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_red">
-		<Original>Red</Original>
-		<English>Red</English>
-		<German>Rot</German>
-		<Chinesesimp>红</Chinesesimp>
-		<Spanish>Rojo</Spanish>
-		<French>Rouge</French>
-		<Polish>Czerwony</Polish>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_green">
-		<Original>Green</Original>
-		<English>Green</English>
-		<German>Grün</German>
-		<Chinesesimp>绿</Chinesesimp>
-		<Spanish>Verde</Spanish>
-		<French>Vert</French>
-		<Polish>Zielony</Polish>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_blue">
-		<Original>Blue</Original>
-		<English>Blue</English>
-		<German>Blau</German>
-		<Chinesesimp>蓝</Chinesesimp>
-		<Spanish>Azul</Spanish>
-		<French>Bleu</French>
-		<Polish>Niebieski</Polish>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_alpha">
-		<Original>Alpha</Original>
-		<English>Alpha</English>
-		<German>Alpha</German>
-		<Chinesesimp>Alpha</Chinesesimp>
-		<Spanish>Alfa</Spanish>
-		<French>Alpha</French>
-		<Polish>Alpha</Polish>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_header">
-		<Original>Colour Picker</Original>
-		<English>Colour Picker</English>
-		<German>Farbauswahl Werkzeug</German>
-		<Chinesesimp>取色器</Chinesesimp>
-		<Spanish>Selector de color</Spanish>
-		<French>Sélecteur de couleur</French>
-		<Polish>Selektor kolorów</Polish>
-	</Key>
 	<Key ID="STR_ENH_moduleInformation_description">
 		<Original>Description</Original>
 		<English>Description</English>
@@ -3832,15 +3703,6 @@
 		<French>Informations sur le module</French>
 		<Polish>Informacja o module</Polish>
 	</Key>
-	<Key ID="STR_ENH_moduleInformation_close">
-		<Original>Close</Original>
-		<English>Close</English>
-		<German>Schließen</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<Spanish>Cerrar</Spanish>
-		<French>Fermer</French>
-		<Polish>Zamknij</Polish>
-	</Key>
 	<Key ID="STR_ENH_textureFinder_header">
 		<Original>Texture Finder</Original>
 		<English>Texture Finder</English>
@@ -3858,15 +3720,6 @@
 		<Spanish>Mostrar todo</Spanish>
 		<French>Montrer tout</French>
 		<Polish>Pokaż wszystko</Polish>
-	</Key>
-	<Key ID="STR_ENH_textureFinder_close">
-		<Original>Close</Original>
-		<English>Close</English>
-		<German>Schließen</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<Spanish>Cerrar</Spanish>
-		<French>Fermer</French>
-		<Polish>Zamknij</Polish>
 	</Key>
 	<Key ID="STR_ENH_textureFinder_searchTextures">
 		<Original>Search Textures</Original>
@@ -3961,15 +3814,6 @@
 		<Spanish>Ejemplo: Classname_1, Classname_2, Classname_n</Spanish>
 		<French>Exemple: Classname_1,Classname_2,Classname_n</French>
 		<Polish>Przykład: Classname_1,Classname_2,Classname_n</Polish>
-	</Key>
-	<Key ID="STR_ENH_batchReplace_close">
-		<Original>Close</Original>
-		<English>Close</English>
-		<German>Schließen</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<Spanish>Cerrar</Spanish>
-		<French>Fermer</French>
-		<Polish>Zamknij</Polish>
 	</Key>
 	<Key ID="STR_ENH_batchReplace_description">
 		<Original>All selected objects will be replaced by the object types you enter in the edit box below randomly.</Original>
@@ -5020,16 +4864,6 @@
 		<French>Texture Finder </French>
 		<Polish>Wyszukiwarka tekstur</Polish>
 	</Key>
-	<Key ID="STR_ENH_tools_colourPicker">
-		<Original>Colour Picker</Original>
-		<English>Colour Picker</English>
-		<German>Farbauswahl Werkzeug</German>
-		<Chinesesimp>颜色取样器</Chinesesimp>
-		<Spanish>Selector de color </Spanish>
-		<Czech>Výběr barvy </Czech>
-		<French>Color Picker </French>
-		<Polish>Selektor kolorów</Polish>
-	</Key>
 	<Key ID="STR_ENH_tools_toggleSimpleObject">
 		<Original>Toggle Simple Object</Original>
 		<English>Toggle Simple Object</English>
@@ -5492,5 +5326,10 @@
 		<English>Title</English>
 		<German>Titel</German>
 		<Original>Title</Original>
+	</Key>
+	<Key ID="STR_ENH_3denRadio_song">
+		<English>Song:</English>
+		<German>Lied:</German>
+		<Original>Song:</Original>
 	</Key>
 </Project>
