@@ -1,32 +1,4 @@
-/* #Dykasa
-$[
-	1.063,
-	["Radio",[["0","0","1","1"],"0.025","0.04","GUI_GRID"],2,0,0],
-	[-2200,"",[1,"",["0.014375 * safezoneW + safezoneX","0.052 * safezoneH + safezoneY","0.97125 * safezoneW","0.9344 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1500,"Songlist",[1,"",["0.0209375 * safezoneW + safezoneX","0.052 * safezoneH + safezoneY","0.741562 * safezoneW","0.868 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"Title_Sort",[1,"",["0.0275 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.42 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1601,"Theme_Sort",[1,"",["0.539374 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.1575 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1603,"Duration_Sort",[1,"",["0.460624 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1604,"Mod",[1,"",["0.696875 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.28875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1501,"Playlist",[1,"",["0.769062 * safezoneW + safezoneX","0.052 * safezoneH + safezoneY","0.21 * safezoneW","0.868 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1605,"On/oFF",[1,"",["0.0209375 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1606,"",[1,"Help",["0.572187 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1607,"",[1,"Close",["0.913437 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1200,"",[1,"#(argb,8,8,3)color(1,1,1,1)",["0.742812 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1900,"",[1,"",["0.119375 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.124687 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1000,"",[1,"Volume",["0.0471875 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1001,"",[1,"Current Song:",["0.250625 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1002,"CurrentSongValue",[1,"",["0.335938 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.229687 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1608,"",[1,"Import",["0.84125 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1609,"",[1,"Export",["0.769063 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.065625 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1400,"",[1,"",["0.644375 * safezoneW + safezoneX","0.934 * safezoneH + safezoneY","0.0984375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1610,"SortTitle",[1,"",["0.014375 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.013125 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1611,"SortDuration",[1,"",["0.4475 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.013125 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1612,"SortTheme",[1,"",["0.52625 * safezoneW + safezoneX","0.024 * safezoneH + safezoneY","0.013125 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
-]
-*/
-
-class Enh_3denRadio
+class Enh_IDD_3denRadio
 {
 	idd = ENH_3DENRADIO;
 	movingEnable = true;
@@ -45,7 +17,7 @@ class Enh_3denRadio
 	};
 	class Controls
 	{
-		class ToggleRadio: ctrlButtonPicture
+		class ToggleRadio: ctrlButtonPictureKeepAspect
 		{
 			idc = 2300;
 			x = 0.0209375 * safezoneW + safezoneX;
@@ -135,10 +107,8 @@ class Enh_3denRadio
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class Close: ctrlButton
+		class Close: ctrlButtonClose
 		{
-			idc = 1;
-			text = $STR_ENH_3denRadio_saveAndClose_text;
 			x = 0.913437 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.065625 * safezoneW;
