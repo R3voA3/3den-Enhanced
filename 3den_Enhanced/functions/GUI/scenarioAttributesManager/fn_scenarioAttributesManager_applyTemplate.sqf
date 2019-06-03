@@ -28,10 +28,7 @@ _data = call compile (_ctrlLB lbData _selectedTemplate);
 //We don't need the title and description of the template, only the attributes
 _data = _data # 2;
 
-collect3DENHistory//Doesn't collect history, bug?
-{
-   set3DENMissionAttributes _data;
-};
+set3DENMissionAttributes _data;
 
 ["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 

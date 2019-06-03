@@ -21,10 +21,7 @@ if (_selectionPath isEqualTypeArray [0]) exitWith {false};
 //Data is string, we need an array, so compiling it is
 _attributeData = call compile (_ctrlTV tvData _selectionPath);//["Section","PropertyName",value];
 
-collect3DENHistory
-{
-	set3DENMissionAttributes [_attributeData];
-};
+set3DENMissionAttributes [_attributeData];
 
 [format ["Attribute %1 was set to %2",_attributeData # 1, _attributeData # 2]] call BIS_fnc_3DENNotification;
 
