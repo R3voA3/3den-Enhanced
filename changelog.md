@@ -17,6 +17,8 @@ v4.3
 - 3den Radio got a new design
 - Fixed some issues with 3den Radio sometimes not playing music
 - Texture finder won't display a texture on start up
+- Module Information GUI got some visual tweaks
+- Texture Finder has now a filter option
 
 
 *removed*
