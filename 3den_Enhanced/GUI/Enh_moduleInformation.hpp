@@ -113,5 +113,40 @@ class Enh_ModuleInformation
 			h = 0.028 * safezoneH;
 			default = 1;
 		};
+		class FrameDescription: ctrlStaticFrame
+		{
+			x = 0.3425 * safezoneW + safezoneX;
+			y = 0.234 * safezoneH + safezoneY;
+			w = 0.328125 * safezoneW;
+			h = 0.196 * safezoneH;
+		};
+		class FrameDirection: ctrlStaticFrame
+		{
+			x = 0.3425 * safezoneW + safezoneX;
+			y = 0.458 * safezoneH + safezoneY;
+			w = 0.328125 * safezoneW;
+			h = 0.056 * safezoneH;
+		};
+		class FramePosition: ctrlStaticFrame
+		{
+			x = 0.3425 * safezoneW + safezoneX;
+			y = 0.542 * safezoneH + safezoneY;
+			w = 0.328125 * safezoneW;
+			h = 0.056 * safezoneH;
+		};
+		class FrameDuplication: ctrlStaticFrame
+		{
+			x = 0.3425 * safezoneW + safezoneX;
+			y = 0.626 * safezoneH + safezoneY;
+			w = 0.328125 * safezoneW;
+			h = 0.056 * safezoneH;
+		};
+		class FrameSync: ctrlStaticFrame
+		{
+			x = 0.3425 * safezoneW + safezoneX;
+			y = 0.71 * safezoneH + safezoneY;
+			w = 0.328125 * safezoneW;
+			h = 0.056 * safezoneH;
+		};
 	};
 };
