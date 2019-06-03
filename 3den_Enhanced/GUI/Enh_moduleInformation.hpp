@@ -33,7 +33,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DescriptionValue: Enh_StructuredText
+		class DescriptionValue: ctrlStructuredText
 		{
 			idc = 1400;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -49,7 +49,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PositionValue: Enh_StructuredText
+		class PositionValue: ctrlStructuredText
 		{
 			idc = 1401;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -65,7 +65,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DuplicateValue: Enh_StructuredText
+		class DuplicateValue: ctrlStructuredText
 		{
 			idc = 1402;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -81,7 +81,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DirectionValue: Enh_StructuredText
+		class DirectionValue: ctrlStructuredText
 		{
 			idc = 1403;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -97,7 +97,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SyncValue: Enh_StructuredText
+		class SyncValue: ctrlStructuredText
 		{
 			idc = 1404;
 			x = 0.3425 * safezoneW + safezoneX;

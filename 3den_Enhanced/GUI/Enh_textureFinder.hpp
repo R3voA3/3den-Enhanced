@@ -41,7 +41,7 @@ class Enh_TextureFinder
 			y = 0.178 * safezoneH + safezoneY;
 			w = 0.485625 * safezoneW;
 			h = 0.42 * safezoneH;
-			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this select 0) lbText (lbCurSel (_this select 0)))";
+			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
 			onKeyDown = "_this spawn Enh_fnc_textureFinder_exportTexturePath";
 		};
 		class TexturePreview: ctrlStaticPictureKeepAspect

@@ -120,7 +120,7 @@ class Enh_FunctionsViewer
 			h = 0.812 * safezoneH;
 			class Controls
 			{
-				class Lines: Enh_StructuredText
+				class Lines: ctrlStructuredText//ctrlStructuredText//Replace with ctrlStructuredText
 				{
 					idc = 1404;
 					canModify = false;

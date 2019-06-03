@@ -76,35 +76,9 @@ class ctrlListbox;
 class ctrlListNBox;
 class ctrlToolbox;
 class ctrlProgress;
+class ctrlStaticFrame;
 class scrollbar;
 class ctrlControlsGroup;
-
-class Enh_StructuredText
-{
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	type = CT_STRUCTURED_TEXT;
-	idc = -1;
-	style = ST_LEFT;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0.2,0.2,0.2,0.8};
-	class Attributes
-	{
-		font = FONT2_NORMAL;
-		color = "#ffffff";
-		colorLink = "#D09B43";
-		align = "left";
-		shadow = 1;
-	};
-	x = 0;
-	y = 0;
-	h = 0.035;
-	w = 0.1;
-	text = "";
-	size = GUI_TEXT_SIZE_SMALL;
-	shadow = 1;
-};
 
 //DIK Codes
 #ifndef DIK_ESCAPE

@@ -141,7 +141,7 @@ class Enh_3denRadio
 			h = 0.028 * safezoneH;
 			onButtonClick = "_this call Enh_fnc_3denRadio_toggleHelp";
 		};
-		class HelpText: Enh_StructuredText
+		class HelpText: ctrlStructuredText
 		{
 			idc = 2400;
 			text = $STR_ENH_3denRadio_help_description;
