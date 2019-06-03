@@ -3,7 +3,6 @@ v4.3
 - Scenario Attributes Manager
 
 *changed*
-- Functions Viewer does now restore the last viewed function
 - Functions Viewer shows mod icons again
 - Functions Viewer now displays line numbers
 - Combo Box controls were replaced with Toolbox controls if possible
@@ -14,10 +13,16 @@ v4.3
 - Some attributes showed wrong tooltips
 - Functions Viewer can now be accessed by pressing ALT + F (Same as CBA)
 - Config viewer can now be opened by pressing ALT + C
+- GUIs use Eden Editor controls now
+- 3den Radio got a new design
+- Fixed some issues with 3den Radio sometimes not playing music
+- Texture finder won't display a texture on start up
+
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - removed on Event Code Attributes (Too complex for a simple attribute)
+- Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 
 *known Issues*
 - Stay on Position attribute sometimes fails on dedicated server
