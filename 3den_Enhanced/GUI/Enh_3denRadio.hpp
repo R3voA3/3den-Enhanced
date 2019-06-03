@@ -172,7 +172,7 @@ class Enh_IDD_3denRadio
 		};
 		class CurrentSongText: ctrlStatic
 		{
-			text = "Song:"; //--- ToDo: Localize;
+			text = $STR_ENH_3denRadio_song;
 			x = 0.15875 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.0459375 * safezoneW;
@@ -207,7 +207,6 @@ class Enh_IDD_3denRadio
 		//Sort buttons
 		class SortTitle: ctrlButtonPicture
 		{
-			idc = 1610;
 			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
 			x = 0.014375 * safezoneW + safezoneX;
 			y = 0.024 * safezoneH + safezoneY;
@@ -217,7 +216,6 @@ class Enh_IDD_3denRadio
 		};
 		class SortDuration: ctrlButtonPicture
 		{
-			idc = 1611;
 			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
 			x = 0.4475 * safezoneW + safezoneX;
 			y = 0.024 * safezoneH + safezoneY;
@@ -227,7 +225,6 @@ class Enh_IDD_3denRadio
 		};
 		class SortTheme: ctrlButtonPicture
 		{
-			idc = 1612;
 			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
 			x = 0.52625 * safezoneW + safezoneX;
 			y = 0.024 * safezoneH + safezoneY;
