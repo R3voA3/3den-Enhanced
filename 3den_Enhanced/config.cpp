@@ -7,7 +7,6 @@
 #include "GUI\Enh_briefingEditor.hpp"
 #include "GUI\Enh_3denRadio.hpp"
 #include "GUI\Enh_nameObjects.hpp"
-#include "GUI\Enh_colourPicker.hpp"
 #include "GUI\Enh_moduleInformation.hpp"
 #include "GUI\Enh_textureFinder.hpp"
 #include "GUI\Enh_batchReplace.hpp"
