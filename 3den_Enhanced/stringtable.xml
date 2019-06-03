@@ -214,6 +214,7 @@
         <Polish>NAZWA:</Polish>
         <French>NOM:</French>
         <Spanish>NOMBRE:</Spanish>
+        <German>NAME:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_class">
         <English>CLASS:</English>
@@ -221,6 +222,7 @@
         <Polish>KLASA:</Polish>
         <French>CLASS:</French>
         <Spanish>CLASE:</Spanish>
+        <German>KLASSE:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_vehicleClass">
         <English>VEHICLE CLASS:</English>
@@ -228,12 +230,14 @@
         <Polish>KLASA POJAZDU:</Polish>
         <French>CLASS DU VÉHICULE :</French>
         <Spanish>CLASEDEVEHICULO:</Spanish>
+        <German>FAHRZEUGKLASSE:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_kindOf">
         <English>KIND OF:</English>
         <Original>KIND OF:</Original>
         <Polish>RODZAJ:</Polish>
         <French>TYPE DE :</French>
+        <German>ART VON:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_size">
         <English>SIZE (Width, Length, Height):</English>
@@ -241,18 +245,21 @@
         <Polish>ROZMIAR(Szerokość, Długość, Wysokość):</Polish>
         <French>TAILLE (Largeur, Longueur, Hauteur) :</French>
         <Spanish>TAMAÑO (Ancho, Largo, Altura):</Spanish>
+        <German>GRÖẞE (Breite, Länge, Höhe):</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_selectionNames">
         <English>SELECTION NAMES:</English>
         <Original>SELECTION NAMES:</Original>
         <French> NOM DE LA SELECTION:</French>
         <Spanish>NOMBRES DE SELECCIÓN:</Spanish>
+        <German>AUSWAHLNAMEN:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_parents">
         <English>PARENTS:</English>
         <Original>PARENTS:</Original>
         <Polish>RODZICE:</Polish>
         <French>PARENTS:</French>
+        <German>ELTERN:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_objectType">
         <English>OBJECT TYPE:</English>
@@ -260,6 +267,7 @@
         <Polish>TYP OBIEKTU:</Polish>
         <French>TYPE D'OBJET :</French>
         <Spanish>TIPO DE OBJETO:</Spanish>
+        <German>OBJEKT TYP:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_materials">
         <English>MATERIALS:</English>
@@ -267,6 +275,7 @@
         <Polish>MATERIAŁY:</Polish>
         <French>MATÉRIAUX :</French>
         <Spanish>MATERIALES:</Spanish>
+        <German>MATERIALIEN:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_modelinfo">
         <English>MODEL INFO:</English>
@@ -274,6 +283,7 @@
         <Polish>MODEL INFO:</Polish>
         <French>INFO MODELE:</French>
         <Spanish>INFO DE MODELO:</Spanish>
+        <German>MODELL INFO:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_textures">
         <English>TEXTURES:</English>
@@ -281,6 +291,7 @@
         <Polish>TEKSTURY:</Polish>
         <French>TEXTURES:</French>
         <Spanish>TEXTURAS:</Spanish>
+        <German>TEXTUREN:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_animationNames">
         <English>ANIMATION NAMES:</English>
@@ -288,6 +299,7 @@
         <Polish>NAZWY ANIMACJI:</Polish>
         <French>NOM DES ANIMATIONS</French>
         <Spanish>NOMBRE DE ANIMACIÓN:</Spanish>
+        <German>ANIMATIONS NAMEN:</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_primary">
         <English>Normal object placed in Visitor, part of landscape</English>
@@ -302,23 +314,27 @@
         <Original>Temporary object (like tracks)</Original>
         <French>Objet temporaire (comme des traces)</French>
         <Spanish>Objetos temporales (Como orugas)</Spanish>
+        <German>Temporäre Objekte (wie Spuren)</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_typeVehicle">
         <English>Some entity added by game</English>
         <Original>Some entity added by game</Original>
         <French>Diverses entités ajoutées par le jeu</French>
         <Spanish>Alguna entidad agregada por el juego</Spanish>
+        <German>Eine vom Spiel hinzugefügte Entität</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_typeTempVehicle">
         <English>Temporary entity</English>
         <Original>Temporary entity</Original>
         <French>Entités temporaire</French>
         <Spanish>Entidad Temporal</Spanish>
+        <German>Temporäre Entität</German>
     </Key>
     <Key ID="STR_ENH_functions_logObjectInfo_landDecal">
         <English>Land decal</English>
         <Original>Land decal</Original>
         <Spanish>Calcomanía de tierra</Spanish>
+        <German>Land Abziehbild</German>
     </Key>
     <Key ID="STR_ENH_tools_importMissionAttributes">
         <English>Import Mission Attributes from Clipboard</English>
@@ -583,7 +599,6 @@
         <French>Déplace ce commentaire dans un calque spécial appelé 'Liste des tâches'.</French>
         <Spanish>Mover este comentario en una capa especial llamada "Qué hacer"</Spanish>
         <Polish>Dodaje ten komentarz do specjalnej warstwy zwanej "Do zrobienia"</Polish>
-
     </Key>
     <Key ID="STR_ENH_toDoList">
         <English>To-Do List</English>
@@ -606,7 +621,6 @@
         <Original>Load template by double clicking. Delete if from list by pressing DELETE.</Original>
         <Spanish>Cargar plantilla haciendo doble click. Borrar con tecla DELETE</Spanish>
         <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
-
     </Key>
     <Key ID="STR_ENH_ambientFlyby_type_displayName">
         <Original>Type of Aircraft</Original>
@@ -1162,7 +1176,6 @@
         <German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.\n\nDer Eingabewert muss eine Markerklasse aus 'CfgMarkers' sein.</German>
         <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "Enh_GroupMarker_</Spanish>
         <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. \n\nAktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.\n\nWartość to classname z CfgMarkers np. 'mil_box'.</Polish>
-
     </Key>
     <Key ID="STR_ENH_advancedDamageVeh_RBWheel">
         <Original>4th axle right wheel</Original>
@@ -2426,7 +2439,7 @@
         <Chinesesimp>执行操作！</Chinesesimp>
         <Polish>Akcja wykonana!</Polish>
     </Key>
-        <Key ID="STR_ENH_notifications_noEntitiesSelected">
+    <Key ID="STR_ENH_notifications_noEntitiesSelected">
         <Original>No entities selected. Action cancelled!</Original>
         <English>No entities selected. Action cancelled!</English>
         <German>Keine Einheiten ausgewählt. Aktion abgebrochen!</German>
@@ -3724,7 +3737,6 @@
         <Spanish>Color final</Spanish>
         <French>Couleur finale</French>
         <Polish>Finalny kolor</Polish>
-        
     </Key>
     <Key ID="STR_ENH_colourPicker_red">
         <Original>Red</Original>
@@ -5420,7 +5432,7 @@
         <German>Eden Editor Video Tuturial</German>
         <Spanish>Video Tutorial del editor Eden</Spanish>
         <Original>Eden Editor Video Tutorial</Original>
-		<Polish>Eden- Poradnik Wideo</Polish>
+        <Polish>Eden- Poradnik Wideo</Polish>
     </Key>
     <Key ID="STR_ENH_tools_placementTools">
         <English>Placement Tools</English>
