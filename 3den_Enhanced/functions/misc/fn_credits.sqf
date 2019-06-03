@@ -30,7 +30,8 @@ private _contributers =
 	"IllidanS4",
 	"2RIMa-PapaBear",
 	"a1044438870",
-	"SynchronizedHD"
+	"SynchronizedHD",
+	"GhostJumper"
 ];
 
 private _disp = findDisplay 313 createDisplay "Enh_Credits";
