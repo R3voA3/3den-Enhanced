@@ -31,25 +31,9 @@ private _class = switch (ctrlType _ctrlList) do
 		_ctrlList lnbData [_selectedIndex,0];
 	};
 };
-systemChat format ["Class: %1",_class];
+
 //Play song and update current song control
 _ctrlCurrentSong ctrlSetText (profileNamespace getVariable ["Enh_3denRadio_CurrentSong",""]);
 playMusic _class;
 
 true
-
-/* private _display = findDisplay 60000;
-private _ctrlCurrentSong = _display displayCtrl 2200;
-
-//Get data from _ctrlSonglist by default
-private _class = _ctrlSonglist lnbData [lnbCurSelRow _ctrlSonglist,0];
-profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrlSonglist lnbText [lnbCurSelRow _ctrlSonglist,0]];
-
-//If data is empty, try to get the data from playlist
-if (_class isEqualTo "") then
-{
-	_class = _ctrlPlaylist lbData (lbCurSel _ctrl);
-	profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrlPlaylist lbText (lbCurSel _ctrlPlaylist)];
-}; */
-
-
