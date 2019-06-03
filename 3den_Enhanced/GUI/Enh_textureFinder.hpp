@@ -47,10 +47,10 @@ class Enh_TextureFinder
 		class TexturePreview: ctrlStaticPictureKeepAspect
 		{
 			idc = 1200;
-			x = 0.26375 * safezoneW + safezoneX;
-			y = 0.626 * safezoneH + safezoneY;
-			w = 0.459375 * safezoneW;
-			h = 0.168 * safezoneH;
+			x = 0.250625 * safezoneW + safezoneX;
+			y = 0.612 * safezoneH + safezoneY;
+			w = 0.485625 * safezoneW;
+			h = 0.154 * safezoneH;
 		};
 		class Close: ctrlButtonClose
 		{
@@ -59,6 +59,24 @@ class Enh_TextureFinder
 			w = 0.1575 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
+		class Filter: ctrlToolbox
+		{
+			x = 0.42125 * safezoneW + safezoneX;
+			y = 0.78 * safezoneH + safezoneY;
+			w = 0.1575 * safezoneW;
+			h = 0.028 * safezoneH;
+            rows = 1;
+            columns = 3;
+            strings[] = 
+            {
+                "Show all",
+                "Hide JPG",
+				"Hide PAA"
+            };
+            values[] = {0,1,2};
+			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; Enh_TextureFinder_Filter = 0";//Default value
+			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl";
+        };
 		class Search: ctrlButtonSearch
 		{
 			x = 0.604999 * safezoneW + safezoneX;
