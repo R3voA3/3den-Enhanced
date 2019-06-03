@@ -1,21 +1,6 @@
-/* #Jatexe
-$[
-	1.063,
-	["test",[[0,0,1,1],0.025,0.04,"GUI_GRID"],2,0,0],
-	[2200,"",[1,"",["0.395 * safezoneW + safezoneX","0.374 * safezoneH + safezoneY","0.21 * safezoneW","0.252 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1000,"",[1,"Template Description ",["0.395 * safezoneW + safezoneX","0.346 * safezoneH + safezoneY","0.21 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1001,"Title",[1,"Title",["0.401563 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.0853125 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1002,"",[2,"Description",["12.5 * GUI_GRID_W + GUI_GRID_X","11.5 * GUI_GRID_H + GUI_GRID_Y","6.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1400,"TitleValue",[1,"",["0.401562 * safezoneW + safezoneX","0.43 * safezoneH + safezoneY","0.196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1401,"DescriptionValue",[1,"",["0.401562 * safezoneW + safezoneX","0.514 * safezoneH + safezoneY","0.196875 * safezoneW","0.056 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"Cancel",[1,"Cancel",["0.401563 * safezoneW + safezoneX","0.584 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1601,"OK",[1,"OK",["0.526249 * safezoneW + safezoneX","0.584 * safezoneH + safezoneY","0.0721875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
-]
-*/
-
 class Enh_ScenarioAttributesManagerTemplateData
 {
-	idd = ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA;
+	idd = ENH_IDD_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA;
 	movingEnable = true;
 	enableSimulation = true;
 	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
@@ -33,7 +18,7 @@ class Enh_ScenarioAttributesManagerTemplateData
 	};
 	class Controls
 	{
-		class Header: Enh_Text
+		class Header: ctrlStaticTitle
 		{
 			x = 0.395 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -41,20 +26,20 @@ class Enh_ScenarioAttributesManagerTemplateData
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class Title: Enh_Text
+		class Title: ctrlStatic
 		{
 			text = $STR_ENH_ScenarioAttributesManagerTemplateData_title;
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.388 * safezoneH + safezoneY;
-			w = 0.0853125 * safezoneW;
+			w = 0.12 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Description: Enh_Text
+		class Description: ctrlStatic
 		{
 			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
-			w = 0.0853125 * safezoneW;
+			w = 0.12 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
 		class TitleValue: ctrlEdit
@@ -73,19 +58,15 @@ class Enh_ScenarioAttributesManagerTemplateData
 			w = 0.196875 * safezoneW;
 			h = 0.056 * safezoneH;
 		};
-		class Cancel: Enh_Button
+		class Cancel: ctrlButtonCancel
 		{
-			idc = 1;
-			text = $STR_ENH_actionCreator_cancel; 
 			x = 0.401563 * safezoneW + safezoneX;
 			y = 0.584 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class OK: Enh_Button
+		class OK: ctrlButtonOK
 		{
-			idc = 2;
-			text = $STR_ENH_actionCreator_ok;
 			x = 0.526249 * safezoneW + safezoneX;
 			y = 0.584 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;

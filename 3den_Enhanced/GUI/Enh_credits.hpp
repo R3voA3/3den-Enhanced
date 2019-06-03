@@ -1,6 +1,6 @@
 class Enh_Credits
 {
-	idd = ENH_CREDITS;
+	idd = ENH_IDD_CREDITS;
 	movingEnable = true;
 	class ControlsBackground
 	{
@@ -15,7 +15,7 @@ class Enh_Credits
 	};
 	class Controls
 	{
-		class Header: Enh_Text
+		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_credits_header;
 			x = 0.395 * safezoneW + safezoneX;
@@ -24,16 +24,14 @@ class Enh_Credits
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class Close: Enh_Button
+		class Close: ctrlButtonClose
 		{
-			idc = 1;
-			text = $STR_ENH_briefingEditor_close_displayName;
 			x = 0.395 * safezoneW + safezoneX;
 			y = 0.766 * safezoneH + safezoneY;
 			w = 0.223125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class List: Enh_ListBox
+		class List: ctrlListbox
 		{
 			idc = 1000;
 			x = 0.408125 * safezoneW + safezoneX;

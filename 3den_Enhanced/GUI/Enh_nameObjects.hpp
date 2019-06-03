@@ -1,6 +1,6 @@
 class Enh_NameObjects
 {
-	idd = ENH_NAMEOBJECTS;
+	idd = ENH_IDD_NAMEOBJECTS;
 	movingEnable = true;
 	class ControlsBackground
 	{
@@ -15,7 +15,7 @@ class Enh_NameObjects
 	};
 	class Controls
 	{
-		class Header: Enh_Text
+		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_nameObjects_header;
 			x = 0.375313 * safezoneW + safezoneX;
@@ -24,25 +24,24 @@ class Enh_NameObjects
 			h = 0.028 * safezoneH;
 			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class RemoveNames: Enh_Button
+		class RemoveNames: ctrlButton
 		{
 			text = $STR_ENH_nameObjects_removeName;
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.535 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 			action = "'UNNAME' call Enh_fnc_nameObjects";
 		};
-		class OK: Enh_Button
+		class OK: ctrlButtonOK
 		{
-			text = $STR_ENH_nameObjects_OK;
-			x = 0.5525 * safezoneW + safezoneX;
+			x = 0.539375 * safezoneW + safezoneX;
 			y = 0.535 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 			action = "call Enh_fnc_nameObjects";
 		};
-		class VariableName: Enh_Text
+		class VariableName: ctrlStatic
 		{
 			text = $STR_ENH_briefingEditor_variableName_displayName;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -50,7 +49,7 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class IndexStart: Enh_Text
+		class IndexStart: ctrlStatic
 		{
 			text = $STR_ENH_nameObjects_startIndex;
 			x = 0.381875 * safezoneW + safezoneX;
