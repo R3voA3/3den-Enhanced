@@ -17,12 +17,6 @@ class CfgFunctions
 			class 3denRadio_searchList;
 			class 3denRadio_selectNewSong;
 		};
-		class ColourPicker
-		{
-			file = "3denEnhanced\functions\GUI\colourPicker";
-			class colourPicker_onLoad;
-			class colourPicker;
-		};
 		class TextureFinder
 		{
 			file = "3denEnhanced\functions\GUI\TextureFinder";
