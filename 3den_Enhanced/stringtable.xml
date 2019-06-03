@@ -5313,9 +5313,14 @@
 		<Original>Apply Template</Original>
 	</Key>
 	<Key ID="STR_ENH_ScenarioAttributesManager_export">
-		<English>Export to Clipboard</English>
-		<German>In Zwischenablage exportieren</German>
-		<Original>Export to Clipboard</Original>
+		<Original>Export</Original>
+		<English>Export</English>
+		<Czech>Export</Czech>
+		<French>Exporter</French>
+		<Spanish>Exportar</Spanish>
+		<German>Exportieren</German>
+		<Chinesesimp>输出</Chinesesimp>
+		<Polish>Eksport</Polish>
 	</Key>
 	<Key ID="STR_ENH_ScenarioAttributesManagerTemplateData_description">
 		<English>Template Descriptio</English>
