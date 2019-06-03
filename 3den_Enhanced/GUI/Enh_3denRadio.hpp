@@ -1,6 +1,6 @@
-class Enh_IDD_3denRadio
+class Enh_3denRadio
 {
-	idd = ENH_3DENRADIO;
+	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
 	onLoad = "_this spawn Enh_fnc_3denRadio_onLoad";
 	onUnload = "_this call Enh_fnc_3denRadio_onUnload"
