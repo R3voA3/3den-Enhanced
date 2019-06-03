@@ -1,6 +1,6 @@
 class Enh_ScenarioAttributesManagerTemplateData
 {
-	idd = ENH_IDD_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA;
+	idd = -1;
 	movingEnable = true;
 	enableSimulation = true;
 	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
