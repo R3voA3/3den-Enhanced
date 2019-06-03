@@ -11,19 +11,16 @@
    BOOLEAN: true / false
 */
 
-#define DISPLAY (findDisplay 80000)
-#define GET_CTRL(IDC) (DISPLAY displayCtrl IDC)
+#define GET_CTRL(IDC) (_display displayCtrl IDC)
+
+private _display = findDisplay 80000;
 
 if !(is3DEN) exitWith {false};
 
 private _input    = param [0,"UNNAME",[""]];
-private _objects  = get3DENSelected "Object";
-private _markers  = get3DENSelected "Marker";
-private _triggers = get3DENSelected "Trigger";
-private _logics   = get3DENSelected "Logic";
-private _toName = _objects + _markers + _triggers + _logics;
+private _toName = get3DENSelected "Object" + get3DENSelected "Marker" + get3DENSelected "Trigger" + get3DENSelected "Logic";
 
-if (_toName isEqualTo []) exitWith {false; DISPLAY closeDisplay 0};
+if (_toName isEqualTo []) exitWith {false; _display closeDisplay 0};
 
 if (_input == "UNNAME") then
 {
@@ -36,7 +33,7 @@ if (_input == "UNNAME") then
 }
 else
 {
-   private _index = parseNumber (ctrlText  GET_CTRL(1100));
+   private _index = parseNumber (ctrlText GET_CTRL(1100));
    profileNamespace setVariable ["Enh_nameObjects_lastIndex",str _index];
 
    private _varName  = ctrlText GET_CTRL(1000);
@@ -52,7 +49,7 @@ else
    };
 };
 
-DISPLAY closeDisplay 0;
+_display closeDisplay 0;
 ["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true
