@@ -3,7 +3,7 @@ class Enh_3denRadio
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
 	onLoad = "_this spawn Enh_fnc_3denRadio_onLoad";
-	onUnload = "_this call Enh_fnc_3denRadio_onUnload"
+	onUnload = "_this call Enh_fnc_3denRadio_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -14,18 +14,57 @@ class Enh_3denRadio
 			w = 0.97125 * safezoneW;
 			h = 0.9344 * safezoneH;
 		};
+		class TitleHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_title;
+			x = 0.0275 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.450312 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+			class HeaderLeft: ctrlStaticTitle
+		{
+			x = 0.014375 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.013125 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class ThemeHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_theme;
+			x = 0.535375 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.170625 * safezoneW
+			h = 0.028 * safezoneH;
+		};
+		class DurationHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_duration;
+			x = 0.460625 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.07875 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class PlaylistHeader:  ctrlStaticTitle
+		{
+			text = "Playlist";
+			x = 0.769063 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.216562 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class ModHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_mod;
+			x = 0.698875 * safezoneW + safezoneX;
+			y = 0.024 * safezoneH + safezoneY;
+			w = 0.28675 * safezoneW;
+			h = 0.028 * safezoneH;
+			colorBackground[] = COLOUR_USER_PRESET;
+		};
 	};
 	class Controls
 	{
-		class ToggleRadio: ctrlButtonPictureKeepAspect
-		{
-			idc = 2300;
-			x = 0.0209375 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.0196875 * safezoneW;
-			h = 0.028 * safezoneH;
-			onButtonClick = "['BUTTON'] call Enh_fnc_3denRadio_toggleRadio";
-		};
 		class Songlist: ctrlListNBox
 		{
 			idc = 1500;
@@ -49,12 +88,79 @@ class Enh_3denRadio
 			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
 		};
+		class Separator: ctrlStaticLine
+		{
+			x = 0.0209375 * safezoneW + safezoneX;
+			y = 0.923704 * safezoneH + safezoneY;
+			w = 0.958125 * safezoneW;
+			//h = 20 * pixelH;
+		};
+		class ToggleRadio: ctrlButtonPictureKeepAspect
+		{
+			idc = 2300;
+			x = 0.0209375 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.0196875 * safezoneW;
+			h = 0.028 * safezoneH;
+			onButtonClick = "['BUTTON'] call Enh_fnc_3denRadio_toggleRadio";
+		};
+		class VolumeIcon: ctrlStaticPictureKeepAspect
+		{
+			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
+			x = 0.0471875 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.0196875 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class Volume: ctrlXSliderH
+		{
+			idc = 1900;
+			x = 0.0734375 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.07875 * safezoneW;
+			h = 0.028 * safezoneH;
+			sliderRange[] = {0,1.5};
+			onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0))";
+		};
+		class CurrentSongText: ctrlStatic
+		{
+			text = $STR_ENH_3denRadio_song;
+			x = 0.15875 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.03 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class CurrentSong: ctrlStatic
+		{
+			idc = 2200;
+			x = 0.19 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.23 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class Sort: ctrlToolbox
+		{
+			x = 0.42125 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.190312 * safezoneW;
+			h = 0.028 * safezoneH;
+            rows = 1;
+            columns = 3;
+            strings[] = 
+            {
+                "Sort by Title",
+				"Sort by Duration",
+                "Sort by Theme"
+            };
+            values[] = {0,1,2};
+			onToolBoxSelChanged  = "params ['_ctrl','_index']; (['TITLE','DURATION','THEME'] select (_ctrl lbValue _index)) call Enh_fnc_3denRadio_sortBy";
+        };
 		class SearchEdit: ctrlEdit
 		{
 			idc = 1400;
-			x = 0.644375 * safezoneW + safezoneX;
+			x = 0.690313 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.0984375 * safezoneW;
+			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
 			onKeyUp = "call Enh_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
 		};
@@ -65,47 +171,6 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-		};
-		class TitleHeader: ctrlStaticTitle
-		{
-			text = $STR_ENH_3denRadio_headline_title;
-			x = 0.0275 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.450312 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class ThemeHeader: ctrlStaticTitle
-		{
-			text = $STR_ENH_3denRadio_headline_theme;
-			x = 0.535375 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.170625 * safezoneW
-			h = 0.028 * safezoneH;
-		};
-		class DurationHeader: ctrlStaticTitle
-		{
-			text = $STR_ENH_3denRadio_headline_duration;
-			x = 0.460624 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class PlaylistHeader:  ctrlStaticTitle
-		{
-			text = "Playlist";
-			x = 0.769063 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.216562 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class ModHeader: ctrlStaticTitle
-		{
-			text = $STR_ENH_3denRadio_headline_mod;
-			x = 0.698875 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.28675 * safezoneW;
-			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class Close: ctrlButtonClose
 		{
@@ -135,7 +200,7 @@ class Enh_3denRadio
 		class ToggleHelp: ctrlButton
 		{
 			text = $STR_ENH_3denRadio_help_text;
-			x = 0.572187 * safezoneW + safezoneX;
+			x = 0.618125 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.065625 * safezoneW;
 			h = 0.028 * safezoneH;
@@ -151,40 +216,6 @@ class Enh_3denRadio
 			h = 0.168 * safezoneH;
 			onLoad = "_this # 0 ctrlSetFade 1;  _this # 0 ctrlCommit 0";
 			colorBackground[] = COLOUR_USER_PRESET;
-		};
-		class VolumeIcon: ctrlStaticPictureKeepAspect
-		{
-			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
-			x = 0.0471875 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.0196875 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class Volume: ctrlXSliderH
-		{
-			idc = 1900;
-			x = 0.0734375 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.07875 * safezoneW;
-			h = 0.028 * safezoneH;
-			sliderRange[] = {0,1.5};
-			onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0))";
-		};
-		class CurrentSongText: ctrlStatic
-		{
-			text = $STR_ENH_3denRadio_song;
-			x = 0.15875 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.0459375 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class CurrentSong: ctrlStatic
-		{
-			idc = 2200;
-			x = 0.19125 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.2575 * safezoneW;
-			h = 0.028 * safezoneH;
 		};
 /* 		class FastForwardIcon: ctrlStaticPictureKeepAspect
 		{
@@ -204,33 +235,5 @@ class Enh_3denRadio
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		}; */
-		//Sort buttons
-		class SortTitle: ctrlButtonPicture
-		{
-			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
-			x = 0.014375 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.013125 * safezoneW;
-			h = 0.028 * safezoneH;
-			onButtonClick = "'NAME' call Enh_fnc_3denRadio_sortBy";
-		};
-		class SortDuration: ctrlButtonPicture
-		{
-			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
-			x = 0.4475 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.013125 * safezoneW;
-			h = 0.028 * safezoneH;
-			onButtonClick = "'DURATION' call Enh_fnc_3denRadio_sortBy";
-		};
-		class SortTheme: ctrlButtonPicture
-		{
-			text = "\A3\ui_f\data\igui\cfg\actions\arrow_down_gs.paa";
-			x = 0.52625 * safezoneW + safezoneX;
-			y = 0.024 * safezoneH + safezoneY;
-			w = 0.013125 * safezoneW;
-			h = 0.028 * safezoneH;
-			onButtonClick = "'THEME' call Enh_fnc_3denRadio_sortBy";
-		};
 	};
 };
