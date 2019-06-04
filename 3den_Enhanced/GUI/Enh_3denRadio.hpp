@@ -93,7 +93,6 @@ class Enh_3denRadio
 			x = 0.0209375 * safezoneW + safezoneX;
 			y = 0.923704 * safezoneH + safezoneY;
 			w = 0.958125 * safezoneW;
-			//h = 20 * pixelH;
 		};
 		class ToggleRadio: ctrlButtonPictureKeepAspect
 		{
