@@ -71,6 +71,7 @@ class ctrlStaticBackgroundDisableTiles;
 class ctrlStaticPictureKeepAspect;
 class ctrlStaticMulti;
 class ctrlStaticTitle;
+class ctrlStaticLine;
 class ctrlTree;
 class ctrlListbox;
 class ctrlListNBox;
