@@ -19,6 +19,9 @@ v4.3
 - Texture finder won't display a texture on start up
 - Module Information GUI got some visual tweaks
 - Texture Finder has now a filter option
+- Batch Replace GUI would not save last used value correctly
+- Tweaked layout of Batch Replace GUI
+- Tweaked layout for Texture Finder
 
 
 *removed*
