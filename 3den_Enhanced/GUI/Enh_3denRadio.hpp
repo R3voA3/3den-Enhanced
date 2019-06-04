@@ -12,7 +12,7 @@ class Enh_3denRadio
 			x = 0.014375 * safezoneW + safezoneX;
 			y = 0.052 * safezoneH + safezoneY;
 			w = 0.97125 * safezoneW;
-			h = 0.868 * safezoneH;
+			h = 0.924 * safezoneH;
 		};
 		class TitleHeader: ctrlStaticTitle
 		{
