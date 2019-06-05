@@ -133,5 +133,15 @@ class CfgFunctions
 			class sessionTimer;
 			class onPreviewDebug;
 		};
+		class EventHandlers
+		{
+			file = "3denEnhanced\functions\eventHandlers";
+			class EH_onMissionLoad;
+			class EH_onMissionNew;
+			class EH_onMissionPreview;
+			class EH_onMissionPreviewEnd;
+			class EH_onSelectionChange;
+			class EH_onTerrainNew;
+		};
 	};
 };
