@@ -1,6 +1,6 @@
 class Enh_PlacementTools
 {
-	idd = ENH_IDD_PLACEMENTTOOLS;
+	idd = -1;
 	onLoad = "call Enh_fnc_placementTools_onLoad";
 	onUnload = "call Enh_fnc_placementTools_onUnload";
 	movingEnable = true;
