@@ -1,5 +1,12 @@
 class Display3DEN
 {
+	class ContextMenu: ctrlMenu
+	{
+		class Items
+		{
+			#include "contextMenu.hpp"
+		};
+	};
 	class Controls
 	{
 		#include "statusbar.hpp"
@@ -12,7 +19,7 @@ class Display3DEN
 				#include "menuStrip_help.hpp"
 			};
 		};
-		//Make BLUFOR category collapsed by default
+		//Make WEST, EAST and GUER category collapsed by default
 		class PanelRight:ctrlControlsGroupNoScrollbars
 		{
 			class Controls
@@ -25,19 +32,23 @@ class Display3DEN
 						{
 							class Controls
 							{
-								class CreateObjectWEST: ctrlTree
-								{
-									defaultItem[] = {};
-								};
+                                class CreateObjectWEST: ctrlTree
+                                {
+                                    defaultItem[] = {};
+                                };
+                                class CreateObjectEAST: CreateObjectWEST
+                                {
+                                    defaultItem[] = {};
+                                };
+                                class CreateObjectGUER: CreateObjectWEST
+                                {
+                                    defaultItem[] = {};
+                                };
 							};	
 						};
 					};
 				};
 			};
 		};
-	};
-	class ContextMenu: ctrlMenu
-	{
-		#include "contextMenu.hpp"
 	};
 };
