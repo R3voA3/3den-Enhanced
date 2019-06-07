@@ -8,7 +8,7 @@
    -
 
    Returns:
-   ARRAY - List of selected objects
+   ARRAY - List of selected entities
 */
 
 get3DENSelected "Object" /* + get3DENSelected "Group" */ + get3DENSelected "Trigger" + get3DENSelected "Logic" + get3DENSelected "Waypoint" + get3DENSelected "Marker"
