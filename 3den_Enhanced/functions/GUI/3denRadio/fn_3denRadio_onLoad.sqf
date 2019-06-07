@@ -58,7 +58,6 @@ Enh_3denRadio_cfgMusic =
 	("true" configClasses (configFile >> "CfgMusic")) + 
 	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
 	("true" configClasses (campaignConfigFile >> "CfgMusic"));
-// +	("(configName _x in ['Fallout','Wasteland','SkyNet','MAD','Defcon'])" configClasses (configFile >> "CfgMusic"));
 
 _ctrlSongList lnbAddColumn 0.585;
 _ctrlSongList lnbAddColumn 0.69;
