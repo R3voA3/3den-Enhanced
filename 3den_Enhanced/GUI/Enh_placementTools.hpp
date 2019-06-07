@@ -32,7 +32,6 @@ class Enh_PlacementTools
 			y = 0.122 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class CircularHeader: ctrlStatic
 		{
@@ -41,7 +40,6 @@ class Enh_PlacementTools
 			y = 0.178 * safezoneH + safezoneY;
 			w = 0.18375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class Radius: ctrlStatic
 		{
@@ -110,7 +108,6 @@ class Enh_PlacementTools
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.18375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class Spacing: ctrlStatic
 		{
@@ -139,7 +136,6 @@ class Enh_PlacementTools
 			y = 0.43 * safezoneH + safezoneY;
 			w = 0.18375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class NumColumns: ctrlStatic
 		{
@@ -207,7 +203,6 @@ class Enh_PlacementTools
 			y = 0.598 * safezoneH + safezoneY;
 			w = 0.18375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class A: ctrlStatic
 		{
@@ -256,7 +251,6 @@ class Enh_PlacementTools
 			y = 0.724 * safezoneH + safezoneY;
 			w = 0.18375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 		class AreaSize: ctrlStatic
 		{
@@ -286,17 +280,24 @@ class Enh_PlacementTools
 			w = 0.0721875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class CoverageValue: ctrlXSliderH
+		class CoverageValue: ctrlToolbox
 		{
-			idc = 110;
 			x = 0.10625 * safezoneW + safezoneX;
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.0984375 * safezoneW;
 			h = 0.028 * safezoneH;
-			sliderRange[] = {1,10};
-			sliderPosition = 2;
-			onSliderPosChanged = "Enh_PlacementTools_Coverage = round (_this # 1); call Enh_fnc_placementTools_garrison";
-		}; 
+            rows = 1;
+            columns = 4;
+            strings[] = 
+            {
+                "100 %",
+				"50 %",
+				"25 %",
+				"10 %"
+            };
+            values[] = {1,2,4,10};
+			onToolBoxSelChanged  = "params ['_ctrl','_index']; Enh_PlacementTools_Coverage = (_ctrl lbValue _index); call Enh_fnc_placementTools_garrison";
+        };
 		class CurrentValueText: ctrlStatic
 		{
 			text = $STR_ENH_placementTools_currentValue;
