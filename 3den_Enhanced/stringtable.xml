@@ -3515,13 +3515,13 @@
 		<Polish>Pomoc</Polish>
 	</Key>
 	<Key ID="STR_ENH_3denRadio_help_description">
-		<Original>- Double left click on a listbox entry plays the song immediately&lt;br/&gt;- Add a song to your playlist by pressing SPACE&lt;br/&gt;- Copy the class name of a song to your clipboard by pressing CTRL + C&lt;br/&gt;- Remove an entry from the Playlist by selecting it and pressing DELETE</Original>
-		<English>- Double left click on a listbox entry plays the song immediately&lt;br/&gt;- Add a song to your playlist by pressing SPACE&lt;br/&gt;- Copy the class name of a song to your clipboard by pressing CTRL + C&lt;br/&gt;- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
-		<German>- Doppelt Linksklick auf einen Listeneintrag spielt das Lied sofort&lt;br/&gt;- Füge ein Lied zur Playlist indem du das Lied markierst und SPACE drückst&lt;br/&gt;- Ein Klassenname kann mit CTRL+C in die Zwischenablage kopiert werden</German>
-		<Chinesesimp>- 双击列表框条目立即播放歌曲&lt;br/&gt;- 通过按SPACE&lt;br/&gt;-将歌曲添加到播放列表 - 按CTRL + C&lt;br/&gt;-将歌曲的类名复制到剪贴板 &lt;br/&gt; - 通过选择并按DELETE从播放列表中删除条目</Chinesesimp>
-		<Spanish>- Haga doble clic en la entrada de un cuadro de lista para reproducir la canción inmediatamente. &lt;br/&gt; - Agregue una canción a su lista de reproducción presionando SPACE &lt;br/&gt; - Copie el nombre de la clase de una canción a su portapapeles presionando CTRL + C &lt;br/&gt; - Eliminar una entrada de la lista de reproducción seleccionándola y presionando BORRAR</Spanish>
-		<French>- Double-cliquez à gauche sur une entrée de la liste pour lire immédiatement la chanson &lt;br/&gt;- Ajouter une chanson à votre liste de lecture en appuyant sur ESPACE &lt;br/&gt;- Copiez le nom de la classe d’une chanson dans le Presse-papiers en appuyant sur CTRL + C &lt;br./&gt;- Supprime une entrée de la liste de lecture en la sélectionnant et en appuyant sur SUPPRIMER</French>
-		<Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki&lt;br/&gt;-Dodaj piosenke do playlisty poprzez naciśniecie SPACE&lt;br/&gt;-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C&lt;br/&gt;Usuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
+		<Original>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</Original>
+		<English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
+		<German>- Doppelt Linksklick auf einen Listeneintrag spielt das Lied sofor\n- Füge ein Lied zur Playlist indem du das Lied markierst und SPACE drückst\n- Ein Klassenname kann mit CTRL+C in die Zwischenablage kopiert werden</German>
+		<Chinesesimp>- 双击列表框条目立即播放歌曲\n- 通过按SPACE\n-将歌曲添加到播放列表 - 按CTRL + C\n-将歌曲的类名复制到剪贴板 &lt;br/&gt; - 通过选择并按DELETE从播放列表中删除条目</Chinesesimp>
+		<Spanish>- Haga doble clic en la entrada de un cuadro de lista para reproducir la canción inmediatamente. \n - Agregue una canción a su lista de reproducción presionando SPACE \n&gt; - Copie el nombre de la clase de una canción a su portapapeles presionando CTRL + C \n - Eliminar una entrada de la lista de reproducción seleccionándola y presionando BORRAR</Spanish>
+		<French>- Double-cliquez à gauche sur une entrée de la liste pour lire immédiatement la chanson \n- Ajouter une chanson à votre liste de lecture en appuyant sur ESPACE \n- Copiez le nom de la classe d’une chanson dans le Presse-papiers en appuyant sur CTRL + C \n- Supprime une entrée de la liste de lecture en la sélectionnant et en appuyant sur SUPPRIMER</French>
+		<Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki\n-Dodaj piosenke do playlisty poprzez naciśniecie SPACE\n-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C\nUsuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
 	</Key>
 	<Key ID="STR_ENH_nameObjects_header">
 		<Original>Name Objects</Original>
@@ -5336,5 +5336,20 @@
 		<English>Song:</English>
 		<German>Lied:</German>
 		<Original>Song:</Original>
+	</Key>
+	<Key ID="STR_ENH_3denRadio_sortByTitle">
+		<English>Sort by Title</English>
+		<German>Sortieren nach Titel</German>
+		<Original>Sort by Title</Original>
+	</Key>
+	<Key ID="STR_ENH_3denRadio_sortByDuration">
+		<English>Sort by Duration</English>
+		<German>Sortieren nach Dauer</German>
+		<Original>Sort by Duration</Original>
+	</Key>
+	<Key ID="STR_ENH_3denRadio_sortByTheme">
+		<English>Sort by Theme</English>
+		<German>Sortieren nach Thema</German>
+		<Original>Sort by Theme</Original>
 	</Key>
 </Project>
