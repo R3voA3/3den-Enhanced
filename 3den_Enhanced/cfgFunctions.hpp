@@ -13,7 +13,6 @@ class CfgFunctions
 			class 3denRadio_toggleRadio;
 			class 3denRadio_handlePlaylist;
 			class 3denRadio_sortBy;
-			class 3denRadio_toggleHelp;
 			class 3denRadio_searchList;
 			class 3denRadio_selectNewSong;
 		};
