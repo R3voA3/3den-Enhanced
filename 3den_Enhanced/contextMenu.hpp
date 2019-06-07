@@ -36,22 +36,20 @@ class Enh_LogFactions
 	action = "call Enh_fnc_logFactions";
 	conditionShow = "hoverObject";
 };
-class CreateComment;
-class Enh_MeasureDistance: CreateComment
+class Enh_MeasureDistance
 {
 	action = "[] spawn Enh_fnc_measureDistance";
 	Text = $STR_ENH_contextMenu_measureDistance;
 	picture = "\3denEnhanced\data\Enh_icon_ruler.paa";
 	conditionShow = "1";
-	data = "";
+	value = 0;
 };
-class Enh_ShowModuleDescription: CreateComment
+class Enh_ShowModuleDescription
 {
 	action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
 	Text = $STR_ENH_contextMenu_getModuleDescription;
-	picture = "";
 	conditionShow = "hoverLogic";
-	data = "";
+	value = 0;
 };
 class Enh_TriggerOwnerPlayer
 {
