@@ -1,10 +1,16 @@
-_selected = call Enh_fnc_all3DENSelected;
-_center = screenToWorld [0.5,0.5];
-
-_space =6;
-_distanceX = 2000;
-_distanceY = 2000;
-_newPos = _center;
+private _space =6;
+private _distanceX = 2000;
+private _distanceY = 2000;
+private _newPos = Enh_PlacementTools_Center;
+private _numX = (_distanceX / _space) - 1;
+private _numY = (_distanceY / _space) - 1;
+private _c1 = _numX;
+private _c2 = _c1 + _numY;
+private _c3 =  _c1 + _c2;
+private _c4 = _numY + _c3;
+private _counter = 1;
+private _toSelect = [];
+private _rotation = [0,0,0];
 
 /*
 _c3-------------------_c2
@@ -14,19 +20,6 @@ _c3-------------------_c2
 -						-
 _c4-------------------_c1 
 */
-
-_numX = (_distanceX / _space) - 1;
-_numY = (_distanceY / _space) - 1;
-
-_c1 = _numX;
-_c2 = _c1 + _numY;
-_c3 =  _c1 + _c2;
-_c4 = _numY + _c3;				
-
-_counter = 1;
-_toSelect = [];
-_rotation = [0,0,0];
-systemChat str _c4;
 {
 	_x set3DENAttribute ["Position",_newPos];
 	_x set3DENAttribute ["Rotation",_rotation];
@@ -39,7 +32,7 @@ systemChat str _c4;
 	if (_counter >= _c4) exitWith {};
 	
 	_counter = _counter + 1;
-} forEach _selected;
+} forEach call Enh_fnc_all3DENSelected;
 
 set3DENSelected _toSelect;
 
