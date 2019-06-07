@@ -25,9 +25,17 @@ private _ctrlVol = _display displayCtrl 1900;
 private _ctrlCurSong = _display displayCtrl 2200;
 private _ctrlSongList = _display displayCtrl 1500;
 private _ctrlToggleRadio = _display displayCtrl 2300;
+private _ctrlSort = _display displayCtrl 1600;
 
 //Set up slider
 _ctrlVol sliderSetPosition (profileNamespace getVariable ["Enh_3denRadio_MusicVolume",0.25]);
+
+//Set up combo
+{
+	_ctrlSort lbAdd localize _x;
+} forEach ["STR_ENH_3denRadio_sortByTitle","STR_ENH_3denRadio_sortByDuration","STR_ENH_3denRadio_sortByTheme"];
+
+_ctrlSort lbSetCurSel 0;
 
 //Update current song
 _ctrlCurSong ctrlSetText (profileNamespace getVariable ["Enh_3denRadio_CurrentSong",""]);
@@ -64,6 +72,6 @@ call Enh_fnc_3denRadio_searchList;
 
 "ONLOAD" call Enh_fnc_3denRadio_toggleRadio;
 
-"NAME" call Enh_fnc_3denRadio_sortBy;
+"TITLE" call Enh_fnc_3denRadio_sortBy;
 
 true
