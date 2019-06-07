@@ -47,7 +47,7 @@ class Enh_3denRadio
 		};
 		class PlaylistHeader:  ctrlStaticTitle
 		{
-			text = "Playlist";
+			text = $STR_ENH_3denRadio_playlist_text;
 			x = 0.769063 * safezoneW + safezoneX;
 			y = 0.024 * safezoneH + safezoneY;
 			w = 0.216562 * safezoneW;
@@ -60,7 +60,6 @@ class Enh_3denRadio
 			y = 0.024 * safezoneH + safezoneY;
 			w = 0.28675 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 	};
 	class Controls
@@ -137,23 +136,15 @@ class Enh_3denRadio
 			w = 0.23 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Sort: ctrlToolbox
-		{
-			x = 0.42125 * safezoneW + safezoneX;
+		class Sort: ctrlCombo
+  		{
+			idc = 1600;
+			x = 0.5525 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.190312 * safezoneW;
+			w = 0.105 * safezoneW;
 			h = 0.028 * safezoneH;
-            rows = 1;
-            columns = 3;
-            strings[] = 
-            {
-                "Sort by Title",
-				"Sort by Duration",
-                "Sort by Theme"
-            };
-            values[] = {0,1,2};
-			onToolBoxSelChanged  = "params ['_ctrl','_index']; (['TITLE','DURATION','THEME'] select (_ctrl lbValue _index)) call Enh_fnc_3denRadio_sortBy";
-        };
+			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call Enh_fnc_3denRadio_sortBy";
+		};
 		class SearchEdit: ctrlEdit
 		{
 			idc = 1400;
@@ -196,25 +187,14 @@ class Enh_3denRadio
 			h = 0.028 * safezoneH;
 			action = "'IMPORT'call Enh_fnc_3denRadio_handlePlaylist";
 		};
-		class ToggleHelp: ctrlButton
+		class ToggleHelp: ctrlStaticPictureKeepAspect
 		{
-			text = $STR_ENH_3denRadio_help_text;
-			x = 0.618125 * safezoneW + safezoneX;
+			text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
+			tooltip = $STR_ENH_3denRadio_help_description;
+			x = 0.664063 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "_this call Enh_fnc_3denRadio_toggleHelp";
-		};
-		class HelpText: ctrlStructuredText
-		{
-			idc = 2400;
-			text = $STR_ENH_3denRadio_help_description;
-			x = 0.2375 * safezoneW + safezoneX;
-			y = 0.318 * safezoneH + safezoneY;
-			w = 0.3 * safezoneW;
-			h = 0.168 * safezoneH;
-			onLoad = "_this # 0 ctrlSetFade 1;  _this # 0 ctrlCommit 0";
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
 /* 		class FastForwardIcon: ctrlStaticPictureKeepAspect
 		{
