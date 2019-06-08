@@ -83,6 +83,12 @@ class CfgFunctions
 			class scenarioAttributesManager_getScenarioAttributes;
 			class scenarioAttributesManager_exportToClipboard;
 		};
+		class NameObjects
+		{
+			file = "3denEnhanced\functions\GUI\nameObjects";
+			class nameObjects_onLoad;
+			class nameObjects_name;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
@@ -92,7 +98,6 @@ class CfgFunctions
 			class switchTime;
 			class toggleGrass;
 			class deleteCrew;
-			class nameObjects;
 			class deleteEmptyLayers;
 			class moduleInformation;
 			class makeObjectSimple;
