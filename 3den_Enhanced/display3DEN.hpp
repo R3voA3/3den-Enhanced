@@ -19,8 +19,8 @@ class Display3DEN
 				#include "menuStrip_help.hpp"
 			};
 		};
-		//Make WEST, EAST and GUER category collapsed by default
-		class PanelRight:ctrlControlsGroupNoScrollbars
+		//Make WEST, EAST and GUER category collapsed by default DOESN'T WORK FOR GUER TV FOR UNKNOWN REASON
+	/* 	class PanelRight:ctrlControlsGroupNoScrollbars
 		{
 			class Controls
 			{
@@ -35,20 +35,23 @@ class Display3DEN
                                 class CreateObjectWEST: ctrlTree
                                 {
                                     defaultItem[] = {};
+									//onLoad = "params ['_ctrl']; tvExpandAll _ctrl; tvCollapseAll _ctrl";
                                 };
                                 class CreateObjectEAST: CreateObjectWEST
                                 {
                                     defaultItem[] = {};
+									//onLoad = "params ['_ctrl']; tvExpandAll _ctrl; tvCollapseAll _ctrl";
                                 };
-                                class CreateObjectGUER: CreateObjectWEST
+                                class CreateObjectGUER: CreateObjectEAST
                                 {
                                     defaultItem[] = {};
+									//onLoad = "params ['_ctrl']; tvExpandAll _ctrl; tvCollapseAll _ctrl";
                                 };
 							};	
 						};
 					};
 				};
 			};
-		};
+		}; */
 	};
 };
