@@ -230,8 +230,6 @@ class Enh_ActionCreator
 		};
 		class Cancel: ctrlButtonCancel
 		{
-			//idc = 2;
-			//text = $STR_ENH_actionCreator_cancel;
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.738 * safezoneH + safezoneY;
 			w = 0.1575 * safezoneW;
@@ -239,7 +237,7 @@ class Enh_ActionCreator
 		};
 		class Ok: ctrlButtonOK
 		{
-			//text = $STR_ENH_actionCreator_ok;
+			idc = -1;//We don't want it to close the GUI
 			action = "call Enh_fnc_actionCreator_export";
 			x = 0.506562 * safezoneW + safezoneX;
 			y = 0.738 * safezoneH + safezoneY;
