@@ -62,6 +62,7 @@ class CfgFunctions
 			file = "3denEnhanced\functions\GUI\placementTools";
 			class placementTools_onLoad;
 			class placementTools_onUnload;
+			class placementTools_createDisplay;
 			class placementTools_centralAngle;
 			class placementTools_fillArea;
 			class placementTools_garrison;
@@ -69,6 +70,7 @@ class CfgFunctions
 			class placementTools_radius;
 			class placementTools_initialAngle;
 			class placementTools_spacing;
+			class placementTools_rectangle;
 		};
 		class ScenarioAttributesManager
 		{
