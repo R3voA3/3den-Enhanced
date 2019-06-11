@@ -15,7 +15,7 @@ class Enh_Folder_Placement
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
-		"Enh_PatternTools",
+		"Enh_PlacementTools",
 		"Separator",
 		"Enh_SetRandomDir",
 		"Enh_ReverseDirection",
@@ -223,10 +223,10 @@ class Enh_GenerateSteamMissionDescription
 	opensNewWindow = 1;
 };
 //Placement Tools
-class Enh_PatternTools
+class Enh_PlacementTools
 {
 	text = $STR_ENH_tools_placementTools;
-	action = "findDisplay 313 createDisplay 'Enh_PlacementTools'";
+	action = "call Enh_fnc_placementTools_createDisplay";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
 	opensNewWindow = 1;
 };
