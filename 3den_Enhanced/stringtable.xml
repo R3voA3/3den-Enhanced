@@ -5352,4 +5352,14 @@
 		<German>Sortieren nach Thema</German>
 		<Original>Sort by Theme</Original>
 	</Key>
+	<Key ID="STR_ENH_briefingEditor_showTitle">
+		<English>Show Title</English>
+		<German>Title zeigen</German>
+		<Original>Show Title</Original>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_hideTitle">
+		<English>Hide Title</English>
+		<German>Title verstecken</German>
+		<Original>Hide Title</Original>
+	</Key>
 </Project>
