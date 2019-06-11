@@ -60,6 +60,7 @@ class ctrlStructuredText;
 class ctrlCombo;
 class ctrlCheckbox;
 class ctrlXSliderH;
+class ctrlControlsGroup;
 class ctrlControlsGroupNoScrollbars;
 class ctrlMenuStrip;
 class ctrlMenu;
@@ -79,7 +80,6 @@ class ctrlToolbox;
 class ctrlProgress;
 class ctrlStaticFrame;
 class scrollbar;
-class ctrlControlsGroup;
 
 //DIK Codes
 #ifndef DIK_ESCAPE
