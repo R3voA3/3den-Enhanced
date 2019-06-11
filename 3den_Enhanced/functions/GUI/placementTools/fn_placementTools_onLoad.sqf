@@ -13,10 +13,7 @@
 
 params ["_display"];
 
-Enh_PlacementTools_Selected = call Enh_fnc_all3DENSelected;
 uiNamespace setVariable ["Enh_PlacementTools_Display",_display];
-
-if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; _display closeDisplay 1; false};
 
 ["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
 ["ShowPanelRight",false] call BIS_fnc_3DENInterface;
@@ -42,6 +39,9 @@ if (isNil "Enh_PlacementTools_A") then {Enh_PlacementTools_A = 50};
 if (isNil "Enh_PlacementTools_B") then {Enh_PlacementTools_B = 50};
 if (isNil "Enh_PlacementTools_AreaDia") then {Enh_PlacementTools_AreaDia = 200};
 if (isNil "Enh_PlacementTools_Coverage") then {Enh_PlacementTools_Coverage = 2};//2 = 50%, 10=10%, 1=100%...
+if (isNil "Enh_PlacementTools_RectangleA") then {Enh_PlacementTools_RectangleA = 5};
+if (isNil "Enh_PlacementTools_RectangleB") then {Enh_PlacementTools_RectangleB = 5};
+if (isNil "Enh_PlacementTools_RectangleSpacing") then {Enh_PlacementTools_RectangleSpacing = 5};
 
 //Set up sliders
 _display displayCtrl 10 sliderSetPosition Enh_PlacementTools_Radius;
@@ -55,5 +55,9 @@ _display displayCtrl 80 sliderSetPosition Enh_PlacementTools_A;
 _display displayCtrl 90 sliderSetPosition Enh_PlacementTools_B;
 _display displayCtrl 100 sliderSetPosition Enh_PlacementTools_AreaDia;
 _display displayCtrl 110 sliderSetPosition Enh_PlacementTools_Coverage;
+
+_display displayCtrl 130 sliderSetPosition Enh_PlacementTools_RectangleA;
+_display displayCtrl 140 sliderSetPosition Enh_PlacementTools_RectangleB;
+_display displayCtrl 150 sliderSetPosition Enh_PlacementTools_RectangleSpacing;
 
 true
