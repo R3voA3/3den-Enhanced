@@ -272,5 +272,20 @@ class Enh_BriefingEditor
 			w = 0.0853125 * safezoneW;
 			h = 0.07 * safezoneH;
 		};
+		class Filter: ctrlToolbox
+		{
+			x = 0.440937 * safezoneW + safezoneX;
+			y = 0.29 * safezoneH + safezoneY;
+			w = 0.190312 * safezoneW;
+			h = 0.028 * safezoneH;
+            rows = 1;
+            columns = 2;
+            strings[] = 
+            {
+                $STR_ENH_briefingEditor_showTitle,
+                $STR_ENH_briefingEditor_hideTitle
+            };
+            values[] = {0,1};
+        };
 	};
 };
