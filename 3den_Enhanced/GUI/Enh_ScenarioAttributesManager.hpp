@@ -25,7 +25,7 @@ class Enh_ScenarioAttributesManager
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.525 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class TemplateList: ctrlListbox
 		{

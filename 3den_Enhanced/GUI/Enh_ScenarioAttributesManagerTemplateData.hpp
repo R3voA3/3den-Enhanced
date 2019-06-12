@@ -24,7 +24,7 @@ class Enh_ScenarioAttributesManagerTemplateData
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class Title: ctrlStatic
 		{

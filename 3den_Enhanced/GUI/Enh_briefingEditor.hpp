@@ -86,7 +86,7 @@ class Enh_BriefingEditor
 			y = 0.122 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.028 * safezoneH;
-   			colorBackground[] = COLOUR_USER_PRESET;
+   			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class Subject_Text: ctrlStatic
 		{
@@ -146,7 +146,7 @@ class Enh_BriefingEditor
 			y = 0.122 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.028 * safezoneH;
-   			colorBackground[] = COLOUR_USER_PRESET;
+   			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class Path_Text: ctrlStatic
 		{

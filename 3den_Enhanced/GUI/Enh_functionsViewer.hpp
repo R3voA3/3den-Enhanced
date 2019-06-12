@@ -24,7 +24,7 @@ class Enh_FunctionsViewer
 			y = 0.024 * safezoneH + safezoneY;
 			w = 0.951562 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class List: ctrlTree
 		{
@@ -84,7 +84,7 @@ class Enh_FunctionsViewer
 			y = 0.024 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class Copy: ctrlButton
 		{

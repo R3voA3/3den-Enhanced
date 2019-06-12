@@ -23,7 +23,7 @@ class Enh_ModuleInformation
 			y = 0.178 * safezoneH + safezoneY;
 			w = 0.354375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class DescriptionText: ctrlStatic
 		{

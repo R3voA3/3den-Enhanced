@@ -23,7 +23,7 @@ class Enh_TextureFinder
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.49875 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class ShowAll: ctrlButton
 		{
