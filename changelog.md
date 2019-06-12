@@ -22,6 +22,10 @@ v4.3
 - Batch Replace GUI would not save last used value correctly
 - Tweaked layout of Batch Replace GUI
 - Tweaked layout for Texture Finder
+- Various GUIs use Pixel Grid System now and scale correctly
+- Layouts of various GUIs were improved
+- Functions of various GUIs were improved
+- Updated Russian translation thanks to lexx__1
 
 
 *removed*
