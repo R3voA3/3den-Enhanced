@@ -2,14 +2,14 @@
 #include "\a3\3DEN\UI\macroexecs.inc"
 
 //Display IDDs
-#define ENH_IDD_BRIEFINGEDITOR 							50000
-#define ENH_IDD_3DENRADIO 								60000
-#define ENH_IDD_NAMEOBJECTS 							80000
-#define ENH_IDD_MODULEINFORMATION 						130000
-#define ENH_IDD_TEXTUREFINDER 							140000
-#define ENH_IDD_BATCHREPLACE 							150000
-#define ENH_IDD_SCENARIOATTRIBUTESMANAGER 				160000
-#define ENH_IDD_ACTIONCREATOR 							190000
+#define ENH_IDD_BRIEFINGEDITOR 				50000
+#define ENH_IDD_3DENRADIO 					60000
+#define ENH_IDD_NAMEOBJECTS 				80000
+#define ENH_IDD_MODULEINFORMATION 			130000
+#define ENH_IDD_TEXTUREFINDER 				140000
+#define ENH_IDD_BATCHREPLACE 				150000
+#define ENH_IDD_SCENARIOATTRIBUTESMANAGER 	160000
+#define ENH_IDD_ACTIONCREATOR 				190000
 
 //Control types
 #define CT_COMBO            4
@@ -30,14 +30,15 @@
 #define LB_TEXTURES       		0x10
 
 #define EDIT_W 10
-#define SPACE_X (2 * pixelW)
-#define ORIGIN_X (safezoneW - 60 * GRID_W)
+#define CENTER_X (safeZoneX + safeZoneW / 2)
+#define CENTERED_X(w) (CENTER_X - (w / 2 * GRID_W))
+#define DIALOG_TOP (safezoneY + 17 * GRID_H)
 
-#define COLOUR_USER_PRESET {\
-				"profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843]",\
-				"profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019]",\
-				"profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862]",\
-				1}
+//Statusbar
+#define SPACE_X (2 * pixelW)
+#define ORIGIN_X_STATUSBAR (safezoneW - 60 * GRID_W)
+
+#define COLOUR_USER_PRESET "profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843]","profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019]","profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862]",1
 
 //Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
