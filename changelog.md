@@ -27,7 +27,6 @@ v4.3
 - Functions of various GUIs were improved
 - Updated Russian translation thanks to lexx__1
 
-
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - removed on Event Code Attributes (Too complex for a simple attribute)
