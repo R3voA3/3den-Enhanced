@@ -47,8 +47,8 @@ switch (_action) do
 		private _playlist = profileNamespace getVariable ["Enh_3denRadio_Playlist",[]];
 		lbClear _ctrlPL;
 		{
-			private _index = _ctrlPL lbAdd (_x select 0);
-			_ctrlPL lbSetData [_index,_x select 1];
+			private _index = _ctrlPL lbAdd (_x # 0);
+			_ctrlPL lbSetData [_index,_x # 1];
 		} forEach _playlist;
 
 		lbSort _ctrlPL;

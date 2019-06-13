@@ -63,7 +63,7 @@ _ctrlSongList lnbAddColumn 0.585;
 _ctrlSongList lnbAddColumn 0.69;
 _ctrlSongList lnbAddColumn 0.91;
 
-//Update list and sort by "NAME"
+//Update list
 call Enh_fnc_3denRadio_searchList;
 
 //Fill playlist listbox
