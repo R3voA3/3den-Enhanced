@@ -43,6 +43,6 @@ class Enh_About_FAQ: Enh_About_Forum
 class Enh_About_Credits: Enh_About_Forum
 {
 	text = $STR_ENH_about_credits;
-	action = "call Enh_fnc_credits";
+	action = "findDisplay 313 createDisplay 'Enh_Credits'";
 	weblink = "";
 };

@@ -44,7 +44,6 @@ class display3DENPublishMissionSelectImage
         {
             x = CENTER_X - (10 - 1) * GRID_W;
             y = 0.5 - (100 * 0.5 - 11) * GRID_H;
-            //w = (160 * 2/4 - 2) * GRID_W;
             w = (80 * 2/4 - 2) * GRID_W;
             h = (100 - (23 + 5 + 2)) * GRID_H;
         };

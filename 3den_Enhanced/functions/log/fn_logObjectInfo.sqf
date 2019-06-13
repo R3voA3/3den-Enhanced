@@ -1,14 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Collects various information about the selected objects and creates display3denCopy from which they can be copied to the clipboard.
+	Description:
+	Collects various information about the selected objects and creates display3denCopy from which they can be copied to the clipboard.
 
-   Parameter(s):
-   -
+	Parameter(s):
+	-
 
-   Returns:
-   BOOLEAN - true
+	Returns:
+	BOOLEAN: true
 */
 
 private _objects = get3DENSelected "Object";

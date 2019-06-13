@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 disableSerialization;

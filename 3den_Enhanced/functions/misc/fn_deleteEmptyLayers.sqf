@@ -8,7 +8,7 @@
    -
 
    Returns:
-   BOOLEAN - true
+   BOOLEAN: true
 */
 
 collect3DENHistory

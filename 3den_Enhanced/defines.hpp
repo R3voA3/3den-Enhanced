@@ -1,21 +1,15 @@
-/* Overview over IDDs
-ENH_BRIEFINGEDITOR 		50000
-ENH_3DENRADIO 			60000
-ENH_NAMEOBJECTS 		80000
-ENH_GARRISONBUILDINGS 	90000
-ENH_PATTERNTOOL 		100000
-ENH_COLOURPICKER 		110000
-ENH_MODULEINFORMATION 	130000
-ENH_TEXTUREFINDER 		140000
-ENH_BATCHREPLACE 		150000
-ENH_GRIDPATTERN 		160000
-ENH_EXPORTINVENTORY 	170000
-ENH_ACTIONCREATOR 		190000
-ENH_CREDITS 			200000 
-*/
-
 #include "\a3\3DEN\UI\macros.inc"
 #include "\a3\3DEN\UI\macroexecs.inc"
+
+//Display IDDs
+#define ENH_IDD_BRIEFINGEDITOR 				50000
+#define ENH_IDD_3DENRADIO 					60000
+#define ENH_IDD_NAMEOBJECTS 				80000
+#define ENH_IDD_MODULEINFORMATION 			130000
+#define ENH_IDD_TEXTUREFINDER 				140000
+#define ENH_IDD_BATCHREPLACE 				150000
+#define ENH_IDD_SCENARIOATTRIBUTESMANAGER 	160000
+#define ENH_IDD_ACTIONCREATOR 				190000
 
 //Control types
 #define CT_COMBO            4
@@ -35,516 +29,58 @@ ENH_CREDITS 			200000
 #define ST_KEEP_ASPECT_RATIO  	0x800
 #define LB_TEXTURES       		0x10
 
-//Default grid
-#define GUI_GRID_WAbs			((safezoneW / safezoneH) min 1.2)
-#define GUI_GRID_HAbs			(GUI_GRID_WAbs / 1.2)
-#define GUI_GRID_H				(GUI_GRID_HAbs / 25)
-#define GUI_TEXT_SIZE_SMALL		(GUI_GRID_H * 0.8)
-
 #define EDIT_W 10
-#define SPACE_X (2 * pixelW)
-#define ORIGIN_X (safezoneW - 60 * GRID_W)
+#define CENTER_X (safeZoneX + safeZoneW / 2)
+#define CENTERED_X(w) (CENTER_X - (w / 2 * GRID_W))
+#define DIALOG_TOP (safezoneY + 17 * GRID_H)
 
-#define COLOUR_USER_PRESET {\
-				"profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843]",\
-				"profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019]",\
-				"profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862]",\
-				1}
+//Statusbar
+#define SPACE_X (2 * pixelW)
+#define ORIGIN_X_STATUSBAR (safezoneW - 60 * GRID_W)
+
+#define COLOUR_USER_PRESET "profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843]","profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019]","profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862]",1
 
 //Disabled background
-#define DISABLE_BACKGROUND class BackgroundDisableTiles: Enh_BackgroundDisableTiles {};\
-						   class BackgroundDisable: Enh_BackgroundDisable {};
+#define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
+						   class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
 
 //Eden base controls
+class title;
 class ctrlEdit;
+class ctrlEditMulti;
 class ctrlButton;
+class ctrlButtonPicture;
+class ctrlButtonClose;
+class ctrlButtonCancel;
+class ctrlButtonOK;
+class ctrlButtonSearch;
+class ctrlButtonCollapseAll;
+class ctrlButtonExpandAll;
+class ctrlButtonPictureKeepAspect;
 class ctrlStructuredText;
 class ctrlCombo;
-class title;
 class ctrlCheckbox;
 class ctrlXSliderH;
+class ctrlControlsGroup;
 class ctrlControlsGroupNoScrollbars;
 class ctrlMenuStrip;
 class ctrlMenu;
 class ctrlStaticBackground;
 class ctrlStatic;
 class ctrlStaticFooter;
-class ctrlStaticTitle;
-class ctrlTree;
-class ctrlListbox;
+class ctrlStaticBackgroundDisable;
+class ctrlStaticBackgroundDisableTiles;
 class ctrlStaticPictureKeepAspect;
 class ctrlStaticMulti;
-
-class Enh_ScrollBar
-{
-	color[] = {1,1,1,0.6};
-	colorActive[] = {1,1,1,1};
-	colorDisabled[] = {1,1,1,0.3};
-	width = 0;
-	height = 0;
-	autoScrollEnabled = 0;
-	autoScrollSpeed = -1;
-	autoScrollDelay = 5;
-	autoScrollRewind = 0;
-	arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
-	arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
-	border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
-	thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
-	shadow = 0;
-	scrollSpeed = 0.06;
-};
-class Enh_ListBox
-{
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	type = CT_LISTBOX;
-	rowHeight = 0;
-	colorText[] = {1,1,1,1};
-	colorDisabled[] = {1,1,1,0.25};
-	colorScrollbar[] = {1,0,0,0};
-	colorSelect[] = {0,0,0,1};
-	colorSelect2[] = {0,0,0,1};
-	colorSelectBackground[] = {0.95,0.95,0.95,1};
-	colorSelectBackground2[] = {1,1,1,0.5};
-	colorBackground[] = {0.2,0.2,0.2,0.8};
-	canDrag = 0;
-	drawSideArrows = true;
-	soundSelect[] =
-	{
-		"\A3\ui_f\data\sound\RscListbox\soundSelect",
-		0.09,
-		1
-	};
-	autoScrollSpeed = -1;
-	autoScrollDelay = 5;
-	autoScrollRewind = 0;
-	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-	colorPicture[] = {1,1,1,1};
-	colorPictureSelected[] = {1,1,1,1};
-	colorPictureDisabled[] = {1,1,1,0.25};
-	colorPictureRight[] = {1,1,1,1};
-	colorPictureRightSelected[] = {1,1,1,1};
-	colorPictureRightDisabled[] = {1,1,1,0.25};
-	colorTextRight[] = {1,1,1,1};
-	colorSelectRight[] = {0,0,0,1};
-	colorSelect2Right[] = {0,0,0,1};
-    tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-	class ListScrollBar: Enh_ScrollBar
-	{
-		color[] = {1,1,1,1};
-		autoScrollEnabled = 1;
-	};
-	x = 0;
-	y = 0;
-	w = 0.3;
-	h = 0.3;
-	style = LB_TEXTURES;
-	font = FONT2_NORMAL;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	shadow = 0;
-	colorShadow[] = {0,0,0,0.5};
-	period = 1.2;
-	maxHistoryDelay = 1;
-};
-class Enh_Background
-{
-	type = 0;
-	idc = -1;
-	style = 128;
-	text = "";
-	colorText[] = {0,0,0,0};
-	font = FONT2_NORMAL;
-	sizeEx = 0;
-	shadow = 0;
-	x = 0.1;
-	y = 0.1;
-	w = 0.1;
-	h = 0.1;
-	colorBackground[] = {0.2,0.2,0.2,0.8};
-	moving = 1;
-};
-class Enh_Button
-{
-	access = 0;
-	idc = -1;
-	type = 1;
-	text = "";
-	colorText[] = {1,1,1,1};
-	colorDisabled[] = {0,0,0,0};
-	colorBackground[] = COLOUR_USER_PRESET;
-	colorBackgroundDisabled[] = {0,0,0,0};
-	colorBackgroundActive[] = {255,255,255,0.7};
-	colorFocused[] = {0,0,0,0.7};
-	colorShadow[] = {0,0,0,0};
-	colorBorder[] = {0,0,0,0};
-	soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,1};
-	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0,9,1};
-	soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,1};
-	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,1};
-	style = 2;
-	x = 0;
-	y = 0;
-	w = 0;
-	h = 0;
-	shadow = 0;
-	tooltipMaxWidth = 0.5;
-	tooltipColorShade[] = {0,0,0,1};
-	tooltipColorText[] = {1,1,1,1};
-	tooltipColorBox[] = {0,0,0,0};
-	font = FONT2_NORMAL;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	offsetX = 0.003;
-	offsetY = 0.003;
-	offsetPressedX = 0.002;
-	offsetPressedY = 0.002;
-	borderSize = 0;
-};
-class Enh_Edit
-{
-	access = 0;
-	type = 2;
-	x = 0;
-	y = 0;
-	h = 0;
-	w = 0;
-	colorBackground[] = {COLOR_OVERLAY_RGBA};
-	colorText[] = {COLOR_TEXT_RGBA};
-	colorSelection[] =
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-		1
-	};
-	autocomplete = "";
-	text = "";
-	size = 0.2;
-	style = 16 + 512;//No Border
-	font = FONT2_NORMAL;
-	shadow = 2;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-	colorDisabled[] = {1,1,1,1};
-	canModify = 1;
-};
-class Enh_Text
-{
-	access = 0;
-	type = 0;
-	idc = -1;
-	colorBackground[] = {1,1,1,0};
-	colorText[] = {1,1,1,1};
-	text = "";
-	fixedWidth = 0;
-	x = 0;
-	y = 0;
-	w = 0;
-	h = 0;
-	style = 0;
-	shadow = 1;
-	colorShadow[] = {0,0,0,0};
-	font = FONT2_NORMAL;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-	linespacing = 1;
-	moving = 1;
-};
-class Enh_StructuredText
-{
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	type = CT_STRUCTURED_TEXT;
-	idc = -1;
-	style = ST_LEFT;
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {0.2,0.2,0.2,0.8};
-	class Attributes
-	{
-		font = FONT2_NORMAL;
-		color = "#ffffff";
-		colorLink = "#D09B43";
-		align = "left";
-		shadow = 1;
-	};
-	x = 0;
-	y = 0;
-	h = 0.035;
-	w = 0.1;
-	text = "";
-	size = GUI_TEXT_SIZE_SMALL;
-	shadow = 1;
-};
-class Enh_Slider
-{
-	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa";
-	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
-	border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa";
-	thumb = "\A3\ui_f\data\gui\cfg\slider\thumb_ca.paa";
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	style = 1024;
-	type = 43;
-	color[] = {1,1,1,0.8};
-	colorActive[] = {1,1,1,1};
-	shadow = 0;
-	tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-	x = 0;
-	y = 0;
-	w = 0;
-	h = 0;
-};
-class Enh_Picture
-{
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	type = CT_STATIC;
-	idc = -1;
-	style = ST_MULTI + ST_TITLE_BAR + ST_KEEP_ASPECT_RATIO;
-	colorBackground[] = {0,0,0,0};
-	colorText[] = {1,1,1,1};
-	font = "TahomaB";
-	sizeEx = 0;
-	lineSpacing = 0;
-	text = "";
-	fixedWidth = 0;
-	shadow = 0;
-	x = 0;
-	y = 0;
-	w = 0.2;
-	h = 0.15;
-    tooltipMaxWidth = 0.5;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-};
-class Enh_ControlsGroup
-{
-	deletable = 0;
-	fade = 0;
-	class VScrollbar: Enh_ScrollBar
-	{
-		color[] = {1,1,1,1};
-		width = 0.021;
-		autoScrollEnabled = 1;
-	};
-	class HScrollbar: Enh_ScrollBar
-	{
-		color[] = {1,1,1,1};
-		height = 0.028;
-	};
-	class Controls
-	{
-	};
-	type = CT_CONTROLS_GROUP;
-	idc = -1;
-	x = 0;
-	y = 0;
-	w = 1;
-	h = 1;
-	shadow = 0;
-	style = ST_MULTI;
-};
-class Enh_Combo
-{
-	deletable = 0;
-	fade = 0;
-	access = 0;
-	type = CT_COMBO;
-	colorBackground[] = {0.05,0.05,0.05,1};
-	colorSelect[] = {0,0,0,1};
-	colorText[] = {1,1,1,1};
-	colorScrollbar[] = {1,0,0,1};
-	colorDisabled[] = {1,1,1,0.25};
-	colorPicture[] = {1,1,1,1};
-	colorPictureSelected[] = {1,1,1,1};
-	colorPictureDisabled[] = {1,1,1,0.25};
-	colorPictureRight[] = {1,1,1,1};
-	colorPictureRightSelected[] = {1,1,1,1};
-	colorPictureRightDisabled[] = {1,1,1,0.25};
-	colorTextRight[] = {1,1,1,1};
-	colorSelectRight[] = {0,0,0,1};
-	colorSelect2Right[] = {0,0,0,1};
-	tooltipColorText[] = {1,1,1,1};
-	tooltipColorBox[] = {1,1,1,1};
-	tooltipColorShade[] = {0,0,0,0.65};
-	soundSelect[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundSelect",
-		0.1,
-		1
-	};
-	soundExpand[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundExpand",
-		0.1,
-		1
-	};
-	soundCollapse[] =
-	{
-		"\A3\ui_f\data\sound\RscCombo\soundCollapse",
-		0.1,
-		1
-	};
-	maxHistoryDelay = 1;
-	class ComboScrollBar: Enh_ScrollBar
-	{
-		color[] = {1,1,1,1};
-	};
-	style = ST_MULTI + ST_NO_RECT;
-	font = FONT2_NORMAL;
-	sizeEx = GUI_TEXT_SIZE_SMALL;
-	shadow = 0;
-	x = 0;
-	y = 0;
-	w = 0.12;
-	h = 0.035;
-	colorSelectBackground[] = {1,1,1,0.7};
-	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
-	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
-	wholeHeight = 0.45;
-	colorActive[] = {1,0,0,1};
-};
-class Enh_BackgroundDisableTiles
-{
-    x = -4;
-    y = -2;
-    w = 8;
-    h = 4;
-    text = "\a3\3DEN\Data\Displays\Display3DENEditAttributes\backgroundDisable_ca.paa";
-    tileW = "8 / (32 * pixelW)";
-    tileH = "4 / (32 * pixelH)";
-    colorText[] = {1,1,1,0.05};
-    style = 144;
-    type = 0;
-    colorBackground[] = {0,0,0,0};
-    lineSpacing = 1;
-    fixedWidth = 0;
-    colorShadow[] = {0,0,0,1};
-    moving = 0;
-    autoplay = 0;
-    loops = 0;
-    onCanDestroy = "";
-    onDestroy = "";
-    onMouseEnter = "";
-    onMouseExit = "";
-    onSetFocus = "";
-    onKillFocus = "";
-    onKeyDown = "";
-    onKeyUp = "";
-    onMouseButtonDown = "";
-    onMouseButtonUp = "";
-    onMouseButtonClick = "";
-    onMouseButtonDblClick = "";
-    onMouseZChanged = "";
-    onMouseMoving = "";
-    onMouseHolding = "";
-    onVideoStopped = "";
-    sizeEx = "4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
-    font = "RobotoCondensedLight";
-    shadow = 1;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-    class ScrollBar
-    {
-        width = 0;
-        height = 0;
-        scrollSpeed = 0.06;
-        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
-        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
-        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
-        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
-        color[] = {1,1,1,1};
-    };
-    access = 0;
-    idc = -1;
-    default = 0;
-    show = 1;
-    fade = 0;
-    blinkingPeriod = 0;
-    deletable = 0;
-    tooltip = "";
-    tooltipMaxWidth = 0.5;
-};
-class Enh_BackgroundDisable
-{
-    x = -4;
-    y = -2;
-    w = 8;
-    h = 4;
-    colorBackground[] = {1,1,1,0.5};
-    type = 0;
-    text = "";
-    lineSpacing = 1;
-    fixedWidth = 0;
-    colorText[] = {1,1,1,1};
-    colorShadow[] = {0,0,0,1};
-    moving = 0;
-    autoplay = 0;
-    loops = 0;
-    tileW = 1;
-    tileH = 1;
-    onCanDestroy = "";
-    onDestroy = "";
-    onMouseEnter = "";
-    onMouseExit = "";
-    onSetFocus = "";
-    onKillFocus = "";
-    onKeyDown = "";
-    onKeyUp = "";
-    onMouseButtonDown = "";
-    onMouseButtonUp = "";
-    onMouseButtonClick = "";
-    onMouseButtonDblClick = "";
-    onMouseZChanged = "";
-    onMouseMoving = "";
-    onMouseHolding = "";
-    onVideoStopped = "";
-    sizeEx = "4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
-    font = "RobotoCondensedLight";
-    shadow = 1;
-    tooltipColorShade[] = {0,0,0,1};
-    tooltipColorText[] = {1,1,1,1};
-    tooltipColorBox[] = {0,0,0,0};
-    class ScrollBar
-    {
-        width = 0;
-        height = 0;
-        scrollSpeed = 0.06;
-        arrowEmpty = "\a3\3DEN\Data\Controls\ctrlDefault\arrowEmpty_ca.paa";
-        arrowFull = "\a3\3DEN\Data\Controls\ctrlDefault\arrowFull_ca.paa";
-        border = "\a3\3DEN\Data\Controls\ctrlDefault\border_ca.paa";
-        thumb = "\a3\3DEN\Data\Controls\ctrlDefault\thumb_ca.paa";
-        color[] = {1,1,1,1};
-    };
-    access = 0;
-    idc = -1;
-    style = 0;
-    default = 0;
-    show = 1;
-    fade = 0;
-    blinkingPeriod = 0;
-    deletable = 0;
-    tooltip = "";
-    tooltipMaxWidth = 0.5;
-};
+class ctrlStaticTitle;
+class ctrlStaticLine;
+class ctrlTree;
+class ctrlListbox;
+class ctrlListNBox;
+class ctrlToolbox;
+class ctrlProgress;
+class ctrlStaticFrame;
+class scrollbar;
 
 //DIK Codes
 #ifndef DIK_ESCAPE
@@ -638,9 +174,7 @@ class Enh_BackgroundDisable
 #define DIK_F13             0x64    /*                     (NEC PC98) */
 #define DIK_F14             0x65    /*                     (NEC PC98) */
 #define DIK_F15             0x66    /*                     (NEC PC98) */
-/*
- *  Alternate names for keys, to facilitate transition from DOS.
- */
+
 #define DIK_BACKSPACE       DIK_BACK            /* backspace */
 #define DIK_NUMPADSTAR      DIK_MULTIPLY        /* * on numeric keypad */
 #define DIK_LALT            DIK_LMENU           /* left Alt */
@@ -657,15 +191,8 @@ class Enh_BackgroundDisable
 #define DIK_DOWNARROW       DIK_DOWN            /* DownArrow on arrow keypad */
 #define DIK_PGDN            DIK_NEXT            /* PgDn on arrow keypad */
 
-/*
- *  Alternate names for keys originally not used on US keyboards.
- */
 #define DIK_CIRCUMFLEX      DIK_PREVTRACK       /* Japanese keyboard */
 
-
-/*
- *  Combination keys
- */
 #define INPUT_CTRL_OFFSET	512
 #define INPUT_SHIFT_OFFSET	1024
 #define INPUT_ALT_OFFSET	2048

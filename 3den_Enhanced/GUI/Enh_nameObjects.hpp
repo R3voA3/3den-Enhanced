@@ -1,11 +1,102 @@
+#define DIALOG_W 70
+#define DIALOG_H 37
+
 class Enh_NameObjects
 {
-	idd = 80000;
+	idd = ENH_IDD_NAMEOBJECTS;
+	onLoad = "call Enh_fnc_nameObjects_onLoad";
 	movingEnable = true;
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 5 * GRID_H;
+			w = DIALOG_W * GRID_W;
+			h = DIALOG_H * GRID_H;
+		};
+	};
+	class Controls
+	{
+		class Header: ctrlStaticTitle
+		{
+			text = $STR_ENH_nameObjects_header;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP;
+			w = DIALOG_W * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class VariableName: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_variableName_displayName;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = DIALOG_W * GRID_W - 4 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class VariableNameValue: ctrlEdit
+		{
+			idc = 1000;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 14 * GRID_H;
+			w = DIALOG_W * GRID_W - 4 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class IndexStart: ctrlStatic
+		{
+			text = $STR_ENH_nameObjects_startIndex;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 21 * GRID_H;
+			w = DIALOG_W * GRID_W - 4 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class IndexStartValue: ctrlEdit
+		{
+			idc = 1100;
+			text = "0";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 28 * GRID_H;
+			w = DIALOG_W * GRID_W - 40 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class OK: ctrlButtonOK
+		{
+			idc = -1;//We don't want it to close the dialog
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 35 * GRID_H;
+			w = 27 * GRID_W;
+			h = 5 * GRID_H;
+			action = "call Enh_fnc_nameObjects_name";
+		};
+		class Cancel: ctrlButtonClose
+		{
+			x = CENTERED_X(DIALOG_W) + 41 * GRID_W;
+			y = DIALOG_TOP + 35 * GRID_H;
+			w = 27 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class RemoveNames: ctrlButton
+		{
+			text = $STR_ENH_nameObjects_removeName;
+			x = CENTERED_X(DIALOG_W) + 41 * GRID_W;
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = 27 * GRID_W;
+			h = 5 * GRID_H;
+			action = "'UNNAME' call Enh_fnc_nameObjects_name";
+		};
+	};
+};
+
+/*class Enh_NameObjects
+{
+	idd = ENH_IDD_NAMEOBJECTS;
+	onLoad = "call Enh_fnc_nameObjects_onLoad";
+	movingEnable = true;
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
 		{
 			x = 0.375313 * safezoneW + safezoneX;
 			y = 0.353 * safezoneH + safezoneY;
@@ -15,34 +106,33 @@ class Enh_NameObjects
 	};
 	class Controls
 	{
-		class Header: Enh_Text
+		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_nameObjects_header;
 			x = 0.375313 * safezoneW + safezoneX;
 			y = 0.325 * safezoneH + safezoneY;
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorBackground[] = COLOUR_USER_PRESET;
 		};
-		class RemoveNames: Enh_Button
+		class RemoveNames: ctrlButton
 		{
 			text = $STR_ENH_nameObjects_removeName;
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.535 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'UNNAME' call Enh_fnc_nameObjects";
+			action = "'UNNAME' call Enh_fnc_nameObjects_name";
 		};
-		class OK: Enh_Button
+		class OK: ctrlButtonOK
 		{
-			text = $STR_ENH_nameObjects_OK;
-			x = 0.5525 * safezoneW + safezoneX;
+			idc = -1;//We don't want it to close the dialog
+			x = 0.539375 * safezoneW + safezoneX;
 			y = 0.535 * safezoneH + safezoneY;
-			w = 0.065625 * safezoneW;
+			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_nameObjects";
+			action = "call Enh_fnc_nameObjects_name";
 		};
-		class VariableName: Enh_Text
+		class VariableName: ctrlStatic
 		{
 			text = $STR_ENH_briefingEditor_variableName_displayName;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -50,7 +140,7 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class IndexStart: Enh_Text
+		class IndexStart: ctrlStatic
 		{
 			text = $STR_ENH_nameObjects_startIndex;
 			x = 0.381875 * safezoneW + safezoneX;
@@ -58,23 +148,22 @@ class Enh_NameObjects
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class VariableNameValue: Enh_Edit
+		class VariableNameValue: ctrlEdit
 		{
 			idc = 1000;
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.395 * safezoneH + safezoneY;
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
-			onLoad = "(_this # 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastVarName',profileName])";
 		};
-		class IndexStartValue: Enh_Edit
+		class IndexStartValue: ctrlEdit
 		{
 			idc = 1100;
+			text = "0";
 			x = 0.381875 * safezoneW + safezoneX;
 			y = 0.479 * safezoneH + safezoneY;
 			w = 0.23625 * safezoneW;
 			h = 0.028 * safezoneH;
-			onLoad = "(_this # 0) ctrlSetText (profileNamespace getVariable ['Enh_nameObjects_lastIndex','0'])";
 		};
 	};
 };

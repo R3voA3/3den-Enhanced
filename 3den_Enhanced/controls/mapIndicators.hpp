@@ -39,8 +39,8 @@ class Enh_MapIndicators: Title
 		{
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			w = 5 * GRID_W;
-			h = 5 * GRID_H;
+			w = SIZE_M * GRID_W;
+			h = SIZE_M * GRID_H;
 		};
 		class EnemyValue: FriendlyValue
 		{

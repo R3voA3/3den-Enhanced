@@ -8,7 +8,7 @@
 	-
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 private _toReplace = get3DENSelected "Object";

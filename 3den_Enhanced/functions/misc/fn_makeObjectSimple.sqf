@@ -8,11 +8,11 @@
 	-
 
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 if !(is3DEN) exitWith {false};
-if (count (get3DENSelected "Object") == 0) exitWith {false};
+if (get3DENSelected "Object" isEqualTo []) exitWith {false};
 
 #define STATE (_x get3DENAttribute "objectIsSimple")
 

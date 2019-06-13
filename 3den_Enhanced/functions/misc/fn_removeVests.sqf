@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 private _units = get3DENSelected "Object";

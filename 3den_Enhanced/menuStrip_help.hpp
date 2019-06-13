@@ -90,7 +90,7 @@ class Enh_Help_MissionPresentation: Enh_Help_KK
 };
 class Enh_Help_DescriptionExt: Enh_Help_KK
 {
-	text = "Description.ext...";
+	text = "Description.ext";
 	weblink = "https://community.bistudio.com/wiki/Description.ext";
 };
 class Enh_Help_CodeOptimisation: Enh_Help_KK

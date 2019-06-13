@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 if (get3DENActionState "toggleMap" == 0) then

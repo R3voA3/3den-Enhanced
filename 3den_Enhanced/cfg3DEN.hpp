@@ -21,13 +21,13 @@ class Cfg3DEN
 	class EventHandlers
 	{
 		class ENH
-		{//Statusbar and interface need to be reinitialised when game directly starts in Eden editor
-			onTerrainNew = "['init'] call BIS_fnc_3DENStatusBar; ['init'] call BIS_fnc_3DENInterface; 'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer; call Enh_fnc_locationList; call Enh_fnc_gitHubNotification";
-			onMissionPreviewEnd = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
-			onMissionLoad = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
-			onMissionNew = "'ONLOAD' call Enh_fnc_3denRadio_toggleRadio; [] spawn Enh_fnc_sessionTimer";
-			onMissionPreview = "call Enh_fnc_onPreviewDebug";
-			onSelectionChange = "call Enh_fnc_numberOfSelectedEntities";
+		{
+			onTerrainNew = "call Enh_fnc_EH_onTerrainNew";
+			onMissionPreviewEnd = "call Enh_fnc_EH_onMissionPreviewEnd";
+			onMissionLoad = "call Enh_fnc_EH_onMissionLoad";
+			onMissionNew = "call Enh_fnc_EH_onMissionNew";
+			onMissionPreview = "call Enh_fnc_EH_onMissionPreview";
+			onSelectionChange = "call Enh_fnc_EH_onSelectionChange";
 		};
 	};
 	class Attributes
@@ -40,17 +40,18 @@ class Cfg3DEN
 			{
 				class Title;
 			};
-		};
-		//Combo
-		#include "controls\terrainGrid.hpp"
-		#include "controls\featureType.hpp"
+		};		
 		//Slider
 		#include "controls\timeMultiplier.hpp"
+		//Toolbox
+		#include "controls\featureType.hpp"
+		#include "controls\terrainGrid.hpp"
 		//Misc
 		#include "controls\ambientAnimation.hpp"
 		#include "controls\introText.hpp"
 		#include "controls\establishingShot.hpp"
 		#include "controls\mapIndicators.hpp"
+		
 	};
 	class Mission
 	{
@@ -148,7 +149,6 @@ class Cfg3DEN
 			#include "attributesObject\disableAI.hpp"
 			#include "attributesObject\advancedSkill.hpp"
 			#include "attributesObject\unitTraits.hpp"
-			#include "attributesObject\onEventCode.hpp"
 			class StateSpecial
 			{
 				class Attributes

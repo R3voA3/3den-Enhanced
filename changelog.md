@@ -1,3 +1,41 @@
+v4.3
+*added*
+- Scenario Attributes Manager
+
+*changed*
+- Functions Viewer shows mod icons again
+- Functions Viewer now displays line numbers
+- Combo Box controls were replaced with Toolbox controls if possible
+- Code cleanup
+- Debug console now uses CTRL+D as shortcut (Same as CBA)
+- Tweaked visuals of custom GUIs (Sliders, Background)
+- Awareness attribute now uses hintSilent instead of custom display
+- Some attributes showed wrong tooltips
+- Functions Viewer can now be accessed by pressing ALT + F (Same as CBA)
+- Config viewer can now be opened by pressing ALT + C
+- GUIs use Eden Editor controls now
+- 3den Radio got a new design
+- Fixed some issues with 3den Radio sometimes not playing music
+- Texture finder won't display a texture on start up
+- Module Information GUI got some visual tweaks
+- Texture Finder has now a filter option
+- Batch Replace GUI would not save last used value correctly
+- Tweaked layout of Batch Replace GUI
+- Tweaked layout for Texture Finder
+- Various GUIs use Pixel Grid System now and scale correctly
+- Layouts of various GUIs were improved
+- Functions of various GUIs were improved
+- Updated Russian translation thanks to lexx__1
+
+
+*removed*
+- Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
+- removed on Event Code Attributes (Too complex for a simple attribute)
+- Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
+
+*known Issues*
+- Stay on Position attribute sometimes fails on dedicated server
+
 v4.2
 *added*
 

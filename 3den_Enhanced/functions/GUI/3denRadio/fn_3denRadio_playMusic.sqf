@@ -8,24 +8,28 @@
 	-
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 disableSerialization;
 
-private _ctrl = param [0,controlNull,[controlNull]];
-private _ctrlCurrentSong = (findDisplay 60000) displayCtrl 2200;
+params ["_ctrlList","_selectedIndex"];
 
+private _display = ctrlParent _ctrlList;
+private _ctrlCurrentSong = _display displayCtrl 2200;
 
-//Get data from lnb by default
-private _class = _ctrl lnbData [lnbCurSelRow _ctrl,0];
-profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrl lnbText [lnbCurSelRow _ctrl,0]];
-
-//If data is empty, try to get the data from playlist
-if (_class isEqualTo "") then
+private _class = switch (ctrlType _ctrlList) do
 {
-	_class = _ctrl lbData (lbCurSel _ctrl);
-	profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrl lbText (lbCurSel _ctrl)];
+	case 5://Playlist
+	{
+		profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrlList lbText _selectedIndex];
+		_ctrlList lbData _selectedIndex;
+	};
+	case 102://Song List
+	{
+		profileNamespace setVariable ["Enh_3denRadio_CurrentSong",_ctrlList lnbText [_selectedIndex,0]];
+		_ctrlList lnbData [_selectedIndex,0];
+	};
 };
 
 //Play song and update current song control
@@ -33,4 +37,3 @@ _ctrlCurrentSong ctrlSetText (profileNamespace getVariable ["Enh_3denRadio_Curre
 playMusic _class;
 
 true
-

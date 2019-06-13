@@ -16,15 +16,15 @@
 	1: NUMBER - (Optional, default -1) - Key code used by some functionalities
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
  */
 
 disableSerialization;
 
 params [["_action","EXPORT",[""]],["_key",-1,[-1]]];
-private _disp = findDisplay 60000;
-private _ctrlPL = _disp displayCtrl 2000;
-private _ctrlSL = _disp displayCtrl 1500;
+private _display = findDisplay 60000;
+private _ctrlPL = _display displayCtrl 2000;
+private _ctrlSL = _display displayCtrl 1500;
 
 switch (_action) do
 {

@@ -5,20 +5,20 @@
 	Sorts the song list listbox according to input.
 
 	Parameter(s):
-	_sortBy: STRING: "NAME","DURATION","THEME"
+	STRING: _sortBy - "TITLE","DURATION","THEME"
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 disableSerialization;
 
-params [["_sortBy","NAME",[""]]];
+params [["_sortBy","TITLE",[""]]];
 private _ctrlSongList = (findDisplay 60000) displayCtrl 1500;
 
 switch _sortBy do
 {
-	case "NAME":
+	case "TITLE":
 	{
 		_ctrlSongList lnbSort [0,false];
 	};

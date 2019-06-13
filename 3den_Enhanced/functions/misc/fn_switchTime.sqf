@@ -8,7 +8,7 @@
 	-
 
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 if (isNil "Enh_savedEnvironment") then

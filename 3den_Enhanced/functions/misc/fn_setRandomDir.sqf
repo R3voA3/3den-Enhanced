@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 private _objects  = get3DENSelected "object";
@@ -17,7 +18,7 @@ private _logics   = get3DENSelected "Logic";
 
 private _entities = _objects + _markers + _triggers + _logics;
 
-if (count _entities == 0) exitWith {false};
+if (_entities isEqualTo []) exitWith {false};
 
 collect3DENHistory
 {

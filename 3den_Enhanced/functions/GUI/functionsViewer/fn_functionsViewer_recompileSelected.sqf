@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   BOOLEAN - true / false
+   BOOLEAN: true / false
 */
 
 private _ctrlFncName = findDisplay 180000 displayCtrl 1402;

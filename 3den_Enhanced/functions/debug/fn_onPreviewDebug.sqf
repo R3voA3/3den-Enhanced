@@ -6,8 +6,9 @@
 
    Parameter(s):
    -
+
    Returns:
-   BOOLEAN - true / false
+   BOOLEAN: true / false
 */
 
 #define MARKERS 			profileNamespace getVariable ["Enh_ShowUnits",false]
@@ -74,7 +75,26 @@ if (GARAGE) then
 
 if (AWARENESS) then
 {
-	[] spawn
+	[] spawn 
+	{
+		while {true} do
+		{
+			hintSilent  format
+			[
+			"AWARENESS\n\nWEST: %1%2\nEAST: %3%4\nINDEPENDENT: %5%6\nCIVILIAN: %7%8",
+			(WEST knowsAbout player) * 100 / 4,
+			"%",
+			(EAST knowsAbout player) * 100 / 4,
+			"%",
+			(INDEPENDENT knowsAbout player) * 100 / 4,
+			"%",
+			(CIVILIAN knowsAbout player) * 100 / 4,
+			"%"
+			]; 
+			sleep 1;
+		};
+	};
+	/* [] spawn
 	{
 		waitUntil {!isNull MISSIONDISPLAY};
 		disableSerialization;
@@ -110,7 +130,29 @@ if (AWARENESS) then
 			];
 			sleep 1;
 		};
-	};
+	}; */
+
+
+	/* 	Revo_Script = [] spawn  
+	{ 
+	while {true} do  
+	{ 
+		private _unit = (player nearEntities ["SoldierEB", 1000]) param [0,objNull];
+		(_unit targetKnowledge player) params ["_knownGroup","_knownUnit","_lastSeen","_lastDanger","_side","_posError","_pos"]; 
+		private _data = format  
+		[ 
+		"Known by Group: %1\nKnown by the Unit: %2\nLast Seen: %3\nLast time endangered: %4\nSide: %5\nAim Position: %6", 
+		_knownGroup,
+		_knownUnit,
+		_lastSeen,
+		_lastDanger,
+		side _unit,
+		_pos
+		]; 
+		hintSilent _data; 
+		sleep 0.05; 
+	}; 
+	}; */
 };
 
 if (FPS) then

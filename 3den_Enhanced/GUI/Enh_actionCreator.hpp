@@ -1,12 +1,231 @@
+#define DIALOG_W 110
+#define DIALOG_H 95
+
 class Enh_ActionCreator
 {
-	idd = 190000;
+	idd = ENH_IDD_ACTIONCREATOR;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_actionCreator_onLoad";
+	onLoad = "_this call Enh_fnc_actionCreator_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
-		class Background: Enh_Background
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 5 * GRID_H;
+			w = DIALOG_W * GRID_W;
+			h = DIALOG_H * GRID_H;
+		};
+	};
+	class Controls
+	{
+		class Header: ctrlStaticTitle
+		{
+			text = "Action Creator";
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP;
+			w = DIALOG_W * GRID_W - 5 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Help: ctrlButton
+		{
+			text = "?";
+			url = "https://community.bistudio.com/wiki/addAction";
+			x = CENTERED_X(DIALOG_W) + (DIALOG_W - 5) * GRID_W;
+			y = DIALOG_TOP;
+			w = 5 * GRID_W;
+			h = 5 * GRID_H;
+			colorBackground[] = {COLOUR_USER_PRESET};
+		};
+		class Title: ctrlStatic
+		{
+			text = "Title";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class TitleValue: ctrlEdit
+		{
+			idc = 1408;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Script: ctrlStatic
+		{
+			text = "Script";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 14 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class ScriptValue: ctrlEditMulti
+		{
+			idc = 1400;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 14 * GRID_H;
+			w = 82 * GRID_W;
+			h = 20 * GRID_H;
+		};
+		class Arguments: ctrlStatic
+		{
+			text = "Arguments";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 36 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class ArgumentsValue: ctrlEdit
+		{
+			idc = 1401;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 36 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Priority: ctrlStatic
+		{
+			text = "Priority";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 43 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class PriorityValue: ctrlEdit
+		{
+			idc = 1402;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 43 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Shortcut: ctrlStatic
+		{
+			text = "Shortcut";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 50 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class ShortcutValue: ctrlEdit
+		{
+			idc = 1405;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 50 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Condition: ctrlStatic
+		{
+			text = "Condition";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 57 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class ConditionValue: ctrlEdit
+		{
+			idc = 1403;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 57 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Radius: ctrlStatic
+		{
+			text = "Radius";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 64 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class RadiusValue: ctrlEdit
+		{
+			idc = 1404;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 64 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Selection: ctrlStatic
+		{
+			text = "Selection";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 71 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class SelectionValue: ctrlEdit
+		{
+			idc = 1406;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 71 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class MemoryPoint: ctrlStatic
+		{
+			text = "Memory Point";
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 78 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class MemoryPointValue: ctrlEdit
+		{
+			idc = 1407;
+			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
+			y = DIALOG_TOP + 78 * GRID_H;
+			w = 82 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Toolbox: ctrlToolbox
+		{
+			idc = 1000;
+			type = 7;
+			style = 2;
+
+			x = CENTERED_X(DIALOG_W) + 3 * GRID_W;
+			y = DIALOG_TOP + 85 * GRID_H;
+			w = (DIALOG_W - 5) * GRID_W;
+			h = 5 * GRID_H;
+
+			columns = 3;
+			rows = 1;
+			strings[] = {"Show Unconscious?","Show Window?","Hide on Use?"};
+			checked_strings[] = {"Show Unconscious? Yes","Show Window? Yes","Hide on Use? Yes"};
+			values[] = {0,0,0};
+		};
+		class Cancel: ctrlButtonCancel
+		{
+			x = CENTERED_X(DIALOG_W) + 85 * GRID_W;
+			y = DIALOG_TOP + 92 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Ok: ctrlButtonOK
+		{
+			idc = -1;//We don't want it to close the GUI
+			action = "call Enh_fnc_actionCreator_export";
+			x = CENTERED_X(DIALOG_W) + 60 * GRID_W;
+			y = DIALOG_TOP + 92 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+	};
+};
+
+/* class Enh_ActionCreator
+{
+	idd = ENH_IDD_ACTIONCREATOR;
+	movingEnable = true;
+	onLoad = "call Enh_fnc_actionCreator_onLoad";
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
 		{
 			idc = 2200;
 			x = 0.329375 * safezoneW + safezoneX;
@@ -17,16 +236,15 @@ class Enh_ActionCreator
 	};
 	class Controls
 	{
-		class Header: Enh_Text
+		class Header: ctrlStaticTitle
 		{
 			text = "Action Creator";
-			colorBackground[] = COLOUR_USER_PRESET;
 			x = 0.329375 * safezoneW + safezoneX;
 			y = 0.136 * safezoneH + safezoneY;
 			w = 0.321562 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Help: Enh_Button
+		class Help: ctrlButton
 		{
 			text = "?";
 			tooltip = $STR_ENH_actionCreator_help;
@@ -35,8 +253,9 @@ class Enh_ActionCreator
 			y = 0.136 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
-		class Title: Enh_Text
+		class Title: ctrlStatic
 		{
 			text = "Title";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -44,7 +263,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Script: Enh_Text
+		class Script: ctrlStatic
 		{
 			text = "Script";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -52,7 +271,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Arguments: Enh_Text
+		class Arguments: ctrlStatic
 		{
 			text = "Arguments";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -60,7 +279,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Priority: Enh_Text
+		class Priority: ctrlStatic
 		{
 			text = "Priority";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -68,7 +287,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Window: Enh_Text
+		class Window: ctrlStatic
 		{
 			text = "Show Window?";
 			x = 0.4475 * safezoneW + safezoneX;
@@ -76,7 +295,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class HideOneUse: Enh_Text
+		class HideOneUse: ctrlStatic
 		{
 			text = "Hide on Use";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -84,7 +303,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Shortcut: Enh_Text
+		class Shortcut: ctrlStatic
 		{
 			text = "Shortcut";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -92,7 +311,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Condition: Enh_Text
+		class Condition: ctrlStatic
 		{
 			text = "Condition";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -100,7 +319,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Radius: Enh_Text
+		class Radius: ctrlStatic
 		{
 			text = "Radius";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -108,7 +327,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Unconscious: Enh_Text
+		class Unconscious: ctrlStatic
 		{
 			text = "Unconscious";
 			x = 0.559062 * safezoneW + safezoneX;
@@ -116,7 +335,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Selection: Enh_Text
+		class Selection: ctrlStatic
 		{
 			text = "Selection";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -124,7 +343,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class MemoryPoint: Enh_Text
+		class MemoryPoint: ctrlStatic
 		{
 			text = "Memory Point";
 			x = 0.335938 * safezoneW + safezoneX;
@@ -132,7 +351,7 @@ class Enh_ActionCreator
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ScriptValue: Enh_Edit
+		class ScriptValue: ctrlEditMulti
 		{
 			idc = 1400;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -140,7 +359,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.154 * safezoneH;
 		};
-		class ArgumentsValue: Enh_Edit
+		class ArgumentsValue: ctrlEdit
 		{
 			idc = 1401;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -148,7 +367,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PriorityValue: Enh_Edit
+		class PriorityValue: ctrlEdit
 		{
 			idc = 1402;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -156,7 +375,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ConditionValue: Enh_Edit
+		class ConditionValue: ctrlEdit
 		{
 			idc = 1403;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -164,7 +383,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class RadiusValue: Enh_Edit
+		class RadiusValue: ctrlEdit
 		{
 			idc = 1404;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -172,7 +391,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class ShortcutValue: Enh_Edit
+		class ShortcutValue: ctrlEdit
 		{
 			idc = 1405;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -180,7 +399,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SelectionValue: Enh_Edit
+		class SelectionValue: ctrlEdit
 		{
 			idc = 1406;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -188,7 +407,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class MemoryPointValue: Enh_Edit
+		class MemoryPointValue: ctrlEdit
 		{
 			idc = 1407;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -196,7 +415,7 @@ class Enh_ActionCreator
 			w = 0.249375 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class TitleValue: Enh_Edit
+		class TitleValue: ctrlEdit
 		{
 			idc = 1408;
 			x = 0.414687 * safezoneW + safezoneX;
@@ -228,18 +447,16 @@ class Enh_ActionCreator
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Cancel: Enh_Button
+		class Cancel: ctrlButtonCancel
 		{
-			idc = 2;
-			text = $STR_ENH_actionCreator_cancel;
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.738 * safezoneH + safezoneY;
 			w = 0.1575 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class Ok: Enh_Button
+		class Ok: ctrlButtonOK
 		{
-			text = $STR_ENH_actionCreator_ok;
+			idc = -1;//We don't want it to close the GUI
 			action = "call Enh_fnc_actionCreator_export";
 			x = 0.506562 * safezoneW + safezoneX;
 			y = 0.738 * safezoneH + safezoneY;
@@ -247,40 +464,4 @@ class Enh_ActionCreator
 			h = 0.028 * safezoneH;
 		};
 	};
-};
-
-/* #Zibufo
-$[
-	1.063,
-	["etst",[[0,0,1,1],0.025,0.04,"GUI_GRID"],2,0,0],
-	[2200,"Background",[1,"",["0.329375 * safezoneW + safezoneX","0.164 * safezoneH + safezoneY","0.34125 * safezoneW","0.616 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1000,"Header",[1,"AddAction Creator",["0.329375 * safezoneW + safezoneX","0.136 * safezoneH + safezoneY","0.321562 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1001,"Title",[1,"Title",["0.335938 * safezoneW + safezoneX","0.178 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1002,"Script",[1,"Script",["0.335938 * safezoneW + safezoneX","0.22 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1400,"ScriptValue",[1,"",["0.414687 * safezoneW + safezoneX","0.22 * safezoneH + safezoneY","0.249375 * safezoneW","0.154 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1003,"Arguments",[1,"Arguments",["0.335938 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1004,"Priority",[1,"Priority",["0.335938 * safezoneW + safezoneX","0.43 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1005,"Window",[1,"Show Window?",["0.4475 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1006,"HideOneUse",[1,"Hide on Use",["0.335938 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1008,"Shortcut",[1,"Shortcut",["0.335938 * safezoneW + safezoneX","0.556 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1009,"Condition",[1,"Condition",["0.335938 * safezoneW + safezoneX","0.472 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1010,"Radius",[1,"Radius",["0.335938 * safezoneW + safezoneX","0.514 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1011,"Unconscious",[1,"Unconscious",["0.559062 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1012,"Selection",[1,"Selection",["0.335938 * safezoneW + safezoneX","0.598 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1013,"MemoryPoint",[1,"Memory Point",["0.335938 * safezoneW + safezoneX","0.64 * safezoneH + safezoneY","0.07875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1401,"ArgumentsValue",[1,"",["0.414687 * safezoneW + safezoneX","0.388 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1402,"PriorityValue",[1,"",["0.414687 * safezoneW + safezoneX","0.43 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1406,"ConditionValue",[1,"",["0.414687 * safezoneW + safezoneX","0.472 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1407,"RadiusValue",[1,"",["0.414687 * safezoneW + safezoneX","0.514 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1408,"ShortcutValue",[1,"",["0.414687 * safezoneW + safezoneX","0.556 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1409,"SelectionValue",[1,"",["0.414687 * safezoneW + safezoneX","0.598 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1410,"MemoryPointValue",[1,"",["0.414687 * safezoneW + safezoneX","0.64 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1411,"TitleValue",[1,"",["0.414687 * safezoneW + safezoneX","0.178 * safezoneH + safezoneY","0.249375 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2800,"WindowValue",[1,"",["0.532812 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2801,"HideOnUseValue",[1,"",["0.42125 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[2802,"UnconsciousValue",[1,"",["0.644375 * safezoneW + safezoneX","0.696 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1600,"Cancel",[1,"Cancel",["0.335938 * safezoneW + safezoneX","0.738 * safezoneH + safezoneY","0.1575 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1601,"Ok",[1,"Ok",["0.506562 * safezoneW + safezoneX","0.738 * safezoneH + safezoneY","0.1575 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
-	[1602,"Help",[1,"?",["0.650637 * safezoneW + safezoneX","0.136 * safezoneH + safezoneY","0.0196875 * safezoneW","0.028 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Get help.","-1"],[]]
-]
-*/
+}; */

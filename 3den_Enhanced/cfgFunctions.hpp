@@ -13,14 +13,8 @@ class CfgFunctions
 			class 3denRadio_toggleRadio;
 			class 3denRadio_handlePlaylist;
 			class 3denRadio_sortBy;
-			class 3denRadio_toggleHelp;
 			class 3denRadio_searchList;
-		};
-		class ColourPicker
-		{
-			file = "3denEnhanced\functions\GUI\colourPicker";
-			class colourPicker_onLoad;
-			class colourPicker;
+			class 3denRadio_selectNewSong;
 		};
 		class TextureFinder
 		{
@@ -68,6 +62,7 @@ class CfgFunctions
 			file = "3denEnhanced\functions\GUI\placementTools";
 			class placementTools_onLoad;
 			class placementTools_onUnload;
+			class placementTools_createDisplay;
 			class placementTools_centralAngle;
 			class placementTools_fillArea;
 			class placementTools_garrison;
@@ -75,6 +70,31 @@ class CfgFunctions
 			class placementTools_radius;
 			class placementTools_initialAngle;
 			class placementTools_spacing;
+			class placementTools_rectangle;
+		};
+		class ScenarioAttributesManager
+		{
+			file = "3denEnhanced\functions\GUI\scenarioAttributesManager";
+			class scenarioAttributesManager_onLoad;
+			class scenarioAttributesManager_onUnload;
+			class scenarioAttributesManager_loadTemplate;
+			class scenarioAttributesManager_deleteTemplate;
+			class scenarioAttributesManager_applyTemplate;
+			class scenarioAttributesManager_createTemplate;
+			class scenarioAttributesManager_applyAttribute;
+			class scenarioAttributesManager_getScenarioAttributes;
+			class scenarioAttributesManager_exportToClipboard;
+		};
+		class NameObjects
+		{
+			file = "3denEnhanced\functions\GUI\nameObjects";
+			class nameObjects_onLoad;
+			class nameObjects_name;
+		};
+		class Credits
+		{
+			file = "3denEnhanced\functions\GUI\credits";
+			class credits_onLoad;
 		};
 		class Misc
 		{
@@ -85,7 +105,6 @@ class CfgFunctions
 			class switchTime;
 			class toggleGrass;
 			class deleteCrew;
-			class nameObjects;
 			class deleteEmptyLayers;
 			class moduleInformation;
 			class makeObjectSimple;
@@ -100,11 +119,11 @@ class CfgFunctions
 			class credits;
 			class all3DENSelected;
 			class numberOfSelectedEntities;
-			class importMissionAttributes;
 			class exportWithLB;
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
 			class gitHubNotification;
+			class locationList;
 		};
 		class Log
 		{
@@ -125,12 +144,15 @@ class CfgFunctions
 			class sessionTimer;
 			class onPreviewDebug;
 		};
-		class Controls
+		class EventHandlers
 		{
-			file = "3denEnhanced\functions\controls";
-			class attributeLoadCombo;
-			class attributeSaveCombo;
-			class locationList;
+			file = "3denEnhanced\functions\eventHandlers";
+			class EH_onMissionLoad;
+			class EH_onMissionNew;
+			class EH_onMissionPreview;
+			class EH_onMissionPreviewEnd;
+			class EH_onSelectionChange;
+			class EH_onTerrainNew;
 		};
 	};
 };

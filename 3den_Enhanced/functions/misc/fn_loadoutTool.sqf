@@ -5,10 +5,10 @@
    Copies loadout from selected units and applies it to all selected ones (Tools can be selected in the menu strip).
 
    Parameter(s):
-   _this: STRING - action ("copy" or "apply")
+   STRING - _this - "copy", "apply"
 
    Returns:
-   BOOLEAN - true when successfull, otherwise false
+   BOOLEAN: true / false
 */
 
 private _input = param [0,"",[""]];

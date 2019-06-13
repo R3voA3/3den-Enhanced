@@ -20,13 +20,13 @@ class Enh_VisualSettings
 			property = "Enh_objViewDistance";
 			expression = "if (_value > 0 && !is3DEN && hasInterface) then {setObjectViewDistance _value}";
 		};
-		class Enh_DisableGrass: Enh_ViewDistance
+		class Enh_TerrainDetail: Enh_ViewDistance
 		{
-			displayName = $STR_ENH_disableGrass_displayName;
+			displayName = $STR_ENH_terrainDetail_displayName;
 			tooltip = "";
-			property = "Enh_disableGrass";
-			control = "Enh_TerrainGrid";
-			expression = "if (((parseNumber _value) > 0) && !is3DEN && hasInterface) then {setTerrainGrid (parseNumber _value)}";
+			property = "Enh_terrainDetail";
+			control = "Enh_TerrainDetail";
+			expression = "if (_value > 0 && !is3DEN && hasInterface) then {setTerrainGrid _value}";
 		};
 	};
 };

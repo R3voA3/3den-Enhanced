@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Logs all mission attribute values to the clipboard.
+	Description:
+	Logs all mission attribute values to the clipboard.
 
-   Parameter(s):
-   -
-   Returns:
-  BOOLEAN -  true
+	Parameter(s):
+	-
+
+	Returns:
+	ARRAY - All scenario attributes
 */
 
 private _attributeValues = [];
@@ -41,7 +42,7 @@ private _value = 0;
 
 private _export = [_attributeValues] call Enh_fnc_exportWithLB;
 
-copyToClipboard _export;///str _attributeValues;
+copyToClipboard _export;
 ["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 
-true
+_export

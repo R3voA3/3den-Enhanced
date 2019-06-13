@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true / false
+	BOOLEAN: true / false
 */
 
 #define IS_PAA ((_string find ".paa") > -1)
@@ -17,7 +18,7 @@
 private ["_string","_toSearch","_disp","_ctrlProg","_ctrlProgText","_fnc_findTextures","_class","_classes"];
 disableSerialization;
 
-Enh_foundTextures = [];
+Enh_TextureFinder_Textures = [];
 _toSearch = [];
 
 
@@ -30,7 +31,7 @@ _fnc_findTextures =
 	params ["_class"];
 	{
 		_string = getText _x;
-		if (IS_PAA || IS_JPG) then {Enh_foundTextures pushBackUnique _string};
+		if (IS_PAA || IS_JPG) then {Enh_TextureFinder_Textures pushBackUnique _string};
 		true
 	} count configProperties [_class];
 };
@@ -44,9 +45,9 @@ _fnc_findTextures =
 	true
 } count ("true" configClasses configFile);
 
-Enh_numToSearch = count _toSearch;
+Enh_TextureFinder_NumToSearch = count _toSearch;
 {
-	Enh_numSearched = _forEachIndex + 1;
+	Enh_TextureFinder_NumSearched = _forEachIndex + 1;
 	_x call _fnc_findTextures;
 } forEach _toSearch;
 

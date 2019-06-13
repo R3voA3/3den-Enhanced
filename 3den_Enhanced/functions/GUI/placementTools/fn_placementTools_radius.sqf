@@ -6,8 +6,9 @@
 
 	Parameter(s):
 	-
+
 	Returns:
-	BOOLEAN - true
+	BOOLEAN: true
 */
 
 params ["_control", "_newValue"];

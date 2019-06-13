@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Shows a notification about the GitHub repository for 3den Enhanced.
+	Description:
+	Shows a notification about the GitHub repository for 3den Enhanced.
 
-   Parameter(s):
-   -
-   Returns:
-  BOOLEAN -  true
+	Parameter(s):
+	-
+
+	Returns:
+	BOOLEAN: true
 */
 
 if (profileNamespace getVariable ["Enh_NotificationGithub_Seen",false]) exitWith {false}; 

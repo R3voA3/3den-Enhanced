@@ -1,13 +1,14 @@
 /*
-   Author: Revo
+	Author: Revo
 
-   Description:
-   Places objects in pattern defined by number of columns and spacing (x,y) in meters. Used in the Enh_PatternTools GUI.
+	Description:
+	Places objects in pattern defined by number of columns and spacing (x,y) in meters. Used in the Enh_PatternTools GUI.
 
-   Parameter(s):
-   -
-   Returns:
-   BOOLEAN - true / false
+	Parameter(s):
+	-
+
+	Returns:
+	BOOLEAN: true / false
 */
 
 private _startPos = Enh_PlacementTools_Center;
@@ -30,6 +31,6 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText str [Enh_PlacementTools_NumColumns,Enh_PlacementTools_SpaceX,Enh_PlacementTools_SpaceY];
+(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText format ["%1 / %2 / %3 m / %4 m",Enh_PlacementTools_NumColumns,Enh_PlacementTools_SpaceX,Enh_PlacementTools_SpaceY];
 
 true
