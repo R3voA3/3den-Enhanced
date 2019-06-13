@@ -3703,17 +3703,6 @@
 		<Polish>Następna linia</Polish>
 		<Russian>Разрыв строки</Russian>
 	</Key>
-	<Key ID="STR_ENH_briefingEditor_close_displayName">
-		<Original>Close</Original>
-		<English>Close</English>
-		<Czech>Zavřít</Czech>
-		<French>Fermer</French>
-		<Spanish>Cerrar</Spanish>
-		<German>Schließen</German>
-		<Chinesesimp>结束</Chinesesimp>
-		<Polish>Zamknij</Polish>
-		<Russian>Зактыть</Russian>
-	</Key>
 	<Key ID="STR_ENH_briefingEditor_createTemplate_displayName">
 		<Original>Create Template</Original>
 		<English>Create Template</English>
@@ -3806,16 +3795,6 @@
 		<French>Expression</French>
 		<Polish>Ekspresja</Polish>
 		<Russian>Выражение</Russian>
-	</Key>
-	<Key ID="STR_ENH_3denRadio_saveAndClose_text">
-		<Original>Close</Original>
-		<English>Close</English>
-		<German>Schließen</German>
-		<Chinesesimp>关闭</Chinesesimp>
-		<Spanish>Cerrar</Spanish>
-		<French>Fermer</French>
-		<Polish>Zamknij</Polish>
-		<Russian>Закрыть</Russian>
 	</Key>
 	<Key ID="STR_ENH_3denRadio_playlist_text">
 		<Original>Playlist</Original>
@@ -3915,16 +3894,6 @@
 		<Spanish>- Haga doble clic en la entrada de un cuadro de lista para reproducir la canción inmediatamente. \n - Agregue una canción a su lista de reproducción presionando SPACE \n&gt; - Copie el nombre de la clase de una canción a su portapapeles presionando CTRL + C \n - Eliminar una entrada de la lista de reproducción seleccionándola y presionando BORRAR</Spanish>
 		<French>- Double-cliquez à gauche sur une entrée de la liste pour lire immédiatement la chanson \n- Ajouter une chanson à votre liste de lecture en appuyant sur ESPACE \n- Copiez le nom de la classe d’une chanson dans le Presse-papiers en appuyant sur CTRL + C \n- Supprime une entrée de la liste de lecture en la sélectionnant et en appuyant sur SUPPRIMER</French>
 		<Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki\n-Dodaj piosenke do playlisty poprzez naciśniecie SPACE\n-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C\nUsuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
-	</Key>
-	<Key ID="STR_ENH_3denRadio_search_text">
-		<Original>Search</Original>
-		<English>Search</English>
-		<German>Durchsuchen</German>
-		<Chinesesimp>搜索</Chinesesimp>
-		<Spanish>Buscar</Spanish>
-		<French>Recherche</French>
-		<Polish>Szukaj</Polish>
-		<Russian>Поиск</Russian>
 	</Key>
 	<Key ID="STR_ENH_nameObjects_header">
 		<Original>Name Objects</Original>
@@ -4083,81 +4052,21 @@
 		<Polish>B</Polish>
 		<Russian>Б</Russian>
 	</Key>
-	<Key ID="STR_ENH_colourPicker_finalColour">
-		<Original>Final Colour</Original>
-		<English>Final Colour</English>
-		<German>Fertige Farbe</German>
-		<Chinesesimp>最终颜色</Chinesesimp>
-		<Spanish>Color final</Spanish>
-		<French>Couleur finale</French>
-		<Polish>Finalny kolor</Polish>
-		<Russian>Окончательный цвет</Russian>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_red">
-		<Original>Red</Original>
-		<English>Red</English>
-		<German>Rot</German>
-		<Chinesesimp>红</Chinesesimp>
-		<Spanish>Rojo</Spanish>
-		<French>Rouge</French>
-		<Polish>Czerwony</Polish>
-		<Russian>Красный</Russian>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_green">
-		<Original>Green</Original>
-		<English>Green</English>
-		<German>Grün</German>
-		<Chinesesimp>绿</Chinesesimp>
-		<Spanish>Verde</Spanish>
-		<French>Vert</French>
-		<Polish>Zielony</Polish>
-		<Russian>Зеленый</Russian>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_blue">
-		<Original>Blue</Original>
-		<English>Blue</English>
-		<German>Blau</German>
-		<Chinesesimp>蓝</Chinesesimp>
-		<Spanish>Azul</Spanish>
-		<French>Bleu</French>
-		<Polish>Niebieski</Polish>
-		<Russian>Синий</Russian>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_alpha">
-		<Original>Alpha</Original>
-		<English>Alpha</English>
-		<German>Alpha</German>
-		<Chinesesimp>Alpha</Chinesesimp>
-		<Spanish>Alfa</Spanish>
-		<French>Alpha</French>
-		<Polish>Alpha</Polish>
-		<Russian>Альфа</Russian>
-	</Key>
-	<Key ID="STR_ENH_colourPicker_header">
-		<Original>Colour Picker</Original>
-		<English>Colour Picker</English>
-		<German>Farbauswahl Werkzeug</German>
-		<Chinesesimp>取色器</Chinesesimp>
-		<Spanish>Selector de color</Spanish>
-		<French>Sélecteur de couleur</French>
-		<Polish>Selektor kolorów</Polish>
-		<Russian>Палитра цветов</Russian>
-	</Key>
 	<Key ID="STR_ENH_moduleInformation_description">
-		<Original>Description</Original>
-		<English>Description</English>
-		<Czech>Popis</Czech>
-		<German>Beschreibung</German>
-		<Russian>Описание</Russian>
-		<Polish>Opis</Polish>
-		<Italian>Descrizione</Italian>
-		<Spanish>Descripción</Spanish>
-		<French>Description</French>
-		<Japanese>詳細</Japanese>
-		<Korean>설명</Korean>
-		<Portuguese>Descrição</Portuguese>
-		<Chinesesimp>描述</Chinesesimp>
-		<Turkish>Açıklama</Turkish>
+		<Original>Description:</Original>
+		<English>Description:</English>
+		<Czech>Popis:</Czech>
+		<German>Beschreibung:</German>
+		<Russian>Описание:</Russian>
+		<Polish>Opis:</Polish>
+		<Italian>Descrizione:</Italian>
+		<Spanish>Descripción:</Spanish>
+		<French>Description:</French>
+		<Japanese>詳細:</Japanese>
+		<Korean>설명:</Korean>
+		<Portuguese>Descrição:</Portuguese>
+		<Chinesesimp>描述:</Chinesesimp>
+		<Turkish>Açıklama:</Turkish>
 	</Key>
 	<Key ID="STR_ENH_moduleInformation_position">
 		<Original>Position:</Original>
@@ -4233,16 +4142,6 @@
 		<Original>Hide PAA</Original>
 		<English>Hide PAA</English>
 		<German>PAA verstecken</German>
-	</Key>
-	<Key ID="STR_ENH_textureFinder_searchTextures">
-		<Original>Search Textures</Original>
-		<English>Search Textures</English>
-		<German>Texturen suchen</German>
-		<Chinesesimp>搜索模型</Chinesesimp>
-		<Spanish>Buscar texturas</Spanish>
-		<French>Rechercher des textures</French>
-		<Polish>Wyszukaj tekstury</Polish>
-		<Russian>Поиск текстур</Russian>
 	</Key>
 	<Key ID="STR_ENH_placementTools_grid_header">
 		<Original>Grid Pattern</Original>
@@ -4407,19 +4306,6 @@
 		<French>Condition</French>
 		<Polish>Warunek</Polish>
 		<Russian>Состояние</Russian>
-	</Key>
-	<Key ID="STR_ENH_functionsViewer_collapseAll_text">
-		<Original>Collapse All</Original>
-		<English>Collapse All</English>
-		<Czech>Sbalit vše</Czech>
-		<French>Tout réduire</French>
-		<Spanish>Reducir todo</Spanish>
-		<Italian>Comprimi tutto</Italian>
-		<Polish>Zwiń wszystko</Polish>
-		<Portuguese>Ocultar tudo</Portuguese>
-		<German>Alles minimieren</German>
-		<Chinesesimp>全部折叠</Chinesesimp>
-		<Russian>Свернуть все</Russian>
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_search_tooltip">
 		<Original>Press CTRL + F to directly jump into the search box.</Original>
@@ -5124,17 +5010,6 @@
 		<French>Crédits</French>
 		<Russian>Кредиты</Russian>
 	</Key>
-	<Key ID="STR_ENH_tools_fillArea">
-		<Original>Fill Area</Original>
-		<English>Fill Area</English>
-		<Czech>Vyplnit oblast</Czech>
-		<French>Remplir la zone</French>
-		<Spanish>Rellenar área</Spanish>
-		<German>Bereich füllen</German>
-		<Chinesesimp>填充区域</Chinesesimp>
-		<Polish>Wypełnij strefe</Polish>
-		<Russian>Заполните область</Russian>
-	</Key>
 	<Key ID="STR_ENH_tools_functionsViewer">
 		<Original>3den Enhanced Functions Viewer</Original>
 		<English>3den Enhanced Functions Viewer</English>
@@ -5405,17 +5280,6 @@
 		<Czech>CfgDisabled Příkazy Generátor šablon </Czech>
 		<French>Générateur de modèle de commandes CfgDisabled </French>
 		<Russian>Генератор шаблонов команд CfgDisabled</Russian>
-	</Key>
-	<Key ID="STR_ENH_tools_showMissionStats">
-		<Original>Show Mission Statistic</Original>
-		<English>Show Mission Statistic</English>
-		<Czech>Zobrazit statistiku mise</Czech>
-		<French>Afficher les statistiques de la mission</French>
-		<Spanish>Mostrar estadísticas de la misión</Spanish>
-		<German>Zeige Missionstatistik</German>
-		<Chinesesimp>显示任务统计</Chinesesimp>
-		<Polish>Pokaż statystyki misji</Polish>
-		<Russian>Показать статистику миссий</Russian>
 	</Key>
 	<Key ID="STR_ENH_tools_clearChat">
 		<Original>Clear Chat</Original>
