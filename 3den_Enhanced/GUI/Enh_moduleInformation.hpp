@@ -1,4 +1,132 @@
+#define DIALOG_W 100
+#define DIALOG_H 94
+
 class Enh_ModuleInformation
+{
+	idd = -1;
+	movingEnable = true;
+	onLoad = "_this call Enh_fnc_moduleInformation_onLoad";
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 5 * GRID_H;
+			w = DIALOG_W * GRID_W;
+			h = DIALOG_H * GRID_H;
+		};
+	};
+	class Controls
+	{
+		class Header: ctrlStaticTitle
+		{
+			text = $STR_ENH_moduleInformation_header;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP;
+			w = DIALOG_W * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class Description: ctrlStatic
+		{
+			text = $STR_ENH_moduleInformation_description;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class DescriptionValue: ctrlEditMulti
+		{
+			idc = 1400;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 12 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 20 * GRID_H;
+			ColorBackground[] = {COLOR_OVERLAY_RGBA};
+			canModify = false;
+		};
+		class Position: ctrlStatic
+		{
+			text = $STR_ENH_moduleInformation_position;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 34 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class PositionValue: ctrlEditMulti
+		{
+			idc = 1401;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 39 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 10 * GRID_H;
+			ColorBackground[] = {COLOR_OVERLAY_RGBA};
+			canModify = false;
+		};
+		class Duplicate: ctrlStatic
+		{
+			text = $STR_ENH_moduleInformation_duplicate;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 51 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class DuplicateValue: ctrlEditMulti
+		{
+			idc = 1402;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 56 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+			ColorBackground[] = {COLOR_OVERLAY_RGBA};
+			canModify = false;
+		};
+		class Direction: ctrlStatic
+		{
+			text = $STR_ENH_moduleInformation_direction;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 61 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class DirectionValue: ctrlEditMulti
+		{
+			idc = 1403;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 66 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+			ColorBackground[] = {COLOR_OVERLAY_RGBA};
+			canModify = false;
+		};
+		class Sync : ctrlStatic
+		{
+			text = $STR_ENH_moduleInformation_sync;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 73 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class SyncValue: ctrlEditMulti
+		{
+			idc = 1404;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 80 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 10 * GRID_H;
+			ColorBackground[] = {COLOR_OVERLAY_RGBA};
+			canModify = false;
+		};
+		class Close: ctrlButtonClose
+		{
+			x = CENTERED_X(DIALOG_W) + 75 * GRID_W;
+			y = DIALOG_TOP + 92 * GRID_H;
+			w = 23 * GRID_W;
+			h = 5 * GRID_H;
+		};
+	};
+};
+/*class Enh_ModuleInformation
 {
 	idd = ENH_IDD_MODULEINFORMATION;
 	movingEnable = true;
@@ -33,7 +161,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DescriptionValue: ctrlStructuredText
+		class DescriptionValue: ctrlEditMulti
 		{
 			idc = 1400;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -49,7 +177,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class PositionValue: ctrlStructuredText
+		class PositionValue: ctrlEditMulti
 		{
 			idc = 1401;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -65,7 +193,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DuplicateValue: ctrlStructuredText
+		class DuplicateValue: ctrlEditMulti
 		{
 			idc = 1402;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -81,7 +209,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class DirectionValue: ctrlStructuredText
+		class DirectionValue: ctrlEditMulti
 		{
 			idc = 1403;
 			x = 0.3425 * safezoneW + safezoneX;
@@ -97,7 +225,7 @@ class Enh_ModuleInformation
 			w = 0.328125 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-		class SyncValue: ctrlStructuredText
+		class SyncValue: ctrlEditMulti
 		{
 			idc = 1404;
 			x = 0.3425 * safezoneW + safezoneX;

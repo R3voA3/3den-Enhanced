@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Retrieves module's description and displays it formatted via systemChat.
+   Used by the Enh_ModuleInformation GUI. Called onLoad.
 
    Parameter(s):
    -
@@ -12,7 +12,8 @@
 */
 
 disableSerialization;
-private _disp = findDisplay 130000;
+
+params ["_display"];
 
 private _logicType = typeOf ((get3DENSelected "Logic") # 0);
 
@@ -67,16 +68,10 @@ if (_description isEqualType []) then
 	_description = _descFinal;
 };
 
-private _ctrlDesc = _disp displayCtrl 1400;
-private _ctrlPos = _disp displayCtrl 1401;
-private _ctrlDup = _disp displayCtrl 1402;
-private _ctrlDir = _disp displayCtrl 1403;
-private _ctrlSync = _disp displayCtrl 1404;
-
-_ctrlDesc ctrlSetStructuredText text _description;
-_ctrlPos ctrlSetStructuredText text _position;
-_ctrlDup ctrlSetStructuredText text _duplicate;
-_ctrlDir ctrlSetStructuredText text _direction;
-_ctrlSync ctrlSetStructuredText text str _sync;
+(_display displayCtrl 1400) ctrlSetText _description;
+(_display displayCtrl 1401) ctrlSetText _position;
+(_display displayCtrl 1402) ctrlSetText _duplicate;
+(_display displayCtrl 1403) ctrlSetText _direction;
+(_display displayCtrl 1404) ctrlSetText str _sync;
 
 true

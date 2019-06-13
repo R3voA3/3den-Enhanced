@@ -96,6 +96,11 @@ class CfgFunctions
 			file = "3denEnhanced\functions\GUI\credits";
 			class credits_onLoad;
 		};
+		class ModuleInformation
+		{
+			file = "3denEnhanced\functions\GUI\moduleInformation";
+			class moduleInformation_onLoad;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
@@ -106,7 +111,6 @@ class CfgFunctions
 			class toggleGrass;
 			class deleteCrew;
 			class deleteEmptyLayers;
-			class moduleInformation;
 			class makeObjectSimple;
 			class removeNVGs;
 			class removeVests;
