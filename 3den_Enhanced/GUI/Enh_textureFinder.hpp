@@ -1,3 +1,115 @@
+#define DIALOG_W 160
+#define DIALOG_H 115
+
+class Enh_TextureFinder
+{
+	idd = ENH_IDD_TEXTUREFINDER;
+	movingEnable = true;
+	onLoad = "[] spawn Enh_fnc_textureFinder_updateProgressbar";
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 5 * GRID_H
+			w = DIALOG_W * GRID_W;
+			h = DIALOG_H * GRID_H;
+		};
+	};
+	class Controls
+	{
+		class Header: ctrlStaticTitle
+		{
+			text = $STR_ENH_textureFinder_header;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP;
+			w = DIALOG_W * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class TextureList: ctrlListbox
+		{
+			idc = 1500;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 5 * GRID_H
+			w = DIALOG_W * GRID_W;
+			h = 52 * GRID_H;
+			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
+			onKeyDown = "_this spawn Enh_fnc_textureFinder_exportTexturePath";
+		};
+		class TexturePreview: ctrlStaticPictureKeepAspect
+		{
+			idc = 1200;
+			text = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_PowerLine_02_pole_small_lamp_off_F.jpg";
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 59 * GRID_H;
+			w = DIALOG_W * GRID_W;
+			h = 40 * GRID_H
+			colorBackground[] = {1,1,1,1};
+		};
+		class ProgessText: ctrlStatic
+		{
+			idc = 1002;
+			style = ST_CENTER;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 101 * GRID_H;
+			w = DIALOG_W * GRID_W
+			h = 5 * GRID_H;
+		};
+		class Progress: ctrlProgress
+		{
+			idc = 1001;
+			x = CENTERED_X(DIALOG_W - 4);
+			y = DIALOG_TOP + 106 * GRID_H;
+			w = (DIALOG_W - 4) * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class UpdateList: ctrlButton
+		{
+			text = $STR_ENH_textureFinder_updateList;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 113 * GRID_H;
+			w = 30 * GRID_W;
+			h = 5 * GRID_H;
+			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
+		};
+		class Search: ctrlButtonSearch
+		{
+			x = CENTERED_X(DIALOG_W) + 34 * GRID_W;
+			y = DIALOG_TOP + 113 * GRID_H;
+			w = 30 * GRID_W;
+			h = 5 * GRID_H;
+			action = "if (call Enh_fnc_textureFinder_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_textureFinder_findTextures}";
+		};
+		class Filter: ctrlToolbox
+		{
+			x = CENTERED_X(DIALOG_W) + 66 * GRID_W;
+			y = DIALOG_TOP + 113 * GRID_H;
+			w = 60 * GRID_W;
+			h = 5 * GRID_H;
+            rows = 1;
+            columns = 3;
+            strings[] = 
+            {
+                $STR_ENH_textureFinder_filterAll,
+                $STR_ENH_textureFinder_filterJPG,
+				$STR_ENH_textureFinder_filterPAA
+            };
+            values[] = {0,1,2};
+			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; Enh_TextureFinder_Filter = 0";//Default value
+			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl";
+        };
+		class Close: ctrlButtonClose
+		{
+			x = CENTERED_X(DIALOG_W) + 128 * GRID_W;
+			y = DIALOG_TOP + 113 * GRID_H;
+			w = 30 * GRID_W;
+			h = 5 * GRID_H;
+		};
+	};
+};
+
+/*
 class Enh_TextureFinder
 {
 	idd = ENH_IDD_TEXTUREFINDER;
