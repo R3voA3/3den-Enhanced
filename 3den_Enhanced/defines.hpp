@@ -30,8 +30,7 @@
 #define LB_TEXTURES       		0x10
 
 #define EDIT_W 10
-#define CENTER_X (safeZoneX + safeZoneW / 2)
-#define CENTERED_X(w) (CENTER_X - (w / 2 * GRID_W))
+#define CENTERED_X(w) (CENTER_X - ((w) / 2 * GRID_W))
 #define DIALOG_TOP (safezoneY + 17 * GRID_H)
 
 //Statusbar
