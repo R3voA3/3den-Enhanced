@@ -182,8 +182,8 @@ class Cfg3DEN
 				{
 					#include "attributesObject\allowFleeing.hpp"
 					#include "attributesObject\setMass.hpp"
-					#include "attributesObject\weaponSway.hpp"
-					#include "attributesObject\weaponRecoil.hpp"
+					//#include "attributesObject\weaponSway.hpp"
+					//#include "attributesObject\weaponRecoil.hpp"
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
 					#include "attributesObject\ambientAnimationSP.hpp"
