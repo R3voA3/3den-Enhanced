@@ -5,21 +5,23 @@
 #define ENH_IDD_BRIEFINGEDITOR 				50000
 #define ENH_IDD_3DENRADIO 					60000
 #define ENH_IDD_NAMEOBJECTS 				80000
-#define ENH_IDD_MODULEINFORMATION 			130000
 #define ENH_IDD_TEXTUREFINDER 				140000
 #define ENH_IDD_BATCHREPLACE 				150000
 #define ENH_IDD_SCENARIOATTRIBUTESMANAGER 	160000
 #define ENH_IDD_ACTIONCREATOR 				190000
 
 //Control types
+#ifndef CT_COMBO
 #define CT_COMBO            4
 #define CT_LISTBOX          5
 #define CT_STRUCTURED_TEXT  13
 #define CT_CONTROLS_GROUP   15
 #define CT_LISTNBOX         102
 #define CT_CHECKBOX         77
+#endif
 
 //Static styles
+#ifndef ST_HPOS
 #define ST_HPOS           		0x03
 #define ST_LEFT           		0x00
 #define ST_CENTER         		0x02
@@ -28,6 +30,7 @@
 #define ST_NO_RECT       		0x200
 #define ST_KEEP_ASPECT_RATIO  	0x800
 #define LB_TEXTURES       		0x10
+#endif
 
 #define EDIT_W 10
 #define CENTERED_X(w) (CENTER_X - ((w) / 2 * GRID_W))
