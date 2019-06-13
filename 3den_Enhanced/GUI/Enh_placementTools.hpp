@@ -136,7 +136,7 @@ class Enh_PlacementTools
 				};
 				class Spacing: ctrlStatic
 				{
-					text = $STR_ENH_patternTool_spacing;
+					text = $STR_ENH_placementTools_spacing;
 					x = POS_X_TEXT;
 					y = 52 * GRID_H;
 					w = WIDTH_TEXT;
@@ -312,17 +312,17 @@ class Enh_PlacementTools
 					columns = 4;
 					strings[] = 
 					{
-						"10 %",
-						"25 %",
-						"50 %",
-						"100 %"
+						$STR_ENH_placementTools_10percent,
+						$STR_ENH_placementTools_25percent,
+						$STR_ENH_placementTools_50percent,
+						$STR_ENH_placementTools_100percent
 					};
 					values[] = {10,4,2,1};
 				    onToolBoxSelChanged  = "params ['_ctrl','_index']; Enh_PlacementTools_Coverage = (_ctrl lbValue _index); call Enh_fnc_placementTools_garrison";
 				};
 				class RectangleHeader: ctrlStatic
 				{
-					text = "Rectangle Header";
+					text = $STR_ENH_placementTools_rectangle_header;
 					x = POS_X_TEXT;
 					y = 162 * GRID_H;
 					W = WIDTH_HEADER;
@@ -331,7 +331,7 @@ class Enh_PlacementTools
 				};
 				class RectangleA: ctrlStatic
 				{
-					text = "L1";
+					text = $STR_ENH_placementTools_A;
 					x = POS_X_TEXT;
 					y = 172 * GRID_H;
 					w = WIDTH_TEXT;
@@ -350,7 +350,7 @@ class Enh_PlacementTools
 				};
 				class RectangleB: ctrlStatic
 				{
-					text = "L2";
+					text = $STR_ENH_placementTools_B;
 					x = POS_X_TEXT;
 					y = 182 * GRID_H;
 					w = WIDTH_TEXT;
@@ -369,7 +369,7 @@ class Enh_PlacementTools
 				};
 				class RectangleSpacing: ctrlStatic
 				{
-					text = $STR_ENH_patternTool_spacing;
+					text = $STR_ENH_placementTools_spacing;
 					x = POS_X_TEXT;
 					y = 192 * GRID_H;
 					w = WIDTH_TEXT;

@@ -4028,7 +4028,7 @@
         <Polish>Wzór liniowy</Polish>
         <Russian>Шаблон линии</Russian>
     </Key>
-    <Key ID="STR_ENH_patternTool_spacing">
+    <Key ID="STR_ENH_placementTools_spacing">
         <Original>Spacing</Original>
         <English>Spacing</English>
         <German>Abstand</German>
@@ -4037,6 +4037,35 @@
         <French>Espacement</French>
         <Polish>Odstęp</Polish>
         <Russian>Расстояние</Russian>
+    </Key>
+        <Key ID="STR_ENH_placementTools_rectangle_header">
+        <Original>Rectangle Pattern</Original>
+        <English>Rectangle Pattern</English>
+        <German>Rechteck-Muster</German>
+    </Key>
+    </Key>
+        <Key ID="STR_ENH_placementTools_10percent">
+        <Original>10 %</Original>
+        <English>10 %</English>
+        <German>10 %</German>
+    </Key>
+    </Key>
+        <Key ID="STR_ENH_placementTools_25percent">
+        <Original>25 %</Original>
+        <English>25 %</English>
+        <German>25 %</German>
+    </Key>
+    </Key>
+        <Key ID="STR_ENH_placementTools_50percent">
+        <Original>50 %</Original>
+        <English>50 %</English>
+        <German>50 %</German>
+    </Key>
+    </Key>
+        <Key ID="STR_ENH_placementTools_100percent">
+        <Original>100 %</Original>
+        <English>100 %</English>
+        <German>100 %</German>
     </Key>
     <Key ID="STR_ENH_placementTools_A">
         <Original>A</Original>
