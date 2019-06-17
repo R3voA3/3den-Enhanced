@@ -5858,9 +5858,9 @@
 		<Polish>Eksport</Polish>
 	</Key>
 	<Key ID="STR_ENH_ScenarioAttributesManagerTemplateData_description">
-		<English>Template Descriptio</English>
+		<English>Template Description</English>
 		<German>Vorlagenbeschreibung</German>
-		<Original>Template Descriptio</Original>
+		<Original>Template Description</Original>
 	</Key>
 	<Key ID="STR_ENH_ScenarioAttributesManagerTemplateData_title">
 		<English>Title</English>
@@ -5901,5 +5901,10 @@
 		<English>PAA &amp; JPG</English>
 		<German>PAA &amp; JPG</German>
 		<Original>PAA &amp; JPG</Original>
+	</Key>
+	<Key ID="STR_ENH_ScenarioAttributesManager_applyAttribute">
+		<English>Apply Attribute</English>
+		<German>Attribut setzen</German>
+		<Original>Apply Attribute</Original>
 	</Key>
 </Project>
