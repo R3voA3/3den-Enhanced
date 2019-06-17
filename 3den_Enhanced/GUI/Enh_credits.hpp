@@ -1,5 +1,5 @@
 #define DIALOG_W 50
-#define DIALOG_H 62
+#define DIALOG_H 60
 
 class Enh_Credits
 {
@@ -12,7 +12,7 @@ class Enh_Credits
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H + 7 * GRID_H;
 		};
@@ -21,11 +21,11 @@ class Enh_Credits
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_credits_header;
+			text = $STR_ENH_about_credits;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class List: ctrlListbox
 		{
@@ -33,14 +33,14 @@ class Enh_Credits
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = DIALOG_W * GRID_W - 4 * GRID_W;
-			h = DIALOG_H * GRID_H - 2 * GRID_H;
+			h = DIALOG_H * GRID_H - 4 * GRID_H;
 		};
 		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
-			y = DIALOG_TOP + (DIALOG_H + 7) * GRID_H;
+			y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
 			w = 20 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };

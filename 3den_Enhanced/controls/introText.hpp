@@ -95,7 +95,7 @@ class Enh_IntroText: Title
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 4 * SIZE_M * GRID_H + 20 * pixelH;
 			w = 5 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };

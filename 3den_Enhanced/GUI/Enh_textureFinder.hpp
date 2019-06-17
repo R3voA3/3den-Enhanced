@@ -12,7 +12,7 @@ class Enh_TextureFinder
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H
+			y = DIALOG_TOP + CTRL_DEFAULT_H
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -25,13 +25,13 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class TextureList: ctrlListbox
 		{
 			idc = 1500;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H
+			y = DIALOG_TOP + CTRL_DEFAULT_H
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
 			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
@@ -40,7 +40,6 @@ class Enh_TextureFinder
 		class TexturePreview: ctrlStaticPictureKeepAspect
 		{
 			idc = 1200;
-			text = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_PowerLine_02_pole_small_lamp_off_F.jpg";
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 59 * GRID_H;
 			w = DIALOG_W * GRID_W;
@@ -54,7 +53,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 101 * GRID_H;
 			w = DIALOG_W * GRID_W
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Progress: ctrlProgress
 		{
@@ -62,7 +61,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W - 4);
 			y = DIALOG_TOP + 106 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class UpdateList: ctrlButton
 		{
@@ -70,7 +69,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 113 * GRID_H;
 			w = 30 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
 		};
 		class Search: ctrlButtonSearch
@@ -78,7 +77,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W) + 34 * GRID_W;
 			y = DIALOG_TOP + 113 * GRID_H;
 			w = 30 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			action = "if (call Enh_fnc_textureFinder_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_textureFinder_findTextures}";
 		};
 		class Filter: ctrlToolbox
@@ -86,7 +85,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W) + 66 * GRID_W;
 			y = DIALOG_TOP + 113 * GRID_H;
 			w = 60 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
             rows = 1;
             columns = 3;
             strings[] = 
@@ -104,7 +103,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W) + 128 * GRID_W;
 			y = DIALOG_TOP + 113 * GRID_H;
 			w = 30 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };

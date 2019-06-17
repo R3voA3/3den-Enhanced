@@ -12,7 +12,7 @@ class Enh_ModuleInformation
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -25,7 +25,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Description: ctrlStatic
 		{
@@ -33,7 +33,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class DescriptionValue: ctrlEditMulti
 		{
@@ -51,7 +51,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 34 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class PositionValue: ctrlEditMulti
 		{
@@ -69,7 +69,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 51 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class DuplicateValue: ctrlEditMulti
 		{
@@ -77,7 +77,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 56 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
 		};
@@ -87,7 +87,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 61 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class DirectionValue: ctrlEditMulti
 		{
@@ -95,7 +95,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 66 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
 		};
@@ -105,7 +105,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 73 * GRID_H;
 			w = (DIALOG_W - 4) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class SyncValue: ctrlEditMulti
 		{
@@ -122,7 +122,7 @@ class Enh_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 75 * GRID_W;
 			y = DIALOG_TOP + 92 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };

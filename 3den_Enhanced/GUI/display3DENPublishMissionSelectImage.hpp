@@ -31,7 +31,7 @@ class display3DENPublishMissionSelectImage
             x = CENTER_X - 110 * GRID_W;
             y = 0.5 - (100 * 0.5 - 5) * GRID_H;
             w = 220 * GRID_W;
-            h = 5 * GRID_H;
+            h = CTRL_DEFAULT_H;
         };
         class Folders: ctrlTree
         {
@@ -59,7 +59,7 @@ class display3DENPublishMissionSelectImage
             x = CENTER_X - (110 - 1) * GRID_W;
             y = 0.5 + (100 * 0.5 - (3 * 5 + 3)) * GRID_H;
             w = (280 - 2) * GRID_W;
-            h = 5 * GRID_H;
+            h = CTRL_DEFAULT_H;
         };
     };
 };

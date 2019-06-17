@@ -19,7 +19,7 @@ class Enh_PlacementTools
  		class Background: ctrlStaticBackground
 		{
 			x = ORIGIN_X;
-			y = ORIGIN_Y + 5 * GRID_H;
+			y = ORIGIN_Y + CTRL_DEFAULT_H;
 			w = 64 * GRID_W;
 			h = 90 * GRID_H;
 		};
@@ -29,7 +29,7 @@ class Enh_PlacementTools
 			x = ORIGIN_X;
 			y = ORIGIN_Y;
 			w = 64 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class CurrentValue: ctrlEdit
 		{
@@ -37,7 +37,7 @@ class Enh_PlacementTools
 			x = ORIGIN_X + 2 * GRID_W;
 			y = ORIGIN_Y + 88 * GRID_H;
 			w = 30 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			canModify = false;
 		};
 		class Close: ctrlButtonClose
@@ -45,7 +45,7 @@ class Enh_PlacementTools
 			x = ORIGIN_X + 37 * GRID_W;
 			y = ORIGIN_Y + 88 * GRID_H;
 			w = WIDTH_TEXT;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 
@@ -65,7 +65,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 2 * GRID_W;
 					w = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class Radius: ctrlStatic
@@ -74,7 +74,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 12 * GRID_H;
 					w = WIDTH_TEXT
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class RadiusValue: ctrlXSliderH
 				{
@@ -82,7 +82,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 12 * GRID_H;
 					w = WIDTH_VALUE
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderPosition = 20;
 					sliderRange[] = {0,200};
 					onSliderPosChanged = "_this call Enh_fnc_placementTools_radius";
@@ -93,7 +93,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 22 * GRID_H;
 					w = WIDTH_TEXT
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class InitialAngleValue: ctrlXSliderH
 				{
@@ -101,7 +101,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 22 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,359};
 					sliderPosition = 0;
 					onSliderPosChanged = "call Enh_fnc_placementTools_initialAngle";
@@ -112,7 +112,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 32 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class CentralAngleValue: ctrlXSliderH
 				{
@@ -120,7 +120,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 32 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,360};
 					sliderPosition = 360;
 					onSliderPosChanged = "call Enh_fnc_placementTools_centralAngle";	
@@ -131,7 +131,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 42 * GRID_H;
 					W = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class Spacing: ctrlStatic
@@ -140,7 +140,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 52 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class SpacingValue: ctrlXSliderH
 				{
@@ -148,7 +148,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 52 * GRID_H;
 					w = WIDTH_VALUE
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,50};
 					sliderPosition = 5;
 				    onSliderPosChanged = "call Enh_fnc_placementTools_spacing"; 
@@ -159,7 +159,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 62 * GRID_H;
 					W = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class NumColumns: ctrlStatic
@@ -168,7 +168,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 72 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class NumColumsValue: ctrlXSliderH
 				{
@@ -176,7 +176,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 72 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,20};
 					sliderPosition = 2;
 					onSliderPosChanged = "Enh_PlacementTools_NumColumns = round (_this # 1); call Enh_fnc_placementTools_grid";
@@ -187,7 +187,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 82 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class SpaceXValue: ctrlXSliderH
 				{
@@ -195,7 +195,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 82 * GRID_H;
 					w = WIDTH_VALUE
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,50};
 					sliderPosition = 5;
 				    onSliderPosChanged = "Enh_PlacementTools_SpaceX = _this # 1; call Enh_fnc_placementTools_grid";
@@ -206,7 +206,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 92 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class SpaceYValue: ctrlXSliderH
 				{
@@ -214,7 +214,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 92 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,50};
 					sliderPosition = 5;
 					onSliderPosChanged = "Enh_PlacementTools_SpaceY = _this # 1; call Enh_fnc_placementTools_grid";
@@ -225,7 +225,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 102 * GRID_H;
 					W = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class A: ctrlStatic
@@ -234,7 +234,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 112 * GRID_H;
 					w = WIDTH_TEXT
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class AValue: ctrlXSliderH
 				{
@@ -242,7 +242,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 112 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,500};
 					sliderPosition = 50;
 				    onSliderPosChanged = "Enh_PlacementTools_A = _this # 1; call Enh_fnc_placementTools_fillArea";
@@ -253,7 +253,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 122 * GRID_H;
 					w = WIDTH_TEXT
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class BValue: ctrlXSliderH
 				{
@@ -261,7 +261,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 122 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,500};
 					sliderPosition = 50;
 				    onSliderPosChanged = "Enh_PlacementTools_B = _this # 1; call Enh_fnc_placementTools_fillArea";
@@ -272,7 +272,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 132 * GRID_H;
 					W = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class AreaSize: ctrlStatic
@@ -281,7 +281,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 142 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class AreaSizeValue: ctrlXSliderH
 				{
@@ -289,7 +289,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 142 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,500};
 					sliderPosition = 50;
 				    onSliderPosChanged = "Enh_PlacementTools_AreaDia = _this # 1; call Enh_fnc_placementTools_garrison";
@@ -300,14 +300,14 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 152 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class CoverageValue: ctrlToolbox
 				{
 					x = POS_X_VALUE;
 					y = 152 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					rows = 1;
 					columns = 4;
 					strings[] = 
@@ -326,7 +326,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 162 * GRID_H;
 					W = WIDTH_HEADER;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					colorBackground[] = {COLOUR_GREY};
 				};
 				class RectangleA: ctrlStatic
@@ -335,7 +335,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 172 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class RectangleAValue: ctrlXSliderH
 				{
@@ -343,7 +343,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 172 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,200};
 					sliderPosition = 50;
 				    onSliderPosChanged = "Enh_PlacementTools_RectangleA = round (_this # 1); call Enh_fnc_placementTools_rectangle";
@@ -354,7 +354,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 182 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class RectangleBValue: ctrlXSliderH
 				{
@@ -362,7 +362,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 182 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,200};
 					sliderPosition = 50;
 				    onSliderPosChanged = "Enh_PlacementTools_RectangleB = round (_this # 1); call Enh_fnc_placementTools_rectangle";
@@ -373,7 +373,7 @@ class Enh_PlacementTools
 					x = POS_X_TEXT;
 					y = 192 * GRID_H;
 					w = WIDTH_TEXT;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 				};
 				class RectangleSpacingValue: ctrlXSliderH
 				{
@@ -381,7 +381,7 @@ class Enh_PlacementTools
 					x = POS_X_VALUE;
 					y = 192 * GRID_H;
 					w = WIDTH_VALUE;
-					h = 5 * GRID_H;
+					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,20};
 					sliderPosition = 5;
 				    onSliderPosChanged = "Enh_PlacementTools_RectangleSpacing = round (_this # 1); call Enh_fnc_placementTools_rectangle";

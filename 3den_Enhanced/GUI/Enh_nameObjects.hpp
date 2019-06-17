@@ -12,7 +12,7 @@ class Enh_NameObjects
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -25,7 +25,7 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class VariableName: ctrlStatic
 		{
@@ -33,7 +33,7 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = DIALOG_W * GRID_W - 4 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class VariableNameValue: ctrlEdit
 		{
@@ -41,7 +41,7 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 14 * GRID_H;
 			w = DIALOG_W * GRID_W - 4 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class IndexStart: ctrlStatic
 		{
@@ -49,7 +49,7 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 21 * GRID_H;
 			w = DIALOG_W * GRID_W - 4 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class IndexStartValue: ctrlEdit
 		{
@@ -58,23 +58,23 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 28 * GRID_H;
 			w = DIALOG_W * GRID_W - 40 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class OK: ctrlButtonOK
 		{
 			idc = -1;//We don't want it to close the dialog
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 35 * GRID_H;
+			y = DIALOG_TOP + 3CTRL_DEFAULT_H;
 			w = 27 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			action = "call Enh_fnc_nameObjects_name";
 		};
 		class Cancel: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 41 * GRID_W;
-			y = DIALOG_TOP + 35 * GRID_H;
+			y = DIALOG_TOP + 3CTRL_DEFAULT_H;
 			w = 27 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class RemoveNames: ctrlButton
 		{
@@ -82,7 +82,7 @@ class Enh_NameObjects
 			x = CENTERED_X(DIALOG_W) + 41 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = 27 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			action = "'UNNAME' call Enh_fnc_nameObjects_name";
 		};
 	};

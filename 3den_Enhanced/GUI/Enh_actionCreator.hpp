@@ -1,7 +1,7 @@
 #define DIALOG_W 110
 #define DIALOG_H 95
 
-class Enh_ActionCreator
+class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 {
 	idd = ENH_IDD_ACTIONCREATOR;
 	movingEnable = true;
@@ -12,7 +12,7 @@ class Enh_ActionCreator
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -21,11 +21,11 @@ class Enh_ActionCreator
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = "Action Creator";
+			text = """AddAction"" Creator";
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W - 5 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Help: ctrlButton
 		{
@@ -34,7 +34,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + (DIALOG_W - 5) * GRID_W;
 			y = DIALOG_TOP;
 			w = 5 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class Title: ctrlStatic
@@ -43,7 +43,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class TitleValue: ctrlEdit
 		{
@@ -51,7 +51,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 7 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Script: ctrlStatic
 		{
@@ -59,7 +59,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 14 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class ScriptValue: ctrlEditMulti
 		{
@@ -75,7 +75,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 36 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class ArgumentsValue: ctrlEdit
 		{
@@ -83,7 +83,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 36 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Priority: ctrlStatic
 		{
@@ -91,7 +91,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 43 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class PriorityValue: ctrlEdit
 		{
@@ -99,7 +99,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 43 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Shortcut: ctrlStatic
 		{
@@ -107,7 +107,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 50 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class ShortcutValue: ctrlEdit
 		{
@@ -115,7 +115,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 50 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Condition: ctrlStatic
 		{
@@ -123,7 +123,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 57 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class ConditionValue: ctrlEdit
 		{
@@ -131,7 +131,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 57 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Radius: ctrlStatic
 		{
@@ -139,7 +139,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 64 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class RadiusValue: ctrlEdit
 		{
@@ -147,7 +147,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 64 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Selection: ctrlStatic
 		{
@@ -155,7 +155,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 71 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class SelectionValue: ctrlEdit
 		{
@@ -163,7 +163,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 71 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class MemoryPoint: ctrlStatic
 		{
@@ -171,7 +171,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
 			y = DIALOG_TOP + 78 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class MemoryPointValue: ctrlEdit
 		{
@@ -179,7 +179,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
 			y = DIALOG_TOP + 78 * GRID_H;
 			w = 82 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Toolbox: ctrlToolbox
 		{
@@ -188,9 +188,9 @@ class Enh_ActionCreator
 			style = 2;
 
 			x = CENTERED_X(DIALOG_W) + 3 * GRID_W;
-			y = DIALOG_TOP + 85 * GRID_H;
+			y = DIALOG_TOP + 8CTRL_DEFAULT_H;
 			w = (DIALOG_W - 5) * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 
 			columns = 3;
 			rows = 1;
@@ -203,7 +203,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 85 * GRID_W;
 			y = DIALOG_TOP + 92 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Ok: ctrlButtonOK
 		{
@@ -212,7 +212,7 @@ class Enh_ActionCreator
 			x = CENTERED_X(DIALOG_W) + 60 * GRID_W;
 			y = DIALOG_TOP + 92 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };

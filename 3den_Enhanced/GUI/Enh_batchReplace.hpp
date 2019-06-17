@@ -1,5 +1,5 @@
 #define DIALOG_W 70
-#define DIALOG_H 45
+#define DIALOG_H 44
 
 class Enh_BatchReplace
 {
@@ -13,7 +13,7 @@ class Enh_BatchReplace
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 5 * GRID_H;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -26,7 +26,7 @@ class Enh_BatchReplace
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class Description: ctrlStructuredText
 		{
@@ -42,7 +42,7 @@ class Enh_BatchReplace
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 19 * GRID_H;
 			w = DIALOG_W * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 		class ReplaceWithValue: ctrlEditMulti
 		{
@@ -59,7 +59,7 @@ class Enh_BatchReplace
 			x = CENTERED_X(DIALOG_W) + 19 * GRID_W;
 			y = DIALOG_TOP + 42 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			action = "call Enh_fnc_batchreplace";
 		};
 		class Close: ctrlButtonCancel
@@ -67,7 +67,7 @@ class Enh_BatchReplace
 			x = CENTER_X + 10 * GRID_W;
 			y = DIALOG_TOP + 42 * GRID_H;
 			w = 23 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 		};
 	};
 };
