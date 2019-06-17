@@ -1,5 +1,5 @@
 #define DIALOG_W 250
-#define DIALOG_H 108
+#define DIALOG_H 106
 
 class Enh_3denRadio
 {
@@ -68,7 +68,7 @@ class Enh_3denRadio
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = (DIALOG_W - 80) * GRID_W;
-			h = (DIALOG_H - 10) * GRID_H;
+			h = (DIALOG_H - 7) * GRID_H;
 			type = CT_LISTNBOX;
 			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['ADDSONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist; _this call Enh_fnc_3denRadio_exportClassname";
@@ -76,17 +76,17 @@ class Enh_3denRadio
 		class Playlist: ctrlListbox
 		{
 			idc = 2000;
-			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 171 * GRID_W;
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = (DIALOG_W - 174) * GRID_W;
-			h = (DIALOG_H - 10) * GRID_H;
+			w = (DIALOG_W - 172) * GRID_W;
+			h = (DIALOG_H - 7) * GRID_H;
 			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
 		};
 		class ToggleRadio: ctrlButtonPictureKeepAspect
 		{
 			idc = 2300;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -95,7 +95,7 @@ class Enh_3denRadio
 		class VolumeIcon: ctrlStaticPictureKeepAspect
 		{
 			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
-			x = CENTERED_X(DIALOG_W) + 9 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 7 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -103,7 +103,7 @@ class Enh_3denRadio
 		class Volume: ctrlXSliderH
 		{
 			idc = 1900;
-			x = CENTERED_X(DIALOG_W) + 15 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 13 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -113,7 +113,7 @@ class Enh_3denRadio
 		class Sort: ctrlCombo
   		{
 			idc = 1600;
-			x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 44 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -123,7 +123,7 @@ class Enh_3denRadio
 		{
 			text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
 			tooltip = $STR_ENH_3denRadio_help_description;
-			x = CENTERED_X(DIALOG_W) + 79 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 74 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -131,7 +131,7 @@ class Enh_3denRadio
 		class SearchEdit: ctrlEdit
 		{
 			idc = 1400;
-			x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 80 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -140,7 +140,7 @@ class Enh_3denRadio
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
 			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-			x = CENTERED_X(DIALOG_W) + 116 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 110 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -148,18 +148,18 @@ class Enh_3denRadio
 		class Import: ctrlButton
 		{
 			text = $STR_ENH_3denRadio_importPlaylist_text;
-			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 171 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
-			w = 24 * GRID_W;
+			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			action = "'IMPORT'call Enh_fnc_3denRadio_handlePlaylist";
 		};
 		class Export: ctrlButton
 		{
 			text = $STR_ENH_3denRadio_exportPlaylist_text;
-			x = CENTERED_X(DIALOG_W) + 198 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 197 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
-			w = 24 * GRID_W;
+			w = 26 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			action = "'EXPORT'call Enh_fnc_3denRadio_handlePlaylist";
 		};
@@ -167,7 +167,7 @@ class Enh_3denRadio
 		{
 			x = CENTERED_X(DIALOG_W) + 224 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
-			w = 24 * GRID_W;
+			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class CurrentSongText: ctrlStaticFooter

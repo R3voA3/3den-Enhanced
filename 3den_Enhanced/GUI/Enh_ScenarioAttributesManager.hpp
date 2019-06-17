@@ -1,5 +1,5 @@
 #define DIALOG_W 160
-#define DIALOG_H 95
+#define DIALOG_H 90
 
 class Enh_ScenarioAttributesManager
 {
@@ -33,15 +33,15 @@ class Enh_ScenarioAttributesManager
 		{
 			text = $STR_ENH_scenarioAttributesManager_templates;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 7 * GRID_H;
+			y = DIALOG_TOP + 6 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Attributes: ctrlStatic
 		{
 			text = $STR_ENH_scenarioAttributesManager_attributes;
-			x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 51 * GRID_W;
+			y = DIALOG_TOP + 6 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -49,16 +49,16 @@ class Enh_ScenarioAttributesManager
 		{
 			text = $STR_ENH_scenarioAttributesManager_createTemplate;
 			x = CENTERED_X(DIALOG_W) + 98 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
-			w = 60 * GRID_W;
+			y = DIALOG_TOP + 6 * GRID_H;
+			w = 61 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_ScenarioAttributesManagerTemplateData'";
 		};
 		class TemplateList: ctrlListbox
 		{
 			idc = 1501;
-			x = CENTERED_X(DIALOG_W - 4);
-			y = DIALOG_TOP + 14 * GRID_H;
+			x = CENTERED_X(DIALOG_W - 2);
+			y = DIALOG_TOP + 12 * GRID_H;
 			w = 50 * GRID_W;
 			h = 70 * GRID_H;
 			onLBSelChanged = "_this call Enh_fnc_scenarioAttributesManager_loadTemplate";
@@ -67,17 +67,17 @@ class Enh_ScenarioAttributesManager
 		{
 			idc = 1500;
 			idcSearch = 1400;
-			x = CENTERED_X(DIALOG_W) + 54 * GRID_W;
-			y = DIALOG_TOP + 14 * GRID_H;
-			w = 104 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
+			y = DIALOG_TOP + 12 * GRID_H;
+			w = 107 * GRID_W;
 			h = 70 * GRID_H;
 		};
 
 		class DeleteTemplate: ctrlButton
 		{
 			text = $STR_ENH_scenarioAttributesManager_deleteTemplate;
-			x = CENTERED_X(DIALOG_W - 4);
-			y = DIALOG_TOP + 86 * GRID_H;
+			x = CENTERED_X(DIALOG_W - 2);
+			y = DIALOG_TOP + 83 * GRID_H;
 			w = 50 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_deleteTemplate";
@@ -85,8 +85,8 @@ class Enh_ScenarioAttributesManager
 		class ApplyTemplate: ctrlButton
 		{
 			text = $STR_ENH_scenarioAttributesManager_applyTemplate;
-			x = CENTERED_X(DIALOG_W - 4);
-			y = DIALOG_TOP + 93 * GRID_H;
+			x = CENTERED_X(DIALOG_W - 2);
+			y = DIALOG_TOP + 89 * GRID_H;
 			w = 50 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			tooltip = "Applies currently selected Template to this mission. Action can be undone with the Eden undo button.";
@@ -95,8 +95,8 @@ class Enh_ScenarioAttributesManager
 		class Export: ctrlButton
 		{
 			text = $STR_ENH_scenarioAttributesManager_export;
-			x = CENTERED_X(DIALOG_W) + 54 * GRID_W;
-			y = DIALOG_TOP + 93 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
+			y = DIALOG_TOP + 89 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_exportToClipboard";
@@ -104,31 +104,31 @@ class Enh_ScenarioAttributesManager
 		class Search: ctrlEdit
 		{
 			idc = 1400;
-			x = CENTERED_X(DIALOG_W) + 54 * GRID_W;
-			y = DIALOG_TOP + 86 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
+			y = DIALOG_TOP + 83 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
 			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-			x = CENTERED_X(DIALOG_W) + 79 * GRID_W;
-			y = DIALOG_TOP + 86 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 77 * GRID_W;
+			y = DIALOG_TOP + 83 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Collapse: ctrlButtonCollapseAll
 		{
-			x = CENTERED_X(DIALOG_W) + 84 * GRID_W;
-			y = DIALOG_TOP + 86 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 82 * GRID_W;
+			y = DIALOG_TOP + 83 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
 		};
 		class Expand: ctrlButtonExpandAll
 		{
-			x = CENTERED_X(DIALOG_W) + 89* GRID_W;
-			y = DIALOG_TOP + 86 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 87 * GRID_W;
+			y = DIALOG_TOP + 83 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
@@ -136,16 +136,16 @@ class Enh_ScenarioAttributesManager
 		class ApplyAttribute: ctrlButton
 		{
 			text = $STR_ENH_scenarioAttributesManager_applyAttribute;
-			x = CENTERED_X(DIALOG_W) + 81 * GRID_W;
-			y = DIALOG_TOP + 93 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 78 * GRID_W;
+			y = DIALOG_TOP + 89 * GRID_H;
 			w = 40 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_applyAttribute";
 		};
 		class Close: ctrlButtonClose
 		{
-			x = CENTERED_X(DIALOG_W) + 133 * GRID_W;
-			y = DIALOG_TOP + 93 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 134 * GRID_W;
+			y = DIALOG_TOP + 89 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};

@@ -1,5 +1,5 @@
 #define DIALOG_W 100
-#define DIALOG_H 94
+#define DIALOG_H 87
 
 class Enh_ModuleInformation
 {
@@ -30,17 +30,17 @@ class Enh_ModuleInformation
 		class Description: ctrlStatic
 		{
 			text = $STR_ENH_moduleInformation_description;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 6 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DescriptionValue: ctrlEditMulti
 		{
 			idc = 1400;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 12 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = 20 * GRID_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
@@ -48,35 +48,35 @@ class Enh_ModuleInformation
 		class Position: ctrlStatic
 		{
 			text = $STR_ENH_moduleInformation_position;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 34 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 33 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class PositionValue: ctrlEditMulti
 		{
 			idc = 1401;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 39 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
-			h = 10 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
+			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
 		};
 		class Duplicate: ctrlStatic
 		{
 			text = $STR_ENH_moduleInformation_duplicate;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 51 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 45 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DuplicateValue: ctrlEditMulti
 		{
 			idc = 1402;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 56 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 51 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
@@ -84,17 +84,17 @@ class Enh_ModuleInformation
 		class Direction: ctrlStatic
 		{
 			text = $STR_ENH_moduleInformation_direction;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 61 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 57 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DirectionValue: ctrlEditMulti
 		{
 			idc = 1403;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 66 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 63 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
@@ -102,25 +102,25 @@ class Enh_ModuleInformation
 		class Sync : ctrlStatic
 		{
 			text = $STR_ENH_moduleInformation_sync;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 73 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 69 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class SyncValue: ctrlEditMulti
 		{
 			idc = 1404;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 80 * GRID_H;
-			w = (DIALOG_W - 4) * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 75 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = 10 * GRID_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
 		};
 		class Close: ctrlButtonClose
 		{
-			x = CENTERED_X(DIALOG_W) + 75 * GRID_W;
-			y = DIALOG_TOP + 92 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
+			y = DIALOG_TOP + 86 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};

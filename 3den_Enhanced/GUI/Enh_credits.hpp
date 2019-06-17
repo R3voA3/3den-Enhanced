@@ -1,3 +1,21 @@
+allowFunctionsRecompile = 1;
+allowFunctionsLog = 1;
+skipLobby = 1;
+
+#include "defines.hpp"
+#include "\a3\3DEN\UI\macros.inc"
+#include "\a3\3DEN\UI\macroexecs.inc"
+//#include "Enh_ConfigViewer.hpp"
+
+//Display IDDs
+#define ENH_IDD_BRIEFINGEDITOR 				50000
+#define ENH_IDD_3DENRADIO 					60000
+#define ENH_IDD_NAMEOBJECTS 				80000
+#define ENH_IDD_TEXTUREFINDER 				140000
+#define ENH_IDD_BATCHREPLACE 				150000
+#define ENH_IDD_SCENARIOATTRIBUTESMANAGER 	160000
+#define ENH_IDD_ACTIONCREATOR 				190000
+
 #define DIALOG_W 50
 #define DIALOG_H 60
 
@@ -30,15 +48,15 @@ class Enh_Credits
 		class List: ctrlListbox
 		{
 			idc = 1000;
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
-			w = DIALOG_W * GRID_W - 4 * GRID_W;
-			h = DIALOG_H * GRID_H - 4 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 6 * GRID_H;
+			w = DIALOG_W * GRID_W - 2 * GRID_W;
+			h = DIALOG_H * GRID_H - 1 * GRID_H;
 		};
 		class Close: ctrlButtonClose
 		{
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
-			y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
+			y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
 			w = 20 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};

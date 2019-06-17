@@ -13,7 +13,7 @@ class Enh_ScenarioAttributesManagerTemplateData
 			x = CENTERED_X(60);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = 60 * GRID_W;
-			h = 57 * GRID_H;
+			h = 51 * GRID_H;
 		};
 	};
 	class Controls
@@ -29,45 +29,45 @@ class Enh_ScenarioAttributesManagerTemplateData
 		{
 			text = $STR_ENH_ScenarioAttributesManagerTemplateData_title;
 			x = CENTERED_X(60);
-			y = DIALOG_TOP + 7 * GRID_H;
-			w = 56 * GRID_W;
+			y = DIALOG_TOP + 6 * GRID_H;
+			w = 58 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class TitleValue: ctrlEdit
 		{
 			idc = 1400;
-			x = CENTERED_X(60) + 2 * GRID_W;
-			y = DIALOG_TOP + 14 * GRID_H;
-			w = 56 * GRID_W;
+			x = CENTERED_X(60) + 1 * GRID_W;
+			y = DIALOG_TOP + 12 * GRID_H;
+			w = 58 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Description: ctrlStatic
 		{
 			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
-			x = CENTERED_X(60) + 2 * GRID_W;
-			y = DIALOG_TOP + 21 * GRID_H;
-			w = 56 * GRID_W;
+			x = CENTERED_X(60) + 1 * GRID_W;
+			y = DIALOG_TOP + 18 * GRID_H;
+			w = 58 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DescriptionValue: ctrlEditMulti
 		{
 			idc = 1401;
-			x = CENTERED_X(60) + 2 * GRID_W;
-			y = DIALOG_TOP + 28 * GRID_H;
-			w = 56 * GRID_W;
-			h = 2CTRL_DEFAULT_H;
+			x = CENTERED_X(60) + 1 * GRID_W;
+			y = DIALOG_TOP + 24 * GRID_H;
+			w = 58 * GRID_W;
+			h = 25 * GRID_H;
 		};
 		class Cancel: ctrlButtonCancel
 		{
-			x = CENTERED_X(60) + 33 * GRID_W;
-			y = DIALOG_TOP + 5CTRL_DEFAULT_H;
+			x = CENTERED_X(60) + 34 * GRID_W;
+			y = DIALOG_TOP + 50 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class OK: ctrlButtonOK
 		{
-			x = CENTERED_X(60) + 2 * GRID_W;
-			y = DIALOG_TOP + 5CTRL_DEFAULT_H;
+			x = CENTERED_X(60) + 1 * GRID_W;
+			y = DIALOG_TOP + 50 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_createTemplate";

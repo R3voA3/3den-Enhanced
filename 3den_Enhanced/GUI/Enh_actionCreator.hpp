@@ -1,6 +1,3 @@
-#define DIALOG_W 110
-#define DIALOG_H 95
-
 class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 {
 	idd = ENH_IDD_ACTIONCREATOR;
@@ -40,145 +37,145 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 		class Title: ctrlStatic
 		{
 			text = "Title";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 6 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class TitleValue: ctrlEdit
 		{
 			idc = 1408;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 7 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 6 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Script: ctrlStatic
 		{
 			text = "Script";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 14 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 12 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ScriptValue: ctrlEditMulti
 		{
 			idc = 1400;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 14 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 12 * GRID_H;
+			w = 85 * GRID_W;
 			h = 20 * GRID_H;
 		};
 		class Arguments: ctrlStatic
 		{
 			text = "Arguments";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 36 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 33 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ArgumentsValue: ctrlEdit
 		{
 			idc = 1401;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 36 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 33 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Priority: ctrlStatic
 		{
 			text = "Priority";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 43 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 39 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class PriorityValue: ctrlEdit
 		{
 			idc = 1402;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 43 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 39 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Shortcut: ctrlStatic
 		{
 			text = "Shortcut";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 50 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 45 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ShortcutValue: ctrlEdit
 		{
 			idc = 1405;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 50 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 45 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Condition: ctrlStatic
 		{
 			text = "Condition";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 57 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 51 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ConditionValue: ctrlEdit
 		{
 			idc = 1403;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 57 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 51 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Radius: ctrlStatic
 		{
 			text = "Radius";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 64 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 57 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class RadiusValue: ctrlEdit
 		{
 			idc = 1404;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 64 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 57 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Selection: ctrlStatic
 		{
 			text = "Selection";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 71 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 63 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class SelectionValue: ctrlEdit
 		{
 			idc = 1406;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 71 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 63 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class MemoryPoint: ctrlStatic
 		{
 			text = "Memory Point";
-			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
-			y = DIALOG_TOP + 78 * GRID_H;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + 69 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class MemoryPointValue: ctrlEdit
 		{
 			idc = 1407;
-			x = CENTERED_X(DIALOG_W) + 26 * GRID_W;
-			y = DIALOG_TOP + 78 * GRID_H;
-			w = 82 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+			y = DIALOG_TOP + 69 * GRID_H;
+			w = 85 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Toolbox: ctrlToolbox
@@ -187,9 +184,9 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 			type = 7;
 			style = 2;
 
-			x = CENTERED_X(DIALOG_W) + 3 * GRID_W;
-			y = DIALOG_TOP + 8CTRL_DEFAULT_H;
-			w = (DIALOG_W - 5) * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 75 * GRID_H;
+			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 
 			columns = 3;
@@ -200,8 +197,8 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 		};
 		class Cancel: ctrlButtonCancel
 		{
-			x = CENTERED_X(DIALOG_W) + 85 * GRID_W;
-			y = DIALOG_TOP + 92 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+			y = DIALOG_TOP + 81 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -209,8 +206,8 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 		{
 			idc = -1;//We don't want it to close the GUI
 			action = "call Enh_fnc_actionCreator_export";
-			x = CENTERED_X(DIALOG_W) + 60 * GRID_W;
-			y = DIALOG_TOP + 92 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
+			y = DIALOG_TOP + 81 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};

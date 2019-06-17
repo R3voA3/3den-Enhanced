@@ -1,5 +1,5 @@
 #define DIALOG_W 70
-#define DIALOG_H 44
+#define DIALOG_H 42
 
 class Enh_BatchReplace
 {
@@ -50,22 +50,22 @@ class Enh_BatchReplace
 			tooltip = $STR_ENH_batchReplace_replaceWith_tooltip;
 			x = CENTERED_X(DIALOG_W) + 19 * GRID_W;
 			y = DIALOG_TOP + 20 * GRID_H;
-			w = 49 * GRID_W;
+			w = 50 * GRID_W;
 			h = 20 * GRID_H;
 		};
 		class Replace: ctrlButton
 		{
 			text = $STR_ENH_batchReplace_replace;
-			x = CENTERED_X(DIALOG_W) + 19 * GRID_W;
-			y = DIALOG_TOP + 42 * GRID_H;
+			x = CENTERED_X(DIALOG_W) + 20 * GRID_W;
+			y = DIALOG_TOP + 41 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			action = "call Enh_fnc_batchreplace";
 		};
 		class Close: ctrlButtonCancel
 		{
-			x = CENTER_X + 10 * GRID_W;
-			y = DIALOG_TOP + 42 * GRID_H;
+			x = CENTER_X + 11 * GRID_W;
+			y = DIALOG_TOP + 41 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
