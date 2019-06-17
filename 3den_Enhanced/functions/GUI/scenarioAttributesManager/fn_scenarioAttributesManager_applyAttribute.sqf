@@ -5,21 +5,25 @@
 
    Description:
    Used by the Enh_Enh_ScenarioAttributesManager_TemplateData GUI.
-   Applies the selection attribute when tvTree is double clicked.
+   Applies attribute selected in tree view controls via button.
 
    Parameter(s):
-   0: CONTROL - Tree view
+   0: CONTROL - Button
 
    Returns:
-   BOOLEAN: true
+   BOOLEAN: true / false
 */
 
-params ["_ctrlTV", "_selectionPath"];
+//params ["_ctrlTV", "_tvPath"];
+params ["_ctrlButton"];
 
-if (_selectionPath isEqualTypeArray [0]) exitWith {false};
+private _ctrlTV = ctrlParent _ctrlButton displayCtrl 1500;
+private _tvPath = tvCurSel _ctrlTV;
+
+if (_tvPath isEqualTypeArray [0] || _tvPath isEqualTo []) exitWith {false};
 
 //Data is string, we need an array, so compiling it is
-_attributeData = call compile (_ctrlTV tvData _selectionPath);//["Section","PropertyName",value];
+_attributeData = call compile (_ctrlTV tvData _tvPath);//["Section","PropertyName",value];
 
 set3DENMissionAttributes [_attributeData];
 

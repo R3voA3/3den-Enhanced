@@ -24,7 +24,6 @@ Enh_ScenarioAttributesManager_TemplateDescription = ctrlText (_display displayCt
 //Close display Enh_Enh_ScenarioAttributesManager_TemplateData and wait for the parent display to be available again
 _display closeDisplay 1;
 
-
 [] spawn 
 {
 	waitUntil {!(isNull findDisplay 160000)};
