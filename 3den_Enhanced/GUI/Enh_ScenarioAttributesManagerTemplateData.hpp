@@ -10,67 +10,66 @@ class Enh_ScenarioAttributesManagerTemplateData
 		DISABLE_BACKGROUND
 		class Background: ctrlStaticBackground
 		{
-			x = 0.395 * safezoneW + safezoneX;
-			y = 0.374 * safezoneH + safezoneY;
-			w = 0.21 * safezoneW;
-			h = 0.252 * safezoneH;
+			x = CENTERED_X(60);
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
+			w = 60 * GRID_W;
+			h = 57 * GRID_H;
 		};
 	};
 	class Controls
 	{
 		class Header: ctrlStaticTitle
 		{
-			x = 0.395 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.21 * safezoneW;
-			h = 0.028 * safezoneH;
-			colorBackground[] = {COLOUR_USER_PRESET};
+			x = CENTERED_X(60);
+			y = DIALOG_TOP;
+			w = 60 * GRID_W;
+			h = CTRL_DEFAULT_H;
 		};
 		class Title: ctrlStatic
 		{
 			text = $STR_ENH_ScenarioAttributesManagerTemplateData_title;
-			x = 0.401563 * safezoneW + safezoneX;
-			y = 0.388 * safezoneH + safezoneY;
-			w = 0.12 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class Description: ctrlStatic
-		{
-			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
-			x = 0.401563 * safezoneW + safezoneX;
-			y = 0.472 * safezoneH + safezoneY;
-			w = 0.12 * safezoneW;
-			h = 0.028 * safezoneH;
+			x = CENTERED_X(60);
+			y = DIALOG_TOP + 7 * GRID_H;
+			w = 56 * GRID_W;
+			h = CTRL_DEFAULT_H;
 		};
 		class TitleValue: ctrlEdit
 		{
 			idc = 1400;
-			x = 0.401562 * safezoneW + safezoneX;
-			y = 0.43 * safezoneH + safezoneY;
-			w = 0.196875 * safezoneW;
-			h = 0.028 * safezoneH;
+			x = CENTERED_X(60) + 2 * GRID_W;
+			y = DIALOG_TOP + 14 * GRID_H;
+			w = 56 * GRID_W;
+			h = CTRL_DEFAULT_H;
 		};
-		class DescriptionValue: ctrlEdit
+		class Description: ctrlStatic
+		{
+			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
+			x = CENTERED_X(60) + 2 * GRID_W;
+			y = DIALOG_TOP + 21 * GRID_H;
+			w = 56 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class DescriptionValue: ctrlEditMulti
 		{
 			idc = 1401;
-			x = 0.401562 * safezoneW + safezoneX;
-			y = 0.514 * safezoneH + safezoneY;
-			w = 0.196875 * safezoneW;
-			h = 0.056 * safezoneH;
+			x = CENTERED_X(60) + 2 * GRID_W;
+			y = DIALOG_TOP + 28 * GRID_H;
+			w = 56 * GRID_W;
+			h = 2CTRL_DEFAULT_H;
 		};
 		class Cancel: ctrlButtonCancel
 		{
-			x = 0.401563 * safezoneW + safezoneX;
-			y = 0.584 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
-			h = 0.028 * safezoneH;
+			x = CENTERED_X(60) + 33 * GRID_W;
+			y = DIALOG_TOP + 5CTRL_DEFAULT_H;
+			w = 25 * GRID_W;
+			h = CTRL_DEFAULT_H;
 		};
 		class OK: ctrlButtonOK
 		{
-			x = 0.526249 * safezoneW + safezoneX;
-			y = 0.584 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
-			h = 0.028 * safezoneH;
+			x = CENTERED_X(60) + 2 * GRID_W;
+			y = DIALOG_TOP + 5CTRL_DEFAULT_H;
+			w = 25 * GRID_W;
+			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_createTemplate";
 		};
 	};
