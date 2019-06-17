@@ -19,7 +19,7 @@ profileNamespace setVariable ["Enh_3denRadio_MusicVolume",musicVolume];
 
 _display closeDisplay 1;
 
-//Show Eden interface
-"showinterface" call BIS_fnc_3DENInterface;
+["ShowPanelLeft",true] call BIS_fnc_3DENInterface;
+["ShowPanelRight",true] call BIS_fnc_3DENInterface;
 
 true

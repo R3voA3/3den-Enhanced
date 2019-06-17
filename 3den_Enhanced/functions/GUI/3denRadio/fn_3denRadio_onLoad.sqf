@@ -13,11 +13,8 @@
 
 disableSerialization;
 
-//Hide Eden interface
-if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
-{
-	"showinterface" call BIS_fnc_3DENInterface
-};
+["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
+["ShowPanelRight",false] call BIS_fnc_3DENInterface;
 
 params ["_display"];
 
@@ -59,9 +56,9 @@ Enh_3denRadio_cfgMusic =
 	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
 	("true" configClasses (campaignConfigFile >> "CfgMusic"));
 
-_ctrlSongList lnbAddColumn 0.585;
-_ctrlSongList lnbAddColumn 0.69;
-_ctrlSongList lnbAddColumn 0.91;
+_ctrlSongList lnbAddColumn 0.5;
+_ctrlSongList lnbAddColumn 0.7;
+_ctrlSongList lnbAddColumn 0.9;
 
 //Update list
 call Enh_fnc_3denRadio_searchList;

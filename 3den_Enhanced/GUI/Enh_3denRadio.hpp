@@ -1,4 +1,195 @@
+#define DIALOG_W 250
+#define DIALOG_H 108
+
 class Enh_3denRadio
+{
+	idd = ENH_IDD_3DENRADIO;
+	movingEnable = true;
+	onLoad = "_this spawn Enh_fnc_3denRadio_onLoad";
+	onUnload = "_this call Enh_fnc_3denRadio_onUnload";
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
+			w = DIALOG_W * GRID_W;
+			h = DIALOG_H * GRID_H;
+		};
+		class TitleHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_title;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP;
+			w = 86 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class DurationHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_duration;
+			x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+			y = DIALOG_TOP;
+			w = 34 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+ 		class ThemeHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_theme;
+			x = CENTERED_X(DIALOG_W) + 120 * GRID_W;
+			y = DIALOG_TOP;
+			w = 34 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class ModHeader: ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_headline_mod;
+			x = CENTERED_X(DIALOG_W) + 154 * GRID_W;
+			y = DIALOG_TOP;
+			w = 18 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class PlaylistHeader:  ctrlStaticTitle
+		{
+			text = $STR_ENH_3denRadio_playlist_text;
+			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			y = DIALOG_TOP;
+			w = (DIALOG_W - 172) * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+	};
+	class Controls
+	{
+		class Songlist: ctrlListNBox
+		{
+			idc = 1500;
+			idcLeft = -1;
+			idcRight = -1;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
+			w = (DIALOG_W - 80) * GRID_W;
+			h = (DIALOG_H - 10) * GRID_H;
+			type = CT_LISTNBOX;
+			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
+			onKeyDown = "['ADDSONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist; _this call Enh_fnc_3denRadio_exportClassname";
+		};
+		class Playlist: ctrlListbox
+		{
+			idc = 2000;
+			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
+			w = (DIALOG_W - 174) * GRID_W;
+			h = (DIALOG_H - 10) * GRID_H;
+			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
+			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
+		};
+		class ToggleRadio: ctrlButtonPictureKeepAspect
+		{
+			idc = 2300;
+			x = CENTERED_X(DIALOG_W) + 2 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onButtonClick = "['BUTTON'] call Enh_fnc_3denRadio_toggleRadio";
+		};
+		class VolumeIcon: ctrlStaticPictureKeepAspect
+		{
+			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
+			x = CENTERED_X(DIALOG_W) + 9 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class Volume: ctrlXSliderH
+		{
+			idc = 1900;
+			x = CENTERED_X(DIALOG_W) + 15 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 30 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			sliderRange[] = {0,1.5};
+			onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0))";
+		};
+		class Sort: ctrlCombo
+  		{
+			idc = 1600;
+			x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 30 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call Enh_fnc_3denRadio_sortBy";
+		};
+		class Help: ctrlStaticPictureKeepAspect
+		{
+			text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
+			tooltip = $STR_ENH_3denRadio_help_description;
+			x = CENTERED_X(DIALOG_W) + 79 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class SearchEdit: ctrlEdit
+		{
+			idc = 1400;
+			x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 30 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onKeyUp = "call Enh_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
+		};
+		class SearchIcon: ctrlStaticPictureKeepAspect
+		{
+			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+			x = CENTERED_X(DIALOG_W) + 116 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class Import: ctrlButton
+		{
+			text = $STR_ENH_3denRadio_importPlaylist_text;
+			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 24 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			action = "'IMPORT'call Enh_fnc_3denRadio_handlePlaylist";
+		};
+		class Export: ctrlButton
+		{
+			text = $STR_ENH_3denRadio_exportPlaylist_text;
+			x = CENTERED_X(DIALOG_W) + 198 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 24 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			action = "'EXPORT'call Enh_fnc_3denRadio_handlePlaylist";
+		};
+		class Close: ctrlButtonClose
+		{
+			x = CENTERED_X(DIALOG_W) + 224 * GRID_W;
+			y = DIALOG_TOP + 105 * GRID_H;
+			w = 24 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class CurrentSongText: ctrlStaticFooter
+		{
+			text = $STR_ENH_3denRadio_song;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + DIALOG_H * GRID_H + CTRL_DEFAULT_H;
+			w = 10 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class CurrentSong: ctrlStaticFooter
+		{
+			idc = 2200;
+			x = CENTERED_X(DIALOG_W) + 10 * GRID_W;
+			y = DIALOG_TOP + DIALOG_H * GRID_H + CTRL_DEFAULT_H;
+			w = (DIALOG_W - 10) * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+	};
+};
+
+/*class Enh_3denRadio
 {
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
@@ -196,23 +387,5 @@ class Enh_3denRadio
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
-/* 		class FastForwardIcon: ctrlStaticPictureKeepAspect
-		{
-			text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa"; //--- ToDo: Localize;
-			x = 0.375313 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.0196875 * safezoneW;
-			h = 0.028 * safezoneH;
-		}; */
-/* 		class FastForward: ctrlXSliderH
-		{
-			idc = 1900;
-			sliderRange[] = {0,1.5};
-			onSliderPosChanged = "playMusic [profileNamespace getVariable ['Enh_3denRadio_CurrentSong',''],]";
-			x = 0.401563 * safezoneW + safezoneX;
-			y = 0.934 * safezoneH + safezoneY;
-			w = 0.07875 * safezoneW;
-			h = 0.028 * safezoneH;
-		}; */
 	};
 };
