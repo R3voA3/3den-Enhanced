@@ -35,6 +35,7 @@
 #define EDIT_W 10
 #define CENTERED_X(w) (CENTER_X - ((w) / 2 * GRID_W))
 #define DIALOG_TOP (safezoneY + 17 * GRID_H)
+#define CTRL_DEFAULT_H 5 * GRID_H
 
 //Statusbar
 #define SPACE_X (2 * pixelW)
