@@ -5488,9 +5488,9 @@
 		<Polish>Zapisz klase do schowka</Polish>
 		<Russian>Записать класса в буфер обмена</Russian>
 	</Key>
-	<Key ID="STR_ENH_contextMenu_getModuleDescription">
-		<Original>Module Description</Original>
-		<English>Module Description</English>
+	<Key ID="STR_ENH_contextMenu_getModuleInformation">
+		<Original>Module Information</Original>
+		<English>Module Information</English>
 		<Czech>Zobrazit popis modulu</Czech>
 		<French>Afficher la description du module</French>
 		<Spanish>Mostrar descripción del módulo</Spanish>
