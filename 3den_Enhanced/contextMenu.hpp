@@ -42,14 +42,14 @@ class Enh_MeasureDistance
 	Text = $STR_ENH_contextMenu_measureDistance;
 	picture = "\3denEnhanced\data\Enh_icon_ruler.paa";
 	conditionShow = "1";
-	value = 0;
+	SHOW_IN_ROOT;
 };
 class Enh_ShowModuleDescription
 {
 	action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
 	Text = $STR_ENH_contextMenu_getModuleDescription;
 	conditionShow = "hoverLogic";
-	value = 0;
+	SHOW_IN_ROOT;
 };
 class Enh_TriggerOwnerPlayer
 {
