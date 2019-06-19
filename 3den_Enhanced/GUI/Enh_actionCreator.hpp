@@ -1,3 +1,6 @@
+#define DIALOG_W 110
+#define DIALOG_H 82
+
 class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 {
 	idd = ENH_IDD_ACTIONCREATOR;

@@ -1,23 +1,5 @@
-allowFunctionsRecompile = 1;
-allowFunctionsLog = 1;
-skipLobby = 1;
-
-#include "defines.hpp"
-#include "\a3\3DEN\UI\macros.inc"
-#include "\a3\3DEN\UI\macroexecs.inc"
-//#include "Enh_ConfigViewer.hpp"
-
-//Display IDDs
-#define ENH_IDD_BRIEFINGEDITOR 				50000
-#define ENH_IDD_3DENRADIO 					60000
-#define ENH_IDD_NAMEOBJECTS 				80000
-#define ENH_IDD_TEXTUREFINDER 				140000
-#define ENH_IDD_BATCHREPLACE 				150000
-#define ENH_IDD_SCENARIOATTRIBUTESMANAGER 	160000
-#define ENH_IDD_ACTIONCREATOR 				190000
-
 #define DIALOG_W 50
-#define DIALOG_H 60
+#define DIALOG_H 70
 
 class Enh_Credits
 {

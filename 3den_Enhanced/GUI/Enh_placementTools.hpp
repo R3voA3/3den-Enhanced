@@ -384,8 +384,7 @@ class Enh_PlacementTools
 					h = CTRL_DEFAULT_H;
 					sliderRange[] = {1,20};
 					sliderPosition = 5;
-				    onSliderPosChanged = "Enh_PlacementTools_RectangleSpacing = round (_this # 1); call Enh_fnc_placementTools_rectangle";
-				    
+				    onSliderPosChanged = "Enh_PlacementTools_RectangleSpacing = round (_this # 1); call Enh_fnc_placementTools_rectangle";  
 				};
 			};
 		};
