@@ -81,7 +81,6 @@ class Enh_Folder_Utilities
 		"Enh_ActionCreator",
 		"Enh_BatchReplace",
 		"Enh_BriefingEditor",
-		//"Enh_ColourPicker",
 		"Enh_NameObjects",
 		"Enh_ScenarioAttributesManager",
 		"Enh_TextureFinder",
@@ -146,13 +145,6 @@ class Enh_NameObjects
 	text = $STR_ENH_tools_batchNaming;
 	action = "findDisplay 313 createDisplay 'Enh_NameObjects'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
-	opensNewWindow = 1;
-};
-class Enh_ColourPicker
-{
-	text = $STR_ENH_tools_colourPicker;
-	action = "findDisplay 313 createDisplay 'Enh_ColourPicker'";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_C};
 	opensNewWindow = 1;
 };
 class Enh_TextureFinder
