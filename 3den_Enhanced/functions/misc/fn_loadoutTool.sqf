@@ -24,7 +24,7 @@ switch (_input) do
 			if (_x isKindOf "Man") then	{Enh_CopiedLoadout_Gear pushBack (getUnitLoadout _x)};
 		} forEach _units;
 
-		["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+		["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 		true;
 	};
 	case "apply":
