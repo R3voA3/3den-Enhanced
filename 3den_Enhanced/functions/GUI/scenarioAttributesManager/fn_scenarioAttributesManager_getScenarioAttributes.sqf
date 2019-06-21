@@ -1,7 +1,7 @@
 /*
    Author: R3vo
 
-   Date:  2019-05-27
+   Date: 2019-05-27
 
    Description:
    Used by the Enh_Enh_ScenarioAttributesManager GUI.

@@ -1,7 +1,7 @@
 /*
    Author: R3vo
 
-   Date:  2019-06-11
+   Date: 2019-06-11
 
    Description:
    Used by the Enh_PlacementTools GUI. Places selected units in a rectangle.

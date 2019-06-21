@@ -1,7 +1,7 @@
 /*
    Author: R3vo
 
-   Date:  2019-06-11
+   Date: 2019-06-11
 
    Description:
    Checks if Enh_PlacementTools GUI should be opened and if yes, creates the display.

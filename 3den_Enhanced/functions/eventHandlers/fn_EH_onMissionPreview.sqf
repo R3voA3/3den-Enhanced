@@ -1,7 +1,7 @@
 /*
    Author: R3vo
 
-   Date:  2019-06-05
+   Date: 2019-06-05
 
    Description:
    Is called by Eden event handler onMissionPreview.
