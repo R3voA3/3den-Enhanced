@@ -2,7 +2,6 @@
 #include "\a3\3DEN\UI\macroexecs.inc"
 
 //Display IDDs
-#define ENH_IDD_BRIEFINGEDITOR 				50000
 #define ENH_IDD_3DENRADIO 					60000
 #define ENH_IDD_NAMEOBJECTS 				80000
 #define ENH_IDD_TEXTUREFINDER 				140000
