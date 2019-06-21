@@ -5,7 +5,7 @@ class Enh_Credits
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "call Enh_fnc_credits_onLoad";
+	onLoad = "_this call Enh_fnc_credits_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
