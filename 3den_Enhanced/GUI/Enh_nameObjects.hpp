@@ -4,7 +4,7 @@
 class Enh_NameObjects
 {
 	idd = ENH_IDD_NAMEOBJECTS;
-	onLoad = "call Enh_fnc_nameObjects_onLoad";
+	onLoad = "_this call Enh_fnc_nameObjects_onLoad";
 	movingEnable = true;
 	class ControlsBackground
 	{
