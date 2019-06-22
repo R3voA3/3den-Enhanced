@@ -10,8 +10,8 @@
 class Enh_PlacementTools
 {
 	idd = -1;
-	onLoad = "call Enh_fnc_placementTools_onLoad";
-	onUnload = "call Enh_fnc_placementTools_onUnload";
+	onLoad = "_this call Enh_fnc_placementTools_onLoad";
+	onUnload = "_this call Enh_fnc_placementTools_onUnload";
 	movingEnable = true;
 	class ControlsBackground
 	{ 
