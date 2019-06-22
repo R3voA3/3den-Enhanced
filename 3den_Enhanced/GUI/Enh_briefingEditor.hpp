@@ -126,6 +126,7 @@ class Enh_BriefingEditor
 		class BriefingText: ctrlStatic
 		{
 			text = $STR_ENH_briefingEditor_text;
+			tooltip = $STR_ENH_briefingEditor_text_tooltip;
 			x = CENTERED_X(90);
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 13 * GRID_H;
 			w = 90 * GRID_W;

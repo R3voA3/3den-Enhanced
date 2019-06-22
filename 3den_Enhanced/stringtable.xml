@@ -5876,4 +5876,8 @@
 		<German>Schriftart</German>
 		<Original>Font</Original>
 	</Key>
+	<Key ID="STR_ENH_briefingEditor_text_tooltip">
+		<English>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</English>
+		<Original>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</Original>
+	</Key>
 </Project>
