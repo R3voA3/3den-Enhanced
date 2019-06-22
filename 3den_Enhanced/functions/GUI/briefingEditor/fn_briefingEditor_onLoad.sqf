@@ -1,17 +1,26 @@
 /*
-   Author: Revo
+   Author: R3vo
+
+   Date: 2019-06-21
 
    Description:
-   Fills the briefing editor with the last saved input (History) and hides left & right 3DEN panel.
+   Initializes Enh_BriefingEditor GUI.
 
    Parameter(s):
-   -
+   0: DISPLAY - Enh_BriefingEditor
 
    Returns:
    BOOLEAN: true
 */
 
-#define GET_CONTROL(IDD,IDC) ((findDisplay IDD) displayCtrl IDC)
+disableSerialization;
+
+//Hide left & right tab to prevent interference
+["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
+["ShowPanelRight",false] call BIS_fnc_3DENInterface;
+
+params ["_display"];
+#define CTRL(IDC) (_display displayCtrl IDC)
 
 private _coloursHTML =
 [
@@ -166,64 +175,77 @@ private _getColorFromHex =
    [(_r/255),(_g/255),(_b/255),1];
 };
 
-//Hide left & right tab to prevent interference
-["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
-["ShowPanelRight",false] call BIS_fnc_3DENInterface;
 //Get history if available
 private _historyLatest = profileNamespace getVariable ["Enh_briefingEditor_history",["","Diary",""]];
 
-GET_CONTROL(50000,30) ctrlSetText (_historyLatest # 0);//Briefing Title
-GET_CONTROL(50000,20) ctrlSetText (_historyLatest # 1);//Subject Text
-GET_CONTROL(50000,10) ctrlSetText (_historyLatest # 2);//Briefing Text
+CTRL(30) ctrlSetText (_historyLatest # 0);//Briefing Title
+CTRL(20) ctrlSetText (_historyLatest # 1);//Subject Text
+CTRL(10) ctrlSetText (_historyLatest # 2);//Briefing Text
 
-{
-   GET_CONTROL(50000,100) lbAdd format ["%1 %2",localize "STR_ENH_briefingEditor_colour",_forEachIndex];
-   GET_CONTROL(50000,100) lbSetData [_forEachIndex,_x];
-
-   GET_CONTROL(50000,100) lbSetColor [_forEachIndex,[_x] call _getColorFromHex];
-} forEach _coloursHTML;
 //Load saved templates
 private _templates = profileNamespace getVariable "Enh_briefingEditor_templates";
+
 //Exit in case the template list is empty
-if (isNil "_templates") exitWith {};
-
-private _ctrlTemplateList =  GET_CONTROL(50000,80);
-
+if !(isNil "_templates") then 
 {
-   private _briefingTitle = _x # 0;
-   private _briefingText = _x # 1;
-   //private _briefingSubject = (_templates select _forEachIndex) select 2; Currently not used
+   private _ctrlTemplateList = CTRL(80);
 
-   _ctrlTemplateList lbAdd _briefingTitle;
-   _ctrlTemplateList lbSetData [_forEachIndex,_briefingText];
-   _ctrlTemplateList lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_loadTemplate_tooltip"];
+   {
+      _x params ["_briefingTitle","_briefingText"];
+   
+      _ctrlTemplateList lbAdd _briefingTitle;
+      _ctrlTemplateList lbSetData [_forEachIndex,_briefingText];
+      _ctrlTemplateList lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_loadTemplate_tooltip"];
+   } forEach _templates;
+};
 
-} forEach _templates;
+ private _ctrlLBColours = _display displayCtrl 100;
+{
+   _ctrlLBColours lbAdd format ["%1 %2",localize "STR_ENH_briefingEditor_colour",_forEachIndex];
+   _ctrlLBColours lbSetData [_forEachIndex,_x];
+   _ctrlLBColours lbSetColor [_forEachIndex,[_x] call _getColorFromHex];
+   _ctrlLBColours lbSetTooltip [_forEachIndex,_x];
+} forEach _coloursHTML;
 
-private _allMarkers = all3DENEntities # 5;
-private _ctrlMarkerList = GET_CONTROL(50000,60);
 //Fill marker list
+private _ctrlLBMarkers = CTRL(60);
 {
    //If marker has no name, use variable name instead
    private _name = (_x get3DENAttribute "text") # 0;
    private _varName = (_x get3DENAttribute "markerName") # 0;
    if (_name isEqualTo "") then {_name = _varName};
 
-   _ctrlMarkerList lbAdd _name;
-   _ctrlMarkerList lbSetData [_forEachIndex,_varName];
-   _ctrlMarkerList lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_addMarker_tooltip"];
+   _ctrlLBMarkers lbAdd _name;
+   _ctrlLBMarkers lbSetData [_forEachIndex,_varName];
+   _ctrlLBMarkers lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_addMarker_tooltip"];
+
    //Get icon
    private _markerType = (_x get3DENAttribute "itemClass") # 0;
    private _icon = getText (configfile >> "CfgMarkers" >> _markerType >> "icon");
-   _ctrlMarkerList lbSetPictureRight [_forEachIndex,_icon];
+   _ctrlLBMarkers lbSetPictureRight [_forEachIndex,_icon];
+
    //Get colour
-   _ctrlMarkerList lbSetPictureRightColor 
+   _ctrlLBMarkers lbSetPictureRightColor
    [
       _forEachIndex,
-      getArray (configfile >> "CfgMarkerColors" >> (_x get3DENAttribute "baseColor") # 0 >> "color") call BIS_fnc_colorConfigToRGBA //Function is need to because some colours are defined as string
+      getArray (configfile >> "CfgMarkerColors" >> (_x get3DENAttribute "baseColor") # 0 >> "color") call BIS_fnc_colorConfigToRGBA //Function is needed to because some colours are defined as string
    ];
-} forEach _allMarkers;
+} forEach (all3DENEntities # 5);
 
-ctrlSetFocus GET_CONTROL(50000,10);
+//Add tags to combo
+private _ctrlComboTags = CTRL(90);
+
+{
+   _ctrlComboTags lbAdd _x;
+} forEach ["Linebreak","Marker","Image","Font","Execute","ExecuteClose"];//Do not localize. Biki description is English
+
+_ctrlComboTags lbSetCurSel 0;
+
+//Add fonts
+private _ctrlLBFonts = CTRL(70);
+{
+   _ctrlLBFonts lbAdd configName _x; 
+   _ctrlLBFonts lbSetTooltip [_forEachIndex,configName _x];
+} forEach ('true' configClasses (configFile >> 'CfgFontFamilies'));
 
 true

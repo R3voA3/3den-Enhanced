@@ -10,16 +10,16 @@
    BOOLEAN: true
 */
 
-#define GET_CONTROL(IDD,IDC) ((findDisplay IDD) displayCtrl IDC)
+#define CTRL(IDC) _display displayCtrl IDC
 
-private _ctrl = param [0,controlNull,[controlNull]];
-private _index = param [1,0,[0]];
+params ["_ctrlLB","_selectedIndex"];
 
-private _briefingTitle = _ctrl lbText _index;
-private _briefingText = _ctrl lbData _index;
+private _display = ctrlparent _ctrlLB;
+private _briefingTitle = _ctrlLB lbText _selectedIndex;
+private _briefingText = _ctrlLB lbData _selectedIndex;
 
-GET_CONTROL(50000,30) ctrlSetText _briefingTitle;
-GET_CONTROL(50000,20) ctrlSetText "Diary";//Set it to diary by default
-GET_CONTROL(50000,10) ctrlSetText _briefingText;
+CTRL(30) ctrlSetText _briefingTitle;
+CTRL(20) ctrlSetText "Diary";//Set it to diary by default
+CTRL(10) ctrlSetText _briefingText;
 
 true

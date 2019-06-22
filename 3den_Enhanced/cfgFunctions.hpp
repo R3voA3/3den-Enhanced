@@ -50,12 +50,10 @@ class CfgFunctions
 			class briefingEditor_onLoad;
 			class briefingEditor_onUnload;
 			class briefingEditor_export;
-			class briefingEditor_addMarker;
-			class briefingEditor_addPicture;
-			class briefingEditor_addLinebreak;
 			class briefingEditor_createTemplate;
 			class briefingEditor_getTemplate;
-			class briefingEditor_addCustomText;
+			class briefingEditor_onLBSelChanged;
+			class briefingEditor_addTAG;
 		};
 		class PlacementTools
 		{

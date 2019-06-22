@@ -1,5 +1,273 @@
 class Enh_BriefingEditor
 {
+	idd = -1;
+	movingEnable = true;
+	onLoad = "_this spawn Enh_fnc_briefingEditor_onLoad";
+	onUnload = "_this call Enh_fnc_briefingEditor_onUnload";
+	class ControlsBackground
+	{
+		DISABLE_BACKGROUND
+		class Background: ctrlStaticBackground
+		{
+			x = CENTERED_X(160);
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
+			w = 160 * GRID_W;
+			h = 110 * GRID_H;
+		};
+	};
+	class Controls
+	{
+		class Header: ctrlStaticTitle
+		{
+			text = $STR_ENH_briefingEditor_headline_displayName;
+			x = CENTERED_X(160);
+			y = DIALOG_TOP;
+			w = 160 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class Templates: ctrlStatic
+		{	
+			text = $STR_ENH_briefingEditor_templates;
+			x = CENTERED_X(160);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
+			w = 33 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class TemplateList: ctrlListbox
+		{
+			idc = 80;
+			x = CENTERED_X(160) + 1 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
+			w = 33 * GRID_W;
+			h = 90 * GRID_H;
+			onKeyDown = "if ((_this # 1) == 211 ) then {(_this #  0) lbDelete (lbCurSel (_this # 0))}";
+			onLBDblClick = "_this call Enh_fnc_briefingEditor_getTemplate";
+		};
+		class Marker: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_marker;
+			x = CENTER_X + 45 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
+			w = 35 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class MarkerList: ctrlListbox
+		{
+			idc = 60;
+			x = CENTER_X + 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
+			w = 33 * GRID_W;
+			h = 25 * GRID_H;
+		};
+		class Colours: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_colour;
+			x = CENTER_X + 45 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 33 * GRID_H;
+			w = 35 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+ 		class ColourList: ctrlListbox
+		{
+			idc = 100;
+			x = CENTER_X + 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 39 * GRID_H;
+			w = 33 * GRID_W;
+			h = 30 * GRID_H;
+		};
+		class Fonts: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_font;
+			x = CENTER_X + 45 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 70 * GRID_H;
+			w = 35 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class FontsList: ctrlListbox
+		{
+			idc = 70;
+			x = CENTER_X + 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 76 * GRID_H;
+			w = 33 * GRID_W;
+			h = 21 * GRID_H;
+		};
+		class Subject: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_subject;
+			x = CENTER_X - 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
+			w = 45 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class SubjectValue: ctrlEdit
+		{
+			idc = 20;
+			x = CENTER_X - 45 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
+			w = 45 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class Title: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_briefingTitle;
+			x = CENTER_X
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
+			w = 44 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class TitleValue: ctrlEdit
+		{
+			idc = 30;
+			x = CENTER_X + 1 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
+			w = 44 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class BriefingText: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_text;
+			x = CENTERED_X(90);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 13 * GRID_H;
+			w = 90 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class BriefingTextValue: ctrlEditMulti
+		{
+			idc = 10;
+			x = CENTERED_X(90);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 19 * GRID_H;
+			w = 90 * GRID_W;
+			h = 60 * GRID_H;
+		};
+		class ShowTitle: ctrlToolbox
+		{
+			idc = 40;
+			x = CENTERED_X(90);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 80 * GRID_H;
+			w = 90 * GRID_W;
+			h = CTRL_DEFAULT_H;
+            rows = 1;
+            columns = 2;
+            strings[] = 
+            {
+                $STR_ENH_briefingEditor_showTitle,
+                $STR_ENH_briefingEditor_hideTitle
+            };
+            values[] = {0,1};
+        };
+		class TAGs: ctrlStatic
+		{
+			text = $STR_ENH_briefingEditor_TAGs;
+			x = CENTERED_X(90);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 86 * GRID_H;
+			w = 85 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class Help: ctrlButton
+		{
+			text = "?";
+			url = "https://community.bistudio.com/wiki/createDiaryRecord";
+			x = CENTER_X + 40 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 86 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+ 		class TAGsValue: ctrlCombo
+		{
+			idc = 90;
+			x = CENTERED_X(90);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 92 * GRID_H;
+			w = 90 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onLBSelChanged = "_this call Enh_fnc_briefingEditor_onLBSelChanged";
+        };
+		class FirstParam: ctrlStatic
+		{
+			idc = 200;
+			x = CENTER_X - 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+			w = 29 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class FirstParamValue: ctrlEdit
+		{
+			idc = 210;
+			x = CENTER_X - 45 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+			w = 29 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class SecondParam: ctrlStatic
+		{
+			idc = 220;
+			x = CENTER_X - 16 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+			w = 29 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class SecondParamValue: ctrlEdit
+		{
+			idc = 230;
+			x = CENTER_X - 15 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+			w = 29 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class ThirdParam: ctrlStatic
+		{
+			idc = 240;
+			x = CENTER_X + 14 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+			w = 31 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class ThirdParamValue: ctrlEdit
+		{
+			idc = 250;
+			x = CENTER_X + 15 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+			w = 30 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class CreateTemplate: ctrlButton
+		{
+			text = $STR_ENH_briefingEditor_createTemplate;
+			x = CENTERED_X(160) + 1 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+			w = 33 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onButtonClick = "_this call Enh_fnc_briefingEditor_createTemplate";
+		};
+		class AddTAG: ctrlButton
+		{
+			text = $STR_ENH_briefingEditor_addTAG;
+			x = CENTERED_X(160) + 1 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+			w = 33 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onButtonClick = "_this call Enh_fnc_briefingEditor_addTAG";
+		};
+		class Export: ctrlButton
+		{
+			text = $STR_ENH_briefingEditor_export;
+			x = CENTER_X + 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+			w = 33 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onButtonClick = "_this call Enh_fnc_briefingEditor_export";
+		};
+		class Close: ctrlButtonClose
+		{
+			x = CENTER_X + 46 * GRID_W;
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+			w = 33 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+	};
+};
+
+/*class Enh_BriefingEditor
+{
 	idd = ENH_IDD_BRIEFINGEDITOR;
 	movingEnable = true;
 	onLoad = "[] spawn Enh_fnc_briefingEditor_onLoad";
@@ -255,6 +523,8 @@ class Enh_BriefingEditor
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.098 * safezoneH;
+			onSetFocus = "params ['_ctrl']; Enh_BriefingEditor_ColourListH = (ctrlPosition _ctrl) # 3; _ctrl ctrlSetPositionH (Enh_BriefingEditor_ColourListH * 5); _ctrl ctrlCommit 0.2";
+			onKillFocus = "params ['_ctrl']; _ctrl ctrlSetPositionH Enh_BriefingEditor_ColourListH; _ctrl ctrlCommit 0.2";
 		};
 		class CustomText_Value: ctrlEditMulti
 		{
@@ -288,4 +558,4 @@ class Enh_BriefingEditor
             values[] = {0,1};
         };
 	};
-};
+};*/
