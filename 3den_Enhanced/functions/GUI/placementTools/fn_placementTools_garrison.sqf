@@ -58,7 +58,7 @@ collect3DENHistory
 	} forEach Enh_PlacementTools_Selected;
 };
 
-// "" are placeholders because value can be 1,2,4,10
+//Update GUI "" are placeholders because value can be 1,2,4,10
 #define OUTPUT format ["%1 m / %2",Enh_PlacementTools_AreaDia,["","100 %","50 %","","25 %","","","","","","10 %"] select Enh_PlacementTools_Coverage]
 (uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText OUTPUT;
 
