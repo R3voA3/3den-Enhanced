@@ -671,14 +671,6 @@
 		<Polish>Do zrobienia</Polish>
 		<Russian>Список задач</Russian>
 	</Key>
-	<Key ID="STR_ENH_briefingEditor_addMarker_tooltip">
-		<English>Add marker by double clicking.</English>
-		<German>Marker durch Doppelklick  hinzufügen.</German>
-		<Original>Add marker by double clicking.</Original>
-		<Spanish>Añadir Marcador haciendo Doble Click</Spanish>
-		<Polish>Dodaj marker podwójnym kliknięciem.</Polish>
-		<Russian>Добавьте маркер двойным щелчком.</Russian>
-	</Key>
 	<Key ID="STR_ENH_briefingEditor_loadTemplate_tooltip">
 		<English>Load template by double clicking. Delete it from list by pressing DELETE.</English>
 		<German>Vorlage durch Doppelklicken laden. Löschen durch Drücken von ENTFERNEN.</German>
@@ -3593,138 +3585,6 @@
 		<Polish>Edytor odprawy</Polish>
 		<Russian>Редактор брифингов</Russian>
 	</Key>
-	<Key ID="STR_ENH_briefingEditor_variableName_displayName">
-		<Original>Variable Name</Original>
-		<English>Variable Name</English>
-		<Czech>Název proměnné</Czech>
-		<French>Nom de la variable</French>
-		<Spanish>Nombre variable</Spanish>
-		<German>Variablenname</German>
-		<Chinesesimp>变量名</Chinesesimp>
-		<Polish>Unikatowa nazwa systemowa</Polish>
-		<Russian>Имя переменной</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_markerText_displayName">
-		<Original>Marker Text</Original>
-		<English>Marker Text</English>
-		<Czech>Text značky</Czech>
-		<French>Texte de marqueur</French>
-		<Spanish>Texto de Marcador</Spanish>
-		<German>Marker Text</German>
-		<Chinesesimp>标记文本</Chinesesimp>
-		<Polish>Tekst markeru</Polish>
-		<Russian>Текст маркера</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_templates_displayName">
-		<Original>Templates</Original>
-		<English>Templates</English>
-		<Czech>Šablony</Czech>
-		<French>Modèles</French>
-		<Spanish>Plantillas</Spanish>
-		<German>Vorlagen</German>
-		<Chinesesimp>模板</Chinesesimp>
-		<Polish>Szablon</Polish>
-		<Russian>Шаблоны</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_path_displayName">
-		<Original>Path</Original>
-		<English>Path</English>
-		<Czech>Cesta</Czech>
-		<French>Chemin</French>
-		<Spanish>Ruta</Spanish>
-		<German>Pfad</German>
-		<Chinesesimp>路径</Chinesesimp>
-		<Polish>Ścieżka</Polish>
-		<Russian>Path</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_briefingTitle_displayName">
-		<Original>Title</Original>
-		<English>Title</English>
-		<Czech>Název</Czech>
-		<French>Titre</French>
-		<Spanish>Título</Spanish>
-		<German>Titel</German>
-		<Chinesesimp>标题</Chinesesimp>
-		<Polish>Tytuł</Polish>
-		<Russian>Оглавление</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_briefingText_displayName">
-		<Original>Text</Original>
-		<English>Text</English>
-		<Czech>Text</Czech>
-		<French>Texte</French>
-		<Spanish>Texto</Spanish>
-		<German>Text</German>
-		<Chinesesimp>文本</Chinesesimp>
-		<Polish>Tekst</Polish>
-		<Russian>Текст</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_subject_displayName">
-		<Original>Subject</Original>
-		<English>Subject</English>
-		<Czech>Předmět</Czech>
-		<French>Sujet</French>
-		<Spanish>Tema</Spanish>
-		<German>Kategorie</German>
-		<Chinesesimp>主题</Chinesesimp>
-		<Polish>Temat</Polish>
-		<Russian>Предмет</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_export_displayName">
-		<Original>Export</Original>
-		<English>Export</English>
-		<Czech>Export</Czech>
-		<French>Exporter</French>
-		<Spanish>Exportar</Spanish>
-		<German>Exportieren</German>
-		<Chinesesimp>输出</Chinesesimp>
-		<Polish>Eksport</Polish>
-		<Russian>Экспорт</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_addPicture_displayName">
-		<Original>Add Picture</Original>
-		<English>Add Picture</English>
-		<Czech>Přidat obrázek</Czech>
-		<French>Ajouter une image</French>
-		<Spanish>Añadir imagen</Spanish>
-		<German>Bild hinzuf.</German>
-		<Chinesesimp>添加图片</Chinesesimp>
-		<Polish>Dodaj zdjęcie</Polish>
-		<Russian>Добавить изображение</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_addLinebreak_displayName">
-		<Original>Linebreak</Original>
-		<English>Linebreak</English>
-		<Czech>Zalomení řádku</Czech>
-		<French>Retour à la ligne</French>
-		<Spanish>Salto de línea</Spanish>
-		<German>Zeilenumbruch</German>
-		<Chinesesimp>换行</Chinesesimp>
-		<Polish>Następna linia</Polish>
-		<Russian>Разрыв строки</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_createTemplate_displayName">
-		<Original>Create Template</Original>
-		<English>Create Template</English>
-		<Czech>Vytvořit šablonu</Czech>
-		<French>Créer un modèle</French>
-		<Spanish>Crear plantilla</Spanish>
-		<German>Vorlage erstellen</German>
-		<Chinesesimp>创建模板</Chinesesimp>
-		<Polish>Stwórz szablon</Polish>
-		<Russian>Создать шаблон</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_addText_displayName">
-		<Original>Add Text</Original>
-		<English>Add Text</English>
-		<Czech>Přidat text</Czech>
-		<French>Ajouter un texte</French>
-		<Spanish>Añadir texto</Spanish>
-		<German>Text hinzuf.</German>
-		<Chinesesimp>添加文本</Chinesesimp>
-		<Polish>Dodaj tekst</Polish>
-		<Russian>Открыть текст</Russian>
-	</Key>
 	<Key ID="STR_ENH_briefingEditor_colour">
 		<Original>Colour</Original>
 		<English>Colour</English>
@@ -3735,66 +3595,6 @@
 		<Chinesesimp>颜色</Chinesesimp>
 		<Polish>Kolor</Polish>
 		<Russian>Цвет</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_marker_displayName">
-		<Original>Marker</Original>
-		<English>Marker</English>
-		<German>Markierung</German>
-		<Chinesesimp>标记</Chinesesimp>
-		<Spanish>Marcador</Spanish>
-		<French>Marqueurs</French>
-		<Polish>Marker</Polish>
-		<Russian>Маркер</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_width_displayName">
-		<Original>Width</Original>
-		<English>Width</English>
-		<German>Breite</German>
-		<Chinesesimp>宽度</Chinesesimp>
-		<Spanish>Anchura</Spanish>
-		<French>Largeur</French>
-		<Polish>Szerokość</Polish>
-		<Russian>Ширина</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_height_displayName">
-		<Original>Height</Original>
-		<English>Height</English>
-		<German>Höhe</German>
-		<Chinesesimp>高度</Chinesesimp>
-		<Spanish>Altura</Spanish>
-		<French>Hauteur</French>
-		<Polish>Wysokość</Polish>
-		<Russian>Высота</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_picture_displayName">
-		<Original>Picture</Original>
-		<English>Picture</English>
-		<German>Bild</German>
-		<Chinesesimp>图片</Chinesesimp>
-		<Spanish>Imagen</Spanish>
-		<French>Image</French>
-		<Polish>Zdjęcie</Polish>
-		<Russian>Картинка</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_colourAndExpression_displayName">
-		<Original>Colour &amp; Expression</Original>
-		<English>Colour &amp; Expression</English>
-		<German>Farbe &amp; Ausdruck</German>
-		<Chinesesimp>色彩和词句</Chinesesimp>
-		<Spanish>Color y expresion</Spanish>
-		<French>Couleur &amp; Expression</French>
-		<Polish>Kolor &amp; ekspresja</Polish>
-		<Russian>Цвет &amp; Выражение</Russian>
-	</Key>
-	<Key ID="STR_ENH_briefingEditor_expression_displayName">
-		<Original>Expression</Original>
-		<English>Expression</English>
-		<German>Ausdruck</German>
-		<Chinesesimp>词句</Chinesesimp>
-		<Spanish>Expresión</Spanish>
-		<French>Expression</French>
-		<Polish>Ekspresja</Polish>
-		<Russian>Выражение</Russian>
 	</Key>
 	<Key ID="STR_ENH_3denRadio_playlist_text">
 		<Original>Playlist</Original>
@@ -5906,5 +5706,174 @@
 		<English>Apply Attribute</English>
 		<German>Attribut setzen</German>
 		<Original>Apply Attribute</Original>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_templates">
+		<English>Templates</English>
+		<Chinesesimp>模板</Chinesesimp>
+		<Czech>Šablony</Czech>
+		<French>Modèles</French>
+		<German>Vorlagen</German>
+		<Original>Templates</Original>
+		<Polish>Szablon</Polish>
+		<Russian>Шаблоны</Russian>
+		<Spanish>Plantillas</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_path">
+		<English>Path</English>
+		<Chinesesimp>路径</Chinesesimp>
+		<Czech>Cesta</Czech>
+		<French>Chemin</French>
+		<German>Pfad</German>
+		<Original>Path</Original>
+		<Polish>Ścieżka</Polish>
+		<Russian>Path</Russian>
+		<Spanish>Ruta</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_briefingTitle">
+		<English>Title</English>
+		<Chinesesimp>标题</Chinesesimp>
+		<Czech>Název</Czech>
+		<French>Titre</French>
+		<German>Titel</German>
+		<Original>Title</Original>
+		<Polish>Tytuł</Polish>
+		<Russian>Оглавление</Russian>
+		<Spanish>Título</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_text">
+		<English>Text</English>
+		<Chinesesimp>文本</Chinesesimp>
+		<Czech>Text</Czech>
+		<French>Texte</French>
+		<German>Text</German>
+		<Original>Text</Original>
+		<Polish>Tekst</Polish>
+		<Russian>Текст</Russian>
+		<Spanish>Texto</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_subject">
+		<English>Subject</English>
+		<Chinesesimp>主题</Chinesesimp>
+		<Czech>Předmět</Czech>
+		<French>Sujet</French>
+		<German>Kategorie</German>
+		<Original>Subject</Original>
+		<Polish>Temat</Polish>
+		<Russian>Предмет</Russian>
+		<Spanish>Tema</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_addPicture">
+		<English>Add Picture</English>
+		<Chinesesimp>添加图片</Chinesesimp>
+		<Czech>Přidat obrázek</Czech>
+		<French>Ajouter une image</French>
+		<German>Bild hinzuf.</German>
+		<Original>Add Picture</Original>
+		<Polish>Dodaj zdjęcie</Polish>
+		<Russian>Добавить изображение</Russian>
+		<Spanish>Añadir imagen</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_linebreak">
+		<English>Linebreak</English>
+		<Chinesesimp>换行</Chinesesimp>
+		<Czech>Zalomení řádku</Czech>
+		<French>Retour à la ligne</French>
+		<German>Zeilenumbruch</German>
+		<Original>Linebreak</Original>
+		<Polish>Następna linia</Polish>
+		<Russian>Разрыв строки</Russian>
+		<Spanish>Salto de línea</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_createTemplate">
+		<English>Create Template</English>
+		<Chinesesimp>创建模板</Chinesesimp>
+		<Czech>Vytvořit šablonu</Czech>
+		<French>Créer un modèle</French>
+		<German>Vorlage erstellen</German>
+		<Original>Create Template</Original>
+		<Polish>Stwórz szablon</Polish>
+		<Russian>Создать шаблон</Russian>
+		<Spanish>Crear plantilla</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_marker">
+		<English>Marker</English>
+		<Chinesesimp>标记</Chinesesimp>
+		<French>Marqueurs</French>
+		<German>Markierung</German>
+		<Original>Marker</Original>
+		<Polish>Marker</Polish>
+		<Russian>Маркер</Russian>
+		<Spanish>Marcador</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_width">
+		<English>Width</English>
+		<Chinesesimp>宽度</Chinesesimp>
+		<French>Largeur</French>
+		<German>Breite</German>
+		<Original>Width</Original>
+		<Polish>Szerokość</Polish>
+		<Russian>Ширина</Russian>
+		<Spanish>Anchura</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_height">
+		<English>Height</English>
+		<Chinesesimp>高度</Chinesesimp>
+		<French>Hauteur</French>
+		<German>Höhe</German>
+		<Original>Height</Original>
+		<Polish>Wysokość</Polish>
+		<Russian>Высота</Russian>
+		<Spanish>Altura</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_picture">
+		<English>Picture</English>
+		<Chinesesimp>图片</Chinesesimp>
+		<French>Image</French>
+		<German>Bild</German>
+		<Original>Picture</Original>
+		<Polish>Zdjęcie</Polish>
+		<Russian>Картинка</Russian>
+		<Spanish>Imagen</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_expression">
+		<English>Expression</English>
+		<Chinesesimp>词句</Chinesesimp>
+		<French>Expression</French>
+		<German>Ausdruck</German>
+		<Original>Expression</Original>
+		<Polish>Ekspresja</Polish>
+		<Russian>Выражение</Russian>
+		<Spanish>Expresión</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_size">
+		<English>Size</English>
+		<German>Größe</German>
+		<Original>Size</Original>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_TAGs">
+		<English>TAGs</English>
+		<German>TAGs</German>
+		<Original>TAGs</Original>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_addTAG">
+		<English>Add TAG</English>
+		<German>TAG hinzufügen</German>
+		<Original>Add TAG</Original>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_export">
+		<English>Export</English>
+		<Chinesesimp>输出</Chinesesimp>
+		<Czech>Export</Czech>
+		<French>Exporter</French>
+		<German>Exportieren</German>
+		<Original>Export</Original>
+		<Polish>Eksport</Polish>
+		<Russian>Экспорт</Russian>
+		<Spanish>Exportar</Spanish>
+	</Key>
+	<Key ID="STR_ENH_briefingEditor_font">
+		<English>Font</English>
+		<German>Schriftart</German>
+		<Original>Font</Original>
 	</Key>
 </Project>
