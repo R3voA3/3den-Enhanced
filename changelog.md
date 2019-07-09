@@ -1,6 +1,7 @@
 v4.3
 *added*
 - Scenario Attributes Manager
+- Link to Mission Optimisation Biki page
 
 *changed*
 - Functions Viewer shows mod icons again
@@ -31,9 +32,7 @@ v4.3
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
-
-*known Issues*
-- Stay on Position attribute sometimes fails on dedicated server
+- removed weapon sway and recoil attribute due to issues on dedicated server
 
 v4.2
 *added*
