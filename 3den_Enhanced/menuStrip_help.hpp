@@ -18,8 +18,7 @@ class Enh_Help_Folder_Community
 		"Enh_Help_MissionCampaignGuide",
 		"Enh_Help_FockersScriptingTutorial",
 		"Enh_Help_FoxhoundInternational",
-		"Enh_Help_AICompilationList"//,
-		//"Enh_Help_ARMAnetEdenTutorial"
+		"Enh_Help_AICompilationList"
 	};
 };
 class Enh_Help_Folder_Wiki
@@ -31,7 +30,8 @@ class Enh_Help_Folder_Wiki
 		"Enh_Help_FunctionsList",
 		"Enh_Help_MissionPresentation",
 		"Enh_Help_DescriptionExt",
-		"Enh_Help_CodeOptimisation"
+		"Enh_Help_CodeOptimisation",
+		"Enh_Help_MissionOptimisation"
 	};
 };
 //Community
@@ -72,11 +72,6 @@ class Enh_Help_FoxhoundInternational: Enh_Help_KK
 	text = $STR_ENH_help_foxhoundInternational;
 	weblink = "http://foxhound.international/development.html";
 };
-/* class Enh_Help_ARMAnetEdenTutorial: Enh_Help_KK
-{
-	text = $STR_ENH_help_ARMAnetEdenTutorial;
-	weblink = "https://www.youtube.com/playlist?list=PLIwVS_QNTTcdoPUVWeFf4M7ZNUWpmH6Vj";
-}; */
 //Wiki
 class Enh_Help_FunctionsList: Enh_Help_KK
 {
@@ -98,3 +93,10 @@ class Enh_Help_CodeOptimisation: Enh_Help_KK
 	text = $STR_ENH_help_codeOptimisation;
 	weblink = "https://community.bistudio.com/wiki/Code_Optimisation";
 };
+class Enh_Help_MissionOptimisation: Enh_Help_KK
+{
+	text = $STR_ENH_help_missionOptimisation;
+	weblink = "https://community.bistudio.com/wiki/Mission_Optimisation";
+};
+
+
