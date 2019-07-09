@@ -26,13 +26,13 @@
 #define KILLINDEP 			profileNamespace getVariable ["Enh_KillIndep",false]
 #define KILLCIV				profileNamespace getVariable ["Enh_KillCiv",false]
 #define KILLCURSOR			profileNamespace getVariable ["Enh_KillCursor",false]
-#define PATHDEBUGGING		profileNamespace getVariable ["Enh_PathDebugging",[]]
+#define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
-#define MISSIONDISPLAY 		(findDisplay 46)
+//To prevent issues in multiplayer games started from multiplayer editor
+if (isMultiplayer) exitWith {false};
 
-if (isMultiplayer) exitWith {false};//To prevent issues in multiplayer games started from multiplayer editor
-
-private ["_zeusModule","_pos","_ctrlData","_ctrlFPS","_markerUnitsArray","_sideColour","_displayName","_marker","_entity","_object","_arrow"];
+//Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu
+waitUntil {time > 0.5};
 
 if (INVULNERABILITY) then {player allowDamage false; (vehicle player) allowDamage false};
 if (CAPTIVE) then {player setCaptive true};
@@ -44,7 +44,7 @@ if (ZEUS) then
 	[] spawn
 	{
 		waitUntil {!isNull player};
-		_zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F",[0,0,0],[],10,"NONE"];
+		private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F",[0,0,0],[],10,"NONE"];
 		player assignCurator _zeusModule;
 		//Add Interface EHs (Workaround)
 		_zeusModule addCuratorEditableObjects [entities "", true];
@@ -75,7 +75,7 @@ if (GARAGE) then
 
 if (AWARENESS) then
 {
-	[] spawn 
+	[] spawn
 	{
 		while {true} do
 		{
@@ -94,65 +94,6 @@ if (AWARENESS) then
 			sleep 1;
 		};
 	};
-	/* [] spawn
-	{
-		waitUntil {!isNull MISSIONDISPLAY};
-		disableSerialization;
-		if (isNull (MISSIONDISPLAY displayCtrl 991)) then//Make sure that controls are not created twice when restart button is pressed
-		{
-			_ctrlData = MISSIONDISPLAY ctrlCreate ["RscStructuredText",991];
-
-			_ctrlData ctrlSetPosition
-			[
-				0.8675 * safezoneW + safezoneX,
-				0.528 * safezoneH + safezoneY,
-				0.118125 * safezoneW,
-				0.3 * safezoneH
-			];
-			_ctrlData ctrlCommit 0;
-		};
-
-		_ctrlData = MISSIONDISPLAY displayCtrl 991;
-
-		while {true} do
-		{
-			_ctrlData ctrlSetStructuredText parseText format
-			[
-				"<t size='1.2'>Awareness</t><br/>WEST: %1%2<br/>EAST: %3%4<br/>INDEPENDENT: %5%6<br/>CIVILIAN: %7%8<br/>",
-				(WEST knowsAbout player) * 100 / 4,
-				"%",
-				(EAST knowsAbout player) * 100 / 4,
-				"%",
-				(INDEPENDENT knowsAbout player) * 100 / 4,
-				"%",
-				(CIVILIAN knowsAbout player) * 100 / 4,
-				"%"
-			];
-			sleep 1;
-		};
-	}; */
-
-
-	/* 	Revo_Script = [] spawn  
-	{ 
-	while {true} do  
-	{ 
-		private _unit = (player nearEntities ["SoldierEB", 1000]) param [0,objNull];
-		(_unit targetKnowledge player) params ["_knownGroup","_knownUnit","_lastSeen","_lastDanger","_side","_posError","_pos"]; 
-		private _data = format  
-		[ 
-		"Known by Group: %1\nKnown by the Unit: %2\nLast Seen: %3\nLast time endangered: %4\nSide: %5\nAim Position: %6", 
-		_knownGroup,
-		_knownUnit,
-		_lastSeen,
-		_lastDanger,
-		side _unit,
-		_pos
-		]; 
-		hintSilent _data; 
-		sleep 0.05; 
-	}; 
-	}; */
 };
 
 if (FPS) then
@@ -161,9 +102,11 @@ if (FPS) then
 	{
 		waitUntil {!isNull MISSIONDISPLAY};
 		disableSerialization;
-		if (isNull (MISSIONDISPLAY displayCtrl 992)) then//Make sure that controls are not created twice when restart button is pressed
+
+		//Make sure that controls are not created twice when restart button is pressed
+		if (isNull (MISSIONDISPLAY displayCtrl 992)) then
 		{
-			_ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText",992];
+			private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText",992];
 			_ctrlFPS ctrlSetPosition
 			[
 				0.94625 * safezoneW + safezoneX,
@@ -173,7 +116,7 @@ if (FPS) then
 			];
 			_ctrlFPS ctrlCommit 0;
 		};
-		_ctrlFPS = MISSIONDISPLAY displayCtrl 992;
+		private _ctrlFPS = MISSIONDISPLAY displayCtrl 992;
 
 		while {true} do
 		{
@@ -227,12 +170,11 @@ if (MARKERS) then
 	[] spawn
 	{
 		#define TO_PERCENT_ROUND(VALUE) round ((VALUE) * 100)
-		waitUntil {time > 2};//Give the game a bit of time to fully initialise the mission.
-		_markerUnitsArray = [];
+		private _markerUnitsArray = [];
 
 		{
-			_sideColour = [side _x,true] call BIS_fnc_sideColor;
-			_displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
+			private _sideColour = [side _x,true] call BIS_fnc_sideColor;
+			private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
 
 			_name = "Enh_previewMarker_" + str _forEachIndex;
 			_name = createMarkerLocal [_name,position _x];
