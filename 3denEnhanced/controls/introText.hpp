@@ -35,7 +35,7 @@ class Enh_IntroText: Title
 			cbChecked _ctrlAPEX\
 		]";
 
-	h = ATTRIBUTE_CONTENT_W * GRID_W / 1.85;
+	h = 4 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
 		class DelayText: Title

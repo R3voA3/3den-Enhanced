@@ -31,7 +31,7 @@ class Enh_AmbientAnimation: Title
 
 	attributeSave = "[(_this controlsGroupCtrl 100) lbData lbCurSel (_this controlsGroupCtrl 100),(_this controlsGroupCtrl 101) lbData lbCurSel (_this controlsGroupCtrl 101)]";
 
-	h = ATTRIBUTE_CONTENT_W * GRID_W / 3;
+	h = 3 * SIZE_M * GRID_H + 10 * pixelH;
 	class Controls: Controls
 	{
 		class AnimText: Title
@@ -297,7 +297,7 @@ class Enh_AmbientAnimation: Title
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			w = ATTRIBUTE_CONTENT_W * GRID_W / 3;
 			h = SIZE_M * GRID_H;
-			y = 2 * (SIZE_M * GRID_H + 5 * pixelH);
+			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
 			onButtonDown  = "((ctrlParentControlsGroup (_this # 0)) controlsGroupCtrl 100) lbSetCurSel 0; ((ctrlParentControlsGroup (_this # 0)) controlsGroupCtrl 101) lbSetCurSel 0";
 			text = $STR_ENH_ambAnimations_reset_text;
 		};

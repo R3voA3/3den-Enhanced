@@ -16,7 +16,7 @@ class Enh_EstablishingShot: Title
 
 	attributeSave = "[call compile ctrlText (_this controlsGroupCtrl 100),ctrlText (_this controlsGroupCtrl 101),parseNumber ctrlText (_this controlsGroupCtrl 102),parseNumber ctrlText (_this controlsGroupCtrl 103),parseNumber ctrlText (_this controlsGroupCtrl 104)]";
 
-	h = ATTRIBUTE_CONTENT_W * GRID_W / 1.85;
+	h = 5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
 		class CenterTitle: Title

@@ -13,7 +13,7 @@ class Enh_MapIndicators: Title
 		_ctrlPing cbSetChecked (_value param [3,false,[true]]);\
 	";
 	attributeSave = "[cbChecked (_this controlsGroupCtrl 100),cbChecked (_this controlsGroupCtrl 101),cbChecked (_this controlsGroupCtrl 102),cbChecked (_this controlsGroupCtrl 103)]";
-	h = ATTRIBUTE_CONTENT_W * GRID_W / 2.5;
+	h = 4 * SIZE_M * GRID_H + 15 * pixelH;
 	class Controls: Controls
 	{
 		class FriendlyText: Title
