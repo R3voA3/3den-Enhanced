@@ -41,17 +41,14 @@ class Cfg3DEN
 				class Title;
 			};
 		};		
-		//Slider
 		#include "controls\timeMultiplier.hpp"
-		//Toolbox
 		#include "controls\featureType.hpp"
 		#include "controls\terrainGrid.hpp"
-		//Misc
 		#include "controls\ambientAnimation.hpp"
 		#include "controls\introText.hpp"
 		#include "controls\establishingShot.hpp"
 		#include "controls\mapIndicators.hpp"
-		
+		#include "controls\groupMarker.hpp"
 	};
 	class Mission
 	{
@@ -130,12 +127,12 @@ class Cfg3DEN
 	{
 		class AttributeCategories
 		{
+			#include "attributesGroup\groupMarker.hpp"
 			class State
 			{
 				class Attributes
 				{
 					#include "attributesGroup\patrol.hpp"
-					#include "attributesGroup\groupMarker.hpp"
 				};
 			};
 		};
