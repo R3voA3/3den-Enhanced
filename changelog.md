@@ -27,12 +27,15 @@ v4.3
 - Layouts of various GUIs were improved
 - Functions of various GUIs were improved
 - Updated Russian translation thanks to lexx__1
+- Improved height of attribute control groups and positioning of controls
+- Group Marker attribute has got a new attribute control and more options
+- Moved code for attribute controls into functions library
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
-- removed on Event Code Attributes (Too complex for a simple attribute)
+- Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
-- removed weapon sway and recoil attribute due to issues on dedicated server
+- Removed weapon sway and recoil attribute due to issues on dedicated server
 
 v4.2
 *added*
