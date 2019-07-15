@@ -47,7 +47,6 @@ class Enh_PlacementTools
 			h = CTRL_DEFAULT_H;
 		};
 	};
-
 	class Controls
 	{
 		class ControlGroup: ctrlControlsGroup
@@ -71,7 +70,7 @@ class Enh_PlacementTools
 					text = $STR_ENH_placementTools_radius;
 					x = POS_X_TEXT;
 					y = 7 * GRID_H;
-					w = WIDTH_TEXT
+					w = WIDTH_TEXT;
 					h = CTRL_DEFAULT_H;
 				};
 				class RadiusValue: ctrlXSliderH
@@ -79,7 +78,7 @@ class Enh_PlacementTools
 					idc = 10;
 					x = POS_X_VALUE;
 					y = 7 * GRID_H;
-					w = WIDTH_VALUE
+					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
 					sliderPosition = 20;
 					sliderRange[] = {0,200};
@@ -90,7 +89,7 @@ class Enh_PlacementTools
 					text = $STR_ENH_placementTools_initialAngle;
 					x = POS_X_TEXT;
 					y = 13 * GRID_H;
-					w = WIDTH_TEXT
+					w = WIDTH_TEXT;
 					h = CTRL_DEFAULT_H;
 				};
 				class InitialAngleValue: ctrlXSliderH
@@ -144,7 +143,7 @@ class Enh_PlacementTools
 					idc = 40;
 					x = POS_X_VALUE;
 					y = 31 * GRID_H;
-					w = WIDTH_VALUE
+					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,50};
 					sliderPosition = 5;
@@ -190,7 +189,7 @@ class Enh_PlacementTools
 					idc = 60;
 					x = POS_X_VALUE;
 					y = 49 * GRID_H;
-					w = WIDTH_VALUE
+					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
 					sliderRange[] = {0,50};
 					sliderPosition = 5;
@@ -228,7 +227,7 @@ class Enh_PlacementTools
 					text = $STR_ENH_placementTools_A;
 					x = POS_X_TEXT;
 					y = 67 * GRID_H;
-					w = WIDTH_TEXT
+					w = WIDTH_TEXT;
 					h = CTRL_DEFAULT_H;
 				};
 				class AValue: ctrlXSliderH
@@ -247,7 +246,7 @@ class Enh_PlacementTools
 					text = $STR_ENH_placementTools_B;
 					x = POS_X_TEXT;
 					y = 73 * GRID_H;
-					w = WIDTH_TEXT
+					w = WIDTH_TEXT;
 					h = CTRL_DEFAULT_H;
 				};
 				class BValue: ctrlXSliderH
