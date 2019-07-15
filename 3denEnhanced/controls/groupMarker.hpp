@@ -1,7 +1,7 @@
 class Enh_GroupMarker: Title
 {
-	attributeLoad = "[_this,_value] call compile preprocessfileLineNumbers 'groupMarker_onAttributeLoad.sqf'";
-	attributeSave = "[_this] call compile preprocessfileLineNumbers 'groupMarker_onAttributeSave.sqf'";
+	attributeLoad = "[_this,_value] call Enh_fnc_groupMarker_onAttributeLoad";
+	attributeSave = "_this call Enh_fnc_groupMarker_onAttributeSave";
 	h = 4 * SIZE_M * GRID_H + 15 * pixelH;
 	class Controls: Controls
 	{
