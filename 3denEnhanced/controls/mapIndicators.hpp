@@ -1,18 +1,7 @@
 class Enh_MapIndicators: Title
 {
-	attributeLoad=
-	"\
-		_ctrlFriendly = _this controlsGroupCtrl 100;\
-		_ctrlEnemy = _this controlsGroupCtrl 101;\
-		_ctrlMines = _this controlsGroupCtrl 102;\
-		_ctrlPing = _this controlsGroupCtrl 103;\
-		\
-		_ctrlFriendly cbSetChecked (_value param [0,false,[true]]);\
-		_ctrlEnemy cbSetChecked (_value param [1,false,[true]]);\
-		_ctrlMines cbSetChecked (_value param [2,false,[true]]);\
-		_ctrlPing cbSetChecked (_value param [3,false,[true]]);\
-	";
-	attributeSave = "[cbChecked (_this controlsGroupCtrl 100),cbChecked (_this controlsGroupCtrl 101),cbChecked (_this controlsGroupCtrl 102),cbChecked (_this controlsGroupCtrl 103)]";
+	attributeLoad = "[_this,_value] call Enh_fnc_mapIndicators_onAttributeLoad";
+	attributeSave = "_this call Enh_fnc_mapIndicators_onAttributeSave";
 	h = 4 * SIZE_M * GRID_H + 15 * pixelH;
 	class Controls: Controls
 	{

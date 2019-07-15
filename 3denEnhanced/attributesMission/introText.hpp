@@ -32,7 +32,7 @@ class Enh_IntroText_Category
 						};\
 					};\
 				}";
-			defaultValue = "[0,'','','',false]";
+			defaultValue = "[5,missionName,'by ' + profileName,[daytime,'HH:MM'] call BIS_fnc_TimeToString,false]";
 		};
 	};
 };

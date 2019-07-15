@@ -1,21 +1,7 @@
 class Enh_EstablishingShot: Title
 {
-	attributeLoad =
-	"\
-		_center = _value param [0,[0,0,0],[[]],3];\
-		_text = _value param [1,getText (configfile >> 'CfgWorlds' >> worldName >> 'description'),['']];\
-		_alt = _value param [2,150,[0]];\
-		_r = _value param [3,300,[0]];\
-		_angle = _value param [4,45,[0]];\
-		\
-		(_this controlsGroupCtrl 100) ctrlSetText str _center;\
-		(_this controlsGroupCtrl 101) ctrlSetText _text;\
-		(_this controlsGroupCtrl 102) ctrlSetText str _alt;\
-		(_this controlsGroupCtrl 103) ctrlSetText str _r;\
-		(_this controlsGroupCtrl 104) ctrlSetText str _angle";
-
-	attributeSave = "[call compile ctrlText (_this controlsGroupCtrl 100),ctrlText (_this controlsGroupCtrl 101),parseNumber ctrlText (_this controlsGroupCtrl 102),parseNumber ctrlText (_this controlsGroupCtrl 103),parseNumber ctrlText (_this controlsGroupCtrl 104)]";
-
+	attributeLoad = "[_this,_value] call Enh_fnc_establishingShot_onAttributeLoad";
+	attributeSave = "_this call Enh_fnc_establishingShot_onAttributeLoad";
 	h = 5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{

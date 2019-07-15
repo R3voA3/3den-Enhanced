@@ -156,5 +156,25 @@ class CfgFunctions
 			class EH_onSelectionChange;
 			class EH_onTerrainNew;
 		};
+		class AttributeControls
+		{
+			file = "3denEnhanced\functions\attributeControls";
+			class groupMarker_onAttributeLoad;
+			class groupMarker_onAttributeSave;
+			class ambientAnimations_onAttributeLoad;
+			class ambientAnimations_onAttributeSave;
+			class ambientAnimations_onButtonDown;
+			class establishingShot_onAttributeLoad;
+			class establishingShot_onAttributeSave;
+			class featureType_onAttributeLoad;
+			class featureType_onAttributeSave;
+			class introText_onAttributeLoad;
+			class introText_onAttributeSave;
+			class terrainDetail_onAttributeLoad;
+			class terrainDetail_onAttributeSave;
+			class timeMultiplier_onAttributeLoad;
+			class timeMultiplier_onAttributeSave;
+			class timeMultiplier_onLoad;
+		};
 	};
 };

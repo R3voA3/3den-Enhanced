@@ -1,9 +1,8 @@
 class Enh_TerrainDetail: Title
 {
-    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel ([-1,50,25,12.5,6.25,3.125] find _value)";
-    attributeSave = "[-1,50,25,12.5,6.25,3.125] select (lbCurSel (_this controlsGroupCtrl 100))";
+    attributeLoad = "[_this,_value] call Enh_fnc_terrainDetail_onAttributeLoad";
+    attributeSave = "_this call Enh_fnc_terrainDetail_onAttributeSave";
     h = 2 * SIZE_M * GRID_H;
-
     class Controls: Controls
     {
         class Title: Title {};

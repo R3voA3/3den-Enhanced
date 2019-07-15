@@ -1,9 +1,8 @@
 class Enh_FeatureType: Title
 {
-    attributeLoad = "(_this controlsGroupCtrl 100) lbSetCursel ([0,1,2] find _value)";
-    attributeSave = "[0,1,2] select (lbCurSel (_this controlsGroupCtrl 100))";
+    attributeLoad = "[_this,_value] call Enh_fnc_featureType_onAttributeLoad";
+    attributeSave = "_this call Enh_fnc_featureType_onAttributeSave";
     h = 3 * SIZE_M * GRID_H;
-
     class Controls: Controls
     {
         class Title: Title {};

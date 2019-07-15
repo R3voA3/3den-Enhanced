@@ -1,36 +1,7 @@
 class Enh_AmbientAnimation: Title
 {
-	attributeLoad=
-	"\
-	_attCtrl = getText (_config >> 'control');\
-	_animCtrl =_this controlsGroupCtrl 100;\
-	_staticItemsCfgAnim = configFile >> 'Cfg3DEN' >> 'Attributes' >> _attCtrl >> 'Controls' >> 'Anim' >> 'items';\
-	{\
-		if ((_value select 0) == getText (_x >> 'data')) then\
-		{\
-			_animCtrl lbSetCurSel _forEachIndex;\
-		};\
-	} forEach configProperties [_staticItemsCfgAnim,'isclass _x'];\
-	\
-	\
-	_gearCtrl =_this controlsGroupCtrl 101;\
-	\
-	_staticItemsCfgGear = configFile >> 'Cfg3DEN' >> 'Attributes' >> _attCtrl >> 'Controls' >> 'Gear' >> 'items';\
-	{\
-		if ((_value # 1) == getText (_x >> 'data')) then\
-		{\
-			_gearCtrl lbSetCurSel _forEachIndex;\
-		};\
-	} forEach configProperties [_staticItemsCfgGear,'isclass _x'];\
-	if (is3DENMultiplayer) then\
-	{\
-		(_this controlsGroupCtrl 100) ctrlEnable false;\
-		(_this controlsGroupCtrl 101) ctrlEnable false;\
-		(_this controlsGroupCtrl 102) ctrlEnable false;\
-	}";
-
-	attributeSave = "[(_this controlsGroupCtrl 100) lbData lbCurSel (_this controlsGroupCtrl 100),(_this controlsGroupCtrl 101) lbData lbCurSel (_this controlsGroupCtrl 101)]";
-
+	attributeLoad = "[_this,_value] call Enh_fnc_ambientAnimations_onAttributeLoad";
+	attributeSave = "_this call Enh_fnc_ambientAnimations_onAttributeSave";
 	h = 3 * SIZE_M * GRID_H + 10 * pixelH;
 	class Controls: Controls
 	{
@@ -298,7 +269,7 @@ class Enh_AmbientAnimation: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W / 3;
 			h = SIZE_M * GRID_H;
 			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-			onButtonDown  = "((ctrlParentControlsGroup (_this # 0)) controlsGroupCtrl 100) lbSetCurSel 0; ((ctrlParentControlsGroup (_this # 0)) controlsGroupCtrl 101) lbSetCurSel 0";
+			onButtonDown  = "_this call Enh_fnc_ambientAnimations_onButtonDown";
 			text = $STR_ENH_ambAnimations_reset_text;
 		};
 	};

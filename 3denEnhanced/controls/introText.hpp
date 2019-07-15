@@ -1,40 +1,7 @@
 class Enh_IntroText: Title
 {
-	attributeLoad=
-	"\
-		_delay = _value param [0,-1,[-1]];\
-		_line1 = _value param [1,missionName,['']];\
-		_line2 = _value param [2,'by ' + profileName,['']];\
-		_line3 = _value param [3,([daytime,'HH:MM'] call BIS_fnc_TimeToString),['']];\
-		_introType = _value param [4,false,[false]];\
-		\
-		_ctrlDelay = _this controlsGroupCtrl 100;\
-		_ctrlLine1 = _this controlsGroupCtrl 101;\
-		_ctrlLine2 = _this controlsGroupCtrl 102;\
-		_ctrlLine3 = _this controlsGroupCtrl 103;\
-		_ctrlAPEX  = _this controlsGroupCtrl 104;\
-		\
-		_ctrlDelay ctrlSetText str _delay;\
-		_ctrlLine1 ctrlSetText _line1;\
-		_ctrlLine2 ctrlSetText _line2;\
-		_ctrlLine3 ctrlSetText _line3;\
-		_ctrlAPEX cbSetChecked _introType";
-
-	attributeSave =
-	"\
-		_ctrlDelay = _this controlsGroupCtrl 100;\
-		_ctrlLine1 = _this controlsGroupCtrl 101;\
-		_ctrlLine2 = _this controlsGroupCtrl 102;\
-		_ctrlLine3 = _this controlsGroupCtrl 103;\
-		_ctrlAPEX  = _this controlsGroupCtrl 104;\
-		[\
-			parseNumber (ctrlText _ctrlDelay),\
-			ctrlText _ctrlLine1,\
-			ctrlText _ctrlLine2,\
-			ctrlText _ctrlLine3,\
-			cbChecked _ctrlAPEX\
-		]";
-
+	attributeLoad = "[_this,_value] call Enh_fnc_introText_onAttributeLoad";
+	attributeSave = "_this call Enh_fnc_introText_onAttributeSave";
 	h = 5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
