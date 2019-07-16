@@ -17,7 +17,7 @@ params ["_ctrlButton"];
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 
-(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0; 
+(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
 (_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
 
 true

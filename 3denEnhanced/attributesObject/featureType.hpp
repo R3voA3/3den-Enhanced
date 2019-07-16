@@ -4,8 +4,7 @@ class Enh_FeatureType
 	tooltip = $STR_ENH_featureType_displayName;
 	property = "Enh_featureType";
 	control = "Enh_FeatureType";
-	expression = "if (_value isEqualType 0) then {_this setFeatureType _value}; if (_value isEqualType 'STRING') then {_this setFeatureType parseNumber _value}";//Type check to prevent issues
-	condition = "1";
+	expression = "_this setFeatureType _value";
 	defaultValue = "0";
 	typeName = "NUMBER";
 };

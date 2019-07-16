@@ -220,12 +220,10 @@ class Enh_AmbientAnimation: Title
 				};
 			};
 		};
-
 		class Gear: Anim
 		{
 			idc = 101;
 			y = SIZE_M * GRID_H + 5 * pixelH;
-
 			class Items
 			{
 				class ASIS
@@ -266,11 +264,11 @@ class Enh_AmbientAnimation: Title
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			w = ATTRIBUTE_CONTENT_W * GRID_W / 3;
+			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
 			onButtonDown  = "_this call Enh_fnc_ambientAnimations_onButtonDown";
-			text = $STR_ENH_ambAnimations_reset_text;
+			text = $STR_ENH_resetAndDisable;
 		};
 	};
 };

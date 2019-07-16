@@ -2,7 +2,6 @@ class Enh_TimeMultiplier: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_timeMultiplier_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_timeMultiplier_onAttributeSave";
-	onLoad = "_this call Enh_fnc_timeMultiplier_onLoad";
 	class Controls: Controls
 	{
 		class Title: Title {};
@@ -14,6 +13,7 @@ class Enh_TimeMultiplier: Title
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 1;
 			sliderRange[] = {0.1,120};
+			sliderStep = 0.1;
 		};
 		class Edit: ctrlEdit
 		{

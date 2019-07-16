@@ -16,13 +16,13 @@
 params ["_ctrlGroup"];
 
 _ctrlDelay = _ctrlGroup controlsGroupCtrl 100;
-_ctrlLine1 = _ctrlGroup controlsGroupCtrl 101;
-_ctrlLine2 = _ctrlGroup controlsGroupCtrl 102;
-_ctrlLine3 = _ctrlGroup controlsGroupCtrl 103;
-_ctrlIntroType = _ctrlGroup controlsGroupCtrl 104;
+_ctrlLine1 = _ctrlGroup controlsGroupCtrl 102;
+_ctrlLine2 = _ctrlGroup controlsGroupCtrl 103;
+_ctrlLine3 = _ctrlGroup controlsGroupCtrl 104;
+_ctrlIntroType = _ctrlGroup controlsGroupCtrl 105;
 
 [
-	parseNumber ctrlText _ctrlDelay,
+	sliderPosition _ctrlDelay,
 	ctrlText _ctrlLine1,
 	ctrlText _ctrlLine2,
 	ctrlText _ctrlLine3,
