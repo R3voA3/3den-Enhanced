@@ -1,6 +1,6 @@
 class Enh_Volume
 {
-	collapsed = 0;
+	collapsed = 1;
 	displayName = $STR_ENH_attributeCategory_volume;
 	class Attributes
 	{
