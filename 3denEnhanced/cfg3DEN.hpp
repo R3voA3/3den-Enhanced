@@ -43,12 +43,13 @@ class Cfg3DEN
 		};		
 		#include "controls\timeMultiplier.hpp"
 		#include "controls\featureType.hpp"
-		#include "controls\terrainGrid.hpp"
+		#include "controls\terrainDetail.hpp"
 		#include "controls\ambientAnimation.hpp"
 		#include "controls\introText.hpp"
 		#include "controls\establishingShot.hpp"
 		#include "controls\mapIndicators.hpp"
 		#include "controls\groupMarker.hpp"
+		#include "controls\airdrop.hpp"
 	};
 	class Mission
 	{
