@@ -472,13 +472,13 @@
 		<Russian>Радиус зоны сброса в метрах.</Russian>
 	</Key>
 	<Key ID="STR_ENH_airdrop_side_tooltip">
-		<English>Side of the dropped soldiers. Can be:\WEST, EAST or INDEPENDENT.</English>
+		<English>Side of the dropped soldiers. Can be:\nWEST, EAST or INDEPENDENT.</English>
 		<German>Seite der Soldaten. Folgende Seiten sind möglich:\nWEST, EAST oder INDEPENDENT</German>
-		<Original>Side of the dropped soldiers. Can be:\WEST, EAST or INDEPENDENT.</Original>
-		<French>Camp des soldats largués. Peut être:\WEST, EAST ou INDEPENDENT.</French>
-		<Polish>Strona zrzucanych żołnierzy. Może być:\WEST, EAST albo INDEPENDENT.</Polish>
-		<Spanish>Bando de los soldados soltados. Puede ser :\WEST, EAST o INDEPENDENT.</Spanish>
-		<Russian>Сторона сброшенных солдат. Может быть: \ ЗАПАД, ВОСТОК или НЕЗАВИСИМЫЙ.</Russian>
+		<Original>Side of the dropped soldiers. Can be:\nWEST, EAST or INDEPENDENT.</Original>
+		<French>Camp des soldats largués. Peut être:\nWEST, EAST ou INDEPENDENT.</French>
+		<Polish>Strona zrzucanych żołnierzy. Może być:\nWEST, EAST albo INDEPENDENT.</Polish>
+		<Spanish>Bando de los soldados soltados. Puede ser :\nWEST, EAST o INDEPENDENT.</Spanish>
+		<Russian>Сторона сброшенных солдат. Может быть: \n ЗАПАД, ВОСТОК или НЕЗАВИСИМЫЙ.</Russian>
 	</Key>
 	<Key ID="STR_ENH_dynamicSkill_BLUFORSkill_displayname">
 		<English>BLUFOR Skill Settings</English>
@@ -544,13 +544,13 @@
 		<Russian>Настройки навыков INDFOR</Russian>
 	</Key>
 	<Key ID="STR_ENH_dynamicSkill_enable_tooltip">
-		<English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects</English>
+		<English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</English>
 		<German>Berechnet den KI-Skill auf Basis der Spieleranzahl und den eingestellten Basiswerten. Die Fähigkeit wird dynamisch angepasst wenn ein Spieler sich verbindet, oder das Spiel verlässt.</German>
-		<Original>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects</Original>
-		<French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera changée dynamiquement lorsqu'un joueur se connecte ou se déconnecte</French>
+		<Original>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</Original>
+		<French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera changée dynamiquement lorsqu'un joueur se connecte ou se déconnecte.</French>
 		<Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
 		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
-		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается</Russian>
+		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
 	</Key>
 	<Key ID="STR_ENH_dynamicSkill_enable_displayName">
 		<English>Enable</English>
@@ -2743,8 +2743,8 @@
 		<Russian>Высота</Russian>
 	</Key>
 	<Key ID="STR_ENH_establishingShot_radius_displayName">
-		<Original>Radius of the orbit</Original>
-		<English>Radius of the orbit</English>
+		<Original>Radius of the Orbit</Original>
+		<English>Radius of the Orbit</English>
 		<Czech>Poloměr orbity</Czech>
 		<German>Radius der Umlaufbahn</German>
 		<Spanish>Radio de la orbita</Spanish>
@@ -3405,16 +3405,6 @@
 		<French>Sélectionnez une animation et un équipement. Pour économiser les performances, cet attribut ne fonctionnera que dans les missions solo.</French>
 		<Polish>Wybierz animacje i wyposażenie. Aby zachować wydajność misji, ten atrybut będzie działał tylko w misjach  jednoosobowych(single).</Polish>
 		<Russian>Выберите анимацию и загрузку. Чтобы сохранить производительность, этот атрибут будет работать только в одиночных миссиях.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_reset_text">
-		<Original>Reset</Original>
-		<English>Reset</English>
-		<Spanish>Reiniciar</Spanish>
-		<German>Zurücksetzen</German>
-		<Chinesesimp>重启</Chinesesimp>
-		<French>Réinitialiser</French>
-		<Polish>Reset</Polish>
-		<Russian>Выключить</Russian>
 	</Key>
 	<Key ID="STR_ENH_ambAnimations_animText_text">
 		<Original>Animation</Original>
@@ -5884,5 +5874,35 @@
 		<English>Mission Optimisation</English>
 		<German>Missions-Optimierung</German>
 		<Original>Mission Optimisation</Original>
+	</Key>
+	<Key ID="STR_ENH_reset">
+		<English>Reset</English>
+		<Chinesesimp>重启</Chinesesimp>
+		<French>Réinitialiser</French>
+		<German>Zurücksetzen</German>
+		<Original>Reset</Original>
+		<Polish>Reset</Polish>
+		<Russian>Выключить</Russian>
+		<Spanish>Reiniciar</Spanish>
+	</Key>
+	<Key ID="STR_ENH_establishingShot_direction_displayName">
+		<English>Rotational Direction</English>
+		<German>Drehsinn</German>
+		<Original>Rotational Direction</Original>
+	</Key>
+	<Key ID="STR_ENH_establishingShot_antiClockwise">
+		<English>Anti-Clockwise</English>
+		<German>Gegen den Uhrzeigersinn</German>
+		<Original>Anti-Clockwise</Original>
+	</Key>
+	<Key ID="STR_ENH_establishingShot_clockwise">
+		<English>Clockwise</English>
+		<German>Mit dem Uhrzeigersinn</German>
+		<Original>Clockwise</Original>
+	</Key>
+	<Key ID="STR_ENH_resetAndDisable">
+		<English>Reset &amp; Disable</English>
+		<German>Zurücksetzen und Deaktivieren</German>
+		<Original>Reset &amp; Disable</Original>
 	</Key>
 </Project>
