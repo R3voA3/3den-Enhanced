@@ -23,13 +23,26 @@ v4.3
 - Batch Replace GUI would not save last used value correctly
 - Tweaked layout of Batch Replace GUI
 - Tweaked layout for Texture Finder
-- Various GUIs use Pixel Grid System now and scale correctly
+- Almost all GUIs use Pixel Grid System now and scale correctly
 - Layouts of various GUIs were improved
 - Functions of various GUIs were improved
 - Updated Russian translation thanks to lexx__1
 - Improved height of attribute control groups and positioning of controls
 - Group Marker attribute has got a new attribute control and more options
 - Moved code for attribute controls into functions library
+- Establishing Shot attribute was overhauled and optimized
+- Ambient Flyby attribute was overhauled and optimized
+- Intro Text attribute was overhauled and optimized
+- Airdrop Shot attribute was overhauled and optimized
+- Some attributes have now a button to reset and disable them.
+- All substantial attributes have now got their own attribute control, therefore no unnecessary missionNamespace variables are declared.
+- All mission attribute are now collapsed by default
+- fixed various missing semicolons
+- fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
+- Changed 3den notification for Enh_fnc_loadoutTools
+- added various new internal macros
+
+
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
