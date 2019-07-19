@@ -18,4 +18,4 @@ params ["_ctrlGroup"];
 [
 	(_ctrlGroup controlsGroupCtrl 100) lbData lbCurSel (_this controlsGroupCtrl 100),
 	(_this controlsGroupCtrl 101) lbData lbCurSel (_this controlsGroupCtrl 101)
-];
+]
