@@ -50,6 +50,7 @@ class Cfg3DEN
 		#include "controls\mapIndicators.hpp"
 		#include "controls\groupMarker.hpp"
 		#include "controls\airdrop.hpp"
+		#include "controls\ambientFlyby.hpp"
 	};
 	class Mission
 	{
