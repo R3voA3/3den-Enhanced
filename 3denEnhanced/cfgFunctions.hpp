@@ -126,7 +126,6 @@ class CfgFunctions
 			class 3denNotificationNoSound;
 			class gitHubNotification;
 			class locationList;
-			class disableAndResetAttribute;
 		};
 		class Log
 		{
@@ -177,6 +176,12 @@ class CfgFunctions
 			class terrainDetail_onAttributeSave;
 			class timeMultiplier_onAttributeLoad;
 			class timeMultiplier_onAttributeSave;
+			class airdrop_onAttributeLoad;
+			class airdrop_onAttributeSave;
+			class airdrop_onButtonDown;
+			class ambientFlyby_onAttributeLoad;
+			class ambientFlyby_onAttributeSave;
+			class ambientFlyby_onButtonDown;
 		};
 	};
 };
