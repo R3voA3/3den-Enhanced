@@ -1,7 +1,7 @@
 items[] +=
 {
 	"Enh_MeasureDistance",
-	"Enh_ShowModuleDescription"
+	"Enh_ShowModuleInformation"
 };
 class Log
 {
@@ -44,10 +44,10 @@ class Enh_MeasureDistance
 	conditionShow = "1";
 	SHOW_IN_ROOT;
 };
-class Enh_ShowModuleDescription
+class Enh_ShowModuleInformation
 {
 	action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
-	Text = $STR_ENH_contextMenu_getModuleDescription;
+	Text = $STR_ENH_contextMenu_getModuleInformation;
 	conditionShow = "hoverLogic";
 	SHOW_IN_ROOT;
 };
