@@ -56,7 +56,7 @@ class Enh_BatchReplace
 		class Replace: ctrlButton
 		{
 			text = $STR_ENH_batchReplace_replace;
-			x = CENTERED_X(DIALOG_W) + 20 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 19 * GRID_W;
 			y = DIALOG_TOP + 41 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
