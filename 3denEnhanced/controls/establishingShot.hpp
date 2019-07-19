@@ -44,7 +44,7 @@ class Enh_EstablishingShot: Title
 		class AltitudeTitle: Title
 		{
 			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_establishingShot_altitude_displayName;
+			text = $STR_ENH_altitude_displayName;
 		};
 		class AltitudeValue: ctrlXSliderH
 		{
@@ -129,7 +129,8 @@ class Enh_EstablishingShot: Title
             columns = 1;
             strings[] = 
             {
-				$STR_ENH_establishingShot_antiClockwise,$STR_ENH_establishingShot_clockwise;
+				$STR_ENH_establishingShot_antiClockwise,
+				$STR_ENH_establishingShot_clockwise
             };
             values[] = {0,1};
         };
