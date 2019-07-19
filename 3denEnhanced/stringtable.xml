@@ -427,32 +427,6 @@
 		<Polish>Promień strefy</Polish>
 		<Russian>Рациус арены</Russian>
 	</Key>
-	<Key ID="STR_ENH_airdrop_side_displayName">
-		<English>Side</English>
-		<Chinese>軍勢</Chinese>
-		<Chinesesimp>一方</Chinesesimp>
-		<Czech>Strana</Czech>
-		<French>Camp</French>
-		<German>Seite</German>
-		<Italian>Parte</Italian>
-		<Japanese>陣営</Japanese>
-		<Korean>진영</Korean>
-		<Original>Side</Original>
-		<Polish>Strona</Polish>
-		<Portuguese>Lado</Portuguese>
-		<Russian>Сторона</Russian>
-		<Spanish>Bando</Spanish>
-		<Turkish>Taraf</Turkish>
-	</Key>
-	<Key ID="STR_ENH_airdrop_classes_tooltip">
-		<English>This condition has to be become true during the mission for the airdrop to start.</English>
-		<German>Diese Bedingung muss während der Mission erfüllt werden damit Einheiten abgeworfen werden.</German>
-		<Original>This condition has to be become true during the mission for the airdrop to start.</Original>
-		<French>Cette condition doit être remplie au cours de la mission pour que le largage commence.</French>
-		<Polish>Ten warunek musi być spełniony w czasie misji aby zrzut się odbył.</Polish>
-		<Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
-		<Russian>Это условие должно быть выполнено во время миссии, чтобы отряды были сброшены.</Russian>
-	</Key>
 	<Key ID="STR_ENH_airdrop_center_tooltip">
 		<English>Center of the drop zone.</English>
 		<German>Zentrum des Abwurfes.</German>
@@ -470,15 +444,6 @@
 		<Polish>Promień strefy zrzutu w metrach.</Polish>
 		<Spanish>Radio de la Zona de Descenso (DZ)</Spanish>
 		<Russian>Радиус зоны сброса в метрах.</Russian>
-	</Key>
-	<Key ID="STR_ENH_airdrop_side_tooltip">
-		<English>Side of the dropped soldiers. Can be:\nWEST, EAST or INDEPENDENT.</English>
-		<German>Seite der Soldaten. Folgende Seiten sind möglich:\nWEST, EAST oder INDEPENDENT</German>
-		<Original>Side of the dropped soldiers. Can be:\nWEST, EAST or INDEPENDENT.</Original>
-		<French>Camp des soldats largués. Peut être:\nWEST, EAST ou INDEPENDENT.</French>
-		<Polish>Strona zrzucanych żołnierzy. Może być:\nWEST, EAST albo INDEPENDENT.</Polish>
-		<Spanish>Bando de los soldados soltados. Puede ser :\nWEST, EAST o INDEPENDENT.</Spanish>
-		<Russian>Сторона сброшенных солдат. Может быть: \n ЗАПАД, ВОСТОК или НЕЗАВИСИМЫЙ.</Russian>
 	</Key>
 	<Key ID="STR_ENH_dynamicSkill_BLUFORSkill_displayname">
 		<English>BLUFOR Skill Settings</English>
@@ -679,50 +644,6 @@
 		<Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
 		<Russian>Загрузите шаблон двойным щелчком мыши. Удалить, нажав DELETE.</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambientFlyby_type_displayName">
-		<Original>Type of Aircraft</Original>
-		<English>Type of Aircraft</English>
-		<Czech>Druh letounu</Czech>
-		<French>Type d'appareil</French>
-		<Spanish>Tipo de aeronave</Spanish>
-		<German>Variante des Luftfahrzeuges</German>
-		<Chinesesimp>飞机类型</Chinesesimp>
-		<Polish>Typ samolotu</Polish>
-		<Russian>Тип самолета</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientFlyby_altitude_displayName">
-		<Original>Altitude</Original>
-		<English>Altitude</English>
-		<Czech>Výška</Czech>
-		<French>Altitude</French>
-		<Spanish>Altitud</Spanish>
-		<German>Flughöhe</German>
-		<Chinesesimp>高度</Chinesesimp>
-		<Polish>Wysokość</Polish>
-		<Russian>Высота</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientFlyby_altitude_tooltip">
-		<Original>Altitude of the flyby.</Original>
-		<English>Altitude of the flyby.</English>
-		<Czech>Výška přeletu</Czech>
-		<French>Altitude du survol</French>
-		<Spanish>Altitud de sobre vuelo</Spanish>
-		<German>Flughöhe des Vorbeifluges.</German>
-		<Chinesesimp>飞行的高度</Chinesesimp>
-		<Polish>Wysokość przelotu.</Polish>
-		<Russian>Высота полета.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientFlyby_speed_tooltip">
-		<Original>Speed of the aircraft.</Original>
-		<English>Speed of the aircraft.</English>
-		<Czech>Rychlost letounu</Czech>
-		<French>Vitesse de l'appareil</French>
-		<Spanish>Velocidad de la aeronave.</Spanish>
-		<German>Geschwindigkeit des Luftfahrzeuges.</German>
-		<Chinesesimp>飞机的速度</Chinesesimp>
-		<Polish>Prędkość samolotu.</Polish>
-		<Russian>Скорость самолета.</Russian>
-	</Key>
 	<Key ID="STR_ENH_ambientFlyby_speed_displayName">
 		<Original>SpeedMode</Original>
 		<English>SpeedMode</English>
@@ -794,17 +715,6 @@
 		<Chinesesimp>结束位置</Chinesesimp>
 		<Polish>Pozycja końcowa.</Polish>
 		<Russian>Конечная позиция</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientFlyby_type_tooltip">
-		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</Original>
-		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</English>
-		<Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: classname_1,classname_2,classname_n.</Czech>
-		<French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs ClassName sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : ClassName_1, ClassName_2, ClassName_n.</French>
-		<Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: classname_1, classname_2, classname_n.</Spanish>
-		<German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1, Klassenname_2, Klassenname_n.</German>
-		<Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:classname_1, classname_2, classname_n 以此类推</Chinesesimp>
-		<Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: classname_1,classname_2,classname_n.</Polish>
-		<Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: classname_1, classname_2, classname_n.</Russian>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_side_displayName">
 		<Original>Side</Original>
@@ -5901,8 +5811,88 @@
 		<Original>Clockwise</Original>
 	</Key>
 	<Key ID="STR_ENH_resetAndDisable">
-		<English>Reset &amp; Disable</English>
+		<English>Reset and Disable</English>
 		<German>Zurücksetzen und Deaktivieren</German>
-		<Original>Reset &amp; Disable</Original>
+		<Original>Reset &amp;amp; Disable</Original>
+	</Key>
+	<Key ID="STR_ENH_airdrop_condition_tooltip">
+		<English>This condition has to be become true during the mission for the airdrop to start.</English>
+		<French>Cette condition doit être remplie au cours de la mission pour que le largage commence.</French>
+		<German>Diese Bedingung muss während der Mission erfüllt werden damit Einheiten abgeworfen werden.</German>
+		<Original>This condition has to be become true during the mission for the airdrop to start.</Original>
+		<Polish>Ten warunek musi być spełniony w czasie misji aby zrzut się odbył.</Polish>
+		<Russian>Это условие должно быть выполнено во время миссии, чтобы отряды были сброшены.</Russian>
+		<Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
+	</Key>
+	<Key ID="STR_ENH_airdrop_classes_tooltip">
+		<English>Classes of the soldiers which should be dropped in format:\nclassname_1 classname_2 classname_n.\nUnits are stored in Enh_Airdrop_Units. This variable is available on host and server machine</English>
+		<Original>Classes of the soldiers which should be dropped in format:\nclassname_1 classname_2 classname_n.\nUnits are stored in Enh_Airdrop_Units. This variable is available on host and server machine</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientFlyby_classes_tooltip">
+		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n</English>
+		<Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:classname_1, classname_2, classname_n 以此类推</Chinesesimp>
+		<Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: classname_1,classname_2,classname_n.</Czech>
+		<French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs ClassName sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : ClassName_1, ClassName_2, ClassName_n.</French>
+		<German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1, Klassenname_2, Klassenname_n.</German>
+		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</Original>
+		<Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: classname_1,classname_2,classname_n.</Polish>
+		<Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: classname_1, classname_2, classname_n.</Russian>
+		<Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: classname_1, classname_2, classname_n.</Spanish>
+	</Key>
+	<Key ID="STR_ENH_side_displayName">
+		<English>Side</English>
+		<Chinese>軍勢</Chinese>
+		<Chinesesimp>一方</Chinesesimp>
+		<Czech>Strana</Czech>
+		<French>Camp</French>
+		<German>Seite</German>
+		<Italian>Parte</Italian>
+		<Japanese>陣営</Japanese>
+		<Korean>진영</Korean>
+		<Original>Side</Original>
+		<Polish>Strona</Polish>
+		<Portuguese>Lado</Portuguese>
+		<Russian>Сторона</Russian>
+		<Spanish>Bando</Spanish>
+		<Turkish>Taraf</Turkish>
+	</Key>
+	<Key ID="STR_ENH_ambientFlyby_classes_displayName">
+		<English>Type of Aircraft</English>
+		<Chinesesimp>飞机类型</Chinesesimp>
+		<Czech>Druh letounu</Czech>
+		<French>Type d'appareil</French>
+		<German>Variante des Luftfahrzeuges</German>
+		<Original>Type of Aircraft</Original>
+		<Polish>Typ samolotu</Polish>
+		<Russian>Тип самолета</Russian>
+		<Spanish>Tipo de aeronave</Spanish>
+	</Key>
+	<Key ID="STR_ENH_speed_limited">
+		<English>Limited</English>
+		<Original>Limited</Original>
+	</Key>
+	<Key ID="STR_ENH_speed_normal">
+		<English>Normal</English>
+		<Original>Normal</Original>
+	</Key>
+	<Key ID="STR_ENH_speed_full">
+		<English>Full</English>
+		<Original>Full</Original>
+	</Key>
+	<Key ID="STR_ENH_altitude_displayName">
+		<English>Altitude</English>
+		<Chinesesimp>高度</Chinesesimp>
+		<Czech>Výška</Czech>
+		<French>Altitude</French>
+		<German>Flughöhe</German>
+		<Original>Altitude</Original>
+		<Polish>Wysokość</Polish>
+		<Russian>Высота</Russian>
+		<Spanish>Altitud</Spanish>
+	</Key>
+	<Key ID="STR_ENH_nameObjects_name">
+		<English>Name</English>
+		<German>Name</German>
+		<Original>Name</Original>
 	</Key>
 </Project>
