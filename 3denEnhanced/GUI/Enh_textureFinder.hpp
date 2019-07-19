@@ -12,7 +12,7 @@ class Enh_TextureFinder
 		class Background: ctrlStaticBackground
 		{
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + CTRL_DEFAULT_H
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H;
 		};
@@ -31,7 +31,7 @@ class Enh_TextureFinder
 		{
 			idc = 1500;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + CTRL_DEFAULT_H
+			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
 			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
@@ -43,7 +43,7 @@ class Enh_TextureFinder
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 58 * GRID_H;
 			w = DIALOG_W * GRID_W;
-			h = 40 * GRID_H
+			h = 40 * GRID_H;
 			colorBackground[] = {1,1,1,1};
 		};
 		class ProgessText: ctrlStatic

@@ -110,7 +110,7 @@ class Enh_BriefingEditor
 		class Title: ctrlStatic
 		{
 			text = $STR_ENH_briefingEditor_briefingTitle;
-			x = CENTER_X
+			x = CENTER_X;
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
 			w = 44 * GRID_W;
 			h = CTRL_DEFAULT_H;
