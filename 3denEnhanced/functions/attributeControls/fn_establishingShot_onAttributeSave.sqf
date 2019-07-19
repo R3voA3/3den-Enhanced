@@ -22,4 +22,4 @@ params ["_ctrlGroup"];
 	sliderPosition (_ctrlGroup controlsGroupCtrl 104),
 	sliderPosition (_ctrlGroup controlsGroupCtrl 106),
    lbCurSel (_ctrlGroup controlsGroupCtrl 108)
-];
+]

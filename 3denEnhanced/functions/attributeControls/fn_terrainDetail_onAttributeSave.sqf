@@ -15,4 +15,4 @@
 
 params ["_ctrlGroup"];
 
-[-1,50,25,12.5,6.25,3.125] select (lbCurSel (_ctrlGroup controlsGroupCtrl 100));
+[-1,50,25,12.5,6.25,3.125] select (lbCurSel (_ctrlGroup controlsGroupCtrl 100))

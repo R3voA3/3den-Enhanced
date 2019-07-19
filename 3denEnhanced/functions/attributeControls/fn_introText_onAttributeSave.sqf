@@ -27,4 +27,4 @@ _ctrlIntroType = _ctrlGroup controlsGroupCtrl 105;
 	ctrlText _ctrlLine2,
 	ctrlText _ctrlLine3,
 	cbChecked _ctrlIntroType
-];
+]

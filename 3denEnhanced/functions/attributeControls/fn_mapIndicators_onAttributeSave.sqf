@@ -20,4 +20,4 @@ params ["_ctrlGroup"];
 	cbChecked (_ctrlGroup controlsGroupCtrl 101),
 	cbChecked (_ctrlGroup controlsGroupCtrl 102),
 	cbChecked (_ctrlGroup controlsGroupCtrl 103)
-];
+]

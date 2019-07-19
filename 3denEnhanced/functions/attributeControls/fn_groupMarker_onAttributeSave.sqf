@@ -25,4 +25,4 @@ private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
 	_ctrlComboColor lbData lbCurSel _ctrlComboColor,
 	ctrlText _ctrlEdit,
 	cbChecked _ctrlCheckbox
-];
+]
