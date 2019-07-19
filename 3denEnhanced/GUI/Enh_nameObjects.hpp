@@ -29,7 +29,7 @@ class Enh_NameObjects
 		};
 		class VariableName: ctrlStatic
 		{
-			text = $STR_ENH_briefingEditor_variableName_displayName;
+			text = $STR_ENH_nameObjects_name;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = DIALOG_W * GRID_W - 4 * GRID_W;
