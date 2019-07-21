@@ -41,6 +41,10 @@ v4.3
 - fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
 - Changed 3den notification for Enh_fnc_loadoutTools
 - added various new internal macros
+- All substantial attributes now have a proper description of what they do, and links to further information if available.
+- Rearanged some scenario attributes
+- Intro text attribute now supports BIS_fnc_infoText
+- Intro text attribute has a new control with images to select the  intro type
 
 
 
