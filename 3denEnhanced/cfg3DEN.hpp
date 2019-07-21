@@ -51,6 +51,7 @@ class Cfg3DEN
 		#include "controls\groupMarker.hpp"
 		#include "controls\airdrop.hpp"
 		#include "controls\ambientFlyby.hpp"
+		#include "controls\dynamicSkill.hpp"
 	};
 	class Mission
 	{
@@ -73,12 +74,12 @@ class Cfg3DEN
 		{
 			class AttributeCategories
 			{
-				#include "attributesMission\mapIndicators.hpp"
 				#include "attributesMission\volume.hpp"
-				#include "attributesMission\introText.hpp"
+				#include "attributesMission\mapIndicators.hpp"
 				#include "attributesMission\ambientFlyby.hpp"
-				#include "attributesMission\establishingShot.hpp"
 				#include "attributesMission\airdrop.hpp"
+				#include "attributesMission\establishingShot.hpp"
+				#include "attributesMission\introText.hpp"
 				class Misc
 				{
 					class Attributes
