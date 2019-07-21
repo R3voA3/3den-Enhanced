@@ -508,7 +508,7 @@
 		<Spanish>Habilidad de INDEPENDIENTE</Spanish>
 		<Russian>Настройки навыков INDFOR</Russian>
 	</Key>
-	<Key ID="STR_ENH_dynamicSkill_enable_tooltip">
+	<Key ID="STR_ENH_dynamicSkill_description">
 		<English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</English>
 		<German>Berechnet den KI-Skill auf Basis der Spieleranzahl und den eingestellten Basiswerten. Die Fähigkeit wird dynamisch angepasst wenn ein Spieler sich verbindet, oder das Spiel verlässt.</German>
 		<Original>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects.</Original>
@@ -517,7 +517,7 @@
 		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
 		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
 	</Key>
-	<Key ID="STR_ENH_dynamicSkill_enable_displayName">
+	<Key ID="STR_ENH_enable_displayName">
 		<English>Enable</English>
 		<Chinesesimp>启用</Chinesesimp>
 		<Czech>Aktivovat</Czech>
@@ -819,33 +819,6 @@
 		<French>Ne pas montrer le ping tactique</French>
 		<Polish>Nie pokazuj sygnału taktycznego</Polish>
 		<Russian>Не показывать тактический пинг</Russian>
-	</Key>
-	<Key ID="STR_ENH_mapIndicatorsDescription_displayName">
-		<Original>Description</Original>
-		<English>Description</English>
-		<Czech>Popis</Czech>
-		<German>Beschreibung</German>
-		<Russian>Описание</Russian>
-		<Polish>Opis</Polish>
-		<Italian>Descrizione</Italian>
-		<Spanish>Descripción</Spanish>
-		<French>La description:</French>
-		<Japanese>詳細</Japanese>
-		<Korean>설명</Korean>
-		<Portuguese>Descrição</Portuguese>
-		<Chinesesimp>描述</Chinesesimp>
-		<Turkish>Açıklama</Turkish>
-	</Key>
-	<Key ID="STR_ENH_mapIndicatorsDescription_description">
-		<Original>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</Original>
-		<English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
-		<German>Deaktiviert Kartenindikatoren für freundliche und feindliche Einheiten sowie Minen und den taktischen Ping. Überschreibt die Einstellungen des Spielers!</German>
-		<Chinesesimp>禁用地图友军、敌军、地雷位置显示和战术ping值。将覆盖玩家的难度设置！</Chinesesimp>
-		<Spanish>Desactiva los contadores de mapas de las unidades amigas y enemigas, las minas y el ping táctico. ¡Anula los ajustes del jugador!</Spanish>
-		<Czech>Zakáže indikátory map pro přátelské a nepřátelské jednotky, doly a taktické ping. Přepíše nastavení obtížnosti hráče!</Czech>
-		<French>Désactive les indicateurs de carte pour les unités amies et hostiles, les mines et le ping tactique. Écrase les paramètres de difficulté du joueur!</French>
-		<Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
-		<Russian>Отключает индикаторы карты для дружественных и враждебных юнитов, мин и тактического пинга. Перезаписывает настройки сложности игрока!</Russian>
 	</Key>
 	<Key ID="STR_ENH_weaponSway_displayName">
 		<Original>Weapon sway</Original>
@@ -1183,14 +1156,6 @@
 		<Spanish>Marcado de Grupo</Spanish>
 		<Polish>Marker grupy</Polish>
 		<Russian>Маркер группы</Russian>
-	</Key>
-	<Key ID="STR_ENH_groupMarker_tooltip">
-		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
-		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted.\n\nThe update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</English>
-		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.\n\nDer Eingabewert muss eine Markerklasse aus 'CfgMarkers' sein.</German>
-		<Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "Enh_GroupMarker_</Spanish>
-		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. \n\nAktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.\n\nWartość to classname z CfgMarkers np. 'mil_box'.</Polish>
-		<Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. \n\n Процесс обновления можно приостановить, задав для переменной 'Enh_GroupMarker_Update' в пространстве имен групп значение false. \n\n Value должно быть именем класса маркера из CfgMarkers.</Russian>
 	</Key>
 	<Key ID="STR_ENH_advancedDamageVeh_RBWheel">
 		<Original>4th axle right wheel</Original>
@@ -2730,15 +2695,9 @@
 		<Russian>Третья строка</Russian>
 	</Key>
 	<Key ID="STR_ENH_introText_introType_displayName">
-		<Original>APEX Protocol Style</Original>
-		<English>APEX Protocol Style</English>
-		<Spanish>Estilo Protocolo APEX</Spanish>
-		<German>APEX Protocol Stil</German>
-		<Chinesesimp>APEX协议样式</Chinesesimp>
-		<Czech>Styl protokolu APEX</Czech>
-		<French>Style de protocole APEX</French>
-		<Polish>Styl "APEX Protocol"</Polish>
-		<Russian>Стиль "Протокол APEX"</Russian>
+		<Original>Intro Type</Original>
+		<English>Intro Type</English>
+		<German>Intro Typ</German>
 	</Key>
 	<Key ID="STR_ENH_terrainGrid_grassDisabled_displayName">
 		<Original>Grass disabled</Original>
@@ -3486,6 +3445,17 @@
 		<Russian>Редактор брифингов</Russian>
 	</Key>
 	<Key ID="STR_ENH_briefingEditor_colour">
+		<Original>Colour</Original>
+		<English>Colour</English>
+		<Czech>Barva</Czech>
+		<French>Couleur</French>
+		<Spanish>Color</Spanish>
+		<German>Farbe</German>
+		<Chinesesimp>颜色</Chinesesimp>
+		<Polish>Kolor</Polish>
+		<Russian>Цвет</Russian>
+	</Key>
+  	<Key ID="STR_ENH_groupMarker_colour">
 		<Original>Colour</Original>
 		<English>Colour</English>
 		<Czech>Barva</Czech>
@@ -5894,5 +5864,64 @@
 		<English>Name</English>
 		<German>Name</German>
 		<Original>Name</Original>
+	</Key>
+	<Key ID="STR_ENH_description">
+		<English>Description</English>
+		<Chinesesimp>描述</Chinesesimp>
+		<Czech>Popis</Czech>
+		<French>La description:</French>
+		<German>Beschreibung</German>
+		<Italian>Descrizione</Italian>
+		<Japanese>詳細</Japanese>
+		<Korean>설명</Korean>
+		<Original>Description</Original>
+		<Polish>Opis</Polish>
+		<Portuguese>Descrição</Portuguese>
+		<Russian>Описание</Russian>
+		<Spanish>Descripción</Spanish>
+		<Turkish>Açıklama</Turkish>
+	</Key>
+	<Key ID="STR_ENH_airdrop_description">
+		<English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</English>
+		<Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientFlyby_description">
+		<English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</English>
+		<Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</Original>
+	</Key>
+	<Key ID="STR_ENH_establishingShot_description">
+		<English>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</English>
+		<Original>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Original>
+	</Key>
+	<Key ID="STR_ENH_introText_description">
+		<English>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</English>
+		<Original>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</Original>
+	</Key>
+	<Key ID="STR_ENH_groupMarker_description">
+		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.</English>
+		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
+		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
+		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
+		<Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'Enh_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
+		<Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "Enh_GroupMarker_</Spanish>
+	</Key>
+	<Key ID="STR_ENH_mapIndicators_description">
+		<English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
+		<Chinesesimp>禁用地图友军、敌军、地雷位置显示和战术ping值。将覆盖玩家的难度设置！</Chinesesimp>
+		<Czech>Zakáže indikátory map pro přátelské a nepřátelské jednotky, doly a taktické ping. Přepíše nastavení obtížnosti hráče!</Czech>
+		<French>Désactive les indicateurs de carte pour les unités amies et hostiles, les mines et le ping tactique. Écrase les paramètres de difficulté du joueur!</French>
+		<German>Deaktiviert Kartenindikatoren für freundliche und feindliche Einheiten sowie Minen und den taktischen Ping. Überschreibt die Einstellungen des Spielers!</German>
+		<Original>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</Original>
+		<Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
+		<Russian>Отключает индикаторы карты для дружественных и враждебных юнитов, мин и тактического пинга. Перезаписывает настройки сложности игрока!</Russian>
+		<Spanish>Desactiva los contadores de mapas de las unidades amigas y enemigas, las minas y el ping táctico. ¡Anula los ajustes del jugador!</Spanish>
+	</Key>
+	<Key ID="STR_ENH_groupMarker_type">
+		<English>Type</English>
+		<Original>Type</Original>
+	</Key>
+	<Key ID="STR_ENH_groupMarker_showGroupSize">
+		<English>Show Group Size</English>
+		<Original>Show Group Size</Original>
 	</Key>
 </Project>
