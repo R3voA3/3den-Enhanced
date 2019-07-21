@@ -31,7 +31,7 @@ class Enh_Airdrop
 						} forEach _classes;\
 					};\
 				}";
-			defaultValue = "['',[0,0,0],false,500,200,west]";
+			defaultValue = "['',[0,0,0],'false',500,200,west]";
 		};
 	};
 };
