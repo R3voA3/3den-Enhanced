@@ -2,18 +2,65 @@ class Enh_IntroText: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_introText_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_introText_onAttributeSave";
-	h = 6 * SIZE_M * GRID_H + 25 * pixelH;
+	h = 12.5 * SIZE_M * GRID_H + 35 * pixelH;
 	class Controls: Controls
 	{
+		class DescriptionGroup: ctrlControlsGroup
+		{
+			x = 5 * GRID_W;
+			y = 0.5 * SIZE_M * GRID_H;
+			h = 4 * SIZE_M * GRID_H;
+			w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W) * GRID_W;
+			class Controls
+			{
+				class DescriptionDeco: ctrlStatic
+				{
+					w = 5 * pixelW;
+					h = SIZE_M * GRID_H;
+					colorBackground[] = {1,1,1,0.05};
+				};
+				class DescriptionHeader: ctrlStatic
+				{
+					text = $STR_ENH_description;
+					x = 7 * pixelW;
+					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
+					h = SIZE_M * GRID_H;
+					colorText[] = {1,1,1,0.4};
+					colorBackground[] = {1,1,1,0.05};
+					colorShadow[] = {0,0,0,0};
+				};
+				class Description: ctrlStructuredText
+				{
+					text = $STR_ENH_introText_description;
+					x = 7 * pixelW;
+					y = SIZE_M * GRID_H;
+					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
+					h = 3 * SIZE_M * GRID_H;
+					colorText[] = {1,1,1,0.4};
+					colorBackground[] = {1,1,1,0};
+					shadow = 0;
+					class Attributes
+					{
+						align = "left";
+						color = "#999999";
+						colorLink = "";
+						font = "RobotoCondensedLight";
+						size = 1;
+					};
+				};
+			};
+		};
 		class DelayTitle: Title
 		{
 			text = $STR_ENH_introText_introDelay_displayName;
 			tooltip = $STR_ENH_introText_introDelay_tooltip;
+			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class DelayValue: ctrlXSliderH
 		{
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
+			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 0;
@@ -24,12 +71,13 @@ class Enh_IntroText: Title
 		{
 			idc = 101;
 			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
+			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = EDIT_W_WIDE * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class Line1Title: DelayTitle
 		{
-			y = SIZE_M * GRID_H + 5 * pixelH;
+			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
 			text = $STR_ENH_introText_line1_displayName;
 			tooltip = "";
 		};
@@ -37,52 +85,61 @@ class Enh_IntroText: Title
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
+			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			y = SIZE_M * GRID_H + 5 * pixelH;
 			h = SIZE_M * GRID_H;
 		};
 		class Line2Title: DelayTitle
 		{
-			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
 			text = $STR_ENH_introText_line2_displayName;
 			tooltip = "";
 		};
 		class Line2Value: Line1Value
 		{
 			idc = 103;
-			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class Line3Title: DelayTitle
 		{
-			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
 			text = $STR_ENH_introText_line3_displayName;
 			tooltip = "";
 		};
 		class Line3Value: Line1Value
 		{
 			idc = 104;
-			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class IntroTypeTitle: DelayTitle
 		{
-			y = 4 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
 			text = $STR_ENH_introText_introType_displayName;
 			tooltip = "";
 		};
-		class IntroTypeValue: ctrlCheckbox
-		{
-			idc = 105;
+		class IntroType: ctrlToolboxPictureKeepAspect
+        {
+            idc = 105;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 4 * SIZE_M * GRID_H + 20 * pixelH;
-			w = 5 * GRID_W;
-			h = CTRL_DEFAULT_H;
-		};
+			y = 8.5 * SIZE_M * GRID_H + 30 * pixelH;
+			w = ATTRIBUTE_CONTENT_W * GRID_W;
+			h = 3 * SIZE_M * GRID_H;
+            rows = 1;
+            columns = 3;
+            strings[] = 
+            {
+				"\3denEnhanced\data\BIS_fnc_textTiles_preview.jpg",
+				"\3denEnhanced\data\BIS_fnc_infoText_preview.jpg",
+				"\3denEnhanced\data\BIS_fnc_EXP_camp_SITREP_preview.jpg"
+            };
+            values[] = {0,1,2};
+        };
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
+			y = 11.5 * SIZE_M * GRID_H + 35 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			y = 5 * SIZE_M * GRID_H + 25 * pixelH;
 			onButtonDown  = "_this call Enh_fnc_introText_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
