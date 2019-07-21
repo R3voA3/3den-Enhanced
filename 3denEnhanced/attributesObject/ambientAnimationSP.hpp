@@ -1,11 +1,3 @@
-class Enh_AmbientAnimDescription
-{
-	control = "SubCategoryDesc2";
-	data = "AttributeSystemSubcategory";
-	displayName = $STR_ENH_ambAnimations_headline;
-	description = $STR_ENH_ambAnimations_description;
-	condition = "objectBrain";
-};
 class Enh_ambientAnimParams
 {
 	control = "Enh_AmbientAnimation";
