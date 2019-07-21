@@ -4,13 +4,6 @@ class Enh_MapIndicators
 	displayName = $STR_ENH_attributeCategory_mapIndicators;
 	class Attributes
 	{
-		class Enh_MapIndicatorsDescription
-		{
-			control = "SubCategoryDesc2";
-			data = "AttributeSystemSubcategory";
-			displayName = $STR_ENH_mapIndicatorsDescription_displayName;
-			description = $STR_ENH_mapIndicatorsDescription_description;
-		};
 		class Enh_MapIndicators
 		{
 			property = "Enh_mapIndicators";
