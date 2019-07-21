@@ -161,6 +161,7 @@ class CfgFunctions
 			file = "3denEnhanced\functions\attributeControls";
 			class groupMarker_onAttributeLoad;
 			class groupMarker_onAttributeSave;
+			class groupMarker_onButtonDown;
 			class ambientAnimations_onAttributeLoad;
 			class ambientAnimations_onAttributeSave;
 			class ambientAnimations_onButtonDown;
@@ -182,6 +183,9 @@ class CfgFunctions
 			class ambientFlyby_onAttributeLoad;
 			class ambientFlyby_onAttributeSave;
 			class ambientFlyby_onButtonDown;
+			class dynamicSkill_onAttributeLoad;
+			class dynamicSkill_onAttributeSave;
+			class dynamicSkill_onButtonDown;
 		};
 	};
 };
