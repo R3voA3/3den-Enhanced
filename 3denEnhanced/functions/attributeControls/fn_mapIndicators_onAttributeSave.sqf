@@ -10,7 +10,7 @@
    0: CONTROL - Controls group
 
    Returns:
-   ARRAY - Array with booleans, attribute value
+   ARRAY: Array with booleans, attribute value
 */
 
 params ["_ctrlGroup"];

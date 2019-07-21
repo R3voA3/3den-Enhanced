@@ -23,6 +23,7 @@ _value params ["_delay","_line1","_line2","_line3","_introType"];
 (_ctrlGroup controlsGroupCtrl 102) ctrlSetText _line1;
 (_ctrlGroup controlsGroupCtrl 103) ctrlSetText _line2;
 (_ctrlGroup controlsGroupCtrl 104) ctrlSetText _line3;
-(_ctrlGroup controlsGroupCtrl 105) cbSetChecked _introType;
+
+(_ctrlGroup controlsGroupCtrl 105) lbSetCurSel _introType;
 
 true

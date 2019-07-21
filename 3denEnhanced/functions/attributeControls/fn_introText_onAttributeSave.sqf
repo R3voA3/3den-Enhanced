@@ -15,16 +15,10 @@
 
 params ["_ctrlGroup"];
 
-_ctrlDelay = _ctrlGroup controlsGroupCtrl 100;
-_ctrlLine1 = _ctrlGroup controlsGroupCtrl 102;
-_ctrlLine2 = _ctrlGroup controlsGroupCtrl 103;
-_ctrlLine3 = _ctrlGroup controlsGroupCtrl 104;
-_ctrlIntroType = _ctrlGroup controlsGroupCtrl 105;
-
 [
-	sliderPosition _ctrlDelay,
-	ctrlText _ctrlLine1,
-	ctrlText _ctrlLine2,
-	ctrlText _ctrlLine3,
-	cbChecked _ctrlIntroType
+	sliderPosition (_ctrlGroup controlsGroupCtrl 100),
+	ctrlText (_ctrlGroup controlsGroupCtrl 102),
+	ctrlText (_ctrlGroup controlsGroupCtrl 103),
+	ctrlText (_ctrlGroup controlsGroupCtrl 104),
+   lbCurSel (_ctrlGroup controlsGroupCtrl 105)
 ]

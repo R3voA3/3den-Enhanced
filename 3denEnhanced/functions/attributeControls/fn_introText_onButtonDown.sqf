@@ -21,6 +21,6 @@ private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 (_ctrlGroup controlsGroupCtrl 102) ctrlSetText briefingName;
 (_ctrlGroup controlsGroupCtrl 103) ctrlSetText ('by ' + profileName);
 (_ctrlGroup controlsGroupCtrl 104) ctrlSetText ([daytime,'HH:MM'] call BIS_fnc_TimeToString);
-(_ctrlGroup controlsGroupCtrl 105) cbSetChecked false;
+(_ctrlGroup controlsGroupCtrl 105) lbSetCurSel 0;
 
 true
