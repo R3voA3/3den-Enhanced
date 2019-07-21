@@ -15,7 +15,6 @@ class Enh_AmbientFlyby
 				_value spawn\
 				{\
 					params ['_classes','_startPos','_endPos','_alt','_speed','_side','_delay'];\
-					diag_log [_startPos,_endPos,_alt,_speed,selectRandom _classes,_side];\
 					while {Enh_AmbientFlyby_Enabled} do\
 					{\
 						sleep _delay;\
