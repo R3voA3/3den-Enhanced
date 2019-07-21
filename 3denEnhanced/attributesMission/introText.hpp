@@ -14,25 +14,33 @@ class Enh_IntroText_Category
 				{\
 					_value spawn\
 					{\
-						waitUntil {time > (_this # 0)};\
-						if !(_this # 4) then\
+						params ['_delay','_line1','_line2','_line3','_type'];\
+						waitUntil {time > _delay};\
+						switch (_type) do\
 						{\
-							private _text = parseText format\
-							[\
-								""<t align='right' size='1.6'><t font='PuristaBold' size='1.8'>%1<br/></t>%2<br/>%3</t>"",\
-								_this # 1,\
-								_this # 2,\
-								_this # 3\
-							];\
-							[_text,true] spawn BIS_fnc_textTiles;\
-						}\
-						else\
-						{\
-							[_this # 1,_this # 2,_this # 3] spawn BIS_fnc_EXP_camp_SITREP;\
+							case 0:\
+							{\
+								private _text = parseText format\
+								[\
+									""<t align='right' size='1.6'><t font='PuristaBold' size='1.8'>%1<br/></t>%2<br/>%3</t>"",\
+									_line1,\
+									_line2,\
+									_line3\
+								];\
+								[_text,true] spawn BIS_fnc_textTiles;\
+							};\
+							case 1:\
+							{\
+								[_line1,_line2,_line3] spawn BIS_fnc_infoText;\
+							};\
+							case 2:\
+							{\
+								[_line1,_line2,_line3] spawn BIS_fnc_EXP_camp_SITREP;\
+							};\
 						};\
 					};\
 				}";
-			defaultValue = "[0,briefingName,'by ' + profileName,[daytime,'HH:MM'] call BIS_fnc_TimeToString,false]";
+			defaultValue = "[0,briefingName,'by ' + profileName,[daytime,'HH:MM'] call BIS_fnc_TimeToString,0]";
 		};
 	};
 };
