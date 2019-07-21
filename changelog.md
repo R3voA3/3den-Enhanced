@@ -45,6 +45,7 @@ v4.3
 - Rearanged some scenario attributes
 - Intro text attribute now supports BIS_fnc_infoText
 - Intro text attribute has a new control with images to select the  intro type
+- Values of Dynamic skill attributes are now handled by attribute control and not writting into mission namespace variables
 
 
 
