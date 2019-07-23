@@ -34,9 +34,11 @@ class CfgFunctions
 		{
 			file = "3denEnhanced\functions\GUI\functionsViewer";
 			class functionsViewer_onLoad;
+			class functionsViewer_onTreeSelChanged;
 			class functionsViewer_recompileSelected;
 			class functionsViewer_copy;
-			class functionsViewer_selectionChanged;
+			class functionsViewer_getFunctionsData;
+			class functionsViewer_fillCtrlTV;
 		};
 		class ActionCreator
 		{
