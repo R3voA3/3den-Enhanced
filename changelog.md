@@ -51,7 +51,9 @@ v4.3
   - Functions were rewritten
   - Shows number of available functions
   - Added button which leads to corresponding Biki page of the function (Keep in mind that not all functions might be documented there)
-
+  - Functions viewer is now available in the debug console, together with the vanilla one. See the "fx" icon in the top right corner
+    This also solves the issue where 3den Enhanced was incompatible with Extended Debug Console by Connor
+- Updated and revised Czech translation thanks to XerXesCZ
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
