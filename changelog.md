@@ -46,8 +46,11 @@ v4.3
 - Intro text attribute now supports BIS_fnc_infoText
 - Intro text attribute has a new control with images to select the  intro type
 - Values of Dynamic skill attributes are now handled by attribute control and not writting into mission namespace variables
-
-
+- FunctionsViewer
+  - Functions Viewer features now several different modes for sorting functions
+  - Functions were rewritten
+  - Shows number of available functions
+  - Added button which leads to corresponding Biki page of the function (Keep in mind that not all functions might be documented there)
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
