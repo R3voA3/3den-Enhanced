@@ -13,6 +13,7 @@
 
 private _ctrlFncName = findDisplay 180000 displayCtrl 1402;
 private _fncName = ctrlText _ctrlFncName;
+
 if (_fncName isEqualTo "") exitWith {false};
 
 _fncName call BIS_fnc_recompile;
