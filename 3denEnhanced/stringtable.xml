@@ -517,17 +517,6 @@
 		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
 		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
 	</Key>
-	<Key ID="STR_ENH_enable_displayName">
-		<English>Enable</English>
-		<Chinesesimp>启用</Chinesesimp>
-		<Czech>Aktivovat</Czech>
-		<French>Activer</French>
-		<German>Anschalten</German>
-		<Original>Enable</Original>
-		<Spanish>Habilitar</Spanish>
-		<Polish>Włącz</Polish>
-		<Russian>Разрешить</Russian>
-	</Key>
 	<Key ID="STR_ENH_attributeCategory_airdrop">
 		<English>Airdrop</English>
 		<German>Fallschirmabwurf</German>
@@ -3455,7 +3444,7 @@
 		<Polish>Kolor</Polish>
 		<Russian>Цвет</Russian>
 	</Key>
-  	<Key ID="STR_ENH_groupMarker_colour">
+	<Key ID="STR_ENH_groupMarker_colour">
 		<Original>Colour</Original>
 		<English>Colour</English>
 		<Czech>Barva</Czech>
@@ -5795,16 +5784,16 @@
 		<Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
 	</Key>
 	<Key ID="STR_ENH_airdrop_classes_tooltip">
-		<English>Classes of the soldiers which should be dropped in format:\nclassname_1 classname_2 classname_n.\nUnits are stored in Enh_Airdrop_Units. This variable is available on host and server machine</English>
-		<Original>Classes of the soldiers which should be dropped in format:\nclassname_1 classname_2 classname_n.\nUnits are stored in Enh_Airdrop_Units. This variable is available on host and server machine</Original>
+		<English>Classes of the soldiers which should be dropped in format:\nclassname_1, classname_2, classname_n.</English>
+		<Original>Classes of the soldiers which should be dropped in format:\nclassname_1, classname_2, classname_n.</Original>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_classes_tooltip">
-		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n\n\nThe flyby can be deactivated by setting Enh_AmbientFlyby_Enabled to false on the server machine.</English>
+		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</English>
 		<Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:classname_1, classname_2, classname_n 以此类推</Chinesesimp>
 		<Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: classname_1,classname_2,classname_n.</Czech>
 		<French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs ClassName sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : ClassName_1, ClassName_2, ClassName_n.</French>
 		<German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1, Klassenname_2, Klassenname_n.</German>
-		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n\n\nThe flyby can be deactivated by setting Enh_AmbientFlyby_Enabled to false on the server machine.</Original>
+		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</Original>
 		<Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: classname_1,classname_2,classname_n.</Polish>
 		<Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: classname_1, classname_2, classname_n.</Russian>
 		<Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: classname_1, classname_2, classname_n.</Spanish>
@@ -5923,5 +5912,25 @@
 	<Key ID="STR_ENH_groupMarker_showGroupSize">
 		<English>Show Group Size</English>
 		<Original>Show Group Size</Original>
+	</Key>
+	<Key ID="STR_ENH_functionsViewer_numFunctions_tooltip">
+		<English>Number of Functions</English>
+		<German>Anzahl an Funktionen</German>
+		<Original>Number of Functions</Original>
+	</Key>
+	<Key ID="STR_ENH_functionsViewer_full">
+		<English>Full</English>
+		<German>Komplett</German>
+		<Original>Full</Original>
+	</Key>
+	<Key ID="STR_ENH_functionsViewer_categories">
+		<English>Categories</English>
+		<German>Kategorien</German>
+		<Original>Categories</Original>
+	</Key>
+	<Key ID="STR_ENH_functionsViewer_functions">
+		<English>Functions</English>
+		<German>Funktionen</German>
+		<Original>Functions</Original>
 	</Key>
 </Project>
