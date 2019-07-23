@@ -17,15 +17,22 @@
 params ["_ctrlGroup","_value"];
 _value params ["_classes","_center","_condition","_alt","_r","_side"];
 
-//Change classes from type array to type string
-private _valueClasses = "";
-
+if (_classes isEqualType "") then 
 {
-	private _add = if (_foreachindex == 0) then {_x} else {format [", %1",_x]};
-	_valueClasses= _valueClasses + _add;
-} foreach _classes;
+   (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _classes;
+}
+else
+{
+   //Change classes from type array to type string
+   private _valueClasses = "";
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
+   {
+      private _add = if (_foreachindex == 0) then {_x} else {format [", %1",_x]};
+      _valueClasses= _valueClasses + _add;
+   } foreach _classes;
+
+   (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
+};
 
 (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str _center;
 (_ctrlGroup controlsGroupCtrl 102) ctrlSetText _condition;
