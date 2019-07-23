@@ -52,7 +52,7 @@ class Enh_TextureFinder
 			style = ST_CENTER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 99 * GRID_H;
-			w = DIALOG_W * GRID_W
+			w = DIALOG_W * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Progress: ctrlProgress
