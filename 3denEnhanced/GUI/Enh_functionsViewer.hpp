@@ -26,24 +26,70 @@ class Enh_FunctionsViewer
 			h = 0.028 * safezoneH;
 			colorBackground[] = {COLOUR_USER_PRESET};
 		};
+		class FilterConfig: ctrlToolbox
+		{
+			idc = 1700;
+			x = 0.0209375 * safezoneW + safezoneX;
+			y = 0.066 * safezoneH + safezoneY;
+			w = 0.21 * safezoneW;
+			h = 0.028 * safezoneH;
+            rows = 1;
+            columns = 3;
+            strings[] = //Do not localize
+            {
+           		"configFile",
+           		"missionConfig",
+				"campaignConfig"
+            };
+            values[] = {0,1,2};
+			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+        };
+		class FilterMode: ctrlToolbox
+		{
+			idc = 1800;
+			x = 0.0209375 * safezoneW + safezoneX;
+			y = 0.108 * safezoneH + safezoneY;
+			w = 0.21 * safezoneW;
+			h = 0.028 * safezoneH;
+            rows = 1;
+            columns = 3;
+            strings[] = 
+            {
+           		$STR_ENH_functionsViewer_full,
+           		$STR_ENH_functionsViewer_categories,
+				$STR_ENH_functionsViewer_functions
+            };
+            values[] = {0,1,2};
+			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+        };
 		class List: ctrlTree
 		{
 			idc = 1500;
 			idcSearch = 1400;
 			x = 0.0209375 * safezoneW + safezoneX;
-			y = 0.066 * safezoneH + safezoneY;
+			y = 0.15 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
-			h = 0.854 * safezoneH;
-			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_selectionChanged";
+			h = 0.78 * safezoneH;
+			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_onTreeSelChanged";
 		};
 		class Search: ctrlEdit
 		{
 			idc = 1400;
 			tooltip = $STR_ENH_functionsViewer_search_tooltip;
+			x = 0.06 * safezoneW + safezoneX;
+			y = 0.934 * safezoneH + safezoneY;
+			w = 0.125 * safezoneW;
+			h = 0.028 * safezoneH;
+		};
+		class NumFunctions: ctrlStatic
+		{
+			idc = 1405;
+			tooltip = $STR_ENH_functionsViewer_numFunctions_tooltip;
 			x = 0.0209375 * safezoneW + safezoneX;
 			y = 0.934 * safezoneH + safezoneY;
-			w = 0.164062 * safezoneW;
+			w = 0.035 * safezoneW;
 			h = 0.028 * safezoneH;
+			colorBackground[] = {COLOUR_USER_PRESET};
 		};
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
@@ -75,6 +121,21 @@ class Enh_FunctionsViewer
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
 			onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
+		};
+		class Biki: ctrlStructuredText
+		{
+			idc = 1900;
+			x = 0.854375 * safezoneW + safezoneX;
+			y = 0.108 * safezoneH + safezoneY;
+			w = 0.124687 * safezoneW;
+			h = 0.028 * safezoneH;
+			colorBackground[] = {0,0,0,1};
+			class Attributes
+			{
+				align = "center";
+				font = "PuristaLight";
+				size = 1;
+			};
 		};
 		class Close: ctrlButton
 		{
@@ -120,7 +181,7 @@ class Enh_FunctionsViewer
 			h = 0.812 * safezoneH;
 			class Controls
 			{
-				class Lines: ctrlStructuredText//ctrlStructuredText//Replace with ctrlStructuredText
+				class Lines: ctrlStructuredText
 				{
 					idc = 1404;
 					canModify = false;
@@ -138,8 +199,10 @@ class Enh_FunctionsViewer
 					canModify = false;
 					x = 0.075;
 					w = 4;
+					h = 2;
 					font = "EtelkaMonospacePro";
 					shadow = 0;
+					style = ST_NO_RECT + ST_MULTI;
 				};
 			};
 		};
@@ -160,7 +223,7 @@ class Enh_FunctionsViewer
 			canModify = false;
 			x = 0.2375 * safezoneW + safezoneX;
 			y = 0.108 * safezoneH + safezoneY;
-			w = 0.741562 * safezoneW;
+			w = 0.61 * safezoneW;
 			h = 0.028 * safezoneH;
 		};
 	};
