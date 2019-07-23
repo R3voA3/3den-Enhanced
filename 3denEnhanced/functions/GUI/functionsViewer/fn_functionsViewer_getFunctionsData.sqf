@@ -35,7 +35,7 @@ private _functionsData = [];
 
 				if (_extension isEqualTo "") then {_extension = ".sqf"};
 
-				private _path = getText (_configPath >> "file");
+				private _path = getText (_config >> "CfgFunctions" >> _addon >> _category >> "file");
 				_path = if (_path isEqualTo "") then 
 				{
 					getText (_configPath >> "file");

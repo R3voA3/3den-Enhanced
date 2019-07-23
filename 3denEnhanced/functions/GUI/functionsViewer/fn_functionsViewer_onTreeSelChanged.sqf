@@ -51,4 +51,6 @@ _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
+Enh_FunctionsViewer_LastViewed = _ctrlTV tvText (tvCurSel _ctrlTV);
+
 true

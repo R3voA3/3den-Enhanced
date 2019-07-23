@@ -83,12 +83,11 @@ switch (_modeIndex) do
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
 				_ctrlTV tvSetTooltip [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_rootIndex,_addonIndex,_categoryIndex,_fncIndex]};
 			};
 		} forEach Enh_FunctionsData;
 
-		//Sort and expand configFile, missionConfigFile and campaignConfigFile, or remove empty
-		//_ctrlTV tvSort [[0],false];
-		
+		//Sort
 		for "_i" from 0 to ((_ctrlTV tvCount []) - 1) do
 		{
 			_ctrlTV tvSort [[_i],false];
@@ -98,7 +97,6 @@ switch (_modeIndex) do
 				for "_k" from 0 to ((_ctrlTV tvCount [_i,_j]) - 1) do
 				{	
 					_ctrlTV tvSort [[_i,_j,_k],false];
-					diag_log [_i,_j,_k];
 				};
 			};
 		};
@@ -124,6 +122,9 @@ switch (_modeIndex) do
 					_ctrlTV tvAdd [[],_category];
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
+
+				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_categoryIndex,_fncIndex]};
+
 				_ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				_ctrlTV tvSort [[_categoryIndex],false];
@@ -139,6 +140,7 @@ switch (_modeIndex) do
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
+				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_fncIndex]};
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 			};

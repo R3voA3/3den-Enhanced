@@ -24,6 +24,8 @@ if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
 	"showinterface" call BIS_fnc_3DENInterface
 };
 
+if (isNil "Enh_FunctionsViewer_LastViewed") then {Enh_FunctionsViewer_LastViewed = ""};
+
 //if (isnil "BIS_fnc_init") then {4 call (uinamespace getvariable "BIS_fnc_recompile")};
 
 //Disable recompile buttons if recompiling isn't allowed
