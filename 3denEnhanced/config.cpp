@@ -19,7 +19,13 @@
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
 
-//Delete the original Functions Viewer button in the BIS Debug Console and replace it
+/* 
+  Adds button to debug menu, credits to
+  Author: Connor
+  Steam:  https://steamcommunity.com/id/_connor
+  Github: https://github.com/ConnorAU
+*/
+
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscShortcutButton;
@@ -27,17 +33,24 @@ class RscButtonMenu;
 class RscDebugConsole: RscControlsGroupNoScrollbars 
 {
 	class Controls 
+  {
+    class Enh_ButtonFunctions: ctrlButtonPictureKeepAspect 
     {
-		delete ButtonFunctions;
-		class Enh_FunctionsViewer: RscButtonMenu 
-        {
-			idc = -1;
-			onLoad = "(_this # 0) ctrlSetText localize 'STR_A3_RscDebugConsole_ButtonFunctions'";
-			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_FunctionsViewer'";
-			x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
-			y = "19.4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			w = "7.4 * (((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-	};
+      idc=0; // idc 0 to exclude from repositioning in CBA extended debug
+      deletable=0;
+      text="\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
+      tooltip="3den Enhanced Functions Viewer";
+      colorBackground[]={0,0,0,0};
+      colorBackgroundActive[]={0,0,0,0};
+      colorFocused[]={0,0,0,0};
+      colorBackgroundDisabled[]={0,0,0,0};
+      onButtonClick="ctrlParent (_this # 0) createDisplay 'Enh_FunctionsViewer'";
+
+      // get from title ctrl incase some mod moves it
+      x="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'w') - (4.1 * (((safezoneW / safezoneH) min 1.2) / 40))";
+      y="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'y')";
+      w="1 * (((safezoneW / safezoneH) min 1.2) / 40)";
+      h="1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    };
+  };
 };
