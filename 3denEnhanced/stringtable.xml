@@ -4200,14 +4200,8 @@
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_recompileAll_tooltip">
 		<Original>Recompiles all functions. This may take a moment.</Original>
-		<English>Recompiles all functions. This may take a moment.</English>h>
-		<German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German>
-		<Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp>
-		<Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish>
-		<Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech>
-		<French>Recompile toutes les fonctions. Cela peut prendre un moment.</French>
-		<Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian>
-	</Key>
+		<English>Recompiles all functions. This may take a moment.</English>h&gt;
+		<German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German><Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp><Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish><Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French><Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian></Key>
 	<Key ID="STR_ENH_functionsViewer_recompileSeletected_text">
 		<Original>Recompile Selected</Original>
 		<English>Recompile Selected</English>
@@ -6155,5 +6149,10 @@
 		<German>Funktionen</German>
 		<Original>Functions</Original>
 		<Czech>Funkce</Czech>
+	</Key>
+	<Key ID="STR_ENH_functionsViewer_biki">
+		<English>View on Biki</English>
+		<German>Auf Biki zeigen</German>
+		<Original>View on Biki</Original>
 	</Key>
 </Project>
