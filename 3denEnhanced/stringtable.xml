@@ -6151,8 +6151,8 @@
 		<Czech>Funkce</Czech>
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_biki">
-		<English>View on Biki</English>
-		<German>Auf Biki zeigen</German>
-		<Original>View on Biki</Original>
+		<English>OPEN ON BIKI</English>
+		<German>AUF BIKI ÖFFEN</German>
+		<Original>OPEN ON BIKI</Original>
 	</Key>
 </Project>
