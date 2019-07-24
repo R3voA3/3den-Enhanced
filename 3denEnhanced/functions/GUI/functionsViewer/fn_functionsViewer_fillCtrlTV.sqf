@@ -62,7 +62,7 @@ switch (_modeIndex) do
 		private _addonOld = [];
 		private _categories = [];
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile"];
+			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
 			{
 				private _addonIndex = 0;
@@ -99,6 +99,7 @@ switch (_modeIndex) do
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
 				_ctrlTV tvSetTooltip [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],_logo];
 			};
 		} forEach Enh_FunctionsData;
 
@@ -122,7 +123,7 @@ switch (_modeIndex) do
 		private _categories = [];
 		private _categoryOld = [];
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile"];
+			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
@@ -140,6 +141,7 @@ switch (_modeIndex) do
 
 				_ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				_ctrlTV tvSetPictureRight [[_categoryIndex,_fncIndex],_logo];
 				_ctrlTV tvSort [[_categoryIndex],false];
 			};
 		} forEach Enh_FunctionsData;
@@ -149,12 +151,13 @@ switch (_modeIndex) do
 	case 2:
 	{
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile"];
+			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				_ctrlTV tvSetPictureRight [[_fncIndex],_logo];
 			};
 		} forEach Enh_FunctionsData;
 		_ctrlTV tvSort [[],false];

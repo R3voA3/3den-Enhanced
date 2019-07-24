@@ -10,7 +10,7 @@
    -
 
    Returns:
-   ARRAY: Array containing arrays in format [_configStr,_addon,_tag,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile]
+   ARRAY: Array containing arrays in format [_configStr,_addon,_tag,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile,_logo]
 */
 
 private _functionsData = [];
@@ -20,6 +20,8 @@ private _functionsData = [];
 	{
 		private _addon = configName _x;
 		private _tag = getText (_config >> "CfgFunctions" >> _addon >> "tag");
+		private _mod = configSourceMod (configfile >> "CfgFunctions" >> _addon);
+		private _logo = modParams [_mod,["logoSmall"]] param [0,""];
 		if (_tag isEqualTo "") then {_tag = _addon};
 		{
 			private _category = configName _x;
@@ -44,42 +46,10 @@ private _functionsData = [];
 				{
 					format ["%1\fn_%2%3",_path,_fncShort,_extension];
 				};
-				
-				_functionsData pushBack [_configStr,_addon,_tag,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile];
+				_functionsData pushBack [_configStr,_addon,_tag,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile,_logo];
 			} forEach ("isClass _x" configClasses (_config >> "CfgFunctions" >> _addon >> _category));
 		} forEach ("isClass _x" configClasses (_config >> "CfgFunctions" >> _addon));
 	} forEach ("isClass _x" configClasses (_config >> "CfgFunctions"));
 } forEach [[configFile,"configFile"],[missionConfigFile,"missionConfigFile"],[campaignConfigfile,"campaignConfigFile"]];
 
 _functionsData
-
-
-/*
-Result:
-64.3125 ms
-
-Cycles:
-16/10000
-
-Code:
-call Enh_fnc_functionsViewer_getFunctionsData
-
-
-Result:
-64.25 ms
-
-Cycles:
-16/10000
-
-Code:
-call Enh_fnc_functionsViewer_getFunctionsData
-
-
-Result:
-37.1111 ms
-
-Cycles:
-27/10000
-
-Code:
-call Enh_fnc_functionsViewer_getFunctionsData
