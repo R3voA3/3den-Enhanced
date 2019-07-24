@@ -53,12 +53,15 @@ v4.3
   - Added button which leads to corresponding Biki page of the function (Keep in mind that not all functions might be documented there)
   - Functions viewer is now available in the debug console, together with the vanilla one. See the "fx" icon in the top right corner
     This also solves the issue where 3den Enhanced was incompatible with Extended Debug Console by Connor
+  - Every function now shows the logo of the mod it was introduced with
 - Updated and revised Czech translation thanks to XerXesCZ
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
+- Time Multiplier will no longer be executed when value is 1
+- Updated credits
 
 v4.2
 *added*
