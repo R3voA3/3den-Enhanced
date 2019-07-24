@@ -29,9 +29,25 @@ private _configIndex = lbCurSel (_display displayCtrl 1700);
 private _modeIndex = lbCurSel (_display displayCtrl 1800); 
 private _ctrlTV = _display displayCtrl 1500;
 private _ctrlEdit = _display displayCtrl 1400;
+private _ctrlBiki = _display displayCtrl 1900;
 
 profileNamespace setVariable ["Enh_FunctionsViewer_ConfigIndex",_configIndex];
 profileNamespace setVariable ["Enh_FunctionsViewer_ModeIndex",_modeIndex];
+
+//Disable biki button if missionConfigFile or campaignConfigFile functions are viewed
+switch (_configIndex) do
+{
+	case 0:
+	{
+		_ctrlBiki ctrlSetFade 0;
+	};
+	case 1;
+	case 2: 
+	{
+		_ctrlBiki ctrlSetFade 1;
+	};
+};
+_ctrlBiki ctrlCommit 0;
 
 tvClear _ctrlTV;
 
@@ -83,7 +99,6 @@ switch (_modeIndex) do
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
 				_ctrlTV tvSetTooltip [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
-				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_rootIndex,_addonIndex,_categoryIndex,_fncIndex]};
 			};
 		} forEach Enh_FunctionsData;
 
@@ -123,8 +138,6 @@ switch (_modeIndex) do
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
 
-				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_categoryIndex,_fncIndex]};
-
 				_ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				_ctrlTV tvSort [[_categoryIndex],false];
@@ -140,7 +153,6 @@ switch (_modeIndex) do
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
-				if (_fncShort isEqualTo Enh_FunctionsViewer_LastViewed) then {_ctrlTV tvSetCurSel [_fncIndex]};
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 			};
@@ -148,6 +160,15 @@ switch (_modeIndex) do
 		_ctrlTV tvSort [[],false];
 		_ctrlEdit ctrlEnable false;
 	};
+};
+
+//Reopen last viewed function and select it
+private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
+
+if !(_lastViewed isEqualTo []) then 
+{
+	_ctrlTV tvSetCurSel _lastViewed;
+	[_ctrlTV,_lastViewed] call Enh_fnc_functionsViewer_onTreeSelChanged;
 };
 
 true

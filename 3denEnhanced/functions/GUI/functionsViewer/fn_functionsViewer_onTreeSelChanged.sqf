@@ -23,6 +23,8 @@ private _ctrlBiki = _disp displayCtrl 1900;
 private _data = _ctrlTV tvData _path;
 private _linesText = "";
 
+uiNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_path];
+
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
@@ -32,7 +34,7 @@ _ctrlFncName ctrlSetText _fncName;
 _ctrlFncPath ctrlSetText _fncPath;
 _ctrlCode ctrlSetText loadFile _fncPath;
 
-_ctrlBiki ctrlSetStructuredText parseText format ["<a href='https://community.bistudio.com/wiki/%1'>SHOW ON BIKI</a>",_fncName];
+_ctrlBiki ctrlSetStructuredText parseText format ["<a href='https://community.bistudio.com/wiki/%1'>%2</a>",_fncName,localize STR_ENH_functionsViewer_biki];
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
 private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
@@ -50,7 +52,5 @@ _ctrlCode ctrlCommit 0;
 _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
-
-Enh_FunctionsViewer_LastViewed = _ctrlTV tvText (tvCurSel _ctrlTV);
 
 true
