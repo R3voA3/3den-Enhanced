@@ -11,11 +11,11 @@
    BOOLEAN: true / false
 */
 
-private _ctrlFncName = findDisplay 180000 displayCtrl 1402;
-private _fncName = ctrlText _ctrlFncName;
+params ["_ctrlButton"];
+
+private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl 1402);
 
 if (_fncName isEqualTo "") exitWith {false};
-
 _fncName call BIS_fnc_recompile;
 playSound "FD_Finish_F";
 
