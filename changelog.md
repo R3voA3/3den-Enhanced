@@ -2,10 +2,9 @@ v4.3
 *added*
 - Scenario Attributes Manager
 - Link to Mission Optimisation Biki page
+- disableAI "radioprotocol"
 
 *changed*
-- Functions Viewer shows mod icons again
-- Functions Viewer now displays line numbers
 - Combo Box controls were replaced with Toolbox controls if possible
 - Code cleanup
 - Debug console now uses CTRL+D as shortcut (Same as CBA)
@@ -54,7 +53,14 @@ v4.3
   - Functions viewer is now available in the debug console, together with the vanilla one. See the "fx" icon in the top right corner
     This also solves the issue where 3den Enhanced was incompatible with Extended Debug Console by Connor
   - Every function now shows the logo of the mod it was introduced with
+  - Functions Viewer now uses pixel grid system
+  - Fixed an issue where recompiling selected function wasn't possible
+  - Removed X button and replaced it with the close button in the lower right corner to be consitent with all other UIs in Eden Editor
+  - Functions Viewer shows mod icons again
+  - Functions Viewer now displays line numbers
+  
 - Updated and revised Czech translation thanks to XerXesCZ
+
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
