@@ -6155,4 +6155,14 @@
 		<German>AUF BIKI ÖFFEN</German>
 		<Original>OPEN ON BIKI</Original>
 	</Key>
+	<Key ID="STR_ENH_disableAI_radioProtocol_displayName">
+		<English>Radio Protocol</English>
+		<German>Radio Protokoll</German>
+		<Original>Radio Protocol</Original>
+	</Key>
+	<Key ID="STR_ENH_disableAI_radioProtocol_tooltip">
+		<English>Stops AI from talking and texting while still being able to issue orders.</English>
+		<German>Deaktivert das Reden und das Schreiben im Radiochat. Das Verteilen von Befehlen bleibt möglich.</German>
+		<Original>Stops AI from talking and texting while still being able to issue orders.</Original>
+	</Key>
 </Project>
