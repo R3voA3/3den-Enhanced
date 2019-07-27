@@ -17,8 +17,9 @@ private _display = findDisplay 60000;
 private _ctrlSongList = _display displayCtrl 1500;
 private _ctrlSearch = _display displayCtrl 1400;
 private _filter = toUpper (ctrlText _ctrlSearch);
-lbClear _ctrlSongList;
 private _filteredClasses = [];
+
+lbClear _ctrlSongList;
 
 //Filter all classes according to input in search control
 {
@@ -27,7 +28,7 @@ private _filteredClasses = [];
 	if (((toUpper _name) find _filter) >= 0 || _filter == "") then
 	{
 		private _configName = configName _x;
-		private _duration = parseNumber ((getNumber (_x >> "duration")) toFixed 0);
+		private _duration =  parseNumber ((getNumber (_x >> "duration")) toFixed 0);
 		private _logo = if (configSourceMod _x == '') then {[""]} else {modParams [configSourceMod  _x,["logoSmall"]]};
 		private _logo = _logo # 0;
 		private _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
