@@ -25,29 +25,14 @@ disableSerialization;
 
 params ["_ctrl"];
 private _display = ctrlParent _ctrl;
-private _configIndex = lbCurSel (_display displayCtrl 1700); 
-private _modeIndex = lbCurSel (_display displayCtrl 1800); 
+private _configIndex = lbCurSel (_display displayCtrl 1700);
+private _modeIndex = lbCurSel (_display displayCtrl 1800);
 private _ctrlTV = _display displayCtrl 1500;
 private _ctrlEdit = _display displayCtrl 1400;
 private _ctrlBiki = _display displayCtrl 1900;
 
 profileNamespace setVariable ["Enh_FunctionsViewer_ConfigIndex",_configIndex];
 profileNamespace setVariable ["Enh_FunctionsViewer_ModeIndex",_modeIndex];
-
-//Disable biki button if missionConfigFile or campaignConfigFile functions are viewed
-switch (_configIndex) do
-{
-	case 0:
-	{
-		_ctrlBiki ctrlSetFade 0;
-	};
-	case 1;
-	case 2: 
-	{
-		_ctrlBiki ctrlSetFade 1;
-	};
-};
-_ctrlBiki ctrlCommit 0;
 
 tvClear _ctrlTV;
 
@@ -101,7 +86,8 @@ switch (_modeIndex) do
 				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],_logo];
 			};
-		} forEach Enh_FunctionsData;
+			true
+		} count Enh_FunctionsData;
 
 		//Sort
 		for "_i" from 0 to ((_ctrlTV tvCount []) - 1) do
@@ -144,7 +130,8 @@ switch (_modeIndex) do
 				_ctrlTV tvSetPictureRight [[_categoryIndex,_fncIndex],_logo];
 				_ctrlTV tvSort [[_categoryIndex],false];
 			};
-		} forEach Enh_FunctionsData;
+			true
+		} count Enh_FunctionsData;
 		_ctrlTV tvSort [[],false];
 		_ctrlEdit ctrlEnable true;
 	};
@@ -159,11 +146,27 @@ switch (_modeIndex) do
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				_ctrlTV tvSetPictureRight [[_fncIndex],_logo];
 			};
-		} forEach Enh_FunctionsData;
+			true
+		} count Enh_FunctionsData;
 		_ctrlTV tvSort [[],false];
 		_ctrlEdit ctrlEnable false;
 	};
 };
+
+//Disable biki button if missionConfigFile or campaignConfigFile functions are viewed
+switch (_configIndex) do
+{
+	case 0:
+	{
+		_ctrlBiki ctrlSetFade 0;
+	};
+	case 1;
+	case 2:
+	{
+		_ctrlBiki ctrlSetFade 1;
+	};
+};
+_ctrlBiki ctrlCommit 0;
 
 //Reopen last viewed function and select it
 private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];

@@ -169,6 +169,7 @@ class Enh_FunctionsViewer
 		class Biki: ctrlStructuredText
 		{
 			idc = 1900;
+			text = $STR_ENH_functionsViewer_biki;
 			x = safezoneX + safezoneW - 41 * GRID_W;
 			y = safezoneY + 12 * GRID_H;
 			w = 40 * GRID_W;
