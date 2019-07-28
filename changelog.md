@@ -60,6 +60,9 @@ v4.3
   - Functions Viewer now displays line numbers
   
 - Updated and revised Czech translation thanks to XerXesCZ
+- Most functions which interact with eden entities will now exit and show a notification if no entities are selected
+- Merged serveral functions into one
+- removed Enh_fnc_logMissionAttributes
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
