@@ -1,4 +1,4 @@
-#define DIALOG_W 250
+#define DIALOG_W 200
 #define DIALOG_H 106
 
 class Enh_3denRadio
@@ -22,39 +22,39 @@ class Enh_3denRadio
 			text = $STR_ENH_3denRadio_headline_title;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
-			w = 86 * GRID_W;
+			w = 76 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DurationHeader: ctrlStaticTitle
 		{
 			text = $STR_ENH_3denRadio_headline_duration;
-			x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
 			y = DIALOG_TOP;
-			w = 34 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
  		class ThemeHeader: ctrlStaticTitle
 		{
 			text = $STR_ENH_3denRadio_headline_theme;
-			x = CENTERED_X(DIALOG_W) + 120 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 106 * GRID_W;
 			y = DIALOG_TOP;
-			w = 34 * GRID_W;
+			w = 29 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ModHeader: ctrlStaticTitle
 		{
 			text = $STR_ENH_3denRadio_headline_mod;
-			x = CENTERED_X(DIALOG_W) + 154 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 135 * GRID_W;
 			y = DIALOG_TOP;
-			w = 18 * GRID_W;
+			w = 17 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class PlaylistHeader:  ctrlStaticTitle
 		{
 			text = $STR_ENH_3denRadio_playlist_text;
-			x = CENTERED_X(DIALOG_W) + 172 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 152 * GRID_W;
 			y = DIALOG_TOP;
-			w = (DIALOG_W - 172) * GRID_W;
+			w = (DIALOG_W - 152) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 	};
@@ -67,7 +67,7 @@ class Enh_3denRadio
 			idcRight = -1;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = (DIALOG_W - 80) * GRID_W;
+			w = (DIALOG_W - 50) * GRID_W;
 			h = (DIALOG_H - 7) * GRID_H;
 			type = CT_LISTNBOX;
 			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
@@ -76,9 +76,9 @@ class Enh_3denRadio
 		class Playlist: ctrlListbox
 		{
 			idc = 2000;
-			x = CENTERED_X(DIALOG_W) + 171 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 150 * GRID_W;
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = (DIALOG_W - 172) * GRID_W;
+			w = (DIALOG_W - 150) * GRID_W;
 			h = (DIALOG_H - 7) * GRID_H;
 			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
 			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
@@ -148,7 +148,7 @@ class Enh_3denRadio
 		class Import: ctrlButton
 		{
 			text = $STR_ENH_3denRadio_importPlaylist_text;
-			x = CENTERED_X(DIALOG_W) + 171 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 121 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -157,7 +157,7 @@ class Enh_3denRadio
 		class Export: ctrlButton
 		{
 			text = $STR_ENH_3denRadio_exportPlaylist_text;
-			x = CENTERED_X(DIALOG_W) + 197 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 147 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 26 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -165,7 +165,7 @@ class Enh_3denRadio
 		};
 		class Close: ctrlButtonClose
 		{
-			x = CENTERED_X(DIALOG_W) + 224 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 174 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -188,7 +188,6 @@ class Enh_3denRadio
 		};
 	};
 };
-
 /*class Enh_3denRadio
 {
 	idd = ENH_IDD_3DENRADIO;
