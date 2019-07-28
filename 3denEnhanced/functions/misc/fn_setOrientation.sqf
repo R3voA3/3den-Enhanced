@@ -11,17 +11,16 @@
 	BOOLEAN: true / false
 */
 
+if (!is3DEN) exitWith {false};
+
 private _input = param [0,0,[0]];
+private _entities = call Enh_fnc_all3denSelected;
 
-private _objects  = get3DENSelected "object";
-private _markers  = get3DENSelected "Marker";
-private _waypoints = get3DENSelected "Waypoint";
-private _triggers = get3DENSelected "Trigger";
-private _logics   = get3DENSelected "Logic";
-
-private _entities = _objects + _markers + _triggers + _logics + _waypoints;
-
-if (_entities isEqualTo []) exitWith {false};
+if (_entities isEqualTo []) exitWith
+{
+	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	false
+};
 
 collect3DENHistory
 {

@@ -13,7 +13,12 @@
 
 private _input = param [0,"",[""]];
 private _units = get3DENSelected "object";
-if (_units isEqualTo []) exitWith {false};
+
+if (_units isEqualTo []) exitWith 
+{
+	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	false
+};
 
 switch (_input) do
 {
@@ -23,9 +28,6 @@ switch (_input) do
 		{
 			if (_x isKindOf "Man") then	{Enh_CopiedLoadout_Gear pushBack (getUnitLoadout _x)};
 		} forEach _units;
-
-		["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
-		true;
 	};
 	case "apply":
 	{
@@ -37,10 +39,9 @@ switch (_input) do
 		} forEach _units;
 
 		save3DENInventory _units;
-		["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
-		true;
 	};
 };
 
+["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 
-
+true

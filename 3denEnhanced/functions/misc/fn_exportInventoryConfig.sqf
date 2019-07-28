@@ -11,9 +11,15 @@
 	BOOLEAN: true / false
 */
 
+if (!is3DEN) exitWith {false};
+
 private _object = (get3DENSelected "Object") # 0;
 
-if (!is3DEN || isNil "_object") exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
+if (isNil "_object") exitWith
+{
+	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
+	false
+};
 
 #define LB endl
 #define IND "    "

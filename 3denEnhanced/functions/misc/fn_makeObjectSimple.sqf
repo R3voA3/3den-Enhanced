@@ -12,7 +12,12 @@
 */
 
 if !(is3DEN) exitWith {false};
-if (get3DENSelected "Object" isEqualTo []) exitWith {false};
+
+if (get3DENSelected "Object" isEqualTo []) exitWith
+{
+	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	false
+};
 
 #define STATE (_x get3DENAttribute "objectIsSimple")
 

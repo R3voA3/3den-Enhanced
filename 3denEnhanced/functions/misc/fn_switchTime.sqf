@@ -11,6 +11,8 @@
 	BOOLEAN: true
 */
 
+if !(is3DEN) exitWith {false};
+
 if (isNil "Enh_savedEnvironment") then
 {
 	Enh_savedEnvironment = [daytime,fog,overcast,rain];
