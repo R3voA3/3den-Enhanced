@@ -287,30 +287,30 @@ class Enh_ExportLoadoutConfig
 class Enh_RemoveNVGs
 {
 	text = $STR_ENH_tools_removeNVGs;
-	action = "call Enh_fnc_removeNVGs";
+	action = "2 call Enh_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_N};
 };
 class Enh_RemoveVests
 {
 	text = $STR_ENH_tools_removeVests;
-	action = "call Enh_fnc_removeVests";
+	action = "3 call Enh_fnc_removeGear";
 };
 class Enh_RemoveGoggles
 {
 	text = $STR_ENH_tools_removeGoggles;
-	action = "call Enh_fnc_removeGoggles";
+	action = "0 call Enh_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_G};
 };
 class Enh_RemoveHeadgear
 {
 	text = $STR_ENH_tools_removeHeadgear;
-	action = "call Enh_fnc_removeHeadgear";
+	action = "1 call Enh_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_H};
 };
 class Enh_RemoveWeapons
 {
 	text = $STR_ENH_tools_removeWeapons;
-	action = "call Enh_fnc_removeWeapons";
+	action = "4 call Enh_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
 };
 //GUI
