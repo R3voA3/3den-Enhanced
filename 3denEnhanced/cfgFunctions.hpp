@@ -112,11 +112,7 @@ class CfgFunctions
 			class deleteCrew;
 			class deleteEmptyLayers;
 			class makeObjectSimple;
-			class removeNVGs;
-			class removeVests;
-			class removeGoggles;
-			class removeWeapons;
-			class removeHeadgear;
+			class removeGear;
 			class setRandomDir;
 			class reverseDirection;
 			class setOrientation;
@@ -138,7 +134,6 @@ class CfgFunctions
 			class logFactions;
 			class logGridPosition;
 			class log3DENIDs;
-			class logMissionAttributes;
 		};
 		class Debug
 		{
