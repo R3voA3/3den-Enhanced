@@ -28,7 +28,7 @@ lbClear _ctrlSongList;
 	if (((toUpper _name) find _filter) >= 0 || _filter == "") then
 	{
 		private _configName = configName _x;
-		private _duration =  parseNumber ((getNumber (_x >> "duration")) toFixed 0);
+		private _duration =  round getNumber (_x >> "duration");
 		private _logo = if (configSourceMod _x == '') then {[""]} else {modParams [configSourceMod  _x,["logoSmall"]]};
 		private _logo = _logo # 0;
 		private _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
