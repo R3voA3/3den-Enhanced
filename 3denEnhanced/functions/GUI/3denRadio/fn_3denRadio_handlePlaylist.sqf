@@ -47,8 +47,10 @@ switch (_action) do
 		private _playlist = profileNamespace getVariable ["Enh_3denRadio_Playlist",[]];
 		lbClear _ctrlPL;
 		{
-			private _index = _ctrlPL lbAdd (_x # 0);
-			_ctrlPL lbSetData [_index,_x # 1];
+			_x params ["_name","_class"];
+			private _index = _ctrlPL lbAdd _name;
+			_ctrlPL lbSetTooltip [_index,_name];
+			_ctrlPL lbSetData [_index,_class];
 		} forEach _playlist;
 
 		lbSort _ctrlPL;
@@ -57,10 +59,11 @@ switch (_action) do
 	{
 		if (_key == 57) then
 		{
-			private _songName = _ctrlSL lnbText [(lbCurSel _ctrlSL),0];
+			private _name = _ctrlSL lnbText [(lbCurSel _ctrlSL),0];
 			private _class = _ctrlSL lnbData [(lbCurSel _ctrlSL),0];
-			private _newIndex = _ctrlPL lbAdd _songName;
-			_ctrlPL lbSetData [_newIndex,_class];
+			private _index = _ctrlPL lbAdd _name;
+			_ctrlPL lbSetTooltip [_index,_name];
+			_ctrlPL lbSetData [_index,_class];
 			"SAVE" call Enh_fnc_3denRadio_handlePlaylist;
 		};
 	};
@@ -72,7 +75,6 @@ switch (_action) do
 		};
 		"SAVE" call Enh_fnc_3denRadio_handlePlaylist;
 	};
-	case "CLEAR": {lbClear _ctrlPL};
 	case "SAVE":
 	{
 		private _playlist = [];
