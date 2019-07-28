@@ -13,15 +13,14 @@
 
 collect3DENHistory
 {
-	{
- 		if ((get3DENLayerEntities _x) isEqualTo []) then
-	    {
-	     remove3DENLayer _x;
-	    };
-	} forEach (all3DENEntities # 6);
+   {
+      if ((get3DENLayerEntities _x) isEqualTo []) then
+      {
+         remove3DENLayer _x;
+      };
+   } forEach (all3DENEntities # 6);
 };
 
-disableSerialization;
 ["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true
