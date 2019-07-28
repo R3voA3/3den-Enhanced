@@ -102,6 +102,7 @@ switch (_modeIndex) do
 				};
 			};
 		};
+		_ctrlTV tvExpand [0];
 		_ctrlEdit ctrlEnable true;
 	};
 	case 1:
