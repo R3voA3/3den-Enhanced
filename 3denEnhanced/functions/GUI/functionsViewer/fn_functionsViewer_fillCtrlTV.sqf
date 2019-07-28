@@ -41,25 +41,26 @@ switch (_modeIndex) do
 	case 0:
 	{
 		private _rootIndex = _ctrlTV tvAdd [[],["configFile","missionConfigFile","campaignConfigFile"] select _configIndex];
-		private _addons = [];
+		private _addonIndex = 0;
 		private _categoryIndex = 0;
 		private _fncIndex = 0;
 		private _addonOld = [];
+		private _addons = [];
 		private _categories = [];
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
+			_x params ["_configStr","_addon","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
 			{
-				private _addonIndex = 0;
 				if (_addonOld isEqualTo []) then {_addonOld = _addon};
-				_addonIndex = if (_addon in _addons) then
+				if (_addon in _addons) then
 				{
-					_addons find _addon;
+					_addonIndex = _addons find _addon;
 				}
 				else
 				{
 					_addons pushBack _addon;
-					_ctrlTV tvAdd [[_rootIndex],_addon];
+					_addonIndex = _ctrlTV tvAdd [[_rootIndex],_addon];
+					_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex],_logo];
 				};
 				
 				if !(_addonOld isEqualTo _addon) then
@@ -84,7 +85,6 @@ switch (_modeIndex) do
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
 				_ctrlTV tvSetTooltip [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
-				_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],_logo];
 			};
 			true
 		} count Enh_FunctionsData;
@@ -108,26 +108,27 @@ switch (_modeIndex) do
 	{
 		private _categories = [];
 		private _categoryOld = [];
+		private _categoryIndex = [];
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
+			_x params ["_configStr","","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
 				if (_categoryOld isEqualTo []) then {_categoryOld = _category};
-				private _categoryIndex = if (_category in _categories) then
+				if (_category in _categories) then
 				{
-					_categories find _category;
+					_categoryIndex = _categories find _category;
 				}
 				else
 				{
 					_categories pushBack _category;
-					_ctrlTV tvAdd [[],_category];
+					_categoryIndex = _ctrlTV tvAdd [[],_category];
+					_ctrlTV tvSetPictureRight [[_categoryIndex],_logo];
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
 
 				_ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
-				_ctrlTV tvSetPictureRight [[_categoryIndex,_fncIndex],_logo];
 				_ctrlTV tvSort [[_categoryIndex],false];
 			};
 			true
@@ -138,7 +139,7 @@ switch (_modeIndex) do
 	case 2:
 	{
 		{
-			_x params ["_configStr","_addon","_tag","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
+			_x params ["_configStr","","","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
