@@ -31,7 +31,7 @@ _value params
    "_skillMaxINDFOR",
    "_skillAimMaxINDFOR"
 ];
-systemChat format ["Value: %1",_value];
+
 (_ctrlGroup controlsGroupCtrl 100) cbSetChecked _enable;
 
 [_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"%"] call BIS_fnc_initSliderValue;
