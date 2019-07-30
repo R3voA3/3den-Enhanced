@@ -28,6 +28,7 @@ class CfgFunctions
 		class BatchReplace
 		{
 			file = "3denEnhanced\functions\GUI\batchReplace";
+			class batchReplace_createDisplay;
 			class batchReplace;
 		};
 		class FunctionsViewer
@@ -71,6 +72,7 @@ class CfgFunctions
 			class placementTools_initialAngle;
 			class placementTools_spacing;
 			class placementTools_rectangle;
+			class placementTools_onToolBoxSelChanged;
 		};
 		class ScenarioAttributesManager
 		{
@@ -113,8 +115,7 @@ class CfgFunctions
 			class deleteEmptyLayers;
 			class makeObjectSimple;
 			class removeGear;
-			class setRandomDir;
-			class reverseDirection;
+			class reverseOrientation;
 			class setOrientation;
 			class credits;
 			class all3DENSelected;
@@ -124,6 +125,7 @@ class CfgFunctions
 			class 3denNotificationNoSound;
 			class gitHubNotification;
 			class locationList;
+			class setRandomOrientation;
 		};
 		class Log
 		{

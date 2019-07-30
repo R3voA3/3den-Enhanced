@@ -164,7 +164,7 @@ class Enh_ToggleGrass
 class Enh_BatchReplace
 {
 	text = $STR_ENH_tools_batchReplace;
-	action = "findDisplay 313 createDisplay 'Enh_BatchReplace'";
+	action = "call Enh_fnc_batchReplace_createDisplay";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
 	opensNewWindow = 1;
 };
@@ -226,7 +226,7 @@ class Enh_SetRandomDir
 {
 	Text = $STR_ENH_tools_randomDir;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\widget_rotation_off_ca.paa";
-	action = "call Enh_fnc_setRandomDir";
+	action = "call Enh_fnc_setRandomOrientation";
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD3};
 };
@@ -234,7 +234,7 @@ class Enh_ReverseDirection
 {
 	text = $STR_ENH_tools_reverseDirection;
 	picture = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-	action = "call Enh_fnc_reverseDirection";
+	action = "call Enh_fnc_reverseOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD7};
 };
 class Enh_OrientateNorth
