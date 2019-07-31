@@ -11,12 +11,17 @@
    BOOLEAN: true
 */
 
-private _disp = findDisplay 180000;
-private _ctrlCode = _disp displayCtrl 1401;
-private _ctrlFncName = _disp displayCtrl 1402;
-private _ctrlFncPath = _disp displayCtrl 1403;
+params ["_ctrlButton"];
 
-private _export = "/*" + ctrlText _ctrlFncName + "*/" + endl + "/*" + ctrlText _ctrlFncPath + "*/" + endl + endl + ctrlText _ctrlCode;
+private _display = ctrlParent _ctrlButton;
+private _fncCode = ctrlText (_display displayCtrl 1401);
+private _fncName = ctrlText (_display displayCtrl 1402);
+private _fncPath = ctrlText (_display displayCtrl 1403);
+
+//Of one of the controls has no text, something is wrong. Exit!
+if (([_fncCode,_fncName,_fncPath] find "") > -1) exitWith {false};
+
+_export = "//" + _fncName + endl + "//" + ctrlText (_display displayCtrl 1403) + endl + endl + _fncCode;
 
 copyToClipboard _export;
 
