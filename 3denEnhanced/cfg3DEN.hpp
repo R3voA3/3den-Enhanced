@@ -40,7 +40,7 @@ class Cfg3DEN
 			{
 				class Title;
 			};
-		};		
+		};
 		#include "controls\timeMultiplier.hpp"
 		#include "controls\featureType.hpp"
 		#include "controls\terrainDetail.hpp"
@@ -109,19 +109,6 @@ class Cfg3DEN
 						#include "attributesMission\respawnTickets.hpp"
 						#include "attributesMission\saveLoadout.hpp"
 					};
-				};
-			};
-		};
-	};
-	class Comment
-	{
-		class AttributeCategories
-		{
-			class Init
-			{
-				class Attributes
-				{
-					#include "attributesComment\moveIntoToDo.hpp"
 				};
 			};
 		};
