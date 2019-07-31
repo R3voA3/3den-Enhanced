@@ -33,6 +33,7 @@ private _ctrlBiki = _display displayCtrl 1900;
 
 profileNamespace setVariable ["Enh_FunctionsViewer_ConfigIndex",_configIndex];
 profileNamespace setVariable ["Enh_FunctionsViewer_ModeIndex",_modeIndex];
+private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
 
 tvClear _ctrlTV;
 
@@ -83,8 +84,14 @@ switch (_modeIndex) do
 					};
 				};
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
-				_ctrlTV tvSetTooltip [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
-				_ctrlTV tvSetData [[_rootIndex,_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				private _fullPath = [_rootIndex,_addonIndex,_categoryIndex,_fncIndex];
+				_ctrlTV tvSetTooltip [_fullPath,format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
+				_ctrlTV tvSetData [_fullPath,format ["['%1','%2']",_fncLong,_path]];
+				if (_ctrlTV tvText _fullPath isEqualTo _lastViewed) then
+				{
+					_ctrlTV tvSetCurSel _fullPath;
+					[_ctrlTV,_fullPath] call Enh_fnc_functionsViewer_onTreeSelChanged;
+				};
 			};
 			true
 		} count Enh_FunctionsData;
@@ -127,9 +134,14 @@ switch (_modeIndex) do
 					_ctrlTV tvSetPictureRight [[_categoryIndex],_logo];
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
-
-				_ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
-				_ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+				private _fullPath = [_categoryIndex,_fncIndex];
+				_ctrlTV tvSetTooltip [_fullPath,format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
+				_ctrlTV tvSetData [_fullPath,format ["['%1','%2']",_fncLong,_path]];
+				if (_ctrlTV tvText _fullPath isEqualTo _lastViewed) then
+				{
+					_ctrlTV tvSetCurSel _fullPath;
+					[_ctrlTV,_fullPath] call Enh_fnc_functionsViewer_onTreeSelChanged;
+				};
 				_ctrlTV tvSort [[_categoryIndex],false];
 			};
 			true
@@ -147,6 +159,11 @@ switch (_modeIndex) do
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				_ctrlTV tvSetPictureRight [[_fncIndex],_logo];
+				if (_ctrlTV tvText [_fncIndex] isEqualTo _lastViewed) then
+				{
+					_ctrlTV tvSetCurSel [_fncIndex];
+					[_ctrlTV,[_fncIndex]] call Enh_fnc_functionsViewer_onTreeSelChanged;
+				};
 			};
 			true
 		} count Enh_FunctionsData;
@@ -171,12 +188,12 @@ switch (_configIndex) do
 _ctrlBiki ctrlCommit 0;
 
 //Reopen last viewed function and select it
-private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
+/* private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
 
 if !(_lastViewed isEqualTo []) then 
 {
 	_ctrlTV tvSetCurSel _lastViewed;
 	[_ctrlTV,_lastViewed] call Enh_fnc_functionsViewer_onTreeSelChanged;
-};
+}; */
 
 true

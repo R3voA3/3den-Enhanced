@@ -23,13 +23,12 @@ private _ctrlBiki = _disp displayCtrl 1900;
 private _data = _ctrlTV tvData _path;
 private _linesText = "";
 
-uiNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_path];
-
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
 _data params ["_fncName","_fncPath"];
 
+uiNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
 _ctrlFncName ctrlSetText _fncName;
 _ctrlFncPath ctrlSetText _fncPath;
 _ctrlCode ctrlSetText loadFile _fncPath;
