@@ -153,7 +153,7 @@ class Enh_FunctionsViewer
 			y = safezoneY + 12 * GRID_H;
 			w = 40 * GRID_W;
 			h = 5 * GRID_H;
-			onButtonClick = "call Enh_fnc_functionsViewer_copy";
+			onButtonClick = "_this call Enh_fnc_functionsViewer_copy";
 		};
 		class RecompileAll: ctrlButton
 		{
