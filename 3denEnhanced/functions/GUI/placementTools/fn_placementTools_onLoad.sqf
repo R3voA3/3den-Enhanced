@@ -15,49 +15,61 @@ params ["_display"];
 
 uiNamespace setVariable ["Enh_PlacementTools_Display",_display];
 
-["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
-["ShowPanelRight",false] call BIS_fnc_3DENInterface;
+//["ShowPanelLeft",false] call BIS_fnc_3DENInterface; Commented for now, until BIS learns to put variables private
 
-Enh_PlacementTools_Center = if (get3DENActionState "ToggleMap" == 1) then 
+if (isNil "Enh_PlacementTools_Center") then
 {
-   (findDisplay 313 displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
-}
-else
-{
-   screenToWorld [0.5,0.5];
+   Enh_PlacementTools_Center = if (get3DENActionState "ToggleMap" == 1) then
+   {
+      (findDisplay 313 displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
+   }
+   else
+   {
+      screenToWorld [0.5,0.5];
+   };
 };
 
-//Define variables if undefined
-if (isNil "Enh_PlacementTools_Radius") then {Enh_PlacementTools_Radius = 50};
-if (isNil "Enh_PlacementTools_InitialAngle") then {Enh_PlacementTools_InitialAngle = 0};
-if (isNil "Enh_PlacementTools_CentralAngle") then {Enh_PlacementTools_CentralAngle = 360};
-if (isNil "Enh_PlacementTools_Spacing") then {Enh_PlacementTools_Spacing = 2};
-if (isNil "Enh_PlacementTools_NumColums") then {Enh_PlacementTools_NumColums = 2};
-if (isNil "Enh_PlacementTools_SpaceX") then {Enh_PlacementTools_SpaceX = 2};
-if (isNil "Enh_PlacementTools_SpaceY") then {Enh_PlacementTools_SpaceY = 2};
-if (isNil "Enh_PlacementTools_A") then {Enh_PlacementTools_A = 50};
-if (isNil "Enh_PlacementTools_B") then {Enh_PlacementTools_B = 50};
-if (isNil "Enh_PlacementTools_AreaDia") then {Enh_PlacementTools_AreaDia = 200};
-if (isNil "Enh_PlacementTools_Coverage") then {Enh_PlacementTools_Coverage = 2};//2 = 50%, 10=10%, 1=100%...
-if (isNil "Enh_PlacementTools_RectangleA") then {Enh_PlacementTools_RectangleA = 5};
-if (isNil "Enh_PlacementTools_RectangleB") then {Enh_PlacementTools_RectangleB = 5};
-if (isNil "Enh_PlacementTools_RectangleSpacing") then {Enh_PlacementTools_RectangleSpacing = 5};
+//Draw an icon where the center is
+["Enh_PlacementTools_CenterIcon", "onEachFrame", 
+{
+   private _color = call Enh_fnc_getProfileColor;
+	drawIcon3D["\a3\Modules_f\data\portraitSector_ca.paa",_color, Enh_PlacementTools_Center,1,1,0,"Center / Start Position"];
+}] call BIS_fnc_addStackedEventHandler;
+
+#define STEP_SIZE_INDEX (missionNamespace getVariable ["Enh_PlacementTools_stepSizeIndex",4])
+
+//Setup toolbox
+(_display displayCtrl 250) lbSetCurSel STEP_SIZE_INDEX;
 
 //Set up sliders
-_display displayCtrl 10 sliderSetPosition Enh_PlacementTools_Radius;
-_display displayCtrl 20 sliderSetPosition Enh_PlacementTools_InitialAngle;
-_display displayCtrl 30 sliderSetPosition Enh_PlacementTools_CentralAngle;
-_display displayCtrl 40 sliderSetPosition Enh_PlacementTools_Spacing;
-_display displayCtrl 50 sliderSetPosition Enh_PlacementTools_NumColums;
-_display displayCtrl 60 sliderSetPosition Enh_PlacementTools_SpaceX;
-_display displayCtrl 70 sliderSetPosition Enh_PlacementTools_SpaceY;
-_display displayCtrl 80 sliderSetPosition Enh_PlacementTools_A;
-_display displayCtrl 90 sliderSetPosition Enh_PlacementTools_B;
-_display displayCtrl 100 sliderSetPosition Enh_PlacementTools_AreaDia;
-_display displayCtrl 110 sliderSetPosition Enh_PlacementTools_Coverage;
+private _stepSize = [0.0001,0.001,0.01,0.1,1,10,100] select STEP_SIZE_INDEX;
 
-_display displayCtrl 130 sliderSetPosition Enh_PlacementTools_RectangleA;
-_display displayCtrl 140 sliderSetPosition Enh_PlacementTools_RectangleB;
-_display displayCtrl 150 sliderSetPosition Enh_PlacementTools_RectangleSpacing;
+{
+   _x params ["_idc","_varName","_defaultvalue"];
+   private _ctrlSlider = _display displayCtrl _idc;
+   _ctrlSlider sliderSetSpeed [_stepSize,_stepSize];
+   _ctrlSlider sliderSetPosition (missionNamespace getVariable [_varName,_defaultValue]);
+
+   //If variable was not declared, set it to default value
+   if (isNil format ["%1",_varName]) then
+   {
+      missionNamespace setVariable [_varName,_defaultValue];
+   };
+} forEach [
+   [10,"Enh_PlacementTools_Radius",50],
+   [20,"Enh_PlacementTools_InitialAngle",0],
+   [30,"Enh_PlacementTools_CentralAngle",360],
+   [40,"Enh_PlacementTools_Spacing",10],
+   [50,"Enh_PlacementTools_NumColums",2],
+   [60,"Enh_PlacementTools_SpaceX",2],
+   [70,"Enh_PlacementTools_SpaceY",2],
+   [80,"Enh_PlacementTools_A",100],
+   [90,"Enh_PlacementTools_B",100],
+   [100,"Enh_PlacementTools_AreaDia",100],
+   [110,"Enh_PlacementTools_Coverage",2],//2 = 50%, 10=10%, 1=100%...
+   [130,"Enh_PlacementTools_RectangleA",100],
+   [140,"Enh_PlacementTools_RectangleB",100],
+   [150,"Enh_PlacementTools_RectangleSpacing",2]
+];
 
 true
