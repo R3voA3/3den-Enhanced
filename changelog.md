@@ -63,6 +63,10 @@ v4.3
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
 - Merged serveral functions into one
 - removed Enh_fnc_logMissionAttributes
+- Placement Tools GUI now also supports setting of object orientation
+- Added fine control to Placement Tools GUI
+- Batch Replace GUI is now only opened when objects are selected
+- Center of Placement Tools will now stay the same until reset.
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
