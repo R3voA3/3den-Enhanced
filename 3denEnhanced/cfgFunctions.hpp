@@ -126,6 +126,7 @@ class CfgFunctions
 			class gitHubNotification;
 			class locationList;
 			class setRandomOrientation;
+			class getProfileColor;
 		};
 		class Log
 		{
