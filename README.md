@@ -51,7 +51,7 @@ Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks
 2. Make the changes
 3. Create a [pull request](https://github.com/RevoArma3/3den-Enhanced/pulls)
 
-# Translation
+# Bug
 Found a **bug** or have a **feature request**? Visit one of the following links.
 
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
