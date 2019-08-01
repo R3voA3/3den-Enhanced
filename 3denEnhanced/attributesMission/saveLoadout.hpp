@@ -10,7 +10,7 @@ class Enh_SaveLoadout
       {\
          [] spawn\
          {\
-            waitUntil {!isNull player};\
+            waitUntil {sleep 1; !isNull player};\
             player setVariable ['Enh_savedLoadout',getUnitloadout player];\
             player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];\
          };\
