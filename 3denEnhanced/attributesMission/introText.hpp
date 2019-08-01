@@ -15,7 +15,7 @@ class Enh_IntroText_Category
 					_value spawn\
 					{\
 						params ['_delay','_line1','_line2','_line3','_type'];\
-						waitUntil {time > _delay};\
+						sleep _delay;\
 						switch (_type) do\
 						{\
 							case 0:\
