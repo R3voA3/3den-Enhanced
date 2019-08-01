@@ -17,7 +17,7 @@ params ["_ctrlButton"];
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 
-private _ctrlComboType =;
+private _ctrlComboType = _ctrlGroup controlsGroupCtrl 100;
 private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
 private _ctrlEdit =_ctrlGroup controlsGroupCtrl 102;
 private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
