@@ -144,6 +144,7 @@ class Cfg3DEN
 					#include "attributesObject\allowSprint.hpp"
 					#include "attributesObject\forceWalk.hpp"
 					#include "attributesObject\makeHostage.hpp"
+					#include "attributesObject\parachute.hpp"
 					#include "attributesObject\enableHeadlights.hpp"
 					#include "attributesObject\allowCrewInImmobile.hpp"
 					#include "attributesObject\engineOn.hpp"
