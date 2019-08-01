@@ -46,3 +46,4 @@ Found a **bug** or have a **feature request**? Visit one of the following links.
 
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
+* [GitHub](https://github.com/RevoArma3/3den-Enhanced/pulls)
