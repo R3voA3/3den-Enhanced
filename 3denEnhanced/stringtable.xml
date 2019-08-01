@@ -6175,4 +6175,8 @@
 		<German>Wenn aktiviert, started die Einheit die Mission am Fallschirm  hägend. Die Höhe ist immer 150 m.</German>
 		<Original>When activated the unit will start the mission in a parachute. Start height is always 150 m.</Original>
 	</Key>
+	<Key ID="STR_ENH_help_multiplayerScripting">
+		<English>Multiplayer Scripting</English>
+		<Original>Multiplayer Scripting</Original>
+	</Key>
 </Project>
