@@ -71,7 +71,6 @@ class CfgFunctions
 			class placementTools_radius;
 			class placementTools_initialAngle;
 			class placementTools_spacing;
-			class placementTools_rectangle;
 			class placementTools_onToolBoxSelChanged;
 		};
 		class ScenarioAttributesManager
@@ -186,6 +185,8 @@ class CfgFunctions
 			class dynamicSkill_onAttributeLoad;
 			class dynamicSkill_onAttributeSave;
 			class dynamicSkill_onButtonDown;
+			class mapIndicators_onAttributeLoad;
+			class mapIndicators_onAttributeSave;
 		};
 	};
 };
