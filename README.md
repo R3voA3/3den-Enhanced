@@ -42,8 +42,18 @@ For more information, please visit the following link:
 * Save the stringtable.xml
 * Create a pull request
 
+# Contribute
+You want to contribute? Add your own code or optimise the existing one. Fee free to do so. 
+Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks. 
+
+## How to?
+1. Fork this repository
+2. Make the changes
+3. Create a [pull request](https://github.com/RevoArma3/3den-Enhanced/pulls)
+
+# Translation
 Found a **bug** or have a **feature request**? Visit one of the following links.
 
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/) 
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
-* [GitHub](https://github.com/RevoArma3/3den-Enhanced/pulls)
+* [GitHub](https://github.com/RevoArma3/3den-Enhanced/issue)
