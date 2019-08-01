@@ -67,6 +67,7 @@ v4.3
 - Added fine control to Placement Tools GUI
 - Batch Replace GUI is now only opened when objects are selected
 - Center of Placement Tools will now stay the same until reset.
+- replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier.
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
