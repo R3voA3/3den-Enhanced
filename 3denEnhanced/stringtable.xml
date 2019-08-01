@@ -6165,4 +6165,14 @@
 		<German>Deaktivert das Reden und das Schreiben im Radiochat. Das Verteilen von Befehlen bleibt möglich.</German>
 		<Original>Stops AI from talking and texting while still being able to issue orders.</Original>
 	</Key>
+	<Key ID="STR_ENH_parachute_displayName">
+		<English>Start in Parachute</English>
+		<German>In Fallschirm starten</German>
+		<Original>Start in Parachute</Original>
+	</Key>
+	<Key ID="STR_ENH_parachute_tooltip">
+		<English>When activated the unit will start the mission in a parachute. Start height is always 150 m.</English>
+		<German>Wenn aktiviert, started die Einheit die Mission am Fallschirm  hägend. Die Höhe ist immer 150 m.</German>
+		<Original>When activated the unit will start the mission in a parachute. Start height is always 150 m.</Original>
+	</Key>
 </Project>
