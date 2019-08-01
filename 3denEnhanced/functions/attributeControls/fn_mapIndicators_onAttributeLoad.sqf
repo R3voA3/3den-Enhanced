@@ -15,11 +15,11 @@
 */
 
 params ["_ctrlGroup","_value"];
-_value params ["_showFriendly","_showEnemy","_showMines","_showPing"];
+_value params ["_hideFriendly","_hideEnemy","_hideMines","_hidePing"];
 
-(_ctrlGroup controlsGroupCtrl 100) cbSetChecked _showFriendly;
-(_ctrlGroup controlsGroupCtrl 101) cbSetChecked _showEnemy;
-(_ctrlGroup controlsGroupCtrl 102) cbSetChecked _showMines;
-(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _showPing;
+(_ctrlGroup controlsGroupCtrl 100) cbSetChecked _hideFriendly;
+(_ctrlGroup controlsGroupCtrl 101) cbSetChecked _hideEnemy;
+(_ctrlGroup controlsGroupCtrl 102) cbSetChecked _hideMines;
+(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _hidePing;
 	
 true
