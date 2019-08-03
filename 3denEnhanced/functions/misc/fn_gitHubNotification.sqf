@@ -22,7 +22,7 @@ if (profileNamespace getVariable ["Enh_NotificationGithub_Seen",false]) exitWith
 		}
 	],
 	"Cancel",
-	"\3denEnhanced\data\Enh_logoSmall.paa"
+	"\3denEnhanced\data\logoSmall.paa"
 ] call BIS_fnc_3DENShowMessage;
 
 true

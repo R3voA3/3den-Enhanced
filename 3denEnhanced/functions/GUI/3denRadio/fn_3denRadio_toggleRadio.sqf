@@ -30,7 +30,7 @@ _fnc_enableRadio =
 	}];
 
 	profileNamespace setVariable ["Enh_3denRadio_Enabled",true];
-	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_Pause.paa";
+	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_pause.paa";
 };
 
 _fnc_disableRadio =
@@ -42,7 +42,7 @@ _fnc_disableRadio =
 	profileNamespace setVariable ["Enh_3denRadio_CurrentSong",""];
 
 	_ctrlCurrentSong ctrlSetText "";
-	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_play.paa";
+	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
 };
 
 if (_input isEqualTo "BUTTON" && _radioState) exitWith {call _fnc_disableRadio};

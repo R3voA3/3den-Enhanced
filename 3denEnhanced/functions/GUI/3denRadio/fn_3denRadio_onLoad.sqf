@@ -42,11 +42,11 @@ switch (profileNamespace getVariable ["Enh_3denRadio_Enabled",false]) do
 {
 	case true:
 	{
-		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_Pause.paa";
+		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
 	};
 	case false:
 	{
-		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\Enh_icon_play.paa";
+		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
 	};
 };
 

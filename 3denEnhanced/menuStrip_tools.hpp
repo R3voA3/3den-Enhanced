@@ -339,7 +339,7 @@ class Enh_GUITestGrids
 class Enh_ToggleMapIDs
 {
 	text = $STR_ENH_tools_showMapIDs;
-	picture = "\3denEnhanced\data\Enh_icon_id.paa";
+	picture = "\3denEnhanced\data\icon_id.paa";
 	action = "call Enh_fnc_toggleMapIDs";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_I};
 };
