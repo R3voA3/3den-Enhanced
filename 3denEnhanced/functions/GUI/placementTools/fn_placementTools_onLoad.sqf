@@ -15,7 +15,7 @@ params ["_display"];
 
 uiNamespace setVariable ["Enh_PlacementTools_Display",_display];
 
-//["ShowPanelLeft",false] call BIS_fnc_3DENInterface; Commented for now, until BIS learns to put variables private
+["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
 
 if (isNil "Enh_PlacementTools_Center") then
 {
