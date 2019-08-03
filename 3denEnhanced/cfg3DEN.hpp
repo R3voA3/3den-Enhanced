@@ -87,13 +87,6 @@ class Cfg3DEN
 						#include "attributesMission\addObjectsToZeus.hpp"
 					};
 				};
-				class States
-				{
-					class Attributes
-					{
-						#include "attributesMission\groupIndicator.hpp"
-					};
-				};
 			};
 		};
 		class Multiplayer
