@@ -1,7 +1,8 @@
 items[] +=
 {
 	"Enh_MeasureDistance",
-	"Enh_ShowModuleInformation"
+	"Enh_ShowModuleInformation",
+	"Enh_Garrison"
 };
 class Log
 {
@@ -49,6 +50,16 @@ class Enh_ShowModuleInformation
 	action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
 	Text = $STR_ENH_contextMenu_getModuleInformation;
 	conditionShow = "hoverLogic";
+	opensNewWindow = 1;
+	SHOW_IN_ROOT;
+};
+class Enh_Garrison
+{
+	action = "(findDisplay 313) createDisplay 'Enh_Garrison'";
+	Text = $STR_ENH_contextMenu_garrison;
+	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
+	conditionShow = "selected";
+	opensNewWindow = 1;
 	SHOW_IN_ROOT;
 };
 class Enh_TriggerOwnerPlayer
