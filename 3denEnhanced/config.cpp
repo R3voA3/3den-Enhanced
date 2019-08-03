@@ -4,18 +4,19 @@
 #include "cfgFunctions.hpp"
 #include "display3DEN.hpp"
 //Custom GUIs
-#include "GUI\Enh_briefingEditor.hpp"
-#include "GUI\Enh_3denRadio.hpp"
-#include "GUI\Enh_nameObjects.hpp"
-#include "GUI\Enh_moduleInformation.hpp"
-#include "GUI\Enh_textureFinder.hpp"
-#include "GUI\Enh_batchReplace.hpp"
-#include "GUI\Enh_functionsViewer.hpp"
-#include "GUI\Enh_actionCreator.hpp"
-#include "GUI\Enh_credits.hpp"
-#include "GUI\Enh_placementTools.hpp"
-#include "GUI\Enh_ScenarioAttributesManager.hpp"
-#include "GUI\Enh_ScenarioAttributesManagerTemplateData.hpp"
+#include "GUI\briefingEditor.hpp"
+#include "GUI\3denRadio.hpp"
+#include "GUI\nameObjects.hpp"
+#include "GUI\moduleInformation.hpp"
+#include "GUI\textureFinder.hpp"
+#include "GUI\batchReplace.hpp"
+#include "GUI\functionsViewer.hpp"
+#include "GUI\actionCreator.hpp"
+#include "GUI\credits.hpp"
+#include "GUI\placementTools.hpp"
+#include "GUI\scenarioAttributesManager.hpp"
+#include "GUI\scenarioAttributesManagerTemplateData.hpp"
+#include "GUI\garrison.hpp"
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
 
@@ -34,7 +35,7 @@ class RscDebugConsole: RscControlsGroupNoScrollbars
 {
 	class Controls 
   {
-    class Enh_ButtonFunctions: ctrlButtonPictureKeepAspect 
+    class ButtonFunctions: ctrlButtonPictureKeepAspect 
     {
       idc=0; // idc 0 to exclude from repositioning in CBA extended debug
       deletable=0;
@@ -44,7 +45,7 @@ class RscDebugConsole: RscControlsGroupNoScrollbars
       colorBackgroundActive[]={0,0,0,0};
       colorFocused[]={0,0,0,0};
       colorBackgroundDisabled[]={0,0,0,0};
-      onButtonClick="ctrlParent (_this # 0) createDisplay 'Enh_FunctionsViewer'";
+      onButtonClick="ctrlParent (_this # 0) createDisplay 'FunctionsViewer'";
 
       // get from title ctrl incase some mod moves it
       x="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'w') - (4.1 * (((safezoneW / safezoneH) min 1.2) / 40))";
