@@ -3731,8 +3731,8 @@
 		<Russian>Размер зоны</Russian>
 	</Key>
 	<Key ID="STR_ENH_garrison_notification">
-		<Original>Not enough empty building positions, increase the radius or reduce the coverage.</Original>
-		<English>Not enough empty building positions, increase the radius or reduce the coverage.</English>
+		<Original>Not enough empty building positions, increase the radius the coverage.</Original>
+		<English>Not enough empty building positions, increase the radius the coverage.</English>
 		<Czech>Nedostatek prázdných pozic v budově, zvyšte poloměr nebo snižte pokrytí.</Czech>
 		<German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
 		<Chinesesimp>没有足够的空建筑位置，增加半径或减少覆盖率。</Chinesesimp>
@@ -5321,6 +5321,17 @@
 		<Russian>Описание модуля</Russian>
 	</Key>
 	<Key ID="STR_ENH_placementTools_garrison_header">
+		<Original>Garrison Buildings</Original>
+		<English>Garrison Buildings</English>
+		<Czech>Obsadit budovy</Czech>
+		<French>Placer en garnison</French>
+		<Spanish>Guarnicionar edificios.</Spanish>
+		<German>Gebäude besetzen</German>
+		<Chinesesimp>驻军建筑物</Chinesesimp>
+		<Polish>Obsadź budynki</Polish>
+		<Russian>Гарнизонные Здания</Russian>
+	</Key>
+  	<Key ID="STR_ENH_contextMenu_garrison">
 		<Original>Garrison Buildings</Original>
 		<English>Garrison Buildings</English>
 		<Czech>Obsadit budovy</Czech>
