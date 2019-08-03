@@ -68,6 +68,8 @@ v4.3
 - Batch Replace GUI is now only opened when objects are selected
 - Center of Placement Tools will now stay the same until reset.
 - replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier.
+- Old garrison UI is back
+
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
