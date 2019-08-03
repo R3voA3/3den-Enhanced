@@ -146,7 +146,7 @@ class Enh_AmbientAnimation: Title
 				class BRIEFING_POINT_RIGHT
 				{
 					text = $STR_ENH_ambAnimCombo_briefingPointRight;
-					data = "BRIEFING_POINT_right";
+					data = "BRIEFING_POINT_RIGHT";
 				};
 				class BRIEFING_POINT_TABLE
 				{
