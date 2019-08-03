@@ -16,6 +16,12 @@ class CfgFunctions
 			class 3denRadio_searchList;
 			class 3denRadio_selectNewSong;
 		};
+		class Garrison
+		{
+			file = "3denEnhanced\functions\GUI\garrison";
+			class garrison_onLoad;
+			class garrison_garrison;
+		};
 		class TextureFinder
 		{
 			file = "3denEnhanced\functions\GUI\TextureFinder";
