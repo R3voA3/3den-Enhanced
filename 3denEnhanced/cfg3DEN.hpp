@@ -52,6 +52,7 @@ class Cfg3DEN
 		#include "controls\airdrop.hpp"
 		#include "controls\ambientFlyby.hpp"
 		#include "controls\dynamicSkill.hpp"
+		#include "controls\holdAction.hpp"
 	};
 	class Mission
 	{
@@ -129,6 +130,7 @@ class Cfg3DEN
 			#include "attributesObject\disableAI.hpp"
 			#include "attributesObject\advancedSkill.hpp"
 			#include "attributesObject\unitTraits.hpp"
+			#include "attributesObject\holdAction.hpp"
 			class StateSpecial
 			{
 				class Attributes
