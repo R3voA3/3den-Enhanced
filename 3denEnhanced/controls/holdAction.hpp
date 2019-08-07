@@ -253,10 +253,12 @@ class Enh_HoldAction: Title
 		class Template: ctrlListbox
 		{
 			idc = 115;
+			tooltip = "Not implemented yet."
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 31.5 * SIZE_M * GRID_H + 70 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = 5 * SIZE_M * GRID_H;
+			onLoad = "_this # 0 ctrlEnable false";
 		};
 		class Reset: ctrlButton
 		{
