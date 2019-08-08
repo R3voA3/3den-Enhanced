@@ -6,6 +6,7 @@ class Enh_EstablishingShot
 	{
 		class Enh_EstablishingShot
 		{
+			displayName = $STR_ENH_attributeCategory_establishingShot;
 			property = "Enh_establisingShot";
 			control = "Enh_EstablishingShot";
 			expression = "if (!((_value # 0) isEqualTo [0,0,0]) && hasInterface && !is3DEN) then {_value spawn BIS_fnc_establishingShot}";

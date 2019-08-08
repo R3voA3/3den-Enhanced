@@ -6,6 +6,7 @@ class Enh_MapIndicators
 	{
 		class Enh_MapIndicators
 		{
+			displayName = $STR_ENH_attributeCategory_mapIndicators;
 			property = "Enh_mapIndicators";
 			control = "Enh_MapIndicators";
 			expression =

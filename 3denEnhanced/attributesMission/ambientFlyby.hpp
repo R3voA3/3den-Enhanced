@@ -6,6 +6,7 @@ class Enh_AmbientFlyby
 	{
 		class Enh_AmbientFlyby_Type
 		{
+			displayName = $STR_ENH_attributeCategory_ambientFlyby;
 			property = "Enh_ambientFlyby";
 			control = "Enh_AmbientFlyby";
 			expression ="\

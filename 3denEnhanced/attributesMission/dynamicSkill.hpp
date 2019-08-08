@@ -6,6 +6,7 @@ class Enh_DynamicSkill
 	{
 		class Enh_Enable
 		{
+			displayName = $STR_ENH_attributeCategory_dynamicSkill;
 			property = "Enh_dynamicSkill";
 			control = "Enh_DynamicSkill";
 			expression = "if (_value # 0 && !is3DEN && isServer) then\
