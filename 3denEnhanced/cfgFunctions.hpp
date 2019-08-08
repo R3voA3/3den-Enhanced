@@ -178,6 +178,7 @@ class CfgFunctions
 			class holdAction_onAttributeLoad;
 			class holdAction_onAttributeSave;
 			class holdAction_onButtonDown;
+			class holdAction_onLBSelChanged;
 			class introText_onAttributeLoad;
 			class introText_onAttributeSave;
 			class introText_onButtonDown;

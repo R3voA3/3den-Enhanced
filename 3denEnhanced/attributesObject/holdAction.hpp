@@ -33,7 +33,7 @@ class Enh_HoldAction
 				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];\
 			};";
 			condition = "1 - logicModule";
-			defaultValue = "['','\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_revive_ca.paa','\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_revive_ca.paa','true','true','','','','',10,1000,false,true,'Custom']";
+			defaultValue = "['','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','true','true','','','','',10,1000,false,true,'Custom']";
 		};
 	};
 };

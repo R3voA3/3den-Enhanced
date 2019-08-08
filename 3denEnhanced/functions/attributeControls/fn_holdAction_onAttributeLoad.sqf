@@ -15,29 +15,31 @@
 */
 
 #define DEFAULT_ICONS [\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_reviveMedic_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff2_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_passleadership_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_thumbsdown_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_thumbsup_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloaddevice_ca.paa",\
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa"\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_connect_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_forcerespawn_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_hack_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_revivemedic_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_search_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff1_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff2_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_unbind_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_passleadership_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_requestleadership_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_secure_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_thumbsdown_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_thumbsup_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_unloaddevice_ca.paa",\
+	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_loaddevice_ca.paa"\
 ]
+
+#define DEFAULT_TEMPLATES ["Custom","Hack","Search","Download"]
 
 params ["_ctrlGroup","_value"];
 
 _value params
 [
-	"_actionName",
+	"_name",
 	"_iconIdle",
 	"_iconProgress",
 	"_conditionShow",
@@ -53,26 +55,26 @@ _value params
 	"_template"
 ];
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlSetText _actionName;
+(_ctrlGroup controlsGroupCtrl 100) ctrlSetText _name;
 
 //Fill icon combos
-_ctrlIdleIcon = _ctrlGroup controlsGroupCtrl 101;
+_ctrlIconIdle = _ctrlGroup controlsGroupCtrl 101;
 {
-	_ctrlIdleIcon lbAdd _x;
-	_ctrlIdleIcon lbSetPicture [_forEachIndex,_x];
+	_ctrlIconIdle lbAdd _x;
+	_ctrlIconIdle lbSetPicture [_forEachIndex,_x];
 	if (_x isEqualTo _iconIdle) then
 	{
-		_ctrlIdleIcon lbSetCurSel _forEachIndex;
+		_ctrlIconIdle lbSetCurSel _forEachIndex;
 	};
 } forEach DEFAULT_ICONS;
 
-_ctrlProgressIcon = _ctrlGroup controlsGroupCtrl 102;
+_ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 {
-	_ctrlProgressIcon lbAdd _x;
-	_ctrlProgressIcon lbSetPicture [_forEachIndex,_x];
+	_ctrlIconProgress lbAdd _x;
+	_ctrlIconProgress lbSetPicture [_forEachIndex,_x];
 	if (_x isEqualTo _iconProgress) then
 	{
-		_ctrlProgressIcon lbSetCurSel _forEachIndex;
+		_ctrlIconProgress lbSetCurSel _forEachIndex;
 	};
 } forEach DEFAULT_ICONS;
 
@@ -100,4 +102,4 @@ _ctrlTemplates = _ctrlGroup controlsGroupCtrl 115;
 	{
 		_ctrlTemplates lbSetCurSel _forEachIndex;
 	};
-} forEach ["Custom","Hack","Search","Download","Custom","Hack","Search","Download"];
+} forEach DEFAULT_TEMPLATES;

@@ -258,7 +258,8 @@ class Enh_HoldAction: Title
 			y = 31.5 * SIZE_M * GRID_H + 70 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = 5 * SIZE_M * GRID_H;
-			onLoad = "_this # 0 ctrlEnable false";
+			//onLoad = "_this # 0 ctrlEnable false";
+			onLBSelChanged = "_this call Enh_fnc_holdAction_onLBSelChanged";
 		};
 		class Reset: ctrlButton
 		{
