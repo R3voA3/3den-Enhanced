@@ -16,6 +16,6 @@
 
 params ["_ctrlGroup","_value"];
 
-(_ctrlGroup controlsGroupCtrl 100) lbSetCursel ([0,1,2] find _value);
+(_ctrlGroup controlsGroupCtrl 100) lbSetCursel _value;
 
 true
