@@ -36,10 +36,10 @@ v4.3
 - Some attributes have now a button to reset and disable them.
 - All substantial attributes have now got their own attribute control, therefore no unnecessary missionNamespace variables are declared.
 - All mission attribute are now collapsed by default
-- fixed various missing semicolons
-- fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
+- Fixed various missing semicolons
+- Fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
 - Changed 3den notification for Enh_fnc_loadoutTools
-- added various new internal macros
+- Added various new internal macros
 - All substantial attributes now have a proper description of what they do, and links to further information if available.
 - Rearanged some scenario attributes
 - Intro text attribute now supports BIS_fnc_infoText
@@ -62,13 +62,15 @@ v4.3
 - Updated and revised Czech translation thanks to XerXesCZ
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
 - Merged serveral functions into one
-- removed Enh_fnc_logMissionAttributes
+- Removed Enh_fnc_logMissionAttributes
 - Placement Tools GUI now also supports setting of object orientation
 - Added fine control to Placement Tools GUI
 - Batch Replace GUI is now only opened when objects are selected
 - Center of Placement Tools will now stay the same until reset.
-- replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier.
+- Replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier.
 - Old garrison UI is back
+- Added hold action attribute (WIP)
+- Fixed feature type attribute would use incorrect data type
 
 
 *removed*
