@@ -34,10 +34,26 @@ if (isMultiplayer) exitWith {false};
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu
 waitUntil {time > 0.5};
 
-if (INVULNERABILITY) then {player allowDamage false; (vehicle player) allowDamage false};
-if (CAPTIVE) then {player setCaptive true};
-if (STAMINA) then {player enableStamina false};
-if (BULLETTRACING) then {[player] spawn BIS_fnc_traceBullets};
+if (INVULNERABILITY) then 
+{
+	player allowDamage false; 
+	(vehicle player) allowDamage false;
+};
+
+if (CAPTIVE) then 
+{
+	player setCaptive true;
+};
+
+if (STAMINA) then 
+{
+	player enableStamina false;
+};
+
+if (BULLETTRACING) then 
+{
+	[player] spawn BIS_fnc_traceBullets;
+};
 
 if (ZEUS) then
 {
@@ -60,7 +76,10 @@ if (ZEUS) then
 	};
 };
 
-if (ARSENAL) then {["AmmoboxInit",[player,true]] spawn BIS_fnc_arsenal};
+if (ARSENAL) then 
+{
+	["AmmoboxInit",[player,true]] spawn BIS_fnc_arsenal;
+};
 
 if (GARAGE) then
 {
@@ -163,7 +182,13 @@ if (KILLCIV) then
 	];
 };
 
-if (KILLCURSOR) then {player addAction [localize "STR_ENH_functions_onePreviewDebug_killCursorTarget",{cursorObject setDamage 1}]};
+if (KILLCURSOR) then 
+{
+	player addAction [
+		localize "STR_ENH_functions_onePreviewDebug_killCursorTarget",
+		"cursorObject setDamage 1"
+	];
+};
 
 if (MARKERS) then
 {
@@ -189,7 +214,7 @@ if (MARKERS) then
 		{
 			waitUntil{sleep 1; visibleMap};//Only updated markers when visible
 			{
-				sleep 0.05;//A bit more performance friendly
+				sleep 1;//A bit more performance friendly
 				_x params ["_marker","_entity"];
 				_displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
 				_marker setMarkerTextLocal _displayName;
