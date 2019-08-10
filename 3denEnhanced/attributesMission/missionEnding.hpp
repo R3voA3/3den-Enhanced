@@ -1,17 +1,16 @@
-class Enh_MissionEnding
+class Enh_MissionEnding_Casualties
 {
 	collapsed = 1;
-	displayName = "Mission Ending";
+	displayName = $STR_ENH_missionEnding_casualties_displayName;
 	class Attributes
 	{
 		class Enh_MissionEnding_Casualties
 		{
-			displayName = "Mission Ending";
+			displayName = $STR_ENH_missionEnding_casualties_displayName;
 			property = "Enh_missionEnding_casualties";
 			control = "Enh_MissionEnding_Casualties";
 			expression =
 			"\
-				diag_log _value;\
 				if (!is3DEN && isServer && !((_value # 1) isEqualTo 'enddefault')) then\
 				{\
 					Enh_Casualties_Threshold = _value param [0,5];\

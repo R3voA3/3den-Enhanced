@@ -1,12 +1,12 @@
 class Enh_HoldAction
 {
 	collapsed = 1;
-	displayName = "Hold Action";
+	displayName = $STR_ENH_holdAction_displayName;
 	class Attributes
 	{
 		class Enh_AddHoldAction//TO-DO: remoteExec adds the action even though it won't appear for clients because it was already used.
 		{
-			displayName = "Hold Action";
+			displayName = $STR_ENH_holdAction_displayName;
 			property = "Enh_HoldAction";
 			control = "Enh_HoldAction";
 			expression = "\

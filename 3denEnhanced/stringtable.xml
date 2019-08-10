@@ -5331,7 +5331,7 @@
 		<Polish>Obsadź budynki</Polish>
 		<Russian>Гарнизонные Здания</Russian>
 	</Key>
-  	<Key ID="STR_ENH_contextMenu_garrison">
+	<Key ID="STR_ENH_contextMenu_garrison">
 		<Original>Garrison Buildings</Original>
 		<English>Garrison Buildings</English>
 		<Czech>Obsadit budovy</Czech>
@@ -6189,5 +6189,20 @@
 	<Key ID="STR_ENH_help_multiplayerScripting">
 		<English>Multiplayer Scripting</English>
 		<Original>Multiplayer Scripting</Original>
+	</Key>
+	<Key ID="STR_ENH_statusbar_EntityCounter_displayName">
+		<English>Show Entity Counter</English>
+		<German>Entitätenzähler anzeigen</German>
+		<Original>Show Entity Counter</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_displayName">
+		<English>Mission Ending (Casualties)</English>
+		<German>Missionsende (Verluste)</German>
+		<Original>Mission Ending (Casualties)</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_displayName">
+		<English>Hold Action</English>
+		<German>Hold Action</German>
+		<Original>Hold Action</Original>
 	</Key>
 </Project>
