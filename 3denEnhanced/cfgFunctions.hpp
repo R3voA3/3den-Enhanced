@@ -124,7 +124,7 @@ class CfgFunctions
 			class setOrientation;
 			class credits;
 			class all3DENSelected;
-			class numberOfSelectedEntities;
+			class statusbar_entityCounter;
 			class exportWithLB;
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
@@ -197,6 +197,9 @@ class CfgFunctions
 			class dynamicSkill_onButtonDown;
 			class mapIndicators_onAttributeLoad;
 			class mapIndicators_onAttributeSave;
+			class missionEnding_onAttributeLoad;
+			class missionEnding_onAttributeSave;
+			class missionEnding_onButtonDown;
 		};
 	};
 };
