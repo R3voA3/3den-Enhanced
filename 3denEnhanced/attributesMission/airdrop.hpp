@@ -23,11 +23,11 @@ class Enh_Airdrop
 						playSound3D ['A3\Data_F_Warlords\sfx\flyby.wss',objNull,false,_center vectorAdd [0,0,100],2.5];\
 						Enh_Airdrop_Units = [];\
 						{\
-							private _unit = _group createUnit [_x,[0,0,0],[],0,'NONE'];\
 							_center set [2,_center # 2 + random [-20,0,20]];\
+							private _unit = _group createUnit [_x,_center,[],0,'NONE'];\
 							private _para = createVehicle ['Steerable_Parachute_F',_center getPos [_r * sqrt random 1,random 360],[],0,'FLY'];\
-							Enh_Airdrop_Units pushBack _unit;\
 							_unit moveInDriver _para;\
+							Enh_Airdrop_Units pushBack _unit;\
 						} forEach _classes;\
 					};\
 				}";
