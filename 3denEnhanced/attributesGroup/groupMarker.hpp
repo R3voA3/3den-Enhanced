@@ -7,7 +7,6 @@ class Enh_GroupMarker
 		class Enh_GroupMarker
 		{
 			displayName = $STR_ENH_groupMarker_displayName;
-			tooltip = $STR_ENH_groupMarker_tooltip;
 			property = "Enh_groupMarker";
 			control = "Enh_GroupMarker";
 			expression = "\
