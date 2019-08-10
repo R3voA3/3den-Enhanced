@@ -2,7 +2,9 @@ v4.3
 *added*
 - Scenario Attributes Manager
 - Link to Mission Optimisation Biki page
-- disableAI "radioprotocol"
+- DisableAI "radioprotocol"
+- Attribute to end mission after certain number of units of given side were killed (e.g. civilian casualties)
+- Added Editor Attribute to toggle Entity Counter in status bar.
 
 *changed*
 - Combo Box controls were replaced with Toolbox controls if possible
