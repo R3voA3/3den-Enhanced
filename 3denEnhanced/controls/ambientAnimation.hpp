@@ -2,7 +2,7 @@ class Enh_AmbientAnimation: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_ambientAnimations_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_ambientAnimations_onAttributeSave";
-	h = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
+	h = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

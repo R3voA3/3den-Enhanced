@@ -2,7 +2,7 @@ class Enh_GroupMarker: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_groupMarker_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_groupMarker_onAttributeSave";
-	h = 9.5 * SIZE_M * GRID_H + 25 * pixelH;
+	h = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

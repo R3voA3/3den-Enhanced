@@ -2,7 +2,7 @@ class Enh_HoldAction: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_holdAction_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_holdAction_onAttributeSave";
-	h = 37.5 * SIZE_M * GRID_H + 75 * pixelH;
+	h = 37.5 * SIZE_M * GRID_H + 80 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

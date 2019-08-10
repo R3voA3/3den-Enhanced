@@ -2,7 +2,7 @@ class Enh_TerrainDetail: Title
 {
     attributeLoad = "[_this,_value] call Enh_fnc_terrainDetail_onAttributeLoad";
     attributeSave = "_this call Enh_fnc_terrainDetail_onAttributeSave";
-    h = 2 * SIZE_M * GRID_H;
+    h = 2 * SIZE_M * GRID_H + 5 * pixelH;
     class Controls: Controls
     {
         class Title: Title {};

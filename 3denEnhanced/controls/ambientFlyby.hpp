@@ -2,7 +2,7 @@ class Enh_AmbientFlyby: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_ambientFlyby_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_ambientFlyby_onAttributeSave";
-	h = 19.5 * SIZE_M * GRID_H + 40 * pixelH;
+	h = 19.5 * SIZE_M * GRID_H + 45 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

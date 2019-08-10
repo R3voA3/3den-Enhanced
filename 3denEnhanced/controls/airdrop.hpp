@@ -2,7 +2,7 @@ class Enh_Airdrop: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_airdrop_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_airdrop_onAttributeSave";
-	h = 17.5 * SIZE_M * GRID_H + 35 * pixelH;
+	h = 17.5 * SIZE_M * GRID_H + 40 * pixelH;//We make it 5 * pixelH larger to prevent scrolling issues
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

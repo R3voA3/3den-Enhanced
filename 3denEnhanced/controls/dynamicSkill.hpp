@@ -2,7 +2,7 @@ class Enh_DynamicSkill: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_dynamicSkill_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_dynamicSkill_onAttributeSave";
-	h = 21.5 * SIZE_M * GRID_H + 85 * pixelH;
+	h = 21.5 * SIZE_M * GRID_H + 90 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup

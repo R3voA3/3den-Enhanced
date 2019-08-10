@@ -2,7 +2,7 @@ class Enh_IntroText: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_introText_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_introText_onAttributeSave";
-	h = 12.5 * SIZE_M * GRID_H + 35 * pixelH;
+	h = 12.5 * SIZE_M * GRID_H + 40 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
