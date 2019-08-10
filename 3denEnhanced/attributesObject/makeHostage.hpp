@@ -17,14 +17,14 @@ class Enh_MakeHostage: Enh_SetCaptive
 					  'Free Hostage',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
-					  '(_target getVariable [''Enh_isHostage'',true]) && ((_this distance _target) < 2) && (alive _target)',\
+					  '(_target getVariable [''Enh_IsHostage'',true]) && ((_this distance _target) < 2) && (alive _target)',\
 					  'true',\
 					  {},\
 					  {},\
 					  {\
 					  	[_this # 0,'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow',0];\
 					  	[_this # 0,_this # 2] remoteExec ['BIS_fnc_holdActionRemove',0];\
-					  	_this # 0 setVariable ['Enh_isHostage',false,true];\
+					  	_this # 0 setVariable ['Enh_IsHostage',false,true];\
 					  }\
 					 ] call BIS_fnc_holdActionAdd;\
 				};\
