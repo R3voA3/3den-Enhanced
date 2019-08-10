@@ -13,6 +13,6 @@
    BOOLEAN: true
 */
 
-call Enh_fnc_numberOfSelectedEntities;
+call Enh_fnc_statusbar_entityCounter;
 
 true
