@@ -53,6 +53,7 @@ class Cfg3DEN
 		#include "controls\ambientFlyby.hpp"
 		#include "controls\dynamicSkill.hpp"
 		#include "controls\holdAction.hpp"
+		#include "controls\missionEnding.hpp"
 	};
 	class Mission
 	{
@@ -61,6 +62,13 @@ class Cfg3DEN
 			class AttributeCategories
 			{
 				#include "attributesEditor\onPreviewDebug.hpp"
+				class Misc
+				{
+					class Attributes
+					{
+						#include "attributesEditor\statusbar_entityCounter.hpp"
+					};
+				};
 			};
 		};
 		class Intel
@@ -81,6 +89,7 @@ class Cfg3DEN
 				#include "attributesMission\airdrop.hpp"
 				#include "attributesMission\establishingShot.hpp"
 				#include "attributesMission\introText.hpp"
+				#include "attributesMission\missionEnding.hpp"
 				class Misc
 				{
 					class Attributes
