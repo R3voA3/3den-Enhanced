@@ -27,10 +27,7 @@
   Github: https://github.com/ConnorAU
 */
 
-//class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
-//class RscShortcutButton;
-//class RscButtonMenu;
 class RscDebugConsole: RscControlsGroupNoScrollbars 
 {
 	class Controls 
