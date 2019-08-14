@@ -2848,67 +2848,7 @@
 		<Polish>Obiekt jest zawsze widoczne wewnątrz zasięgu rysowania mapy.</Polish>
 		<Russian>Объект всегда виден на расстоянии обзора местности.</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimEquipCombo_random">
-		<Original>Random (Gear is randomized according to the animation set)</Original>
-		<English>Random (Gear is randomized according to the animation set)</English>
-		<Czech>Náhodně (Výstroj je vybrána náhodně podle druhu animace)</Czech>
-		<French>Aléatoire (l'équipement est aléatoire en fonction de l'animation selectionnée)</French>
-		<Spanish>Aleatorio (equipamiento es aleatorio de acuerdo con el conjunto de animaciones)</Spanish>
-		<Italian>Random (L'equipaggiamento randomizzato in base all'animazione impostata)</Italian>
-		<German>Zufällig (Ausrüstung wird der Animation angepasst)</German>
-		<Chinesesimp>随机（齿轮根据动画集随机化）</Chinesesimp>
-		<Polish>Losowy (Wyposażenie jest losowe w zależności do ustawionej animacji)</Polish>
-		<Russian>Случайный (Вооружение случайное в соответствии с набором анимации)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimEquipCombo_light">
-		<Original>Light (No goggles, headgear, vest)</Original>
-		<English>Light (No goggles, headgear, vest)</English>
-		<Czech>Lehká (Žádné brýle, pokrývka hlavy, vesta)</Czech>
-		<French>Léger (pas de lunette, casque ou veste)</French>
-		<Spanish>Ligero (sin gafas, equipamiento de cabeza, ni chaleco)</Spanish>
-		<Italian>Light (Niente occhiali,né elmetto e veste)</Italian>
-		<German>Leicht (Keine Nachtsicht, Kopfbedeckung, Weste)</German>
-		<Chinesesimp>随机（齿轮根据动画集随机化）</Chinesesimp>
-		<Polish>Lekkie (Brak gogli, nakrycia głowy, kamizelki)</Polish>
-		<Russian>Легкий (без - ночного видения, головного убора, жилета)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimEquipCombo_medium">
-		<Original>Medium (No goggles, headgear)</Original>
-		<English>Medium (No goggles, headgear)</English>
-		<Czech>Střední (Žádné brýle, pokrývka hlavy)</Czech>
-		<French>Intermédiaire (pas de lunette ou de casque)</French>
-		<Spanish>Medio (sin gafas, ni equipamiento de cabeza)</Spanish>
-		<Italian>Medium (Niente occhiali né elmetto)</Italian>
-		<German>Mittel (Keine Nachtsicht, Kopfbedeckung)</German>
-		<Chinesesimp>中号（无护目镜，头饰）</Chinesesimp>
-		<Polish>Średnie (Brak gogli, nakrycia głowy)</Polish>
-		<Russian>Средний (без - очков, головного убора)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimEquipCombo_full">
-		<Original>Full (No goggles)</Original>
-		<English>Full (No goggles)</English>
-		<Czech>Plná (Žádné brýle)</Czech>
-		<French>Tout (pas de lunette)</French>
-		<Spanish>Completo (sin gafas)</Spanish>
-		<Italian>Full (Niente occhiali)</Italian>
-		<German>Volle Ausrüstung (Keine Nachtsicht)</German>
-		<Chinesesimp>满（没有护目镜）</Chinesesimp>
-		<Polish>Pełne (Brak gogli)</Polish>
-		<Russian>Все (без очков)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimEquipCombo_none">
-		<Original>None (No goggles, headgear, vest, weapon)</Original>
-		<English>None (No goggles, headgear, vest, weapon)</English>
-		<Czech>Žádná (Žádné brýle, pokrývka hlavy, vesta, zbraň)</Czech>
-		<French>Rien (pas de lunette, casque, veste ou arme)</French>
-		<Spanish>Ninguno (Sin gafas, equipamiento de cabeza, chaleco ni arma)</Spanish>
-		<Italian>Nulla (Niente occhiali, elmetto, veste e arma)</Italian>
-		<German>Nichts (Keine Nachtsicht, Kopfbedeckung, Weste, Waffe)</German>
-		<Chinesesimp>无（没有护目镜，头饰，背心，武器）</Chinesesimp>
-		<Polish>Żadne (Brak gogli, nakrycia głowy, kamizelki, broni)</Polish>
-		<Russian>Пусто (без - очков, головных уборов, жилета, оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_stand">
+	<Key ID="STR_ENH_ambientAnimations_animSet_stand">
 		<Original>Stand (Slightly turning to the sides, needs rifle!)</Original>
 		<English>Stand (Slightly turning to the sides, needs rifle!)</English>
 		<Czech>Stojící (Zlehka se otáčí do stran, potřebuje pušku!)</Czech>
@@ -2920,7 +2860,7 @@
 		<Polish>Stojąca (Lekko kręci się na boki, potrzebny karabin!)</Polish>
 		<Russian>Стоя (Слегка поворачиваясь в сторону, нужна винтовка!)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_standIA">
+	<Key ID="STR_ENH_ambientAnimations_animSet_stand_IA">
 		<Original>Stand (Default A3 animation)</Original>
 		<English>Stand (Default A3 animation)</English>
 		<Czech>Stojící (Výchozí A3 animace)</Czech>
@@ -2932,7 +2872,7 @@
 		<Polish>Stojąca (Podstawowa animacja A3)</Polish>
 		<Russian>Стоя (анимация по умолчанию A3)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitLow">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_Low">
 		<Original>Sit (Sitting on the ground, with weapon)</Original>
 		<English>Sit (Sitting on the ground, with weapon)</English>
 		<Czech>Sedící (Sedí na zemi, se zbraní)</Czech>
@@ -2944,7 +2884,7 @@
 		<Polish>Siedząca (Siedzi na ziemi, z bronią)</Polish>
 		<Russian>Сидит (сидя на земле, с оружием)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitLowU">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_Low_U">
 		<Original>Sit low (Sitting on the ground, no weapon)</Original>
 		<English>Sit low (Sitting on the ground, no weapon)</English>
 		<Czech>Nízko sedící (Sedí na zemi, beze zbraně)</Czech>
@@ -2956,7 +2896,7 @@
 		<Polish>Siedząca niska (Siedzi na ziemi bez broni)</Polish>
 		<Russian>Сидит пусто (сидя на земле, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_kneel">
+	<Key ID="STR_ENH_ambientAnimations_animSet_kneel">
 		<Original>Kneel (Kneeling, with weapon)</Original>
 		<English>Kneel (Kneeling, with weapon)</English>
 		<Czech>Klečící (Klečí, se zbraní)</Czech>
@@ -2968,7 +2908,7 @@
 		<Polish>Klęcząca (Klęczy, z bronią)</Polish>
 		<Russian>На Колене (на коленях, с оружием)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_lean">
+	<Key ID="STR_ENH_ambientAnimations_animSet_lean">
 		<Original>Lean</Original>
 		<English>Lean</English>
 		<Czech>Opírající se</Czech>
@@ -2980,7 +2920,7 @@
 		<Polish>Pochylająca</Polish>
 		<Russian>Наклоняться</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_watch1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_watch1">
 		<Original>Watch 1 (Standing and turning around)</Original>
 		<English>Watch (Standing and turning around)</English>
 		<Czech>Pozorující (Stojí a otáčí se okolo)</Czech>
@@ -2992,23 +2932,11 @@
 		<Polish>Obserwująca 1 (Stoi i obraca się)</Polish>
 		<Russian>Часовой 1(Стоя и оборачиваясь)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_watch">
-		<Original>Watch 1 (Standing and turning around)</Original>
-		<English>Watch (Standing and turning around)</English>
-		<Czech>Pozorující (Stojí a otáčí se okolo)</Czech>
-		<French>Surveille 2 (attend et pivote sur lui même)</French>
-		<Spanish>Observar 1 (De pie y girando)</Spanish>
-		<Italian>Watch  1(Posizione eretta mentre controlla i dintorni)</Italian>
-		<German>Ausschau halten 1</German>
-		<Chinesesimp>观看1（站立和转身）</Chinesesimp>
-		<Polish>Obserwująca 1 (Stoi i obraca się)</Polish>
-		<Russian>Часовой (Стоя при проверке окружения)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_watch2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_watch2">
 		<Original>Watch 2(Standing and turning around)</Original>
 		<English>Watch (Standing and turning around)</English>
 		<Czech>Pozorující 2 (Stojí a otáčí se okolo)</Czech>
-		<French>Surveille 3(attend et pivote sur lui même)</French>
+		<French>Surveille 2(attend et pivote sur lui même)</French>
 		<Spanish>Observar 2 (De pie y girando)</Spanish>
 		<Italian>Watch 2(Posizione eretta mentre controlla i dintorni)</Italian>
 		<German>Ausschau halten 2</German>
@@ -3016,7 +2944,7 @@
 		<Polish>Obserwująca 2 (Stoi i obraca się)</Polish>
 		<Russian>Часовой 2(Standing and turning around)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_standU1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U1">
 		<Original>Stand U1 (Slightly turning to the sides, no weapon)</Original>
 		<English>Stand U1 (Slightly turning to the sides, no weapon)</English>
 		<Czech>Stojící U1 (Zlehka se otáčí do stran, beze zbraně)</Czech>
@@ -3028,7 +2956,7 @@
 		<Polish>Stojąca U1 (Lekko obraca się na boki, brak broni)</Polish>
 		<Russian>Стоя U1 (слегка поворачивается в стороны, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_standU2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U2">
 		<Original>Stand U2 (Slightly turning to the sides, no weapon)</Original>
 		<English>Stand U2 (Slightly turning to the sides, no weapon)</English>
 		<Czech>Stojící U2 (Zlehka se otáčí do stran, beze zbraně)</Czech>
@@ -3040,7 +2968,7 @@
 		<Polish>Stojąca U2 (Lekko obraca się na boki, brak broni)</Polish>
 		<Russian>Стоя U2 (слегка поворачиваясь в стороны, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_standU3">
+	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U3">
 		<Original>Stand U3 (Slightly turning to the sides, no weapon)</Original>
 		<English>Stand U3 (Slightly turning to the sides, no weapon)</English>
 		<Czech>Stojící U3 (Zlehka se otáčí do stran, beze zbraně)</Czech>
@@ -3052,7 +2980,7 @@
 		<Polish>Stojąca U3 (Lekko obraca się na boki, brak broni)</Polish>
 		<Russian>Стоя U3 (слегка поворачивается в стороны, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_listenBriefing">
+	<Key ID="STR_ENH_ambientAnimations_animSet_listen_briefing">
 		<Original>Listen Briefing (Hands behind back, no weapon)</Original>
 		<English>Listen Briefing (Hands behind back, no weapon)</English>
 		<Czech>Poslouchající brífink (Ruce za zády, beze zbraně)</Czech>
@@ -3064,7 +2992,7 @@
 		<Polish>Słucha odprawy (Ręce za plecami, brak broni)</Polish>
 		<Russian>На брифинге (Руки за спиной, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_leanOnTable">
+	<Key ID="STR_ENH_ambientAnimations_animSet_lean_on_table">
 		<Original>Lean on table (Standing while leaning on table)</Original>
 		<English>Lean on table (Standing while leaning on table)</English>
 		<Czech>Opírající se o stůl (Stojí a opírá se o stůl)</Czech>
@@ -3076,7 +3004,7 @@
 		<Polish>Opiera się o stół (Stoi opierając się o stół)</Polish>
 		<Russian>Опираться на стол (стоя, опираясь на стол)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_briefing">
+	<Key ID="STR_ENH_ambientAnimations_animSet_briefing">
 		<Original>Briefing (Ambient briefing loop)</Original>
 		<English>Briefing (Ambient briefing loop)</English>
 		<Czech>Brífink (Ambientní animace ve smyčce)</Czech>
@@ -3088,7 +3016,7 @@
 		<Polish>Odprawa (Zapętlona odprawa)</Polish>
 		<Russian>Брифинг (анимация цикла брифинга)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_briefingPointLeft">
+	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_left">
 		<Original>Briefing pointing left (Pointing left &amp; high)</Original>
 		<English>Briefing pointing left (Pointing left &amp; high)</English>
 		<Czech>Brífink ukazující vlevo (Ukazující vlevo &amp; vysoko)</Czech>
@@ -3100,7 +3028,7 @@
 		<Polish>Odprawa, wskazuje lewo (Wskazuje lewo &amp; wysoko)</Polish>
 		<Russian>Брифинг, указывает влево (указывая влево и вверх)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_briefingPointRight">
+	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_right">
 		<Original>Briefing pointing right (Pointing right &amp; high)</Original>
 		<English>Briefing pointing right (Pointing right &amp; high)</English>
 		<Czech>Brífink ukazující vpravo (Ukazující vpravo &amp; vysoko)</Czech>
@@ -3112,7 +3040,7 @@
 		<Polish>Odprawa, wskazuje prawo (Wskazuje prawo &amp; wysoko)</Polish>
 		<Russian>Брифинг, указывает вправо (указывая вправо и вверх)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_briefingPointTable">
+	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_table">
 		<Original>Briefing pointing down (pointing front &amp; low)</Original>
 		<English>Briefing pointing down (pointing front &amp; low)</English>
 		<Czech>Brífink ukazující dolů (ukazující před sebe &amp; nízko)</Czech>
@@ -3124,7 +3052,7 @@
 		<Polish>Odprawa, wskazuje nisko (Wskazuje front przód &amp; nisko)</Polish>
 		<Russian>Брифинг направлен вниз (направлен вперед и вниз)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitU1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U1">
 		<Original>Sit U1 (Sitting on bench or similar, no weapon)</Original>
 		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
 		<Czech>Sedící U1 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
@@ -3136,7 +3064,7 @@
 		<Polish>Siedząca U1 (Siedzi na ławce lub podobnym, brak broni)</Polish>
 		<Russian>Сядит на U1 (сидя на скамейке или подобном, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitU2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U2">
 		<Original>Sit U2 (Sitting on bench or similar, no weapon)</Original>
 		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
 		<Czech>Sedící U2 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
@@ -3148,7 +3076,7 @@
 		<Polish>Siedząca U2 (Siedzi na ławce lub podobnym, brak broni)</Polish>
 		<Russian>Сядит на U2 (сидя на скамейке или подобном, без оружия))</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitU3">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U3">
 		<Original>Sit U3 (Sitting on bench or similar, no weapon)</Original>
 		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
 		<Czech>Sedící U3 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
@@ -3160,7 +3088,7 @@
 		<Polish>Siedząca U3 (Siedzi na ławce lub podobnym, brak broni)</Polish>
 		<Russian>Сядит на U3 (сидя на скамейке или подобном, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sit1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit1">
 		<Original>Sit 1 (Sitting on bench or similar)</Original>
 		<English>Sit 1 (Sitting on bench or similar)</English>
 		<Czech>Sedící 1 (Sedí na lavičce nebo podobném)</Czech>
@@ -3172,7 +3100,7 @@
 		<Polish>Siedząca 1 (Siedzi na ławce lub podobnym)</Polish>
 		<Russian>Сидит 1 (сидя на скамейке или подобное)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sit2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit2">
 		<Original>Sit 2 (Sitting on bench or similar)</Original>
 		<English>Sit 2 (Sitting on bench or similar)</English>
 		<Czech>Sedící 2 (Sedí na lavičce nebo podobném)</Czech>
@@ -3184,7 +3112,7 @@
 		<Polish>Siedząca 2 (Siedzi na ławce lub podobnym)</Polish>
 		<Russian>Сидит 2 (сидя на скамейке или подобное)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sit3">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit3">
 		<Original>Sit 3 (Sitting on bench or similar, unarmed)</Original>
 		<English>Sit 3 (Sitting on bench or similar, unarmed)</English>
 		<Czech>Sedící 3 (Sedí na lavičce nebo podobném, neozbrojený)</Czech>
@@ -3196,7 +3124,7 @@
 		<Polish>Siedząca 3 (Siedzi na ławce lub podobnym, nieuzbrojony)</Polish>
 		<Russian>Сидеть 3 (сидя на скамейке или подобное)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitAtTable">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_at_table">
 		<Original>Sit at table</Original>
 		<English>Sit at table</English>
 		<Czech>Sedící na stole</Czech>
@@ -3208,7 +3136,7 @@
 		<Polish>Siedzi na stole</Polish>
 		<Russian>Сидит за столом</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitHigh_1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_High1">
 		<Original>Sit High 1 (Sitting on higher object, legs swinging, needs a rifle)</Original>
 		<English>Sit High 1 (Sitting on higher object, legs swinging, needs a rifle)</English>
 		<Czech>Sedící vysoko 1 (Sedí na vyšším objektu, houpe nohama, potřebuje pušku)</Czech>
@@ -3220,7 +3148,7 @@
 		<Polish>Siedząca wysoko 1 (Siedzi na wysokim obiekcie, nogi zwisają, potrzebna broń)</Polish>
 		<Russian>Сидит высоко 1 (сидя на более высоком объекте, ноги качаются, нужна винтовка)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitHigh_2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_high2">
 		<Original>Sit High 2 (Sitting on higher object, legs swinging, needs a rifle)</Original>
 		<English>Sit High 2 (Sitting on higher object, legs swinging, needs a rifle)</English>
 		<Czech>Sedící vysoko 2 (Sedí na vyšším objektu, houpe nohama, potřebuje pušku)</Czech>
@@ -3232,7 +3160,7 @@
 		<Polish>Siedząca wysoko 2 (Siedzi na wysokim obiekcie, nogi zwisają, potrzebna broń)</Polish>
 		<Russian>Сидит высоко 2 (сидя на более высоком объекте, ноги качаются, нужна винтовка)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_proneInjured1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured_u1">
 		<Original>Prone injured 1 (Laying wounded on back, no weapon)</Original>
 		<English>Prone injured 1 (Laying wounded on back, no weapon)</English>
 		<Czech>Ležící zraněný 1 (Leží zraněný na zádech, beze zbraně)</Czech>
@@ -3244,7 +3172,7 @@
 		<Polish>Leżący ranny 1 (Leży na plecach, bez broni)</Polish>
 		<Russian>Лежащий раненый 1 (Положение раненого на спине, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_proneInjured2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured_u2">
 		<Original>Prone injured 2 (Laying wounded on back, no weapon)</Original>
 		<English>Prone injured 2 (Laying wounded on back, no weapon)</English>
 		<Czech>Ležící zraněný 2 (Leží zraněný na zádech, beze zbraně)</Czech>
@@ -3256,7 +3184,7 @@
 		<Polish>Leżący ranny 2 (leży na plecach, bez broni)</Polish>
 		<Russian>Лежащий раненый 2 (Положение раненого на спине, без оружия)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_proneInjured">
+	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured">
 		<Original>Prone injured (Laying wounded on back, with or without weapon)</Original>
 		<English>Prone injured (Laying wounded on back, with or without weapon)</English>
 		<Czech>Ležící zraněný (Leží zraněný na zádech, se zbraní či bez ní)</Czech>
@@ -3268,7 +3196,7 @@
 		<Polish>Leżący ranny (Leży na plecach, z bronią lub bez)</Polish>
 		<Russian>Легко раненые (лежачие раненые на спине, с оружием или без)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_repairVehStand">
+	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_stand">
 		<Original>Repair vehicle (Reparing vehicle, standing)</Original>
 		<English>Repair vehicle (Reparing vehicle, standing)</English>
 		<Czech>Opravující vozidlo (Opravuje vozidlo, stojí)</Czech>
@@ -3280,7 +3208,7 @@
 		<Polish>Naprawia pojazd (Naprawianie pojazdu, stojąc)</Polish>
 		<Russian>Ремонт автомобиля (Ремонт автомобиля, стоя)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_repairVehKneel">
+	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_kneel">
 		<Original>Repair vehicle (Reparing vehicle, kneeling)</Original>
 		<English>Repair vehicle (Reparing vehicle, kneeling)</English>
 		<Czech>Opravující vozidlo (Opravující vozidlo, klečí)</Czech>
@@ -3292,7 +3220,7 @@
 		<Polish>Naprawia pojazd (Naprawianie pojazdu, klęcząc)</Polish>
 		<Russian>Ремонт автомобиля (Ремонт автомобиля, стоя на коленях)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_repairVehProne">
+	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_prone">
 		<Original>Repair vehicle (Reparing vehicle, prone)</Original>
 		<English>Repair vehicle (Reparing vehicle, prone)</English>
 		<Czech>Opravující vozidlo (Opravuje vozidlo, leží)</Czech>
@@ -3304,7 +3232,7 @@
 		<Polish>Naprawia pojazd (Naprawianie pojazdu, leżąc)</Polish>
 		<Russian>Ремонт автомобиля (Ремонт автомобиля, лежа)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_kneelTreat">
+	<Key ID="STR_ENH_ambientAnimations_animSet_kneel_treat">
 		<Original>Treating wounded soldier (Kneeling)</Original>
 		<English>Treating wounded soldier (Kneeling)</English>
 		<Czech>Ošetřující zraněného vojáka (Klečí)</Czech>
@@ -3316,7 +3244,7 @@
 		<Polish>Leczenie rannego (klęcząc)</Polish>
 		<Russian>Лечение раненого солдата (на коленях)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitSad_1">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad_1">
 		<Original>Sit Sad 1 (Sitting on chair, looking sad)</Original>
 		<English>Sit Sad 1 (Sitting on chair, looking sad)</English>
 		<Czech>Sedící smutně 1 (Sedí na židli, vypadá smutně)</Czech>
@@ -3328,7 +3256,7 @@
 		<Polish>Siedzi smutny 1 (Siedzi na krześle, smutny)</Polish>
 		<Russian>Сидеть грустный 1 (Сидя на стуле, глядя грустно)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_sitSad_2">
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad_2">
 		<Original>Sit Sad 2 (Sitting on chair, looking sad)</Original>
 		<English>Sit Sad 2 (Sitting on chair, looking sad)</English>
 		<Czech>Sedící smutně 2 (Sedí na židli, vypadá smutně)</Czech>
@@ -3340,7 +3268,7 @@
 		<Polish>Siedzi smutny 2 (Siedzi na krześle, smutny)</Polish>
 		<Russian>Сидеть грустный 2 (Сидя на стуле, глядя грустно)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambAnimCombo_guard">
+	<Key ID="STR_ENH_ambientAnimations_animSet_guard">
 		<Original>Guard</Original>
 		<English>Guard</English>
 		<Czech>Na stráži</Czech>
@@ -3350,72 +3278,6 @@
 		<French>Garde</French>
 		<Polish>Na straży</Polish>
 		<Russian>Охрана</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_headline">
-		<Original>Ambient Animations</Original>
-		<English>Ambient Animations</English>
-		<Czech>Ambientní animace</Czech>
-		<Spanish>Animaciones de ambiente</Spanish>
-		<Chinesesimp>环境动画</Chinesesimp>
-		<German>Animationen</German>
-		<French>Animations ambiantes</French>
-		<Polish>Animacje</Polish>
-		<Russian>Окружающая анимация</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_description">
-		<Original>Select an animation and loadout. To save performance, this attribute will only work in single player missions.</Original>
-		<English>Select an animation and loadout. To save performance, this attribute will only work in single player missions.</English>
-		<Czech>Vyberte animaci a výstroj. K ušetření výkonu, tento atribut bude fungovat pouze v misích pro jednoho hráče.</Czech>
-		<Spanish>Seleccione una animación y equipamiento. Para mejorar rendimiento, este atributo sólo funcionará en misiones de un solo jugador.</Spanish>
-		<Chinesesimp>选择动画并加载。 为了保持性能，此属性仅适用于单人任务。</Chinesesimp>
-		<German>Wähle eine Animation und die Ausrüstung. Um Leistung einzusparen, funktioniert dieses Attribut nur in Einzelspielermissionen.</German>
-		<French>Sélectionnez une animation et un équipement. Pour économiser les performances, cet attribut ne fonctionnera que dans les missions solo.</French>
-		<Polish>Wybierz animacje i wyposażenie. Aby zachować wydajność misji, ten atrybut będzie działał tylko w misjach  jednoosobowych(single).</Polish>
-		<Russian>Выберите анимацию и загрузку. Чтобы сохранить производительность, этот атрибут будет работать только в одиночных миссиях.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_animText_text">
-		<Original>Animation</Original>
-		<English>Animation</English>
-		<Czech>Animace</Czech>
-		<Spanish>Animación</Spanish>
-		<German>Animation</German>
-		<Chinesesimp>动作</Chinesesimp>
-		<French>Animation</French>
-		<Polish>Animacja</Polish>
-		<Russian>Анимация</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_gearText_text">
-		<Original>Gear</Original>
-		<English>Gear</English>
-		<Czech>Výstroj</Czech>
-		<Spanish>Equipo</Spanish>
-		<German>Ausrüstung</German>
-		<Chinesesimp>装备</Chinesesimp>
-		<French>Équipement</French>
-		<Polish>Wyposażenie</Polish>
-		<Russian>Оборудование</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_gearText_tooltip">
-		<Original>Select the loadout.</Original>
-		<English>Select the loadout.</English>
-		<Czech>Vyberte výstroj.</Czech>
-		<Spanish>Selecciona equipamiento</Spanish>
-		<German>Wähle die Ausrüstung,</German>
-		<Chinesesimp>选择加载</Chinesesimp>
-		<French>Sélectionnez l'équipement.</French>
-		<Polish>Wybierz wyposażenie.</Polish>
-		<Russian>Выберите загрузку.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambAnimations_animText_tooltip">
-		<Original>Select the animation.</Original>
-		<English>Select the animation.</English>
-		<Czech>Vyberte animaci.</Czech>
-		<Spanish>Selecciona la animación</Spanish>
-		<German>Wähle die Animation.</German>
-		<Chinesesimp>选择动画</Chinesesimp>
-		<French>Sélectionnez l'animation.</French>
-		<Polish>Wybierz animacje.</Polish>
-		<Russian>Выберите анимацию.</Russian>
 	</Key>
 	<Key ID="STR_ENH_attributeCategory_advancedDamage">
 		<Original>Advanced Damage</Original>
@@ -6204,5 +6066,170 @@
 		<English>Hold Action</English>
 		<German>Hold Action</German>
 		<Original>Hold Action</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_category_displaynName">
+		<English>Mission Ending</English>
+		<German>Missionsende</German>
+		<Original>Mission Ending</Original>
+	</Key>
+	<Key ID="STR_ENH_groupMarker_text">
+		<English>Text</English>
+		<German>Text</German>
+		<Original>Text</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_description_description">
+		<English>Plays a selected animation set.</English>
+		<Original>Plays a selected animation set.</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_description">
+		<English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
+		<Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_threshold_displayName">
+		<English>Threshold</English>
+		<Original>Threshold</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_threshold_tooltip">
+		<English>When the amount of killed entities of given side reaches the threshold, the mission is ended.</English>
+		<Original>When the amount of killed entities of given side reaches the threshold, the mission is ended.</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_threshold_ending_displayName">
+		<English>Ending</English>
+		<Original>Ending</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_threshold_ending_tooltip">
+		<English>Can be ending from config file or mission config (CfgDebriefing).</English>
+		<Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
+	</Key>
+	<Key ID="STR_ENH_missionEnding_casualties_threshold_win_displayName">
+		<English>Win?</English>
+		<Original>Win?</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_canEdit_displayName">
+		<English>Can Exit?</English>
+		<Original>Can Exit?</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_canEdit_tooltip">
+		<English>If enabled, the unit will exit the animation when in danger.</English>
+		<Original>If enabled, the unit will exit the animation when in danger.</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_disableCollision_displayName">
+		<English>Disable Collision</English>
+		<Original>Disable Collision</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_disableCollision_tooltip">
+		<English>If enabled, the collison between with the nearest object will be disabled. Useful for placing unit precisely, for example, on a chair.</English>
+		<Original>If enabled, the collison between with the nearest object will be disabled. Useful for placing unit precisely, for example, on a chair.</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_attach_displayName">
+		<English>Attach?</English>
+		<Original>Attach?</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_attach_tooltip">
+		<English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or other object.</English>
+		<Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or other object.</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_animation_displayName">
+		<English>Animation</English>
+		<Chinesesimp>动作</Chinesesimp>
+		<Czech>Animace</Czech>
+		<French>Animation</French>
+		<German>Animation</German>
+		<Original>Animation</Original>
+		<Polish>Animacja</Polish>
+		<Russian>Анимация</Russian>
+		<Spanish>Animación</Spanish>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_displayName">
+		<English>Ambient Animations</English>
+		<Chinesesimp>环境动画</Chinesesimp>
+		<Czech>Ambientní animace</Czech>
+		<French>Animations ambiantes</French>
+		<German>Animationen</German>
+		<Original>Ambient Animations</Original>
+		<Polish>Animacje</Polish>
+		<Russian>Окружающая анимация</Russian>
+		<Spanish>Animaciones de ambiente</Spanish>
+	</Key>
+	<Key ID="STR_ENH_holdAction_description">
+		<English>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</English>
+		<Original>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_name_displayName">
+		<English>Name</English>
+		<German>Name</German>
+		<Original>Name</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_iconIdle_displayName">
+		<English>Icon Idle</English>
+		<Original>Icon Idle</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_iconProgress_displayName">
+		<English>Icon Progress</English>
+		<Original>Icon Progress</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_conditionShow_displayName">
+		<English>Condition Show</English>
+		<Original>Condition Show</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_conditionShow_tooltip">
+		<English>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</English>
+		<Original>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_conditionProgress_displayName">
+		<English>Condition Progress</English>
+		<Original>Condition Progress</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_conditionProgress_tooltip">
+		<English>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</English>
+		<Original>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeStart_displayName">
+		<English>Code Start</English>
+		<Original>Code Start</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeStart_tooltip">
+		<English>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</English>
+		<Original>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeProgress_displayName">
+		<English>Code Progress</English>
+		<Original>Code Progress</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeProgress_tooltip">
+		<English>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</English>
+		<Original>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeComplete_displayName">
+		<English>Code Complete</English>
+		<Original>Code Complete</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeComplete_tooltip">
+		<English>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</English>
+		<Original>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeInterrupt_displayName">
+		<English>Code Interrupt</English>
+		<Original>Code Interrupt</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_codeInterrupt_tooltip">
+		<English>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</English>
+		<Original>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_duration_displayName">
+		<English>Duration</English>
+		<Original>Duration</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_priority_displayName">
+		<English>Priority</English>
+		<Original>Priority</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_showUnconsciousy_displayName">
+		<English>Show when Unconscious</English>
+		<Original>Show when Unconscious</Original>
+	</Key>
+	<Key ID="STR_ENH_holdAction_showWindow_displayName">
+		<English>Show Window</English>
+		<Original>Show Window</Original>
 	</Key>
 </Project>
