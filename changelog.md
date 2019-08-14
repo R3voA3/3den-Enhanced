@@ -73,6 +73,8 @@ v4.3
 - Old garrison UI is back
 - Added hold action attribute (WIP)
 - Fixed feature type attribute would use incorrect data type
+- Ambient Animation attribute uses Listbox control instead of Combobox control
+- Ambient Animation attribute was overhauled, it now works in multiplayer
 
 
 *removed*
