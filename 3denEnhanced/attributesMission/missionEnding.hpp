@@ -1,7 +1,7 @@
-class Enh_MissionEnding_Casualties
+class Enh_MissionEnding
 {
 	collapsed = 1;
-	displayName = $STR_ENH_missionEnding_casualties_displayName;
+	displayName = $STR_ENH_missionEnding_category_displaynName;
 	class Attributes
 	{
 		class Enh_MissionEnding_Casualties
