@@ -22,11 +22,9 @@ switch (_mode) do
 {
    case "INIT":
    {
-      private _fade = [1,0] select _enabled;
       for "_i" from 669 to 680 do 
       {
-         (_display displayCtrl _i) ctrlSetFade _fade;
-         (_display displayCtrl _i) ctrlCommit 0;
+         (_display displayCtrl _i) ctrlShow _enabled;
       };
    };
    case "RUN":
