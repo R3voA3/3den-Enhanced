@@ -4,7 +4,7 @@ class Enh_HoldAction
 	displayName = $STR_ENH_holdAction_displayName;
 	class Attributes
 	{
-		class Enh_AddHoldAction//TO-DO: remoteExec adds the action even though it won't appear for clients because it was already used.
+		class Enh_AddHoldAction//TO-DO: remoteExec adds the action even though it won't appear for clients because it was already used. Could be solved by using remoteExec ["",object] to remove entry from JIP qeue once action was activated
 		{
 			displayName = $STR_ENH_holdAction_displayName;
 			property = "Enh_HoldAction";
@@ -33,7 +33,7 @@ class Enh_HoldAction
 				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];\
 			};";
 			condition = "1 - logicModule";
-			defaultValue = "['','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','true','true','','','','',10,1000,false,true,'Custom']";
+			defaultValue = "['','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','true','true','','','','',10,1000,false,true]";
 		};
 	};
 };
