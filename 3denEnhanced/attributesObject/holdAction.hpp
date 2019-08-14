@@ -4,7 +4,7 @@ class Enh_HoldAction
 	displayName = $STR_ENH_holdAction_displayName;
 	class Attributes
 	{
-		class Enh_AddHoldAction//TO-DO: remoteExec adds the action even though it won't appear for clients because it was already used. Could be solved by using remoteExec ["",object] to remove entry from JIP qeue once action was activated
+		class Enh_AddHoldAction
 		{
 			displayName = $STR_ENH_holdAction_displayName;
 			property = "Enh_HoldAction";
@@ -18,11 +18,11 @@ class Enh_HoldAction
 					_name,\
 					_iconIdle,\
 					_iconProgress,\
-					format ['(%1) && (%2)',_conditionShow,'_target getVariable [''Enh_HoldActionShow'',true]'],\
+					_conditionShow,\
 					_conditionProgress,\
 					compile _codeStart,\
 					compile _codeProgress,\
-					compile format ['%1; %2','_target setVariable [''Enh_HoldActionShow'',false,true]',_codeCompletion],\
+					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],\
 					compile _codeInterrupt,\
 					nil,\
 					_duration,\
