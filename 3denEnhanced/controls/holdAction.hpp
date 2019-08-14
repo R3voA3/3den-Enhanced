@@ -2,7 +2,7 @@ class Enh_HoldAction: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_holdAction_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_holdAction_onAttributeSave";
-	h = 37.5 * SIZE_M * GRID_H + 80 * pixelH;
+	h = 32.5 * SIZE_M * GRID_H + 75 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
@@ -31,7 +31,7 @@ class Enh_HoldAction: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = "Adds a hold action to this entity. Can be a custom one, or one of the templates. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: <a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'>BIS_fnc_holdActionAdd</a>.";
+					text = $STR_ENH_holdAction_description;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class Enh_HoldAction: Title
 		};
 		class NameTitle: Title
 		{
-			text = "Name";
+			text = $STR_ENH_holdAction_name_displayName;
 			y = 6.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Name: ctrlEdit
@@ -65,7 +65,7 @@ class Enh_HoldAction: Title
 		};
 		class IdleIconTitle: Title
 		{
-			text = "Icon Idle";
+			text = $STR_ENH_holdAction_iconIdle_displayName;
 			y = 7.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class IdleIcon: ctrlCombo
@@ -78,7 +78,7 @@ class Enh_HoldAction: Title
 		};		
 		class ProgressIconTitle: Title
 		{
-			text = "Icon Progress";
+			text = $STR_ENH_holdAction_iconProgress_displayName;
 			y = 8.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class ProgressIcon: ctrlCombo
@@ -91,8 +91,8 @@ class Enh_HoldAction: Title
 		};
 		class ConditionShowTitle: Title
 		{
-			text = "Condition Show ";
-			tooltip = "Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).";
+			text = $STR_ENH_holdAction_conditionShow_displayName;
+			tooltip = $STR_ENH_holdAction_conditionShow_tooltip;
 			y = 9.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class ConditionShow: ctrlEditMulti
@@ -105,8 +105,8 @@ class Enh_HoldAction: Title
 		};
 		class ConditionProgressTitle: Title
 		{
-			text = "Condition Progress";
-			tooltip = "Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.";
+			text = $STR_ENH_holdAction_conditionProgress_displayName;
+			tooltip = $STR_ENH_holdAction_conditionProgress_tooltip;
 			y = 12.5 * SIZE_M * GRID_H + 25 * pixelH;
 		};
 		class ConditionProgress: ctrlEditMulti
@@ -119,8 +119,8 @@ class Enh_HoldAction: Title
 		};
 		class CodeStartTitle: Title
 		{
-			text = "Code Start";
-			tooltip = "Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.";
+			text = $STR_ENH_holdAction_codeStart_displayName;
+			tooltip = $STR_ENH_holdAction_codeStart_tooltip;
 			y = 15.5 * SIZE_M * GRID_H + 30 * pixelH;
 		};
 		class CodeStart: ctrlEditMulti
@@ -133,8 +133,8 @@ class Enh_HoldAction: Title
 		};
 		class CodeProgressTitle: Title
 		{
-			text = "Code Progress";
-			tooltip = "Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.";
+			text = $STR_ENH_holdAction_codeProgress_displayName;
+			tooltip = $STR_ENH_holdAction_codeProgress_tooltip;
 			y = 18.5 * SIZE_M * GRID_H + 35 * pixelH;
 		};
 		class CodeProgress: ctrlEditMulti
@@ -147,8 +147,8 @@ class Enh_HoldAction: Title
 		};
 		class CodeCompletionTitle: Title
 		{
-			text = "Code Complete";
-			tooltip = "Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.";
+			text = $STR_ENH_holdAction_codeComplete_displayName;
+			tooltip = $STR_ENH_holdAction_codeComplete_tooltip;
 			y = 21.5 * SIZE_M * GRID_H + 40 * pixelH;
 		};
 		class CodeCompletion: ctrlEditMulti
@@ -161,8 +161,8 @@ class Enh_HoldAction: Title
 		};
 		class CodeInterruptTitle: Title
 		{
-			text = "Code Interrupt";
-			tooltip = "Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.";
+			text = $STR_ENH_holdAction_codeInterrupt_displayName;
+			tooltip = $STR_ENH_holdAction_codeInterrupt_tooltip;
 			y = 24.5 * SIZE_M * GRID_H + 45 * pixelH;
 		};
 		class CodeInterrupt: ctrlEditMulti
@@ -175,7 +175,7 @@ class Enh_HoldAction: Title
 		};
 		class DurationTitle: Title
 		{
-			text = "Duration";
+			text = $STR_ENH_holdAction_duration_displayName;
 			y = 27.5 * SIZE_M * GRID_H + 50 * pixelH;
 		};
 		class DurationValue: ctrlXSliderH
@@ -198,7 +198,7 @@ class Enh_HoldAction: Title
 		};
 		class PriorityTitle: Title
 		{
-			text = "Priority";
+			text = $STR_ENH_holdAction_priority_displayName;
 			y = 28.5 * SIZE_M * GRID_H + 55 * pixelH;
 		};
 		class PriorityValue: ctrlXSliderH
@@ -221,7 +221,7 @@ class Enh_HoldAction: Title
 		};
 		class ShowUnconsciousTitle: Title
 		{
-			text = "Show when Unconscious";
+			text = $STR_ENH_holdAction_showUnconsciousy_displayName;
 			y = 29.5 * SIZE_M * GRID_H + 60 * pixelH;
 		};
 		class ShowUnconscious: ctrlCheckbox
@@ -234,7 +234,7 @@ class Enh_HoldAction: Title
 		};
 		class ShowWindowTitle: Title
 		{
-			text = "Show Window";
+			text = $STR_ENH_holdAction_showWindow_displayName;
 			y = 30.5 * SIZE_M * GRID_H + 65 * pixelH;
 		};
 		class ShowWindow: ctrlCheckbox
@@ -245,26 +245,10 @@ class Enh_HoldAction: Title
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
-		class TemplateTitle: Title
-		{
-			text = "Template";
-			y = 31.5 * SIZE_M * GRID_H + 70 * pixelH;
-		};
-		class Template: ctrlListbox
-		{
-			idc = 115;
-			tooltip = "Not implemented yet."
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 31.5 * SIZE_M * GRID_H + 70 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = 5 * SIZE_M * GRID_H;
-			//onLoad = "_this # 0 ctrlEnable false";
-			onLBSelChanged = "_this call Enh_fnc_holdAction_onLBSelChanged";
-		};
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 36.5 * SIZE_M * GRID_H + 75 * pixelH;
+			y = 31.5 * SIZE_M * GRID_H + 70 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call Enh_fnc_holdAction_onButtonDown";
