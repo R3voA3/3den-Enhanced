@@ -11,6 +11,8 @@
    BOOLEAN: true / false
 */
 
+#define CHECK_MAN _x isKindOf "Man"
+
 private _input = param [0,"",[""]];
 private _units = get3DENSelected "object";
 
@@ -24,10 +26,13 @@ switch (_input) do
 {
 	case "copy":
 	{
-		Enh_CopiedLoadout_Gear = [];
+		Enh_CopiedLoadout_Gear = _units apply
 		{
-			if (_x isKindOf "Man") then	{Enh_CopiedLoadout_Gear pushBack (getUnitLoadout _x)};
-		} forEach _units;
+			if (CHECK_MAN) then
+			{
+				getUnitLoadout _x;
+			};
+		};
 	};
 	case "apply":
 	{

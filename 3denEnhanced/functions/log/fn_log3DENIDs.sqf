@@ -12,12 +12,8 @@
 */
 
 private _selection = call Enh_fnc_all3DENSelected;
-private _IDs = [];
 
-{
-	_IDs pushBack get3DENEntityID _x;
-} forEach _selection;
-
+private _IDs = _selection apply {get3DENEntityID _x};
 private _export = [_IDs] call Enh_fnc_exportWithLB;
 
 copyToClipboard _export;
