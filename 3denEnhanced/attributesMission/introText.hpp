@@ -14,8 +14,8 @@ class Enh_IntroText_Category
 				{\
 					_value spawn\
 					{\
-						params ['_delay','_line1','_line2','_line3','_type'];\
-						sleep _delay;\
+						params ['_delay','_l1','_l2','_l3','_type'];\
+						uiSleep _delay;\
 						switch (_type) do\
 						{\
 							case 0:\
@@ -23,19 +23,19 @@ class Enh_IntroText_Category
 								private _text = parseText format\
 								[\
 									""<t align='right' size='1.6'><t font='PuristaBold' size='1.8'>%1<br/></t>%2<br/>%3</t>"",\
-									_line1,\
-									_line2,\
-									_line3\
+									_l1,\
+									_l2,\
+									_l3\
 								];\
 								[_text,true] spawn BIS_fnc_textTiles;\
 							};\
 							case 1:\
 							{\
-								[_line1,_line2,_line3] spawn BIS_fnc_infoText;\
+								[_l1,_l2,_l3] spawn BIS_fnc_infoText;\
 							};\
 							case 2:\
 							{\
-								[_line1,_line2,_line3] spawn BIS_fnc_EXP_camp_SITREP;\
+								[_l1,_l2,_l3] spawn BIS_fnc_EXP_camp_SITREP;\
 							};\
 						};\
 					};\
