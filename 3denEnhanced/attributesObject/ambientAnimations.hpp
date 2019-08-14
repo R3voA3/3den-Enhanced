@@ -15,26 +15,26 @@ class Enh_AmbientAnimations
 		if (_attach && !is3DEN) then\
 		{\
 			private _logic = group _this createUnit ['Logic',getPosATL _this,[],0,'NONE'];\
-			_this setVariable ['Enh_fnc_ambientAnim_logic',_logic];\
+			_this setVariable ['Enh_ambientAnimations_logic',_logic];\
 			[_this,_logic] call BIS_fnc_attachToRelative;\
 		};\
-		(_animSet call BIS_fnc_ambientAnimGetParams) params ['_anims'];\
-		_this setVariable ['Enh_fnc_ambientAnim_anims',_anims];\
+		(_animSet call BIS_ambientAnimationsGetParams) params ['_anims'];\
+		_this setVariable ['Enh_ambientAnimations_anims',_anims];\
 		\
-		Enh_fnc_ambientAnim_play =\
+		Enh_fnc_ambientAnimations_play =\
 		{\
 			params ['_this'];\
-			private _anim = selectRandom (_this getVariable ['Enh_fnc_ambientAnim_anims',[]]);\
+			private _anim = selectRandom (_this getVariable ['Enh_ambientAnimations_anims',[]]);\
 			[_this,_anim] remoteExec ['switchMove',0];\
 		};\
 		\
-		Enh_fnc_ambientAnim_exit =\
+		Enh_fnc_ambientAnimations_exit =\
 		{\
 			params ['_this'];\
 			if (_this getVariable ['Enh_ambientAnim_exit',false]) exitWith {false};\
 			_this setVariable ['Enh_ambientAnim_exit',true];\
 			detach _this;\
-			deleteVehicle (_this getVariable ['Enh_fnc_ambientAnim_logic',objNull]);\
+			deleteVehicle (_this getVariable ['Enh_ambientAnimations_logic',objNull]);\
 			[_this,''] remoteExec ['switchMove',0];\
 			\
 			_this enableAI 'all';\
@@ -52,11 +52,11 @@ class Enh_AmbientAnimations
 					params ['_this'];\
 					if (alive _this) then\
 					{\
-						_this call Enh_fnc_ambientAnim_play;\
+						_this call Enh_ambientAnimations_play;\
 					}\
 					else\
 					{\
-						_this call Enh_fnc_ambientAnim_exit;\
+						_this call Enh_ambientAnimations_exit;\
 					};\
 				}\
 			];\
@@ -66,7 +66,7 @@ class Enh_AmbientAnimations
 			[\
 				'Killed',\
 				{\
-					(_this select 0) call Enh_fnc_ambientAnim_exit;\
+					(_this select 0) call Enh_ambientAnimations_exit;\
 				}\
 			];\
 			_this setVariable ['Enh_EHKilled',_EHKilled];\
@@ -74,7 +74,7 @@ class Enh_AmbientAnimations
 			[\
 				'Dammaged',\
 				{\
-					(_this select 0) call Enh_fnc_ambientAnim_exit;\
+					(_this select 0) call Enh_ambientAnimations_exit;\
 				}\
 			];\
 			_this setVariable ['Enh_EHDammaged',_EHDammaged];\
@@ -85,10 +85,10 @@ class Enh_AmbientAnimations
 				{\
 					sleep 1; !isNull (_this findNearestEnemy _this) || (_this getVariable ['Enh_ambientAnim_exit',false])\
 				};\
-				_this call Enh_fnc_ambientAnim_exit;\
+				_this call Enh_ambientAnimations_exit;\
 			};\
 		};\
-		_this call Enh_fnc_ambientAnim_play";
+		_this call Enh_fnc_ambientAnimations_play";
 	condition = "objectBrain";
 	defaultValue = "['',true,false,false]";
 };
