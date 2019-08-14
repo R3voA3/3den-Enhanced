@@ -2,7 +2,7 @@ class Enh_GroupMarker: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_groupMarker_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_groupMarker_onAttributeSave";
-	h = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
+	h = 23.5 * SIZE_M * GRID_H + 30 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
@@ -55,57 +55,57 @@ class Enh_GroupMarker: Title
 			text = $STR_ENH_groupMarker_type;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
-		class Type: ctrlCombo
+		class Type: ctrlListbox
 		{
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
+			h = 8 * SIZE_M * GRID_H;
 		};
 		class ColourTitle: Title
 		{
 			text = $STR_ENH_groupMarker_colour;
-			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 12.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
-		class Colour: ctrlCombo
+		class Colour: ctrlListbox	
 		{
 			idc = 101;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 12.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
+			h = 8 * SIZE_M * GRID_H;
 		};		
 		class TextTitle: Title
 		{
 			text = $STR_ENH_groupMarker_text;
-			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 20.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class Text: ctrlEdit
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 20.5 * SIZE_M * GRID_H + 15 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class ShowGroupSizeTitle: Title 
 		{
 			text = $STR_ENH_groupMarker_showGroupSize;
-			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 21.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class ShowGroupSize: ctrlCheckbox
 		{
 			idc = 103;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 21.5 * SIZE_M * GRID_H + 20 * pixelH;
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
+			y = 22.5 * SIZE_M * GRID_H + 25 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call Enh_fnc_groupMarker_onButtonDown";
