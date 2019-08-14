@@ -75,6 +75,7 @@ v4.3
 - Fixed feature type attribute would use incorrect data type
 - Ambient Animation attribute uses Listbox control instead of Combobox control
 - Ambient Animation attribute was overhauled, it now works in multiplayer
+- Fixed an issue where Intro Text would be displayed immediately on dedicated server (delay was ignored)
 
 
 *removed*
