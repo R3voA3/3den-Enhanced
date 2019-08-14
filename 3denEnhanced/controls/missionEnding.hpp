@@ -1,4 +1,4 @@
-class Enh_MissionEnding: Title//Add support for play sound etc. BIS_fnc_endMission
+class Enh_MissionEnding_Casualties: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_missionEnding_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_missionEnding_onAttributeSave";
@@ -31,7 +31,7 @@ class Enh_MissionEnding: Title//Add support for play sound etc. BIS_fnc_endMissi
 				};
 				class Description: ctrlStructuredText
 				{
-					text = "Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See <a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'>Arma 3 Debriefing</a>.";
+					text = $STR_ENH_missionEnding_casualties_description;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -53,8 +53,8 @@ class Enh_MissionEnding: Title//Add support for play sound etc. BIS_fnc_endMissi
 		class ThresholdTitle: Title
 		{
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
-			text = "Threshold";
-			tooltip = "When the amount of kille entites of given side reaches the threshold, the mission is ended.";
+			text = $STR_ENH_missionEnding_casualties_threshold_displayName;
+			tooltip = $STR_ENH_missionEnding_casualties_threshold_tooltip;
 		};
 		class ThresholdValue: ctrlXSliderH
 		{
@@ -77,8 +77,8 @@ class Enh_MissionEnding: Title//Add support for play sound etc. BIS_fnc_endMissi
 		};
 		class EndingTitle: Title 
 		{
-			text = "Ending";
-			tooltip = "Can be ending from config file (CfgDebriefing) or mission config. Endings defined in mission config will be displayed here.";
+			text = $STR_ENH_missionEnding_casualties_threshold_ending_displayName;
+			tooltip = $STR_ENH_missionEnding_casualties_threshold_ending_tooltip;
 			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class Ending: ctrlCombo
@@ -91,7 +91,7 @@ class Enh_MissionEnding: Title//Add support for play sound etc. BIS_fnc_endMissi
 		};
 		class IsWinTitle: Title 
 		{
-			text = "Win?";
+			text = $STR_ENH_missionEnding_casualties_threshold_win_displayName;
 			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class IsWin: ctrlCheckbox
