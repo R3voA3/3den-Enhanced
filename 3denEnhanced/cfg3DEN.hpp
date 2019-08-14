@@ -44,7 +44,7 @@ class Cfg3DEN
 		#include "controls\timeMultiplier.hpp"
 		#include "controls\featureType.hpp"
 		#include "controls\terrainDetail.hpp"
-		#include "controls\ambientAnimation.hpp"
+		#include "controls\ambientAnimations.hpp"
 		#include "controls\introText.hpp"
 		#include "controls\establishingShot.hpp"
 		#include "controls\mapIndicators.hpp"
@@ -176,7 +176,7 @@ class Cfg3DEN
 					#include "attributesObject\setMass.hpp"
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
-					#include "attributesObject\ambientAnimationSP.hpp"
+					#include "attributesObject\ambientAnimations.hpp"
 				};
 			};
 		};
