@@ -20,14 +20,14 @@ private _enabled = profileNamespace getVariable ["Enh_Statusbar_EntityCounter",t
 
 switch (_mode) do
 {
-   case "INIT":
+   case "init":
    {
       for "_i" from 669 to 680 do 
       {
          (_display displayCtrl _i) ctrlShow _enabled;
       };
    };
-   case "RUN":
+   case "run":
    {
       if !(_enabled) exitWith {false};
       {
