@@ -18,30 +18,30 @@ class Enh_AmbientAnimations
 			_this setVariable ['Enh_ambientAnimations_logic',_logic];\
 			[_this,_logic] call BIS_fnc_attachToRelative;\
 		};\
-		(_animSet call BIS_ambientAnimationsGetParams) params ['_anims'];\
+		(_animSet call BIS_fnc_ambientAnimGetParams) params ['_anims'];\
 		_this setVariable ['Enh_ambientAnimations_anims',_anims];\
 		\
 		Enh_fnc_ambientAnimations_play =\
 		{\
-			params ['_this'];\
-			private _anim = selectRandom (_this getVariable ['Enh_ambientAnimations_anims',[]]);\
-			[_this,_anim] remoteExec ['switchMove',0];\
+			params ['_unit'];\
+			private _anim = selectRandom (_unit getVariable ['Enh_ambientAnimations_anims',[]]);\
+			[_unit,_anim] remoteExec ['switchMove',0];\
 		};\
 		\
 		Enh_fnc_ambientAnimations_exit =\
 		{\
-			params ['_this'];\
-			if (_this getVariable ['Enh_ambientAnim_exit',false]) exitWith {false};\
-			_this setVariable ['Enh_ambientAnim_exit',true];\
-			detach _this;\
-			deleteVehicle (_this getVariable ['Enh_ambientAnimations_logic',objNull]);\
-			[_this,''] remoteExec ['switchMove',0];\
+			params ['_unit'];\
+			if (_unit getVariable ['Enh_ambientAnimations_exit',false]) exitWith {false};\
+			_unit setVariable ['Enh_ambientAnimations_exit',true];\
+			detach _unit;\
+			deleteVehicle (_unit getVariable ['Enh_ambientAnimations_logic',objNull]);\
+			[_unit,''] remoteExec ['switchMove',0];\
 			\
-			_this enableAI 'all';\
+			_unit enableAI 'all';\
 			\
-			_this removeEventHandler ['Killed',_this getVariable ['Enh_EHKilled',-1]];\
-			_this removeEventHandler ['Dammaged',_this getVariable ['Enh_EHDammaged',-1]];\
-			_this removeEventHandler ['AnimDone',_this getVariable ['Enh_EHAnimDone',-1]];\
+			_unit removeEventHandler ['Killed',_unit getVariable ['Enh_EHKilled',-1]];\
+			_unit removeEventHandler ['Dammaged',_unit getVariable ['Enh_EHDammaged',-1]];\
+			_unit removeEventHandler ['AnimDone',_unit getVariable ['Enh_EHAnimDone',-1]];\
 		};\
 		if (_canExit) then\
 		{\
@@ -52,11 +52,11 @@ class Enh_AmbientAnimations
 					params ['_this'];\
 					if (alive _this) then\
 					{\
-						_this call Enh_ambientAnimations_play;\
+						_this call Enh_fnc_ambientAnimations_exit;\
 					}\
 					else\
 					{\
-						_this call Enh_ambientAnimations_exit;\
+						_this call Enh_fnc_ambientAnimations_exit;\
 					};\
 				}\
 			];\
@@ -66,7 +66,7 @@ class Enh_AmbientAnimations
 			[\
 				'Killed',\
 				{\
-					(_this select 0) call Enh_ambientAnimations_exit;\
+					(_this select 0) call Enh_fnc_ambientAnimations_exit;\
 				}\
 			];\
 			_this setVariable ['Enh_EHKilled',_EHKilled];\
@@ -74,18 +74,19 @@ class Enh_AmbientAnimations
 			[\
 				'Dammaged',\
 				{\
-					(_this select 0) call Enh_ambientAnimations_exit;\
+					systemChat str (_this select 0);\
+					(_this select 0) call Enh_fnc_ambientAnimations_exit;\
 				}\
 			];\
 			_this setVariable ['Enh_EHDammaged',_EHDammaged];\
 			[_this] spawn\
 			{\
-				params ['_this'];\
+				params ['_unit'];\
 				waitUntil\
 				{\
-					sleep 1; !isNull (_this findNearestEnemy _this) || (_this getVariable ['Enh_ambientAnim_exit',false])\
+					sleep 1; !isNull (_unit findNearestEnemy _unit) || (_unit getVariable ['Enh_ambientAnimations_exit',false])\
 				};\
-				_this call Enh_ambientAnimations_exit;\
+				_unit call Enh_fnc_ambientAnimations_exit;\
 			};\
 		};\
 		_this call Enh_fnc_ambientAnimations_play";
