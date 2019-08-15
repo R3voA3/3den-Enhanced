@@ -66,7 +66,7 @@ class Enh_AmbientAnimations: Title
 		class CanExitTitle: Title 
 		{
 			text = $STR_ENH_ambientAnimations_canEdit_displayName;
-			tooltip = STR_ENH_ambientAnimations_canEdit_tooltip;
+			tooltip = $STR_ENH_ambientAnimations_canEdit_tooltip;
 			y = 10.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class CanExit: ctrlCheckbox
@@ -80,7 +80,7 @@ class Enh_AmbientAnimations: Title
 		class DisableCollisionTitle: Title 
 		{
 			text = $STR_ENH_ambientAnimations_disableCollision_displayName;
-			tooltip = STR_ENH_ambientAnimations_disableCollision_displayName;
+			tooltip = $STR_ENH_ambientAnimations_disableCollision_displayName;
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class DisableCollision: ctrlCheckbox
@@ -94,7 +94,7 @@ class Enh_AmbientAnimations: Title
 		class AttachTitle: Title 
 		{
 			text = $STR_ENH_ambientAnimations_attach_displayName;
-			tooltip = STR_ENH_ambientAnimations_attach_displayName;
+			tooltip = $STR_ENH_ambientAnimations_attach_displayName;
 			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class Attach: ctrlCheckbox

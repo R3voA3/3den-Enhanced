@@ -3244,30 +3244,6 @@
 		<Polish>Leczenie rannego (klęcząc)</Polish>
 		<Russian>Лечение раненого солдата (на коленях)</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad_1">
-		<Original>Sit Sad 1 (Sitting on chair, looking sad)</Original>
-		<English>Sit Sad 1 (Sitting on chair, looking sad)</English>
-		<Czech>Sedící smutně 1 (Sedí na židli, vypadá smutně)</Czech>
-		<Spanish>Sentarse triste 1 (Sentado en la silla, mirando triste)</Spanish>
-		<German>Sitzen 1 (In Stuhl sitzend, niederschlagen schauend)</German>
-		<Chinesesimp>坐伤心1（坐在椅子上，看起来很伤心）</Chinesesimp>
-		<Italian>Sit Sad 1 (Seduto sulla sedia, triste)</Italian>
-		<French>Assis triste 1 (Assis sur une chaise, l'air triste)</French>
-		<Polish>Siedzi smutny 1 (Siedzi na krześle, smutny)</Polish>
-		<Russian>Сидеть грустный 1 (Сидя на стуле, глядя грустно)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad_2">
-		<Original>Sit Sad 2 (Sitting on chair, looking sad)</Original>
-		<English>Sit Sad 2 (Sitting on chair, looking sad)</English>
-		<Czech>Sedící smutně 2 (Sedí na židli, vypadá smutně)</Czech>
-		<Spanish>Sentarse triste 2 (Sentado en la silla, mirando triste)</Spanish>
-		<German>Sitzen 2 (In Stuhl sitzend, niederschlagen schauend)</German>
-		<Chinesesimp>坐伤心2（坐在椅子上，看起来很伤心）</Chinesesimp>
-		<Italian>Sit Sad 2 (Seduto sulla sedia, triste)</Italian>
-		<French>Assis triste 2 (Assis sur une chaise, l'air triste)</French>
-		<Polish>Siedzi smutny 2 (Siedzi na krześle, smutny)</Polish>
-		<Russian>Сидеть грустный 2 (Сидя на стуле, глядя грустно)</Russian>
-	</Key>
 	<Key ID="STR_ENH_ambientAnimations_animSet_guard">
 		<Original>Guard</Original>
 		<English>Guard</English>
@@ -6231,5 +6207,29 @@
 	<Key ID="STR_ENH_holdAction_showWindow_displayName">
 		<English>Show Window</English>
 		<Original>Show Window</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad1">
+		<English>Sit Sad 1 (Sitting on chair, looking sad)</English>
+		<Chinesesimp>坐伤心1（坐在椅子上，看起来很伤心）</Chinesesimp>
+		<Czech>Sedící smutně 1 (Sedí na židli, vypadá smutně)</Czech>
+		<French>Assis triste 1 (Assis sur une chaise, l'air triste)</French>
+		<German>Sitzen 1 (In Stuhl sitzend, niederschlagen schauend)</German>
+		<Italian>Sit Sad 1 (Seduto sulla sedia, triste)</Italian>
+		<Original>Sit Sad 1 (Sitting on chair, looking sad)</Original>
+		<Polish>Siedzi smutny 1 (Siedzi na krześle, smutny)</Polish>
+		<Russian>Сидеть грустный 1 (Сидя на стуле, глядя грустно)</Russian>
+		<Spanish>Sentarse triste 1 (Sentado en la silla, mirando triste)</Spanish>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad2">
+		<English>Sit Sad 2 (Sitting on chair, looking sad)</English>
+		<Chinesesimp>坐伤心2（坐在椅子上，看起来很伤心）</Chinesesimp>
+		<Czech>Sedící smutně 2 (Sedí na židli, vypadá smutně)</Czech>
+		<French>Assis triste 2 (Assis sur une chaise, l'air triste)</French>
+		<German>Sitzen 2 (In Stuhl sitzend, niederschlagen schauend)</German>
+		<Italian>Sit Sad 2 (Seduto sulla sedia, triste)</Italian>
+		<Original>Sit Sad 2 (Sitting on chair, looking sad)</Original>
+		<Polish>Siedzi smutny 2 (Siedzi na krześle, smutny)</Polish>
+		<Russian>Сидеть грустный 2 (Сидя на стуле, глядя грустно)</Russian>
+		<Spanish>Sentarse triste 2 (Sentado en la silla, mirando triste)</Spanish>
 	</Key>
 </Project>
