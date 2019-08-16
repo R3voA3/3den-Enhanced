@@ -15,8 +15,43 @@
 
 params ["_ctrlGroup"];
 
+//Selection animations to pass to the attribute
+private _animSet = (_ctrlGroup controlsGroupCtrl 100) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 100);
+private _anims = switch (_animSet) do
+{
+   case 'WARMUP':
+   {
+      ['Acts_AidlPercMstpSloWWpstDnon_warmup_6_loop'];
+   };
+   case 'WARMUP_KNEELING':
+   {
+      ['Acts_AidlPercMstpSloWWrflDnon_warmup_6_loop'];
+   };
+   case 'SIT_HANDCUFFED':
+   {
+      ['Acts_AidlPsitMstpSsurWnonDnon01','Acts_AidlPsitMstpSsurWnonDnon02','Acts_AidlPsitMstpSsurWnonDnon03','Acts_AidlPsitMstpSsurWnonDnon04','Acts_AidlPsitMstpSsurWnonDnon05'];
+   };
+   case 'STAND_TALKING':
+   {
+      ['Acts_CivilTalking_1','Acts_CivilTalking_2'];
+   };
+   case 'STAND_IDLE':
+   {
+      ['Acts_CivilIdle_1','Acts_CivilIdle_2'];
+   };
+   case 'STAND_PISTOL':
+   {
+      ['Acts_Executioner_StandingLoop'];
+   };
+   default
+   {
+      (_animSet call BIS_fnc_ambientAnimGetParams) param [0,[]];
+   };
+};
+
 [
-	(_ctrlGroup controlsGroupCtrl 100) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 100),
+   _animSet,//Needs to be saved to restore the value when attribute is loaded
+	_anims,
 	cbChecked (_ctrlGroup controlsGroupCtrl 101),
    cbChecked (_ctrlGroup controlsGroupCtrl 102),
    cbChecked (_ctrlGroup controlsGroupCtrl 103)

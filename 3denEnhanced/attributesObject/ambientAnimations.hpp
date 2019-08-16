@@ -5,8 +5,9 @@ class Enh_AmbientAnimations
 	property = "Enh_AmbientAnimations";
 	expression =
 	"\
-		_value params ['_animSet','_canExit','_disableCollision','_attach'];\
+		_value params ['_animSet','_anims','_canExit','_disableCollision','_attach'];\
 		\
+		_this setVariable ['Enh_ambientAnimations_anims',_anims];\
 		_this disableAI 'all';\
 		if (_disableCollision && !is3DEN) then\
 		{\
@@ -18,8 +19,6 @@ class Enh_AmbientAnimations
 			_this setVariable ['Enh_ambientAnimations_logic',_logic];\
 			[_this,_logic] call BIS_fnc_attachToRelative;\
 		};\
-		(_animSet call BIS_fnc_ambientAnimGetParams) params ['_anims'];\
-		_this setVariable ['Enh_ambientAnimations_anims',_anims];\
 		\
 		Enh_fnc_ambientAnimations_play =\
 		{\
@@ -43,25 +42,26 @@ class Enh_AmbientAnimations
 			_unit removeEventHandler ['Dammaged',_unit getVariable ['Enh_EHDammaged',-1]];\
 			_unit removeEventHandler ['AnimDone',_unit getVariable ['Enh_EHAnimDone',-1]];\
 		};\
+		\
+		_EHAnimDone = _this addEventHandler\
+		[\
+			'AnimDone',\
+			{\
+				params ['_unit'];\
+				if (alive _unit) then\
+				{\
+					_unit call Enh_fnc_ambientAnimations_play;\
+				}\
+				else\
+				{\
+					_unit call Enh_fnc_ambientAnimations_exit;\
+				};\
+			}\
+		];\
+		_this setVariable ['Enh_EHAnimDone',_EHAnimDone];\
+		\
 		if (_canExit) then\
 		{\
-			_EHAnimDone = _this addEventHandler\
-			[\
-				'AnimDone',\
-				{\
-					params ['_this'];\
-					if (alive _this) then\
-					{\
-						_this call Enh_fnc_ambientAnimations_exit;\
-					}\
-					else\
-					{\
-						_this call Enh_fnc_ambientAnimations_exit;\
-					};\
-				}\
-			];\
-			_this setVariable ['Enh_EHAnimDone',_EHAnimDone];\
-			\
 			private _EHKilled = _this addEventHandler\
 			[\
 				'Killed',\
@@ -74,12 +74,11 @@ class Enh_AmbientAnimations
 			[\
 				'Dammaged',\
 				{\
-					systemChat str (_this select 0);\
 					(_this select 0) call Enh_fnc_ambientAnimations_exit;\
 				}\
 			];\
 			_this setVariable ['Enh_EHDammaged',_EHDammaged];\
-			[_this] spawn\
+			_this spawn\
 			{\
 				params ['_unit'];\
 				waitUntil\
