@@ -5,14 +5,10 @@ class Enh_AmbientAnimations
 	property = "Enh_AmbientAnimations";
 	expression =
 	"\
-		_value params ['_animSet','_anims','_canExit','_disableCollision','_attach'];\
+		_value params ['_animSet','_anims','_canExit','_attach'];\
 		\
 		_this setVariable ['Enh_ambientAnimations_anims',_anims];\
 		_this disableAI 'all';\
-		if (_disableCollision && !is3DEN) then\
-		{\
-			private _object = (nearestObjects [_this,[],2,true] - [_this] select 0);\
-		};\
 		if (_attach && !is3DEN) then\
 		{\
 			private _logic = group _this createUnit ['Logic',getPosATL _this,[],0,'NONE'];\
@@ -90,5 +86,5 @@ class Enh_AmbientAnimations
 		};\
 		_this call Enh_fnc_ambientAnimations_play";
 	condition = "objectBrain";
-	defaultValue = "['',true,false,false]";
+	defaultValue = "['',false,false]";
 };

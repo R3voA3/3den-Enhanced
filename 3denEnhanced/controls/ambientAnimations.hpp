@@ -2,7 +2,7 @@ class Enh_AmbientAnimations: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_ambientAnimations_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_ambientAnimations_onAttributeSave";
-	h = 14.5 * SIZE_M * GRID_H + 30 * pixelH;
+	h = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
@@ -77,13 +77,13 @@ class Enh_AmbientAnimations: Title
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
-		class DisableCollisionTitle: Title 
+		class AttachTitle: Title 
 		{
-			text = $STR_ENH_ambientAnimations_disableCollision_displayName;
-			tooltip = $STR_ENH_ambientAnimations_disableCollision_displayName;
+			text = $STR_ENH_ambientAnimations_attach_displayName;
+			tooltip = $STR_ENH_ambientAnimations_attach_displayName;
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
-		class DisableCollision: ctrlCheckbox
+		class Attach: ctrlCheckbox
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
@@ -91,24 +91,10 @@ class Enh_AmbientAnimations: Title
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
-		class AttachTitle: Title 
-		{
-			text = $STR_ENH_ambientAnimations_attach_displayName;
-			tooltip = $STR_ENH_ambientAnimations_attach_displayName;
-			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
-		};
-		class Attach: ctrlCheckbox
-		{
-			idc = 103;
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
-			w = 5 * GRID_W;
-			h = SIZE_M * GRID_H;
-		};
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
+			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call Enh_fnc_ambientAnimations_onButtonDown";
