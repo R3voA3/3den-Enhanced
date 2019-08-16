@@ -21,12 +21,6 @@ _value params ["_animSet","_anims","_canExit","_attach"];
 {
    (_ctrlGroup controlsGroupCtrl 100) lbAdd _x;
 
-   //Translate all strings except the first one
-/*    if (_forEachIndex > 0) then
-   {
-      //Localisation string is automatically generated
-      (_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [_forEachIndex,localize ("STR_ENH_ambientAnimations_animSet_" + _x)];
-   }; */
    if (_animSet isEqualTo _x) then
    {
       (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel _forEachIndex;
