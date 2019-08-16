@@ -76,7 +76,7 @@ v4.3
 - Ambient Animation attribute uses Listbox control instead of Combobox control
 - Ambient Animation attribute was overhauled, it now works in multiplayer
 - Fixed an issue where Intro Text would be displayed immediately on dedicated server (delay was ignored)
-
+- Added more ambient animations
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
