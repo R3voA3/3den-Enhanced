@@ -2848,114 +2848,6 @@
 		<Polish>Obiekt jest zawsze widoczne wewnątrz zasięgu rysowania mapy.</Polish>
 		<Russian>Объект всегда виден на расстоянии обзора местности.</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_stand">
-		<Original>Stand (Slightly turning to the sides, needs rifle!)</Original>
-		<English>Stand (Slightly turning to the sides, needs rifle!)</English>
-		<Czech>Stojící (Zlehka se otáčí do stran, potřebuje pušku!)</Czech>
-		<French>Attend (pivote légèrement sur les côtés, nécessite une arme)</French>
-		<Spanish>De pie (ligeramente girando a los lados, necesita rifle!)</Spanish>
-		<Italian>Eretto (Si gira leggermente, necessita un fucile!)</Italian>
-		<German>Stehen (Leicht zur Seite drehend, braucht ein Gewehr!)</German>
-		<Chinesesimp>满（没有护目镜）</Chinesesimp>
-		<Polish>Stojąca (Lekko kręci się na boki, potrzebny karabin!)</Polish>
-		<Russian>Стоя (Слегка поворачиваясь в сторону, нужна винтовка!)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_stand_IA">
-		<Original>Stand (Default A3 animation)</Original>
-		<English>Stand (Default A3 animation)</English>
-		<Czech>Stojící (Výchozí A3 animace)</Czech>
-		<French>Attend (animation debout par défaut)</French>
-		<Spanish>De pie (Animación A3 predeterminada)</Spanish>
-		<Italian>Eretto (Animazione di default)</Italian>
-		<German>Stehen (Standard A3 Animation)</German>
-		<Chinesesimp>站立（默认A3动画）</Chinesesimp>
-		<Polish>Stojąca (Podstawowa animacja A3)</Polish>
-		<Russian>Стоя (анимация по умолчанию A3)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_Low">
-		<Original>Sit (Sitting on the ground, with weapon)</Original>
-		<English>Sit (Sitting on the ground, with weapon)</English>
-		<Czech>Sedící (Sedí na zemi, se zbraní)</Czech>
-		<French>Assis au sol 1(armé)</French>
-		<Spanish>Sentarse (Sentado en el suelo, con arma)</Spanish>
-		<Italian>Seduto (Seduto per terra, con un'arma)</Italian>
-		<German>Schneidersitz (Bewaffnet)</German>
-		<Chinesesimp>坐（坐在地上，用武器）</Chinesesimp>
-		<Polish>Siedząca (Siedzi na ziemi, z bronią)</Polish>
-		<Russian>Сидит (сидя на земле, с оружием)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_Low_U">
-		<Original>Sit low (Sitting on the ground, no weapon)</Original>
-		<English>Sit low (Sitting on the ground, no weapon)</English>
-		<Czech>Nízko sedící (Sedí na zemi, beze zbraně)</Czech>
-		<French>Assis au sol 2 (non armé)</French>
-		<Spanish>Sentarse bajo (Sentado en el suelo, sin arma)</Spanish>
-		<Italian>Sit Low(Seduto a terra senza arma)</Italian>
-		<German>Schneidersitz (unbewaffnet)</German>
-		<Chinesesimp>坐（坐在地上，用武器）</Chinesesimp>
-		<Polish>Siedząca niska (Siedzi na ziemi bez broni)</Polish>
-		<Russian>Сидит пусто (сидя на земле, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_kneel">
-		<Original>Kneel (Kneeling, with weapon)</Original>
-		<English>Kneel (Kneeling, with weapon)</English>
-		<Czech>Klečící (Klečí, se zbraní)</Czech>
-		<French>Accroupi (armé)</French>
-		<Spanish>Arrodillarse (arrodillado, con arma)</Spanish>
-		<Italian>Kneel (Inginocchiato, con un'arma)</Italian>
-		<German>Kniend (Mit Waffe)</German>
-		<Chinesesimp>跪（跪着，带武器）</Chinesesimp>
-		<Polish>Klęcząca (Klęczy, z bronią)</Polish>
-		<Russian>На Колене (на коленях, с оружием)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_lean">
-		<Original>Lean</Original>
-		<English>Lean</English>
-		<Czech>Opírající se</Czech>
-		<French>Adossé</French>
-		<Spanish>Apoyarse</Spanish>
-		<German>Anlehnen</German>
-		<Chinesesimp>靠</Chinesesimp>
-		<Italian>magro</Italian>
-		<Polish>Pochylająca</Polish>
-		<Russian>Наклоняться</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_watch1">
-		<Original>Watch 1 (Standing and turning around)</Original>
-		<English>Watch (Standing and turning around)</English>
-		<Czech>Pozorující (Stojí a otáčí se okolo)</Czech>
-		<French>Surveille 1 (attend et pivote sur lui même)</French>
-		<Spanish>Observar 1 (De pie y girando)</Spanish>
-		<Italian>Watch  1(Posizione eretta mentre controlla i dintorni)</Italian>
-		<German>Ausschau halten 1</German>
-		<Chinesesimp>观看1（站立和转身）</Chinesesimp>
-		<Polish>Obserwująca 1 (Stoi i obraca się)</Polish>
-		<Russian>Часовой 1(Стоя и оборачиваясь)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_watch2">
-		<Original>Watch 2(Standing and turning around)</Original>
-		<English>Watch (Standing and turning around)</English>
-		<Czech>Pozorující 2 (Stojí a otáčí se okolo)</Czech>
-		<French>Surveille 2(attend et pivote sur lui même)</French>
-		<Spanish>Observar 2 (De pie y girando)</Spanish>
-		<Italian>Watch 2(Posizione eretta mentre controlla i dintorni)</Italian>
-		<German>Ausschau halten 2</German>
-		<Chinesesimp>观看2（站立和转身）</Chinesesimp>
-		<Polish>Obserwująca 2 (Stoi i obraca się)</Polish>
-		<Russian>Часовой 2(Standing and turning around)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U1">
-		<Original>Stand U1 (Slightly turning to the sides, no weapon)</Original>
-		<English>Stand U1 (Slightly turning to the sides, no weapon)</English>
-		<Czech>Stojící U1 (Zlehka se otáčí do stran, beze zbraně)</Czech>
-		<French>Attend 1 (pivote légèrement sur les côtés, non armé)</French>
-		<Spanish>De pie U1 (Ligeramente girando a los lados, sin arma)</Spanish>
-		<Italian>Stand U1 (Si gira leggermente, nessun'arma)</Italian>
-		<German>Stehen U1 (Leicht zur seite drehend, keine Waffe)</German>
-		<Chinesesimp>站在U1（略微转向两侧，没有武器）</Chinesesimp>
-		<Polish>Stojąca U1 (Lekko obraca się na boki, brak broni)</Polish>
-		<Russian>Стоя U1 (слегка поворачивается в стороны, без оружия)</Russian>
-	</Key>
 	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U2">
 		<Original>Stand U2 (Slightly turning to the sides, no weapon)</Original>
 		<English>Stand U2 (Slightly turning to the sides, no weapon)</English>
@@ -2967,293 +2859,6 @@
 		<Chinesesimp>站在U2（稍微转向两侧，没有武器）</Chinesesimp>
 		<Polish>Stojąca U2 (Lekko obraca się na boki, brak broni)</Polish>
 		<Russian>Стоя U2 (слегка поворачиваясь в стороны, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U3">
-		<Original>Stand U3 (Slightly turning to the sides, no weapon)</Original>
-		<English>Stand U3 (Slightly turning to the sides, no weapon)</English>
-		<Czech>Stojící U3 (Zlehka se otáčí do stran, beze zbraně)</Czech>
-		<French>Attend 3(tourne légèrement sur les côtés, non armé)</French>
-		<Spanish>De pie U3 (Ligeramente girando a los lados, sin arma)</Spanish>
-		<Italian>Stand U3 (Si gira leggermente, nessun'arma)</Italian>
-		<German>Stehen U3 (Leicht zur seite drehend, keine Waffe)</German>
-		<Chinesesimp>站在U3（稍微转向两侧，没有武器）</Chinesesimp>
-		<Polish>Stojąca U3 (Lekko obraca się na boki, brak broni)</Polish>
-		<Russian>Стоя U3 (слегка поворачивается в стороны, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_listen_briefing">
-		<Original>Listen Briefing (Hands behind back, no weapon)</Original>
-		<English>Listen Briefing (Hands behind back, no weapon)</English>
-		<Czech>Poslouchající brífink (Ruce za zády, beze zbraně)</Czech>
-		<French>Écoute un briefing (mains derrière le dos, non armé)</French>
-		<Spanish>Escuchar Briefing (Manos detrás de la espalda, sin arma)</Spanish>
-		<Italian>Ascolta il briefing (Mani dietro la schiena, nessun'arma)</Italian>
-		<German>Einsatzbesprechung anhören (Hände hinter Rücken, keine Waffe)</German>
-		<Chinesesimp>听简报（双手背后，没有武器）</Chinesesimp>
-		<Polish>Słucha odprawy (Ręce za plecami, brak broni)</Polish>
-		<Russian>На брифинге (Руки за спиной, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_lean_on_table">
-		<Original>Lean on table (Standing while leaning on table)</Original>
-		<English>Lean on table (Standing while leaning on table)</English>
-		<Czech>Opírající se o stůl (Stojí a opírá se o stůl)</Czech>
-		<French>Appuyé sur la table</French>
-		<Spanish>Apóyado en la mesa (de pie mientras se apoya en la mesa)</Spanish>
-		<Italian>Lean On Table (In piedi mentre indica sul tavolo)</Italian>
-		<German>Auf Tisch abstützend</German>
-		<Chinesesimp>靠在桌子上（站在靠在桌子上）</Chinesesimp>
-		<Polish>Opiera się o stół (Stoi opierając się o stół)</Polish>
-		<Russian>Опираться на стол (стоя, опираясь на стол)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_briefing">
-		<Original>Briefing (Ambient briefing loop)</Original>
-		<English>Briefing (Ambient briefing loop)</English>
-		<Czech>Brífink (Ambientní animace ve smyčce)</Czech>
-		<French>Briefing (boucle ambiante)</French>
-		<Spanish>Briefing (bucle ambiental de briefing)</Spanish>
-		<Italian>Briefing (Animazione loop del Briefing)</Italian>
-		<German>Einsatzbesprechung halten (Schleife)</German>
-		<Chinesesimp>简报（环境简报循环）</Chinesesimp>
-		<Polish>Odprawa (Zapętlona odprawa)</Polish>
-		<Russian>Брифинг (анимация цикла брифинга)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_left">
-		<Original>Briefing pointing left (Pointing left &amp; high)</Original>
-		<English>Briefing pointing left (Pointing left &amp; high)</English>
-		<Czech>Brífink ukazující vlevo (Ukazující vlevo &amp; vysoko)</Czech>
-		<French>Briefing (en pointant en haut à gauche)</French>
-		<Spanish>Briefing apuntando a la izquierda (apuntando a la izquierda y alto)</Spanish>
-		<Italian>Briefing Pointing Left (Indica in alto a siniSTR_ENH_a)</Italian>
-		<German>Einsatzbesprechung (Nach links oben zeigend)</German>
-		<Chinesesimp>向左指的简报（指向左和高）</Chinesesimp>
-		<Polish>Odprawa, wskazuje lewo (Wskazuje lewo &amp; wysoko)</Polish>
-		<Russian>Брифинг, указывает влево (указывая влево и вверх)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_right">
-		<Original>Briefing pointing right (Pointing right &amp; high)</Original>
-		<English>Briefing pointing right (Pointing right &amp; high)</English>
-		<Czech>Brífink ukazující vpravo (Ukazující vpravo &amp; vysoko)</Czech>
-		<French>Briefing (en pointant en haut à droite)</French>
-		<Spanish>Briefing apuntando a la derecha (apuntando a la derecha y alto)</Spanish>
-		<Italian>Briefing Pointing Right (Indica in alto a deSTR_ENH_a)</Italian>
-		<German>Einsatzbesprechung (Nach rechts oben zeigend)</German>
-		<Chinesesimp>简报指向右（指向右和高）</Chinesesimp>
-		<Polish>Odprawa, wskazuje prawo (Wskazuje prawo &amp; wysoko)</Polish>
-		<Russian>Брифинг, указывает вправо (указывая вправо и вверх)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_briefing_point_table">
-		<Original>Briefing pointing down (pointing front &amp; low)</Original>
-		<English>Briefing pointing down (pointing front &amp; low)</English>
-		<Czech>Brífink ukazující dolů (ukazující před sebe &amp; nízko)</Czech>
-		<French>Briefing (en pointant devant et vers le bas)</French>
-		<Spanish>Briefing apuntando hacia abajo (apuntando hacia delante y hacia abajo)</Spanish>
-		<Italian>Briefing Pointing Down (Indica in basso in avanti)</Italian>
-		<German>Einsatzbesprechung (Auf Tisch zeigend)</German>
-		<Chinesesimp>简报指向下方（指向前方和下方）</Chinesesimp>
-		<Polish>Odprawa, wskazuje nisko (Wskazuje front przód &amp; nisko)</Polish>
-		<Russian>Брифинг направлен вниз (направлен вперед и вниз)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U1">
-		<Original>Sit U1 (Sitting on bench or similar, no weapon)</Original>
-		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
-		<Czech>Sedící U1 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
-		<French>Assis non armé 1 (sur un banc ou autre, sans arme)</French>
-		<Spanish>Sit U1 (Sentado en un banco o similar, sin arma)</Spanish>
-		<Italian>Sit U1 (Seduto su una panchina o similiari, nessun'arma)</Italian>
-		<German>Sitzen U1 (Auf Bank oder Ähnlichem sitzend, keine Waffe)</German>
-		<Chinesesimp>坐U1（坐在长凳上或类似的，没有武器）</Chinesesimp>
-		<Polish>Siedząca U1 (Siedzi na ławce lub podobnym, brak broni)</Polish>
-		<Russian>Сядит на U1 (сидя на скамейке или подобном, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U2">
-		<Original>Sit U2 (Sitting on bench or similar, no weapon)</Original>
-		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
-		<Czech>Sedící U2 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
-		<French>Assis non armé 2 (sur un banc ou autre, sans arme)</French>
-		<Spanish>Sit U2 (Sentado en un banco o similar, sin arma)</Spanish>
-		<Italian>Sit U2 (Seduto su una panchina o similiari, nessun'arma)</Italian>
-		<German>Sitzen U2(Auf Bank oder Ähnlichem sitzend, keine Waffe)</German>
-		<Chinesesimp>坐U2（坐在长凳上或类似的，没有武器）</Chinesesimp>
-		<Polish>Siedząca U2 (Siedzi na ławce lub podobnym, brak broni)</Polish>
-		<Russian>Сядит на U2 (сидя на скамейке или подобном, без оружия))</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_U3">
-		<Original>Sit U3 (Sitting on bench or similar, no weapon)</Original>
-		<English>Sit U1 (Sitting on bench or similar, no weapon)</English>
-		<Czech>Sedící U3 (Sedí na lavičce nebo podobném, beze zbraně)</Czech>
-		<French>Assis non armé 3 (sur un banc ou autre, sans arme)</French>
-		<Spanish>Sentado U3 (sentado en un banco o similar, sin arma)</Spanish>
-		<Italian>Sit U3 (Seduto su una panchina o similiari, nessun'arma)</Italian>
-		<German>Sitzen U3 (Auf Bank oder Ähnlichem sitzend, keine Waffe)</German>
-		<Chinesesimp>坐U3（坐在长凳上或类似的，没有武器）</Chinesesimp>
-		<Polish>Siedząca U3 (Siedzi na ławce lub podobnym, brak broni)</Polish>
-		<Russian>Сядит на U3 (сидя на скамейке или подобном, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit1">
-		<Original>Sit 1 (Sitting on bench or similar)</Original>
-		<English>Sit 1 (Sitting on bench or similar)</English>
-		<Czech>Sedící 1 (Sedí na lavičce nebo podobném)</Czech>
-		<French>Assis 1 (sur un banc ou autre)</French>
-		<Spanish>Sentarse 1 (sentado en un banco o similar)</Spanish>
-		<Italian>Sit 1 (Seduto su una panchina o similiari)</Italian>
-		<German>Sitzen 1 (Auf Bank oder Ähnlichem sitzend)</German>
-		<Chinesesimp>坐2（坐在长椅上或类似的）</Chinesesimp>
-		<Polish>Siedząca 1 (Siedzi na ławce lub podobnym)</Polish>
-		<Russian>Сидит 1 (сидя на скамейке или подобное)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit2">
-		<Original>Sit 2 (Sitting on bench or similar)</Original>
-		<English>Sit 2 (Sitting on bench or similar)</English>
-		<Czech>Sedící 2 (Sedí na lavičce nebo podobném)</Czech>
-		<French>Assis 2 (sur un banc ou autre)</French>
-		<Spanish>Sentarse 2 (sentado en un banco o similar)</Spanish>
-		<Italian>Sit 2 (Seduto su una panchina o similiari)</Italian>
-		<German>Sitzen 2 (Auf Bank oder Ähnlichem sitzend)</German>
-		<Chinesesimp>坐2（坐在长椅上或类似的）</Chinesesimp>
-		<Polish>Siedząca 2 (Siedzi na ławce lub podobnym)</Polish>
-		<Russian>Сидит 2 (сидя на скамейке или подобное)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit3">
-		<Original>Sit 3 (Sitting on bench or similar, unarmed)</Original>
-		<English>Sit 3 (Sitting on bench or similar, unarmed)</English>
-		<Czech>Sedící 3 (Sedí na lavičce nebo podobném, neozbrojený)</Czech>
-		<French>Assis 3 (sur un banc ou autre, non armé)</French>
-		<Spanish>Sentarse 3 (Sentado en un banco o similar, desarmado)</Spanish>
-		<German>Sitzen 2 (Auf Bank oder Ähnlichem sitzend, unbewaffnet)</German>
-		<Chinesesimp>坐3（坐在长凳上或类似的，没有武装）</Chinesesimp>
-		<Italian>Sit 3 (seduto su una panca o simile, disarmato)</Italian>
-		<Polish>Siedząca 3 (Siedzi na ławce lub podobnym, nieuzbrojony)</Polish>
-		<Russian>Сидеть 3 (сидя на скамейке или подобное)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_at_table">
-		<Original>Sit at table</Original>
-		<English>Sit at table</English>
-		<Czech>Sedící na stole</Czech>
-		<French>Assis sur une table</French>
-		<Spanish>Sentarse a la mesa</Spanish>
-		<Italian>Seduto ad un tavolo</Italian>
-		<German>An Tisch sitzen</German>
-		<Chinesesimp>坐在餐桌旁</Chinesesimp>
-		<Polish>Siedzi na stole</Polish>
-		<Russian>Сидит за столом</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_High1">
-		<Original>Sit High 1 (Sitting on higher object, legs swinging, needs a rifle)</Original>
-		<English>Sit High 1 (Sitting on higher object, legs swinging, needs a rifle)</English>
-		<Czech>Sedící vysoko 1 (Sedí na vyšším objektu, houpe nohama, potřebuje pušku)</Czech>
-		<French>Assis haut 1 (appuyé sur des objets hauts avec une jambe dans le vide, nécessite une arme)</French>
-		<Spanish>Sentarse Alto 1 (Sentado en un objeto más alto, piernas balanceándose, necesita un rifle)</Spanish>
-		<Italian>Sit High 1 (Seduot su un oggetto sopraelevato, gambe a penzoloni, necessita un fucile)</Italian>
-		<German>Erhöht Sitzend 1 (Auf höherem Objekt sitzend, braucht Waffe)</German>
-		<Chinesesimp>坐高1（坐在较高的物体上，双腿摆动，需要步枪）</Chinesesimp>
-		<Polish>Siedząca wysoko 1 (Siedzi na wysokim obiekcie, nogi zwisają, potrzebna broń)</Polish>
-		<Russian>Сидит высоко 1 (сидя на более высоком объекте, ноги качаются, нужна винтовка)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_high2">
-		<Original>Sit High 2 (Sitting on higher object, legs swinging, needs a rifle)</Original>
-		<English>Sit High 2 (Sitting on higher object, legs swinging, needs a rifle)</English>
-		<Czech>Sedící vysoko 2 (Sedí na vyšším objektu, houpe nohama, potřebuje pušku)</Czech>
-		<French>Assis haut 2 (appuyé sur des objets hauts avec une jambe dans le vide, nécessite une arme)</French>
-		<Spanish>Sentarse Alto 2 (Sentado en un objeto más alto, piernas balanceándose, necesita un rifle)</Spanish>
-		<Italian>Sit High 2 (Seduot su un oggetto sopraelevato, gambe a penzoloni, necessita un fucile)</Italian>
-		<German>Erhöht Sitzend 2 (Auf höherem Objekt sitzend, braucht Waffe)</German>
-		<Chinesesimp>坐高2（坐在较高的物体上，双腿摆动，需要步枪）</Chinesesimp>
-		<Polish>Siedząca wysoko 2 (Siedzi na wysokim obiekcie, nogi zwisają, potrzebna broń)</Polish>
-		<Russian>Сидит высоко 2 (сидя на более высоком объекте, ноги качаются, нужна винтовка)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured_u1">
-		<Original>Prone injured 1 (Laying wounded on back, no weapon)</Original>
-		<English>Prone injured 1 (Laying wounded on back, no weapon)</English>
-		<Czech>Ležící zraněný 1 (Leží zraněný na zádech, beze zbraně)</Czech>
-		<French>Blessé 1 (sur le dos, sans arme)</French>
-		<Spanish>Tumbado prono herido 1 (Colocación herida en la espalda, sin arma)</Spanish>
-		<German>Verletzt am Boden 1 (Keine Waffe)</German>
-		<Chinesesimp>容易受伤1（背部受伤，没有武器）</Chinesesimp>
-		<Italian>Prona ferita 1 (Posa ferita alla schiena, senza arma)</Italian>
-		<Polish>Leżący ranny 1 (Leży na plecach, bez broni)</Polish>
-		<Russian>Лежащий раненый 1 (Положение раненого на спине, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured_u2">
-		<Original>Prone injured 2 (Laying wounded on back, no weapon)</Original>
-		<English>Prone injured 2 (Laying wounded on back, no weapon)</English>
-		<Czech>Ležící zraněný 2 (Leží zraněný na zádech, beze zbraně)</Czech>
-		<French>Blessé 2 (le dos, sans arme)</French>
-		<Spanish>Tumbado prono herido 2 (Colocación herida en la espalda, sin arma)</Spanish>
-		<German>Verletzt am Boden 2 (Keine Waffe)</German>
-		<Chinesesimp>容易受伤2（背部受伤，没有武器）</Chinesesimp>
-		<Italian>Prona ferita 2 (Posa ferita dietro, senza arma)</Italian>
-		<Polish>Leżący ranny 2 (leży na plecach, bez broni)</Polish>
-		<Russian>Лежащий раненый 2 (Положение раненого на спине, без оружия)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_prone_injured">
-		<Original>Prone injured (Laying wounded on back, with or without weapon)</Original>
-		<English>Prone injured (Laying wounded on back, with or without weapon)</English>
-		<Czech>Ležící zraněný (Leží zraněný na zádech, se zbraní či bez ní)</Czech>
-		<French>Blessé 3 (sur le dos, avec ou sans arme)</French>
-		<Spanish>Tumbado prono herido (Colocación herida en la espalda, con o sin arma)</Spanish>
-		<German>Verletzt am Boden (Mit oder ohne Waffe)</German>
-		<Chinesesimp>容易受伤（背部受伤，有或没有武器）</Chinesesimp>
-		<Italian>Prona ferita (Posa ferita sul dorso, con o senza arma)</Italian>
-		<Polish>Leżący ranny (Leży na plecach, z bronią lub bez)</Polish>
-		<Russian>Легко раненые (лежачие раненые на спине, с оружием или без)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_stand">
-		<Original>Repair vehicle (Reparing vehicle, standing)</Original>
-		<English>Repair vehicle (Reparing vehicle, standing)</English>
-		<Czech>Opravující vozidlo (Opravuje vozidlo, stojí)</Czech>
-		<French>Répare 1 (debout, non armé)</French>
-		<Spanish>Reparar vehículo (Reparando vehículo, de pie)</Spanish>
-		<German>Fahrzeug reparieren (Stehend, ohne Waffe)</German>
-		<Chinesesimp>修理车辆（修理车辆，站立）</Chinesesimp>
-		<Italian>Veicolo di riparazione (veicolo di riparazione, in piedi)</Italian>
-		<Polish>Naprawia pojazd (Naprawianie pojazdu, stojąc)</Polish>
-		<Russian>Ремонт автомобиля (Ремонт автомобиля, стоя)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_kneel">
-		<Original>Repair vehicle (Reparing vehicle, kneeling)</Original>
-		<English>Repair vehicle (Reparing vehicle, kneeling)</English>
-		<Czech>Opravující vozidlo (Opravující vozidlo, klečí)</Czech>
-		<French>Répare 2 (à genoux, non armé)</French>
-		<Spanish>Reparar vehículo (Reparando vehículo, de rodillas)</Spanish>
-		<German>Fahrzeug reparieren (Kniend, ohne Waffe)</German>
-		<Chinesesimp>修车（修车，跪）</Chinesesimp>
-		<Italian>Veicolo riparatore (veicolo riparatore, inginocchiato)</Italian>
-		<Polish>Naprawia pojazd (Naprawianie pojazdu, klęcząc)</Polish>
-		<Russian>Ремонт автомобиля (Ремонт автомобиля, стоя на коленях)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_repair_veh_prone">
-		<Original>Repair vehicle (Reparing vehicle, prone)</Original>
-		<English>Repair vehicle (Reparing vehicle, prone)</English>
-		<Czech>Opravující vozidlo (Opravuje vozidlo, leží)</Czech>
-		<French>Répare 3 (allongé, non armé)</French>
-		<Spanish>Reparar vehículo (Reparando vehículo, tumbado prono)</Spanish>
-		<German>Fahrzeug reparieren (Liegend, ohne Waffe)</German>
-		<Chinesesimp>修理车辆（修理车辆，俯卧）</Chinesesimp>
-		<Italian>Veicolo riparatore (veicolo riparatore, incline)</Italian>
-		<Polish>Naprawia pojazd (Naprawianie pojazdu, leżąc)</Polish>
-		<Russian>Ремонт автомобиля (Ремонт автомобиля, лежа)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_kneel_treat">
-		<Original>Treating wounded soldier (Kneeling)</Original>
-		<English>Treating wounded soldier (Kneeling)</English>
-		<Czech>Ošetřující zraněného vojáka (Klečí)</Czech>
-		<Spanish>Tratando a un soldado herido (Arrodillado)</Spanish>
-		<German>Verletzung behandeln (Kniend)</German>
-		<Chinesesimp>治疗受伤的士兵（跪）</Chinesesimp>
-		<Italian>Trattare il soldato ferito (inginocchiato)</Italian>
-		<French>Traitement d'un soldat blessé (agenouillé)</French>
-		<Polish>Leczenie rannego (klęcząc)</Polish>
-		<Russian>Лечение раненого солдата (на коленях)</Russian>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_guard">
-		<Original>Guard</Original>
-		<English>Guard</English>
-		<Czech>Na stráži</Czech>
-		<Spanish>Guarda</Spanish>
-		<German>Bewachen</German>
-		<Chinesesimp>守卫</Chinesesimp>
-		<French>Garde</French>
-		<Polish>Na straży</Polish>
-		<Russian>Охрана</Russian>
 	</Key>
 	<Key ID="STR_ENH_attributeCategory_advancedDamage">
 		<Original>Advanced Damage</Original>
@@ -5499,58 +5104,6 @@
 		<Original>3den Radio</Original>
 		<Czech>3den rádio</Czech>
 	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_templates">
-		<English>Templates</English>
-		<German>Vorlagen</German>
-		<Original>Templates</Original>
-		<Czech>Šablony</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_attributes">
-		<English>Attributes</English>
-		<German>Attribute</German>
-		<Original>Attributes</Original>
-		<Czech>Atributy</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_deleteTemplate">
-		<English>Delete Template</English>
-		<German>Vorlage löschen</German>
-		<Original>DeleteTemplate</Original>
-		<Czech>Smazat šablonu</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_createTemplate">
-		<English>Create Template from Scenario</English>
-		<German>Vorlage aus Szenario erstellen</German>
-		<Original>Create Template from Scenario</Original>
-		<Czech>Vytvořit šablonu ze scénáře</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_applyTemplate">
-		<English>Apply Template</English>
-		<German>Vorlage anwenden</German>
-		<Original>Apply Template</Original>
-		<Czech>Použít šablonu</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManager_export">
-		<Original>Export</Original>
-		<English>Export</English>
-		<Czech>Export</Czech>
-		<French>Exporter</French>
-		<Spanish>Exportar</Spanish>
-		<German>Exportieren</German>
-		<Chinesesimp>输出</Chinesesimp>
-		<Polish>Eksport</Polish>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManagerTemplateData_description">
-		<English>Template Description</English>
-		<German>Vorlagenbeschreibung</German>
-		<Original>Template Description</Original>
-		<Czech>Popis šablony</Czech>
-	</Key>
-	<Key ID="STR_ENH_ScenarioAttributesManagerTemplateData_title">
-		<English>Title</English>
-		<German>Titel</German>
-		<Original>Title</Original>
-		<Czech>Název</Czech>
-	</Key>
 	<Key ID="STR_ENH_3denRadio_song">
 		<English>Song:</English>
 		<German>Lied:</German>
@@ -6089,14 +5642,6 @@
 		<English>If enabled, the unit will exit the animation when in danger.</English>
 		<Original>If enabled, the unit will exit the animation when in danger.</Original>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_disableCollision_displayName">
-		<English>Disable Collision</English>
-		<Original>Disable Collision</Original>
-	</Key>
-	<Key ID="STR_ENH_ambientAnimations_disableCollision_tooltip">
-		<English>If enabled, the collison between with the nearest object will be disabled. Useful for placing unit precisely, for example, on a chair.</English>
-		<Original>If enabled, the collison between with the nearest object will be disabled. Useful for placing unit precisely, for example, on a chair.</Original>
-	</Key>
 	<Key ID="STR_ENH_ambientAnimations_attach_displayName">
 		<English>Attach?</English>
 		<Original>Attach?</Original>
@@ -6208,28 +5753,56 @@
 		<English>Show Window</English>
 		<Original>Show Window</Original>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad1">
-		<English>Sit Sad 1 (Sitting on chair, looking sad)</English>
-		<Chinesesimp>坐伤心1（坐在椅子上，看起来很伤心）</Chinesesimp>
-		<Czech>Sedící smutně 1 (Sedí na židli, vypadá smutně)</Czech>
-		<French>Assis triste 1 (Assis sur une chaise, l'air triste)</French>
-		<German>Sitzen 1 (In Stuhl sitzend, niederschlagen schauend)</German>
-		<Italian>Sit Sad 1 (Seduto sulla sedia, triste)</Italian>
-		<Original>Sit Sad 1 (Sitting on chair, looking sad)</Original>
-		<Polish>Siedzi smutny 1 (Siedzi na krześle, smutny)</Polish>
-		<Russian>Сидеть грустный 1 (Сидя на стуле, глядя грустно)</Russian>
-		<Spanish>Sentarse triste 1 (Sentado en la silla, mirando triste)</Spanish>
+	<Key ID="STR_ENH_scenarioAttributesManager_templates">
+		<English>Templates</English>
+		<Czech>Šablony</Czech>
+		<German>Vorlagen</German>
+		<Original>Templates</Original>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_sit_sad2">
-		<English>Sit Sad 2 (Sitting on chair, looking sad)</English>
-		<Chinesesimp>坐伤心2（坐在椅子上，看起来很伤心）</Chinesesimp>
-		<Czech>Sedící smutně 2 (Sedí na židli, vypadá smutně)</Czech>
-		<French>Assis triste 2 (Assis sur une chaise, l'air triste)</French>
-		<German>Sitzen 2 (In Stuhl sitzend, niederschlagen schauend)</German>
-		<Italian>Sit Sad 2 (Seduto sulla sedia, triste)</Italian>
-		<Original>Sit Sad 2 (Sitting on chair, looking sad)</Original>
-		<Polish>Siedzi smutny 2 (Siedzi na krześle, smutny)</Polish>
-		<Russian>Сидеть грустный 2 (Сидя на стуле, глядя грустно)</Russian>
-		<Spanish>Sentarse triste 2 (Sentado en la silla, mirando triste)</Spanish>
+	<Key ID="STR_ENH_scenarioAttributesManager_attributes">
+		<English>Attributes</English>
+		<Czech>Atributy</Czech>
+		<German>Attribute</German>
+		<Original>Attributes</Original>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManager_deleteTemplate">
+		<English>Delete Template</English>
+		<Czech>Smazat šablonu</Czech>
+		<German>Vorlage löschen</German>
+		<Original>DeleteTemplate</Original>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManager_createTemplate">
+		<English>Create Template from Scenario</English>
+		<Czech>Vytvořit šablonu ze scénáře</Czech>
+		<German>Vorlage aus Szenario erstellen</German>
+		<Original>Create Template from Scenario</Original>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManager_applyTemplate">
+		<English>Apply Template</English>
+		<Czech>Použít šablonu</Czech>
+		<German>Vorlage anwenden</German>
+		<Original>Apply Template</Original>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManager_export">
+		<English>Export</English>
+		<Chinesesimp>输出</Chinesesimp>
+		<Czech>Export</Czech>
+		<French>Exporter</French>
+		<German>Exportieren</German>
+		<Original>Export</Original>
+		<Polish>Eksport</Polish>
+		<Spanish>Exportar</Spanish>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManagerTemplateData_description">
+		<English>Template Description</English>
+		<Czech>Popis šablony</Czech>
+		<German>Vorlagenbeschreibung</German>
+		<Original>Template Description</Original>
+	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManagerTemplateData_title">
+		<English>Title</English>
+		<Czech>Název</Czech>
+		<German>Titel</German>
+		<Original>Title</Original>
 	</Key>
 </Project>
