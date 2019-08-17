@@ -35,10 +35,6 @@ private _anims = switch (_animSet) do
    {
       ["Acts_JetsMarshallingStop_loop"];
    };
-   case "NO CLUE":
-   {
-      ["Acts_Hilltop_Calibration_Loop"];
-   };
    case "WARMUP":
    {
       ["Acts_AidlPercMstpSloWWpstDnon_warmup_6_loop"];
