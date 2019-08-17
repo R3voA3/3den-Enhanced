@@ -11,7 +11,7 @@
    BOOLEAN: true / false
 */
 
-params [["_mode","RUN"]];
+params [["_mode","run"]];
 
 disableSerialization;
 
