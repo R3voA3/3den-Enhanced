@@ -14,19 +14,24 @@
    BOOLEAN: true
 */
 
-#define ANIMSETS ["","BRIEFING","BRIEFING_POINT_LEFT","BRIEFING_POINT_RIGHT","BRIEFING_POINT_TABLE","GUARD","KNEEL","KNEEL_TREAT","LEAN","LEAN_ON_TABLE","LISTEN_BRIEFING","PRONE_INJURED","PRONE_INJURED_U1","PRONE_INJURED_U2","REPAIR_VEH_KNEEL","REPAIR_VEH_PRONE","REPAIR_VEH_STAND","SIT1","SIT2","SIT3","SIT_AT_TABLE","SIT_HANDCUFFED","SIT_HIGH1","SIT_HIGH2","SIT_LOW","SIT_LOW_U","SIT_SAD1","SIT_SAD2","SIT_U1","SIT_U2","SIT_U3","STAND","STAND_IA","STAND_IDLE","STAND_PISTOL","STAND_TALKING","STAND_U1","STAND_U2","STAND_U3","WARMUP","WARMUP_KNEELING","WATCH1","WATCH2","SHIELD_FROM_SUN","WORKING_AT_DESK","HANDS_HELD_HIGH","NO CLUE"]
+#define ANIMSETS [["","STR_ENH_no"],["BRIEFING","STR_ENH_no"],["BRIEFING_POINT_LEFT","STR_ENH_no"],["BRIEFING_POINT_RIGHT","STR_ENH_no"],["BRIEFING_POINT_TABLE","STR_ENH_no"],["GUARD","STR_ENH_yes"],["HANDS_HELD_HIGH","STR_ENH_yes"],["KNEEL","STR_ENH_no"],["KNEEL_TREAT","STR_ENH_no"],["LEAN","STR_ENH_no"],["LEAN_ON_TABLE","STR_ENH_no"],["LISTEN_BRIEFING","STR_ENH_yes"],["PRONE_INJURED","STR_ENH_no"],["PRONE_INJURED_U1","STR_ENH_yes"],["PRONE_INJURED_U2","STR_ENH_yes"],["REPAIR_VEH_KNEEL","STR_ENH_yes"],["REPAIR_VEH_PRONE","STR_ENH_yes"],["REPAIR_VEH_STAND","STR_ENH_yes"],["SHIELD_FROM_SUN","STR_ENH_no"],["SIT1","STR_ENH_no"],["SIT2","STR_ENH_no"],["SIT3","STR_ENH_no"],["SIT_AT_TABLE","STR_ENH_no"],["SIT_HANDCUFFED","STR_ENH_yes"],["SIT_HIGH1","STR_ENH_no"],["SIT_HIGH2","STR_ENH_no"],["SIT_LOW","STR_ENH_no"],["SIT_LOW_U","STR_ENH_yes"],["SIT_SAD1","STR_ENH_no"],["SIT_SAD2","STR_ENH_no"],["SIT_U1","STR_ENH_yes"],["SIT_U2","STR_ENH_yes"],["SIT_U3","STR_ENH_yes"],["STAND","STR_ENH_no"],["STAND_IA","STR_ENH_no"],["STAND_IDLE","STR_ENH_yes"],["STAND_PISTOL","STR_ENH_no"],["STAND_TALKING","STR_ENH_yes"],["STAND_U1","STR_ENH_yes"],["STAND_U2","STR_ENH_yes"],["STAND_U3","STR_ENH_yes"],["WARMUP","STR_ENH_no"],["WARMUP_KNEELING","STR_ENH_no"],["WATCH1","STR_ENH_no"],["WATCH2","STR_ENH_no"],["WORKING_AT_DESK","STR_ENH_no"]]
 
 params ["_ctrlGroup","_value"];
 _value params ["_animSet","_anims","_canExit","_attach"];
+private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
 {
-   (_ctrlGroup controlsGroupCtrl 100) lbAdd _x;
+   _x params ["_animSetPreset","_unarmedStr"];
+   _ctrlLB lbAdd _animSetPreset;
 
-   if (_animSet isEqualTo _x) then
+   if (_animSet isEqualTo _animSetPreset) then
    {
-      (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel _forEachIndex;
-   }
+      _ctrlLB lbSetCurSel _forEachIndex;
+   };
+   //Add tooltip depening on preset
+   _ctrlLB lbSetTooltip [_forEachIndex,format ["%1 %2.",localize "STR_ENH_ambientAnimations_unarmed",localize _unarmedStr]];
 } forEach ANIMSETS;
 
 (_ctrlGroup controlsGroupCtrl 101) cbSetChecked _canExit;
 (_ctrlGroup controlsGroupCtrl 102) cbSetChecked _attach;
+
 true
