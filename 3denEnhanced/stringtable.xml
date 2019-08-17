@@ -2848,18 +2848,6 @@
 		<Polish>Obiekt jest zawsze widoczne wewnątrz zasięgu rysowania mapy.</Polish>
 		<Russian>Объект всегда виден на расстоянии обзора местности.</Russian>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_animSet_stand_U2">
-		<Original>Stand U2 (Slightly turning to the sides, no weapon)</Original>
-		<English>Stand U2 (Slightly turning to the sides, no weapon)</English>
-		<Czech>Stojící U2 (Zlehka se otáčí do stran, beze zbraně)</Czech>
-		<French>Attend 2 (tourne légèrement sur les côtés, non armé)</French>
-		<Spanish>De pie U2 (Ligeramente girando a los lados, sin arma)</Spanish>
-		<Italian>Stand U2 (Si gira leggermente, nessun'arma)</Italian>
-		<German>Stehen U2 (Leicht zur seite drehend, keine Waffe)</German>
-		<Chinesesimp>站在U2（稍微转向两侧，没有武器）</Chinesesimp>
-		<Polish>Stojąca U2 (Lekko obraca się na boki, brak broni)</Polish>
-		<Russian>Стоя U2 (слегка поворачиваясь в стороны, без оружия)</Russian>
-	</Key>
 	<Key ID="STR_ENH_attributeCategory_advancedDamage">
 		<Original>Advanced Damage</Original>
 		<English>Advanced Damage</English>
@@ -5607,8 +5595,8 @@
 		<Original>Text</Original>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_description_description">
-		<English>Plays a selected animation set.</English>
-		<Original>Plays a selected animation set.</Original>
+		<English>Plays a selected animation set. The gear needs to be set up manually.</English>
+		<Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_description">
 		<English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
@@ -5647,8 +5635,8 @@
 		<Original>Attach?</Original>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_attach_tooltip">
-		<English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or other object.</English>
-		<Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or other object.</Original>
+		<English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</English>
+		<Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</Original>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_animation_displayName">
 		<English>Animation</English>
@@ -5804,5 +5792,20 @@
 		<Czech>Název</Czech>
 		<German>Titel</German>
 		<Original>Title</Original>
+	</Key>
+	<Key ID="STR_ENH_yes">
+		<English>Yes</English>
+		<German>Ja</German>
+		<Original>Yes</Original>
+	</Key>
+	<Key ID="STR_ENH_no">
+		<English>No</English>
+		<German>Nein</German>
+		<Original>Yes</Original>
+	</Key>
+	<Key ID="STR_ENH_ambientAnimations_unarmed">
+		<English>Unarmed:</English>
+		<German>Unbewaffnet:</German>
+		<Original>Unarmed:</Original>
 	</Key>
 </Project>
