@@ -80,7 +80,7 @@ class Enh_AmbientAnimations: Title
 		class AttachTitle: Title 
 		{
 			text = $STR_ENH_ambientAnimations_attach_displayName;
-			tooltip = $STR_ENH_ambientAnimations_attach_displayName;
+			tooltip = $STR_ENH_ambientAnimations_attach_tooltip;
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class Attach: ctrlCheckbox
