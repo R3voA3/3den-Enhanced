@@ -27,7 +27,7 @@ private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
    {
       _ctrlLB lbSetCurSel _forEachIndex;
    };
-   //Add tooltip depening on preset
+   //Adds tooltip depending on preset
    _ctrlLB lbSetTooltip [_forEachIndex,format ["%1 %2.",localize "STR_ENH_ambientAnimations_unarmed",localize _unarmedStr]];
 } forEach ANIMSETS;
 
