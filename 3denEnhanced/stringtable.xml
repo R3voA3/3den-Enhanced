@@ -4620,6 +4620,11 @@
 		<Polish>Włącz "proste obiekty"</Polish>
 		<Russian>Переключить простой объект</Russian>
 	</Key>
+  <Key ID="STR_ENH_tools_toggleSimulation">
+		<Original>Toggle Simulation</Original>
+		<English>Toggle Simulation</English>
+		<German>Simulation umschalten</German>
+	</Key>
 	<Key ID="STR_ENH_help_functionsOverview">
 		<Original>Functions Overview</Original>
 		<English>Functions Overview</English>
