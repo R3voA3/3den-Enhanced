@@ -19,12 +19,12 @@ if (get3DENSelected "Object" isEqualTo []) exitWith
 	false
 };
 
-#define STATE (_x get3DENAttribute "objectIsSimple")
+#define ATTRIBUTE (_x get3DENAttribute "objectIsSimple")
 
 collect3DENHistory
 {
 	{
-		if (STATE isEqualTo [false]) then
+		if (ATTRIBUTE isEqualTo [false]) then
 		{
 		 	_x set3DENAttribute ["objectIsSimple",true];
 		}
