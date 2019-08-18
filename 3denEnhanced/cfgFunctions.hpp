@@ -118,7 +118,8 @@ class CfgFunctions
 			class toggleGrass;
 			class deleteCrew;
 			class deleteEmptyLayers;
-			class makeObjectSimple;
+			class toggleSimpleObject;
+			class toggleSimulation;
 			class removeGear;
 			class reverseOrientation;
 			class setOrientation;
@@ -132,6 +133,7 @@ class CfgFunctions
 			class locationList;
 			class setRandomOrientation;
 			class getProfileColor;
+			class initAmbientAnimationsInEditor;
 		};
 		class Log
 		{
