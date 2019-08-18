@@ -19,4 +19,7 @@
 //Enable session timer
 [] spawn Enh_fnc_sessionTimer;
 
+//Initialize ambient animations
+call Enh_fnc_initAmbientAnimationsInEditor;
+
 true

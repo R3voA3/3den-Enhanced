@@ -33,4 +33,7 @@ call Enh_fnc_locationList;
 //Show github message
 call Enh_fnc_gitHubNotification;
 
+//Initialize ambient animations
+call Enh_fnc_initAmbientAnimationsInEditor;
+
 true
