@@ -5,6 +5,7 @@ v4.3
 - DisableAI "radioprotocol"
 - Attribute to end mission after certain number of units of given side were killed (e.g. civilian casualties)
 - Added Editor Attribute to toggle Entity Counter in status bar.
+- Added a tool to quickly toggle simulation of selected objects
 
 *changed*
 - Combo Box controls were replaced with Toolbox controls if possible
@@ -77,6 +78,7 @@ v4.3
 - Ambient Animation attribute was overhauled, it now works in multiplayer
 - Fixed an issue where Intro Text would be displayed immediately on dedicated server (delay was ignored)
 - Added more ambient animations
+- Ambient animations are now properly initialized when a new terrain or mission is loaded
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
