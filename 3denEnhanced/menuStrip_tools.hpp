@@ -89,6 +89,7 @@ class Enh_Folder_Utilities
 		"Enh_GenerateSteamMissionDescription",
 		"Enh_SwitchTime",
 		"Enh_ToggleSimpleObject",
+		"Enh_ToggleSimulation",
 		"Enh_ToggleGrass"
 	};
 };
@@ -178,8 +179,15 @@ class Enh_ToggleSimpleObject
 {
 	text = $STR_ENH_tools_toggleSimpleObject;
 	picture = "";
-	action = "call Enh_fnc_makeObjectSimple";
+	action = "call Enh_fnc_toggleSimpleObject";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
+};
+class Enh_ToggleSimulation
+{
+	text = $STR_ENH_tools_toggleSimulation;
+	picture = "";
+	action = "call Enh_fnc_toggleSimulation";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
 class FunctionsViewer//Overwrites the default function viewer
 {
