@@ -34,6 +34,7 @@
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11
+#define EDIT_W_ULTRA_WIDE 12
 #define CENTERED_X(w) (CENTER_X - ((w) / 2 * GRID_W))
 #define DIALOG_TOP (safezoneY + 17 * GRID_H)
 #define CTRL_DEFAULT_H 5 * GRID_H
