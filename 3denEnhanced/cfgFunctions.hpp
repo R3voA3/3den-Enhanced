@@ -201,6 +201,8 @@ class CfgFunctions
 			class missionEnding_onAttributeLoad;
 			class missionEnding_onAttributeSave;
 			class missionEnding_onButtonDown;
+			class taskPatrol_onAttributeLoad;
+			class taskPatrol_onAttributeSave;
 		};
 	};
 };

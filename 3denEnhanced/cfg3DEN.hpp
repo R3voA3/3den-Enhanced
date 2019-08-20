@@ -54,6 +54,7 @@ class Cfg3DEN
 		#include "controls\dynamicSkill.hpp"
 		#include "controls\holdAction.hpp"
 		#include "controls\missionEnding.hpp"
+		#include "controls\taskPatrol.hpp"
 	};
 	class Mission
 	{
@@ -125,7 +126,7 @@ class Cfg3DEN
 			{
 				class Attributes
 				{
-					#include "attributesGroup\patrol.hpp"
+					#include "attributesGroup\taskPatrol.hpp"
 				};
 			};
 		};
