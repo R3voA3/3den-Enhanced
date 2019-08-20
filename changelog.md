@@ -79,14 +79,16 @@ v4.3
 - Fixed an issue where Intro Text would be displayed immediately on dedicated server (delay was ignored)
 - Added more ambient animations
 - Ambient animations are now properly initialized when a new terrain or mission is loaded
+- Time Multiplier will no longer be executed when value is 1
+- Updated credits
+- Task Patrol attribute now uses a slider control
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
-- Time Multiplier will no longer be executed when value is 1
-- Updated credits
+
 
 v4.2
 *added*
