@@ -31,7 +31,7 @@
 //To prevent issues in multiplayer games started from multiplayer editor
 if (isMultiplayer) exitWith {false};
 
-//Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu
+//Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 waitUntil {time > 0.5};
 
 if (INVULNERABILITY) then 

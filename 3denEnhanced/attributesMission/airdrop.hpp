@@ -4,11 +4,11 @@ class Enh_Airdrop
 	displayName = $STR_ENH_attributeCategory_airdrop;
 	class Attributes
 	{
-		class Enh_Airdrop_Classes
+		class Enh_Airdrop
 		{
 			displayName = $STR_ENH_airdrop_classes_displayName;
 			tooltip = $STR_ENH_airdrop_classes_tooltip;
-			property = "Enh_Airdrop_Classes";
+			property = "Enh_Airdrop";
 			control = "Enh_Airdrop";
 			expression =
 			"\

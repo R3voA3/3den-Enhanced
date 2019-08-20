@@ -4,7 +4,7 @@ class Enh_AmbientFlyby
 	displayName = $STR_ENH_attributeCategory_ambientFlyby;
 	class Attributes
 	{
-		class Enh_AmbientFlyby_Type
+		class Enh_AmbientFlyby
 		{
 			displayName = $STR_ENH_attributeCategory_ambientFlyby;
 			property = "Enh_ambientFlyby";
