@@ -4620,7 +4620,7 @@
 		<Polish>Włącz "proste obiekty"</Polish>
 		<Russian>Переключить простой объект</Russian>
 	</Key>
-  <Key ID="STR_ENH_tools_toggleSimulation">
+	<Key ID="STR_ENH_tools_toggleSimulation">
 		<Original>Toggle Simulation</Original>
 		<English>Toggle Simulation</English>
 		<German>Simulation umschalten</German>
@@ -5492,8 +5492,8 @@
 		<Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise. Může být buď &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; nebo &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Czech>
 	</Key>
 	<Key ID="STR_ENH_groupMarker_description">
-		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.</English>
-		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the groups namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
+		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the group's namespace to false.</English>
+		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the group's namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
 		<Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "Enh_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).\n\nHodnota musí být název třídy značky z CfgMarkers.</Czech>
 		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
 		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
