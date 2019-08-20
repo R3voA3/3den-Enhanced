@@ -1,14 +1,16 @@
 /*
-	Author: Revo
+   Author: R3vo
 
-	Description:
-	Retrieves data of currently used Arma 3 version and formats this information so it can directly be used in bug reports or similar.
+   Date: 2019-08-20
 
-	Parameter(s):
-	-
+   Description:
+   Retrieves data of currently used Arma 3 version and formats this information so it can directly be used in bug reports or similar.
 
-	Returns:
-	BOOLEAN: true
+   Parameter(s):
+   -
+
+   Returns:
+   BOOLEAN: true
 */
 
 private _modList = "";

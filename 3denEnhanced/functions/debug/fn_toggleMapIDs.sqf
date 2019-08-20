@@ -1,14 +1,16 @@
 /*
-	Author: Revo
+   Author: R3vo
 
-	Description:
-	Opens the map and toggles the map IDs on/off.
+   Date: 2019-08-20
 
-	Parameter(s):
-	-
+   Description:
+   Opens the map and toggles the map IDs on/off.
 
-	Returns:
-	BOOLEAN: true
+   Parameter(s):
+   -
+
+   Returns:
+   BOOLEAN: true
 */
 
 if (get3DENActionState "toggleMap" == 0) then

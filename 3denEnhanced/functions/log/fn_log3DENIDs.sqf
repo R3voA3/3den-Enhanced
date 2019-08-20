@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+   Author: Revo
 
-	Description:
-	Logs 3DEN IDs of selected objects to clipboard
+   Description:
+   Logs 3DEN IDs of selected objects to clipboard
 
-	Parameter(s):
-	-
+   Parameter(s):
+   -
 
-	Returns:
-    BOOLEAN: true
+   Returns:
+   BOOLEAN: true
 */
 
 private _selection = call Enh_fnc_all3DENSelected;

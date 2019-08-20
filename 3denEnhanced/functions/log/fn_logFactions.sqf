@@ -1,13 +1,15 @@
 /*
-	Author: Revo
+   Author: R3vo
 
-	Description:
-	Logs faction class names of selected objects to clipboard
+   Date: 2019-08-20
 
-	Parameter(s):
-	-
+   Description:
+   Logs faction class names of selected objects to clipboard.
 
-	Returns:
+   Parameter(s):
+   -
+
+   Returns:
    BOOLEAN: true
 */
 

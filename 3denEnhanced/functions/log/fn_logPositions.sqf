@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+   Author: Revo
 
-	Description:
-	Logs position 3D of all selected entities and copies them to the clipboard. Array is shuffled.
+   Description:
+   Logs position 3D of all selected entities and copies them to the clipboard. Array is shuffled.
 
-	Parameter(s):
-	-
+   Parameter(s):
+   -
 
-	Returns:
-	BOOLEAN: true / false
+   Returns:
+   BOOLEAN: true / false
 */
 
 private _objects  = get3DENSelected "Object";
@@ -21,7 +21,7 @@ private _export = "";
 private _entities = _objects + _triggers + _logics + _markers;
 
 {
-	_posArray pushBack ((_x get3DENAttribute "Position") # 0);
+   _posArray pushBack ((_x get3DENAttribute "Position") # 0);
 } forEach _entities;
 
 private _export = [_posArray,false] call Enh_fnc_exportWithLB;

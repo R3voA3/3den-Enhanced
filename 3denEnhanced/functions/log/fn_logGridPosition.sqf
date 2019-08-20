@@ -1,14 +1,16 @@
 /*
-	Author: Revo
+   Author: R3vo
 
-	Description:
-	Logs grid position to clipboard.
+   Date: 2019-08-20
 
-	Parameter(s):
-	-
+   Description:
+   Logs grid position to clipboard.
 
-	Returns:
-	BOOLEAN: true
+   Parameter(s):
+   -
+
+   Returns:
+   BOOLEAN: true
 */
 
 private _posClick = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;

@@ -1,14 +1,16 @@
 /*
-	Author: Revo
+   Author: R3vo
 
-	Description:
-	Initialises the 3den Enhanced session timer. Needs to be spawned!
+   Date: 2019-08-20
 
-	Parameter(s):
-	-
+   Description:
+   Initialises the 3den Enhanced session timer. Needs to be spawned!
 
-	Returns:
-	BOOLEAN: true
+   Parameter(s):
+   -
+
+   Returns:
+   BOOLEAN: true
 */
 
 private _display3DEN = findDisplay 313 displayCtrl 668;
