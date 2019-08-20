@@ -101,6 +101,6 @@ class Enh_Help_MissionOptimisation: Enh_Help_KK
 };
 class Enh_Help_MultiplayerScripting: Enh_Help_KK
 {
-	text = STR_ENH_help_multiplayerScripting;
+	text = $STR_ENH_help_multiplayerScripting;
 	weblink = "https://community.bistudio.com/wiki/Multiplayer_Scripting";
 };
