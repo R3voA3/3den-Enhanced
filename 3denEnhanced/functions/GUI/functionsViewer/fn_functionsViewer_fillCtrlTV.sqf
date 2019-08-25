@@ -61,7 +61,7 @@ switch (_modeIndex) do
 				{
 					_addons pushBack _addon;
 					_addonIndex = _ctrlTV tvAdd [[_rootIndex],_addon];
-					_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex],_logo];
+					//_ctrlTV tvSetPictureRight [[_rootIndex,_addonIndex],_logo]; Adding icons hits the performance quite hard
 				};
 				
 				if !(_addonOld isEqualTo _addon) then
@@ -131,7 +131,7 @@ switch (_modeIndex) do
 				{
 					_categories pushBack _category;
 					_categoryIndex = _ctrlTV tvAdd [[],_category];
-					_ctrlTV tvSetPictureRight [[_categoryIndex],_logo];
+					//_ctrlTV tvSetPictureRight [[_categoryIndex],_logo]; Adding icons hits the performance quite hard
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
 				private _fullPath = [_categoryIndex,_fncIndex];
@@ -153,12 +153,12 @@ switch (_modeIndex) do
 	{
 		{
 			_x params ["_configStr","","","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
-			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then 
+			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
-				_ctrlTV tvSetPictureRight [[_fncIndex],_logo];
+				//_ctrlTV tvSetPictureRight [[_fncIndex],_logo]; Adding icons hits the performance quite hard
 				if (_ctrlTV tvText [_fncIndex] isEqualTo _lastViewed) then
 				{
 					_ctrlTV tvSetCurSel [_fncIndex];
@@ -186,14 +186,5 @@ switch (_configIndex) do
 	};
 };
 _ctrlBiki ctrlCommit 0;
-
-//Reopen last viewed function and select it
-/* private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
-
-if !(_lastViewed isEqualTo []) then 
-{
-	_ctrlTV tvSetCurSel _lastViewed;
-	[_ctrlTV,_lastViewed] call Enh_fnc_functionsViewer_onTreeSelChanged;
-}; */
 
 true
