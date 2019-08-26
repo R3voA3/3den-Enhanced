@@ -82,6 +82,9 @@ v4.3
 - Time Multiplier will no longer be executed when value is 1
 - Updated credits
 - Task Patrol attribute now uses a slider control
+- Logging of multiple map grid positions is now possible. Only unique value will be logged
+- Faction are now logged to clipboard without [ ]
+- Added context menu enty to log classes in format "class1","class2",...
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
