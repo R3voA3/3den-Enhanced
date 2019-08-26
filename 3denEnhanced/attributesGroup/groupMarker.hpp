@@ -27,7 +27,7 @@ class Enh_GroupMarker
 					_marker setMarkerText _text;\
 					while {true} do\
 					{\
-						sleep 1; comment 'Sleep here to make sure units joined the group already';\
+						sleep 1;\
 						if (units _group isEqualTo []) exitWith {deleteMarker _marker};\
 						if (_group getVariable ['Enh_GroupMarker_Update',true]) then\
 						{\
