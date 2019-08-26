@@ -138,12 +138,13 @@ class CfgFunctions
 		class Log
 		{
 			file = "3denEnhanced\functions\log";
-			class logPositions;
+			class logPositions3D;
 			class logPositions2D;
 			class logObjectInfo;
 			class logFactions;
 			class logGridPosition;
 			class log3DENIDs;
+			class logClassesString;
 		};
 		class Debug
 		{

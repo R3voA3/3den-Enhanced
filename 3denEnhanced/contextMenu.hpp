@@ -9,6 +9,7 @@ class Log
 	picture = "\3denEnhanced\data\icon_clipboard.paa";
 	items[] +=
 	{
+		"Enh_LogClassesString",
 		"Enh_LogFactions",
 		"Enh_LogPositions3D",
 		"Enh_LogPositions2D",
@@ -78,6 +79,12 @@ class Enh_DeleteCrew
 	action = "call Enh_fnc_deleteCrew";
 	Text = $STR_ENH_contextMenu_deleteCrew;
 	conditionShow = "hoverObjectVehicle";
+};
+class Enh_LogClassesString
+{
+	action = "call Enh_fnc_logClassesString";
+	Text = "Log Classes to Clipboard (String)";
+	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
 class Enh_LogPositions3D
 {
