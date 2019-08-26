@@ -11,18 +11,13 @@
    BOOLEAN: true / false
 */
 
-private _objects  = get3DENSelected "Object";
-private _markers  = get3DENSelected "Marker";
-private _triggers = get3DENSelected "Trigger";
-private _logics   = get3DENSelected "Logic";
 private _posArray = [];
 private _export = "";
-
-private _entities = _objects + _triggers + _logics + _markers;
+private _selection = call Enh_fnc_all3DENSelected;
 
 {
    _posArray pushBack ((_x get3DENAttribute "Position") # 0);
-} forEach _entities;
+} forEach _selection;
 
 private _export = [_posArray,false] call Enh_fnc_exportWithLB;
 

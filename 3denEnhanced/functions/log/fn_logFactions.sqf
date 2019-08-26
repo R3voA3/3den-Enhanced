@@ -20,7 +20,7 @@ private _factions = [];
    _factions pushBackUnique faction _x;
 } forEach _selection;
 
-private _export = [_factions] call Enh_fnc_exportWithLB;
+private _export = [_factions,false] call Enh_fnc_exportWithLB;
 
 copyToClipboard _export;
 

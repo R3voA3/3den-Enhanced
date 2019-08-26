@@ -4,7 +4,7 @@
    Date: 2019-08-20
 
    Description:
-   Logs grid position to clipboard.
+   Logs grid positions to clipboard.
 
    Parameter(s):
    -
@@ -13,9 +13,18 @@
    BOOLEAN: true
 */
 
-private _posClick = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
+private _posArray = [];
+private _export = "";
+private _selection = call Enh_fnc_all3DENSelected;
 
-copyToClipboard (mapGridPosition _posClick);
+{
+   _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
+} forEach _selection;
+
+private _export = [_posArray,false] call Enh_fnc_exportWithLB;
+
+copyToClipboard _export;
+
 ["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 
 true
