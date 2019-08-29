@@ -70,7 +70,7 @@ class Enh_Garrison
 		};
 		class Stance: ctrlStatic
 		{
-			text = "Stance";
+			text = $$STR_ENH_placementTools_stance;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 15 * GRID_W;
@@ -87,9 +87,9 @@ class Enh_Garrison
 			columns = 3;
 			strings[] = 
 			{
-				"Auto",
-				"Crouch",
-				"Random"
+				$STR_ENH_placementTools_stance_auto,
+				$STR_ENH_placementTools_stance_crouch,
+				$STR_ENH_placementTools_stance_stand
 			};
 			values[] = {0,1,2,3};
 		};

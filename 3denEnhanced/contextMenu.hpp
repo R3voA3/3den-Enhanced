@@ -38,6 +38,36 @@ class Enh_LogFactions
 	action = "call Enh_fnc_logFactions";
 	conditionShow = "hoverObject";
 };
+class Enh_LogClassesString
+{
+	action = "call Enh_fnc_logClassesString";
+	Text = "Log Classes to Clipboard (String)";
+	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
+};
+class Enh_LogPositions3D
+{
+	action = "call Enh_fnc_logPositions";
+	Text = $STR_ENH_contextMenu_logPositions3D;
+	conditionShow = "selected - selectedMarker";
+};
+class Enh_LogPositions2D
+{
+	action = "call Enh_fnc_logPositions2D";
+	Text = $STR_ENH_contextMenu_logPositions2D;
+	conditionShow = "selected";
+};
+class Enh_LogGridPositon
+{
+	action = "call Enh_fnc_logGridPosition";
+	Text = $STR_ENH_contextMenu_logGridPosition;
+	conditionShow = "1";
+};
+class Enh_Log3DENID
+{
+	action = "call Enh_fnc_log3DENIDs";
+	Text = $STR_ENH_contextMenu_log3DENIDs;
+	conditionShow = "selected";
+};
 class Enh_MeasureDistance
 {
 	action = "[] spawn Enh_fnc_measureDistance";
@@ -79,34 +109,4 @@ class Enh_DeleteCrew
 	action = "call Enh_fnc_deleteCrew";
 	Text = $STR_ENH_contextMenu_deleteCrew;
 	conditionShow = "hoverObjectVehicle";
-};
-class Enh_LogClassesString
-{
-	action = "call Enh_fnc_logClassesString";
-	Text = "Log Classes to Clipboard (String)";
-	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
-};
-class Enh_LogPositions3D
-{
-	action = "call Enh_fnc_logPositions";
-	Text = $STR_ENH_contextMenu_logPositions3D;
-	conditionShow = "selected - selectedMarker";
-};
-class Enh_LogPositions2D
-{
-	action = "call Enh_fnc_logPositions2D";
-	Text = $STR_ENH_contextMenu_logPositions2D;
-	conditionShow = "selected";
-};
-class Enh_LogGridPositon
-{
-	action = "call Enh_fnc_logGridPosition";
-	Text = $STR_ENH_contextMenu_logGridPosition;
-	conditionShow = "1";
-};
-class Enh_Log3DENID
-{
-	action = "call Enh_fnc_log3DENIDs";
-	Text = $STR_ENH_contextMenu_log3DENIDs;
-	conditionShow = "selected";
 };
