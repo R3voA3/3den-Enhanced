@@ -91,6 +91,7 @@ v4.3
 - Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
+- Added option to garrision tool to change stance of units
 
 
 v4.2
