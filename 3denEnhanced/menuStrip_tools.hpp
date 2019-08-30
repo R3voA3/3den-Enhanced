@@ -90,7 +90,8 @@ class Enh_Folder_Utilities
 		"Enh_SwitchTime",
 		"Enh_ToggleSimpleObject",
 		"Enh_ToggleSimulation",
-		"Enh_ToggleGrass"
+		"Enh_ToggleGrass",
+		"Enh_ToggleDrawBuildingPositions"
 	};
 };
 //Utilities
@@ -221,6 +222,11 @@ class Enh_GenerateSteamMissionDescription
 	text = $STR_ENH_tools_generateSteamMissionDescription;
 	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
+};
+class Enh_ToggleDrawBuildingPositions
+{
+	text = Toggle Drawing of Building Positions;
+	action = "call Enh_fnc_toggleDrawBuildingPositions";
 };
 //Placement Tools
 class Enh_PlacementTools

@@ -134,6 +134,7 @@ class CfgFunctions
 			class setRandomOrientation;
 			class getProfileColor;
 			class initAmbientAnimationsInEditor;
+			class toggleDrawBuildingPositions;
 		};
 		class Log
 		{
