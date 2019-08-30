@@ -13,8 +13,9 @@
    BOOLEAN: true / false
 */
 
-#define MAP_DIAGONAL sqrt (2 * worldSize) //TO-DO: POSITIONS ARE NOT PROPERLY DRAWN OVER WATER, SEE GARRISON FUNCTION FOR A WORKAROUND
-#define GET_BUILDINGS (position get3DENCamera nearObjects ["House",MAP_DIAGONAL])
+#define MAP_CENTER [worldSize / 2,worldSize / 2,0]
+#define MAP_DIAGONAL sqrt (2 * worldSize)
+#define GET_BUILDINGS (MAP_CENTER nearObjects ["House",MAP_DIAGONAL])
 
 //Remove icons if EH already exists and exit
 if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
