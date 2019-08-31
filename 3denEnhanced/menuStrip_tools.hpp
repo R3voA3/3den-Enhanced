@@ -213,7 +213,7 @@ class Enh_ActionCreator
 };
 class Enh_ScenarioAttributesManager
 {
-	text = $STR_ENH_tools_ScenarioAttributesManager;
+	text = $STR_ENH_tools_scenarioAttributesManager;
 	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
 	opensNewWindow = 1;
 };
@@ -225,7 +225,7 @@ class Enh_GenerateSteamMissionDescription
 };
 class Enh_ToggleDrawBuildingPositions
 {
-	text = Toggle Drawing of Building Positions;
+	text = $STR_ENH_tools_drawBuildingPositions;
 	action = "call Enh_fnc_toggleDrawBuildingPositions";
 };
 //Placement Tools

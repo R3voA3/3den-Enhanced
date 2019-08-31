@@ -5813,24 +5813,28 @@
 		<German>Unbewaffnet:</German>
 		<Original>Unarmed:</Original>
 	</Key>
-	<Key ID="$STR_ENH_contextMenu_logClassesString">
+	<Key ID="STR_ENH_contextMenu_logClassesString">
 		<English>Copy Classes to Clipboard (String)</English>
 		<Original>Copy Classes to Clipboard (String)</Original>
 	</Key>
-	<Key ID="$STR_ENH_placementTools_stance">
+	<Key ID="STR_ENH_placementTools_stance">
 		<English>Stance</English>
 		<Original>Stance</Original>
 	</Key>
-	<Key ID="$STR_ENH_placementTools_stance_auto">
+	<Key ID="STR_ENH_placementTools_stance_auto">
 		<English>Auto</English>
 		<Original>Auto</Original>
 	</Key>
-	<Key ID="$STR_ENH_placementTools_stance_crouch">
+	<Key ID="STR_ENH_placementTools_stance_crouch">
 		<English>Crouch</English>
 		<Original>Crouch</Original>
 	</Key>
-	<Key ID="$STR_ENH_placementTools_stance_stand">
+	<Key ID="STR_ENH_placementTools_stance_stand">
 		<English>Stand</English>
 		<Original>Stand</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_drawBuildingPositions">
+		<English>Toggle Drawing of Building Positions</English>
+		<Original>Toggle Drawing of Building Positions</Original>
 	</Key>
 </Project>
