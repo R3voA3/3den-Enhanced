@@ -43,7 +43,7 @@ For more information, please visit the following link:
 * Create a pull request
 
 # Contribute
-You want to contribute? Add your own code or optimise the existing one. Fee free to do so. 
+You want to contribute? Add your own code or optimise the existing one. Feel free to do so. 
 Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks. 
 
 ## How to?
