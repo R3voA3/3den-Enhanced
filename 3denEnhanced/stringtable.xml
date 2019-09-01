@@ -5085,12 +5085,6 @@
 		<Original>Action Creator</Original>
 		<Czech>Vytvářeč akcí</Czech>
 	</Key>
-	<Key ID="STR_ENH_tools_ScenarioAttributesManager">
-		<English>Scenario Attributes Manager</English>
-		<German>Szenario-Attribute-Manager</German>
-		<Original>Scenario Attributes Manager</Original>
-		<Czech>Správce atributů scénáře</Czech>
-	</Key>
 	<Key ID="STR_ENH_tools_3denRadio">
 		<English>3den Radio</English>
 		<German>3den Radio</German>
