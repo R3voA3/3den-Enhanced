@@ -135,6 +135,7 @@ class CfgFunctions
 			class getProfileColor;
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
+			class toggleDynamicSimulation;
 		};
 		class Log
 		{
@@ -154,6 +155,7 @@ class CfgFunctions
 			class toggleMapIDs;
 			class sessionTimer;
 			class onPreviewDebug;
+			class checkShortCutsDuplicates;
 		};
 		class EventHandlers
 		{

@@ -90,6 +90,7 @@ class Enh_Folder_Utilities
 		"Enh_SwitchTime",
 		"Enh_ToggleSimpleObject",
 		"Enh_ToggleSimulation",
+		"Enh_ToggleDynamicSimulation",
 		"Enh_ToggleGrass",
 		"Enh_ToggleDrawBuildingPositions"
 	};
@@ -189,6 +190,13 @@ class Enh_ToggleSimulation
 	picture = "";
 	action = "call Enh_fnc_toggleSimulation";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
+};
+class Enh_ToggleDynamicSimulation
+{
+	text = "Toggle Dynamic Simulation";
+	picture = "";
+	action = "call Enh_fnc_toggleDynamicSimulation";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class FunctionsViewer//Overwrites the default function viewer
 {
