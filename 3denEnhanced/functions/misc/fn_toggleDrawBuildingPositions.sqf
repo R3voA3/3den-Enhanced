@@ -13,11 +13,9 @@
    BOOLEAN: true / false
 */
 
-#define MAP_CENTER [_a,_a,0]
-#define MAP_DIAGONAL sqrt 2 * _a
+#define MAP_CENTER [worldSize / 2,worldSize / 2,0]
+#define MAP_DIAGONAL sqrt 2 * worldSize / 2
 #define GET_BUILDINGS (MAP_CENTER nearObjects ["House",MAP_DIAGONAL])
-
-private _a = worldSize / 2;
 
 //Remove icons if EH already exists and exit
 if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
