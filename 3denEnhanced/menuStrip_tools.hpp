@@ -158,11 +158,33 @@ class Enh_TextureFinder
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
 	opensNewWindow = 1;
 };
+//Toggle
 class Enh_ToggleGrass
 {
 	text = $STR_ENH_tools_toggleGrass;
 	action = "[] spawn Enh_fnc_toggleGrass";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
+};
+class Enh_ToggleSimpleObject
+{
+	text = $STR_ENH_tools_toggleSimpleObject;
+	picture = "";
+	action = "[['Object'],'objectIsSimple'] call Enh_fnc_toggleAttribute";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
+};
+class Enh_ToggleSimulation
+{
+	text = $STR_ENH_tools_toggleSimulation;
+	picture = "";
+	action = "[['Object'],'enableSimulation'] call Enh_fnc_toggleAttribute";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
+};
+class Enh_ToggleDynamicSimulation
+{
+	text = "Toggle Dynamic Simulation";
+	picture = "";
+	action = "[['Object','Group'],'dynamicSimulation'] call Enh_fnc_toggleAttribute";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class Enh_BatchReplace
 {
@@ -176,27 +198,6 @@ class Enh_DeleteEmptyLayers
 	text = $STR_ENH_tools_deleteEmptyLayers;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
 	action = "call Enh_fnc_deleteEmptyLayers";
-};
-class Enh_ToggleSimpleObject
-{
-	text = $STR_ENH_tools_toggleSimpleObject;
-	picture = "";
-	action = "call Enh_fnc_toggleSimpleObject";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
-};
-class Enh_ToggleSimulation
-{
-	text = $STR_ENH_tools_toggleSimulation;
-	picture = "";
-	action = "call Enh_fnc_toggleSimulation";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
-};
-class Enh_ToggleDynamicSimulation
-{
-	text = "Toggle Dynamic Simulation";
-	picture = "";
-	action = "call Enh_fnc_toggleDynamicSimulation";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class FunctionsViewer//Overwrites the default function viewer
 {

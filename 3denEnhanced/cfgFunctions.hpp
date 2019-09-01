@@ -118,8 +118,6 @@ class CfgFunctions
 			class toggleGrass;
 			class deleteCrew;
 			class deleteEmptyLayers;
-			class toggleSimpleObject;
-			class toggleSimulation;
 			class removeGear;
 			class reverseOrientation;
 			class setOrientation;
@@ -135,7 +133,7 @@ class CfgFunctions
 			class getProfileColor;
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
-			class toggleDynamicSimulation;
+			class toggleAttribute;
 		};
 		class Log
 		{
