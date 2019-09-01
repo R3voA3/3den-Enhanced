@@ -13,7 +13,7 @@
 
 private _display = findDisplay 80000;
 private _input    = param [0,"UNNAME",[""]];
-private _toName = call Enh_fnc_all3DENSelected;
+private _toName = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
 
 if (_input == "UNNAME") then
 {

@@ -13,7 +13,7 @@
    BOOLEAN: true / false
 */
 
-Enh_PlacementTools_Selected = call Enh_fnc_all3DENSelected;
+Enh_PlacementTools_Selected = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
 
 if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
 

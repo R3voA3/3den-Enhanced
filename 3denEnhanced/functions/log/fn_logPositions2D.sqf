@@ -13,7 +13,7 @@
 
 private _posArray = [];
 private _export = "";
-private _selection = call Enh_fnc_all3DENSelected;
+private _selection = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
 
 {
    private _pos = (_x get3DENAttribute "Position") # 0;

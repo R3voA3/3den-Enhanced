@@ -19,7 +19,7 @@ params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 
 private _positions = [];
-private _selectedObjects = call Enh_fnc_all3denSelected;
+private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3denSelected;
 private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
 
 private _radius = ctrlText (_display displayCtrl 100);

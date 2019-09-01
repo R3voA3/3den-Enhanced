@@ -32,8 +32,7 @@ if (isNil "Enh_PlacementTools_Center") then
 //Draw an icon where the center is
 ["Enh_PlacementTools_CenterIcon", "onEachFrame", 
 {
-   private _color = call Enh_fnc_getProfileColor;
-	drawIcon3D["\a3\Modules_f\data\portraitSector_ca.paa",_color, Enh_PlacementTools_Center,1,1,0,"Center / Start Position"];
+	drawIcon3D["\A3\modules_f\data\iconStrategicMapMission_ca.paa",[1,0.1,1,1], Enh_PlacementTools_Center,1,1,0,"Center / Start Position"];
 }] call BIS_fnc_addStackedEventHandler;
 
 #define STEP_SIZE_INDEX (missionNamespace getVariable ["Enh_PlacementTools_stepSizeIndex",4])

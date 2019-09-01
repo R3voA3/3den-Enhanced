@@ -2,7 +2,7 @@ params ['_display'];
 
 if !(is3DEN) exitWith {false};
 
-if ((call Enh_fnc_all3DENSelected) isEqualTo []) exitWith 
+if (([["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected) isEqualTo []) exitWith 
 {
 	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
 	_display closeDisplay 1; 

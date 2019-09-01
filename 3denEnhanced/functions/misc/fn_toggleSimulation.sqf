@@ -13,26 +13,29 @@
 
 if !(is3DEN) exitWith {false};
 
-if (get3DENSelected "Object" isEqualTo []) exitWith
+private _selected = [["Object"]] call Enh_fnc_all3denSelected;
+
+if (_selected isEqualTo []) exitWith
 {
 	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
 
-#define ATTRIBUTE (_x get3DENAttribute "enableSimulation")
+#define ATTRIBUTE "enableSimulation"
+#define GET_ATTRIBUTE (_x get3DENAttribute ATTRIBUTE)
 
 collect3DENHistory
 {
 	{
-		if (ATTRIBUTE isEqualTo [false]) then
+		if (GET_ATTRIBUTE isEqualTo [false]) then
 		{
-		 	_x set3DENAttribute ["enableSimulation",true];
+		 	_x set3DENAttribute [ATTRIBUTE,true];
 		}
 		else
 		{
-			_x set3DENAttribute ["enableSimulation",false];
+			_x set3DENAttribute [ATTRIBUTE,false];
 		};
-	} forEach get3DENSelected "Object";
+	} forEach _selected;
 };
 
 ["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
