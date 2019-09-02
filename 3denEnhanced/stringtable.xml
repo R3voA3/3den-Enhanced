@@ -5831,4 +5831,12 @@
 		<English>Toggle Drawing of Building Positions</English>
 		<Original>Toggle Drawing of Building Positions</Original>
 	</Key>
+	<Key ID="STR_ENH_tools_scenarioAttributesManager">
+		<English>Scenario Attributes Manager</English>
+		<Original>Scenario Attributes Manager</Original>
+	</Key>
+	<Key ID="STR_ENH_folder_miscellaneous">
+		<English>Miscellaneous Tools</English>
+		<Original>Miscellaneous Tools</Original>
+	</Key>
 </Project>
