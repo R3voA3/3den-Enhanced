@@ -7,6 +7,7 @@ class Tools
 		"Enh_Folder_Debug",
 		"Enh_Folder_Loadout",
 		"Enh_Folder_GUI"
+		"Enh_Folder_Miscellaneous"
 	};
 };
 class Enh_Folder_Placement
@@ -83,8 +84,15 @@ class Enh_Folder_Utilities
 		"Enh_BriefingEditor",
 		"Enh_NameObjects",
 		"Enh_ScenarioAttributesManager",
-		"Enh_TextureFinder",
-		"Separator",
+		"Enh_TextureFinder"
+	};
+};
+class Enh_Folder_Miscellaneous
+{
+	text = $STR_ENH_folder_miscellaneous;
+	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+	items[] +=
+	{
 		"Enh_DeleteEmptyLayers",
 		"Enh_GenerateSteamMissionDescription",
 		"Enh_SwitchTime",
@@ -136,12 +144,24 @@ class Enh_3denRadio
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
 	opensNewWindow = 1;
 };
-class Enh_SwitchTime
+class Enh_ActionCreator
 {
-	text = $STR_ENH_tools_switchTime;
-	picture = "\A3\ui_f\data\igui\cfg\actions\settimer_ca.paa";
-	action = "call Enh_fnc_switchTime";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
+	text = $STR_ENH_tools_actionCreator;
+	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
+	opensNewWindow = 1;
+};
+class Enh_ScenarioAttributesManager
+{
+	text = $STR_ENH_tools_scenarioAttributesManager;
+	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
+	opensNewWindow = 1;
+};
+class Enh_BatchReplace
+{
+	text = $STR_ENH_tools_batchReplace;
+	action = "call Enh_fnc_batchReplace_createDisplay";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
+	opensNewWindow = 1;
 };
 class Enh_NameObjects
 {
@@ -158,7 +178,20 @@ class Enh_TextureFinder
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
 	opensNewWindow = 1;
 };
-//Toggle
+//Miscellaneous
+class Enh_DeleteEmptyLayers
+{
+	text = $STR_ENH_tools_deleteEmptyLayers;
+	picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
+	action = "call Enh_fnc_deleteEmptyLayers";
+};
+class Enh_SwitchTime
+{
+	text = $STR_ENH_tools_switchTime;
+	picture = "\A3\ui_f\data\igui\cfg\actions\settimer_ca.paa";
+	action = "call Enh_fnc_switchTime";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
+};
 class Enh_ToggleGrass
 {
 	text = $STR_ENH_tools_toggleGrass;
@@ -186,18 +219,16 @@ class Enh_ToggleDynamicSimulation
 	action = "[['Object','Group'],'dynamicSimulation'] call Enh_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
-class Enh_BatchReplace
+class Enh_GenerateSteamMissionDescription
 {
-	text = $STR_ENH_tools_batchReplace;
-	action = "call Enh_fnc_batchReplace_createDisplay";
-	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
+	text = $STR_ENH_tools_generateSteamMissionDescription;
+	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
 };
-class Enh_DeleteEmptyLayers
+class Enh_ToggleDrawBuildingPositions
 {
-	text = $STR_ENH_tools_deleteEmptyLayers;
-	picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-	action = "call Enh_fnc_deleteEmptyLayers";
+	text = $STR_ENH_tools_drawBuildingPositions;
+	action = "call Enh_fnc_toggleDrawBuildingPositions";
 };
 class FunctionsViewer//Overwrites the default function viewer
 {
@@ -213,29 +244,6 @@ class ConfigViewer//Overwrites the default config viewer to change shortcut
 class DebugConsole//Overwrites the default debug console to change shortcut
 {
 	shortCuts[] = {INPUT_CTRL_OFFSET + DIK_D};
-};
-class Enh_ActionCreator
-{
-	text = $STR_ENH_tools_actionCreator;
-	action = "findDisplay 313 createDisplay 'Enh_ActionCreator'";
-	opensNewWindow = 1;
-};
-class Enh_ScenarioAttributesManager
-{
-	text = $STR_ENH_tools_scenarioAttributesManager;
-	action = "findDisplay 313 createDisplay 'Enh_ScenarioAttributesManager'";
-	opensNewWindow = 1;
-};
-class Enh_GenerateSteamMissionDescription
-{
-	text = $STR_ENH_tools_generateSteamMissionDescription;
-	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
-	opensNewWindow = 1;
-};
-class Enh_ToggleDrawBuildingPositions
-{
-	text = $STR_ENH_tools_drawBuildingPositions;
-	action = "call Enh_fnc_toggleDrawBuildingPositions";
 };
 //Placement Tools
 class Enh_PlacementTools
