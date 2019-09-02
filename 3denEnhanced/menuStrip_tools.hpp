@@ -96,10 +96,10 @@ class Enh_Folder_Miscellaneous
 		"Enh_DeleteEmptyLayers",
 		"Enh_GenerateSteamMissionDescription",
 		"Enh_SwitchTime",
+		"Enh_ToggleGrass",
 		"Enh_ToggleSimpleObject",
 		"Enh_ToggleSimulation",
 		"Enh_ToggleDynamicSimulation",
-		"Enh_ToggleGrass",
 		"Enh_ToggleDrawBuildingPositions"
 	};
 };
@@ -219,17 +219,19 @@ class Enh_ToggleDynamicSimulation
 	action = "[['Object','Group'],'dynamicSimulation'] call Enh_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
+class Enh_ToggleDrawBuildingPositions
+{
+	text = $STR_ENH_tools_drawBuildingPositions;
+	action = "call Enh_fnc_toggleDrawBuildingPositions";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
+};
 class Enh_GenerateSteamMissionDescription
 {
 	text = $STR_ENH_tools_generateSteamMissionDescription;
 	action = "[] spawn Enh_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
 };
-class Enh_ToggleDrawBuildingPositions
-{
-	text = $STR_ENH_tools_drawBuildingPositions;
-	action = "call Enh_fnc_toggleDrawBuildingPositions";
-};
+//Vanilla
 class FunctionsViewer//Overwrites the default function viewer
 {
 	action = "findDisplay 313 createDisplay 'Enh_FunctionsViewer'";
