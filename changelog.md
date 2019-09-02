@@ -85,13 +85,15 @@ v4.3
 - Logging of multiple map grid positions is now possible. Only unique value will be logged
 - Faction are now logged to clipboard without [ ]
 - Added context menu enty to log classes in format "class1","class2",...
+- Added new folder to menu strip
+- Added option to garrision tool to change stance of units
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
-- Added option to garrision tool to change stance of units
+
 
 
 v4.2
