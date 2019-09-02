@@ -6,7 +6,7 @@ class Tools
 		"Enh_Folder_Placement",
 		"Enh_Folder_Debug",
 		"Enh_Folder_Loadout",
-		"Enh_Folder_GUI"
+		"Enh_Folder_GUI",
 		"Enh_Folder_Miscellaneous"
 	};
 };
@@ -372,14 +372,12 @@ class Enh_ToggleMapIDs
 	text = $STR_ENH_tools_showMapIDs;
 	picture = "\3denEnhanced\data\icon_id.paa";
 	action = "call Enh_fnc_toggleMapIDs";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_I};
 };
 class Enh_ProductInfo
 {
 	text = $STR_ENH_tools_productInfo;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\intel_ca.paa";
 	action = "call Enh_fnc_productInfo";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_P};
 };
 class Enh_RecompileFunctions
 {
