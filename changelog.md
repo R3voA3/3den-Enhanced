@@ -87,6 +87,8 @@ v4.3
 - Added context menu enty to log classes in format "class1","class2",...
 - Added new folder to menu strip
 - Added option to garrision tool to change stance of units
+- Fixed missing shortcuts for some tools
+- Fixed Switch Time would not properly set overcast, rain and fog to 0. Change is forced now.
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
