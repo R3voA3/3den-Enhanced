@@ -41,7 +41,7 @@ class Enh_LogFactions
 class Enh_LogClassesString
 {
 	action = "call Enh_fnc_logClassesString";
-	Text = "Log Classes to Clipboard (String)";
+	Text = $STR_ENH_contextMenu_logClassesString;
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
 class Enh_LogPositions3D
