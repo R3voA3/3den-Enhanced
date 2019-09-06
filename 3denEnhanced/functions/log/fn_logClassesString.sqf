@@ -15,7 +15,7 @@
 
 private _classes = [];
 private _export = "";
-private _selection = [""] call Enh_fnc_all3DENSelected;
+private _selection = [[""]] call Enh_fnc_all3DENSelected;
 
 {
 	_classes pushBackUnique typeOf _x;

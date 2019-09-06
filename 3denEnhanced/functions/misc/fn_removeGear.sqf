@@ -30,7 +30,7 @@ if (_units isEqualTo []) exitWith
 	false
 };
 
-private _code = 
+private _code =
 [
 	{removeGoggles _x},
 	{removeHeadgear _x},

@@ -57,7 +57,7 @@ private _fnc_addArray =
 ["linkedItems",[vest _object,headgear _object,goggles _object] + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems] call _fnc_addArray;
 
 //From BIS_fnc_exportLoadout END
-_export = _export + "};" + LB + "Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
+_export = _export + "};" + LB + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
 
 ["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 copyToClipboard _export;

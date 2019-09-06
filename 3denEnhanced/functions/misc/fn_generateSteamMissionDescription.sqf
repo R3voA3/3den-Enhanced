@@ -39,15 +39,15 @@ _appID = "Scenario" get3DENMissionAttribute "AppID";
 
 switch _appID do
 {
-case 275700: {_appID = "Zeus"};
-case 288520: {_appID = "Karts"};
-case 304380: {_appID = "Helicopters"};
-case 332350: {_appID = "Marksmen"};
-case 395180: {_appID = "Apex"};
-case 571710: {_appID = "Laws of War"};
-case 601670: {_appID = "Jets"};
-case 744950: {_appID = "Tac Ops"};
-case 798390: {_appID = "Tanks"};
+  case 275700: {_appID = "Zeus"};
+  case 288520: {_appID = "Karts"};
+  case 304380: {_appID = "Helicopters"};
+  case 332350: {_appID = "Marksmen"};
+  case 395180: {_appID = "Apex"};
+  case 571710: {_appID = "Laws of War"};
+  case 601670: {_appID = "Jets"};
+  case 744950: {_appID = "Tac Ops"};
+  case 798390: {_appID = "Tanks"};
 };
 //Multiplayer
 _gameType = "Multiplayer" get3DENMissionAttribute "GameType";
@@ -67,7 +67,7 @@ _rain = ("Intel" get3DENMissionAttribute "IntelRainStart");
 _date = ("Intel" get3DENMissionAttribute "IntelDate");
 _date = (str (_date # 1) + "-" + str (date # 2) + "-" + str (date # 0));
 
-["Mission Description:",""] call _fnc_addLine;
+["Mission Description",""] call _fnc_addLine;
 ["",_description,false,false] call _fnc_addLine;
 
 if !(_appID == 0) then
