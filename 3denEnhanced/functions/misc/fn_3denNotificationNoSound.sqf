@@ -76,13 +76,14 @@ bis_fnc_3DENNotification_spawn = [_ctrlNotification,_ctrlNotificationTextHeight,
 	disableserialization;
 
 	//--- Expand
-	_ctrlNotification = _this select 0;
-	_ctrlNotificationTextHeight = _this select 1;
-	_duration = _this select 2;
-	_animate = _this select 3;
+	params ["_ctrlNotification","_ctrlNotificationTextHeight","_duration","_animate"];
 
 	_commitTime = if (_animate) then {0.1} else {0};
-	if (_duration < 0) then {_duration = 2 + (ctrltextheight _ctrlNotification / _ctrlNotificationTextHeight);}; //--- Sleep longer for each text line
+	if (_duration < 0) then
+	{
+		//--- Sleep longer for each text line
+		_duration = 2 + (ctrltextheight _ctrlNotification / _ctrlNotificationTextHeight);
+	}; 
 
 	_ctrlNotificationPos = ctrlposition _ctrlNotification;
 	_ctrlNotificationPos set [3,ctrltextheight _ctrlNotification];
