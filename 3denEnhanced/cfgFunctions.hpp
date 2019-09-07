@@ -134,6 +134,7 @@ class CfgFunctions
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
 			class toggleAttribute;
+			class 3DENCreateExtraction;
 		};
 		class Log
 		{

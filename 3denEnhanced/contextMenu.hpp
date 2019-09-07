@@ -2,7 +2,8 @@ items[] +=
 {
 	"Enh_MeasureDistance",
 	"Enh_ShowModuleInformation",
-	"Enh_Garrison"
+	"Enh_Garrison",
+	"Enh_Extraction"
 };
 class Log
 {
@@ -90,6 +91,16 @@ class Enh_Garrison
 	Text = $STR_ENH_contextMenu_garrison;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
 	conditionShow = "selected";
+	opensNewWindow = 1;
+	SHOW_IN_ROOT;
+};
+class Enh_Extraction
+{
+	//action = "call Enh_fnc_3DENCreateExtraction";
+	action = "call compile preprocessFileLineNumbers 'fn_3DENCreateExtraction.sqf'";
+	Text = "Create Extraction"
+	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
+	conditionShow = "hoverObjectVehicle";
 	opensNewWindow = 1;
 	SHOW_IN_ROOT;
 };
