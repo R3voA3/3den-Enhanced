@@ -70,7 +70,7 @@ class Enh_Garrison
 		};
 		class Stance: ctrlStatic
 		{
-			text = $$STR_ENH_placementTools_stance;
+			text = $STR_ENH_placementTools_stance;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 15 * GRID_W;
