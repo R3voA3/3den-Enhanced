@@ -15,11 +15,20 @@
 
 private _posArray = [];
 private _export = "";
-private _selection = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
+private _selection = [["Object","Logic","Trigger","Marker","Waypoint"]] call Enh_fnc_all3DENSelected;
 
+if (_selection isEqualTo []) then 
 {
-   _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
-} forEach _selection;
+   (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_pos3D"];
+   
+   _posArray pushBack mapGridPosition _pos3D;
+}
+else
+{
+   {
+      _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
+   } forEach _selection;
+};
 
 private _export = [_posArray,false] call Enh_fnc_exportWithLB;
 
