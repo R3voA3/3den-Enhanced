@@ -29,10 +29,6 @@ private _ctrlTransport = GET_CTRL(300);
 _ctrlTransport ctrlSetText groupId group _veh;
 _ctrlTransport ctrlEnable false;
 
-private _ctrlGridPos = GET_CTRL(400);
-_ctrlGridPos ctrlSetText mapGridPosition _center;
-_ctrlGridPos ctrlEnable false;
-
 private _ctrlConditionStart = GET_CTRL(400);
 _ctrlConditionStart ctrlSetText "Enh_Extraction_Start";
 
