@@ -3,6 +3,7 @@
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
 #include "display3DEN.hpp"
+
 //Custom GUIs
 #include "GUI\briefingEditor.hpp"
 #include "GUI\3denRadio.hpp"
@@ -17,6 +18,8 @@
 #include "GUI\scenarioAttributesManager.hpp"
 #include "GUI\scenarioAttributesManagerTemplateData.hpp"
 #include "GUI\garrison.hpp"
+#include "GUI\extraction.hpp"
+
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
 

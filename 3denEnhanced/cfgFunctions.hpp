@@ -22,6 +22,13 @@ class CfgFunctions
 			class garrison_onLoad;
 			class garrison_garrison;
 		};
+		class Extraction
+		{
+			file = "3denEnhanced\functions\GUI\extraction";
+			class extraction_onLoad;
+			class extraction_onCheckedChanged;
+			class extraction_setup;
+		};
 		class TextureFinder
 		{
 			file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -134,7 +141,6 @@ class CfgFunctions
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
 			class toggleAttribute;
-			class 3DENCreateExtraction;
 		};
 		class Log
 		{

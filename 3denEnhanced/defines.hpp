@@ -3,6 +3,7 @@
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 
 //Display IDDs
+#define ENH_IDD_EXTRACTION					50000
 #define ENH_IDD_3DENRADIO 					60000
 #define ENH_IDD_NAMEOBJECTS 				80000
 #define ENH_IDD_TEXTUREFINDER 				140000

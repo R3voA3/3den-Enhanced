@@ -97,7 +97,8 @@ class Enh_Garrison
 class Enh_Extraction
 {
 	//action = "call Enh_fnc_3DENCreateExtraction";
-	action = "call compile preprocessFileLineNumbers 'fn_3DENCreateExtraction.sqf'";
+	//action = "call compile preprocessFileLineNumbers 'fn_3DENCreateExtraction.sqf'";
+	action = "findDisplay 313 createDisplay 'Enh_Extraction'";
 	Text = "Create Extraction"
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
 	conditionShow = "hoverObjectVehicle";
