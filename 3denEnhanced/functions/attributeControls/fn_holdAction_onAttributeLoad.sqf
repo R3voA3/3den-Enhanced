@@ -33,8 +33,6 @@
 	"\a3\ui_f\data\igui\cfg\holdactions\holdaction_loaddevice_ca.paa"\
 ]
 
-#define DEFAULT_TEMPLATES ["Custom","Hack","Search","Download"]
-
 params ["_ctrlGroup","_value"];
 
 _value params
@@ -94,12 +92,4 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 (_ctrlGroup controlsGroupCtrl 113) cbSetChecked _showUnconscious;
 (_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
 
-//Fill templates combo WIP
-_ctrlTemplates = _ctrlGroup controlsGroupCtrl 115;
-{
-	_ctrlTemplates lbAdd _x;
- 	if (_x isEqualTo _template) then
-	{
-		_ctrlTemplates lbSetCurSel _forEachIndex;
-	};
-} forEach DEFAULT_TEMPLATES;
+true
