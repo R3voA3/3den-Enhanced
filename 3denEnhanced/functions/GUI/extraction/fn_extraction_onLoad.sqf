@@ -14,6 +14,7 @@
 */
 
 #define GET_CTRL(IDC) (_display displayCtrl IDC)
+#define CFG_MAGAZINES ["SmokeShell","smokeShellGreen","smokeShellOrange","smokeShellBlue","smokeShellRed","smokeShellPurple","smokeShellYellow","Chemlight_blue","Chemlight_red","Chemlight_green","Chemlight_yellow","B_IR_Grenade"]
 
 params ["_display"];
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center","_veh"];
@@ -34,8 +35,19 @@ _ctrlConditionStart ctrlSetText "Enh_Extraction_Start";
 
 private _ctrlGrenadeType = GET_CTRL(500);
 {
-	_ctrlGrenadeType lbAdd _x;
-} forEach ["None","smokeShellWhite","smokeShellGreen","smokeShellOrange","smokeShellBlue","smokeShellRed","smokeShellPurple","smokeShellYellow","B_IRStrobe"];
+   if (_x isEqualTo "-") then
+   {
+      _ctrlGrenadeType lbAdd _x;
+   }
+   else
+   {
+      private _cfgMagazineClass = getText (configfile >> "CfgMagazines" >> _x >> "ammo");
+      private _displayName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+      _ctrlGrenadeType lbAdd _displayName;
+	   _ctrlGrenadeType lbSetData [_forEachIndex,_cfgMagazineClass];
+   };
+} forEach ["-"] + CFG_MAGAZINES;
+
 _ctrlGrenadeType lbSetCurSel 0;
 
 private _ctrlCondition = GET_CTRL(600);

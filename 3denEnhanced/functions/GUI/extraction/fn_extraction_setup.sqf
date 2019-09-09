@@ -23,10 +23,10 @@ _center set [2,0];//Set z to zero
 private _radioChat = cbChecked GET_CTRL(100);
 private _conditionStart = ctrlText GET_CTRL(400);
 private _ctrlGrenadeType = GET_CTRL(500);
-private _grenadeType = _ctrlGrenadeType lbText lbCurSel _ctrlGrenadeType;
+private _grenadeType = _ctrlGrenadeType lbData lbCurSel _ctrlGrenadeType;
 private _condition = ctrlText GET_CTRL(600);
 private _gridPos = ctrlText GET_CTRL(700);
-systemChat str _conditionStart;
+
 collect3DENHistory
 {
 	_veh set3DENAttribute ["Position",_center vectorAdd [0,-120,0]];
