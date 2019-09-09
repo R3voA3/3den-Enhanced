@@ -6,6 +6,7 @@ v4.3
 - Attribute to end mission after certain number of units of given side were killed (e.g. civilian casualties)
 - Added Editor Attribute to toggle Entity Counter in status bar.
 - Added a tool to quickly toggle simulation of selected objects
+- Added a tool to quickly setup a simple extraction
 
 *changed*
 - Combo Box controls were replaced with Toolbox controls if possible
