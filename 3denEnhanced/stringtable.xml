@@ -5830,4 +5830,8 @@
 		<English>Miscellaneous Tools</English>
 		<Original>Miscellaneous Tools</Original>
 	</Key>
+	<Key ID="STR_ENH_placementTools_orientation">
+		<English>Orientation</English>
+		<Original>Orientation</Original>
+	</Key>
 </Project>
