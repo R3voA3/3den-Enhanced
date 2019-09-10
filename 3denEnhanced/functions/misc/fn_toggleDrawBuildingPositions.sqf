@@ -17,7 +17,6 @@
 #define RADIUS 100
 #define GET_BUILDINGS (CENTER nearObjects ["House",RADIUS])
 
-
 //Remove icons if EH already exists and exit
 if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
 
@@ -42,5 +41,7 @@ if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStacke
 		} count GET_BUILDINGS;
 	}
 ] call BIS_fnc_addStackedEventHandler;
+
+["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true
