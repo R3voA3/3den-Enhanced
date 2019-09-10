@@ -21,9 +21,14 @@ private _display = ctrlParent _ctrlButton;
 private _positions = [];
 private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3denSelected;
 private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
+_center set [2,0];
 
 private _radius = ctrlText (_display displayCtrl 100);
-private _index  = lbCurSel (_display displayCtrl 200);
+
+private _ctrlCoverage = _display displayCtrl 200;
+private _index  = lbCurSel _ctrlCoverage;
+private _step = _ctrlCoverage lbValue _index;
+
 private _stance  = lbCurSel (_display displayCtrl 300);
 private _step   = _ctrlCoverage lbValue _index;
 
@@ -36,8 +41,9 @@ profileNamespace setVariable ['Enh_garrison_lastStance',_stance];
 private _buildings = _center nearObjects ["House",parseNumber _radius];
 
 //Get all building positions from nearby buildings
+#define BUILDINGPOS (_x buildingPos -1)
 {
-	for "_i" from 0 to (count (_x buildingPos -1) - 1) step _step do
+for "_i" from 0 to (count BUILDINGPOS - 1) step _step do
 	{
 		_positions pushBack (_x buildingPos _i);
 	};
@@ -53,7 +59,7 @@ collect3DENHistory
 
 		if (count _positions == 0) exitWith
 		{
-			[localize "STR_ENH_garrison_notification"] call BIS_fnc_3DENNotification;
+			[localize "STR_ENH_garrison_notification",1] call BIS_fnc_3DENNotification;
 		};
 		if(surfaceIsWater _pos) then
 		{
