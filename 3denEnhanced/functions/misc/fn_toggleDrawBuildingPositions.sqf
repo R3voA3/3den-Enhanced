@@ -4,7 +4,7 @@
    Date: 2019-08-30
 
    Description:
-   Draws all building positions on the map. Function always covers the whole map. If drawing is already enabled, calling it again will destroy the icons.
+   Draws all building positions on the map. Function always covers the whole map. If drawing has already already been enabled, calling it again will destroy the icons.
 
    Parameter(s):
    -
@@ -13,9 +13,10 @@
    BOOLEAN: true / false
 */
 
-#define MAP_CENTER [worldSize / 2,worldSize / 2,0]
-#define MAP_DIAGONAL sqrt 2 * worldSize / 2
-#define GET_BUILDINGS (MAP_CENTER nearObjects ["House",MAP_DIAGONAL])
+#define CENTER (getPos get3DENCamera)
+#define RADIUS 100
+#define GET_BUILDINGS (CENTER nearObjects ["House",RADIUS])
+
 
 //Remove icons if EH already exists and exit
 if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
