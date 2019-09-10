@@ -306,7 +306,7 @@ class Enh_PlacementTools
 				};
 				class AreaSize: ctrlStatic
 				{
-					text = $STR_ENH_placementTools_areaSize;
+					text = $STR_ENH_placementTools_radius
 					x = POS_X_TEXT;
 					y = 85 * GRID_H;
 					w = WIDTH_TEXT;
