@@ -79,7 +79,6 @@ class CfgFunctions
 			class placementTools_createDisplay;
 			class placementTools_centralAngle;
 			class placementTools_fillArea;
-			class placementTools_garrison;
 			class placementTools_grid;
 			class placementTools_radius;
 			class placementTools_initialAngle;

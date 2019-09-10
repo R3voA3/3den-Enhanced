@@ -64,8 +64,6 @@ private _stepSize = [0.0001,0.001,0.01,0.1,1,10,100] select STEP_SIZE_INDEX;
    [70,"Enh_PlacementTools_SpaceY",2],
    [80,"Enh_PlacementTools_A",100],
    [90,"Enh_PlacementTools_B",100],
-   [100,"Enh_PlacementTools_AreaDia",100],
-   [110,"Enh_PlacementTools_Coverage",2],//2 = 50%, 10=10%, 1=100%...
    [130,"Enh_PlacementTools_RectangleA",100],
    [140,"Enh_PlacementTools_RectangleB",100],
    [150,"Enh_PlacementTools_RectangleSpacing",2]
