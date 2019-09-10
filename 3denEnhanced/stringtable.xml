@@ -3152,15 +3152,6 @@
 		<Polish>Pokrycie budynków</Polish>
 		<Russian>Индекс запуска</Russian>
 	</Key>
-	<Key ID="STR_ENH_placementTools_areaSize">
-		<Original>Area Size</Original>
-		<English>Area Size</English>
-		<Czech>Velikost oblasti</Czech>
-		<German>Gebietsgröße</German>
-		<Spanish>Tamaño de Area</Spanish>
-		<Polish>Wielkość strefy</Polish>
-		<Russian>Размер зоны</Russian>
-	</Key>
 	<Key ID="STR_ENH_garrison_notification">
 		<Original>Not enough empty building positions, increase the radius the coverage.</Original>
 		<English>Not enough empty building positions, increase the radius the coverage.</English>
@@ -3634,9 +3625,9 @@
 		<English>Recompiles all functions. This may take a moment.</English>h&gt;
 		<German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German><Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp><Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish><Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French><Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian></Key>
 	<Key ID="STR_ENH_functionsViewer_recompileSeletected_text">
-		<Original>Recompile Selected</Original>
+		<Original>Recomp. Sel.</Original>
 		<English>Recompile Selected</English>
-		<German>Ausgewählte rekompilieren</German>
+		<German>Ausgewählte rekomp.</German>
 		<Chinesesimp>重新编译选择的</Chinesesimp>
 		<Spanish>Recompilar Seleccionado</Spanish>
 		<Czech>Překomplikovat vybrané</Czech>
