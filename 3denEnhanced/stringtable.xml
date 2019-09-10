@@ -3141,17 +3141,6 @@
 		<Polish>Start index</Polish>
 		<Russian>Стартовый индекс</Russian>
 	</Key>
-	<Key ID="STR_ENH_placementTools_coverage">
-		<Original>Coverage</Original>
-		<English>Coverage</English>
-		<Czech>Kryté pozice v budově</Czech>
-		<French>Positions de couverture dans le bâtiment</French>
-		<Spanish>Posiciones de covertura en edificios</Spanish>
-		<German>Abdeckung</German>
-		<Chinesesimp>覆盖建筑位置</Chinesesimp>
-		<Polish>Pokrycie budynków</Polish>
-		<Russian>Индекс запуска</Russian>
-	</Key>
 	<Key ID="STR_ENH_garrison_notification">
 		<Original>Not enough empty building positions, increase the radius the coverage.</Original>
 		<English>Not enough empty building positions, increase the radius the coverage.</English>
@@ -3223,30 +3212,6 @@
 		<English>Rectangle Pattern</English>
 		<Czech>Obdélníkový tvar</Czech>
 		<German>Rechteck-Muster</German>
-	</Key>
-	<Key ID="STR_ENH_placementTools_10percent">
-		<Original>10 %</Original>
-		<English>10 %</English>
-		<Czech>10 %</Czech>
-		<German>10 %</German>
-	</Key>
-	<Key ID="STR_ENH_placementTools_25percent">
-		<Original>25 %</Original>
-		<English>25 %</English>
-		<Czech>25 %</Czech>
-		<German>25 %</German>
-	</Key>
-	<Key ID="STR_ENH_placementTools_50percent">
-		<Original>50 %</Original>
-		<English>50 %</English>
-		<Czech>50 %</Czech>
-		<German>50 %</German>
-	</Key>
-	<Key ID="STR_ENH_placementTools_100percent">
-		<Original>100 %</Original>
-		<English>100 %</English>
-		<Czech>100 %</Czech>
-		<German>100 %</German>
 	</Key>
 	<Key ID="STR_ENH_placementTools_A">
 		<Original>A</Original>
@@ -4747,17 +4712,6 @@
 		<Polish>Opis modułu</Polish>
 		<Russian>Описание модуля</Russian>
 	</Key>
-	<Key ID="STR_ENH_placementTools_garrison_header">
-		<Original>Garrison Buildings</Original>
-		<English>Garrison Buildings</English>
-		<Czech>Obsadit budovy</Czech>
-		<French>Placer en garnison</French>
-		<Spanish>Guarnicionar edificios.</Spanish>
-		<German>Gebäude besetzen</German>
-		<Chinesesimp>驻军建筑物</Chinesesimp>
-		<Polish>Obsadź budynki</Polish>
-		<Russian>Гарнизонные Здания</Russian>
-	</Key>
 	<Key ID="STR_ENH_contextMenu_garrison">
 		<Original>Garrison Buildings</Original>
 		<English>Garrison Buildings</English>
@@ -5802,22 +5756,6 @@
 		<English>Copy Classes to Clipboard (String)</English>
 		<Original>Copy Classes to Clipboard (String)</Original>
 	</Key>
-	<Key ID="STR_ENH_placementTools_stance">
-		<English>Stance</English>
-		<Original>Stance</Original>
-	</Key>
-	<Key ID="STR_ENH_placementTools_stance_auto">
-		<English>Auto</English>
-		<Original>Auto</Original>
-	</Key>
-	<Key ID="STR_ENH_placementTools_stance_crouch">
-		<English>Crouch</English>
-		<Original>Crouch</Original>
-	</Key>
-	<Key ID="STR_ENH_placementTools_stance_stand">
-		<English>Stand</English>
-		<Original>Stand</Original>
-	</Key>
 	<Key ID="STR_ENH_tools_drawBuildingPositions">
 		<English>Toggle Drawing of Building Positions</English>
 		<Original>Toggle Drawing of Building Positions</Original>
@@ -5833,5 +5771,67 @@
 	<Key ID="STR_ENH_placementTools_orientation">
 		<English>Orientation</English>
 		<Original>Orientation</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_stance">
+		<English>Stance</English>
+		<Original>Stance</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_stance_auto">
+		<English>Auto</English>
+		<Original>Auto</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_stance_crouch">
+		<English>Crouch</English>
+		<Original>Crouch</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_coverage">
+		<English>Coverage</English>
+		<Chinesesimp>覆盖建筑位置</Chinesesimp>
+		<Czech>Kryté pozice v budově</Czech>
+		<French>Positions de couverture dans le bâtiment</French>
+		<German>Abdeckung</German>
+		<Original>Coverage</Original>
+		<Polish>Pokrycie budynków</Polish>
+		<Russian>Индекс запуска</Russian>
+		<Spanish>Posiciones de covertura en edificios</Spanish>
+	</Key>
+	<Key ID="STR_ENH_garrison_10percent">
+		<English>10 %</English>
+		<Czech>10 %</Czech>
+		<German>10 %</German>
+		<Original>10 %</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_25percent">
+		<English>25 %</English>
+		<Czech>25 %</Czech>
+		<German>25 %</German>
+		<Original>25 %</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_50percent">
+		<English>50 %</English>
+		<Czech>50 %</Czech>
+		<German>50 %</German>
+		<Original>50 %</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_100percent">
+		<English>100 %</English>
+		<Czech>100 %</Czech>
+		<German>100 %</German>
+		<Original>100 %</Original>
+	</Key>
+	<Key ID="STR_ENH_garrison_header">
+		<English>Garrison Buildings</English>
+		<Chinesesimp>驻军建筑物</Chinesesimp>
+		<Czech>Obsadit budovy</Czech>
+		<French>Placer en garnison</French>
+		<German>Gebäude besetzen</German>
+		<Original>Garrison Buildings</Original>
+		<Polish>Obsadź budynki</Polish>
+		<Russian>Гарнизонные Здания</Russian>
+		<Spanish>Guarnicionar edificios.</Spanish>
+	</Key>
+	<Key ID="STR_ENH_garrison_stance_stand">
+		<English>Stand</English>
+		<Original>Stand</Original>
 	</Key>
 </Project>
