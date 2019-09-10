@@ -28,7 +28,7 @@ class Enh_Garrison
 		};
 		class Radius: ctrlStatic
 		{
-			text = $STR_ENH_placementTools_areaSize;
+			text = $STR_ENH_placementTools_radius;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 15 * GRID_W;
