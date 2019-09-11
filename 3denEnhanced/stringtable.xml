@@ -5834,4 +5834,9 @@
 		<English>Stand</English>
 		<Original>Stand</Original>
 	</Key>
+	<Key ID="STR_ENH_tools_scriptCommands">
+		<English>Script Commands</English>
+		<German>Skript Befehle</German>
+		<Original>Script Commands</Original>
+	</Key>
 </Project>

@@ -77,6 +77,7 @@ class Enh_Folder_Utilities
 		"Enh_Jukebox",
 		"Enh_MoonPhases",
 		"Enh_PrintConfig",
+		"Enh_ScriptCommands",
 		"Separator",
 		"Enh_3denRadio",
 		"Enh_ActionCreator",
@@ -126,6 +127,12 @@ class Enh_CfgDisabledCommands
 {
 	text = $STR_ENH_tools_CfgDisabledCommands;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
+	opensNewWindow = 1;
+};
+class Enh_ScriptCommands
+{
+	text = $STR_ENH_tools_ScriptCommands;
+	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_scriptCommands.sqf'";
 	opensNewWindow = 1;
 };
 class Enh_BriefingEditor
