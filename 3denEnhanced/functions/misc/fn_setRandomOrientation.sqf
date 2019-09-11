@@ -20,7 +20,6 @@ if (_entities isEqualTo []) exitWith
 	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
-systemChat format ["Entities: %1",_entities];
 collect3DENHistory
 {
 	{
