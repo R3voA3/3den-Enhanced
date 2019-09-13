@@ -5839,4 +5839,43 @@
 		<German>Skript Befehle</German>
 		<Original>Script Commands</Original>
 	</Key>
+	<Key ID="STR_ENH_contextMenu_createExtraction">
+		<English>Create Extraction</English>
+		<German>Extraktion erstellen</German>
+		<Original>Create Extraction</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_layer">
+		<English>Extraction</English>
+		<German>Extraktion</German>
+		<Original>Extraction</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_triggerSmokeText">
+		<English>Mark LZ</English>
+		<German>LZ markieren</German>
+		<Original>Mark LZ</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_triggerStartExtractionText">
+		<English>Start Extraction</English>
+		<German>Extraktion ausführen</German>
+		<Original>Start Extraction</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_callExtractionMsg">
+		<English>%2, this is %1. Requesting immediate extraction at grid position %3, over.</English>
+		<German>%2 von %1. Sofortige Extraktion benötigt. Koordinaten sind %3, kommen.</German>
+		<Original>%2, this is %1. Requesting immediate extraction at grid position %3, over.</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_extractionConfirmedMsg">
+		<English>%1 this is %2, coordinates received. Standby, over.</English>
+		<German>%1 von %2, Koordinaten erhalten, Ende.</German>
+		<Original>%1 this is %2, coordinates received. Standby, over.</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_header">
+		<English>Extraction Creator</English>
+		<German>Extraktions-Konfigurator</German>
+		<Original>Extraction Creator</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_showRadioChat">
+		<English>Show Radio Chat</English>
+		<Original>Show Radio Chat</Original>
+	</Key>
 </Project>

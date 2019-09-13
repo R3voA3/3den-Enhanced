@@ -7,7 +7,7 @@
    Used by the Enh_Extraction GUI. Is called when display is created.
 
    Parameter(s):
-   -
+   0: DISPLAY - Enh_Extraction GUI
 
    Returns:
    BOOLEAN: true
@@ -22,9 +22,9 @@ params ["_display"];
 private _ctrlShowRadio = _display displayCtrl 100;
 _ctrlShowRadio cbSetChecked false;
 
-private _ctrlCaller = GET_CTRL(200);
-_ctrlCaller ctrlSetText groupId group player;
-_ctrlCaller ctrlEnable false;
+private _ctrlRequester = GET_CTRL(200);
+_ctrlRequester ctrlSetText groupId group player;
+_ctrlRequester ctrlEnable false;
 
 private _ctrlTransport = GET_CTRL(300);
 _ctrlTransport ctrlSetText groupId group _veh;

@@ -21,7 +21,7 @@ class Enh_Extraction
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = "Extraction Creator";
+			text = $STR_ENH_extraction_header;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -29,7 +29,7 @@ class Enh_Extraction
 		};
 		class ShowRadioChat: ctrlStatic
 		{
-			text = "Show Radio Chat";
+			text = $STR_ENH_extraction_showRadioChat;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 23 * GRID_W;
@@ -44,16 +44,15 @@ class Enh_Extraction
 			h = 30 * pixelH;
 			onCheckedChanged = "_this call Enh_fnc_extraction_onCheckedChanged";
 		};
-		class NameCaller: ctrlStatic
+		class NameRequester: ctrlStatic
 		{
-			text = "Callsign Caller";
-			tooltip = "Name of the caller shown in radio chat.";
+			text = STR_ENH_extraction_callSignRequester;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
-		class NameCallerValue: ctrlEdit
+		class NameRequesterValue: ctrlEdit
 		{
 			idc = 200;
 			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
@@ -63,8 +62,7 @@ class Enh_Extraction
 		};
 		class NameTransport: ctrlStatic
 		{
-			text = "Callsign Transport";
-			tooltip = "Name of the transport shown in radio chat.";
+			text = $STR_ENH_extraction_callSignTransport;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 28 * GRID_W;
@@ -80,8 +78,8 @@ class Enh_Extraction
 		};
 		class ConditionStart: ctrlStatic
 		{
-			text = "Condition Start";
-			tooltip = "Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.";
+			text = $STR_ENH_extraction_conditionStart;
+			tooltip = $STR_ENH_extraction_conditionStart_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 24 * GRID_H;
 			w = 23 * GRID_W;
@@ -97,8 +95,8 @@ class Enh_Extraction
 		};
 		class GrenadeType: ctrlStatic
 		{
-			text = "Grenade Type";
-			tooltip = "The landing zone is marked by this grenade type."
+			text = $STR_ENH_extraction_grenadeType;
+			tooltip = $STR_ENH_extraction_grenadeType_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 30 * GRID_H;
 			w = 23 * GRID_W;
@@ -114,8 +112,8 @@ class Enh_Extraction
 		};
 		class Condition: ctrlStatic
 		{
-			text = "Condition";
-			tooltip = "This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle."
+			text = $STR_ENH_extraction_condition;
+			tooltip = $STR_ENH_extraction_condition_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 36 * GRID_H;
 			w = 23 * GRID_W;
@@ -131,7 +129,7 @@ class Enh_Extraction
 		};
 		class GridPosition: ctrlStatic
 		{
-			text = "Grid Position";
+			text = $STR_ENH_extraction_gridPosition;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 57 * GRID_H;
 			w = 23 * GRID_W;

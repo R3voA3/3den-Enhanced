@@ -97,7 +97,7 @@ class Enh_Garrison
 class Enh_Extraction
 {
 	action = "findDisplay 313 createDisplay 'Enh_Extraction'";
-	Text = "Create Extraction"
+	Text = $STR_ENH_contextMenu_createExtraction;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
 	conditionShow = "hoverObjectVehicle";
 	opensNewWindow = 1;

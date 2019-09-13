@@ -4,7 +4,7 @@
    Date: 2019-09-06
 
    Description:
-   Creates all required entities within Eden for a extraction. Value are taken from Enh_Extraction GUI.
+   Creates all required entities within Eden for a extraction. Values are taken from Enh_Extraction GUI.
 
    Parameter(s):
    -
@@ -30,7 +30,7 @@ private _gridPos = ctrlText GET_CTRL(700);
 collect3DENHistory
 {
 	_veh set3DENAttribute ["Position",_center vectorAdd [0,-120,0]];
-	private _layer = -1 add3DENLayer "Extraction";
+	private _layer = -1 add3DENLayer localize "STR_ENH_extraction_layer";
 
 	//Set up first waypoint. This WP has to be completed for the extraction to start
 	private _wpStart = group _veh create3DENEntity ["Waypoint","Move",_center vectorAdd [0,-119,0]];
@@ -42,12 +42,12 @@ collect3DENHistory
 		_heliPad set3DENLayer _layer;
 	};
 
-	if !(_grenadeType isEqualTo "None") then
+	if !(_grenadeType isEqualTo "") then
 	{
 		private _triggerSmoke = create3DENEntity ["Trigger","EmptyDetector",_center vectorAdd [2,-119,0]];
 		_triggerSmoke set3DENAttribute ["Condition","Enh_Extraction_Start"];
 		_triggerSmoke set3DENAttribute ["IsServerOnly",true];
-		_triggerSmoke set3DENAttribute ["Text","Create Smoke"];
+		_triggerSmoke set3DENAttribute ["Text",localize "STR_ENH_extraction_triggerSmokeText"];
 		_triggerSmoke set3DENAttribute ["OnActivation",
 			format 
 			[
@@ -79,24 +79,27 @@ collect3DENHistory
 		]
 	];
 	_triggerStart set3DENAttribute ["IsServerOnly",true];
-	_triggerStart set3DENAttribute ["Text","Start Extraction"];
+	_triggerStart set3DENAttribute ["Text",localize "STR_ENH_extraction_triggerStartExtractionText"];
 
 	add3DENConnection ["WaypointActivation",[_triggerStart],_wpStart];
 
 	//Set up radio chat trigger
 	if (_radioChat) then
 	{
-		private _nameCaller = ctrlText GET_CTRL(200);
+		private _nameRequester = ctrlText GET_CTRL(200);
 		private _nameTransport = ctrlText GET_CTRL(300);
+		private _callExtractionMsg = format [localize "STR_ENH_extraction_callExtractionMsg",_nameRequester,_nameTransport,_gridPos];
+		private _extractionConfirmedMsg = format [localize "STR_ENH_extraction_extractionConfirmedMsg",_nameRequester,_nameTransport];
 		_triggerStart set3DENAttribute
 		[
 			"OnActivation",
-			format 
+			format
 			[
-				"[['%1','%2, this is %1. Requesting immediate extraction at grid position %3, over.'],['%2','%1 this is %2, coordinates received. Standby, over.',8]] remoteExec ['BIS_fnc_EXP_camp_playSubtitles',0];",
-				_nameCaller,
+				"[['%1','%3'],['%2','%4',8]] remoteExec ['BIS_fnc_EXP_camp_playSubtitles',0];",
+				_nameRequester,
 				_nameTransport,
-				_gridPos
+				_callExtractionMsg,
+				_extractionConfirmedMsg
 			]
 		];
 	};
@@ -104,12 +107,12 @@ collect3DENHistory
 	//Setup unload waypoint
 	private _wpTransportUnload = group _veh create3DENEntity ["Waypoint","TransportUnload",_center  vectorAdd [0,-0.5,0]];
 
-	//Condition for the transport unload wp to become true. Acc time is set to 1 to prevent waypoint to be skipped
+	//Condition for the transport unload wp to become true.
 	_wpTransportUnload set3DENAttribute	["Condition",format ["%1",_condition]];
 
 	private _markerLZ = create3DENEntity ["Marker","hd_pickup",_center vectorAdd [1,0,0]];
 	_markerLZ set3DENAttribute ["baseColor","colorBLUFOR"];
-	_markerLZ set3DENAttribute ["text","LZ"];
+	_markerLZ set3DENAttribute ["text","LZ"];//No need to localize
 
 	private _wpEnd = group _veh create3DENEntity ["Waypoint","Move",_center vectorAdd [0,120,0]];
 	//Put everything into one layer
