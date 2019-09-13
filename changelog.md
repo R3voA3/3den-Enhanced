@@ -7,6 +7,7 @@ v4.3
 - Added Editor Attribute to toggle Entity Counter in status bar.
 - Added a tool to quickly toggle simulation of selected objects
 - Added a tool to quickly setup a simple extraction
+- Script Commands Viewer to menu strip -> tools -> utilities
 
 *changed*
 - Combo Box controls were replaced with Toolbox controls if possible
