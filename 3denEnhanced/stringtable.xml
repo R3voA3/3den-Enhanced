@@ -5878,4 +5878,46 @@
 		<English>Show Radio Chat</English>
 		<Original>Show Radio Chat</Original>
 	</Key>
+	<Key ID="STR_ENH_extraction_callSignRequester">
+		<English>Call Sign Requester</English>
+		<German>Rufzeichen Anforderer</German>
+		<Original>Call Sign Requester</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_callSignTransport">
+		<English>Call Sign Transport</English>
+		<German>Rufzeichen Transport</German>
+		<Original>Call Sign Transport</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_conditionStart">
+		<English>Condition Start</English>
+		<German>Startbedingung</German>
+		<Original>Condition Start</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_conditionStart_tooltip">
+		<English>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
+		<Original>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_grenadeType">
+		<English>Grenade Type</English>
+		<Original>Grenade Type</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_grenadeType_tooltip">
+		<English>The landing zone is marked by this grenade type.</English>
+		<Original>The landing zone is marked by this grenade type.</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_condition">
+		<English>Condition</English>
+		<German>Bedingung</German>
+		<Original>Condition</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_condition_tooltip">
+		<English>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</English>
+		<German>Diese Bedingung muss erfüllt sein, damit sich das Fahrzeug zum Endwegpunkt bewegt. Standardmäßig müssen sich alle lebenden Einheiten in der Spielergruppe im Fahrzeug befinden.</German>
+		<Original>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</Original>
+	</Key>
+	<Key ID="STR_ENH_extraction_gridPosition">
+		<English>Grid Position</English>
+		<German>Koordinaten</German>
+		<Original>Grid Position</Original>
+	</Key>
 </Project>
