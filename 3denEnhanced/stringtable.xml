@@ -5896,6 +5896,7 @@
 	<Key ID="STR_ENH_extraction_conditionStart_tooltip">
 		<English>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
 		<Original>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
+		<German>Bedingung für den Start der Extraktion. Standardmäßig muss die Variable 'Enh_Extraction_Start' auf true gesetzt werden. Lassen Sie das Feld leer, wenn Sie es durch einen Trigger starten möchten.</German>
 	</Key>
 	<Key ID="STR_ENH_extraction_grenadeType">
 		<English>Grenade Type</English>

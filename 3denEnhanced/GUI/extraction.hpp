@@ -46,7 +46,7 @@ class Enh_Extraction
 		};
 		class NameRequester: ctrlStatic
 		{
-			text = STR_ENH_extraction_callSignRequester;
+			text = $STR_ENH_extraction_callSignRequester;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 23 * GRID_W;
@@ -163,7 +163,7 @@ class Enh_Extraction
 		{
 			idc = 1000;
 			x = CENTERED_X(DIALOG_W) + 4 * GRID_W;
-			y = DIALOG_TOP + 38 * GRID_H;
+			y = DIALOG_TOP + 39 * GRID_H;
 			w = 20 * GRID_W;
 			h = 20 * GRID_H
 		};
