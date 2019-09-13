@@ -38,7 +38,7 @@ class Enh_Extraction
 		class ShowRadioChatValue: ctrlCheckbox
 		{
 			idc = 100;
-			x = CENTERED_X(DIALOG_W) + 27 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 30 * pixelW;
 			h = 30 * pixelH;
@@ -49,15 +49,15 @@ class Enh_Extraction
 			text = $STR_ENH_extraction_callSignRequester;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class NameRequesterValue: ctrlEdit
 		{
 			idc = 200;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 12 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class NameTransport: ctrlStatic
@@ -65,15 +65,15 @@ class Enh_Extraction
 			text = $STR_ENH_extraction_callSignTransport;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
-			w = 28 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class NameTransportValue: ctrlEdit
 		{
 			idc = 300;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 18 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ConditionStart: ctrlStatic
@@ -82,15 +82,15 @@ class Enh_Extraction
 			tooltip = $STR_ENH_extraction_conditionStart_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 24 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ConditionStartValue: ctrlEditMulti
 		{
 			idc = 400;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 24 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class GrenadeType: ctrlStatic
@@ -99,15 +99,15 @@ class Enh_Extraction
 			tooltip = $STR_ENH_extraction_grenadeType_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 30 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class GrenadeTypeValue: ctrlCombo
 		{
 			idc = 500;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 30 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Condition: ctrlStatic
@@ -116,15 +116,15 @@ class Enh_Extraction
 			tooltip = $STR_ENH_extraction_condition_tooltip;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 36 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ConditionValue: ctrlEditMulti
 		{
 			idc = 600;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 36 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = 4 * CTRL_DEFAULT_H;
 		};
 		class GridPosition: ctrlStatic
@@ -132,23 +132,23 @@ class Enh_Extraction
 			text = $STR_ENH_extraction_gridPosition;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 57 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class GridPositionValue: ctrlEdit
 		{
 			idc = 700;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 57 * GRID_H;
-			w = 81 * GRID_W;
+			w = 79 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class VehicleClass: ctrlEdit
 		{
 			idc = 800;
-			x = CENTERED_X(DIALOG_W) + 28 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
 			y = DIALOG_TOP + 63 * GRID_H;
-			w = 44 * GRID_W;
+			w = 42 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class Position: ctrlEdit
