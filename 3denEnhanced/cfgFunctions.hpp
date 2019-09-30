@@ -139,7 +139,9 @@ class CfgFunctions
 			class getProfileColor;
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
+			class toggleDrawDLCIcons;
 			class toggleAttribute;
+			class floatToTime;
 		};
 		class Log
 		{

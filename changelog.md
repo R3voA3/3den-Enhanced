@@ -8,6 +8,7 @@ v4.3
 - Added a tool to quickly toggle simulation of selected objects
 - Added a tool to quickly setup a simple extraction
 - Script Commands Viewer to menu strip -> tools -> utilities
+- A function to convert floats to time format minutes:seconds
 
 *changed*
 - Combo Box controls were replaced with Toolbox controls if possible
@@ -91,6 +92,7 @@ v4.3
 - Added option to garrision tool to change stance of units
 - Fixed missing shortcuts for some tools
 - Fixed Switch Time would not properly set overcast, rain and fog to 0. Change is forced now.
+- Song duration in 3den Radio is no displayed in format minutes:seconds (00:00)
 
 *removed*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
