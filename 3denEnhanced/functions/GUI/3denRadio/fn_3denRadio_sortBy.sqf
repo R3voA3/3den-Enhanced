@@ -24,7 +24,7 @@ switch _sortBy do
 	};
 	case "DURATION":
 	{
-		_ctrlSongList lnbSortByValue [1,true];
+		_ctrlSongList lnbSort [1,true];
 	};
 	case "THEME":
 	{
