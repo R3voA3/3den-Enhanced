@@ -5921,4 +5921,8 @@
 		<German>Koordinaten</German>
 		<Original>Grid Position</Original>
 	</Key>
+	<Key ID="STR_ENH_tools_drawDLCIcons">
+		<English>Toggle Drawing of DLC Icons</English>
+		<Original>Toggle Drawing of DLC Icons</Original>
+	</Key>
 </Project>
