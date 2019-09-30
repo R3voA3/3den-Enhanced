@@ -62,11 +62,6 @@ switch (SELECTEDINDEX) do
 		_ctrlBriefingValue ctrlSetText BRIEFINGTEXT + format ["<executeClose expression='%1'>%2</executeClose>",VALUE1,VALUE2];
 		
 	};
-/* 	case 6:
-	{
-		_ctrlBriefingValue ctrlSetText BRIEFINGTEXT + format ["<log subject='%1' record='%2'>%3</log>",VALUE1,VALUE2,VALUE3];
-		
-	}; */
 };
 
 true
