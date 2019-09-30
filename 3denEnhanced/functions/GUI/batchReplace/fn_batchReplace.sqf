@@ -13,7 +13,7 @@
 
 disableSerialization;//Because of BIS_fnc_3DENNotification
 
-private _objects = ["Object"] call Enh_fnc_all3denSelected;
+private _objects = [["Object"]] call Enh_fnc_all3denSelected;
 private _replaceWith = ctrlText ((findDisplay 150000) displayCtrl 1400); //"sfd,2ffds,5,123"
 
 profileNameSpace setVariable ['Enh_batchReplace_lastUsed',_replaceWith];
@@ -24,13 +24,13 @@ collect3DENHistory
 {
 	{
 		private _class = selectRandom _replaceWithArray;
-		if (isClass (ConfigFile >> "CfgVehicles" >> _class)) then
+		if (isClass (configFile >> "CfgVehicles" >> _class)) then
 		{
 			[_x] set3DENObjectType _class;
 		}
 		else
 		{
-			[format ["%1 (%2)",localize "STR_ENH_functions_batchReplace_error",_class]] call BIS_fnc_3DENNotification;
+			[format ["%1 (%2)",localize "STR_ENH_functions_batchReplace_error",_class],1] call BIS_fnc_3DENNotification;
 		};
 	} forEach _objects;
 };

@@ -35,7 +35,22 @@ if (_condition isEqualTo "") then {_condition = "true"};
 
 profileNamespace setVariable ["Enh_ActionCreator_LastUsed",[_title,_script,_args,_priority,_window,_hide,_shortcuts,_condition,_r,_unconscious,_selection,_memory]];
 
-copyToClipboard format ["this addAction [""%1"",""%2"",%3,%4,%5,%6,""%7"",""%8"",%9,%10,""%11"",""%12""];",_title,_script,_args,_priority,_window,_hide,_shortcuts,_condition,_r,_unconscious,_selection,_memory];
+copyToClipboard format 
+[
+	"this addAction [""%1"",""%2"",%3,%4,%5,%6,""%7"",""%8"",%9,%10,""%11"",""%12""];",
+	_title,
+	_script,
+	_args,
+	_priority,
+	_window,
+	_hide,
+	_shortcuts,
+	_condition,
+	_r,
+	_unconscious,
+	_selection,
+	_memory
+];
 
 ["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 
