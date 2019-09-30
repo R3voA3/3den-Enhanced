@@ -101,7 +101,8 @@ class Enh_Folder_Miscellaneous
 		"Enh_ToggleSimpleObject",
 		"Enh_ToggleSimulation",
 		"Enh_ToggleDynamicSimulation",
-		"Enh_ToggleDrawBuildingPositions"
+		"Enh_ToggleDrawBuildingPositions",
+		"Enh_ToggleDrawDLCIcons"
 	};
 };
 //Utilities
@@ -231,6 +232,12 @@ class Enh_ToggleDrawBuildingPositions
 	text = $STR_ENH_tools_drawBuildingPositions;
 	action = "call Enh_fnc_toggleDrawBuildingPositions";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
+};
+class Enh_ToggleDrawDLCIcons
+{
+	text = $STR_ENH_tools_drawDLCIcons;
+	action = "call Enh_fnc_toggleDrawDLCIcons";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
 };
 class Enh_GenerateSteamMissionDescription
 {
