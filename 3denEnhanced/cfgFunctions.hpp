@@ -134,6 +134,7 @@ class CfgFunctions
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
 			class gitHubNotification;
+			class newVersionNotification;
 			class locationList;
 			class setRandomOrientation;
 			class getProfileColor;

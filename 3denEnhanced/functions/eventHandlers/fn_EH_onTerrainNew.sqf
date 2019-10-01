@@ -31,7 +31,10 @@
 call Enh_fnc_locationList;
 
 //Show github message
-call Enh_fnc_gitHubNotification;
+[] spawn Enh_fnc_gitHubNotification;
+
+//Show version 4.3 message
+[] spawn Enh_fnc_newVersionNotification
 
 //Initialize ambient animations
 call Enh_fnc_initAmbientAnimationsInEditor;

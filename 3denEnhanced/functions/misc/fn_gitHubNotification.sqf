@@ -11,6 +11,9 @@
 	BOOLEAN: true
 */
 
+waitUntil {isNil "Enh_NotificationShowing"};
+Enh_NotificationShowing = true;
+
 if (profileNamespace getVariable ["Enh_NotificationGithub_Seen",false]) exitWith {false}; 
 
 [	//No localisation needed, just a temporary message
@@ -19,9 +22,15 @@ if (profileNamespace getVariable ["Enh_NotificationGithub_Seen",false]) exitWith
 	["Roger that",
 		{
 			profileNamespace setVariable ["Enh_NotificationGithub_Seen",true];
+			Enh_NotificationShowing = nil;
 		}
 	],
-	"Cancel",
+	[
+		"Cancel",
+		{
+			Enh_NotificationShowing = nil;
+		}
+	],
 	"\3denEnhanced\data\logoSmall.paa"
 ] call BIS_fnc_3DENShowMessage;
 
