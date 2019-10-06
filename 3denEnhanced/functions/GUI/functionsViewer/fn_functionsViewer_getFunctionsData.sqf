@@ -20,8 +20,8 @@ private _functionsData = [];
 	{
 		private _addon = configName _x;
 		private _tag = getText (_config >> "CfgFunctions" >> _addon >> "tag");
-		private _mod = configSourceMod (configfile >> "CfgFunctions" >> _addon);
-		private _logo = modParams [_mod,["logoSmall"]] param [0,""];
+		//private _mod = configSourceMod (configfile >> "CfgFunctions" >> _addon);
+		//private _logo = modParams [_mod,["logoSmall"]] param [0,""];
 		if (_tag isEqualTo "") then {_tag = _addon};
 		{
 			private _category = configName _x;
@@ -46,7 +46,7 @@ private _functionsData = [];
 				{
 					format ["%1\fn_%2%3",_path,_fncShort,_extension];
 				};
-				_functionsData pushBack [_configStr,_addon,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile,_logo];
+				_functionsData pushBack [_configStr,_addon,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile/* ,_logo */];
 			} forEach ("isClass _x" configClasses (_config >> "CfgFunctions" >> _addon >> _category));
 		} forEach ("isClass _x" configClasses (_config >> "CfgFunctions" >> _addon));
 	} forEach ("isClass _x" configClasses (_config >> "CfgFunctions"));
