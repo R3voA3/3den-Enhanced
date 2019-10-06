@@ -5753,8 +5753,8 @@
 		<Original>Unarmed:</Original>
 	</Key>
 	<Key ID="STR_ENH_contextMenu_logClassesString">
-		<English>Copy Classes to Clipboard (String)</English>
-		<Original>Copy Classes to Clipboard (String)</Original>
+		<English>Log Classes to to Clipboard (String)</English>
+		<Original>Log Classes to to Clipboard (String)</Original>
 	</Key>
 	<Key ID="STR_ENH_tools_drawBuildingPositions">
 		<English>Toggle Drawing of Building Positions</English>
