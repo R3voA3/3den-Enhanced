@@ -1,3 +1,9 @@
+v4.4
+*changed*
+- fixed Log position 3D tool
+- fixed Log classes as string tool
+- improved performance of functions viewer
+
 v4.3
 *added*
 - Scenario Attributes Manager
