@@ -47,7 +47,7 @@ class Enh_LogClassesString
 };
 class Enh_LogPositions3D
 {
-	action = "call Enh_fnc_logPositions";
+	action = "call Enh_fnc_logPositions3D";
 	Text = $STR_ENH_contextMenu_logPositions3D;
 	conditionShow = "selected - selectedMarker";
 };
@@ -68,6 +68,11 @@ class Enh_Log3DENID
 	action = "call Enh_fnc_log3DENIDs";
 	Text = $STR_ENH_contextMenu_log3DENIDs;
 	conditionShow = "selected";
+};
+class Enh_LogObjectInfo: Enh_LogFactions
+{
+	action = "call Enh_fnc_logObjectInfo";
+	Text = $STR_ENH_contextMenu_logObjectInfo;
 };
 class Enh_MeasureDistance
 {
@@ -108,11 +113,6 @@ class Enh_TriggerOwnerPlayer
 	action = "add3DENConnection ['TriggerOwner',get3DENSelected 'Trigger',player]";
 	Text = $STR_ENH_contextMenu_setTriggerOwnerPlayer;
 	conditionShow = "hoverTrigger";
-};
-class Enh_LogObjectInfo: Enh_LogFactions
-{
-	action = "call Enh_fnc_logObjectInfo";
-	Text = $STR_ENH_contextMenu_logObjectInfo;
 };
 class Enh_DeleteCrew
 {
