@@ -1,3 +1,7 @@
+v4.5
+*changed*
+- animations will now be exited when unit enters combat mode
+
 v4.4
 *changed*
 - fixed Log position 3D tool
