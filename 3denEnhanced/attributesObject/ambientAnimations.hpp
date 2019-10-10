@@ -28,7 +28,7 @@ class Enh_AmbientAnimations
 			Enh_fnc_ambientAnimations_exit =\
 			{\
 				params ['_unit'];\
-				if (_unit getVariable ['Enh_ambientAnimations_exit',false]) exitWith {false};\
+				if !(_unit getVariable ['Enh_ambientAnimations_exit',true]) exitWith {false};\
 				_unit setVariable ['Enh_ambientAnimations_exit',true];\
 				detach _unit;\
 				deleteVehicle (_unit getVariable ['Enh_ambientAnimations_logic',objNull]);\
@@ -41,7 +41,7 @@ class Enh_AmbientAnimations
 				_unit removeEventHandler ['AnimDone',_unit getVariable ['Enh_EHAnimDone',-1]];\
 			};\
 			\
-			_EHAnimDone = _this addEventHandler\
+			private _EHAnimDone = _this addEventHandler\
 			[\
 				'AnimDone',\
 				{\
@@ -81,7 +81,7 @@ class Enh_AmbientAnimations
 					params ['_unit'];\
 					waitUntil\
 					{\
-						sleep 1; !isNull (_unit findNearestEnemy _unit) || (_unit getVariable ['Enh_ambientAnimations_exit',false])\
+						sleep 1; (!isNull (_unit findNearestEnemy _unit) || {_unit getVariable ['Enh_ambientAnimations_exit',false]}) || {behaviour _unit == 'COMBAT'}\
 					};\
 					_unit call Enh_fnc_ambientAnimations_exit;\
 				};\
