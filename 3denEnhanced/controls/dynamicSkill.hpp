@@ -152,7 +152,7 @@ class Enh_DynamicSkill: Title
 
 		class SkillAimMaxBLUFORTitle: Title
 		{
-			text = $STR_ENH_dynamicSkill_skillAimMin_displayname;
+			text = $STR_ENH_dynamicSkill_skillAimMax_displayname;
 			y = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
 		};
 		class SkillAimMaxBLUFORValue: ctrlXSliderH
@@ -262,7 +262,7 @@ class Enh_DynamicSkill: Title
 
 		class SkillAimMaxOPFORTitle: Title
 		{
-			text = $STR_ENH_dynamicSkill_skillAimMin_displayname;
+			text = $STR_ENH_dynamicSkill_skillAimMax_displayname;
 			y = 14.5 * SIZE_M * GRID_H + 55 * pixelH;
 		};
 		class SkillAimMaxOPFORValue: ctrlXSliderH
@@ -372,7 +372,7 @@ class Enh_DynamicSkill: Title
 
 		class SkillAimMaxINDFORTitle: Title
 		{
-			text = $STR_ENH_dynamicSkill_skillAimMin_displayname;
+			text = $STR_ENH_dynamicSkill_skillAimMax_displayname;
 			y = 19.5 * SIZE_M * GRID_H + 80 * pixelH;
 		};
 		class SkillAimMaxINDFORValue: ctrlXSliderH
