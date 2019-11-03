@@ -17,7 +17,7 @@ class Enh_MakeHostage: Enh_SetCaptive
 					  'Free Hostage',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
-					  '(_target getVariable [''Enh_IsHostage'',true]) && ((_this distance _target) < 2) && (alive _target)',\
+					  '(_target getVariable [''Enh_IsHostage'',true]) && ((_this distance _target) < 2) && (alive _target) && !(_target isEqualTo _caller)',\
 					  'true',\
 					  {},\
 					  {},\
