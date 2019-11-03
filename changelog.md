@@ -1,3 +1,8 @@
+v4.6
+*changed*
+- fixed incorrect labeling of Dynamic Skill controls
+- added check to prevent player from exiting hostage state
+
 v4.5
 *changed*
 - animations will now be exited when unit enters combat mode
