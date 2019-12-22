@@ -22,7 +22,7 @@ class Enh_FunctionsViewer
 			x = safezoneX;
 			y = safezoneY;
 			w = safezoneW;
-			h = 5 * GRID_H
+			h = 5 * GRID_H;
 			colorBackground[] = {COLOUR_USER_PRESET};
 			moving = false;
 		};

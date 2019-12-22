@@ -119,12 +119,12 @@ class Enh_DisableAI
 			property = "Enh_disableAI_lights";
 			expression = "if(_value) then {_this disableAI 'LIGHTS'}";
 		};
-/* 		class Enh_RadioProtocol: Enh_Move
+ 		class Enh_RadioProtocol: Enh_Move
 		{
 			displayName = $STR_ENH_disableAI_radioProtocol_displayName;
 			tooltip = $STR_ENH_disableAI_radioProtocol_tooltip;
 			property = "Enh_disableAI_radioProtocol";
 			expression = "if(_value) then {_this disableAI 'RADIOPROTOCOL'}";
-		}; */
+		};
 	};
 };

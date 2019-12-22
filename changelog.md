@@ -1,4 +1,11 @@
 v4.6
+*added*
+- an attribute to disable AIs radio protocol
+
+*changed*
+- fixed mission semicolons in some configs
+
+v4.6
 *changed*
 - fixed incorrect labeling of Dynamic Skill controls
 - added check to prevent player from exiting hostage state

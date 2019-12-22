@@ -165,7 +165,7 @@ class Enh_Extraction
 			x = CENTERED_X(DIALOG_W) + 4 * GRID_W;
 			y = DIALOG_TOP + 39 * GRID_H;
 			w = 20 * GRID_W;
-			h = 20 * GRID_H
+			h = 20 * GRID_H;
 		};
 		class Cancel: ctrlButtonCancel
 		{
