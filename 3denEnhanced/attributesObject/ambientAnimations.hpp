@@ -10,7 +10,7 @@ class Enh_AmbientAnimations
 			_value params ['_animSet','_anims','_canExit','_attach'];\
 			\
 			_this setVariable ['Enh_ambientAnimations_anims',_anims];\
-			_this disableAI 'all';\
+			_this disableAI 'ANIM';\
 			if (_attach && !is3DEN) then\
 			{\
 				private _logic = group _this createUnit ['Logic',getPosATL _this,[],0,'NONE'];\
@@ -34,7 +34,7 @@ class Enh_AmbientAnimations
 				deleteVehicle (_unit getVariable ['Enh_ambientAnimations_logic',objNull]);\
 				[_unit,''] remoteExec ['switchMove',0];\
 				\
-				_unit enableAI 'all';\
+				_unit enableAI 'ANIM';\
 				\
 				_unit removeEventHandler ['Killed',_unit getVariable ['Enh_EHKilled',-1]];\
 				_unit removeEventHandler ['Dammaged',_unit getVariable ['Enh_EHDammaged',-1]];\
@@ -81,7 +81,7 @@ class Enh_AmbientAnimations
 					params ['_unit'];\
 					waitUntil\
 					{\
-						sleep 1; (!isNull (_unit findNearestEnemy _unit) || {_unit getVariable ['Enh_ambientAnimations_exit',false]}) || {behaviour _unit == 'COMBAT'}\
+						sleep 1; (_unit getVariable ['Enh_ambientAnimations_exit',false]) || {behaviour _unit == 'COMBAT'}\
 					};\
 					_unit call Enh_fnc_ambientAnimations_exit;\
 				};\
