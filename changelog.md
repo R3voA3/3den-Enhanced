@@ -1,9 +1,10 @@
-v4.6
+v4.7
 *added*
 - an attribute to disable AIs radio protocol
 
 *changed*
 - fixed mission semicolons in some configs
+- units using ambient animation will now reliably exit their animation if enemies are nearby
 
 v4.6
 *changed*
