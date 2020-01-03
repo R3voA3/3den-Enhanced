@@ -5925,4 +5925,8 @@
 		<English>Toggle Drawing of DLC Icons</English>
 		<Original>Toggle Drawing of DLC Icons</Original>
 	</Key>
+	<Key ID="STR_ENH_scenarioAttributesManager_applyTemplate_tooltip">
+		<English>Applies currently selected Template to this mission. Action can be undone with the Eden undo button.</English>
+		<Original>Applies currently selected Template to this mission. Action can be undone with the Eden undo button.</Original>
+	</Key>
 </Project>
