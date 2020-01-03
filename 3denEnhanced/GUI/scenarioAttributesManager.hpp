@@ -89,7 +89,6 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 50 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			tooltip = $STR_ENH_scenarioAttributesManager_applyTemplate_tooltip;
 			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_applyTemplate";
 		};
 		class Export: ctrlButton
