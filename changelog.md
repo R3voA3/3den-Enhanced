@@ -1,7 +1,7 @@
 v4.9
 *added*
 - menu strip entry for additional 3rd party tools
-- a UI so save 3den Camera positions in. You can use it to save interesting places.
+- a UI so save 3den Camera positions in. You can use it to save interesting places
 
 v4.8
 *changed*
