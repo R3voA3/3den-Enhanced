@@ -5,7 +5,7 @@ class CfgFunctions
 		tag = "Enh";
 		class 3denRadio
 		{
-			file = "3denEnhanced\functions\GUI\3denRadio";
+			file = "3denEnhanced\functions\GUI\3DENRadio";
 			class 3denRadio_onLoad;
 			class 3denRadio_onUnload;
 			class 3denRadio_exportClassname;
@@ -113,6 +113,17 @@ class CfgFunctions
 		{
 			file = "3denEnhanced\functions\GUI\moduleInformation";
 			class moduleInformation_onLoad;
+		};
+		class 3DENCam
+		{
+			file = "3denEnhanced\functions\GUI\3DENCam";
+			class 3DENCam_updateList;
+			class 3DENCam_deleteEntry;
+			class 3DENCam_get3DENCameraParameters;
+			class 3DENCam_set3DENCameraParameters;
+			class 3DENCam_onKillFocus;
+			class 3DENCam_onSetFocus;
+			class 3DENCam_saveList;
 		};
 		class Misc
 		{

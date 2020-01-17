@@ -85,7 +85,8 @@ class Enh_Folder_Utilities
 		"Enh_BriefingEditor",
 		"Enh_NameObjects",
 		"Enh_ScenarioAttributesManager",
-		"Enh_TextureFinder"
+		"Enh_TextureFinder",
+		"Enh_3DENCamPositions"
 	};
 };
 class Enh_Folder_Miscellaneous
@@ -184,6 +185,14 @@ class Enh_TextureFinder
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
 	action = "findDisplay 313 createDisplay 'Enh_TextureFinder'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
+	opensNewWindow = 1;
+};
+class Enh_3DENCamPositions
+{
+	text = "3DEN Cam Positions";
+	picture = "\a3\3DEN\Data\Cfg3DEN\Camera\cameraTexture_ca.paa";
+	action = "findDisplay 313 createDisplay 'Enh_3DENCamPositions'";
+	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
 	opensNewWindow = 1;
 };
 //Miscellaneous
