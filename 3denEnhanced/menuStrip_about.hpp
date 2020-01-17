@@ -1,5 +1,3 @@
-items[] += {"Enh_About"};//new main category
-
 class Enh_About
 {
 	text = $STR_ENH_folder_about;
