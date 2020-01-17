@@ -19,6 +19,7 @@
 #include "GUI\scenarioAttributesManagerTemplateData.hpp"
 #include "GUI\garrison.hpp"
 #include "GUI\extraction.hpp"
+#include "GUI\3DENCameraPositions.hpp"
 
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
