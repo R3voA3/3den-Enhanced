@@ -131,19 +131,6 @@ class Cfg3DEN
 			};
 		};
 	};
-//  class Trigger
-// 	{
-// 		class AttributeCategories
-// 		{
-// 			class Activation
-// 			{
-// 				class Attributes
-// 				{
-// 					#include "attributesTrigger\triggerInterval.hpp"
-// 				};
-// 			};
-// 		};
-// 	};'
 	class Object
 	{
 		class AttributeCategories
