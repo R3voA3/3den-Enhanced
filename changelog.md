@@ -1,3 +1,7 @@
+v5.0
+*added*
+- context menu tool to move camera into first person view of selected entity
+
 v4.9
 *added*
 - menu strip entry for additional 3rd party tools

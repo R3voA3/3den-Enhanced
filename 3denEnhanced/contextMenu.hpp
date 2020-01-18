@@ -23,7 +23,8 @@ class Edit
 {
 	items[] +=
 	{
-		"Enh_DeleteCrew"
+		"Enh_DeleteCrew",
+		"Enh_FirstPerson"
 	};
 };
 class ConnectParent
@@ -119,4 +120,10 @@ class Enh_DeleteCrew
 	action = "call Enh_fnc_deleteCrew";
 	Text = $STR_ENH_contextMenu_deleteCrew;
 	conditionShow = "hoverObjectVehicle";
+};
+class Enh_FirstPerson
+{
+	action = "call Enh_fnc_firstPerson";
+	Text = $STR_ENH_contextMenu_firstPerson;
+	conditionShow = "objectBrain";
 };

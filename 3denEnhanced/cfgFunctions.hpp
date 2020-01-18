@@ -154,6 +154,7 @@ class CfgFunctions
 			class toggleDrawDLCIcons;
 			class toggleAttribute;
 			class floatToTime;
+			class firstPerson;
 		};
 		class Log
 		{

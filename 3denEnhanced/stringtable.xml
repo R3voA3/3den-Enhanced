@@ -6094,4 +6094,9 @@
 		<German>Third Party Werkzeuge</German>
 		<Original>Third Party Tools</Original>
 	</Key>
+	<Key ID="STR_ENH_contextMenu_firstPerson">
+		<English>Move Camera to First Person View</English>
+		<German>Kamera in First Person View bewegen</German>
+		<Original>Move Camera to First Person View</Original>
+	</Key>
 </Project>
