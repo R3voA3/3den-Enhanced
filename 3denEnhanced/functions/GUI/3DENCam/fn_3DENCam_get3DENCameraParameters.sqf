@@ -21,7 +21,7 @@ private _cam3DENSavedPositions = profileNamespace getVariable ["Enh_Cam3DENSaved
 private _display = ctrlParent _ctrl;
 private _description = ctrlText (_display displayCtrl 2000);
 
-if (_description isEqualTo "Description..." || _description isEqualTo "") then
+if (_description isEqualTo localize "STR_ENH_3DENCam_description" || _description isEqualTo "") then
 {
 	_description = format ["#%1",round random 9999];//We don't wanna save Description... every time
 };
