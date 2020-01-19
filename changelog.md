@@ -2,6 +2,9 @@ v5.0
 *added*
 - context menu tool to move camera into first person view of selected entity
 
+*changed*
+- 3DEN Camera Positions UI now properly checks for incorrect description
+
 v4.9
 *added*
 - menu strip entry for additional 3rd party tools
