@@ -11,17 +11,13 @@
 	BOOLEAN: true / false
 */
 
-disableSerialization;
-
-private _ctrl = param [0,controlNull,[controlNull]];
-private _key = param [1,46,[1]];
-private _mod = param [3,true,[true]];
+params ["_ctrl","_key","_mod"];
 
 if (_key isEqualTo 46 && _mod) then
 {
-	private _class = _ctrl lbText (lbCurSel _ctrl);
-	if (_class isEqualTo "") exitWith {false};
-	copyToClipboard str _class;
+	private _path = _ctrl lbText (lbCurSel _ctrl);
+	if (_path isEqualTo "") exitWith {false};
+	copyToClipboard str _path;
 	["Enh_DataCopied"] call BIS_fnc_3DENNotification;
 };
 

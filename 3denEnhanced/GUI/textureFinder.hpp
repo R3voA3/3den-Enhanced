@@ -5,7 +5,7 @@ class Enh_TextureFinder
 {
 	idd = ENH_IDD_TEXTUREFINDER;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_textureFinder_updateProgressbar";
+	onLoad = "[] spawn Enh_fnc_textureFinder_findTextures";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -35,7 +35,7 @@ class Enh_TextureFinder
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
 			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
-			onKeyDown = "_this spawn Enh_fnc_textureFinder_exportTexturePath";
+			onKeyDown = "_this call Enh_fnc_textureFinder_exportTexturePath";
 		};
 		class TexturePreview: ctrlStaticPictureKeepAspect
 		{
@@ -72,13 +72,22 @@ class Enh_TextureFinder
 			h = CTRL_DEFAULT_H;
 			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
 		};
-		class Search: ctrlButtonSearch
+		class SearchTextBox: ctrlEdit
 		{
-			x = CENTERED_X(DIALOG_W) + 32 * GRID_W;
-			y = DIALOG_TOP + 110 * GRID_H;
+			idc = 1600;
+			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+			y = DIALOG_TOP + 58 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "if (call Enh_fnc_textureFinder_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_textureFinder_findTextures}";
+		};
+		class SearchButton: ctrlButtonSearch
+		{
+			idc = 1700;
+			x = CENTERED_X(DIALOG_W) + 31 * GRID_W;
+			y = DIALOG_TOP + 58 * GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+			onButtonClick = "_this call Enh_fnc_textureFinder_search";
 		};
 		class Filter: ctrlToolbox
 		{
@@ -104,113 +113,6 @@ class Enh_TextureFinder
 			y = DIALOG_TOP + 110 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
-		};
-	};
-};
-
-/*
-class Enh_TextureFinder
-{
-	idd = ENH_IDD_TEXTUREFINDER;
-	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_textureFinder_updateProgressbar";
-	class ControlsBackground
-	{
-		DISABLE_BACKGROUND
-		class Background: ctrlStaticBackground
-		{
-			x = 0.250625 * safezoneW + safezoneX;
-			y = 0.178 * safezoneH + safezoneY;
-			w = 0.49875 * safezoneW;
-			h = 0.672 * safezoneH;
-		};
-	};
-	class Controls
-	{
-		class Header: ctrlStaticTitle
-		{
-			text = $STR_ENH_textureFinder_header;
-			x = 0.250625 * safezoneW + safezoneX;
-			y = 0.15 * safezoneH + safezoneY;
-			w = 0.49875 * safezoneW;
-			h = 0.028 * safezoneH;
-			colorBackground[] = {COLOUR_USER_PRESET};
-		};
-		class ShowAll: ctrlButton
-		{
-			text = $STR_ENH_textureFinder_showAll;
-			x = 0.257187 * safezoneW + safezoneX;
-			y = 0.738 * safezoneH + safezoneY;
-			w = 0.091875 * safezoneW;
-			h = 0.028 * safezoneH;
-			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
-		};
-		class TextureList: ctrlListbox
-		{
-			idc = 1500;
-			x = 0.257187 * safezoneW + safezoneX;
-			y = 0.178 * safezoneH + safezoneY;
-			w = 0.485625 * safezoneW;
-			h = 0.378 * safezoneH;
-			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
-			onKeyDown = "_this spawn Enh_fnc_textureFinder_exportTexturePath";
-		};
-		class TexturePreview: ctrlStaticPictureKeepAspect
-		{
-			idc = 1200;
-			x = 0.257187 * safezoneW + safezoneX;
-			y = 0.57 * safezoneH + safezoneY;
-			w = 0.485625 * safezoneW;
-			h = 0.154 * safezoneH;
-		};
-		class Close: ctrlButtonClose
-		{
-			x = 0.454062 * safezoneW + safezoneX;
-			y = 0.738 * safezoneH + safezoneY;
-			w = 0.091875 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class Filter: ctrlToolbox
-		{
-			x = 0.5525 * safezoneW + safezoneX;
-			y = 0.738 * safezoneH + safezoneY;
-			w = 0.190312 * safezoneW;
-			h = 0.028 * safezoneH;
-            rows = 1;
-            columns = 3;
-            strings[] = 
-            {
-                "Show all",
-                "Hide JPG",
-				"Hide PAA"
-            };
-            values[] = {0,1,2};
-			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; Enh_TextureFinder_Filter = 0";//Default value
-			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl";
-        };
-		class Search: ctrlButtonSearch
-		{
-			x = 0.355625 * safezoneW + safezoneX;
-			y = 0.738 * safezoneH + safezoneY;
-			w = 0.091875 * safezoneW;
-			h = 0.028 * safezoneH;
-			action = "if (call Enh_fnc_textureFinder_searchState) then {Enh_findTextures_handle = [] spawn Enh_fnc_textureFinder_findTextures}";
-		};
-		class ProgessText: ctrlStatic
-		{
-			idc = 1002;
-			x = 0.257187 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.485625 * safezoneW;
-			h = 0.028 * safezoneH;
-		};
-		class Progress: ctrlProgress
-		{
-			idc = 1001;
-			x = 0.257187 * safezoneW + safezoneX;
-			y = 0.78 * safezoneH + safezoneY;
-			w = 0.485625 * safezoneW;
-			h = 0.028 * safezoneH;
 		};
 	};
 };

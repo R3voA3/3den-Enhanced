@@ -11,44 +11,101 @@
 	BOOLEAN: true / false
 */
 
-#define IS_PAA ((_string find ".paa") > -1)
-#define IS_JPG ((_string find ".jpg") > -1)
-#define NOT_ALLOWED ((_string find "<img image=" > -1)) //Wrong format
+//Only add things which end with eighter jpg or paa
+#define IS_PAA (".jpg" in (_string select [count _string-4]))
+#define IS_JPG (".paa" in (_string select [count _string-4]))
 
-private ["_string","_toSearch","_disp","_ctrlProg","_ctrlProgText","_fnc_findTextures","_class","_classes"];
+//Update progress bar (Should only run if searching is in progress, but also runs if searching was finished, optimize?)
+[] spawn Enh_fnc_textureFinder_updateProgressbar;
+
+if !(isNil "Enh_TextureFinder_TexturesFound") exitWith {false};
+
+//Check if search is already running
+if !(isNil "Enh_FindTexture_SearchRunning") exitWith {[localize "STR_ENH_searchState_pleaseWait",1] call BIS_fnc_3DENNotification; false};
+
 disableSerialization;
 
-Enh_TextureFinder_Textures = [];
-_toSearch = [];
+private _string = "";
+private _classes = [];
 
+_display = findDisplay 140000;
+_ctrlProg = _display displayCtrl 1001;
+_ctrlProgText = _display displayCtrl 1002;
 
-_disp = findDisplay 140000;
-_ctrlProg = _disp displayCtrl 1001;
-_ctrlProgText = _disp displayCtrl 1002;
+Enh_TextureFinder_TexturesFound = [];
+Enh_TextureFinder_ClassesFound = 0;
+Enh_TextureFinder_ClassesSearched = 0;
 
-_fnc_findTextures =
+//Scan configFile for all classes
 {
-	params ["_class"];
+	_classes pushBack _x;
+	Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+	{
+		_classes pushBack _x;
+		Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+		{
+			_classes pushBack _x;
+			Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+			{
+				_classes pushBack _x;
+				Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+				{
+					_classes pushBack _x;
+					Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+					{
+						_classes pushBack _x;
+						Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+						{
+							_classes pushBack _x;
+							Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+							{
+								_classes pushBack _x;
+								Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+								{
+									_classes pushBack _x;
+									Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+									{
+										_classes pushBack _x;
+										Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+										{
+											_classes pushBack _x;
+											Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+											{
+												_classes pushBack _x;
+												Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+												{
+													_classes pushBack _x;
+													Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+													{
+														_classes pushBack _x;
+														Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+													} forEach ("true" configClasses _x);
+												} forEach ("true" configClasses _x);
+											} forEach ("true" configClasses _x);
+										} forEach ("true" configClasses _x);
+									} forEach ("true" configClasses _x);
+								} forEach ("true" configClasses _x);
+							} forEach ("true" configClasses _x);
+						} forEach ("true" configClasses _x);
+					} forEach ("true" configClasses _x);
+				} forEach ("true" configClasses _x);
+			} forEach ("true" configClasses _x);
+		} forEach ("true" configClasses _x);
+	} forEach ("true" configClasses _x);
+} forEach ("true" configClasses configFile);
+
+//Check configProperties of every class for textures
+{
+	Enh_TextureFinder_ClassesSearched = Enh_TextureFinder_ClassesSearched + 1;
 	{
 		_string = getText _x;
-		if (IS_PAA || IS_JPG) then {Enh_TextureFinder_Textures pushBackUnique _string};
-		true
-	} count configProperties [_class];
-};
+		if (IS_PAA || IS_JPG) then
+		{
+			Enh_TextureFinder_TexturesFound pushBackUnique _string
+		};
+	} forEach configProperties [_x];
+} forEach _classes;
 
-{
-	_classes = ("true" configClasses _x);
-	for "_i" from 0 to (count _classes -1) do
-	{
-		_toSearch pushBack (_classes # _i);
-	};
-	true
-} count ("true" configClasses configFile);
-
-Enh_TextureFinder_NumToSearch = count _toSearch;
-{
-	Enh_TextureFinder_NumSearched = _forEachIndex + 1;
-	_x call _fnc_findTextures;
-} forEach _toSearch;
+Enh_FindTexture_SearchRunning = nil;
 
 true

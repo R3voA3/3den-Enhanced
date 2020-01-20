@@ -11,48 +11,46 @@
 	BOOLEAN: true / false
 */
 
-private ["_disp","_ctrl","_fnc_addToList"];
-
 disableSerialization;
 
-if (isNil "Enh_TextureFinder_Textures") exitWith {false};
+private _display = findDisplay 140000;
+private _ctrlLB = _display displayCtrl 1500;
+private _tooltip = localize "STR_ENH_functions_fillTextureLB_tooltip";
+private _index = 0;
 
-_disp = findDisplay 140000;
-_ctrl = _disp displayCtrl 1500;
-
-_fnc_addToList = 
+private _fnc_addToList =
 {
 	params ["_texturePath"];
-	private _index = _ctrl lbAdd _texturePath;
-	_ctrl lbSetPictureRight [_index,_texturePath];
-	_ctrl lbSetTooltip [_index,localize "STR_ENH_functions_fillTextureLB_tooltip"];
+	_index = _ctrlLB lbAdd _texturePath;
+	_ctrlLB lbSetPictureRight [_index,_texturePath];
+	_ctrlLB lbSetTooltip [_index,_tooltip];
 };
 
-lbClear _ctrl;
+lbClear _ctrlLB;
 {
-	switch (Enh_TextureFinder_Filter) do 
+	switch (Enh_TextureFinder_Filter) do
 	{
-		case 0://No filter applied, add every texture
+		case 0://All
 		{
 			[_x] call _fnc_addToList;
 		};
-		case 1://Do nothing if JPG is in the texture path and filter is set to hide JPG
+		case 1://paa
 		{
-			if !(_x find "jpg" > -1) then 
+			if !("jpg" in _x) then
 			{
 				[_x] call _fnc_addToList;
 			};
 		};
-		case 2://Do nothing if PAA is in the texture path and filter is set to hide PAA
+		case 2://jpg
 		{
-			if !(_x find "paa" > -1) then 
+			if !("paa" in _x) then
 			{
 				[_x] call _fnc_addToList;
 			};
 		};
 	};
-} forEach Enh_TextureFinder_Textures;
+} forEach Enh_TextureFinder_TexturesFound;
 
-lbSort _ctrl;
+lbSort _ctrlLB;
 
 true
