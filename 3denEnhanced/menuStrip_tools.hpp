@@ -190,7 +190,7 @@ class Enh_TextureFinder
 class Enh_3DENCamPositions
 {
 	text = "3DEN Cam Positions";
-	picture = "\a3\3DEN\Data\Cfg3DEN\Camera\cameraTexture_ca.paa";
+	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'Enh_3DENCamPositions'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
 	opensNewWindow = 1;
