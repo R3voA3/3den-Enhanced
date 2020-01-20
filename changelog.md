@@ -4,6 +4,13 @@ v5.0
 
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
+- Icon updated
+- Texture Finder 
+  - Will now search 170.000 classes instead of ~30.000 for textures and image
+  - Added search to Texture Finder tool
+  - Optimized Texture Finder functions to be more performant
+  - Search is now automatically started when UI was opened
+  - Improved filter, now all none textures/images should be removed
 
 v4.9
 *added*
