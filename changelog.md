@@ -8,7 +8,7 @@ v5.0
 - Texture Finder 
   - Will now search 170.000 classes instead of ~30.000 for textures and image
   - Added search to Texture Finder tool
-  - Optimized Texture Finder functions to be more performant
+  - Optimized Texture Finder functions to be more performant (Thanks to shukari)
   - Search is now automatically started when UI was opened
   - Improved filter, now all none textures/images should be removed
 
