@@ -34,7 +34,6 @@ Enh_TextureFinder_ClassesFound = 0;
 Enh_TextureFinder_ClassesSearched = 0;
 
 //Scan configFile for all classes
-
 private _fnc_searchConfig = 
 {
     params [["_depth", 1], ["_class", configFile]];
