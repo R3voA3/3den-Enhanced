@@ -15,8 +15,10 @@ disableSerialization;
 
 private _display = findDisplay 140000;
 private _ctrlLB = _display displayCtrl 1500;
+private _ctrlProgressList = _display displayCtrl 1800;
 private _tooltip = localize "STR_ENH_functions_fillTextureLB_tooltip";
 private _index = 0;
+private _textureCount = count Enh_TextureFinder_TexturesFound;
 
 private _fnc_addToList =
 {
@@ -49,6 +51,14 @@ lbClear _ctrlLB;
 			};
 		};
 	};
+	_ctrlProgressList progressSetPosition linearConversion
+	[
+		0,
+		_textureCount,
+		lbSize _ctrlLB -1,//_forEachIndex,
+		0,
+		1
+	];
 } forEach Enh_TextureFinder_TexturesFound;
 
 lbSort _ctrlLB;

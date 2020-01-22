@@ -37,6 +37,15 @@ class Enh_TextureFinder
 			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
 			onKeyDown = "_this call Enh_fnc_textureFinder_exportTexturePath";
 		};
+		class ProgressList: ctrlProgress
+		{
+			idc = 1800;
+			x = CENTERED_X(DIALOG_W);
+			y = DIALOG_TOP + CTRL_DEFAULT_H + 52 * GRID_H;
+			w = (DIALOG_W) * GRID_W;
+			h = GRID_H;
+			colorFrame[] = {0,0,0,0};
+		};
 		class TexturePreview: ctrlStaticPictureKeepAspect
 		{
 			idc = 1200;
