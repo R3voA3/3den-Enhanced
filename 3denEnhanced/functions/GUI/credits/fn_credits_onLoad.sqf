@@ -36,7 +36,8 @@ private _contributers =
 	"SynchronizedHD",
 	"GhostJumper",
 	"lex__1",
-	"ConnorAU"
+	"ConnorAU",
+	"shukari"
 ];
 
 private _ctrl = _display displayCtrl 1000;

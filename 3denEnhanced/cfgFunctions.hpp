@@ -138,7 +138,6 @@ class CfgFunctions
 			class removeGear;
 			class reverseOrientation;
 			class setOrientation;
-			class credits;
 			class all3DENSelected;
 			class statusbar_entityCounter;
 			class exportWithLB;
