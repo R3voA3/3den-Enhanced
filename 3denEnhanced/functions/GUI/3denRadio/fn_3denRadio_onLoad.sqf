@@ -56,7 +56,7 @@ Enh_3denRadio_cfgMusic =
 	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
 	("true" configClasses (campaignConfigFile >> "CfgMusic"));
 
-_ctrlSongList lnbAddColumn 0.5;
+_ctrlSongList lnbAddColumn 0.59;
 _ctrlSongList lnbAddColumn 0.7;
 _ctrlSongList lnbAddColumn 0.9;
 

@@ -22,15 +22,15 @@ class Enh_3denRadio
 			text = $STR_ENH_3denRadio_headline_title;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
-			w = 76 * GRID_W;
+			w = 90 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class DurationHeader: ctrlStaticTitle
 		{
 			text = $STR_ENH_3denRadio_headline_duration;
-			x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 90 * GRID_W;
 			y = DIALOG_TOP;
-			w = 30 * GRID_W;
+			w = 16 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
  		class ThemeHeader: ctrlStaticTitle
@@ -115,7 +115,7 @@ class Enh_3denRadio
 			idc = 1600;
 			x = CENTERED_X(DIALOG_W) + 44 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
-			w = 30 * GRID_W;
+			w = 35 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call Enh_fnc_3denRadio_sortBy";
 		};
@@ -123,7 +123,7 @@ class Enh_3denRadio
 		{
 			text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
 			tooltip = $STR_ENH_3denRadio_help_description;
-			x = CENTERED_X(DIALOG_W) + 74 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 79 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -131,7 +131,7 @@ class Enh_3denRadio
 		class SearchEdit: ctrlEdit
 		{
 			idc = 1400;
-			x = CENTERED_X(DIALOG_W) + 80 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 85 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
@@ -140,7 +140,7 @@ class Enh_3denRadio
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
 			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-			x = CENTERED_X(DIALOG_W) + 110 * GRID_W;
+			x = CENTERED_X(DIALOG_W) + 115 * GRID_W;
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;

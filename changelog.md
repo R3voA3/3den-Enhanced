@@ -12,6 +12,7 @@ v5.0
   - Search is now automatically started when UI was opened
   - Improved filter, now all none textures/images should be removed
   - Added progress bar to show listbox status
+- Small improvements of the 3den Radio GUI
 
 v4.9
 *added*
