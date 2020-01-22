@@ -12,8 +12,8 @@
 */
 
 //Only add things which end with eighter jpg or paa
-#define IS_JPG (".jpg" in (_string select [count _string-4]))
-#define IS_PAA (".paa" in (_string select [count _string-4]))
+#define IS_JPG (".jpg" in (_string select [count _string - 4]))
+#define IS_PAA (".paa" in (_string select [count _string - 4]))
 
 //Update progress bar (Should only run if searching is in progress, but also runs if searching was finished, optimize?)
 [] spawn Enh_fnc_textureFinder_updateProgressbar;
