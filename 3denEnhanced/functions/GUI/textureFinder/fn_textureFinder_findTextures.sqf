@@ -35,21 +35,22 @@ Enh_TextureFinder_ClassesSearched = 0;
 
 //Scan configFile for all classes
 
-private _fnc_searchConfig = {  
-    params [["_depth", 1], ["_class", configFile]]; 
+private _fnc_searchConfig = 
+{
+    params [["_depth", 1], ["_class", configFile]];
      
-    if (_depth <= 0) exitWith {[]}; 
-    _depth = _depth - 1; 
-    private _array = [];  
+    if (_depth <= 0) exitWith {[]};
+    _depth = _depth - 1;
+    private _array = [];
   
     {  
-        _array pushBack _x;  
-        Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;  
-        _array append ([_depth, _x] call _fnc_searchConfig);  
-    } forEach ("true" configClasses _class);  
+        _array pushBack _x;
+        Enh_TextureFinder_ClassesFound = Enh_TextureFinder_ClassesFound + 1;
+        _array append ([_depth, _x] call _fnc_searchConfig);
+    } forEach ("true" configClasses _class);
   
-   _array;  
-};  
+   _array
+};
   
 private _classes = [13] call _fnc_searchConfig;
 
