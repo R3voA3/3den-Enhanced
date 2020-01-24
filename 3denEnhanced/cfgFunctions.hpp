@@ -37,6 +37,7 @@ class CfgFunctions
 			class textureFinder_exportTexturePath;
 			class textureFinder_fillTextureLB;
 			class textureFinder_search;
+			class textureFinder_showTexture;
 		};
 		class BatchReplace
 		{

@@ -34,7 +34,7 @@ class Enh_TextureFinder
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
-			onLBSelChanged = "((findDisplay 140000) displayCtrl 1200 ) ctrlsetText ((_this # 0) lbText (lbCurSel (_this # 0)))";
+			onLBSelChanged = "_this call Enh_fnc_textureFinder_showTexture";
 			onKeyDown = "_this call Enh_fnc_textureFinder_exportTexturePath";
 		};
 		class ProgressList: ctrlProgress
