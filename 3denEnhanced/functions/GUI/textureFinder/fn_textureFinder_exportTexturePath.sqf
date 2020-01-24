@@ -11,11 +11,11 @@
 	BOOLEAN: true / false
 */
 
-params ["_ctrl","_key","_mod"];
+params ["_ctrlLB","_key","","_ctrl"];
 
-if (_key isEqualTo 46 && _mod) then
+if (_key isEqualTo 46 && _ctrl) then
 {
-	private _path = _ctrl lbText (lbCurSel _ctrl);
+	private _path = _ctrlLB lbText (lbCurSel _ctrlLB);
 	if (_path isEqualTo "") exitWith {false};
 	copyToClipboard str _path;
 	["Enh_DataCopied"] call BIS_fnc_3DENNotification;
