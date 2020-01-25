@@ -1,6 +1,6 @@
 class Enh_FunctionsViewer
 {
-	idd = ENH_IDD_FUNCTIONSVIEWER;
+	idd = -1;
 	movingEnable = false;
 	onLoad = "_this call  Enh_fnc_functionsViewer_onLoad";
 	onUnload = "'showinterface' call BIS_fnc_3DENInterface";
