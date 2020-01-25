@@ -2,7 +2,6 @@ class Enh_ScenarioAttributesManagerTemplateData
 {
 	idd = -1;
 	movingEnable = true;
-	enableSimulation = true;
 	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
 	onUnload = "";
 	class ControlsBackground

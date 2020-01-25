@@ -5,7 +5,6 @@ class Enh_ScenarioAttributesManager
 {
 	idd = ENH_IDD_SCENARIOATTRIBUTESMANAGER;
 	movingEnable = true;
-	enableSimulation = true;
 	onLoad = "_this call Enh_fnc_scenarioAttributesManager_onLoad";
 	onUnload = "_this call Enh_fnc_scenarioAttributesManager_onUnload";
 	class ControlsBackground
