@@ -1,6 +1,7 @@
 v5.0
 *added*
-- context menu tool to move camera into first person view of selected entity
+- Context menu tool to move camera into first person view of selected entity
+- Added shortcuts to GUIs to preview controls styles and types (menu strip) 
 
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
@@ -16,6 +17,8 @@ v5.0
 - Small improvements of the 3den Radio GUI
 - Some general cleanup
 - Fixed some typos in translation
+- Batch Replace GUI will now properly display German localisation
+- Added missed German Translations
 
 v4.9
 *added*
