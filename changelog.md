@@ -18,7 +18,7 @@ v5.0
 - Some general cleanup
 - Fixed some typos in translation
 - Batch Replace GUI will now properly display German localisation
-- Added missed German Translations
+- Added missing German Translations
 
 v4.9
 *added*
