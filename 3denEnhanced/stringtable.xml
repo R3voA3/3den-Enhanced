@@ -3415,7 +3415,7 @@
 		<Original>Batch Replace</Original>
 		<English>Batch Replace</English>
 		<Czech>Dávkově nahradit</Czech>
-		<German>Objekte ersetzten</German>
+		<German>Objekte ersetzen</German>
 		<Chinesesimp>批量替换</Chinesesimp>
 		<Spanish>Reemplazar por lotes</Spanish>
 		<French>Batch Replace</French>
@@ -4517,7 +4517,7 @@
 	<Key ID="STR_ENH_tools_batchReplace">
 		<Original>Batch Replace</Original>
 		<English>Batch Replace</English>
-		<German>Objekte ersetzten</German>
+		<German>Objekte ersetzen</German>
 		<Chinesesimp>批量替换</Chinesesimp>
 		<Spanish>Lote Reemplazar </Spanish>
 		<Czech>Dávkově nahradit</Czech>
