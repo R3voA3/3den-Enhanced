@@ -4,15 +4,17 @@ v5.0
 
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
-- Icon updated
+- Icons updated
 - Texture Finder 
-  - Will now search 170.000 classes instead of ~30.000 for textures and image
+  - Will now search ~200.000 classes instead of ~30.000 for textures and images
   - Added search to Texture Finder tool
   - Optimized Texture Finder functions to be more performant (Thanks to shukari)
-  - Search is now automatically started when UI was opened
+  - Search is now automatically started when UI is opened
   - Improved filter, now all none textures/images should be removed
   - Added progress bar to show listbox status
+  - Update list button is now disable while list is updating
 - Small improvements of the 3den Radio GUI
+- Some general cleanup
 
 v4.9
 *added*

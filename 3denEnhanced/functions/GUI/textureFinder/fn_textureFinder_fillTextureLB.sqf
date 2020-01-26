@@ -19,6 +19,14 @@ private _ctrlProgressList = _display displayCtrl 1800;
 private _tooltip = localize "STR_ENH_functions_fillTextureLB_tooltip";
 private _index = 0;
 private _textureCount = count Enh_TextureFinder_TexturesFound;
+private _buttonSearch = _display displayCtrl 1900;
+private _buttonUpdateList = _display displayCtrl 1700;
+private _toolboxFilter = _display displayCtrl 2000;
+
+//Disable button to prevent user from starting search twice
+_buttonSearch ctrlEnable false;
+_buttonUpdateList ctrlEnable false;
+_toolboxFilter ctrlEnable false;
 
 private _fnc_addToList =
 {
@@ -28,29 +36,8 @@ private _fnc_addToList =
 	_ctrlLB lbSetTooltip [_index,_tooltip];
 };
 
-lbClear _ctrlLB;
+private _updateProgressBar =
 {
-	switch (Enh_TextureFinder_Filter) do
-	{
-		case 0://All
-		{
-			[_x] call _fnc_addToList;
-		};
-		case 1://paa
-		{
-			if !("jpg" in _x) then
-			{
-				[_x] call _fnc_addToList;
-			};
-		};
-		case 2://jpg
-		{
-			if !("paa" in _x) then
-			{
-				[_x] call _fnc_addToList;
-			};
-		};
-	};
 	_ctrlProgressList progressSetPosition linearConversion
 	[
 		0,
@@ -59,8 +46,34 @@ lbClear _ctrlLB;
 		0,
 		1
 	];
-} forEach Enh_TextureFinder_TexturesFound;
+};
+
+private _allowedType = ["all",".jpg",".paa"] select Enh_TextureFinder_Filter;
+lbClear _ctrlLB;
+
+if (_allowedType != "all") then
+{
+	{
+		if !(_allowedType in _x) then
+		{
+			[_x] call _fnc_addToList;
+		};
+		call _updateProgressBar;
+	} forEach Enh_TextureFinder_TexturesFound;
+}
+else
+{
+	{
+		[_x] call _fnc_addToList;
+		call _updateProgressBar;
+	} forEach Enh_TextureFinder_TexturesFound;
+};
 
 lbSort _ctrlLB;
+
+//Reenable after list was filled
+_buttonSearch ctrlEnable true;
+_buttonUpdateList ctrlEnable true;
+_toolboxFilter ctrlEnable true;
 
 true
