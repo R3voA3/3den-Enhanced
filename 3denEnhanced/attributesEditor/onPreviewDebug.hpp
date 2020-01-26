@@ -5,7 +5,7 @@ class Enh_OnPreviewDebug
 	{
 		class Enh_OnPreviewDebug_Description
 		{
-			displayName = $STR_ENH_onMissionDebug_description_displayName;
+			displayName = $STR_ENH_description;
 			description = $STR_ENH_onMissionDebug_description_description;
 			control = "SubCategoryDesc2";
 			data = "AttributeSystemSubcategory";
@@ -25,7 +25,6 @@ class Enh_OnPreviewDebug
 			tooltip = $STR_ENH_onPreviewDebug_bulletTracking_tooltip;
 			property = "Enh_BulletTracing";
 			defaultValue = "profileNamespace getVariable ['Enh_BulletTracing',false]";
-
 		};
 		class Enh_Zeus: Enh_ShowUnits
 		{
@@ -33,7 +32,6 @@ class Enh_OnPreviewDebug
 			tooltip = "";
 			defaultValue = "profileNamespace getVariable ['Enh_Zeus',false]";
 			property = "Enh_Zeus";
-
 		};
 		class Enh_Arsenal: Enh_Zeus
 		{
