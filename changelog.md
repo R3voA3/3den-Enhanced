@@ -15,6 +15,7 @@ v5.0
   - Update list button is now disable while list is updating
 - Small improvements of the 3den Radio GUI
 - Some general cleanup
+- Fixed some typos in translation
 
 v4.9
 *added*
