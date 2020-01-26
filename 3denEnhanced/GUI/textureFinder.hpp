@@ -1,5 +1,5 @@
 #define DIALOG_W 160
-#define DIALOG_H 111
+#define DIALOG_H 110
 
 class Enh_TextureFinder
 {
@@ -75,9 +75,10 @@ class Enh_TextureFinder
 		};
 		class UpdateList: ctrlButton
 		{
+			idc = 1900;
 			text = $STR_ENH_textureFinder_updateList;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 110 * GRID_H;
+			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
@@ -86,7 +87,7 @@ class Enh_TextureFinder
 		{
 			idc = 1600;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 58 * GRID_H;
+			y = DIALOG_TOP + 59 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -94,15 +95,16 @@ class Enh_TextureFinder
 		{
 			idc = 1700;
 			x = CENTERED_X(DIALOG_W) + 31 * GRID_W;
-			y = DIALOG_TOP + 58 * GRID_H;
+			y = DIALOG_TOP + 59 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "_this call Enh_fnc_textureFinder_search";
 		};
 		class Filter: ctrlToolbox
 		{
+			idc = 2000;
 			x = CENTERED_X(DIALOG_W) + 63 * GRID_W;
-			y = DIALOG_TOP + 110 * GRID_H;
+			y = DIALOG_TOP + 109 * GRID_H;
 			w = 65 * GRID_W;
 			h = CTRL_DEFAULT_H;
             rows = 1;
@@ -115,12 +117,12 @@ class Enh_TextureFinder
             };
             values[] = {0,1,2};
 			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; Enh_TextureFinder_Filter = 0";//Default value
-			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl";
+			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl; [] spawn Enh_fnc_textureFinder_fillTextureLB";
         };
 		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 129 * GRID_W;
-			y = DIALOG_TOP + 110 * GRID_H;
+			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
