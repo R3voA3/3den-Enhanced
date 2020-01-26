@@ -3009,18 +3009,7 @@
 		<Polish>Kolor</Polish>
 		<Russian>Цвет</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_playlist_text">
-		<Original>Playlist</Original>
-		<English>Playlist</English>
-		<Czech>Playlist</Czech>
-		<Spanish>Canciones seleccionadas</Spanish>
-		<German>Playlist</German>
-		<Chinesesimp>播放列表</Chinesesimp>
-		<French>Liste de lecture</French>
-		<Polish>Lista odtwarzania</Polish>
-		<Russian>Список воспроизведения</Russian>
-	</Key>
-	<Key ID="STR_ENH_3denRadio_clearPlaylist_text">
+	<Key ID="STR_ENH_3DENRadio_clearPlaylist_text">
 		<Original>Clear Playlist</Original>
 		<English>Clear Playlist</English>
 		<Czech>Vymazat playlist</Czech>
@@ -3031,7 +3020,7 @@
 		<Polish>Wyczyść liste odtwarzania</Polish>
 		<Russian>Очистить список воспроизведения</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_exportPlaylist_text">
+	<Key ID="STR_ENH_3DENRadio_exportPlaylist_text">
 		<Original>Export</Original>
 		<English>Export</English>
 		<Czech>Export</Czech>
@@ -3042,7 +3031,7 @@
 		<Polish>Eksport</Polish>
 		<Russian>Экспорт</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_importPlaylist_text">
+	<Key ID="STR_ENH_3DENRadio_importPlaylist_text">
 		<Original>Import</Original>
 		<English>Import</English>
 		<Czech>Import</Czech>
@@ -3053,7 +3042,7 @@
 		<Polish>Import</Polish>
 		<Russian>Импорт</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_headline_title">
+	<Key ID="STR_ENH_3DENRadio_headline_title">
 		<Original>Title</Original>
 		<English>Title</English>
 		<Czech>Název</Czech>
@@ -3064,7 +3053,7 @@
 		<Polish>Tytuł</Polish>
 		<Russian>Оглавление</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_headline_duration">
+	<Key ID="STR_ENH_3DENRadio_headline_duration">
 		<Original>Duration</Original>
 		<English>Duration</English>
 		<Czech>Délka</Czech>
@@ -3075,7 +3064,7 @@
 		<Polish>Czas trwania</Polish>
 		<Russian>Продолжительность</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_headline_theme">
+	<Key ID="STR_ENH_3DENRadio_headline_theme">
 		<Original>Theme</Original>
 		<English>Theme</English>
 		<Czech>Téma</Czech>
@@ -3086,7 +3075,7 @@
 		<Polish>Motyw</Polish>
 		<Russian>Тема</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_headline_mod">
+	<Key ID="STR_ENH_3DENRadio_headline_mod">
 		<Original>Mod</Original>
 		<English>Mod</English>
 		<Czech>Mód</Czech>
@@ -3097,7 +3086,7 @@
 		<Polish>Mod</Polish>
 		<Russian>Мод</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_help_text">
+	<Key ID="STR_ENH_3DENRadio_help_text">
 		<Original>Help</Original>
 		<English>Help</English>
 		<Czech>Pomoc</Czech>
@@ -3108,7 +3097,7 @@
 		<Polish>Pomoc</Polish>
 		<Russian>Помощь</Russian>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_help_description">
+	<Key ID="STR_ENH_3DENRadio_help_description">
 		<Original>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</Original>
 		<English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
 		<Czech>- Dvojí kliknutí levým tlačítkem na záznam v seznamu přehraje hudbu okamžitě\n- Přidejte hudbu do svého playlistu stisknutím SPACE\n - Zkopírujte jméno třídy (class name) hudby do své schránky stisknutím CTRL + C\n - Odstraňte záznam z playlistu jeho vybráním a stisknutím DELETE</Czech>
@@ -3552,7 +3541,7 @@
 		<Portuguese>3den Enhanced Visualizador de funções</Portuguese>
 		<German>3den Enhanced Funktionsviewer</German>
 		<Chinesesimp>3den Enhanced 函数查看器</Chinesesimp>
-		<Russian>Расширенные возможности браузера 3den</Russian>
+		<Russian>Расширенные возможности браузера 3DEN</Russian>
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_expandAll_text">
 		<Original>Expand All</Original>
@@ -4078,7 +4067,7 @@
 		<English>About 3den Enhanced</English>
 		<German>Über 3den Enhanced</German>
 		<Spanish>Acerca de 3den Enhanced</Spanish>
-		<Chinesesimp>关于3den增强版</Chinesesimp>
+		<Chinesesimp>关于3DEN增强版</Chinesesimp>
 		<Czech>O 3den Enhanced</Czech>
 		<French>À propos de 3den Enhanced</French>
 		<Polish>O 3den Enhanced</Polish>
@@ -4243,7 +4232,7 @@
 		<Portuguese>3den Enhanced Visualizador de funções</Portuguese>
 		<German>3den Enhanced Funktionsviewer</German>
 		<Chinesesimp>3den Enhanced 函数查看器</Chinesesimp>
-		<Russian>Средство просмотра расширенных функций 3den</Russian>
+		<Russian>Средство просмотра расширенных функций 3DEN</Russian>
 	</Key>
 	<Key ID="STR_ENH_tools_copyLoadouts">
 		<Original>Copy Loadout/s</Original>
@@ -4420,7 +4409,7 @@
 		<Czech>Exportovat základní třídy rozhraní GUI (Všechny)</Czech>
 		<Russian>Экспорт базовых классов GUI (все)</Russian>
 	</Key>
-	<Key ID="STR_ENH_tools_exportGUIBaseClasses_3den">
+	<Key ID="STR_ENH_tools_exportGUIBaseClasses_3DEN">
 		<Original>Export GUI Base Classes (Eden only)</Original>
 		<English>Export GUI Base Classes (Eden only)</English>
 		<French>Exporter les classes GUI (Eden only)</French>
@@ -5046,35 +5035,35 @@
 		<Czech>Vytvářeč akcí</Czech>
 		<Spanish>Creador de acción</Spanish>
 	</Key>
-	<Key ID="STR_ENH_tools_3denRadio">
-		<English>3den Radio</English>
-		<German>3den Radio</German>
-		<Original>3den Radio</Original>
-		<Czech>3den rádio</Czech>
-		<Spanish>3den Radio</Spanish>
+	<Key ID="STR_ENH_tools_3DENRadio">
+		<English>3DEN Radio</English>
+		<German>3DEN Radio</German>
+		<Original>3DEN Radio</Original>
+		<Czech>3DEN rádio</Czech>
+		<Spanish>3DEN Radio</Spanish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_song">
+	<Key ID="STR_ENH_3DENRadio_song">
 		<English>Song:</English>
 		<German>Lied:</German>
 		<Original>Song:</Original>
 		<Czech>Skladba:</Czech>
 		<Spanish>Canción:</Spanish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_sortByTitle">
+	<Key ID="STR_ENH_3DENRadio_sortByTitle">
 		<English>Sort by Title</English>
 		<German>Sortieren nach Titel</German>
 		<Original>Sort by Title</Original>
 		<Czech>Seřadit podle názvu</Czech>
 		<Spanish>Ordenar por título</Spanish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_sortByDuration">
+	<Key ID="STR_ENH_3DENRadio_sortByDuration">
 		<English>Sort by Duration</English>
 		<German>Sortieren nach Dauer</German>
 		<Original>Sort by Duration</Original>
 		<Czech>Seřadit podle délky trvání</Czech>
 		<Spanish>Ordenar por duración</Spanish>
 	</Key>
-	<Key ID="STR_ENH_3denRadio_sortByTheme">
+	<Key ID="STR_ENH_3DENRadio_sortByTheme">
 		<English>Sort by Theme</English>
 		<German>Sortieren nach Thema</German>
 		<Original>Sort by Theme</Original>
@@ -5873,6 +5862,7 @@
 		<English>Miscellaneous Tools</English>
 		<Original>Miscellaneous Tools</Original>
 		<Spanish>Herramientas misceláneas</Spanish>
+		<German>Sonstige Werkzeuge</German>
 	</Key>
 	<Key ID="STR_ENH_placementTools_orientation">
 		<English>Orientation</English>
@@ -6098,5 +6088,39 @@
 		<English>Move Camera to First Person View</English>
 		<German>Kamera in First Person View bewegen</German>
 		<Original>Move Camera to First Person View</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_controlTypes">
+		<English>View Control Types</English>
+		<Original>View Control Types</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_controlStyles">
+		<English>View Control Styles</English>
+		<Original>View Control Styles</Original>
+	</Key>
+	<Key ID="STR_ENH_Radio_playlist_text">
+		<English>Playlist</English>
+		<Chinesesimp>播放列表</Chinesesimp>
+		<Czech>Playlist</Czech>
+		<French>Liste de lecture</French>
+		<German>Playlist</German>
+		<Original>Playlist</Original>
+		<Polish>Lista odtwarzania</Polish>
+		<Russian>Список воспроизведения</Russian>
+		<Spanish>Canciones seleccionadas</Spanish>
+	</Key>
+	<Key ID="STR_ENH_placementTools_resetCenter_tooltip">
+		<English>Reset Center.</English>
+		<German>Mittelpunkt zurücksetzen.</German>
+		<Original>Reset Center.</Original>
+	</Key>
+	<Key ID="STR_ENH_placementTools_stepSize_tooltip">
+		<English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
+		<German>Legt die Größe eines Inkrementes fest, wenn einer der Pfeile eines Schiebers angeklickt wird.</German>
+		<Original>Sets the size of the increment when clicking the arrows next to the sliders.</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_3DENCam">
+		<English>3DEN Camera Positions</English>
+		<German>3DEN Kamerapositionen</German>
+		<Original>3DEN Camera Positions</Original>
 	</Key>
 </Project>

@@ -51,13 +51,13 @@ class Enh_PlacementTools
 			};
 			tooltips[] =
 			{
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders.",
-				"Sets the size of the increment when clicking the arrows next to the sliders."
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip,
+				$STR_ENH_placementTools_stepSize_tooltip
 			};
 			values[] = {0.0001,0.001,0.01,0.1,1,10,100};
 			onToolBoxSelChanged  = "_this call Enh_fnc_placementTools_onToolBoxSelChanged";
@@ -74,7 +74,7 @@ class Enh_PlacementTools
  		class SelectCenter: ctrlButtonPictureKeepAspect
 		{
 			text = "\A3\ui_f\data\igui\cfg\weaponcursors\rocket_gs.paa";
-			tooltip = "Reset Center";
+			tooltip = $STR_ENH_placementTools_resetCenter_tooltip;
 			x = ORIGIN_X + 32 * GRID_W;
 			y = ORIGIN_Y + 93 * GRID_H;
 			w = CTRL_DEFAULT_H;

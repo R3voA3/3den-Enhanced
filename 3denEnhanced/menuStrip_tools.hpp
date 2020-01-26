@@ -63,8 +63,10 @@ class Enh_Folder_GUI
 	{
 		"Enh_ExportGUIBaseClassesAll",
 		"Enh_ExportGUIBaseClassesDefault",
-		"Enh_ExportGUIBaseClasses3den",
-		"Enh_GUITestGrids"
+		"Enh_ExportGUIBaseClasses3DEN",
+		"Enh_GUITestGrids",
+		"Enh_ControlStyles",
+		"Enh_ControlTypes"
 	};
 };
 class Enh_Folder_Utilities
@@ -79,7 +81,7 @@ class Enh_Folder_Utilities
 		"Enh_PrintConfig",
 		"Enh_ScriptCommands",
 		"Separator",
-		"Enh_3denRadio",
+		"Enh_3DENRadio",
 		"Enh_ActionCreator",
 		"Enh_BatchReplace",
 		"Enh_BriefingEditor",
@@ -145,11 +147,11 @@ class Enh_BriefingEditor
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
 	opensNewWindow = 1;
 };
-class Enh_3denRadio
+class Enh_3DENRadio
 {
-	text = $STR_ENH_tools_3denRadio;
+	text = $STR_ENH_tools_3DENRadio;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
-	action = "findDisplay 313 createDisplay 'Enh_3denRadio'";
+	action = "findDisplay 313 createDisplay 'Enh_3DENRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
 	opensNewWindow = 1;
 };
@@ -189,7 +191,7 @@ class Enh_TextureFinder
 };
 class Enh_3DENCamPositions
 {
-	text = "3DEN Cam Positions";
+	text = $STR_ENH_tools_3DENCam;
 	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'Enh_3DENCamPositions'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
@@ -380,9 +382,9 @@ class Enh_ExportGUIBaseClassesDefault
 	text = $STR_ENH_tools_exportGUIBaseClasses_default;
 	action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
 };
-class Enh_ExportGUIBaseClasses3den
+class Enh_ExportGUIBaseClasses3DEN
 {
-	text = $STR_ENH_tools_exportGUIBaseClasses_3den;
+	text = $STR_ENH_tools_exportGUIBaseClasses_3DEN;
 	action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['Enh_DataCopied'] call BIS_fnc_3DENNotification";
 };
 class Enh_GUITestGrids
@@ -391,11 +393,23 @@ class Enh_GUITestGrids
 	action = "findDisplay 313 createDisplay 'RscTestGrids'";
 	opensNewWindow = 1;
 };
+class Enh_ControlStyles
+{
+	text = $STR_ENH_tools_controlStyles;
+	action = "findDisplay 313 createDisplay 'RscTestControlStyles'";
+	opensNewWindow = 1;
+};
+class Enh_ControlTypes
+{
+	text = $STR_ENH_tools_controlTypes;
+	action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
+	opensNewWindow = 1;
+};
 //Debug Tools
 class Enh_ToggleMapIDs
 {
 	text = $STR_ENH_tools_showMapIDs;
-	picture = "\3denEnhanced\data\icon_id.paa";
+	picture = "\3DENEnhanced\data\icon_id.paa";
 	action = "call Enh_fnc_toggleMapIDs";
 };
 class Enh_ProductInfo
