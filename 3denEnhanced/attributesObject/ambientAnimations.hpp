@@ -89,5 +89,5 @@ class Enh_AmbientAnimations
 			_this call Enh_fnc_ambientAnimations_play;\
 		};";
 	condition = "objectBrain";
-	defaultValue = "['',false,false]";
+	defaultValue = "['',[],false,false]";
 };
