@@ -65,6 +65,9 @@ private _anims = switch (_animSet) do
    };
 };
 
+//Make sure to exit with exact default value if nothing was set, so attribute data is not written to mission.sqf (Workaround)
+if (_animSet isEqualTo "") exitWith {['',[],false,false]};
+
 [
    _animSet,//Needs to be saved to restore the value when attribute is loaded
 	_anims,
