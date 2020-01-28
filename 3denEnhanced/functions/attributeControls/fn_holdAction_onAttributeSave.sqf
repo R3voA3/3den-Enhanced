@@ -15,6 +15,12 @@
 
 params ["_ctrlGroup"];
 
+//Make sure to exit with exact default value if nothing was set, so attribute data is not written to mission.sqf (Workaround)
+if ((ctrlText (_ctrlGroup controlsGroupCtrl 100)) isEqualTo "") exitWith
+{
+   ['','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa','true','true','','','','',10,1000,false,true];
+};
+
 [
    ctrlText (_ctrlGroup controlsGroupCtrl 100),
    (_ctrlGroup controlsGroupCtrl 101) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 101),
@@ -30,4 +36,4 @@ params ["_ctrlGroup"];
    cbChecked (_ctrlGroup controlsGroupCtrl 113),
    cbChecked (_ctrlGroup controlsGroupCtrl 114),
    (_ctrlGroup controlsGroupCtrl 115) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 115)
-]
+];
