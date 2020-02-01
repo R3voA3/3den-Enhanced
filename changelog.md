@@ -20,6 +20,8 @@ v5.0
 - Batch Replace GUI will now properly display German localisation
 - Added missing German Translations
 - Hold Action and Ambient Animation attribute will now longer be writting to mission.sqm for every entity which results in greatly reduced file sizes. Keep in mind that if the attribute was set once, it will remain in the mission.sqm even when reset to default values
+- The menu for 3rd party tools was overhauled
+- The airdrop attribute had a missplaced control
 
 v4.9
 *added*
