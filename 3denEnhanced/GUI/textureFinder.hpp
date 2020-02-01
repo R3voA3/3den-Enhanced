@@ -68,7 +68,7 @@ class Enh_TextureFinder
 		{
 			idc = 1001;
 			x = CENTERED_X(DIALOG_W - 2);
-			y = DIALOG_TOP + 104 * GRID_H;
+			y = DIALOG_TOP + 103 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			colorFrame[] = {0,0,0,0};
