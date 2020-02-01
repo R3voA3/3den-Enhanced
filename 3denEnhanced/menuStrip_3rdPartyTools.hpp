@@ -3,16 +3,35 @@ class Enh_3rdPartyTools
 	text = $STR_ENH_folder_3rdPartyTools;
 	items[] +=
 	{
+		"Enh_3rdPartyTools_Folder_NoDependencies",
+		"Enh_3rdPartyTools_Folder_Dependencies"
+	};
+};
+class Enh_3rdPartyTools_Folder_NoDependencies
+{
+	text = "Tools that don't create dependencies";//Localise
+	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+	items[] +=
+	{
 		"Enh_3rdPartyTools_ColorPicker",
 		"Enh_3rdPartyTools_ExtendedFunctionViewer",
 		"Enh_3rdPartyTools_DebugConsole",
 		"Enh_3rdPartyTools_EditingExtensions",
 		"Enh_3rdPartyTools_ZEI",
 		"Enh_3rdPartyTools_ZEC",
-		"Enh_3rdPartyTools_EdenExtendedObjects",
 		"Enh_3rdPartyTools_Emitter3Ditor",
 		"Enh_3rdPartyTools_CompoT",
 		"Enh_3rdPartyTools_DisableMissionPreviewShortcut"
+	};
+};
+class Enh_3rdPartyTools_Folder_Dependencies: Enh_3rdPartyTools_Folder_NoDependencies
+{
+	text = "Tools that create dependencies";//Localise
+	items[] +=
+	{
+		"Enh_3rdPartyTools_Arma3MissionFramework",
+		"Enh_3rdPartyTools_MissionMakerFramework",
+		"Enh_3rdPartyTools_EdenExtendedObjects"
 	};
 };
 class Enh_3rdPartyTools_ColorPicker
@@ -68,4 +87,14 @@ class Enh_3rdPartyTools_DisableMissionPreviewShortcut: Enh_3rdPartyTools_ColorPi
 {
 	text = "Disable 3den Mission Preview Shortcut by 7erra";
 	weblink = "https://steamcommunity.com/sharedfiles/filedetails/?id=1420348567";
+};
+class Enh_3rdPartyTools_Arma3MissionFramework: Enh_3rdPartyTools_ColorPicker
+{
+	text = "Arma 3 Mission Framework by EightySix";
+	weblink = "https://steamcommunity.com/sharedfiles/filedetails/?id=1378195701";
+};
+class Enh_3rdPartyTools_MissionMakerFramework: Enh_3rdPartyTools_ColorPicker
+{
+	text = "Mission Maker Framework by PiZZADOX";
+	weblink = "https://steamcommunity.com/sharedfiles/filedetails/?id=1378195701";
 };
