@@ -140,7 +140,7 @@ class Enh_Airdrop: Title
 		};
 		class SideTitle: Title
 		{
-			y = 14 * SIZE_M * GRID_H + 30 * pixelH;
+			y = 14.5 * SIZE_M * GRID_H + 30 * pixelH;
 			text = $STR_ENH_side_displayName;
 		};
 		class SideValue: ctrlToolboxPictureKeepAspect
