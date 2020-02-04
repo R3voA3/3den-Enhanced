@@ -30,14 +30,14 @@ collect3DENHistory
       private _attributeName = "Enh_disableAI_" + _x;
       _entity set3DENAttribute [_attributeName,Enh_attribute_disableAI_state]; 
     } forEach ["move","target","cover","autotarget","anim","FSM","aimingError","teamswitch","suppression","checkVisible","autocombat","path","mineDetection","weaponAim","NVG","lights","radioProtocol"]; 
-  } forEach get3DENSelected "Object"; 
+  } forEach get3DENSelected "Object";
 };
 
 [
 	format
 	[
-		"AI features %1.",
-		["disabled","enabled"] select Enh_attribute_disableAI_state
+		localize "STR_ENH_toggleAIFeatures_notification",
+		[localize "STR_ENH_disabled",localize "STR_ENH_enabled"] select Enh_attribute_disableAI_state
 	]
 ] call BIS_fnc_3DENNotification;
 

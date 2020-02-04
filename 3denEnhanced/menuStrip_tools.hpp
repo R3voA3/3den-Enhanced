@@ -253,7 +253,7 @@ class Enh_ToggleDrawDLCIcons
 };
 class Enh_ToggleAIFeatures
 {
-	text = "Toggle AI Features";
+	text = $STR_ENH_tools_toggleAIFeatures;
 	action = "call Enh_fnc_toggleAIFeatures";
 };
 class Enh_GenerateSteamMissionDescription
