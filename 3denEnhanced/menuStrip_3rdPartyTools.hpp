@@ -11,7 +11,7 @@ class Enh_3rdPartyTools_Folder_NoDependencies
 {
 	text = "Tools that don't create dependencies";//Localise
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
-	items[] +=
+	items[] =
 	{
 		"Enh_3rdPartyTools_ColorPicker",
 		"Enh_3rdPartyTools_ExtendedFunctionViewer",
@@ -27,7 +27,7 @@ class Enh_3rdPartyTools_Folder_NoDependencies
 class Enh_3rdPartyTools_Folder_Dependencies: Enh_3rdPartyTools_Folder_NoDependencies
 {
 	text = "Tools that create dependencies";//Localise
-	items[] +=
+	items[] =
 	{
 		"Enh_3rdPartyTools_Arma3MissionFramework",
 		"Enh_3rdPartyTools_MissionMakerFramework",
