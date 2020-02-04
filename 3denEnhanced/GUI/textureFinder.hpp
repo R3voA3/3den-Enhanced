@@ -21,7 +21,7 @@ class Enh_TextureFinder
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_textureFinder_header;
+			text = $STR_ENH_textureFinder;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;

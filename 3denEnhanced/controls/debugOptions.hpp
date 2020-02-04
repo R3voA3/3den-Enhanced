@@ -52,7 +52,7 @@ class Enh_DebugOptions: Title
 		};
 		class Title: Title
 		{
-			text = $STR_ENH_debugOptions_options;
+			text = $STR_ENH_options;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class DebugOptions: ctrlListbox

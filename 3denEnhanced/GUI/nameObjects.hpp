@@ -21,7 +21,7 @@ class Enh_NameObjects
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_nameObjects_header;
+			text = $STR_ENH_nameObjects;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -108,7 +108,7 @@ class Enh_NameObjects
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_nameObjects_header;
+			text = $STR_ENH_nameObjects;
 			x = 0.375313 * safezoneW + safezoneX;
 			y = 0.325 * safezoneH + safezoneY;
 			w = 0.249375 * safezoneW;

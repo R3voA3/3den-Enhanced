@@ -22,7 +22,7 @@ class Enh_BatchReplace
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_batchReplace_header;
+			text = $STR_ENH_batchReplace;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;

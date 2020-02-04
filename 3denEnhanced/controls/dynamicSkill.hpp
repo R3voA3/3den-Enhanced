@@ -52,7 +52,7 @@ class Enh_DynamicSkill: Title
 		};
 		class EnableTitle: Title 
 		{
-			text = $STR_ENH_enable_displayName;
+			text = $STR_ENH_enable;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Enable: ctrlCheckbox

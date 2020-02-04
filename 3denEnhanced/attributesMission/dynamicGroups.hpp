@@ -6,7 +6,7 @@ class Enh_DynamicGroups
 	{
 		class Enh_EnableDynamicGroups
 		{
-			displayName = $STR_ENH_enable_displayName;
+			displayName = $STR_ENH_enable;
 			tooltip = $STR_ENH_dynamicGroups_tooltip;
 			property = "Enh_dynamicGroups";
 			control = "Checkbox";

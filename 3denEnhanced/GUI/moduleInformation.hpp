@@ -21,7 +21,7 @@ class Enh_ModuleInformation
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_moduleInformation_header;
+			text = $STR_ENH_moduleInformation;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -146,7 +146,7 @@ class Enh_ModuleInformation
 	{
 		class Headline: ctrlStaticTitle
 		{
-			text = $STR_ENH_moduleInformation_header;
+			text = $STR_ENH_moduleInformation;
 			x = 0.329375 * safezoneW + safezoneX;
 			y = 0.178 * safezoneH + safezoneY;
 			w = 0.354375 * safezoneW;

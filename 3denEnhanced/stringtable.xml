@@ -95,23 +95,6 @@
 		<Spanish>Obtener Ayuda</Spanish>
 		<Russian>Получить помощь</Russian>
 	</Key>
-	<Key ID="STR_ENH_actionCreator_cancel">
-		<English>Cancel</English>
-		<German>Abbrechen</German>
-		<Original>Cancel</Original>
-		<Chinese>取消</Chinese>
-		<Chinesesimp>取消</Chinesesimp>
-		<Czech>Zrušit</Czech>
-		<French>Annuler</French>
-		<Italian>Annulla</Italian>
-		<Japanese>キャンセル</Japanese>
-		<Korean>작전 취소</Korean>
-		<Polish>Anuluj</Polish>
-		<Portuguese>Cancelar</Portuguese>
-		<Russian>Отмена</Russian>
-		<Spanish>Cancelar</Spanish>
-		<Turkish>İptal</Turkish>
-	</Key>
 	<Key ID="STR_ENH_debugPath_displayName">
 		<English>Debug Path</English>
 		<German>Debug Pfad</German>
@@ -411,16 +394,6 @@
 		<German>Land Abziehbild</German>
 		<Russian>Деколь земли</Russian>
 	</Key>
-	<Key ID="STR_ENH_tools_importMissionAttributes">
-		<English>Import Mission Attributes from Clipboard</English>
-		<German>Missionsattribute aus Zwischenablage importieren</German>
-		<Original>  STR_ENH_tools_importMissionAttributes   Import Mission Attributes from Clipboard</Original>
-		<Czech>Importovat atributy mise ze schránky</Czech>
-		<French>Importer des attributs de mission à partir du Presse-papiers</French>
-		<Polish>Importuje atrybuty misji z schowka.</Polish>
-		<Spanish>Importar Atributos de misión desde el portapapeles</Spanish>
-		<Russian>Импортировать атрибуты миссии из буфера обмена</Russian>
-	</Key>
 	<Key ID="STR_ENH_airdrop_classes_displayName">
 		<English>Classes</English>
 		<German>Klassen</German>
@@ -583,7 +556,7 @@
 	<Key ID="STR_ENH_attributeCategory_dynamicSkill">
 		<English>Dynamic AI Skill Settings</English>
 		<German>Dynamische KI-Fähigkeitseinstellungen</German>
-		<Original>  STR_ENH_attributeCategory_dynamicSkill  Dynamic AI Skill Settings                                                       </Original>
+		<Original>Dynamic AI Skill Settings</Original>
 		<Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
 		<French>Paramètres de compétences AI dynamiques</French>
 		<Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
@@ -659,36 +632,6 @@
 		<Spanish>Remover Carmas</Spanish>
 		<Polish>Usuń broń</Polish>
 		<Russian>Убрать оружие</Russian>
-	</Key>
-	<Key ID="STR_ENH_moveIntoToDo_displayName">
-		<English>Move into To-do List</English>
-		<German>Zu To-do Liste hinzufügen</German>
-		<Original>Move into To-do List</Original>
-		<Czech>Přesunout do "Seznamu věcí k dodělání"</Czech>
-		<French>deplaceer dans la Liste des tâches</French>
-		<Spanish>Mover a lista de Qué hacer</Spanish>
-		<Polish>Dodaj do "Do zrobienia"</Polish>
-		<Russian>Добавить в список задач</Russian>
-	</Key>
-	<Key ID="STR_ENH_moveIntoToDo_tooltip">
-		<English>Moves this comment into a special layer called 'To-do List'.</English>
-		<German>Verschiebt dieses Kommentar in eine spezielle Ebene mit dem Namen 'To-Do-Liste'.</German>
-		<Original>Moves this comment into a special layer called 'To-do List'.</Original>
-		<Czech>Přesune tento komentář do zvláštní vrstvy zvné "Seznam věcí k dodělání"</Czech>
-		<French>Déplace ce commentaire dans un calque spécial appelé 'Liste des tâches'.</French>
-		<Spanish>Mover este comentario en una capa especial llamada "Qué hacer"</Spanish>
-		<Polish>Dodaje ten komentarz do specjalnej warstwy zwanej "Do zrobienia"</Polish>
-		<Russian>Перемещает этот комментарий в специальный раздел под названием «Список задач».</Russian>
-	</Key>
-	<Key ID="STR_ENH_toDoList">
-		<English>To-Do List</English>
-		<German>To-Do Liste</German>
-		<Original>To-Do List</Original>
-		<Czech>Seznam věcí k dodělání</Czech>
-		<French>Liste des tâches</French>
-		<Spanish>Lista de Qué hacer</Spanish>
-		<Polish>Do zrobienia</Polish>
-		<Russian>Список задач</Russian>
 	</Key>
 	<Key ID="STR_ENH_briefingEditor_loadTemplate_tooltip">
 		<English>Load template by double clicking. Delete it from list by pressing DELETE.</English>
@@ -875,33 +818,6 @@
 		<Polish>Nie pokazuj sygnału taktycznego</Polish>
 		<Russian>Не показывать тактический пинг</Russian>
 	</Key>
-	<Key ID="STR_ENH_weaponSway_displayName">
-		<Original>Weapon sway</Original>
-		<Spanish>Balanceo del arma</Spanish>
-		<Chinesesimp>武器的影响</Chinesesimp>
-		<German>Waffenverwacklung</German>
-		<French>Balancement d'arme</French>
-		<Italian>Dondolio arma</Italian>
-		<Polish>Kołysanie broni</Polish>
-		<Russian>Регулирует колебания ствола</Russian>
-		<Czech>Houpání zbraně</Czech>
-		<English>Weapon sway</English>
-		<Portuguese>Oscilação de arma</Portuguese>
-		<Korean>무기 흔들림</Korean>
-		<Japanese>武器の揺れ</Japanese>
-		<Turkish>Silah sallanması</Turkish>
-	</Key>
-	<Key ID="STR_ENH_weaponSway_tooltip">
-		<Original>Sets player's weapon sway. State is preserved even after respawn.</Original>
-		<English>Sets player's weapon sway. State is preserved even after respawn.</English>
-		<Czech>Nastavuje jak moc se hráčova zbraň houpe. Nastavení je uchováno i po respawnu.</Czech>
-		<Spanish>Establece el balanceo del arma del jugador. Este estado se conserva incluso después de respawn.</Spanish>
-		<Chinesesimp>设置玩家的武器晃动。 即使在重生之后，状态仍然保留。</Chinesesimp>
-		<German>Bestimmt das Verwackeln der Waffe. Die Einstellung wird bei einem Wiedereinstieg wieder hergestellt.</German>
-		<French>Règle l"oscillation des armes du joueur. L'état est préservé même après la réapparition.</French>
-		<Polish>Ustawia "kołysanie" się broni gracza. Stan pozostaje nawet po odrodzeniu.</Polish>
-		<Russian>Устанавливает оружие игрока. Состояние сохраняется даже после возрождения.</Russian>
-	</Key>
 	<Key ID="STR_ENH_forceFlag_displayName">
 		<Original>Add Flag</Original>
 		<English>Add Flag</English>
@@ -945,33 +861,6 @@
 		<French>Empêche l'IA d'entrer en formation au début de la mission.</French>
 		<Polish>Zapobiega przed przemieszczeniem się SI do formacji podczas startu misji.</Polish>
 		<Russian>Предотвращает формирование ИИ в начале миссии.</Russian>
-	</Key>
-	<Key ID="STR_ENH_weaponRecoil_displayName">
-		<Chinesesimp>武器后坐力</Chinesesimp>
-		<Original>Recoil</Original>
-		<French>Recul</French>
-		<Spanish>Retroceso</Spanish>
-		<Italian>Rinculo</Italian>
-		<Polish>Odrzut</Polish>
-		<Russian>Отдача</Russian>
-		<German>Rückstoß</German>
-		<Czech>Zpětný ráz</Czech>
-		<English>Recoil</English>
-		<Portuguese>Recuo</Portuguese>
-		<Korean>반동</Korean>
-		<Japanese>反動</Japanese>
-		<Turkish>Geri Tepme</Turkish>
-	</Key>
-	<Key ID="STR_ENH_weaponRecoil_tooltip">
-		<Original>Sets player's weapon recoil. State is preserved even after respawn.</Original>
-		<English>Sets player's weapon recoil. State is preserved even after respawn.</English>
-		<Czech>Nastavuje zpětný ráz hráčovy zbraně. Nastavení je uchováno i po respawnu.</Czech>
-		<Spanish>Define el retroceso del arma del jugador. Este estado se conserva incluso después de respawn.</Spanish>
-		<Chinesesimp>设置玩家的武器后坐力。 即使在重生之后，状态仍然保留。</Chinesesimp>
-		<German>Bestimmt den Waffenrückstoß des Spielers. Die Einstellung wird bei einem Wiedereinstieg wieder hergestellt.</German>
-		<French>Définit le recul de l'arme du joueur. L'état est préservé même après la réapparition.</French>
-		<Polish>Ustawia odrzut broni gracza. Stan pozostaje nawet po odrodzeniu.</Polish>
-		<Russian>Устанавливает отдачу оружия игрока. Состояние сохраняется даже после возрождения.</Russian>
 	</Key>
 	<Key ID="STR_ENH_advancedDamageVeh_engine1">
 		<Original>Engine #1</Original>
@@ -1611,18 +1500,7 @@
 		<Polish>Jednostka nie może sprintować jeżeli nie zaznaczone.</Polish>
 		<Russian>Отряд\единица не может бегать, если отключено</Russian>
 	</Key>
-	<Key ID="STR_ENH_setCaptive_displayName">
-		<Original>Set Captive</Original>
-		<English>Set Captive</English>
-		<Czech>Jednotka je zajatec</Czech>
-		<French>Capturé</French>
-		<Spanish>Establecer como cautivo.</Spanish>
-		<German>Neutrales Verhalten</German>
-		<Chinesesimp>设置俘虏</Chinesesimp>
-		<Polish>Ustaw jako jeńca</Polish>
-		<Russian>Нейтральное поведение</Russian>
-	</Key>
-	<Key ID="STR_ENH_setCaptive_tooltip">
+	<Key ID="STR_ENH_captive_tooltip">
 		<Original>Unit will behave neutral and will join the civilian side.</Original>
 		<English>Unit will behave neutral and will join the civilian side.</English>
 		<Czech>Jednotka se bude chovat neutrálně a bude přiřazena na stranu civilistů.</Czech>
@@ -2403,72 +2281,6 @@
 		<Polish>Jeżeli włączone, optyka termowizyjna nie może być używana.</Polish>
 		<Russian>Если включено, тепловая оптика больше не может использоваться.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onRespawnEvent_displayName">
-		<Original>On Respawn</Original>
-		<English>On Respawn</English>
-		<Czech>Při oživení</Czech>
-		<French>Lors de la réapparition</French>
-		<Spanish>En respawn</Spanish>
-		<German>Beim Wiedereinstieg</German>
-		<Chinesesimp>重生位置</Chinesesimp>
-		<Polish>Podczas odrodzenia</Polish>
-		<Russian>Возрождение</Russian>
-	</Key>
-	<Key ID="STR_ENH_onRespawnEvent_tooltip">
-		<Original>Code which is executed on respawn.</Original>
-		<English>Code which is executed on respawn.</English>
-		<Czech>Kód který je spuštěn při znovuzrození jednotky (respawn).</Czech>
-		<French>Code exécuté lors du Respawn de l'unité</French>
-		<Spanish>Código que se ejecuta en respawn.</Spanish>
-		<German>Code welcher beim Wiedereinstieg ausgeführt wird.</German>
-		<Chinesesimp>在重生时执行的代码。</Chinesesimp>
-		<Polish>Kod który będzie aktywowany podczasu odrodzenia.</Polish>
-		<Russian>Код, который выполняется при возрождении.</Russian>
-	</Key>
-	<Key ID="STR_ENH_onKilledEvent_displayName">
-		<Original>On Killed</Original>
-		<English>On Killed</English>
-		<Czech>Při zabití</Czech>
-		<French>Lorsque détruit</French>
-		<Spanish>En muerte.</Spanish>
-		<German>Beim Tod</German>
-		<Chinesesimp>死亡位置</Chinesesimp>
-		<Polish>Podczas śmierci</Polish>
-		<Russian>Во время смерти</Russian>
-	</Key>
-	<Key ID="STR_ENH_onKilledEvent_tooltip">
-		<Original>Code which is executed on death.</Original>
-		<English>Code which is executed on death.</English>
-		<Czech>Kód který je spuštěn při smrti jednotky.</Czech>
-		<French>Code exécuté lorsque l'unité est tuée ou détruite.</French>
-		<Spanish>Código que es ejecutado en muerte.</Spanish>
-		<German>Code welcher beim Tod ausgeführt wird.</German>
-		<Chinesesimp>在死亡时执行的代码</Chinesesimp>
-		<Polish>Kod który będzie aktywowany podczas śmierci.</Polish>
-		<Russian>Код, который выполняется во время смерти.</Russian>
-	</Key>
-	<Key ID="STR_ENH_onDamagedEvent_displayName">
-		<Original>On Damaged</Original>
-		<English>On Damaged</English>
-		<Czech>Při poškození</Czech>
-		<French>Lorsqu'endommagé</French>
-		<Spanish>En daño</Spanish>
-		<German>Wenn beschädigt</German>
-		<Chinesesimp>破坏位置</Chinesesimp>
-		<Polish>Podczas uszkodzeń.</Polish>
-		<Russian>Во время ранения</Russian>
-	</Key>
-	<Key ID="STR_ENH_onDamagedEvent_tooltip">
-		<Original>Code which is executed when entity is damaged.</Original>
-		<English>Code which is executed when entity is damaged.</English>
-		<Czech>Kód který je spuštěn když je jednotka poškozena.</Czech>
-		<French>Code exécuté lorsque l'unité est blessée ou endommagée.</French>
-		<Spanish>Código que es ejecutado cuando la entidad está dañada.</Spanish>
-		<German>Code welcher ausgeführt wird wenn die Entität beschädigt wurde.</German>
-		<Chinesesimp>当对象被破坏时执行的代码</Chinesesimp>
-		<Polish>Kod który będzie aktywowany w momencie zranienia/uszkodzenia bytu.</Polish>
-		<Russian>Код, который выполняется во время ранения.</Russian>
-	</Key>
 	<Key ID="STR_ENH_allowFleeing_displayName">
 		<Original>Fleeing Coefficient</Original>
 		<English>Fleeing Coefficient</English>
@@ -2568,28 +2380,6 @@
 		<Polish>Obiekt nie będzie usunięty przy śmierci lub zniszczeniu.</Polish>
 		<Russian>Объект не будет удален после смерти или разрушения.</Russian>
 	</Key>
-	<Key ID="STR_ENH_kbTell_displayName">
-		<Original>KbTell Name</Original>
-		<English>KbTell Name</English>
-		<German>KbTell Name</German>
-		<Chinesesimp>KbTell 名称</Chinesesimp>
-		<Spanish>KbTell Name</Spanish>
-		<Czech>KbTell Name</Czech>
-		<French>KbTell Nom</French>
-		<Polish>KbTell Name</Polish>
-		<Russian>Имя в далоге "KbTell"</Russian>
-	</Key>
-	<Key ID="STR_ENH_kbTell_tooltip">
-		<Original>Name used in kbTell dialogues.</Original>
-		<English>Name used in kbTell dialogues.</English>
-		<German>Name der in 'KbTell' Dialogen verwendet wird.</German>
-		<Chinesesimp>kbTell对话中使用的名称。</Chinesesimp>
-		<Spanish>Nombre utilizado en los diálogos kbTell.</Spanish>
-		<Czech>Název použitý v dialozích kbTell.</Czech>
-		<French>Nom utilisé dans les dialogues kbTell.</French>
-		<Polish>Imie używane w dialogach kbTell.</Polish>
-		<Russian>Имя, используемое в диалогах "KbTell"</Russian>
-	</Key>
 	<Key ID="STR_ENH_notifications_actionPerformed">
 		<Original>Action performed!</Original>
 		<English>Action performed!</English>
@@ -2609,7 +2399,7 @@
 		<Russian>Объекты не выбраны. Действие отменено!</Russian>
 		<Spanish>¡No hay entidades seleccionadas. Acción cancelada!</Spanish>
 	</Key>
-	<Key ID="STR_ENH_enable_displayName">
+	<Key ID="STR_ENH_enable">
 		<Original>Enable</Original>
 		<English>Enable</English>
 		<Czech>Aktivovat</Czech>
@@ -2924,16 +2714,6 @@
 		<Polish>Cechy jednostki</Polish>
 		<Russian>Свойства объекта</Russian>
 	</Key>
-	<Key ID="STR_ENH_attributeCategory_onEventCode">
-		<Original>Event Scripting</Original>
-		<English>Event Scripting</English>
-		<Czech>Skriptování událostí</Czech>
-		<French>Scripting d'event</French>
-		<Spanish>"Scripting" de eventos</Spanish>
-		<German>Ereignis Skripting</German>
-		<Chinesesimp>事件脚本</Chinesesimp>
-		<Russian>Сценарии событий</Russian>
-	</Key>
 	<Key ID="STR_ENH_attributeCategory_ambientFlyby">
 		<Original>Ambient Flyby</Original>
 		<English>Ambient Flyby</English>
@@ -2976,7 +2756,7 @@
 		<Polish>Tekst intro</Polish>
 		<Russian>Вывод текста</Russian>
 	</Key>
-	<Key ID="STR_ENH_briefingEditor_headline_displayName">
+	<Key ID="STR_ENH_briefingEditor">
 		<Original>Briefing Editor</Original>
 		<English>Briefing Editor</English>
 		<Czech>Editor brífinku</Czech>
@@ -3107,7 +2887,7 @@
 		<French>- Double-cliquez à gauche sur une entrée de la liste pour lire immédiatement la chanson \n- Ajouter une chanson à votre liste de lecture en appuyant sur ESPACE \n- Copiez le nom de la classe d’une chanson dans le Presse-papiers en appuyant sur CTRL + C \n- Supprime une entrée de la liste de lecture en la sélectionnant et en appuyant sur SUPPRIMER</French>
 		<Polish>- Podwójne kliknięcie LPM na pozycje z listy spowoduje odtworzenie piosenki\n-Dodaj piosenke do playlisty poprzez naciśniecie SPACE\n-Skopiuj "class name" piosenki do schowka przy użyciu CTRL + C\nUsuń pozycje z playlisty zaznaczając ją i klikając DELETE</Polish>
 	</Key>
-	<Key ID="STR_ENH_nameObjects_header">
+	<Key ID="STR_ENH_nameObjects">
 		<Original>Name Objects</Original>
 		<English>Name Objects</English>
 		<Czech>Pojmenovat objekty</Czech>
@@ -3295,7 +3075,7 @@
 		<Polish>Może być zsynchronizowany z:</Polish>
 		<Russian>Может быть синхронизирован с:</Russian>
 	</Key>
-	<Key ID="STR_ENH_moduleInformation_header">
+	<Key ID="STR_ENH_moduleInformation">
 		<Original>Module Information</Original>
 		<English>Module Information</English>
 		<Czech>Informace o modulu</Czech>
@@ -3306,7 +3086,7 @@
 		<Polish>Informacja o module</Polish>
 		<Russian>Информация о модуле</Russian>
 	</Key>
-	<Key ID="STR_ENH_textureFinder_header">
+	<Key ID="STR_ENH_textureFinder">
 		<Original>Texture Finder</Original>
 		<English>Texture Finder</English>
 		<Czech>Vyhledávač textur</Czech>
@@ -3400,7 +3180,7 @@
 		<Polish>Kąt początkowy</Polish>
 		<Russian>Начальный угол</Russian>
 	</Key>
-	<Key ID="STR_ENH_batchReplace_header">
+	<Key ID="STR_ENH_batchReplace">
 		<Original>Batch Replace</Original>
 		<English>Batch Replace</English>
 		<Czech>Dávkově nahradit</Czech>
@@ -3453,71 +3233,6 @@
 		<French>Tous les objets sélectionnés seront remplacés par les types d'objets que vous avez entrés dans la zone d'édition ci-dessous de manière aléatoire.</French>
 		<Polish>Wszystkie zaznaczone obiekty bedą losowo zamienione przez typy obiektów które wpiszesz poniżej.</Polish>
 		<Russian>Все выбранные объекты будут заменены типами объектов, которые вы вводите в поле редактирования ниже случайным образом.</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_header">
-		<Original>Export Loadout to Respawn Inventory</Original>
-		<English>Export Loadout to Respawn Inventory</English>
-		<Czech>Exportovat výstroj do inventáře respawnu</Czech>
-		<German>Wiedereinstiegs-Ausrüstung exportieren</German>
-		<Chinesesimp>导出加载的重生库存</Chinesesimp>
-		<Spanish>Exportar Loadout a Respawn Inventory</Spanish>
-		<French>Exporter l'équipement dans l'inventaire de Respawn</French>
-		<Russian>Экспорт оборудования в инвентарь возрожденного</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_className">
-		<Original>Class Name</Original>
-		<English>Class Name</English>
-		<Czech>Název třídy (Class Name)</Czech>
-		<German>Klassenname</German>
-		<Chinesesimp>类名（Class name）</Chinesesimp>
-		<Spanish>Nombre de la clase</Spanish>
-		<French>Class Name</French>
-		<Polish>Class Name</Polish>
-		<Russian>Имя класса</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_displayName">
-		<Original>Display Name</Original>
-		<English>Display Name</English>
-		<Czech>Zobrazované jméno</Czech>
-		<German>Anzeigename</German>
-		<Chinesesimp>显示名称</Chinesesimp>
-		<Spanish>Nombre para mostrar</Spanish>
-		<French>Nom afficher</French>
-		<Polish>Wyświetlana nazwa</Polish>
-		<Russian>Отображаемое имя</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_icon">
-		<Original>Icon</Original>
-		<English>Icon</English>
-		<Czech>Ikona</Czech>
-		<German>Icon</German>
-		<Chinesesimp>标志</Chinesesimp>
-		<Spanish>Icono</Spanish>
-		<French>Icône</French>
-		<Polish>Ikona</Polish>
-		<Russian>Значок</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_role">
-		<Original>Role</Original>
-		<English>Role</English>
-		<Czech>Role</Czech>
-		<German>Rolle</German>
-		<Chinesesimp>任务</Chinesesimp>
-		<Spanish>Papel</Spanish>
-		<French>Rôle</French>
-		<Polish>Rola</Polish>
-		<Russian>Роль</Russian>
-	</Key>
-	<Key ID="STR_ENH_exportLoadout_condition">
-		<Original>Condition</Original>
-		<English>Condition</English>
-		<Czech>Podmínka</Czech>
-		<German>Bedingung</German>
-		<Chinesesimp>条件</Chinesesimp>
-		<Spanish>Condición</Spanish>
-		<French>Condition</French>
-		<Polish>Warunek</Polish>
-		<Russian>Состояние</Russian>
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_search_tooltip">
 		<Original>Press CTRL + F to directly jump into the search box.</Original>
@@ -3804,7 +3519,7 @@
 		<Polish>Zaznacz drugi punkt</Polish>
 		<Russian>Выберите вторую точку</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_captive_displayName">
+	<Key ID="STR_ENH_captive_displayName">
 		<Original>Enable Captive Mode</Original>
 		<English>Enable Captive Mode</English>
 		<Czech>Aktivovat režim "Zajatec"</Czech>
@@ -3880,17 +3595,6 @@
 		<French>Activer le garage virtuel</French>
 		<Polish>Włącz garaż</Polish>
 		<Russian>Включить виртуальный гараж</Russian>
-	</Key>
-	<Key ID="STR_ENH_debugOptions_captive_tooltip">
-		<Original>Player unit will be 'invisible' for other units during scenario preview.</Original>
-		<English>Player unit will be 'invisible' for other units during scenario preview.</English>
-		<German>Der Spieler wird 'unsichtbar' für andere Einheiten während der Szenariovorschau sein.</German>
-		<Chinesesimp>在场景预览期间，其他单位的玩家单位将“隐藏”。</Chinesesimp>
-		<Spanish>La unidad del jugador será "invisible" para otras unidades durante la vista previa del escenario.</Spanish>
-		<Czech>Jednotka hráče bude během náhledu scénáře "neviditelná" pro další jednotky.</Czech>
-		<French>L'unité du joueur sera «invisible» pour les autres unités lors de la prévisualisation du scénario.</French>
-		<Polish>Gracz będzie niewidzialny dla innych jednostek w czasie testowania scenariusza.</Polish>
-		<Russian>Игрок будет «невидимым» для других юнитов во время предварительного просмотра сценария.</Russian>
 	</Key>
 	<Key ID="STR_ENH_debugOptions_invulnerability_displayName">
 		<Original>Enable Invulnerability</Original>
@@ -4540,17 +4244,6 @@
 		<French>Nommez des objets </French>
 		<Polish>Nazwij obiekty</Polish>
 		<Russian>Наименование объектов</Russian>
-	</Key>
-	<Key ID="STR_ENH_tools_textureFinder">
-		<Original>Texture Finder</Original>
-		<English>Texture Finder</English>
-		<German>Texturen suchen</German>
-		<Chinesesimp>纹理查找器</Chinesesimp>
-		<Spanish>Buscador de texturas </Spanish>
-		<Czech>Vyhledávač textur</Czech>
-		<French>Texture Finder </French>
-		<Polish>Wyszukiwarka tekstur</Polish>
-		<Russian>Поиск текстур</Russian>
 	</Key>
 	<Key ID="STR_ENH_tools_toggleSimpleObject">
 		<Original>Toggle Simple Object</Original>
@@ -6107,7 +5800,7 @@
 		<German>3DEN Kamerapositionen</German>
 		<Original>3DEN Camera Positions</Original>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_options">
+	<Key ID="STR_ENH_options">
 		<English>Options</English>
 		<German>Optionen</German>
 		<Original>Options</Original>

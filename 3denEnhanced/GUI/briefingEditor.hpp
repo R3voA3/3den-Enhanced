@@ -19,7 +19,7 @@ class Enh_BriefingEditor
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_briefingEditor_headline_displayName;
+			text = $STR_ENH_briefingEditor;
 			x = CENTERED_X(160);
 			y = DIALOG_TOP;
 			w = 160 * GRID_W;
@@ -318,7 +318,7 @@ class Enh_BriefingEditor
 		};
 		class BriefingEditorHeader: ctrlStaticTitle
 		{
-			text = $STR_ENH_briefingEditor_headline_displayName;
+			text = $STR_ENH_briefingEditor;
 			x = 0.335938 * safezoneW + safezoneX;
 			y = 0.122 * safezoneH + safezoneY;
 			w = 0.308437 * safezoneW;

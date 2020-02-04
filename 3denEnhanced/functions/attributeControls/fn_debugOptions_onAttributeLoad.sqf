@@ -21,7 +21,7 @@ private _options =
 	["STR_ENH_debugOptions_arsenal_displayName",""],
 	["STR_ENH_debugOptions_garage_displayName",""],
 	["STR_ENH_debugOptions_invulnerability_displayName",""],
-	["STR_ENH_debugOptions_captive_displayName","STR_ENH_debugOptions_captive_tooltip"],
+	["STR_ENH_captive_displayName","STR_ENH_captive_tooltip"],
 	["STR_ENH_debugOptions_stamina_displayName",""],
 	["STR_ENH_debugOptions_awareness_displayName","STR_ENH_debugOptions_awareness_tooltip"],
 	["STR_ENH_debugOptions_FPS_displayName",""],
