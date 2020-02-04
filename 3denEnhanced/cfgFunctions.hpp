@@ -153,6 +153,7 @@ class CfgFunctions
 			class toggleDrawBuildingPositions;
 			class toggleDrawDLCIcons;
 			class toggleAttribute;
+			class toggleAIFeatures;
 			class floatToTime;
 			class firstPerson;
 		};
@@ -173,7 +174,7 @@ class CfgFunctions
 			class productInfo;
 			class toggleMapIDs;
 			class sessionTimer;
-			class onPreviewDebug;
+			class DebugOptions;
 			class checkShortCutsDuplicates;
 		};
 		class EventHandlers
@@ -226,6 +227,10 @@ class CfgFunctions
 			class missionEnding_onButtonDown;
 			class taskPatrol_onAttributeLoad;
 			class taskPatrol_onAttributeSave;
+			class debugOptions_onAttributeLoad;
+			class debugOptions_onAttributeSave;
+			class debugOptions_onLBSelChanged;
+			class debugOptions_onButtonDown;
 		};
 	};
 };
