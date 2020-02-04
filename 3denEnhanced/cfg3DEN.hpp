@@ -55,6 +55,7 @@ class Cfg3DEN
 		#include "controls\holdAction.hpp"
 		#include "controls\missionEnding.hpp"
 		#include "controls\taskPatrol.hpp"
+		#include "controls\debugOptions.hpp"
 	};
 	class Mission
 	{
@@ -62,12 +63,12 @@ class Cfg3DEN
 		{
 			class AttributeCategories
 			{
-				#include "attributesEditor\onPreviewDebug.hpp"
 				class Misc
 				{
 					class Attributes
 					{
 						#include "attributesEditor\statusbar_entityCounter.hpp"
+						#include "attributesEditor\debugOptions.hpp"
 					};
 				};
 			};
