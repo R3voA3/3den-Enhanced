@@ -11,21 +11,23 @@
    BOOLEAN: true / false
 */
 
-#define MARKERS 			profileNamespace getVariable ["Enh_ShowUnits",false]
-#define BULLETTRACING 		profileNamespace getVariable ["Enh_BulletTracing",false]
-#define ZEUS				profileNamespace getVariable ["Enh_Zeus",false]
-#define ARSENAL 			profileNamespace getVariable ["Enh_Arsenal",false]
-#define GARAGE 				profileNamespace getVariable ["Enh_Garage",false]
-#define INVULNERABILITY 	profileNamespace getVariable ["Enh_Invulnerability",false]
-#define CAPTIVE 			profileNamespace getVariable ["Enh_CaptiveMode",false]
-#define STAMINA 			profileNamespace getVariable ["Enh_DisableStamina",false]
-#define AWARENESS 			profileNamespace getVariable ["Enh_Awareness",false]
-#define FPS 			    profileNamespace getVariable ["Enh_FPS",false]
-#define KILLWEST 			profileNamespace getVariable ["Enh_KillWest",false]
-#define KILLEAST 			profileNamespace getVariable ["Enh_KillEast",false]
-#define KILLINDEP 			profileNamespace getVariable ["Enh_KillIndep",false]
-#define KILLCIV				profileNamespace getVariable ["Enh_KillCiv",false]
-#define KILLCURSOR			profileNamespace getVariable ["Enh_KillCursor",false]
+private _enabledOptions =  profileNamespace getVariable ["Enh_DebugOptions_Settings",[]];
+
+#define MARKERS 			0
+#define BULLETTRACING 		1
+#define ZEUS				2
+#define ARSENAL 			3
+#define GARAGE 				4
+#define INVULNERABILITY 	5
+#define CAPTIVE 			6
+#define STAMINA 			7
+#define AWARENESS 			8
+#define FPS 			    9
+#define KILLWEST 			10
+#define KILLEAST 			11
+#define KILLINDEP 			12
+#define KILLCIV				13
+#define KILLCURSOR			14
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
 //To prevent issues in multiplayer games started from multiplayer editor
@@ -34,28 +36,28 @@ if (isMultiplayer) exitWith {false};
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 waitUntil {time > 0.5};
 
-if (INVULNERABILITY) then 
+if (INVULNERABILITY in _enabledOptions) then
 {
 	player allowDamage false; 
 	(vehicle player) allowDamage false;
 };
 
-if (CAPTIVE) then 
+if (CAPTIVE in _enabledOptions) then
 {
 	player setCaptive true;
 };
 
-if (STAMINA) then 
+if (STAMINA in _enabledOptions) then
 {
 	player enableStamina false;
 };
 
-if (BULLETTRACING) then 
+if (BULLETTRACING in _enabledOptions) then
 {
 	[player] spawn BIS_fnc_traceBullets;
 };
 
-if (ZEUS) then
+if (ZEUS in _enabledOptions) then
 {
 	[] spawn
 	{
@@ -76,12 +78,12 @@ if (ZEUS) then
 	};
 };
 
-if (ARSENAL) then 
+if (ARSENAL in _enabledOptions) then
 {
 	["AmmoboxInit",[player,true]] spawn BIS_fnc_arsenal;
 };
 
-if (GARAGE) then
+if (GARAGE in _enabledOptions) then
 {
 
 	player addAction ["Garage",
@@ -92,7 +94,7 @@ if (GARAGE) then
 	}];
 };
 
-if (AWARENESS) then
+if (AWARENESS in _enabledOptions) then
 {
 	[] spawn
 	{
@@ -115,7 +117,7 @@ if (AWARENESS) then
 	};
 };
 
-if (FPS) then
+if (FPS in _enabledOptions) then
 {
 	[] spawn
 	{
@@ -150,7 +152,7 @@ if (FPS) then
 	};
 };
 
-if (KILLWEST) then
+if (KILLWEST in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killWest",
@@ -158,7 +160,7 @@ if (KILLWEST) then
 	];
 };
 
-if (KILLEAST) then
+if (KILLEAST in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killEast",
@@ -166,7 +168,7 @@ if (KILLEAST) then
 	];
 };
 
-if (KILLINDEP) then
+if (KILLINDEP in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killIndep",
@@ -174,7 +176,7 @@ if (KILLINDEP) then
 	];
 };
 
-if (KILLCIV) then
+if (KILLCIV in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killCiv",
@@ -182,7 +184,7 @@ if (KILLCIV) then
 	];
 };
 
-if (KILLCURSOR) then 
+if (KILLCURSOR in _enabledOptions) then 
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killCursorTarget",
@@ -190,7 +192,7 @@ if (KILLCURSOR) then
 	];
 };
 
-if (MARKERS) then
+if (MARKERS in _enabledOptions) then
 {
 	[] spawn
 	{
