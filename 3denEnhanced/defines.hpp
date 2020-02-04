@@ -78,6 +78,7 @@ class ctrlStaticFooter;
 class ctrlStaticBackgroundDisable;
 class ctrlStaticBackgroundDisableTiles;
 class ctrlStaticPictureKeepAspect;
+class ctrlStaticPicture;
 class ctrlStaticMulti;
 class ctrlStaticTitle;
 class ctrlStaticLine;
