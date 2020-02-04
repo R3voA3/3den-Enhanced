@@ -13,6 +13,8 @@
 
 private _enabledOptions =  profileNamespace getVariable ["Enh_DebugOptions_Settings",[]];
 
+if (_enabledOptions isEqualTo []) exitWith {false};
+
 #define MARKERS 			0
 #define BULLETTRACING 		1
 #define ZEUS				2
