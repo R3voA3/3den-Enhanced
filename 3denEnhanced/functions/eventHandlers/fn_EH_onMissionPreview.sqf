@@ -13,6 +13,6 @@
    BOOLEAN: true
 */
 
-[] spawn Enh_fnc_onPreviewDebug;
+[] spawn Enh_fnc_DebugOptions;
 
 true
