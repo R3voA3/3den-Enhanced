@@ -105,7 +105,8 @@ class Enh_Folder_Miscellaneous
 		"Enh_ToggleSimulation",
 		"Enh_ToggleDynamicSimulation",
 		"Enh_ToggleDrawBuildingPositions",
-		"Enh_ToggleDrawDLCIcons"
+		"Enh_ToggleDrawDLCIcons",
+		"Enh_ToggleAIFeatures"
 	};
 };
 //Utilities
@@ -249,6 +250,11 @@ class Enh_ToggleDrawDLCIcons
 	text = $STR_ENH_tools_drawDLCIcons;
 	action = "call Enh_fnc_toggleDrawDLCIcons";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
+};
+class Enh_ToggleAIFeatures
+{
+	text = "Toggle AI Features";
+	action = "call Enh_fnc_toggleAIFeatures";
 };
 class Enh_GenerateSteamMissionDescription
 {
