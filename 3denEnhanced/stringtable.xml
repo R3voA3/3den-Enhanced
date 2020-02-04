@@ -3804,7 +3804,7 @@
 		<Polish>Zaznacz drugi punkt</Polish>
 		<Russian>Выберите вторую точку</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_captive_displayName">
+	<Key ID="STR_ENH_debugOptions_captive_displayName">
 		<Original>Enable Captive Mode</Original>
 		<English>Enable Captive Mode</English>
 		<Czech>Aktivovat režim "Zajatec"</Czech>
@@ -3815,23 +3815,7 @@
 		<Polish>Włącz tryb "Jeniec"</Polish>
 		<Russian>Включить нейтральное поведение</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_description_displayName">
-		<Original>Description</Original>
-		<English>Description</English>
-		<German>Beschreibung</German>
-		<Russian>Описание</Russian>
-		<Polish>Opis</Polish>
-		<Italian>Descrizione</Italian>
-		<Spanish>Descripción</Spanish>
-		<Czech>Popis</Czech>
-		<French>La description</French>
-		<Japanese>詳細</Japanese>
-		<Korean>설명</Korean>
-		<Portuguese>Descrição</Portuguese>
-		<Chinesesimp>描述</Chinesesimp>
-		<Turkish>Açıklama</Turkish>
-	</Key>
-	<Key ID="STR_ENH_onMissionDebug_description_description">
+	<Key ID="STR_ENH_debugOptions_description_description">
 		<Original>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</Original>
 		<English>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</English>
 		<German>Die folgenden Einstellungen erlauben dir deine Szenarios während der Szenariovorschau leichter zu testen. Die Attribute werden nicht in der mission.sqm gespeichert. Im Multiplayer-Modus deaktiviert.</German>
@@ -3842,7 +3826,7 @@
 		<Polish>Poniższe ustawienia pozwolą ci na łatwiejsze testowanie scenariusza. Atrybuty nie zapiszą się w mission.sqm więc nie wpłyną na twój scenariusz kiedy go opublikujesz. Ustawienia są wyłączone w trybie wieloosobowym.</Polish>
 		<Russian>Эти настройки помогут вам проверить ваши сценарии во время предварительного просмотра. Они не будут сохранены в файле mission.sqm, поэтому они не повлияют на ваш сценарий, когда вы его опубликуете. Отключено в мультиплеере.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_awareness_displayName">
+	<Key ID="STR_ENH_debugOptions_awareness_displayName">
 		<Original>Show Level of Awareness</Original>
 		<English>Show Level of Awareness</English>
 		<German>Kenntnisstand anzeigen</German>
@@ -3853,7 +3837,7 @@
 		<Polish>Pokaż poziom świadomości</Polish>
 		<Russian>Показать уровень осведомленности</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_awareness_tooltip">
+	<Key ID="STR_ENH_debugOptions_awareness_tooltip">
 		<Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
 		<English>A graphic will show how much each side knows about the player during scenario preview.</English>
 		<German>Während der Szenariovorschau zeigt ine Grafik an wie viel jede Seite über den Spieler weis.</German>
@@ -3864,7 +3848,7 @@
 		<Polish>Tabela pokaże ci jak dużo strony konfliktu więdzą o graczu w czasie testowania.</Polish>
 		<Russian>Графика покажет, сколько каждая сторона знает об игроке во время предварительного просмотра сценария.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_zeus_displayName">
+	<Key ID="STR_ENH_debugOptions_zeus_displayName">
 		<Original>Enable Zeus</Original>
 		<English>Enable Zeus</English>
 		<German>Zeus aktivieren</German>
@@ -3875,7 +3859,7 @@
 		<Polish>Włącz Zeusa</Polish>
 		<Russian>Включить Зевс</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_arsenal_displayName">
+	<Key ID="STR_ENH_debugOptions_arsenal_displayName">
 		<Original>Enable Arsenal</Original>
 		<English>Enable Arsenal</English>
 		<German>Arsenal aktivieren</German>
@@ -3886,7 +3870,7 @@
 		<Polish>Włącz arsenał</Polish>
 		<Russian>Включить Арсенал</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_garage_displayName">
+	<Key ID="STR_ENH_debugOptions_garage_displayName">
 		<Original>Enable Virtual Garage</Original>
 		<English>Enable Virtual Garage</English>
 		<German>Virtuelle Garage aktivieren</German>
@@ -3897,7 +3881,7 @@
 		<Polish>Włącz garaż</Polish>
 		<Russian>Включить виртуальный гараж</Russian>
 	</Key>
-	<Key ID="STR_ENH_onMissionDebug_captive_tooltip">
+	<Key ID="STR_ENH_debugOptions_captive_tooltip">
 		<Original>Player unit will be 'invisible' for other units during scenario preview.</Original>
 		<English>Player unit will be 'invisible' for other units during scenario preview.</English>
 		<German>Der Spieler wird 'unsichtbar' für andere Einheiten während der Szenariovorschau sein.</German>
@@ -3908,10 +3892,10 @@
 		<Polish>Gracz będzie niewidzialny dla innych jednostek w czasie testowania scenariusza.</Polish>
 		<Russian>Игрок будет «невидимым» для других юнитов во время предварительного просмотра сценария.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_invulnerability_displayName">
+	<Key ID="STR_ENH_debugOptions_invulnerability_displayName">
 		<Original>Enable Invulnerability</Original>
 		<English>Enable Invulnerability</English>
-		<German>Unverwundbarkeit anschalten</German>
+		<German>Unverwundbarkeit aktivieren</German>
 		<Chinesesimp>启用无敌</Chinesesimp>
 		<Spanish>Habilitar invulnerabilidad</Spanish>
 		<Czech>Povolit nezranitelnost</Czech>
@@ -3919,10 +3903,10 @@
 		<Polish>Włącz nieśmiertelność</Polish>
 		<Russian>Включить неуязвимость</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_stamina_displayName">
+	<Key ID="STR_ENH_debugOptions_stamina_displayName">
 		<Original>Disable Stamina</Original>
 		<English>Disable Stamina</English>
-		<German>Ausdauer ausschalten</German>
+		<German>Ausdauer deaktivieren</German>
 		<Chinesesimp>禁用耐力</Chinesesimp>
 		<Spanish>Desactivar la resistencia</Spanish>
 		<Czech>Zakázat výdrž</Czech>
@@ -3930,7 +3914,7 @@
 		<Polish>Wyłącz stamine</Polish>
 		<Russian>Отключить усталость</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_FPS_displayName">
+	<Key ID="STR_ENH_debugOptions_FPS_displayName">
 		<Original>Show FPS</Original>
 		<English>Show FPS</English>
 		<German>FPS anzeigen</German>
@@ -3941,10 +3925,10 @@
 		<Polish>Pokaż FPS</Polish>
 		<Russian>Показать FPS</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_bulletTracking_displayName">
+	<Key ID="STR_ENH_debugOptions_bulletTracking_displayName">
 		<Original>Enable Bullet Tracking</Original>
 		<English>Enable Bullet Tracking</English>
-		<German>Projektilverfolung an</German>
+		<German>Projektilverfolung aktivieren</German>
 		<Chinesesimp>启用子弹跟踪</Chinesesimp>
 		<Spanish>Habilitar seguimiento de viñetas</Spanish>
 		<Czech>Aktivovat trasování střel</Czech>
@@ -3952,7 +3936,7 @@
 		<Polish>Włącz śledzenie toru lotu pocisku</Polish>
 		<Russian>Включить трассировку пуль</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_bulletTracking_tooltip">
+	<Key ID="STR_ENH_debugOptions_bulletTracking_tooltip">
 		<Original>Activates bullet tracing for player unit during scenario preview.</Original>
 		<English>Activates bullet tracing for player unit during scenario preview.</English>
 		<German>Aktiviert die Projektilverfolgung für den Spieler während der Szenariovorschau.</German>
@@ -3963,7 +3947,7 @@
 		<Polish>Włącza śledzenie pocisków dla postaci gracza w czasie testowania scenariusza.</Polish>
 		<Russian>Активирует трассировку пули для игрока во время предварительного просмотра сценария.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_showUnits_displayName">
+	<Key ID="STR_ENH_debugOptions_showUnits_displayName">
 		<Original>Show Units</Original>
 		<English>Show Units</English>
 		<German>Einheiten anzeigen</German>
@@ -3974,7 +3958,7 @@
 		<Polish>Pokaż jednostki</Polish>
 		<Russian>Показать отряды</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_showUnits_tooltip">
+	<Key ID="STR_ENH_debugOptions_showUnits_tooltip">
 		<Original>All units and their movement will be visible on the map during scenario preview.</Original>
 		<English>All units and their movement will be visible on the map during scenario preview.</English>
 		<German>Alle Einheiten werden auf der Karte wären der Szenariovorschau angezeigt.</German>
@@ -3985,18 +3969,18 @@
 		<Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
 		<Russian>Все отряды и их движения будут видны на карте во время предварительного просмотра сценария.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killWest_displayName">
-		<Original>Kill Units (West)</Original>
-		<English>Kill Units (West)</English>
-		<German>Einheiten töten (Westen)</German>
+	<Key ID="STR_ENH_debugOptions_killWest_displayName">
+		<Original>Kill Units (BLUFOR)</Original>
+		<English>Kill Units (BLUFOR)</English>
+		<German>Einheiten töten (BLUFOR)</German>
 		<Chinesesimp>杀死单位（西方）</Chinesesimp>
-		<Spanish>Matar Unidades (Oeste)</Spanish>
+		<Spanish>Matar Unidades (BLUFOR)</Spanish>
 		<Czech>Zabíjet jednotky (Západ)</Czech>
 		<French>Tuer des unités (Ouest)</French>
-		<Polish>Zabij jednostki (Zachód)</Polish>
+		<Polish>Zabij jednostki (BLUFOR)</Polish>
 		<Russian>Убить оиряды (Запад)</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killUnits_tooltip">
+	<Key ID="STR_ENH_debugOptions_killUnits_tooltip">
 		<Original>Adds an entry to the action menu during scenario preview which instantly kills all units of given side.</Original>
 		<English>Adds an entry to the action menu during scenario preview which instantly kills all units of given side.</English>
 		<German>Fügt einen Eintrag während der Szenariovorschau zum Aktionsmenü hinzu welche alle Einheiten der gegebenen Seite tötet.</German>
@@ -4007,18 +3991,18 @@
 		<Polish>Dodaje pozycje do menu akcji w czasie testowania scenariusza która natychmiastowo zabija wszystkie jednostki danej strony.</Polish>
 		<Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает все юниты данной стороны.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killCiv_displayName">
-		<Original>Kill Units (Civilian)</Original>
-		<English>Kill Units (Civilian)</English>
-		<German>Einheiten töten (Zivil)</German>
+	<Key ID="STR_ENH_debugOptions_killCiv_displayName">
+		<Original>Kill Units (CIVFOR)</Original>
+		<English>Kill Units (CIVFOR)</English>
+		<German>Einheiten töten (CIVFOR)</German>
 		<Chinesesimp>杀死单位（平民）</Chinesesimp>
-		<Spanish>Matar Unidades (Civil)</Spanish>
+		<Spanish>Matar Unidades (CIVFORl)</Spanish>
 		<Czech>Zabíjet jednotky (Civilisté)</Czech>
 		<French>Tuer des unités (civils)</French>
-		<Polish>Zabij jednostki (Cywile)</Polish>
+		<Polish>Zabij jednostki (CIVFOR)</Polish>
 		<Russian>Убить отряды (гражданский)</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killCursor_displayName">
+	<Key ID="STR_ENH_debugOptions_killCursor_displayName">
 		<Original>Kill Cursor Target</Original>
 		<English>Kill Cursor Target</English>
 		<German>Cursor Target töten</German>
@@ -4029,7 +4013,7 @@
 		<Polish>Zabij jednostke na kursorze</Polish>
 		<Russian>Убить цель под курсором</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killCursor_tooltip">
+	<Key ID="STR_ENH_debugOptions_killCursor_tooltip">
 		<Original>Adds an entry to the action menu during scenario preview which instantly kills the unit the player is looking at.</Original>
 		<English>Adds an entry to the action menu during scenario preview which instantly the unit the player is looking at.</English>
 		<German>Fügt einen Eintrag während der Szenariovorschau zum Aktionsmenü hinzu welche sofort die anvisierte Einheit tötet.</German>
@@ -4040,26 +4024,26 @@
 		<Polish>Dodaje pozycje do "action menu" w czasie testowania scenariusza która natychmiastowo zabija jednostkę na którą gracz patrzy.</Polish>
 		<Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает юнит, на которого смотрит игрок.</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killIndep_displayName">
-		<Original>Kill Units (Independent)</Original>
-		<English>Kill Units (Independent)</English>
-		<German>Einheiten töten (Unabhängige)</German>
+	<Key ID="STR_ENH_debugOptions_killIndep_displayName">
+		<Original>Kill Units (INDFOR)</Original>
+		<English>Kill Units (INDFOR)</English>
+		<German>Einheiten töten (INDFOR)</German>
 		<Chinesesimp>杀死单位（中立）</Chinesesimp>
-		<Spanish>Unidades de Matanza (Independientes)</Spanish>
-		<Czech>Kill Units (Nezávislí)</Czech>
-		<French>Tuer des unités (indépendant)</French>
-		<Polish>Zabij jednostki (Niezależne)</Polish>
+		<Spanish>Unidades de Matanza (INDFOR)</Spanish>
+		<Czech>Kill Units (INDFOR)</Czech>
+		<French>Tuer des unités (INDFOR)</French>
+		<Polish>Zabij jednostki (INDFOR)</Polish>
 		<Russian>Убить отряды (независимых)</Russian>
 	</Key>
-	<Key ID="STR_ENH_onPreviewDebug_killEast_displayName">
-		<Original>Kill Units (East)</Original>
-		<English>Kill Units (East)</English>
-		<German>Einheiten töten (Osten)</German>
+	<Key ID="STR_ENH_debugOptions_killEast_displayName">
+		<Original>Kill Units (OPFOR)</Original>
+		<English>Kill Units (OPFOR)</English>
+		<German>Einheiten töten (OPFOR)</German>
 		<Chinesesimp>杀死单位（东方）</Chinesesimp>
-		<Spanish>Matar Unidades (Este)</Spanish>
-		<Czech>Zabíjet jednotky (Východ)</Czech>
-		<French>Tuer des unités (est)</French>
-		<Polish>Zabij jednostki (Wschód)</Polish>
+		<Spanish>Matar Unidades (OPFOR)</Spanish>
+		<Czech>Zabíjet jednotky (OPFOR)</Czech>
+		<French>Tuer des unités (OPFOR)</French>
+		<Polish>Zabij jednostki (OPFOR)</Polish>
 		<Russian>Убить отряды (Восток)</Russian>
 	</Key>
 	<Key ID="STR_ENH_folder_about">
@@ -6122,5 +6106,10 @@
 		<English>3DEN Camera Positions</English>
 		<German>3DEN Kamerapositionen</German>
 		<Original>3DEN Camera Positions</Original>
+	</Key>
+	<Key ID="STR_ENH_debugOptions_options">
+		<English>Options</English>
+		<German>Optionen</German>
+		<Original>Options</Original>
 	</Key>
 </Project>
