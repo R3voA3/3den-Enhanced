@@ -406,20 +406,16 @@
 	</Key>
 	<Key ID="STR_ENH_airdrop_condition_displayName">
 		<English>Condition</English>
-		<Chinese>條件</Chinese>
 		<Chinesesimp>状态</Chinesesimp>
 		<Czech>Podmínka</Czech>
 		<French>Condition</French>
 		<German>Bedingung</German>
 		<Italian>Condizione</Italian>
-		<Japanese>条件</Japanese>
-		<Korean>조건</Korean>
 		<Original>Condition</Original>
 		<Polish>Warunek</Polish>
 		<Portuguese>Condição</Portuguese>
 		<Russian>Условие</Russian>
 		<Spanish>Condición</Spanish>
-		<Turkish>Koşul</Turkish>
 	</Key>
 	<Key ID="STR_ENH_airdrop_center_displayName">
 		<English>Center Position</English>
@@ -652,12 +648,8 @@
 		<Italian>Modalità velocità</Italian>
 		<Spanish>Modo Velocidad</Spanish>
 		<French>Vitesse</French>
-		<Chinese>速度模式</Chinese>
-		<Japanese>スピードモード</Japanese>
-		<Korean>스피드모드</Korean>
 		<Portuguese>Modo de velocidade</Portuguese>
 		<Chinesesimp>速度模式</Chinesesimp>
-		<Turkish>Hız Modu</Turkish>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_iterations_displayName">
 		<Original>Number of Flybys</Original>
@@ -725,10 +717,7 @@
 		<Czech>Strana</Czech>
 		<English>Side</English>
 		<Portuguese>Lado</Portuguese>
-		<Korean>진영</Korean>
 		<Chinesesimp>一方</Chinesesimp>
-		<Japanese>陣営</Japanese>
-		<Turkish>Taraf</Turkish>
 	</Key>
 	<Key ID="STR_ENH_editableObjZeus_displayName">
 		<Original>Editable Objects (Zeus)</Original>
@@ -3025,11 +3014,8 @@
 		<Italian>Descrizione:</Italian>
 		<Spanish>Descripción:</Spanish>
 		<French>Description:</French>
-		<Japanese>詳細:</Japanese>
-		<Korean>설명:</Korean>
 		<Portuguese>Descrição:</Portuguese>
 		<Chinesesimp>描述:</Chinesesimp>
-		<Turkish>Açıklama:</Turkish>
 	</Key>
 	<Key ID="STR_ENH_moduleInformation_position">
 		<Original>Position:</Original>
@@ -5038,20 +5024,16 @@
 	</Key>
 	<Key ID="STR_ENH_side_displayName">
 		<English>Side</English>
-		<Chinese>軍勢</Chinese>
 		<Chinesesimp>一方</Chinesesimp>
 		<Czech>Strana</Czech>
 		<French>Camp</French>
 		<German>Seite</German>
 		<Italian>Parte</Italian>
-		<Japanese>陣営</Japanese>
-		<Korean>진영</Korean>
 		<Original>Side</Original>
 		<Polish>Strona</Polish>
 		<Portuguese>Lado</Portuguese>
 		<Russian>Сторона</Russian>
 		<Spanish>Bando</Spanish>
-		<Turkish>Taraf</Turkish>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_classes_displayName">
 		<English>Type of Aircraft</English>
@@ -5107,14 +5089,11 @@
 		<French>La description:</French>
 		<German>Beschreibung</German>
 		<Italian>Descrizione</Italian>
-		<Japanese>詳細</Japanese>
-		<Korean>설명</Korean>
 		<Original>Description</Original>
 		<Polish>Opis</Polish>
 		<Portuguese>Descrição</Portuguese>
 		<Russian>Описание</Russian>
 		<Spanish>Descripción</Spanish>
-		<Turkish>Açıklama</Turkish>
 	</Key>
 	<Key ID="STR_ENH_airdrop_description">
 		<English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</English>
@@ -5804,5 +5783,25 @@
 		<English>Options</English>
 		<German>Optionen</German>
 		<Original>Options</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_toggleAIFeatures">
+		<English>Toggle AI Features</English>
+		<German>KI Funktionen an/ausschalten</German>
+		<Original>Toggle AI Features</Original>
+	</Key>
+	<Key ID="STR_ENH_toggleAIFeatures_notification">
+		<English>AI features %1.</English>
+		<German>KI Funktionen%1</German>
+		<Original>AI features %1.</Original>
+	</Key>
+	<Key ID="STR_ENH_disabled">
+		<English>disabled</English>
+		<German>deaktiviert</German>
+		<Original>disabled</Original>
+	</Key>
+	<Key ID="STR_ENH_enabled">
+		<English>enabled</English>
+		<German>aktiviert</German>
+		<Original>enabled</Original>
 	</Key>
 </Project>
