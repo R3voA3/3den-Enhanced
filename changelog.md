@@ -22,6 +22,7 @@ v5.0
 - Hold Action and Ambient Animation attribute will now longer be writting to mission.sqm for every entity which results in greatly reduced file sizes. Keep in mind that if the attribute was set once, it will remain in the mission.sqm even when reset to default values
 - The menu for 3rd party tools was overhauled
 - The airdrop attribute had a missplaced control
+- The On Mission Debug attribute was overhauled
 
 v4.9
 *added*
@@ -393,7 +394,7 @@ v3.0
 - improved code (establishing shot)
 - updated localisation
 - new mod logo/icon
-- OnPreviewDebug - Player was not able to edit objects in Zeus interface
+- DebugOptions - Player was not able to edit objects in Zeus interface
 
 *removed*
 - obsolete function
