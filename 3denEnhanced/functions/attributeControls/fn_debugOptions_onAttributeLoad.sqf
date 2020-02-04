@@ -25,10 +25,10 @@ private _options =
 	["STR_ENH_debugOptions_stamina_displayName",""],
 	["STR_ENH_debugOptions_awareness_displayName","STR_ENH_debugOptions_awareness_tooltip"],
 	["STR_ENH_debugOptions_FPS_displayName",""],
-	["STR_ENH_debugOptions_killWest_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killEast_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killIndep_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killCiv_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
+	["STR_ENH_debugOptions_killBLUFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
+	["STR_ENH_debugOptions_killOPFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
+	["STR_ENH_debugOptions_killINDFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
+	["STR_ENH_debugOptions_killCIVFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
 	["STR_ENH_debugOptions_killCursor_displayName","STR_ENH_debugOptions_killUnits_tooltip"]
 ];
 

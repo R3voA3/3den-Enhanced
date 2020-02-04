@@ -183,7 +183,7 @@
 		<Spanish>Garaje</Spanish>
 		<Russian>Гараж</Russian>
 	</Key>
-	<Key ID="STR_ENH_functions_onePreviewDebug_killWest">
+	<Key ID="STR_ENH_functions_onePreviewDebug_killBLUFOR">
 		<English>Kill Units (BLUFOR)</English>
 		<German>Einheiten töten (BLUFOR)</German>
 		<Original>Kill Units (BLUFOR)</Original>
@@ -193,7 +193,7 @@
 		<Spanish>Matar unidades (BLUFOR)</Spanish>
 		<Russian>Убить юнитов (BLUFOR)</Russian>
 	</Key>
-	<Key ID="STR_ENH_functions_onePreviewDebug_killEast">
+	<Key ID="STR_ENH_functions_onePreviewDebug_killOPFOR">
 		<English>Kill Units (OPFOR)</English>
 		<German>Einheiten töten (OPFOR)</German>
 		<Original>Kill Units (OPFOR)</Original>
@@ -203,7 +203,7 @@
 		<Spanish>Matar unidades (OPFOR)</Spanish>
 		<Russian>Убить юнитов (OPFOR)</Russian>
 	</Key>
-	<Key ID="STR_ENH_functions_onePreviewDebug_killIndep">
+	<Key ID="STR_ENH_functions_onePreviewDebug_killINDFOR">
 		<English>Kill Units (INDFOR)</English>
 		<German>Einheiten töten (INDFOR)</German>
 		<Original>Kill Units (INDFOR)</Original>
@@ -213,7 +213,7 @@
 		<Spanish>Matar unidades (Independiente)</Spanish>
 		<Russian>Убить юнитов (INDFOR)</Russian>
 	</Key>
-	<Key ID="STR_ENH_functions_onePreviewDebug_killCiv">
+	<Key ID="STR_ENH_functions_onePreviewDebug_killCIVFOR">
 		<English>Kill Units (CIVFOR)</English>
 		<German>Einheiten töten (CIVFOR)</German>
 		<Original>Kill Units (CIVFOR)</Original>
@@ -3969,7 +3969,7 @@
 		<Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
 		<Russian>Все отряды и их движения будут видны на карте во время предварительного просмотра сценария.</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_killWest_displayName">
+	<Key ID="STR_ENH_debugOptions_killBLUFOR_displayName">
 		<Original>Kill Units (BLUFOR)</Original>
 		<English>Kill Units (BLUFOR)</English>
 		<German>Einheiten töten (BLUFOR)</German>
@@ -3991,7 +3991,7 @@
 		<Polish>Dodaje pozycje do menu akcji w czasie testowania scenariusza która natychmiastowo zabija wszystkie jednostki danej strony.</Polish>
 		<Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает все юниты данной стороны.</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_killCiv_displayName">
+	<Key ID="STR_ENH_debugOptions_killCIVFOR_displayName">
 		<Original>Kill Units (CIVFOR)</Original>
 		<English>Kill Units (CIVFOR)</English>
 		<German>Einheiten töten (CIVFOR)</German>
@@ -4024,7 +4024,7 @@
 		<Polish>Dodaje pozycje do "action menu" w czasie testowania scenariusza która natychmiastowo zabija jednostkę na którą gracz patrzy.</Polish>
 		<Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает юнит, на которого смотрит игрок.</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_killIndep_displayName">
+	<Key ID="STR_ENH_debugOptions_killINDFOR_displayName">
 		<Original>Kill Units (INDFOR)</Original>
 		<English>Kill Units (INDFOR)</English>
 		<German>Einheiten töten (INDFOR)</German>
@@ -4035,7 +4035,7 @@
 		<Polish>Zabij jednostki (INDFOR)</Polish>
 		<Russian>Убить отряды (независимых)</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_killEast_displayName">
+	<Key ID="STR_ENH_debugOptions_killOPFOR_displayName">
 		<Original>Kill Units (OPFOR)</Original>
 		<English>Kill Units (OPFOR)</English>
 		<German>Einheiten töten (OPFOR)</German>

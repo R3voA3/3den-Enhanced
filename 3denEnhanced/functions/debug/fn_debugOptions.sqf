@@ -23,10 +23,10 @@ private _enabledOptions =  profileNamespace getVariable ["Enh_DebugOptions_Setti
 #define STAMINA 			7
 #define AWARENESS 			8
 #define FPS 			    9
-#define KILLWEST 			10
-#define KILLEAST 			11
-#define KILLINDEP 			12
-#define KILLCIV				13
+#define killBLUFOR 			10
+#define killOPFOR 			11
+#define killINDFOR 			12
+#define killCIVFOR				13
 #define KILLCURSOR			14
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
@@ -152,34 +152,34 @@ if (FPS in _enabledOptions) then
 	};
 };
 
-if (KILLWEST in _enabledOptions) then
+if (killBLUFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killWest",
+		localize "STR_ENH_functions_onePreviewDebug_killBLUFOR",
 		"{if (side _x == WEST) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
 
-if (KILLEAST in _enabledOptions) then
+if (killOPFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killEast",
+		localize "STR_ENH_functions_onePreviewDebug_killOPFOR",
 		"{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
 
-if (KILLINDEP in _enabledOptions) then
+if (killINDFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killIndep",
+		localize "STR_ENH_functions_onePreviewDebug_killINDFOR",
 		"{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
 
-if (KILLCIV in _enabledOptions) then
+if (killCIVFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killCiv",
+		localize "STR_ENH_functions_onePreviewDebug_killCIVFOR",
 		"{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
