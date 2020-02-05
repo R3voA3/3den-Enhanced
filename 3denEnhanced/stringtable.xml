@@ -29,6 +29,7 @@
 		<English>Terrain Detail</English>
 		<Czech>Detail krajiny</Czech>
 		<Spanish>Detalle del terreno</Spanish>
+		<German>Geländedetail</German>
 	</Key>
 	<Key ID="STR_ENH_radioVolume_displayName">
 		<Original>Volume (Radio)</Original>
@@ -351,6 +352,7 @@
 		<Czech>Normální objekt umístěný ve Visitoru, část krajiny</Czech>
 		<Russian>Обычный объект, помещен в гостевой, часть ландшафта</Russian>
 		<Spanish>Objeto normal puesto en Visitor, parte del paisaje.</Spanish>
+		<German>Normales Objekt das  in Visitor plaziert wurde und Teil der Landschaft ist</German>
 	</Key>
 	<Key ID="STR_ENH_functions_logObjectInfo_network">
 		<English>Road placed in Visitor, part of landscape</English>
@@ -358,6 +360,7 @@
 		<Czech>Cesta umístěná ve Visitoru, část krajiny</Czech>
 		<Russian>Путь в гостевой, часть ландшафта</Russian>
 		<Spanish>Carretera situada en Visitor, parte del paisaje.</Spanish>
+		<German>Straße die in Visitor plaziert wurde und Teil der Landschaft ist</German>
 	</Key>
 	<Key ID="STR_ENH_functions_logObjectInfo_temporary">
 		<English>Temporary object (like tracks)</English>
@@ -365,7 +368,7 @@
 		<Czech>Dočasný objekt (třeba stopy)</Czech>
 		<French>Objet temporaire (comme des traces)</French>
 		<Spanish>Objetos temporales (Como orugas)</Spanish>
-		<German>Temporäre Objekte (wie Spuren)</German>
+		<German>Temporäres Objekt, zum Beispiel Spuren</German>
 		<Russian>Временный объект (например, треки)</Russian>
 	</Key>
 	<Key ID="STR_ENH_functions_logObjectInfo_typeVehicle">
@@ -391,7 +394,7 @@
 		<Original>Land decal</Original>
 		<Czech>Otisk na zemi</Czech>
 		<Spanish>Calcomanía de tierra</Spanish>
-		<German>Land Abziehbild</German>
+		<German>Land Abziehbild (Decal)</German>
 		<Russian>Деколь земли</Russian>
 	</Key>
 	<Key ID="STR_ENH_airdrop_classes_displayName">
@@ -4948,6 +4951,7 @@
 		<Original>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</Original>
 		<Czech>Toto je čistý  text použitý ve "createDiaryRecord". Může být také použit v modulu "Vytvoření úkolu (Create Task)"" pro změnění vzhledu vašich úkolů."</Czech>
 		<Spanish>Este es el texto sin formato utilizado en 'createDiaryRecord'. También se puede usar dentro del módulo 'Crear tarea' para cambiar la apariencia de sus tareas.</Spanish>
+		<German>Dieser Text wird von 'createDiaryRecord' verwendet. Er kann auch im 'Aufgabe erstellen' Modul verwendet werden. </German>
 	</Key>
 	<Key ID="STR_ENH_help_missionOptimisation">
 		<English>Mission Optimisation</English>
@@ -5010,6 +5014,7 @@
 		<Original>Classes of the soldiers which should be dropped in format:\nclassname_1, classname_2, classname_n.</Original>
 		<Czech>Třídy vojáků kteří budou shozeni výsadkem ve formátu:\nclassname_1, classname_2, classname_n.</Czech>
 		<Spanish>Clases de los soldados que deben soltarse en formato:\nclassname_1, classname_2, classname_n.</Spanish>
+		<German>Klassennamen der Einheiten die abspringen sollen im Format:\nclassname_1, classname_2, classname_n. </German>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_classes_tooltip">
 		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</English>
@@ -5051,18 +5056,21 @@
 		<Original>Limited</Original>
 		<Czech>Omezený</Czech>
 		<Spanish>Limitada</Spanish>
+		<German>Beschränkt</German>
 	</Key>
 	<Key ID="STR_ENH_speed_normal">
 		<English>Normal</English>
 		<Original>Normal</Original>
 		<Czech>Normální</Czech>
 		<Spanish>Normal</Spanish>
+		<German>Normal</German>
 	</Key>
 	<Key ID="STR_ENH_speed_full">
 		<English>Full</English>
 		<Original>Full</Original>
 		<Czech>Plný</Czech>
 		<Spanish>Completa</Spanish>
+		<German>Voll</German>
 	</Key>
 	<Key ID="STR_ENH_altitude_displayName">
 		<English>Altitude</English>
@@ -5100,24 +5108,28 @@
 		<Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</Original>
 		<Czech>Vytvoří výsadek. Jednotky se zadanými třídami a stranou jsou shozeny v okamžiku kdy se podmínka vrátí jako pravdivá (true). Vytvořené jednotky jsou uloženy v proměnné "Enh_Airdrop_Units" která je dostupná na straně serveru.</Czech>
 		<Spanish>Crea un lanzamiento aéreo. Las unidades con clases y bandos dados se descartan una vez que la condición devuelve verdadero. Las unidades creadas se almacenan en la variable 'Enh_Airdrop_Units' que está disponible en la máquina del servidor.</Spanish>
+		<German>Erstellt einen Luftabwurf. Einheiten mit den angegebenen Klassennamen und Seite werden abgeworfen sobald die Bedingungen erfüllt ist. Dir erstellen Einheiten stehen in der Variable 'Enh_Airdrop_Units' auf dem Server zur Verfügung.</German>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_description">
 		<English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</English>
 		<Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</Original>
 		<Czech>Vytvoří leteckou jednotku která se pohybuje z bodu A do bodu B, nikdy neútočí a ani na ní není útočeno. Je nastavena jako zajatec a vymaže se v okamžiku kdy dosáhne svého cíle. Přelety mohou být zastaveny nastavením proměnné "Enh_AmbientFlyby_Enabled" jako nepravdu (false) na straně serveru.</Czech>
 		<Spanish>Genera una unidad aérea que se mueve desde el punto A al punto B, nunca atacando ni siendo atacado. Se establece como cautivo y desaparecerá una vez que llegue a su destino. Los sobrevuelos se pueden detener configurando 'Enh_AmbientFlyby_Enabled' en falso en la máquina del servidor.</Spanish>
+		<German>Spawnt eine Lufteinheit die von Punkt A zu Punkt B fliegt. Sie wird niemals angegriffen oder angreifen. Sie wird gelöscht sobalt sie ihren Zielpunkt erreicht hat. Die Vorbeiflüge können gestoppt werden durch das setzten von 'Enh_AmbientFlyby_Enabled' zu 'false' auf dem Server.</German>
 	</Key>
 	<Key ID="STR_ENH_establishingShot_description">
 		<English>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</English>
 		<Original>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Original>
 		<Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek. Pro více informací &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Czech>
 		<Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento. Consulte &lt;ahref='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt; BIS_fnc_establishingShot&lt;/a&gt;.</Spanish>
+		<German>Spiele eine gestellte UAV Beobachtung ab welche zu Beginn der Mission gezeigt wird. See See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</German>
 	</Key>
 	<Key ID="STR_ENH_introText_description">
 		<English>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</English>
 		<Original>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</Original>
 		<Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise. Může být buď &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; nebo &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Czech>
 		<Spanish>Muestra un texto animado. Se puede usar para mostrar el nombre de la misión. Puede ser &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</Spanish>
+		<German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen. Kann &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; oder &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt; sein. </German>
 	</Key>
 	<Key ID="STR_ENH_groupMarker_description">
 		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the group's namespace to false.</English>
@@ -5144,12 +5156,14 @@
 		<Original>Type</Original>
 		<Czech>Typ</Czech>
 		<Spanish>Tipo</Spanish>
+		<German>Typ</German>
 	</Key>
 	<Key ID="STR_ENH_groupMarker_showGroupSize">
 		<English>Show Group Size</English>
 		<Original>Show Group Size</Original>
 		<Czech>Zobrazit velikost skupiny</Czech>
 		<Spanish>Mostrar tamaño</Spanish>
+		<German>Zeige Gruppengrößen</German>
 	</Key>
 	<Key ID="STR_ENH_functionsViewer_numFunctions_tooltip">
 		<English>Number of Functions</English>
@@ -5213,6 +5227,7 @@
 		<English>Multiplayer Scripting</English>
 		<Original>Multiplayer Scripting</Original>
 		<Spanish>Scripting multiplayer</Spanish>
+		<German>Mehrspieler Skripten</German>
 	</Key>
 	<Key ID="STR_ENH_statusbar_EntityCounter_displayName">
 		<English>Show Entity Counter</English>
@@ -5248,56 +5263,67 @@
 		<English>Plays a selected animation set. The gear needs to be set up manually.</English>
 		<Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
 		<Spanish>Reproducir una animación seleccionada. El engranaje necesita ser seleccionado manualmente</Spanish>
+		<German>Spielt das ausgewählte Animationsset. Die Ausrüstung der Einheit muss manuell angepasst werden.</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_description">
 		<English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
 		<Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
 		<Spanish>Finaliza la misión con un final personalizado si una cierta cantidad de entidades de un bando del bando indicado muere. Puede ser usado para fallar la misión Se puede utilizar para fallar la misión por víctimas civiles. En multijugador, la misión finalizará para todos los clientes. Los informes personalizados deben definirse en la configuración de la misión. Ver &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Spanish>
+		<German>Beendet die Mission mit einem benutzerdefinierten Ende, wenn eine definierte Anzahl von Einheiten einer bestimmten Seite getötet wurden. Kann dazu verwendet werden die Mission zu beenden wenn zu viele civile Opfer enstanden sind. Benutzerdefinierte Einsatzbesprechnungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_threshold_displayName">
 		<English>Threshold</English>
 		<Original>Threshold</Original>
 		<Spanish>Límite</Spanish>
+		<German>Schwellenwert</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_threshold_tooltip">
 		<English>When the amount of killed entities of given side reaches the threshold, the mission is ended.</English>
 		<Original>When the amount of killed entities of given side reaches the threshold, the mission is ended.</Original>
 		<Spanish>Cuando la cantidad de entidades asesinadas de un bando determinado alcanza el límite, la misión finaliza.</Spanish>
+		<German>Wenn die Anzahl von getöteten Einheiten der gegebenen Seite den Schwellenwert überschreitet, wird die Mission beendet.</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_threshold_ending_displayName">
 		<English>Ending</English>
 		<Original>Ending</Original>
 		<Spanish>Final</Spanish>
+		<German>Ende</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_threshold_ending_tooltip">
 		<English>Can be ending from config file or mission config (CfgDebriefing).</English>
 		<Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
 		<Spanish>Puede terminar desde el archivo de configuración o la configuración de la misión (CfgDebriefing).</Spanish>
+		<German>Kann ein Ende der Konfig oder Missionskonfig sein (CfgDebriefing).</German>
 	</Key>
 	<Key ID="STR_ENH_missionEnding_casualties_threshold_win_displayName">
 		<English>Win?</English>
 		<Original>Win?</Original>
 		<Spanish>¿Victoria?</Spanish>
+		<German>Gewinnen?</German>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_canEdit_displayName">
 		<English>Can Exit?</English>
 		<Original>Can Exit?</Original>
 		<Spanish>¿Puede salir?</Spanish>
+		<German>Beenden erlaubt?</German>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_canEdit_tooltip">
 		<English>If enabled, the unit will exit the animation when in danger.</English>
 		<Original>If enabled, the unit will exit the animation when in danger.</Original>
 		<Spanish>Si está habilitada, la unidad saldrá de la animación cuando esté en peligro.</Spanish>
+		<German>Wenn erlaubt, kann die Einheit die Animation beenden, wenn sie in Gefahr ist.</German>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_attach_displayName">
 		<English>Attach?</English>
 		<Original>Attach?</Original>
 		<Spanish>¿Adjuntar?</Spanish>
+		<German>Befestigen?</German>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_attach_tooltip">
 		<English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</English>
 		<Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</Original>
 		<Spanish>Si está habilitado, la unidad se conectará a una lógica invisible. Solo habilite esta opción si necesita colocar la unidad encima de una pared o cerca de otro objeto.</Spanish>
+		<German>Wenn angeschaltet, wird die Einheit an einer unsichtbaren Logic befestigt. Verwende diese Option nur, wenn die Einheit auf einem Gegenstand oder nah an einer Wand platziert werden soll.</German>
 	</Key>
 	<Key ID="STR_ENH_ambientAnimations_animation_displayName">
 		<English>Animation</English>
@@ -5325,6 +5351,7 @@
 		<English>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</English>
 		<Original>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</Original>
 		<Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes. Para obtener una descripción detallada de este atributo, consulte: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</Spanish>
+		<German>Fügt eine Halte-Aktion dieser Entität hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;. </German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_name_displayName">
 		<English>Name</English>
@@ -5336,91 +5363,109 @@
 		<English>Icon Idle</English>
 		<Original>Icon Idle</Original>
 		<Spanish>Icono de espera</Spanish>
+		<German>Icon Inaktiv</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_iconProgress_displayName">
 		<English>Icon Progress</English>
 		<Original>Icon Progress</Original>
 		<Spanish>Icono de progreso</Spanish>
+		<German>Icon Fortschritt</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_conditionShow_displayName">
 		<English>Condition Show</English>
 		<Original>Condition Show</Original>
 		<Spanish>Mostrar condición</Spanish>
+		<German>Anzeigebedingung</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_conditionShow_tooltip">
 		<English>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</English>
 		<Original>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</Original>
 		<Spanish>Condición para que se muestre la acción. Los argumentos aprobados son: \n_target, _this (caller).</Spanish>
+		<German>Bedingung die erfüllt sein muss damit die Aktion angezeigt wird. Übergebene Parameter sind:\n_target, _this (caller).</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_conditionProgress_displayName">
 		<English>Condition Progress</English>
 		<Original>Condition Progress</Original>
 		<Spanish>Progreso de la condición</Spanish>
+		<German>Fortschrittsbedingung</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_conditionProgress_tooltip">
 		<English>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</English>
 		<Original>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</Original>
 		<Spanish>Condición para que la acción progrese. Los argumentos aprobados son: \n_target, _caller, _actionID.</Spanish>
+		<German>Bedingung die erfüllt sein muss damit die Aktion fortschreitet. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeStart_displayName">
 		<English>Code Start</English>
 		<Original>Code Start</Original>
 		<Spanish>Iniciar código</Spanish>
+		<German>Code Start</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeStart_tooltip">
 		<English>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</English>
 		<Original>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</Original>
 		<Spanish>Código ejecutado cuando la acción se inicia. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
+		<German>Code der ausgeführt wird, wenn die Aktion gestartet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeProgress_displayName">
 		<English>Code Progress</English>
 		<Original>Code Progress</Original>
 		<Spanish>Progreso del código</Spanish>
+		<German>Code Fortschritt</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeProgress_tooltip">
 		<English>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</English>
 		<Original>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</Original>
 		<Spanish>Código ejecutado en cada marca de progreso. Los argumentos pasados son: \n_target, _caller, _actionID, _progress, _maxProgress.</Spanish>
+		<German>Code der bei jedem Tick ausgeführt wird. Übergebene Parameter sind:\n_target, _caller, _actionID, _progress, _maxProgress.</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeComplete_displayName">
 		<English>Code Complete</English>
 		<Original>Code Complete</Original>
 		<Spanish>Código completado</Spanish>
+		<German>Code Beendet</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeComplete_tooltip">
 		<English>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</English>
 		<Original>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</Original>
 		<Spanish>Código ejecutado al completar. Argumentos pasados: \n_target, _caller, _actionID.</Spanish>
+		<German>Code der ausgeführt wird, wenn die Aktion beendet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeInterrupt_displayName">
 		<English>Code Interrupt</English>
 		<Original>Code Interrupt</Original>
 		<Spanish>Código interrumpido</Spanish>
+		<German>Code Unterbrochen</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_codeInterrupt_tooltip">
 		<English>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</English>
 		<Original>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</Original>
 		<Spanish>Código ejecutado cuando se interrumpe la acción. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
+		<German>Code der ausgeführt wird, wenn die Aktion unterbrochen wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_duration_displayName">
 		<English>Duration</English>
 		<Original>Duration</Original>
 		<Spanish>Duración</Spanish>
+		<German>Dauer</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_priority_displayName">
 		<English>Priority</English>
 		<Original>Priority</Original>
 		<Spanish>Prioridad</Spanish>
+		<German>Priorität</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_showUnconsciousy_displayName">
-		<English>Show when Unconscious</English>
-		<Original>Show when Unconscious</Original>
+		<English>Show when Unconscious?</English>
+		<Original>Show when Unconscious?</Original>
 		<Spanish>Mostrar cuando está inconsciente</Spanish>
+		<German>Anzeigen wenn Bewusstlos?</German>
 	</Key>
 	<Key ID="STR_ENH_holdAction_showWindow_displayName">
 		<English>Show Window</English>
 		<Original>Show Window</Original>
 		<Spanish>Mostrar ventana</Spanish>
+		<German>Show Window</German>
 	</Key>
 	<Key ID="STR_ENH_scenarioAttributesManager_templates">
 		<English>Templates</English>
@@ -5500,19 +5545,22 @@
 		<Spanish>Sin nombre:</Spanish>
 	</Key>
 	<Key ID="STR_ENH_contextMenu_logClassesString">
-		<English>Log Classes to to Clipboard (String)</English>
-		<Original>Log Classes to to Clipboard (String)</Original>
+		<English>Log Classes as String  to to Clipboard</English>
+		<Original>Log Classes as String  to to Clipboard</Original>
 		<Spanish>Registrar clases en el portapapeles (String)</Spanish>
+		<German>Klassen als String in Zwischenablage aufzeichnen</German>
 	</Key>
 	<Key ID="STR_ENH_tools_drawBuildingPositions">
 		<English>Toggle Drawing of Building Positions</English>
 		<Original>Toggle Drawing of Building Positions</Original>
 		<Spanish>Conmutar dibujos la posición de los edificios</Spanish>
+		<German>Gebäudepositionen an/ausschalten</German>
 	</Key>
 	<Key ID="STR_ENH_tools_scenarioAttributesManager">
 		<English>Scenario Attributes Manager</English>
 		<Original>Scenario Attributes Manager</Original>
 		<Spanish>Manejador de atributos de escenario</Spanish>
+		<German>Szenarioattribute-Manager</German>
 	</Key>
 	<Key ID="STR_ENH_folder_miscellaneous">
 		<English>Miscellaneous Tools</English>
@@ -5524,21 +5572,25 @@
 		<English>Orientation</English>
 		<Original>Orientation</Original>
 		<Spanish>Orientación</Spanish>
+		<German>Ausrichtung</German>
 	</Key>
 	<Key ID="STR_ENH_garrison_stance">
 		<English>Stance</English>
 		<Original>Stance</Original>
 		<Spanish>Postura</Spanish>
+		<German>Haltung</German>
 	</Key>
 	<Key ID="STR_ENH_garrison_stance_auto">
 		<English>Auto</English>
 		<Original>Auto</Original>
 		<Spanish>Auto</Spanish>
+		<German>Auto</German>
 	</Key>
 	<Key ID="STR_ENH_garrison_stance_crouch">
 		<English>Crouch</English>
 		<Original>Crouch</Original>
 		<Spanish>Agachado</Spanish>
+		<German>Hocke</German>
 	</Key>
 	<Key ID="STR_ENH_garrison_coverage">
 		<English>Coverage</English>
@@ -5594,10 +5646,11 @@
 		<English>Stand</English>
 		<Original>Stand</Original>
 		<Spanish>De pie</Spanish>
+		<German>Stehen</German>
 	</Key>
 	<Key ID="STR_ENH_tools_scriptCommands">
 		<English>Script Commands</English>
-		<German>Skript Befehle</German>
+		<German>Skriptbefehle</German>
 		<Original>Script Commands</Original>
 		<Spanish>Comandos de Scripts</Spanish>
 	</Key>
@@ -5644,9 +5697,10 @@
 		<Spanish>Creador de Extracción</Spanish>
 	</Key>
 	<Key ID="STR_ENH_extraction_showRadioChat">
-		<English>Show Radio Chat</English>
-		<Original>Show Radio Chat</Original>
+		<English>Show Radio Chat?</English>
+		<Original>Show Radio Chat?</Original>
 		<Spanish>Mostrar radio chat</Spanish>
+		<German>Radio anzeigen?</German>
 	</Key>
 	<Key ID="STR_ENH_extraction_callSignRequester">
 		<English>Call Sign Requester</English>
@@ -5676,11 +5730,13 @@
 		<English>Grenade Type</English>
 		<Original>Grenade Type</Original>
 		<Spanish>Tipo de granada</Spanish>
+		<German>Granatentyp</German>
 	</Key>
 	<Key ID="STR_ENH_extraction_grenadeType_tooltip">
 		<English>The landing zone is marked by this grenade type.</English>
 		<Original>The landing zone is marked by this grenade type.</Original>
 		<Spanish>La landing zone está marcada por el tipo de granada</Spanish>
+		<German>Die Landezone wird durch eine Granate markiert.</German>
 	</Key>
 	<Key ID="STR_ENH_extraction_condition">
 		<English>Condition</English>
@@ -5704,6 +5760,7 @@
 		<English>Toggle Drawing of DLC Icons</English>
 		<Original>Toggle Drawing of DLC Icons</Original>
 		<Spanish>Alternar dibujo de iconos DLC</Spanish>
+		<German>DLC Icons an/ausschalten</German>
 	</Key>
 	<Key ID="STR_ENH_3DENCam_description">
 		<English>Description...</English>
@@ -5748,10 +5805,12 @@
 	<Key ID="STR_ENH_tools_controlTypes">
 		<English>View Control Types</English>
 		<Original>View Control Types</Original>
+		<German>Steuerelementtypen anzeigen</German>
 	</Key>
 	<Key ID="STR_ENH_tools_controlStyles">
 		<English>View Control Styles</English>
 		<Original>View Control Styles</Original>
+		<German>Steuerelementstyles anzeigen</German>
 	</Key>
 	<Key ID="STR_ENH_Radio_playlist_text">
 		<English>Playlist</English>
