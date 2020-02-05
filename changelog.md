@@ -24,6 +24,7 @@ v5.0
 - The airdrop attribute had a missplaced control
 - The On Mission Debug attribute was overhauled
 - German translation is now again 100% completed
+- German translation was greatly polished and made consistent (Feel free to report issues)
 
 v4.9
 *added*

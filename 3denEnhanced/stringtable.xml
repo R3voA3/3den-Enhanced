@@ -3929,7 +3929,7 @@
 		<Czech>Exportovat výstroj (Config)</Czech>
 		<French>Exporter l'équipement (config)</French>
 		<Spanish>Exportar equipamiento (configuración)</Spanish>
-		<German>Ausrüstung exportieren (Config)</German>
+		<German>Ausrüstung exportieren (Konfig)</German>
 		<Chinesesimp>导出加载 （配置config）</Chinesesimp>
 		<Polish>Eksportuj wyposażenie (konfig)</Polish>
 		<Russian>Экспорт оборудования (конфиг)</Russian>
@@ -4132,7 +4132,7 @@
 		<Original>Print Config</Original>
 		<English>Print Config</English>
 		<Spanish>Imprimir configuración</Spanish>
-		<German>Config auslesen</German>
+		<German>Konfig auslesen</German>
 		<Chinesesimp>打印配置</Chinesesimp>
 		<Czech>Vypsat Config</Czech>
 		<French>Imprimer la configuration </French>
