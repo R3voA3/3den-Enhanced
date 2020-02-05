@@ -86,16 +86,6 @@
 		<Polish>Usuń kamizelki</Polish>
 		<Russian>Удалить Жилеты</Russian>
 	</Key>
-	<Key ID="STR_ENH_actionCreator_help_tooltip">
-		<English>Get help.</English>
-		<German>Hilfe.</German>
-		<Original>Get help.</Original>
-		<Czech>Vyhledat pomoc.</Czech>
-		<French>Obtenir de l'aide</French>
-		<Polish>Poszukaj pomocy</Polish>
-		<Spanish>Obtener Ayuda</Spanish>
-		<Russian>Получить помощь</Russian>
-	</Key>
 	<Key ID="STR_ENH_debugPath_displayName">
 		<English>Debug Path</English>
 		<German>Debug Pfad</German>

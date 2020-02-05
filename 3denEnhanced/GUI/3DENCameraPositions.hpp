@@ -35,7 +35,6 @@ class Enh_3DENCamPositions
 			h = DIALOG_H * GRID_H - 7 * GRID_H;
 			onLBDblClick = "_this call Enh_fnc_3DENCam_set3DENCameraParameters";
 			onKeyDown = "_this call Enh_fnc_3DENCam_deleteEntry";
-			LineSpacing = 1;
 		};
 		class Description: ctrlEdit
 		{
