@@ -234,7 +234,7 @@ class Enh_ToggleSimulation
 };
 class Enh_ToggleDynamicSimulation
 {
-	text = "Toggle Dynamic Simulation";
+	text = $STR_ENH_tools_toggleDynamicSimulation;
 	picture = "";
 	action = "[['Object','Group'],'dynamicSimulation'] call Enh_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
