@@ -2016,7 +2016,7 @@
 		<Czech>Motor zapnutý/vypnutý</Czech>
 		<French>Moteur Allumé/Eteint</French>
 		<Spanish>Motor encendido/apagado</Spanish>
-		<German>Motor an/aus</German>
+		<German>Motor umschalten</German>
 		<Chinesesimp>引擎 开/关</Chinesesimp>
 		<Polish>Silnik włączony/wyłączony</Polish>
 		<Russian>Двигатель вкл/выкл</Russian>
@@ -4050,7 +4050,7 @@
 		<Czech>Zobrazit trávu</Czech>
 		<French>Afficher l'herbe</French>
 		<Spanish>Hierba Sí/No</Spanish>
-		<German>Gras an/aussschalten</German>
+		<German>Gras umschalten</German>
 		<Chinesesimp>切换草</Chinesesimp>
 		<Polish>Włącz trawe</Polish>
 		<Russian>Тумблер Травы</Russian>
@@ -4238,7 +4238,7 @@
 	<Key ID="STR_ENH_tools_toggleSimulation">
 		<Original>Toggle Simulation</Original>
 		<English>Toggle Simulation</English>
-		<German>Simulation an/ausschalten</German>
+		<German>Simulation umschalten</German>
 		<Spanish>Alternar simulación</Spanish>
 	</Key>
 	<Key ID="STR_ENH_help_functionsOverview">
@@ -4519,10 +4519,15 @@
 		<Czech>Aktivuje systém dynamických skupin.</Czech>
 		<French>Activer le système de Groupes Dynamiques.</French>
 		<Spanish>Habilita el sistema de grupos dinámicos</Spanish>
-		<German>Aktiviert das 'Dynamic Groups' System.</German>
+		<German>Aktiviert die Gruppenverwaltung.</German>
 		<Chinesesimp>启用动态组系统。</Chinesesimp>
 		<Polish>Pozwala na system "Dynamicznych grup"</Polish>
 		<Russian>Включает систему динамических групп.</Russian>
+	</Key>
+  	<Key ID="STR_ENH_dynamicGroups_displayName">
+		<Original>Dynamic Groups</Original>
+		<English>Dynamic Groups</English>
+		<German>Gruppenverwaltung</German>
 	</Key>
 	<Key ID="STR_ENH_respawnTickets_BLUFOR_displayName">
 		<Original>Respawn Tickets BLUFOR</Original>
@@ -5544,7 +5549,7 @@
 		<English>Toggle Drawing of Building Positions</English>
 		<Original>Toggle Drawing of Building Positions</Original>
 		<Spanish>Conmutar dibujos la posición de los edificios</Spanish>
-		<German>Gebäudepositionen an/ausschalten</German>
+		<German>Gebäudepositionen umschalten</German>
 	</Key>
 	<Key ID="STR_ENH_tools_scenarioAttributesManager">
 		<English>Scenario Attributes Manager</English>
@@ -5750,7 +5755,7 @@
 		<English>Toggle Drawing of DLC Icons</English>
 		<Original>Toggle Drawing of DLC Icons</Original>
 		<Spanish>Alternar dibujo de iconos DLC</Spanish>
-		<German>DLC Icons an/ausschalten</German>
+		<German>DLC Icons umschalten</German>
 	</Key>
 	<Key ID="STR_ENH_3DENCam_description">
 		<English>Description...</English>
@@ -5835,7 +5840,7 @@
 	</Key>
 	<Key ID="STR_ENH_tools_toggleAIFeatures">
 		<English>Toggle AI Features</English>
-		<German>KI Funktionen an/ausschalten</German>
+		<German>KI Funktionen umschalten</German>
 		<Original>Toggle AI Features</Original>
 	</Key>
 	<Key ID="STR_ENH_toggleAIFeatures_notification">
@@ -5855,7 +5860,7 @@
 	</Key>
 	<Key ID="STR_ENH_tools_toggleDynamicSimulation">
 		<English>Toggle Dynamic Simulation</English>
-		<German>Dynamische Simulation an/ausschalten</German>
+		<German>Dynamische Simulation umschalten</German>
 		<Original>Toggle Dynamic Simulation</Original>
 	</Key>
 </Project>

@@ -1,7 +1,7 @@
 class Enh_DynamicGroups
 {
 	collapsed = 1;
-	displayName = "Dynamic Groups";
+	displayName = $STR_ENH_dynamicGroups_displayName;
 	class Attributes
 	{
 		class Enh_EnableDynamicGroups
