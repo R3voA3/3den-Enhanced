@@ -23,6 +23,7 @@ v5.0
 - The menu for 3rd party tools was overhauled
 - The airdrop attribute had a missplaced control
 - The On Mission Debug attribute was overhauled
+- German translation is now again 100% completed
 
 v4.9
 *added*

@@ -137,16 +137,6 @@
 		<Spanish>Registrar IDs de la entidad al portapapeles.</Spanish>
 		<Russian>Записать идентификаторы объектов 3DEN в буфер обмена</Russian>
 	</Key>
-	<Key ID="STR_ENH_statusbar_numberOfSelectedEntities">
-		<English>Number of selected entities in format:\nObjects-Groups-Triggers-Waypoints-Systems-Markers.</English>
-		<German>Anzahl ausgewählter Entitäten im Format:\nObjekte-Gruppen-Auslöser-Wegpunkte-Systeme-Marker.</German>
-		<Original>Number of selected entities in format:\nObjects-Groups-Triggers-Waypoints-Systems-Markers.</Original>
-		<Czech>Počet zvolených entit ve formátu:\nObjeky-Skupiny-Spínače-Waypointy-Systémy-Značky.</Czech>
-		<French>Nombres d'objets sélectionnés au format:\nObjets-Groupes-Déclencheurs-Points de passage-Systèmes-Marqueurs</French>
-		<Polish>Liczba zaznaczonych bytów w formacie:\nObiekty-Groupy-Wyzwalacze-Waypointy-Systemy-Markery.</Polish>
-		<Russian>Число выбранных объектов в формате: \ nObjects-Groups-Triggers-Waypoints-Systems-Markers.</Russian>
-		<Spanish>Número de entidades seleccionadas en formato:\nObjects-Groups-Triggers-Waypoints-Systems-Markers.</Spanish>
-	</Key>
 	<Key ID="STR_ENH_functions_batchReplace_error">
 		<English>No valid classname!</English>
 		<German>Kein gültiger Klassenname!</German>
@@ -642,8 +632,8 @@
 		<Russian>Загрузите шаблон двойным щелчком мыши. Удалить, нажав DELETE.</Russian>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_speed_displayName">
-		<Original>SpeedMode</Original>
-		<English>SpeedMode</English>
+		<Original>Speed Mode</Original>
+		<English>Speed Mode</English>
 		<Czech>Rychlý režim</Czech>
 		<German>Geschwindigkeitsmodus</German>
 		<Russian>Скоростной режим</Russian>
@@ -4060,7 +4050,7 @@
 		<Czech>Zobrazit trávu</Czech>
 		<French>Afficher l'herbe</French>
 		<Spanish>Hierba Sí/No</Spanish>
-		<German>Gras an/aus</German>
+		<German>Gras an/aussschalten</German>
 		<Chinesesimp>切换草</Chinesesimp>
 		<Polish>Włącz trawe</Polish>
 		<Russian>Тумблер Травы</Russian>
@@ -4248,7 +4238,7 @@
 	<Key ID="STR_ENH_tools_toggleSimulation">
 		<Original>Toggle Simulation</Original>
 		<English>Toggle Simulation</English>
-		<German>Simulation umschalten</German>
+		<German>Simulation an/ausschalten</German>
 		<Spanish>Alternar simulación</Spanish>
 	</Key>
 	<Key ID="STR_ENH_help_functionsOverview">
@@ -5862,5 +5852,10 @@
 		<English>enabled</English>
 		<German>aktiviert</German>
 		<Original>enabled</Original>
+	</Key>
+	<Key ID="STR_ENH_tools_toggleDynamicSimulation">
+		<English>Toggle Dynamic Simulation</English>
+		<German>Dynamische Simulation an/ausschalten</German>
+		<Original>Toggle Dynamic Simulation</Original>
 	</Key>
 </Project>
