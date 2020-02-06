@@ -2,14 +2,14 @@ class Enh_MissionEnding_Casualties: Title
 {
 	attributeLoad = "[_this,_value] call Enh_fnc_missionEnding_onAttributeLoad";
 	attributeSave = "_this call Enh_fnc_missionEnding_onAttributeSave";
-	h = 10.5 * SIZE_M * GRID_H + 30 * pixelH;
+	h = 11.5 * SIZE_M * GRID_H + 30 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
 		{
 			x = 5 * GRID_W;
 			y = 0.5 * SIZE_M * GRID_H;
-			h = 4 * SIZE_M * GRID_H;
+			h = 5 * SIZE_M * GRID_H;
 			w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W) * GRID_W;
 			class Controls
 			{
@@ -35,7 +35,7 @@ class Enh_MissionEnding_Casualties: Title
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
-					h = 3 * SIZE_M * GRID_H;
+					h = 4 * SIZE_M * GRID_H;
 					colorText[] = {1,1,1,0.4};
 					colorBackground[] = {1,1,1,0};
 					shadow = 0;
@@ -52,7 +52,7 @@ class Enh_MissionEnding_Casualties: Title
 		};
 		class ThresholdTitle: Title
 		{
-			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
+			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
 			text = $STR_ENH_missionEnding_casualties_threshold_displayName;
 			tooltip = $STR_ENH_missionEnding_casualties_threshold_tooltip;
 		};
@@ -60,7 +60,7 @@ class Enh_MissionEnding_Casualties: Title
 		{
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
+			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 5;
@@ -70,8 +70,8 @@ class Enh_MissionEnding_Casualties: Title
 		class ThresholdEdit: ctrlEdit
 		{
 			idc = 101;
-			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
+			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
+			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = EDIT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
@@ -79,39 +79,39 @@ class Enh_MissionEnding_Casualties: Title
 		{
 			text = $STR_ENH_missionEnding_casualties_threshold_ending_displayName;
 			tooltip = $STR_ENH_missionEnding_casualties_threshold_ending_tooltip;
-			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class Ending: ctrlCombo
 		{
 			idc = 102;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class IsWinTitle: Title 
 		{
 			text = $STR_ENH_missionEnding_casualties_threshold_win_displayName;
-			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class IsWin: ctrlCheckbox
 		{
 			idc = 103;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class SideTitle: Title
 		{
-			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
 			text = $STR_ENH_side_displayName;
 		};
 		class SideValue: ctrlToolboxPictureKeepAspect
         {
             idc = 104;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = 2 * SIZE_M * GRID_H;
             rows = 1; 
@@ -128,7 +128,7 @@ class Enh_MissionEnding_Casualties: Title
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 9.5 * SIZE_M * GRID_H + 25 * pixelH;
+			y = 10.5 * SIZE_M * GRID_H + 25 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call Enh_fnc_missionEnding_onButtonDown";
