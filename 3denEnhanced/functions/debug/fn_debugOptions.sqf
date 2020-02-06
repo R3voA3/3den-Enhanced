@@ -28,8 +28,9 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define killBLUFOR 			10
 #define killOPFOR 			11
 #define killINDFOR 			12
-#define killCIVFOR				13
+#define killCIVFOR			13
 #define KILLCURSOR			14
+#define SHOWUNITS_3D 		15
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
 //To prevent issues in multiplayer games started from multiplayer editor
@@ -40,7 +41,10 @@ waitUntil {time > 0.5};
 
 if (INVULNERABILITY in _enabledOptions) then
 {
-	player allowDamage false; 
+	{
+		_x allowDamage false;
+	} forEach units player;
+	 
 	(vehicle player) allowDamage false;
 };
 
@@ -51,7 +55,9 @@ if (CAPTIVE in _enabledOptions) then
 
 if (STAMINA in _enabledOptions) then
 {
-	player enableStamina false;
+	{
+		_x enableStamina false;
+	} forEach units player;
 };
 
 if (BULLETTRACING in _enabledOptions) then
@@ -166,7 +172,7 @@ if (killOPFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killOPFOR",
-		"{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]"
+		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
 
@@ -174,7 +180,7 @@ if (killINDFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killINDFOR",
-		"{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]"
+		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
 
@@ -182,7 +188,7 @@ if (killCIVFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killCIVFOR",
-		"{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]"
+		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
 
@@ -190,7 +196,7 @@ if (KILLCURSOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_functions_onePreviewDebug_killCursorTarget",
-		"cursorObject setDamage 1"
+		{cursorObject setDamage 1}
 	];
 };
 
@@ -226,6 +232,40 @@ if (MARKERS in _enabledOptions) then
 			} forEach _markerUnitsArray;//[markerName,entity,displayName]
 		};
 	};
+};
+
+if (SHOWUNITS_3D in _enabledOptions) then
+{
+	Enh_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
+	#define RADIUS 250
+
+	["Enh_EH_DrawDLCIcons_ID", "onEachFrame",
+		{
+			{
+				drawIcon3D
+				[
+					getText (Enh_DebugOptions_CfgVehicles >> typeOf _x >> "icon"),
+					(side _x call BIS_fnc_sideColor),
+					_x modelToWorldVisual [0,0,0.5],
+					0.5,
+					0.5,
+					0,
+					format
+					[
+						"%1 (%2 %3 HP, %4, %5 %6)",
+						getText (Enh_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
+						(1 - damage _x) * 100,
+						"%",
+						behaviour _x,
+						(_x knowsAbout player) * 100 / 4,
+						"%"
+					],
+					true
+				];
+				false;
+			} count (ASLToAGL getPosASL player nearEntities [["Man","Air","Car","Tank"],RADIUS]);
+		}
+	] call BIS_fnc_addStackedEventHandler;
 };
 
 true
