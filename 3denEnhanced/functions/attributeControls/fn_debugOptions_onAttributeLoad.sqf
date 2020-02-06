@@ -29,7 +29,8 @@ private _options =
 	["STR_ENH_debugOptions_killOPFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
 	["STR_ENH_debugOptions_killINDFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
 	["STR_ENH_debugOptions_killCIVFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killCursor_displayName","STR_ENH_debugOptions_killUnits_tooltip"]
+	["STR_ENH_debugOptions_killCursor_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
+	["STR_ENH_debugOptions_drawIcons_displayName","STR_ENH_debugOptions_drawIcons_tooltip"]
 ];
 
 params ["_ctrlGroup"];
