@@ -31,7 +31,7 @@ class Enh_DebugOptions: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_debugOptions_description_description;
+					text = $STR_ENH_debugOptions_description;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
