@@ -54,15 +54,15 @@
 		<Russian>Случайная музыка</Russian>
 	</Key>
 	<Key ID="STR_ENH_randomMusic_tooltip">
-		<Original>Will play randomly selected music at mission start. Input must look as follows: classname_1 classname_2 classname_3 classname_n.</Original>
-		<English>Will play randomly selected music at mission start. Input must look as follows: classname_1 classname_2 classname_3 classname_n.</English>
-		<Czech>Bude hrát náhodně vybranou hudbu na začátku mise. Formát musí být následující: classname_1 classname_2 classname_3 classname_n.</Czech>
-		<French>Joue aléatoirement une musique sélectionnée quand la mission débute. Formatez ainsi : classname_1 classname_2 classname_3 ClassName_n.</French>
-		<Spanish>Reproducirá música seleccionada al azar en el inicio de la misión. La entrada debe tener el siguiente aspecto: classname_1 classname_2 classname_3 classname_n.</Spanish>
+		<Original>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</Original>
+		<English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
+		<Czech>Bude hrát náhodně vybranou hudbu na začátku mise. Formát musí být následující: Classname_1 Classname_2 Classname_3 Classname_n.</Czech>
+		<French>Joue aléatoirement une musique sélectionnée quand la mission débute. Formatez ainsi : Classname_1 Classname_2 Classname_3 Classname_n.</French>
+		<Spanish>Reproducirá música seleccionada al azar en el inicio de la misión. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_3 Classname_n.</Spanish>
 		<German>Spielt willkürlich ausgewählte Musikstücke am Anfang der Mission. Eingabe muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_3 Klassenname_n.</German>
-		<Chinesesimp>将在任务开始时随机播放选定的音乐。输入必须如下:classname_1 classname_2 classname_3 classname_n。以此类推</Chinesesimp>
-		<Polish>Będzie grało losowo wybraną muzyke podczas startu misji. Kod musi wyglądać następująco: classname_1 classname_2 classname_3 classname_n.</Polish>
-		<Russian>Будет играть случайно выбранную музыку в начале миссии. Входные данные должны выглядеть следующим образом: classname_1 classname_2 classname_3 classname_n.</Russian>
+		<Chinesesimp>将在任务开始时随机播放选定的音乐。输入必须如下:Classname_1 Classname_2 Classname_3 Classname_n。以此类推</Chinesesimp>
+		<Polish>Będzie grało losowo wybraną muzyke podczas startu misji. Kod musi wyglądać następująco: Classname_1 Classname_2 Classname_3 Classname_n.</Polish>
+		<Russian>Будет играть случайно выбранную музыку в начале миссии. Входные данные должны выглядеть следующим образом: Classname_1 Classname_2 Classname_3 Classname_n.</Russian>
 	</Key>
 	<Key ID="STR_ENH_tools_removeNVGs">
 		<English>Remove NVGs</English>
@@ -128,12 +128,12 @@
 		<Russian>Записать идентификаторы объектов 3DEN в буфер обмена</Russian>
 	</Key>
 	<Key ID="STR_ENH_functions_batchReplace_error">
-		<English>No valid classname!</English>
+		<English>No valid Classname!</English>
 		<German>Kein gültiger Klassenname!</German>
-		<Original>No valid classname!</Original>
-		<Czech>Žádné validní classname!</Czech>
-		<French>Pas de classname valide!</French>
-		<Polish>Brak poprawnych classname!</Polish>
+		<Original>No valid Classname!</Original>
+		<Czech>Žádné validní Classname!</Czech>
+		<French>Pas de Classname valide!</French>
+		<Polish>Brak poprawnych Classname!</Polish>
 		<Russian>Нет действительного имени класса!</Russian>
 		<Spanish>¡Classname no valido!</Spanish>
 	</Key>
@@ -2518,7 +2518,7 @@
 		<Original>Intro Type</Original>
 		<English>Intro Type</English>
 		<Czech>Druh Intra</Czech>
-		<German>Intro Typ</German>
+		<German>Introtyp</German>
 		<Spanish>Tipo de intro</Spanish>
 	</Key>
 	<Key ID="STR_ENH_terrainGrid_grassDisabled_displayName">
@@ -3182,15 +3182,15 @@
 		<Russian>Заменить на:</Russian>
 	</Key>
 	<Key ID="STR_ENH_batchReplace_replaceWith_tooltip">
-		<Original>Example: Classname_1,Classname_2,Classname_n</Original>
-		<English>Example: Classname_1,Classname_2,Classname_n</English>
-		<Czech>Příklad: Classname_1,Classname_2,Classname_n</Czech>
-		<German>Beispiel: Classname_1,Classname_2,Classname_n</German>
-		<Chinesesimp>例如：Classname_1,Classname_2,Classname_n以此类推</Chinesesimp>
-		<Spanish>Ejemplo: Classname_1, Classname_2, Classname_n</Spanish>
-		<French>Exemple: Classname_1,Classname_2,Classname_n</French>
-		<Polish>Przykład: Classname_1,Classname_2,Classname_n</Polish>
-		<Russian>Пример: имя_класса_1, имя_класса_2, имя_класса_n</Russian>
+		<Original>Example: Classname_1 Classname_2 Classname_n</Original>
+		<English>Example: Classname_1 Classname_2 Classname_n</English>
+		<Czech>Příklad: Classname_1 Classname_2 Classname_n</Czech>
+		<German>Beispiel: Klassenname_1 Klassenname_2 Klassenname_n</German>
+		<Chinesesimp>例如：Classname_1 Classname_2 Classname_n以此类推</Chinesesimp>
+		<Spanish>Ejemplo: Classname_1 Classname_2 Classname_n</Spanish>
+		<French>Exemple: Classname_1 Classname_2 Classname_n</French>
+		<Polish>Przykład: Classname_1 Classname_2 Classname_n</Polish>
+		<Russian>Пример: имя_класса_1 имя_класса_2 имя_класса_n</Russian>
 	</Key>
 	<Key ID="STR_ENH_batchReplace_description">
 		<Original>All selected objects will be replaced by the object types you enter in the edit box below randomly.</Original>
@@ -3330,15 +3330,15 @@
 		<Russian>Патрульный</Russian>
 	</Key>
 	<Key ID="STR_ENH_patrol_tooltip">
-		<Original>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n-1 deactivates the patrol.</Original>
-		<English>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n-1 deactivates the patrol.</English>
-		<French>Fais patrouiller le groupe sélectionné. La valeur définit la distance max entre deux étapes de l'itinéraire.\n\n-1 désactives the patrol.</French>
-		<Spanish>Hace que el grupo de la unidad seleccionada patrulle un área. El valor define la máx. distancia entre dos waypoints de patrulla. \n\n-1 desactiva la patrulla.</Spanish>
-		<German>Weist der Gruppe der ausgewählten Einheit ein Gebiet zum Patrouillieren zu. Der Wert definiert den maximalen Abstand zwischen den Wegpunkten.\n\n-1 deaktiviert das Patrouillieren.</German>
-		<Chinesesimp>使选定单位的小组在一个区域内巡逻。这个值定义了最大值。两个巡逻点之间的距离。\n\n-1的巡逻。</Chinesesimp>
-		<Czech>Skupina vybrané jednotky začne hlídkovat v oblasti. Hodnota definuje max. vzdálenost mezi dvěma hlídkovými body. \n\n-1 deaktivuje hlídku.</Czech>
-		<Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n-1 deaktywuje patrol</Polish>
-		<Russian>Это заставит выбранную группу патрулировать область. Значения определяют максимальное расстояние между двумя патрульными точками навигации. \ n \ n-1 отключает патруль</Russian>
+		<Original>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</Original>
+		<English>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</English>
+		<French>Fais patrouiller le groupe sélectionné. La valeur définit la distance max entre deux étapes de l'itinéraire.\n\n0 désactives the patrol.</French>
+		<Spanish>Hace que el grupo de la unidad seleccionada patrulle un área. El valor define la máx. distancia entre dos waypoints de patrulla. \n\n0 desactiva la patrulla.</Spanish>
+		<German>Weist der Gruppe der ausgewählten Einheit ein Gebiet zum Patrouillieren zu. Der Wert definiert den maximalen Abstand zwischen den Wegpunkten.\n\n0 deaktiviert das Patrouillieren.</German>
+		<Chinesesimp>使选定单位的小组在一个区域内巡逻。这个值定义了最大值。两个巡逻点之间的距离。\n\n0的巡逻。</Chinesesimp>
+		<Czech>Skupina vybrané jednotky začne hlídkovat v oblasti. Hodnota definuje max. vzdálenost mezi dvěma hlídkovými body. \n\n0 deaktivuje hlídku.</Czech>
+		<Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n0 deaktywuje patrol</Polish>
+		<Russian>Это заставит выбранную группу патрулировать область. Значения определяют максимальное расстояние между двумя патрульными точками навигации. \ n \ n0 отключает патруль</Russian>
 	</Key>
 	<Key ID="STR_ENH_locationList_cities">
 		<Original>Cities &amp; Villages</Original>
@@ -3499,7 +3499,7 @@
 		<Polish>Włącz tryb "Jeniec"</Polish>
 		<Russian>Включить нейтральное поведение</Russian>
 	</Key>
-	<Key ID="STR_ENH_debugOptions_description_description">
+	<Key ID="STR_ENH_debugOptions_description">
 		<Original>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</Original>
 		<English>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</English>
 		<German>Die folgenden Einstellungen erlauben dir deine Szenarios während der Szenariovorschau leichter zu testen. Die Attribute werden nicht in der mission.sqm gespeichert. Im Multiplayer-Modus deaktiviert.</German>
@@ -3520,6 +3520,16 @@
 		<French>Montrer le niveau de conscience</French>
 		<Polish>Pokaż poziom świadomości</Polish>
 		<Russian>Показать уровень осведомленности</Russian>
+	</Key>
+  <Key ID="STR_ENH_debugOptions_drawIcons_displayName">
+		<Original>Draw Unit Icons</Original>
+		<English>Draw Unit Icons</English>
+		<German>Einheitenicons darstellen</German>
+	</Key>
+  <Key ID="STR_ENH_debugOptions_drawIcons_tooltip">
+		<Original>Draws information of nearby units and vehicles.</Original>
+		<English>Draws information of nearby units and vehicles.</English>
+		<German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
 	</Key>
 	<Key ID="STR_ENH_debugOptions_awareness_tooltip">
 		<Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
@@ -4995,22 +5005,22 @@
 		<Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
 	</Key>
 	<Key ID="STR_ENH_airdrop_classes_tooltip">
-		<English>Classes of the soldiers which should be dropped in format:\nclassname_1, classname_2, classname_n.</English>
-		<Original>Classes of the soldiers which should be dropped in format:\nclassname_1, classname_2, classname_n.</Original>
-		<Czech>Třídy vojáků kteří budou shozeni výsadkem ve formátu:\nclassname_1, classname_2, classname_n.</Czech>
-		<Spanish>Clases de los soldados que deben soltarse en formato:\nclassname_1, classname_2, classname_n.</Spanish>
-		<German>Klassennamen der Einheiten die abspringen sollen im Format:\nclassname_1, classname_2, classname_n. </German>
+		<English>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</English>
+		<Original>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</Original>
+		<Czech>Třídy vojáků kteří budou shozeni výsadkem ve formátu:\nClassname_1 Classname_2 Classname_n.</Czech>
+		<Spanish>Clases de los soldados que deben soltarse en formato:\nClassname_1 Classname_2 Classname_n.</Spanish>
+		<German>Klassennamen der Einheiten die abspringen sollen im Format:\nClassname_1 Classname_2 Classname_n. </German>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_classes_tooltip">
-		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</English>
-		<Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:classname_1, classname_2, classname_n 以此类推</Chinesesimp>
-		<Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: classname_1,classname_2,classname_n.</Czech>
-		<French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs ClassName sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : ClassName_1, ClassName_2, ClassName_n.</French>
-		<German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1, Klassenname_2, Klassenname_n.</German>
-		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: classname_1,classname_2,classname_n.</Original>
-		<Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: classname_1,classname_2,classname_n.</Polish>
-		<Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: classname_1, classname_2, classname_n.</Russian>
-		<Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: classname_1, classname_2, classname_n.</Spanish>
+		<English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
+		<Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:Classname_1 Classname_2 Classname_n 以此类推</Chinesesimp>
+		<Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: Classname_1 Classname_2 Classname_n.</Czech>
+		<French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs Classname sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : Classname_1 Classname_2 Classname_n.</French>
+		<German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_n.</German>
+		<Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</Original>
+		<Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
+		<Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: Classname_1 Classname_2 Classname_n.</Russian>
+		<Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_n.</Spanish>
 	</Key>
 	<Key ID="STR_ENH_side_displayName">
 		<English>Side</English>
@@ -5244,7 +5254,7 @@
 		<Original>Text</Original>
 		<Spanish>Texto</Spanish>
 	</Key>
-	<Key ID="STR_ENH_ambientAnimations_description_description">
+	<Key ID="STR_ENH_ambientAnimations_description">
 		<English>Plays a selected animation set. The gear needs to be set up manually.</English>
 		<Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
 		<Spanish>Reproducir una animación seleccionada. El engranaje necesita ser seleccionado manualmente</Spanish>
