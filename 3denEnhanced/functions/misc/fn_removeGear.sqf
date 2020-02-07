@@ -26,7 +26,7 @@ private _units = get3DENSelected "Object";
 
 if (_units isEqualTo []) exitWith
 {
-	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
 
@@ -47,6 +47,6 @@ private _code =
 } forEach _units;
 
 save3DENInventory _units;
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

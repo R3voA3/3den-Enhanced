@@ -1,14 +1,14 @@
-class Enh_DynamicGroups
+class ENH_DynamicGroups
 {
 	collapsed = 1;
 	displayName = $STR_ENH_dynamicGroups_displayName;
 	class Attributes
 	{
-		class Enh_EnableDynamicGroups
+		class ENH_EnableDynamicGroups
 		{
 			displayName = $STR_ENH_enable;
 			tooltip = $STR_ENH_dynamicGroups_tooltip;
-			property = "Enh_dynamicGroups";
+			property = "ENH_dynamicGroups";
 			control = "Checkbox";
 			expression =
 			"\

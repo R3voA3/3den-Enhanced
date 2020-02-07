@@ -1,11 +1,11 @@
 #define DIALOG_W 90
 #define DIALOG_H 70
 
-class Enh_3DENCamPositions
+class ENH_3DENCamPositions
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_3DENCam_updateList";
+	onLoad = "_this call ENH_fnc_3DENCam_updateList";
 	class ControlsBackground
 	{
 		class Background: ctrlStaticBackground
@@ -33,8 +33,8 @@ class Enh_3DENCamPositions
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = DIALOG_W * GRID_W - 2 * GRID_W;
 			h = DIALOG_H * GRID_H - 7 * GRID_H;
-			onLBDblClick = "_this call Enh_fnc_3DENCam_set3DENCameraParameters";
-			onKeyDown = "_this call Enh_fnc_3DENCam_deleteEntry";
+			onLBDblClick = "_this call ENH_fnc_3DENCam_set3DENCameraParameters";
+			onKeyDown = "_this call ENH_fnc_3DENCam_deleteEntry";
 		};
 		class Description: ctrlEdit
 		{
@@ -44,8 +44,8 @@ class Enh_3DENCamPositions
 			y = DIALOG_TOP + (DIALOG_H) * GRID_H;
 			w = DIALOG_W * GRID_W - 2 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onSetFocus = "_this call Enh_fnc_3DENCam_onSetFocus";
-			onKillFocus = "_this call Enh_fnc_3DENCam_onKillFocus";
+			onSetFocus = "_this call ENH_fnc_3DENCam_onSetFocus";
+			onKillFocus = "_this call ENH_fnc_3DENCam_onKillFocus";
 		};
 		class Save: ctrlButton
 		{
@@ -54,7 +54,7 @@ class Enh_3DENCamPositions
 			y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
 			w = 20 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this # 0 call Enh_fnc_3DENCam_get3DENCameraParameters";
+			onButtonClick = "_this # 0 call ENH_fnc_3DENCam_get3DENCameraParameters";
 		};
 		class Close: ctrlButtonClose
 		{

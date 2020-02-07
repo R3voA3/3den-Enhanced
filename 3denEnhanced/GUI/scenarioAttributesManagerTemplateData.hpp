@@ -1,8 +1,8 @@
-class Enh_ScenarioAttributesManagerTemplateData
+class ENH_ScenarioAttributesManagerTemplateData
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "Enh_ScenarioAttributesManager_TemplateTitle = ''; Enh_ScenarioAttributesManager_TemplateDescription = '';";
+	onLoad = "ENH_ScenarioAttributesManager_TemplateTitle = ''; ENH_ScenarioAttributesManager_TemplateDescription = '';";
 	onUnload = "";
 	class ControlsBackground
 	{
@@ -69,7 +69,7 @@ class Enh_ScenarioAttributesManagerTemplateData
 			y = DIALOG_TOP + 50 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_createTemplate";
+			onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_createTemplate";
 		};
 	};
 };

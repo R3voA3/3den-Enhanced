@@ -1,11 +1,11 @@
 #define DIALOG_W 110
 #define DIALOG_H 82
 
-class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
+class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
 {
 	idd = ENH_IDD_ACTIONCREATOR;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_actionCreator_onLoad";
+	onLoad = "_this call ENH_fnc_actionCreator_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -208,7 +208,7 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 		class Ok: ctrlButtonOK
 		{
 			idc = -1;//We don't want it to close the GUI
-			action = "call Enh_fnc_actionCreator_export";
+			action = "call ENH_fnc_actionCreator_export";
 			x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
 			y = DIALOG_TOP + 81 * GRID_H;
 			w = 23 * GRID_W;
@@ -217,11 +217,11 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 	};
 };
 
-/* class Enh_ActionCreator
+/* class ENH_ActionCreator
 {
 	idd = ENH_IDD_ACTIONCREATOR;
 	movingEnable = true;
-	onLoad = "call Enh_fnc_actionCreator_onLoad";
+	onLoad = "call ENH_fnc_actionCreator_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -457,7 +457,7 @@ class Enh_ActionCreator//Do not localize. Text should be identical to wiki page
 		class Ok: ctrlButtonOK
 		{
 			idc = -1;//We don't want it to close the GUI
-			action = "call Enh_fnc_actionCreator_export";
+			action = "call ENH_fnc_actionCreator_export";
 			x = 0.506562 * safezoneW + safezoneX;
 			y = 0.738 * safezoneH + safezoneY;
 			w = 0.1575 * safezoneW;

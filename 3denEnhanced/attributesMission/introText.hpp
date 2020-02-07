@@ -1,13 +1,13 @@
-class Enh_IntroText_Category
+class ENH_IntroText_Category
 {
 	collapsed = 1;
 	displayName = $STR_ENH_attributeCategory_introText;
 	class Attributes
 	{
-		class Enh_IntroText
+		class ENH_IntroText
 		{
-			property = "Enh_introText";
-			control = "Enh_IntroText";
+			property = "ENH_introText";
+			control = "ENH_IntroText";
 			expression =
 			"\
 				if (!is3DEN && (_value # 0) > 0 && hasInterface) then\

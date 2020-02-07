@@ -18,7 +18,7 @@ private _units = get3DENSelected "object";
 
 if (_units isEqualTo []) exitWith 
 {
-	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
 
@@ -26,7 +26,7 @@ switch (_input) do
 {
 	case "copy":
 	{
-		Enh_CopiedLoadout_Gear = _units apply
+		ENH_CopiedLoadout_Gear = _units apply
 		{
 			if (CHECK_MAN) then
 			{
@@ -39,7 +39,7 @@ switch (_input) do
 		{
 			if (_x isKindOf "Man") then
 			{
-				_x setUnitLoadout selectRandom Enh_CopiedLoadout_Gear;
+				_x setUnitLoadout selectRandom ENH_CopiedLoadout_Gear;
 			};
 		} forEach _units;
 
@@ -47,6 +47,6 @@ switch (_input) do
 	};
 };
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

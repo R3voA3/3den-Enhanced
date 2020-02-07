@@ -11,7 +11,7 @@
    BOOLEAN: true / false
 */
 
-private _enabledOptions =  profileNamespace getVariable ["Enh_DebugOptions_Settings",[]];
+private _enabledOptions =  profileNamespace getVariable ["ENH_DebugOptions_Settings",[]];
 
 if (_enabledOptions isEqualTo []) exitWith {false};
 
@@ -23,14 +23,13 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define INVULNERABILITY 	5
 #define CAPTIVE 			6
 #define STAMINA 			7
-#define AWARENESS 			8
-#define FPS 			    9
-#define killBLUFOR 			10
-#define killOPFOR 			11
-#define killINDFOR 			12
-#define killCIVFOR			13
-#define KILLCURSOR			14
-#define SHOWUNITS_3D 		15
+#define FPS 			    8
+#define killBLUFOR 			9
+#define killOPFOR 			10
+#define killINDFOR 			11
+#define killCIVFOR			12
+#define KILLCURSOR			13
+#define SHOWUNITS_3D 		14
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
 //To prevent issues in multiplayer games started from multiplayer editor
@@ -100,29 +99,6 @@ if (GARAGE in _enabledOptions) then
 		BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F",player getPos [10,getDir player],[],0,"CAN_COLLIDE"];
 		["Open",true] call BIS_fnc_garage;
 	}];
-};
-
-if (AWARENESS in _enabledOptions) then
-{
-	[] spawn
-	{
-		while {true} do
-		{
-			hintSilent  format
-			[
-			"AWARENESS\n\nWEST: %1%2\nEAST: %3%4\nINDEPENDENT: %5%6\nCIVILIAN: %7%8",
-			(WEST knowsAbout player) * 100 / 4,
-			"%",
-			(EAST knowsAbout player) * 100 / 4,
-			"%",
-			(INDEPENDENT knowsAbout player) * 100 / 4,
-			"%",
-			(CIVILIAN knowsAbout player) * 100 / 4,
-			"%"
-			]; 
-			sleep 1;
-		};
-	};
 };
 
 if (FPS in _enabledOptions) then
@@ -211,7 +187,7 @@ if (MARKERS in _enabledOptions) then
 			private _sideColour = [side _x,true] call BIS_fnc_sideColor;
 			private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
 
-			_name = "Enh_previewMarker_" + str _forEachIndex;
+			_name = "ENH_previewMarker_" + str _forEachIndex;
 			_name = createMarkerLocal [_name,position _x];
 			_name setMarkerTypeLocal 'mil_box';
 			_name setMarkerTextLocal _displayName;
@@ -236,15 +212,15 @@ if (MARKERS in _enabledOptions) then
 
 if (SHOWUNITS_3D in _enabledOptions) then
 {
-	Enh_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
+	ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
 	#define RADIUS 250
 
-	["Enh_EH_DrawDLCIcons_ID", "onEachFrame",
+	["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
 		{
 			{
 				drawIcon3D
 				[
-					getText (Enh_DebugOptions_CfgVehicles >> typeOf _x >> "icon"),
+					getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "icon"),
 					(side _x call BIS_fnc_sideColor),
 					_x modelToWorldVisual [0,0,0.5],
 					0.5,
@@ -253,7 +229,7 @@ if (SHOWUNITS_3D in _enabledOptions) then
 					format
 					[
 						"%1 (%2 %3 HP, %4, %5 %6)",
-						getText (Enh_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
+						getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
 						(1 - damage _x) * 100,
 						"%",
 						behaviour _x,

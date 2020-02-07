@@ -1,11 +1,11 @@
 #define DIALOG_W 160
 #define DIALOG_H 110
 
-class Enh_TextureFinder
+class ENH_TextureFinder
 {
 	idd = ENH_IDD_TEXTUREFINDER;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_textureFinder_findTextures";
+	onLoad = "[] spawn ENH_fnc_textureFinder_findTextures";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -34,8 +34,8 @@ class Enh_TextureFinder
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
-			onLBSelChanged = "_this call Enh_fnc_textureFinder_showTexture";
-			onKeyDown = "_this call Enh_fnc_textureFinder_exportTexturePath";
+			onLBSelChanged = "_this call ENH_fnc_textureFinder_showTexture";
+			onKeyDown = "_this call ENH_fnc_textureFinder_exportTexturePath";
 		};
 		class ProgressList: ctrlProgress
 		{
@@ -81,7 +81,7 @@ class Enh_TextureFinder
 			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "[] spawn Enh_fnc_textureFinder_fillTextureLB";
+			action = "[] spawn ENH_fnc_textureFinder_fillTextureLB";
 		};
 		class SearchTextBox: ctrlEdit
 		{
@@ -98,7 +98,7 @@ class Enh_TextureFinder
 			y = DIALOG_TOP + 59 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_textureFinder_search";
+			onButtonClick = "_this call ENH_fnc_textureFinder_search";
 		};
 		class Filter: ctrlToolbox
 		{
@@ -116,8 +116,8 @@ class Enh_TextureFinder
 				$STR_ENH_textureFinder_filterPAA
             };
             values[] = {0,1,2};
-			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; Enh_TextureFinder_Filter = 0";//Default value
-			onToolBoxSelChanged  = "params ['_ctrl']; Enh_TextureFinder_Filter = lbCurSel _ctrl; [] spawn Enh_fnc_textureFinder_fillTextureLB";
+			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; ENH_TextureFinder_Filter = 0";//Default value
+			onToolBoxSelChanged  = "params ['_ctrl']; ENH_TextureFinder_Filter = lbCurSel _ctrl; [] spawn ENH_fnc_textureFinder_fillTextureLB";
         };
 		class Close: ctrlButtonClose
 		{

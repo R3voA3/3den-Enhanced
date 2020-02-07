@@ -2045,15 +2045,15 @@
 		<Russian>Сделать заложником</Russian>
 	</Key>
 	<Key ID="STR_ENH_makeHostage_tooltip">
-		<Original>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'Enh_isHostage';</Original>
-		<English>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'Enh_isHostage';</English>
-		<Czech>Udělá z jednotky rukojmí a přídá možnost "Osvobodit rukojmí". Jestli je jednotka stále rukojmím může být zkontrolováno pomocí _unitName getVariable 'Enh_isHostage';</Czech>
-		<French>Défini l'unité comme étant otage, et ajoute une action "Libérer l'Otage". Il est possible de vérifier son statut d'otage avec la commande : _unitName getVariable "Enh_isHostage";</French>
-		<Spanish>Hace que la unidad sea un rehén y añade una acción de "liberar rehén". Si la unidad sigue siendo rehén se puede comprobar con _unitName getVariable 'Enh_isHostage';</Spanish>
-		<German>Die Einheit wird zu einer Geisel und jeder Spieler erhält eine Action diese zu befreien, ob die Geisel befreit wurde kann mit folgendermaßen überprüft werden: _unitName getVariable 'Enh_isHostage';</German>
-		<Chinesesimp>让这个单位成为人质，并增加一个“解救人质”的动作菜单。该单位是否仍然是人质，可以用_unitName getVariable 'Enh_isHostage';来检查。</Chinesesimp>
-		<Polish>Sprawia że jednostka staję się zakładnikiem i dodaje opcje 'Uwolnij zakładnika'. Czy jednostka jest dalej zakładnikiem można sprawdzić przy pomocy _unitName getVariable 'Enh_isHostage'; </Polish>
-		<Russian>Делает юнит заложником и добавляет действие «Свободный заложник». Может ли устройство оставаться заложником, можно проверить с помощью _unitName getVariable 'Enh_isHostage';</Russian>
+		<Original>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'ENH_isHostage';</Original>
+		<English>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'ENH_isHostage';</English>
+		<Czech>Udělá z jednotky rukojmí a přídá možnost "Osvobodit rukojmí". Jestli je jednotka stále rukojmím může být zkontrolováno pomocí _unitName getVariable 'ENH_isHostage';</Czech>
+		<French>Défini l'unité comme étant otage, et ajoute une action "Libérer l'Otage". Il est possible de vérifier son statut d'otage avec la commande : _unitName getVariable "ENH_isHostage";</French>
+		<Spanish>Hace que la unidad sea un rehén y añade una acción de "liberar rehén". Si la unidad sigue siendo rehén se puede comprobar con _unitName getVariable 'ENH_isHostage';</Spanish>
+		<German>Die Einheit wird zu einer Geisel und jeder Spieler erhält eine Action diese zu befreien, ob die Geisel befreit wurde kann mit folgendermaßen überprüft werden: _unitName getVariable 'ENH_isHostage';</German>
+		<Chinesesimp>让这个单位成为人质，并增加一个“解救人质”的动作菜单。该单位是否仍然是人质，可以用_unitName getVariable 'ENH_isHostage';来检查。</Chinesesimp>
+		<Polish>Sprawia że jednostka staję się zakładnikiem i dodaje opcje 'Uwolnij zakładnika'. Czy jednostka jest dalej zakładnikiem można sprawdzić przy pomocy _unitName getVariable 'ENH_isHostage'; </Polish>
+		<Russian>Делает юнит заложником и добавляет действие «Свободный заложник». Может ли устройство оставаться заложником, можно проверить с помощью _unitName getVariable 'ENH_isHostage';</Russian>
 	</Key>
 	<Key ID="STR_ENH_unitTraits_medic_displayName">
 		<Original>Is Medic?</Original>
@@ -5099,18 +5099,18 @@
 		<Spanish>Descripción</Spanish>
 	</Key>
 	<Key ID="STR_ENH_airdrop_description">
-		<English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</English>
-		<Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'Enh_Airdrop_Units' variable which is available on the server machine.</Original>
-		<Czech>Vytvoří výsadek. Jednotky se zadanými třídami a stranou jsou shozeny v okamžiku kdy se podmínka vrátí jako pravdivá (true). Vytvořené jednotky jsou uloženy v proměnné "Enh_Airdrop_Units" která je dostupná na straně serveru.</Czech>
-		<Spanish>Crea un lanzamiento aéreo. Las unidades con clases y bandos dados se descartan una vez que la condición devuelve verdadero. Las unidades creadas se almacenan en la variable 'Enh_Airdrop_Units' que está disponible en la máquina del servidor.</Spanish>
-		<German>Erstellt einen Luftabwurf. Einheiten mit den angegebenen Klassennamen und Seite werden abgeworfen sobald die Bedingungen erfüllt ist. Dir erstellen Einheiten stehen in der Variable 'Enh_Airdrop_Units' auf dem Server zur Verfügung.</German>
+		<English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</English>
+		<Original>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</Original>
+		<Czech>Vytvoří výsadek. Jednotky se zadanými třídami a stranou jsou shozeny v okamžiku kdy se podmínka vrátí jako pravdivá (true). Vytvořené jednotky jsou uloženy v proměnné "ENH_Airdrop_Units" která je dostupná na straně serveru.</Czech>
+		<Spanish>Crea un lanzamiento aéreo. Las unidades con clases y bandos dados se descartan una vez que la condición devuelve verdadero. Las unidades creadas se almacenan en la variable 'ENH_Airdrop_Units' que está disponible en la máquina del servidor.</Spanish>
+		<German>Erstellt einen Luftabwurf. Einheiten mit den angegebenen Klassennamen und Seite werden abgeworfen sobald die Bedingungen erfüllt ist. Dir erstellen Einheiten stehen in der Variable 'ENH_Airdrop_Units' auf dem Server zur Verfügung.</German>
 	</Key>
 	<Key ID="STR_ENH_ambientFlyby_description">
-		<English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</English>
-		<Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'Enh_AmbientFlyby_Enabled' to false on the server machine.</Original>
-		<Czech>Vytvoří leteckou jednotku která se pohybuje z bodu A do bodu B, nikdy neútočí a ani na ní není útočeno. Je nastavena jako zajatec a vymaže se v okamžiku kdy dosáhne svého cíle. Přelety mohou být zastaveny nastavením proměnné "Enh_AmbientFlyby_Enabled" jako nepravdu (false) na straně serveru.</Czech>
-		<Spanish>Genera una unidad aérea que se mueve desde el punto A al punto B, nunca atacando ni siendo atacado. Se establece como cautivo y desaparecerá una vez que llegue a su destino. Los sobrevuelos se pueden detener configurando 'Enh_AmbientFlyby_Enabled' en falso en la máquina del servidor.</Spanish>
-		<German>Spawnt eine Lufteinheit die von Punkt A zu Punkt B fliegt. Sie wird niemals angegriffen oder angreifen. Sie wird gelöscht sobalt sie ihren Zielpunkt erreicht hat. Die Vorbeiflüge können gestoppt werden durch das setzten von 'Enh_AmbientFlyby_Enabled' zu 'false' auf dem Server.</German>
+		<English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
+		<Original>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</Original>
+		<Czech>Vytvoří leteckou jednotku která se pohybuje z bodu A do bodu B, nikdy neútočí a ani na ní není útočeno. Je nastavena jako zajatec a vymaže se v okamžiku kdy dosáhne svého cíle. Přelety mohou být zastaveny nastavením proměnné "ENH_AmbientFlyby_Enabled" jako nepravdu (false) na straně serveru.</Czech>
+		<Spanish>Genera una unidad aérea que se mueve desde el punto A al punto B, nunca atacando ni siendo atacado. Se establece como cautivo y desaparecerá una vez que llegue a su destino. Los sobrevuelos se pueden detener configurando 'ENH_AmbientFlyby_Enabled' en falso en la máquina del servidor.</Spanish>
+		<German>Spawnt eine Lufteinheit die von Punkt A zu Punkt B fliegt. Sie wird niemals angegriffen oder angreifen. Sie wird gelöscht sobalt sie ihren Zielpunkt erreicht hat. Die Vorbeiflüge können gestoppt werden durch das setzten von 'ENH_AmbientFlyby_Enabled' zu 'false' auf dem Server.</German>
 	</Key>
 	<Key ID="STR_ENH_establishingShot_description">
 		<English>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</English>
@@ -5127,13 +5127,13 @@
 		<German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen. Kann &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; oder &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt; sein. </German>
 	</Key>
 	<Key ID="STR_ENH_groupMarker_description">
-		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the group's namespace to false.</English>
-		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'Enh_GroupMarker_Update' in the group's namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
-		<Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "Enh_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).\n\nHodnota musí být název třídy značky z CfgMarkers.</Czech>
-		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'Enh_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
-		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'Enh_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
-		<Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'Enh_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
-		<Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "Enh_GroupMarker_</Spanish>
+		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
+		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
+		<Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "ENH_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).\n\nHodnota musí být název třídy značky z CfgMarkers.</Czech>
+		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'ENH_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
+		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
+		<Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'ENH_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
+		<Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "ENH_GroupMarker_</Spanish>
 	</Key>
 	<Key ID="STR_ENH_mapIndicators_description">
 		<English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
@@ -5716,10 +5716,10 @@
 		<Spanish>Condición de inicio</Spanish>
 	</Key>
 	<Key ID="STR_ENH_extraction_conditionStart_tooltip">
-		<English>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
-		<Original>Condition for the extraction to start. By default the variable Enh_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
-		<German>Bedingung für den Start der Extraktion. Standardmäßig muss die Variable 'Enh_Extraction_Start' auf true gesetzt werden. Lassen Sie das Feld leer, wenn Sie es durch einen Trigger starten möchten.</German>
-		<Spanish>Condición para que comience la extracción. Por defecto, la variable Enh_Extraction_Start debe establecerse en true. Deje en blanco si desea iniciarlo con un disparador.</Spanish>
+		<English>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
+		<Original>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</Original>
+		<German>Bedingung für den Start der Extraktion. Standardmäßig muss die Variable 'ENH_Extraction_Start' auf true gesetzt werden. Lassen Sie das Feld leer, wenn Sie es durch einen Trigger starten möchten.</German>
+		<Spanish>Condición para que comience la extracción. Por defecto, la variable ENH_Extraction_Start debe establecerse en true. Deje en blanco si desea iniciarlo con un disparador.</Spanish>
 	</Key>
 	<Key ID="STR_ENH_extraction_grenadeType">
 		<English>Grenade Type</English>

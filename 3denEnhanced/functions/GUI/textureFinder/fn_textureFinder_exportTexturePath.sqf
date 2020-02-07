@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Used by the Enh_TexturFinder GUI. Exports path of selected lb entry by pressing CTRL + C.
+	Used by the ENH_TexturFinder GUI. Exports path of selected lb entry by pressing CTRL + C.
 
 	Parameter(s):
 	-
@@ -18,7 +18,7 @@ if (_key isEqualTo 46 && _ctrl) then
 	private _path = _ctrlLB lbText (lbCurSel _ctrlLB);
 	if (_path isEqualTo "") exitWith {false};
 	copyToClipboard str _path;
-	["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+	["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
 
 true

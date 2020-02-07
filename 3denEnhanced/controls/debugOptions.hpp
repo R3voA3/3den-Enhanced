@@ -1,7 +1,7 @@
-class Enh_DebugOptions: Title
+class ENH_DebugOptions: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_debugOptions_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_debugOptions_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_debugOptions_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_debugOptions_onAttributeSave";
 	h = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 	class Controls: Controls
 	{
@@ -62,7 +62,7 @@ class Enh_DebugOptions: Title
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = 6 * SIZE_M * GRID_H;
-			onLBSelChanged = "_this call Enh_fnc_debugOptions_onLBSelChanged";
+			onLBSelChanged = "_this call ENH_fnc_debugOptions_onLBSelChanged";
 		};
 		class Reset: ctrlButton
 		{
@@ -70,7 +70,7 @@ class Enh_DebugOptions: Title
 			y = 10.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_debugOptions_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_debugOptions_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

@@ -1,44 +1,44 @@
-class Enh_AmbientAnimations
+class ENH_AmbientAnimations
 {
 	displayName = $STR_ENH_ambientAnimations_displayName;
-	control = "Enh_AmbientAnimations";
-	property = "Enh_AmbientAnimations";
+	control = "ENH_AmbientAnimations";
+	property = "ENH_AmbientAnimations";
 	expression =
 	"\
 		if !(_value # 0 isEqualTo '') then\
 		{\
 			_value params ['_animSet','_anims','_canExit','_attach'];\
 			\
-			_this setVariable ['Enh_ambientAnimations_anims',_anims];\
+			_this setVariable ['ENH_ambientAnimations_anims',_anims];\
 			_this disableAI 'ANIM';\
 			if (_attach && !is3DEN) then\
 			{\
 				private _logic = group _this createUnit ['Logic',getPosATL _this,[],0,'NONE'];\
-				_this setVariable ['Enh_ambientAnimations_logic',_logic];\
+				_this setVariable ['ENH_ambientAnimations_logic',_logic];\
 				[_this,_logic] call BIS_fnc_attachToRelative;\
 			};\
 			\
-			Enh_fnc_ambientAnimations_play =\
+			ENH_fnc_ambientAnimations_play =\
 			{\
 				params ['_unit'];\
-				private _anim = selectRandom (_unit getVariable ['Enh_ambientAnimations_anims',[]]);\
+				private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims',[]]);\
 				[_unit,_anim] remoteExec ['switchMove',0];\
 			};\
 			\
-			Enh_fnc_ambientAnimations_exit =\
+			ENH_fnc_ambientAnimations_exit =\
 			{\
 				params ['_unit'];\
-				if !(_unit getVariable ['Enh_ambientAnimations_exit',true]) exitWith {false};\
-				_unit setVariable ['Enh_ambientAnimations_exit',true];\
+				if !(_unit getVariable ['ENH_ambientAnimations_exit',true]) exitWith {false};\
+				_unit setVariable ['ENH_ambientAnimations_exit',true];\
 				detach _unit;\
-				deleteVehicle (_unit getVariable ['Enh_ambientAnimations_logic',objNull]);\
+				deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic',objNull]);\
 				[_unit,''] remoteExec ['switchMove',0];\
 				\
 				_unit enableAI 'ANIM';\
 				\
-				_unit removeEventHandler ['Killed',_unit getVariable ['Enh_EHKilled',-1]];\
-				_unit removeEventHandler ['Dammaged',_unit getVariable ['Enh_EHDammaged',-1]];\
-				_unit removeEventHandler ['AnimDone',_unit getVariable ['Enh_EHAnimDone',-1]];\
+				_unit removeEventHandler ['Killed',_unit getVariable ['ENH_EHKilled',-1]];\
+				_unit removeEventHandler ['Dammaged',_unit getVariable ['ENH_EHDammaged',-1]];\
+				_unit removeEventHandler ['AnimDone',_unit getVariable ['ENH_EHAnimDone',-1]];\
 			};\
 			\
 			private _EHAnimDone = _this addEventHandler\
@@ -48,15 +48,15 @@ class Enh_AmbientAnimations
 					params ['_unit'];\
 					if (alive _unit) then\
 					{\
-						_unit call Enh_fnc_ambientAnimations_play;\
+						_unit call ENH_fnc_ambientAnimations_play;\
 					}\
 					else\
 					{\
-						_unit call Enh_fnc_ambientAnimations_exit;\
+						_unit call ENH_fnc_ambientAnimations_exit;\
 					};\
 				}\
 			];\
-			_this setVariable ['Enh_EHAnimDone',_EHAnimDone];\
+			_this setVariable ['ENH_EHAnimDone',_EHAnimDone];\
 			\
 			if (_canExit) then\
 			{\
@@ -64,29 +64,29 @@ class Enh_AmbientAnimations
 				[\
 					'Killed',\
 					{\
-						(_this select 0) call Enh_fnc_ambientAnimations_exit;\
+						(_this select 0) call ENH_fnc_ambientAnimations_exit;\
 					}\
 				];\
-				_this setVariable ['Enh_EHKilled',_EHKilled];\
+				_this setVariable ['ENH_EHKilled',_EHKilled];\
 				private _EHDammaged = _this addEventHandler\
 				[\
 					'Dammaged',\
 					{\
-						(_this select 0) call Enh_fnc_ambientAnimations_exit;\
+						(_this select 0) call ENH_fnc_ambientAnimations_exit;\
 					}\
 				];\
-				_this setVariable ['Enh_EHDammaged',_EHDammaged];\
+				_this setVariable ['ENH_EHDammaged',_EHDammaged];\
 				_this spawn\
 				{\
 					params ['_unit'];\
 					waitUntil\
 					{\
-						sleep 1; (_unit getVariable ['Enh_ambientAnimations_exit',false]) || {behaviour _unit == 'COMBAT'}\
+						sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit',false]) || {behaviour _unit == 'COMBAT'}\
 					};\
-					_unit call Enh_fnc_ambientAnimations_exit;\
+					_unit call ENH_fnc_ambientAnimations_exit;\
 				};\
 			};\
-			_this call Enh_fnc_ambientAnimations_play;\
+			_this call ENH_fnc_ambientAnimations_play;\
 		};";
 	condition = "objectBrain";
 	defaultValue = "['',[],false,false]";

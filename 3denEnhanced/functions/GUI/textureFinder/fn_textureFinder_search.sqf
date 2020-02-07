@@ -26,9 +26,9 @@ private _ctrlProgressList = _display displayCtrl 1800;
 
 private _lbSize = lbSize _ctrlLB;
 private _searchFor = toLower ctrlText _ctrlSearch;
-private _textureCount = count Enh_TextureFinder_TexturesFound;
+private _textureCount = count ENH_TextureFinder_TexturesFound;
 
-if (isNil "Enh_TextureFinder_SearchStarted") then
+if (isNil "ENH_TextureFinder_SearchStarted") then
 {
 		private _toDelete = [];
 		_ctrlSearchButton ctrlSetText TEXTURE_SEARCH_END;
@@ -54,15 +54,15 @@ if (isNil "Enh_TextureFinder_SearchStarted") then
 				1
 			];
 		} forEach _toDelete;
-		Enh_TextureFinder_SearchStarted = true;
+		ENH_TextureFinder_SearchStarted = true;
 }
 else
 {
 		_ctrlSearch ctrlSetText "";
 		_ctrlSearchButton ctrlSetText TEXTURE_SEARCH_START;
 
-		[] spawn Enh_fnc_textureFinder_fillTextureLB;
-		Enh_TextureFinder_SearchStarted = nil;
+		[] spawn ENH_fnc_textureFinder_fillTextureLB;
+		ENH_TextureFinder_SearchStarted = nil;
 };
 
 true

@@ -20,7 +20,7 @@ if (_key isEqualTo 211) then
 	_ctrlLB lbDelete lbCurSel _ctrlLB;
 
 	//Update list
-	_ctrlLB call Enh_fnc_3DENCam_saveList;
+	_ctrlLB call ENH_fnc_3DENCam_saveList;
 };
 
 true

@@ -1,7 +1,7 @@
-class Enh_MapIndicators: Title
+class ENH_MapIndicators: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_mapIndicators_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_mapIndicators_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_mapIndicators_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_mapIndicators_onAttributeSave";
 	h = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
 	class Controls: Controls
 	{

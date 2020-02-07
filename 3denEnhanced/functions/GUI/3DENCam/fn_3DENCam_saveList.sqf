@@ -22,6 +22,6 @@ for "_i" from 0 to _lbMaxIndex do
 	_data pushBack call compile (_ctrlLB lbData _i);
 };
 
-profileNamespace setVariable ["Enh_Cam3DENSavedPositions",_data];
+profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_data];
 
 true

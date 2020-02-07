@@ -1,8 +1,8 @@
-class Enh_AllowCrewInImmobile: Enh_SetCaptive
+class ENH_AllowCrewInImmobile: ENH_SetCaptive
 {
 	displayName = $STR_ENH_allowCrewImmobile_displayName;
 	tooltip = $STR_ENH_allowCrewImmobile_tooltip;
-	property = "Enh_allowCrewInImmobile";
+	property = "ENH_allowCrewInImmobile";
 	expression =
 	"\
 		_this allowCrewInImmobile _value;\

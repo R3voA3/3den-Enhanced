@@ -25,6 +25,11 @@ v5.0
 - The On Mission Debug attribute was overhauled
 - German translation is now again 100% completed
 - German translation was greatly polished and made consistent (Feel free to report issues)
+- Description of Mission Ending attribute is now fully displayed when German localisation is shown
+- Input description of Classname_1 Classname_2 Classname_3 Classname_n is now consistent throughout all controls
+- Added Debug Option to draw icons of nearby units and vehicles together with some basic information
+- Fixed Patrol tooltip. (Was showing -1 to disable instead of 0)
+- Debug option Disable Stamina and Invincibility are now activated for all units in player's group
 
 v4.9
 *added*
@@ -104,7 +109,7 @@ v4.3
 - All mission attribute are now collapsed by default
 - Fixed various missing semicolons
 - Fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
-- Changed 3den notification for Enh_fnc_loadoutTools
+- Changed 3den notification for ENH_fnc_loadoutTools
 - Added various new internal macros
 - All substantial attributes now have a proper description of what they do, and links to further information if available.
 - Rearanged some scenario attributes
@@ -128,7 +133,7 @@ v4.3
 - Updated and revised Czech translation thanks to XerXesCZ
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
 - Merged serveral functions into one
-- Removed Enh_fnc_logMissionAttributes
+- Removed ENH_fnc_logMissionAttributes
 - Placement Tools GUI now also supports setting of object orientation
 - Added fine control to Placement Tools GUI
 - Batch Replace GUI is now only opened when objects are selected
@@ -174,7 +179,7 @@ v4.2
 - Shortcut for Remove Vest tool was removed because it was blocking a default Eden action
 - Functions Viewer performs better now
 - Debug Console now uses the Eden Enhanced Functions Viewer
-- Enh_fnc_FunctionsViewer was split into multiple function files
+- ENH_fnc_FunctionsViewer was split into multiple function files
 
 *removed*
 - Export Inventory to Config GUI->Wasn't needed any longer
@@ -278,12 +283,12 @@ v3.7
 
 v3.6
 *added*
-- added new functions Enh_fnc_all3DENSelected
+- added new functions ENH_fnc_all3DENSelected
 - a control to the statusbar which shows number of selected entities
 - a tool to export and import mission attributes
 - an airdrop mission attribute
 - many missing translations
-- new function Enh_fnc_exportWithLB
+- new function ENH_fnc_exportWithLB
 
 *changed*
 - some shortcuts were changed for pattern tools
@@ -451,7 +456,7 @@ v2.7
 	- options to quickly kill all units of given side during scenario preview
 
 *changed*
-- removed obsolete function call from Enh_Changelog GUI
+- removed obsolete function call from ENH_Changelog GUI
 - Changed/removed some icons from menu strip
 - reordered menu strip tools for easier access
 - fixed alot of missing/incorrect translations(German)
@@ -534,7 +539,7 @@ v2.2
 
 *changed*
 - garrison function feature now a custom UI
-- Enh_fnc_garrisonNearest.sqf has been improved
+- ENH_fnc_garrisonNearest.sqf has been improved
 - one wasn't able to play a song from the playlist via double click
 - "Measure Distance" tool now also works when the map is opened
 - "Establishing Shot" attribute has been overhauled and should now be less performance hungry and more reliable
@@ -796,7 +801,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Removed activate checkbox from intro text attribute. It can not be disable by leaving the delay undefined(empty)
 - Changed config name of save gear attribute
 - Improved code for hide terrain object trigger
-- improve Enh_fnc_playMusic, it now filters out classes which have no soundtrack defined and it's slightly faster
+- improve ENH_fnc_playMusic, it now filters out classes which have no soundtrack defined and it's slightly faster
 - Insignias are now also read from the local missionConfigfile
 
 *added*
@@ -847,7 +852,7 @@ v1.3
 - added hostage attribute:
 	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
 	Mission designers can check whether the unit is hostage or not by retrieving the following variable:
-	_unit getVariable "Enh_isHostage"; (true,is hostage/false,isn't hostage)
+	_unit getVariable "ENH_isHostage"; (true,is hostage/false,isn't hostage)
 *changed*
 - UAV intro center position attribute tooltip was using a wrong string
 - removed the tooltip from Advanced Damage Attributes
@@ -893,7 +898,7 @@ v1.2
 - some attributes were executed where not needed
 - completely overhauled the task patrol attribute, one can now set the number of waypoints, radius of the area, behaviour of unit/group, and speed of unit/group
 - removed an unwanted radio sound from playMusic function
-- all functions, variables and attribute properties are now using the same tag (Enh_)
+- all functions, variables and attribute properties are now using the same tag (ENH_)
 - various function improvements
 - some categories where renamed
 - tooltips where improved

@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Replaces all selected objects with the types of objects defined in the GUI "Enh_BatchReplace".
+	Replaces all selected objects with the types of objects defined in the GUI "ENH_BatchReplace".
 
 	Parameter(s):
 	-
@@ -13,10 +13,10 @@
 
 disableSerialization;//Because of BIS_fnc_3DENNotification
 
-private _objects = [["Object"]] call Enh_fnc_all3denSelected;
+private _objects = [["Object"]] call ENH_fnc_all3denSelected;
 private _replaceWith = ctrlText ((findDisplay 150000) displayCtrl 1400); //"sfd,2ffds,5,123"
 
-profileNameSpace setVariable ['Enh_batchReplace_lastUsed',_replaceWith];
+profileNameSpace setVariable ['ENH_batchReplace_lastUsed',_replaceWith];
 
 private _replaceWithArray = _replaceWith splitString ",";//Separates string by comma and values into an array //["sfd","2ffds","5","123"]
 

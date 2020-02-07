@@ -1,7 +1,7 @@
-class Enh_TaskPatrol: Title
+class ENH_TaskPatrol: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_taskPatrol_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_taskPatrol_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_taskPatrol_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_taskPatrol_onAttributeSave";
 	class Controls: Controls
 	{
 		class Title: Title {};

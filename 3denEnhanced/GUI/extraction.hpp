@@ -1,11 +1,11 @@
 #define DIALOG_W 110
 #define DIALOG_H 70
 
-class Enh_Extraction
+class ENH_Extraction
 {
 	idd = ENH_IDD_EXTRACTION;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_extraction_onLoad";
+	onLoad = "_this call ENH_fnc_extraction_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -42,7 +42,7 @@ class Enh_Extraction
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 30 * pixelW;
 			h = 30 * pixelH;
-			onCheckedChanged = "_this call Enh_fnc_extraction_onCheckedChanged";
+			onCheckedChanged = "_this call ENH_fnc_extraction_onCheckedChanged";
 		};
 		class NameRequester: ctrlStatic
 		{
@@ -177,7 +177,7 @@ class Enh_Extraction
 		class Ok: ctrlButtonOK
 		{
 			idc = -1;//We don't want it to close the GUI
-			action = "call Enh_fnc_extraction_setup";
+			action = "call ENH_fnc_extraction_setup";
 			x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
 			y = DIALOG_TOP + 69 * GRID_H;
 			w = 23 * GRID_W;

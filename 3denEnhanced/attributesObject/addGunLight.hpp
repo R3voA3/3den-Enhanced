@@ -1,8 +1,8 @@
-class Enh_AddGunLight
+class ENH_AddGunLight
 {
 	displayName = $STR_ENH_addGunLight_displayName;
 	tooltip = $STR_ENH_addGunLight_tooltip;
-	property = "Enh_addGunLight";
+	property = "ENH_addGunLight";
 	control = "Checkbox";
 	expression =
 	"if (!is3DEN && _value) then\

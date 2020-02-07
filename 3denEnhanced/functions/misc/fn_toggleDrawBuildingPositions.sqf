@@ -17,13 +17,13 @@
 #define RADIUS 100
 #define GET_BUILDINGS (CENTER nearObjects ["House",RADIUS])
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 //Remove icons if EH already exists and exit
-if (["Enh_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
+if (["ENH_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
 
 //Get all building positions from nearby buildings
-["Enh_EH_DrawBuildingPositions_ID", "onEachFrame",
+["ENH_EH_DrawBuildingPositions_ID", "onEachFrame",
 	{
 		{
 			for "_i" from 0 to (count (_x buildingPos -1) - 1) do

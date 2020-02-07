@@ -21,6 +21,6 @@ collect3DENHistory
    } forEach (all3DENEntities # 6);
 };
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

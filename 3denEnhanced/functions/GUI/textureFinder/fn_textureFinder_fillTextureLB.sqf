@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Used by the Enh_TexturFinder GUI. Fills the GUI with all found textures.
+	Used by the ENH_TexturFinder GUI. Fills the GUI with all found textures.
 
 	Parameter(s):
 	-
@@ -18,7 +18,7 @@ private _ctrlLB = _display displayCtrl 1500;
 private _ctrlProgressList = _display displayCtrl 1800;
 private _tooltip = localize "STR_ENH_functions_fillTextureLB_tooltip";
 private _index = 0;
-private _textureCount = count Enh_TextureFinder_TexturesFound;
+private _textureCount = count ENH_TextureFinder_TexturesFound;
 private _buttonSearch = _display displayCtrl 1900;
 private _buttonUpdateList = _display displayCtrl 1700;
 private _toolboxFilter = _display displayCtrl 2000;
@@ -48,7 +48,7 @@ private _updateProgressBar =
 	];
 };
 
-private _allowedType = ["all",".jpg",".paa"] select Enh_TextureFinder_Filter;
+private _allowedType = ["all",".jpg",".paa"] select ENH_TextureFinder_Filter;
 lbClear _ctrlLB;
 
 if (_allowedType != "all") then
@@ -59,14 +59,14 @@ if (_allowedType != "all") then
 			[_x] call _fnc_addToList;
 		};
 		call _updateProgressBar;
-	} forEach Enh_TextureFinder_TexturesFound;
+	} forEach ENH_TextureFinder_TexturesFound;
 }
 else
 {
 	{
 		[_x] call _fnc_addToList;
 		call _updateProgressBar;
-	} forEach Enh_TextureFinder_TexturesFound;
+	} forEach ENH_TextureFinder_TexturesFound;
 };
 
 lbSort _ctrlLB;

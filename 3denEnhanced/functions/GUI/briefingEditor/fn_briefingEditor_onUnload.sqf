@@ -7,7 +7,7 @@
    Closes the briefing editor and creates a history.
 
    Parameter(s):
-   0: DISPLAy - Enh_BriefingEditor
+   0: DISPLAy - ENH_BriefingEditor
 
    Returns:
    BOOLEAN: true
@@ -22,7 +22,7 @@ params ["_display"];
 //Create history of last input when closing the display
 profileNamespace setVariable
 [
-	"Enh_briefingEditor_history",
+	"ENH_briefingEditor_history",
 	[
       ctrlText CTRL(30),//Briefing Title
       ctrlText CTRL(20),//Subject Text
@@ -41,7 +41,7 @@ for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
    _savedTemplates pushBack [_briefingTitle,_briefingText];
 };
 
-profileNamespace setVariable ["Enh_briefingEditor_templates",_savedTemplates];
+profileNamespace setVariable ["ENH_briefingEditor_templates",_savedTemplates];
 
 ['ShowPanelLeft',true] call BIS_fnc_3DENInterface;
 ['ShowPanelRight',true] call BIS_fnc_3DENInterface;

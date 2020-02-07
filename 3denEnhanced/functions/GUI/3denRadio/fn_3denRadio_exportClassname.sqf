@@ -25,7 +25,7 @@ if (_key isEqualTo 46 && _mod) then //CTRL + C
 		_class = _ctrl lbData (lbCurSel _ctrl);
 	};
 	copyToClipboard str _class;
-	["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+	["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
 
 true

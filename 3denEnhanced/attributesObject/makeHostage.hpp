@@ -1,15 +1,15 @@
-class Enh_MakeHostage: Enh_SetCaptive
+class ENH_MakeHostage: ENH_SetCaptive
 {
 	displayName = $STR_ENH_makeHostage_displayName;
 	tooltip = $STR_ENH_makeHostage_tooltip;
-	property = "Enh_makeHostage";
+	property = "ENH_makeHostage";
 	expression =
 	"\
 		if (isServer && _value) then\
 		{\
-			Enh_fnc_makeHostage =\
+			ENH_fnc_makeHostage =\
 			{\
-				if (_this getVariable ['Enh_isHostage',true]) then\
+				if (_this getVariable ['ENH_isHostage',true]) then\
 				{\
 					_this switchMove 'Acts_AidlPsitMstpSsurWnonDnon04';\
 					[\
@@ -17,19 +17,19 @@ class Enh_MakeHostage: Enh_SetCaptive
 					  'Free Hostage',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
 					  'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
-					  '(_target getVariable [''Enh_IsHostage'',true]) && ((_this distance _target) < 2) && (alive _target) && !(_target isEqualTo _this)',\
+					  '(_target getVariable [''ENH_IsHostage'',true]) && ((_this distance _target) < 2) && (alive _target) && !(_target isEqualTo _this)',\
 					  'true',\
 					  {},\
 					  {},\
 					  {\
 					  	[_this # 0,'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow',0];\
 					  	[_this # 0,_this # 2] remoteExec ['BIS_fnc_holdActionRemove',0];\
-					  	_this # 0 setVariable ['Enh_IsHostage',false,true];\
+					  	_this # 0 setVariable ['ENH_IsHostage',false,true];\
 					  }\
 					 ] call BIS_fnc_holdActionAdd;\
 				};\
 			};\
-			[_this,Enh_fnc_makeHostage] remoteExec ['call',0,true];\
+			[_this,ENH_fnc_makeHostage] remoteExec ['call',0,true];\
 		};\
 	";
 };

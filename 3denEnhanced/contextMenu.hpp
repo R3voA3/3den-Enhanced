@@ -1,129 +1,129 @@
 items[] +=
 {
-	"Enh_MeasureDistance",
-	"Enh_ShowModuleInformation",
-	"Enh_Garrison",
-	"Enh_Extraction"
+	"ENH_MeasureDistance",
+	"ENH_ShowModuleInformation",
+	"ENH_Garrison",
+	"ENH_Extraction"
 };
 class Log
 {
 	picture = "\3denEnhanced\data\icon_clipboard.paa";
 	items[] +=
 	{
-		"Enh_LogClassesString",
-		"Enh_LogFactions",
-		"Enh_LogPositions3D",
-		"Enh_LogPositions2D",
-		"Enh_LogGridPositon",
-		"Enh_Log3DENID",
-		"Enh_LogObjectInfo"
+		"ENH_LogClassesString",
+		"ENH_LogFactions",
+		"ENH_LogPositions3D",
+		"ENH_LogPositions2D",
+		"ENH_LogGridPositon",
+		"ENH_Log3DENID",
+		"ENH_LogObjectInfo"
 	};
 };
 class Edit
 {
 	items[] +=
 	{
-		"Enh_DeleteCrew",
-		"Enh_FirstPerson"
+		"ENH_DeleteCrew",
+		"ENH_FirstPerson"
 	};
 };
 class ConnectParent
 {
 	items[] +=
 	{
-		"Enh_TriggerOwnerPlayer",
+		"ENH_TriggerOwnerPlayer",
 	};
 };
-class Enh_LogFactions
+class ENH_LogFactions
 {
 	text = $STR_ENH_contextMenu_logFaction;
-	action = "call Enh_fnc_logFactions";
+	action = "call ENH_fnc_logFactions";
 	conditionShow = "hoverObject";
 };
-class Enh_LogClassesString
+class ENH_LogClassesString
 {
-	action = "call Enh_fnc_logClassesString";
+	action = "call ENH_fnc_logClassesString";
 	Text = $STR_ENH_contextMenu_logClassesString;
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
-class Enh_LogPositions3D
+class ENH_LogPositions3D
 {
-	action = "call Enh_fnc_logPositions3D";
+	action = "call ENH_fnc_logPositions3D";
 	Text = $STR_ENH_contextMenu_logPositions3D;
 	conditionShow = "selected - selectedMarker";
 };
-class Enh_LogPositions2D
+class ENH_LogPositions2D
 {
-	action = "call Enh_fnc_logPositions2D";
+	action = "call ENH_fnc_logPositions2D";
 	Text = $STR_ENH_contextMenu_logPositions2D;
 	conditionShow = "selected";
 };
-class Enh_LogGridPositon
+class ENH_LogGridPositon
 {
-	action = "call Enh_fnc_logGridPosition";
+	action = "call ENH_fnc_logGridPosition";
 	Text = $STR_ENH_contextMenu_logGridPosition;
 	conditionShow = "1";
 };
-class Enh_Log3DENID
+class ENH_Log3DENID
 {
-	action = "call Enh_fnc_log3DENIDs";
+	action = "call ENH_fnc_log3DENIDs";
 	Text = $STR_ENH_contextMenu_log3DENIDs;
 	conditionShow = "selected";
 };
-class Enh_LogObjectInfo: Enh_LogFactions
+class ENH_LogObjectInfo: ENH_LogFactions
 {
-	action = "call Enh_fnc_logObjectInfo";
+	action = "call ENH_fnc_logObjectInfo";
 	Text = $STR_ENH_contextMenu_logObjectInfo;
 };
-class Enh_MeasureDistance
+class ENH_MeasureDistance
 {
-	action = "[] spawn Enh_fnc_measureDistance";
+	action = "[] spawn ENH_fnc_measureDistance";
 	Text = $STR_ENH_contextMenu_measureDistance;
 	picture = "\3denEnhanced\data\icon_ruler.paa";
 	conditionShow = "1";
 	SHOW_IN_ROOT;
 };
-class Enh_ShowModuleInformation
+class ENH_ShowModuleInformation
 {
-	action = "findDisplay 313 createDisplay 'Enh_ModuleInformation'";
+	action = "findDisplay 313 createDisplay 'ENH_ModuleInformation'";
 	Text = $STR_ENH_contextMenu_getModuleInformation;
 	conditionShow = "hoverLogic";
 	opensNewWindow = 1;
 	SHOW_IN_ROOT;
 };
-class Enh_Garrison
+class ENH_Garrison
 {
-	action = "(findDisplay 313) createDisplay 'Enh_Garrison'";
+	action = "(findDisplay 313) createDisplay 'ENH_Garrison'";
 	Text = $STR_ENH_contextMenu_garrison;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
 	conditionShow = "selected";
 	opensNewWindow = 1;
 	SHOW_IN_ROOT;
 };
-class Enh_Extraction
+class ENH_Extraction
 {
-	action = "findDisplay 313 createDisplay 'Enh_Extraction'";
+	action = "findDisplay 313 createDisplay 'ENH_Extraction'";
 	Text = $STR_ENH_contextMenu_createExtraction;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
 	conditionShow = "hoverObjectVehicle";
 	opensNewWindow = 1;
 	SHOW_IN_ROOT;
 };
-class Enh_TriggerOwnerPlayer
+class ENH_TriggerOwnerPlayer
 {
 	action = "add3DENConnection ['TriggerOwner',get3DENSelected 'Trigger',player]";
 	Text = $STR_ENH_contextMenu_setTriggerOwnerPlayer;
 	conditionShow = "hoverTrigger";
 };
-class Enh_DeleteCrew
+class ENH_DeleteCrew
 {
-	action = "call Enh_fnc_deleteCrew";
+	action = "call ENH_fnc_deleteCrew";
 	Text = $STR_ENH_contextMenu_deleteCrew;
 	conditionShow = "hoverObjectVehicle";
 };
-class Enh_FirstPerson
+class ENH_FirstPerson
 {
-	action = "call Enh_fnc_firstPerson";
+	action = "call ENH_fnc_firstPerson";
 	Text = $STR_ENH_contextMenu_firstPerson;
 	conditionShow = "objectBrain";
 };

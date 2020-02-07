@@ -11,7 +11,7 @@
   BOOLEAN: true
 */
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 sleep 0.5;
 do3DENAction 'OpenSteamPublishDialog';
 

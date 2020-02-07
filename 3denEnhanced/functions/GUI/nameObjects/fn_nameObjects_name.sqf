@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Names all selected entities. Name is taken from the Enh_nameObjects dialog.
+   Names all selected entities. Name is taken from the ENH_nameObjects dialog.
 
    Parameter(s):
    -
@@ -13,7 +13,7 @@
 
 private _display = findDisplay 80000;
 private _input    = param [0,"UNNAME",[""]];
-private _toName = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
+private _toName = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
 
 if (_input == "UNNAME") then
 {
@@ -28,7 +28,7 @@ else
 {
    private _varName  = ctrlText (_display displayCtrl 1000);
    private _index = parseNumber ctrlText (_display displayCtrl 1100);
-   profileNamespace setVariable ["Enh_NameObjects_LastVarName",_varName];
+   profileNamespace setVariable ["ENH_NameObjects_LastVarName",_varName];
    _varName = _varName + "_";
 
    collect3DENHistory
@@ -41,6 +41,6 @@ else
 };
 
 _display closeDisplay 0;
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

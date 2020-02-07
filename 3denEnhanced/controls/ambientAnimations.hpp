@@ -1,7 +1,7 @@
-class Enh_AmbientAnimations: Title
+class ENH_AmbientAnimations: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_ambientAnimations_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_ambientAnimations_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_ambientAnimations_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_ambientAnimations_onAttributeSave";
 	h = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
 	class Controls: Controls
 	{
@@ -97,7 +97,7 @@ class Enh_AmbientAnimations: Title
 			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_ambientAnimations_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_ambientAnimations_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

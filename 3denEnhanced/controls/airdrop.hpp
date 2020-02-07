@@ -1,7 +1,7 @@
-class Enh_Airdrop: Title
+class ENH_Airdrop: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_airdrop_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_airdrop_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_airdrop_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_airdrop_onAttributeSave";
 	h = 17.5 * SIZE_M * GRID_H + 40 * pixelH;//We make it 5 * pixelH larger to prevent scrolling issues
 	class Controls: Controls
 	{
@@ -167,7 +167,7 @@ class Enh_Airdrop: Title
 			y = 16.5 * SIZE_M * GRID_H + 35 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_airdrop_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_airdrop_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

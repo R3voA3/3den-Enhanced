@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Used by the Enh_FunctionViewer GUI. Called when the Copy button is pressed.
+   Used by the ENH_FunctionViewer GUI. Called when the Copy button is pressed.
 
    Parameter(s):
    0: CONTROL: Control - Button

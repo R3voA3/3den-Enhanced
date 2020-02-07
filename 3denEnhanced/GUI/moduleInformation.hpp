@@ -1,11 +1,11 @@
 #define DIALOG_W 100
 #define DIALOG_H 87
 
-class Enh_ModuleInformation
+class ENH_ModuleInformation
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_moduleInformation_onLoad";
+	onLoad = "_this call ENH_fnc_moduleInformation_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -126,11 +126,11 @@ class Enh_ModuleInformation
 		};
 	};
 };
-/*class Enh_ModuleInformation
+/*class ENH_ModuleInformation
 {
 	idd = ENH_IDD_MODULEINFORMATION;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_moduleInformation";
+	onLoad = "[] spawn ENH_fnc_moduleInformation";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND

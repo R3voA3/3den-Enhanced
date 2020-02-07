@@ -1,12 +1,12 @@
 #define DIALOG_W 80
 #define DIALOG_H 42
 
-class Enh_BatchReplace
+class ENH_BatchReplace
 {
 	idd = ENH_IDD_BATCHREPLACE;
 	movingEnable = true;
-	onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['Enh_batchReplace_lastUsed','']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
-	onUnload = "profileNameSpace setVariable ['Enh_batchReplace_lastUsed',ctrlText ((_this # 0) displayCtrl 1400)]";
+	onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['ENH_batchReplace_lastUsed','']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
+	onUnload = "profileNameSpace setVariable ['ENH_batchReplace_lastUsed',ctrlText ((_this # 0) displayCtrl 1400)]";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -60,7 +60,7 @@ class Enh_BatchReplace
 			y = DIALOG_TOP + 41 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "call Enh_fnc_batchreplace";
+			action = "call ENH_fnc_batchreplace";
 		};
 		class Close: ctrlButtonCancel
 		{

@@ -1,8 +1,8 @@
-class Enh_debugPath
+class ENH_debugPath
 {
 	displayName = $STR_ENH_debugPath_displayName;
 	tooltip = $STR_ENH_debugPath_tooltip;
-	property = "Enh_debugPath";
+	property = "ENH_debugPath";
 	control = "Checkbox";
 	expression =
 	"if (!is3DEN && _value) then\

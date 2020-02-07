@@ -13,13 +13,13 @@
    BOOLEAN: true
 */
 
-if (isNil "Enh_attribute_disableAI_state") then 
+if (isNil "ENH_attribute_disableAI_state") then 
 { 
-  Enh_attribute_disableAI_state = false; 
+  ENH_attribute_disableAI_state = false; 
 }
 else
 {
-  Enh_attribute_disableAI_state = !Enh_attribute_disableAI_state;
+  ENH_attribute_disableAI_state = !ENH_attribute_disableAI_state;
 };
 
 collect3DENHistory
@@ -27,8 +27,8 @@ collect3DENHistory
   { 
     private _entity = _x; 
     { 
-      private _attributeName = "Enh_disableAI_" + _x;
-      _entity set3DENAttribute [_attributeName,Enh_attribute_disableAI_state]; 
+      private _attributeName = "ENH_disableAI_" + _x;
+      _entity set3DENAttribute [_attributeName,ENH_attribute_disableAI_state]; 
     } forEach ["move","target","cover","autotarget","anim","FSM","aimingError","teamswitch","suppression","checkVisible","autocombat","path","mineDetection","weaponAim","NVG","lights","radioProtocol"]; 
   } forEach get3DENSelected "Object";
 };
@@ -37,7 +37,7 @@ collect3DENHistory
 	format
 	[
 		localize "STR_ENH_toggleAIFeatures_notification",
-		[localize "STR_ENH_disabled",localize "STR_ENH_enabled"] select Enh_attribute_disableAI_state
+		[localize "STR_ENH_disabled",localize "STR_ENH_enabled"] select ENH_attribute_disableAI_state
 	]
 ] call BIS_fnc_3DENNotification;
 

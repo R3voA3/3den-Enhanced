@@ -3,7 +3,7 @@
 	Author: Revo
 
 	Description:
-	Used by the Enh_TexturFinder GUI. Updates the progressbar at anytime.
+	Used by the ENH_TexturFinder GUI. Updates the progressbar at anytime.
 
 	Parameter(s):
 	-
@@ -24,15 +24,15 @@ while {!isNull _display} do
 	_ctrlProgText ctrlSetText format 
 	[
 		localize "STR_ENH_updateProgressbar",
-		Enh_TextureFinder_ClassesSearched,
-		Enh_TextureFinder_ClassesFound,
-		count Enh_TextureFinder_TexturesFound
+		ENH_TextureFinder_ClassesSearched,
+		ENH_TextureFinder_ClassesFound,
+		count ENH_TextureFinder_TexturesFound
 	];
 	_ctrlProg progressSetPosition linearConversion 
 	[
 		0,
-		Enh_TextureFinder_ClassesFound,
-		Enh_TextureFinder_ClassesSearched,
+		ENH_TextureFinder_ClassesFound,
+		ENH_TextureFinder_ClassesSearched,
 		0,
 		1
 	];

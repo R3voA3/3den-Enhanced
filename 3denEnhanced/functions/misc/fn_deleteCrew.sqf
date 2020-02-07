@@ -18,6 +18,6 @@ private _toReplace = get3DENSelected "Object";
 } forEach _toReplace;
 
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

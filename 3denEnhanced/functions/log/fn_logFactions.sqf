@@ -20,10 +20,10 @@ private _factions = [];
    _factions pushBackUnique faction _x;
 } forEach _selection;
 
-private _export = [_factions,false] call Enh_fnc_exportWithLB;
+private _export = [_factions,false] call ENH_fnc_exportWithLB;
 
 copyToClipboard _export;
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 true

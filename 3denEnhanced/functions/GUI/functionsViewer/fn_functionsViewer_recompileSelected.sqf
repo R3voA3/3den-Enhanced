@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Used by the Enh_FunctionViewer GUI. Called when Recompile Selected button is pressed.
+   Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
 
    Parameter(s):
    -

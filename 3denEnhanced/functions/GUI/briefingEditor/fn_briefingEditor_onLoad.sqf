@@ -4,10 +4,10 @@
    Date: 2019-06-21
 
    Description:
-   Initializes Enh_BriefingEditor GUI.
+   Initializes ENH_BriefingEditor GUI.
 
    Parameter(s):
-   0: DISPLAY - Enh_BriefingEditor
+   0: DISPLAY - ENH_BriefingEditor
 
    Returns:
    BOOLEAN: true
@@ -176,14 +176,14 @@ private _getColorFromHex =
 };
 
 //Get history if available
-private _historyLatest = profileNamespace getVariable ["Enh_briefingEditor_history",["","Diary",""]];
+private _historyLatest = profileNamespace getVariable ["ENH_briefingEditor_history",["","Diary",""]];
 
 CTRL(30) ctrlSetText (_historyLatest # 0);//Briefing Title
 CTRL(20) ctrlSetText (_historyLatest # 1);//Subject Text
 CTRL(10) ctrlSetText (_historyLatest # 2);//Briefing Text
 
 //Load saved templates
-private _templates = profileNamespace getVariable "Enh_briefingEditor_templates";
+private _templates = profileNamespace getVariable "ENH_briefingEditor_templates";
 
 //Exit in case the template list is empty
 if !(isNil "_templates") then 

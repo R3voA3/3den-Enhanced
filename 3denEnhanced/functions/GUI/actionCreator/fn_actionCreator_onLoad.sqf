@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Used by Enh_actionCreator GUI.
+	Used by ENH_actionCreator GUI.
 
 	Parameter(s):
 	-
@@ -26,7 +26,7 @@ private _selection = _display displayCtrl 1406;
 private _memory = _display displayCtrl 1407;
 private _toolbox = _display displayCtrl 1000;
 
-private _save = profileNamespace getVariable ["Enh_ActionCreator_LastUsed",[]];
+private _save = profileNamespace getVariable ["ENH_ActionCreator_LastUsed",[]];
 
 if !(_save isEqualTo []) then
 {

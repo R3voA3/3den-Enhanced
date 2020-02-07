@@ -1,12 +1,12 @@
 #define DIALOG_W 160
 #define DIALOG_H 90
 
-class Enh_ScenarioAttributesManager
+class ENH_ScenarioAttributesManager
 {
 	idd = ENH_IDD_SCENARIOATTRIBUTESMANAGER;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_scenarioAttributesManager_onLoad";
-	onUnload = "_this call Enh_fnc_scenarioAttributesManager_onUnload";
+	onLoad = "_this call ENH_fnc_scenarioAttributesManager_onLoad";
+	onUnload = "_this call ENH_fnc_scenarioAttributesManager_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -51,7 +51,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 61 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "ctrlParent (_this # 0) createDisplay 'Enh_ScenarioAttributesManagerTemplateData'";
+			onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_ScenarioAttributesManagerTemplateData'";
 		};
 		class TemplateList: ctrlListbox
 		{
@@ -60,7 +60,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 50 * GRID_W;
 			h = 70 * GRID_H;
-			onLBSelChanged = "_this call Enh_fnc_scenarioAttributesManager_loadTemplate";
+			onLBSelChanged = "_this call ENH_fnc_scenarioAttributesManager_loadTemplate";
 		};
 		class AttributeList: ctrlTree
 		{
@@ -79,7 +79,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 83 * GRID_H;
 			w = 50 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_deleteTemplate";
+			onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_deleteTemplate";
 		};
 		class ApplyTemplate: ctrlButton
 		{
@@ -88,7 +88,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 50 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_applyTemplate";
+			onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_applyTemplate";
 		};
 		class Export: ctrlButton
 		{
@@ -97,7 +97,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_exportToClipboard";
+			onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_exportToClipboard";
 		};
 		class Search: ctrlEdit
 		{
@@ -138,7 +138,7 @@ class Enh_ScenarioAttributesManager
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 40 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_scenarioAttributesManager_applyAttribute";
+			onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_applyAttribute";
 		};
 		class Close: ctrlButtonClose
 		{

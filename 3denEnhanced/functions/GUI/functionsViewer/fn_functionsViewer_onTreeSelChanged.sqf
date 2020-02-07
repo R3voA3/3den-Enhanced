@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Used by the Enh_FunctionViewer GUI. Called when selection of tv tree control has changed.
+   Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
 
    Parameter(s):
    0: CONTROL - Tree Control
@@ -28,7 +28,7 @@ if (_data isEqualTo "") exitWith {false};
 _data = call compile _data;
 _data params ["_fncName","_fncPath"];
 
-uiNamespace setVariable ["Enh_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
+uiNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
 _ctrlFncName ctrlSetText _fncName;
 _ctrlFncPath ctrlSetText _fncPath;
 _ctrlCode ctrlSetText loadFile _fncPath;

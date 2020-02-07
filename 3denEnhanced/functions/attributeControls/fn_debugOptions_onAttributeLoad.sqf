@@ -23,7 +23,6 @@ private _options =
 	["STR_ENH_debugOptions_invulnerability_displayName",""],
 	["STR_ENH_captive_displayName","STR_ENH_captive_tooltip"],
 	["STR_ENH_debugOptions_stamina_displayName",""],
-	["STR_ENH_debugOptions_awareness_displayName","STR_ENH_debugOptions_awareness_tooltip"],
 	["STR_ENH_debugOptions_FPS_displayName",""],
 	["STR_ENH_debugOptions_killBLUFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
 	["STR_ENH_debugOptions_killOPFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
@@ -36,7 +35,7 @@ private _options =
 params ["_ctrlGroup"];
 
 private _ctrlLB  = _ctrlGroup controlsGroupCtrl 100;
-private _enabledOptions = profileNamespace getVariable ["Enh_DebugOptions_Settings",[]];
+private _enabledOptions = profileNamespace getVariable ["ENH_DebugOptions_Settings",[]];
 
 {
 	_x params ["_displayName","_tooltip"];

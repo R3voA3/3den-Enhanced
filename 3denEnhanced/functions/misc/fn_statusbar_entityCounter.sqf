@@ -16,7 +16,7 @@ params [["_mode","run"]];
 disableSerialization;
 
 private _display = findDisplay 313;
-private _enabled = profileNamespace getVariable ["Enh_Statusbar_EntityCounter",true];
+private _enabled = profileNamespace getVariable ["ENH_Statusbar_EntityCounter",true];
 
 switch (_mode) do
 {

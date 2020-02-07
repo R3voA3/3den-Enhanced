@@ -4,7 +4,7 @@
    Date: 2019-07-22
 
    Description:
-   Used by Enh_FunctionsViewer GUI. Gets the data of all functions and returns it.
+   Used by ENH_FunctionsViewer GUI. Gets the data of all functions and returns it.
 
    Parameter(s):
    -

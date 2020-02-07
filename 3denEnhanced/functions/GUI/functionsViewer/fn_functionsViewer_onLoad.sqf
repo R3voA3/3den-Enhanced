@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Used by the Enh_FunctionViewer GUI. Called on load.
+   Used by the ENH_FunctionViewer GUI. Called on load.
 
    Parameter(s):
    0: DISPLAY - Display
@@ -17,7 +17,7 @@ params ["_disp"];
 
 private _ctrlTV = _disp displayCtrl 1500;
 
-Enh_FunctionsData = call Enh_fnc_functionsViewer_getFunctionsData;
+ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
 if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
 {
@@ -45,18 +45,18 @@ _disp displayAddEventHandler ["keyDown",//Copy
 	params ["_disp", "_key", "_shift", "_ctrl"];
 	if (_key isEqualTo 45 && _ctrl) then
 	{
-		call Enh_fnc_functionsViewer_copy;
+		call ENH_fnc_functionsViewer_copy;
 	}
 }];
 
 //Set number of functions
-(_disp displayCtrl 1405) ctrlSetText str count Enh_FunctionsData;
+(_disp displayCtrl 1405) ctrlSetText str count ENH_FunctionsData;
 
 //Set filters to last used or default value
-(_disp displayCtrl 1700) lbSetCurSel (profileNamespace getVariable ["Enh_FunctionsViewer_ConfigIndex",0]);
-(_disp displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["Enh_FunctionsViewer_ModeIndex",0]);
+(_disp displayCtrl 1700) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
+(_disp displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
 
 //Set up tree view
-_ctrlTV call Enh_fnc_FunctionsViewer_fillCtrlTV;
+_ctrlTV call ENH_fnc_FunctionsViewer_fillCtrlTV;
 
 true

@@ -1,8 +1,8 @@
-class Enh_DisableTIE: Enh_SetCaptive
+class ENH_DisableTIE: ENH_SetCaptive
 {
 	displayName = $STR_ENH_disableTIEquipment_displayName;
 	tooltip = $STR_ENH_disableTIEquipment_tooltip;
-	property = "Enh_disableTIEquipment";
+	property = "ENH_disableTIEquipment";
 	expression = "_this disableTIEquipment _value";
 	condition = "objectVehicle";
 };

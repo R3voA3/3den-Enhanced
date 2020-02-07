@@ -4,7 +4,7 @@
    Date: 2019-05-24
 
    Description:
-   Used by the Enh_Enh_ScenarioAttributesManager_TemplateData GUI. Exports attributes from selected template.
+   Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI. Exports attributes from selected template.
 
    Parameter(s):
    0: CONTROL - Control button
@@ -24,9 +24,9 @@ if (_selectedTemplate isEqualTo -1) exitWith {[]};
 _data = call compile (_ctrlLB lbData _selectedTemplate);
 
 //We only need the attribute value not title and description of the template
-_data = [_data # 2] call Enh_fnc_exportWithLB;
+_data = [_data # 2] call ENH_fnc_exportWithLB;
 
 copyToClipboard _data;
-['Enh_DataCopied'] call BIS_fnc_3DENNotification;
+['ENH_DataCopied'] call BIS_fnc_3DENNotification;
 
 _data

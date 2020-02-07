@@ -1,7 +1,7 @@
-class Enh_FeatureType: Title
+class ENH_FeatureType: Title
 {
-    attributeLoad = "[_this,_value] call Enh_fnc_featureType_onAttributeLoad";
-    attributeSave = "_this call Enh_fnc_featureType_onAttributeSave";
+    attributeLoad = "[_this,_value] call ENH_fnc_featureType_onAttributeLoad";
+    attributeSave = "_this call ENH_fnc_featureType_onAttributeSave";
     h = 3 * SIZE_M * GRID_H + 5 * pixelH;
     class Controls: Controls
     {

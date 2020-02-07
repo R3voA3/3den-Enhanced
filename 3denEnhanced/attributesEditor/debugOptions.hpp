@@ -1,6 +1,6 @@
-class Enh_MissionDebug
+class ENH_MissionDebug
 {
-	property = "Enh_DebugOptions";
-	control = "Enh_DebugOptions";
-	defaultValue = "profileNamespace getVariable ['Enh_DebugOptions_Settings',[]]";
+	property = "ENH_DebugOptions";
+	control = "ENH_DebugOptions";
+	defaultValue = "profileNamespace getVariable ['ENH_DebugOptions_Settings',[]]";
 };

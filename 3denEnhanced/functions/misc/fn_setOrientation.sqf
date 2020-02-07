@@ -14,11 +14,11 @@
 if (!is3DEN) exitWith {false};
 
 private _input = param [0,0,[0]];
-private _entities = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3denSelected;
+private _entities = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3denSelected;
 
 if (_entities isEqualTo []) exitWith
 {
-	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
 collect3DENHistory
@@ -29,6 +29,6 @@ collect3DENHistory
 	} count _entities;
 };
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

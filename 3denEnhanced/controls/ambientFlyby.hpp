@@ -1,7 +1,7 @@
-class Enh_AmbientFlyby: Title
+class ENH_AmbientFlyby: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_ambientFlyby_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_ambientFlyby_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_ambientFlyby_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_ambientFlyby_onAttributeSave";
 	h = 19.5 * SIZE_M * GRID_H + 45 * pixelH;
 	class Controls: Controls
 	{
@@ -196,7 +196,7 @@ class Enh_AmbientFlyby: Title
 			y = 18.5 * SIZE_M * GRID_H + 40 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_ambientFlyby_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_ambientFlyby_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

@@ -1,8 +1,8 @@
-class Enh_AllowFleeing
+class ENH_AllowFleeing
 {
 	displayName = $STR_ENH_allowFleeing_displayName;
 	tooltip = $STR_ENH_allowFleeing_tooltip;
-	property = "Enh_allowFleeing";
+	property = "ENH_allowFleeing";
 	control = "Slider";
 	condition = "objectBrain";
 	expression = "_this allowFleeing _value";

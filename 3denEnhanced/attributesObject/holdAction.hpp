@@ -1,14 +1,14 @@
-class Enh_HoldAction
+class ENH_HoldAction
 {
 	collapsed = 1;
 	displayName = $STR_ENH_holdAction_displayName;
 	class Attributes
 	{
-		class Enh_AddHoldAction
+		class ENH_AddHoldAction
 		{
 			displayName = $STR_ENH_holdAction_displayName;
-			property = "Enh_HoldAction";
-			control = "Enh_HoldAction";
+			property = "ENH_HoldAction";
+			control = "ENH_HoldAction";
 			expression = "\
 			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];\
 			if (!is3DEN && !(_name isEqualTo '')) then\

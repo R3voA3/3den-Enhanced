@@ -4,7 +4,7 @@
    Date: 2019-05-24
 
    Description:
-   Used by the Enh_Enh_ScenarioAttributesManager_TemplateData GUI. 
+   Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI. 
    Removes currently selected item from template listbox.
    
    Parameter(s):

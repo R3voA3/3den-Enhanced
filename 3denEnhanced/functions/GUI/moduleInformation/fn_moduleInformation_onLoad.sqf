@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Used by the Enh_ModuleInformation GUI. Called onLoad.
+   Used by the ENH_ModuleInformation GUI. Called onLoad.
 
    Parameter(s):
    -

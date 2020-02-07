@@ -36,7 +36,7 @@ class RscDebugConsole: RscControlsGroupNoScrollbars
 {
 	class Controls 
   {
-    class Enh_ButtonFunctions: ctrlButtonPictureKeepAspect 
+    class ENH_ButtonFunctions: ctrlButtonPictureKeepAspect 
     {
       idc=0; // idc 0 to exclude from repositioning in CBA extended debug
       deletable=0;
@@ -46,7 +46,7 @@ class RscDebugConsole: RscControlsGroupNoScrollbars
       colorBackgroundActive[]={0,0,0,0};
       colorFocused[]={0,0,0,0};
       colorBackgroundDisabled[]={0,0,0,0};
-      onButtonClick="ctrlParent (_this # 0) createDisplay 'Enh_FunctionsViewer'";
+      onButtonClick="ctrlParent (_this # 0) createDisplay 'ENH_FunctionsViewer'";
       // get from title ctrl incase some mod moves it
       x="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'w') - (4.1 * (((safezoneW / safezoneH) min 1.2) / 40))";
       y="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'y')";

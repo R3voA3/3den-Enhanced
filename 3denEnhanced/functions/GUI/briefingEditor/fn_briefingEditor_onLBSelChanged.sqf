@@ -4,7 +4,7 @@
    Date: 2019-06-20
 
    Description:
-   Used by Enh_BriefingEditor GUI. Triggers when HTML tag combo selection has changed.
+   Used by ENH_BriefingEditor GUI. Triggers when HTML tag combo selection has changed.
 
    Parameter(s):
    0: CONTROL - Combo box control

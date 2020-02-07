@@ -1,14 +1,14 @@
-class Enh_GroupMarker
+class ENH_GroupMarker
 {
 	displayName = $STR_ENH_groupMarker_displayName;
 	collapsed = 0;
 	class Attributes
 	{
-		class Enh_GroupMarker
+		class ENH_GroupMarker
 		{
 			displayName = $STR_ENH_groupMarker_displayName;
-			property = "Enh_groupMarker";
-			control = "Enh_GroupMarker";
+			property = "ENH_groupMarker";
+			control = "ENH_GroupMarker";
 			expression = "\
 			if (!is3DEN && !(_value isEqualTo ['','','',true])) then\
 			{\
@@ -19,7 +19,7 @@ class Enh_GroupMarker
 					private _leader = leader _group;\
 					private _marker = createMarker\
 					[\
-						format ['Enh_GroupMarker_%1',str floor random 10e5],\
+						format ['ENH_GroupMarker_%1',str floor random 10e5],\
 						_leader\
 					];\
 					_marker setMarkerType _type;\
@@ -29,7 +29,7 @@ class Enh_GroupMarker
 					{\
 						sleep 1;\
 						if (units _group isEqualTo []) exitWith {deleteMarker _marker};\
-						if (_group getVariable ['Enh_GroupMarker_Update',true]) then\
+						if (_group getVariable ['ENH_GroupMarker_Update',true]) then\
 						{\
 							_marker setMarkerPos _leader;\
 							if (_showGroupSize) then\

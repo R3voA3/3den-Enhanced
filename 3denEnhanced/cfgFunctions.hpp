@@ -2,7 +2,7 @@ class CfgFunctions
 {
 	class 3denEnhanced
 	{
-		tag = "Enh";
+		tag = "ENH";
 		class 3denRadio
 		{
 			file = "3denEnhanced\functions\GUI\3DENRadio";

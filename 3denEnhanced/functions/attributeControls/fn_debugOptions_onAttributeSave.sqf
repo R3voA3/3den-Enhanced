@@ -26,6 +26,6 @@ for "_i" from 0 to lbSize _ctrlLB -1 do
 	};
 };
 
-profileNamespace setVariable ["Enh_DebugOptions_Settings",_enabledOptions];
+profileNamespace setVariable ["ENH_DebugOptions_Settings",_enabledOptions];
 
 true

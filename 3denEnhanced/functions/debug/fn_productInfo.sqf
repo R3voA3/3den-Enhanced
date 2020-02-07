@@ -43,6 +43,6 @@ copyToClipboard format
 
 ];
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 true

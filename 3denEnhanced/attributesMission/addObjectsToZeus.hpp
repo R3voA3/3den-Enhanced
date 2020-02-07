@@ -1,8 +1,8 @@
-class Enh_AddObjectsToZeus
+class ENH_AddObjectsToZeus
 {
 	displayName = $STR_ENH_editableObjZeus_displayName;
 	tooltip = $STR_ENH_editableObjZeus_tooltip;
-	property = "Enh_dynamicGroups";
+	property = "ENH_dynamicGroups";
 	control = "Checkbox";
 	expression =
 	"\

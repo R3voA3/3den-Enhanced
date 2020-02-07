@@ -31,13 +31,13 @@ private ["_name","_configName","_duration","_logo","_theme"];
 	{
 		_configName = configName _x;
 		_duration =  getNumber (_x >> "duration");
-		_duration = _duration call Enh_fnc_floatToTime;
+		_duration = _duration call ENH_fnc_floatToTime;
 		_logo = if (configSourceMod _x == '') then {[""]} else {modParams [configSourceMod  _x,["logoSmall"]]};
 		_logo = _logo # 0;
 		_theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 		_filteredClasses pushBack [_name,_configName,_duration,_theme,_logo];
 	};
-} forEach Enh_3denRadio_cfgMusic;
+} forEach ENH_3denRadio_cfgMusic;
 
 //Add all classes to the list box, must be in two steps otherwise previewing songs and sorting the list box doesn't work anymore
 {

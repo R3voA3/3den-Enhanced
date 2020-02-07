@@ -18,25 +18,25 @@
 ['init'] call BIS_fnc_3DENInterface;
 
 //Set up entity counter in status bar according to preferences
-"init" call Enh_fnc_statusbar_entityCounter;
-"run" call Enh_fnc_statusbar_entityCounter;
+"init" call ENH_fnc_statusbar_entityCounter;
+"run" call ENH_fnc_statusbar_entityCounter;
 
 //Enable 3den Radio
-'ONLOAD' call Enh_fnc_3denRadio_toggleRadio;
+'ONLOAD' call ENH_fnc_3denRadio_toggleRadio;
 
 //Enable session timer
-[] spawn Enh_fnc_sessionTimer;
+[] spawn ENH_fnc_sessionTimer;
 
 //Update location list
-call Enh_fnc_locationList;
+call ENH_fnc_locationList;
 
 //Show github message
-[] spawn Enh_fnc_gitHubNotification;
+[] spawn ENH_fnc_gitHubNotification;
 
 //Show version 4.3 message
-[] spawn Enh_fnc_newVersionNotification
+[] spawn ENH_fnc_newVersionNotification
 
 //Initialize ambient animations
-call Enh_fnc_initAmbientAnimationsInEditor;
+call ENH_fnc_initAmbientAnimationsInEditor;
 
 true

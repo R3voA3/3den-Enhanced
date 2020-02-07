@@ -4,7 +4,7 @@
    Date: 2019-05-25
 
    Description:
-   Used by the Enh_Enh_ScenarioAttributesManager GUI.
+   Used by the ENH_ENH_ScenarioAttributesManager GUI.
    Applies selected template to current mission.
 
    Parameter(s):
@@ -33,7 +33,7 @@ collect3DENHistory
    set3DENMissionAttributes _data;
 };
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true
    

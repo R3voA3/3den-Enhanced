@@ -1,12 +1,12 @@
 #define DIALOG_W 200
 #define DIALOG_H 106
 
-class Enh_3denRadio
+class ENH_3denRadio
 {
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
-	onLoad = "_this spawn Enh_fnc_3denRadio_onLoad";
-	onUnload = "_this call Enh_fnc_3denRadio_onUnload";
+	onLoad = "_this spawn ENH_fnc_3denRadio_onLoad";
+	onUnload = "_this call ENH_fnc_3denRadio_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -70,8 +70,8 @@ class Enh_3denRadio
 			w = (DIALOG_W - 50) * GRID_W;
 			h = (DIALOG_H - 7) * GRID_H;
 			type = CT_LISTNBOX;
-			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
-			onKeyDown = "['ADDSONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist; _this call Enh_fnc_3denRadio_exportClassname";
+			onLBDblClick  = "_this call ENH_fnc_3denRadio_playMusic";
+			onKeyDown = "['ADDSONG',_this # 1] call ENH_fnc_3denRadio_handlePlaylist; _this call ENH_fnc_3denRadio_exportClassname";
 		};
 		class Playlist: ctrlListbox
 		{
@@ -80,8 +80,8 @@ class Enh_3denRadio
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = (DIALOG_W - 150) * GRID_W;
 			h = (DIALOG_H - 7) * GRID_H;
-			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
-			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
+			onLBDblClick  = "call ENH_fnc_3denRadio_playMusic";
+			onKeyDown = "['REMOVESONG',_this # 1] call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class ToggleRadio: ctrlButtonPictureKeepAspect
 		{
@@ -90,7 +90,7 @@ class Enh_3denRadio
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "['BUTTON'] call Enh_fnc_3denRadio_toggleRadio";
+			onButtonClick = "['BUTTON'] call ENH_fnc_3denRadio_toggleRadio";
 		};
 		class VolumeIcon: ctrlStaticPictureKeepAspect
 		{
@@ -117,7 +117,7 @@ class Enh_3denRadio
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 35 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call Enh_fnc_3denRadio_sortBy";
+			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call ENH_fnc_3denRadio_sortBy";
 		};
 		class Help: ctrlStaticPictureKeepAspect
 		{
@@ -135,7 +135,7 @@ class Enh_3denRadio
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onKeyUp = "call Enh_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
+			onKeyUp = "call ENH_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
 		};
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
@@ -152,7 +152,7 @@ class Enh_3denRadio
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "'IMPORT'call Enh_fnc_3denRadio_handlePlaylist";
+			action = "'IMPORT'call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class Export: ctrlButton
 		{
@@ -161,7 +161,7 @@ class Enh_3denRadio
 			y = DIALOG_TOP + 105 * GRID_H;
 			w = 26 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "'EXPORT'call Enh_fnc_3denRadio_handlePlaylist";
+			action = "'EXPORT'call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class Close: ctrlButtonClose
 		{
@@ -188,12 +188,12 @@ class Enh_3denRadio
 		};
 	};
 };
-/*class Enh_3denRadio
+/*class ENH_3denRadio
 {
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
-	onLoad = "_this spawn Enh_fnc_3denRadio_onLoad";
-	onUnload = "_this call Enh_fnc_3denRadio_onUnload";
+	onLoad = "_this spawn ENH_fnc_3denRadio_onLoad";
+	onUnload = "_this call ENH_fnc_3denRadio_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -264,8 +264,8 @@ class Enh_3denRadio
 			w = 0.741562 * safezoneW;
 			h = 0.868 * safezoneH;
 			type = CT_LISTNBOX;
-			onLBDblClick  = "_this call Enh_fnc_3denRadio_playMusic";
-			onKeyDown = "['ADDSONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist; _this call Enh_fnc_3denRadio_exportClassname";
+			onLBDblClick  = "_this call ENH_fnc_3denRadio_playMusic";
+			onKeyDown = "['ADDSONG',_this # 1] call ENH_fnc_3denRadio_handlePlaylist; _this call ENH_fnc_3denRadio_exportClassname";
 		};
 		class Playlist: ctrlListbox
 		{
@@ -274,8 +274,8 @@ class Enh_3denRadio
 			y = 0.052 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
 			h = 0.868 * safezoneH;
-			onLBDblClick  = "call Enh_fnc_3denRadio_playMusic";
-			onKeyDown = "['REMOVESONG',_this # 1] call Enh_fnc_3denRadio_handlePlaylist";
+			onLBDblClick  = "call ENH_fnc_3denRadio_playMusic";
+			onKeyDown = "['REMOVESONG',_this # 1] call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class Separator: ctrlStaticLine
 		{
@@ -290,7 +290,7 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.0196875 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "['BUTTON'] call Enh_fnc_3denRadio_toggleRadio";
+			onButtonClick = "['BUTTON'] call ENH_fnc_3denRadio_toggleRadio";
 		};
 		class VolumeIcon: ctrlStaticPictureKeepAspect
 		{
@@ -333,7 +333,7 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.105 * safezoneW;
 			h = 0.028 * safezoneH;
-			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call Enh_fnc_3denRadio_sortBy";
+			onLBSelChanged = "params ['','_index']; (['TITLE','DURATION','THEME'] select _index) call ENH_fnc_3denRadio_sortBy";
 		};
 		class SearchEdit: ctrlEdit
 		{
@@ -342,7 +342,7 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.0525 * safezoneW;
 			h = 0.028 * safezoneH;
-			onKeyUp = "call Enh_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
+			onKeyUp = "call ENH_fnc_3denRadio_searchList;";//onKeyUp to give the control time to update
 		};
 		class SearchIcon: ctrlStaticPictureKeepAspect
 		{
@@ -366,7 +366,7 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.065625 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'EXPORT'call Enh_fnc_3denRadio_handlePlaylist";
+			action = "'EXPORT'call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class Import: ctrlButton
 		{
@@ -375,7 +375,7 @@ class Enh_3denRadio
 			y = 0.934 * safezoneH + safezoneY;
 			w = 0.065625 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'IMPORT'call Enh_fnc_3denRadio_handlePlaylist";
+			action = "'IMPORT'call ENH_fnc_3denRadio_handlePlaylist";
 		};
 		class ToggleHelp: ctrlStaticPictureKeepAspect
 		{

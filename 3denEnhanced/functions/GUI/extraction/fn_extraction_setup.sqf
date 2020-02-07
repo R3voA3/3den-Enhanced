@@ -4,7 +4,7 @@
    Date: 2019-09-06
 
    Description:
-   Creates all required entities within Eden for a extraction. Values are taken from Enh_Extraction GUI.
+   Creates all required entities within Eden for a extraction. Values are taken from ENH_Extraction GUI.
 
    Parameter(s):
    -
@@ -45,7 +45,7 @@ collect3DENHistory
 	if !(_grenadeType isEqualTo "") then
 	{
 		private _triggerSmoke = create3DENEntity ["Trigger","EmptyDetector",_center vectorAdd [2,-119,0]];
-		_triggerSmoke set3DENAttribute ["Condition","Enh_Extraction_Start"];
+		_triggerSmoke set3DENAttribute ["Condition","ENH_Extraction_Start"];
 		_triggerSmoke set3DENAttribute ["IsServerOnly",true];
 		_triggerSmoke set3DENAttribute ["Text",localize "STR_ENH_extraction_triggerSmokeText"];
 		_triggerSmoke set3DENAttribute ["OnActivation",
@@ -122,6 +122,6 @@ collect3DENHistory
 };
 
 findDisplay 50000 closeDisplay 0;
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

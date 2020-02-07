@@ -25,7 +25,7 @@ private _ctrlToggleRadio = _display displayCtrl 2300;
 private _ctrlSort = _display displayCtrl 1600;
 
 //Set up slider
-_ctrlVol sliderSetPosition (profileNamespace getVariable ["Enh_3denRadio_MusicVolume",0.25]);
+_ctrlVol sliderSetPosition (profileNamespace getVariable ["ENH_3denRadio_MusicVolume",0.25]);
 
 //Set up combo
 {
@@ -35,10 +35,10 @@ _ctrlVol sliderSetPosition (profileNamespace getVariable ["Enh_3denRadio_MusicVo
 _ctrlSort lbSetCurSel 0;
 
 //Update current song
-_ctrlCurSong ctrlSetText (profileNamespace getVariable ["Enh_3denRadio_CurrentSong",""]);
+_ctrlCurSong ctrlSetText (profileNamespace getVariable ["ENH_3denRadio_CurrentSong",""]);
 
 //Update radio button
-switch (profileNamespace getVariable ["Enh_3denRadio_Enabled",false]) do
+switch (profileNamespace getVariable ["ENH_3denRadio_Enabled",false]) do
 {
 	case true:
 	{
@@ -51,7 +51,7 @@ switch (profileNamespace getVariable ["Enh_3denRadio_Enabled",false]) do
 };
 
 //Get all music tracks
-Enh_3denRadio_cfgMusic = 
+ENH_3denRadio_cfgMusic = 
 	("true" configClasses (configFile >> "CfgMusic")) + 
 	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
 	("true" configClasses (campaignConfigFile >> "CfgMusic"));
@@ -61,13 +61,13 @@ _ctrlSongList lnbAddColumn 0.7;
 _ctrlSongList lnbAddColumn 0.9;
 
 //Update list
-call Enh_fnc_3denRadio_searchList;
+call ENH_fnc_3denRadio_searchList;
 
 //Fill playlist listbox
-"UPDATE" call Enh_fnc_3denRadio_handlePlaylist;
+"UPDATE" call ENH_fnc_3denRadio_handlePlaylist;
 
-"ONLOAD" call Enh_fnc_3denRadio_toggleRadio;
+"ONLOAD" call ENH_fnc_3denRadio_toggleRadio;
 
-"TITLE" call Enh_fnc_3denRadio_sortBy;
+"TITLE" call ENH_fnc_3denRadio_sortBy;
 
 true

@@ -16,7 +16,7 @@
 params ["_ctrl"];
 
 private _cam3DEN = get3DENCamera;
-private _cam3DENSavedPositions = profileNamespace getVariable ["Enh_Cam3DENSavedPositions",[]];
+private _cam3DENSavedPositions = profileNamespace getVariable ["ENH_Cam3DENSavedPositions",[]];
 
 private _display = ctrlParent _ctrl;
 private _description = ctrlText (_display displayCtrl 2000);
@@ -29,9 +29,9 @@ if (_description isEqualTo localize "STR_ENH_3DENCam_description" || _descriptio
 private _cam3DENParameters = [worldName,getPos _cam3DEN,vectorDir _cam3DEN,vectorUp _cam3DEN,_description];
 _cam3DENSavedPositions pushBack _cam3DENParameters;
 
-profileNamespace setVariable ["Enh_Cam3DENSavedPositions",_cam3DENSavedPositions];
+profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_cam3DENSavedPositions];
 
 //Update list
-_ctrl call Enh_fnc_3DENCam_updateList;
+_ctrl call ENH_fnc_3DENCam_updateList;
 
 true

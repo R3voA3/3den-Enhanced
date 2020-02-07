@@ -4,7 +4,7 @@
    Date: 2019-06-20
 
    Description:
-   Used by Enh_BriefingEditor GUI. Triggers when "Add TAG" button is clicked.
+   Used by ENH_BriefingEditor GUI. Triggers when "Add TAG" button is clicked.
 
    Parameter(s):
    0: CONTROL - Button control

@@ -1,10 +1,10 @@
 #define DIALOG_W 70
 #define DIALOG_H 30
 
-class Enh_NameObjects
+class ENH_NameObjects
 {
 	idd = ENH_IDD_NAMEOBJECTS;
-	onLoad = "_this call Enh_fnc_nameObjects_onLoad";
+	onLoad = "_this call ENH_fnc_nameObjects_onLoad";
 	movingEnable = true;
 	class ControlsBackground
 	{
@@ -67,7 +67,7 @@ class Enh_NameObjects
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 27 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "'UNNAME' call Enh_fnc_nameObjects_name";
+			action = "'UNNAME' call ENH_fnc_nameObjects_name";
 		};
 		class OK: ctrlButtonOK
 		{
@@ -76,7 +76,7 @@ class Enh_NameObjects
 			y = DIALOG_TOP + 29 * GRID_H;
 			w = 27 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			action = "call Enh_fnc_nameObjects_name";
+			action = "call ENH_fnc_nameObjects_name";
 		};
 		class Cancel: ctrlButtonClose
 		{
@@ -88,10 +88,10 @@ class Enh_NameObjects
 	};
 };
 
-/*class Enh_NameObjects
+/*class ENH_NameObjects
 {
 	idd = ENH_IDD_NAMEOBJECTS;
-	onLoad = "call Enh_fnc_nameObjects_onLoad";
+	onLoad = "call ENH_fnc_nameObjects_onLoad";
 	movingEnable = true;
 	class ControlsBackground
 	{
@@ -121,7 +121,7 @@ class Enh_NameObjects
 			y = 0.535 * safezoneH + safezoneY;
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "'UNNAME' call Enh_fnc_nameObjects_name";
+			action = "'UNNAME' call ENH_fnc_nameObjects_name";
 		};
 		class OK: ctrlButtonOK
 		{
@@ -130,7 +130,7 @@ class Enh_NameObjects
 			y = 0.535 * safezoneH + safezoneY;
 			w = 0.07875 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_nameObjects_name";
+			action = "call ENH_fnc_nameObjects_name";
 		};
 		class VariableName: ctrlStatic
 		{

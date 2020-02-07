@@ -4,7 +4,7 @@
    Date: 2019-05-24
 
    Description:
-   Used by the Enh_Enh_ScenarioAttributesManager GUI. 
+   Used by the ENH_ENH_ScenarioAttributesManager GUI. 
    Saves all templates to profilenamespace when GUI is closed.
    
    Parameter(s):
@@ -27,7 +27,7 @@ for "_i" from 0 to _lbSize - 1 do
 };
 
 //Store templates in profilenamespace and save it.
-profileNamespace setVariable ["Enh_ScenarioAttributesManager_Templates",_templates];
+profileNamespace setVariable ["ENH_ScenarioAttributesManager_Templates",_templates];
 saveprofileNamespace;
 
 true

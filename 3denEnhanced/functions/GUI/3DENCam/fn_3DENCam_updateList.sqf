@@ -67,7 +67,7 @@ lbClear _ctrlLB;
 		_ctrlLB lbSetColor [_index,[1,0,0,1]];
 		_ctrlLB lbSetColorRight [_index,[1,0,0,1]];
 	};
-} forEach (profileNamespace getVariable ["Enh_Cam3DENSavedPositions",[]]);
+} forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions",[]]);
 
 lbSort [_ctrlLB,"DESC"];
 

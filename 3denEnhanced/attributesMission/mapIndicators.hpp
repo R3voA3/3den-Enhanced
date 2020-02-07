@@ -1,14 +1,14 @@
-class Enh_MapIndicators
+class ENH_MapIndicators
 {
 	collapsed = 1;
 	displayName = $STR_ENH_attributeCategory_mapIndicators;
 	class Attributes
 	{
-		class Enh_MapIndicators
+		class ENH_MapIndicators
 		{
 			displayName = $STR_ENH_attributeCategory_mapIndicators;
-			property = "Enh_mapIndicators";
-			control = "Enh_MapIndicators";
+			property = "ENH_mapIndicators";
+			control = "ENH_MapIndicators";
 			expression =
 			"\
 				if (!is3DEN && !(_value isEqualTo [false,false,false,false]) && hasInterface) then\

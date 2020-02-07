@@ -1,7 +1,7 @@
-class Enh_MissionEnding_Casualties: Title
+class ENH_MissionEnding_Casualties: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_missionEnding_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_missionEnding_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_missionEnding_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_missionEnding_onAttributeSave";
 	h = 11.5 * SIZE_M * GRID_H + 30 * pixelH;
 	class Controls: Controls
 	{
@@ -131,7 +131,7 @@ class Enh_MissionEnding_Casualties: Title
 			y = 10.5 * SIZE_M * GRID_H + 25 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_missionEnding_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_missionEnding_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

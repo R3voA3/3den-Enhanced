@@ -15,7 +15,7 @@
 
 private _posArray = [];
 private _export = "";
-private _selection = [["Object","Logic","Trigger","Marker","Waypoint"]] call Enh_fnc_all3DENSelected;
+private _selection = [["Object","Logic","Trigger","Marker","Waypoint"]] call ENH_fnc_all3DENSelected;
 
 if (_selection isEqualTo []) then 
 {
@@ -30,10 +30,10 @@ else
    } forEach _selection;
 };
 
-private _export = [_posArray,false] call Enh_fnc_exportWithLB;
+private _export = [_posArray,false] call ENH_fnc_exportWithLB;
 
 copyToClipboard _export;
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 true

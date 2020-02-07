@@ -4,7 +4,7 @@
    Date: 2019-08-03
 
    Description:
-   Garrison one or multiple buildings in the area. Radius and coverage are taken from the custom UI Enh_Garrison.
+   Garrison one or multiple buildings in the area. Radius and coverage are taken from the custom UI ENH_Garrison.
 
    Parameter(s):
    CONTROL: Button control
@@ -19,7 +19,7 @@ params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 
 private _positions = [];
-private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3denSelected;
+private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3denSelected;
 private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
 _center set [2,0];
 
@@ -33,9 +33,9 @@ private _stance  = lbCurSel (_display displayCtrl 300);
 private _step   = _ctrlCoverage lbValue _index;
 
 //Save settings
-profileNamespace setVariable ['Enh_garrison_lastRadius',_radius];
-profileNamespace setVariable ['Enh_garrison_lastCoverage',_index];
-profileNamespace setVariable ['Enh_garrison_lastStance',_stance];
+profileNamespace setVariable ['ENH_garrison_lastRadius',_radius];
+profileNamespace setVariable ['ENH_garrison_lastCoverage',_index];
+profileNamespace setVariable ['ENH_garrison_lastStance',_stance];
 
 //Get nearest buildings
 private _buildings = _center nearObjects ["House",parseNumber _radius];

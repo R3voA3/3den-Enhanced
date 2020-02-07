@@ -12,21 +12,21 @@
    BOOLEAN: true / false
 */
 
-["Enh_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 //Remove icons if EH already exists and exit
-if (["Enh_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
+if (["ENH_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
 
 //Define path here to save performance inside the loop
-Enh_DrawDLCIcons_Path = configFile >> "CfgVehicles";
+ENH_DrawDLCIcons_Path = configFile >> "CfgVehicles";
 
 //Loop though all object
 private ["_icon"];
-["Enh_EH_DrawDLCIcons_ID", "onEachFrame",
+["ENH_EH_DrawDLCIcons_ID", "onEachFrame",
 	{
 		{
 			//Use param to filter nil value when no icon is define
-			_icon = modParams [configSourceMod (Enh_DrawDLCIcons_Path >> typeOf _x),["logo"]] param [0,"",[""]];
+			_icon = modParams [configSourceMod (ENH_DrawDLCIcons_Path >> typeOf _x),["logo"]] param [0,"",[""]];
 			drawIcon3D
 			[
 				_icon,

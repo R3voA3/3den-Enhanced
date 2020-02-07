@@ -4,10 +4,10 @@
    Date: 2019-09-06
 
    Description:
-   Used by the Enh_Extraction GUI. Is called when display is created.
+   Used by the ENH_Extraction GUI. Is called when display is created.
 
    Parameter(s):
-   0: DISPLAY - Enh_Extraction GUI
+   0: DISPLAY - ENH_Extraction GUI
 
    Returns:
    BOOLEAN: true
@@ -31,7 +31,7 @@ _ctrlTransport ctrlSetText groupId group _veh;
 _ctrlTransport ctrlEnable false;
 
 private _ctrlConditionStart = GET_CTRL(400);
-_ctrlConditionStart ctrlSetText "Enh_Extraction_Start";
+_ctrlConditionStart ctrlSetText "ENH_Extraction_Start";
 
 private _ctrlGrenadeType = GET_CTRL(500);
 {

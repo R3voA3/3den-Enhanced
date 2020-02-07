@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Changes the rotation. Used in the Enh_PatternTools GUI.
+	Changes the rotation. Used in the ENH_PatternTools GUI.
 
 	Parameter(s):
 	-
@@ -13,20 +13,20 @@
 
 params ["_control", "_newValue"];
 
-Enh_PlacementTools_InitialAngle = _newValue;
+ENH_PlacementTools_InitialAngle = _newValue;
 private _angle = _newValue;
-private _angleStep = Enh_PlacementTools_CentralAngle / count Enh_PlacementTools_Selected;
+private _angleStep = ENH_PlacementTools_CentralAngle / count ENH_PlacementTools_Selected;
 
 collect3DENHistory
 {
 	{
-		private _pos = Enh_PlacementTools_Center getPos [Enh_PlacementTools_Radius,_angle];
+		private _pos = ENH_PlacementTools_Center getPos [ENH_PlacementTools_Radius,_angle];
 		_x set3DENAttribute ["Position",_pos];
 		_x set3DENAttribute ["Rotation",[0,0,_angle]];
 		_angle = _angle + _angleStep;
-	} forEach Enh_PlacementTools_Selected;
+	} forEach ENH_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "Enh_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " °");
+(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " °");
 
 true

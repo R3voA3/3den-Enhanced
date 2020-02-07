@@ -2,17 +2,17 @@ class Cfg3DEN
 {
 	class Notifications
 	{
-		class Enh_DataCopied
+		class ENH_DataCopied
 		{
 			isWarning = 0;
 			text = $STR_a3_RscDisplayArsenal_message_clipboard;
 		};
-		class Enh_ActionPerformed
+		class ENH_ActionPerformed
 		{
 			isWarning = 0;
 			text = $STR_ENH_notifications_actionPerformed;
 		};
-		class Enh_NoEntitiesSelected
+		class ENH_NoEntitiesSelected
 		{
 			isWarning = 1;
 			text = $STR_ENH_notifications_noEntitiesSelected;
@@ -22,12 +22,12 @@ class Cfg3DEN
 	{
 		class ENH
 		{
-			onTerrainNew = "call Enh_fnc_EH_onTerrainNew";
-			onMissionPreviewEnd = "call Enh_fnc_EH_onMissionPreviewEnd";
-			onMissionLoad = "call Enh_fnc_EH_onMissionLoad";
-			onMissionNew = "call Enh_fnc_EH_onMissionNew";
-			onMissionPreview = "call Enh_fnc_EH_onMissionPreview";
-			onSelectionChange = "call Enh_fnc_EH_onSelectionChange";
+			onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
+			onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
+			onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
+			onMissionNew = "call ENH_fnc_EH_onMissionNew";
+			onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
+			onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
 		};
 	};
 	class Attributes

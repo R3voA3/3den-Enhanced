@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Retrieves loadout of unit and formats it for CfgRespawnLoadouts. Content is copied to clipboard. Meant to be used with Enh_ExportInventory GUI.
+	Retrieves loadout of unit and formats it for CfgRespawnLoadouts. Content is copied to clipboard. Meant to be used with ENH_ExportInventory GUI.
 
 	Parameter(s):
 	-
@@ -17,7 +17,7 @@ private _object = (get3DENSelected "Object") # 0;
 
 if (isNil "_object") exitWith
 {
-	["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
 	false
 };
 
@@ -59,7 +59,7 @@ private _fnc_addArray =
 //From BIS_fnc_exportLoadout END
 _export = _export + "};" + LB + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 copyToClipboard _export;
 
 true

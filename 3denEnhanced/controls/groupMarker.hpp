@@ -1,7 +1,7 @@
-class Enh_GroupMarker: Title
+class ENH_GroupMarker: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_groupMarker_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_groupMarker_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_groupMarker_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_groupMarker_onAttributeSave";
 	h = 23.5 * SIZE_M * GRID_H + 30 * pixelH;
 	class Controls: Controls
 	{
@@ -108,7 +108,7 @@ class Enh_GroupMarker: Title
 			y = 22.5 * SIZE_M * GRID_H + 25 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_groupMarker_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_groupMarker_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

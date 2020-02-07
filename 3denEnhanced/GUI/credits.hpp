@@ -1,11 +1,11 @@
 #define DIALOG_W 50
 #define DIALOG_H 70
 
-class Enh_Credits
+class ENH_Credits
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_credits_onLoad";
+	onLoad = "_this call ENH_fnc_credits_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -45,7 +45,7 @@ class Enh_Credits
 	};
 };
 
-/*class Enh_Credits
+/*class ENH_Credits
 {
 	idd = -1;
 	movingEnable = true;
@@ -94,7 +94,7 @@ class Enh_Credits
 #define PIXEL_GRID_W	(pixelGrid * pixelW * 0.5)
 #define PIXEL_GRID_H	(pixelGrid * pixelH * 0.5)
 
-class Enh_Credits
+class ENH_Credits
 {
 	idd = -1;
 	movingEnable = true;

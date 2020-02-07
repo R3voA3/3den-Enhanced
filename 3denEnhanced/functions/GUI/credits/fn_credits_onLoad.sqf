@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Used by Enh_Credits. Called onLoad event.
+	Used by ENH_Credits. Called onLoad event.
 
 	Parameter(s):
 	-

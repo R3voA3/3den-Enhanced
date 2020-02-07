@@ -1,8 +1,8 @@
-class Enh_SaveLoadout
+class ENH_SaveLoadout
 {
    displayName = $STR_ENH_saveLoadout_displayName;
    tooltip = $STR_ENH_saveLoadout_tooltip;
-   property = "Enh_saveLoadout";
+   property = "ENH_saveLoadout";
    control = "Checkbox";
    expression =
    "\
@@ -11,8 +11,8 @@ class Enh_SaveLoadout
          [] spawn\
          {\
             waitUntil {sleep 1; !isNull player};\
-            player setVariable ['Enh_savedLoadout',getUnitloadout player];\
-            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'Enh_savedLoadout')}];\
+            player setVariable ['ENH_savedLoadout',getUnitloadout player];\
+            player addEventHandler ['Respawn',{player setUnitLoadout (player getVariable 'ENH_savedLoadout')}];\
          };\
       };\
    ";

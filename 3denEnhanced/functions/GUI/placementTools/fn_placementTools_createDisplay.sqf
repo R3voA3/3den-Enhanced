@@ -4,7 +4,7 @@
    Date: 2019-06-11
 
    Description:
-   Checks if Enh_PlacementTools GUI should be opened and if yes, creates the display.
+   Checks if ENH_PlacementTools GUI should be opened and if yes, creates the display.
 
    Parameter(s):
    -
@@ -13,10 +13,10 @@
    BOOLEAN: true / false
 */
 
-Enh_PlacementTools_Selected = [["Object","Logic","Trigger","Marker"]] call Enh_fnc_all3DENSelected;
+ENH_PlacementTools_Selected = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
 
-if (Enh_PlacementTools_Selected isEqualTo []) exitWith {["Enh_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
+if (ENH_PlacementTools_Selected isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
 
-findDisplay 313 createDisplay "Enh_PlacementTools";
+findDisplay 313 createDisplay "ENH_PlacementTools";
 
 true

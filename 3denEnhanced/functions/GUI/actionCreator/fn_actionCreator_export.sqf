@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Used by Enh_actionCreator GUI.
+	Used by ENH_actionCreator GUI.
 
 	Parameter(s):
 	-
@@ -33,7 +33,7 @@ if (_r isEqualTo "") then {_r = "50"};
 if (_condition isEqualTo "") then {_condition = "true"};
 
 
-profileNamespace setVariable ["Enh_ActionCreator_LastUsed",[_title,_script,_args,_priority,_window,_hide,_shortcuts,_condition,_r,_unconscious,_selection,_memory]];
+profileNamespace setVariable ["ENH_ActionCreator_LastUsed",[_title,_script,_args,_priority,_window,_hide,_shortcuts,_condition,_r,_unconscious,_selection,_memory]];
 
 copyToClipboard format 
 [
@@ -52,7 +52,7 @@ copyToClipboard format
 	_memory
 ];
 
-["Enh_DataCopied"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 _display closeDisplay 1;
 

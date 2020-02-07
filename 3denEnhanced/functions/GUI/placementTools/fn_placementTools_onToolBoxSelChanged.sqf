@@ -4,7 +4,7 @@
    Date: 2019-07-29
 
    Description:
-   Sets the increment size. Used in the Enh_PatternTools GUI. Called when toolbox selection was changed.
+   Sets the increment size. Used in the ENH_PatternTools GUI. Called when toolbox selection was changed.
 
    Parameter(s):
    0: CONTROL - Control tool box
@@ -18,7 +18,7 @@ params ["_ctrlToolbox","_selectedIndex"];
 private _display = ctrlParent _ctrlToolbox;
 private _stepSize = _ctrlToolbox lbValue _selectedIndex;
 
-missionNamespace setVariable ["Enh_PlacementTools_stepSizeIndex",_selectedIndex];
+missionNamespace setVariable ["ENH_PlacementTools_stepSizeIndex",_selectedIndex];
 
 //Set slider speed
 {

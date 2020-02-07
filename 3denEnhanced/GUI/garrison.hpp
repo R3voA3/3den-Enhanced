@@ -1,10 +1,10 @@
 #define DIALOG_W 60
 
-class Enh_Garrison
+class ENH_Garrison
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this call Enh_fnc_garrison_onLoad";
+	onLoad = "_this call ENH_fnc_garrison_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -107,7 +107,7 @@ class Enh_Garrison
 			y = DIALOG_TOP + 24 * GRID_H;
 			w = 25 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_garrison_garrison";
+			onButtonClick = "_this call ENH_fnc_garrison_garrison";
 		};
 	};
 };

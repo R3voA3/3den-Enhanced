@@ -1,7 +1,7 @@
-class Enh_IntroText: Title
+class ENH_IntroText: Title
 {
-	attributeLoad = "[_this,_value] call Enh_fnc_introText_onAttributeLoad";
-	attributeSave = "_this call Enh_fnc_introText_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_introText_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_introText_onAttributeSave";
 	h = 12.5 * SIZE_M * GRID_H + 40 * pixelH;
 	class Controls: Controls
 	{
@@ -140,7 +140,7 @@ class Enh_IntroText: Title
 			y = 11.5 * SIZE_M * GRID_H + 35 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-			onButtonDown  = "_this call Enh_fnc_introText_onButtonDown";
+			onButtonDown  = "_this call ENH_fnc_introText_onButtonDown";
 			text = $STR_ENH_resetAndDisable;
 		};
 	};

@@ -4,7 +4,7 @@
    Date: 2019-05-25
 
    Description:
-   Used by the Enh_Enh_ScenarioAttributesManager GUI.
+   Used by the ENH_ENH_ScenarioAttributesManager GUI.
    Fills listbox with templates stored in profilenamespace when UI is loaded.
 
    Parameter(s):
@@ -17,7 +17,7 @@
 params ["_display"];
 
 _ctrlLB = _display displayCtrl 1501;
-_templates = profileNamespace getVariable ["Enh_ScenarioAttributesManager_Templates",[]];
+_templates = profileNamespace getVariable ["ENH_ScenarioAttributesManager_Templates",[]];
 
 if (_templates isEqualTo []) exitWith {false};
 

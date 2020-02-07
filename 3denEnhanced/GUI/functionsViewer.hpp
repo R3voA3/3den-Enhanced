@@ -1,8 +1,8 @@
-class Enh_FunctionsViewer
+class ENH_FunctionsViewer
 {
 	idd = -1;
 	movingEnable = false;
-	onLoad = "_this call  Enh_fnc_functionsViewer_onLoad";
+	onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
 	onUnload = "'showinterface' call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
@@ -42,7 +42,7 @@ class Enh_FunctionsViewer
 				"campaignConfig"
             };
             values[] = {0,1,2};
-			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class FilterMode: FilterConfig
 		{
@@ -58,7 +58,7 @@ class Enh_FunctionsViewer
 				$STR_ENH_functionsViewer_functions
             };
             values[] = {0,1,2};
-			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class List: ctrlTree
 		{
@@ -68,7 +68,7 @@ class Enh_FunctionsViewer
 			y = safezoneY + 18 * GRID_H;
 			w = 70 * GRID_W;
 			h = safezoneH - 25 * GRID_H;
-			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_onTreeSelChanged";
+			onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
 		};
 		class NumFunctions: ctrlStatic
 		{
@@ -143,7 +143,7 @@ class Enh_FunctionsViewer
 			y = safezoneY + 6 * GRID_H;
 			w = 40 * GRID_W;
 			h = 5 * GRID_H;
-			onButtonClick = "_this call Enh_fnc_functionsViewer_recompileSelected";
+			onButtonClick = "_this call ENH_fnc_functionsViewer_recompileSelected";
 		};
 		class Copy: ctrlButton
 		{
@@ -153,7 +153,7 @@ class Enh_FunctionsViewer
 			y = safezoneY + 12 * GRID_H;
 			w = 40 * GRID_W;
 			h = 5 * GRID_H;
-			onButtonClick = "_this call Enh_fnc_functionsViewer_copy";
+			onButtonClick = "_this call ENH_fnc_functionsViewer_copy";
 		};
 		class RecompileAll: ctrlButton
 		{
@@ -225,11 +225,11 @@ class Enh_FunctionsViewer
 	};
 };
 
-/*class Enh_FunctionsViewer
+/*class ENH_FunctionsViewer
 {
 	idd = ENH_IDD_FUNCTIONSVIEWER;
 	movingEnable = true;
-	onLoad = "_this call  Enh_fnc_functionsViewer_onLoad";
+	onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
 	onUnload = "'showinterface' call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
@@ -269,7 +269,7 @@ class Enh_FunctionsViewer
 				"campaignConfig"
             };
             values[] = {0,1,2};
-			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class FilterMode: ctrlToolbox
 		{
@@ -287,7 +287,7 @@ class Enh_FunctionsViewer
 				$STR_ENH_functionsViewer_functions
             };
             values[] = {0,1,2};
-			onToolBoxSelChanged  = "_this call Enh_fnc_functionsViewer_fillCtrlTV";
+			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class List: ctrlTree
 		{
@@ -297,7 +297,7 @@ class Enh_FunctionsViewer
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.21 * safezoneW;
 			h = 0.78 * safezoneH;
-			onTreeSelChanged = "_this call Enh_fnc_functionsViewer_onTreeSelChanged";
+			onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
 		};
 		class Search: ctrlEdit
 		{
@@ -336,7 +336,7 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "_this call Enh_fnc_functionsViewer_recompileSelected";
+			onButtonClick = "_this call ENH_fnc_functionsViewer_recompileSelected";
 		};
 		class RecompileAll: ctrlButton
 		{
@@ -382,7 +382,7 @@ class Enh_FunctionsViewer
 			y = 0.066 * safezoneH + safezoneY;
 			w = 0.124687 * safezoneW;
 			h = 0.028 * safezoneH;
-			onButtonClick = "call Enh_fnc_functionsViewer_copy";
+			onButtonClick = "call ENH_fnc_functionsViewer_copy";
 		};
 		class Collapse: ctrlButtonCollapseAll
 		{

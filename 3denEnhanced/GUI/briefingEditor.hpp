@@ -1,9 +1,9 @@
-class Enh_BriefingEditor
+class ENH_BriefingEditor
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this spawn Enh_fnc_briefingEditor_onLoad";
-	onUnload = "_this call Enh_fnc_briefingEditor_onUnload";
+	onLoad = "_this spawn ENH_fnc_briefingEditor_onLoad";
+	onUnload = "_this call ENH_fnc_briefingEditor_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -41,7 +41,7 @@ class Enh_BriefingEditor
 			w = 33 * GRID_W;
 			h = 90 * GRID_H;
 			onKeyDown = "if ((_this # 1) == 211 ) then {(_this #  0) lbDelete (lbCurSel (_this # 0))}";
-			onLBDblClick = "_this call Enh_fnc_briefingEditor_getTemplate";
+			onLBDblClick = "_this call ENH_fnc_briefingEditor_getTemplate";
 		};
 		class Marker: ctrlStatic
 		{
@@ -180,7 +180,7 @@ class Enh_BriefingEditor
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 92 * GRID_H;
 			w = 90 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onLBSelChanged = "_this call Enh_fnc_briefingEditor_onLBSelChanged";
+			onLBSelChanged = "_this call ENH_fnc_briefingEditor_onLBSelChanged";
         };
 		class FirstParam: ctrlStatic
 		{
@@ -237,7 +237,7 @@ class Enh_BriefingEditor
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
 			w = 33 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_briefingEditor_createTemplate";
+			onButtonClick = "_this call ENH_fnc_briefingEditor_createTemplate";
 		};
 		class AddTAG: ctrlButton
 		{
@@ -246,7 +246,7 @@ class Enh_BriefingEditor
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
 			w = 33 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_briefingEditor_addTAG";
+			onButtonClick = "_this call ENH_fnc_briefingEditor_addTAG";
 		};
 		class Export: ctrlButton
 		{
@@ -255,7 +255,7 @@ class Enh_BriefingEditor
 			y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
 			w = 33 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call Enh_fnc_briefingEditor_export";
+			onButtonClick = "_this call ENH_fnc_briefingEditor_export";
 		};
 		class Close: ctrlButtonClose
 		{
@@ -267,12 +267,12 @@ class Enh_BriefingEditor
 	};
 };
 
-/*class Enh_BriefingEditor
+/*class ENH_BriefingEditor
 {
 	idd = ENH_IDD_BRIEFINGEDITOR;
 	movingEnable = true;
-	onLoad = "[] spawn Enh_fnc_briefingEditor_onLoad";
-	onUnload = "call Enh_fnc_briefingEditor_onUnload";
+	onLoad = "[] spawn ENH_fnc_briefingEditor_onLoad";
+	onUnload = "call ENH_fnc_briefingEditor_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -346,7 +346,7 @@ class Enh_BriefingEditor
 			y = 0.528 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_briefingEditor_addCustomText";
+			action = "call ENH_fnc_briefingEditor_addCustomText";
 		};
 		class MarkerHeader: ctrlStaticTitle
 		{
@@ -388,7 +388,7 @@ class Enh_BriefingEditor
 			y = 0.528 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_briefingEditor_addLinebreak";
+			action = "call ENH_fnc_briefingEditor_addLinebreak";
 		};
 		class Export: ctrlButton
 		{
@@ -397,7 +397,7 @@ class Enh_BriefingEditor
 			y = 0.528 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_briefingEditor_export";
+			action = "call ENH_fnc_briefingEditor_export";
 		};
 		class CreateTemplate: ctrlButton
 		{
@@ -406,7 +406,7 @@ class Enh_BriefingEditor
 			y = 0.528 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_briefingEditor_createTemplate";
+			action = "call ENH_fnc_briefingEditor_createTemplate";
 		};
 		class Image_Headline: ctrlStatic
 		{
@@ -432,7 +432,7 @@ class Enh_BriefingEditor
 			y = 0.528 * safezoneH + safezoneY;
 			w = 0.0853125 * safezoneW;
 			h = 0.028 * safezoneH;
-			action = "call Enh_fnc_briefingEditor_addPicture";
+			action = "call ENH_fnc_briefingEditor_addPicture";
 		};
 		class Width_Text: ctrlStatic
 		{
@@ -497,7 +497,7 @@ class Enh_BriefingEditor
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.42 * safezoneH;
-			onLBDblClick = "call Enh_fnc_briefingEditor_addMarker";
+			onLBDblClick = "call ENH_fnc_briefingEditor_addMarker";
 		};
 		class TemplateList: ctrlListbox
 		{
@@ -507,7 +507,7 @@ class Enh_BriefingEditor
 			w = 0.111562 * safezoneW;
 			h = 0.42 * safezoneH;
 			onKeyDown = "if ((_this # 1) == 211 ) then {(_this #  0) lbDelete (lbCurSel (_this # 0))}";
-			onLBDblClick = "[_this # 0,_this # 1] call Enh_fnc_briefingEditor_getTemplate";
+			onLBDblClick = "[_this # 0,_this # 1] call ENH_fnc_briefingEditor_getTemplate";
 		};
 		class Height_Value: ctrlEdit
 		{
@@ -524,8 +524,8 @@ class Enh_BriefingEditor
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.111562 * safezoneW;
 			h = 0.098 * safezoneH;
-			onSetFocus = "params ['_ctrl']; Enh_BriefingEditor_ColourListH = (ctrlPosition _ctrl) # 3; _ctrl ctrlSetPositionH (Enh_BriefingEditor_ColourListH * 5); _ctrl ctrlCommit 0.2";
-			onKillFocus = "params ['_ctrl']; _ctrl ctrlSetPositionH Enh_BriefingEditor_ColourListH; _ctrl ctrlCommit 0.2";
+			onSetFocus = "params ['_ctrl']; ENH_BriefingEditor_ColourListH = (ctrlPosition _ctrl) # 3; _ctrl ctrlSetPositionH (ENH_BriefingEditor_ColourListH * 5); _ctrl ctrlCommit 0.2";
+			onKillFocus = "params ['_ctrl']; _ctrl ctrlSetPositionH ENH_BriefingEditor_ColourListH; _ctrl ctrlCommit 0.2";
 		};
 		class CustomText_Value: ctrlEditMulti
 		{

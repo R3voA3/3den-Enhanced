@@ -4,7 +4,7 @@
    Date: 2019-07-22
 
    Description:
-   Used by Enh_FunctionsViewer GUI. Fill the tree view control.
+   Used by ENH_FunctionsViewer GUI. Fill the tree view control.
 
    Parameter(s):
    0: NUMBER - Can be 0 - Full list with addons and categories
@@ -15,7 +15,7 @@
 					  2 - campaignConfigFile
    2: CONTROL - Tree view control
    3: CONTROL - Edit control (search)
-   4: ARRAY - Functions data from Enh_fnc_functionsViewer_returnFunctionsData
+   4: ARRAY - Functions data from ENH_fnc_functionsViewer_returnFunctionsData
 
    Returns:
    BOOLEAN: true / false
@@ -31,9 +31,9 @@ private _ctrlTV = _display displayCtrl 1500;
 private _ctrlEdit = _display displayCtrl 1400;
 private _ctrlBiki = _display displayCtrl 1900;
 
-profileNamespace setVariable ["Enh_FunctionsViewer_ConfigIndex",_configIndex];
-profileNamespace setVariable ["Enh_FunctionsViewer_ModeIndex",_modeIndex];
-private _lastViewed = uiNamespace getVariable ["Enh_FunctionsViewer_LastViewed",[]];
+profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex",_configIndex];
+profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex",_modeIndex];
+private _lastViewed = uiNamespace getVariable ["ENH_FunctionsViewer_LastViewed",[]];
 
 tvClear _ctrlTV;
 
@@ -90,11 +90,11 @@ switch (_modeIndex) do
 				if (_ctrlTV tvText _fullPath isEqualTo _lastViewed) then
 				{
 					_ctrlTV tvSetCurSel _fullPath;
-					[_ctrlTV,_fullPath] call Enh_fnc_functionsViewer_onTreeSelChanged;
+					[_ctrlTV,_fullPath] call ENH_fnc_functionsViewer_onTreeSelChanged;
 				};
 			};
 			true
-		} count Enh_FunctionsData;
+		} count ENH_FunctionsData;
 
 		//Sort
 		for "_i" from 0 to ((_ctrlTV tvCount []) - 1) do
@@ -140,12 +140,12 @@ switch (_modeIndex) do
 				if (_ctrlTV tvText _fullPath isEqualTo _lastViewed) then
 				{
 					_ctrlTV tvSetCurSel _fullPath;
-					[_ctrlTV,_fullPath] call Enh_fnc_functionsViewer_onTreeSelChanged;
+					[_ctrlTV,_fullPath] call ENH_fnc_functionsViewer_onTreeSelChanged;
 				};
 				_ctrlTV tvSort [[_categoryIndex],false];
 			};
 			true
-		} count Enh_FunctionsData;
+		} count ENH_FunctionsData;
 		_ctrlTV tvSort [[],false];
 		_ctrlEdit ctrlEnable true;
 	};
@@ -162,11 +162,11 @@ switch (_modeIndex) do
 				if (_ctrlTV tvText [_fncIndex] isEqualTo _lastViewed) then
 				{
 					_ctrlTV tvSetCurSel [_fncIndex];
-					[_ctrlTV,[_fncIndex]] call Enh_fnc_functionsViewer_onTreeSelChanged;
+					[_ctrlTV,[_fncIndex]] call ENH_fnc_functionsViewer_onTreeSelChanged;
 				};
 			};
 			true
-		} count Enh_FunctionsData;
+		} count ENH_FunctionsData;
 		_ctrlTV tvSort [[],false];
 		_ctrlEdit ctrlEnable false;
 	};
