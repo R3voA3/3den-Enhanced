@@ -1,7 +1,7 @@
 class ENH_3rdPartyTools
 {
 	text = $STR_ENH_FOLDER_3RDPARTYTOOLS;
-	items[] +=
+	items[] =
 	{
 		"ENH_3rdPartyTools_Folder_NoDependencies",
 		"ENH_3rdPartyTools_Folder_Dependencies"
@@ -9,7 +9,7 @@ class ENH_3rdPartyTools
 };
 class ENH_3rdPartyTools_Folder_NoDependencies
 {
-	text = "Tools that don't create dependencies";//Localise
+	text =  $STR_ENH_FOLDER_3RDPARTYTOOLS_NODEPENDENCIES;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] =
 	{
@@ -26,7 +26,7 @@ class ENH_3rdPartyTools_Folder_NoDependencies
 };
 class ENH_3rdPartyTools_Folder_Dependencies: ENH_3rdPartyTools_Folder_NoDependencies
 {
-	text = "Tools that create dependencies";//Localise
+	text = $STR_ENH_FOLDER_3RDPARTYTOOLS_DEPENDENCIES;
 	items[] =
 	{
 		"ENH_3rdPartyTools_Arma3MissionFramework",

@@ -287,7 +287,7 @@
 		<Russian>Тип Объекта:</Russian>
 	</Key>
 	<Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MATERIALS">
-		<English>MATERIALS:</english>
+		<English>MATERIALS:</English>
 		<Original>MATERIALS:</Original>
 		<Czech>MATERIÁLY:</Czech>
 		<Polish>MATERIAŁY:</Polish>
@@ -3521,12 +3521,12 @@
 		<Polish>Pokaż poziom świadomości</Polish>
 		<Russian>Показать уровень осведомленности</Russian>
 	</Key>
-  <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
+	<Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
 		<Original>Draw Unit Icons</Original>
 		<English>Draw Unit Icons</English>
 		<German>Einheitenicons darstellen</German>
 	</Key>
-  <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
+	<Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
 		<Original>Draws information of nearby units and vehicles.</Original>
 		<English>Draws information of nearby units and vehicles.</English>
 		<German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
@@ -4524,7 +4524,7 @@
 		<Polish>Pozwala na system "Dynamicznych grup"</Polish>
 		<Russian>Включает систему динамических групп.</Russian>
 	</Key>
-  	<Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
+	<Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
 		<Original>Dynamic Groups</Original>
 		<English>Dynamic Groups</English>
 		<German>Gruppenverwaltung</German>
@@ -5862,5 +5862,15 @@
 		<English>Toggle Dynamic Simulation</English>
 		<German>Dynamische Simulation umschalten</German>
 		<Original>Toggle Dynamic Simulation</Original>
+	</Key>
+	<Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_NODEPENDENCIES">
+		<English>Tools that don't create dependencies</English>
+		<German>Werkzeuge die keine Abhängigkeiten erzeugen</German>
+		<Original>Tools that don't create dependencies</Original>
+	</Key>
+	<Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_DEPENDENCIES">
+		<English>Tools that create dependencies</English>
+		<German>Werkezuge die Abhängkeiten erzeugen</German>
+		<Original>Tools that create dependencies</Original>
 	</Key>
 </Project>
