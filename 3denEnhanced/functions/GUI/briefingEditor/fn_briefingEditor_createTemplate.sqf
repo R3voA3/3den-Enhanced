@@ -26,6 +26,6 @@ private _briefingText = ctrlText CTRL(10);
 private _index = CTRL(80) lbAdd _briefingTitle;
 
 CTRL(80) lbSetData [_index,_briefingText];
-CTRL(80) lbSetTooltip [_index,localize "STR_ENH_briefingEditor_loadTemplate_tooltip"];
+CTRL(80) lbSetTooltip [_index,localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
 
 true

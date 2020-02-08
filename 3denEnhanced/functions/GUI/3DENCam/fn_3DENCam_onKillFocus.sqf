@@ -17,7 +17,7 @@ params ['_ctrlEdit'];
 
 if (ctrlText _ctrlEdit isEqualTo '') then 
 {
-	_ctrlEdit ctrlSetText localize "STR_ENH_3DENCam_description";
+	_ctrlEdit ctrlSetText localize "STR_ENH_3DENCAM_DESCRIPTION";
 };
 
 true

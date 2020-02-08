@@ -30,7 +30,7 @@ collect3DENHistory
 		}
 		else
 		{
-			[format ["%1 (%2)",localize "STR_ENH_functions_batchReplace_error",_class],1] call BIS_fnc_3DENNotification;
+			[format ["%1 (%2)",localize "STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR",_class],1] call BIS_fnc_3DENNotification;
 		};
 	} forEach _objects;
 };

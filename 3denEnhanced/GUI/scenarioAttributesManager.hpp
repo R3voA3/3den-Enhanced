@@ -22,7 +22,7 @@ class ENH_ScenarioAttributesManager
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_tools_ScenarioAttributesManager;
+			text = $STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -30,7 +30,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class Templates: ctrlStatic
 		{
-			text = $STR_ENH_scenarioAttributesManager_templates;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 25 * GRID_W;
@@ -38,7 +38,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class Attributes: ctrlStatic
 		{
-			text = $STR_ENH_scenarioAttributesManager_attributes;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES;
 			x = CENTERED_X(DIALOG_W) + 51 * GRID_W;
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 25 * GRID_W;
@@ -46,7 +46,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class CreateTemplate: ctrlButton
 		{
-			text = $STR_ENH_scenarioAttributesManager_createTemplate;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + 98 * GRID_W;
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 61 * GRID_W;
@@ -74,7 +74,7 @@ class ENH_ScenarioAttributesManager
 
 		class DeleteTemplate: ctrlButton
 		{
-			text = $STR_ENH_scenarioAttributesManager_deleteTemplate;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE;
 			x = CENTERED_X(DIALOG_W - 2);
 			y = DIALOG_TOP + 83 * GRID_H;
 			w = 50 * GRID_W;
@@ -83,7 +83,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class ApplyTemplate: ctrlButton
 		{
-			text = $STR_ENH_scenarioAttributesManager_applyTemplate;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE;
 			x = CENTERED_X(DIALOG_W - 2);
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 50 * GRID_W;
@@ -92,7 +92,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class Export: ctrlButton
 		{
-			text = $STR_ENH_scenarioAttributesManager_export;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT;
 			x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 25 * GRID_W;
@@ -133,7 +133,7 @@ class ENH_ScenarioAttributesManager
 		};
 		class ApplyAttribute: ctrlButton
 		{
-			text = $STR_ENH_scenarioAttributesManager_applyAttribute;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE;
 			x = CENTERED_X(DIALOG_W) + 78 * GRID_W;
 			y = DIALOG_TOP + 89 * GRID_H;
 			w = 40 * GRID_W;

@@ -21,7 +21,7 @@ class ENH_HoldAction: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_HoldAction: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_holdAction_description;
+					text = $STR_ENH_HOLDACTION_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_HoldAction: Title
 		};
 		class NameTitle: Title
 		{
-			text = $STR_ENH_holdAction_name_displayName;
+			text = $STR_ENH_HOLDACTION_NAME_DISPLAYNAME;
 			y = 6.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Name: ctrlEdit
@@ -65,7 +65,7 @@ class ENH_HoldAction: Title
 		};
 		class IdleIconTitle: Title
 		{
-			text = $STR_ENH_holdAction_iconIdle_displayName;
+			text = $STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME;
 			y = 7.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class IdleIcon: ctrlCombo
@@ -78,7 +78,7 @@ class ENH_HoldAction: Title
 		};		
 		class ProgressIconTitle: Title
 		{
-			text = $STR_ENH_holdAction_iconProgress_displayName;
+			text = $STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME;
 			y = 8.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class ProgressIcon: ctrlCombo
@@ -91,8 +91,8 @@ class ENH_HoldAction: Title
 		};
 		class ConditionShowTitle: Title
 		{
-			text = $STR_ENH_holdAction_conditionShow_displayName;
-			tooltip = $STR_ENH_holdAction_conditionShow_tooltip;
+			text = $STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP;
 			y = 9.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class ConditionShow: ctrlEditMulti
@@ -105,8 +105,8 @@ class ENH_HoldAction: Title
 		};
 		class ConditionProgressTitle: Title
 		{
-			text = $STR_ENH_holdAction_conditionProgress_displayName;
-			tooltip = $STR_ENH_holdAction_conditionProgress_tooltip;
+			text = $STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP;
 			y = 12.5 * SIZE_M * GRID_H + 25 * pixelH;
 		};
 		class ConditionProgress: ctrlEditMulti
@@ -119,8 +119,8 @@ class ENH_HoldAction: Title
 		};
 		class CodeStartTitle: Title
 		{
-			text = $STR_ENH_holdAction_codeStart_displayName;
-			tooltip = $STR_ENH_holdAction_codeStart_tooltip;
+			text = $STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CODESTART_TOOLTIP;
 			y = 15.5 * SIZE_M * GRID_H + 30 * pixelH;
 		};
 		class CodeStart: ctrlEditMulti
@@ -133,8 +133,8 @@ class ENH_HoldAction: Title
 		};
 		class CodeProgressTitle: Title
 		{
-			text = $STR_ENH_holdAction_codeProgress_displayName;
-			tooltip = $STR_ENH_holdAction_codeProgress_tooltip;
+			text = $STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP;
 			y = 18.5 * SIZE_M * GRID_H + 35 * pixelH;
 		};
 		class CodeProgress: ctrlEditMulti
@@ -147,8 +147,8 @@ class ENH_HoldAction: Title
 		};
 		class CodeCompletionTitle: Title
 		{
-			text = $STR_ENH_holdAction_codeComplete_displayName;
-			tooltip = $STR_ENH_holdAction_codeComplete_tooltip;
+			text = $STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP;
 			y = 21.5 * SIZE_M * GRID_H + 40 * pixelH;
 		};
 		class CodeCompletion: ctrlEditMulti
@@ -161,8 +161,8 @@ class ENH_HoldAction: Title
 		};
 		class CodeInterruptTitle: Title
 		{
-			text = $STR_ENH_holdAction_codeInterrupt_displayName;
-			tooltip = $STR_ENH_holdAction_codeInterrupt_tooltip;
+			text = $STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME;
+			tooltip = $STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP;
 			y = 24.5 * SIZE_M * GRID_H + 45 * pixelH;
 		};
 		class CodeInterrupt: ctrlEditMulti
@@ -175,7 +175,7 @@ class ENH_HoldAction: Title
 		};
 		class DurationTitle: Title
 		{
-			text = $STR_ENH_holdAction_duration_displayName;
+			text = $STR_ENH_HOLDACTION_DURATION_DISPLAYNAME;
 			y = 27.5 * SIZE_M * GRID_H + 50 * pixelH;
 		};
 		class DurationValue: ctrlXSliderH
@@ -198,7 +198,7 @@ class ENH_HoldAction: Title
 		};
 		class PriorityTitle: Title
 		{
-			text = $STR_ENH_holdAction_priority_displayName;
+			text = $STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME;
 			y = 28.5 * SIZE_M * GRID_H + 55 * pixelH;
 		};
 		class PriorityValue: ctrlXSliderH
@@ -221,7 +221,7 @@ class ENH_HoldAction: Title
 		};
 		class ShowUnconsciousTitle: Title
 		{
-			text = $STR_ENH_holdAction_showUnconsciousy_displayName;
+			text = $STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME;
 			y = 29.5 * SIZE_M * GRID_H + 60 * pixelH;
 		};
 		class ShowUnconscious: ctrlCheckbox
@@ -234,7 +234,7 @@ class ENH_HoldAction: Title
 		};
 		class ShowWindowTitle: Title
 		{
-			text = $STR_ENH_holdAction_showWindow_displayName;
+			text = $STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME;
 			y = 30.5 * SIZE_M * GRID_H + 65 * pixelH;
 		};
 		class ShowWindow: ctrlCheckbox
@@ -252,7 +252,7 @@ class ENH_HoldAction: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_holdAction_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

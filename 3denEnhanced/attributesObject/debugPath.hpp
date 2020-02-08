@@ -1,7 +1,7 @@
 class ENH_debugPath
 {
-	displayName = $STR_ENH_debugPath_displayName;
-	tooltip = $STR_ENH_debugPath_tooltip;
+	displayName = $STR_ENH_DEBUGPATH_DISPLAYNAME;
+	tooltip = $STR_ENH_DEBUGPATH_TOOLTIP;
 	property = "ENH_debugPath";
 	control = "Checkbox";
 	expression =
@@ -9,7 +9,7 @@ class ENH_debugPath
 	{\
 		[_this] spawn\
 		{\
-			systemChat format [localize 'STR_ENH_debugPath_message',str _this];\
+			systemChat format [localize 'STR_ENH_DEBUGPATH_MESSAGE',str _this];\
 			params ['_unit'];\
 			private _arrow = objNull;\
 			private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)',random(1),random(1),random(1)];\

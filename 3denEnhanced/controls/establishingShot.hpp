@@ -21,7 +21,7 @@ class ENH_EstablishingShot: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_EstablishingShot: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_establishingShot_description;
+					text = $STR_ENH_ESTABLISHINGSHOT_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_EstablishingShot: Title
 		};
 		class CenterTitle: Title
 		{
-			text = $STR_ENH_establishingShot_centerPos_displayName;
+			text = $STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class CenterValue: ctrlEdit
@@ -66,7 +66,7 @@ class ENH_EstablishingShot: Title
 		class TextTitle: Title
 		{
 			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_establishingShot_displayedText;
+			text = $STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT;
 		};
 		class TextValue: CenterValue
 		{
@@ -76,7 +76,7 @@ class ENH_EstablishingShot: Title
 		class AltitudeTitle: Title
 		{
 			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_altitude_displayName;
+			text = $STR_ENH_ALTITUDE_DISPLAYNAME;
 		};
 		class AltitudeValue: ctrlXSliderH
 		{
@@ -100,7 +100,7 @@ class ENH_EstablishingShot: Title
 		class RadiusTitle: Title
 		{
 			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_establishingShot_radius_displayName;
+			text = $STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME;
 		};
 		class RadiusValue: ctrlXSliderH
 		{
@@ -124,7 +124,7 @@ class ENH_EstablishingShot: Title
 		class AngleTitle: Title
 		{
 			y = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
-			text = $STR_ENH_establishingShot_viewingAngle_displayName;
+			text = $STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME;
 		};
 		class AngleValue: ctrlXSliderH
 		{
@@ -148,7 +148,7 @@ class ENH_EstablishingShot: Title
 		class DirectionTitle: Title
 		{
 			y = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
-			text = $STR_ENH_establishingShot_direction_displayName;
+			text = $STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME;
 		};
 		class DirectionValue: ctrlToolbox
         {
@@ -161,8 +161,8 @@ class ENH_EstablishingShot: Title
             columns = 1;
             strings[] = 
             {
-				$STR_ENH_establishingShot_antiClockwise,
-				$STR_ENH_establishingShot_clockwise
+				$STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE,
+				$STR_ENH_ESTABLISHINGSHOT_CLOCKWISE
             };
             values[] = {0,1};
         };
@@ -173,7 +173,7 @@ class ENH_EstablishingShot: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_establishingShot_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

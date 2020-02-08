@@ -20,7 +20,7 @@ class ENH_Garrison
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_garrison_header;
+			text = $STR_ENH_GARRISON_HEADER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -28,7 +28,7 @@ class ENH_Garrison
 		};
 		class Radius: ctrlStatic
 		{
-			text = $STR_ENH_placementTools_radius;
+			text = $STR_ENH_PLACEMENTTOOLS_RADIUS;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 15 * GRID_W;
@@ -44,7 +44,7 @@ class ENH_Garrison
 		};
 		class Coverage: ctrlStatic
 		{
-			text = $STR_ENH_garrison_coverage;
+			text = $STR_ENH_GARRISON_COVERAGE;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 15 * GRID_W;
@@ -61,16 +61,16 @@ class ENH_Garrison
 			columns = 4;
 			strings[] = 
 			{
-				$STR_ENH_garrison_10percent,
-				$STR_ENH_garrison_25percent,
-				$STR_ENH_garrison_50percent,
-				$STR_ENH_garrison_100percent
+				$STR_ENH_GARRISON_10PERCENT,
+				$STR_ENH_GARRISON_25PERCENT,
+				$STR_ENH_GARRISON_50PERCENT,
+				$STR_ENH_GARRISON_100PERCENT
 			};
 			values[] = {10,4,2,1};
 		};
 		class Stance: ctrlStatic
 		{
-			text = $STR_ENH_garrison_stance;
+			text = $STR_ENH_GARRISON_STANCE;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 15 * GRID_W;
@@ -87,9 +87,9 @@ class ENH_Garrison
 			columns = 3;
 			strings[] = 
 			{
-				$STR_ENH_garrison_stance_auto,
-				$STR_ENH_garrison_stance_crouch,
-				$STR_ENH_garrison_stance_stand
+				$STR_ENH_GARRISON_STANCE_AUTO,
+				$STR_ENH_GARRISON_STANCE_CROUCH,
+				$STR_ENH_GARRISON_STANCE_STAND
 			};
 			values[] = {0,1,2,3};
 		};

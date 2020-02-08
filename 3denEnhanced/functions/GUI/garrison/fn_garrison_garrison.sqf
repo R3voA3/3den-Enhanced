@@ -59,7 +59,7 @@ collect3DENHistory
 
 		if (count _positions == 0) exitWith
 		{
-			[localize "STR_ENH_garrison_notification",1] call BIS_fnc_3DENNotification;
+			[localize "STR_ENH_GARRISON_NOTIFICATION",1] call BIS_fnc_3DENNotification;
 		};
 		if(surfaceIsWater _pos) then
 		{

@@ -21,7 +21,7 @@ class ENH_AmbientFlyby: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_AmbientFlyby: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_ambientFlyby_description;
+					text = $STR_ENH_AMBIENTFLYBY_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,8 +52,8 @@ class ENH_AmbientFlyby: Title
 		};
 		class ClassesTitle: Title
 		{
-			text = $STR_ENH_ambientFlyby_classes_displayName;
-			tooltip = $STR_ENH_ambientFlyby_classes_tooltip;
+			text = $STR_ENH_AMBIENTFLYBY_CLASSES_DISPLAYNAME;
+			tooltip = $STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class ClassesValue: ctrlEditMulti
@@ -66,7 +66,7 @@ class ENH_AmbientFlyby: Title
 		};
 		class StartTitle: Title
 		{
-			text = $STR_ENH_ambientFlyby_startPosition_displayName;
+			text = $STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME;
 			y = 10.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class StartValue: ctrlEdit
@@ -79,7 +79,7 @@ class ENH_AmbientFlyby: Title
 		};
 		class EndTitle: Title
 		{
-			text = $STR_ENH_ambientFlyby_endPosition_displayName;
+			text = $STR_ENH_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME;
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class EndValue: ctrlEdit
@@ -93,7 +93,7 @@ class ENH_AmbientFlyby: Title
 		class AltitudeTitle: Title
 		{
 			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_altitude_displayName;
+			text = $STR_ENH_ALTITUDE_DISPLAYNAME;
 		};
 		class AltitudeValue: ctrlXSliderH
 		{
@@ -117,7 +117,7 @@ class ENH_AmbientFlyby: Title
 		class SpeedTitle: Title
 		{
 			y = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
-			text = $STR_ENH_ambientFlyby_speed_displayName;
+			text = $STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME;
 		};
 		class SpeedValue: ctrlToolboxPictureKeepAspect
         {
@@ -136,16 +136,16 @@ class ENH_AmbientFlyby: Title
 			};
 			tooltips[] = 
 			{
-				$STR_ENH_speed_limited,
-				$STR_ENH_speed_normal,
-				$STR_ENH_speed_full
+				$STR_ENH_SPEED_LIMITED,
+				$STR_ENH_SPEED_NORMAL,
+				$STR_ENH_SPEED_FULL
 			};
             values[] = {0,1,2};
         };
 		class SideTitle: Title
 		{
 			y = 15.5 * SIZE_M * GRID_H + 30 * pixelH;
-			text = $STR_ENH_side_displayName;
+			text = $STR_ENH_SIDE_DISPLAYNAME;
 		};
 		class SideValue: ctrlToolboxPictureKeepAspect
         {
@@ -167,8 +167,8 @@ class ENH_AmbientFlyby: Title
         };
 		class DelayTitle: Title
 		{
-			text = $STR_ENH_ambientFlyby_delay_displayName;
-			tooltip = $STR_ENH_ambientFlyby_delay_tooltip;
+			text = $STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME;
+			tooltip = $STR_ENH_AMBIENTFLYBY_DELAY_TOOLTIP;
 			y = 17.5 * SIZE_M * GRID_H + 35 * pixelH;
 		};
 		class DelayValue: ctrlXSliderH
@@ -197,7 +197,7 @@ class ENH_AmbientFlyby: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_ambientFlyby_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

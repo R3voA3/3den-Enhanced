@@ -23,7 +23,7 @@ _data params ["_world","_camPosition","_camVectorDir","_camVectorUp"];
 
 if !(_world isEqualTo worldName) exitWith
 {
-	[localize "STR_ENH_3DENCam_wrongWorld",1] call BIS_fnc_3DENNotification;
+	[localize "STR_ENH_3DENCAM_WRONGWORLD",1] call BIS_fnc_3DENNotification;
 };
 
 [true] call BIS_fnc_EXP_camp_setCinematicMode;

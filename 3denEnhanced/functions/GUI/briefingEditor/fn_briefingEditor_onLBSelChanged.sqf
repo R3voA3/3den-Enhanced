@@ -52,20 +52,20 @@ switch (_selectedIndex) do
 	};
 	case 1:
 	{ 
-		[[true,false,false],["STR_ENH_briefingEditor_text","",""],[false,false,true]] call _fnc_setupCtrls;
+		[[true,false,false],["STR_ENH_BRIEFINGEDITOR_TEXT","",""],[false,false,true]] call _fnc_setupCtrls;
 	};
 	case 2:
 	{ 
-		[[true,true,true],["STR_ENH_briefingEditor_path","STR_ENH_briefingEditor_width","STR_ENH_briefingEditor_height"]] call _fnc_setupCtrls;
+		[[true,true,true],["STR_ENH_BRIEFINGEDITOR_PATH","STR_ENH_BRIEFINGEDITOR_WIDTH","STR_ENH_BRIEFINGEDITOR_HEIGHT"]] call _fnc_setupCtrls;
 	};
 	case 3:
 	{
-		[[true,true,false],["STR_ENH_briefingEditor_size","STR_ENH_briefingEditor_text",""],[true,true,false]] call _fnc_setupCtrls;
+		[[true,true,false],["STR_ENH_BRIEFINGEDITOR_SIZE","STR_ENH_BRIEFINGEDITOR_TEXT",""],[true,true,false]] call _fnc_setupCtrls;
 	};
 	case 4;
 	case 5:
 	{
-		[[true,true,false],["STR_ENH_briefingEditor_expression","STR_ENH_briefingEditor_text",""]] call _fnc_setupCtrls;
+		[[true,true,false],["STR_ENH_BRIEFINGEDITOR_EXPRESSION","STR_ENH_BRIEFINGEDITOR_TEXT",""]] call _fnc_setupCtrls;
 	};
 };
 

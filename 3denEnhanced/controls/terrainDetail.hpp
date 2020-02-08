@@ -16,12 +16,12 @@ class ENH_TerrainDetail: Title
             columns = 3;
             strings[] = 
             {
-                $STR_3den_attributes_default_unchanged_text,
-                $STR_ENH_terrainGrid_grassDisabled_displayName,
-                $STR_ENH_terrainGrid_standard_displayName,
-                $STR_ENH_terrainGrid_high_displayName,
-                $STR_ENH_terrainGrid_veryHigh_displayName,
-                $STR_ENH_terrainGrid_ultra_displayName
+                $STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT,
+                $STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME,
+                $STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME,
+                $STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME,
+                $STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME,
+                $STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME
             };
             values[] = {-1,50,25,12.5,6.25,3.125};
         };

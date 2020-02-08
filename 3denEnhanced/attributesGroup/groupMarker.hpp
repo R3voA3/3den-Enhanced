@@ -1,12 +1,12 @@
 class ENH_GroupMarker
 {
-	displayName = $STR_ENH_groupMarker_displayName;
+	displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
 	collapsed = 0;
 	class Attributes
 	{
 		class ENH_GroupMarker
 		{
-			displayName = $STR_ENH_groupMarker_displayName;
+			displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
 			property = "ENH_groupMarker";
 			control = "ENH_GroupMarker";
 			expression = "\

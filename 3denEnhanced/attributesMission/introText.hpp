@@ -1,7 +1,7 @@
 class ENH_IntroText_Category
 {
 	collapsed = 1;
-	displayName = $STR_ENH_attributeCategory_introText;
+	displayName = $STR_ENH_ATTRIBUTECATEGORY_INTROTEXT;
 	class Attributes
 	{
 		class ENH_IntroText

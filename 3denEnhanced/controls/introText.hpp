@@ -21,7 +21,7 @@ class ENH_IntroText: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_IntroText: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_introText_description;
+					text = $STR_ENH_INTROTEXT_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,8 +52,8 @@ class ENH_IntroText: Title
 		};
 		class DelayTitle: Title
 		{
-			text = $STR_ENH_introText_introDelay_displayName;
-			tooltip = $STR_ENH_introText_introDelay_tooltip;
+			text = $STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME;
+			tooltip = $STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class DelayValue: ctrlXSliderH
@@ -78,7 +78,7 @@ class ENH_IntroText: Title
 		class Line1Title: DelayTitle
 		{
 			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_introText_line1_displayName;
+			text = $STR_ENH_INTROTEXT_LINE1_DISPLAYNAME;
 			tooltip = "";
 		};
 		class Line1Value: ctrlEdit
@@ -92,7 +92,7 @@ class ENH_IntroText: Title
 		class Line2Title: DelayTitle
 		{
 			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_introText_line2_displayName;
+			text = $STR_ENH_INTROTEXT_LINE2_DISPLAYNAME;
 			tooltip = "";
 		};
 		class Line2Value: Line1Value
@@ -103,7 +103,7 @@ class ENH_IntroText: Title
 		class Line3Title: DelayTitle
 		{
 			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_introText_line3_displayName;
+			text = $STR_ENH_INTROTEXT_LINE3_DISPLAYNAME;
 			tooltip = "";
 		};
 		class Line3Value: Line1Value
@@ -114,7 +114,7 @@ class ENH_IntroText: Title
 		class IntroTypeTitle: DelayTitle
 		{
 			y = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
-			text = $STR_ENH_introText_introType_displayName;
+			text = $STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME;
 			tooltip = "";
 		};
 		class IntroType: ctrlToolboxPictureKeepAspect
@@ -141,7 +141,7 @@ class ENH_IntroText: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_introText_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

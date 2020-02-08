@@ -21,7 +21,7 @@ class ENH_Extraction
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_extraction_header;
+			text = $STR_ENH_EXTRACTION_HEADER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -29,7 +29,7 @@ class ENH_Extraction
 		};
 		class ShowRadioChat: ctrlStatic
 		{
-			text = $STR_ENH_extraction_showRadioChat;
+			text = $STR_ENH_EXTRACTION_SHOWRADIOCHAT;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 23 * GRID_W;
@@ -46,7 +46,7 @@ class ENH_Extraction
 		};
 		class NameRequester: ctrlStatic
 		{
-			text = $STR_ENH_extraction_callSignRequester;
+			text = $STR_ENH_EXTRACTION_CALLSIGNREQUESTER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = 30 * GRID_W;
@@ -62,7 +62,7 @@ class ENH_Extraction
 		};
 		class NameTransport: ctrlStatic
 		{
-			text = $STR_ENH_extraction_callSignTransport;
+			text = $STR_ENH_EXTRACTION_CALLSIGNTRANSPORT;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 30 * GRID_W;
@@ -78,8 +78,8 @@ class ENH_Extraction
 		};
 		class ConditionStart: ctrlStatic
 		{
-			text = $STR_ENH_extraction_conditionStart;
-			tooltip = $STR_ENH_extraction_conditionStart_tooltip;
+			text = $STR_ENH_EXTRACTION_CONDITIONSTART;
+			tooltip = $STR_ENH_EXTRACTION_CONDITIONSTART_TOOLTIP;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 24 * GRID_H;
 			w = 30 * GRID_W;
@@ -95,8 +95,8 @@ class ENH_Extraction
 		};
 		class GrenadeType: ctrlStatic
 		{
-			text = $STR_ENH_extraction_grenadeType;
-			tooltip = $STR_ENH_extraction_grenadeType_tooltip;
+			text = $STR_ENH_EXTRACTION_GRENADETYPE;
+			tooltip = $STR_ENH_EXTRACTION_GRENADETYPE_TOOLTIP;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 30 * GRID_H;
 			w = 30 * GRID_W;
@@ -112,8 +112,8 @@ class ENH_Extraction
 		};
 		class Condition: ctrlStatic
 		{
-			text = $STR_ENH_extraction_condition;
-			tooltip = $STR_ENH_extraction_condition_tooltip;
+			text = $STR_ENH_EXTRACTION_CONDITION;
+			tooltip = $STR_ENH_EXTRACTION_CONDITION_TOOLTIP;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 36 * GRID_H;
 			w = 30 * GRID_W;
@@ -129,7 +129,7 @@ class ENH_Extraction
 		};
 		class GridPosition: ctrlStatic
 		{
-			text = $STR_ENH_extraction_gridPosition;
+			text = $STR_ENH_EXTRACTION_GRIDPOSITION;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 57 * GRID_H;
 			w = 30 * GRID_W;

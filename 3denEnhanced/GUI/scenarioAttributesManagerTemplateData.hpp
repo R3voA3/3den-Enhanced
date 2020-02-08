@@ -26,7 +26,7 @@ class ENH_ScenarioAttributesManagerTemplateData
 		};
 		class Title: ctrlStatic
 		{
-			text = $STR_ENH_ScenarioAttributesManagerTemplateData_title;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE;
 			x = CENTERED_X(60);
 			y = DIALOG_TOP + 6 * GRID_H;
 			w = 58 * GRID_W;
@@ -42,7 +42,7 @@ class ENH_ScenarioAttributesManagerTemplateData
 		};
 		class Description: ctrlStatic
 		{
-			text = $STR_ENH_ScenarioAttributesManagerTemplateData_description;
+			text = $STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION;
 			x = CENTERED_X(60) + 1 * GRID_W;
 			y = DIALOG_TOP + 18 * GRID_H;
 			w = 58 * GRID_W;

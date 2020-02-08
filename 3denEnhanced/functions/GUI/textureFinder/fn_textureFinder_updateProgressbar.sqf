@@ -23,7 +23,7 @@ while {!isNull _display} do
 	sleep 0.1;
 	_ctrlProgText ctrlSetText format 
 	[
-		localize "STR_ENH_updateProgressbar",
+		localize "STR_ENH_UPDATEPROGRESSBAR",
 		ENH_TextureFinder_ClassesSearched,
 		ENH_TextureFinder_ClassesFound,
 		count ENH_TextureFinder_TexturesFound

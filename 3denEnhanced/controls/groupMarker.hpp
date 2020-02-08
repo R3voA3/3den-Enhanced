@@ -21,7 +21,7 @@ class ENH_GroupMarker: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_GroupMarker: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_groupMarker_description;
+					text = $STR_ENH_GROUPMARKER_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_GroupMarker: Title
 		};
 		class TypeTitle: Title 
 		{
-			text = $STR_ENH_groupMarker_type;
+			text = $STR_ENH_GROUPMARKER_TYPE;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Type: ctrlListbox
@@ -65,7 +65,7 @@ class ENH_GroupMarker: Title
 		};
 		class ColourTitle: Title
 		{
-			text = $STR_ENH_groupMarker_colour;
+			text = $STR_ENH_GROUPMARKER_COLOUR;
 			y = 12.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class Colour: ctrlListbox	
@@ -78,7 +78,7 @@ class ENH_GroupMarker: Title
 		};		
 		class TextTitle: Title
 		{
-			text = $STR_ENH_groupMarker_text;
+			text = $STR_ENH_GROUPMARKER_TEXT;
 			y = 20.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class Text: ctrlEdit
@@ -91,7 +91,7 @@ class ENH_GroupMarker: Title
 		};
 		class ShowGroupSizeTitle: Title 
 		{
-			text = $STR_ENH_groupMarker_showGroupSize;
+			text = $STR_ENH_GROUPMARKER_SHOWGROUPSIZE;
 			y = 21.5 * SIZE_M * GRID_H + 20 * pixelH;
 		};
 		class ShowGroupSize: ctrlCheckbox
@@ -109,7 +109,7 @@ class ENH_GroupMarker: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_groupMarker_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

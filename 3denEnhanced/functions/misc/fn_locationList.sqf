@@ -34,7 +34,7 @@ private _fn_addLocations =
    private _parentIndex = _ctrlTV tvAdd [[0],localize _parentName];
    {
       private _name = getText (configfile >> "CfgVehicles" >> typeOf _x >> "displayName");
-      if (_name isEqualTo "") then {_name = localize "STR_ENH_locationList_unknown"};
+      if (_name isEqualTo "") then {_name = localize "STR_ENH_LOCATIONLIST_UNKNOWN"};
       private _index = _ctrlTV tvAdd [[0,_parentIndex],_name];
 
       _ctrlTV tvSetData [[0,_parentIndex,_index],str position _x];
@@ -45,18 +45,18 @@ private _fn_addLocations =
 };
 
 //Get all locations
-[["Chapel"],"STR_ENH_locationList_chapels",false] call _fn_addLocations;
-[["Church"],"STR_ENH_locationList_churches",false] call _fn_addLocations;
-[["Transmitter"],"STR_ENH_locationList_transmitters",false] call _fn_addLocations;
-[["Powersolar","Powerwind","Powerwave"],"STR_ENH_locationList_powerProduction",false] call _fn_addLocations;
-[["FuelStation"],"STR_ENH_locationList_fuelStations",false] call _fn_addLocations;
-[["Shipwreck"],"STR_ENH_locationList_shipwrecks",false] call _fn_addLocations;
+[["Chapel"],"STR_ENH_LOCATIONLIST_CHAPELS",false] call _fn_addLocations;
+[["Church"],"STR_ENH_LOCATIONLIST_CHURCHES",false] call _fn_addLocations;
+[["Transmitter"],"STR_ENH_LOCATIONLIST_TRANSMITTERS",false] call _fn_addLocations;
+[["Powersolar","Powerwind","Powerwave"],"STR_ENH_LOCATIONLIST_POWERPRODUCTION",false] call _fn_addLocations;
+[["FuelStation"],"STR_ENH_LOCATIONLIST_FUELSTATIONS",false] call _fn_addLocations;
+[["Shipwreck"],"STR_ENH_LOCATIONLIST_SHIPWRECKS",false] call _fn_addLocations;
 
 //Add airports
 private _locations = nearestLocations [_centerMap,["Airport"],_r];
 
 if (_locations isEqualTo []) exitWith {false};
-private _parentIndex = _ctrlTV tvAdd [[0],localize "STR_ENH_locationList_airports"];
+private _parentIndex = _ctrlTV tvAdd [[0],localize "STR_ENH_LOCATIONLIST_AIRPORTS"];
 
 {
    private _index = _ctrlTV tvAdd [[0,_parentIndex],text _x];

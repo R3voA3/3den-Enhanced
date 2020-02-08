@@ -7,7 +7,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
 		class ENH_SessionTime: Version
 		{
 			idc = 668;
-			tooltip = $STR_ENH_statusBar_sessionTimer_tooltip;
+			tooltip = $STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP;
 			x = ORIGIN_X_STATUSBAR - 49 * GRID_W - SPACE_X;
 			onLoad = "(_this # 0) ctrlEnable false";
 			style = ST_CENTER + ST_NO_RECT;

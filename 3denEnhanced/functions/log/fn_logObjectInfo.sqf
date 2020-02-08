@@ -55,27 +55,27 @@ private _text = "";
 	{
 		case 1:
 		{
-			("1 - Primary - " + localize "STR_ENH_functions_logObjectInfo_primary");
+			("1 - Primary - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_PRIMARY");
 		};
 		case 2:
 		{
-			("2 - Network - " + localize "STR_ENH_functions_logObjectInfo_network");
+			("2 - Network - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_NETWORK");
 		};
 		case 4:
 		{
-			("4 - Temporary - " + localize "STR_ENH_functions_logObjectInfo_temporary");
+			("4 - Temporary - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEMPORARY");
 		};
 		case 8:
 		{
-			("8 - TypeVehicle - " + localize "STR_ENH_functions_logObjectInfo_typeVehicle");
+			("8 - TypeVehicle - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPEVEHICLE");
 		};
 		case 16:
 		{
-			("16 - TypeTempVehicle - " + localize "STR_ENH_functions_logObjectInfo_typeTempVehicle");
+			("16 - TypeTempVehicle - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_TYPETEMPVEHICLE");
 		};
 		case 32:
 		{
-			("32 - LandDecal - " + localize "STR_ENH_functions_logObjectInfo_landDecal");
+			("32 - LandDecal - " + localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_LANDDECAL");
 		};
 	};
 	private _materials = str getObjectMaterials _x;
@@ -84,23 +84,23 @@ private _text = "";
 
 	 _text =  _text +
 	([
-			localize "STR_ENH_functions_logObjectInfo_name" + endl + _name + endl,
-			localize "STR_ENH_functions_logObjectInfo_class" + endl + _class + endl,
-			localize "STR_ENH_functions_logObjectInfo_vehicleClass" + endl + _vehClass + endl,
-			localize "STR_ENH_functions_logObjectInfo_kindOf" + endl + _kind + endl,
-			localize "STR_ENH_functions_logObjectInfo_size" + endl + _size + endl,
-			localize "STR_ENH_functions_logObjectInfo_selectionNames"  + endl + _selectionNamesFormatted + endl,
-			localize "STR_ENH_functions_logObjectInfo_parents" + endl + _parents + endl,
-			localize "STR_ENH_functions_logObjectInfo_modelInfo" + endl + _modelInfo + endl,
-			localize "STR_ENH_functions_logObjectInfo_objectType" + endl + _objType + endl,
-			localize "STR_ENH_functions_logObjectInfo_materials" + endl + _materials + endl,
-			localize "STR_ENH_functions_logObjectInfo_textures" + endl + _textures + endl,
-			localize "STR_ENH_functions_logObjectInfo_animationNames" + endl + _animationNames + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_NAME" + endl + _name + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_CLASS" + endl + _class + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_VEHICLECLASS" + endl + _vehClass + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_KINDOF" + endl + _kind + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_SIZE" + endl + _size + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_SELECTIONNAMES"  + endl + _selectionNamesFormatted + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_PARENTS" + endl + _parents + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_MODELINFO" + endl + _modelInfo + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_OBJECTTYPE" + endl + _objType + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_MATERIALS" + endl + _materials + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEXTURES" + endl + _textures + endl,
+			localize "STR_ENH_FUNCTIONS_LOGOBJECTINFO_ANIMATIONNAMES" + endl + _animationNames + endl,
 			endl + endl + endl + endl
 		] joinString endl);
 } forEach _objects;
 //Set variable used by Display3denCopy and create the display
-uinamespace setVariable ["Display3DENCopy_data",[localize "STR_ENH_contextMenu_logObjectInfo",_text]];
+uinamespace setVariable ["Display3DENCopy_data",[localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO",_text]];
 findDisplay 313 createDisplay "Display3denCopy";
 
 true

@@ -1,7 +1,7 @@
 class ENH_AddGunLight
 {
-	displayName = $STR_ENH_addGunLight_displayName;
-	tooltip = $STR_ENH_addGunLight_tooltip;
+	displayName = $STR_ENH_ADDGUNLIGHT_DISPLAYNAME;
+	tooltip = $STR_ENH_ADDGUNLIGHT_TOOLTIP;
 	property = "ENH_addGunLight";
 	control = "Checkbox";
 	expression =

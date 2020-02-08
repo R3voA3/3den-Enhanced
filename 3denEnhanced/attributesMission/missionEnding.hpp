@@ -1,12 +1,12 @@
 class ENH_MissionEnding
 {
 	collapsed = 1;
-	displayName = $STR_ENH_missionEnding_category_displaynName;
+	displayName = $STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME;
 	class Attributes
 	{
 		class ENH_MissionEnding_Casualties
 		{
-			displayName = $STR_ENH_missionEnding_casualties_displayName;
+			displayName = $STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME;
 			property = "ENH_missionEnding_casualties";
 			control = "ENH_MissionEnding_Casualties";
 			expression =

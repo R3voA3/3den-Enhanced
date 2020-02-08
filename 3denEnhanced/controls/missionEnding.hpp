@@ -21,7 +21,7 @@ class ENH_MissionEnding_Casualties: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_MissionEnding_Casualties: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_missionEnding_casualties_description;
+					text = $STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -53,8 +53,8 @@ class ENH_MissionEnding_Casualties: Title
 		class ThresholdTitle: Title
 		{
 			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
-			text = $STR_ENH_missionEnding_casualties_threshold_displayName;
-			tooltip = $STR_ENH_missionEnding_casualties_threshold_tooltip;
+			text = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME;
+			tooltip = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP;
 		};
 		class ThresholdValue: ctrlXSliderH
 		{
@@ -77,8 +77,8 @@ class ENH_MissionEnding_Casualties: Title
 		};
 		class EndingTitle: Title 
 		{
-			text = $STR_ENH_missionEnding_casualties_threshold_ending_displayName;
-			tooltip = $STR_ENH_missionEnding_casualties_threshold_ending_tooltip;
+			text = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_ENDING_DISPLAYNAME;
+			tooltip = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_ENDING_TOOLTIP;
 			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class Ending: ctrlCombo
@@ -91,7 +91,7 @@ class ENH_MissionEnding_Casualties: Title
 		};
 		class IsWinTitle: Title 
 		{
-			text = $STR_ENH_missionEnding_casualties_threshold_win_displayName;
+			text = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_WIN_DISPLAYNAME;
 			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class IsWin: ctrlCheckbox
@@ -105,7 +105,7 @@ class ENH_MissionEnding_Casualties: Title
 		class SideTitle: Title
 		{
 			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_side_displayName;
+			text = $STR_ENH_SIDE_DISPLAYNAME;
 		};
 		class SideValue: ctrlToolboxPictureKeepAspect
         {
@@ -132,7 +132,7 @@ class ENH_MissionEnding_Casualties: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_missionEnding_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

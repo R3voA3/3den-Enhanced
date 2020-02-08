@@ -1,6 +1,6 @@
 class ENH_AmbientAnimations
 {
-	displayName = $STR_ENH_ambientAnimations_displayName;
+	displayName = $STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME;
 	control = "ENH_AmbientAnimations";
 	property = "ENH_AmbientAnimations";
 	expression =

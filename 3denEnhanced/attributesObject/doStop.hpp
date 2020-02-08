@@ -1,7 +1,7 @@
 class ENH_DoStop
 {
-	displayName = $STR_ENH_doStop_displayName;
-	tooltip = $STR_ENH_doStop_tooltip;
+	displayName = $STR_ENH_DOSTOP_DISPLAYNAME;
+	tooltip = $STR_ENH_DOSTOP_TOOLTIP;
 	property = "ENH_doStop";
 	control = "Checkbox";
 	expression = "if (!is3DEN && _value) then {doStop _this}";

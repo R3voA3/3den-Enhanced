@@ -12,7 +12,7 @@ class Tools
 };
 class ENH_Folder_Placement
 {
-	text = $STR_ENH_folder_placementTools;
+	text = $STR_ENH_FOLDER_PLACEMENTTOOLS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -29,7 +29,7 @@ class ENH_Folder_Placement
 };
 class ENH_Folder_Debug
 {
-	text = $STR_ENH_folder_debugTools;
+	text = $STR_ENH_FOLDER_DEBUGTOOLS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -41,7 +41,7 @@ class ENH_Folder_Debug
 };
 class ENH_Folder_Loadout
 {
-	text = $STR_ENH_folder_loadoutTools;
+	text = $STR_ENH_FOLDER_LOADOUTTOOLS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -57,7 +57,7 @@ class ENH_Folder_Loadout
 };
 class ENH_Folder_GUI
 {
-	text = $STR_ENH_folder_GUI;
+	text = $STR_ENH_FOLDER_GUI;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -71,7 +71,7 @@ class ENH_Folder_GUI
 };
 class ENH_Folder_Utilities
 {
-	text = $STR_ENH_folder_utilities;
+	text = $STR_ENH_FOLDER_UTILITIES;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -93,7 +93,7 @@ class ENH_Folder_Utilities
 };
 class ENH_Folder_Miscellaneous
 {
-	text = $STR_ENH_folder_miscellaneous;
+	text = $STR_ENH_FOLDER_MISCELLANEOUS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
@@ -112,37 +112,37 @@ class ENH_Folder_Miscellaneous
 //Utilities
 class ENH_MoonPhases
 {
-	text = $STR_ENH_tools_moonPhases;
+	text = $STR_ENH_TOOLS_MOONPHASES;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf'";
 	opensNewWindow = 1;
 };
 class ENH_Jukebox
 {
-	text = $STR_ENH_tools_jukebox;
+	text = $STR_ENH_TOOLS_JUKEBOX;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
 	opensNewWindow = 1;
 };
 class ENH_PrintConfig
 {
-	text = $STR_ENH_tools_printConfig;
+	text = $STR_ENH_TOOLS_PRINTCONFIG;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
 	opensNewWindow = 1;
 };
 class ENH_CfgDisabledCommands
 {
-	text = $STR_ENH_tools_CfgDisabledCommands;
+	text = $STR_ENH_TOOLS_CFGDISABLEDCOMMANDS;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
 	opensNewWindow = 1;
 };
 class ENH_ScriptCommands
 {
-	text = $STR_ENH_tools_ScriptCommands;
+	text = $STR_ENH_TOOLS_SCRIPTCOMMANDS;
 	action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_scriptCommands.sqf'";
 	opensNewWindow = 1;
 };
 class ENH_BriefingEditor
 {
-	text = $STR_ENH_tools_briefingEditor;
+	text = $STR_ENH_TOOLS_BRIEFINGEDITOR;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa";
 	action = "findDisplay 313 createDisplay 'ENH_briefingEditor'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
@@ -150,7 +150,7 @@ class ENH_BriefingEditor
 };
 class ENH_3DENRadio
 {
-	text = $STR_ENH_tools_3DENRadio;
+	text = $STR_ENH_TOOLS_3DENRADIO;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
 	action = "findDisplay 313 createDisplay 'ENH_3DENRadio'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
@@ -158,33 +158,33 @@ class ENH_3DENRadio
 };
 class ENH_ActionCreator
 {
-	text = $STR_ENH_tools_actionCreator;
+	text = $STR_ENH_TOOLS_ACTIONCREATOR;
 	action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
 	opensNewWindow = 1;
 };
 class ENH_ScenarioAttributesManager
 {
-	text = $STR_ENH_tools_scenarioAttributesManager;
+	text = $STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER;
 	action = "findDisplay 313 createDisplay 'ENH_ScenarioAttributesManager'";
 	opensNewWindow = 1;
 };
 class ENH_BatchReplace
 {
-	text = $STR_ENH_tools_batchReplace;
+	text = $STR_ENH_TOOLS_BATCHREPLACE;
 	action = "call ENH_fnc_batchReplace_createDisplay";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
 	opensNewWindow = 1;
 };
 class ENH_NameObjects
 {
-	text = $STR_ENH_tools_batchNaming;
+	text = $STR_ENH_TOOLS_BATCHNAMING;
 	action = "findDisplay 313 createDisplay 'ENH_NameObjects'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
 	opensNewWindow = 1;
 };
 class ENH_TextureFinder
 {
-	text = $STR_ENH_textureFinder;
+	text = $STR_ENH_TEXTUREFINDER;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
 	action = "findDisplay 313 createDisplay 'ENH_TextureFinder'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
@@ -192,7 +192,7 @@ class ENH_TextureFinder
 };
 class ENH_3DENCamPositions
 {
-	text = $STR_ENH_tools_3DENCam;
+	text = $STR_ENH_TOOLS_3DENCAM;
 	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'ENH_3DENCamPositions'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
@@ -201,64 +201,64 @@ class ENH_3DENCamPositions
 //Miscellaneous
 class ENH_DeleteEmptyLayers
 {
-	text = $STR_ENH_tools_deleteEmptyLayers;
+	text = $STR_ENH_TOOLS_DELETEEMPTYLAYERS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
 	action = "call ENH_fnc_deleteEmptyLayers";
 };
 class ENH_SwitchTime
 {
-	text = $STR_ENH_tools_switchTime;
+	text = $STR_ENH_TOOLS_SWITCHTIME;
 	picture = "\A3\ui_f\data\igui\cfg\actions\settimer_ca.paa";
 	action = "call ENH_fnc_switchTime";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
 };
 class ENH_ToggleGrass
 {
-	text = $STR_ENH_tools_toggleGrass;
+	text = $STR_ENH_TOOLS_TOGGLEGRASS;
 	action = "[] spawn ENH_fnc_toggleGrass";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
 };
 class ENH_ToggleSimpleObject
 {
-	text = $STR_ENH_tools_toggleSimpleObject;
+	text = $STR_ENH_TOOLS_TOGGLESIMPLEOBJECT;
 	picture = "";
 	action = "[['Object'],'objectIsSimple'] call ENH_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
 };
 class ENH_ToggleSimulation
 {
-	text = $STR_ENH_tools_toggleSimulation;
+	text = $STR_ENH_TOOLS_TOGGLESIMULATION;
 	picture = "";
 	action = "[['Object'],'enableSimulation'] call ENH_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
 class ENH_ToggleDynamicSimulation
 {
-	text = $STR_ENH_tools_toggleDynamicSimulation;
+	text = $STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION;
 	picture = "";
 	action = "[['Object','Group'],'dynamicSimulation'] call ENH_fnc_toggleAttribute";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class ENH_ToggleDrawBuildingPositions
 {
-	text = $STR_ENH_tools_drawBuildingPositions;
+	text = $STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS;
 	action = "call ENH_fnc_toggleDrawBuildingPositions";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
 };
 class ENH_ToggleDrawDLCIcons
 {
-	text = $STR_ENH_tools_drawDLCIcons;
+	text = $STR_ENH_TOOLS_DRAWDLCICONS;
 	action = "call ENH_fnc_toggleDrawDLCIcons";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
 };
 class ENH_ToggleAIFeatures
 {
-	text = $STR_ENH_tools_toggleAIFeatures;
+	text = $STR_ENH_TOOLS_TOGGLEAIFEATURES;
 	action = "call ENH_fnc_toggleAIFeatures";
 };
 class ENH_GenerateSteamMissionDescription
 {
-	text = $STR_ENH_tools_generateSteamMissionDescription;
+	text = $STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION;
 	action = "[] spawn ENH_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
 };
@@ -281,14 +281,14 @@ class DebugConsole//Overwrites the default debug console to change shortcut
 //Placement Tools
 class ENH_PlacementTools
 {
-	text = $STR_ENH_tools_placementTools;
+	text = $STR_ENH_TOOLS_PLACEMENTTOOLS;
 	action = "call ENH_fnc_placementTools_createDisplay";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
 	opensNewWindow = 1;
 };
 class ENH_SetRandomDir
 {
-	Text = $STR_ENH_tools_randomDir;
+	Text = $STR_ENH_TOOLS_RANDOMDIR;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\widget_rotation_off_ca.paa";
 	action = "call ENH_fnc_setRandomOrientation";
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
@@ -296,35 +296,35 @@ class ENH_SetRandomDir
 };
 class ENH_ReverseDirection
 {
-	text = $STR_ENH_tools_reverseDirection;
+	text = $STR_ENH_TOOLS_REVERSEDIRECTION;
 	picture = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
 	action = "call ENH_fnc_reverseOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD7};
 };
 class ENH_OrientateNorth
 {
-	text = $STR_ENH_tools_orientateNorth;
+	text = $STR_ENH_TOOLS_ORIENTATENORTH;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\N_ca.paa";
 	action = "0 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD8};
 };
 class ENH_OrientateEast: ENH_OrientateNorth
 {
-	text = $STR_ENH_tools_orientateEast;
+	text = $STR_ENH_TOOLS_ORIENTATEEAST;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\E_ca.paa";
 	action = "90 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD6};
 };
 class ENH_OrientateSouth: ENH_OrientateNorth
 {
-	text = $STR_ENH_tools_orientateSouth;
+	text = $STR_ENH_TOOLS_ORIENTATESOUTH;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\S_ca.paa";
 	action = "180 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD2};
 };
 class ENH_OrientateWest: ENH_OrientateNorth
 {
-	text = $STR_ENH_tools_orientateWest;
+	text = $STR_ENH_TOOLS_ORIENTATEWEST;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\W_ca.paa";
 	action = "270 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD4};
@@ -332,108 +332,108 @@ class ENH_OrientateWest: ENH_OrientateNorth
 //Loadout Tools
 class ENH_CopyLoadout
 {
-	text = $STR_ENH_tools_copyLoadouts;
+	text = $STR_ENH_TOOLS_COPYLOADOUTS;
 	action = "'copy' call ENH_fnc_loadoutTool";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_C};
 };
 class ENH_ApplyLoadout: ENH_copyLoadout
 {
-	text = $STR_ENH_tools_applyLoadouts;
+	text = $STR_ENH_TOOLS_APPLYLOADOUTS;
 	action = "'apply' call ENH_fnc_loadoutTool";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_A};
 };
 class ENH_ExportLoadoutConfig
 {
-	text = $STR_ENH_tools_exportLoadoutConfig;
+	text = $STR_ENH_TOOLS_EXPORTLOADOUTCONFIG;
 	action = "call ENH_fnc_exportInventoryConfig";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
 };
 class ENH_RemoveNVGs
 {
-	text = $STR_ENH_tools_removeNVGs;
+	text = $STR_ENH_TOOLS_REMOVENVGS;
 	action = "2 call ENH_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_N};
 };
 class ENH_RemoveVests
 {
-	text = $STR_ENH_tools_removeVests;
+	text = $STR_ENH_TOOLS_REMOVEVESTS;
 	action = "3 call ENH_fnc_removeGear";
 };
 class ENH_RemoveGoggles
 {
-	text = $STR_ENH_tools_removeGoggles;
+	text = $STR_ENH_TOOLS_REMOVEGOGGLES;
 	action = "0 call ENH_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_G};
 };
 class ENH_RemoveHeadgear
 {
-	text = $STR_ENH_tools_removeHeadgear;
+	text = $STR_ENH_TOOLS_REMOVEHEADGEAR;
 	action = "1 call ENH_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_H};
 };
 class ENH_RemoveWeapons
 {
-	text = $STR_ENH_tools_removeWeapons;
+	text = $STR_ENH_TOOLS_REMOVEWEAPONS;
 	action = "4 call ENH_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
 };
 //GUI
 class ENH_ExportGUIBaseClassesAll
 {
-	text = $STR_ENH_tools_exportGUIBaseClasses;
+	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
 	action = "'' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
 class ENH_ExportGUIBaseClassesDefault
 {
-	text = $STR_ENH_tools_exportGUIBaseClasses_default;
+	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT;
 	action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
 class ENH_ExportGUIBaseClasses3DEN
 {
-	text = $STR_ENH_tools_exportGUIBaseClasses_3DEN;
+	text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN;
 	action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
 class ENH_GUITestGrids
 {
-	text = $STR_ENH_tools_GUITestGrids;
+	text = $STR_ENH_TOOLS_GUITESTGRIDS;
 	action = "findDisplay 313 createDisplay 'RscTestGrids'";
 	opensNewWindow = 1;
 };
 class ENH_ControlStyles
 {
-	text = $STR_ENH_tools_controlStyles;
+	text = $STR_ENH_TOOLS_CONTROLSTYLES;
 	action = "findDisplay 313 createDisplay 'RscTestControlStyles'";
 	opensNewWindow = 1;
 };
 class ENH_ControlTypes
 {
-	text = $STR_ENH_tools_controlTypes;
+	text = $STR_ENH_TOOLS_CONTROLTYPES;
 	action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
 	opensNewWindow = 1;
 };
 //Debug Tools
 class ENH_ToggleMapIDs
 {
-	text = $STR_ENH_tools_showMapIDs;
+	text = $STR_ENH_TOOLS_SHOWMAPIDS;
 	picture = "\3DENEnhanced\data\icon_id.paa";
 	action = "call ENH_fnc_toggleMapIDs";
 };
 class ENH_ProductInfo
 {
-	text = $STR_ENH_tools_productInfo;
+	text = $STR_ENH_TOOLS_PRODUCTINFO;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\intel_ca.paa";
 	action = "call ENH_fnc_productInfo";
 };
 class ENH_RecompileFunctions
 {
-	text = $STR_ENH_tools_recompileFunctions;
+	text = $STR_ENH_TOOLS_RECOMPILEFUNCTIONS;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
 	action = "1 call BIS_fnc_recompile; ['ENH_actionPerformed'] call BIS_fnc_3DENNotification";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_R};
 };
 class ENH_ClearChat
 {
-	text = $STR_ENH_tools_clearChat;
+	text = $STR_ENH_TOOLS_CLEARCHAT;
 	action = "clearRadio";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_C};
 };

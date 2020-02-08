@@ -195,13 +195,13 @@ if !(isNil "_templates") then
    
       _ctrlTemplateList lbAdd _briefingTitle;
       _ctrlTemplateList lbSetData [_forEachIndex,_briefingText];
-      _ctrlTemplateList lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_loadTemplate_tooltip"];
+      _ctrlTemplateList lbSetTooltip [_forEachIndex,localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
    } forEach _templates;
 };
 
  private _ctrlLBColours = _display displayCtrl 100;
 {
-   _ctrlLBColours lbAdd format ["%1 %2",localize "STR_ENH_briefingEditor_colour",_forEachIndex];
+   _ctrlLBColours lbAdd format ["%1 %2",localize "STR_ENH_BRIEFINGEDITOR_COLOUR",_forEachIndex];
    _ctrlLBColours lbSetData [_forEachIndex,_x];
    _ctrlLBColours lbSetColor [_forEachIndex,[_x] call _getColorFromHex];
    _ctrlLBColours lbSetTooltip [_forEachIndex,_x];
@@ -217,7 +217,7 @@ private _ctrlLBMarkers = CTRL(60);
 
    _ctrlLBMarkers lbAdd _name;
    _ctrlLBMarkers lbSetData [_forEachIndex,_varName];
-   _ctrlLBMarkers lbSetTooltip [_forEachIndex,localize "STR_ENH_briefingEditor_addMarker_tooltip"];
+   _ctrlLBMarkers lbSetTooltip [_forEachIndex,localize "STR_ENH_BRIEFINGEDITOR_ADDMARKER_TOOLTIP"];
 
    //Get icon
    private _markerType = (_x get3DENAttribute "itemClass") # 0;

@@ -1,12 +1,12 @@
 class ENH_DynamicSkill
 {
 	collapsed = 1;
-	displayName = $STR_ENH_attributeCategory_dynamicSkill;
+	displayName = $STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL;
 	class Attributes
 	{
 		class ENH_Enable
 		{
-			displayName = $STR_ENH_attributeCategory_dynamicSkill;
+			displayName = $STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL;
 			property = "ENH_dynamicSkill";
 			control = "ENH_DynamicSkill";
 			expression = "if (_value # 0 && !is3DEN && isServer) then\

@@ -19,7 +19,7 @@ waitUntil {isNil "ENH_EH_drawDist" && isNil "ENH_measureDist_markers"};
 if (isNil "ENH_pos_1") then
 {
    ENH_pos_1 = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
-   [localize "STR_ENH_measureDistance_select2ndPoint"] call BIS_fnc_3DENNotification;
+   [localize "STR_ENH_MEASUREDISTANCE_SELECT2NDPOINT"] call BIS_fnc_3DENNotification;
 }
 else
 {
@@ -33,7 +33,7 @@ else
    [
       format
       [
-         localize "STR_ENH_measureDistance_data",
+         localize "STR_ENH_MEASUREDISTANCE_DATA",
          round _dist2D,
          round _dist3D,
          ceil _travelTime

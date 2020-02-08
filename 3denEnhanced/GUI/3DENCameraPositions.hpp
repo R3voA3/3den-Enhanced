@@ -20,7 +20,7 @@ class ENH_3DENCamPositions
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_3DENCam_header;
+			text = $STR_ENH_3DENCAM_HEADER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -39,7 +39,7 @@ class ENH_3DENCamPositions
 		class Description: ctrlEdit
 		{
 			idc = 2000;
-			text = $STR_ENH_3DENCam_description;
+			text = $STR_ENH_3DENCAM_DESCRIPTION;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + (DIALOG_H) * GRID_H;
 			w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -49,7 +49,7 @@ class ENH_3DENCamPositions
 		};
 		class Save: ctrlButton
 		{
-			text = $STR_ENH_3DENCam_save;
+			text = $STR_ENH_3DENCAM_SAVE;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
 			w = 20 * GRID_W;

@@ -30,7 +30,7 @@ _ctrlVol sliderSetPosition (profileNamespace getVariable ["ENH_3denRadio_MusicVo
 //Set up combo
 {
 	_ctrlSort lbAdd localize _x;
-} forEach ["STR_ENH_3denRadio_sortByTitle","STR_ENH_3denRadio_sortByDuration","STR_ENH_3denRadio_sortByTheme"];
+} forEach ["STR_ENH_3DENRADIO_SORTBYTITLE","STR_ENH_3DENRADIO_SORTBYDURATION","STR_ENH_3DENRADIO_SORTBYTHEME"];
 
 _ctrlSort lbSetCurSel 0;
 

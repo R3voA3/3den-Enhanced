@@ -1,12 +1,12 @@
 class ENH_HoldAction
 {
 	collapsed = 1;
-	displayName = $STR_ENH_holdAction_displayName;
+	displayName = $STR_ENH_HOLDACTION_DISPLAYNAME;
 	class Attributes
 	{
 		class ENH_AddHoldAction
 		{
-			displayName = $STR_ENH_holdAction_displayName;
+			displayName = $STR_ENH_HOLDACTION_DISPLAYNAME;
 			property = "ENH_HoldAction";
 			control = "ENH_HoldAction";
 			expression = "\

@@ -17,15 +17,15 @@ class ENH_FeatureType: Title
             columns = 1;
             strings[] = 
             {
-                $STR_3den_attributes_default_unchanged_text,
-                $STR_ENH_featureType_objectViewDistance_text,
-				$STR_ENH_featureType_terrainViewDistance_text
+                $STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT,
+                $STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TEXT,
+				$STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TEXT
             };
 			tooltips[] = 
 			{
-				$STR_3den_attributes_default_unchanged_tooltip,
-				$STR_ENH_featureType_objectViewDistance_tooltip,
-				$STR_ENH_featureType_terrainViewDistance_tooltip
+				$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TOOLTIP,
+				$STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TOOLTIP,
+				$STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TOOLTIP
 			};
             values[] = {0,1,2};
         };

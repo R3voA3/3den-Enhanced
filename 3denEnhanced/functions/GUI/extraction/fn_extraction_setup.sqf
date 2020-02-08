@@ -30,7 +30,7 @@ private _gridPos = ctrlText GET_CTRL(700);
 collect3DENHistory
 {
 	_veh set3DENAttribute ["Position",_center vectorAdd [0,-120,0]];
-	private _layer = -1 add3DENLayer localize "STR_ENH_extraction_layer";
+	private _layer = -1 add3DENLayer localize "STR_ENH_EXTRACTION_LAYER";
 
 	//Set up first waypoint. This WP has to be completed for the extraction to start
 	private _wpStart = group _veh create3DENEntity ["Waypoint","Move",_center vectorAdd [0,-119,0]];
@@ -47,7 +47,7 @@ collect3DENHistory
 		private _triggerSmoke = create3DENEntity ["Trigger","EmptyDetector",_center vectorAdd [2,-119,0]];
 		_triggerSmoke set3DENAttribute ["Condition","ENH_Extraction_Start"];
 		_triggerSmoke set3DENAttribute ["IsServerOnly",true];
-		_triggerSmoke set3DENAttribute ["Text",localize "STR_ENH_extraction_triggerSmokeText"];
+		_triggerSmoke set3DENAttribute ["Text",localize "STR_ENH_EXTRACTION_TRIGGERSMOKETEXT"];
 		_triggerSmoke set3DENAttribute ["OnActivation",
 			format 
 			[
@@ -79,7 +79,7 @@ collect3DENHistory
 		]
 	];
 	_triggerStart set3DENAttribute ["IsServerOnly",true];
-	_triggerStart set3DENAttribute ["Text",localize "STR_ENH_extraction_triggerStartExtractionText"];
+	_triggerStart set3DENAttribute ["Text",localize "STR_ENH_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT"];
 
 	add3DENConnection ["WaypointActivation",[_triggerStart],_wpStart];
 
@@ -88,8 +88,8 @@ collect3DENHistory
 	{
 		private _nameRequester = ctrlText GET_CTRL(200);
 		private _nameTransport = ctrlText GET_CTRL(300);
-		private _callExtractionMsg = format [localize "STR_ENH_extraction_callExtractionMsg",_nameRequester,_nameTransport,_gridPos];
-		private _extractionConfirmedMsg = format [localize "STR_ENH_extraction_extractionConfirmedMsg",_nameRequester,_nameTransport];
+		private _callExtractionMsg = format [localize "STR_ENH_EXTRACTION_CALLEXTRACTIONMSG",_nameRequester,_nameTransport,_gridPos];
+		private _extractionConfirmedMsg = format [localize "STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG",_nameRequester,_nameTransport];
 		_triggerStart set3DENAttribute
 		[
 			"OnActivation",

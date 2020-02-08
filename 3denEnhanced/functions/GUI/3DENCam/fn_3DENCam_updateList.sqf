@@ -51,8 +51,8 @@ lbClear _ctrlLB;
 			_yC,
 			_zC,
 			_description,
-			localize "STR_ENH_3DENCam_helpDelete",
-			localize "STR_ENH_3DENCam_helpMoveTo"
+			localize "STR_ENH_3DENCAM_HELPDELETE",
+			localize "STR_ENH_3DENCAM_HELPMOVETO"
 		]
 	];
 

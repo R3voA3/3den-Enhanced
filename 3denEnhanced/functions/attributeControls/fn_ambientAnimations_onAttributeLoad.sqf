@@ -14,7 +14,7 @@
    BOOLEAN: true
 */
 
-#define ANIMSETS [["","STR_ENH_no"],["BRIEFING","STR_ENH_no"],["BRIEFING_POINT_LEFT","STR_ENH_no"],["BRIEFING_POINT_RIGHT","STR_ENH_no"],["BRIEFING_POINT_TABLE","STR_ENH_no"],["GUARD","STR_ENH_yes"],["HANDS_HELD_HIGH","STR_ENH_yes"],["KNEEL","STR_ENH_no"],["KNEEL_TREAT","STR_ENH_no"],["LEAN","STR_ENH_no"],["LEAN_ON_TABLE","STR_ENH_no"],["LISTEN_BRIEFING","STR_ENH_yes"],["PRONE_INJURED","STR_ENH_no"],["PRONE_INJURED_U1","STR_ENH_yes"],["PRONE_INJURED_U2","STR_ENH_yes"],["REPAIR_VEH_KNEEL","STR_ENH_yes"],["REPAIR_VEH_PRONE","STR_ENH_yes"],["REPAIR_VEH_STAND","STR_ENH_yes"],["SHIELD_FROM_SUN","STR_ENH_no"],["SIT1","STR_ENH_no"],["SIT2","STR_ENH_no"],["SIT3","STR_ENH_no"],["SIT_AT_TABLE","STR_ENH_no"],["SIT_HANDCUFFED","STR_ENH_yes"],["SIT_HIGH1","STR_ENH_no"],["SIT_HIGH2","STR_ENH_no"],["SIT_LOW","STR_ENH_no"],["SIT_LOW_U","STR_ENH_yes"],["SIT_SAD1","STR_ENH_no"],["SIT_SAD2","STR_ENH_no"],["SIT_U1","STR_ENH_yes"],["SIT_U2","STR_ENH_yes"],["SIT_U3","STR_ENH_yes"],["STAND","STR_ENH_no"],["STAND_IA","STR_ENH_no"],["STAND_IDLE","STR_ENH_yes"],["STAND_PISTOL","STR_ENH_no"],["STAND_TALKING","STR_ENH_yes"],["STAND_U1","STR_ENH_yes"],["STAND_U2","STR_ENH_yes"],["STAND_U3","STR_ENH_yes"],["WARMUP","STR_ENH_no"],["WARMUP_KNEELING","STR_ENH_no"],["WATCH1","STR_ENH_no"],["WATCH2","STR_ENH_no"],["WORKING_AT_DESK","STR_ENH_no"]]
+#define ANIMSETS [["","STR_ENH_NO"],["BRIEFING","STR_ENH_NO"],["BRIEFING_POINT_LEFT","STR_ENH_NO"],["BRIEFING_POINT_RIGHT","STR_ENH_NO"],["BRIEFING_POINT_TABLE","STR_ENH_NO"],["GUARD","STR_ENH_YES"],["HANDS_HELD_HIGH","STR_ENH_YES"],["KNEEL","STR_ENH_NO"],["KNEEL_TREAT","STR_ENH_NO"],["LEAN","STR_ENH_NO"],["LEAN_ON_TABLE","STR_ENH_NO"],["LISTEN_BRIEFING","STR_ENH_YES"],["PRONE_INJURED","STR_ENH_NO"],["PRONE_INJURED_U1","STR_ENH_YES"],["PRONE_INJURED_U2","STR_ENH_YES"],["REPAIR_VEH_KNEEL","STR_ENH_YES"],["REPAIR_VEH_PRONE","STR_ENH_YES"],["REPAIR_VEH_STAND","STR_ENH_YES"],["SHIELD_FROM_SUN","STR_ENH_NO"],["SIT1","STR_ENH_NO"],["SIT2","STR_ENH_NO"],["SIT3","STR_ENH_NO"],["SIT_AT_TABLE","STR_ENH_NO"],["SIT_HANDCUFFED","STR_ENH_YES"],["SIT_HIGH1","STR_ENH_NO"],["SIT_HIGH2","STR_ENH_NO"],["SIT_LOW","STR_ENH_NO"],["SIT_LOW_U","STR_ENH_YES"],["SIT_SAD1","STR_ENH_NO"],["SIT_SAD2","STR_ENH_NO"],["SIT_U1","STR_ENH_YES"],["SIT_U2","STR_ENH_YES"],["SIT_U3","STR_ENH_YES"],["STAND","STR_ENH_NO"],["STAND_IA","STR_ENH_NO"],["STAND_IDLE","STR_ENH_YES"],["STAND_PISTOL","STR_ENH_NO"],["STAND_TALKING","STR_ENH_YES"],["STAND_U1","STR_ENH_YES"],["STAND_U2","STR_ENH_YES"],["STAND_U3","STR_ENH_YES"],["WARMUP","STR_ENH_NO"],["WARMUP_KNEELING","STR_ENH_NO"],["WATCH1","STR_ENH_NO"],["WATCH2","STR_ENH_NO"],["WORKING_AT_DESK","STR_ENH_NO"]]
 
 params ["_ctrlGroup","_value"];
 _value params ["_animSet","_anims","_canExit","_attach"];
@@ -28,7 +28,7 @@ private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
       _ctrlLB lbSetCurSel _forEachIndex;
    };
    //Adds tooltip depending on preset
-   _ctrlLB lbSetTooltip [_forEachIndex,format ["%1 %2.",localize "STR_ENH_ambientAnimations_unarmed",localize _unarmedStr]];
+   _ctrlLB lbSetTooltip [_forEachIndex,format ["%1 %2.",localize "STR_ENH_AMBIENTANIMATIONS_UNARMED",localize _unarmedStr]];
 } forEach ANIMSETS;
 
 (_ctrlGroup controlsGroupCtrl 101) cbSetChecked _canExit;

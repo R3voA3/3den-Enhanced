@@ -36,8 +36,8 @@ collect3DENHistory
 [
 	format
 	[
-		localize "STR_ENH_toggleAIFeatures_notification",
-		[localize "STR_ENH_disabled",localize "STR_ENH_enabled"] select ENH_attribute_disableAI_state
+		localize "STR_ENH_TOGGLEAIFEATURES_NOTIFICATION",
+		[localize "STR_ENH_DISABLED",localize "STR_ENH_ENABLED"] select ENH_attribute_disableAI_state
 	]
 ] call BIS_fnc_3DENNotification;
 

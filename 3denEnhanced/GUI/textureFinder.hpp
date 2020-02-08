@@ -21,7 +21,7 @@ class ENH_TextureFinder
 	{
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_textureFinder;
+			text = $STR_ENH_TEXTUREFINDER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -76,7 +76,7 @@ class ENH_TextureFinder
 		class UpdateList: ctrlButton
 		{
 			idc = 1900;
-			text = $STR_ENH_textureFinder_updateList;
+			text = $STR_ENH_TEXTUREFINDER_UPDATELIST;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 109 * GRID_H;
 			w = 30 * GRID_W;
@@ -111,9 +111,9 @@ class ENH_TextureFinder
             columns = 3;
             strings[] = 
             {
-                $STR_ENH_textureFinder_filterAll,
-                $STR_ENH_textureFinder_filterJPG,
-				$STR_ENH_textureFinder_filterPAA
+                $STR_ENH_TEXTUREFINDER_FILTERALL,
+                $STR_ENH_TEXTUREFINDER_FILTERJPG,
+				$STR_ENH_TEXTUREFINDER_FILTERPAA
             };
             values[] = {0,1,2};
 			onLoad = "params ['_ctrl']; _ctrl lbSetCurSel 0; ENH_TextureFinder_Filter = 0";//Default value

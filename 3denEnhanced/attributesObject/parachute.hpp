@@ -1,7 +1,7 @@
 class ENH_Parachute: ENH_SetCaptive
 {
-	displayName = $STR_ENH_parachute_displayName;
-	tooltip = $STR_ENH_parachute_tooltip;
+	displayName = $STR_ENH_PARACHUTE_DISPLAYNAME;
+	tooltip = $STR_ENH_PARACHUTE_TOOLTIP;
 	property = "ENH_parachute";
 	expression = "if (_value && !is3DEN) then\
 	{\

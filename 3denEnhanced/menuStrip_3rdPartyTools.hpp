@@ -1,6 +1,6 @@
 class ENH_3rdPartyTools
 {
-	text = $STR_ENH_folder_3rdPartyTools;
+	text = $STR_ENH_FOLDER_3RDPARTYTOOLS;
 	items[] +=
 	{
 		"ENH_3rdPartyTools_Folder_NoDependencies",

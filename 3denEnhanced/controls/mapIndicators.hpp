@@ -21,7 +21,7 @@ class ENH_MapIndicators: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_MapIndicators: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_mapIndicators_description;
+					text = $STR_ENH_MAPINDICATORS_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_MapIndicators: Title
 		};
 		class FriendlyText: Title
 		{
-			text = $STR_ENH_mapIndicators_friendlyText;
+			text = $STR_ENH_MAPINDICATORS_FRIENDLYTEXT;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class FriendlyValue: ctrlCheckbox
@@ -66,7 +66,7 @@ class ENH_MapIndicators: Title
 		class EnemyText: FriendlyText
 		{
 			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_mapIndicators_enemyText;
+			text = $STR_ENH_MAPINDICATORS_ENEMYTEXT;
 		};
 		class EnemyValue: FriendlyValue
 		{
@@ -76,7 +76,7 @@ class ENH_MapIndicators: Title
 		class MinesText: FriendlyText
 		{
 			y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_mapIndicators_minesText;
+			text = $STR_ENH_MAPINDICATORS_MINESTEXT;
 		};
 		class MinesValue: FriendlyValue
 		{
@@ -86,7 +86,7 @@ class ENH_MapIndicators: Title
 		class PingText: FriendlyText
 		{
 			y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_mapIndicators_pingText;
+			text = $STR_ENH_MAPINDICATORS_PINGTEXT;
 		};
 		class PingValue: FriendlyValue
 		{

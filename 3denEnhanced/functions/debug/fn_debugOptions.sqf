@@ -139,7 +139,7 @@ if (FPS in _enabledOptions) then
 if (killBLUFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killBLUFOR",
+		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLBLUFOR",
 		"{if (side _x == WEST) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
@@ -147,7 +147,7 @@ if (killBLUFOR in _enabledOptions) then
 if (killOPFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killOPFOR",
+		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLOPFOR",
 		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -155,7 +155,7 @@ if (killOPFOR in _enabledOptions) then
 if (killINDFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killINDFOR",
+		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLINDFOR",
 		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -163,7 +163,7 @@ if (killINDFOR in _enabledOptions) then
 if (killCIVFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killCIVFOR",
+		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCIVFOR",
 		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -171,7 +171,7 @@ if (killCIVFOR in _enabledOptions) then
 if (KILLCURSOR in _enabledOptions) then 
 {
 	player addAction [
-		localize "STR_ENH_functions_onePreviewDebug_killCursorTarget",
+		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCURSORTARGET",
 		{cursorObject setDamage 1}
 	];
 };

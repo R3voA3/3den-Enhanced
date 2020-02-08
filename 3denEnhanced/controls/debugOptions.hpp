@@ -21,7 +21,7 @@ class ENH_DebugOptions: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_DebugOptions: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_debugOptions_description;
+					text = $STR_ENH_DEBUGOPTIONS_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_DebugOptions: Title
 		};
 		class Title: Title
 		{
-			text = $STR_ENH_options;
+			text = $STR_ENH_OPTIONS;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class DebugOptions: ctrlListbox
@@ -71,7 +71,7 @@ class ENH_DebugOptions: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_debugOptions_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

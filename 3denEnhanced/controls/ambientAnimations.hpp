@@ -21,7 +21,7 @@ class ENH_AmbientAnimations: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_AmbientAnimations: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_ambientAnimations_description;
+					text = $STR_ENH_AMBIENTANIMATIONS_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,7 +52,7 @@ class ENH_AmbientAnimations: Title
 		};
 		class AnimText: Title
 		{
-			text = $STR_ENH_ambientAnimations_animation_displayName;
+			text = $STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME;
 			y = 2.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Anim: ctrlListbox
@@ -65,8 +65,8 @@ class ENH_AmbientAnimations: Title
 		};
 		class CanExitTitle: Title 
 		{
-			text = $STR_ENH_ambientAnimations_canEdit_displayName;
-			tooltip = $STR_ENH_ambientAnimations_canEdit_tooltip;
+			text = $STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME;
+			tooltip = $STR_ENH_AMBIENTANIMATIONS_CANEDIT_TOOLTIP;
 			y = 10.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class CanExit: ctrlCheckbox
@@ -79,8 +79,8 @@ class ENH_AmbientAnimations: Title
 		};
 		class AttachTitle: Title 
 		{
-			text = $STR_ENH_ambientAnimations_attach_displayName;
-			tooltip = $STR_ENH_ambientAnimations_attach_tooltip;
+			text = $STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME;
+			tooltip = $STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP;
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class Attach: ctrlCheckbox
@@ -98,7 +98,7 @@ class ENH_AmbientAnimations: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_ambientAnimations_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

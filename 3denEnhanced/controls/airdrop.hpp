@@ -21,7 +21,7 @@ class ENH_Airdrop: Title
 				};
 				class DescriptionHeader: ctrlStatic
 				{
-					text = $STR_ENH_description;
+					text = $STR_ENH_DESCRIPTION;
 					x = 7 * pixelW;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
 					h = SIZE_M * GRID_H;
@@ -31,7 +31,7 @@ class ENH_Airdrop: Title
 				};
 				class Description: ctrlStructuredText
 				{
-					text = $STR_ENH_airdrop_description;
+					text = $STR_ENH_AIRDROP_DESCRIPTION;
 					x = 7 * pixelW;
 					y = SIZE_M * GRID_H;
 					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -52,8 +52,8 @@ class ENH_Airdrop: Title
 		};
 		class ClassesTitle: Title
 		{
-			text = $STR_ENH_airdrop_classes_displayName;
-			tooltip = $STR_ENH_airdrop_classes_tooltip;
+			text = $STR_ENH_AIRDROP_CLASSES_DISPLAYNAME;
+			tooltip = $STR_ENH_AIRDROP_CLASSES_TOOLTIP;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class ClassesValue: ctrlEditMulti
@@ -66,8 +66,8 @@ class ENH_Airdrop: Title
 		};
 		class CenterTitle: Title
 		{
-			text = $STR_ENH_airdrop_center_displayName;
-			tooltip = $STR_ENH_airdrop_center_tooltip;
+			text = $STR_ENH_AIRDROP_CENTER_DISPLAYNAME;
+			tooltip = $STR_ENH_AIRDROP_CENTER_TOOLTIP;
 			y = 10.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class CenterValue: ctrlEdit
@@ -81,8 +81,8 @@ class ENH_Airdrop: Title
 		class ConditionTitle: Title
 		{
 			y = 11.5 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_airdrop_condition_displayName;
-			tooltip = $STR_ENH_airdrop_condition_tooltip;
+			text = $STR_ENH_AIRDROP_CONDITION_DISPLAYNAME;
+			tooltip = $STR_ENH_AIRDROP_CONDITION_TOOLTIP;
 		};
 		class ConditionValue: CenterValue
 		{
@@ -92,7 +92,7 @@ class ENH_Airdrop: Title
 		class AltitudeTitle: Title
 		{
 			y = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_altitude_displayName;
+			text = $STR_ENH_ALTITUDE_DISPLAYNAME;
 		};
 		class AltitudeValue: ctrlXSliderH
 		{
@@ -116,8 +116,8 @@ class ENH_Airdrop: Title
 		class RadiusTitle: Title
 		{
 			y = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
-			text = $STR_ENH_airdrop_radius_displayName;
-			tooltip = $STR_ENH_airdrop_radius_tooltip;
+			text = $STR_ENH_AIRDROP_RADIUS_DISPLAYNAME;
+			tooltip = $STR_ENH_AIRDROP_RADIUS_TOOLTIP;
 		};
 		class RadiusValue: ctrlXSliderH
 		{
@@ -141,7 +141,7 @@ class ENH_Airdrop: Title
 		class SideTitle: Title
 		{
 			y = 14.5 * SIZE_M * GRID_H + 30 * pixelH;
-			text = $STR_ENH_side_displayName;
+			text = $STR_ENH_SIDE_DISPLAYNAME;
 		};
 		class SideValue: ctrlToolboxPictureKeepAspect
         {
@@ -168,7 +168,7 @@ class ENH_Airdrop: Title
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_airdrop_onButtonDown";
-			text = $STR_ENH_resetAndDisable;
+			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

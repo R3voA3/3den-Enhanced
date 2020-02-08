@@ -1,7 +1,7 @@
 class ENH_MakeHostage: ENH_SetCaptive
 {
-	displayName = $STR_ENH_makeHostage_displayName;
-	tooltip = $STR_ENH_makeHostage_tooltip;
+	displayName = $STR_ENH_MAKEHOSTAGE_DISPLAYNAME;
+	tooltip = $STR_ENH_MAKEHOSTAGE_TOOLTIP;
 	property = "ENH_makeHostage";
 	expression =
 	"\
