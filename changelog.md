@@ -19,12 +19,12 @@ v5.0
 - Fixed some typos in translation
 - Batch Replace GUI will now properly display German localisation
 - Added missing German Translations
-- Hold Action and Ambient Animation attribute will now longer be writting to mission.sqm for every entity which results in greatly reduced file sizes. Keep in mind that if the attribute was set once, it will remain in the mission.sqm even when reset to default values
+- Hold Action and Ambient Animation attribute will no longer be written to mission.sqm for every entity which results in greatly reduced file sizes. Keep in mind that if the attribute was set once, it will remain in the mission.sqm even when reset to default values
 - The menu for 3rd party tools was overhauled
 - The airdrop attribute had a missplaced control
 - The On Mission Debug attribute was overhauled
 - German translation is now again 100% completed
-- German translation was greatly polished and made consistent (Feel free to report issues)
+- German translation was greatly polished and made consistent
 - Description of Mission Ending attribute is now fully displayed when German localisation is shown
 - Input description of Classname_1 Classname_2 Classname_3 Classname_n is now consistent throughout all controls
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
@@ -35,7 +35,7 @@ v5.0
 v4.9
 *added*
 - menu strip entry for additional 3rd party tools
-- a UI so save 3den Camera positions in. You can use it to save interesting places
+- a UI to save 3den Camera positions in. You can use it to save interesting places
 
 v4.8
 *changed*
