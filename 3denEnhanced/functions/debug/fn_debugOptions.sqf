@@ -172,7 +172,13 @@ if (KILLCURSOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCURSORTARGET",
-		{cursorObject setDamage 1}
+		{cursorObject setDamage 1},
+		[],
+		1.5,
+		true,
+		true,
+		"",
+		"!isNull cursorObject"
 	];
 };
 
