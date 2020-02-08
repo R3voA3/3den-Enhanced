@@ -93,7 +93,7 @@ class ENH_ShowModuleInformation
 };
 class ENH_Garrison
 {
-	action = "(findDisplay 313) createDisplay 'ENH_Garrison'";
+	action = "findDisplay 313 createDisplay 'ENH_Garrison'";
 	Text = $STR_ENH_CONTEXTMENU_GARRISON;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
 	conditionShow = "selected";
