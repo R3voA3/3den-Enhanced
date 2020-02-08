@@ -30,6 +30,7 @@ v5.0
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Fixed Patrol tooltip. (Was showing -1 to disable instead of 0)
 - Debug option Disable Stamina and Invincibility are now activated for all units in player's group
+- Kill cursorObject is now only showing if cursorObject is not null
 
 v4.9
 *added*
