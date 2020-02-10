@@ -20,4 +20,6 @@ if (get3DENActionState "toggleMap" == 0) then
 
 do3DENAction "ToggleMapIDs";
 
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+
 true

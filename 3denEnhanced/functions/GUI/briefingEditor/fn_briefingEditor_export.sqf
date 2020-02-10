@@ -44,6 +44,6 @@ else
    copyToClipboard _createBriefing;
 };
 
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 true

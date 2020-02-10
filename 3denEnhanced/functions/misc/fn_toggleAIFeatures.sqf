@@ -13,9 +13,17 @@
    BOOLEAN: true
 */
 
-if (isNil "ENH_attribute_disableAI_state") then 
+private _entities = [["Object"]] call ENH_fnc_all3denSelected;
+
+if (_entities isEqualTo []) exitWith
+{
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+	false
+};
+
+if (isNil "ENH_attribute_disableAI_state") then
 { 
-  ENH_attribute_disableAI_state = false; 
+  ENH_attribute_disableAI_state = false;
 }
 else
 {
@@ -30,7 +38,7 @@ collect3DENHistory
       private _attributeName = "ENH_disableAI_" + _x;
       _entity set3DENAttribute [_attributeName,ENH_attribute_disableAI_state]; 
     } forEach ["move","target","cover","autotarget","anim","FSM","aimingError","teamswitch","suppression","checkVisible","autocombat","path","mineDetection","weaponAim","NVG","lights","radioProtocol"]; 
-  } forEach get3DENSelected "Object";
+  } forEach _entities;
 };
 
 [
