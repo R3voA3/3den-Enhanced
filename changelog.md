@@ -31,6 +31,7 @@ v5.0
 - Fixed Patrol tooltip. (Was showing -1 to disable instead of 0)
 - Debug option Disable Stamina and Invincibility are now activated for all units in player's group
 - Kill cursorObject is now only showing if cursorObject is not null
+- Briefing Editor showed the wrong message when pressing the export button
 
 v4.9
 *added*
