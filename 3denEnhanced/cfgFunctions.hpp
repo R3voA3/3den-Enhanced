@@ -126,6 +126,20 @@ class CfgFunctions
 			class 3DENCam_onSetFocus;
 			class 3DENCam_saveList;
 		};
+		class VariableViewer
+		{
+			file = "3denEnhanced\functions\GUI\variableViewer";
+			class variableViewer_onLoad;
+			class variableViewer_fillLNB;
+			class variableViewer_hideFunctions;
+			class variableViewer_messageConfirm;
+			class variableViewer_onFilterChanged;
+			class variableViewer_onLNBSelChanged;
+			class variableViewer_onSearch;
+			class variableViewer_setOrCreate;
+			class variableViewer_delete;
+			class variableViewer_getNamespace;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
