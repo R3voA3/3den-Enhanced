@@ -30,6 +30,8 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define killCIVFOR			12
 #define KILLCURSOR			13
 #define SHOWUNITS_3D 		14
+#define REMOVECORPSE 		15
+#define SHOWWAYPOINTS 		16
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 
 //To prevent issues in multiplayer games started from multiplayer editor
@@ -49,7 +51,9 @@ if (INVULNERABILITY in _enabledOptions) then
 
 if (CAPTIVE in _enabledOptions) then
 {
-	player setCaptive true;
+	{
+		_x allowDamage true;
+	} forEach units player;
 };
 
 if (STAMINA in _enabledOptions) then
@@ -93,7 +97,7 @@ if (ARSENAL in _enabledOptions) then
 if (GARAGE in _enabledOptions) then
 {
 
-	player addAction ["Garage",
+	player addAction [localize "STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME",
 	{
 		if (!isNil "BIS_fnc_garage_center") then {deleteVehicle BIS_fnc_garage_center};
 		BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F",player getPos [10,getDir player],[],0,"CAN_COLLIDE"];
@@ -139,7 +143,7 @@ if (FPS in _enabledOptions) then
 if (killBLUFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLBLUFOR",
+		localize "STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME",
 		"{if (side _x == WEST) then {_x setDamage 1}} forEach allUnits - [player]"
 	];
 };
@@ -147,7 +151,7 @@ if (killBLUFOR in _enabledOptions) then
 if (killOPFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLOPFOR",
+		localize "STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME",
 		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -155,7 +159,7 @@ if (killOPFOR in _enabledOptions) then
 if (killINDFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLINDFOR",
+		localize "STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME",
 		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -163,7 +167,7 @@ if (killINDFOR in _enabledOptions) then
 if (killCIVFOR in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCIVFOR",
+		localize "STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME",
 		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]}
 	];
 };
@@ -171,7 +175,7 @@ if (killCIVFOR in _enabledOptions) then
 if (KILLCURSOR in _enabledOptions) then 
 {
 	player addAction [
-		localize "STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCURSORTARGET",
+		localize "STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME",
 		{cursorObject setDamage 1},
 		[],
 		1.5,
@@ -194,10 +198,10 @@ if (MARKERS in _enabledOptions) then
 			private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
 
 			_name = "ENH_previewMarker_" + str _forEachIndex;
-			_name = createMarkerLocal [_name,position _x];
-			_name setMarkerTypeLocal 'mil_box';
-			_name setMarkerTextLocal _displayName;
-			_name setMarkerColorLocal _sideColour;
+			_name = createMarker [_name,position _x];
+			_name setMarkerType 'mil_box';
+			_name setMarkerText _displayName;
+			_name setMarkerColor _sideColour;
 
 			_markerUnitsArray pushBack [_name,_x,_displayName],;
 		} forEach entities [["AllVehicles"],[],false,true];//All vehicles without crew and dead entities
@@ -209,8 +213,8 @@ if (MARKERS in _enabledOptions) then
 				sleep 1;//A bit more performance friendly
 				_x params ["_marker","_entity"];
 				_displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
-				_marker setMarkerTextLocal _displayName;
-				_marker setMarkerPosLocal getPos _entity;
+				_marker setMarkerText _displayName;
+				_marker setMarkerPos getPos _entity;
 			} forEach _markerUnitsArray;//[markerName,entity,displayName]
 		};
 	};
@@ -248,6 +252,46 @@ if (SHOWUNITS_3D in _enabledOptions) then
 			} count (ASLToAGL getPosASL player nearEntities [["Man","Air","Car","Tank"],RADIUS]);
 		}
 	] call BIS_fnc_addStackedEventHandler;
+};
+
+if (REMOVECORPSE in _enabledOptions) then
+{
+	player addAction [
+		localize "STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_DELETECORPSE_DISPLAYNAME",
+		{allDeadMen apply {deleteVehicle _x}}
+	];
+};
+
+if (SHOWWAYPOINTS in _enabledOptions) then
+{
+	_markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
+	private _color = "";
+
+	private _waypoints = [];
+	{	
+		_color = selectRandom _markerColors;
+		{
+			_x params ["_group","_wpIndex"];
+
+			_marker = createMarker
+			[
+				format ["ENH_debugWaypoints_%1_%2",_group,_wpIndex],
+				waypointPosition _x
+			];
+			
+			_marker setMarkerColor _color;
+			_marker setMarkerShape "ICON";
+			_marker setMarkerType "mil_dot";
+			_marker setMarkerText format
+			[
+				"%1/%2/%3/%4",
+				_group,
+				_wpIndex,
+				waypointSpeed _x,
+				waypointType _x
+			];
+		} forEach waypoints _x;
+	} forEach allGroups;
 };
 
 true
