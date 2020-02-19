@@ -137,66 +137,6 @@
 		<Russian>Нет действительного имени класса!</Russian>
 		<Spanish>¡Classname no valido!</Spanish>
 	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_GARAGE">
-		<English>Garage</English>
-		<German>Garage</German>
-		<Original>Garage</Original>
-		<Czech>Garáž</Czech>
-		<French>Garage</French>
-		<Polish>Garaż</Polish>
-		<Spanish>Garaje</Spanish>
-		<Russian>Гараж</Russian>
-	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLBLUFOR">
-		<English>Kill Units (BLUFOR)</English>
-		<German>Einheiten töten (BLUFOR)</German>
-		<Original>Kill Units (BLUFOR)</Original>
-		<Czech>Zabít jednotky (BLUFOR)</Czech>
-		<French>Tuer des unités (BLUFOR)</French>
-		<Polish>Zabij jednostki (BLUFOR)</Polish>
-		<Spanish>Matar unidades (BLUFOR)</Spanish>
-		<Russian>Убить юнитов (BLUFOR)</Russian>
-	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLOPFOR">
-		<English>Kill Units (OPFOR)</English>
-		<German>Einheiten töten (OPFOR)</German>
-		<Original>Kill Units (OPFOR)</Original>
-		<Czech>Zabít jednotky (OPFOR)</Czech>
-		<French>Tuer des unités (OPFOR)</French>
-		<Polish>Zabij jednostki (OPFOR)</Polish>
-		<Spanish>Matar unidades (OPFOR)</Spanish>
-		<Russian>Убить юнитов (OPFOR)</Russian>
-	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLINDFOR">
-		<English>Kill Units (INDFOR)</English>
-		<German>Einheiten töten (INDFOR)</German>
-		<Original>Kill Units (INDFOR)</Original>
-		<Czech>Zabít jednotky (INDFOR)</Czech>
-		<French>Tuer des unités (INDFOR)</French>
-		<Polish>Zabij jednostki (INDFOR)</Polish>
-		<Spanish>Matar unidades (Independiente)</Spanish>
-		<Russian>Убить юнитов (INDFOR)</Russian>
-	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCIVFOR">
-		<English>Kill Units (CIVFOR)</English>
-		<German>Einheiten töten (CIVFOR)</German>
-		<Original>Kill Units (CIVFOR)</Original>
-		<Czech>Zabít jednotky (CIVFOR)</Czech>
-		<French>Tuer des unités (CIVFOR)</French>
-		<Polish>Zabij jednostki (CIVFOR)</Polish>
-		<Spanish>Matar unidades (Civil)</Spanish>
-		<Russian>Убить юнитов (CIVFOR)</Russian>
-	</Key>
-	<Key ID="STR_ENH_FUNCTIONS_ONEPREVIEWDEBUG_KILLCURSORTARGET">
-		<English>Kill Cursor Target</English>
-		<German>Töte anvisiertes Ziel</German>
-		<Original>Kill Cursor Target</Original>
-		<Czech>Zabít cíl označený kurzorem</Czech>
-		<French>Kill Cursor Target</French>
-		<Polish>Zabij cel na kursorze</Polish>
-		<Spanish>Matar al objetivo del cursor</Spanish>
-		<Russian>Убить цель по курсору</Russian>
-	</Key>
 	<Key ID="STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
 		<English>Copy path with 'CTRL + C'.</English>
 		<German>Pfad kopieren mit 'CTRL + C</German>
@@ -2893,15 +2833,9 @@
 		<Russian>Стартовый индекс</Russian>
 	</Key>
 	<Key ID="STR_ENH_GARRISON_NOTIFICATION">
-		<Original>Not enough empty building positions, increase the radius the coverage.</Original>
-		<English>Not enough empty building positions, increase the radius the coverage.</English>
-		<Czech>Nedostatek prázdných pozic v budově, zvyšte poloměr nebo snižte pokrytí.</Czech>
+		<Original>Not enough empty building positions, increase the radius or the coverage.</Original>
+		<English>Not enough empty building positions, increase the radius or the coverage.</English>
 		<German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
-		<Chinesesimp>没有足够的空建筑位置，增加半径或减少覆盖率。</Chinesesimp>
-		<Spanish>No hay suficientes posiciones de edificios vacíos, aumentar el radio o reducir la cobertura.</Spanish>
-		<French>Pas assez de positions vide dans les batiments, augmenter le rayon ou réduire la couverture.</French>
-		<Polish>Niewystarczająco pustych pozycji w budynkach, zwiększ promień lub zmniejsz pokrycie.</Polish>
-		<Russian>Недостаточно пустых строительных позиций, увеличьте радиус или уменьшите покрытие.</Russian>
 	</Key>
 	<Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
 		<Original>Fill Area </Original>
@@ -5872,5 +5806,65 @@
 		<English>Tools that create dependencies</English>
 		<German>Werkezuge die Abhängkeiten erzeugen</German>
 		<Original>Tools that create dependencies</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_DELETECORPSE_DISPLAYNAME">
+		<English>Delete Corpses</English>
+		<German>Leichen löschen</German>
+		<Original>Delete Corpses</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_HEADER">
+		<English>Variable Viewer</English>
+		<German>Variablen-Viewer</German>
+		<Original>Variable Viewer</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
+		<English>Variable Value</English>
+		<German>Variablenwert</German>
+		<Original>Variable Value</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
+		<English>Variable Name</English>
+		<German>Variablenname</German>
+		<Original>Variable Name</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
+		<English>Variable Type</English>
+		<German>Variablentyp</German>
+		<Original>Variable Type</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
+		<English>Hide Functions</English>
+		<German>Funktionen verst.</German>
+		<Original>Hide Functions</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_DELETE">
+		<English>Delete</English>
+		<German>Löschen</German>
+		<Original>Delete</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_SET_NEW">
+		<English>Set/New</English>
+		<German>Setzen/Neu</German>
+		<Original>Set/New</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
+		<English>Confirm</English>
+		<German>Bestätigen</German>
+		<Original>Confirm</Original>
+	</Key>
+	<Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG">
+		<English>Are you sure?</English>
+		<German>Bist du sicher?</German>
+		<Original>Are you sure?</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_DISPLAYNAME">
+		<English>Show Waypoints</English>
+		<German>Wegpunkte anzeigen</German>
+		<Original>Show Waypoints</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_TOOLTIP">
+		<English>Show's the waypoints of all groups on the map.</English>
+		<German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
+		<Original>Show's the waypoints of all groups on the map.</Original>
 	</Key>
 </Project>
