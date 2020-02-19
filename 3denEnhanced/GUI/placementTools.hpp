@@ -273,7 +273,7 @@ class ENH_PlacementTools
 					y = 67 * GRID_H;
 					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
-					sliderRange[] = {1,500};
+					sliderRange[] = {1,10000};
 					sliderStep = 1;
 				    onSliderPosChanged = "ENH_PlacementTools_A = _this # 1; call ENH_fnc_placementTools_fillArea";
 				};
@@ -292,7 +292,7 @@ class ENH_PlacementTools
 					y = 73 * GRID_H;
 					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
-					sliderRange[] = {1,500};
+					sliderRange[] = {1,10000};
 					sliderStep = 1;
 				    onSliderPosChanged = "ENH_PlacementTools_B = _this # 1; call ENH_fnc_placementTools_fillArea";
 				};
