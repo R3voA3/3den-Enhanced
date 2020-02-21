@@ -88,7 +88,8 @@ class ENH_Folder_Utilities
 		"ENH_NameObjects",
 		"ENH_ScenarioAttributesManager",
 		"ENH_TextureFinder",
-		"ENH_3DENCamPositions"
+		"ENH_3DENCamPositions",
+		"ENH_VariableViewer"
 	};
 };
 class ENH_Folder_Miscellaneous
@@ -196,6 +197,13 @@ class ENH_3DENCamPositions
 	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'ENH_3DENCamPositions'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
+	opensNewWindow = 1;
+};
+class ENH_VariableViewer
+{
+	text = "Variable Viewer";
+	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
+	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
 	opensNewWindow = 1;
 };
 //Miscellaneous
