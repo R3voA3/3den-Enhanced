@@ -17,6 +17,12 @@
 ['init'] call BIS_fnc_3DENStatusBar;
 ['init'] call BIS_fnc_3DENInterface;
 
+//Remove assets from asset browser
+call ENH_fnc_3DENBlacklistAssets;
+
+//Collapse asset browser
+call ENH_fnc_3DENCollapseAssetBrowser;
+
 //Set up entity counter in status bar according to preferences
 "init" call ENH_fnc_statusbar_entityCounter;
 "run" call ENH_fnc_statusbar_entityCounter;

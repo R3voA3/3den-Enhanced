@@ -5867,6 +5867,7 @@
 		<German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
 		<Original>Show's the waypoints of all groups on the map.</Original>
 	</Key>
+<<<<<<< HEAD
 	<Key ID="STR_ENH_COLLAPSEASSETBROWSER">
 		<English>Collapse Asset Browser on Start</English>
 		<Original>Collapse Asset Browser on Start</Original>
@@ -5877,4 +5878,6 @@
 		<Original>Collapse Entity List on Start</Original>
 		<German>Entitäten-List beim Start minimieren</German>
 	</Key>
+=======
+>>>>>>> f3ec2b6d24261c294a8b753777b28e4ab71a455d
 </Project>
