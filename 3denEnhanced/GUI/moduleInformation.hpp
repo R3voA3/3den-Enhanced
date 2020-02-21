@@ -41,7 +41,7 @@ class ENH_ModuleInformation
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
 			y = DIALOG_TOP + 12 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
-			h = 20 * GRID_H;
+			h = 22 * GRID_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
 			canModify = false;
 		};
@@ -49,7 +49,7 @@ class ENH_ModuleInformation
 		{
 			text = $STR_ENH_MODULEINFORMATION_POSITION;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 33 * GRID_H;
+			y = DIALOG_TOP + 35 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -57,7 +57,7 @@ class ENH_ModuleInformation
 		{
 			idc = 1401;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 39 * GRID_H;
+			y = DIALOG_TOP + 41 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
@@ -67,7 +67,7 @@ class ENH_ModuleInformation
 		{
 			text = $STR_ENH_MODULEINFORMATION_DUPLICATE;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 45 * GRID_H;
+			y = DIALOG_TOP + 47 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -75,7 +75,7 @@ class ENH_ModuleInformation
 		{
 			idc = 1402;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 51 * GRID_H;
+			y = DIALOG_TOP + 53 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
@@ -85,7 +85,7 @@ class ENH_ModuleInformation
 		{
 			text = $STR_ENH_MODULEINFORMATION_DIRECTION;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 57 * GRID_H;
+			y = DIALOG_TOP + 59 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -93,7 +93,7 @@ class ENH_ModuleInformation
 		{
 			idc = 1403;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 63 * GRID_H;
+			y = DIALOG_TOP + 65 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
@@ -103,7 +103,7 @@ class ENH_ModuleInformation
 		{
 			text = $STR_ENH_MODULEINFORMATION_SYNC;
 			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + 69 * GRID_H;
+			y = DIALOG_TOP + 71 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
@@ -111,7 +111,7 @@ class ENH_ModuleInformation
 		{
 			idc = 1404;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-			y = DIALOG_TOP + 75 * GRID_H;
+			y = DIALOG_TOP + 77 * GRID_H;
 			w = (DIALOG_W - 2) * GRID_W;
 			h = 10 * GRID_H;
 			ColorBackground[] = {COLOR_OVERLAY_RGBA};
@@ -120,7 +120,7 @@ class ENH_ModuleInformation
 		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
-			y = DIALOG_TOP + 86 * GRID_H;
+			y = DIALOG_TOP + 88 * GRID_H;
 			w = 23 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
