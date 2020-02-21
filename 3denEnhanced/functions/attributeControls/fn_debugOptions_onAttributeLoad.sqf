@@ -15,21 +15,23 @@
 
 private _options =
 [
-	["STR_ENH_debugOptions_showUnits_displayName","STR_ENH_debugOptions_showUnits_tooltip"],
-	["STR_ENH_debugOptions_bulletTracking_displayName","STR_ENH_debugOptions_bulletTracking_tooltip"],
-	["STR_ENH_debugOptions_zeus_displayName",""],
-	["STR_ENH_debugOptions_arsenal_displayName",""],
-	["STR_ENH_debugOptions_garage_displayName",""],
-	["STR_ENH_debugOptions_invulnerability_displayName",""],
-	["STR_ENH_captive_displayName","STR_ENH_captive_tooltip"],
-	["STR_ENH_debugOptions_stamina_displayName",""],
-	["STR_ENH_debugOptions_FPS_displayName",""],
-	["STR_ENH_debugOptions_killBLUFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killOPFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killINDFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killCIVFOR_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_killCursor_displayName","STR_ENH_debugOptions_killUnits_tooltip"],
-	["STR_ENH_debugOptions_drawIcons_displayName","STR_ENH_debugOptions_drawIcons_tooltip"]
+	["STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_ARSENAL_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_INVULNERABILITY_DISPLAYNAME",""],
+	["STR_ENH_CAPTIVE_DISPLAYNAME","STR_ENH_CAPTIVE_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_STAMINA_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP"],
+	["STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_DELETECORPSE_DISPLAYNAME",""],
+	["STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_DISPLAYNAME","STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_TOOLTIP"]
 ];
 
 params ["_ctrlGroup"];
