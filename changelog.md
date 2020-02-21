@@ -2,6 +2,11 @@ v5.0
 *added*
 - Context menu tool to move camera into first person view of selected entity
 - Added shortcuts to GUIs to preview controls styles and types (menu strip) 
+- Added Debug Option to draw icons of nearby units and vehicles together with some basic information
+- Added Debug Option to show waypoints of all group on the map
+- Added option to collapse asset browser (right panel) on startup
+- Added option to collapse entity list (left panel) on startup
+- Added option to blacklist factions from asset browser. (For those who don't use vanilla assets at all)
 
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
@@ -27,11 +32,12 @@ v5.0
 - German translation was greatly polished and made consistent
 - Description of Mission Ending attribute is now fully displayed when German localisation is shown
 - Input description of Classname_1 Classname_2 Classname_3 Classname_n is now consistent throughout all controls
-- Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Fixed Patrol tooltip. (Was showing -1 to disable instead of 0)
 - Debug option Disable Stamina and Invincibility are now activated for all units in player's group
 - Kill cursorObject is now only showing if cursorObject is not null
 - Briefing Editor showed the wrong message when pressing the export button
+- Module Information GUI got tweaked so that the description doesn't extent over the bottom of the control
+- Fill Area tools max area was increased from 500x500 to 10.000 by 10.000
 
 v4.9
 *added*

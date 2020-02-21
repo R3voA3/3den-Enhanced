@@ -31,6 +31,7 @@
 #define ST_NO_RECT       		0x200
 #define ST_KEEP_ASPECT_RATIO  	0x800
 #define LB_TEXTURES       		0x10
+#define LB_MULTI 				0x20
 #endif
 
 #define SHOW_IN_ROOT value = 0
