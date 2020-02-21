@@ -67,13 +67,10 @@ class Cfg3DEN
 				{
 					class Attributes
 					{
-						#include "attributesEditor\statusbar_entityCounter.hpp"
-						#include "attributesEditor\collapseAssetBrowser.hpp"
-						#include "attributesEditor\collapseEntityList.hpp"
-						#include "attributesEditor\blacklistedAssets.hpp"
 						#include "attributesEditor\debugOptions.hpp"
 					};
 				};
+				#include "attributesEditor\interface.hpp"
 			};
 		};
 		class Intel

@@ -17,6 +17,10 @@
 ['init'] call BIS_fnc_3DENStatusBar;
 ['init'] call BIS_fnc_3DENInterface;
 
+//Show or hide panels
+["ShowPanelRight",profileNamespace getVariable ['ENH_ShowPanelRight',true]] call bis_fnc_3DENINterface;
+["ShowPanelLeft",profileNamespace getVariable ['ENH_ShowPanelLeft',true]] call bis_fnc_3DENINterface;
+
 //Remove assets from asset browser
 call ENH_fnc_3DENBlacklistAssets;
 

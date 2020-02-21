@@ -5867,7 +5867,6 @@
 		<German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
 		<Original>Show's the waypoints of all groups on the map.</Original>
 	</Key>
-<<<<<<< HEAD
 	<Key ID="STR_ENH_COLLAPSEASSETBROWSER">
 		<English>Collapse Asset Browser on Start</English>
 		<Original>Collapse Asset Browser on Start</Original>
@@ -5876,8 +5875,26 @@
 	<Key ID="STR_ENH_COLLAPSEENTITYLIST">
 		<English>Collapse Entity List on Start</English>
 		<Original>Collapse Entity List on Start</Original>
-		<German>Entitäten-List beim Start minimieren</German>
+		<German>Entitäten-Liste beim Start minimieren</German>
 	</Key>
-=======
->>>>>>> f3ec2b6d24261c294a8b753777b28e4ab71a455d
+	<Key ID="STR_ENH_INTERFACE">
+		<English>Interface</English>
+		<German>Benutzeroberfläche</German>
+		<Original>Interface</Original>
+	</Key>
+	<Key ID="STR_ENH_SHOWRIGHTPANEL">
+		<English>Show Right Panel on Start</English>
+		<German>Rechts Panel beim Start anzeigen</German>
+		<Original>Show Right Panel on Start</Original>
+	</Key>
+	<Key ID="STR_ENH_SHOWLEFTPANEL">
+		<English>Show Left Panel on Start</English>
+		<German>Linkes Panel beim Start anzeigen</German>
+		<Original>Show Left Panel on Start</Original>
+	</Key>
+	<Key ID="STR_ENH_ASSETBLACKLIST">
+		<English>Asset Blacklist</English>
+		<German>Asset-Sperrliste</German>
+		<Original>Asset Blacklist</Original>
+	</Key>
 </Project>
