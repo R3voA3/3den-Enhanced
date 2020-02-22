@@ -257,7 +257,7 @@ if (SHOWUNITS_3D in _enabledOptions) then
 if (REMOVECORPSE in _enabledOptions) then
 {
 	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_DELETECORPSE_DISPLAYNAME",
+		localize "STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME",
 		{allDeadMen apply {deleteVehicle _x}}
 	];
 };

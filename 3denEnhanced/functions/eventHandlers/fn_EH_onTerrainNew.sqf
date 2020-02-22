@@ -21,9 +21,6 @@
 ["ShowPanelRight",profileNamespace getVariable ['ENH_ShowPanelRight',true]] call bis_fnc_3DENINterface;
 ["ShowPanelLeft",profileNamespace getVariable ['ENH_ShowPanelLeft',true]] call bis_fnc_3DENINterface;
 
-//Remove assets from asset browser
-call ENH_fnc_3DENBlacklistAssets;
-
 //Collapse asset browser
 call ENH_fnc_3DENCollapseAssetBrowser;
 

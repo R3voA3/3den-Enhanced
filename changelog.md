@@ -4,12 +4,9 @@ v5.0
 - Added shortcuts to GUIs to preview controls styles and types (menu strip) 
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Added Debug Option to show waypoints of all group on the map
-<<<<<<< HEAD
 - Added option to collapse asset browser (right panel) on startup
 - Added option to collapse entity list (left panel) on startup
-- Added option to blacklist factions from asset browser. (For those who don't use vanilla assets at all)
-=======
->>>>>>> f3ec2b6d24261c294a8b753777b28e4ab71a455d
+- Added option to hide left and rigt panel on startup
 
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description

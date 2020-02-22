@@ -170,7 +170,6 @@ class CfgFunctions
 			class toggleAIFeatures;
 			class floatToTime;
 			class firstPerson;
-			class 3DENBlacklistAssets;
 			class 3DENCollapseAssetBrowser;
 		};
 		class Log

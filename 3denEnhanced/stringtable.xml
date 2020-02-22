@@ -5807,7 +5807,7 @@
 		<German>Werkezuge die Abhängkeiten erzeugen</German>
 		<Original>Tools that create dependencies</Original>
 	</Key>
-	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_DELETECORPSE_DISPLAYNAME">
+	<Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
 		<English>Delete Corpses</English>
 		<German>Leichen löschen</German>
 		<Original>Delete Corpses</Original>
@@ -5857,12 +5857,12 @@
 		<German>Bist du sicher?</German>
 		<Original>Are you sure?</Original>
 	</Key>
-	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_DISPLAYNAME">
+	<Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
 		<English>Show Waypoints</English>
 		<German>Wegpunkte anzeigen</German>
 		<Original>Show Waypoints</Original>
 	</Key>
-	<Key ID="STR_ENH_DEBUGOPTIONS_ONEPREVIEWDEBUG_SHOWWAYPOINTS_TOOLTIP">
+	<Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
 		<English>Show's the waypoints of all groups on the map.</English>
 		<German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
 		<Original>Show's the waypoints of all groups on the map.</Original>
@@ -5891,10 +5891,5 @@
 		<English>Show Left Panel on Start</English>
 		<German>Linkes Panel beim Start anzeigen</German>
 		<Original>Show Left Panel on Start</Original>
-	</Key>
-	<Key ID="STR_ENH_ASSETBLACKLIST">
-		<English>Asset Blacklist</English>
-		<German>Asset-Sperrliste</German>
-		<Original>Asset Blacklist</Original>
 	</Key>
 </Project>

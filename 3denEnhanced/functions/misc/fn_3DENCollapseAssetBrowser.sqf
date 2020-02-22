@@ -46,6 +46,5 @@ private _fnc_collapse =
 
 {
 	private _ctrlTree = _display3DEN displayctrl _x;
-	systemChat str _ctrlTree;
 	[] call _fnc_collapse;
 } foreach _tvIDCs;
