@@ -244,13 +244,14 @@ if (SHOWUNITS_3D in _enabledOptions) then
 					0,
 					format
 					[
-						"%1 (%2 %3 HP, %4, %5 %6)",
+						"%1 (%2 %3 HP, %4, %5 %6, %7 m)",
 						getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
 						(1 - damage _x) * 100,
 						"%",
 						behaviour _x,
 						(_x knowsAbout player) * 100 / 4,
-						"%"
+						"%",
+						round (player distance _x)
 					],
 					true
 				];
