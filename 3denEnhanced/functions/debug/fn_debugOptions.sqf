@@ -32,7 +32,15 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define SHOWUNITS_3D 		14
 #define REMOVECORPSE 		15
 #define SHOWWAYPOINTS 		16
+#define NORECOIL			17
+#define NOSWAY				18
+#define UNLIMITEDAMMO		19
+#define NORELOADTIME		20
+#define DRAWVIEWDIR			21
+#define TELEPORT			22
+
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
+#define RADIUS 150
 
 //To prevent issues in multiplayer games started from multiplayer editor
 if (isMultiplayer) exitWith {false};
@@ -52,7 +60,7 @@ if (INVULNERABILITY in _enabledOptions) then
 if (CAPTIVE in _enabledOptions) then
 {
 	{
-		_x allowDamage true;
+		_x setCaptive true;
 	} forEach units player;
 };
 
@@ -152,7 +160,7 @@ if (killOPFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME",
-		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - [player]}
+		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - units player}
 	];
 };
 
@@ -160,7 +168,7 @@ if (killINDFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME",
-		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits - [player]}
+		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits -  units player}
 	];
 };
 
@@ -168,7 +176,7 @@ if (killCIVFOR in _enabledOptions) then
 {
 	player addAction [
 		localize "STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME",
-		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - [player]}
+		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - units player}
 	];
 };
 
@@ -223,8 +231,6 @@ if (MARKERS in _enabledOptions) then
 if (SHOWUNITS_3D in _enabledOptions) then
 {
 	ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
-	#define RADIUS 250
-
 	["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
 		{
 			{
@@ -249,7 +255,7 @@ if (SHOWUNITS_3D in _enabledOptions) then
 					true
 				];
 				false;
-			} count (ASLToAGL getPosASL player nearEntities [["Man","Air","Car","Tank"],RADIUS]);
+			} count (ASLToAGL getPosASL player nearEntities [["CAManBase","Air","Car","Tank"],RADIUS]);
 		}
 	] call BIS_fnc_addStackedEventHandler;
 };
@@ -292,6 +298,76 @@ if (SHOWWAYPOINTS in _enabledOptions) then
 			];
 		} forEach waypoints _x;
 	} forEach allGroups;
+};
+
+if (NORECOIL in _enabledOptions) then
+{
+	player setUnitRecoilCoefficient 0;
+};
+
+if (NOSWAY in _enabledOptions) then
+{
+	player setCustomAimCoef 0;
+};
+
+if (UNLIMITEDAMMO in _enabledOptions) then
+{
+	player addEventHandler ["FiredMan",
+	{
+		params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_vehicle"];
+		if (isNull _vehicle) then
+		{
+			_unit setAmmo [_weapon,1000];
+			_unit setWeaponReloadingTime [_unit,_muzzle,0];
+			
+		}
+		else
+		{
+			_vehicle setVehicleAmmo 1;
+			_vehicle setWeaponReloadingTime [_unit,_muzzle,0];
+		};
+	}];
+};
+
+if (NORELOADTIME in _enabledOptions) then
+{
+	player addEventHandler ["FiredMan",
+	{
+		params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_vehicle"];
+		if (isNull _vehicle) then
+		{
+			_unit setWeaponReloadingTime [_unit,_muzzle,0];
+			
+		}
+		else
+		{
+			_vehicle setWeaponReloadingTime [_unit,_muzzle,0];
+		};
+	}];
+};
+
+if (DRAWVIEWDIR in _enabledOptions) then
+{
+	["ENH_EH_DrawViewDirection_ID", "onEachFrame",
+		{
+			{
+				private _beg = ASLToAGL eyePos _x;
+				private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 50));
+				private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 50));
+				drawLine3D [ _beg,_endE, [0,1,0,1]];
+				drawLine3D [_beg,_endW, [1,0,0,1]];
+				false;
+			} count (player nearEntities [["CAManBase"],RADIUS] select {!isPlayer _x});
+		}
+	] call BIS_fnc_addStackedEventHandler;
+};
+
+if (TELEPORT in _enabledOptions) then
+{
+	player addAction ["Teleport",
+	{
+		player setPos screenToWorld [0.5,0.5];
+	}];
 };
 
 true

@@ -4,6 +4,12 @@ v5.0
 - Added shortcuts to GUIs to preview controls styles and types (menu strip) 
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Added Debug Option to show waypoints of all group on the map
+- Added Debug Option to enable unlimited ammo
+- Added Debug Option to disable reload time
+- Added Debug Option to draw view and aiming pos of AI
+- Added Debug Option to teleport in 3D space
+- Added Debug Option to disable weapon recoil
+- Added Debug Option to disable weapon sway
 - Added option to collapse asset browser (right panel) on startup
 - Added option to collapse entity list (left panel) on startup
 - Added option to hide left and rigt panel on startup

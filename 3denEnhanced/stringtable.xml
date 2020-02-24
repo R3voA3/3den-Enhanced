@@ -5892,4 +5892,44 @@
 		<German>Linkes Panel beim Start anzeigen</German>
 		<Original>Show Left Panel on Start</Original>
 	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
+		<English>Disable Weapon Recoil</English>
+		<German>Waffenrückstoß ausschalten</German>
+		<Original>Disable Weapon Recoil</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
+		<English>Disable Weapon Sway</English>
+		<German>Waffenverwacklung ausschalten</German>
+		<Original>Disable Weapon Sway</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
+		<English>Disable Reload Time</English>
+		<German>Nachladezeit entfernen</German>
+		<Original>Disable Reload Time</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
+		<English>Enable Unlimited Ammunition</English>
+		<German>Unendlich Munition anschalten</German>
+		<Original>Enable Unlimited Ammunition</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
+		<English>Draw View Direction</English>
+		<German>Blickrichtung darstellen</German>
+		<Original>Draw View Direction</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP">
+		<English>Draws the view- and aiming position of nearby units.</English>
+		<German>Stellt die Blick- und Zielrichtung von sich in der Nähe befindenten Einheiten dar.</German>
+		<Original>Draws the view- and aiming position of nearby units.</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
+		<English>Enable Teleport</English>
+		<German>Teleportieren anschalten</German>
+		<Original>Enable Teleport</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
+		<English>Allows for teleportation in 3D scene. Player is always teleportet to the position at the center of the screen.</English>
+		<German>Erlaubt das Teleportieren in der 3D-Szene. Der Spieler wird immer zur Position in der Bildschirmmitte teleportiert.</German>
+		<Original>Allows for teleportation in 3D scene. Player is always teleportet to the position at the center of the screen.</Original>
+	</Key>
 </Project>
