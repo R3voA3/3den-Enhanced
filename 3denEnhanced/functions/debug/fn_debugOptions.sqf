@@ -24,10 +24,10 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define CAPTIVE 			6
 #define STAMINA 			7
 #define FPS 			    8
-#define killBLUFOR 			9
-#define killOPFOR 			10
-#define killINDFOR 			11
-#define killCIVFOR			12
+#define KILLBLUFOR 			9
+#define KILLOPFOR 			10
+#define KILLINDFOR 			11
+#define KILLCIVFOR			12
 #define KILLCURSOR			13
 #define SHOWUNITS_3D 		14
 #define REMOVECORPSE 		15
@@ -38,6 +38,8 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define NORELOADTIME		20
 #define DRAWVIEWDIR			21
 #define TELEPORT			22
+#define SKIPTIME			23
+#define TIMEMULTIPLIER		24
 
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 #define RADIUS 150
@@ -99,18 +101,48 @@ if (ZEUS in _enabledOptions) then
 
 if (ARSENAL in _enabledOptions) then
 {
-	["AmmoboxInit",[player,true]] spawn BIS_fnc_arsenal;
+	[
+		player,
+		localize "STR_A3_ARSENAL",
+		"\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\arsenal_ca.paa",
+		"\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\arsenal_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{["Open",[true]] call BIS_fnc_arsenal},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
 };
 
 if (GARAGE in _enabledOptions) then
 {
-
-	player addAction [localize "STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME",
-	{
-		if (!isNil "BIS_fnc_garage_center") then {deleteVehicle BIS_fnc_garage_center};
-		BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F",player getPos [10,getDir player],[],0,"CAN_COLLIDE"];
-		["Open",true] call BIS_fnc_garage;
-	}];
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME",
+		"\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\garage_ca.paa",
+		"\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\garage_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{
+			if (!isNil "BIS_fnc_garage_center") then {deleteVehicle BIS_fnc_garage_center};
+			BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F",player getPos [10,getDir player],[],0,"CAN_COLLIDE"];
+			["Open",true] call BIS_fnc_garage;
+		},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
 };
 
 if (FPS in _enabledOptions) then
@@ -148,50 +180,133 @@ if (FPS in _enabledOptions) then
 	};
 };
 
-if (killBLUFOR in _enabledOptions) then
+if (KILLBLUFOR in _enabledOptions) then
 {
-	player addAction [
+	[
+		player,
 		localize "STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME",
-		"{if (side _x == WEST) then {_x setDamage 1}} forEach allUnits - [player]"
-	];
-};
-
-if (killOPFOR in _enabledOptions) then
-{
-	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME",
-		{{if (side _x == EAST) then {_x setDamage 1}} forEach allUnits - units player}
-	];
-};
-
-if (killINDFOR in _enabledOptions) then
-{
-	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME",
-		{{if (side _x == INDEPENDENT) then {_x setDamage 1}} forEach allUnits -  units player}
-	];
-};
-
-if (killCIVFOR in _enabledOptions) then
-{
-	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME",
-		{{if (side _x == CIVILIAN) then {_x setDamage 1}} forEach allUnits - units player}
-	];
-};
-
-if (KILLCURSOR in _enabledOptions) then 
-{
-	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME",
-		{cursorObject setDamage 1},
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{
+			{
+				if (side _x == WEST) then
+				{
+					_x setDamage 1;
+				}
+			} forEach allUnits - units player},
+		{},
 		[],
-		1.5,
-		true,
-		true,
-		"",
-		"!isNull cursorObject"
-	];
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (KILLOPFOR in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{
+			{
+				if (side _x == EAST) then
+				{
+					_x setDamage 1;
+				}
+			} forEach allUnits - units player},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (KILLINDFOR in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"true",
+		"true",
+		{
+			{
+				if (side _x == INDEPENDENT) then
+				{
+					_x setDamage 1;
+				}
+			} forEach allUnits - units player},
+		{},
+		{},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (KILLCIVFOR in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{
+			{
+				if (side _x == CIVILIAN) then
+				{
+					_x setDamage 1;
+				}
+			} forEach allUnits - units player},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (KILLCURSOR in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME",
+		"A3\Ui_f\data\IGUI\RscCustomInfo\Sensors\Targets\NVTarget_ca.paa",
+		"A3\Ui_f\data\IGUI\RscCustomInfo\Sensors\Targets\NVTarget_ca.paa",
+		"!isNull cursorObject",
+		"true",
+		{},
+		{},
+		{cursorObject setDamage 1},
+		{},
+		[],
+		1,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
 };
 
 if (MARKERS in _enabledOptions) then
@@ -216,9 +331,9 @@ if (MARKERS in _enabledOptions) then
 
 		while {true} do
 		{
-			waitUntil{sleep 1; visibleMap};//Only updated markers when visible
+			waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
 			{
-				sleep 1;//A bit more performance friendly
+				sleep 0.2;//A bit more performance friendly
 				_x params ["_marker","_entity"];
 				_displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
 				_marker setMarkerText _displayName;
@@ -263,10 +378,23 @@ if (SHOWUNITS_3D in _enabledOptions) then
 
 if (REMOVECORPSE in _enabledOptions) then
 {
-	player addAction [
-		localize "STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME",
-		{allDeadMen apply {deleteVehicle _x}}
-	];
+	[
+	player,
+	localize "STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME",
+	"\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa",
+	"\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa",
+	"true",
+	"true",
+	{},
+	{},
+	{allDeadMen apply {deleteVehicle _x}},
+	{},
+	[],
+	1,
+	nil,
+	false,
+	false
+	] call BIS_fnc_holdActionAdd;
 };
 
 if (SHOWWAYPOINTS in _enabledOptions) then
@@ -353,8 +481,8 @@ if (DRAWVIEWDIR in _enabledOptions) then
 		{
 			{
 				private _beg = ASLToAGL eyePos _x;
-				private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 50));
-				private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 50));
+				private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 3));
+				private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 3));
 				drawLine3D [ _beg,_endE, [0,1,0,1]];
 				drawLine3D [_beg,_endW, [1,0,0,1]];
 				false;
@@ -365,10 +493,72 @@ if (DRAWVIEWDIR in _enabledOptions) then
 
 if (TELEPORT in _enabledOptions) then
 {
-	player addAction ["Teleport",
-	{
-		player setPos screenToWorld [0.5,0.5];
-	}];
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_TELEPORT",
+		"\a3\Modules_F_Curator\Data\portraitLightning_ca.paa",
+		"\a3\Modules_F_Curator\Data\portraitLightning_ca.paa",
+		"true",
+		"true",
+		{},
+		{},
+		{player setPos screenToWorld [0.5,0.5]},
+		{},
+		[],
+		0.2,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (SKIPTIME in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_SKIPTIME",
+		"\a3\Modules_F_Curator\Data\portraitSkiptime_ca.paa",
+		"\a3\Modules_F_Curator\Data\portraitSkiptime_ca.paa",
+		"true",
+		"true",
+		{},
+		{
+			skipTime 1;
+			hint (dayTime call BIS_fnc_timeToString);
+		},
+		{},
+		{},
+		[],
+		10,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (TIMEMULTIPLIER in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER",
+		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
+		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
+		"true",
+		"true",
+		{},
+		{
+			private _valueArray = [0.1,0.2,0.3,0.4,1,2,5,10,15,18,20,25,30,35,40,45,50,60,70,80,90,100,110,120];
+			setTimeMultiplier (_valueArray select (_this select 4));
+			hint format ["%1x",timeMultiplier];
+		},
+		{},
+		{},
+		[],
+		10,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
 };
 
 true
