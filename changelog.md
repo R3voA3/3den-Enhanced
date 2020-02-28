@@ -1,3 +1,14 @@
+v5.1
+*added*
+- Added debug option to skip time
+- Added debug option to change time multiplier
+
+*changed*
+- Debug options are now using BIS_fnc_holdAction
+- Updated icon for debug options and tweaked several values
+- Lenght of "laser beams" indicating view and aiming direction was shortened
+- Mission ending attribute control was using EDIT_W_WIDE instead of EDIT_W resulting in slightly incorrect positioning
+
 v5.0
 *added*
 - Context menu tool to move camera into first person view of selected entity
