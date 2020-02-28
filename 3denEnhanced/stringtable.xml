@@ -5863,9 +5863,9 @@
 		<Original>Show Waypoints</Original>
 	</Key>
 	<Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
-		<English>Show's the waypoints of all groups on the map.</English>
+		<English>Shows the waypoints of all groups on the map.</English>
 		<German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
-		<Original>Show's the waypoints of all groups on the map.</Original>
+		<Original>Shows the waypoints of all groups on the map.</Original>
 	</Key>
 	<Key ID="STR_ENH_COLLAPSEASSETBROWSER">
 		<English>Collapse Asset Browser on Start</English>
@@ -5923,13 +5923,23 @@
 		<Original>Draws the view- and aiming position of nearby units.</Original>
 	</Key>
 	<Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
-		<English>Enable Teleport</English>
-		<German>Teleportieren anschalten</German>
-		<Original>Enable Teleport</Original>
+		<English>Teleport</English>
+		<German>Teleportieren</German>
+		<Original>Teleport</Original>
 	</Key>
 	<Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
 		<English>Allows for teleportation in 3D scene. Player is always teleportet to the position at the center of the screen.</English>
 		<German>Erlaubt das Teleportieren in der 3D-Szene. Der Spieler wird immer zur Position in der Bildschirmmitte teleportiert.</German>
 		<Original>Allows for teleportation in 3D scene. Player is always teleportet to the position at the center of the screen.</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_SKIPTIME">
+		<English>Skip Time</English>
+		<German>Zeit überspringen</German>
+		<Original>Skip Time</Original>
+	</Key>
+	<Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
+		<English>Time Multiplier</English>
+		<German>Zeit-Multiplikator</German>
+		<Original>Time Multiplier</Original>
 	</Key>
 </Project>

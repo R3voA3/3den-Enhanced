@@ -61,7 +61,7 @@ class ENH_MissionEnding_Casualties: Title
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
-			w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
+			w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 5;
 			sliderRange[] = {1,100};
