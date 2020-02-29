@@ -56,6 +56,7 @@ class Cfg3DEN
 		#include "controls\missionEnding.hpp"
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"
+		#include "controls\SPR.hpp"
 	};
 	class Mission
 	{
@@ -92,6 +93,7 @@ class Cfg3DEN
 				#include "attributesMission\establishingShot.hpp"
 				#include "attributesMission\introText.hpp"
 				#include "attributesMission\missionEnding.hpp"
+				#include "attributesMission\SPR.hpp"
 				class Misc
 				{
 					class Attributes
@@ -159,6 +161,7 @@ class Cfg3DEN
 					#include "attributesObject\limitSpeed.hpp"
 					#include "attributesObject\doStop.hpp"
 					#include "attributesObject\removeFromRemainsCollector.hpp"
+					#include "attributesObject\enableSPR.hpp"
 					#include "attributesObject\debugPath.hpp"
 				};
 			};

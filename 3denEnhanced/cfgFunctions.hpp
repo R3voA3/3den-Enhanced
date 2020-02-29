@@ -246,6 +246,9 @@ class CfgFunctions
 			class debugOptions_onAttributeSave;
 			class debugOptions_onLBSelChanged;
 			class debugOptions_onButtonDown;
+			class SPR_onAttributeLoad;
+			class SPR_onAttributeSave;
+			class SPR_onButtonDown;
 		};
 	};
 };
