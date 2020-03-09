@@ -6,7 +6,7 @@ class ENH_AddObjectsToZeus
 	control = "Checkbox";
 	expression =
 	"\
-		if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then\
+		if (!is3DEN && {isServer && {_value} && !(allCurators isEqualTo [])}) then\
 		{\
 			[] spawn\
 			{\

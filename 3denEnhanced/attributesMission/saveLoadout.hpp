@@ -6,7 +6,7 @@ class ENH_SaveLoadout
    control = "Checkbox";
    expression =
    "\
-      if (!is3DEN && hasInterface && _value) then\
+      if (!is3DEN && {hasInterface && {_value}}) then\
       {\
          [] spawn\
          {\

@@ -12,7 +12,7 @@ class ENH_DynamicGroups
 			control = "Checkbox";
 			expression =
 			"\
-				if (!is3DEN && isMultiplayer && _value) then\
+				if (!is3DEN && {isMultiplayer && {_value}}) then\
 				{\
 					if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};\
 					if (hasInterface) then\

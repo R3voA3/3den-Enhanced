@@ -11,7 +11,7 @@ class ENH_MapIndicators
 			control = "ENH_MapIndicators";
 			expression =
 			"\
-				if (!is3DEN && !(_value isEqualTo [false,false,false,false]) && hasInterface) then\
+				if (!is3DEN && {!(_value isEqualTo [false,false,false,false]) && {hasInterface}}) then\
 				{\
 					disableMapIndicators _value;\
 				};\

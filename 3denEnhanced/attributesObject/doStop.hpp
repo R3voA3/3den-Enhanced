@@ -4,7 +4,7 @@ class ENH_DoStop
 	tooltip = $STR_ENH_DOSTOP_TOOLTIP;
 	property = "ENH_doStop";
 	control = "Checkbox";
-	expression = "if (!is3DEN && _value) then {doStop _this}";
+	expression = "if (!is3DEN && {_value && !isMultiplayer}) then {doStop _this}";
 	condition = "objectBrain + objectVehicle";
 	defaultValue = "false";
 };

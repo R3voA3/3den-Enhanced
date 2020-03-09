@@ -4,12 +4,7 @@ class ENH_AddGunLight
 	tooltip = $STR_ENH_ADDGUNLIGHT_TOOLTIP;
 	property = "ENH_addGunLight";
 	control = "Checkbox";
-	expression =
-	"if (!is3DEN && _value) then\
-	{\
-		_this addPrimaryWeaponItem 'acc_flashlight';\
-		_this enableGunLights 'forceOn';\
-	}";
+	expression = "if (!is3DEN) then {_this addPrimaryWeaponItem 'acc_flashlight'; _this enableGunLights 'forceOn'}";
 	condition = "objectBrain";
 	defaultValue = "false";
 };

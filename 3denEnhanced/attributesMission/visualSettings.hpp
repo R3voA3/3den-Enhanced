@@ -10,7 +10,7 @@ class ENH_VisualSettings
 			tooltip = $STR_ENH_VIEWDISTANCE_TOOLTIP;
 			property = "ENH_viewDistance";
 			control = "Edit";
-			expression = "if (_value > 0 && !is3DEN && hasInterface) then {setViewDistance _value}";
+			expression = "if (!is3DEN && {_value > 0 && {hasInterface}}) then {setViewDistance _value}";
 			defaultValue = "-1";
 			typeName = "NUMBER";
 		};
@@ -18,7 +18,7 @@ class ENH_VisualSettings
 		{
 			displayName = $STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME;
 			property = "ENH_objViewDistance";
-			expression = "if (_value > 0 && !is3DEN && hasInterface) then {setObjectViewDistance _value}";
+			expression = "if (!is3DEN && {_value > 0 && {hasInterface}}) then {setObjectViewDistance _value}";
 		};
 		class ENH_TerrainDetail: ENH_ViewDistance
 		{
@@ -26,7 +26,7 @@ class ENH_VisualSettings
 			tooltip = "";
 			property = "ENH_terrainDetail";
 			control = "ENH_TerrainDetail";
-			expression = "if (_value > 0 && !is3DEN && hasInterface) then {setTerrainGrid _value}";
+			expression = "if (!is3DEN && {_value > 0 && {hasInterface}}) then {setTerrainGrid _value}";
 		};
 	};
 };

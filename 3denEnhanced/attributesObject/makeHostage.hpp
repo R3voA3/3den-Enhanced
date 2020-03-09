@@ -5,7 +5,7 @@ class ENH_MakeHostage: ENH_SetCaptive
 	property = "ENH_makeHostage";
 	expression =
 	"\
-		if (isServer && _value) then\
+		if (isServer && {_value}) then\
 		{\
 			ENH_fnc_makeHostage =\
 			{\

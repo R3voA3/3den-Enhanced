@@ -8,7 +8,7 @@ class Date
 			tooltip = $STR_ENH_TIMEMULTIPLIER_TOOLTIP;
 			property = "ENH_timeMultiplier";
 			control = "ENH_TimeMultiplier";
-			expression = "if (!is3DEN && isServer && _value != 1) then {setTimeMultiplier _value}";
+			expression = "if (!is3DEN && {isServer && {_value != 1}}) then {setTimeMultiplier _value}";
 			defaultValue = "1";
 		};
 	};

@@ -9,7 +9,7 @@ class ENH_DynamicSkill
 			displayName = $STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL;
 			property = "ENH_dynamicSkill";
 			control = "ENH_DynamicSkill";
-			expression = "if (_value # 0 && !is3DEN && isServer) then\
+			expression = "if (!is3DEN && {_value # 0 && {isServer}}) then\
 			{\
 				_value params\
 				[\
