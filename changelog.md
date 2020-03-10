@@ -2,6 +2,7 @@ v5.1
 *added*
 - Added debug option to skip time
 - Added debug option to change time multiplier
+- Added Variable Broweser to debug options
 
 *changed*
 - Debug options are now using BIS_fnc_holdAction
