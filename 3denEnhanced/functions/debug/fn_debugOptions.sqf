@@ -567,8 +567,8 @@ if (VARIABLEVIEWER in _enabledOptions) then
 	[
 		player,
 		localize "STR_ENH_VARIABLEVIEWER_HEADER",
-		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
-		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
 		"true",
 		"true",
 		{(call BIS_fnc_displayMission) createDisplay "ENH_VariableViewer"},
