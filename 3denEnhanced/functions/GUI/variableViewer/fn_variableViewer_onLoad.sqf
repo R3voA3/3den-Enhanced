@@ -81,7 +81,7 @@ private _icon = "";
 			_icon = "\a3\Modules_F_Curator\Data\portraitLightning_ca.paa";
 		};
 	};
-	_ctrlNamespace lbSetPictureRight [_forEachIndex,_icon];
+	_ctrlNamespace lbSetPicture [_forEachIndex,_icon];
 } forEach _namespaces;
 
 //Fill ListNbox

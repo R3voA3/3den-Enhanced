@@ -10,7 +10,7 @@ class ENH_GroupMarker
 			property = "ENH_groupMarker";
 			control = "ENH_GroupMarker";
 			expression = "\
-			if (!is3DEN && !(_value isEqualTo ['','','',true])) then\
+			if (!is3DEN && {!(_value isEqualTo ['','','',true])}) then\
 			{\
 				[_this,_value] spawn\
 				{\

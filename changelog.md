@@ -8,6 +8,9 @@ v5.1
 - Updated icon for debug options and tweaked several values
 - Lenght of "laser beams" indicating view and aiming direction was shortened
 - Mission ending attribute control was using EDIT_W_WIDE instead of EDIT_W resulting in slightly incorrect positioning
+- Disabled ENH_DoStop in multiplayer https://github.com/R3voA3/3den-Enhanced/issues/85
+- Changed attribute conditions from condition && condition to condition && code for best performance
+- Fixed an issue where Hold Action attribute settings would not be saved
 
 v5.0
 *added*

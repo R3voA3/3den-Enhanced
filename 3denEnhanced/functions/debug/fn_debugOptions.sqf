@@ -40,6 +40,7 @@ if (_enabledOptions isEqualTo []) exitWith {false};
 #define TELEPORT			22
 #define SKIPTIME			23
 #define TIMEMULTIPLIER		24
+#define VARIABLEVIEWER		25
 
 #define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
 #define RADIUS 150
@@ -555,6 +556,27 @@ if (TIMEMULTIPLIER in _enabledOptions) then
 		{},
 		[],
 		10,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
+
+if (VARIABLEVIEWER in _enabledOptions) then
+{
+	[
+		player,
+		localize "STR_ENH_VARIABLEVIEWER_HEADER",
+		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
+		"\a3\Modules_F_Curator\Data\portraitTimeAcceleration_ca.paa",
+		"true",
+		"true",
+		{(call BIS_fnc_displayMission) createDisplay "ENH_VariableViewer"},
+		{},
+		{},
+		{},
+		[],
+		0.2,
 		nil,
 		false,
 		false
