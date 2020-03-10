@@ -4524,7 +4524,7 @@
 		<Czech>Obnoví výstroj při respawnu.</Czech>
 		<French>Restaure l'équipement lors de la réapparition.</French>
 		<Spanish>Restaurar equipamiento en el respawn</Spanish>
-		<German>Ausrüstung wird beim Wiedereinstieg wiederhergestellt.</German>
+		<German>Ausrüstung wird beim Respawn wiederhergestellt.</German>
 		<Chinesesimp>在重生时恢复加载。</Chinesesimp>
 		<Polish>Przywraca wyposażenie podczas odrodzenia.</Polish>
 		<Russian>Восстанавливает оборудование, когда оно появляется снова.</Russian>
@@ -5063,8 +5063,8 @@
 	<Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
 		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
 		<Original>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.\n\nValue has to be a marker class name from CfgMarkers.</Original>
-		<Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "ENH_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).\n\nHodnota musí být název třídy značky z CfgMarkers.</Czech>
-		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht.\n\nDas Aktualisieren des Markers kann durch das Setzen der Variablen 'ENH_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
+		<Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "ENH_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).Hodnota musí být název třídy značky z CfgMarkers.</Czech>
+		<German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht. Das Aktualisieren des Markers kann durch das Setzen der Variablen 'ENH_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
 		<Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
 		<Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'ENH_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
 		<Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar por la configuración de variable "ENH_GroupMarker_</Spanish>
@@ -5970,27 +5970,32 @@
 	</Key>
 	<Key ID="STR_ENH_SPR_DESCRIPTION">
 		<English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
-		<German>Erlaubt dem Spieler und KI-Einheiten in Einzelspielerszenarios wiedereinzusteigen. Nur Einheiten für die der Einzelspielerwiedereinstieg in den Attributen aktiviert wurde, sind betroffen. Für Mehrspielermissionen benutze den Mehrspielerwiedereinstieg.</German>
+		<German>Erlaubt dem Spieler und KI-Einheiten in Einzelspielerszenarios zu respawnen. Nur Einheiten für die der Einzelspieler-Respawn in den Attributen aktiviert wurde, sind betroffen. Für Mehrspielermissionen benutze den Mehrspieler-Respawn.</German>
 		<Original>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_ENABLESPR">
 		<English>Enable Single Player Respawn</English>
-		<German>Einzelspielerwiedereinstieg aktivieren</German>
+		<German>Einzelspieler-Respawn aktivieren</German>
 		<Original>Enable Single Player Respawn</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
 		<English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
-		<German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Wiedereinstiegspunkte. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - OPFOR Wiedereinstieg\n* respawn_west - BLUFOR Wiedereinstieg\n* respawn_guerilla - INDFOR Wiedereinstieg\n* respawn_civilian - CIVFOR Wiedereinstieg</German>
+		<German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für INDFOR\n* respawn_civilian - Respawn für CIVFOR</German>
 		<Original>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
-		<English>Respawn at the nearest Respawn Position</English>
-		<German>Bei nähester Wiedereinstiegsposition wiedereinsteigen</German>
-		<Original>Respawn at the nearest Respawn Position</Original>
+		<English>Respawn at nearest Respawn Position</English>
+		<German>Bei nähester Respawn-Position wiedereinsteigen</German>
+		<Original>Respawn at nearest Respawn Position</Original>
 	</Key>
-	<Key ID="s">
-		<English>Respawn at random respawn position</English>
-		<German>Bei einer willkürlichen Wiedereinstiegsposition wiedereinsteigen</German>
-		<Original>Respawn at random respawn position</Original>
+	<Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
+		<English>Respawn at random Respawn Position</English>
+		<German>Bei einer willkürlichen Respawn-Positionwiedereinsteigen</German>
+		<Original>Respawn at random Respawn Position</Original>
+	</Key>
+	<Key ID="STR_ENH_SPR">
+		<English>Single Player Respawn</English>
+		<German>Einzelspieler-Respawn</German>
+		<Original>Single Player Respawn</Original>
 	</Key>
 </Project>
