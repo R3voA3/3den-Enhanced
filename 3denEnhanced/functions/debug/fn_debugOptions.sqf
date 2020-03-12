@@ -503,7 +503,7 @@ if (TELEPORT in _enabledOptions) then
 		"true",
 		{},
 		{},
-		{player setPos screenToWorld [0.5,0.5]},
+		{player setPos screenToWorld [0.5,0.6]},//Center of action icon
 		{},
 		[],
 		0.2,
