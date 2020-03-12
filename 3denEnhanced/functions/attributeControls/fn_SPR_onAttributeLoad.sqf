@@ -18,11 +18,15 @@ params ["_ctrlGroup","_value"];
 _value params ["_ruletSet","_respawnTime","_canDie","_restoreLoadout"];
 
 (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
+
 (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
-(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_RANDOMPOSITION";
-(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [1,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
-(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_NEARESTPOSITION";
-(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [2,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+
+private _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_RANDOMPOSITION";
+(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [_index,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+
+_index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_NEARESTPOSITION";
+(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [_index,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+
 (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel _ruletSet;
 
 [_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"s"] call BIS_fnc_initSliderValue;

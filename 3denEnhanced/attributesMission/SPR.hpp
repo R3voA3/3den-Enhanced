@@ -86,7 +86,6 @@ class ENH_SPR
 							_unit setPos _respawnPos;\
 						};\
 					};\
-					hint format ['SPR DEBUG:\n\n%1 respawned at %2\nTickets left: %3',_unit,position _unit,_unit getVariable 'ENH_SPR_Tickets'];\
 				};\
 				\
 				ENH_fnc_SPR_respawnTimer =\
