@@ -22,7 +22,7 @@ class ENH_MissionEnding
 					addMissionEventHandler ['EntityKilled',\
 					{\
 						params ['_killed', '_killer'];\
-						if (side group _killed isEqualTo ENH_Casualties_side && isPlayer _killer) then\
+						if (side group _killed isEqualTo ENH_Casualties_side) then\
 						{\
 							ENH_Casualties_Counter = ENH_Casualties_Counter + 1;\
 						};\
