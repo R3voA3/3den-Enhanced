@@ -50,17 +50,30 @@ class ENH_SPR: Title
 				};
 			};
 		};
+		class RulesetTitle: Title
+		{
+			text = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNTEMPLATES_DISPLAYNAME;
+			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
+		};
+		class Ruleset: ctrlCombo
+		{
+			idc = 100;
+			x = ATTRIBUTE_TITLE_W * GRID_W;
+			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
+			w = ATTRIBUTE_CONTENT_W * GRID_W;
+			h = SIZE_M * GRID_H;
+		};
 		class RespawnTimeTitle: Title
 		{
-			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 			text = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_DISPLAYNAME;
 			tooltip = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_TOOLTIP
 		};
 		class RespawnTimeValue: ctrlXSliderH
 		{
-			idc = 100;
+			idc = 101;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
+			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 20;
@@ -69,59 +82,35 @@ class ENH_SPR: Title
 		};
 		class TimeEdit: ctrlEdit
 		{
-			idc = 101;
-			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
-			y = 5.5 * SIZE_M * GRID_H + 5 * pixelH;
-			w = EDIT_W * GRID_W;
-			h = SIZE_M * GRID_H;
-		};
-		class TicketsTitle: Title
-		{
-			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_SPR_RESPAWNTICKETS_DISPLAYNAME;
-			tooltip = $STR_ENH_SPR_RESPAWNTICKETS_TOOLTIP;
-		};
-		class TicketsValue: ctrlXSliderH
-        {
-            idc = 102;
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
-			w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
-			h = SIZE_M * GRID_H;
-			sliderPosition = 0;
-			sliderRange[] = {0,100};
-			sliderStep = 1;
-        };
-		class TicketsEdit: ctrlEdit
-		{
-			idc = 103;
+			idc = 102;
 			x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			y = 6.5 * SIZE_M * GRID_H + 10 * pixelH;
 			w = EDIT_W * GRID_W;
 			h = SIZE_M * GRID_H;
-		};
-		class RulesetTitle: Title
-		{
-			text = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNTEMPLATES_DISPLAYNAME;
-			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
-		};
-		class Ruleset: ctrlCombo
-		{
-			idc = 104;
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
-		};
-		class CanDieTitle: Title 
+		};	
+		class CanDieTitle: Title
 		{
 			text = $STR_ENH_SPR_CANDIE_DISPLAYNAME;
 			tooltip = $STR_ENH_SPR_CANDIE_TOOLTIP;
-			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class CanDie: ctrlCheckbox
 		{
-			idc = 105;
+			idc = 103;
+			x = ATTRIBUTE_TITLE_W * GRID_W;
+			y = 7.5 * SIZE_M * GRID_H + 15 * pixelH;
+			w = 5 * GRID_W;
+			h = SIZE_M * GRID_H;
+		};
+		class RestoreLoadoutTitle: Title
+		{
+			text = $STR_ENH_SAVELOADOUT_DISPLAYNAME;
+			tooltip = $STR_ENH_SAVELOADOUT_TOOLTIP;
+			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
+		};
+		class RestoreLoadout: ctrlCheckbox
+		{
+			idc = 104;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
 			w = 5 * GRID_W;

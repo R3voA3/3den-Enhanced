@@ -161,7 +161,7 @@ class Cfg3DEN
 					#include "attributesObject\limitSpeed.hpp"
 					#include "attributesObject\doStop.hpp"
 					#include "attributesObject\removeFromRemainsCollector.hpp"
-					#include "attributesObject\enableSPR.hpp"
+					#include "attributesObject\SPRTickets.hpp"
 					#include "attributesObject\debugPath.hpp"
 				};
 			};

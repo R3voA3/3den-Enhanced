@@ -17,12 +17,9 @@ params ["_ctrlButton"];
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 
-[_ctrlGroup controlsGroupCtrl 100,_ctrlGroup controlsGroupCtrl 101,"s",20] call BIS_fnc_initSliderValue;
-
-[_ctrlGroup controlsGroupCtrl 102,_ctrlGroup controlsGroupCtrl 103,"",0] call BIS_fnc_initSliderValue;
-
-(_ctrlGroup controlsGroupCtrl 104) lbSetCurSel 0;
-
-(_ctrlGroup controlsGroupCtrl 105) cbSetChecked false;
+(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
+[_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"s",20] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
+(_ctrlGroup controlsGroupCtrl 104) cbSetChecked false;
 
 true

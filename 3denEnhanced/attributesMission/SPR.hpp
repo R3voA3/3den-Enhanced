@@ -1,35 +1,81 @@
 class ENH_SPR
 {
 	collapsed = 1;
-	displayName = "Single Player Respawn";
+	displayName = $STR_ENH_SPR;
 	class Attributes
 	{
 		class ENH_SPR
 		{
-			displayName = "Single Player Respawn";
+			displayName = $STR_ENH_SPR;
 			property = "ENH_SPR";
 			control = "ENH_SPR";
 			expression =
-			"if (!is3DEN && {_value # 1 > 0 && {!isMultiplayer}}) then\
+			"if (!is3DEN && {_value # 0 > 0 && {!isMultiplayer}}) then\
 			{\
-				ENH_SPR_Delay = _value param [0,20];\
-				ENH_SPR_Tickets = _value param [1,0];\
-				ENH_SPR_Ruleset = _value param [2,0];\
-				ENH_SPR_CanDie = _value param [3,false];\
+				ENH_SPR_Ruleset = _value param [0,0];\
+				ENH_SPR_Delay = _value param [1,20];\
+				ENH_SPR_CanDie = _value param [2,false];\
+				ENH_SPR_RestoreLoadout = _value param [3,false];\
 				ENH_SPR_Positions_West = allMapMarkers select {'respawn_west' in _x} apply {getMarkerPos _x};\
 				ENH_SPR_Positions_East = allMapMarkers select {'respawn_east' in _x} apply {getMarkerPos _x};\
 				ENH_SPR_Positions_Guerilla = allMapMarkers select {'respawn_guerilla' in _x} apply {getMarkerPos _x};\
 				ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civlian' in _x} apply {getMarkerPos _x};\
+				\
+				{\
+					_x setVariable ['ENH_SPR_OriginalSide',side _x];\
+					_x setVariable ['ENH_SPR_OriginalLoadout',getUnitLoadout _x];\
+					_x addEventHandler ['handleDamage',\
+					{\
+						params ['_unit','_selection','_damage','','','_hitIndex'];\
+						if (_handleDamage < 0.1 || {!alive _unit || {lifeState _unit isEqualTo 'INCAPACITATED'}}) exitWith {0};\
+						if (ENH_SPR_CanDie && {_selection == 'head' && {_damage >= 1.2}}) exitWith\
+						{\
+							_unit setDamage 1;\
+							_unit removeEventHandler ['handleDamage',_thisEventHandler];\
+						};\
+						if (_unit getVariable ['ENH_SPR_Tickets',0] == 0) then\
+						{\
+							_unit removeEventHandler ['handleDamage',_thisEventHandler];\
+						}\
+						else\
+						{\
+							if(_selection == '' && {_damage >= 0.95}) then\
+							{\
+								_unit allowDamage false;\
+								_unit setCaptive true;\
+								_unit setUnconscious true;\
+								_unit setVariable ['ENH_SPR_Tickets',(_unit getVariable ['ENH_SPR_Tickets',0]) - 1];\
+								removeSwitchableUnit _unit;\
+								moveOut _unit;\
+								_unit spawn ENH_fnc_SPR_respawnTimer;\
+								_damage = 0;\
+							}\
+							else\
+							{\
+								_damage = _damage min 0.95;\
+							};\
+						};\
+						_damage;\
+					}];\
+				} forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets',0] > 0});\
+				\
 				ENH_fnc_SPR_respawn =\
 				{\
 					params ['_unit'];\
-					if (ENH_SPR_Ruleset > 0) then\
+					_unit setUnconscious false;\
+					_unit playAction 'PlayerStand';\
+					_unit allowDamage true;\
+					_unit setCaptive false;\
+					_unit setDamage 0;\
+					addSwitchableUnit _unit;\
+					if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
+					if (ENH_SPR_Ruleset >= 2) then\
 					{\
-						private _sideID = (_unit getVariable ['ENH_SPR_OriginalSide',west]) call BIS_fnc_sideID;\
+						private _sideID = side _unit call BIS_fnc_sideID;\
 						private _positions = [ENH_SPR_Positions_East,ENH_SPR_Positions_West,ENH_SPR_Positions_Guerilla,ENH_SPR_Positions_Civilian] select _sideID;\
 						if !(_positions isEqualTo []) then\
 						{\
-							private _respawnPos = if (ENH_SPR_Ruleset == 1) then\
+							private _respawnPos = if (ENH_SPR_Ruleset == 2) then\
 							{\
 								selectRandom _positions;\
 							}\
@@ -40,17 +86,15 @@ class ENH_SPR
 							_unit setPos _respawnPos;\
 						};\
 					};\
-					_unit setUnconscious false;\
-					_unit allowDamage true;\
-					_unit setCaptive false;\
-					_unit setDamage 0;\
+					hint format ['SPR DEBUG:\n\n%1 respawned at %2\nTickets left: %3',_unit,position _unit,_unit getVariable 'ENH_SPR_Tickets'];\
 				};\
+				\
 				ENH_fnc_SPR_respawnTimer =\
 				{\
 					params ['_unit'];\
+					private _respawnTime = time + ENH_SPR_Delay;\
 					if (isPlayer _unit) then\
 					{\
-						private _respawnTime = time + ENH_SPR_Delay;\
 						private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];\
 						_ctrlRespawnTimer ctrlSetPosition [0.25,0,0.5,0.06];\
 						_ctrlRespawnTimer ctrlSetBackgroundColor [0,0,0,0.1];\
@@ -73,41 +117,29 @@ class ENH_SPR
 						showChat true;\
 						[\
 							['Respawned'],\
-							[format ['GRID:%1',mapGridPosition _unit]],\
-							[format ['Tickets used: %1/%2',_unit getVariable ['ENH_SPR_UsedTickets',0],ENH_SPR_Tickets]]\
+							[format ['GRID: %1',mapGridPosition _unit]],\
+							[format ['Tickets left: %1',_unit getVariable 'ENH_SPR_Tickets']]\
 						] spawn BIS_fnc_EXP_camp_SITREP;\
 					}\
 					else\
 					{\
+						if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then\
+						{\
+							[\
+								str _unit,'onEachFrame',\
+								{\
+									drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa',[0.13,0.54,0.21,0.8],ASLToAGL ((_this # 0) modelToWorldVisualWorld [0,0,1]),1,1,0,str round ((_this # 1) - time),2];\
+								},\
+								[_unit,_respawnTime]\
+							] call BIS_fnc_addStackedEventHandler;\
+						};\
 						sleep ENH_SPR_Delay;\
 					};\
+					[str _unit,'onEachFrame'] call BIS_fnc_removeStackedEventHandler;\
 					_unit call ENH_fnc_SPR_respawn;\
 				};\
-				{\
-					_x setVariable ['ENH_SPR_OriginalSide',side _x];\
-					_x addEventHandler ['handleDamage',\
-					{\
-						params ['_unit','','_damage','','','_hitIndex'];\
-						if (_handleDamage < 0.1 || {!alive _unit || {lifeState _unit isEqualTo 'INCAPACITATED'}}) exitWith {0};\
-						if (_unit getVariable ['ENH_SPR_UsedTickets',0] >= ENH_SPR_Tickets) exitWith\
-						{\
-							_unit removeEventHandler ['handleDamage',_thisEventHandler];\
-						};\
-						if (ENH_SPR_CanDie && {_hitIndex in [0,1,2] && _damage > 1}) exitWith {1};\
-						if(_selection == '' && _damage >= 0.95) then\
-						{\
-							_unit allowDamage false;\
-							_unit setCaptive true;\
-							_unit setUnconscious true;\
-							_unit setVariable ['ENH_SPR_UsedTickets',(_unit getVariable ['ENH_SPR_UsedTickets',0]) + 1];\
-							_unit spawn ENH_fnc_SPR_respawnTimer;\
-							0.9;\
-						};\
-						_damage min 0.95\
-					}];\
-				} forEach (allUnits select {_x getVariable 'ENH_EnableSPR' isEqualTo true})\
 			}";
-			defaultValue = "[20,0,0,false]";
+			defaultValue = "[0,20,false,false]";
 		};
 	};
 };

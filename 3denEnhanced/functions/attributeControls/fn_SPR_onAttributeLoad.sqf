@@ -15,21 +15,21 @@
 */
 
 params ["_ctrlGroup","_value"];
-_value params ["_respawnTime","_tickets","_respawnType","_canDie"];
+_value params ["_ruletSet","_respawnTime","_canDie","_restoreLoadout"];
 
-[_ctrlGroup controlsGroupCtrl 100,_ctrlGroup controlsGroupCtrl 101,"s"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 100,_ctrlGroup controlsGroupCtrl 101,"s",_respawnTime] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
+(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
+(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_RANDOMPOSITION";
+(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [1,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_NEARESTPOSITION";
+(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [2,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel _ruletSet;
 
-[_ctrlGroup controlsGroupCtrl 102,_ctrlGroup controlsGroupCtrl 103,""] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 102,_ctrlGroup controlsGroupCtrl 103,"",_tickets] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"s"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"s",_respawnTime] call BIS_fnc_initSliderValue;
 
-(_ctrlGroup controlsGroupCtrl 104) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
-(_ctrlGroup controlsGroupCtrl 104) lbAdd localize "STR_ENH_SPR_RULESET_RANDOMPOSITION";
-(_ctrlGroup controlsGroupCtrl 104) lbSetTooltip [1,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
-(_ctrlGroup controlsGroupCtrl 104) lbAdd localize "STR_ENH_SPR_RULESET_NEARESTPOSITION";
-(_ctrlGroup controlsGroupCtrl 104) lbSetTooltip [2,localize "STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
-(_ctrlGroup controlsGroupCtrl 104) lbSetCurSel _respawnType;
+(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _canDie;
 
-(_ctrlGroup controlsGroupCtrl 105) cbSetChecked _canDie;
+(_ctrlGroup controlsGroupCtrl 104) cbSetChecked _restoreLoadout;
 
 true
