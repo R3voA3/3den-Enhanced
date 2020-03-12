@@ -12,7 +12,7 @@ class ENH_Airdrop
 			control = "ENH_Airdrop";
 			expression =
 			"\
-				if (!is3DEN && {!((_value # 0) isEqualTo '') && {isServer}}) then\
+				if (!is3DEN && {!((_value # 0) isEqualTo []) && {isServer}}) then\
 				{\
 					_value spawn\
 					{\
@@ -31,7 +31,7 @@ class ENH_Airdrop
 						} forEach _classes;\
 					};\
 				}";
-			defaultValue = "['',[0,0,0],'false',500,200,west]";
+			defaultValue = "[[],[0,0,0],'false',500,200,west]";
 		};
 	};
 };
