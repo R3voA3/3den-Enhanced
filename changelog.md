@@ -12,6 +12,9 @@ v5.1
 - Disabled ENH_DoStop in multiplayer https://github.com/R3voA3/3den-Enhanced/issues/85
 - Changed attribute conditions from condition && condition to condition && code for best performance
 - Fixed an issue where Hold Action attribute settings would not be saved
+- Fixed an issue which caused Ambient Flyby and Airdrop attribute to be added to the mission.sqm unintentionally
+- Debug option Teleport now teleports the player to the position at the center of the action icon
+- Mission Ending attribute was only counting units killed by a player
 
 v5.0
 *added*

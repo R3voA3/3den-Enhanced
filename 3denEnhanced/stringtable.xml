@@ -5942,7 +5942,7 @@
 		<German>Zeit-Multiplikator</German>
 		<Original>Time Multiplier</Original>
 	</Key>
-	<Key ID="STR_ENH_SPR_RESPAWNTICKETS_DISPLAYNAME">
+	<Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
 		<Original>Respawn Tickets</Original>
 		<English>Respawn Tickets</English>
 		<Czech>Počet respawn tiketů</Czech>
@@ -5953,7 +5953,7 @@
 		<Polish>Punkty odrodzenia</Polish>
 		<Russian>Respawn Билеты</Russian>
 	</Key>
-	<Key ID="STR_ENH_SPR_RESPAWNTICKETS_TOOLTIP">
+	<Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
 		<English>Every unit can respawn as long as it hasn't run out of tickets.</English>
 		<German>Einheiten können Wiedereinsteigen solange sie noch Tickets haben.</German>
 		<Original>Every unit can respawn as long as it hasn't run out of tickets.</Original>
@@ -5964,9 +5964,9 @@
 		<Original>Can Die?</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
-		<English>If enabled, units can instantly die, by getting shot in the head, face or neck.</English>
-		<German>Wenn aktiviert können Einheiten durch einen kritischen Treffer in den Kopf, Nacken oder das Gesicht, sofort sterben</German>
-		<Original>If enabled, units can instantly die, by getting shot in the head, face or neck.</Original>
+		<English>Units can instantly die by getting shot in the head.</English>
+		<German>Einheiten können durch einen kritischen Treffer in den Kopf sofort sterben</German>
+		<Original>Units can instantly die by getting shot in the head.</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_DESCRIPTION">
 		<English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
