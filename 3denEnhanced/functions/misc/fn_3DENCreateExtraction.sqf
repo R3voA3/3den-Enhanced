@@ -55,5 +55,3 @@ collect3DENHistory
 };
 
 true
-
-//["B_Heli_Light_01_F",true] call compileFinal preprocessFileLineNumbers "fn_3DENCreateExtraction.sqf";

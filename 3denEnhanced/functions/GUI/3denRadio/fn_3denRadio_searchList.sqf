@@ -37,7 +37,7 @@ private ["_name","_configName","_duration","_logo","_theme"];
 		_theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 		_filteredClasses pushBack [_name,_configName,_duration,_theme,_logo];
 	};
-} forEach ENH_3denRadio_cfgMusic;
+} forEach ENH_3DENRadio_cfgMusic;
 
 //Add all classes to the list box, must be in two steps otherwise previewing songs and sorting the list box doesn't work anymore
 {

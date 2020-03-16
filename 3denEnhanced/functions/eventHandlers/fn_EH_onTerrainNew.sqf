@@ -29,7 +29,7 @@ call ENH_fnc_3DENCollapseAssetBrowser;
 "run" call ENH_fnc_statusbar_entityCounter;
 
 //Enable 3den Radio
-'ONLOAD' call ENH_fnc_3denRadio_toggleRadio;
+'ONLOAD' call ENH_fnc_3DENRadio_toggleRadio;
 
 //Enable session timer
 [] spawn ENH_fnc_sessionTimer;

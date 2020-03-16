@@ -13,9 +13,9 @@
 
 params ["_display"];
 
-"SAVE" call ENH_fnc_3denRadio_handlePlaylist;
+"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
 
-profileNamespace setVariable ["ENH_3denRadio_MusicVolume",musicVolume];
+profileNamespace setVariable ["ENH_3DENRadio_MusicVolume",musicVolume];
 
 _display closeDisplay 1;
 

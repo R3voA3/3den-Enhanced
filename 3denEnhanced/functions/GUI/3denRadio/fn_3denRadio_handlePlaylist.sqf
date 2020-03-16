@@ -2,7 +2,7 @@
 	Author: Revo
 
 	Description:
-	Handles the playlist of 3denRadio GUI.
+	Handles the playlist of 3DENRadio GUI.
 
 	Parameter(s):
 	0: STRING - Action to be taken, can be:
@@ -30,21 +30,21 @@ switch (_action) do
 {
 	case "EXPORT":
 	{
-		"SAVE" call ENH_fnc_3denRadio_handlePlaylist;
-		copyToClipboard str (profileNamespace getVariable ["ENH_3denRadio_Playlist",[]]);
+		"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
+		copyToClipboard str (profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]]);
 		["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 	};
 	case "IMPORT":
 	{
 		private _clipboard = call compile copyFromClipboard;
 		if !(_clipboard isEqualTypeParams [["",""]]) exitWith {false};
-		profileNamespace setVariable ["ENH_3denRadio_Playlist",_clipboard];
+		profileNamespace setVariable ["ENH_3DENRadio_Playlist",_clipboard];
 		["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-		"UPDATE" call ENH_fnc_3denRadio_handlePlaylist;
+		"UPDATE" call ENH_fnc_3DENRadio_handlePlaylist;
 	};
 	case "UPDATE":
 	{
-		private _playlist = profileNamespace getVariable ["ENH_3denRadio_Playlist",[]];
+		private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];
 		lbClear _ctrlPL;
 		{
 			_x params ["_name","_class"];
@@ -64,7 +64,7 @@ switch (_action) do
 			private _index = _ctrlPL lbAdd _name;
 			_ctrlPL lbSetTooltip [_index,_name];
 			_ctrlPL lbSetData [_index,_class];
-			"SAVE" call ENH_fnc_3denRadio_handlePlaylist;
+			"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
 		};
 	};
 	case "REMOVESONG":
@@ -73,7 +73,7 @@ switch (_action) do
 		{
 			_ctrlPL lbDelete (lbCurSel _ctrlPL);
 		};
-		"SAVE" call ENH_fnc_3denRadio_handlePlaylist;
+		"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
 	};
 	case "SAVE":
 	{
@@ -82,7 +82,7 @@ switch (_action) do
 		{
 			_playlist pushBack [_ctrlPL lbText _i,_ctrlPL lbData _i];
 		};
-		profileNamespace setVariable ["ENH_3denRadio_Playlist",_playlist];
+		profileNamespace setVariable ["ENH_3DENRadio_Playlist",_playlist];
 	};
 };
 

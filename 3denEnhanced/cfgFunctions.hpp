@@ -3,18 +3,18 @@ class CfgFunctions
 	class 3denEnhanced
 	{
 		tag = "ENH";
-		class 3denRadio
+		class 3DENRadio
 		{
 			file = "3denEnhanced\functions\GUI\3DENRadio";
-			class 3denRadio_onLoad;
-			class 3denRadio_onUnload;
-			class 3denRadio_exportClassname;
-			class 3denRadio_playMusic;
-			class 3denRadio_toggleRadio;
-			class 3denRadio_handlePlaylist;
-			class 3denRadio_sortBy;
-			class 3denRadio_searchList;
-			class 3denRadio_selectNewSong;
+			class 3DENRadio_onLoad;
+			class 3DENRadio_onUnload;
+			class 3DENRadio_exportClassname;
+			class 3DENRadio_playMusic;
+			class 3DENRadio_toggleRadio;
+			class 3DENRadio_handlePlaylist;
+			class 3DENRadio_sortBy;
+			class 3DENRadio_searchList;
+			class 3DENRadio_selectNewSong;
 		};
 		class Garrison
 		{

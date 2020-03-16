@@ -6,7 +6,7 @@
 
 //Custom GUIs
 #include "GUI\briefingEditor.hpp"
-#include "GUI\3denRadio.hpp"
+#include "GUI\3DENRadio.hpp"
 #include "GUI\nameObjects.hpp"
 #include "GUI\moduleInformation.hpp"
 #include "GUI\textureFinder.hpp"
