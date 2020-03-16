@@ -120,6 +120,36 @@ class Cfg3DEN
 			};
 		};
 	};
+	/* class Waypoint
+	{
+		class AttributeCategories
+		{
+			#include "attributesWaypoint\presence.hpp"
+		};
+	}; */
+	/* class Trigger
+	{
+		class AttributeCategories
+		{
+			class  Activation
+			{
+				class Attributes
+				{
+					class ENH_TriggerInterval
+					{
+						displayName = "Trigger Interval";
+						tooltip = "Sets the interval of how often the trigger's condition is checked.";
+						property = "ENH_TriggerInterval";
+						control = "EditShort";
+						expression = "[_this,_value] remoteExec ['setTriggerInterval',0,true]";
+						typeName = "NUMBER";
+						validate = "number";
+						defaultValue = "0.5";
+					};
+				};
+			};
+		};
+	}; */
 	class Group
 	{
 		class AttributeCategories

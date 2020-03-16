@@ -45,7 +45,7 @@ class ENH_SPR
 								_unit setCaptive true;\
 								_unit setUnconscious true;\
 								_unit setVariable ['ENH_SPR_Tickets',(_unit getVariable ['ENH_SPR_Tickets',0]) - 1];\
-								removeSwitchableUnit _unit;\
+								if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};\
 								moveOut _unit;\
 								_unit spawn ENH_fnc_SPR_respawnTimer;\
 								_damage = 0;\
@@ -67,7 +67,7 @@ class ENH_SPR
 					_unit allowDamage true;\
 					_unit setCaptive false;\
 					_unit setDamage 0;\
-					addSwitchableUnit _unit;\
+					if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
 					if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
 					if (ENH_SPR_Ruleset >= 2) then\
 					{\

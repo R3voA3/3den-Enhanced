@@ -1,3 +1,10 @@
+v5.2
+*added*
+
+*changed*
+- It's no longer possible to switch to a unit which is about to respawn (Single Player Revive)
+- Optimized Make Hostage attribute condition
+
 v5.1
 *added*
 - Added Single Player Respawn

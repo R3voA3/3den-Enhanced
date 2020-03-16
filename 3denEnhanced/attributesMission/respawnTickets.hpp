@@ -26,4 +26,3 @@ class ENH_TicketsCIVFOR: ENH_TicketsBLUFOR
    property = "ENH_respawnTickets_civilian";
    expression = "if (!is3DEN && {isMultiplayer && {isServer}}) then {[civilian,_value] call BIS_fnc_respawnTickets}";
 };
-
