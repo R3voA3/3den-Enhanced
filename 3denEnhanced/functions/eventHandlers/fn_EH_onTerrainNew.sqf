@@ -35,13 +35,7 @@ call ENH_fnc_3DENCollapseAssetBrowser;
 [] spawn ENH_fnc_sessionTimer;
 
 //Update location list
-call ENH_fnc_locationList;
-
-//Show github message
-[] spawn ENH_fnc_gitHubNotification;
-
-//Show version 4.3 message
-[] spawn ENH_fnc_newVersionNotification
+[] spawn ENH_fnc_locationList;
 
 //Initialize ambient animations
 call ENH_fnc_initAmbientAnimationsInEditor;
