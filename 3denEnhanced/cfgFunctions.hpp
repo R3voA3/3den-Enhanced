@@ -158,11 +158,8 @@ class CfgFunctions
 			class exportWithLB;
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
-			class gitHubNotification;
-			class newVersionNotification;
 			class locationList;
 			class setRandomOrientation;
-			class getProfileColor;
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
 			class toggleDrawDLCIcons;
