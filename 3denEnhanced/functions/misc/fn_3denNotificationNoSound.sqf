@@ -97,4 +97,5 @@ bis_fnc_3DENNotification_spawn = [_ctrlNotification,_ctrlNotificationTextHeight,
 	_ctrlNotification ctrlsetposition _ctrlNotificationPos;
 	_ctrlNotification ctrlcommit _commitTime;
 };
+
 _type
