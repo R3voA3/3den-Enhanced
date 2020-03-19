@@ -27,11 +27,7 @@ if !(_world isEqualTo worldName) exitWith
 
 [true] call BIS_fnc_EXP_camp_setCinematicMode;
 
-private _cam3DEN = get3DENCamera;
-
-_cam3DEN setPos _camPosition;
-_cam3DEN setVectorDirAndUp [_camVectorDir,_camVectorUp];
-
-[false] call BIS_fnc_EXP_camp_setCinematicMode;
+move3DENCamera _camPosition;
+get3DENCamera setVectorDirAndUp [_camVectorDir,_camVectorUp];
 
 true
