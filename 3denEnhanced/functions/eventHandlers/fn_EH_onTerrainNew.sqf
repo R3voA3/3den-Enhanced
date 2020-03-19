@@ -35,7 +35,7 @@ call ENH_fnc_3DENCollapseAssetBrowser;
 [] spawn ENH_fnc_sessionTimer;
 
 //Update location list
-[] spawn ENH_fnc_locationList;
+call ENH_fnc_locationList;
 
 //Initialize ambient animations
 call ENH_fnc_initAmbientAnimationsInEditor;

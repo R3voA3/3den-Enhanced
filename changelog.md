@@ -1,9 +1,17 @@
 v5.2
 *added*
+- Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
 
 *changed*
 - It's no longer possible to switch to a unit which is about to respawn (Single Player Revive)
 - Optimized Make Hostage attribute condition
+- Handling of location list was changed
+- Measure distance function now used ENH_fnc_floatToTime function
+- Removed black in / black out effect when Eden Camera is set to custom position
+- Renamed former "Export Loadout (Config)" to "Export Loadout (CfgRespawnInventory)
+
+*removed*
+- removed some old, obsolete functions
 
 v5.1
 *added*
