@@ -48,6 +48,7 @@ class ENH_Folder_Loadout
 		"ENH_CopyLoadout",
 		"ENH_ApplyLoadout",
 		"ENH_ExportLoadoutConfig",
+		"ENH_ExportLoadoutCfgRespawnInventory",
 		"ENH_RemoveNVGs",
 		"ENH_RemoveVests",
 		"ENH_RemoveGoggles",
@@ -350,11 +351,15 @@ class ENH_ApplyLoadout: ENH_copyLoadout
 	action = "'apply' call ENH_fnc_loadoutTool";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_A};
 };
+class ENH_ExportLoadoutCfgRespawnInventory
+{
+	text = $STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY;
+	action = "false call ENH_fnc_exportLoadout";
+};
 class ENH_ExportLoadoutConfig
 {
-	text = $STR_ENH_TOOLS_EXPORTLOADOUTCONFIG;
-	action = "call ENH_fnc_exportInventoryConfig";
-	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_E};
+	text = $STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG;
+	action = "true call ENH_fnc_exportLoadout";
 };
 class ENH_RemoveNVGs
 {

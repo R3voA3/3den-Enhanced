@@ -37,7 +37,7 @@ switch (_input) do
 	case "apply":
 	{
 		{
-			if (_x isKindOf "Man") then
+			if (CHECK_MAN) then
 			{
 				_x setUnitLoadout selectRandom ENH_CopiedLoadout_Gear;
 			};

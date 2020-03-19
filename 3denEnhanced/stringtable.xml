@@ -3857,7 +3857,7 @@
 		<Polish>Zastosuj wyposażenie</Polish>
 		<Russian>Назначить оборудование</Russian>
 	</Key>
-	<Key ID="STR_ENH_TOOLS_EXPORTLOADOUTCONFIG">
+	<Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG">
 		<Original>Export Loadout (Config)</Original>
 		<English>Export Loadout (Config)</English>
 		<Czech>Exportovat výstroj (Config)</Czech>
@@ -3867,6 +3867,17 @@
 		<Chinesesimp>导出加载 （配置config）</Chinesesimp>
 		<Polish>Eksportuj wyposażenie (konfig)</Polish>
 		<Russian>Экспорт оборудования (конфиг)</Russian>
+	</Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
+		<Original>Export Loadout (CfgRespawnInventory)</Original>
+		<English>Export Loadout (CfgRespawnInventory)</English>
+		<Czech>Exportovat výstroj (CfgRespawnInventory)</Czech>
+		<French>Exporter l'équipement (CfgRespawnInventory)</French>
+		<Spanish>Exportar equipamiento (CfgRespawnInventory)</Spanish>
+		<German>Ausrüstung exportieren (CfgRespawnInventory)</German>
+		<Chinesesimp>导出加载 （CfgRespawnInventory）</Chinesesimp>
+		<Polish>Eksportuj wyposażenie (CfgRespawnInventory)</Polish>
+		<Russian>Экспорт оборудования (CfgRespawnInventory)</Russian>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_CIRCULARPATTERN">
 		<Original>Circular Pattern</Original>

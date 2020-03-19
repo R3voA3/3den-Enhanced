@@ -144,7 +144,7 @@ class CfgFunctions
 		{
 			file = "3denEnhanced\functions\Misc";
 			class loadoutTool;
-			class exportInventoryConfig;
+			class exportLoadout;
 			class measureDistance;
 			class switchTime;
 			class toggleGrass;
