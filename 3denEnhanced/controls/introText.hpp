@@ -2,7 +2,7 @@ class ENH_IntroText: Title
 {
 	attributeLoad = "[_this,_value] call ENH_fnc_introText_onAttributeLoad";
 	attributeSave = "_this call ENH_fnc_introText_onAttributeSave";
-	h = 12.5 * SIZE_M * GRID_H + 40 * pixelH;
+	h = 14.5 * SIZE_M * GRID_H + 40 * pixelH;
 	class Controls: Controls
 	{
 		class DescriptionGroup: ctrlControlsGroup
@@ -124,21 +124,21 @@ class ENH_IntroText: Title
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 8.5 * SIZE_M * GRID_H + 30 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = 3 * SIZE_M * GRID_H;
+			h = 5 * SIZE_M * GRID_H;
             rows = 1;
             columns = 3;
-            strings[] = 
+            strings[] =
             {
-				"\3denEnhanced\data\BIS_fnc_textTiles_preview.jpg",
-				"\3denEnhanced\data\BIS_fnc_infoText_preview.jpg",
-				"\3denEnhanced\data\BIS_fnc_EXP_camp_SITREP_preview.jpg"
+				"\3denEnhanced\data\BIS_fnc_textTiles_preview.paa",
+				"\3denEnhanced\data\BIS_fnc_infoText_preview.paa",
+				"\3denEnhanced\data\BIS_fnc_EXP_camp_SITREP_preview.paa"
             };
             values[] = {0,1,2};
         };
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 11.5 * SIZE_M * GRID_H + 35 * pixelH;
+			y = 13.5 * SIZE_M * GRID_H + 35 * pixelH;
 			w = ATTRIBUTE_CONTENT_W * GRID_W;
 			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_introText_onButtonDown";
