@@ -79,6 +79,7 @@ class ENH_SPR: Title
 		 	sliderPosition = 20;
 			sliderRange[] = {0,360};
 			sliderStep = 1;
+			lineSize = 1;
 		};
 		class TimeEdit: ctrlEdit
 		{

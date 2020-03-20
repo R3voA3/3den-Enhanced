@@ -105,6 +105,7 @@ class ENH_AmbientFlyby: Title
 		 	sliderPosition = 500;
 			sliderRange[] = {50,3000};
 			sliderStep = 50;
+			lineSize = 50;
 		};
 		class AltitudeEdit: ctrlEdit
 		{

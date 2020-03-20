@@ -14,6 +14,7 @@ class ENH_TaskPatrol: Title
 		 	sliderPosition = 0;
 			sliderRange[] = {0,2500};
 			sliderStep = 100;
+			lineSize = 100;
 		};
 		class Edit: ctrlEdit
 		{

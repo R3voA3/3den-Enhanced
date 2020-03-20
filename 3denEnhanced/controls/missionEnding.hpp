@@ -66,6 +66,7 @@ class ENH_MissionEnding_Casualties: Title
 		 	sliderPosition = 5;
 			sliderRange[] = {1,100};
 			sliderStep = 1;
+			lineSize = 1;
 		};
 		class ThresholdEdit: ctrlEdit
 		{

@@ -87,7 +87,8 @@ class ENH_EstablishingShot: Title
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 500;
 			sliderRange[] = {50,2000};
-			sliderStep = 1;
+			sliderStep = 50;
+			lineSize = 50;
 		};
 		class AltitudeEdit: ctrlEdit
 		{
@@ -111,7 +112,8 @@ class ENH_EstablishingShot: Title
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 200;
 			sliderRange[] = {50,2000};
-			sliderStep = 1;
+			sliderStep = 50;
+			lineSize = 50;
 		};
 		class RadiusEdit: ctrlEdit
 		{
@@ -135,7 +137,8 @@ class ENH_EstablishingShot: Title
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 45;
 			sliderRange[] = {0,360};
-			sliderStep = 1;
+			sliderStep = 5;
+			lineSize = 5;
 		};
 		class AngleEdit: ctrlEdit
 		{

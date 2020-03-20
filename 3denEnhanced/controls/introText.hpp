@@ -66,6 +66,7 @@ class ENH_IntroText: Title
 		 	sliderPosition = 0;
 			sliderRange[] = {0,360};
 			sliderStep = 1;
+			lineSize = 1;
 		};
 		class DelayEdit: ctrlEdit
 		{

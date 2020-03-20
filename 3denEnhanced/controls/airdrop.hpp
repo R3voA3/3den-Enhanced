@@ -104,6 +104,7 @@ class ENH_Airdrop: Title
 		 	sliderPosition = 500;
 			sliderRange[] = {200,5000};
 			sliderStep = 50;
+			lineSize = 50;
 		};
 		class AltitudeEdit: ctrlEdit
 		{
@@ -129,6 +130,7 @@ class ENH_Airdrop: Title
 		 	sliderPosition = 200;
 			sliderRange[] = {50,2000};
 			sliderStep = 50;
+			lineSize = 50;
 		};
 		class RadiusEdit: ctrlEdit
 		{
