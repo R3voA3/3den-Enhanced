@@ -9,6 +9,8 @@ v5.2
 - Measure distance function now used ENH_fnc_floatToTime function
 - Removed black in / black out effect when Eden Camera is set to custom position
 - Renamed former "Export Loadout (Config)" to "Export Loadout (CfgRespawnInventory)
+- Left and right arrows of custom slider controls now properly change the slider value
+- Tweaked intro text control
 
 *removed*
 - removed some old, obsolete functions
