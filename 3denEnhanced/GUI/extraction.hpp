@@ -112,7 +112,7 @@ class ENH_Extraction
 		};
 		class Condition: ctrlStatic
 		{
-			text = $STR_ENH_EXTRACTION_CONDITION;
+			text = $STR_ENH_CONDITION;
 			tooltip = $STR_ENH_EXTRACTION_CONDITION_TOOLTIP;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 36 * GRID_H;

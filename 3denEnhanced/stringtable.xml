@@ -661,8 +661,8 @@
 		<Chinesesimp>每60秒检查所有活动对象（逻辑除外）并使其可供所有管理者编辑。\n如果游戏中没有管理者，则该属性将不起作用。</Chinesesimp>
 		<Spanish>Verifica todos los objetos vivos (excepto las lógicas) cada 60 segundos y los pone a disposición de todos los curadores.\nSi no hay curadores en el juego, el atributo no funcionará.</Spanish>
 		<French>Vérifie tous les objets vivants (sauf les logiques) toutes les 60 secondes et les met à la disposition de tous les zeus.\nSi aucun zeus n'est en jeu, l'attribut ne fonctionnera pas.</French>
-		<Polish>Sprawdza wszystkie żywe obiekty (oprócz logiki) co 60 sekund i sprawia że są edytowalne dla wszystkich kuratorów. \nJeżeli nie ma kuratorów w grze to atrybut nie będzie działać. </Polish>
-		<Russian>Проверяет все живые объекты (кроме логики) каждые 60 секунд и делает их доступными для редактирования для всех кураторов. \ n Если в игре нет кураторов, атрибут не будет работать.</Russian>
+		<Polish>Sprawdza wszystkie żywe obiekty (oprócz logiki) co 60 sekund i sprawia że są edytowalne dla wszystkich kuratorów.\nJeżeli nie ma kuratorów w grze to atrybut nie będzie działać. </Polish>
+		<Russian>Проверяет все живые объекты (кроме логики) каждые 60 секунд и делает их доступными для редактирования для всех кураторов.\nЕсли в игре нет кураторов, атрибут не будет работать.</Russian>
 	</Key>
 	<Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
 		<Original>Show Group Indicator</Original>
@@ -764,15 +764,9 @@
 		<Russian>Оставайтесь на позиции</Russian>
 	</Key>
 	<Key ID="STR_ENH_DOSTOP_TOOLTIP">
-		<Original>Prevents AI from moving into formation at mission start.</Original>
-		<English>Prevents AI from moving into formation at mission start.</English>
-		<German>Verhindert das die KI beim Missionsstart in Formation tritt.</German>
-		<Chinesesimp>防止AI在任务开始时进入阵型。</Chinesesimp>
-		<Spanish>Evita que la IA se mueva hacia la formación al comienzo de la misión.</Spanish>
-		<Czech>Zabraňuje tomu, aby se umělá inteligence přesunula do formace na začátku mise.</Czech>
-		<French>Empêche l'IA d'entrer en formation au début de la mission.</French>
-		<Polish>Zapobiega przed przemieszczeniem się SI do formacji podczas startu misji.</Polish>
-		<Russian>Предотвращает формирование ИИ в начале миссии.</Russian>
+		<Original>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</Original>
+		<English>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</English>
+		<German>Verhindert das die KI beim Missionsstart in Formation tritt. In Mehrspielermissionen deaktiviert!</German>
 	</Key>
 	<Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE1">
 		<Original>Engine #1</Original>
@@ -3868,7 +3862,7 @@
 		<Polish>Eksportuj wyposażenie (konfig)</Polish>
 		<Russian>Экспорт оборудования (конфиг)</Russian>
 	</Key>
-  <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
+	<Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
 		<Original>Export Loadout (CfgRespawnInventory)</Original>
 		<English>Export Loadout (CfgRespawnInventory)</English>
 		<Czech>Exportovat výstroj (CfgRespawnInventory)</Czech>
@@ -5062,7 +5056,7 @@
 		<Original>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Original>
 		<Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek. Pro více informací &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Czech>
 		<Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento. Consulte &lt;ahref='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt; BIS_fnc_establishingShot&lt;/a&gt;.</Spanish>
-		<German>Spiele eine gestellte UAV Beobachtung ab welche zu Beginn der Mission gezeigt wird. See See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</German>
+		<German>Spiele eine gestellte UAV Beobachtung ab welche zu Beginn der Mission gezeigt wird. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</German>
 	</Key>
 	<Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
 		<English>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</English>
@@ -5184,14 +5178,8 @@
 	<Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
 		<English>Hold Action</English>
 		<German>Hold Action</German>
-		<Original>Hold Action</Original>
+		<Original>Missionsende</Original>
 		<Spanish>Detener acción</Spanish>
-	</Key>
-	<Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
-		<English>Mission Ending</English>
-		<German>Missionsende</German>
-		<Original>Mission Ending</Original>
-		<Spanish>Final de misión</Spanish>
 	</Key>
 	<Key ID="STR_ENH_GROUPMARKER_TEXT">
 		<English>Text</English>
@@ -5209,7 +5197,7 @@
 		<English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
 		<Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
 		<Spanish>Finaliza la misión con un final personalizado si una cierta cantidad de entidades de un bando del bando indicado muere. Puede ser usado para fallar la misión Se puede utilizar para fallar la misión por víctimas civiles. En multijugador, la misión finalizará para todos los clientes. Los informes personalizados deben definirse en la configuración de la misión. Ver &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Spanish>
-		<German>Beendet die Mission mit einem benutzerdefinierten Ende, wenn eine definierte Anzahl von Einheiten einer bestimmten Seite getötet wurden. Kann dazu verwendet werden die Mission zu beenden wenn zu viele civile Opfer enstanden sind. Benutzerdefinierte Einsatzbesprechnungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
+		<German>Beendet die Mission mit einem benutzerdefinierten Ende, wenn eine definierte Anzahl von Einheiten einer bestimmten Seite getötet wurden. Kann dazu verwendet werden die Mission zu beenden wenn zu viele civile Opfer entstanden sind. Benutzerdefinierte Einsatzbesprechnungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
 	</Key>
 	<Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
 		<English>Threshold</English>
@@ -5223,23 +5211,11 @@
 		<Spanish>Cuando la cantidad de entidades asesinadas de un bando determinado alcanza el límite, la misión finaliza.</Spanish>
 		<German>Wenn die Anzahl von getöteten Einheiten der gegebenen Seite den Schwellenwert überschreitet, wird die Mission beendet.</German>
 	</Key>
-	<Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_ENDING_DISPLAYNAME">
-		<English>Ending</English>
-		<Original>Ending</Original>
-		<Spanish>Final</Spanish>
-		<German>Ende</German>
-	</Key>
-	<Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_ENDING_TOOLTIP">
+	<Key ID="STR_ENH_MISSIONENDING_ENDING_TOOLTIP">
 		<English>Can be ending from config file or mission config (CfgDebriefing).</English>
 		<Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
 		<Spanish>Puede terminar desde el archivo de configuración o la configuración de la misión (CfgDebriefing).</Spanish>
 		<German>Kann ein Ende der Konfig oder Missionskonfig sein (CfgDebriefing).</German>
-	</Key>
-	<Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_WIN_DISPLAYNAME">
-		<English>Win?</English>
-		<Original>Win?</Original>
-		<Spanish>¿Victoria?</Spanish>
-		<German>Gewinnen?</German>
 	</Key>
 	<Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME">
 		<English>Can Exit?</English>
@@ -5678,7 +5654,7 @@
 		<Spanish>La landing zone está marcada por el tipo de granada</Spanish>
 		<German>Die Landezone wird durch eine Granate markiert.</German>
 	</Key>
-	<Key ID="STR_ENH_EXTRACTION_CONDITION">
+	<Key ID="STR_ENH_CONDITION">
 		<English>Condition</English>
 		<German>Bedingung</German>
 		<Original>Condition</Original>
@@ -5966,7 +5942,7 @@
 	</Key>
 	<Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
 		<English>Every unit can respawn as long as it hasn't run out of tickets.</English>
-		<German>Einheiten können Wiedereinsteigen solange sie noch Tickets haben.</German>
+		<German>Einheiten können Wiedereinsteigen, solange sie noch Tickets haben.</German>
 		<Original>Every unit can respawn as long as it hasn't run out of tickets.</Original>
 	</Key>
 	<Key ID="STR_ENH_SPR_CANDIE_DISPLAYNAME">
@@ -6008,5 +5984,37 @@
 		<English>Single Player Respawn</English>
 		<German>Einzelspieler-Respawn</German>
 		<Original>Single Player Respawn</Original>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_DESCRIPTION">
+		<English>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
+		<Original>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
+		<English>Custom Mission Endings</English>
+		<German>Benutzerdefinierte Missionsenden</German>
+		<Original>Custom Mission Endings</Original>
+		<Spanish>Final de misión</Spanish>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME">
+		<English>Ending</English>
+		<German>Ende</German>
+		<Original>Ending</Original>
+		<Spanish>Final</Spanish>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
+		<English>Win?</English>
+		<German>Gewinnen?</German>
+		<Original>Win?</Original>
+		<Spanish>¿Victoria?</Spanish>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_CONDITION_TOOLTIP">
+		<English>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</English>
+		<German>Bedingung die erfüllt sein muss, um das Ende der Mission einzuleiten. Die Bedingung wird alle 10 Sekunden auf dem Server überprüft.</German>
+		<Original>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</Original>
+	</Key>
+	<Key ID="STR_ENH_MISSIONENDING_PLAYMUSIC">
+		<English>Play Music?</English>
+		<German>Musik abspielen?</German>
+		<Original>Play Music?</Original>
 	</Key>
 </Project>
