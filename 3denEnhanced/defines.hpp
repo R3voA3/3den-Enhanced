@@ -40,7 +40,7 @@
 #define EDIT_W_ULTRA_WIDE 12
 #define CENTERED_X(w) (CENTER_X - ((w) / 2 * GRID_W))
 #define DIALOG_TOP (safezoneY + 17 * GRID_H)
-#define CTRL_DEFAULT_H 5 * GRID_H
+#define CTRL_DEFAULT_H (5 * GRID_H)
 
 //Statusbar
 #define SPACE_X (2 * pixelW)
@@ -51,6 +51,53 @@
 //Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
 						   class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
+
+
+#define ATTRIBUTE_DESCRIPTION(DESCRIPTION_TEXT,HEIGHT) class DescriptionGroup: ctrlControlsGroup\
+		{\
+			x = 5 * GRID_W;\
+			y = 0.5 * SIZE_M * GRID_H;\
+			h = (HEIGHT + 1) * SIZE_M * GRID_H;\
+			w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W) * GRID_W;\
+			class Controls\
+			{\
+				class DescriptionDeco: ctrlStatic\
+				{\
+					w = 5 * pixelW;\
+					h = SIZE_M * GRID_H;\
+					colorBackground[] = {1,1,1,0.05};\
+				};\
+				class DescriptionHeader: ctrlStatic\
+				{\
+					text = $STR_ENH_DESCRIPTION;\
+					x = 7 * pixelW;\
+					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;\
+					h = SIZE_M * GRID_H;\
+					colorText[] = {1,1,1,0.4};\
+					colorBackground[] = {1,1,1,0.05};\
+					colorShadow[] = {0,0,0,0};\
+				};\
+				class Description: ctrlStructuredText\
+				{\
+					text = DESCRIPTION_TEXT;\
+					x = 7 * pixelW;\
+					y = SIZE_M * GRID_H;\
+					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;\
+					h = HEIGHT * SIZE_M * GRID_H;\
+					colorText[] = {1,1,1,0.4};\
+					colorBackground[] = {1,1,1,0};\
+					shadow = 0;\
+					class Attributes\
+					{\
+						align = "left";\
+						color = "#999999";\
+						colorLink = "";\
+						font = "RobotoCondensedLight";\
+						size = 1;\
+					};\
+				};\
+			};\
+		};\
 
 //Eden base controls
 class title;
