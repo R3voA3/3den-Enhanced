@@ -65,7 +65,6 @@ class ENH_SPR
 					_unit setUnconscious false;\
 					_unit playAction 'PlayerStand';\
 					_unit allowDamage true;\
-					_unit setCaptive false;\
 					_unit setDamage 0;\
 					if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
 					if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
@@ -85,6 +84,11 @@ class ENH_SPR
 							};\
 							_unit setPos _respawnPos;\
 						};\
+					};\
+					_unit spawn\
+					{\
+						sleep 5;\
+						(_this select 0) setCaptive false;\
 					};\
 				};\
 				\

@@ -5,51 +5,7 @@ class ENH_AmbientAnimations: Title
 	h = 13.5 * SIZE_M * GRID_H + 25 * pixelH;
 	class Controls: Controls
 	{
-		class DescriptionGroup: ctrlControlsGroup
-		{
-			x = 5 * GRID_W;
-			y = 0.5 * SIZE_M * GRID_H;
-			h = 2 * SIZE_M * GRID_H;
-			w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W) * GRID_W;
-			class Controls
-			{
-				class DescriptionDeco: ctrlStatic
-				{
-					w = 5 * pixelW;
-					h = SIZE_M * GRID_H;
-					colorBackground[] = {1,1,1,0.05};
-				};
-				class DescriptionHeader: ctrlStatic
-				{
-					text = $STR_ENH_DESCRIPTION;
-					x = 7 * pixelW;
-					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
-					h = SIZE_M * GRID_H;
-					colorText[] = {1,1,1,0.4};
-					colorBackground[] = {1,1,1,0.05};
-					colorShadow[] = {0,0,0,0}; 
-				};
-				class Description: ctrlStructuredText
-				{
-					text = $STR_ENH_AMBIENTANIMATIONS_DESCRIPTION;
-					x = 7 * pixelW;
-					y = SIZE_M * GRID_H;
-					w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
-					h = SIZE_M * GRID_H;
-					colorText[] = {1,1,1,0.4};
-					colorBackground[] = {1,1,1,0};
-					shadow = 0;
-					class Attributes
-					{
-						align = "left";
-						color = "#999999";
-						colorLink = "";
-						font = "RobotoCondensedLight";
-						size = 1;
-					};
-				};
-			};
-		};
+		ATTRIBUTE_DESCRIPTION($STR_ENH_AMBIENTANIMATIONS_DESCRIPTION,1);
 		class AnimText: Title
 		{
 			text = $STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME;
