@@ -53,6 +53,7 @@ class Cfg3DEN
 		#include "controls\ambientFlyby.hpp"
 		#include "controls\dynamicSkill.hpp"
 		#include "controls\holdAction.hpp"
+		#include "controls\missionEndingCasualties.hpp"
 		#include "controls\missionEnding.hpp"
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"

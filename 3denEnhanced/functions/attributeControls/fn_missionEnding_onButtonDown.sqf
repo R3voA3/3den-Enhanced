@@ -17,10 +17,11 @@ params ["_ctrlButton"];
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
 
-[_ctrlGroup controlsGroupCtrl 100,_ctrlGroup controlsGroupCtrl 101,"",5] call BIS_fnc_initSliderValue;
-(_ctrlGroup controlsGroupCtrl 102) lbSetCurSel 0;
+(_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
 
+(_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
+
+(_ctrlGroup controlsGroupCtrl 102) cbSetChecked false;
 (_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
-(_ctrlGroup controlsGroupCtrl 104) lbSetCurSel ([west,east,independent,civilian] find civilian);
 
 true

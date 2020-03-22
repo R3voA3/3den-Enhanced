@@ -234,6 +234,9 @@ class CfgFunctions
 			class dynamicSkill_onButtonDown;
 			class mapIndicators_onAttributeLoad;
 			class mapIndicators_onAttributeSave;
+			class missionEndingCasualties_onAttributeLoad;
+			class missionEndingCasualties_onAttributeSave;
+			class missionEndingCasualties_onButtonDown;
 			class missionEnding_onAttributeLoad;
 			class missionEnding_onAttributeSave;
 			class missionEnding_onButtonDown;
@@ -246,6 +249,7 @@ class CfgFunctions
 			class SPR_onAttributeLoad;
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
+			class initDebriefingCombo;
 		};
 	};
 };
