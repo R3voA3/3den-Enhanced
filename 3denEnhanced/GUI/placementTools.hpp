@@ -20,7 +20,7 @@ class ENH_PlacementTools
 			x = ORIGIN_X;
 			y = ORIGIN_Y + CTRL_DEFAULT_H;
 			w = 64 * GRID_W;
-			h = 94 * GRID_H;
+			h = 120 * GRID_H;
 		};
 		class Header: ctrlStaticTitle
 		{
@@ -34,12 +34,12 @@ class ENH_PlacementTools
 		{
 			idc = 250;
 			x = ORIGIN_X + 1 * GRID_W;
-			y = ORIGIN_Y + 87 * GRID_H;
+			y = ORIGIN_Y + 113 * GRID_H;
 			w = 62 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			rows = 1;
 			columns = 7;
-			strings[] = 
+			strings[] =
 			{
 				".0001",
 				".001",
@@ -66,7 +66,7 @@ class ENH_PlacementTools
 		{
 			idc = 120;
 			x = ORIGIN_X + 1 * GRID_W;
-			y = ORIGIN_Y + 93 * GRID_H;
+			y = ORIGIN_Y + 119 * GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			canModify = false;
@@ -76,7 +76,7 @@ class ENH_PlacementTools
 			text = "\A3\ui_f\data\igui\cfg\weaponcursors\rocket_gs.paa";
 			tooltip = $STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP;
 			x = ORIGIN_X + 32 * GRID_W;
-			y = ORIGIN_Y + 93 * GRID_H;
+			y = ORIGIN_Y + 119 * GRID_H;
 			w = CTRL_DEFAULT_H;
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "ENH_PlacementTools_Center = screenToWorld [0.5,0.5]";
@@ -84,7 +84,7 @@ class ENH_PlacementTools
 		class Close: ctrlButtonClose
 		{
 			x = ORIGIN_X + 40 * GRID_W;
-			y = ORIGIN_Y + 93 * GRID_H;
+			y = ORIGIN_Y + 119 * GRID_H;
 			w = WIDTH_TEXT;
 			h = CTRL_DEFAULT_H;
 		};
@@ -96,7 +96,7 @@ class ENH_PlacementTools
 			x = ORIGIN_X;
 			y = ORIGIN_Y +  6 * GRID_H;
 			w = 64 * GRID_W;
-			h = 80 * GRID_H;
+			h = 105 * GRID_H;
 			class Controls 
 			{
 				class CircularHeader: ctrlStaticFooter
