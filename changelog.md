@@ -1,6 +1,7 @@
 v5.2
 *added*
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
+- Added tool to quickly export mission parameters (https://community.bistudio.com/wiki/Arma_3_Mission_Parameters)
 
 *changed*
 - It's no longer possible to switch to a unit which is about to respawn (Single Player Revive)
@@ -10,11 +11,15 @@ v5.2
 - Removed black in / black out effect when Eden Camera is set to custom position
 - Renamed former "Export Loadout (Config)" to "Export Loadout (CfgRespawnInventory)
 - Left and right arrows of custom slider controls now properly change the slider value
-- Tweaked intro text control
+- Tweaked several attribute controls
+- Improved localisations
+- Added a delay before resetting captive mode on respawn (Single Player Respawn), to prevent the unit to be shot instantly again on respawn before they exit the animation
+- Fixed some RPT spam
+- Increased placement tools height
 
 *removed*
 - removed some old, obsolete functions
-
++ 
 v5.1
 *added*
 - Added Single Player Respawn
