@@ -87,8 +87,8 @@ class ENH_SPR
 					};\
 					_unit spawn\
 					{\
-						sleep 5;\
-						(_this select 0) setCaptive false;\
+						sleep 8;\
+						_this setCaptive false;\
 					};\
 				};\
 				\
