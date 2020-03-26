@@ -75,6 +75,11 @@
 		<Polish>Usuń noktowizje</Polish>
 		<Russian>Удалить NVG</Russian>
 	</Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS">
+		<English>Export Mission Parameters</English>
+		<German>Missionsparameter exportieren</German>
+		<Original>Export Mission Parameters</Original>
+	</Key>
 	<Key ID="STR_ENH_TOOLS_REMOVEVESTS">
 		<English>Remove Vests</English>
 		<German>Schutzvesten entfernen</German>

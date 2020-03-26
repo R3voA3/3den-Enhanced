@@ -100,6 +100,7 @@ class ENH_Folder_Miscellaneous
 	items[] +=
 	{
 		"ENH_DeleteEmptyLayers",
+		"ENH_ExportMissionParameters",
 		"ENH_GenerateSteamMissionDescription",
 		"ENH_SwitchTime",
 		"ENH_ToggleGrass",
@@ -270,6 +271,11 @@ class ENH_GenerateSteamMissionDescription
 	text = $STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION;
 	action = "[] spawn ENH_fnc_generateSteamMissionDescription";
 	opensNewWindow = 1;
+};
+class ENH_ExportMissionParameters
+{
+	text = $STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS;
+	action = "copyToClipboard loadFile '3denEnhanced\missionParameters.hpp'; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
 //Vanilla
 class FunctionsViewer//Overwrites the default function viewer
