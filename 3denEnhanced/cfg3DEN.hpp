@@ -54,12 +54,12 @@ class Cfg3DEN
 		#include "controls\dynamicSkill.hpp"
 		#include "controls\holdAction.hpp"
 		#include "controls\missionEndingCasualties.hpp"
-		#include "controls\missionEnding.hpp"
+		//#include "controls\missionEnding.hpp"
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
 	};
-	class Mission
+ 	class Mission
 	{
 		class Preferences
 		{
@@ -121,36 +121,6 @@ class Cfg3DEN
 			};
 		};
 	};
-	/* class Waypoint
-	{
-		class AttributeCategories
-		{
-			#include "attributesWaypoint\presence.hpp"
-		};
-	}; */
-	/* class Trigger
-	{
-		class AttributeCategories
-		{
-			class  Activation
-			{
-				class Attributes
-				{
-					class ENH_TriggerInterval
-					{
-						displayName = "Trigger Interval";
-						tooltip = "Sets the interval of how often the trigger's condition is checked.";
-						property = "ENH_TriggerInterval";
-						control = "EditShort";
-						expression = "[_this,_value] remoteExec ['setTriggerInterval',0,true]";
-						typeName = "NUMBER";
-						validate = "number";
-						defaultValue = "0.5";
-					};
-				};
-			};
-		};
-	}; */
 	class Group
 	{
 		class AttributeCategories
@@ -217,4 +187,34 @@ class Cfg3DEN
 			};
 		};
 	};
+	/* class Waypoint
+	{
+		class AttributeCategories
+		{
+			#include "attributesWaypoint\presence.hpp"
+		};
+	};
+	class Trigger
+	{
+		class AttributeCategories
+		{
+			class  Activation
+			{
+				class Attributes
+				{
+					class ENH_TriggerInterval
+					{
+						displayName = "Trigger Interval";
+						tooltip = "Sets the interval of how often the trigger's condition is checked.";
+						property = "ENH_TriggerInterval";
+						control = "EditShort";
+						expression = "[_this,_value] spawn {sleep 1; [_this # 0,_this # 1] remoteExec ['setTriggerInterval',0,true]}";
+						typeName = "NUMBER";
+						validate = "number";
+						defaultValue = "0.5";
+					};
+				};
+			};
+		};
+	}; */
 };

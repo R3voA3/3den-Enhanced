@@ -34,7 +34,7 @@ class ENH_MissionEnding
 				};";
 			defaultValue = "[5,'enddefault',false,civilian]";
 		};
- 		class ENH_MissionEnding_1
+ 		/* class ENH_MissionEnding_1
 		{
 			displayName = "Mission Ending";
 			property = "ENH_MissionEnding_1";
@@ -60,6 +60,6 @@ class ENH_MissionEnding
 		class ENH_MissionEnding_3: ENH_MissionEnding_1
 		{
 			property = "ENH_MissionEnding_3";
-		};
+		};*/
 	};
 };
