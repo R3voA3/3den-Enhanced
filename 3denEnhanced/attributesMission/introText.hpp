@@ -1,11 +1,12 @@
 class ENH_IntroText_Category
 {
 	collapsed = 1;
-	displayName = $STR_ENH_ATTRIBUTECATEGORY_INTROTEXT;
+	displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;
 	class Attributes
 	{
 		class ENH_IntroText
 		{
+			displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;
 			property = "ENH_introText";
 			control = "ENH_IntroText";
 			expression =

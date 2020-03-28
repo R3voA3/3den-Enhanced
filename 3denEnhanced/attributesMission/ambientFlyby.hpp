@@ -1,12 +1,12 @@
 class ENH_AmbientFlyby
 {
 	collapsed = 1;
-	displayName = $STR_ENH_ATTRIBUTECATEGORY_AMBIENTFLYBY;
+	displayName = $STR_ENH_AMBIENTFLYBY_DISPLAYNAME;
 	class Attributes
 	{
 		class ENH_AmbientFlyby
 		{
-			displayName = $STR_ENH_ATTRIBUTECATEGORY_AMBIENTFLYBY;
+			displayName = $STR_ENH_AMBIENTFLYBY_DISPLAYNAME;
 			property = "ENH_ambientFlyby";
 			control = "ENH_AmbientFlyby";
 			expression ="\

@@ -1,13 +1,12 @@
 class ENH_Airdrop
 {
 	collapsed = 1;
-	displayName = $STR_ENH_ATTRIBUTECATEGORY_AIRDROP;
+	displayName = $STR_ENH_AIRDROP_DISPLAYNAME;
 	class Attributes
 	{
 		class ENH_Airdrop
 		{
-			displayName = $STR_ENH_AIRDROP_CLASSES_DISPLAYNAME;
-			tooltip = $STR_ENH_AIRDROP_CLASSES_TOOLTIP;
+			displayName = $STR_ENH_AIRDROP_DISPLAYNAME;
 			property = "ENH_Airdrop";
 			control = "ENH_Airdrop";
 			expression =

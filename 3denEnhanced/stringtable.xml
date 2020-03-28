@@ -467,7 +467,7 @@
 		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
 		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
 	</Key>
-	<Key ID="STR_ENH_ATTRIBUTECATEGORY_AIRDROP">
+	<Key ID="STR_ENH_AIRDROP_DISPLAYNAME">
 		<English>Airdrop</English>
 		<German>Fallschirmabwurf</German>
 		<Original>Airdrop</Original>
@@ -2625,7 +2625,7 @@
 		<Polish>Cechy jednostki</Polish>
 		<Russian>Свойства объекта</Russian>
 	</Key>
-	<Key ID="STR_ENH_ATTRIBUTECATEGORY_AMBIENTFLYBY">
+	<Key ID="STR_ENH_AMBIENTFLYBY_DISPLAYNAME">
 		<Original>Ambient Flyby</Original>
 		<English>Ambient Flyby</English>
 		<Czech>Ambientní přelet</Czech>
@@ -2656,7 +2656,7 @@
 		<French>Indicateurs de carte</French>
 		<Russian>Индикаторы карты</Russian>
 	</Key>
-	<Key ID="STR_ENH_ATTRIBUTECATEGORY_INTROTEXT">
+	<Key ID="STR_ENH_INTROTEXT_DISPLAYNAME">
 		<Original>Intro Text</Original>
 		<English>Intro Text</English>
 		<Czech>Úvodní text</Czech>
@@ -5763,6 +5763,11 @@
 		<English>Options</English>
 		<German>Optionen</German>
 		<Original>Options</Original>
+	</Key>
+  <Key ID="STR_ENH_DEBUG_OPTIONS">
+		<English>Debug Options</English>
+		<German>Debugoptionen</German>
+		<Original>Debug Options</Original>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_TOGGLEAIFEATURES">
 		<English>Toggle AI Features</English>
