@@ -151,7 +151,6 @@ class CfgFunctions
 			class deleteCrew;
 			class deleteEmptyLayers;
 			class removeGear;
-			class reverseOrientation;
 			class setOrientation;
 			class all3DENSelected;
 			class statusbar_entityCounter;
@@ -159,7 +158,6 @@ class CfgFunctions
 			class generateSteamMissionDescription;
 			class 3denNotificationNoSound;
 			class locationList;
-			class setRandomOrientation;
 			class initAmbientAnimationsInEditor;
 			class toggleDrawBuildingPositions;
 			class toggleDrawDLCIcons;

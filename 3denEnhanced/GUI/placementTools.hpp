@@ -347,7 +347,7 @@ class ENH_PlacementTools
 					y = 85 * GRID_H;
 					w = CTRL_DEFAULT_H;
 					h = CTRL_DEFAULT_H;
-					onButtonClick = "call ENH_fnc_setRandomOrientation";
+					onButtonClick = "-1 call ENH_fnc_setOrientation";
 				};
 				class ReverseOrientation: ctrlButtonPictureKeepAspect
 				{
@@ -356,7 +356,7 @@ class ENH_PlacementTools
 					y = 97 * GRID_H;
 					w = CTRL_DEFAULT_H;
 					h = CTRL_DEFAULT_H;
-					onButtonClick = "call ENH_fnc_reverseOrientation";
+					onButtonClick = "-2 call ENH_fnc_setOrientation";
 				};
 			};
 		};

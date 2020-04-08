@@ -305,7 +305,7 @@ class ENH_SetRandomDir
 {
 	Text = $STR_ENH_TOOLS_RANDOMDIR;
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\widget_rotation_off_ca.paa";
-	action = "call ENH_fnc_setRandomOrientation";
+	action = "-1 call ENH_fnc_setOrientation";
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD3};
 };
@@ -313,7 +313,7 @@ class ENH_ReverseDirection
 {
 	text = $STR_ENH_TOOLS_REVERSEDIRECTION;
 	picture = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-	action = "call ENH_fnc_reverseOrientation";
+	action = "-2 call ENH_fnc_setOrientation";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD7};
 };
 class ENH_OrientateNorth

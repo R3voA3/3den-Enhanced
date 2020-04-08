@@ -23,10 +23,30 @@ if (_entities isEqualTo []) exitWith
 };
 collect3DENHistory
 {
+	switch _input do
 	{
-		_x set3DENAttribute ["rotation", [0,0,_input]];
-		false;
-	} count _entities;
+		case -2://reverse
+		{
+			{
+				private _dir = (_x get3DENAttribute "Rotation") # 0;
+				_dir set [2,(_dir # 2) + 180];
+				_x set3DENAttribute ["rotation",_dir];
+			} forEach _entities;
+		};
+		case -1://randomise
+		{
+			private _dir = random 360;
+			{
+				_x set3DENAttribute ["rotation", [0,0,_dir]];
+			} forEach _entities;
+		};
+		default
+		{
+			{
+				_x set3DENAttribute ["rotation", [0,0,_input]];
+			} forEach _entities;
+		};
+	};
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
