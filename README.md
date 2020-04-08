@@ -27,18 +27,11 @@ Feel free to [contribute!](https://github.com/RevoArma3/3den-Enhanced)
 # Translation
 You can help us by adding more translations for this modification. Read below to find out how.
 
-## Tabler
-To ease the process of creating translations and editing stringtable.xml files, consider using Tabler.
-
-For more information, please visit the following link:
-
-[Download Tabler](https://github.com/bux/tabler/releases)
-
 ## How to?
-* Download the stringtable.xml
-* Download Tabler from the link (s.a)
+* [Download the stringtable.xml](https://github.com/R3voA3/3den-Enhanced/blob/master/3denEnhanced/stringtable.xml)
+* [Download Tabler](https://github.com/bux/tabler/releases)
 * Open the stringtable.xml with Tabler
-* Select a localisation and edit it (filling in missing languages)
+* Filling in missing translations
 * Save the stringtable.xml
 * Create a pull request
 
