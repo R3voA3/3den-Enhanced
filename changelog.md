@@ -1,3 +1,15 @@
+v5.3
+*added*
+
+*changed*
+- ENH_fnc_setOrientation can now reverse and randomise directions
+- "Show Radio Message" would be cut off in the extraction GUI
+- Updated Spanish translation (Thanks to arv187)
+- Tweaked some functions
+
+*removed*
+- remove obsolete functions
+
 v5.2
 *added*
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
@@ -15,7 +27,7 @@ v5.2
 - Improved localisations
 - Added a delay before resetting captive mode on respawn (Single Player Respawn), to prevent the unit to be shot instantly again on respawn before they exit the animation
 - Fixed some RPT spam
-- Increased placement tools height
+- Increase GUI height of Placement Tools
 
 *removed*
 - removed some old, obsolete functions
