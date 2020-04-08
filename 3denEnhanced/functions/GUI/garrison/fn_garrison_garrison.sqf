@@ -19,7 +19,7 @@ params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 
 private _positions = [];
-private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3denSelected;
+private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
 private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
 _center set [2,0];
 

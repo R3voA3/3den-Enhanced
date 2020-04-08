@@ -32,7 +32,7 @@ class ENH_Extraction
 			text = $STR_ENH_EXTRACTION_SHOWRADIOCHAT;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP + 6 * GRID_H;
-			w = 23 * GRID_W;
+			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
 		class ShowRadioChatValue: ctrlCheckbox

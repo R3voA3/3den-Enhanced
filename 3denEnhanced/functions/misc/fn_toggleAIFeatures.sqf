@@ -13,7 +13,7 @@
    BOOLEAN: true
 */
 
-private _entities = [["Object"]] call ENH_fnc_all3denSelected;
+private _entities = [["Object"]] call ENH_fnc_all3DENSelected;
 
 if (_entities isEqualTo []) exitWith
 {

@@ -56,7 +56,7 @@ collect3DENHistory
 				_center
 			]
 		];
-		_triggerSmoke set3DENAttribute 
+		_triggerSmoke set3DENAttribute
 		[
 			"Condition",
 			format
@@ -69,7 +69,7 @@ collect3DENHistory
 	};
 
 	private _triggerStart = create3DENEntity ["Trigger","EmptyDetector",_center vectorAdd [4,-119,0]];
-	_triggerStart set3DENAttribute 
+	_triggerStart set3DENAttribute
 	[
 		"Condition",
 		format

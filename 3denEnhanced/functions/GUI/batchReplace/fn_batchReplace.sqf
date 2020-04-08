@@ -13,8 +13,8 @@
 
 disableSerialization;//Because of BIS_fnc_3DENNotification
 
-private _objects = [["Object"]] call ENH_fnc_all3denSelected;
-private _replaceWith = ctrlText ((findDisplay 150000) displayCtrl 1400); //"sfd,2ffds,5,123"
+private _objects = [["Object"]] call ENH_fnc_all3DENSelected;
+private _replaceWith = ctrlText (findDisplay 150000 displayCtrl 1400); //"sfd,2ffds,5,123"
 
 profileNameSpace setVariable ['ENH_batchReplace_lastUsed',_replaceWith];
 

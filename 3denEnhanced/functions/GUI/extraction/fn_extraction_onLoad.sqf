@@ -51,7 +51,7 @@ private _ctrlGrenadeType = GET_CTRL(500);
 _ctrlGrenadeType lbSetCurSel 0;
 
 private _ctrlCondition = GET_CTRL(600);
-_ctrlCondition ctrlSetText "units group player findIf {!(_x in vehicle this) && alive _x} < 0;";
+_ctrlCondition ctrlSetText "units player findIf {!(_x in vehicle this) && alive _x} < 0;";
 
 private _ctrlGridPos = GET_CTRL(700);
 _ctrlGridPos ctrlSetText mapGridPosition _center;
