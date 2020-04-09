@@ -33,7 +33,7 @@ class ENH_SPR: Title
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
 			h = SIZE_M * GRID_H;
 		 	sliderPosition = 20;
-			sliderRange[] = {0,360};
+			sliderRange[] = {2,360};
 			sliderStep = 1;
 			lineSize = 1;
 		};

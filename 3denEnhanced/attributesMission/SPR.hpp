@@ -19,7 +19,7 @@ class ENH_SPR
 				ENH_SPR_Positions_West = allMapMarkers select {'respawn_west' in _x} apply {getMarkerPos _x};\
 				ENH_SPR_Positions_East = allMapMarkers select {'respawn_east' in _x} apply {getMarkerPos _x};\
 				ENH_SPR_Positions_Guerilla = allMapMarkers select {'respawn_guerilla' in _x} apply {getMarkerPos _x};\
-				ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civlian' in _x} apply {getMarkerPos _x};\
+				ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civilian' in _x} apply {getMarkerPos _x};\
 				\
 				{\
 					_x setVariable ['ENH_SPR_OriginalSide',side _x];\
@@ -41,6 +41,7 @@ class ENH_SPR
 						{\
 							if(_selection == '' && {_damage >= 0.95}) then\
 							{\
+								setAccTime 1;\
 								_unit allowDamage false;\
 								_unit setCaptive true;\
 								_unit setUnconscious true;\
@@ -62,15 +63,11 @@ class ENH_SPR
 				ENH_fnc_SPR_respawn =\
 				{\
 					params ['_unit'];\
-					_unit setUnconscious false;\
-					_unit playAction 'PlayerStand';\
-					_unit allowDamage true;\
-					_unit setDamage 0;\
 					if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
 					if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
 					if (ENH_SPR_Ruleset >= 2) then\
 					{\
-						private _sideID = side _unit call BIS_fnc_sideID;\
+						private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;\
 						private _positions = [ENH_SPR_Positions_East,ENH_SPR_Positions_West,ENH_SPR_Positions_Guerilla,ENH_SPR_Positions_Civilian] select _sideID;\
 						if !(_positions isEqualTo []) then\
 						{\
@@ -85,6 +82,10 @@ class ENH_SPR
 							_unit setPos _respawnPos;\
 						};\
 					};\
+					_unit setUnconscious false;\
+					_unit allowDamage true;\
+					_unit setDamage 0;\
+					_unit switchMove '';\
 					_unit spawn\
 					{\
 						sleep 8;\

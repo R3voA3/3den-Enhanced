@@ -6,6 +6,7 @@ v5.3
 - "Show Radio Message" would be cut off in the extraction GUI
 - Updated Spanish translation (Thanks to arv187)
 - Tweaked some functions
+- Several fixes for Single Player respawn.
 
 *removed*
 - remove obsolete functions
