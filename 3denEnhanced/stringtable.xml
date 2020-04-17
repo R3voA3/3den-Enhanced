@@ -2016,7 +2016,7 @@
         <Original>Defines whether the unit can fully heal other units.</Original>
         <English>Defines whether the unit can fully heal other units.</English>
         <Czech>Určuje jestli může jednotka plně léčit ostatní jednotky.</Czech>
-        <French>Définti si l'unité peut soigner complètement d'autres unités.</French>
+        <French>Définit si l'unité peut soigner complètement d'autres unités.</French>
         <Spanish>Define si la unidad puede curar completamente otras unidades.</Spanish>
         <German>Bestimmt ob die Einheit andere Einheiten vollständig heilen kann.</German>
         <Chinesesimp>设定该单位是否能治愈其他单位</Chinesesimp>
@@ -2082,7 +2082,7 @@
         <Original>Defines whether the unit can hack hostile UAVs.</Original>
         <English>Defines whether the unit can hack hostile UAVs.</English>
         <Czech>Určuje jestli může jednotka přebrat kontrolu nad nepřátelskými bezpilotními prostředky.</Czech>
-        <French>Définti si l'unité peut pirater un UAV (Drone) hostile.</French>
+        <French>Définit si l'unité peut pirater un UAV (Drone) hostile.</French>
         <Spanish>Define si la unidad puede hackear UAV hostiles.</Spanish>
         <German>Bestimmt ob die Einheit feindliche Drohnen übernehmen kann.</German>
         <Chinesesimp>设定该单位是否能操作无人载具。</Chinesesimp>
