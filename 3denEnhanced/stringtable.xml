@@ -5492,12 +5492,14 @@
         <German>Ja</German>
         <Original>Yes</Original>
         <Spanish>Sí</Spanish>
+        <French>Oui</French>
     </Key>
     <Key ID="STR_ENH_NO">
         <English>No</English>
         <German>Nein</German>
         <Original>Yes</Original>
         <Spanish>Sí</Spanish>
+        <French>Non</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_UNARMED">
         <English>Unarmed:</English>
@@ -5570,6 +5572,7 @@
         <German>10 %</German>
         <Original>10 %</Original>
         <Spanish>10%</Spanish>
+        <French>10 %</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_25PERCENT">
         <English>25 %</English>
@@ -5577,6 +5580,7 @@
         <German>25 %</German>
         <Original>25 %</Original>
         <Spanish>25%</Spanish>
+        <French>25 %</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_50PERCENT">
         <English>50 %</English>
@@ -5584,6 +5588,7 @@
         <German>50 %</German>
         <Original>50 %</Original>
         <Spanish>50%</Spanish>
+        <French>50 %</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_100PERCENT">
         <English>100 %</English>
@@ -5591,6 +5596,7 @@
         <German>100 %</German>
         <Original>100 %</Original>
         <Spanish>100%</Spanish>
+        <French>100 %</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_HEADER">
         <English>Garrison Buildings</English>
