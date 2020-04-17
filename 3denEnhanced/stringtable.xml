@@ -5620,24 +5620,28 @@
         <German>Extraktion erstellen</German>
         <Original>Create Extraction</Original>
         <Spanish>Crear extracción</Spanish>
+        <French>Créer une extraction</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_LAYER">
         <English>Extraction</English>
         <German>Extraktion</German>
         <Original>Extraction</Original>
         <Spanish>Extracción</Spanish>
+        <French>Extraction</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_TRIGGERSMOKETEXT">
         <English>Mark LZ</English>
         <German>LZ markieren</German>
         <Original>Mark LZ</Original>
         <Spanish>Marcar LZ</Spanish>
+        <French>Marquer la zone d'atterissage</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT">
         <English>Start Extraction</English>
         <German>Extraktion ausführen</German>
         <Original>Start Extraction</Original>
         <Spanish>Iniciar extracción</Spanish>
+        <French>Démarrer l'extraction</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_CALLEXTRACTIONMSG">
         <English>%2, this is %1. Requesting immediate extraction at grid position %3, over.</English>
@@ -5656,6 +5660,7 @@
         <German>Extraktions-Konfigurator</German>
         <Original>Extraction Creator</Original>
         <Spanish>Creador de Extracción</Spanish>
+        <French>Créateur d'extraction</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_SHOWRADIOCHAT">
         <English>Show Radio Chat?</English>
@@ -5668,12 +5673,14 @@
         <German>Rufzeichen Anforderer</German>
         <Original>Call Sign Requester</Original>
         <Spanish>Call sign del solicitante</Spanish>
+        <French>Indicatif du requérant</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_CALLSIGNTRANSPORT">
         <English>Call Sign Transport</English>
         <German>Rufzeichen Transport</German>
         <Original>Call Sign Transport</Original>
         <Spanish>Call sign del transporte</Spanish>
+        <French>Indicatif du transport</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART">
         <English>Condition Start</English>
@@ -5701,18 +5708,21 @@
         <Original>The landing zone is marked by this grenade type.</Original>
         <Spanish>La landing zone está marcada por el tipo de granada</Spanish>
         <German>Die Landezone wird durch eine Granate markiert.</German>
+        <French>La zone d'atterissage est indiquée par ce type de grenade.</French>
     </Key>
     <Key ID="STR_ENH_CONDITION">
         <English>Condition</English>
         <German>Bedingung</German>
         <Original>Condition</Original>
         <Spanish>Condición</Spanish>
+        <French>Condition</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_CONDITION_TOOLTIP">
         <English>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</English>
         <German>Diese Bedingung muss erfüllt sein, damit sich das Fahrzeug zum Endwegpunkt bewegt. Standardmäßig müssen sich alle lebenden Einheiten in der Spielergruppe im Fahrzeug befinden.</German>
         <Original>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</Original>
         <Spanish>Esta condición tiene que hacerse true para que el vehículo se mueva hasta el punto final. Por defecto, todas las unidades vivas del grupo de jugadores deben estar dentro del vehículo de recogida.</Spanish>
+        <French>La condition doit être remplie pour que le véhicule se dirige vers son point de passage final. Par défaut, toutes les unités en vie du groupe du joueur doivent être dans le véhicule d'extraction.</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_GRIDPOSITION">
         <English>Grid Position</English>
@@ -5731,18 +5741,21 @@
         <German>Beschreibung...</German>
         <Original>Description...</Original>
         <Spanish>Descripción...</Spanish>
+        <French>Description...</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_WRONGWORLD">
         <English>Incorrect world!</English>
         <German>Falsche Karte!</German>
         <Original>Incorrect world!</Original>
         <Spanish>¡Palabra incorrecta!</Spanish>
+        <French>Monde incorrect !</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_SAVE">
         <English>Save</English>
         <German>Speichern</German>
         <Original>Save</Original>
         <Spanish>Guardar</Spanish>
+        <French>Sauvegarder</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_HEADER">
         <English>3DEN Camera Positions</English>
@@ -5803,12 +5816,14 @@
         <German>Mittelpunkt zurücksetzen.</German>
         <Original>Reset Center.</Original>
         <Spanish>Resetear centro</Spanish>
+        <French>Réinitialiser le centre</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
         <English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
         <German>Legt die Größe eines Inkrementes fest, wenn einer der Pfeile eines Schiebers angeklickt wird.</German>
         <Original>Sets the size of the increment when clicking the arrows next to the sliders.</Original>
         <Spanish>Fijar el tamaño del incremento cuando se pulsan las flechas junto al deslizador</Spanish>
+        <French>Définissez la taille de l'incrémentation des flèches à côté des curseurs.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_3DENCAM">
         <English>3DEN Camera Positions</English>
@@ -5821,12 +5836,14 @@
         <German>Optionen</German>
         <Original>Options</Original>
         <Spanish>Opciones</Spanish>
+        <French>Options</French>
     </Key>
     <Key ID="STR_ENH_DEBUG_OPTIONS">
         <English>Debug Options</English>
         <German>Debugoptionen</German>
         <Original>Debug Options</Original>
         <Spanish>Opciones de Debug</Spanish>
+        <French>Options de débogage</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLEAIFEATURES">
         <English>Toggle AI Features</English>
@@ -5893,24 +5910,28 @@
         <German>Variablenwert</German>
         <Original>Variable Value</Original>
         <Spanish>Valor variable</Spanish>
+        <French>Valeur de la variable</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
         <English>Variable Name</English>
         <German>Variablenname</German>
         <Original>Variable Name</Original>
         <Spanish>Nombre variable</Spanish>
+        <French>Nom de la variable</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
         <English>Variable Type</English>
         <German>Variablentyp</German>
         <Original>Variable Type</Original>
         <Spanish>Tipo variable</Spanish>
+        <French>Type de la variable</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
         <English>Hide Functions</English>
         <German>Funktionen verst.</German>
         <Original>Hide Functions</Original>
         <Spanish>Funciones ocultas</Spanish>
+        <French>Cacher les fonctions</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_DELETE">
         <English>Delete</English>
@@ -5944,12 +5965,14 @@
         <German>Wegpunkte anzeigen</German>
         <Original>Show Waypoints</Original>
         <Spanish>Mostrar waypoints</Spanish>
+        <French>Afficher les points de passage</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
         <English>Shows the waypoints of all groups on the map.</English>
         <German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
         <Original>Shows the waypoints of all groups on the map.</Original>
         <Spanish>Mostrar los waypoints de todos los grupos en el mapa</Spanish>
+        <French>Affiche les points de passage de tous les groupes sur la carte.</French>
     </Key>
     <Key ID="STR_ENH_COLLAPSEASSETBROWSER">
         <English>Collapse Asset Browser on Start</English>
@@ -6130,7 +6153,7 @@
         <German>Gewinnen?</German>
         <Original>Win?</Original>
         <Spanish>¿Victoria?</Spanish>
-        <French>Réussite ?</French>
+        <French>Victoire ?</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CONDITION_TOOLTIP">
         <English>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</English>
