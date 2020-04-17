@@ -3439,7 +3439,7 @@
         <Original>Enable Captive Mode</Original>
         <English>Enable Captive Mode</English>
         <Czech>Aktivovat režim "Zajatec"</Czech>
-        <French>Capturé</French>
+        <French>Captif</French>
         <Spanish>Establecer como cautivo.</Spanish>
         <German>Neutrales Verhalten aktivieren</German>
         <Chinesesimp>启用捕获模式</Chinesesimp>
@@ -3485,7 +3485,7 @@
         <Chinesesimp>图形将显示场景预览期间每个方面对玩家的了解程度。</Chinesesimp>
         <Spanish>Un gráfico mostrará cuánto sabe cada lado sobre el jugador durante la vista previa del escenario.</Spanish>
         <Czech>Ukáže, jak moc ví každá strana o hráči během náhledu scénáře.</Czech>
-        <French>Un graphique montrera ce que chaque côté sait sur le joueur lors de la prévisualisation du scénario.</French>
+        <French>Un graphique montrera ce que chaque camp sait sur le joueur lors de la prévisualisation du scénario.</French>
         <Polish>Tabela pokaże ci jak dużo strony konfliktu więdzą o graczu w czasie testowania.</Polish>
         <Russian>Графика покажет, сколько каждая сторона знает об игроке во время предварительного просмотра сценария.</Russian>
     </Key>
@@ -4135,7 +4135,7 @@
         <Chinesesimp>批量替换</Chinesesimp>
         <Spanish>Lote Reemplazar </Spanish>
         <Czech>Dávkově nahradit</Czech>
-        <French>Lot Remplacer </French>
+        <French>Remplacer des objets</French>
         <Russian>Пакетная замена</Russian>
     </Key>
     <Key ID="STR_ENH_TOOLS_DELETEEMPTYLAYERS">
@@ -4178,7 +4178,7 @@
         <German>Objekte benennen</German>
         <Chinesesimp>对象名称</Chinesesimp>
         <Czech>Názvy objektů</Czech>
-        <French>Nommez des objets </French>
+        <French>Nommer des objets </French>
         <Polish>Nazwij obiekty</Polish>
         <Russian>Наименование объектов</Russian>
     </Key>
@@ -4189,7 +4189,7 @@
         <Chinesesimp>切换简单对象</Chinesesimp>
         <Spanish>Alternar objeto simple</Spanish>
         <Czech>Nastavit jako jednoduchý objekt</Czech>
-        <French>Basculer un objet simple</French>
+        <French>Activer/désactiver l'objet simple</French>
         <Polish>Włącz "proste obiekty"</Polish>
         <Russian>Переключить простой объект</Russian>
     </Key>
@@ -4198,6 +4198,7 @@
         <English>Toggle Simulation</English>
         <German>Simulation umschalten</German>
         <Spanish>Alternar simulación</Spanish>
+        <French>Activer/désactiver la simulation</French>
     </Key>
     <Key ID="STR_ENH_HELP_FUNCTIONSOVERVIEW">
         <Original>Functions Overview</Original>
@@ -4312,7 +4313,7 @@
         <Original>Log Class to Clipboard</Original>
         <English>Log Class to Clipboard</English>
         <Czech>Zaznamenat třídu do schránky</Czech>
-        <French>Log Class vers le presse-papier</French>
+        <French>Copier la classe vers le presse-papier</French>
         <Spanish>Registar "Class" en el portapapeles.</Spanish>
         <German>Kopiere Klasse in Zwischenablage</German>
         <Chinesesimp>将类别记录到剪贴板</Chinesesimp>
@@ -4349,6 +4350,7 @@
         <Spanish>Valor actual</Spanish>
         <Polish>Aktualna wartość</Polish>
         <Russian>Текущае значение</Russian>
+        <French>Valeur actuelle</French>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER">
         <Original>Set Player as Trigger Owner</Original>
@@ -4390,7 +4392,7 @@
         <Chinesesimp>记录位置（2D）</Chinesesimp>
         <Spanish>Posiciones de registro (2D)</Spanish>
         <Czech>Zaznamenat pozice ve 2D do schránky</Czech>
-        <French>Enregistrer les positions (2D) dans le Presse-papiers</French>
+        <French>Copier les positions (2D) dans le presse-papiers</French>
         <Polish>Zapisz pozycje (2D) do schowka</Polish>
         <Russian>Записать позиции (2D) в буфер обмена</Russian>
     </Key>
@@ -4398,7 +4400,7 @@
         <Original>Log Faction Names to Clipboard</Original>
         <English>Log Faction Names to Clipboard</English>
         <Czech>Zaznamenat názvy frakcí do schránky</Czech>
-        <French>Log du nom des factions</French>
+        <French>Copier les noms des factions dans le presse-papiers</French>
         <Spanish>Registrar nombres de facción</Spanish>
         <German>Fraktionsnamen in Zwischenablage aufzeichnen</German>
         <Chinesesimp>记录派系名称</Chinesesimp>
@@ -4412,7 +4414,7 @@
         <Chinesesimp>记录位置（3D）</Chinesesimp>
         <Spanish>Posiciones de registro (3D)</Spanish>
         <Czech>Zaznamenat pozice ve 3D do schránky</Czech>
-        <French>Log Positions (3D)</French>
+        <French>Copier les positions (3D) dans le presse-papiers</French>
         <Polish>Zapisz pozycje (3D) do schowka</Polish>
         <Russian>Записать позиции (3D) в буфер обмена</Russian>
     </Key>
@@ -4456,7 +4458,7 @@
         <Chinesesimp>记录网格位置</Chinesesimp>
         <Spanish>Posición de la cuadrícula de registro</Spanish>
         <Czech>Zaznamenat pozici mřížky do schránky</Czech>
-        <French>Log Grid Position to Clipboard</French>
+        <French>Copier la position (sur la grille) dans le presse-papiers</French>
         <Polish>Zapisuje pozycje geograficzną do schowka</Polish>
         <Russian>Записать положение сетки в буфер обмена</Russian>
     </Key>
@@ -4466,7 +4468,7 @@
         <Czech>Zaznamenat atributy mise do schránky</Czech>
         <German>Missionsattribute in Zwischenablage aufzeichnen</German>
         <Chinesesimp>记录网格位置</Chinesesimp>
-        <French>Enregistrer les attributs de mission dans le Presse-papiers</French>
+        <French>Copier les attributs de mission dans le presse-papiers</French>
         <Polish>Zapisuje atrybuty misji do schowka</Polish>
         <Spanish>Registrar Atributos de Misión al Portapapeles</Spanish>
         <Russian>Записать атрибуты миссии в буфер обмена</Russian>
@@ -4475,7 +4477,7 @@
         <Original>Enables the Dynamic Groups system.</Original>
         <English>Enable the Dynamic Groups system.</English>
         <Czech>Aktivuje systém dynamických skupin.</Czech>
-        <French>Activer le système de Groupes Dynamiques.</French>
+        <French>Activer le système de groupes dynamiques.</French>
         <Spanish>Habilita el sistema de grupos dinámicos</Spanish>
         <German>Aktiviert die Gruppenverwaltung.</German>
         <Chinesesimp>启用动态组系统。</Chinesesimp>
@@ -4486,6 +4488,7 @@
         <Original>Dynamic Groups</Original>
         <English>Dynamic Groups</English>
         <German>Gruppenverwaltung</German>
+        <French>Groupes dynamiques</French>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_BLUFOR_DISPLAYNAME">
         <Original>Respawn Tickets BLUFOR</Original>
@@ -4535,7 +4538,7 @@
         <Original>Save Loadout</Original>
         <English>Save Loadout</English>
         <Czech>Uložit výstroj</Czech>
-        <French>Sauvegarder l'Equipement</French>
+        <French>Sauvegarder l'équipement</French>
         <Spanish>Guardar equipamiento</Spanish>
         <German>Ausrüstung speichern</German>
         <Chinesesimp>保存加载</Chinesesimp>
@@ -4635,6 +4638,7 @@
         <Czech>Nástroje pro umísťování</Czech>
         <Spanish>Herramientas de Colocación</Spanish>
         <Russian>Инструменты размещения</Russian>
+        <French>Outils de positionnement</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
         <English>Circular Pattern</English>
@@ -4883,6 +4887,7 @@
         <Original>TAGs</Original>
         <Czech>TAGy</Czech>
         <Spanish>Etiquetas</Spanish>
+        <French>Étiquettes</French>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_ADDTAG">
         <English>Add TAG</English>
@@ -4890,6 +4895,7 @@
         <Original>Add TAG</Original>
         <Czech>Přidat TAG</Czech>
         <Spanish>Añadir etiqueta</Spanish>
+        <French>Ajouter une étiquette</French>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
         <English>Export</English>
@@ -5301,7 +5307,7 @@
         <English>Ambient Animations</English>
         <Chinesesimp>环境动画</Chinesesimp>
         <Czech>Ambientní animace</Czech>
-        <French>Animations ambiantes</French>
+        <French>Animations d'ambiance</French>
         <German>Animationen</German>
         <Original>Ambient Animations</Original>
         <Polish>Animacje</Polish>
