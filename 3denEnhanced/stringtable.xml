@@ -3455,7 +3455,7 @@
         <Chinesesimp>以下设置可让您在预览期间更轻松地测试场景。 这些属性不会保存在mission.sqm中，因此在发布时它们不会影响您的方案。 在多人游戏中禁用设置。</Chinesesimp>
         <Spanish>La siguiente configuración le permite probar más fácilmente sus escenarios durante la vista previa. Los atributos no se guardarán en mission.sqm, por lo que no afectarán su escenario cuando lo publique. Los ajustes están deshabilitados en el modo multijugador.</Spanish>
         <Czech>Následující nastavení umožňují snadnější testování scénářů během náhledu. Atributy nebudou uloženy v mission.sqm, takže nebudou mít vliv na váš scénář při jeho publikování. V multiplayeru jsou nastavení zakázána.</Czech>
-        <French>Les paramètres suivants vous permettent de tester plus facilement vos scénarios lors de la prévisualisation. Les attributs ne seront pas sauvegardés dans le fichier mission.sqm, ils n'affecteront donc pas votre scénario lorsque vous le publiez. Les paramètres sont désactivés en multijoueur.</French>
+        <French>Les paramètres suivants vous permettent de tester plus facilement vos scénarios lors de la prévisualisation. Les attributs ne seront pas sauvegardés dans le fichier mission.sqm, ils n'affecteront donc pas votre scénario lorsque vous le publierez. Les paramètres sont désactivés en multijoueur.</French>
         <Polish>Poniższe ustawienia pozwolą ci na łatwiejsze testowanie scenariusza. Atrybuty nie zapiszą się w mission.sqm więc nie wpłyną na twój scenariusz kiedy go opublikujesz. Ustawienia są wyłączone w trybie wieloosobowym.</Polish>
         <Russian>Эти настройки помогут вам проверить ваши сценарии во время предварительного просмотра. Они не будут сохранены в файле mission.sqm, поэтому они не повлияют на ваш сценарий, когда вы его опубликуете. Отключено в мультиплеере.</Russian>
     </Key>
@@ -5124,7 +5124,7 @@
         <English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
         <Chinesesimp>禁用地图友军、敌军、地雷位置显示和战术ping值。将覆盖玩家的难度设置！</Chinesesimp>
         <Czech>Zakáže mapové indikátory pro přátelské a nepřátelské jednotky, miny a taktický ping. Přepisuje nastavení obtížnosti hráče!</Czech>
-        <French>Désactive les indicateurs de carte pour les unités amies et hostiles, les mines et le ping tactique. Écrase les paramètres de difficulté du joueur!</French>
+        <French>Désactive les indicateurs de carte pour les unités amies et hostiles, les mines et le ping tactique. Écrase les paramètres de difficulté du joueur !</French>
         <German>Deaktiviert Kartenindikatoren für freundliche und feindliche Einheiten sowie Minen und den taktischen Ping. Überschreibt die Einstellungen des Spielers!</German>
         <Original>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</Original>
         <Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
@@ -6003,36 +6003,42 @@
         <Original>Collapse Asset Browser on Start</Original>
         <German>Asset-Browser beim Start minimieren</German>
         <Spanish>Colapsar navegador de assets al inicio</Spanish>
+        <French>Réduire le navigateur d'objets au lancement</French>
     </Key>
     <Key ID="STR_ENH_COLLAPSEENTITYLIST">
         <English>Collapse Entity List on Start</English>
         <Original>Collapse Entity List on Start</Original>
         <German>Entitäten-Liste beim Start minimieren</German>
         <Spanish>Colapsar lista de entidades al inicio</Spanish>
+        <French>Réduire la liste des entités au lancement</French>
     </Key>
     <Key ID="STR_ENH_INTERFACE">
         <English>Interface</English>
         <German>Benutzeroberfläche</German>
         <Original>Interface</Original>
         <Spanish>Interfaz</Spanish>
+        <French>Interface</French>
     </Key>
     <Key ID="STR_ENH_SHOWRIGHTPANEL">
         <English>Show Right Panel on Start</English>
         <German>Rechts Panel beim Start anzeigen</German>
         <Original>Show Right Panel on Start</Original>
         <Spanish>Mostrar panel derecho al inicio</Spanish>
+        <French>Afficher le panel de droite au lancement</French>
     </Key>
     <Key ID="STR_ENH_SHOWLEFTPANEL">
         <English>Show Left Panel on Start</English>
         <German>Linkes Panel beim Start anzeigen</German>
         <Original>Show Left Panel on Start</Original>
         <Spanish>Mostrar panel izquierdo al inicio</Spanish>
+        <French>Afficher le panel de gauche au lancement</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
         <English>Disable Weapon Recoil</English>
         <German>Waffenrückstoß ausschalten</German>
         <Original>Disable Weapon Recoil</Original>
         <Spanish>Deshabilitar retroceso de arma</Spanish>
+        <French>Désactiver le recul de l'arme</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
         <English>Disable Weapon Sway</English>
@@ -6045,30 +6051,35 @@
         <German>Nachladezeit entfernen</German>
         <Original>Disable Reload Time</Original>
         <Spanish>Deshabilitar tiempo de recarga</Spanish>
+        <French>Recharge instantanée</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
         <English>Enable Unlimited Ammunition</English>
         <German>Unendlich Munition anschalten</German>
         <Original>Enable Unlimited Ammunition</Original>
         <Spanish>Habilitar munición ilimitada</Spanish>
+        <French>Activer les munitions illimitées</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
         <English>Draw View Direction</English>
         <German>Blickrichtung darstellen</German>
         <Original>Draw View Direction</Original>
         <Spanish>Dibujar dirección de vista</Spanish>
+        <French>Afficher le champ de vision</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP">
         <English>Draws the view- and aiming position of nearby units.</English>
         <German>Stellt die Blick- und Zielrichtung von sich in der Nähe befindenten Einheiten dar.</German>
         <Original>Draws the view- and aiming position of nearby units.</Original>
         <Spanish>Dibujar la vista y posición de apuntado de las unidades cercanas</Spanish>
+        <French>Afficher le champ de vision et la visée des unités proches</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
         <English>Teleport</English>
         <German>Teleportieren</German>
         <Original>Teleport</Original>
         <Spanish>Teletransporte</Spanish>
+        <French>Téléportation</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
         <English>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</English>
