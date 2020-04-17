@@ -5110,6 +5110,7 @@
         <Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise. Může být buď &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; nebo &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Czech>
         <Spanish>Muestra un texto animado. Se puede usar para mostrar el nombre de la misión. Puede ser &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Spanish>
         <German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen. Kann &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; oder &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt; sein. </German>
+        <French>Affiche un texte animé. Peut être utilisé pour afficher le nom de la mission. Cela peut être soit &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; ou &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</French>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
         <English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
@@ -5119,6 +5120,7 @@
         <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
         <Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'ENH_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
         <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar configurando la variable 'ENH_GroupMarker_Update' en el nombre de espacio de grupos (group's namespace) a FALSE. \n\nValue tiene que ser un nombre de clase de marcador de CfgMarkers.</Spanish>
+        <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
     </Key>
     <Key ID="STR_ENH_MAPINDICATORS_DESCRIPTION">
         <English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
@@ -5183,12 +5185,14 @@
         <German>AUF BIKI ÖFFEN</German>
         <Original>OPEN ON BIKI</Original>
         <Spanish>Abrir BIKI</Spanish>
+        <French>Ouvrir sur le BIKI</French>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME">
         <English>Radio Protocol</English>
         <German>Radio Protokoll</German>
         <Original>Radio Protocol</Original>
         <Spanish>Protocolo de radio</Spanish>
+        <French>Protocole radio</French>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_TOOLTIP">
         <English>Stops AI from talking and texting while still being able to issue orders.</English>
