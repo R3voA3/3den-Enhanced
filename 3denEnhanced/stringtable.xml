@@ -2938,7 +2938,7 @@
         <Polish>Opis:</Polish>
         <Italian>Descrizione:</Italian>
         <Spanish>Descripción:</Spanish>
-        <French>Description:</French>
+        <French>Description :</French>
         <Portuguese>Descrição:</Portuguese>
         <Chinesesimp>描述:</Chinesesimp>
     </Key>
@@ -2949,7 +2949,7 @@
         <German>Position:</German>
         <Chinesesimp>位置：</Chinesesimp>
         <Spanish>Posición:</Spanish>
-        <French>Position:</French>
+        <French>Position :</French>
         <Polish>Pozycja:</Polish>
         <Russian>Позиция:</Russian>
     </Key>
@@ -2960,7 +2960,7 @@
         <German>Duplizieren:</German>
         <Chinesesimp>重复：</Chinesesimp>
         <Spanish>Duplicar:</Spanish>
-        <French>Dupliquer:</French>
+        <French>Dupliquer :</French>
         <Polish>Duplikat:</Polish>
         <Russian>Дубликат:</Russian>
     </Key>
@@ -2971,7 +2971,7 @@
         <German>Ausrichtung:</German>
         <Chinesesimp>方向：</Chinesesimp>
         <Spanish>Dirección:</Spanish>
-        <French>Direction:</French>
+        <French>Direction :</French>
         <Polish>Kierunek:</Polish>
         <Russian>Направление:</Russian>
     </Key>
@@ -2982,7 +2982,7 @@
         <German>Kann synchronisiert werden mit:</German>
         <Chinesesimp>可以同步:</Chinesesimp>
         <Spanish>Se puede sincronizar con:</Spanish>
-        <French>Peut être synchronisé avec:</French>
+        <French>Peut être synchronisé avec :</French>
         <Polish>Może być zsynchronizowany z:</Polish>
         <Russian>Может быть синхронизирован с:</Russian>
     </Key>
@@ -3083,6 +3083,7 @@
         <Spanish>Angulo Central</Spanish>
         <Polish>Kąt środkowy</Polish>
         <Russian>Центральный угол</Russian>
+        <French>Angle central</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
         <Original>Initial Angle</Original>
@@ -3092,6 +3093,7 @@
         <Spanish>Angulo Inicial</Spanish>
         <Polish>Kąt początkowy</Polish>
         <Russian>Начальный угол</Russian>
+        <French>Angle initial</French>
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE">
         <Original>Batch Replace</Original>
@@ -4630,6 +4632,7 @@
         <Original>Eden Editor Video Tutorial</Original>
         <Polish>Eden- Poradnik Wideo</Polish>
         <Russian>Редактор Eden Видеоурок</Russian>
+        <French>Tutoriel vidéo Eden Editor</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS">
         <English>Placement Tools</English>
@@ -4948,6 +4951,7 @@
         <Original>Rotational Direction</Original>
         <Czech>Směr otáčení</Czech>
         <Spanish>Dirección rotacional</Spanish>
+        <French>Sens de rotation</French>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE">
         <English>Anti-Clockwise</English>
@@ -4955,7 +4959,7 @@
         <Original>Anti-Clockwise</Original>
         <Czech>Proti směru hodinových ručiček</Czech>
         <Spanish>Antihoraria</Spanish>
-        <French>Sens anti-horaire</French>
+        <French>anti-horaire</French>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CLOCKWISE">
         <English>Clockwise</English>
@@ -4963,7 +4967,7 @@
         <Original>Clockwise</Original>
         <Czech>Po směru hodinových ručiček</Czech>
         <Spanish>Horaria</Spanish>
-        <French>Sens horaire</French>
+        <French>horaire</French>
     </Key>
     <Key ID="STR_ENH_RESETANDDISABLE">
         <English>Reset and Disable</English>
@@ -5141,6 +5145,7 @@
         <Czech>Zobrazit velikost skupiny</Czech>
         <Spanish>Mostrar tamaño</Spanish>
         <German>Zeige Gruppengrößen</German>
+        <French>Afficher la taille du groupe</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
         <English>Number of Functions</English>
@@ -5492,6 +5497,7 @@
         <German>Titel</German>
         <Original>Title</Original>
         <Spanish>Título</Spanish>
+        <French>Titre</French>
     </Key>
     <Key ID="STR_ENH_YES">
         <English>Yes</English>
@@ -5512,18 +5518,21 @@
         <German>Unbewaffnet:</German>
         <Original>Unarmed:</Original>
         <Spanish>Sin nombre:</Spanish>
+        <French>Désarmé :</French>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
         <English>Log Classes as String  to to Clipboard</English>
         <Original>Log Classes as String  to to Clipboard</Original>
         <Spanish>Registrar clases en el portapapeles (String)</Spanish>
         <German>Klassen als String in Zwischenablage aufzeichnen</German>
+        <French>Copier les classes (en String) dans le presse-papiers</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
         <English>Toggle Drawing of Building Positions</English>
         <Original>Toggle Drawing of Building Positions</Original>
         <Spanish>Conmutar dibujos la posición de los edificios</Spanish>
         <German>Gebäudepositionen umschalten</German>
+        <French>Activer/désactiver l'affichage des positions de bâtiments</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER">
         <English>Scenario Attributes Manager</English>
@@ -5536,6 +5545,7 @@
         <Original>Miscellaneous Tools</Original>
         <Spanish>Herramientas misceláneas</Spanish>
         <German>Sonstige Werkzeuge</German>
+        <French>Outils divers</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_ORIENTATION">
         <English>Orientation</English>
@@ -5805,12 +5815,14 @@
         <Original>View Control Types</Original>
         <German>Steuerelementtypen anzeigen</German>
         <Spanish>Ver tipos de control</Spanish>
+        <French>Voir les types de contrôles</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_CONTROLSTYLES">
         <English>View Control Styles</English>
         <Original>View Control Styles</Original>
         <German>Steuerelementstyles anzeigen</German>
         <Spanish>Ver estilos de control</Spanish>
+        <French>Voir les styles de contrôles</French>
     </Key>
     <Key ID="STR_ENH_RADIO_PLAYLIST_TEXT">
         <English>Playlist</English>
