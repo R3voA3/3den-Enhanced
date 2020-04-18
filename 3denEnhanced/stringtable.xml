@@ -5468,8 +5468,8 @@
         <Spanish>Sin nombre:</Spanish>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
-        <English>Log Classes as String  to to Clipboard</English>
-        <Original>Log Classes as String  to to Clipboard</Original>
+        <English>Log Classes as String to Clipboard</English>
+        <Original>Log Classes as String to Clipboard</Original>
         <Spanish>Registrar clases en el portapapeles (String)</Spanish>
         <German>Klassen als String in Zwischenablage aufzeichnen</German>
     </Key>
