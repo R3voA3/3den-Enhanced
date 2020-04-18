@@ -4055,6 +4055,12 @@
     <Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
         <English>Dynamic Groups</English>
         <German>Gruppenverwaltung</German>
+        <Chinesesimp>Dynamic Groups</Chinesesimp>
+        <Czech>Dynamic Groups</Czech>
+        <French>Dynamic Groups</French>
+        <Polish>Dynamic Groups</Polish>
+        <Russian>Dynamic Groups</Russian>
+        <Spanish>Dynamic Groups</Spanish>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_BLUFOR_DISPLAYNAME">
         <English>Respawn Tickets BLUFOR</English>
