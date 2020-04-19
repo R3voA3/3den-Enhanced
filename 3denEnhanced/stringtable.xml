@@ -5237,8 +5237,9 @@
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
         <English>Hold Action</English>
         <German>Hold Action</German>
-        <Original>Missionsende</Original>
+        <Original>Hold Action</Original>
         <Spanish>Detener acción</Spanish>
+        <French>Hold Action</French>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_TEXT">
         <English>Text</English>
