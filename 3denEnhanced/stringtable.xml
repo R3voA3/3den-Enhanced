@@ -72,7 +72,7 @@
         <Spanish>Retirar NVGs (dispositivo de visión nocturna)</Spanish>
         <Chinesesimp>删除NVG</Chinesesimp>
         <Czech>Odstranit NVG</Czech>
-        <French>Supprimer les NVG</French>
+        <French>Supprimer les JVNs</French>
         <Polish>Usuń noktowizje</Polish>
         <Russian>Удалить NVG</Russian>
     </Key>
@@ -281,6 +281,7 @@
         <Russian>Обычный объект, помещен в гостевой, часть ландшафта</Russian>
         <Spanish>Objeto normal puesto en Visitor, parte del paisaje.</Spanish>
         <German>Normales Objekt das  in Visitor plaziert wurde und Teil der Landschaft ist</German>
+        <French>Objet simple placé avec Visitor et faisant partie du paysage</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_NETWORK">
         <English>Road placed in Visitor, part of landscape</English>
@@ -289,6 +290,7 @@
         <Russian>Путь в гостевой, часть ландшафта</Russian>
         <Spanish>Carretera situada en Visitor, parte del paisaje.</Spanish>
         <German>Straße die in Visitor plaziert wurde und Teil der Landschaft ist</German>
+        <French>Route placée avec Visitor et faisant partie du terrain</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_TEMPORARY">
         <English>Temporary object (like tracks)</English>
@@ -324,6 +326,7 @@
         <Spanish>Calcomanía de tierra</Spanish>
         <German>Land Abziehbild (Decal)</German>
         <Russian>Деколь земли</Russian>
+        <French>Texture du terrain</French>
     </Key>
     <Key ID="STR_ENH_AIRDROP_CLASSES_DISPLAYNAME">
         <English>Classes</English>
@@ -2648,7 +2651,7 @@
         <Original>Establishing Shot</Original>
         <English>Establishing Shot</English>
         <Czech>Úvodní záběr (UAV Intro)</Czech>
-        <French>Establishing Shot</French>
+        <French>Introduction avec drone</French>
         <Spanish>Introducción con UAV</Spanish>
         <German>UAV Intro</German>
         <Chinesesimp>无人机初始介绍镜头</Chinesesimp>
@@ -2836,7 +2839,7 @@
         <German>Anfangszahl</German>
         <Chinesesimp>开启索引</Chinesesimp>
         <Spanish>Índice de comienzo</Spanish>
-        <French>Index de démarrage</French>
+        <French>Index initial</French>
         <Polish>Start index</Polish>
         <Russian>Стартовый индекс</Russian>
     </Key>
@@ -2844,6 +2847,7 @@
         <Original>Not enough empty building positions, increase the radius or the coverage.</Original>
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
         <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
+        <French>Il n'y a pas assez de bâtiments vides à proximité. Augmentez le rayon ou le pourcentage de couverture.</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
         <Original>Fill Area </Original>
@@ -2906,6 +2910,7 @@
         <Czech>Obdélníkový tvar</Czech>
         <German>Rechteck-Muster</German>
         <Spanish>Patrón de rectángulo</Spanish>
+        <French>Disposition en rectangle</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_A">
         <Original>A</Original>
@@ -3014,6 +3019,7 @@
         <Czech>Aktualizovat seznam</Czech>
         <German>Liste updaten</German>
         <Spanish>Actualizar lista</Spanish>
+        <French>Actualiser la liste</French>
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_FILTERJPG">
         <Original>Hide JPG</Original>
@@ -3474,11 +3480,13 @@
         <Original>Draw Unit Icons</Original>
         <English>Draw Unit Icons</English>
         <German>Einheitenicons darstellen</German>
+        <French>Montrer les icônes des unités</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
         <Original>Draws information of nearby units and vehicles.</Original>
         <English>Draws information of nearby units and vehicles.</English>
         <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
+        <French>Affiche des informations à propos des unités et véhicules à proximité.</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_TOOLTIP">
         <Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
@@ -3542,7 +3550,7 @@
         <Chinesesimp>禁用耐力</Chinesesimp>
         <Spanish>Desactivar la resistencia</Spanish>
         <Czech>Zakázat výdrž</Czech>
-        <French>Désactiver l'endurance</French>
+        <French>Désactiver la simulation de l'endurance</French>
         <Polish>Wyłącz stamine</Polish>
         <Russian>Отключить усталость</Russian>
     </Key>
@@ -3553,7 +3561,7 @@
         <Chinesesimp>显示FPS</Chinesesimp>
         <Spanish>Mostrar fps</Spanish>
         <Czech>Zobrazit FPS</Czech>
-        <French>Afficher fps</French>
+        <French>Afficher les FPS</French>
         <Polish>Pokaż FPS</Polish>
         <Russian>Показать FPS</Russian>
     </Key>
@@ -3564,7 +3572,7 @@
         <Chinesesimp>启用子弹跟踪</Chinesesimp>
         <Spanish>Habilitar seguimiento de viñetas</Spanish>
         <Czech>Aktivovat trasování střel</Czech>
-        <French>Activer le suivi des balles</French>
+        <French>Montrer la trajectoir des balles</French>
         <Polish>Włącz śledzenie toru lotu pocisku</Polish>
         <Russian>Включить трассировку пуль</Russian>
     </Key>
@@ -3608,7 +3616,7 @@
         <Chinesesimp>杀死单位（西方）</Chinesesimp>
         <Spanish>Matar Unidades (BLUFOR)</Spanish>
         <Czech>Zabíjet jednotky (Západ)</Czech>
-        <French>Tuer des unités (Ouest)</French>
+        <French>Tuer des unités (BLUFOR)</French>
         <Polish>Zabij jednostki (BLUFOR)</Polish>
         <Russian>Убить оиряды (Запад)</Russian>
     </Key>
@@ -3641,7 +3649,7 @@
         <Chinesesimp>杀死指针目标</Chinesesimp>
         <Spanish>Matar cursor blanco</Spanish>
         <Czech>Zabije jednotku označenou kurzorem</Czech>
-        <French>Kill Cursor Target</French>
+        <French>Tuer la cible du curseur</French>
         <Polish>Zabij jednostke na kursorze</Polish>
         <Russian>Убить цель под курсором</Russian>
     </Key>
@@ -4660,6 +4668,7 @@
         <Original>Action Creator</Original>
         <Czech>Vytvářeč akcí</Czech>
         <Spanish>Creador de acción</Spanish>
+        <French>Créer une action</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_3DENRADIO">
         <English>3DEN Radio</English>
@@ -4925,6 +4934,7 @@
         <Czech>Toto je čistý  text použitý ve "createDiaryRecord". Může být také použit v modulu "Vytvoření úkolu (Create Task)"" pro změnění vzhledu vašich úkolů."</Czech>
         <Spanish>Este es el texto sin formato utilizado en 'createDiaryRecord'. También se puede usar dentro del módulo 'Crear tarea' para cambiar la apariencia de sus tareas.</Spanish>
         <German>Dieser Text wird von 'createDiaryRecord' verwendet. Er kann auch im 'Aufgabe erstellen' Modul verwendet werden. </German>
+        <French>Ce texte est utilisé dans 'createDiaryRecord'. Il peut aussi être utilisé dans le module 'Créer une tâche' pour modifier l'apparence de vos tâches.</French>
     </Key>
     <Key ID="STR_ENH_HELP_MISSIONOPTIMISATION">
         <English>Mission Optimisation</English>
@@ -4993,12 +5003,13 @@
         <Czech>Třídy vojáků kteří budou shozeni výsadkem ve formátu:\nClassname_1 Classname_2 Classname_n.</Czech>
         <Spanish>Clases de los soldados que deben soltarse en formato:\nClassname_1 Classname_2 Classname_n.</Spanish>
         <German>Klassennamen der Einheiten die abspringen sollen im Format:\nClassname_1 Classname_2 Classname_n. </German>
+        <French>Classes des soldats qui seront largués, dans le format suivant : \nClassname_1 Classname_2 </French>
     </Key>
     <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
         <English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
         <Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:Classname_1 Classname_2 Classname_n 以此类推</Chinesesimp>
         <Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: Classname_1 Classname_2 Classname_n.</Czech>
-        <French>ClassName des véhicules utilisés pour le(s) survol(s). Si plusieurs Classname sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : Classname_1 Classname_2 Classname_n.</French>
+        <French>Classes des véhicules utilisés pour le(s) survol(s). Si plusieurs Classname sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : Classname_1 Classname_2 Classname_n.</French>
         <German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_n.</German>
         <Original>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</Original>
         <Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
@@ -5043,6 +5054,7 @@
         <Czech>Normální</Czech>
         <Spanish>Normal</Spanish>
         <German>Normal</German>
+        <French>Normal</French>
     </Key>
     <Key ID="str_enh_speed_full">
         <English>Full</English>
@@ -5050,6 +5062,7 @@
         <Czech>Plný</Czech>
         <Spanish>Completa</Spanish>
         <German>Voll</German>
+        <French>Complet</French>
     </Key>
     <Key ID="STR_ENH_ALTITUDE_DISPLAYNAME">
         <English>Altitude</English>
@@ -5089,6 +5102,7 @@
         <Czech>Vytvoří výsadek. Jednotky se zadanými třídami a stranou jsou shozeny v okamžiku kdy se podmínka vrátí jako pravdivá (true). Vytvořené jednotky jsou uloženy v proměnné "ENH_Airdrop_Units" která je dostupná na straně serveru.</Czech>
         <Spanish>Crea un lanzamiento aéreo. Las unidades con clases y bandos dados se descartan una vez que la condición devuelve verdadero. Las unidades creadas se almacenan en la variable 'ENH_Airdrop_Units' que está disponible en la máquina del servidor.</Spanish>
         <German>Erstellt einen Luftabwurf. Einheiten mit den angegebenen Klassennamen und Seite werden abgeworfen sobald die Bedingungen erfüllt ist. Dir erstellen Einheiten stehen in der Variable 'ENH_Airdrop_Units' auf dem Server zur Verfügung.</German>
+        <French>Crée un larguage. Les unités dont les classes sont spécifiées seront larguées lorsque la condition sera vérifiée. Les unités créées sont stockées dans la variable 'ENH_Airdrop_Units' accessible sur le serveur.</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
         <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
@@ -5096,6 +5110,7 @@
         <Czech>Vytvoří leteckou jednotku která se pohybuje z bodu A do bodu B, nikdy neútočí a ani na ní není útočeno. Je nastavena jako zajatec a vymaže se v okamžiku kdy dosáhne svého cíle. Přelety mohou být zastaveny nastavením proměnné "ENH_AmbientFlyby_Enabled" jako nepravdu (false) na straně serveru.</Czech>
         <Spanish>Genera una unidad aérea que se mueve desde el punto A al punto B, nunca atacando ni siendo atacado. Se establece como cautivo y desaparecerá una vez que llegue a su destino. Los sobrevuelos se pueden detener configurando 'ENH_AmbientFlyby_Enabled' en falso en la máquina del servidor.</Spanish>
         <German>Spawnt eine Lufteinheit die von Punkt A zu Punkt B fliegt. Sie wird niemals angegriffen oder angreifen. Sie wird gelöscht sobalt sie ihren Zielpunkt erreicht hat. Die Vorbeiflüge können gestoppt werden durch das setzten von 'ENH_AmbientFlyby_Enabled' zu 'false' auf dem Server.</German>
+        <French>Fait apparaître une unité aérienne qui se déplace du point A au point B sans engager ni être engagée. Elle est définie comme captive et disparaît lorsqu'elle atteint sa destination. Les survols peuvent être stoppés en définissant 'ENH_AmbientFlyby_Enabled' en false sur le serveur.</French>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
         <English>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</English>
@@ -5103,6 +5118,7 @@
         <Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek. Pro více informací &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Czech>
         <Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento. Consulte &lt;ahref='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt; BIS_fnc_establishingShot&lt;/a&gt;.</Spanish>
         <German>Spiele eine gestellte UAV Beobachtung ab welche zu Beginn der Mission gezeigt wird. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</German>
+        <French>Joue une fausse séquence d'observation drone pouvant servir à une introduction. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</French>
     </Key>
     <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
         <English>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</English>
@@ -5163,6 +5179,7 @@
         <Original>Full</Original>
         <Czech>Plné</Czech>
         <Spanish>Completo</Spanish>
+        <French>Complet</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
         <English>Categories</English>
@@ -5220,6 +5237,7 @@
         <Original>Multiplayer Scripting</Original>
         <Spanish>Scripting multiplayer</Spanish>
         <German>Mehrspieler Skripten</German>
+        <French>Scripting multijoueur</French>
     </Key>
     <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
         <English>Show Entity Counter</English>
@@ -5233,6 +5251,7 @@
         <German>Missionsende (Verluste)</German>
         <Original>Mission Ending (Casualties)</Original>
         <Spanish>Final de misión (Bajas)</Spanish>
+        <French>Fin de mission (pertes)</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
         <English>Hold Action</English>
@@ -5253,54 +5272,63 @@
         <Original>Plays a selected animation set. The gear needs to be set up manually.</Original>
         <Spanish>Reproducir una animación seleccionada. El engranaje necesita ser seleccionado manualmente.</Spanish>
         <German>Spielt das ausgewählte Animationsset. Die Ausrüstung der Einheit muss manuell angepasst werden.</German>
+        <French>Joue un ensemble d'animations. L'équipement doit être manuellement sélectionné.</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
         <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
         <Original>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
         <Spanish>Finaliza la misión con un final personalizado si una cierta cantidad de entidades de un bando del bando indicado muere. Puede ser usado para fallar la misión Se puede utilizar para fallar la misión por víctimas civiles. En multijugador, la misión finalizará para todos los clientes. Los informes personalizados deben definirse en la configuración de la misión. Ver &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;</Spanish>
         <German>Beendet die Mission mit einem benutzerdefinierten Ende, wenn eine definierte Anzahl von Einheiten einer bestimmten Seite getötet wurden. Kann dazu verwendet werden die Mission zu beenden wenn zu viele civile Opfer entstanden sind. Benutzerdefinierte Einsatzbesprechnungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
+        <French>Termine la mission avec une fin de mission personnalisée si un certain nombre d'unités d'un certain camp sont morts. Peut être employée pour l'échec d'une mission en cas de pertes civiles. En multijoueur, la mission sera terminée pour tous les clients. Le débriefing personnalisé doit être défini dans la configuration de la mission. Voir &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
         <English>Threshold</English>
         <Original>Threshold</Original>
         <Spanish>Límite</Spanish>
         <German>Schwellenwert</German>
+        <French>Limite</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP">
         <English>When the amount of killed entities of given side reaches the threshold, the mission is ended.</English>
         <Original>When the amount of killed entities of given side reaches the threshold, the mission is ended.</Original>
         <Spanish>Cuando la cantidad de entidades asesinadas de un bando determinado alcanza el límite, la misión finaliza.</Spanish>
         <German>Wenn die Anzahl von getöteten Einheiten der gegebenen Seite den Schwellenwert überschreitet, wird die Mission beendet.</German>
+        <French>Quand le nombre de pertes dans le camp spécifie atteint la limite, la mission est terminée.</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_ENDING_TOOLTIP">
         <English>Can be ending from config file or mission config (CfgDebriefing).</English>
         <Original>Can be ending from config file or mission config (CfgDebriefing).</Original>
         <Spanish>Puede terminar desde el archivo de configuración o la configuración de la misión (CfgDebriefing).</Spanish>
         <German>Kann ein Ende der Konfig oder Missionskonfig sein (CfgDebriefing).</German>
+        <French>Peut-être une fin de mission issue soit d'un fichier de configuration, soit de la configuration de la mission (CfgDebriefing).</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME">
         <English>Can Exit?</English>
         <Original>Can Exit?</Original>
         <Spanish>¿Puede salir?</Spanish>
         <German>Beenden erlaubt?</German>
+        <French>Peut quitter l'animation ?</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_TOOLTIP">
         <English>If enabled, the unit will exit the animation when in danger.</English>
         <Original>If enabled, the unit will exit the animation when in danger.</Original>
         <Spanish>Si está habilitada, la unidad saldrá de la animación cuando esté en peligro.</Spanish>
         <German>Wenn erlaubt, kann die Einheit die Animation beenden, wenn sie in Gefahr ist.</German>
+        <French>Si activé, l'unité quittera l'animation lorsqu'elle est en danger;</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME">
         <English>Attach?</English>
         <Original>Attach?</Original>
         <Spanish>¿Adjuntar?</Spanish>
         <German>Befestigen?</German>
+        <French>Attacher ?</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP">
         <English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</English>
         <Original>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</Original>
         <Spanish>Si está habilitado, la unidad se conectará a una lógica invisible. Solo habilite esta opción si necesita colocar la unidad encima de una pared o cerca de otro objeto.</Spanish>
         <German>Wenn angeschaltet, wird die Einheit an einer unsichtbaren Logic befestigt. Verwende diese Option nur, wenn die Einheit auf einem Gegenstand oder nah an einer Wand platziert werden soll.</German>
+        <French>Si activé, l'unité sera attachée à une entité logique invisible. Activez cette option si vous devez placer l'unité sur un mur ou proche d'un objet.</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME">
         <English>Animation</English>
@@ -5329,120 +5357,140 @@
         <Original>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</Original>
         <Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes. Para obtener una descripción detallada de este atributo, consulte: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;</Spanish>
         <German>Fügt eine Halte-Aktion dieser Entität hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;. </German>
+        <French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients. Pour une description détaillé de cet attribut, consultez : &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_NAME_DISPLAYNAME">
         <English>Name</English>
         <German>Name</German>
         <Original>Name</Original>
         <Spanish>Nombre</Spanish>
+        <French>Nom</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME">
         <English>Icon Idle</English>
         <Original>Icon Idle</Original>
         <Spanish>Icono de espera</Spanish>
         <German>Icon Inaktiv</German>
+        <French>Icône en inactivité</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME">
         <English>Icon Progress</English>
         <Original>Icon Progress</Original>
         <Spanish>Icono de progreso</Spanish>
         <German>Icon Fortschritt</German>
+        <French>Icône de progression</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME">
         <English>Condition Show</English>
         <Original>Condition Show</Original>
         <Spanish>Mostrar condición</Spanish>
         <German>Anzeigebedingung</German>
+        <French>Condition d'affichage</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP">
         <English>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</English>
         <Original>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</Original>
         <Spanish>Condición para que se muestre la acción. Los argumentos aprobados son: \n_target, _this (caller).</Spanish>
         <German>Bedingung die erfüllt sein muss damit die Aktion angezeigt wird. Übergebene Parameter sind:\n_target, _this (caller).</German>
+        <French>Condition pour que l'action apparaisse. Les variables disponibles sont :\n_target, _this (caller).</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME">
         <English>Condition Progress</English>
         <Original>Condition Progress</Original>
         <Spanish>Progreso de la condición</Spanish>
         <German>Fortschrittsbedingung</German>
+        <French>Condition de progression</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP">
         <English>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</English>
         <Original>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</Original>
         <Spanish>Condición para que la acción progrese. Los argumentos aprobados son: \n_target, _caller, _actionID.</Spanish>
         <German>Bedingung die erfüllt sein muss damit die Aktion fortschreitet. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
+        <French>Condition pour que l'action progresse. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME">
         <English>Code Start</English>
         <Original>Code Start</Original>
         <Spanish>Iniciar código</Spanish>
         <German>Code Start</German>
+        <French>Code au démarrage</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODESTART_TOOLTIP">
         <English>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</English>
         <Original>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</Original>
         <Spanish>Código ejecutado cuando la acción se inicia. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
         <German>Code der ausgeführt wird, wenn die Aktion gestartet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
+        <French>Code exécuté lorsque le joueur commence à effectuer l'action. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME">
         <English>Code Progress</English>
         <Original>Code Progress</Original>
         <Spanish>Progreso del código</Spanish>
         <German>Code Fortschritt</German>
+        <French>Code de progression</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP">
         <English>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</English>
         <Original>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</Original>
         <Spanish>Código ejecutado en cada marca de progreso. Los argumentos pasados son: \n_target, _caller, _actionID, _progress, _maxProgress.</Spanish>
         <German>Code der bei jedem Tick ausgeführt wird. Übergebene Parameter sind:\n_target, _caller, _actionID, _progress, _maxProgress.</German>
+        <French>Code exécuté à chaque tick durant lequel l'action progresse. Les variables disponibles sont :\n_target, _caller, _actionID, _progress, _maxProgress.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME">
         <English>Code Complete</English>
         <Original>Code Complete</Original>
         <Spanish>Código completado</Spanish>
         <German>Code Beendet</German>
+        <French>Code de complétion</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP">
         <English>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</English>
         <Original>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</Original>
         <Spanish>Código ejecutado al completar. Argumentos pasados: \n_target, _caller, _actionID.</Spanish>
         <German>Code der ausgeführt wird, wenn die Aktion beendet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
+        <French>Code exécuté lorsque l'action est complétée. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME">
         <English>Code Interrupt</English>
         <Original>Code Interrupt</Original>
         <Spanish>Código interrumpido</Spanish>
         <German>Code Unterbrochen</German>
+        <French>Code d'interruption</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP">
         <English>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</English>
         <Original>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</Original>
         <Spanish>Código ejecutado cuando se interrumpe la acción. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
         <German>Code der ausgeführt wird, wenn die Aktion unterbrochen wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
+        <French>Code exécuté lorsque l'action est interrompue. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_DURATION_DISPLAYNAME">
         <English>Duration</English>
         <Original>Duration</Original>
         <Spanish>Duración</Spanish>
         <German>Dauer</German>
+        <French>Durée</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME">
         <English>Priority</English>
         <Original>Priority</Original>
         <Spanish>Prioridad</Spanish>
         <German>Priorität</German>
+        <French>Priorité</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME">
         <English>Show when Unconscious?</English>
         <Original>Show when Unconscious?</Original>
         <Spanish>Mostrar cuando está inconsciente</Spanish>
         <German>Anzeigen wenn Bewusstlos?</German>
+        <French>Afficher lorsqu'inconscient ?</French>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME">
         <English>Show Window</English>
         <Original>Show Window</Original>
         <Spanish>Mostrar ventana</Spanish>
         <German>Show Window</German>
+        <French>Afficher au centre de l'écran</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES">
         <English>Templates</English>
@@ -5450,6 +5498,7 @@
         <German>Vorlagen</German>
         <Original>Templates</Original>
         <Spanish>Plantillas</Spanish>
+        <French>Modèles</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES">
         <English>Attributes</English>
@@ -5457,6 +5506,7 @@
         <German>Attribute</German>
         <Original>Attributes</Original>
         <Spanish>Atributos</Spanish>
+        <French>Attributs</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE">
         <English>Delete Template</English>
@@ -5464,6 +5514,7 @@
         <German>Vorlage löschen</German>
         <Original>DeleteTemplate</Original>
         <Spanish>Borrar plantilla</Spanish>
+        <French>Supprimer un modèle</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE">
         <English>Create Template from Scenario</English>
@@ -5471,6 +5522,7 @@
         <German>Vorlage aus Szenario erstellen</German>
         <Original>Create Template from Scenario</Original>
         <Spanish>Crear plantilla desde escenario</Spanish>
+        <French>Créer un modèle à partir d'un scénario</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE">
         <English>Apply Template</English>
@@ -5478,6 +5530,7 @@
         <German>Vorlage anwenden</German>
         <Original>Apply Template</Original>
         <Spanish>Aplicar plantilla</Spanish>
+        <French>Appliquer un modèle</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT">
         <English>Export</English>
@@ -5495,6 +5548,7 @@
         <German>Vorlagenbeschreibung</German>
         <Original>Template Description</Original>
         <Spanish>Descripción de la plantilla</Spanish>
+        <French>Description du modèle</French>
     </Key>
     <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE">
         <English>Title</English>
@@ -5544,6 +5598,7 @@
         <Original>Scenario Attributes Manager</Original>
         <Spanish>Manejador de atributos de escenario</Spanish>
         <German>Szenarioattribute-Manager</German>
+        <French>Gestionnaire des attributs du scénario</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_MISCELLANEOUS">
         <English>Miscellaneous Tools</English>
@@ -5557,24 +5612,28 @@
         <Original>Orientation</Original>
         <Spanish>Orientación</Spanish>
         <German>Ausrichtung</German>
+        <French>Orientation</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE">
         <English>Stance</English>
         <Original>Stance</Original>
         <Spanish>Postura</Spanish>
         <German>Haltung</German>
+        <French>Posture</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_AUTO">
         <English>Auto</English>
         <Original>Auto</Original>
         <Spanish>Auto</Spanish>
         <German>Auto</German>
+        <French>Automatique</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_CROUCH">
         <English>Crouch</English>
         <Original>Crouch</Original>
         <Spanish>Agachado</Spanish>
         <German>Hocke</German>
+        <French>Accroupi</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_COVERAGE">
         <English>Coverage</English>
@@ -5635,12 +5694,14 @@
         <Original>Stand</Original>
         <Spanish>De pie</Spanish>
         <German>Stehen</German>
+        <French>Debout</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SCRIPTCOMMANDS">
         <English>Script Commands</English>
         <German>Skriptbefehle</German>
         <Original>Script Commands</Original>
         <Spanish>Comandos de Scripts</Spanish>
+        <French>Commandes script</French>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
         <English>Create Extraction</English>
@@ -5675,12 +5736,14 @@
         <German>%2 von %1. Sofortige Extraktion benötigt. Koordinaten sind %3, kommen.</German>
         <Original>%2, this is %1. Requesting immediate extraction at grid position %3, over.</Original>
         <Spanish>%2, aquí %1. Solicita extracción inmediata en la posición de cuadrícula %3, terminado.</Spanish>
+        <French>%2 de %1. Demandons extraction immédiate à la position %3. Terminé.</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
         <English>%1 this is %2, coordinates received. Standby, over.</English>
         <German>%1 von %2, Koordinaten erhalten, Ende.</German>
         <Original>%1 this is %2, coordinates received. Standby, over.</Original>
         <Spanish>1% aquí %2, Coordenadas recibidas. A la espera, corto.</Spanish>
+        <French>%1 de %2, coordonnées reçues. On arrive. Terminé.</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_HEADER">
         <English>Extraction Creator</English>
@@ -5694,6 +5757,7 @@
         <Original>Show Radio Chat?</Original>
         <Spanish>Mostrar radio chat</Spanish>
         <German>Radio anzeigen?</German>
+        <French>Afficher la discussion radio ?</French>
     </Key>
     <Key ID="STR_ENH_EXTRACTION_CALLSIGNREQUESTER">
         <English>Call Sign Requester</English>
@@ -5756,12 +5820,14 @@
         <German>Koordinaten</German>
         <Original>Grid Position</Original>
         <Spanish>Posición de regilla</Spanish>
+        <French>Coordonnées</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_DRAWDLCICONS">
         <English>Toggle Drawing of DLC Icons</English>
         <Original>Toggle Drawing of DLC Icons</Original>
         <Spanish>Alternar dibujo de iconos DLC</Spanish>
         <German>DLC Icons umschalten</German>
+        <French>Activer/désactiver l'affichage des DLCs</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_DESCRIPTION">
         <English>Description...</English>
@@ -5789,18 +5855,21 @@
         <German>3DEN Kamerapositionen</German>
         <Original>3DEN Camera Positions</Original>
         <Spanish>3DEN posición de la cámara</Spanish>
+        <French>Positions de la caméra 3DEN</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_HELPDELETE">
         <English>- To delete an entry press the DELETE key</English>
         <German>- Um einen Eintrag zu löschen drücke die ENTFERNEN Taste</German>
         <Original>- To delete an entry press the DELETE key</Original>
         <Spanish>- Para borrar una entrada pulsa la tecla DELETE</Spanish>
+        <French>- Pour supprimer une position, appuyez sur 'SUPPR'.</French>
     </Key>
     <Key ID="STR_ENH_3DENCAM_HELPMOVETO">
         <English>- To move to a selected position, double click on the entry</English>
         <German>- Durch Doppelklicken auf einen Listeneintrag kann zu der Position gesprungen werden</German>
         <Original>- To move to a selected position, double click on the entry</Original>
         <Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
+        <French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS">
         <English>Third Party Tools</English>
@@ -5814,6 +5883,7 @@
         <German>Kamera in First Person View bewegen</German>
         <Original>Move Camera to First Person View</Original>
         <Spanish>Mover cámara a vista de primera persona</Spanish>
+        <French>Déplacer la caméro en vue à la première personne</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_CONTROLTYPES">
         <English>View Control Types</English>
@@ -5859,6 +5929,7 @@
         <German>3DEN Kamerapositionen</German>
         <Original>3DEN Camera Positions</Original>
         <Spanish>3DEN posición de la cámara</Spanish>
+        <French>Positions de la caméra 3DEN</French>
     </Key>
     <Key ID="STR_ENH_OPTIONS">
         <English>Options</English>
@@ -5879,12 +5950,14 @@
         <German>KI Funktionen umschalten</German>
         <Original>Toggle AI Features</Original>
         <Spanish>Conmutar características IA</Spanish>
+        <French>Désactiver des fonctionnalités IA</French>
     </Key>
     <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
         <English>AI features %1.</English>
         <German>KI Funktionen%1</German>
         <Original>AI features %1.</Original>
         <Spanish>Características IA %1.</Spanish>
+        <French>Fonctionnalités IA %1.</French>
     </Key>
     <Key ID="STR_ENH_DISABLED">
         <English>disabled</English>
@@ -5933,6 +6006,7 @@
         <German>Variablen-Viewer</German>
         <Original>Variable Viewer</Original>
         <Spanish>Visor variable</Spanish>
+        <French>Afficher les variables</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
         <English>Variable Value</English>
@@ -5974,6 +6048,7 @@
         <German>Setzen/Neu</German>
         <Original>Set/New</Original>
         <Spanish>Fijar/Nuevo</Spanish>
+        <French>Définir/Nouveau</French>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
         <English>Confirm</English>
@@ -6050,6 +6125,7 @@
         <German>Waffenverwacklung ausschalten</German>
         <Original>Disable Weapon Sway</Original>
         <Spanish>Deshabilitar balanceo de arma</Spanish>
+        <French>Désactiver le balancement de l'arme</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
         <English>Disable Reload Time</English>
@@ -6091,18 +6167,21 @@
         <German>Erlaubt das Teleportieren in der 3D-Szene. Der Spieler wird immer zur Position in der Bildschirmmitte teleportiert.</German>
         <Original>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</Original>
         <Spanish>Permite el teletransporte en la escena 3D. El jugador es siempre teletransportado a la posición central de la pantalla</Spanish>
+        <French>Permet de se téléporter dans la scène 3D. Le joueur est toujours téléporté à la position au centre de son écran.</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SKIPTIME">
         <English>Skip Time</English>
         <German>Zeit überspringen</German>
         <Original>Skip Time</Original>
         <Spanish>Saltar tiempo</Spanish>
+        <French>Passer le temps</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
         <English>Time Multiplier</English>
         <German>Zeit-Multiplikator</German>
         <Original>Time Multiplier</Original>
         <Spanish>Multiplicador de tiempo</Spanish>
+        <French>Multiplicateur de temps</French>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
         <Original>Respawn Tickets</Original>
@@ -6120,59 +6199,69 @@
         <German>Einheiten können Wiedereinsteigen, solange sie noch Tickets haben.</German>
         <Original>Every unit can respawn as long as it hasn't run out of tickets.</Original>
         <Spanish>Cada unidad puede reaparecer siempre que no se quede sin tickets</Spanish>
+        <French>Chaque unité peut réapparaître tant qu'elle n'a pas épuisé ses tickets de réapparition.</French>
     </Key>
     <Key ID="STR_ENH_SPR_CANDIE_DISPLAYNAME">
         <English>Can Die?</English>
         <German>Sterben zulassen?</German>
         <Original>Can Die?</Original>
         <Spanish>¿Puede morir?</Spanish>
+        <French>Peut mourir ?</French>
     </Key>
     <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
         <English>Units can instantly die by getting shot in the head.</English>
         <German>Einheiten können durch einen kritischen Treffer in den Kopf sofort sterben</German>
         <Original>Units can instantly die by getting shot in the head.</Original>
         <Spanish>Las unidades mueren instantaneamente al recibir un tiro en la cabeza.</Spanish>
+        <French>Les unités peuvent mourir instantanément lorsqu'elles sont touchées à la tête.</French>
     </Key>
     <Key ID="STR_ENH_SPR_DESCRIPTION">
         <English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
         <German>Erlaubt dem Spieler und KI-Einheiten in Einzelspielerszenarios zu respawnen. Nur Einheiten für die der Einzelspieler-Respawn in den Attributen aktiviert wurde, sind betroffen. Für Mehrspielermissionen benutze den Mehrspieler-Respawn.</German>
         <Original>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</Original>
         <Spanish>Habilita al jugador y a la IA a reaparecer en escenarios de un solo jugador. Solo están afectadas las unidades con la opción reaparición de un solo jugador habilitada. Para escenarios MP usa el sistema reaparición multijugador.</Spanish>
+        <French>Permet aux IA et au joueur de réapparaître dans les scénarios solo. Seules les unités avec la 'Réapparation en solo' activée dans leurs attributs sont affectées. Pour les scénarios multijoueurs, utilisez le système de réapparition multijoueur. </French>
     </Key>
     <Key ID="STR_ENH_SPR_ENABLESPR">
         <English>Enable Single Player Respawn</English>
         <German>Einzelspieler-Respawn aktivieren</German>
         <Original>Enable Single Player Respawn</Original>
         <Spanish>Habilitar reaparición un solo jugador</Spanish>
+        <French>Réapparition en solo</French>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
         <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
         <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für INDFOR\n* respawn_civilian - Respawn für CIVFOR</German>
         <Original>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Original>
         <Spanish>Todos los marcadores con el prefijo 'respawn_SIDE' cuentan como posición de reaparición. Por ejemplo: unidades OPFOR pueden usar todos los marcadores llamados respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Spanish>
+        <French>Tous les marqueurs avec le préfix 'respawn_CAMP' comptent comme des points de réapparition. Par exemple, les unités OPFOR peuvent utiliser tous les marqueurs respawn_est_xxx comme points de réapparition.\n\n* respawn_east - réapparition OPFOR.\n* respawn_west - réapparition BLUFOR.\n* respawn_guerilla - réapparition INDFOR.\n* respawn_civilian - réapparition CIVFOR.</French>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
         <English>Respawn at nearest Respawn Position</English>
         <German>Bei nähester Respawn-Position wiedereinsteigen</German>
         <Original>Respawn at nearest Respawn Position</Original>
         <Spanish>Reaparecer en la posición de reaparición más cercana</Spanish>
+        <French>Réapparaître au plus proche point de réapparition</French>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
         <English>Respawn at random Respawn Position</English>
         <German>Bei einer willkürlichen Respawn-Positionwiedereinsteigen</German>
         <Original>Respawn at random Respawn Position</Original>
         <Spanish>Reaparecer en una posición de reaparición aleatoria</Spanish>
+        <French>Réapparaître à un point de réapparition aléatoire</French>
     </Key>
     <Key ID="STR_ENH_SPR">
         <English>Single Player Respawn</English>
         <German>Einzelspieler-Respawn</German>
         <Original>Single Player Respawn</Original>
         <Spanish>Reaparición de un solo jugador</Spanish>
+        <French>Réapparition en solo</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_DESCRIPTION">
         <English>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
         <Original>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</Original>
         <Spanish>Crear una condición de fin personalizada. Si la condición devuelve TRUE (verdadero), la misión finaliza para todos los jugadores con la configuración dada. Ver &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;</Spanish>
+        <French>Crée une condition de fin de mission personnalisée. Si la condition est vérifiée, la mission est terminée pour tous les joueurs avec les paramètres précisés. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; pour une documentation complète. Les débriefings personnalisés doivent être définis dans la configuration de la mission. Voir &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</French>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
         <English>Custom Mission Endings</English>
