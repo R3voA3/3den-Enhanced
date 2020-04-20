@@ -1,3 +1,10 @@
+v5.4
+*added*
+
+*changed*
+- Many translation tweaks, thanks to Poslovitch
+- removed original language from stringtable.xml, default is English anyway
+
 v5.3
 *added*
 
@@ -32,7 +39,7 @@ v5.2
 
 *removed*
 - removed some old, obsolete functions
-+ 
+
 v5.1
 *added*
 - Added Single Player Respawn
