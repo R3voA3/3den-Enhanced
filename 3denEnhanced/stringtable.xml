@@ -4761,7 +4761,6 @@
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
         <English>Hold Action</English>
         <German>Hold Action</German>
-        <Original>Hold Action</Original>
         <Spanish>Detener acción</Spanish>
         <French>Hold Action</French>
     </Key>
@@ -5546,7 +5545,6 @@
     <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
         <English>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</English>
         <German>Erlaubt das Teleportieren in der 3D-Szene. Der Spieler wird immer zur Position in der Bildschirmmitte teleportiert.</German>
-        <Original>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</Original>
         <Spanish>Permite el teletransporte en la escena 3D. El jugador es siempre teletransportado a la posición central de la pantalla</Spanish>
         <French>Permet de se téléporter dans la scène 3D. Le joueur est toujours téléporté à la position au centre de son écran.</French>
     </Key>
@@ -5630,6 +5628,7 @@
         <English>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
         <Spanish>Crear una condición de fin personalizada. Si la condición devuelve TRUE (verdadero), la misión finaliza para todos los jugadores con la configuración dada. Ver &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;</Spanish>
         <French>Crée une condition de fin de mission personnalisée. Si la condition est vérifiée, la mission est terminée pour tous les joueurs avec les paramètres précisés. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; pour une documentation complète. Les débriefings personnalisés doivent être définis dans la configuration de la mission. Voir &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</French>
+        <German>Erstellt eine benutzerdefinierte Endbedingung. Fals die Bedingung wahr wird, wir die Mission für alle Spieler, mit den gegebenen Einstellungen, beendet. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; für eine vollständige Beschreibung. Benutzerdefinierte Einsatzbesprechungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
         <English>Custom Mission Endings</English>
