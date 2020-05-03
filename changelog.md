@@ -4,6 +4,8 @@ v5.4
 *changed*
 - Many translation tweaks, thanks to Poslovitch
 - removed original language from stringtable.xml, default is English anyway
+- Fixed an issue with randomize directon tool
+
 
 v5.3
 *added*
