@@ -5,7 +5,9 @@
 	Sets the orientation of all selected objects.
 
 	Parameter(s):
-	NUMBER: Direction in degrees
+	NUMBER: -1: random
+			-2: reverse
+			>-1: Direction in degrees
 
 	Returns:
 	BOOLEAN: true / false
@@ -35,8 +37,8 @@ collect3DENHistory
 		};
 		case -1://randomise
 		{
-			private _dir = random 360;
 			{
+				private _dir = random 360;
 				_x set3DENAttribute ["rotation", [0,0,_dir]];
 			} forEach _entities;
 		};
