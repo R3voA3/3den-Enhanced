@@ -45,6 +45,7 @@ class ENH_LogClassesString
 	action = "call ENH_fnc_logClassesString";
 	Text = $STR_ENH_CONTEXTMENU_LOGCLASSESSTRING;
 	conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
+	//shortcuts[] = {INPUT_CTRL_OFFSET + DIK_B}; Not working atm!
 };
 class ENH_LogPositions3D
 {
