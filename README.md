@@ -31,7 +31,7 @@ You can help us by adding more translations for this modification. Read below to
 * [Download the stringtable.xml](https://github.com/R3voA3/3den-Enhanced/blob/master/3denEnhanced/stringtable.xml)
 * [Download Tabler](https://github.com/bux/tabler/releases)
 * Open the stringtable.xml with Tabler
-* Filling in missing translations
+* Fill in missing translations
 * Save the stringtable.xml
 * Create a pull request
 
