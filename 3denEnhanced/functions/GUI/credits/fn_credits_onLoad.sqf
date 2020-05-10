@@ -38,7 +38,8 @@ private _contributers =
 	"lex__1",
 	"ConnorAU",
 	"shukari",
-	"Poslovitch"
+	"Poslovitch",
+	"zagor64bz"
 ];
 
 private _ctrl = _display displayCtrl 1000;

@@ -1,3 +1,6 @@
+v5.5
+*changed*
+- Italian translation was updated by zagor64bz
 v5.4
 *changed*
 - Many translation tweaks, thanks to Poslovitch
