@@ -5,6 +5,7 @@ v5.4
 *changed*
 - Many translation tweaks, thanks to Poslovitch
 - Fixed an issue with randomize directon tool
+- Fixed a bug which caused Hold Action attribute to be always created in mission.sqm
 
 
 v5.3
