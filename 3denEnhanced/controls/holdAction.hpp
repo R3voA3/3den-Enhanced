@@ -166,8 +166,8 @@ class ENH_HoldAction: Title
 			w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
 			h = SIZE_M * GRID_H;
 			sliderRange[] = {1,1000};
-			sliderStep = 10;
-			lineSize = 10;
+			sliderStep = 1;
+			lineSize = 1;
 		};
 		class PriorityEdit: ctrlEdit
 		{
