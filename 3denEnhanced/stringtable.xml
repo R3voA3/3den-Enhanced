@@ -2001,6 +2001,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_MEDIC_DISPLAYNAME">
         <English>Is Medic?</English>
+		<Italian>E' medico?</Italian>
         <Czech>Je lékařem?</Czech>
         <French>Est infirmier ?</French>
         <Spanish>¿Es médico?</Spanish>
@@ -2011,6 +2012,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_MEDIC_TOOLTIP">
         <English>Defines whether the unit can fully heal other units.</English>
+		<Italian>Stabilisce se l'unità puo guarire interamente altre unità</Italian>
         <Czech>Určuje jestli může jednotka plně léčit ostatní jednotky.</Czech>
         <French>Définit si l'unité peut soigner complètement d'autres unités.</French>
         <Spanish>Define si la unidad puede curar completamente otras unidades.</Spanish>
@@ -2021,6 +2023,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_ENGINEER_DISPLAYNAME">
         <English>Is Engineer?</English>
+		<Italian>E' un meccanico?</Italian>
         <Czech>Je ženistou?</Czech>
         <French>Est mécanicien ?</French>
         <Spanish>¿Es ingeniero?</Spanish>
@@ -2031,6 +2034,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_ENGINEER_TOOLTIP">
         <English>Defines whether or not the unit can repair vehicles.</English>
+		<Italian>Stabilisce se l'unità è abilitata al riparo di mezzi</Italian>
         <Czech>Určuje jestli může jednotka opravovat vozidla.</Czech>
         <French>Définit si l'unité peut réparer des véhicules.</French>
         <Spanish>Define si la unidad puede o no reparar vehículos.</Spanish>
@@ -2041,6 +2045,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_DISPLAYNAME">
         <English>Is Explosive Specialist?</English>
+		<Italian>E' uno specialista di esplosivi?</Italian>
         <Czech>Je pyrotechnikem?</Czech>
         <French>Est démineur ?</French>
         <Spanish>¿Es especialista en explosivos?</Spanish>
@@ -2051,6 +2056,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_TOOLTIP">
         <English>Defines whether the unit can defuse explosives.</English>
+		<Italian>Definisce se l'unità è in grado di disinnescare esplosivi</Italian>
         <Czech>Určuje jestli může jednotka deaktivovat výbušniny.</Czech>
         <French>Définit si l'unité peut désamorcer des explosifs.</French>
         <Spanish>Define si la unidad puede desactivar explosivos.</Spanish>
@@ -2061,6 +2067,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_DISPLAYNAME">
         <English>Is UAV Hacker?</English>
+		<Italian>E' un'hacker di UAV?</Italian>
         <Czech>Je UAV hackerem?</Czech>
         <French>Peut pirater un drone ?</French>
         <Spanish>¿Es un hacker de UAV?</Spanish>
@@ -2071,6 +2078,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_TOOLTIP">
         <English>Defines whether the unit can hack hostile UAVs.</English>
+		<Italian>Definisce se l'unità è in grado di hackerare UAV nemiche</Italian>
         <Czech>Určuje jestli může jednotka přebrat kontrolu nad nepřátelskými bezpilotními prostředky.</Czech>
         <French>Définit si l'unité peut pirater un UAV (Drone) hostile.</French>
         <Spanish>Define si la unidad puede hackear UAV hostiles.</Spanish>
@@ -2081,6 +2089,7 @@
     </Key>
     <Key ID="STR_ENH_CAMOUFLAGECOEF_DISPLAYNAME">
         <English>Camouflage Coefficent</English>
+		<Italian>Coefficiente di camuffamento</Italian>
         <Czech>Koeficient kamufláže</Czech>
         <French>Coefficient de camouflage</French>
         <Spanish>Coeficiente de camuflaje</Spanish>
@@ -2091,6 +2100,7 @@
     </Key>
     <Key ID="STR_ENH_CAMOUFLAGECOEF_TOOLTIP">
         <English>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it's more difficult to spot it.</English>
+		<Italian>Il coefficente di camuffamento determina la facilita con cui un'unità puo essere avvistata dall'AI. Un valore minore significa piu difficoltà ad essere avvistati</Italian>
         <Czech>Tento koeficient určuje jak snadno může být jednotka zpozorována umělou inteligencí. Nižší hodnota znamená že je jednotku těžší odhalit.</Czech>
         <French>Détermine la facilité avec laquelle l'unité peut être repérée visuellement par l'IA (valeur faible = plus difficile à voir).</French>
         <Spanish>El coeficiente de camuflaje determina la facilidad con que una unidad puede ser detectada por la IA. Un valor menor significa que es más difícil detectarlo.</Spanish>
@@ -2101,6 +2111,7 @@
     </Key>
     <Key ID="STR_ENH_AUDIBLECOEF_DISPLAYNAME">
         <English>Audible Coefficient</English>
+		<Italian>Coefficente udibile</Italian>
         <Czech>Koeficient vydávané hlasitosti</Czech>
         <French>Coefficient de bruit</French>
         <Spanish>Coeficiente audible</Spanish>
@@ -2111,6 +2122,7 @@
     </Key>
     <Key ID="STR_ENH_AUDIBLECOEF_TOOLTIP">
         <English>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it's more difficult to hear it.</English>
+		<Italian>Il coefficiente audibile determina quanto facilmente l'AI possa sentire l'unità. Un valore basso significa che è piu difficile sentirla</Italian>
         <Czech>Tento koeficient určuje jak snadno může být jednotka zaslechnuta umělou inteligencí. Nižší hodnota znamená že je jednotku hůře slyšet.</Czech>
         <French>Détermine la facilité avec laquelle l'unité peut être entendue par l'IA (valeur faible = plus difficile à entendre).</French>
         <Spanish>El coeficiente audible determina la facilidad con que una unidad puede ser escuchada por AI. Un valor menor significa que es más difícil escucharlo.</Spanish>
@@ -2121,6 +2133,7 @@
     </Key>
     <Key ID="STR_ENH_LOADCOEF_DISPLAYNAME">
         <English>Load Coefficient</English>
+		<Italian>Coefficiente di carico</Italian>
         <Czech>Výdrž</Czech>
         <French>Coefficient de charge</French>
         <Spanish>Coeficiente de carga</Spanish>
@@ -2131,6 +2144,7 @@
     </Key>
     <Key ID="STR_ENH_LOADCOEF_TOOLTIP">
         <English>The load coefficient determines how much influence the unit's loadout weight has on it's stamina. A higher value means the weight has a higher influence.</English>
+		<Italian>Il coefficiente di carico determina quanto il peso del carico influisca sulla stamina di un'unità. Un maggior valore significa che il peso ha maggiore influenza.</Italian>
         <Czech>Tento koeficient určuje jak moc velký vliv má váha výstroje jednotky vliv na její výdrž. Vyšší hodnota znamená že váha má větší vliv na výdrž.</Czech>
         <French>Détermine l'influence que peut avoir la charge d'équipement de l'unité sur son endurance (valeur élevée = plus grande influence).</French>
         <Spanish>El coeficiente de carga determina cuánto influye el peso de la carga de la unidad sobre su resistencia. Un valor más alto significa que el peso tiene una influencia más alta.</Spanish>
@@ -2141,6 +2155,7 @@
     </Key>
     <Key ID="STR_ENH_DISABLENVGEQUIPMENT_TOOLTIP">
         <English>If enabled, night vision optics can no longer be used.</English>
+		<Italian>Se attivato, il visore notturno non puo più essere usato.</Italian>
         <Czech>Zamezí použití brýlí pro noční vidění.</Czech>
         <French>Si activé, les optiques de visée intégrant une vision nocturne ne peuvent pas être utilisées.</French>
         <Spanish>Si está habilitado, opticas de visión nocturna no pueden ser usadas.</Spanish>
@@ -2151,6 +2166,7 @@
     </Key>
     <Key ID="STR_ENH_DISABLENVGEQUIPMENT_DISPLAYNAME">
         <English>Disable NVG Equipment</English>
+		<Italian>Disabilita i visori notturni</Italian>
         <Czech>Zakázat použítí brýlí pro noční vidění</Czech>
         <French>Désactiver les optiques à vision nocturne</French>
         <Spanish>Deshabilitar equipamiento NVG</Spanish>
@@ -2161,6 +2177,7 @@
     </Key>
     <Key ID="STR_ENH_DISABLETIEQUIPMENT_DISPLAYNAME">
         <English>Disable Thermal Optics</English>
+		<Italian>Disabilita i Visori Termici</Italian>
         <Czech>Zakázat použití termální optiky</Czech>
         <French>Désactiver les optiques à vision thermique</French>
         <Spanish>Deshabilitar opticas térmicas</Spanish>
@@ -2171,6 +2188,7 @@
     </Key>
     <Key ID="STR_ENH_DISABLETIEQUIPMENT_TOOLTIP">
         <English>If enabled, thermal optics can no longer be used.</English>
+		<Italian>Se attivato, i visori termici non potranno essere più utilizzati.</Italian>
         <Czech>Zamezí použití termální optiky.</Czech>
         <French>Si activé, les optiques de visée intégrant une vision thermique ne peuvent pas être utilisées.</French>
         <Spanish>Si está habilitado, opticas térmicas no pueden ser usadas.</Spanish>
@@ -2181,6 +2199,7 @@
     </Key>
     <Key ID="STR_ENH_ALLOWFLEEING_DISPLAYNAME">
         <English>Fleeing Coefficient</English>
+		<Italian>Coefficiente di fuga</Italian>
         <Czech>Zbabělost</Czech>
         <French>Coefficient de fuite</French>
         <Spanish>Coeficiente de huida</Spanish>
@@ -2191,6 +2210,7 @@
     </Key>
     <Key ID="STR_ENH_ALLOWFLEEING_TOOLTIP">
         <English>Sets the cowardice level (the lack of courage or bravery) of the unit. The more cowardice the unit has, the sooner it will start fleeing. 0 means maximum courage, while 1 means always fleeing.</English>
+		<Italian>Imposta il livello di codardia (la mancanza di coraggio o valore)dell'unità.Più codardia un'unita ha, più velocemente si darà alla fuga. 0 significa coraggio al massimo, mentre 1 significa sempre fuga</Italian>
         <Czech>Určuje úroveň zbabělosti (nedostatek kuráže či odvahy) jednotky. Čím více je jednotka zbabělá, tím dříve začne ustupovat. 0 znamená že jednotka nikdy neustoupí, zatímco 1 znamená, že jednotka ustoupí vždy.</Czech>
         <French>Définit le niveau de peur de l'unité face au danger. Plus il est élevé, plus vite l'unité prendra la fuite (valeur entre 0 et 1, où 0 signifie qu'elle combattra jusqu'à sa mort/destruction et 1 signifie que l'unité prendra immédiatement la fuite).</French>
         <Spanish>Establece el nivel de cobardía (la falta de valor o valentía) de la unidad. Cuanto más cobardía tenga la unidad, más pronto comenzará a huir. 0 significa máxima valentía, mientras que 1 significa siempre huyendo.</Spanish>
@@ -2201,6 +2221,7 @@
     </Key>
     <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
         <English>Unladen Weight</English>
+		<Italian>peso a Vuoto</Italian>
         <Czech>Hmotnost</Czech>
         <French>Change la masse</French>
         <Spanish>Peso en vacío</Spanish>
@@ -2211,6 +2232,7 @@
     </Key>
     <Key ID="STR_ENH_SETMASS_TOOLTIP">
         <English>Change the original mass value from 0% - 100%. Keep in mind that too low values can cause unwanted behaviour.</English>
+		<Italian>Cambia il valore di massa originale da 0% - 100%. Tieni presente che valori troppo bassi possono causare comportamenti non voluti. </Italian>
         <Czech>Změní původní hodnotu hmotnosti v rozmezí 0% - 100%. Vezměte na vědomí že příliš nízké hodnoty mohou způsobit nepředvídatelné chování.</Czech>
         <French>Change la masse originale de l'objet selon un pourcentage de 0% à 100%. Attention, une valeur trop petite peut engendrer un comportement imprévisible.</French>
         <Spanish>Cambia la masa original del objeto de 0% a 100%. Tenga en cuenta que valores demasiado bajos pueden causar un comportamiento no deseado.</Spanish>
@@ -2221,6 +2243,7 @@
     </Key>
     <Key ID="STR_ENH_FORCEWALK_DISPLAYNAME">
         <English>Force Walking</English>
+		<Italian>Forza la camminata</Italian>
         <Czech>Vynutit chůzi</Czech>
         <French>Forcer à marcher</French>
         <Spanish>Forzar caminando</Spanish>
@@ -2231,6 +2254,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_DISPLAYNAME">
         <English>Visibility</English>
+		<Italian>Visibilità</Italian>
         <Spanish>Visibilidad</Spanish>
         <German>Sichtbarkeit</German>
         <Chinesesimp>能见度</Chinesesimp>
@@ -2241,6 +2265,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_TOOLTIP">
         <English>Defines the visibility of the object.</English>
+		<Italian>Stabilisce la visibilità dell'oggetto.</Italian>
         <Spanish>Define la visibilidad de un objeto.</Spanish>
         <German>Beeinflusst die Sichtbarkeit des Objektes.</German>
         <Chinesesimp>设置对象的可见性。</Chinesesimp>
@@ -2251,6 +2276,7 @@
     </Key>
     <Key ID="STR_ENH_REMOVEFROMREMAINSCOLLECTOR_DISPLAYNAME">
         <English>Disable Deletion on Death</English>
+		<Italian>Disabilita la rimozione dopo la morte</Italian>
         <German>Löschung bei Tod deaktivieren</German>
         <Chinesesimp>在死亡时停用删除</Chinesesimp>
         <Spanish>Desactivar la eliminación de la muerte</Spanish>
@@ -2261,6 +2287,7 @@
     </Key>
     <Key ID="STR_ENH_REMOVEFROMREMAINSCOLLECTOR_TOOLTIP">
         <English>The object won't be deleted after death or destruction.</English>
+		<Italian>L'oggetto non verrà rimosso dopo la distruzione o la morte.</Italian>
         <German>Das Objekt wird nicht gelöscht wenn es zerstört oder getötet wurde.</German>
         <Chinesesimp>死亡或毁坏后不会删除该对象。</Chinesesimp>
         <Spanish>El objeto no será eliminado después de la muerte o destrucción.</Spanish>
@@ -2271,6 +2298,7 @@
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_ACTIONPERFORMED">
         <English>Action performed!</English>
+		<Italian>Azione eseguita!</Italian>
         <Czech>Akce provedena!</Czech>
         <French>Action effectuée !</French>
         <Spanish>¡Acción efectuada!</Spanish>
@@ -2289,6 +2317,7 @@
     </Key>
     <Key ID="STR_ENH_ENABLE">
         <English>Enable</English>
+		<Italian>Attiva</Italian>
         <Czech>Aktivovat</Czech>
         <French>Activer</French>
         <Spanish>Habilitar</Spanish>
@@ -2299,6 +2328,7 @@
     </Key>
     <Key ID="STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP">
         <English>Session Time</English>
+		<Italian>Tempo della sessione</Italian>
         <Czech>Doba relace</Czech>
         <French>Durée de la session</French>
         <Spanish>Hora de la sesión</Spanish>
@@ -2309,6 +2339,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
         <English>Center Position</English>
+		<Italian>Posizione centrale</Italian>
         <Czech>Středová pozice</Czech>
         <French>Centre</French>
         <Spanish>Posición centrada</Spanish>
@@ -2319,6 +2350,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP">
         <English>The center position of the virtual UAV's orbit.</English>
+		<Italian>La posizione centrale dell'orbita virtuale dell'UAV.</Italian>
         <Czech>Střed orbity po které bude virtuální UAV obíhat.</Czech>
         <French>Définit le centre de l'orbite de l'UAV (Drone) virtuel</French>
         <Spanish>La posición centrada de la orbita del UAV (Drone) virtual</Spanish>
@@ -2329,6 +2361,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT">
         <English>Displayed Text</English>
+		<Italian>Mostra il testo</Italian>
         <Czech>Zobrazený text</Czech>
         <French>Texte affiché</French>
         <Spanish>Texto mostrado</Spanish>
@@ -2339,6 +2372,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_ALTITUDE_DISPLAYNAME">
         <English>Altitude</English>
+		<Italian>Altitudine</Italian>
         <Czech>Výška</Czech>
         <French>Altitude</French>
         <Spanish>Altitud</Spanish>
@@ -2349,6 +2383,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME">
         <English>Radius of the Orbit</English>
+		<Italian>Raggio dell'orbita</Italian>
         <Czech>Poloměr orbity</Czech>
         <German>Radius der Umlaufbahn</German>
         <Spanish>Radio de la orbita</Spanish>
@@ -2359,6 +2394,7 @@
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME">
         <English>Viewing Angle</English>
+		<Italian>Angolo visuale</Italian>
         <Czech>Zobrazovací úhel</Czech>
         <French>Angle de la caméra</French>
         <Spanish>Ángulo de la cámara</Spanish>
@@ -2369,6 +2405,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME">
         <English>Delay</English>
+		<Italian>Ritardo</Italian>
         <Czech>Prodleva</Czech>
         <French>Délai</French>
         <Spanish>Retraso</Spanish>
@@ -2379,6 +2416,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP">
         <English>Defines how much time has to pass until the intro text is shown. Setting it to 0 will disable the intro.</English>
+		<Italian>Stabilisce quanto tempo deve passare prima che il testo dell'introduzione compaia. Settarlo sullo 0 disabiliterà l'introduzione.</Italian>
         <Czech>Určuje kolik času musí uplynout než se úvodní text zobrazí. Nastavení této hodnoty na 0 deaktivuje intro.</Czech>
         <French>Défini le délai d'apparition du texte d'introduction. Définir sur 0 pour désactiver l'introduction.</French>
         <Spanish>Define cuánto tiempo tiene que pasar hasta que se muestre el texto de introducción. Si se establece en 0, se inhabilitará la introducción.</Spanish>
@@ -2389,6 +2427,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_LINE1_DISPLAYNAME">
         <English>First Line</English>
+		<Italian>Prima linea</Italian>
         <Czech>První řádek</Czech>
         <French>Première ligne</French>
         <Spanish>Primera línea</Spanish>
@@ -2399,6 +2438,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_LINE2_DISPLAYNAME">
         <English>Second Line</English>
+		<Italian>Seconda linea</Italian>
         <Czech>Druhý řádek</Czech>
         <French>Deuxième ligne</French>
         <Spanish>Segunda línea</Spanish>
@@ -2409,6 +2449,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_LINE3_DISPLAYNAME">
         <English>Third Line</English>
+		<Italian>Terza linea</Italian>
         <Czech>Třetí řádek</Czech>
         <French>Troisième ligne</French>
         <Spanish>Tercera línea</Spanish>
@@ -2419,6 +2460,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME">
         <English>Intro Type</English>
+		<Italian>Tipo di introduzione</Italian>
         <Czech>Druh Intra</Czech>
         <German>Introtyp</German>
         <Spanish>Tipo de intro</Spanish>
@@ -2426,6 +2468,7 @@
     </Key>
     <Key ID="STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME">
         <English>Grass disabled</English>
+		<Italian>Disabilita l'erba</Italian>
         <Czech>Tráva vypnuta</Czech>
         <French>Herbe désactivée</French>
         <Spanish>Hierba deshabilitada</Spanish>
@@ -2436,6 +2479,7 @@
     </Key>
     <Key ID="STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME">
         <English>Standard</English>
+		<Italian>Standard</Italian>
         <Czech>Standardní</Czech>
         <French>Standard</French>
         <Spanish>Estándar</Spanish>
@@ -2446,6 +2490,7 @@
     </Key>
     <Key ID="STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME">
         <English>High</English>
+		<Italian>Alto</Italian>
         <Czech>Vysoké</Czech>
         <French>Elevé</French>
         <Spanish>Alto</Spanish>
@@ -2456,6 +2501,7 @@
     </Key>
     <Key ID="STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME">
         <English>Ultra</English>
+		<Italian>Ultra</Italian>
         <Czech>Ultra</Czech>
         <French>Ultra</French>
         <Spanish>Ultra</Spanish>
@@ -2466,6 +2512,7 @@
     </Key>
     <Key ID="STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME">
         <English>Very  High</English>
+		<Italian>Molto Alto</Italian>
         <Czech>Velmi vysoké</Czech>
         <French>Très élevé</French>
         <Spanish>Muy alto</Spanish>
@@ -2476,6 +2523,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TEXT">
         <English>Limit by Object View Distance</English>
+		<Italian>Limitato dalla distanza di visione dell'oggetto</Italian>
         <Czech>Omezit podle vykreslovací vzdálenosti objektů</Czech>
         <Spanish>Limitado por distancia de visión de objetos</Spanish>
         <German>Limitiert durch Objektsichtweite.</German>
@@ -2486,6 +2534,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_OBJECTVIEWDISTANCE_TOOLTIP">
         <English>Object is always visible within object view distance.</English>
+		<Italian>L'oggetto è sempre visibile se entro la distanza di visione degli oggetti.</Italian>
         <Czech>Objekt je vždy viditelný uvnitř vykreslovací vzdálenosti objektů.</Czech>
         <Spanish>El objeto está siempre visible dentro de la distancia de visión de objetos.</Spanish>
         <German>Das Objekt ist immer sichtbar innerhalb der Objektsichweite.</German>
@@ -2496,6 +2545,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TEXT">
         <English>Limit by Terrain View Distance</English>
+		<Italian>Limitato dalla distanza di visione del Terreno</Italian>
         <Czech>Omezit podle vykreslovací vzdálenosti krajiny</Czech>
         <Spanish>Limitado por la distancia de visión del terreno</Spanish>
         <German>Limitiert durch Geländesichtbarkeit</German>
@@ -2506,6 +2556,7 @@
     </Key>
     <Key ID="STR_ENH_FEATURETYPE_TERRAINVIEWDISTANCE_TOOLTIP">
         <English>Object is always visible within terrain view distance.</English>
+		<Italian>L'oggetto è sempre visibile se entro la distanza di visione del Terreno.</Italian>
         <Czech>Objekt je vždy viditelný uvnitř vykreslovací vzdálenosti krajiny.</Czech>
         <Spanish>El objeto es siempre visible dentro de la distancia de la vista del terreno.</Spanish>
         <German>Das Objekt ist immer innerhalb der Geländesichtweite sichtbar.</German>
@@ -2516,6 +2567,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDDAMAGE">
         <English>Advanced Damage</English>
+		<Italian>Danno avanzato</Italian>
         <Czech>Pokročilé poškození</Czech>
         <French>Dégâts avancés</French>
         <Spanish>Daño avanzado</Spanish>
@@ -2526,6 +2578,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_VOLUME">
         <English>Music, Sound &amp; Radio Settings</English>
+		<Italian>Configurazione della Musica, Suono e della Radio</Italian>
         <Czech>Hudba, zvuk &amp; nastavení rádia</Czech>
         <French>Sons, musiques et radio</French>
         <Spanish>Configuración de música, sonido y radio</Spanish>
@@ -2536,6 +2589,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_VISUALSETTINGS">
         <English>Visual Settings</English>
+		<Italian>Configurazione della grafica</Italian>
         <Czech>Nastavení grafiky</Czech>
         <French>Paramètres graphiques</French>
         <Spanish>Configuración visual</Spanish>
@@ -2546,6 +2600,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDSKILL">
         <English>Advanced Skill Settings</English>
+		<Italian>Configurazione delle abilità avanzate</Italian>
         <Czech>Pokročilé nastavení dovedností</Czech>
         <French>Compétences avancées</French>
         <Spanish>Configuración de habilidad avanzada</Spanish>
@@ -2556,6 +2611,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_DISABLEAI">
         <English>Disable AI Features</English>
+		<Italian>Disabilita le funzionalità dell'AI</Italian>
         <Czech>Deaktivovat možnosti umělé inteligence</Czech>
         <French>Désactiver des fonctionnalités de l'IA</French>
         <Spanish>Deshabilitar características de la IA</Spanish>
@@ -2566,6 +2622,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_UNITTRAITS">
         <English>Unit Traits</English>
+		<Italian>Caratteristiche dell'unità</Italian>
         <Czech>Vlastnosti jednotky</Czech>
         <French>Caractéristiques de l'unité</French>
         <Spanish>Características de la unidad</Spanish>
@@ -2576,6 +2633,7 @@
     </Key>
     <Key ID="STR_ENH_AMBIENTFLYBY_DISPLAYNAME">
         <English>Ambient Flyby</English>
+		<Italian>Sorvolo Ambientale</Italian>
         <Czech>Ambientní přelet</Czech>
         <French>Survol d'ambiance</French>
         <Spanish>Sobre vuelo Ambiental</Spanish>
@@ -2585,6 +2643,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_ESTABLISHINGSHOT">
         <English>Establishing Shot</English>
+		<Italian>Introduzione con vista dal drone UAV</Italian>
         <Czech>Úvodní záběr (UAV Intro)</Czech>
         <French>Introduction avec drone</French>
         <Spanish>Introducción con UAV</Spanish>
@@ -2604,6 +2663,7 @@
     </Key>
     <Key ID="STR_ENH_INTROTEXT_DISPLAYNAME">
         <English>Intro Text</English>
+		<Italian>Testo dell'introduzione</Italian>
         <Czech>Úvodní text</Czech>
         <French>Texte d'introduction</French>
         <Spanish>Texto de la intro</Spanish>
@@ -2614,6 +2674,7 @@
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
+		<Italian>Editoe del Briefing</Italian>
         <Czech>Editor brífinku</Czech>
         <French>Éditeur de Briefing</French>
         <Spanish>Editor de briefing</Spanish>
@@ -2624,6 +2685,7 @@
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_COLOUR">
         <English>Colour</English>
+		<Italian>Colore</Italian>
         <Czech>Barva</Czech>
         <French>Couleur</French>
         <Spanish>Color</Spanish>
@@ -2634,6 +2696,7 @@
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_COLOUR">
         <English>Colour</English>
+		<Italian>Colore</Italian>
         <Czech>Barva</Czech>
         <French>Couleur</French>
         <Spanish>Color</Spanish>
@@ -2644,6 +2707,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_CLEARPLAYLIST_TEXT">
         <English>Clear Playlist</English>
+		<Italian>Cancella la Playlist</Italian>
         <Czech>Vymazat playlist</Czech>
         <Spanish>Borrar selección</Spanish>
         <German>Playlist leeren</German>
@@ -2654,6 +2718,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_EXPORTPLAYLIST_TEXT">
         <English>Export</English>
+		<Italian>Esporta</Italian>
         <Czech>Export</Czech>
         <Spanish>Exportar</Spanish>
         <German>Export</German>
@@ -2664,6 +2729,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT">
         <English>Import</English>
+		<Italian>Importa</Italian>
         <Czech>Import</Czech>
         <Spanish>Importar</Spanish>
         <German>Importieren</German>
@@ -2674,6 +2740,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HEADLINE_TITLE">
         <English>Title</English>
+		<Italian>Titolo</Italian>
         <Czech>Název</Czech>
         <Spanish>Título</Spanish>
         <German>Titel</German>
@@ -2684,6 +2751,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HEADLINE_DURATION">
         <English>Duration</English>
+		<Italian>Durata</Italian>
         <Czech>Délka</Czech>
         <Spanish>Duración</Spanish>
         <German>Länge</German>
@@ -2694,6 +2762,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HEADLINE_THEME">
         <English>Theme</English>
+		<Italian>Tema</Italian>
         <Czech>Téma</Czech>
         <Spanish>Tema</Spanish>
         <German>Thema</German>
@@ -2704,6 +2773,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HEADLINE_MOD">
         <English>Mod</English>
+		<Italian>Mod</Italian>
         <Czech>Mód</Czech>
         <Spanish>Mod</Spanish>
         <German>Mod</German>
@@ -2714,6 +2784,7 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HELP_TEXT">
         <English>Help</English>
+		<Italian>Aiuto</Italian>
         <Czech>Pomoc</Czech>
         <German>Hilfe</German>
         <Spanish>Ayuda</Spanish>
@@ -2724,6 +2795,8 @@
     </Key>
     <Key ID="STR_ENH_3DENRADIO_HELP_DESCRIPTION">
         <English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
+		<Italian>- Fai doppio clic con il pulsante sinistro del mouse su una voce della casella di riepilogo per riprodurre immediatamente il brano \ n- Aggiungi un brano alla playlist premendo SPACE \ n- Copia il nome della classe di un brano negli appunti premendo CTRL + C \ n- Rimuovi una voce dal Playlist selezionandola e premendo CANC
+		</Italian>
         <Czech>- Dvojí kliknutí levým tlačítkem na záznam v seznamu přehraje hudbu okamžitě\n- Přidejte hudbu do svého playlistu stisknutím SPACE\n - Zkopírujte jméno třídy (class name) hudby do své schránky stisknutím CTRL + C\n - Odstraňte záznam z playlistu jeho vybráním a stisknutím DELETE</Czech>
         <German>- Doppelt Linksklick auf einen Listeneintrag spielt das Lied sofor\n- Füge ein Lied zur Playlist indem du das Lied markierst und SPACE drückst\n- Ein Klassenname kann mit CTRL+C in die Zwischenablage kopiert werden</German>
         <Chinesesimp>- 双击列表框条目立即播放歌曲\n- 通过按SPACE\n-将歌曲添加到播放列表 - 按CTRL + C\n-将歌曲的类名复制到剪贴板 &lt;br/&gt; - 通过选择并按DELETE从播放列表中删除条目</Chinesesimp>
@@ -2733,6 +2806,7 @@
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS">
         <English>Name Objects</English>
+		<Italian>Nome dell'oggetto</Italian>
         <Czech>Pojmenovat objekty</Czech>
         <German>Objekte benennen</German>
         <Chinesesimp>对象名称</Chinesesimp>
@@ -2743,6 +2817,7 @@
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS_REMOVENAME">
         <English>Remove Name</English>
+		<Italian>Rimuovi il nome</Italian>
         <Czech>Odstranit jméno</Czech>
         <German>Namen entf.</German>
         <Chinesesimp>删除名称</Chinesesimp>
@@ -2753,6 +2828,7 @@
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS_STARTINDEX">
         <English>Start Index</English>
+		<Italian>Indice iniziale</Italian>
         <Czech>Startovní číslo</Czech>
         <German>Anfangszahl</German>
         <Chinesesimp>开启索引</Chinesesimp>
@@ -2763,11 +2839,13 @@
     </Key>
     <Key ID="STR_ENH_GARRISON_NOTIFICATION">
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
+		<Italian>Non ci sono abbastanza posizioni vuote dell'edificio, aumentare il raggio o la copertura.</Italian>
         <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
         <French>Il n'y a pas assez de bâtiments vides à proximité. Augmentez le rayon ou le pourcentage de couverture.</French>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
         <English>Fill Area </English>
+		<Italian>Area di riempimento</Italian>
         <Czech>Vyplnit oblast</Czech>
         <French>Remplissage de zone</French>
         <Spanish>Área de relleno</Spanish>
@@ -2778,6 +2856,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_HEADER">
         <English>Settings: Pattern Tools</English>
+		<Italian>Impostazioni: strumento modello</Italian>
         <Czech>Nastavení: Nástroje tvaru</Czech>
         <French>Paramètres : Outil de Remplissage</French>
         <Spanish>Configuración de Formaciones</Spanish>
@@ -2788,6 +2867,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_RADIUS">
         <English>Radius</English>
+		<Italian>Raggio</Italian>
         <Czech>Poloměr</Czech>
         <German>Radius</German>
         <Chinesesimp>半径</Chinesesimp>
@@ -2798,6 +2878,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_LINEPATTERN_HEADER">
         <English>Line Pattern</English>
+		<Italian>Modello di Linea</Italian>
         <Czech>Zobrazit linie</Czech>
         <French>Aligner</French>
         <Spanish>En línea</Spanish>
@@ -2808,6 +2889,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_SPACING">
         <English>Spacing</English>
+		<Italian>Spaziatura</Italian>
         <Czech>Rozestup</Czech>
         <German>Abstand</German>
         <Chinesesimp>间距</Chinesesimp>
@@ -2818,6 +2900,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_RECTANGLE_HEADER">
         <English>Rectangle Pattern</English>
+		<Italian>modello Rettangolo</Italian>
         <Czech>Obdélníkový tvar</Czech>
         <German>Rechteck-Muster</German>
         <Spanish>Patrón de rectángulo</Spanish>
@@ -2825,6 +2908,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_A">
         <English>A</English>
+		<Italian>A</Italian>
         <Czech>A</Czech>
         <German>A</German>
         <Spanish>A</Spanish>
@@ -2835,6 +2919,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_B">
         <English>B</English>
+		<Italian>B</Italian>
         <Czech>B</Czech>
         <German>B</German>
         <Spanish>B</Spanish>
@@ -2845,11 +2930,11 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_DESCRIPTION">
         <English>Description:</English>
+		<Italian>Descrizione:</Italian>
         <Czech>Popis:</Czech>
         <German>Beschreibung:</German>
         <Russian>Описание:</Russian>
         <Polish>Opis:</Polish>
-        <Italian>Descrizione:</Italian>
         <Spanish>Descripción:</Spanish>
         <French>Description :</French>
         <Portuguese>Descrição:</Portuguese>
@@ -2857,6 +2942,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_POSITION">
         <English>Position:</English>
+		<Italian>Posizione:</Italian>
         <Czech>Pozice:</Czech>
         <German>Position:</German>
         <Chinesesimp>位置：</Chinesesimp>
@@ -2867,6 +2953,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_DUPLICATE">
         <English>Duplicate:</English>
+		<Italian>Duplicato:</Italian>
         <Czech>Duplikovat:</Czech>
         <German>Duplizieren:</German>
         <Chinesesimp>重复：</Chinesesimp>
@@ -2877,6 +2964,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_DIRECTION">
         <English>Direction:</English>
+		<Italian>Direzione:</Italian>
         <Czech>Směr:</Czech>
         <German>Ausrichtung:</German>
         <Chinesesimp>方向：</Chinesesimp>
@@ -2887,6 +2975,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_SYNC">
         <English>Can be synced with:</English>
+		<Italian>Puo essere sincronizzato con:</Italian>
         <Czech>Může být synchroznizován s:</Czech>
         <German>Kann synchronisiert werden mit:</German>
         <Chinesesimp>可以同步:</Chinesesimp>
@@ -2897,6 +2986,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION">
         <English>Module Information</English>
+		<Italian>Informazioni sul modulo</Italian>
         <Czech>Informace o modulu</Czech>
         <German>Modulerläuterung</German>
         <Chinesesimp>模块信息</Chinesesimp>
@@ -2907,6 +2997,7 @@
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER">
         <English>Texture Finder</English>
+		<Italian>Cercatore di Texture</Italian>
         <Czech>Vyhledávač textur</Czech>
         <German>Texturen finden</German>
         <Chinesesimp>纹理查找器</Chinesesimp>
@@ -2917,6 +3008,7 @@
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_UPDATELIST">
         <English>Update List</English>
+		<Italian>Aggiorna lista</Italian>
         <Czech>Aktualizovat seznam</Czech>
         <German>Liste updaten</German>
         <Spanish>Actualizar lista</Spanish>
@@ -2924,6 +3016,7 @@
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_FILTERJPG">
         <English>Hide JPG</English>
+		<Italian>Nascondi JPG</Italian>
         <Czech>Skrýt JPG</Czech>
         <German>JPG verstecken</German>
         <Spanish>Ocultar JPG</Spanish>
@@ -2931,6 +3024,7 @@
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_FILTERPAA">
         <English>Hide PAA</English>
+		<Italian>Nascondi PAA</Italian>
         <Czech>Skrýt PAA</Czech>
         <German>PAA verstecken</German>
         <Spanish>Ocultar PAA</Spanish>
@@ -2938,6 +3032,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_GRID_HEADER">
         <English>Grid Pattern</English>
+		<Italian>Modello di griglia</Italian>
         <Czech>Vzor mřížky</Czech>
         <German>Im Raster anordnen</German>
         <Chinesesimp>网格图形</Chinesesimp>
@@ -2948,6 +3043,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
         <English>#Colums</English>
+		<Italian>#Colonne</Italian>
         <Czech>#Sloupce</Czech>
         <German>#Spalten</German>
         <Chinesesimp>列数</Chinesesimp>
@@ -2958,6 +3054,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGX">
         <English>Spacing X</English>
+		<Italian>Distanza X</Italian>
         <Czech>Rozestup X</Czech>
         <German>Abstand X</German>
         <Chinesesimp>X间距</Chinesesimp>
@@ -2968,6 +3065,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGY">
         <English>Spacing Y</English>
+		<Italian>Distanza Y</Italian>
         <Czech>Rozestup Y</Czech>
         <German>Abstand Y</German>
         <Chinesesimp>Y间距</Chinesesimp>
@@ -2978,6 +3076,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_CENTRALANGLE">
         <English>Central Angle</English>
+		<Italian>Angolo Centrale</Italian>
         <Czech>Středový úhel</Czech>
         <German>Öffnungswinkel</German>
         <Spanish>Angulo Central</Spanish>
@@ -2987,6 +3086,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
         <English>Initial Angle</English>
+		<Italian>Angolo Iniziale</Italian>
         <Czech>Počáteční úhel</Czech>
         <German>Startwinkel</German>
         <Spanish>Angulo Inicial</Spanish>
@@ -2995,6 +3095,7 @@
         <French>Angle initial</French>
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE">
+	    <Italian>Rimpiazza in gruppo</Italian>
         <English>Batch Replace</English>
         <Czech>Dávkově nahradit</Czech>
         <German>Objekte ersetzen</German>
@@ -3005,6 +3106,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_REPLACE">
         <English>Replace</English>
+		<Italian>Rimpiazza</Italian>
         <Czech>Nahradit</Czech>
         <German>Ersetzen</German>
         <Chinesesimp>替换</Chinesesimp>
@@ -3015,6 +3117,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH">
         <English>Replace with:</English>
+		<Italian>Rimpiazza con:</Italian>
         <Czech>Nahradit za:</Czech>
         <German>Ersetzen durch:</German>
         <Chinesesimp>替换为：</Chinesesimp>
@@ -3025,6 +3128,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP">
         <English>Example: Classname_1 Classname_2 Classname_n</English>
+		<Italian>Esempio: Classname_1 Classname_2 Classname_n</Italian>
         <Czech>Příklad: Classname_1 Classname_2 Classname_n</Czech>
         <German>Beispiel: Klassenname_1 Klassenname_2 Klassenname_n</German>
         <Chinesesimp>例如：Classname_1 Classname_2 Classname_n以此类推</Chinesesimp>
@@ -3035,6 +3139,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_DESCRIPTION">
         <English>All selected objects will be replaced by the object types you enter in the edit box below randomly.</English>
+		<Italian>Tutti gli oggetti selezionati verranno sostituiti in modo casuale dai tipi di oggetto immessi nella casella di modifica in basso.</Italian>
         <Czech>Všechny vybrané objekty budou náhodně nahrazeny typy objektu který vložíte do pole níže.</Czech>
         <German>Alle ausgewählten Objekte werden durch die hier angegebenen Objekttypen willkürlich ausgetauscht.</German>
         <Chinesesimp>所有选定的对象将被您在下面的编辑框中随机输入的对象类型所取代。</Chinesesimp>
@@ -3045,6 +3150,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP">
         <English>Press CTRL + F to directly jump into the search box.</English>
+		<Italian>Premi CTRL + F per andare direttamente alla casella di ricerca.</Italian>
         <German>Drücke STRG + F um direkt in die Suche zu springen.</German>
         <Chinesesimp>按CTRL + F直接跳转到搜索框。</Chinesesimp>
         <Spanish>Presione CTRL + F para saltar directamente al cuadro de búsqueda.</Spanish>
@@ -3055,6 +3161,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_HEADER">
         <English>3den Enhanced Functions Viewer</English>
+		<Italian>Visualizzatore delle funzioni di 3den Enhanced</Italian>
         <Czech>3den Enhanced Prohlížeč funkcí</Czech>
         <French>Afficher les fonctions 3den Enhanced</French>
         <Spanish>3den Enhanced Visor de funciones</Spanish>
@@ -3067,6 +3174,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_EXPANDALL_TEXT">
         <English>Expand All</English>
+		<Italian>Espandi Tutto</Italian>
         <Czech>Rozbalit vše</Czech>
         <French>Tout développer</French>
         <Spanish>Ampliar todo</Spanish>
@@ -3079,6 +3187,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT">
         <English>Copy Function</English>
+		<Italian>Copia Funzione</Italian>
         <German>Funktion kopieren</German>
         <Chinesesimp>复制函数</Chinesesimp>
         <Spanish>Función de copia</Spanish>
@@ -3089,6 +3198,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP">
         <English>Copies the function's code, path and name to the clipboard. Can also be triggered by pressing CTRL + X.</English>
+		<Italian>Copia il codice, il percorso e il nome della funzione negli Appunti. Può anche essere attivato premendo CTRL + X.</Italian>
         <German>Kopiert den Funktionsnamen, Pfad und Code in die Zwischenablage. Kopieren kann auch durch das Drücken von STRG + X durchgeführt werden.</German>
         <Chinesesimp>将函数的代码、路径和名称复制到剪贴板。也可以通过按下CTRL + X触发。</Chinesesimp>
         <Spanish>Copia el código de la función, la ruta y el nombre en el portapapeles. También puede activarse presionando CTRL + X.</Spanish>
