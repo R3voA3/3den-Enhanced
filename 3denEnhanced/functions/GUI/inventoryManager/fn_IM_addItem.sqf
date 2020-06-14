@@ -1,0 +1,53 @@
+/*
+   Author: R3vo
+
+   Date: 2020-06-14
+
+   Description:
+   Used by the ENH_InventoryManager GUI. Adds an item to the inventory list.
+
+   Parameter(s):
+   0: CONTROL - Control Button
+   1: NUMBER - Amount of items to be added
+
+   Returns:
+   BOOLEAN: true
+*/
+
+params ["_ctrlButton","_amount"];
+private _display = ctrlparent _ctrlButton;
+private _ctrlInventory = _display displayCtrl 1501;
+private _ctrlItems = _display displayCtrl 1500;
+
+private _row = lbCurSel _ctrlItems;
+
+if (_row isEqualTo -1) exitWith {false};
+
+private _rows = lnbSize _ctrlInventory select 0;
+private _displayName = _ctrlItems lbText _row;
+private _configName = _ctrlItems lbData _row;
+private _allItems = uiNamespace getVariable "ENH_IM_allItems";
+
+_index = _allItems findIf {_x select 0 isEqualTo _configName};
+private _itemData = _allItems select _index;
+_itemData params ["_configName","_displayName","_image","_addonIcon"];
+
+private _itemAdded = false;
+
+for "_i" from 0 to (( _rows - 1)) max 0 do
+{
+	if (_configName == _ctrlInventory lnbData [_i,0]) exitWith
+	{
+		private _currentAmount = _ctrlInventory lnbValue [_i,1];
+		private _newAmount = _currentAmount + _amount;
+		_ctrlInventory lnbSetText [[_i,2],str _newAmount];
+		_ctrlInventory lnbSetValue [[_i,1],_newAmount];
+		_itemAdded = true;
+	};
+};
+if !(_itemAdded) then//If item was not found in the list, add it
+{
+	[_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount] call ENH_fnc_IM_LnbAddItem;
+};
+
+true

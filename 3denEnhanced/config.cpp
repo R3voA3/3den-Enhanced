@@ -21,6 +21,9 @@
 #include "GUI\extraction.hpp"
 #include "GUI\3DENCameraPositions.hpp"
 #include "GUI\variableViewer.hpp"
+#include "GUI\inventoryManager.hpp"
+#include "GUI\inventoryManager_templateData.hpp"
+#include "GUI\inventoryManager_itemPreview.hpp"
 
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"

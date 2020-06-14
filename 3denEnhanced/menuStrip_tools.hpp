@@ -53,7 +53,8 @@ class ENH_Folder_Loadout
 		"ENH_RemoveVests",
 		"ENH_RemoveGoggles",
 		"ENH_RemoveHeadgear",
-		"ENH_RemoveWeapons"
+		"ENH_RemoveWeapons",
+		"ENH_InventoryManager"
 	};
 };
 class ENH_Folder_GUI
@@ -206,6 +207,13 @@ class ENH_VariableViewer
 	text = "Variable Viewer";
 	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
+	opensNewWindow = 1;
+};
+class ENH_InventoryManager
+{
+	text = "InventoryManager";
+	//picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
+	action = "call ENH_fnc_IM_open";
 	opensNewWindow = 1;
 };
 //Miscellaneous
