@@ -17,7 +17,7 @@ class Cfg3DEN
 			isWarning = 1;
 			text = $STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED;
 		};
-	};
+	}; 
 	class EventHandlers
 	{
 		class ENH
