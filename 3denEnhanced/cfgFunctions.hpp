@@ -15,7 +15,7 @@ class CfgFunctions
 			class 3DENRadio_sortBy;
 			class 3DENRadio_searchList;
 			class 3DENRadio_selectNewSong;
-		};sdfsd
+		};
 		class Garrison
 		{
 			file = "3denEnhanced\functions\GUI\garrison";
