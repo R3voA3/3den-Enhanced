@@ -1,4 +1,4 @@
-class ENH_IntroText_Category
+class ENH_IntroText
 {
 	collapsed = 1;
 	displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;

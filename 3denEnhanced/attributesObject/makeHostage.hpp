@@ -2,6 +2,7 @@ class ENH_MakeHostage: ENH_SetCaptive
 {
 	displayName = $STR_ENH_MAKEHOSTAGE_DISPLAYNAME;
 	tooltip = $STR_ENH_MAKEHOSTAGE_TOOLTIP;
+	control = "Checkbox";
 	property = "ENH_makeHostage";
 	expression =
 	"\
@@ -32,4 +33,5 @@ class ENH_MakeHostage: ENH_SetCaptive
 			[_this,ENH_fnc_makeHostage] remoteExec ['call',0,true];\
 		};\
 	";
+	defaultValue = "false";
 };

@@ -204,16 +204,9 @@ class ENH_3DENCamPositions
 };
 class ENH_VariableViewer
 {
-	text = "Variable Viewer";
+	text = $STR_ENH_TOOLS_VARIABLEVIEWER;
 	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
-	opensNewWindow = 1;
-};
-class ENH_InventoryManager
-{
-	text = "InventoryManager";
-	//picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
-	action = "call ENH_fnc_IM_open";
 	opensNewWindow = 1;
 };
 //Miscellaneous
@@ -359,7 +352,7 @@ class ENH_CopyLoadout
 	action = "'copy' call ENH_fnc_loadoutTool";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_C};
 };
-class ENH_ApplyLoadout: ENH_copyLoadout
+class ENH_ApplyLoadout
 {
 	text = $STR_ENH_TOOLS_APPLYLOADOUTS;
 	action = "'apply' call ENH_fnc_loadoutTool";
@@ -403,6 +396,13 @@ class ENH_RemoveWeapons
 	text = $STR_ENH_TOOLS_REMOVEWEAPONS;
 	action = "4 call ENH_fnc_removeGear";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
+};
+class ENH_InventoryManager
+{
+	text = $STR_ENH_TOOLS_INVENTORYMANAGER;
+	action = "call ENH_fnc_IM_open";
+	opensNewWindow = 1;
+	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_I};
 };
 //GUI
 class ENH_ExportGUIBaseClassesAll
