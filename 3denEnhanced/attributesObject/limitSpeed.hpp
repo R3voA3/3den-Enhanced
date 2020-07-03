@@ -1,4 +1,4 @@
-class ENH_LimitSpeed: ENH_SetCaptive
+class ENH_LimitSpeed
 {
 	displayName = $STR_ENH_LIMITSPEED_DISPLAYNAME;
 	tooltip = $STR_ENH_LIMITSPEED_TOOLTIP;

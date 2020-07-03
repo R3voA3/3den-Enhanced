@@ -1,4 +1,4 @@
-class ENH_SPR_Tickets: ENH_SetCaptive
+class ENH_SPR_Tickets
 {
 	displayName = $STR_ENH_RESPAWNTICKETS_DISPLAYNAME;
 	tooltip = $STR_ENH_RESPAWNTICKETS_TOOLTIP;

@@ -1,3 +1,10 @@
+v5.6
+*added*
+- Vehicle Inventory Manager
+
+*changed*
+- Texture Finder will no longer list some textures multiple times
+
 v5.5
 *changed*
 - Italian translation was updated by zagor64bz
