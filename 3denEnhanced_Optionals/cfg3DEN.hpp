@@ -4,7 +4,7 @@ class Cfg3DEN
 	{
 		class ENH_Optionals
 		{
-			onTerrainNew = "call ENH_fnc_removeItemsFromMenu";
+			onTerrainNew = "call ENHO_fnc_removeItemsFromMenu";
 		};
 	};
  	class Mission

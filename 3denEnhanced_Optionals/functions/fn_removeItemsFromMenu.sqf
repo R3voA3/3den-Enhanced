@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-07-03
+
+   Description:
+   Loops through all menu strip entires and checks if they are blacklisten. If true it removes the entry. Is executed everytime the editor is started.
+
+   Parameter(s):
+   -
+
+   Returns:
+   BOOLEAN: true
+*/
+
 #include "\userconfig\3denEnhanced_Optionals_MenuStrip.hpp"
 
 private _ctrlMenuStrip = findDisplay 313 displayCtrl 120;
