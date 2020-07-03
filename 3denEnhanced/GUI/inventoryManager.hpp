@@ -4,7 +4,6 @@
 class ENH_InventoryManager
 {
 	idd = 80000;
-	//onLoad = "_this call compile preprocessfileLineNumbers 't.sqf'; _this call ENH_fnc_IM_onLoad";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -31,7 +30,8 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
 			w = 40 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			sizeEx = 1.2 * GUI_GRID_H;//Used eden macro
+			font = FONT_BOLD;
+			sizeEx = SIZEEX_PURISTA(SIZEEX_L);
 		};
 		class InventoryItems: AvailableItems
 		{
@@ -60,10 +60,8 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + CTRL_DEFAULT_H + GRID_H;
 			w = DIALOG_W * GRID_W - 2 * GRID_W;
 			h = 3 * CTRL_DEFAULT_H;
-			//colorBackgroundDisable[] = {1,1,1,0.25}; This needs to work
-			//colorTextDisable[] = {1,1,1,0.25};
-			strings[] = {"Assault Rifles","Machine Guns","Sniper Rifles","Shotguns","Submachine Guns","Launchers","Handguns","Grenades","Smoke Grenades","Magazines","Mines","Bipods","Muzzles","Pointer","Scopes","Uniforms","Vests","Backpacks","Headgear","Glasses","Items"};
-			onToolBoxSelChanged = "_this call ENH_fnc_IM_FilterList";
+			strings[] = {"Assault Rifles","Machine Guns","Sniper Rifles","Shotguns","Submachine Guns","Launchers","Handguns","Grenades","Magazines","Mines","Bipods","Muzzles","Pointer","Scopes","Uniforms","Vests","Backpacks","Headgear","Glasses","NVGs","Items"};
+			onToolBoxSelChanged = "_this call ENH_fnc_IM_filterList";
 		};
 		class AvailableItemsList: ctrlListbox
 		{
@@ -141,7 +139,7 @@ class ENH_InventoryManager
 			idc = 1900;
 			text = "Create Template";
 			x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
-			onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_InventoryManager_TemplateData';";
+			onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_InventoryManager_TemplateData'";
 		};
 		class DeleteTemplate: ctrlButtonPictureKeepAspect
 		{
@@ -160,7 +158,7 @@ class ENH_InventoryManager
 			idc = 2200;
 			text = "Apply Template";
 			x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
-			onButtonClick = "_this call ENH_fnc_IM_ApplyTemplate";
+			onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
 		};
 		class IsVirtualText: ctrlStatic
 		{
@@ -177,7 +175,7 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
 			h = 5 * GRID_H;
-			onCheckedChanged = "_this call ENH_fnc_IM_ToggleVirtual";
+			onCheckedChanged = "_this call ENH_fnc_IM_toggleVirtual";
 		};
 		class Search: ctrlEdit
 		{

@@ -30,10 +30,11 @@ lbClear _ctrlItems;
 	{
 		if (_category isEqualTo _filterType && _specificType in _types) exitWith {false};
 
-		[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_lbAdd;
-		_filteredItems pushBack [_configName,_displayName,_picture,_addonIcon,_descriptionShort];
+		[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
+		_filteredItems pushBack [_configName,_displayName,_picture,_addonIcon];
 	};
 } forEach (uiNamespace getVariable "ENH_IM_allItems");
+
 lbSort [_ctrlItems,"ASC"];
 
 //Store items to improve search later

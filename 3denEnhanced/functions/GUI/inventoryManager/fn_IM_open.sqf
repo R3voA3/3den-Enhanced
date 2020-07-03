@@ -18,7 +18,7 @@ ENH_IM_target = get3DENSelected "Object" select 0;
 
 if (isNil "ENH_IM_target") exitWith
 {
-	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
+	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false
 };
 
@@ -38,7 +38,6 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 			"RocketLauncher",
 			"Handgun",
 			"Grenade",
-			"SmokeShell",
 			"Magazine",
 			"Mine",
 			"AccessoryBipod",
@@ -50,6 +49,7 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 			"Backpack",
 			"Headgear",
 			"Glasses",
+			"NVGoggles",
 			"Item"
 		]
 	];
@@ -71,9 +71,10 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 		{(_category != "VehicleWeapon") &&
 		{(getText (_x >> "picture") != "") &&
 		{getText (_x >> "model") != "" && 
-		{if (isArray (_x >> "muzzles")) then { (configName _x) call bis_fnc_baseWeapon == configName _x} else {true}}}}}) then
+		{if (isArray (_x >> "muzzles")) then { (configName _x) call BIS_fnc_baseWeapon == configName _x} else {true}}}}}) then
 		{
 			if (_specificType isEqualTo "MissileLauncher") then {_specificType = "RocketLauncher"};//Same type for all launchers
+			if (_specificType in ["Throw","SmokeShell","Flare"]) then {_specificType = "Grenade"};//Same type for all grenades, flares, chemlights, smoke
 
 			modParams
 			[
@@ -97,8 +98,7 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 	"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
 };
 
-private _ctrlFilter = _display displayCtrl 2100;
-[_ctrlFilter,0] call ENH_fnc_IM_filterList;
+[_display displayCtrl 2100,0] call ENH_fnc_IM_filterList;
 _display call ENH_fnc_IM_loadAttributeValue;
 
 private _ctrlBackgroundIcon = _display displayCtrl 2000;
