@@ -140,6 +140,27 @@ class CfgFunctions
 			class variableViewer_delete;
 			class variableViewer_getNamespace;
 		};
+		class InventoryManager
+		{
+			file = "3denEnhanced\functions\GUI\inventoryManager";
+			class IM_open;
+			class IM_addItem;
+			class IM_applyAttribute;
+			class IM_applyTemplate;
+			class IM_clearInventory;
+			class IM_createTemplate;
+			class IM_deleteTemplate;
+			class IM_filterList;
+			class IM_lbAdd;
+			class IM_lnbAddItem;
+			class IM_loadAttributeValue;
+			class IM_previewItem;
+			class IM_removeItem;
+			class IM_search;
+			class IM_showTemplates;
+			class IM_toggleVirtual;
+			class IM_updateTemplateList;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
