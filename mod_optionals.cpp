@@ -1,12 +1,12 @@
 name = "3den Enhanced - Optionals";
 author = "R3vo";
-picture = "\3denEnhanced\data\logo.paa";
-logo = "\3denEnhanced\data\logo.paa";
-logoOver = "\3denEnhanced\data\logo.paa";
-logoSmall = "\3denEnhanced\data\logoSmall.paa";
+picture = "\3denEnhanced_Optionals\data\logo.paa";
+logo = "\3denEnhanced_Optionals\data\logo.paa";
+logoOver = "\3denEnhanced_Optionals\data\logo.paa";
+logoSmall = "\3denEnhanced_Optionals\data\logo.paa";
 actionName = "Workshop";
 action = "http://steamcommunity.com/sharedfiles/filedetails/?id=623475643";
-tooltipOwned = "Allows the user to customize available options introduced by 3den Enhanced.";
-overview = "Allows the user to customize available options introduced by 3den Enhanced.";
+tooltipOwned = "Allows the user to hide tools and attributes introduced by 3den Enhanced.";
+overview = "Allows the user to hide tools and attributes introduced by 3den Enhanced.";
 hideName = 0;
 hidePicture = 0;
