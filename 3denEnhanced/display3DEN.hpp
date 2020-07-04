@@ -14,8 +14,7 @@ class Display3DEN
 		{
 			class Items
 			{
-				items[] += {"ENH_3rdPartyTools","ENH_About"};//new main categories
-				#include "menuStrip_3rdPartyTools.hpp"
+				items[] += {"ENH_About"};//new main category
 				#include "menuStrip_about.hpp"
 				#include "menuStrip_tools.hpp"
 				#include "menuStrip_help.hpp"

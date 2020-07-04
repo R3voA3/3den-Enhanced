@@ -2,6 +2,7 @@ class Help
 {
 	items[] +=
 	{
+    "ENH_Help_GetExtensions",
 		"ENH_Help_Folder_Community",
 		"ENH_Help_Folder_Wiki"
 	};
@@ -34,6 +35,13 @@ class ENH_Help_Folder_Wiki
 		"ENH_Help_MissionOptimisation",
 		"ENH_Help_MultiplayerScripting"
 	};
+};
+class ENH_Help_GetExtensions
+{
+	text = $STR_ENH_HELP_GETEXTENSIONS;
+	picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
+	weblink = "https://steamcommunity.com/sharedfiles/filedetails/?id=1774491737";
+	opensNewWindow = 1;
 };
 //Community
 class ENH_Help_KK
