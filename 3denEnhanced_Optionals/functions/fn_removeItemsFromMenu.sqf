@@ -25,13 +25,13 @@ _fnc_delete =
 	};
 };
 
-for "_i" from 15 to 0 step -1 do
+for "_i" from (_ctrlMenuStrip menuSize []) to 0 step -1 do
 {
     [_i] call _fnc_delete;
-	for "_j" from 30 to 0 step -1 do
+	for "_j" from (_ctrlMenuStrip menuSize [_i]) to 0 step -1 do
 	{
 		[_i,_j] call _fnc_delete;
-		for "_k" from 30 to 0 step -1 do
+		for "_k" from (_ctrlMenuStrip menuSize [_j]) to 0 step -1 do
 		{
 			[_i,_j,_k] call _fnc_delete;
 		};
