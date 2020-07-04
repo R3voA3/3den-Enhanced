@@ -7,6 +7,8 @@ v5.6
 - Texture Finder will no longer list some textures multiple times
 - Debug path attributes now uses is3DENPreview command to make sure it only runs in the editor
 - Debug Options use is3DENPreview now
+- Remove 3rdPartyTools folder from menu strip. Instead there is now a link to a Steam collection in the Help folder
+- Removed obsolete stuff from configs
 
 v5.5
 *changed*
