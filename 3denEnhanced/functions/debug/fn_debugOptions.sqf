@@ -13,7 +13,7 @@
 
 private _enabledOptions =  profileNamespace getVariable ["ENH_DebugOptions_Settings",[]];
 
-if (_enabledOptions isEqualTo []) exitWith {false};
+if (_enabledOptions isEqualTo [] || {!is3DENPreview}) exitWith {false};
 
 #define MARKERS 			0
 #define BULLETTRACING 		1
