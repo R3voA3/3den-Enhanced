@@ -16,7 +16,7 @@ class ENH_InventoryManager
 		};
 		class Header: ctrlStaticTitle
 		{
-			text = "3den Enhanced Inventory Manager"; //--- ToDo: Localize;
+			text = $STR_ENH_IM_HEADER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
@@ -25,7 +25,7 @@ class ENH_InventoryManager
 		class AvailableItems: ctrlStatic
 		{
 			idc = 1000;
-			text = "Available Items"; //--- ToDo: Localize;
+			text = $STR_ENH_IM_AVAILABLEITEMS;
 			x = CENTERED_X(DIALOG_W) + GRID_W;
 			y = DIALOG_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
 			w = 40 * GRID_W;
@@ -35,7 +35,7 @@ class ENH_InventoryManager
 		};
 		class InventoryItems: AvailableItems
 		{
-			text = "Items in Inventory"; //--- ToDo: Localize;
+			text = $STR_ENH_IM_ITEMSININVENTORY;
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
 		};
 		class InventoryListBackground: ctrlStaticPictureKeepAspect
@@ -87,6 +87,7 @@ class ENH_InventoryManager
 		{
 			idc = 100;
 			text = ">";
+      tooltip = "+1";
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
 			y = DIALOG_TOP + 10 * CTRL_DEFAULT_H;
 			w = 10 * GRID_W;
@@ -97,6 +98,7 @@ class ENH_InventoryManager
 		{
 			idc = 110;
 			text = ">>";
+      tooltip = "+10";
 			y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
 			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_AddItem";
 		};
@@ -104,6 +106,7 @@ class ENH_InventoryManager
 		{
 			idc = 120;
 			text = "<";
+      tooltip = "-1";
 			y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
 			onButtonClick = "[_this # 0,1] call ENH_fnc_IM_RemoveItem";
 		};
@@ -111,6 +114,7 @@ class ENH_InventoryManager
 		{
 			idc = 130;
 			text = "<<";
+      tooltip = "-10";
 			y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
 			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_RemoveItem";
 		};
@@ -118,6 +122,7 @@ class ENH_InventoryManager
 		{
 			idc = 140;
 			text = "<<<";
+      tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
 			y = DIALOG_TOP + 18 * CTRL_DEFAULT_H + 4 * GRID_W;
 			w = 10 * GRID_W;
@@ -127,7 +132,7 @@ class ENH_InventoryManager
 		class ShowTemplates: ctrlButton
 		{
 			idc = 1800;
-			text = "Show Templates"; //--- ToDo: Localize;
+			text = $STR_ENH_IM_SHOWTEMPLATES;
 			x = CENTERED_X(DIALOG_W) + GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 30 * GRID_W;
@@ -137,7 +142,7 @@ class ENH_InventoryManager
 		class CreateTemplate: ShowTemplates
 		{
 			idc = 1900;
-			text = "Create Template";
+			text = $STR_ENH_IM_CREATETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
 			onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_InventoryManager_TemplateData'";
 		};
@@ -145,6 +150,7 @@ class ENH_InventoryManager
 		{
 			idc = 150;
 			text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
+      tooltip = $STR_ENH_IM_DELETETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
@@ -156,13 +162,13 @@ class ENH_InventoryManager
 		class ApplyTemplate: ShowTemplates
 		{
 			idc = 2200;
-			text = "Apply Template";
+			text = $STR_ENH_IM_APPLYTEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
 			onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
 		};
 		class IsVirtualText: ctrlStatic
 		{
-			text = "Is Virtual?"; //--- ToDo: Localize;
+			text = $STR_ENH_IM_ISVIRTUAL;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 120 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 20 * GRID_W;
@@ -195,9 +201,9 @@ class ENH_InventoryManager
 			h = CTRL_DEFAULT_H;
 			colorBackground[] = {1,1,1,1};
 		};
-		class ApplyLoadout: ctrlButton
+		class ApplyLoadout: ctrlButtonOK
 		{
-			text = "Apply Loadout"; //--- ToDo: Localize;
+      idc = -1;
 			x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 30 * GRID_W;

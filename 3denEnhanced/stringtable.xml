@@ -6064,11 +6064,45 @@
 	<Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
 		<English>VariableViewer</English>
 		<German>Variable Viewer</German>
-		<Spanish>VariableViewer</Spanish>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_INVENTORYMANAGER">
 		<English>Inventory Manager</English>
 		<German>Inventar-Manager</German>
-		<Spanish>Inventory Manager</Spanish>
+	</Key>
+	<Key ID="STR_ENH_IM_HEADER">
+		<English>3den Enhanced Inventory Manager</English>
+		<German>3den Enhanced Inventar-Manager</German>
+	</Key>
+	<Key ID="STR_ENH_IM_AVAILABLEITEMS">
+		<English>Available Items</English>
+		<German>Verfügbare Gegenstände</German>
+	</Key>
+	<Key ID="STR_ENH_IM_ITEMSININVENTORY">
+		<English>Items in Inventory</English>
+		<German>Gegenstände im Inventar</German>
+	</Key>
+	<Key ID="STR_ENH_IM_SHOWTEMPLATES">
+		<English>Show Templates</English>
+		<German>Vorlagen anz.</German>
+	</Key>
+	<Key ID="STR_ENH_IM_CREATETEMPLATE">
+		<English>Create Template</English>
+		<German>Vorlage erstellen</German>
+	</Key>
+	<Key ID="STR_ENH_IM_APPLYTEMPLATE">
+		<English>Apply Template</English>
+		<German>Vorlage anwenden</German>
+	</Key>
+	<Key ID="STR_ENH_IM_ISVIRTUAL">
+		<English>Is Virtual?</English>
+		<German>Virtuell?</German>
+	</Key>
+	<Key ID="STR_ENH_IM_REMOVESELECTED_TOOLTIP">
+		<English>Remove selected Items.</English>
+		<German>Ausgewählte Gegenstände entfernen.</German>
+	</Key>
+	<Key ID="STR_ENH_IM_DELETETEMPLATE">
+		<English>Delete selected Template.</English>
+		<German>Ausgewählte Vorlage löschen.</German>
 	</Key>
 </Project>
