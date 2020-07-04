@@ -34,32 +34,5 @@ class ENH_MissionEnding
 				};";
 			defaultValue = "[5,'enddefault',false,civilian]";
 		};
- 		/* class ENH_MissionEnding_1
-		{
-			displayName = "Mission Ending";
-			property = "ENH_MissionEnding_1";
-			control = "ENH_MissionEnding";
-			expression =
-			"\
-				if (!is3DEN && {isServer && {(_value # 1) != 'enddefault'}}) then\
-				{\
-					_value spawn\
-					{\
-						params ['_condition','_debriefing','_isWin','_playMusic'];\
-						_condition = compile _condition;\
-						waitUntil {sleep 10; call _condition};\
-						[_debriefing,_isWin,true,_playMusic] remoteExecCall ['BIS_fnc_endMission',0];\
-					};\
-				};";
-			defaultValue = "['','enddefault',false,false]";
-		};
-		class ENH_MissionEnding_2: ENH_MissionEnding_1
-		{
-			property = "ENH_MissionEnding_2";
-		};
-		class ENH_MissionEnding_3: ENH_MissionEnding_1
-		{
-			property = "ENH_MissionEnding_3";
-		};*/
 	};
 };

@@ -5693,12 +5693,7 @@
 		<Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
 		<French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
 	</Key>
-	<Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS">
-		<English>Third Party Tools</English>
-		<German>Third Party Werkzeuge</German>
-		<Spanish>Herramientas de terceras partes</Spanish>
-		<French>Outils tiers</French>
-	</Key>
+
 	<Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
 		<English>Move Camera to First Person View</English>
 		<German>Kamera in First Person View bewegen</German>
@@ -5786,18 +5781,6 @@
 		<German>Dynamische Simulation umschalten</German>
 		<Spanish>Conmutar simulación dinámica</Spanish>
 		<French>Activer la simulation dynamique</French>
-	</Key>
-	<Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_NODEPENDENCIES">
-		<English>Tools that don't create dependencies</English>
-		<German>Werkzeuge die keine Abhängigkeiten erzeugen</German>
-		<Spanish>Herramientas que no crean dependencias</Spanish>
-		<French>Outils qui ne créent pas de dépendances</French>
-	</Key>
-	<Key ID="STR_ENH_FOLDER_3RDPARTYTOOLS_DEPENDENCIES">
-		<English>Tools that create dependencies</English>
-		<German>Werkezuge die Abhängkeiten erzeugen</German>
-		<Spanish>Herramientas que crean dependencias</Spanish>
-		<French>Outils qui créent des dépendances</French>
 	</Key>
 	<Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
 		<English>Delete Corpses</English>
@@ -6104,5 +6087,9 @@
 	<Key ID="STR_ENH_IM_DELETETEMPLATE">
 		<English>Delete selected Template.</English>
 		<German>Ausgewählte Vorlage löschen.</German>
+	</Key>
+	<Key ID="STR_ENH_HELP_GETEXTENSIONS">
+		<English>Additional Eden Editor Extentions</English>
+		<German>Zusätzliche Eden Editor Erweiterungen</German>
 	</Key>
 </Project>
