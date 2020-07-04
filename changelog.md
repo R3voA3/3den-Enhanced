@@ -1,9 +1,12 @@
 v5.6
 *added*
 - Vehicle Inventory Manager
+- Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries
 
 *changed*
 - Texture Finder will no longer list some textures multiple times
+- Debug path attributes now uses is3DENPreview command to make sure it only runs in the editor
+- Debug Options use is3DENPreview now
 
 v5.5
 *changed*
