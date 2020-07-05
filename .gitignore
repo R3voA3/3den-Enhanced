@@ -6,10 +6,9 @@
 *.7z
 *.zip
 *.txt
-
-#Exluded files
-.vscode
-ENH_GitHub.code-workspace
+*.code-workspace
+*.vscode
+*.gitignore
 
 #Excluded folders
 Old Files/
