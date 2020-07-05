@@ -1,15 +1,5 @@
 #Excluded file extentions
 *.biprivatekey
-*.log
-*.pbo
-*.log
-*.7z
 *.zip
-*.txt
 *.code-workspace
 *.vscode
-*.gitignore
-
-#Excluded folders
-Old Files/
-Old Versions/
