@@ -87,7 +87,7 @@ class ENH_InventoryManager
 		{
 			idc = 100;
 			text = ">";
-      tooltip = "+1";
+			tooltip = "+1";
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
 			y = DIALOG_TOP + 10 * CTRL_DEFAULT_H;
 			w = 10 * GRID_W;
@@ -98,7 +98,7 @@ class ENH_InventoryManager
 		{
 			idc = 110;
 			text = ">>";
-      tooltip = "+10";
+			tooltip = "+10";
 			y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
 			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_AddItem";
 		};
@@ -106,7 +106,7 @@ class ENH_InventoryManager
 		{
 			idc = 120;
 			text = "<";
-      tooltip = "-1";
+			tooltip = "-1";
 			y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
 			onButtonClick = "[_this # 0,1] call ENH_fnc_IM_RemoveItem";
 		};
@@ -114,7 +114,7 @@ class ENH_InventoryManager
 		{
 			idc = 130;
 			text = "<<";
-      tooltip = "-10";
+			tooltip = "-10";
 			y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
 			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_RemoveItem";
 		};
@@ -122,7 +122,7 @@ class ENH_InventoryManager
 		{
 			idc = 140;
 			text = "<<<";
-      tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
+			tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
 			y = DIALOG_TOP + 18 * CTRL_DEFAULT_H + 4 * GRID_W;
 			w = 10 * GRID_W;
@@ -150,7 +150,7 @@ class ENH_InventoryManager
 		{
 			idc = 150;
 			text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-      tooltip = $STR_ENH_IM_DELETETEMPLATE;
+			tooltip = $STR_ENH_IM_DELETETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
@@ -203,7 +203,7 @@ class ENH_InventoryManager
 		};
 		class ApplyLoadout: ctrlButtonOK
 		{
-      idc = -1;
+			idc = -1;
 			x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 30 * GRID_W;
