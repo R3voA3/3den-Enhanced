@@ -182,12 +182,44 @@ class ENH_FunctionsViewer
 				size = 1;
 			};
 		};
+		class SearchCode: ctrlEdit
+		{
+			idc = 2000;
+			x = safezoneX + 72 * GRID_W;
+			y = safezoneY + 18 * GRID_H;
+			w = 40 * GRID_W;
+			h = 5 * GRID_H;
+			onKeyUp = "_this call ENH_fnc_functionsViewer_searchKey";
+		};
+		class SearchText: ctrlStatic
+		{
+			idc = 2100;
+			x = safezoneX + 113 * GRID_W;
+			y = safezoneY + 18 * GRID_H;
+			w = 30 * GRID_W;
+			h = 5 * GRID_H;
+		};
+		class SearchButtonUp: ctrlButtonPictureKeepAspect
+		{
+			text = "\a3\ui_f\data\gui\rsc\rscdisplaymultiplayer\arrow_up_ca.paa";
+			x = safezoneX + 135 * GRID_W;
+			y = safezoneY + 18 * GRID_H;
+			w = 5 * GRID_W;
+			h = 5 * GRID_H;
+			onButtonClick = "[_this # 0, -1] call ENH_fnc_FunctionsViewer_IncrementKey";
+		};
+		class SearchButtonDown: SearchButtonUp
+		{
+			text = "\a3\ui_f\data\gui\rsc\rscdisplaymultiplayer\arrow_down_ca.paa";
+			x = safezoneX + 129 * GRID_W;
+			onButtonClick = "[_this # 0, 1] call ENH_fnc_functionsViewer_incrementKey";
+		};
 		class Preview: ctrlControlsGroup
 		{
 			x = safezoneX + 72 * GRID_W;
-			y = safezoneY + 18 * GRID_H;
+			y = safezoneY + 24 * GRID_H;
 			w = safezoneW - 73 * GRID_W;
-			h = safeZoneH - 25 * GRID_H;
+			h = safeZoneH - 31 * GRID_H;
 			class Controls
 			{
 				class Lines: ctrlStructuredText

@@ -54,6 +54,8 @@ class CfgFunctions
 			class functionsViewer_copy;
 			class functionsViewer_getFunctionsData;
 			class functionsViewer_fillCtrlTV;
+      class functionsViewer_incrementKey;
+      class functionsViewer_searchkey;
 		};
 		class ActionCreator
 		{
