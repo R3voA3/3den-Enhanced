@@ -42,7 +42,7 @@ private _allLocations = [];
 //Sort units, vehicles, groups and locations first, then add special namespaces so that they are at the beginning of the combo box
 private _namespaces = allUnits + vehicles + allGroups + _allLocations;
 _namespaces sort true;
-_namespaces = ["missionNamespace","profileNamespace","parsingNamespace","uiNamespace","player","cursorTarget"] + _namespaces;
+_namespaces = ["missionNamespace","localNamespace","profileNamespace","parsingNamespace","uiNamespace","player","cursorTarget"] + _namespaces;
 
 uiNamespace setVariable ["ENH_VariableViewer_Namespaces",_namespaces];
 
