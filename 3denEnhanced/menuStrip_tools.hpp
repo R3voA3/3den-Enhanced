@@ -205,7 +205,6 @@ class ENH_3DENCamPositions
 class ENH_VariableViewer
 {
 	text = $STR_ENH_TOOLS_VARIABLEVIEWER;
-	picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
 	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
 	opensNewWindow = 1;
 };
