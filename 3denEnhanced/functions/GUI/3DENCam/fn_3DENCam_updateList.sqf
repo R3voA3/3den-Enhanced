@@ -24,10 +24,9 @@ private _ctrlLB = _displayOrControl displayCtrl 1000;
 lbClear _ctrlLB;
 
 {
-	_x params ["_world","_cam3DENPosition","","","_description"];
+	_x params ["_world","_cam3DENPosition","","","_description",["_systemTime",[2020,7,17,00,00]]];
 
 	private _icon = getText (configFile >> "CfgWorlds" >> _world >> "pictureMap");
-	private _worldDisplayName = getText (configFile >> "CfgWorlds" >> _world >> "description");
 	private _index = 0;
 	
 	if (count _description > 50) then
@@ -57,7 +56,9 @@ lbClear _ctrlLB;
 	];
 
 	_ctrlLB lbSetPictureRight [_index,_icon];
-	_ctrlLB lbSetTextRight [_index,_worldDisplayName];
+	
+	_systemTime = format ["%1/%2/%3  %4:%5", _systemTime # 2,_systemTime # 1,_systemTime # 0,_systemTime # 3,_systemTime # 4];
+	_ctrlLB lbSetTextRight [_index,_systemTime];
 
 	//Save whole data set to listbox. It's used to update the profileNamespace variable later
 	_ctrlLB lbSetData [_index,str _x];

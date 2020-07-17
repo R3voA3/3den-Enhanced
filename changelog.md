@@ -10,6 +10,7 @@ v5.6
 - Debug Options use is3DENPreview now
 - Remove 3rdPartyTools folder from menu strip. Instead there is now a link to a Steam collection in the Help folder
 - Removed obsolete stuff from configs
+- Fixed missing string in 3den Radio
 
 v5.5
 *changed*
