@@ -51,7 +51,7 @@ class ENH_3DENRadio
 		};
 		class PlaylistHeader:  ctrlStaticTitle
 		{
-			text = $STR_ENH_3DENRADIO_PLAYLIST_TEXT;
+			text = $STR_ENH_RADIO_PLAYLIST_TEXT;
 			x = CENTERED_X(DIALOG_W) + 152 * GRID_W;
 			y = DIALOG_TOP;
 			w = (DIALOG_W - 152) * GRID_W;
