@@ -162,10 +162,13 @@ class CfgFunctions
 			class IM_showTemplates;
 			class IM_toggleVirtual;
 			class IM_updateTemplateList;
+      class IM_onModFilterChanged;
+      class IM_resetSearch;
 		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
+      class twoDigitsStr;
 			class loadoutTool;
 			class exportLoadout;
 			class measureDistance;

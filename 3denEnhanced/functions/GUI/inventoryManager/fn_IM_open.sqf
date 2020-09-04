@@ -82,6 +82,12 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 				["logo"]
 			] params [["_addonIcon","",[""]]];
 
+			modParams
+			[
+				configSourceMod _x,
+				["name"]
+			] params [["_addonName","",[""]]];
+
 			_itemsCache pushBack
 			[
 				configName _x,
@@ -89,7 +95,9 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 				getText(_x >> "Picture"),
 				_addonIcon,
 				_category,
-				_specificType
+				_specificType,
+				configSourceMod _x,
+				_addonName
 			];
 		};
 		(_allItemsConfigsCount / _forEachIndex) call BIS_fnc_progressLoadingScreen;
@@ -97,6 +105,20 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 	uiNamespace setVariable ["ENH_IM_allItems",_itemsCache];
 	"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
 };
+
+private _ctrlFilterSearch = _display displayCtrl 2900;
+private _added = [];
+
+{
+	private _addonClass = _x select 6;
+	private _addonName = _x select 7;
+	private _addonIcon = _x select 3;
+	if !(_addonClass == "" || {_addonClass in _added}) then
+	{
+		_added pushBack _addonClass;
+		[_ctrlFilterSearch,_addonName,_addonClass,"",_addonIcon] call ENH_fnc_IM_lbAdd;
+	};
+} forEach (uiNamespace getVariable "ENH_IM_allItems");
 
 [_display displayCtrl 2100,0] call ENH_fnc_IM_filterList;
 _display call ENH_fnc_IM_loadAttributeValue;

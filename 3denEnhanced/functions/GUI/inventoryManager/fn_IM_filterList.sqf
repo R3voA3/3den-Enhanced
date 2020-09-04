@@ -25,13 +25,12 @@ private _filteredItems = [];
 lbClear _ctrlItems;
 
 {
-	_x params ["_configName","_displayName","_picture","_addonIcon","_category","_specificType"];
+	_x params ["_configName","_displayName","_picture","_addonIcon","_category","_specificType","_addon"];
 	if (_specificType isEqualTo _filterType || _category isEqualTo _filterType) then
 	{
-		if (_category isEqualTo _filterType && _specificType in _types) exitWith {false};
-
+      if (_category isEqualTo _filterType && _specificType in _types) exitWith {false};
 		[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
-		_filteredItems pushBack [_configName,_displayName,_picture,_addonIcon];
+		_filteredItems pushBack [_configName,_displayName,_picture,_addonIcon,_addon];
 	};
 } forEach (uiNamespace getVariable "ENH_IM_allItems");
 

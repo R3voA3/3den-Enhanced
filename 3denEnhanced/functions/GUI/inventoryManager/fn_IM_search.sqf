@@ -16,18 +16,24 @@
 params ["_ctrlSearch"];
 private _display = ctrlParent _ctrlSearch;
 private _ctrlItems = _display displayCtrl 1500;
-private _filter = toUpper (ctrlText _ctrlSearch);
+private _filter = toUpper ctrlText _ctrlSearch;
 private _classesToSearch = uiNamespace getVariable ["ENH_IM_FilteredItems",[]];
-
-if (_classesToSearch isEqualTo [] || _filter isEqualTo "") exitWith {false};
 
 lbClear _ctrlItems;
 {
-	_x params ["_configName","_displayName","_picture","_addonIcon"];
-	if ((toUpper _displayName find _filter) >= 0 || _filter == "") then
-	{
-		[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
-	};
+   _x params ["_configName","_displayName","_picture","_addonIcon","_addon"];
+   diag_log [_filter,_addon,_filter select [0,3]];
+   if ((_filter select [0,3] == "MOD") && ((_filter select [4,50]) in toUpper _addon)) then
+   {
+      [_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
+   }
+   else
+   {
+	   if ((_filter in toUpper _displayName) || (_filter == "")) then
+	   {
+	   	[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
+      };
+   };
 } forEach _classesToSearch;
 
 lbSort [_ctrlItems,"ASC"];

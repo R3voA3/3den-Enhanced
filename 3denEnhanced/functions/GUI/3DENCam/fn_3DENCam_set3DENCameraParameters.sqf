@@ -4,30 +4,28 @@
    Date: 2020-01-16
 
    Description:
-   Sets 3DEN camera parameters according to selected listBox entry.
+   Sets 3DEN camera parameters according to selected list Box entry.
 
    Parameter(s):
-   0: CONTROL - ListBox
+   0: CONTROL - List Box
    1: NUMBER - Selected index
 
    Returns:
    BOOLEAN: true
 */
 
-params ["_ctrlLB","_selectedIndex"];
+params ["_ctrlLnB","_row"];
 
-private _data = call compile (_ctrlLB lbData _selectedIndex);
+private _data = call compile (_ctrlLnB lnbData [_row,0]);
 
 _data params ["_world","_camPosition","_camVectorDir","_camVectorUp"];
 
-if !(_world isEqualTo worldName) exitWith
+/* if !(_world isEqualTo worldName) exitWith
 {
 	[localize "STR_ENH_3DENCAM_WRONGWORLD",1] call BIS_fnc_3DENNotification;
-};
+}; */
 
-[true] call BIS_fnc_EXP_camp_setCinematicMode;
-
-move3DENCamera _camPosition;
+move3DENCamera [_camPosition,true];
 get3DENCamera setVectorDirAndUp [_camVectorDir,_camVectorUp];
 
 true

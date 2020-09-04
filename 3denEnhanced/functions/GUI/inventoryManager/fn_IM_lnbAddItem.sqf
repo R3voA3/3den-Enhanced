@@ -12,7 +12,7 @@
    2: STRING - Item Text
    3: STRING - Image of the first column
    4: STRING - Image of the forth column
-   5: NUMBER - Value set in the second column
+   5: NUMBER - Value set in the second column (Text of second column will be that value)
 
    Returns:
    BOOLEAN: true

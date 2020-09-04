@@ -18,7 +18,6 @@ params ["_ctrlButton","_amount"];
 private _display = ctrlparent _ctrlButton;
 private _ctrlInventory = _display displayCtrl 1501;
 private _ctrlItems = _display displayCtrl 1500;
-
 private _row = lbCurSel _ctrlItems;
 
 if (_row isEqualTo -1) exitWith {false};
@@ -49,5 +48,11 @@ if !(_itemAdded) then//If item was not found in the list, add it
 {
 	[_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount] call ENH_fnc_IM_LnbAddItem;
 };
+
+//Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
+[
+	_ctrlInventory,
+	uiNamespace getVariable ["ENH_IM_IsVirtual",false]
+] call ENH_fnc_IM_toggleVirtual;
 
 true

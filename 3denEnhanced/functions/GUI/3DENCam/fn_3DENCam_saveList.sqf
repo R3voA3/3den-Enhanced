@@ -13,13 +13,17 @@
    BOOLEAN: true
 */
 
-params ["_ctrlLB"];
+params ["_ctrlLnB"];
 
-private _lbMaxIndex = lbSize _ctrlLB - 1;
+private _lnbMaxIndex = (lnbSize _ctrlLnB select 0) - 1;
 private _data = [];
+
+systemChat str ((lnbSize _ctrlLnB select 0) - 1);
+
 for "_i" from 0 to _lbMaxIndex do
 {
-	_data pushBack call compile (_ctrlLB lbData _i);
+	_data pushBack call compile (_ctrlLnB lnbData [_i,0]);
+   diag_log (compile (_ctrlLnB lnbData [_i,0]));
 };
 
 profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_data];

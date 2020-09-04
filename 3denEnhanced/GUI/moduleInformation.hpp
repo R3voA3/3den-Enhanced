@@ -1,5 +1,5 @@
 #define DIALOG_W 100
-#define DIALOG_H 87
+#define DIALOG_H 89
 
 class ENH_ModuleInformation
 {

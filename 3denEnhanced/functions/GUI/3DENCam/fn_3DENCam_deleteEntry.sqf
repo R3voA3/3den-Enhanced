@@ -13,14 +13,14 @@
    BOOLEAN: true
 */
 
-params ["_ctrlLB", "_key", "_shift", "_ctrl", "_alt"];
+params ["_ctrlLnB","_key"];
 
 if (_key isEqualTo 211) then
 {
-	_ctrlLB lbDelete lbCurSel _ctrlLB;
+	_ctrlLnB lnbDeleteRow lnbCurSelRow _ctrlLnB;
 
 	//Update list
-	_ctrlLB call ENH_fnc_3DENCam_saveList;
+	_ctrlLnB call ENH_fnc_3DENCam_saveList;
 };
 
 true

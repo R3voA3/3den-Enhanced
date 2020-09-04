@@ -1,4 +1,4 @@
-#define DIALOG_W 90
+#define DIALOG_W 120
 #define DIALOG_H 70
 
 class ENH_3DENCamPositions
@@ -15,9 +15,6 @@ class ENH_3DENCamPositions
 			w = DIALOG_W * GRID_W;
 			h = DIALOG_H * GRID_H + 7 * GRID_H;
 		};
-	};
-	class Controls
-	{
 		class Header: ctrlStaticTitle
 		{
 			text = $STR_ENH_3DENCAM_HEADER;
@@ -26,7 +23,11 @@ class ENH_3DENCamPositions
 			w = DIALOG_W * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
-		class List: ctrlListbox
+	};
+	class Controls
+	{
+		
+		class List: ctrlListNBox
 		{
 			idc = 1000;
 			x = CENTERED_X(DIALOG_W) + 1 * GRID_W;

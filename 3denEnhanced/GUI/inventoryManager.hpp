@@ -80,7 +80,7 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
 			w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
 			h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
-			columns[] = {0,0.061,0.8,0.88};	
+			columns[] = {0,0.08,0.8/* ,0.88 */};	
 			onLBDblClick = "_this call ENH_fnc_IM_previewItem";	
 		};
 		class AddOne: ctrlButton

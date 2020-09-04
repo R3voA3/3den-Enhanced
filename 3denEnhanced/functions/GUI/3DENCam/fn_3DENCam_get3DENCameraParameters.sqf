@@ -26,8 +26,7 @@ if (_description isEqualTo localize "STR_ENH_3DENCAM_DESCRIPTION" || _descriptio
 	_description = format ["#%1",round random 9999];//We don't wanna save Description... every time
 };
 
-private _cam3DENParameters = [worldName,getPos _cam3DEN,vectorDir _cam3DEN,vectorUp _cam3DEN,_description,systemTime];
-_cam3DENSavedPositions pushBack _cam3DENParameters;
+_cam3DENSavedPositions pushBack [worldName,getPos _cam3DEN,vectorDir _cam3DEN,vectorUp _cam3DEN,_description,systemTime];
 
 profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_cam3DENSavedPositions];
 

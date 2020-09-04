@@ -11,6 +11,8 @@ v5.6
 - Remove 3rdPartyTools folder from menu strip. Instead there is now a link to a Steam collection in the Help folder
 - Removed obsolete stuff from configs
 - Fixed missing string in 3den Radio
+- 3DEN Cam Positions will now also show the time and date when the position was saved
+- Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
 
 v5.5
 *changed*
