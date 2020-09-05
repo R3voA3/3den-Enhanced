@@ -5693,7 +5693,6 @@
 		<Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
 		<French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
 	</Key>
-
 	<Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
 		<English>Move Camera to First Person View</English>
 		<German>Kamera in First Person View bewegen</German>
@@ -6091,5 +6090,9 @@
 	<Key ID="STR_ENH_HELP_GETEXTENSIONS">
 		<English>Additional Eden Editor Extentions</English>
 		<German>Zusätzliche Eden Editor Erweiterungen</German>
+	</Key>
+	<Key ID="STR_ENH_HIDETERRAINOBJECTS_DESCRIPTION">
+		<English>Hides or destroys all objects of given type in the trigger area when the mission starts. Effect is visible for all players including JIP.</English>
+		<German>Versteckt oder zerstört alle Objekte des gegebenenTyps in dem Auslösergebiet. Der Effekt ist für alle Spieler, auch JIP sichtbar.</German>
 	</Key>
 </Project>

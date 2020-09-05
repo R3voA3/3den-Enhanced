@@ -5,10 +5,10 @@ class ENH_HideTerrainObjects: Title
 	h = 12.5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
-		ATTRIBUTE_DESCRIPTION("Hides or destroys all objects of given type in the trigger area when the mission starts. Code is applied for all players including JIP.",3);
+		ATTRIBUTE_DESCRIPTION($STR_ENH_HIDETERRAINOBJECTS_DESCRIPTION,3);
     class EffectsTitle: Title
 		{
-			text = "Effect";
+			text = $STR_A3_RSCATTRIBUTEPOSTPROCESS_TITLE
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Effect: ctrlToolbox
@@ -22,14 +22,14 @@ class ENH_HideTerrainObjects: Title
       columns = 2;
       strings[] =
       {
-        "Hide",
-        "Destroy"
+        $STR_CA_HIDE,
+        $STR_CFG_MARKERS_DESTROY
       };
       values[] = {0,1};
 		};
 		class TypesTitle: Title
 		{
-			text = "Object Types";
+			text = $STR_A3_TO_HIDETERRAINOBJECTS4;
 			y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class Types: ctrlListbox
