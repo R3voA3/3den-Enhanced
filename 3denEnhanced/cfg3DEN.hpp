@@ -57,6 +57,7 @@ class Cfg3DEN
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
+    #include "controls\hideTerrainObjects.hpp"
 	};
  	class Mission
 	{
@@ -134,6 +135,13 @@ class Cfg3DEN
 			};
 		};
 	};
+  class Trigger
+  {
+    class AttributeCategories
+    {
+      #include "attributesTrigger\hideTerrainObjects.hpp"
+    };
+  };
 	class Object
 	{
 		class AttributeCategories

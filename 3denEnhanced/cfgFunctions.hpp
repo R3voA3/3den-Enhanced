@@ -274,6 +274,10 @@ class CfgFunctions
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
 			class initDebriefingCombo;
+      class hideTerrainObjects_onAttributeLoad;
+			class hideTerrainObjects_onAttributeSave;
+			class hideTerrainObjects_onLBSelChanged;
+			class hideTerrainObjects_onButtonDown;
 		};
 	};
 };
