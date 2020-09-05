@@ -110,21 +110,21 @@ class ENH_EstablishingShot: Title
 			text = $STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME;
 		};
 		class DirectionValue: ctrlToolbox
-        {
-            idc = 108;
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = 2 * SIZE_M * GRID_H;
-            rows = 2;
-            columns = 1;
-            strings[] = 
-            {
-				$STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE,
-				$STR_ENH_ESTABLISHINGSHOT_CLOCKWISE
-            };
-            values[] = {0,1};
-        };
+    {
+      idc = 108;
+      x = ATTRIBUTE_TITLE_W * GRID_W;
+      y = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
+      w = ATTRIBUTE_CONTENT_W * GRID_W;
+      h = 2 * SIZE_M * GRID_H;
+      rows = 2;
+      columns = 1;
+      strings[] = 
+      {
+      $STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE,
+      $STR_ENH_ESTABLISHINGSHOT_CLOCKWISE
+      };
+      values[] = {0,1};
+    };
 		class Reset: ctrlButton
 		{
 			x = ATTRIBUTE_TITLE_W * GRID_W;
