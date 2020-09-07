@@ -3,7 +3,7 @@
 
 class ENH_InventoryManager
 {
-	idd = 80000;
+	idd = -1;
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -65,7 +65,7 @@ class ENH_InventoryManager
 		};
 		class AvailableItemsList: ctrlListbox
 		{
-			idc = 1500;
+			idc = 2200;
 			x = CENTERED_X(DIALOG_W) + GRID_W;
 			y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
 			w = DIALOG_W * GRID_W  / 2 - 7 * GRID_W;
@@ -75,17 +75,17 @@ class ENH_InventoryManager
 		};
 		class InventoryItemsList: ctrlListNBox
 		{
-			idc = 1501;
+			idc = 2300;
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
 			y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
 			w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
 			h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
-			columns[] = {0,0.08,0.8/* ,0.88 */};	
-			onLBDblClick = "_this call ENH_fnc_IM_previewItem";	
+			columns[] = {0,0.08,0.8,0.88};
+			onLBDblClick = "_this call ENH_fnc_IM_previewItem";
 		};
 		class AddOne: ctrlButton
 		{
-			idc = 100;
+			idc = 2400;
 			text = ">";
 			tooltip = "+1";
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
@@ -96,7 +96,7 @@ class ENH_InventoryManager
 		};
 		class AddTen: AddOne
 		{
-			idc = 110;
+			idc = 2500;
 			text = ">>";
 			tooltip = "+10";
 			y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
@@ -104,7 +104,7 @@ class ENH_InventoryManager
 		};
 		class RemoveOne: AddOne
 		{
-			idc = 120;
+			idc = 2600;
 			text = "<";
 			tooltip = "-1";
 			y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
@@ -112,7 +112,7 @@ class ENH_InventoryManager
 		};
 		class RemoveTen: AddOne
 		{
-			idc = 130;
+			idc = 2700;
 			text = "<<";
 			tooltip = "-10";
 			y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
@@ -120,7 +120,7 @@ class ENH_InventoryManager
 		};
 		class RemoveAll: ctrlButton
 		{
-			idc = 140;
+			idc = 2800;
 			text = "<<<";
 			tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
 			x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
@@ -131,7 +131,6 @@ class ENH_InventoryManager
 		};
 		class ShowTemplates: ctrlButton
 		{
-			idc = 1800;
 			text = $STR_ENH_IM_SHOWTEMPLATES;
 			x = CENTERED_X(DIALOG_W) + GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
@@ -141,14 +140,14 @@ class ENH_InventoryManager
 		};
 		class CreateTemplate: ShowTemplates
 		{
-			idc = 1900;
+			idc = 2900;
 			text = $STR_ENH_IM_CREATETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
 			onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_InventoryManager_TemplateData'";
 		};
 		class DeleteTemplate: ctrlButtonPictureKeepAspect
 		{
-			idc = 150;
+			idc = 3000;
 			text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
 			tooltip = $STR_ENH_IM_DELETETEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
@@ -161,47 +160,56 @@ class ENH_InventoryManager
 		};
 		class ApplyTemplate: ShowTemplates
 		{
-			idc = 2200;
+			idc = 3100;
 			text = $STR_ENH_IM_APPLYTEMPLATE;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
 			onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
 		};
-		class IsVirtualText: ctrlStatic
-		{
-			text = $STR_ENH_IM_ISVIRTUAL;
-			x = CENTERED_X(DIALOG_W) + GRID_W + 120 * GRID_W;
-			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-			w = 20 * GRID_W;
-			h = CTRL_DEFAULT_H;
-		};
 		class IsVirtualCheckbox: ctrlCheckbox
 		{
-			idc = 2800;
-			x = CENTERED_X(DIALOG_W) + GRID_W + 138 * GRID_W;
+			idc = 3200;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 112 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
 			h = 5 * GRID_H;
 			onCheckedChanged = "_this call ENH_fnc_IM_toggleVirtual";
 		};
+    class IsVirtualText: ctrlStatic
+		{
+			text = $STR_ENH_IM_ISVIRTUAL;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 116 * GRID_W;
+			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
+			w = 20 * GRID_W;
+			h = CTRL_DEFAULT_H;
+		};
+		class FilterSearch: ctrlCombo
+		{
+			idc = 3300;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 141 * GRID_W;
+			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
+			w = 5 * GRID_W;
+			h = 5 * GRID_H;
+			onLBSelChanged = "_this call ENH_fnc_IM_onModFilterChanged";
+		};
 		class Search: ctrlEdit
 		{
-			idc = 5000;
-			x = CENTERED_X(DIALOG_W) + GRID_W + 145 * GRID_W;
+			idc = 3400;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 146 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 25 * GRID_W;
 			h = 5 * GRID_H;
 			onKeyUp = "_this call ENH_fnc_IM_Search";
 		};
-		class SearchIcon: ctrlStaticPictureKeepAspect
+		class ButtonSearch: ctrlButtonSearch
 		{
-			text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-			x = CENTERED_X(DIALOG_W) + GRID_W + 170 * GRID_W;
+			idc = 3500;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 171 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			colorBackground[] = {1,1,1,1};
+			onButtonClick = "_this call ENH_fnc_IM_resetSearch";
 		};
-		class ApplyLoadout: ctrlButtonOK
+		class Ok: ctrlButtonOK
 		{
 			idc = -1;
 			x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;

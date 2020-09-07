@@ -192,6 +192,7 @@ class CfgFunctions
 			class floatToTime;
 			class firstPerson;
 			class 3DENCollapseAssetBrowser;
+      class hasStorage;
 		};
 		class Log
 		{

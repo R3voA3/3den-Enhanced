@@ -15,7 +15,7 @@
 
 params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
-private _ctrlItems = _display displayCtrl 1500;
+private _ctrlItems = _display displayCtrl 2200;
 private _row = lbCurSel _ctrlItems;
 private _templateData = _ctrlItems lbData _row;
 

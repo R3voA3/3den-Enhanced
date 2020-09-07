@@ -16,8 +16,8 @@
 
 params [["_ctrlButton",controlNull],["_return",false]];
 private _display = ctrlParent _ctrlButton;
-private _ctrlInventory = _display displayCtrl 1501;
-private _ctrlIsVirtual = _display displayCtrl 2800;
+private _ctrlInventory = _display displayCtrl 2300;
+private _ctrlIsVirtual = _display displayCtrl 3200;
 private _rows = lnbSize _ctrlInventory select 0;
 
 private _weapons = [];

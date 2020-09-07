@@ -14,6 +14,8 @@ v5.6
 - Fixed missing string in 3den Radio
 - 3DEN Cam Positions will now also show the time and date when the position was saved
 - Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
+- German translation has recieved some fixes thanks to Mr-Melker
+- Fixed a wrong condition in context menu causing some .rpt entries
 
 v5.5
 *changed*

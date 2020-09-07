@@ -17,7 +17,7 @@
 params ["_ctrlFilter","_selectedIndex"];
 
 private _display = ctrlparent _ctrlFilter;
-private _ctrlItems = _display displayCtrl 1500;
+private _ctrlItems = _display displayCtrl 2200;
 private _types = uiNamespace getVariable "ENH_IM_Types";
 private _filterType = _types select _selectedIndex;
 private _filteredItems = [];
@@ -38,6 +38,6 @@ lbSort [_ctrlItems,"ASC"];
 
 //Store items to improve search later
 uiNamespace setVariable ["ENH_IM_FilteredItems",_filteredItems];
-(_display displayCtrl 5000) call ENH_fnc_IM_search;
+(_display displayCtrl 3400) call ENH_fnc_IM_search;
 
 true

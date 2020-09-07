@@ -14,8 +14,8 @@
 */
 
 params ["_display"];
-private _ctrlInventory = _display displayCtrl 1501;
-private _ctrlIsVirtual = _display displayCtrl 2800;
+private _ctrlInventory = _display displayCtrl 2300;
+private _ctrlIsVirtual = _display displayCtrl 3200;
 
 if (isNull ENH_IM_target) exitWith {false};
 

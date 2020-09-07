@@ -14,6 +14,6 @@
 */
 
 params ["_ctrlButton"];
-lnbClear ((ctrlParent _ctrlButton) displayCtrl 1501);
+lnbClear ((ctrlParent _ctrlButton) displayCtrl 2300);
 
 true

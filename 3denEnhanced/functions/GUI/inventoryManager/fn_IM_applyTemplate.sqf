@@ -17,7 +17,7 @@ params ["_ctrlButton"];
 private _display = ctrlparent _ctrlButton;
 
 //Get template data from listbox
-private _ctrlItems = _display displayCtrl 1500;
+private _ctrlItems = _display displayCtrl 2200;
 private _row = lbCurSel _ctrlItems;
 if (_row isEqualTo -1) exitWith {false};
 private _value = _ctrlItems lbData lbCurSel _ctrlItems;

@@ -15,7 +15,7 @@
 
 params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
-private _ctrlItems = _display displayCtrl 1500;
+private _ctrlItems = _display displayCtrl 2200;
 lbClear _ctrlItems;
 
 private _showTemplate = isNil "ENH_IM_ShowTemplates";
@@ -23,12 +23,12 @@ private _showTemplate = isNil "ENH_IM_ShowTemplates";
 //Disable controls
 {
 	_display displayCtrl _x ctrlEnable !_showTemplate;
-} forEach [5000,2100,100,110,120,130,140,150,1900,2200];
+} forEach [2100,2400,2500,2600,2700,2800,3300,3400,3500];
 
 //Enable controls
 {
 	_display displayCtrl _x ctrlEnable _showTemplate;
-} forEach [150,1900,2200];
+} forEach [2900,3000,3100];
 
 if (isNil "ENH_IM_ShowTemplates") then
 {
@@ -50,7 +50,7 @@ else
 	_ctrlButton ctrlSetText "show templates";
 	_display displayCtrl 1000 ctrlSetText "Available Items";
 	private _ctrlFilter = _display displayCtrl 2100;
-	[_ctrlFilter,lbCurSel _ctrlFilter]call ENH_fnc_IM_filterList;
+	[_ctrlFilter,lbCurSel _ctrlFilter] call ENH_fnc_IM_filterList;
 
 	ENH_IM_ShowTemplates = nil;
 };

@@ -16,7 +16,7 @@
 
 params ["_ctrlButton","_amount"];
 private _display = ctrlparent _ctrlButton;
-private _ctrlInventory = _display displayCtrl 1501;
+private _ctrlInventory = _display displayCtrl 2300;
 private _row = lnbCurSelRow  _ctrlInventory;
 
 if (_row == -1) exitWith {false};

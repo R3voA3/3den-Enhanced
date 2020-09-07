@@ -14,7 +14,7 @@
 */
 
 params ["_display"];
-private _ctrlItems = _display displayCtrl 1500;
+private _ctrlItems = _display displayCtrl 2200;
 _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 lbClear _ctrlItems;
 {

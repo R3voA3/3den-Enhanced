@@ -19,7 +19,8 @@
 */
 
 params ["_ctrlLnb","_data","_text","_image","_addonIcon","_value"];
-private _row = _ctrlLnb lnbAddRow ["",_text,str _value];
+
+private _row = _ctrlLnb lnbAddRow ["",_text,str _value,""];
 _ctrlLnb lnbSetData [[_row,0],_data];
 _ctrlLnb lnbSetValue [[_row,1],_value];
 _ctrlLnb lnbSetText [[_row,2],str _value];

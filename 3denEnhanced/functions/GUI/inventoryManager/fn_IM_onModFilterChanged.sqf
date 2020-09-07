@@ -1,8 +1,8 @@
 params ["_ctrlCombo", "_selectedIndex"];
 
 private _display = ctrlParent _ctrlCombo;
-private _ctrlSearch = _display displayCtrl 5000;
-private _ctrlButtonSearch = _display displayCtrl 5100;
+private _ctrlSearch = _display displayCtrl 3400;
+private _ctrlButtonSearch = _display displayCtrl 3500;
 
 //Update edit box and button
 _ctrlSearch ctrlSetText "mod " + (_ctrlCombo lbData _selectedIndex);

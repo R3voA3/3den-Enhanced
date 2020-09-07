@@ -15,7 +15,7 @@
 
 params ["_ctrlButton"];
 private _displayParent = findDisplay 80000;
-private _ctrlInventory = _displayParent displayCtrl 1501;
+private _ctrlInventory = _displayParent displayCtrl 2300;
 private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 
 //Return inventory data
