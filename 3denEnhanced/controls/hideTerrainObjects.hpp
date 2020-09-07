@@ -8,7 +8,7 @@ class ENH_HideTerrainObjects: Title
 		ATTRIBUTE_DESCRIPTION($STR_ENH_HIDETERRAINOBJECTS_DESCRIPTION,3);
     class EffectsTitle: Title
 		{
-			text = $STR_A3_RSCATTRIBUTEPOSTPROCESS_TITLE
+			text = $STR_A3_RSCATTRIBUTEPOSTPROCESS_TITLE;
 			y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class Effect: ctrlToolbox

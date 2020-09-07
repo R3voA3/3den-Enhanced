@@ -5,6 +5,6 @@ class ENH_ForceFlag
 	property = "ENH_forceFlag";
 	control = "Edit";
 	expression = "if (_value != '') then {_this forceFlagTexture _value}";
-	condition = "objectVehicle + objectBrain";
+	condition = "objectBrain + objectVehicle";
 	defaultValue = "''";
 };

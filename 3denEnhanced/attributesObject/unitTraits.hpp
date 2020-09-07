@@ -52,16 +52,16 @@ class ENH_UnitTraits
 		class ENH_AudibleCoef: ENH_Camouflage
 		{
 			displayName = $STR_ENH_AUDIBLECOEF_DISPLAYNAME;
-         	tooltip = $STR_ENH_AUDIBLECOEF_TOOLTIP;
+      tooltip = $STR_ENH_AUDIBLECOEF_TOOLTIP;
 			property = "ENH_unitTraits_audibleCoef";
 			expression = "_this setUnitTrait ['AudibleCoef',_value]";
 		};
-      	class ENH_LoadCoef: ENH_Camouflage
-      	{
-         	displayName = $STR_ENH_LOADCOEF_DISPLAYNAME;
-         	tooltip = $STR_ENH_LOADCOEF_TOOLTIP;
-         	property = "ENH_unitTraits_loadCoef";
-         	expression = "_this setUnitTrait ['LoadCoef',_value]";
-      	};
+    class ENH_LoadCoef: ENH_Camouflage
+    {
+      displayName = $STR_ENH_LOADCOEF_DISPLAYNAME;
+      tooltip = $STR_ENH_LOADCOEF_TOOLTIP;
+      property = "ENH_unitTraits_loadCoef";
+      expression = "_this setUnitTrait ['LoadCoef',_value]";
+    };
 	};
 };
