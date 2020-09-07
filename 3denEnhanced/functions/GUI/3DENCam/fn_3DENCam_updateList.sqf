@@ -51,7 +51,7 @@ _ctrlLnB lnbSetColumnsPos [0,0.1,0.75,0.9];
 		
 		_ctrlLnB lnbSetPicture [[_index,0],getText (configFile >> "CfgWorlds" >> _world >> "pictureMap")];
 		_ctrlLnB lnbSetData [[_index,0],str _x];
-		//diag_log [_description,_index,]
+		
 		private _number = ((_index + 1) call ENH_fnc_twoDigitsStr) + ".";
 		_ctrlLnB lnbSetText [[_index,0],_number];
 
