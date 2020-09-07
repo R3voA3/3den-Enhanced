@@ -39,7 +39,8 @@ private _contributers =
 	"ConnorAU",
 	"shukari",
 	"Poslovitch",
-	"zagor64bz"
+	"zagor64bz",
+	"Mr-Melker"
 ];
 
 private _ctrl = _display displayCtrl 1000;
