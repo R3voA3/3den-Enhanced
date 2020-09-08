@@ -3,7 +3,9 @@
 
 class ENH_InventoryManager
 {
-	idd = -1;
+	idd = 80000;
+  onLoad = "['showInterface',false] call BIS_fnc_3DENInterface";
+  onUnload = "['showInterface',true] call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND

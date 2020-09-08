@@ -32,23 +32,16 @@ private _showTemplate = isNil "ENH_IM_ShowTemplates";
 
 if (isNil "ENH_IM_ShowTemplates") then
 {
-	_ctrlButton ctrlSetText "hide templates";
-	_display displayCtrl 1000 ctrlSetText "Templates";
+	_ctrlButton ctrlSetText "STR_ENH_IM_HIDETEMPLATES";
+	_display displayCtrl 1000 ctrlSetText "STR_ENH_IM_TEMPLATES";
 
-	_templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
-	
-	{
-		_x params ["_name","_description","_data"];
-		_ctrlItems lbAdd _name;
-		_ctrlItems lbSetTooltip [_forEachIndex,_description];
-		_ctrlItems lbSetData [_forEachIndex,_data];
-	} forEach _templates;
+	_display call ENH_fnc_IM_updateTemplateList;
 	ENH_IM_ShowTemplates = true;
 } 
 else
 {
-	_ctrlButton ctrlSetText "show templates";
-	_display displayCtrl 1000 ctrlSetText "Available Items";
+	_ctrlButton ctrlSetText localize "STR_ENH_IM_SHOWTEMPLATES";
+	_display displayCtrl 1000 ctrlSetText localize "STR_ENH_IM_AVAILABLEITEMS";
 	private _ctrlFilter = _display displayCtrl 2100;
 	[_ctrlFilter,lbCurSel _ctrlFilter] call ENH_fnc_IM_filterList;
 

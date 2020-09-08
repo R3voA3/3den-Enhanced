@@ -12,15 +12,26 @@
    2: STRING - Item Data
    3: STRING - Left Picture
    4: STRING - Right Picture
+   5: STRING - Tooltip
 
    Returns:
    BOOLEAN: true
 */
 
-params ["_ctrlLb","_lbText","_lbData","_pictureLeft","_pictureRight"];
-private _indexItem = _ctrlLb lbAdd _lbText;
-_ctrlLb lbSetData [_indexItem,_lbData];
-_ctrlLb lbSetPicture [_indexItem,_pictureLeft];
-_ctrlLb lbSetPictureRight [_indexItem,_pictureRight];
+params
+[
+   ["_ctrlLb",controlNull],
+   ["_lbText",""],
+   ["_lbData",""],
+   ["_pictureLeft",""],
+   ["_pictureRight",""],
+   ["_tooltip",""]
+];
+
+private _index = _ctrlLb lbAdd _lbText;
+_ctrlLb lbSetData [_index,_lbData];
+_ctrlLb lbSetPicture [_index,_pictureLeft];
+_ctrlLb lbSetPictureRight [_index,_pictureRight];
+_ctrlLb lbSetTooltip [_index,_tooltip];
 
 true

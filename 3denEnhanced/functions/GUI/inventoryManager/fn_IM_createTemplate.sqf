@@ -30,7 +30,7 @@ if !(_templateTitle isEqualTo "") then
 	_templates pushBack [_templateTitle,_templateDescription,_value];
 	profileNamespace setVariable ["ENH_IM_Templates",_templates];
 	_displayChild closeDisplay 1;
-	_displayParent call ENH_fnc_updateTemplateList;
+	_displayParent call ENH_fnc_IM_updateTemplateList;
 };
 
 true

@@ -19,9 +19,9 @@ _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 lbClear _ctrlItems;
 {
 	_x params ["_name","_description","_data"];
-	_ctrlItems lbAdd _name;
+	_test = _ctrlItems lbAdd _name;
+   _ctrlItems lbSetData [_forEachIndex,_data];
 	_ctrlItems lbSetTooltip [_forEachIndex,_description];
-	_ctrlItems lbSetData [_forEachIndex,_data];
 } forEach _templates;
 
 true

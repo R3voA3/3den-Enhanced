@@ -102,7 +102,6 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 	"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
 };
 
-
 //Get all addons and add them to filter control
 private _ctrlFilterSearch = _display displayCtrl 3300;
 private _added = [];
@@ -125,12 +124,12 @@ _display call ENH_fnc_IM_loadAttributeValue;
 //Add background icon
 private _ctrlBackgroundIcon = _display displayCtrl 2000;
 private _icon = getText (configFile >> "CfgVehicles" >> typeOf ENH_IM_target >> "icon");
-//Stupid work around because some vehicle / crates don't have the icon texture in their config...
+
+//Stupid workaround because some vehicles / crates don't have the icon texture in their config...
 if !(".paa" in _icon) then
 {
 	_icon = getText (configfile >> "CfgVehicleIcons" >> _icon);
 };
-
 _ctrlBackgroundIcon ctrlSetText _icon;
 
 {

@@ -1,7 +1,6 @@
 class ENH_InventoryManager_TemplateData
 {
 	idd = -1;
-	movingEnable = true;
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
