@@ -5,8 +5,8 @@ class ENH_3DENRadio
 {
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
-	onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
-	onUnload = "_this call ENH_fnc_3DENRadio_onUnload";
+	onLoad = "['showInterface',false] call BIS_fnc_3DENInterface; _this spawn ENH_fnc_3DENRadio_onLoad";
+	onUnload = "['showInterface',true] call BIS_fnc_3DENInterface; _this call ENH_fnc_3DENRadio_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND

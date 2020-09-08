@@ -6095,4 +6095,12 @@
 		<English>Hides or destroys all objects of given type in the trigger area when the mission starts. Effect is visible for all players including JIP.</English>
 		<German>Versteckt oder zerstört alle Objekte des angegebenen Typs im Auslösergebiet. Der Effekt ist für alle Spieler, auch JIP sichtbar.</German>
 	</Key>
+	<Key ID="STR_ENH_IM_HIDETEMPLATES">
+		<English>Hide Templates</English>
+		<German>Vorlagen versteck.</German>
+	</Key>
+	<Key ID="STR_ENH_IM_TEMPLATES">
+		<English>Templates</English>
+		<German>Vorlagen</German>
+	</Key>
 </Project>

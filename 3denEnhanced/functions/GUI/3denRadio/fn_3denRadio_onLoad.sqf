@@ -13,9 +13,6 @@
 
 disableSerialization;
 
-["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
-["ShowPanelRight",false] call BIS_fnc_3DENInterface;
-
 params ["_display"];
 
 private _ctrlVol = _display displayCtrl 1900;
@@ -51,10 +48,17 @@ switch (profileNamespace getVariable ["ENH_3DENRadio_Enabled",false]) do
 };
 
 //Get all music tracks
-ENH_3DENRadio_cfgMusic = 
-	("true" configClasses (configFile >> "CfgMusic")) + 
-	("true" configClasses (missionConfigFile >> "CfgMusic")) + 
-	("true" configClasses (campaignConfigFile >> "CfgMusic"));
+
+if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic",[]]) isEqualTo []) then
+{
+	uiNamespace setVariable
+	[
+		"ENH_3DENRadio_cfgMusic",
+		("true" configClasses (configFile >> "CfgMusic")) +
+		("true" configClasses (missionConfigFile >> "CfgMusic")) +
+		("true" configClasses (campaignConfigFile >> "CfgMusic"))
+	];
+};
 
 _ctrlSongList lnbAddColumn 0.59;
 _ctrlSongList lnbAddColumn 0.7;

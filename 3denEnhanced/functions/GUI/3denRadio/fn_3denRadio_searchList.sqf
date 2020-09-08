@@ -18,7 +18,7 @@ private _ctrlSongList = _display displayCtrl 1500;
 private _ctrlSearch = _display displayCtrl 1400;
 private _filter = toUpper (ctrlText _ctrlSearch);
 private _filteredClasses = [];
-
+private _music = uiNamespace getVariable ["ENH_3DENRadio_cfgMusic",[]];
 lbClear _ctrlSongList;
 
 //Filter all classes according to input in search control, private here to avoid in loop
@@ -37,7 +37,7 @@ private ["_name","_configName","_duration","_logo","_theme"];
 		_theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 		_filteredClasses pushBack [_name,_configName,_duration,_theme,_logo];
 	};
-} forEach ENH_3DENRadio_cfgMusic;
+} forEach _music;
 
 //Add all classes to the list box, must be in two steps otherwise previewing songs and sorting the list box doesn't work anymore
 {
