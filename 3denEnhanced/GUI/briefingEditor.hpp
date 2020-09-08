@@ -2,8 +2,8 @@ class ENH_BriefingEditor
 {
 	idd = -1;
 	movingEnable = true;
-	onLoad = "_this spawn ENH_fnc_briefingEditor_onLoad";
-	onUnload = "_this call ENH_fnc_briefingEditor_onUnload";
+	onLoad = "['showInterface',false] call BIS_fnc_3DENInterface; _this spawn ENH_fnc_briefingEditor_onLoad";
+	onUnload = "['showInterface',true] call BIS_fnc_3DENInterface; _this call ENH_fnc_briefingEditor_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND

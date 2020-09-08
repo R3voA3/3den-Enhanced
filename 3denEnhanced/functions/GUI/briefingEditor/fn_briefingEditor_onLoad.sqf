@@ -15,10 +15,6 @@
 
 disableSerialization;
 
-//Hide left & right tab to prevent interference
-["ShowPanelLeft",false] call BIS_fnc_3DENInterface;
-["ShowPanelRight",false] call BIS_fnc_3DENInterface;
-
 params ["_display"];
 #define CTRL(IDC) (_display displayCtrl IDC)
 

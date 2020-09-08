@@ -43,7 +43,4 @@ for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
 
 profileNamespace setVariable ["ENH_briefingEditor_templates",_savedTemplates];
 
-['ShowPanelLeft',true] call BIS_fnc_3DENInterface;
-['ShowPanelRight',true] call BIS_fnc_3DENInterface;
-
 true
