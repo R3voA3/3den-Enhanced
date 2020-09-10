@@ -7,15 +7,14 @@
    Used by the ENH_InventoryManager GUI. Adds an item to the inventory list.
 
    Parameter(s):
-   0: CONTROL - Control Button
-   1: NUMBER - Amount of items to be added
+   0: NUMBER - Amount of items to be added
 
    Returns:
    BOOLEAN: true
 */
 
-params ["_ctrlButton","_amount"];
-private _display = ctrlparent _ctrlButton;
+params ["_amount"];
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _display displayCtrl 2300;
 private _ctrlItems = _display displayCtrl 2200;
 private _row = lbCurSel _ctrlItems;

@@ -40,7 +40,7 @@ class ENH_InventoryManager_TemplateData
 		class Description: ctrlStatic
 		{
 			text = $STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION;
-			x = CENTERED_X(60) + 1 * GRID_W;
+			x = CENTERED_X(60);
 			y = DIALOG_TOP + 68 * GRID_H;
 			w = 58 * GRID_W;
 			h = CTRL_DEFAULT_H;

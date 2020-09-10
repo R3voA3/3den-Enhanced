@@ -7,13 +7,12 @@
    Used by the ENH_InventoryManager GUI. Clear the inventory list.
 
    Parameter(s):
-   0: CONTROL - Control Button
+   -
 
    Returns:
    BOOLEAN: true
 */
 
-params ["_ctrlButton"];
-lnbClear ((ctrlParent _ctrlButton) displayCtrl 2300);
+lnbClear ((uiNamespace getVariable "Enh_Display_InventoryManager") displayCtrl 2300);
 
 true

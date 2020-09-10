@@ -14,9 +14,9 @@
 */
 
 params ["_ctrlSearch"];
-private _display = ctrlParent _ctrlSearch;
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlItems = _display displayCtrl 2200;
-private _filter = toUpper ctrlText _ctrlSearch;
+private _filter = toUpper ctrlText (_display displayCtrl 3400);
 private _classesToSearch = uiNamespace getVariable ["ENH_IM_FilteredItems",[]];
 
 if (_filter == "") then

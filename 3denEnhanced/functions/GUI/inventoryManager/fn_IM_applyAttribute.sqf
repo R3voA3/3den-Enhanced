@@ -7,15 +7,14 @@
    Used by the ENH_InventoryManager GUI. Takes items from inventory list and applies the attribute. Can also only return the attribute value.
 
    Parameter(s):
-   0: CONTROL - Control Button
-   1: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
+   0: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
 
    Returns:
    BOOLEAN: true
 */
 
-params [["_ctrlButton",controlNull],["_return",false]];
-private _display = ctrlParent _ctrlButton;
+params [["_return",false]];
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _display displayCtrl 2300;
 private _ctrlIsVirtual = _display displayCtrl 3200;
 private _rows = lnbSize _ctrlInventory select 0;

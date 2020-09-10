@@ -23,6 +23,7 @@ if (isNil "ENH_IM_target" || ENH_IM_target isKindOf "CAManBase" || !(ENH_IM_targ
 };
 
 private _display = findDisplay 313 createDisplay "ENH_InventoryManager";
+uiNamespace setVariable ["Enh_Display_InventoryManager",_display];
 
 if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 {
@@ -54,72 +55,70 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 		]
 	];
 
-	private _cfgWeapons = "getNumber (_x >> 'scope') isEqualTo 2" configClasses (configfile >> "CfgWeapons");
-	private _cfgMagazines = "getNumber (_x >> 'scope') isEqualTo 2" configClasses (configFile >> "CfgMagazines");
-	private _cfgGlasses = "getNumber (_x >> 'scope') isEqualTo 2" configClasses (configFile >> "CfgGlasses");
-	private _cfgVehicles = "getNumber (_x >> 'scope') isEqualTo 2" configClasses (configFile >> "CfgVehicles");
+	#define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
+
+	private _cfgWeapons = CONDITION configClasses (configfile >> "CfgWeapons");
+	private _cfgMagazines = CONDITION configClasses (configFile >> "CfgMagazines");
+	private _cfgGlasses = CONDITION configClasses (configFile >> "CfgGlasses");
+	private _cfgVehicles = CONDITION configClasses (configFile >> "CfgVehicles");
 
 	private _allItemConfigs = _cfgWeapons + _cfgMagazines + _cfgGlasses + _cfgVehicles;
 	private _allItemsConfigsCount = count _allItemsConfig;
-	["ENH_IM_LoadingScreen"] call BIS_fnc_startLoadingScreen;
+	//["ENH_IM_LoadingScreen"] call BIS_fnc_startLoadingScreen;
 
-	_itemsCache = [];
-
+	private _itemsCache = [];
+	private _addons = [];
+	private _blacklist = ["","Unknown","UnknownEquipment","UnknownWeapon","VehicleWeapon"];
+	
 	{
-		(configName _x call BIS_fnc_itemType) params ["_category","_specificType"];
-		if (_category != "" && 
-		{(_category != "VehicleWeapon") &&
-		{(getText (_x >> "picture") != "") &&
-		{getText (_x >> "model") != "" &&
-		{if (isArray (_x >> "muzzles")) then { (configName _x) call BIS_fnc_baseWeapon == configName _x} else {true}}}}}) then
+		private _configName = configName _x;
+		(_configName call BIS_fnc_itemType) params ["_category","_specificType"];
+		if (!(_category in _blacklist || _specificType in _blackList) && {if (isArray (_x >> "muzzles")) then {_configName call BIS_fnc_baseWeapon == _configName} else {true}}) then
 		{
-			if (_specificType isEqualTo "MissileLauncher") then {_specificType = "RocketLauncher"};//Same type for all launchers
+			if (_specificType == "MissileLauncher") then {_specificType = "RocketLauncher"};//Same type for all launchers
 			if (_specificType in ["Throw","SmokeShell","Flare"]) then {_specificType = "Grenade"};//Same type for all grenades, flares, chemlights, smoke
 
 			private _addonName = "";
 			private _addonIcon = "";
-			if (configSourceMod _x != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
+			private _configSourceMod = configSourceMod _x;
+			if (_configSourceMod != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
 			{
-				_addonName = modParams [configSourceMod _x, ["name"]] # 0;
-				_addonIcon = modParams [configSourceMod _x, ["logoSmall"]] # 0;
+				_addonName = modParams [_configSourceMod, ["name"]] # 0;
+				_addonIcon = modParams [_configSourceMod, ["logoSmall"]] # 0;
+
+				//Get all addons so they can be added to filter later
+				_addons pushBackUnique [_configSourceMod,_addonName,_addonIcon];
 			};
-	
+
 			_itemsCache pushBack
 			[
-				configName _x,
+				_configName,
 				getText (_x >> "DisplayName"),
 				getText(_x >> "Picture"),
 				_addonIcon,
 				_category,
 				_specificType,
-				configSourceMod _x,
+				_configSourceMod,
 				_addonName
 			];
 		};
-		(_allItemsConfigsCount / _forEachIndex) call BIS_fnc_progressLoadingScreen;
+		//(_allItemsConfigsCount / _forEachIndex) call BIS_fnc_progressLoadingScreen;
 	} forEach _allItemConfigs;
 	uiNamespace setVariable ["ENH_IM_allItems",_itemsCache];
-	"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
+	uiNamespace setVariable ["ENH_IM_allAddons",_addons];
+	//"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
 };
 
 //Get all addons and add them to filter control
 private _ctrlFilterSearch = _display displayCtrl 3300;
-private _added = [];
 
 {
-	private _addonIcon = _x select 3;
-	private _addonClass = _x select 6;
-	private _addonName = _x select 7;
-	
-	if !(_addonClass == "" || {_addonClass in _added}) then
-	{
-		_added pushBack _addonClass;
-		[_ctrlFilterSearch,_addonName,_addonClass,"",_addonIcon] call ENH_fnc_IM_lbAdd;
-	};
-} forEach (uiNamespace getVariable "ENH_IM_allItems");
+	_x params ["_addonClass","_addonName","_addonIcon"];
+	[_ctrlFilterSearch,_addonName,_addonClass,"",_addonIcon] call ENH_fnc_IM_lbAdd;
+} forEach (uiNamespace getVariable "ENH_IM_allAddons");
 
 [_display displayCtrl 2100,0] call ENH_fnc_IM_filterList;
-_display call ENH_fnc_IM_loadAttributeValue;
+call ENH_fnc_IM_loadAttributeValue;
 
 //Add background icon
 private _ctrlBackgroundIcon = _display displayCtrl 2000;

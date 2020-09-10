@@ -164,6 +164,7 @@ class CfgFunctions
 			class IM_updateTemplateList;
       class IM_onModFilterChanged;
       class IM_resetSearch;
+      class IM_resetStorage;
 		};
 		class Misc
 		{

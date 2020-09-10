@@ -15,7 +15,7 @@
 */
 
 params ["_ctrlListbox","_selectedIndex"];
-private _display = ctrlParent _ctrlListbox;
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _typeCtrl = ctrlType _ctrlListbox;
 
 //Exit if templates are shown and user double clicks on template list

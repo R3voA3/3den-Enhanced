@@ -94,7 +94,7 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + 10 * CTRL_DEFAULT_H;
 			w = 10 * GRID_W;
 			h = 2 * CTRL_DEFAULT_H;
-			onButtonClick = "[_this # 0,1] call ENH_fnc_IM_AddItem";
+			onButtonClick = "1 call ENH_fnc_IM_AddItem";
 		};
 		class AddTen: AddOne
 		{
@@ -102,7 +102,7 @@ class ENH_InventoryManager
 			text = ">>";
 			tooltip = "+10";
 			y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
-			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_AddItem";
+			onButtonClick = "10 call ENH_fnc_IM_AddItem";
 		};
 		class RemoveOne: AddOne
 		{
@@ -110,7 +110,7 @@ class ENH_InventoryManager
 			text = "<";
 			tooltip = "-1";
 			y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
-			onButtonClick = "[_this # 0,1] call ENH_fnc_IM_RemoveItem";
+			onButtonClick = "1 call ENH_fnc_IM_RemoveItem";
 		};
 		class RemoveTen: AddOne
 		{
@@ -118,7 +118,7 @@ class ENH_InventoryManager
 			text = "<<";
 			tooltip = "-10";
 			y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
-			onButtonClick = "[_this # 0,10] call ENH_fnc_IM_RemoveItem";
+			onButtonClick = "10 call ENH_fnc_IM_RemoveItem";
 		};
 		class RemoveAll: ctrlButton
 		{
@@ -129,7 +129,7 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + 18 * CTRL_DEFAULT_H + 4 * GRID_W;
 			w = 10 * GRID_W;
 			h = 2 * CTRL_DEFAULT_H;
-			onButtonClick = "_this call ENH_fnc_IM_clearInventory";
+			onButtonClick = "call ENH_fnc_IM_clearInventory";
 		};
 		class ShowTemplates: ctrlButton
 		{
@@ -173,7 +173,7 @@ class ENH_InventoryManager
 			x = CENTERED_X(DIALOG_W) + GRID_W + 112 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			onCheckedChanged = "_this call ENH_fnc_IM_toggleVirtual";
 		};
     class IsVirtualText: ctrlStatic
@@ -184,13 +184,23 @@ class ENH_InventoryManager
 			w = 20 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
+    class Reset: ctrlButtonPictureKeepAspect
+		{
+			text = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
+      tooltip = $STR_ENH_IM_RESET_TOOLTIP;
+			x = CENTERED_X(DIALOG_W) + GRID_W + 135 * GRID_W;
+			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
+			w = 5 * GRID_W;
+			h = CTRL_DEFAULT_H;
+      action = "call ENH_fnc_IM_resetStorage";
+    };
 		class FilterSearch: ctrlCombo
 		{
 			idc = 3300;
 			x = CENTERED_X(DIALOG_W) + GRID_W + 141 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 5 * GRID_W;
-			h = 5 * GRID_H;
+		  h = CTRL_DEFAULT_H;
 			onLBSelChanged = "_this call ENH_fnc_IM_onModFilterChanged";
 		};
 		class Search: ctrlEdit
@@ -199,7 +209,7 @@ class ENH_InventoryManager
 			x = CENTERED_X(DIALOG_W) + GRID_W + 146 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 25 * GRID_W;
-			h = 5 * GRID_H;
+			h = CTRL_DEFAULT_H;
 			onKeyUp = "_this call ENH_fnc_IM_Search";
 		};
 		class ButtonSearch: ctrlButtonSearch
@@ -218,7 +228,7 @@ class ENH_InventoryManager
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
 			w = 30 * GRID_W;
 			h = CTRL_DEFAULT_H;
-			onButtonClick = "_this call ENH_fnc_IM_ApplyAttribute";
+			onButtonClick = "[] call ENH_fnc_IM_ApplyAttribute";
 		};
 		class Cancel: ctrlButtonCancel
 		{

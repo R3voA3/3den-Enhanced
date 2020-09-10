@@ -14,12 +14,12 @@
 */
 
 params ["_ctrlButton"];
-private _displayParent = findDisplay 80000;
+private _displayParent = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _displayParent displayCtrl 2300;
 private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 
 //Return inventory data
-private _value = [_ctrlInventory,true] call ENH_fnc_IM_applyAttribute;
+private _value = [true] call ENH_fnc_IM_applyAttribute;
 
 private _displayChild = ctrlParent _ctrlButton;
 private _templateTitle = ctrlText (_displayChild displayCtrl 1000);
@@ -30,7 +30,7 @@ if !(_templateTitle isEqualTo "") then
 	_templates pushBack [_templateTitle,_templateDescription,_value];
 	profileNamespace setVariable ["ENH_IM_Templates",_templates];
 	_displayChild closeDisplay 1;
-	_displayParent call ENH_fnc_IM_updateTemplateList;
+	call ENH_fnc_IM_updateTemplateList;
 };
 
 true

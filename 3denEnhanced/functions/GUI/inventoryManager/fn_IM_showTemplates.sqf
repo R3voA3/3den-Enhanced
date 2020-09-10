@@ -14,7 +14,7 @@
 */
 
 params ["_ctrlButton"];
-private _display = ctrlParent _ctrlButton;
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlItems = _display displayCtrl 2200;
 lbClear _ctrlItems;
 
@@ -32,8 +32,8 @@ private _showTemplate = isNil "ENH_IM_ShowTemplates";
 
 if (isNil "ENH_IM_ShowTemplates") then
 {
-	_ctrlButton ctrlSetText "STR_ENH_IM_HIDETEMPLATES";
-	_display displayCtrl 1000 ctrlSetText "STR_ENH_IM_TEMPLATES";
+	_ctrlButton ctrlSetText localize "STR_ENH_IM_HIDETEMPLATES";
+	_display displayCtrl 1000 ctrlSetText localize "STR_ENH_IM_TEMPLATES";
 
 	_display call ENH_fnc_IM_updateTemplateList;
 	ENH_IM_ShowTemplates = true;

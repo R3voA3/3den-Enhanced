@@ -6103,4 +6103,8 @@
 		<English>Templates</English>
 		<German>Vorlagen</German>
 	</Key>
+	<Key ID="STR_ENH_IM_RESET_TOOLTIP">
+		<English>Reset to default items defined in object's config.</English>
+		<German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
+	</Key>
 </Project>

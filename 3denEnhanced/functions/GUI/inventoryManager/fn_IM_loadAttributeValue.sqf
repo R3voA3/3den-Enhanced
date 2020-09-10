@@ -7,17 +7,15 @@
    Used by the ENH_InventoryManager GUI. Used to fill the inventory listbox with set attribute value.
 
    Parameter(s):
-   0: DISPLAY - Display
+   -
 
    Returns:
    BOOLEAN: true
 */
 
-params ["_display"];
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _display displayCtrl 2300;
 private _ctrlIsVirtual = _display displayCtrl 3200;
-
-if (isNull ENH_IM_target) exitWith {false};
 
 private _attributeValue = (ENH_IM_target get3DENAttribute "ammoBox") # 0;
 _attributeValue = call compile _attributeValue;//Eden saves attributes as string
@@ -35,7 +33,7 @@ private _fnc_addItems =
 			if (_x # 0 isEqualTo _currentClass) exitWith
 			{
 				_x params ["_configName","_displayName","_image","_addonIcon"];
-				([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount]) call ENH_fnc_IM_LnbAddItem;
+				([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount]) call ENH_fnc_IM_lnbAddItem;
 			};
 		} forEach (uiNamespace getVariable "ENH_IM_allItems");
 	} forEach _configNamesArray;

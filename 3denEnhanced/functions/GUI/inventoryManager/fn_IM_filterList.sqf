@@ -26,9 +26,8 @@ lbClear _ctrlItems;
 
 {
 	_x params ["_configName","_displayName","_picture","_addonIcon","_category","_specificType","_addon"];
-	if (_specificType isEqualTo _filterType || _category isEqualTo _filterType) then
+	if ((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) then
 	{
-      if (_category isEqualTo _filterType && _specificType in _types) exitWith {false};
 		[_ctrlItems,_displayName,_configName,_picture,_addonIcon,"Double click to preview an item."] call ENH_fnc_IM_lbAdd;
 		_filteredItems pushBack [_configName,_displayName,_picture,_addonIcon,_addon];
 	};

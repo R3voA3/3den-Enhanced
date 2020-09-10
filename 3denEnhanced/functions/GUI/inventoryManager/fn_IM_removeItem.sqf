@@ -14,8 +14,8 @@
    BOOLEAN: true
 */
 
-params ["_ctrlButton","_amount"];
-private _display = ctrlparent _ctrlButton;
+params ["_amount"];
+private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _display displayCtrl 2300;
 private _row = lnbCurSelRow  _ctrlInventory;
 

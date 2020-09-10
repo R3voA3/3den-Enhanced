@@ -9,6 +9,6 @@ class CfgPatches
 		requiredAddons[] = {"3den","A3_Data_F_Sams_Loadorder"};
 		units[] = {};
 		weapons[] = {};
-      	worlds[] = {};
+    worlds[] = {};
 	};
 };
