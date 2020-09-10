@@ -145,7 +145,7 @@ class ENH_3DENRadio
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
-		class Import: ctrlButton
+		/* class Import: ctrlButton
 		{
 			text = $STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT;
 			x = CENTERED_X(DIALOG_W) + 121 * GRID_W;
@@ -162,7 +162,7 @@ class ENH_3DENRadio
 			w = 26 * GRID_W;
 			h = CTRL_DEFAULT_H;
 			action = "'EXPORT'call ENH_fnc_3DENRadio_handlePlaylist";
-		};
+		}; */
 		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 174 * GRID_W;
