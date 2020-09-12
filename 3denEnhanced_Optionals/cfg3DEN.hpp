@@ -136,6 +136,14 @@ class Cfg3DEN
 			};
 		};
 	};
+  class Trigger
+  {
+    class AttributeCategories
+    {
+      #ifdef HIDE_ENH_HIDETERRAINOBJECTS
+      delete ENH_HideTerrainObjects
+    };
+  };
 	class Object
 	{
 		class AttributeCategories
