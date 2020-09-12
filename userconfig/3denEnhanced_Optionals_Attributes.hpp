@@ -33,6 +33,9 @@
 #define HIDE_ENH_GROUPMARKER
 #define HIDE_ENH_TASKPATROL
 
+//Trigger Attribute
+#define HIDE_ENH_HIDETERRAINOBJECTS
+
 //Object Attributes
 #define HIDE_ENH_ALLOWCREWINIMMOBILE
 #define HIDE_ENH_ALLOWSPRINT
