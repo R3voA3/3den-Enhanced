@@ -4,8 +4,6 @@
 class ENH_InventoryManager
 {
 	idd = 80000;
-  onLoad = "['showInterface',false] call BIS_fnc_3DENInterface";
-  onUnload = "['showInterface',true] call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -230,7 +228,7 @@ class ENH_InventoryManager
 			h = CTRL_DEFAULT_H;
 			onButtonClick = "[] call ENH_fnc_IM_ApplyAttribute";
 		};
-		class Cancel: ctrlButtonCancel
+		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 32 * GRID_W;
 			y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;

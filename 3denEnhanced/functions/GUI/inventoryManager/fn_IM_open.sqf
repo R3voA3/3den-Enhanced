@@ -10,13 +10,13 @@
    -
 
    Returns:
-   BOOLEAN: true
+   BOOLEAN: true / false
 */
 
 ENH_IM_ShowTemplates = nil;
 ENH_IM_target = get3DENSelected "Object" select 0;
 
-if (isNil "ENH_IM_target" || ENH_IM_target isKindOf "CAManBase" || !(ENH_IM_target call ENH_fnc_hasStorage)) exitWith
+if (isNil "ENH_IM_target" || {ENH_IM_target isKindOf "CAManBase" || !(ENH_IM_target call ENH_fnc_hasStorage)}) exitWith
 {
 	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 	false

@@ -45,7 +45,7 @@ for "_i" from 0 to (( _rows - 1)) max 0 do
 };
 if !(_itemAdded) then//If item was not found in the list, add it
 {
-	[_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount] call ENH_fnc_IM_LnbAddItem;
+	[_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_LnbAddItem;
 };
 
 //Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)

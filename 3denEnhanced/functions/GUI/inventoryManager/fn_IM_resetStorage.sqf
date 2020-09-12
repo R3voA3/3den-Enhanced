@@ -13,25 +13,45 @@
    BOOLEAN: true
 */
 
-_display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = _display displayCtrl 2300;
 
-//Clear inventory listbox
-call ENH_fnc_IM_clearInventory;
-
-//Get all items defined in vehicle's config and add them to the listbox
+ENH_fnc_IM_resetStorage_main =
 {
-	private _classes = "true" configClasses (configOf ENH_IM_target >> _x);
-	{
-			_count = getNumber (_x >> "count");
-			_configName = configName _x select [4,count (configName _x) -1];
-			
-			[_ctrlInventory,_configName,"","","",_count] call ENH_fnc_IM_LnbAddItem;
-	} forEach _classes;
-} forEach ["TransportWeapons","TransportMagazines","TransportItems","TransportBackpacks"];
+   _display = uiNamespace getVariable "Enh_Display_InventoryManager";
+   private _ctrlInventory = _display displayCtrl 2300;
 
-//Apply attribute will read the listbox content and set the attribute
-false call ENH_fnc_IM_applyAttribute;
+   //Clear inventory listbox
+   call ENH_fnc_IM_clearInventory;
 
-//Let's just read the attribute value to properly fill the inventory listbox with DLC icons etc.
-call ENH_fnc_IM_loadAttributeValue;
+   //Get all items defined in vehicle's config and add them to the listbox
+   {
+      private _classes = "true" configClasses (configOf ENH_IM_target >> _x);
+      {
+            _count = getNumber (_x >> "count");
+            _configName = configName _x select [4,count (configName _x) -1];
+            
+            [_ctrlInventory,_configName,"","","",_count,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAddItem;
+      } forEach _classes;
+   } forEach ["TransportWeapons","TransportMagazines","TransportItems","TransportBackpacks"];
+
+   //Apply attribute will read the listbox content and set the attribute
+   false call ENH_fnc_IM_applyAttribute;
+
+   //Let's just read the attribute value to properly fill the inventory listbox with DLC icons etc.
+   call ENH_fnc_IM_loadAttributeValue;
+};
+
+
+[
+	localize "STR_ENH_IM_RESET_TOOLTIP",
+	"",
+	[
+		"Yes",
+		{call ENH_fnc_IM_resetStorage_main; nil}//Return nil so the dialog is closed
+	],
+	[
+		"No",
+		{}
+	],
+	"\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa",
+	uiNamespace getVariable "Enh_Display_InventoryManager"
+] call BIS_fnc_3DENShowMessage;

@@ -17,7 +17,6 @@ params ["_ctrlSearch"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlItems = _display displayCtrl 2200;
 private _filter = toUpper ctrlText (_display displayCtrl 3400);
-private _classesToSearch = uiNamespace getVariable ["ENH_IM_FilteredItems",[]];
 
 if (_filter == "") then
 {
@@ -34,16 +33,16 @@ lbClear _ctrlItems;
 
    if ((_filter select [0,3] == "MOD") && ((_filter select [4,50]) in toUpper _addon)) then
    {
-      [_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
+      [_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
    }
    else
    {
 	   if ((_filter in toUpper _displayName) || (_filter == "")) then
 	   {
-	   	[_ctrlItems,_displayName,_configName,_picture,_addonIcon] call ENH_fnc_IM_lbAdd;
+	   	[_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
       };
    };
-} forEach _classesToSearch;
+} forEach (uiNamespace getVariable ["ENH_IM_FilteredItems",[]]);
 
 lbSort [_ctrlItems,"ASC"];
 
