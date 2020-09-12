@@ -3,7 +3,6 @@ class ENH_FunctionsViewer
 	idd = -1;
 	movingEnable = false;
 	onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
-	onUnload = "'showinterface' call BIS_fnc_3DENInterface";
 	class ControlsBackground
 	{
 		class Background: ctrlStaticBackground
@@ -147,6 +146,7 @@ class ENH_FunctionsViewer
 		};
 		class Copy: ctrlButton
 		{
+      idc = 1602;
 			text = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT;
 			tooltip = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP;
 			x = safezoneX + safezoneW - 82 * GRID_W;

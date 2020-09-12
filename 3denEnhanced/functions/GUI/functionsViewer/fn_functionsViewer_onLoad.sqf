@@ -19,11 +19,6 @@ private _ctrlTV = _disp displayCtrl 1500;
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
-if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
-{
-	"showinterface" call BIS_fnc_3DENInterface
-};
-
 //Disable recompile buttons if recompiling isn't allowed
 if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 {
@@ -45,7 +40,7 @@ _disp displayAddEventHandler ["keyDown",//Copy
 	params ["_disp", "_key", "_shift", "_ctrl"];
 	if (_key isEqualTo 45 && _ctrl) then
 	{
-		call ENH_fnc_functionsViewer_copy;
+		(_disp displayCtrl 1602) call ENH_fnc_functionsViewer_copy;
 	}
 }];
 
