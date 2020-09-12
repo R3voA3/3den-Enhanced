@@ -17,17 +17,10 @@
 #define EXIT if (_units isEqualTo []) exitWith {false};
 
 //Select only soldiers from all objects
+//Only select soldiers which have the ENH_AmbientAnimation attribute set
 private _units = (all3DENEntities # 0) select
 {
-	_x isKindOf "CAManBase"
-};
-
-EXIT
-
-//Only select soldiers which have the ENH_AmbientAnimation attribute set
-_units = _units select 
-{
-	!((ATTRIBUTE # 0 # 0) isEqualTo "")
+	(_x isKindOf "CAManBase") && (!((ATTRIBUTE # 0 # 0) isEqualTo ""))
 };
 
 EXIT
