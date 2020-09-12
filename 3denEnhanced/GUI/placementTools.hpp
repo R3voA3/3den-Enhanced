@@ -210,9 +210,8 @@ class ENH_PlacementTools
 					y = 43 * GRID_H;
 					w = WIDTH_VALUE;
 					h = CTRL_DEFAULT_H;
-					sliderRange[] = {1,20};
-					sliderStep = 1;
-					onSliderPosChanged = "ENH_PlacementTools_NumColumns = _this # 1; call ENH_fnc_placementTools_grid";
+					sliderRange[] = {1,50};
+					onSliderPosChanged = "ENH_PlacementTools_NumColumns = round (_this # 1); call ENH_fnc_placementTools_grid";
 				};
 				class SpaceX: ctrlStatic
 				{
