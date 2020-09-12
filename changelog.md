@@ -16,6 +16,10 @@ v5.6
 - Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
 - German translation has recieved some fixes thanks to Mr-Melker
 - Fixed a wrong condition in context menu causing some .rpt entries
+- Fixed an issue which caused CTRL + X shortcut in the Functions Viewer to cause a script error
+- Custom GUIs will no longer hide Eden Interface.
+- Fixed a bug which would cause Grid Pattern to not work
+- Increased max number of columns in Grid Pattern from 20 to 50
 
 v5.5
 *changed*
