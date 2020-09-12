@@ -28,20 +28,6 @@ private _ctrlSL = _display displayCtrl 1500;
 
 switch (_action) do
 {
-	case "EXPORT":
-	{
-		"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
-		copyToClipboard str (profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]]);
-		["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-	};
-	case "IMPORT":
-	{
-		private _clipboard = call compile copyFromClipboard;
-		if !(_clipboard isEqualTypeParams [["",""]]) exitWith {false};
-		profileNamespace setVariable ["ENH_3DENRadio_Playlist",_clipboard];
-		["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-		"UPDATE" call ENH_fnc_3DENRadio_handlePlaylist;
-	};
 	case "UPDATE":
 	{
 		private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];

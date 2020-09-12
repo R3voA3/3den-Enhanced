@@ -5,8 +5,8 @@ class ENH_3DENRadio
 {
 	idd = ENH_IDD_3DENRADIO;
 	movingEnable = true;
-	onLoad = "['showInterface',false] call BIS_fnc_3DENInterface; _this spawn ENH_fnc_3DENRadio_onLoad";
-	onUnload = "['showInterface',true] call BIS_fnc_3DENInterface; _this call ENH_fnc_3DENRadio_onUnload";
+	onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
+	onUnload = "_this call ENH_fnc_3DENRadio_onUnload";
 	class ControlsBackground
 	{
 		DISABLE_BACKGROUND
@@ -145,24 +145,6 @@ class ENH_3DENRadio
 			w = 5 * GRID_W;
 			h = CTRL_DEFAULT_H;
 		};
-		/* class Import: ctrlButton
-		{
-			text = $STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT;
-			x = CENTERED_X(DIALOG_W) + 121 * GRID_W;
-			y = DIALOG_TOP + 105 * GRID_H;
-			w = 25 * GRID_W;
-			h = CTRL_DEFAULT_H;
-			action = "'IMPORT'call ENH_fnc_3DENRadio_handlePlaylist";
-		};
-		class Export: ctrlButton
-		{
-			text = $STR_ENH_3DENRADIO_EXPORTPLAYLIST_TEXT;
-			x = CENTERED_X(DIALOG_W) + 147 * GRID_W;
-			y = DIALOG_TOP + 105 * GRID_H;
-			w = 26 * GRID_W;
-			h = CTRL_DEFAULT_H;
-			action = "'EXPORT'call ENH_fnc_3DENRadio_handlePlaylist";
-		}; */
 		class Close: ctrlButtonClose
 		{
 			x = CENTERED_X(DIALOG_W) + 174 * GRID_W;
