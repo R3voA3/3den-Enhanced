@@ -40,7 +40,8 @@ private _contributers =
 	"shukari",
 	"Poslovitch",
 	"zagor64bz",
-	"Mr-Melker"
+	"Mr-Melker",
+	"Krzyciu"
 ];
 
 private _ctrl = _display displayCtrl 1000;
