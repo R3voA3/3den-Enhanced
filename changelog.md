@@ -20,6 +20,7 @@ v5.6
 - Custom GUIs will no longer hide Eden Interface.
 - Fixed a bug which would cause Grid Pattern to not work
 - Increased max number of columns in Grid Pattern from 20 to 50
+- Polish translation was updated by Krzyciu
 
 v5.5
 *changed*
