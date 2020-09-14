@@ -21,6 +21,7 @@ v5.6
 - Fixed a bug which would cause Grid Pattern to not work
 - Increased max number of columns in Grid Pattern from 20 to 50
 - Polish translation was updated by Krzyciu
+- 3DEN Cam Positions will now properly display the tooltip for each entry
 
 v5.5
 *changed*
