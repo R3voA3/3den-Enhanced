@@ -56,9 +56,9 @@ _ctrlLnB lnbSetColumnsPos [0,0.1,0.75,0.9];
 		_ctrlLnB lnbSetText [[_index,0],_number];
 
 		_cam3DENPosition params ["_xC","_yC","_zC"];
-		_ctrlLnB lbSetTooltip
+		_ctrlLnB lnbSetTooltip
 		[
-			_index,
+			[_index,0],
 			format
 			[
 				"X: %1 Y: %2 Z: %3\n\n%4\n\n%5\n%6",
