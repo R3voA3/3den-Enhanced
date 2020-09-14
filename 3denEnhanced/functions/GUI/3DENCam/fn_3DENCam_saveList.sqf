@@ -18,8 +18,6 @@ params ["_ctrlLnB"];
 private _lnbMaxIndex = (lnbSize _ctrlLnB select 0) - 1;
 private _data = [];
 
-systemChat str ((lnbSize _ctrlLnB select 0) - 1);
-
 for "_i" from 0 to _lbMaxIndex do
 {
 	_data pushBack call compile (_ctrlLnB lnbData [_i,0]);
