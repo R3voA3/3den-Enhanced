@@ -20,11 +20,6 @@ private _data = call compile (_ctrlLnB lnbData [_row,0]);
 
 _data params ["_world","_camPosition","_camVectorDir","_camVectorUp"];
 
-/* if !(_world isEqualTo worldName) exitWith
-{
-	[localize "STR_ENH_3DENCAM_WRONGWORLD",1] call BIS_fnc_3DENNotification;
-}; */
-
 move3DENCamera [_camPosition,true];
 get3DENCamera setVectorDirAndUp [_camVectorDir,_camVectorUp];
 
