@@ -4,7 +4,7 @@
    Date: 2020-07-03
 
    Description:
-   Loops through all menu strip entires and checks if they are blacklisten. If true it removes the entry. Is executed everytime the editor is started.
+   Loops through all menu strip entries and checks if they are blacklisted. If true it removes the entry. Is is executed everytime the editor is started.
 
    Parameter(s):
    -
