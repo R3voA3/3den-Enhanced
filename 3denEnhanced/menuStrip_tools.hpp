@@ -188,7 +188,7 @@ class ENH_NameObjects
 };
 class ENH_TextureFinder
 {
-	text = $STR_ENH_TEXTUREFINDER;
+	text = $STR_ENH_TOOLS_TEXTUREFINDER;
 	picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
 	action = "findDisplay 313 createDisplay 'ENH_TextureFinder'";
 	shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};

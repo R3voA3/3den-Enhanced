@@ -3010,7 +3010,7 @@
 		<Polish>Informacja o module</Polish>
 		<Russian>Информация о модуле</Russian>
 	</Key>
-	<Key ID="STR_ENH_TEXTUREFINDER">
+	<Key ID="STR_ENH_TOOLS_TEXTUREFINDER">
 		<English>Texture Finder</English>
 		<Italian>Cercatore di Texture</Italian>
 		<Czech>Vyhledávač textur</Czech>
