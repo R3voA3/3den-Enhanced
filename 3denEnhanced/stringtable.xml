@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="3den Enhanced">
-  <Key ID="STR_ENH_SOUNDVOLUME_DISPLAYNAME">
+<Key ID="STR_ENH_SOUNDVOLUME_DISPLAYNAME">
       <English>Volume (Sound)</English>
       <Czech>Hlasitost zvuku</Czech>
       <French>Volume (Son)</French>
