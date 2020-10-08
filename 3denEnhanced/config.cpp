@@ -24,6 +24,7 @@
 #include "GUI\inventoryManager.hpp"
 #include "GUI\inventoryManager_templateData.hpp"
 #include "GUI\inventoryManager_itemPreview.hpp"
+#include "GUI\CfgSentences.hpp"
 
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"

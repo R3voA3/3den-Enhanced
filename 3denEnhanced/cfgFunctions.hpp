@@ -166,6 +166,17 @@ class CfgFunctions
       class IM_resetSearch;
       class IM_resetStorage;
 		};
+    class CfgSentencesBrowser
+		{
+			file = "3denEnhanced\functions\GUI\CFGS";
+			class CFGS_onLoad;
+      class CFGS_changePage;
+      class CFGS_changeFilter;
+      class CFGS_getCfgSentences;
+      class CFGS_getSentenceDataFromConfig;
+      class CFGS_handleFavorites;
+      class CFGS_playOrCopy;
+		};
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";

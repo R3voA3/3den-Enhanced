@@ -91,7 +91,8 @@ class ENH_Folder_Utilities
 		"ENH_ScenarioAttributesManager",
 		"ENH_TextureFinder",
 		"ENH_3DENCamPositions",
-		"ENH_VariableViewer"
+		"ENH_VariableViewer",
+    "ENH_CfgSentencesBrowser"
 	};
 };
 class ENH_Folder_Miscellaneous
@@ -206,6 +207,12 @@ class ENH_VariableViewer
 {
 	text = $STR_ENH_TOOLS_VARIABLEVIEWER;
 	action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
+	opensNewWindow = 1;
+};
+class ENH_CfgSentencesBrowser
+{
+	text = $STR_ENH_TOOLS_CFGSENTENCESBROWSER;
+	action = "findDisplay 313 createDisplay 'ENH_CfgSentencesBrowser'";
 	opensNewWindow = 1;
 };
 //Miscellaneous
