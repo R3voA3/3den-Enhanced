@@ -6230,13 +6230,8 @@
 		<Polish>Przeglądarka zmiennych</Polish>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_INVENTORYMANAGER">
-		<English>Inventory Manager</English>
-		<German>Inventar-Manager</German>
-		<Polish>Manager ekwpiunku</Polish>
-	</Key>
-	<Key ID="STR_ENH_IM_HEADER">
-		<English>3den Enhanced Inventory Manager</English>
-		<German>3den Enhanced Inventar-Manager</German>
+		<English>Vehicle Inventory Manager</English>
+		<German>Vehicle-Inventar-Manager</German>
 	</Key>
 	<Key ID="STR_ENH_IM_AVAILABLEITEMS">
 		<English>Available Items</English>
