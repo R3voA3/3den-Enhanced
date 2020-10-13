@@ -3,7 +3,6 @@ v5.6
 - Vehicle Inventory Manager
 - Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
 - It's now possible to search a function in the Functions Viewer for a specific keyword
-- Attribute to triggers which can be used to hide or destroyed selected terrain objects in the trigger area
 - Added CfgSentences Browser
 
 *changed*
@@ -23,6 +22,9 @@ v5.6
 - Increased max number of columns in Grid Pattern from 20 to 50
 - Polish translation was updated by Krzyciu
 - 3DEN Cam Positions will now properly display the tooltip for each entry
+- Debug path attribute will only show for AI and player units now
+- SPR Tickets attribute will only show for objectBrain
+- Menu Strip was tidied up a bit
 
 v5.5
 *changed*

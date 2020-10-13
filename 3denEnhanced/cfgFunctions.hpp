@@ -205,6 +205,7 @@ class CfgFunctions
 			class firstPerson;
 			class 3DENCollapseAssetBrowser;
       class hasStorage;
+      class magazinesTurret_defaultValue;
 		};
 		class Log
 		{
@@ -291,6 +292,9 @@ class CfgFunctions
 			class hideTerrainObjects_onAttributeSave;
 			class hideTerrainObjects_onLBSelChanged;
 			class hideTerrainObjects_onButtonDown;
+      class magazineTurrets_onAttributeLoad;
+			class magazineTurrets_onAttributeSave;
+			class magazineTurrets_onButtonDown;
 		};
 	};
 };

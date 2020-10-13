@@ -58,6 +58,7 @@ class Cfg3DEN
 		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
     #include "controls\hideTerrainObjects.hpp"
+    #include "controls\magazinesTurrets.hpp"
 	};
  	class Mission
 	{
@@ -135,13 +136,13 @@ class Cfg3DEN
 			};
 		};
 	};
-  class Trigger
+ /*  class Trigger
   {
     class AttributeCategories
     {
       #include "attributesTrigger\hideTerrainObjects.hpp"
     };
-  };
+  }; */
 	class Object
 	{
 		class AttributeCategories
@@ -190,6 +191,7 @@ class Cfg3DEN
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
 					#include "attributesObject\ambientAnimations.hpp"
+          #include "attributesObject\magazineTurrets.hpp"
 				};
 			};
 		};
