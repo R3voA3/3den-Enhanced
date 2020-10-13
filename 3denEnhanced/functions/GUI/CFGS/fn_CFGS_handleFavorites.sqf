@@ -26,8 +26,13 @@ else
 		if ((ENH_CFGS_Favorites find [_text,_configStr]) > -1) exitWith {false};
 
 		ENH_CFGS_Favorites = ENH_CFGS_Favorites + [[_text,_configStr]];
-		["ENH_ActionPerformed"] call BIS_fnc_3DENNotification;
 		"fill" call ENH_fnc_CFGS_handleFavorites;
+		[_display] spawn
+		{
+			private _ctrlHighlight = [((_this select 0) displayCtrl 1000),5] call BIS_fnc_highlightControl;
+			sleep 2;
+			ctrldelete _ctrlHighlight;
+		};
 	}
 	else
 	{
