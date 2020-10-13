@@ -1,10 +1,10 @@
 class ENH_HideTerrainObjects
 {
 	collapsed = 0;
-	displayName = "Hide or Destroy Terrain Objects";
+	displayName = $STR_HIDETERRAINOBJECTS;// Hide or Destroy Terrain Objects
 	class Attributes
 	{
-		class ENH_HideTerrainObjects
+		class ENH_HideTerrainObjects // Doesn't work yet. To be implemented later...maybe
 		{
 			displayName = "Object Types";
 			property = "ENH_HideTerrainObjects";
@@ -16,19 +16,20 @@ class ENH_HideTerrainObjects
           {\
             _this params ['_trigger','_value'];\
             _value params ['_effect','_types'];\
+            private _area = triggerArea _trigger;\
+            private _objects = nearestTerrainObjects [_trigger,_types,_area # 0 max _area # 1 * 1.42,false] inAreaArray _trigger;\
             if (_effect == 0) then\
             {\
               {\
                   hideObjectGlobal _x;\
-                  sleep 0.001;\
-              } forEach nearestTerrainObjects [_trigger,[],(triggerArea _trigger) # 0,false];\
+                  _x setDamage [1,false];\
+              } forEach _objects;\
             }\
             else\
             {\
               {\
                 _x setDamage [1,false];\
-                sleep 0.001;\
-              } forEach nearestTerrainObjects [_trigger,[],(triggerArea _trigger) # 0,false];\
+              } forEach _objects;\
             };\
           };\
       };";
