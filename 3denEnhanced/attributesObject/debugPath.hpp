@@ -29,6 +29,6 @@ class ENH_debugPath
 			};\
 		};\
 	}";
-	condition = "objectBrain + objectVehicle";
+	condition = "objectBrain";
 	defaultValue = "false";
 };

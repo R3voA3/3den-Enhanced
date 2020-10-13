@@ -7,4 +7,5 @@ class ENH_SPR_Tickets
 	expression = "if (!is3DEN && {!isMultiplayer}) then {_this setVariable ['%s',_value]}";
 	typeName = "NUMBER";
 	defaultValue = "0";
+  condition = "objectBrain";
 };
