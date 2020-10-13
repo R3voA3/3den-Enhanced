@@ -4,10 +4,10 @@ class Tools
 	{
 		"ENH_Folder_Utilities",
 		"ENH_Folder_Placement",
+    "ENH_Folder_Loadout",
+    "ENH_Folder_Miscellaneous",
 		"ENH_Folder_Debug",
-		"ENH_Folder_Loadout",
-		"ENH_Folder_GUI",
-		"ENH_Folder_Miscellaneous"
+    "ENH_Folder_GUI"	
 	};
 };
 class ENH_Folder_Placement
@@ -45,16 +45,17 @@ class ENH_Folder_Loadout
 	picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
 	items[] +=
 	{
+    "ENH_InventoryManager",
 		"ENH_CopyLoadout",
 		"ENH_ApplyLoadout",
 		"ENH_ExportLoadoutConfig",
 		"ENH_ExportLoadoutCfgRespawnInventory",
+    "Separator",
 		"ENH_RemoveNVGs",
 		"ENH_RemoveVests",
 		"ENH_RemoveGoggles",
 		"ENH_RemoveHeadgear",
-		"ENH_RemoveWeapons",
-		"ENH_InventoryManager"
+		"ENH_RemoveWeapons"
 	};
 };
 class ENH_Folder_GUI
@@ -66,6 +67,7 @@ class ENH_Folder_GUI
 		"ENH_ExportGUIBaseClassesAll",
 		"ENH_ExportGUIBaseClassesDefault",
 		"ENH_ExportGUIBaseClasses3DEN",
+    "Separator",
 		"ENH_GUITestGrids",
 		"ENH_ControlStyles",
 		"ENH_ControlTypes"
@@ -105,6 +107,7 @@ class ENH_Folder_Miscellaneous
 		"ENH_ExportMissionParameters",
 		"ENH_GenerateSteamMissionDescription",
 		"ENH_SwitchTime",
+    "Separator",
 		"ENH_ToggleGrass",
 		"ENH_ToggleSimpleObject",
 		"ENH_ToggleSimulation",
