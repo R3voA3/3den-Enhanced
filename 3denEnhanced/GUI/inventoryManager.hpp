@@ -16,7 +16,7 @@ class ENH_InventoryManager
 		};
 		class Header: ctrlStaticTitle
 		{
-			text = $STR_ENH_IM_HEADER;
+			text = $STR_ENH_TOOLS_INVENTORYMANAGER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
