@@ -191,7 +191,7 @@ class Cfg3DEN
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
 					#include "attributesObject\ambientAnimations.hpp"
-          #include "attributesObject\magazineTurrets.hpp"
+          //#include "attributesObject\magazineTurrets.hpp"
 				};
 			};
 		};
