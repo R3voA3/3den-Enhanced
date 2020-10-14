@@ -1,7 +1,7 @@
 class ENH_MagazinesTurrets: Title
 {
-	//attributeLoad = "[_this,_value] call ENH_fnc_magazineTurrets_onAttributeLoad";
-	//attributeSave = "_this call ENH_fnc_magazineTurrets_onAttributeSave";
+	attributeLoad = "[_this,_value] call ENH_fnc_magazineTurrets_onAttributeLoad";
+	attributeSave = "_this call ENH_fnc_magazineTurrets_onAttributeSave";
 	h = 8.5 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{

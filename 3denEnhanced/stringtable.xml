@@ -4790,15 +4790,6 @@
 		<Polish>Ustaw jak szybko ma płynąć czas.</Polish>
 		<Russian>Установите, как быстро изменяется время.</Russian>
 	</Key>
-	<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS">
-		<English>Placement Tools</English>
-		<German>Platzierungs-Werkzeuge</German>
-		<Czech>Nástroje pro umísťování</Czech>
-		<Spanish>Herramientas de Colocación</Spanish>
-		<Russian>Инструменты размещения</Russian>
-		<French>Outils de positionnement</French>
-		<Polish>Narzędzia stawiania obieków</Polish>
-	</Key>
 	<Key ID="STR_ENH_TOOLS_ACTIONCREATOR">
 		<English>Action Creator</English>
 		<German>Aktion erstellen</German>
@@ -6305,5 +6296,9 @@
 		<English>CfgSentences Browser</English>
 		<German>CfgSentences Browser</German>
 		<Polish>CfgSentences Browser</Polish>
+	</Key>
+	<Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
+		<English>Placement Tool</English>
+		<German>Platzierungs-Werkzeug</German>
 	</Key>
 </Project>

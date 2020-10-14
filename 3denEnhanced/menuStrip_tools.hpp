@@ -306,7 +306,7 @@ class DebugConsole//Overwrites the default debug console to change shortcut
 //Placement Tools
 class ENH_PlacementTools
 {
-	text = $STR_ENH_TOOLS_PLACEMENTTOOLS;
+	text = $STR_ENH_TOOLS_PLACEMENTTOOL;
 	action = "call ENH_fnc_placementTools_createDisplay";
 	shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
 	opensNewWindow = 1;

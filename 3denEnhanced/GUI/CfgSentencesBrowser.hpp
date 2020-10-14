@@ -18,7 +18,7 @@ class ENH_CfgSentencesBrowser
 		};
 		class Header: ctrlStaticTitle
 		{
-			text = "CfgSentences";
+			text = $STR_ENH_TOOLS_CFGSENTENCESBROWSER;
 			x = CENTERED_X(DIALOG_W);
 			y = DIALOG_TOP;
 			w = DIALOG_W * GRID_W;
