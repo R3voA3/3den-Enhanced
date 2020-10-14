@@ -1,6 +1,6 @@
 //Uncomment lines to remove them from Eden Editor
 
-_menuStripBlacklist =
+private _menuStripBlacklist =
 [
   //Main Folders
   //"STR_ENH_FOLDER_ABOUT",
