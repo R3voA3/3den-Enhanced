@@ -34,6 +34,8 @@ class ENH_TextureFinder
 			y = DIALOG_TOP + CTRL_DEFAULT_H;
 			w = DIALOG_W * GRID_W;
 			h = 52 * GRID_H;
+      rowHeight = 0.08;
+      shadow = 0;
 			onLBSelChanged = "_this call ENH_fnc_textureFinder_showTexture";
 			onKeyDown = "_this call ENH_fnc_textureFinder_exportTexturePath";
 		};
