@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Used to either play the selected sentece or copy it to clipboard
+
+   Parameter(s):
+   0: STRING - Mode, "play" to play the sentence, anything else to copy it
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_mode"];
 
 _tv = uiNamespace getVariable ["ENH_CFGS_ActiveList",controlNull];

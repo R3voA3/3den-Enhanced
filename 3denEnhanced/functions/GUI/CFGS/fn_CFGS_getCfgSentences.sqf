@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Searches through CfgSentences and retrieves all classes.
+
+   Parameter(s):
+   0: STRING - Filter, can be ALL or anything else
+
+   Returns:
+   BOOLEAN: true
+*/
+
 private _display = uiNamespace getVariable ["ENH_CFGS_Display",displayNull];
 private _tv = _display displayCtrl 2000;
 private _ctrlFilter = _display displayCtrl 1000;

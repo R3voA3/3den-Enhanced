@@ -1,3 +1,19 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Called when the page was changed.
+
+   Parameter(s):
+   0: CONTROL - Toolbox
+   1: NUMBER - Index
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_control", "_selectedIndex"];
 _tv = (ctrlParent _control displayCtrl 2000);
 _tvFavorites = (ctrlParent _control displayCtrl 4000);

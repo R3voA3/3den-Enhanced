@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Returns all data relevant for a sentence.
+
+   Parameter(s):
+   0: STRING - Config path as string. Saved in tvData
+
+   Returns:
+   ARRAY: [<configLedgible>,<bikbPath>,<topic>,<sentence>,<soundPath>]
+*/
+
 params ["_configStr"];
 
 private _config = [_configStr, configNull] call BIS_fnc_configPath;

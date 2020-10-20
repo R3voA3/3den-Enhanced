@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Handles favorites such as filling the list, adding or removing favorites.
+
+   Parameter(s):
+   0: STRING - Mode, can be empty for deleting or adding (automatically handles) or "fill" to fill the favorites list
+
+   Returns:
+   BOOLEAN: true
+*/
+
 private _display = uiNamespace getVariable ["ENH_CFGS_Display",displayNull];
 
 params [["_mode",""]];

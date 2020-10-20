@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-20
+
+   Description:
+   Used by the CfgSentences Browser GUI. Init.
+
+   Parameter(s):
+   0: DISPLAY
+
+   Returns:
+   BOOLEAN: True
+*/
+
 params ["_display"];
 
 uiNamespace setVariable ["ENH_CFGS_Display",_display];
@@ -13,3 +28,5 @@ _display displayCtrl 10000 ctrlEnable false;
 
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;
+
+true
