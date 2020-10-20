@@ -206,6 +206,10 @@ class CfgFunctions
 			class 3DENCollapseAssetBrowser;
       class hasStorage;
       class magazinesTurret_defaultValue;
+      class exportAttributesToWiki;
+      class exportContextMenuToWiki;
+      class exportFunctionsToWiki;
+      class exportMenuStripToWiki;
 		};
 		class Log
 		{
