@@ -63,7 +63,7 @@ private _string = "";
 		{
 			ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
 		};
-	} forEach configProperties [_x, "isText _x"];
+	} forEach configProperties [_x, "isText _x",false];
 } forEach _classes;
 
 ENH_FindTexture_SearchRunning = nil;
