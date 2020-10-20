@@ -33,8 +33,9 @@ else
 
    collect3DENHistory
    {
-      {
+      {  //Set name attribute for object. For marker set markerName attribute
          _x set3DENAttribute ["Name",_varName + (str _index)];
+         _x set3DENAttribute ["markerName",_varName + (str _index)];
          _index = _index + 1;
       } forEach _toName;
    };
