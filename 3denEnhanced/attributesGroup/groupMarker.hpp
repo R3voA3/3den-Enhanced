@@ -7,6 +7,7 @@ class ENH_GroupMarker
 		class ENH_GroupMarker
 		{
 			displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
+      tooltip = $STR_ENH_GROUPMARKER_DESCRIPTION;
 			property = "ENH_groupMarker";
 			control = "ENH_GroupMarker";
 			expression = "\
@@ -40,7 +41,7 @@ class ENH_GroupMarker
 					};\
 				};\
 			};";
-			defaultValue = "['',[side _this,true] call BIS_fnc_sideColor,groupID _this ,true]";
+			defaultValue = "['',[side _this,true] call BIS_fnc_sideColor,groupID _this,true]";
 		};
 	};
 };
