@@ -54,16 +54,29 @@ private _fnc_searchConfig =
 private _classes = [13] call _fnc_searchConfig;
 
 //Check configProperties of every class for textures
-private _string = "";
+private _addPath =  {
+	params ["_string"];
+	if (IS_PAA || IS_JPG) then
+	{
+		if (_string find "\" != 0) then {_string = "\" + _string};
+		ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
+	};
+};
+private _searchArray = {
+	if (_x isEqualType "") then {_x call _addPath} else {
+		if (_x isEqualType []) then {
+			_searchArray forEach _x;
+		};
+	};
+};
+
 {
 	ENH_TextureFinder_ClassesSearched = ENH_TextureFinder_ClassesSearched + 1;
 	{
-		_string = getText _x;
-		if (IS_PAA || IS_JPG) then
-		{
-			ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
+		if (isText _x) then {getText _x call _addPath} else {
+			_searchArray forEach getArray _x;
 		};
-	} forEach configProperties [_x, "isText _x"];
+	} forEach configProperties [_x, "isText _x || isArray _x",false];
 } forEach _classes;
 
 ENH_FindTexture_SearchRunning = nil;
