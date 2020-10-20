@@ -6288,9 +6288,8 @@
 		<Polish>Zresetuj ekwipunek</Polish>
 	</Key>
 	<Key ID="STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP">
-		<English>Add entry to favorites or remove it from favorits depending on the selected list.</English>
+		<English>Add entry to favorites or remove it from favorites depending on the selected list.</English>
 		<German>Entfernt einen Eintrag aus den Favoriten oder fügt einen Eintrag zu den Favoriten hinzu. Dies ist Abhängig von der aktiven Liste.</German>
-		<Polish>Add entry to favorites or remove it from favorits depending on the selected list.</Polish>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_CFGSENTENCESBROWSER">
 		<English>CfgSentences Browser</English>

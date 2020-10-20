@@ -1,5 +1,18 @@
 v5.6
 *added*
+
+*changed*
+- Improved some translations
+- Open on Biki button in Functions Viewer is not a ctrlButton
+- Batch Rename tool can now also rename markers.
+- Added functions to create 3den Enhanced documention for GitHub wiki
+- Texture Finder is now faster. From 137.559 s down to 45.614 to load all textures (Thanks to ConnorAU)
+- Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
+- Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
+- Behaviour of the "View on Biki" button in the Functions Viewer was improved
+
+v5.6
+*added*
 - Vehicle Inventory Manager
 - Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
 - It's now possible to search a function in the Functions Viewer for a specific keyword
