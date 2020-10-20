@@ -38,7 +38,7 @@ class ENH_FunctionsViewer
             {
            		"configFile",
            		"missionConfig",
-				"campaignConfig"
+				      "campaignConfig"
             };
             values[] = {0,1,2};
 			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
@@ -48,15 +48,15 @@ class ENH_FunctionsViewer
 			idc = 1800;
 			x = safezoneX + GRID_W;
 			y = safezoneY + 12 * GRID_H;
-            rows = 1;
-            columns = 3;
-            strings[] = 
-            {
-           		$STR_ENH_FUNCTIONSVIEWER_FULL,
-           		$STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
-				$STR_ENH_FUNCTIONSVIEWER_FUNCTIONS
-            };
-            values[] = {0,1,2};
+      rows = 1;
+      columns = 3;
+      strings[] =
+      {
+        $STR_ENH_FUNCTIONSVIEWER_FULL,
+        $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
+        $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS
+      };
+      values[] = {0,1,2};
 			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class List: ctrlTree
@@ -166,7 +166,7 @@ class ENH_FunctionsViewer
 			h = 5 * GRID_H;
 			onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
 		};
-		class Biki: ctrlStructuredText
+		class Biki: ctrlButton
 		{
 			idc = 1900;
 			text = $STR_ENH_FUNCTIONSVIEWER_BIKI;
@@ -174,13 +174,6 @@ class ENH_FunctionsViewer
 			y = safezoneY + 12 * GRID_H;
 			w = 40 * GRID_W;
 			h = 5 * GRID_H;
-			colorBackground[] = {0,0,0,1};
-			class Attributes
-			{
-				align = "center";
-				font = "PuristaLight";
-				size = 1;
-			};
 		};
 		class SearchCode: ctrlEdit
 		{
