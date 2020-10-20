@@ -61,6 +61,7 @@ private _string = "";
 		_string = getText _x;
 		if (IS_PAA || IS_JPG) then
 		{
+			if (_string find "\" != 0) then {_string = "\" + _string};
 			ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
 		};
 	} forEach configProperties [_x, "isText _x"];
