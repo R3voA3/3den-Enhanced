@@ -33,7 +33,16 @@ _ctrlFncName ctrlSetText _fncName;
 _ctrlFncPath ctrlSetText _fncPath;
 _ctrlCode ctrlSetText loadFile _fncPath;
 
-_ctrlBiki ctrlSetStructuredText parseText format ["<a href='https://community.bistudio.com/wiki/%1'>%2</a>",_fncName,localize "STR_ENH_FUNCTIONSVIEWER_BIKI"];
+if (_fncName select [0,3] in ["BIS","BIN"]) then
+{
+   _ctrlBiki ctrlEnable true;
+   _ctrlBiki ctrlSetURL format ["https://community.bistudio.com/wiki/%1",_fncName];
+}
+else
+{
+   _ctrlBiki ctrlEnable false;
+   //_ctrlBiki ctrlSetURL format ["https://community.bistudio.com/wiki/%1",_fncName];
+};
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
 private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
