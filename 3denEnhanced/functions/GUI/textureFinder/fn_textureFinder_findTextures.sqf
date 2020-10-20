@@ -54,7 +54,8 @@ private _fnc_searchConfig =
 private _classes = [13] call _fnc_searchConfig;
 
 //Check configProperties of every class for textures
-private _addPath =  {
+private _addPath =
+{
 	params ["_string"];
 	if (IS_PAA || IS_JPG) then
 	{
@@ -62,9 +63,12 @@ private _addPath =  {
 		ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
 	};
 };
-private _searchArray = {
-	if (_x isEqualType "") then {_x call _addPath} else {
-		if (_x isEqualType []) then {
+private _searchArray =
+{
+	if (_x isEqualType "") then {_x call _addPath} else
+	{
+		if (_x isEqualType []) then
+		{
 			_searchArray forEach _x;
 		};
 	};
