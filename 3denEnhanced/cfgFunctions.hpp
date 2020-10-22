@@ -292,10 +292,6 @@ class CfgFunctions
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
 			class initDebriefingCombo;
-      class hideTerrainObjects_onAttributeLoad;
-			class hideTerrainObjects_onAttributeSave;
-			class hideTerrainObjects_onLBSelChanged;
-			class hideTerrainObjects_onButtonDown;
       class magazineTurrets_onAttributeLoad;
 			class magazineTurrets_onAttributeSave;
 			class magazineTurrets_onButtonDown;
