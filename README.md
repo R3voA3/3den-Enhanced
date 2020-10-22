@@ -24,17 +24,6 @@ Adds new functionalities to the [Eden Editor](https://community.bistudio.com/wik
 
 Feel free to [contribute!](https://github.com/RevoArma3/3den-Enhanced)
 
-# Translation
-You can help us by adding more translations for this modification. Read below to find out how.
-
-## How to?
-* [Download the stringtable.xml](https://github.com/R3voA3/3den-Enhanced/blob/master/3denEnhanced/stringtable.xml)
-* [Download Tabler](https://github.com/bux/tabler/releases)
-* Open the stringtable.xml with Tabler
-* Fill in missing translations
-* Save the stringtable.xml
-* Create a pull request
-
 # Contribute
 You want to contribute? Add your own code or optimise the existing one. Feel free to do so. 
 Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks. 
