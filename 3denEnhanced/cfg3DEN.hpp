@@ -136,13 +136,6 @@ class Cfg3DEN
 			};
 		};
 	};
- /*  class Trigger
-  {
-    class AttributeCategories
-    {
-      #include "attributesTrigger\hideTerrainObjects.hpp"
-    };
-  }; */
 	class Object
 	{
 		class AttributeCategories
