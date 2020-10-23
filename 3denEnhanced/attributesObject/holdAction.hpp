@@ -7,6 +7,7 @@ class ENH_HoldAction
 		class ENH_AddHoldAction
 		{
 			displayName = $STR_ENH_HOLDACTION_DISPLAYNAME;
+      tooltip = $STR_ENH_HOLDACTION_DESCRIPTION;
 			property = "ENH_HoldAction";
 			control = "ENH_HoldAction";
 			expression = "\
