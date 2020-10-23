@@ -703,10 +703,10 @@
 		<Polish>Pokazuje indykator grupy po prawej stronie ekranu.</Polish>
 		<Russian>Показывает индикатор группы в правой части экрана.</Russian>
 	</Key>
-	<Key ID="STR_ENH_MAPINDICATORS_FRIENDLYTEXT">
-		<English>Don't show friendly units</English>
+	<Key ID="STR_ENH_MAPINDICATORS_FRIENDLY">
+		<English>Hide Friendly Units</English>
 		<Italian>Non mostra le unità amiche</Italian>
-		<German>Freundliche Einheiten nicht zeigen</German>
+		<German>Freundliche Einheiten verstecken</German>
 		<Chinesesimp>不显示友好单位</Chinesesimp>
 		<Spanish>No mostrar unidades amigas.</Spanish>
 		<Czech>Nezobrazovat přátelské jednotky</Czech>
@@ -714,10 +714,10 @@
 		<Polish>Nie pokazuj jednostek przyjaznych</Polish>
 		<Russian>Не показывать дружественные отряды</Russian>
 	</Key>
-	<Key ID="STR_ENH_MAPINDICATORS_ENEMYTEXT">
-		<English>Don't show hostile units</English>
+	<Key ID="STR_ENH_MAPINDICATORS_ENEMY">
+		<English>Hide Hostile Units</English>
 		<Italian>Non mostra le unità nemiche</Italian>
-		<German>Feindliche Einheiten nicht zeigen</German>
+		<German>Feindliche Einheiten verstecken</German>
 		<Chinesesimp>不显示敌对单位</Chinesesimp>
 		<Spanish>No mostrar unidades hostiles.</Spanish>
 		<Czech>Nezobrazovat nepřátelské jednotky</Czech>
@@ -725,10 +725,10 @@
 		<Polish>Nie pokazuj jednostek wrogich</Polish>
 		<Russian>Не показывать враждебные отряды</Russian>
 	</Key>
-	<Key ID="STR_ENH_MAPINDICATORS_MINESTEXT">
-		<English>Don't show mines</English>
+	<Key ID="STR_ENH_MAPINDICATORS_MINES">
+		<English>Hide Mines</English>
 		<Italian>Non mostra le mine</Italian>
-		<German>Minen nicht zeigen</German>
+		<German>Minen verstecken</German>
 		<Chinesesimp>不显示地雷位置</Chinesesimp>
 		<Spanish>No muestres minas</Spanish>
 		<Czech>Nezobrazovat miny</Czech>
@@ -736,16 +736,32 @@
 		<Polish>Nie pokazuj min</Polish>
 		<Russian>Не показывать мины</Russian>
 	</Key>
-	<Key ID="STR_ENH_MAPINDICATORS_PINGTEXT">
-		<English>Don't show tactical ping</English>
+	<Key ID="STR_ENH_MAPINDICATORS_PING">
+		<English>Hide Tactical Pings</English>
 		<Italian>Non mostra il ping tattico</Italian>
-		<German>Taktischen Ping nicht zeigen</German>
+		<German>Taktischen Pings verstecken</German>
 		<Chinesesimp>不显示战术ping值</Chinesesimp>
 		<Spanish>No mostrar ping táctico</Spanish>
 		<Czech>Nezobrazovat taktický ping</Czech>
 		<French>Ne pas montrer le ping tactique</French>
 		<Polish>Nie pokazuj sygnału taktycznego</Polish>
 		<Russian>Не показывать тактический пинг</Russian>
+	</Key>
+  <Key ID="STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP">
+		<English>Hide Friendly Units on the Map.</English>
+		<German>Freundliche Einheiten verstecken</German>
+	</Key>
+	<Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
+		<English>Hide Hostile Units on the Map.</English>
+		<German>Feindliche Einheiten auf der Karte verstecken</German>
+	</Key>
+	<Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
+		<English>Hide Mines on the Map</English>
+		<German>Minen auf der Karte verstecken</German>
+	</Key>
+	<Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
+		<English>Hide Tactical Pings on the Map</English>
+		<German>Taktischen Pings auf der Karte verstecken</German>
 	</Key>
 	<Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
 		<English>Add Flag</English>
@@ -6216,7 +6232,7 @@
 		<Polish>Odtwórz muzykę?</Polish>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
-		<English>VariableViewer</English>
+		<English>Variable Viewer</English>
 		<German>Variable Viewer</German>
 		<Polish>Przeglądarka zmiennych</Polish>
 	</Key>

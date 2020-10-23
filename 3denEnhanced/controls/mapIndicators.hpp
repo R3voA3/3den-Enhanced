@@ -2,52 +2,53 @@ class ENH_MapIndicators: Title
 {
 	attributeLoad = "[_this,_value] call ENH_fnc_mapIndicators_onAttributeLoad";
 	attributeSave = "_this call ENH_fnc_mapIndicators_onAttributeSave";
-	h = 7.5 * SIZE_M * GRID_H + 25 * pixelH;
+	h = 4 * SIZE_M * GRID_H + 20 * pixelH;
 	class Controls: Controls
 	{
-		ATTRIBUTE_DESCRIPTION($STR_ENH_MAPINDICATORS_DESCRIPTION,2);
-		class FriendlyText: Title
+		class FriendlyText: title
 		{
-			text = $STR_ENH_MAPINDICATORS_FRIENDLYTEXT;
-			y = 3.5 * SIZE_M * GRID_H + 5 * pixelH;
+			text = $STR_ENH_MAPINDICATORS_FRIENDLY;
+      tooltip = $STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP;
 		};
 		class FriendlyValue: ctrlCheckbox
 		{
 			idc = 100;
 			x = ATTRIBUTE_TITLE_W * GRID_W;
-			y = 3.5 * SIZE_M * GRID_H + 5 * pixelH;
 			w = SIZE_M * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
 		class EnemyText: FriendlyText
 		{
-			y = 4.5 * SIZE_M * GRID_H + 10 * pixelH;
-			text = $STR_ENH_MAPINDICATORS_ENEMYTEXT;
+      text = $STR_ENH_MAPINDICATORS_ENEMY;
+      tooltip = $STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP;
+			y = SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class EnemyValue: FriendlyValue
 		{
 			idc = 101;
-			y = 4.5 * SIZE_M * GRID_H + 10 * pixelH;
+			y = SIZE_M * GRID_H + 5 * pixelH;
 		};
 		class MinesText: FriendlyText
 		{
-			y = 5.5 * SIZE_M * GRID_H + 15 * pixelH;
-			text = $STR_ENH_MAPINDICATORS_MINESTEXT;
+      text = $STR_ENH_MAPINDICATORS_MINES;
+      tooltip = $STR_ENH_MAPINDICATORS_MINES_TOOLTIP;
+			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class MinesValue: FriendlyValue
 		{
 			idc = 102;
-			y = 5.5 * SIZE_M * GRID_H + 15 * pixelH;
+			y = 2 * SIZE_M * GRID_H + 10 * pixelH;
 		};
 		class PingText: FriendlyText
 		{
-			y = 6.5 * SIZE_M * GRID_H + 20 * pixelH;
-			text = $STR_ENH_MAPINDICATORS_PINGTEXT;
+      text = $STR_ENH_MAPINDICATORS_PING;
+      tooltip = $STR_ENH_MAPINDICATORS_PING_TOOLTIP;
+			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 		class PingValue: FriendlyValue
 		{
 			idc = 103;
-			y = 6.5 * SIZE_M * GRID_H + 20 * pixelH;
+			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
 		};
 	};
 };
