@@ -13,7 +13,6 @@
 #include "GUI\batchReplace.hpp"
 #include "GUI\functionsViewer.hpp"
 #include "GUI\actionCreator.hpp"
-#include "GUI\credits.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\scenarioAttributesManager.hpp"
 #include "GUI\scenarioAttributesManagerTemplateData.hpp"
@@ -37,11 +36,11 @@
 */
 
 class RscControlsGroupNoScrollbars;
-class RscDebugConsole: RscControlsGroupNoScrollbars 
+class RscDebugConsole: RscControlsGroupNoScrollbars
 {
-	class Controls 
+	class Controls
   {
-    class ENH_ButtonFunctions: ctrlButtonPictureKeepAspect 
+    class ENH_ButtonFunctions: ctrlButtonPictureKeepAspect
     {
       idc=0; // idc 0 to exclude from repositioning in CBA extended debug
       deletable=0;

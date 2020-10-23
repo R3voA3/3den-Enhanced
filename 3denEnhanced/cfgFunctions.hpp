@@ -107,11 +107,6 @@ class CfgFunctions
 			class nameObjects_onLoad;
 			class nameObjects_name;
 		};
-		class Credits
-		{
-			file = "3denEnhanced\functions\GUI\credits";
-			class credits_onLoad;
-		};
 		class ModuleInformation
 		{
 			file = "3denEnhanced\functions\GUI\moduleInformation";

@@ -100,7 +100,6 @@
 		};\
 
 //Eden base controls
-class title;
 class ctrlEdit;
 class ctrlEditMulti;
 class ctrlButton;
