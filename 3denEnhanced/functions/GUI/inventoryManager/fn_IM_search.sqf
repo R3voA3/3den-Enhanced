@@ -33,13 +33,13 @@ lbClear _ctrlItems;
 
    if ((_filter select [0,3] == "MOD") && ((_filter select [4,50]) in toUpper _addon)) then
    {
-      [_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
+      [_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
    }
    else
    {
 	   if ((_filter in toUpper _displayName) || (_filter == "")) then
 	   {
-	   	[_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
+	   	[_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lbAdd;
       };
    };
 } forEach (uiNamespace getVariable ["ENH_IM_FilteredItems",[]]);

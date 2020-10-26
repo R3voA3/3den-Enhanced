@@ -36,4 +36,7 @@ uiNamespace setVariable ["ENH_IM_FilteredItems",_filteredItems];
 //Fill listbox via the search function
 (_display displayCtrl 3400) call ENH_fnc_IM_search;
 
+//Scroll all the way to the top to prevent items not being displayed because it was scrolled down too far
+(_display displayCtrl 2200) ctrlSetScrollValues [0,0];
+
 true

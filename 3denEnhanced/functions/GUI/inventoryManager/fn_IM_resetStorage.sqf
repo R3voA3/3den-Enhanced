@@ -29,7 +29,7 @@ ENH_fnc_IM_resetStorage_main =
             _count = getNumber (_x >> "count");
             _configName = configName _x select [4,count (configName _x) -1];
             
-            [_ctrlInventory,_configName,"","","",_count,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAddItem;
+            [_ctrlInventory,_configName,"","","",_count,_configName +  "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAddItem;
       } forEach _classes;
    } forEach ["TransportWeapons","TransportMagazines","TransportItems","TransportBackpacks"];
 

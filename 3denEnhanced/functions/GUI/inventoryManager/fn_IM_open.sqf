@@ -64,7 +64,6 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 
 	private _allItemConfigs = _cfgWeapons + _cfgMagazines + _cfgGlasses + _cfgVehicles;
 	private _allItemsConfigsCount = count _allItemsConfig;
-	//["ENH_IM_LoadingScreen"] call BIS_fnc_startLoadingScreen;
 
 	private _itemsCache = [];
 	private _addons = [];
@@ -75,19 +74,31 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 		(_configName call BIS_fnc_itemType) params ["_category","_specificType"];
 		if (!(_category in _blacklist || _specificType in _blackList) && {if (isArray (_x >> "muzzles")) then {_configName call BIS_fnc_baseWeapon == _configName} else {true}}) then
 		{
+			//Modify some _specificTypes
 			if (_specificType == "MissileLauncher") then {_specificType = "RocketLauncher"};//Same type for all launchers
 			if (_specificType in ["Throw","SmokeShell","Flare"]) then {_specificType = "Grenade"};//Same type for all grenades, flares, chemlights, smoke
+			if (_specificType == "AccessoryBipod" && (_configName isKindOf ["CBA_MiscItem",configFile >> "CfgWeapons"])) then {_specificType = "Item"};
 
+			//Get the DLC, make sure it's a DLC and was not modified by a mod only (CBA,ACE)
+			private _dlc = ""; 
+			private _addons = configSourceAddonList _x;
+			if (count _addons > 0) then
+			{ 
+				private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons # 0);
+				if (count _mods > 0) then
+				{ 
+					_dlc = _mods # 0;
+				};
+			};
+			
 			private _addonName = "";
 			private _addonIcon = "";
-			private _configSourceMod = configSourceMod _x;
-			if (_configSourceMod != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
+			if (_dlc != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
 			{
-				_addonName = modParams [_configSourceMod, ["name"]] # 0;
-				_addonIcon = modParams [_configSourceMod, ["logoSmall"]] # 0;
-
+				_addonName = modParams [_dlc, ["name"]] # 0;
+				_addonIcon = modParams [_dlc, ["logoSmall"]] # 0;
 				//Get all addons so they can be added to filter later
-				_addons pushBackUnique [_configSourceMod,_addonName,_addonIcon];
+				_addons pushBackUnique [_dlc,_addonName,_addonIcon];
 			};
 
 			_itemsCache pushBack
@@ -98,15 +109,13 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 				_addonIcon,
 				_category,
 				_specificType,
-				_configSourceMod,
+				_dlc,
 				_addonName
 			];
 		};
-		//(_allItemsConfigsCount / _forEachIndex) call BIS_fnc_progressLoadingScreen;
 	} forEach _allItemConfigs;
 	uiNamespace setVariable ["ENH_IM_allItems",_itemsCache];
 	uiNamespace setVariable ["ENH_IM_allAddons",_addons];
-	//"ENH_IM_LoadingScreen" call BIS_fnc_endLoadingScreen;
 };
 
 //Get all addons and add them to filter control
