@@ -1,4 +1,4 @@
-v5.7
+v5.7 (WIP)
 *added*
 - Turret Magazines Attribute
 
