@@ -21,6 +21,8 @@ v5.7
 - Fixed ACE items would not be properly sorted in the Inventory Manager (Thanks to [KP] veteran29)
 - Fixed dlc icons would be incorrect if certain mods are loaded
 - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
+- Mines category was renamed to Explosives in Inventory Manager
+- Added localisation for Inventory Manager
 
 *removed*
 - Credits GUI and all related functions
