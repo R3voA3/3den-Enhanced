@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-26
+
+   Description:
+   Used by the ENH_TurretMagazines attribute control.
+
+   Parameter(s):
+   0: CONTORL - Button
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_ctrlButton"];
 
 private _ctrlList = (ctrlParentControlsGroup _ctrlButton) controlsGroupCtrl 100;

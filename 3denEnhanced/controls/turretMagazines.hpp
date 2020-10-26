@@ -1,4 +1,4 @@
-class ENH_MagazinesTurrets: Title
+class ENH_TurretMagazines: TitleWide
 {
 	attributeLoad = "[_this,_value] call ENH_fnc_magazineTurrets_onAttributeLoad";
 	attributeSave = "_this call ENH_fnc_magazineTurrets_onAttributeSave";
@@ -6,7 +6,7 @@ class ENH_MagazinesTurrets: Title
 	class Controls: Controls
 	{
 		ATTRIBUTE_DESCRIPTION("Shows all available magazines from all turrets. Use the slider to set a custom magazine count.",1);
-		class TypeTitle: Title 
+		class TypeTitle: Title
 		{
 			text = "Magazines";
 			y = 2.5 * SIZE_M * GRID_H + 5 * pixelH;

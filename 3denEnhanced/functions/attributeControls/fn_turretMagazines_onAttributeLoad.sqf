@@ -1,7 +1,21 @@
+/*
+   Author: R3vo
+
+   Date: 2020-10-26
+
+   Description:
+   Used by the ENH_TurretMagazines attribute control. Called when attribute is loaded.
+
+   Parameter(s):
+   0: CONTORL - Button
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_ctrlGroup","_value"];
 
 private _magData = parseSimpleArray _value;
-
 private _ctrlList = _ctrlGroup controlsGroupCtrl 100;
 private _ctrlSlider = _ctrlGroup controlsGroupCtrl 101;
 
@@ -18,20 +32,6 @@ _ctrlList ctrlAddEventHandler ["lbSelChanged",
 	_ctrlSlider = (ctrlParentControlsGroup _ctrlList) controlsGroupCtrl 101;
 	_ctrlSlider sliderSetPosition parseNumber (_ctrlList lbTextRight _selectedIndex);
 }];
-
-/* if (_value isEqualTo "[]") then // Only get default magazines if value is empty, else just use value
-{
-	_mags = magazinesAllTurrets (get3DENSelected "Object" select 0);
-	{
-		_x params ["_magClass","_turretPath"];
-		_value pushBackUnique
-		[
-			_magClass,
-			_turretPath,
-			count (_mags select {_x # 0 == _magClass})
-		];
-	} forEach _mags;
-}; */
 
 {
 	_x params ["_mag","_turretPath","_count"];

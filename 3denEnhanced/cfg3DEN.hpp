@@ -33,14 +33,21 @@ class Cfg3DEN
 	class Attributes
 	{
 		// Base class templates
-		class Default;
+		class Default; // Empty template with pre-defined width and single line height
 		class Title: Default
 		{
 			class Controls
 			{
 				class Title;
 			};
-		};
+		}; // Two-column template with title on the left and space for content on the right
+		class TitleWide: Default
+		{
+			class Controls
+			{
+				class Title;
+			};
+		}; // Template with full-width single line title and space for content below it
 		#include "controls\timeMultiplier.hpp"
 		#include "controls\featureType.hpp"
 		#include "controls\terrainDetail.hpp"
@@ -57,8 +64,7 @@ class Cfg3DEN
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
-    #include "controls\hideTerrainObjects.hpp"
-    #include "controls\magazinesTurrets.hpp"
+    #include "controls\turretMagazines.hpp"
 	};
  	class Mission
 	{
@@ -89,7 +95,6 @@ class Cfg3DEN
 			class AttributeCategories
 			{
 				#include "attributesMission\volume.hpp"
-				#include "attributesMission\mapIndicators.hpp"
 				#include "attributesMission\ambientFlyby.hpp"
 				#include "attributesMission\airdrop.hpp"
 				#include "attributesMission\establishingShot.hpp"
@@ -101,6 +106,7 @@ class Cfg3DEN
 					class Attributes
 					{
 						#include "attributesMission\addObjectsToZeus.hpp"
+            #include "attributesMission\mapIndicators.hpp"
 					};
 				};
 			};
@@ -173,6 +179,7 @@ class Cfg3DEN
 				{
 					#include "attributesObject\addGunLight.hpp"
 					#include "attributesObject\arsenal.hpp"
+          #include "attributesObject\turretMagazines.hpp"
 				};
 			};
 			class State
@@ -184,7 +191,6 @@ class Cfg3DEN
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
 					#include "attributesObject\ambientAnimations.hpp"
-          //#include "attributesObject\magazineTurrets.hpp"
 				};
 			};
 		};

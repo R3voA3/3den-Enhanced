@@ -200,7 +200,6 @@ class CfgFunctions
 			class firstPerson;
 			class 3DENCollapseAssetBrowser;
       class hasStorage;
-      class magazinesTurret_defaultValue;
       class exportAttributesToWiki;
       class exportContextMenuToWiki;
       class exportFunctionsToWiki;
@@ -287,9 +286,10 @@ class CfgFunctions
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
 			class initDebriefingCombo;
-      class magazineTurrets_onAttributeLoad;
-			class magazineTurrets_onAttributeSave;
-			class magazineTurrets_onButtonDown;
+      class turretMagazines_onAttributeLoad;
+			class turretMagazines_onAttributeSave;
+			class turretMagazines_onButtonDown;
+      class turretMagazines_defaultValue;
 		};
 	};
 };

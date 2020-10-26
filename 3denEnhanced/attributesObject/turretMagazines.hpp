@@ -1,8 +1,9 @@
-class ENH_MagazinesTurrets
+class ENH_TurretMagazines
 {
-	displayName = "Turrets Magazines";
-  control = "ENH_MagazinesTurrets";
-	property = "ENH_MagazinesTurrets";
+	displayName = "Turret Magazines";
+  tooltip = "Shows all available magazines from all turrets. Use the slider to set a custom magazine count.";
+  control = "ENH_TurretMagazines";
+	property = "ENH_TurretMagazines";
 	expression = "if (!is3DEN && {isServer}) then\
   {\
     {\
@@ -15,5 +16,5 @@ class ENH_MagazinesTurrets
     } forEach parseSimpleArray _value;\
   };";
 	condition = "objectVehicle";
-  defaultValue = "_this call ENH_fnc_magazineTurrets_defaultValue";
+  defaultValue = "_this call ENH_fnc_turretMagazines_defaultValue";
 };
