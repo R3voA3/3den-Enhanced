@@ -1,11 +1,11 @@
 v5.7
 *added*
-- Turret Magazines Attribute.
+- Turret Magazines Attribute
 
 *changed*
 - Improved some translations
 - Open on Biki button in Functions Viewer is not a ctrlButton
-- Batch Rename tool can now also rename markers.
+- Batch Rename tool can now also rename markers
 - Added functions to create 3den Enhanced documention for GitHub wiki
 - Texture Finder is now faster. From 137.559 s down to 45.614 to load all textures (Thanks to ConnorAU)
 - Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
