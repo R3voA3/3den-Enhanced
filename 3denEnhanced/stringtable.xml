@@ -6245,6 +6245,10 @@
 		<German>Verfügbare Gegenstände</German>
 		<Polish>Dostępne przedmioty</Polish>
 	</Key>
+  <Key ID="STR_ENH_IM_PREVIEW_TOOLTIP">
+		<English>Double Click on an item to preview it.</English>
+		<German>Doppelklick auf einen Gegenstand um ihn anzuzeigen.</German>
+	</Key>
 	<Key ID="STR_ENH_IM_ITEMSININVENTORY">
 		<English>Items in Inventory</English>
 		<German>Gegenstände im Inventar</German>

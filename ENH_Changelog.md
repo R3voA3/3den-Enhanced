@@ -17,6 +17,10 @@ v5.7
 - FAQ was moved to the 3den Enhanced Wiki
 - Fixed a bug which would cause the "Disable and Reset" button for the group marker attribute not to work
 - Size of Hold Action description has been slightly reduced
+- Fixed .rpt spam caused by Inventory Manager
+- Fixed ACE items would not be properly sorted in the Inventory Manager (Thanks to [KP] veteran29)
+- Fixed dlc icons would be incorrect if certain mods are loaded
+- Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
 
 *removed*
 - Credits GUI and all related functions
