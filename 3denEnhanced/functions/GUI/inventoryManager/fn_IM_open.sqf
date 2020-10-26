@@ -80,7 +80,7 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 			if (_specificType == "AccessoryBipod" && (_configName isKindOf ["CBA_MiscItem",configFile >> "CfgWeapons"])) then {_specificType = "Item"};
 
 			//Get the DLC, make sure it's a DLC and was not modified by a mod only (CBA,ACE)
-			private _dlc = ""; 
+			private _dlc = "";
 			private _addons = configSourceAddonList _x;
 			if (count _addons > 0) then
 			{ 
