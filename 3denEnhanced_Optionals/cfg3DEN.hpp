@@ -136,14 +136,6 @@ class Cfg3DEN
 			};
 		};
 	};
-  class Trigger
-  {
-    class AttributeCategories
-    {
-      #ifdef HIDE_ENH_HIDETERRAINOBJECTS
-      delete ENH_HideTerrainObjects
-    };
-  };
 	class Object
 	{
 		class AttributeCategories
@@ -226,7 +218,10 @@ class Cfg3DEN
 					#endif
 					#ifdef HIDE_ENH_VIRTUALARSENAL
 						delete ENH_VirtualArsenal;
-					#endif	
+					#endif
+          #ifdef HIDE_ENH_TURRETMAGAZINES
+						delete ENH_TurretMagazines;
+					#endif
 				};
 			};
 			class State

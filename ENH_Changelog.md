@@ -1,5 +1,6 @@
-v5.6
+v5.7
 *added*
+- Turret Magazines Attribute.
 
 *changed*
 - Improved some translations
@@ -10,6 +11,15 @@ v5.6
 - Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
 - Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
 - Behaviour of the "View on Biki" button in the Functions Viewer was improved
+- Map Indicator settings are now in the Misc category
+- Text for Map Indicator attribute was improved
+- Credits were moved to the 3den Enhanced Wiki
+- FAQ was moved to the 3den Enhanced Wiki
+- Fixed a bug which would cause the "Disable and Reset" button for the group marker attribute not to work
+- Size of Hold Action description has been slightly reduced
+
+*removed*
+- Credits GUI and all related functions
 
 v5.6
 *added*
