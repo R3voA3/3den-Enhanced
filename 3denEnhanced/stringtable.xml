@@ -748,24 +748,24 @@
 		<Russian>Не показывать тактический пинг</Russian>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP">
-		<English>Hide Friendly Units on the Map</English>
-		<German>Freundliche Einheiten verstecken</German>
-		<French>Ne pas afficher les unités amies sur la carte</French>
+		<English>Hide Friendly Units on the Map.</English>
+		<German>Freundliche Einheiten verstecken.</German>
+		<French>Ne pas afficher les unités amies sur la carte.</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
-		<English>Hide Hostile Units on the Map</English>
-		<German>Feindliche Einheiten auf der Karte verstecken</German>
-		<French>Ne pas afficher les unités hostiles sur la carte</French>
+		<English>Hide Hostile Units on the Map.</English>
+		<German>Feindliche Einheiten auf der Karte verstecken.</German>
+		<French>Ne pas afficher les unités hostiles sur la carte.</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
-		<English>Hide Mines on the Map</English>
-		<German>Minen auf der Karte verstecken</German>
-		<French>Ne pas afficher les mines sur la carte</French>
+		<English>Hide Mines on the Map.</English>
+		<German>Minen auf der Karte verstecken.</German>
+		<French>Ne pas afficher les mines sur la carte.</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
-		<English>Hide Tactical Pings on the Map</English>
-		<German>Taktischen Pings auf der Karte verstecken</German>
-		<French>Ne pas afficher les pings tactiques sur la carte</French>
+		<English>Hide Tactical Pings on the Map.</English>
+		<German>Taktischen Pings auf der Karte verstecken.</German>
+		<French>Ne pas afficher les pings tactiques sur la carte.</French>
 	</Key>
 	<Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
 		<English>Add Flag</English>
@@ -779,7 +779,7 @@
 		<Russian>Регулирует колебания оружия игрока. Состояние сохраняется даже после возрождения.</Russian>
 	</Key>
 	<Key ID="STR_ENH_FORCEFLAG_TOOLTIP">
-		<English>Forces a flag texture onto a flag carrier (unit, vehicle or flag pole). No flag holder is required. </English>
+		<English>Forces a flag texture onto a flag carrier (unit, vehicle or flag pole). No flag holder is required.</English>
 		<Italian>Forza una trama bandiera su un supporto bandiera (unità, veicolo o asta bandiera). Non è richiesto il portabandiera.</Italian>
 		<German>Bringt eine Flaggentextur an dem Flaggenträger an (Einheit, Fahrzeug oder Fahnenmast). Es wird keine Halterung für die Flagge benötigt.</German>
 		<Chinesesimp>在旗帜载体（单位，载具或旗杆）上强制添加标志和纹理。 不需要旗帜持有人。</Chinesesimp>
@@ -802,10 +802,10 @@
 	</Key>
 	<Key ID="STR_ENH_DOSTOP_TOOLTIP">
 		<English>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</English>
-		<Italian>Impedisce all'AI di muoversi in formazione all'inizio della missione. Disattivato in multiplayer</Italian>
+		<Italian>Impedisce all'AI di muoversi in formazione all'inizio della missione. Disattivato in multiplayer!</Italian>
 		<German>Verhindert, dass die KI beim Missionsstart in Formation tritt. In Mehrspielermissionen deaktiviert!</German>
-		<Spanish>Evita que la IA entre en formación al inicio de la misión. Desactivado en MP.</Spanish>
-		<French>Empêche les IA de se mettre en formation lors du démarrage de la mission. Ce paramètre est désactivé en multijoueur.</French>
+		<Spanish>Evita que la IA entre en formación al inicio de la misión. Desactivado en MP!</Spanish>
+		<French>Empêche les IA de se mettre en formation lors du démarrage de la mission. Ce paramètre est désactivé en multijoueur!</French>
 		<Polish>Powstrzymuje AI przed dołączaniem do formacji na starcie misji. Nieaktywne w multiplayerze!</Polish>
 	</Key>
 	<Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE1">
