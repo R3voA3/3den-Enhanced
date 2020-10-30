@@ -36,12 +36,11 @@ _ctrlCode ctrlSetText loadFile _fncPath;
 if (_fncName select [0,3] in ["BIS","BIN"]) then
 {
    _ctrlBiki ctrlEnable true;
-   _ctrlBiki ctrlSetURL format ["https://community.bistudio.com/wiki/%1",_fncName];
+   _ctrlBiki ctrlSetURL format ("https://community.bistudio.com/wiki/" + _fncName);
 }
 else
 {
    _ctrlBiki ctrlEnable false;
-   //_ctrlBiki ctrlSetURL format ["https://community.bistudio.com/wiki/%1",_fncName];
 };
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
