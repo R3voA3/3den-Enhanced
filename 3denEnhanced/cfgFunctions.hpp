@@ -175,6 +175,7 @@ class CfgFunctions
 		class Misc
 		{
 			file = "3denEnhanced\functions\Misc";
+      class sessionTimer;
       class twoDigitsStr;
 			class loadoutTool;
 			class exportLoadout;
@@ -221,7 +222,6 @@ class CfgFunctions
 			file = "3denEnhanced\functions\debug";
 			class productInfo;
 			class toggleMapIDs;
-			class sessionTimer;
 			class DebugOptions;
 			class checkShortCutsDuplicates;
 		};
