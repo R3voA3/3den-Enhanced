@@ -1,6 +1,5 @@
 v5.7 (WIP)
 *added*
-- Turret Magazines Attribute
 
 *changed*
 - Improved some translations
@@ -19,10 +18,11 @@ v5.7 (WIP)
 - Size of Hold Action description has been slightly reduced
 - Fixed .rpt spam caused by Inventory Manager
 - Fixed ACE items would not be properly sorted in the Inventory Manager (Thanks to [KP] veteran29)
-- Fixed dlc icons would be incorrect if certain mods are loaded
+- Fixed DLC icons would be incorrect if certain mods are loaded
 - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
 - Mines category was renamed to Explosives in Inventory Manager
 - Added localisation for Inventory Manager
+- Added another separator to the menu strip -> tools -> utilities folder
 
 *removed*
 - Credits GUI and all related functions
