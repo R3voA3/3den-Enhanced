@@ -710,7 +710,7 @@
 		<Chinesesimp>不显示友好单位</Chinesesimp>
 		<Spanish>No mostrar unidades amigas.</Spanish>
 		<Czech>Nezobrazovat přátelské jednotky</Czech>
-		<French>Ne pas montrer les unités amies</French>
+		<French>Ne pas afficher les unités amies</French>
 		<Polish>Nie pokazuj jednostek przyjaznych</Polish>
 		<Russian>Не показывать дружественные отряды</Russian>
 	</Key>
@@ -721,7 +721,7 @@
 		<Chinesesimp>不显示敌对单位</Chinesesimp>
 		<Spanish>No mostrar unidades hostiles.</Spanish>
 		<Czech>Nezobrazovat nepřátelské jednotky</Czech>
-		<French>Ne pas montrer les unités hostiles</French>
+		<French>Ne pas afficher les unités hostiles</French>
 		<Polish>Nie pokazuj jednostek wrogich</Polish>
 		<Russian>Не показывать враждебные отряды</Russian>
 	</Key>
@@ -732,7 +732,7 @@
 		<Chinesesimp>不显示地雷位置</Chinesesimp>
 		<Spanish>No muestres minas</Spanish>
 		<Czech>Nezobrazovat miny</Czech>
-		<French>Ne pas montrer les mines</French>
+		<French>Ne pas afficher les mines</French>
 		<Polish>Nie pokazuj min</Polish>
 		<Russian>Не показывать мины</Russian>
 	</Key>
@@ -743,25 +743,29 @@
 		<Chinesesimp>不显示战术ping值</Chinesesimp>
 		<Spanish>No mostrar ping táctico</Spanish>
 		<Czech>Nezobrazovat taktický ping</Czech>
-		<French>Ne pas montrer le ping tactique</French>
+		<French>Ne pas afficher les pings tactiques</French>
 		<Polish>Nie pokazuj sygnału taktycznego</Polish>
 		<Russian>Не показывать тактический пинг</Russian>
 	</Key>
-  <Key ID="STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP">
-		<English>Hide Friendly Units on the Map.</English>
+	<Key ID="STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP">
+		<English>Hide Friendly Units on the Map</English>
 		<German>Freundliche Einheiten verstecken</German>
+		<French>Ne pas afficher les unités amies sur la carte</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
-		<English>Hide Hostile Units on the Map.</English>
+		<English>Hide Hostile Units on the Map</English>
 		<German>Feindliche Einheiten auf der Karte verstecken</German>
+		<French>Ne pas afficher les unités hostiles sur la carte</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
 		<English>Hide Mines on the Map</English>
 		<German>Minen auf der Karte verstecken</German>
+		<French>Ne pas afficher les mines sur la carte</French>
 	</Key>
 	<Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
 		<English>Hide Tactical Pings on the Map</English>
 		<German>Taktischen Pings auf der Karte verstecken</German>
+		<French>Ne pas afficher les pings tactiques sur la carte</French>
 	</Key>
 	<Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
 		<English>Add Flag</English>
@@ -1787,7 +1791,7 @@
 		<English>Autotarget</English>
 		<Italian>Cerca Bersagli</Italian>
 		<Czech>Vyhledávání cílů</Czech>
-		<French>Cible automatique</French>
+		<French>Ciblage automatique</French>
 		<Spanish>Auto objetivo.</Spanish>
 		<German>Ziele suchen</German>
 		<Chinesesimp>自动索敌</Chinesesimp>
@@ -2307,7 +2311,7 @@
 		<Chinesesimp>在死亡时停用删除</Chinesesimp>
 		<Spanish>Desactivar la eliminación de la muerte</Spanish>
 		<Czech>Deaktivuje smazání při smrti</Czech>
-		<French>Désactiver l'effacement au décès</French>
+		<French>Désactiver la suppression après la mort</French>
 		<Polish>Wyłącza usunięcie przy śmierci.</Polish>
 		<Russian>Отключает удаление после смерти.</Russian>
 	</Key>
@@ -6239,92 +6243,110 @@
 	<Key ID="STR_ENH_TOOLS_INVENTORYMANAGER">
 		<English>Vehicle Inventory Manager</English>
 		<German>Vehicle-Inventar-Manager</German>
+		<French>Gestionnaire d'inventaire de véhicule</French>
 	</Key>
 	<Key ID="STR_ENH_IM_AVAILABLEITEMS">
 		<English>Available Items</English>
 		<German>Verfügbare Gegenstände</German>
 		<Polish>Dostępne przedmioty</Polish>
+		<French>Items disponibles</French>
 	</Key>
-  <Key ID="STR_ENH_IM_PREVIEW_TOOLTIP">
+	<Key ID="STR_ENH_IM_PREVIEW_TOOLTIP">
 		<English>Double click on an item to preview it.</English>
 		<German>Doppelklick auf einen Gegenstand, um ihn anzuzeigen.</German>
+		<French>Double-cliquez sur un item pour le prévisualiser.</French>
 	</Key>
 	<Key ID="STR_ENH_IM_ITEMSININVENTORY">
 		<English>Items in Inventory</English>
 		<German>Gegenstände im Inventar</German>
 		<Polish>Przedmioty w ekwipunku</Polish>
+		<French>Items dans l'inventaire</French>
 	</Key>
-  <Key ID="STR_ENH_IM_SHOTGUNS">
+	<Key ID="STR_ENH_IM_SHOTGUNS">
 		<English>Shotguns</English>
 		<German>Schrotflinten</German>
-    <French>Fusil à pompe</French>
-    <Spanish>Escopetas</Spanish>
+		<French>Fusil à pompe</French>
+		<Spanish>Escopetas</Spanish>
 		<Polish>Strzelby</Polish>
 	</Key>
 	<Key ID="STR_ENH_IM_SHOWTEMPLATES">
 		<English>Show Templates</English>
 		<German>Vorlagen anz.</German>
 		<Polish>Pokaż szablony</Polish>
+		<French>Afficher les modèles</French>
 	</Key>
 	<Key ID="STR_ENH_IM_CREATETEMPLATE">
 		<English>Create Template</English>
 		<German>Vorlage erstellen</German>
 		<Polish>Stwórz szablon</Polish>
+		<French>Créer un modèle</French>
 	</Key>
 	<Key ID="STR_ENH_IM_APPLYTEMPLATE">
 		<English>Apply Template</English>
 		<German>Vorlage anwenden</German>
 		<Polish>Zastosuj szablon</Polish>
+		<French>Appliquer un modèle</French>
 	</Key>
 	<Key ID="STR_ENH_IM_ISVIRTUAL">
 		<English>Is Virtual?</English>
 		<German>Virtuell?</German>
 		<Polish>Jest wirtualne?</Polish>
+		<French>Virtuel ?</French>
 	</Key>
 	<Key ID="STR_ENH_IM_REMOVESELECTED_TOOLTIP">
 		<English>Clear Inventory</English>
 		<German>Inventar leeren</German>
 		<Polish>Wyczyść ekwipunek</Polish>
+		<French>Vider l'inventaire</French>
 	</Key>
 	<Key ID="STR_ENH_IM_DELETETEMPLATE">
 		<English>Delete selected Template.</English>
 		<German>Ausgewählte Vorlage löschen.</German>
 		<Polish>Skasuj zaznaczony szablon</Polish>
+		<French>Supprimer le modèle sélectionné</French>
 	</Key>
 	<Key ID="STR_ENH_HELP_GETEXTENSIONS">
 		<English>Additional Eden Editor Extentions</English>
 		<German>Zusätzliche Eden Editor Erweiterungen</German>
+		<French>Extensions Eden Editor supplémentaires</French>
 	</Key>
 	<Key ID="STR_ENH_HIDETERRAINOBJECTS_DESCRIPTION">
 		<English>Hides or destroys all objects of given type in the trigger area when the mission starts. Effect is visible for all players including JIP.</English>
 		<German>Versteckt oder zerstört alle Objekte des angegebenen Typs im Auslösergebiet. Der Effekt ist für alle Spieler, auch JIP sichtbar.</German>
+		<French>Cache ou détruit tous les objets du type spécifié situés au sein de la zone du déclencheur lorsque la mission commence. L'effet s'applique à tous les joueurs, même les JIP.</French>
 	</Key>
 	<Key ID="STR_ENH_IM_HIDETEMPLATES">
 		<English>Hide Templates</English>
 		<German>Vorlagen versteck.</German>
 		<Polish>Ukryj szablony</Polish>
+		<French>Ne pas afficher les modèles</French>
 	</Key>
 	<Key ID="STR_ENH_IM_TEMPLATES">
 		<English>Templates</English>
 		<German>Vorlagen</German>
 		<Polish>Szablony</Polish>
+		<French>Modèles</French>
 	</Key>
 	<Key ID="STR_ENH_IM_RESET_TOOLTIP">
 		<English>Reset to default items defined in object's config.</English>
 		<German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
 		<Polish>Zresetuj ekwipunek</Polish>
+		<French>Réinitialiser aux items par défaut définis dans la configuration de l'objet.</French>
 	</Key>
 	<Key ID="STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP">
 		<English>Add entry to favorites or remove it from favorites depending on the selected list.</English>
 		<German>Entfernt einen Eintrag aus den Favoriten oder fügt einen Eintrag zu den Favoriten hinzu. Dies ist Abhängig von der aktiven Liste.</German>
+		<French>Ajouter ou retirer des favoris un élément de la liste sélectionnée.</French>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_CFGSENTENCESBROWSER">
 		<English>CfgSentences Browser</English>
 		<German>CfgSentences Browser</German>
 		<Polish>CfgSentences Browser</Polish>
+		<French>Navigateur CfgSentences</French>
 	</Key>
 	<Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
 		<English>Placement Tool</English>
 		<German>Platzierungs-Werkzeug</German>
+		<French>Outil de placement</French>
 	</Key>
 </Project>
