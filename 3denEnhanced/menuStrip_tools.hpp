@@ -86,15 +86,16 @@ class ENH_Folder_Utilities
 		"ENH_ScriptCommands",
 		"Separator",
 		"ENH_3DENRadio",
+    "ENH_3DENCamPositions",
+    "ENH_ScenarioAttributesManager",
+    "ENH_CfgSentencesBrowser",
+    "ENH_TextureFinder",
+		"ENH_VariableViewer",
+    "Separator",
+    "ENH_BriefingEditor",
 		"ENH_ActionCreator",
 		"ENH_BatchReplace",
-		"ENH_BriefingEditor",
-		"ENH_NameObjects",
-		"ENH_ScenarioAttributesManager",
-		"ENH_TextureFinder",
-		"ENH_3DENCamPositions",
-		"ENH_VariableViewer",
-    "ENH_CfgSentencesBrowser"
+		"ENH_NameObjects"
 	};
 };
 class ENH_Folder_Miscellaneous
