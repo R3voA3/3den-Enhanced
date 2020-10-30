@@ -286,10 +286,10 @@ class CfgFunctions
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
 			class initDebriefingCombo;
-      class turretMagazines_onAttributeLoad;
-			class turretMagazines_onAttributeSave;
-			class turretMagazines_onButtonDown;
-      class turretMagazines_defaultValue;
+      //class turretMagazines_onAttributeLoad;
+			//class turretMagazines_onAttributeSave;
+			//class turretMagazines_onButtonDown;
+      //class turretMagazines_defaultValue;
 		};
 	};
 };

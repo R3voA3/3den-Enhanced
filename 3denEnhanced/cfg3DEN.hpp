@@ -64,7 +64,7 @@ class Cfg3DEN
 		#include "controls\taskPatrol.hpp"
 		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
-    #include "controls\turretMagazines.hpp"
+    //#include "controls\turretMagazines.hpp"
 	};
  	class Mission
 	{
@@ -179,7 +179,7 @@ class Cfg3DEN
 				{
 					#include "attributesObject\addGunLight.hpp"
 					#include "attributesObject\arsenal.hpp"
-          #include "attributesObject\turretMagazines.hpp"
+          //#include "attributesObject\turretMagazines.hpp"
 				};
 			};
 			class State
