@@ -11,7 +11,7 @@
    1: BOOLEAN - True to show smoke at LZ
 
    Returns:
-   BOOLEAN: true
+   -
 */ 
 
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center","_veh"];
@@ -53,5 +53,3 @@ collect3DENHistory
 		_smoke set3DENLayer _layer;
 	};
 };
-
-true

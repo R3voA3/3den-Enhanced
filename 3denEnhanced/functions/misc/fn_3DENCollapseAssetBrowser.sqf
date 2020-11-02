@@ -10,12 +10,10 @@
    -
 
    Returns:
-   BOOLEAN: true / false
+   -
 */
 
-private _collapse = profileNamespace getVariable ["ENH_CollapseAssetBrowser",false];
-
-if (!_collapse) exitWith {false};
+if !("Preferences" get3DENMissionAttribute "ENH_CollapseAssetBrowser") exitWith {};
 
 private _display3DEN = findDisplay 313;
 private _ctrlTV = controlNull;

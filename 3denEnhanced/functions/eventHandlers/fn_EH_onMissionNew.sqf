@@ -19,4 +19,7 @@
 //Enable session timer
 [] spawn ENH_fnc_sessionTimer;
 
+//Enable dynamic view distance
+call ENH_fnc_dynamicViewDistance;
+
 true
