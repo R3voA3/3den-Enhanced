@@ -205,6 +205,7 @@ class CfgFunctions
       class exportContextMenuToWiki;
       class exportFunctionsToWiki;
       class exportMenuStripToWiki;
+      class dynamicViewDistance;
 		};
 		class Log
 		{

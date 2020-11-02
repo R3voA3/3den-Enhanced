@@ -72,6 +72,13 @@ class Cfg3DEN
 		{
 			class AttributeCategories
 			{
+        class Camera
+        {
+          class Attributes
+          {
+            #include "attributesEditor\dynamicViewDistance.hpp"
+          };
+        };
 				class Misc
 				{
 					class Attributes
