@@ -6310,11 +6310,6 @@
 		<German>Zusätzliche Eden Editor Erweiterungen</German>
 		<French>Extensions Eden Editor supplémentaires</French>
 	</Key>
-	<Key ID="STR_ENH_HIDETERRAINOBJECTS_DESCRIPTION">
-		<English>Hides or destroys all objects of given type in the trigger area when the mission starts. Effect is visible for all players including JIP.</English>
-		<German>Versteckt oder zerstört alle Objekte des angegebenen Typs im Auslösergebiet. Der Effekt ist für alle Spieler, auch JIP sichtbar.</German>
-		<French>Cache ou détruit tous les objets du type spécifié situés au sein de la zone du déclencheur lorsque la mission commence. L'effet s'applique à tous les joueurs, même les JIP.</French>
-	</Key>
 	<Key ID="STR_ENH_IM_HIDETEMPLATES">
 		<English>Hide Templates</English>
 		<German>Vorlagen versteck.</German>
@@ -6348,5 +6343,13 @@
 		<English>Placement Tool</English>
 		<German>Platzierungs-Werkzeug</German>
 		<French>Outil de placement</French>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICVIEWDISTANCE_DISPLAYNAME">
+		<English>Enable Dynamic View Distance</English>
+		<German>Dynamische Sichtweite anschalten</German>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
+		<English>View distance and object view distance will be changed according to camera height. This option might cause performance on weak systems</English>
+		<German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
 	</Key>
 </Project>
