@@ -40,14 +40,7 @@ class Cfg3DEN
 			{
 				class Title;
 			};
-		}; // Two-column template with title on the left and space for content on the right
-		class TitleWide: Default
-		{
-			class Controls
-			{
-				class Title;
-			};
-		}; // Template with full-width single line title and space for content below it
+		};
 		#include "controls\timeMultiplier.hpp"
 		#include "controls\featureType.hpp"
 		#include "controls\terrainDetail.hpp"
@@ -62,9 +55,7 @@ class Cfg3DEN
 		#include "controls\holdAction.hpp"
 		#include "controls\missionEndingCasualties.hpp"
 		#include "controls\taskPatrol.hpp"
-		#include "controls\debugOptions.hpp"
 		#include "controls\SPR.hpp"
-    //#include "controls\turretMagazines.hpp"
 	};
  	class Mission
 	{
@@ -79,14 +70,8 @@ class Cfg3DEN
             #include "attributesEditor\dynamicViewDistance.hpp"
           };
         };
-				class Misc
-				{
-					class Attributes
-					{
-						#include "attributesEditor\debugOptions.hpp"
-					};
-				};
 				#include "attributesEditor\interface.hpp"
+        #include "attributesEditor\debugOptions.hpp"
 			};
 		};
 		class Intel
@@ -186,7 +171,6 @@ class Cfg3DEN
 				{
 					#include "attributesObject\addGunLight.hpp"
 					#include "attributesObject\arsenal.hpp"
-          //#include "attributesObject\turretMagazines.hpp"
 				};
 			};
 			class State

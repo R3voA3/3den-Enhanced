@@ -8,99 +8,20 @@
    -
 
    Returns:
-   BOOLEAN: true / false
+   -
 */
 
-private _enabledOptions =  profileNamespace getVariable ["ENH_DebugOptions_Settings",[]];
-
-if (_enabledOptions isEqualTo [] || {!is3DENPreview}) exitWith {false};
-
-#define MARKERS 			0
-#define BULLETTRACING 		1
-#define ZEUS				2
-#define ARSENAL 			3
-#define GARAGE 				4
-#define INVULNERABILITY 	5
-#define CAPTIVE 			6
-#define STAMINA 			7
-#define FPS 			    8
-#define KILLBLUFOR 			9
-#define KILLOPFOR 			10
-#define KILLINDFOR 			11
-#define KILLCIVFOR			12
-#define KILLCURSOR			13
-#define SHOWUNITS_3D 		14
-#define REMOVECORPSE 		15
-#define SHOWWAYPOINTS 		16
-#define NORECOIL			17
-#define NOSWAY				18
-#define UNLIMITEDAMMO		19
-#define NORELOADTIME		20
-#define DRAWVIEWDIR			21
-#define TELEPORT			22
-#define SKIPTIME			23
-#define TIMEMULTIPLIER		24
-#define VARIABLEVIEWER		25
-
-#define MISSIONDISPLAY 		(call BIS_fnc_displayMission)
+#define ENABLED(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
+#define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 
 //To prevent issues in multiplayer games started from multiplayer editor
-if (isMultiplayer) exitWith {false};
+if (!is3DENPreview || isMultiplayer) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
-waitUntil {time > 0.5};
+sleep 0.5;
 
-if (INVULNERABILITY in _enabledOptions) then
-{
-	{
-		_x allowDamage false;
-	} forEach units player;
-	 
-	(vehicle player) allowDamage false;
-};
-
-if (CAPTIVE in _enabledOptions) then
-{
-	{
-		_x setCaptive true;
-	} forEach units player;
-};
-
-if (STAMINA in _enabledOptions) then
-{
-	{
-		_x enableStamina false;
-	} forEach units player;
-};
-
-if (BULLETTRACING in _enabledOptions) then
-{
-	[player] spawn BIS_fnc_traceBullets;
-};
-
-if (ZEUS in _enabledOptions) then
-{
-	[] spawn
-	{
-		waitUntil {!isNull player};
-		private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F",[0,0,0],[],10,"NONE"];
-		player assignCurator _zeusModule;
-		//Add Interface EHs (Workaround)
-		_zeusModule addCuratorEditableObjects [entities "", true];
-		_zeusModule addeventhandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
-		_zeusModule addeventhandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
-		_zeusModule addeventhandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
-		_zeusModule addeventhandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
-		_zeusModule addeventhandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
-		_zeusModule addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-	};
-};
-
-if (ARSENAL in _enabledOptions) then
+if ENABLED("Arsenal") then
 {
 	[
 		player,
@@ -121,7 +42,7 @@ if (ARSENAL in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (GARAGE in _enabledOptions) then
+if ENABLED("Garage") then
 {
 	[
 		player,
@@ -146,7 +67,91 @@ if (GARAGE in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (FPS in _enabledOptions) then
+if ENABLED("ShowUnits") then
+{
+	[] spawn
+	{
+		#define TO_PERCENT_ROUND(VALUE) round ((VALUE) * 100)
+		private _markerUnitsArray = [];
+
+		{
+			private _sideColour = [side _x,true] call BIS_fnc_sideColor;
+			private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
+
+			_name = "ENH_previewMarker_" + str _forEachIndex;
+			_name = createMarker [_name,position _x];
+			_name setMarkerType 'mil_box';
+			_name setMarkerText _displayName;
+			_name setMarkerColor _sideColour;
+
+			_markerUnitsArray pushBack [_name,_x,_displayName],;
+		} forEach entities [["AllVehicles"],[],false,true];//All vehicles without crew and dead entities
+
+		while {true} do
+		{
+			waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
+			{
+				sleep 0.2;//A bit more performance friendly
+				_x params ["_marker","_entity"];
+				_displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
+				_marker setMarkerText _displayName;
+				_marker setMarkerPos getPos _entity;
+			} forEach _markerUnitsArray;//[markerName,entity,displayName]
+		};
+	};
+};
+
+if ENABLED("BulletTracking") then
+{
+	[player] spawn BIS_fnc_traceBullets;
+};
+
+if ENABLED("Zeus") then
+{
+	[] spawn
+	{
+		//waitUntil {!isNull player};
+		private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F",[0,0,0],[],10,"NONE"];
+		player assignCurator _zeusModule;
+		//Add Interface EHs (Workaround)
+		_zeusModule addCuratorEditableObjects [entities "", true];
+		_zeusModule addeventhandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
+		_zeusModule addeventhandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
+		_zeusModule addeventhandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
+		_zeusModule addeventhandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
+		_zeusModule addeventhandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
+		_zeusModule addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+	};
+};
+
+
+if ENABLED("Invulnerability") then
+{
+	{
+		_x allowDamage false;
+	} forEach units player;
+	 
+	(vehicle player) allowDamage false;
+};
+
+if ENABLED("Captive") then
+{
+	{
+		_x setCaptive true;
+	} forEach units player;
+};
+
+if ENABLED("Stamina") then
+{
+	{
+		_x enableStamina false;
+	} forEach units player;
+};
+
+if ENABLED("FPS") then
 {
 	[] spawn
 	{
@@ -181,7 +186,7 @@ if (FPS in _enabledOptions) then
 	};
 };
 
-if (KILLBLUFOR in _enabledOptions) then
+if ENABLED("KillBLUFOR") then
 {
 	[
 		player,
@@ -208,7 +213,7 @@ if (KILLBLUFOR in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (KILLOPFOR in _enabledOptions) then
+if ENABLED("KillOPFOR") then
 {
 	[
 		player,
@@ -235,7 +240,7 @@ if (KILLOPFOR in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (KILLINDFOR in _enabledOptions) then
+if ENABLED("KILLINDFOR") then
 {
 	[
 		player,
@@ -262,7 +267,7 @@ if (KILLINDFOR in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (KILLCIVFOR in _enabledOptions) then
+if ENABLED("KillCIVFOR") then
 {
 	[
 		player,
@@ -289,7 +294,7 @@ if (KILLCIVFOR in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (KILLCURSOR in _enabledOptions) then
+if ENABLED("KillCurser") then
 {
 	[
 		player,
@@ -310,41 +315,7 @@ if (KILLCURSOR in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (MARKERS in _enabledOptions) then
-{
-	[] spawn
-	{
-		#define TO_PERCENT_ROUND(VALUE) round ((VALUE) * 100)
-		private _markerUnitsArray = [];
-
-		{
-			private _sideColour = [side _x,true] call BIS_fnc_sideColor;
-			private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
-
-			_name = "ENH_previewMarker_" + str _forEachIndex;
-			_name = createMarker [_name,position _x];
-			_name setMarkerType 'mil_box';
-			_name setMarkerText _displayName;
-			_name setMarkerColor _sideColour;
-
-			_markerUnitsArray pushBack [_name,_x,_displayName],;
-		} forEach entities [["AllVehicles"],[],false,true];//All vehicles without crew and dead entities
-
-		while {true} do
-		{
-			waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
-			{
-				sleep 0.2;//A bit more performance friendly
-				_x params ["_marker","_entity"];
-				_displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
-				_marker setMarkerText _displayName;
-				_marker setMarkerPos getPos _entity;
-			} forEach _markerUnitsArray;//[markerName,entity,displayName]
-		};
-	};
-};
-
-if (SHOWUNITS_3D in _enabledOptions) then
+if ENABLED("DrawIcons") then
 {
 	ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
 	["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
@@ -377,7 +348,7 @@ if (SHOWUNITS_3D in _enabledOptions) then
 	] call BIS_fnc_addStackedEventHandler;
 };
 
-if (REMOVECORPSE in _enabledOptions) then
+if ENABLED("DeleteCorpse") then
 {
 	[
 	player,
@@ -398,7 +369,7 @@ if (REMOVECORPSE in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (SHOWWAYPOINTS in _enabledOptions) then
+if ENABLED("ShowWaypoints") then
 {
 	_markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
 	private _color = "";
@@ -430,17 +401,17 @@ if (SHOWWAYPOINTS in _enabledOptions) then
 	} forEach allGroups;
 };
 
-if (NORECOIL in _enabledOptions) then
+if ENABLED("NoRecoil") then
 {
 	player setUnitRecoilCoefficient 0;
 };
 
-if (NOSWAY in _enabledOptions) then
+if ENABLED("NoSway") then
 {
 	player setCustomAimCoef 0;
 };
 
-if (UNLIMITEDAMMO in _enabledOptions) then
+if ENABLED("NoReload") then
 {
 	player addEventHandler ["FiredMan",
 	{
@@ -449,7 +420,6 @@ if (UNLIMITEDAMMO in _enabledOptions) then
 		{
 			_unit setAmmo [_weapon,1000];
 			_unit setWeaponReloadingTime [_unit,_muzzle,0];
-			
 		}
 		else
 		{
@@ -459,24 +429,7 @@ if (UNLIMITEDAMMO in _enabledOptions) then
 	}];
 };
 
-if (NORELOADTIME in _enabledOptions) then
-{
-	player addEventHandler ["FiredMan",
-	{
-		params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_vehicle"];
-		if (isNull _vehicle) then
-		{
-			_unit setWeaponReloadingTime [_unit,_muzzle,0];
-			
-		}
-		else
-		{
-			_vehicle setWeaponReloadingTime [_unit,_muzzle,0];
-		};
-	}];
-};
-
-if (DRAWVIEWDIR in _enabledOptions) then
+if ENABLED("DrawViewDirection") then
 {
 	["ENH_EH_DrawViewDirection_ID", "onEachFrame",
 		{
@@ -492,7 +445,7 @@ if (DRAWVIEWDIR in _enabledOptions) then
 	] call BIS_fnc_addStackedEventHandler;
 };
 
-if (TELEPORT in _enabledOptions) then
+if ENABLED("Teleport") then
 {
 	[
 		player,
@@ -513,7 +466,7 @@ if (TELEPORT in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (SKIPTIME in _enabledOptions) then
+if ENABLED("SkipTime") then
 {
 	[
 		player,
@@ -537,7 +490,7 @@ if (SKIPTIME in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (TIMEMULTIPLIER in _enabledOptions) then
+if ENABLED("TimeMultiplier") then
 {
 	[
 		player,
@@ -562,7 +515,7 @@ if (TIMEMULTIPLIER in _enabledOptions) then
 	] call BIS_fnc_holdActionAdd;
 };
 
-if (VARIABLEVIEWER in _enabledOptions) then
+if ENABLED("VariableViewer") then
 {
 	[
 		player,
@@ -582,5 +535,3 @@ if (VARIABLEVIEWER in _enabledOptions) then
 		false
 	] call BIS_fnc_holdActionAdd;
 };
-
-true

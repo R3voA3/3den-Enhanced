@@ -223,7 +223,7 @@ class CfgFunctions
 			file = "3denEnhanced\functions\debug";
 			class productInfo;
 			class toggleMapIDs;
-			class DebugOptions;
+			class debugOptions;
 			class checkShortCutsDuplicates;
 		};
 		class EventHandlers
@@ -279,18 +279,10 @@ class CfgFunctions
 			class missionEnding_onButtonDown;
 			class taskPatrol_onAttributeLoad;
 			class taskPatrol_onAttributeSave;
-			class debugOptions_onAttributeLoad;
-			class debugOptions_onAttributeSave;
-			class debugOptions_onLBSelChanged;
-			class debugOptions_onButtonDown;
 			class SPR_onAttributeLoad;
 			class SPR_onAttributeSave;
 			class SPR_onButtonDown;
 			class initDebriefingCombo;
-      //class turretMagazines_onAttributeLoad;
-			//class turretMagazines_onAttributeSave;
-			//class turretMagazines_onButtonDown;
-      //class turretMagazines_defaultValue;
 		};
 	};
 };
