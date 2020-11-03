@@ -10,6 +10,7 @@ class ENH_AddObjectsToZeus
 		{\
 			[] spawn\
 			{\
+        scriptName 'ENH_Attribute_AddObjectsToZeus';\
 				while {true} do\
 				{\
 					{\

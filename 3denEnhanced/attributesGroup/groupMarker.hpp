@@ -15,6 +15,7 @@ class ENH_GroupMarker
 			{\
 				[_this,_value] spawn\
 				{\
+          scriptName 'ENH_Attribute_GroupMarker';\
 					params ['_group','_value'];\
 					_value params ['_type','_color','_text','_showGroupSize'];\
 					private _leader = leader _group;\

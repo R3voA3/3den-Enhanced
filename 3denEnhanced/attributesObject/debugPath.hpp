@@ -1,4 +1,4 @@
-class ENH_debugPath
+class ENH_DebugPath
 {
 	displayName = $STR_ENH_DEBUGPATH_DISPLAYNAME;
 	tooltip = $STR_ENH_DEBUGPATH_TOOLTIP;
@@ -9,6 +9,7 @@ class ENH_debugPath
 	{\
 		[_this] spawn\
 		{\
+      scriptName 'ENH_Attribute_DebugPath';\
 			systemChat format [localize 'STR_ENH_DEBUGPATH_MESSAGE',str _this];\
 			params ['_unit'];\
 			private _arrow = objNull;\

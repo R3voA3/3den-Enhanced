@@ -19,6 +19,7 @@ class ENH_DynamicGroups
 					{\
 						[] spawn\
 						{\
+              scriptName 'ENH_Attribute_DynamicGroups';\
 							waitUntil {!isNull player};\
 							['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;\
 						};\

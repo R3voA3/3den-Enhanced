@@ -78,6 +78,7 @@ class ENH_AmbientAnimations
 				_this setVariable ['ENH_EHDammaged',_EHDammaged];\
 				_this spawn\
 				{\
+          scriptName 'ENH_Attribute_AmbientAnimations';\
 					params ['_unit'];\
 					waitUntil\
 					{\

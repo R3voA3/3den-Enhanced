@@ -15,6 +15,7 @@ class ENH_IntroText
 				{\
 					_value spawn\
 					{\
+            scriptName 'ENH_Attribute_IntroText';\
 						params ['_delay','_l1','_l2','_l3','_type'];\
 						uiSleep _delay;\
 						switch (_type) do\

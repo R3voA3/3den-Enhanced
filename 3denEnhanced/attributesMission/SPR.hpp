@@ -62,6 +62,7 @@ class ENH_SPR
 				\
 				ENH_fnc_SPR_respawn =\
 				{\
+          scriptName 'ENH_Attribute_SPR_Respawn';\
 					params ['_unit'];\
 					if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
 					if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
@@ -95,6 +96,7 @@ class ENH_SPR
 				\
 				ENH_fnc_SPR_respawnTimer =\
 				{\
+          scriptName 'ENH_Attribute_SPR_RespawnTimer';\
 					params ['_unit'];\
 					private _respawnTime = time + ENH_SPR_Delay;\
 					if (isPlayer _unit) then\
