@@ -10,7 +10,7 @@ class ENH_SPR
 			property = "ENH_SPR";
 			control = "ENH_SPR";
 			expression =
-			"if (!is3DEN && {_value # 0 > 0 && {!isMultiplayer}}) then\
+			"if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then\
 			{\
 				ENH_SPR_Ruleset = _value param [0,0];\
 				ENH_SPR_Delay = _value param [1,20];\

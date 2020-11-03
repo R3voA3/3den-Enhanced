@@ -11,7 +11,7 @@ class ENH_MissionEnding
 			control = "ENH_MissionEnding_Casualties";
 			expression =
 			"\
-				if (!is3DEN && {isServer && {(_value # 1) != 'enddefault'}}) then\
+				if (!is3DEN && isServer && (_value # 1) != 'enddefault') then\
 				{\
 					ENH_Casualties_Threshold = _value param [0,5];\
 					ENH_Casualties_Debriefing = _value param [1,'enddefault'];\

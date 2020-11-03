@@ -11,7 +11,7 @@ class ENH_IntroText
 			control = "ENH_IntroText";
 			expression =
 			"\
-				if (!is3DEN && {(_value # 0) > 0 && {hasInterface}}) then\
+				if (!is3DEN && (_value # 0) > 0 && hasInterface) then\
 				{\
 					_value spawn\
 					{\

@@ -5,7 +5,7 @@ class ENH_DebugPath
 	property = "ENH_debugPath";
 	control = "Checkbox";
 	expression =
-	"if (is3DENPreview && {_value}) then\
+	"if (is3DENPreview && _value) then\
 	{\
 		[_this] spawn\
 		{\
