@@ -225,6 +225,7 @@ class CfgFunctions
 			class toggleMapIDs;
 			class debugOptions;
 			class checkShortCutsDuplicates;
+      class activeScripts;
 		};
 		class EventHandlers
 		{

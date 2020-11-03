@@ -151,5 +151,11 @@ class ENH_DebugOptions
 			displayName = $STR_ENH_VARIABLEVIEWER_HEADER;
 			property = "ENH_DebugOptions_VariableViewer";
 		};
+    class ENH_DebugOptions_ActiveScripts: ENH_DebugOptions_Arsenal
+		{
+			displayName = "Log active Scripts";
+      tooltip = "When activated, all active scripts will be logged into the .rpt file."
+			property = "ENH_DebugOptions_ActiveScripts";
+		};
 	};
 };

@@ -534,3 +534,24 @@ if ENABLED("VariableViewer") then
 		false
 	] call BIS_fnc_holdActionAdd;
 };
+
+if ENABLED("ActiveScripts") then
+{
+	[
+		player,
+		"Log active Scripts",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
+		"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
+		"true",
+		"true",
+		{call ENH_fnc_activeScripts},
+		{},
+		{},
+		{},
+		[],
+		0.2,
+		nil,
+		false,
+		false
+	] call BIS_fnc_holdActionAdd;
+};
