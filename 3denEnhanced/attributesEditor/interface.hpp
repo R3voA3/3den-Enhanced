@@ -1,6 +1,6 @@
 class ENH_Interface
 {
-	collapsed = 0;
+	collapsed = 1;
 	displayName = $STR_ENH_INTERFACE;
 	class Attributes
   {
