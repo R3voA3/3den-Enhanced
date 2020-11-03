@@ -2,7 +2,7 @@
    Author: Revo
 
    Description:
-   Checks Eden preferences and enables certain features accordingly.
+   Checks Eden preferences and enables features accordingly.
 
    Parameter(s):
    -
@@ -126,7 +126,6 @@ if ENABLED("Zeus") then
 		_zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
 	};
 };
-
 
 if ENABLED("Invulnerability") then
 {
