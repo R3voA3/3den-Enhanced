@@ -4,7 +4,7 @@ class ENH_Parachute
 	tooltip = $STR_ENH_PARACHUTE_TOOLTIP;
 	property = "ENH_parachute";
   control = "Checkbox";
-	expression = "if (!is3DEN && {_value}) then\
+	expression = "if (!is3DEN && _value) then\
 	{\
 	 	_this moveInDriver (createVehicle ['Steerable_Parachute_F',getPos _this,[],0,'FLY']);\
 	}";

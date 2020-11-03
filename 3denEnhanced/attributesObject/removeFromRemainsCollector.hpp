@@ -4,6 +4,6 @@ class ENH_removeFromRemainsCollector
 	tooltip = $STR_ENH_REMOVEFROMREMAINSCOLLECTOR_TOOLTIP;
   control = "Checkbox";
 	property = "ENH_removeFromRemainsCollector";
-	expression = "if (!is3DEN && {_value}) then {removeFromRemainsCollector [this]}";
+	expression = "if (!is3DEN && _value) then {removeFromRemainsCollector [this]}";
   defaultValue = "false";
 };

@@ -10,7 +10,7 @@ class ENH_AmbientFlyby
 			property = "ENH_ambientFlyby";
 			control = "ENH_AmbientFlyby";
 			expression ="\
-			if (isServer && {!is3DEN && {!((_value # 0) isEqualTo [])}}) then\
+			if (isServer && !is3DEN && !((_value # 0) isEqualTo [])) then\
 			{\
 				ENH_AmbientFlyby_Enabled = true;\
 				_value spawn\
