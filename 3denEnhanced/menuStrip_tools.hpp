@@ -7,7 +7,7 @@ class Tools
     "ENH_Folder_Loadout",
     "ENH_Folder_Miscellaneous",
 		"ENH_Folder_Debug",
-    "ENH_Folder_GUI"	
+    "ENH_Folder_GUI"
 	};
 };
 class ENH_Folder_Placement
@@ -36,7 +36,8 @@ class ENH_Folder_Debug
 		"ENH_ProductInfo",
 		"ENH_RecompileFunctions",
 		"ENH_ToggleMapIDs",
-		"ENH_ClearChat"
+		"ENH_ClearChat",
+    "ENH_RPTViewer"
 	};
 };
 class ENH_Folder_Loadout
@@ -473,4 +474,11 @@ class ENH_ClearChat
 	text = $STR_ENH_TOOLS_CLEARCHAT;
 	action = "clearRadio";
 	shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_C};
+};
+class ENH_RPTViewer
+{
+	text = "View Latest RPT";
+	action = "findDisplay 313 createDisplay 'ENH_RPT'";
+  opensNewWindow = 1;
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_D};
 };
