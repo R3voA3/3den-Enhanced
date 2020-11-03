@@ -1,7 +1,7 @@
 //Include in description.ext 
 //See https://community.bistudio.com/wiki/Arma_3_Mission_Parameters for the full documentation. 
-class Params 
-{ 
+class Params
+{
 	#define COUNTDOWN_MIN 600
 	#define COUNTDOWN_MAX 3600
 	#define COUNTDOWN_DEFAULT -1
