@@ -6,10 +6,9 @@ class ENH_DebugOptions
   {
     class ENH_DebugOptions_Description
 		{
-			displayName = "Debug Options";
       description = $STR_ENH_DEBUGOPTIONS_DESCRIPTION;
 			data = "AttributeSystemSubcategory";
-			control = "SubCategoryDesc2";
+			control = "SubCategoryNoHeader2";
 		};
     class ENH_DebugOptions_Arsenal
 		{
@@ -23,39 +22,6 @@ class ENH_DebugOptions
 		{
 			displayName = $STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME;
 			property = "ENH_DebugOptions_Garage";
-		};
-		class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME;
-      tooltip = $STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP;
-			property = "ENH_DebugOptions_ShowUnits";
-		};
-    class ENH_DebugOptions_BulletTracking: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME;
-      tooltip = $STR_ENH_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP;
-			property = "ENH_DebugOptions_BulletTracking";
-		};
-    class ENH_DebugOptions_Zeus: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME;
-			property = "ENH_DebugOptions_Zeus";
-		};
-    class ENH_DebugOptions_Invulnerability: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_INVULNERABILITY_DISPLAYNAME;
-			property = "ENH_DebugOptions_Invulnerability";
-		};
-    class ENH_DebugOptions_Captive: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_CAPTIVE_DISPLAYNAME;
-      tooltip = $STR_ENH_CAPTIVE_TOOLTIP;
-			property = "ENH_DebugOptions_Captive";
-		};
-    class ENH_DebugOptions_Stamina: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_STAMINA_DISPLAYNAME;
-			property = "ENH_DebugOptions_Stamina";
 		};
     class ENH_DebugOptions_FPS: ENH_DebugOptions_Arsenal
 		{
@@ -88,21 +54,62 @@ class ENH_DebugOptions
 			displayName = $STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME;
 			property = "ENH_DebugOptions_KillCursor";
 		};
-    class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME;
-			property = "ENH_DebugOptions_DrawIcons";
-		};
+    
     class ENH_DebugOptions_DeleteCorpse: ENH_DebugOptions_Arsenal
 		{
 			displayName = $STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME;
 			property = "ENH_DebugOptions_DeleteCorpse";
 		};
-    class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
+    class ENH_DebugOptions_Teleport: ENH_DebugOptions_Arsenal
 		{
-			displayName = $STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME;
-      tooltip = $STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP;
-			property = "ENH_DebugOptions_ShowWaypoints";
+			displayName = $STR_ENH_DEBUGOPTIONS_TELEPORT;
+      tooltip = $STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP;
+			property = "ENH_DebugOptions_Teleport";
+		};
+    class ENH_DebugOptions_VariableViewer: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_VARIABLEVIEWER_HEADER;
+			property = "ENH_DebugOptions_VariableViewer";
+		};
+    class ENH_DebugOptions_ActiveScripts: ENH_DebugOptions_Arsenal
+		{
+			displayName = "Log active Scripts";
+      tooltip = "When activated, all active scripts will be logged into the .rpt file."
+			property = "ENH_DebugOptions_ActiveScripts";
+		};
+    //----------------PLAYER
+    class ENH_DebugOptions_Subcategory_Player: ENH_DebugOptions_Description
+		{
+			displayName = $STR_MPTABLE_NAME;
+      description = "";
+			control = "SubCategory";
+		};
+    class ENH_DebugOptions_Invulnerability: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_INVULNERABILITY_DISPLAYNAME;
+			property = "ENH_DebugOptions_Invulnerability";
+		};
+    class ENH_DebugOptions_Captive: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_CAPTIVE_DISPLAYNAME;
+      tooltip = $STR_ENH_CAPTIVE_TOOLTIP;
+			property = "ENH_DebugOptions_Captive";
+		};
+    class ENH_DebugOptions_Stamina: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_STAMINA_DISPLAYNAME;
+			property = "ENH_DebugOptions_Stamina";
+		};
+    class ENH_DebugOptions_BulletTracking: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME;
+      tooltip = $STR_ENH_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP;
+			property = "ENH_DebugOptions_BulletTracking";
+		};
+    class ENH_DebugOptions_Zeus: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME;
+			property = "ENH_DebugOptions_Zeus";
 		};
     class ENH_DebugOptions_NoRecoil: ENH_DebugOptions_Arsenal
 		{
@@ -124,17 +131,38 @@ class ENH_DebugOptions
 			displayName = $STR_ENH_DEBUGOPTIONS_NORELOAD;
 			property = "ENH_DebugOptions_NoReload";
 		};
+    //----------------DRAW
+    class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Subcategory_Player
+		{
+			displayName = $STR_A3_ENDGAME_DEBRIEFING_DRAW;
+		};
+		class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME;
+      tooltip = $STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP;
+			property = "ENH_DebugOptions_ShowUnits";
+		};
+    class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME;
+			property = "ENH_DebugOptions_DrawIcons";
+		};
+    class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
+		{
+			displayName = $STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME;
+      tooltip = $STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP;
+			property = "ENH_DebugOptions_ShowWaypoints";
+		};
     class ENH_DebugOptions_DrawViewDirection: ENH_DebugOptions_Arsenal
 		{
 			displayName = $STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION;
       tooltip = $STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP;
 			property = "ENH_DebugOptions_DrawViewDirection";
 		};
-    class ENH_DebugOptions_Teleport: ENH_DebugOptions_Arsenal
+    //----------------ENVIRONMENT
+    class ENH_DebugOptions_Subcategory_Environment: ENH_DebugOptions_Subcategory_Player
 		{
-			displayName = $STR_ENH_DEBUGOPTIONS_TELEPORT;
-      tooltip = $STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP;
-			property = "ENH_DebugOptions_Teleport";
+			displayName = $STR_A3_CREDITS_ENVIRONMENT;
 		};
     class ENH_DebugOptions_SkipTime: ENH_DebugOptions_Arsenal
 		{
@@ -145,17 +173,6 @@ class ENH_DebugOptions
 		{
 			displayName = $STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER;
 			property = "ENH_DebugOptions_TimeMultiplier";
-		};
-    class ENH_DebugOptions_VariableViewer: ENH_DebugOptions_Arsenal
-		{
-			displayName = $STR_ENH_VARIABLEVIEWER_HEADER;
-			property = "ENH_DebugOptions_VariableViewer";
-		};
-    class ENH_DebugOptions_ActiveScripts: ENH_DebugOptions_Arsenal
-		{
-			displayName = "Log active Scripts";
-      tooltip = "When activated, all active scripts will be logged into the .rpt file."
-			property = "ENH_DebugOptions_ActiveScripts";
 		};
 	};
 };
