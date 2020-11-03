@@ -2,7 +2,7 @@ class ENH_AddObjectsToZeus
 {
 	displayName = $STR_ENH_EDITABLEOBJZEUS_DISPLAYNAME;
 	tooltip = $STR_ENH_EDITABLEOBJZEUS_TOOLTIP;
-	property = "ENH_dynamicGroups";
+	property = "ENH_AddObjectsToZeus";
 	control = "Checkbox";
 	expression =
 	"\
