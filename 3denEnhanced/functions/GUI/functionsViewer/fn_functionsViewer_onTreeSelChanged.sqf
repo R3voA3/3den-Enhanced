@@ -36,7 +36,7 @@ _ctrlCode ctrlSetText loadFile _fncPath;
 if (_fncName select [0,3] in ["BIS","BIN"]) then
 {
    _ctrlBiki ctrlEnable true;
-   _ctrlBiki ctrlSetURL format ("https://community.bistudio.com/wiki/" + _fncName);
+   _ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
 }
 else
 {
