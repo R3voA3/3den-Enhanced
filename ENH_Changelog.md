@@ -1,5 +1,6 @@
 v5.7 (WIP)
 *added*
+- Added editor setting Dynamic View Distance. It removes the need to change view distance inside the editor by changing view distance depending on camera height
 
 *changed*
 - Improved some translations
@@ -23,6 +24,9 @@ v5.7 (WIP)
 - Mines category was renamed to Explosives in Inventory Manager
 - Added localisation for Inventory Manager
 - Added another separator to the menu strip -> tools -> utilities folder
+- Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
+- Editable Objects (Zeus) would have an incorrect property name which would conflict with Dynamic Group attribute
+- Implementation for Debug Options in Eden Editor was changed
 
 *removed*
 - Credits GUI and all related functions
