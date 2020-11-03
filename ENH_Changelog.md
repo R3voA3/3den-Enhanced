@@ -27,6 +27,8 @@ v5.7 (WIP)
 - Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
 - Editable Objects (Zeus) would have an incorrect property name which would conflict with Dynamic Group attribute
 - Implementation for Debug Options in Eden Editor was changed
+- All attributes now have "scriptName" defined for debugging
+- Added a Debug Tool to log all active scripts and mission EHs to .rpt
 
 *removed*
 - Credits GUI and all related functions
