@@ -10,9 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 call ENH_fnc_statusbar_entityCounter;
-
-true

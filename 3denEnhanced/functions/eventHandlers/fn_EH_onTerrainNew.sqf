@@ -10,7 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 //Reinitialize Eden interface to prevent issues when game directly starts inside the editor via startup parameter
@@ -39,5 +39,3 @@ call ENH_fnc_locationList;
 
 //Initialize ambient animations
 call ENH_fnc_initAmbientAnimationsInEditor;
-
-true

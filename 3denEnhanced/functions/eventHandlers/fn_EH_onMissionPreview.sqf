@@ -10,9 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 [] spawn ENH_fnc_debugOptions;
-
-true

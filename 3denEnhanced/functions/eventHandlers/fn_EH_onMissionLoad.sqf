@@ -10,7 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 //Enable 3den Radio
@@ -34,5 +34,3 @@ if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
       ["collapseEntityList"] call bis_fnc_3DENInterface;
    };
 };
-
-true

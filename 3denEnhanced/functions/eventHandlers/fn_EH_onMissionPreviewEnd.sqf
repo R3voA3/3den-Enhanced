@@ -10,7 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 //Enable 3den Radio
@@ -18,5 +18,3 @@
 
 //Enable session timer
 [] spawn ENH_fnc_sessionTimer;
-
-true

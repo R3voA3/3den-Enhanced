@@ -10,7 +10,7 @@
    -
 
    Returns:
-   BOOLEAN: true
+   -
 */
 
 //Enable 3den Radio
@@ -21,5 +21,3 @@
 
 //Enable dynamic view distance
 call ENH_fnc_dynamicViewDistance;
-
-true
