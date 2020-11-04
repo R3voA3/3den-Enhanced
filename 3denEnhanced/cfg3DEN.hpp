@@ -138,10 +138,10 @@ class Cfg3DEN
 	{
 		class AttributeCategories
 		{
+      #include "attributesObject\ambientAnimations.hpp"
+      #include "attributesObject\AI.hpp"
 			#include "attributesObject\advancedDamageUnit.hpp"
 			#include "attributesObject\advancedDamageVehicle.hpp"
-			#include "attributesObject\disableAI.hpp"
-			#include "attributesObject\advancedSkill.hpp"
 			#include "attributesObject\unitTraits.hpp"
 			#include "attributesObject\holdAction.hpp"
 			class StateSpecial
@@ -177,11 +177,9 @@ class Cfg3DEN
 			{
 				class Attributes
 				{
-					#include "attributesObject\allowFleeing.hpp"
 					#include "attributesObject\setMass.hpp"
 					#include "attributesObject\featureType.hpp"
 					#include "attributesObject\forceFlag.hpp"
-					#include "attributesObject\ambientAnimations.hpp"
 				};
 			};
 		};
