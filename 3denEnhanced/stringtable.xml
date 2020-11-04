@@ -1480,23 +1480,16 @@
 		<Russian>Включит фары выбранного ПУСТОГО транспортного средства.</Russian>
 	</Key>
 	<Key ID="STR_ENH_ALLOWCREWIMMOBILE_DISPLAYNAME">
-		<English>Immobilize crew</English>
-		<Italian>Blocca l'equipaggio</Italian>
-		<Czech>Posádka zůstává ve vozidle</Czech>
-		<French>Équipage immobile</French>
-		<Spanish>Tripulación inmóvil</Spanish>
-		<German>Besatzung einsperren</German>
-		<Chinesesimp>允许机组人员静止不动</Chinesesimp>
-		<Polish>Załoga zostaje w pojeździe</Polish>
-		<Russian>Экипаж остается в транспортном средстве</Russian>
+		<English>Forbid Disembarking</English>
+		<German>Aussteigen verbieten</German>
 	</Key>
 	<Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
-		<English>Crew stays in vehicle even thought the vehicle is disabled.</English>
-		<Italian>L'equipaggio rimane nel veicolo anche se disabilitato</Italian>
+		<English>Crew stays in vehicle even though the vehicle is disabled.</English>
+		<Italian>L'equipaggio rimane nel veicolo anche se disabilitato.</Italian>
 		<Czech>Posádka neopustí vozidlo, i když je vozidlo neschopné pohybu.</Czech>
 		<French>L'équipage restera à bord du véhicule même s'il est neutralisé.</French>
 		<Spanish>Tripulación se queda en el vehículo incluso aunque el vehículo esté neutralizado.</Spanish>
-		<German>Fahrzeugbesatzung bleibt im Fahrzeug auch wenn dieses Kampfunfähig ist.</German>
+		<German>Fahrzeugbesatzung bleibt im Fahrzeug auch wenn dieses kampfunfähig ist.</German>
 		<Chinesesimp>机组人员待在车内，并且车辆是被禁用的。</Chinesesimp>
 		<Polish>Załoga zostaje w pojeździe nawet jeżeli pojazd jest niesprawny.</Polish>
 		<Russian>Экипаж остается в автомобиле, даже если автомобиль отключен.</Russian>

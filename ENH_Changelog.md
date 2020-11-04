@@ -29,6 +29,7 @@ v5.7 (WIP)
 - Implementation for Debug Options in Eden Editor was changed
 - All attributes now have "scriptName" defined for debugging
 - Added a Debug Tool to log all active scripts and mission EHs to .rpt
+- Various translation improvements
 
 *removed*
 - Credits GUI and all related functions
