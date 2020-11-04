@@ -1,3 +1,19 @@
+/*
+   Author: R3vo
+
+   Date: 2020-11-04
+
+   Description:
+   Updates Functions Viewer key controls according to found keys.
+
+   Parameter(s):
+   0: CONTROL - Button
+   1: NUMBER - Increment
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_ctrlButton","_increment"];
 
 private _display = ctrlParent _ctrlButton;

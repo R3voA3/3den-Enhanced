@@ -1,3 +1,18 @@
+/*
+   Author: R3vo
+
+   Date: 2020-11-04
+
+   Description:
+   Searches code in Functions Viewer for specific key word.
+
+   Parameter(s):
+   0: CONTROL - Search
+
+   Returns:
+   BOOLEAN: true
+*/
+
 params ["_ctrlSearchCode"];
 
 private _display = ctrlParent _ctrlSearchCode;
