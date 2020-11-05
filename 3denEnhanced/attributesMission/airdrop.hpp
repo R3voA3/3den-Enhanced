@@ -15,7 +15,7 @@ class ENH_Airdrop
 				{\
 					_value spawn\
 					{\
-            scriptName 'ENH_Attribute_Airdrop';\
+                        scriptName 'ENH_Attribute_Airdrop';\
 						params ['_classes','_center','_condition','_alt','_r','_side'];\
 						_condition = compile _condition;\
 						waitUntil {sleep 1; call _condition};\

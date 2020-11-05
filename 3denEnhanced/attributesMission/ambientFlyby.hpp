@@ -15,7 +15,7 @@ class ENH_AmbientFlyby
 				ENH_AmbientFlyby_Enabled = true;\
 				_value spawn\
 				{\
-          scriptName 'ENH_Attribute_AmbientFlyby';\
+                    scriptName 'ENH_Attribute_AmbientFlyby';\
 					params ['_classes','_startPos','_endPos','_alt','_speed','_side','_delay'];\
 					while {ENH_AmbientFlyby_Enabled} do\
 					{\

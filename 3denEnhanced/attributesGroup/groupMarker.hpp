@@ -7,7 +7,7 @@ class ENH_GroupMarker
 		class ENH_GroupMarker
 		{
 			displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
-      tooltip = $STR_ENH_GROUPMARKER_DESCRIPTION;
+            tooltip = $STR_ENH_GROUPMARKER_DESCRIPTION;
 			property = "ENH_groupMarker";
 			control = "ENH_GroupMarker";
 			expression = "\
@@ -15,7 +15,7 @@ class ENH_GroupMarker
 			{\
 				[_this,_value] spawn\
 				{\
-          scriptName 'ENH_Attribute_GroupMarker';\
+                    scriptName 'ENH_Attribute_GroupMarker';\
 					params ['_group','_value'];\
 					_value params ['_type','_color','_text','_showGroupSize'];\
 					private _leader = leader _group;\
