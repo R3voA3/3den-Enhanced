@@ -8,7 +8,7 @@ class ENH_AmbientAnimations
         {
             description = $STR_ENH_AMBIENTANIMATIONS_DESCRIPTION;
             data = "AttributeSystemSubcategory";
-            control = "SubCategoryNoHeader1";
+            control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_AmbientAnimations
         {

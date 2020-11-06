@@ -4,9 +4,16 @@ class ENH_IntroText
 	displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;
 	class Attributes
 	{
+        class ENH_IntroText_Subcategory
+        {
+            description = $STR_ENH_INTROTEXT_DESCRIPTION;
+            data = "AttributeSystemSubcategory";
+            control = "ENH_SubCategoryNoHeader1_Fixed";
+        };
 		class ENH_IntroText
 		{
 			displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;
+            tooltip = $STR_ENH_INTROTEXT_TOOLTIP;
 			property = "ENH_introText";
 			control = "ENH_IntroText";
 			expression =

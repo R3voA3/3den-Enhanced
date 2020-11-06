@@ -4,11 +4,11 @@ class ENH_DebugOptions
     displayName = $STR_ENH_DEBUG_OPTIONS;
     class Attributes
     {
-        class ENH_DebugOptions_Description
+        class ENH_DebugOptions_Subcategory
         {
             description = $STR_ENH_DEBUGOPTIONS_DESCRIPTION;
             data = "AttributeSystemSubcategory";
-            control = "StructuredText2";//"SubCategoryNoHeader2";
+            control = "ENH_SubCategoryNoHeader2_Fixed";
         };
         class ENH_DebugOptions_Arsenal
         {
@@ -77,11 +77,11 @@ class ENH_DebugOptions
             property = "ENH_DebugOptions_ActiveScripts";
         };
         //----------------PLAYER
-        class ENH_DebugOptions_Subcategory_Player: ENH_DebugOptions_Description
+        class ENH_DebugOptions_Player_Subcategory: ENH_DebugOptions_Subcategory
         {
-            displayName = $STR_MPTABLE_NAME;
+            description = $STR_MPTABLE_NAME;
             description = "";
-            control = "SubCategory";
+            control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_DebugOptions_Invulnerability: ENH_DebugOptions_Arsenal
         {
@@ -131,9 +131,9 @@ class ENH_DebugOptions
             property = "ENH_DebugOptions_NoReload";
         };
         //----------------DRAW
-        class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Subcategory_Player
+        class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Player_Subcategory
         {
-            displayName = $STR_A3_ENDGAME_DEBRIEFING_DRAW;
+            description = $STR_A3_ENDGAME_DEBRIEFING_DRAW;
         };
         class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
         {
@@ -159,9 +159,9 @@ class ENH_DebugOptions
             property = "ENH_DebugOptions_DrawViewDirection";
         };
         //----------------ENVIRONMENT
-        class ENH_DebugOptions_Subcategory_Environment: ENH_DebugOptions_Subcategory_Player
+        class ENH_DebugOptions_Environment_Subcategory: ENH_DebugOptions_Player_Subcategory
         {
-            displayName = $STR_A3_CREDITS_ENVIRONMENT;
+            description = $STR_A3_CREDITS_ENVIRONMENT;
         };
         class ENH_DebugOptions_SkipTime: ENH_DebugOptions_Arsenal
         {

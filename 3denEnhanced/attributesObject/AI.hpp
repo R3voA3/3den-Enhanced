@@ -5,11 +5,11 @@ class ENH_AI
     class Attributes
     {
         //----------------SKILL
-        class ENH_AI_Skill_Description
+        class ENH_AI_Skill_SubCategory
         {
-            title = "Skill Settings";
+            description = "Skill Settings";
             data = "AttributeSystemSubcategory";
-            control = "SubCategory";
+            control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_AimingShake
         {
@@ -86,10 +86,9 @@ class ENH_AI
             expression = "_this allowFleeing _value";
         };
         //----------------AI Features
-        class ENH_AI_Features_Description: ENH_AI_Skill_Description
+        class ENH_AI_Features_SubCategory: ENH_AI_Skill_SubCategory
         {
-        title = "AI Features";
-            description = "<t size='2'>Hello!</t>";
+            description = "AI Features";
             data = "AttributeSystemSubcategory";
         };
         class ENH_Move

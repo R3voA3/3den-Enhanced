@@ -28,7 +28,7 @@ class ENH_AmbientAnimations: Title
 			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = SIZE_M * GRID_H + 5 * pixelH;
 			w = 5 * GRID_W;
-	    h = SIZE_M * GRID_H;
+	        h = SIZE_M * GRID_H;
 		};
 		class AttachTitle: Title 
 		{
