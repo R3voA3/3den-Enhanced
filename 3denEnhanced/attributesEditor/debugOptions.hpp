@@ -80,7 +80,6 @@ class ENH_DebugOptions
         class ENH_DebugOptions_Player_Subcategory: ENH_DebugOptions_Subcategory
         {
             description = $STR_MPTABLE_NAME;
-            description = "";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_DebugOptions_Invulnerability: ENH_DebugOptions_Arsenal
