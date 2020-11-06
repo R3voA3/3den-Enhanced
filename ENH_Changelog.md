@@ -31,6 +31,7 @@ v5.7 (WIP)
 - Added a Debug Tool to log all active scripts and mission EHs to .rpt
 - Various translation improvements
 - AI Features and AI Skill as well as Allow Fleeing attributs have been merged into category AI
+- Visual appearance of some attribute was improved
 
 *removed*
 - Credits GUI and all related functions

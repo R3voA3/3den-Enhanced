@@ -3265,11 +3265,11 @@
 		<French>Joue une fausse séquence d'observation drone pouvant servir à une introduction. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</French>
 	</Key>
 	<Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
-		<English>Shows an animated text. Can be used to display mission name. Can either be &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</English>
-		<Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise. Může být buď &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; nebo &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Czech>
-		<Spanish>Muestra un texto animado. Se puede usar para mostrar el nombre de la misión. Puede ser &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; or &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;</Spanish>
-		<German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen. Kann &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; oder &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt; sein. </German>
-		<French>Affiche un texte animé. Peut être utilisé pour afficher le nom de la mission. Cela peut être soit &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_textTiles'&gt;BIS_fnc_textTiles&lt;/a&gt;, &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_camp_SITREP'&gt;BIS_fnc_EXP_camp_SITREP&lt;/a&gt; ou &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_EXP_infoText'&gt;BIS_fnc_infoText&lt;/a&gt;.</French>
+		<English>Shows an animated text. Can be used to display mission name.</English>
+		<Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise.</Czech>
+		<Spanish>Muestra un texto animado. Se puede usar para mostrar el nombre de la misión.</Spanish>
+		<German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen.</German>
+		<French>Affiche un texte animé. Peut être utilisé pour afficher le nom de la mission.</French>
 	</Key>
 	<Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
 		<English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
@@ -5398,10 +5398,10 @@
 		<Spanish>Animaciones de ambiente</Spanish>
 	</Key>
 	<Key ID="STR_ENH_HOLDACTION_DESCRIPTION">
-		<English>Adds a hold action to this entity. Once the action was completed it's removed for all clients. For a detailed description of this attribute see: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</English>
-		<Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes. Para obtener una descripción detallada de este atributo, consulte: &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;</Spanish>
-		<German>Fügt dieser Entität eine Taste-Halten-Aktion hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;. </German>
-		<French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients. Pour une description détaillé de cet attribut, consultez : &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_holdActionAdd'&gt;BIS_fnc_holdActionAdd&lt;/a&gt;.</French>
+		<English>Adds a hold action to this entity. Once the action was completed it's removed for all clients.</English>
+		<Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes.</Spanish>
+		<German>Fügt dieser Entität eine 'HoldAction' hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt.</German>
+		<French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients.</French>
 	</Key>
 	<Key ID="STR_ENH_HOLDACTION_NAME_DISPLAYNAME">
 		<English>Name</English>
