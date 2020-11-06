@@ -56,7 +56,7 @@ class Cfg3DEN
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\taskPatrol.hpp"
         #include "controls\SPR.hpp"
-        #include "controls\subCategoryNoHeader2_Fixed.hpp"
+        #include "controls\subCategoryNoHeader_Fixed.hpp"
     };
      class Mission
     {
