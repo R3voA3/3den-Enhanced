@@ -4,6 +4,12 @@ class ENH_AmbientFlyby
 	displayName = $STR_ENH_AMBIENTFLYBY_DISPLAYNAME;
 	class Attributes
 	{
+        class ENH_AmbientFlyby_Subcategory
+        {
+            description = $STR_ENH_AMBIENTFLYBY_DESCRIPTION;
+            data = "AttributeSystemSubcategory";
+            control = "ENH_SubCategoryNoHeader3_Fixed";
+        };
 		class ENH_AmbientFlyby
 		{
 			displayName = $STR_ENH_AMBIENTFLYBY_DISPLAYNAME;
