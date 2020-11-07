@@ -168,7 +168,6 @@ switch (_modeIndex) do
 			true
 		} count ENH_FunctionsData;
 		_ctrlTV tvSort [[],false];
-		_ctrlEdit ctrlEnable false;
 	};
 };
 
