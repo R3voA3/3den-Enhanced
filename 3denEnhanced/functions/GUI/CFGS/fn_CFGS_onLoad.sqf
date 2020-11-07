@@ -24,8 +24,6 @@ _tvFavorites ctrlSetFade 1;
 _tvFavorites ctrlEnable false;
 _tvFavorites ctrlCommit 0;
 
-_display displayCtrl 10000 ctrlEnable false;
-
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;
 

@@ -25,8 +25,6 @@ if (_soundPath == "") exitWith {false};
 
 if (_mode == "play") then
 {
-	
-	
 	playSound3D [_soundPath,get3DENCamera];
 	[
 		["SPEAKER",_text,0]
