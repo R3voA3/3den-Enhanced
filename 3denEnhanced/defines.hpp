@@ -137,3 +137,37 @@ class ctrlToolboxPictureKeepAspect;
 class ctrlProgress;
 class ctrlStaticFrame;
 class scrollbar;
+
+//Attribute controls
+class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
+{
+    idc = -1;
+    x = ATTRIBUTE_TITLE_W * GRID_W;
+    w = ATTRIBUTE_CONTENT_W * GRID_W;
+    h = 2 * SIZE_M * GRID_H;
+    rows = 1;
+    columns = 4;
+    strings[] =
+    {
+        "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_west_ca.paa",
+        "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_east_ca.paa",
+        "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa",
+        "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_civ_ca.paa"
+    };
+    tooltips[] =
+    {
+        $STR_WEST,
+        $STR_EAST,
+        $STR_GUERRILA,
+        $STR_CIVILIAN
+    };
+    values[] = {0,1,2,3};
+};
+
+class ENH_ResetButton_Base: ctrlButton
+{
+    x = ATTRIBUTE_TITLE_W * GRID_W;
+    w = ATTRIBUTE_CONTENT_W * GRID_W;
+    h = SIZE_M * GRID_H;
+    text = $STR_ENH_RESETANDDISABLE;
+};
