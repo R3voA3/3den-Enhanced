@@ -1236,39 +1236,6 @@
 		<Polish>Pojazdy powietrzne</Polish>
 		<Russian>Авиационные транспортные средства</Russian>
 	</Key>
-	<Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_DESCRIPTION">
-		<English>Used by various vehicles.</English>
-		<Italian>Usati da vari veicoli</Italian>
-		<German>Verwendet von verschiedenen Fahrzeugen.</German>
-		<Chinesesimp>由所有载具使用</Chinesesimp>
-		<Spanish>Utilizado por varios vehículos.</Spanish>
-		<Czech>Používáno různými vozidly.</Czech>
-		<French>Utilisé par divers véhicules.</French>
-		<Polish>Używane przez różne pojazdy.</Polish>
-		<Russian>Используется различными транспортными средствами.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_DESCRIPTION">
-		<English>Used by land vehicles.</English>
-		<Italian>Usati da veicoli di terra</Italian>
-		<German>Verwendet von Landfahrzeugen.</German>
-		<Chinesesimp>由地面载具使用</Chinesesimp>
-		<Spanish>Utilizado por vehículos terrestres.</Spanish>
-		<Czech>Používáno pozemními vozidly.</Czech>
-		<French>Utilisé par les véhicules terrestres.</French>
-		<Polish>Używane przez pojazdy lądowe.</Polish>
-		<Russian>Используется наземными транспортными средствами.</Russian>
-	</Key>
-	<Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_DESCRIPTION">
-		<English>Used by aeronautical vehicles.</English>
-		<Italian>Usati da veicoli aeronautici</Italian>
-		<German>Verwendet von Luftfahrzeugen.</German>
-		<Chinesesimp>由航空载具使用</Chinesesimp>
-		<Spanish>Utilizado por vehículos aeronáuticos.</Spanish>
-		<Czech>Používáno letadly.</Czech>
-		<French>Utilisé par les véhicules aéronautiques.</French>
-		<Polish>Używane przez pojazdy powietrzne.</Polish>
-		<Russian>Используется авиационными транспортными средствами.</Russian>
-	</Key>
 	<Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_HEAD">
 		<English>Head</English>
 		<Italian>testa</Italian>
@@ -1290,6 +1257,10 @@
 		<Chinesesimp>脸部</Chinesesimp>
 		<Polish>Twarz</Polish>
 		<Russian>Лицо</Russian>
+	</Key>
+    <Key ID="STR_ENH_DISABLEAI_SUBCATEGORY">
+		<English>AI Features</English>
+		<German>KI Funktionen</German>
 	</Key>
 	<Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_NECK">
 		<English>Neck</English>
@@ -3258,11 +3229,11 @@
 		<French>Fait apparaître une unité aérienne qui se déplace du point A au point B sans engager ni être engagée. Elle est définie comme captive et disparaît lorsqu'elle atteint sa destination. Les survols peuvent être stoppés en définissant 'ENH_AmbientFlyby_Enabled' en false sur le serveur.</French>
 	</Key>
 	<Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
-		<English>Plays a fake UAV observational sequence which serves as an establishing shot. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</English>
-		<Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek. Pro více informací &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</Czech>
-		<Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento. Consulte &lt;ahref='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt; BIS_fnc_establishingShot&lt;/a&gt;.</Spanish>
-		<German>Spielt eine gestellte UAV Kamerafahrt ab, welche zu Beginn der Mission gezeigt wird. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</German>
-		<French>Joue une fausse séquence d'observation drone pouvant servir à une introduction. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_establishingShot'&gt;BIS_fnc_establishingShot&lt;/a&gt;.</French>
+		<English>Plays a fake UAV observational sequence which serves as an establishing shot.</English>
+		<Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek.</Czech>
+		<Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento.</Spanish>
+		<German>Spielt eine gestellte UAV Kamerafahrt ab, welche zu Beginn der Mission gezeigt wird.</German>
+		<French>Joue une fausse séquence d'observation drone pouvant servir à une introduction.</French>
 	</Key>
 	<Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
 		<English>Shows an animated text. Can be used to display mission name.</English>
