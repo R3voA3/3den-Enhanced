@@ -15,8 +15,6 @@ disableSerialization;
 
 params ["_display"];
 
-private _ctrlTV = _display displayCtrl 1500;
-
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
 _display displayCtrl 1900 ctrlEnable false;
@@ -54,6 +52,6 @@ _display displayAddEventHandler ["keyDown",//Copy
 (_display displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
 
 //Set up tree view
-_ctrlTV call ENH_fnc_FunctionsViewer_fillCtrlTV;
+( _display displayCtrl 1500) call ENH_fnc_FunctionsViewer_fillCtrlTV;
 
 true

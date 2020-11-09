@@ -7,18 +7,10 @@
    Used by ENH_FunctionsViewer GUI. Fill the tree view control.
 
    Parameter(s):
-   0: NUMBER - Can be 0 - Full list with addons and categories
-					  1 - Only categories
-					  2 - Only functions, search control disabled
-   1: NUMBER - Can be 0 - configFile
-					  1 - missionConfigFile
-					  2 - campaignConfigFile
-   2: CONTROL - Tree view control
-   3: CONTROL - Edit control (search)
-   4: ARRAY - Functions data from ENH_fnc_functionsViewer_returnFunctionsData
+   -
 
    Returns:
-   BOOLEAN: true / false
+   -
 */
 
 disableSerialization;
@@ -30,10 +22,52 @@ private _modeIndex = lbCurSel (_display displayCtrl 1800);
 private _ctrlTV = _display displayCtrl 1500;
 private _ctrlEdit = _display displayCtrl 1400;
 private _ctrlBiki = _display displayCtrl 1900;
+private _counter = 0;
+
+(_display displayCtrl 1700) ctrlEnable true;
+(_display displayCtrl 1700) ctrlSetFade 0;
+(_display displayCtrl 1700) ctrlCommit 0;
+
+if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
+{
+	(_display displayCtrl 1600) ctrlEnable false;
+	(_display displayCtrl 1601) ctrlEnable false;
+}
+else
+{
+	(_display displayCtrl 1600) ctrlEnable true;
+	(_display displayCtrl 1601) ctrlEnable true;
+};
 
 profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex",_configIndex];
 profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex",_modeIndex];
 private _lastViewed = uiNamespace getVariable ["ENH_FunctionsViewer_LastViewed",[]];
+
+
+private _fnc_addCustomFiles =
+{
+	(_display displayCtrl 1700) ctrlEnable false;
+	(_display displayCtrl 1700) ctrlSetFade 0.5;
+	(_display displayCtrl 1700) ctrlCommit 0;
+	(_display displayCtrl 1600) ctrlEnable false;
+	(_display displayCtrl 1601) ctrlEnable false;
+	params ["_ctrlTV","_extension"];
+	{
+		private _addonPath = _x # 0;
+		{
+			if !("fn_" in _x) then
+			{
+				private _fileName = _x splitString "\";
+				_fileName = _fileName select (count _fileName - 1);
+				private _index = _ctrlTV tvAdd [[],_fileName];
+				_counter = _counter + 1;
+				_ctrlTV tvSetData [[_index],str [_fileName,_x]];
+				_ctrlTV tvSetTooltip [[_index],_addonPath];
+			};
+		} forEach  addonFiles [_addonPath,_extension];
+	} forEach allAddonsInfo;
+	_ctrlTV tvSort [[],false];
+};
 
 tvClear _ctrlTV;
 
@@ -84,6 +118,7 @@ switch (_modeIndex) do
 					};
 				};
 				_fncIndex = _ctrlTV tvAdd [[_rootIndex,_addonIndex,_categoryIndex],_fncShort];
+				_counter = _counter + 1;
 				private _fullPath = [_rootIndex,_addonIndex,_categoryIndex,_fncIndex];
 				_ctrlTV tvSetTooltip [_fullPath,format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [_fullPath,format ["['%1','%2']",_fncLong,_path]];
@@ -134,6 +169,7 @@ switch (_modeIndex) do
 					//_ctrlTV tvSetPictureRight [[_categoryIndex],_logo]; Adding icons hits the performance quite hard
 				};
 				private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
+				_counter = _counter + 1;
 				private _fullPath = [_categoryIndex,_fncIndex];
 				_ctrlTV tvSetTooltip [_fullPath,format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [_fullPath,format ["['%1','%2']",_fncLong,_path]];
@@ -156,6 +192,7 @@ switch (_modeIndex) do
 			if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
 			{
 				private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
+				_counter = _counter + 1;
 				_ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
 				_ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
 				//_ctrlTV tvSetPictureRight [[_fncIndex],_logo]; Adding icons hits the performance quite hard
@@ -169,21 +206,18 @@ switch (_modeIndex) do
 		} count ENH_FunctionsData;
 		_ctrlTV tvSort [[],false];
 	};
-};
-
-//Disable biki button if missionConfigFile or campaignConfigFile functions are viewed
-switch (_configIndex) do
-{
-	case 0:
+	case 3:
 	{
-		_ctrlBiki ctrlSetFade 0;
+		[_ctrlTV,".sqf"] call _fnc_addCustomFiles;
 	};
-	case 1;
-	case 2:
+	case 4:
 	{
-		_ctrlBiki ctrlSetFade 1;
+		[_ctrlTV,".inc"] call _fnc_addCustomFiles;
+	};
+	case 5:
+	{
+		[_ctrlTV,".hpp"] call _fnc_addCustomFiles;
 	};
 };
-_ctrlBiki ctrlCommit 0;
 
-true
+(_display displayCtrl 1405) ctrlSetText str _counter;

@@ -12,6 +12,8 @@
    BOOLEAN: true
 */
 
+disableSerialization;
+
 params ["_ctrlTV", "_path"];
 
 private _disp = ctrlParent _ctrlTV;
@@ -29,6 +31,7 @@ _data = call compile _data;
 _data params ["_fncName","_fncPath"];
 
 uiNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
+
 _ctrlFncName ctrlSetText _fncName;
 _ctrlFncPath ctrlSetText _fncPath;
 _ctrlCode ctrlSetText loadFile _fncPath;
@@ -36,7 +39,7 @@ _ctrlCode ctrlSetText loadFile _fncPath;
 if (_fncName select [0,3] in ["BIS","BIN"]) then
 {
    _ctrlBiki ctrlEnable true;
-   _ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
+   //_ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
 }
 else
 {
@@ -59,5 +62,7 @@ _ctrlCode ctrlCommit 0;
 _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
+
+ENH_FunctionsViewer_CancelLoading = nil;
 
 true

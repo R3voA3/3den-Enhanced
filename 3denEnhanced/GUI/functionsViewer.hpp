@@ -38,7 +38,7 @@ class ENH_FunctionsViewer
             {
            		"configFile",
            		"missionConfig",
-				      "campaignConfig"
+			    "campaignConfig"
             };
             values[] = {0,1,2};
 			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
@@ -48,15 +48,19 @@ class ENH_FunctionsViewer
 			idc = 1800;
 			x = safezoneX + GRID_W;
 			y = safezoneY + 12 * GRID_H;
-      rows = 1;
-      columns = 3;
-      strings[] =
-      {
-        $STR_ENH_FUNCTIONSVIEWER_FULL,
-        $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
-        $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS
-      };
-      values[] = {0,1,2};
+            h = 10 * GRID_H;
+            rows = 2;
+            columns = 3;
+            strings[] =
+            {
+                $STR_ENH_FUNCTIONSVIEWER_FULL,
+                $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
+                $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS,
+                "Scripts",
+                ".hpp",
+                ".inc"
+            };
+            values[] = {0,1,2,3,4,5};
 			onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
         };
 		class List: ctrlTree
@@ -64,9 +68,9 @@ class ENH_FunctionsViewer
 			idc = 1500;
 			idcSearch = 1400;
 			x = safezoneX + GRID_W;
-			y = safezoneY + 18 * GRID_H;
+			y = safezoneY + 23 * GRID_H;
 			w = 70 * GRID_W;
-			h = safezoneH - 25 * GRID_H;
+			h = safezoneH - 30 * GRID_H;
 			onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
 		};
 		class NumFunctions: ctrlStatic
