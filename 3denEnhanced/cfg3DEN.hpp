@@ -42,8 +42,6 @@ class Cfg3DEN
             };
         };
         #include "controls\timeMultiplier.hpp"
-        #include "controls\featureType.hpp"
-        #include "controls\terrainDetail.hpp"
         #include "controls\ambientAnimations.hpp"
         #include "controls\introText.hpp"
         #include "controls\establishingShot.hpp"
@@ -54,7 +52,6 @@ class Cfg3DEN
         #include "controls\dynamicSkill.hpp"
         #include "controls\holdAction.hpp"
         #include "controls\missionEndingCasualties.hpp"
-        #include "controls\taskPatrol.hpp"
         #include "controls\SPR.hpp"
         #include "controls\subCategoryNoHeader_Fixed.hpp"
     };
