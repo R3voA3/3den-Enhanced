@@ -28,7 +28,7 @@ class ENH_HoldAction: Title
             y = SIZE_M * GRID_H + 5 * pixelH;
             w = ATTRIBUTE_CONTENT_W * GRID_W;
             h = SIZE_M * GRID_H;
-        };        
+        };
         class ProgressIconTitle: Title
         {
             text = $STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME;
