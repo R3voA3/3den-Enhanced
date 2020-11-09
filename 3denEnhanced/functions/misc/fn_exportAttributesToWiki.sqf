@@ -24,33 +24,48 @@ private _configClasses = [];
 if (_entityAttributes) then
 {
 	_config = configFile >> "Cfg3DEN";
-	_configClasses = ["Group","Marker","Mission","Object","Trigger","Waypoint","Logic"];
+	_configClasses = ["Group","Marker","Object","Trigger","Waypoint","Logic","Comment"];
 }
 else
 {
 	_config = configFile >> "Cfg3DEN" >> "Mission";
-	_configClasses = ["GargabeCollection","Intel","Multiplayer","Multiplayer","Preferences","Scenario"];
+	_configClasses = ["GargabeCollection","Intel","Multiplayer","Preferences","Scenario"];
 };
 
 {
-	_config = _config >> _x;
-	private _attributeCategories = "true" configClasses (_config >> "AttributeCategories");
+	private _attributeCategories = "true" configClasses (_config >> _x >> "AttributeCategories");
 	{	
 		private _attributes = "configName _x select [0,3] == 'ENH'" configClasses (_x >> "attributes");
 		private _categoryName = getText (_x >> "displayName");
 		{
-			private _displayName = getText (_x >> "displayName");
-			private _tooltip = getText (_x >> "tooltip");
-			if (_tooltip == "") then {_tooltip = _displayName};
-			private _defaultValue = getText (_x >> "defaultValue");
-			private _property = getText (_x >> "property");
-			if (_forEachIndex == 0) then
+			if ("Subcategory" in configName _x) then
 			{
-				_export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
+				private _displayName = "Subcategory (Used for describing the following attributes)";
+				private _tooltip = getText (_x >> "description");
+				if (_forEachIndex == 0) then
+				{
+					_export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl;
+				}
+				else
+				{
+					_export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl;
+				};
 			}
-			else 
+			else
 			{
-				_export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
+				private _displayName = getText (_x >> "displayName");
+				private _tooltip = getText (_x >> "tooltip");
+				if (_tooltip == "") then {_tooltip = _displayName};
+				private _defaultValue = getText (_x >> "defaultValue");
+				private _property = getText (_x >> "property");
+				if (_forEachIndex == 0) then
+				{
+					_export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
+				}
+				else
+				{
+					_export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
+				};
 			};
 			_counter = _counter + 1;
 		} forEach _attributes;
