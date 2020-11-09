@@ -4,12 +4,11 @@ class ENH_AdvancedDamageVehicle
 	collapsed = 1;
 	class Attributes
 	{
-		class ENH_AdvancedDamageVehicle_VariousVehicles//All Vehicles
+		class ENH_AdvancedDamageVehicle_VariousVehicles_Subcategory//All Vehicles
 		{
-			control = "SubCategoryDesc2";
+			control = "ENH_SubCategoryNoHeader1_Fixed";
 			data = "AttributeSystemSubcategory";
-			displayName = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_TITLE;
-			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_DESCRIPTION;
+			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_TITLE;
 		};
 		class ENH_Engine
 		{
@@ -87,12 +86,9 @@ class ENH_AdvancedDamageVehicle
 			property = "ENH_damageWindows6";
 			expression = "_this setHitPointDamage ['HitGlass6',_value]";
 		};
-		class ENH_AdvancedDamageVehicle_LandVehicles
+		class ENH_AdvancedDamageVehicle_LandVehicles_Subcategory: ENH_AdvancedDamageVehicle_VariousVehicles_Subcategory
 		{
-			control = "SubCategoryDesc2";
-			data = "AttributeSystemSubcategory";
-			displayName = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_TITLE;
-			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_DESCRIPTION;
+			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_TITLE;
 		};
 		class ENH_LFWheel: ENH_Engine
 		{
@@ -160,12 +156,9 @@ class ENH_AdvancedDamageVehicle
 			property = "ENH_damageRTrack";
 			expression = "_this setHitPointDamage ['hitRTrack',_value]";
 		};
-		class ENH_AdvancedDamageVehicle_Aeronautical
+		class ENH_AdvancedDamageVehicle_Aeronautical: ENH_AdvancedDamageVehicle_VariousVehicles_Subcategory
 		{
-			control = "SubCategoryDesc2";
-			data = "AttributeSystemSubcategory";
-			displayName = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_TITLE;
-			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_DESCRIPTION;
+			description = $STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_TITLE;
 		};
 		class ENH_Avionics: ENH_Engine
 		{

@@ -97,20 +97,10 @@ class ENH_AmbientFlyby: Title
 			y = 9 * SIZE_M * GRID_H + 25 * pixelH;
 			text = $STR_ENH_SIDE_DISPLAYNAME;
 		};
-		class SideValue: SpeedValue
+		class SideValue: ENH_SideToolbox_Base
         {
             idc = 106;
 			y = 9 * SIZE_M * GRID_H + 25 * pixelH;
-            columns = 4;
-            strings[] = 
-            {
-				"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_west_ca.paa",
-				"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_east_ca.paa",
-				"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa",
-				"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_civ_ca.paa"
-            };
-            tooltip[] = {};
-            values[] = {0,1,2,3};
         };
 		class DelayTitle: Title
 		{
@@ -131,14 +121,10 @@ class ENH_AmbientFlyby: Title
 			idc = 108;
 			y = 11 * SIZE_M * GRID_H + 30 * pixelH;
 		};
-		class Reset: ctrlButton
+		class Reset: ENH_ResetButton_Base
 		{
-			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 12 * SIZE_M * GRID_H + 35 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_ambientFlyby_onButtonDown";
-			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

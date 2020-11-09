@@ -44,14 +44,10 @@ class ENH_AmbientAnimations: Title
 			w = 5 * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
-		class Reset: ctrlButton
+		class Reset: ENH_ResetButton_Base
 		{
-			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_ambientAnimations_onButtonDown";
-			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

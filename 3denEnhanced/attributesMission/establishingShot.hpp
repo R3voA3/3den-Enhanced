@@ -4,6 +4,12 @@ class ENH_EstablishingShot
 	displayName = $STR_ENH_ATTRIBUTECATEGORY_ESTABLISHINGSHOT;
 	class Attributes
 	{
+        class ENH_EstablishingShot_Subcategory
+        {
+            description = $STR_ENH_ESTABLISHINGSHOT_DESCRIPTION;
+            data = "AttributeSystemSubcategory";
+            control = "ENH_SubCategoryNoHeader1_Fixed";
+        };
 		class ENH_EstablishingShot
 		{
 			displayName = $STR_ENH_ATTRIBUTECATEGORY_ESTABLISHINGSHOT;

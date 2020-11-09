@@ -5,9 +5,9 @@ class ENH_AI
     class Attributes
     {
         //----------------SKILL
-        class ENH_AI_Skill_SubCategory
+        class ENH_AI_Skill_Subcategory
         {
-            description = "Skill Settings";
+            description = $STR_A3_RSCDISPLAYGAMEOPTIONS_TEXTAISKILL;
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
@@ -86,9 +86,9 @@ class ENH_AI
             expression = "_this allowFleeing _value";
         };
         //----------------AI Features
-        class ENH_AI_Features_SubCategory: ENH_AI_Skill_SubCategory
+        class ENH_AI_Features_Subcategory: ENH_AI_Skill_SubCategory
         {
-            description = "AI Features";
+            description = $STR_ENH_DISABLEAI_SUBCATEGORY;
             data = "AttributeSystemSubcategory";
         };
         class ENH_Move

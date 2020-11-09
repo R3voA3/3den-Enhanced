@@ -84,14 +84,10 @@ class ENH_IntroText: Title
             };
             values[] = {0,1,2};
         };
-		class Reset: ctrlButton
+		class Reset: ENH_ResetButton_Base
 		{
-			x = ATTRIBUTE_TITLE_W * GRID_W;
 			y = 9 * SIZE_M * GRID_H + 25 * pixelH;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
 			onButtonDown  = "_this call ENH_fnc_introText_onButtonDown";
-			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

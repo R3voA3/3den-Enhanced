@@ -4,7 +4,7 @@ class ENH_AmbientAnimations
     displayName = $STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME;
     class Attributes
     {
-        class ENH_AmbientAnimations_Description
+        class ENH_AmbientAnimations_Subcategory
         {
             description = $STR_ENH_AMBIENTANIMATIONS_DESCRIPTION;
             data = "AttributeSystemSubcategory";

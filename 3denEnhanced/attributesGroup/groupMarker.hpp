@@ -1,9 +1,15 @@
 class ENH_GroupMarker
 {
 	displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
-	collapsed = 0;
+	collapsed = 1;
 	class Attributes
 	{
+        class ENH_GroupMarker_Subcategory
+        {
+            description = $STR_ENH_GROUPMARKER_DESCRIPTION;
+            data = "AttributeSystemSubcategory";
+            control = "ENH_SubCategoryNoHeader3_Fixed";
+        };
 		class ENH_GroupMarker
 		{
 			displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;

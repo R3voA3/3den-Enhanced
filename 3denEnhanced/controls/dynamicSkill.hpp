@@ -348,14 +348,10 @@ class ENH_DynamicSkill: Title
 			w = EDIT_W_WIDE * GRID_W;
 			h = SIZE_M * GRID_H;
 		};
-		class Reset: ctrlButton
+		class Reset: ENH_ResetButton_Base
 		{
-			x = ATTRIBUTE_TITLE_W * GRID_W;
-			w = ATTRIBUTE_CONTENT_W * GRID_W;
-			h = SIZE_M * GRID_H;
 			y = 20.5 * SIZE_M * GRID_H + 85 * pixelH;
 			onButtonDown  = "_this call ENH_fnc_dynamicSkill_onButtonDown";
-			text = $STR_ENH_RESETANDDISABLE;
 		};
 	};
 };

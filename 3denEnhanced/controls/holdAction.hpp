@@ -171,14 +171,10 @@ class ENH_HoldAction: Title
             idc = 114;
             y = 24 * SIZE_M * GRID_H + 60 * pixelH;
         };
-        class Reset: ctrlButton
+        class Reset: ENH_ResetButton_Base
         {
-            x = ATTRIBUTE_TITLE_W * GRID_W;
             y = 25 * SIZE_M * GRID_H + 65 * pixelH;
-            w = ATTRIBUTE_CONTENT_W * GRID_W;
-            h = SIZE_M * GRID_H;
             onButtonDown  = "_this call ENH_fnc_holdAction_onButtonDown";
-            text = $STR_ENH_RESETANDDISABLE;
         };
     };
 };
