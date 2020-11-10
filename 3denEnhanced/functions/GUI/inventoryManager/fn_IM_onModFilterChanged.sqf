@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-11-10
+    Date: 2020-11-10
 
-   Description:
-   Handles the mod filter in the IM search.
+    Description:
+    Handles the mod filter in the IM search.
 
-   Parameter(s):
-   0: CONTROL - Combo
-   1: NUMBER - Selected index
+    Parameter(s):
+    0: CONTROL - Combo
+    1: NUMBER - Selected index
 
-   Returns:
-   -
+    Returns:
+    -
 */
 
 params ["_ctrlCombo","_selectedIndex"];
