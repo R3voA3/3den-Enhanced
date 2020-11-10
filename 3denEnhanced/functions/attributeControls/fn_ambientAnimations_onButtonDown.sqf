@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-07-15
+    Date: 2019-07-15
 
-   Description:
-   Used by the ambient animations attribute. Called when reset button is clicked.
+    Description:
+    Used by the ambient animations attribute. Called when reset button is clicked.
 
-   Parameter(s):
-   0: CONTROL - Button control
+    Parameter(s):
+    0: CONTROL - Button control
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlButton"];

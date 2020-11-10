@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-07-15
+    Date: 2019-07-15
 
-   Description:
-   Used by the time multiplier attribute. Call when attribute is saved.
+    Description:
+    Used by the time multiplier attribute. Call when attribute is saved.
 
-   Parameter(s):
-   0: CONTROL - Controls group
+    Parameter(s):
+    0: CONTROL - Controls group
 
-   Returns:
-   NUMBER: Attribute value
+    Returns:
+    NUMBER: Attribute value
 */
 
 params ["_ctrlGroup"];

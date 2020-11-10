@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-03-21
+    Date: 2020-03-21
 
-   Description:
-   Fills given combo box with all debriefings from CfgDebriefing both from missionConfigFile and configFile.
+    Description:
+    Fills given combo box with all debriefings from CfgDebriefing both from missionConfigFile and configFile.
 
-   Parameter(s):
-   0: CONTROL - Control comboBox
-   1: STRING - Debriefing config name
+    Parameter(s):
+    0: CONTROL - Control comboBox
+    1: STRING - Debriefing config name
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlCombo","_debriefing"];

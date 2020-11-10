@@ -1,35 +1,35 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-07-15
+    Date: 2019-07-15
 
-   Description:
-   Used by the dynamic skill attribute. Call when attribute is loaded.
+    Description:
+    Used by the dynamic skill attribute. Call when attribute is loaded.
 
-   Parameter(s):
-   0: CONTROL - Controls group
-   1: ARRAY - Attribute value
+    Parameter(s):
+    0: CONTROL - Controls group
+    1: ARRAY - Attribute value
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlGroup","_value"];
-_value params 
+_value params
 [
-   "_enable",
-   "_skillMinBLUFOR",
-   "_skillAimMinBLUFOR",
-   "_skillMaxBLUFOR",
-   "_skillAimMaxBlUFOR",
-   "_skillMinOPFOR",
-   "_skillAimMinOPFOR",
-   "_skillMaxOPFOR",
-   "_skillAimMaxOPFOR",
-   "_skillMinINDFOR",
-   "_skillAimMinINDFOR",
-   "_skillMaxINDFOR",
-   "_skillAimMaxINDFOR"
+    "_enable",
+    "_skillMinBLUFOR",
+    "_skillAimMinBLUFOR",
+    "_skillMaxBLUFOR",
+    "_skillAimMaxBlUFOR",
+    "_skillMinOPFOR",
+    "_skillAimMinOPFOR",
+    "_skillMaxOPFOR",
+    "_skillAimMaxOPFOR",
+    "_skillMinINDFOR",
+    "_skillAimMinINDFOR",
+    "_skillMaxINDFOR",
+    "_skillAimMaxINDFOR"
 ];
 
 (_ctrlGroup controlsGroupCtrl 100) cbSetChecked _enable;
