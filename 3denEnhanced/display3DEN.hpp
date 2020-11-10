@@ -1,24 +1,24 @@
 class Display3DEN
 {
-    class ContextMenu: ctrlMenu
+  class ContextMenu: ctrlMenu
+  {
+    class Items
     {
-        class Items
-        {
-            #include "contextMenu.hpp"
-        };
+      #include "contextMenu.hpp"
     };
-    class Controls
+  };
+  class Controls
+  {
+    #include "statusbar.hpp"
+    class MenuStrip: ctrlMenuStrip
     {
-        #include "statusbar.hpp"
-        class MenuStrip: ctrlMenuStrip
-        {
-            class Items
-            {
-                items[] += {"ENH_About"};//new main category
-                #include "menuStrip_about.hpp"
-                #include "menuStrip_tools.hpp"
-                #include "menuStrip_help.hpp"
-            };
-        };
+      class Items
+      {
+        items[] += {"ENH_About"};//new main category
+        #include "menuStrip_about.hpp"
+        #include "menuStrip_tools.hpp"
+        #include "menuStrip_help.hpp"
+      };
     };
+  };
 };

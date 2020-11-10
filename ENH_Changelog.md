@@ -141,7 +141,7 @@ v5.1
 v5.0
 *added*
 - Context menu tool to move camera into first person view of selected entity
-- Added shortcuts to GUIs to preview controls styles and types (menu strip) 
+- Added shortcuts to GUIs to preview controls styles and types (menu strip)
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Added Debug Option to show waypoints of all group on the map
 - Added Debug Option to enable unlimited ammo
@@ -157,7 +157,7 @@ v5.0
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
 - Icons updated
-- Texture Finder 
+- Texture Finder
   - Will now search ~200.000 classes instead of ~30.000 for textures and images
   - Added search to Texture Finder tool
   - Optimized Texture Finder functions to be more performant (Thanks to shukari)
@@ -283,7 +283,7 @@ v4.3
   - Removed X button and replaced it with the close button in the lower right corner to be consitent with all other UIs in Eden Editor
   - Functions Viewer shows mod icons again
   - Functions Viewer now displays line numbers
-  
+
 - Updated and revised Czech translation thanks to XerXesCZ
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
 - Merged serveral functions into one
@@ -512,13 +512,13 @@ v3.1
 - Select Image GUI when publishing a mission to steam has been widened to allow the ctrlTree to expand further
 - Some general GUI overhauls
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
-		- briefing editor shortcut was changed from CTRL + B to ALT + B
-		- Texture Finder can now be opened by pretting ALT + T
-		- Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut.
-		- Clear chat can now be performed by pressing ALT + CTRL + C
-		- all debug tools have got a shortcut now
-		- Loadout tools can now be accessed by CTRL + SHIFT shortcuts
-		- Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
+    - briefing editor shortcut was changed from CTRL + B to ALT + B
+    - Texture Finder can now be opened by pretting ALT + T
+    - Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut.
+    - Clear chat can now be performed by pressing ALT + CTRL + C
+    - all debug tools have got a shortcut now
+    - Loadout tools can now be accessed by CTRL + SHIFT shortcuts
+    - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
 - Added search icon next to search edit control in 3den Radio
 - 3den Radio will now loop through playlist again one enabled
 
@@ -598,16 +598,16 @@ v2.7
 - added grid pattern tool
 - added tool to export all Arsenal loadout templates for backup
 - On preview debug (Those settings will only work during mission preview and won't influence the published scenario)
-	- show all units on map
-	- disable damage
-	- toggle captive mode
-	- enable bullet tracing
-	- enable Virtual Garage
-	- enable Virtual Arsenal
-	- disable stamina
-	- enable Zeus
-	- show awareness of all sides
-	- options to quickly kill all units of given side during scenario preview
+  - show all units on map
+  - disable damage
+  - toggle captive mode
+  - enable bullet tracing
+  - enable Virtual Garage
+  - enable Virtual Arsenal
+  - disable stamina
+  - enable Zeus
+  - show awareness of all sides
+  - options to quickly kill all units of given side during scenario preview
 
 *changed*
 - removed obsolete function call from ENH_Changelog GUI
@@ -644,8 +644,8 @@ v2.6
 - improved appearance of combo box control types
 - some config cleanup
 - measure distance functionality was rewritten and improved:
-	If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
-	If map is opened, then markers are drawn from point A to B showing the direct path
+  If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
+  If map is opened, then markers are drawn from point A to B showing the direct path
 - several menu entriess were missing "..." to indicate they are opening a new window
 
 v2.5
@@ -940,8 +940,8 @@ v1.5
 - Moved most of the code from control configs to global functions
 - Preferences are now applied when a preview ends, or a new scenario is created.
 - Ambient animation attribute is now easier to use:
-	- 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied.
-		In older versions, one had to deactivate the animation first.
+  - 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied.
+    In older versions, one had to deactivate the animation first.
 - Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
 NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function.
 - Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
@@ -1004,9 +1004,9 @@ v1.3
 - attribute for unit traits
 
 - added hostage attribute:
-	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
-	Mission designers can check whether the unit is hostage or not by retrieving the following variable:
-	_unit getVariable "ENH_isHostage"; (true,is hostage/false,isn't hostage)
+  A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
+  Mission designers can check whether the unit is hostage or not by retrieving the following variable:
+  _unit getVariable "ENH_isHostage"; (true,is hostage/false,isn't hostage)
 *changed*
 - UAV intro center position attribute tooltip was using a wrong string
 - removed the tooltip from Advanced Damage Attributes
@@ -1083,9 +1083,9 @@ v1.1
 - view distance and disable grass option to environment mission attribute (Will be executed globally and for JIP playes)
 - attribute to create a small mission intro containing three lines (See scenario attribute -> general)
 - quick links for:(Can be found in the menu strip -> help)
-	- Arma 3 Assets
-	- Arma 3 Function Overview
-	- 3den Enhanced Forum thread
+  - Arma 3 Assets
+  - Arma 3 Function Overview
+  - 3den Enhanced Forum thread
 - ability to quickly copy class name of selected unit to clipboard
 - ability to quickly set random rotation for all selected entities
 - attribute to force walk
