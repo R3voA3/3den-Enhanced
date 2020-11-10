@@ -32,9 +32,19 @@ v5.7 (WIP)
 - Various translation improvements
 - AI Features and AI Skill as well as Allow Fleeing attributs have been merged into category AI
 - Visual appearance of some attribute was improved
+----Thanks to Tree View Optimisations <3
+    - Function list in Functions Viewer can now also be searched if functions are displayed as list
+    - It's now possible to search in the CfgSentences Browser if filter is set to "ALL"#
+- Added missing tooltips for side toolbox controls
+- Feature Type and Terrain detail attribute controls have been simlyfied
+- Task Patrol attribute uses an edit box now again to give the scenario editor more freedom
+- Documentation on GitHub has been updated
+- Functions Viewer can now view .inc and .hpp files as well as scripts used in missions and GUIs
+- Functions counter in Functions Viewer works properly now also for campaign config and mission config
 
 *removed*
 - Credits GUI and all related functions
+- Unused functions and config entries
 
 v5.6
 *added*
