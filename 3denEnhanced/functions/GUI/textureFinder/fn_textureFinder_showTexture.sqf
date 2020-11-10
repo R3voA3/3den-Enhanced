@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-01-24
+    Date: 2020-01-24
 
-   Description:
-   Shows selected texture.
+    Description:
+    Shows selected texture.
 
-   Parameter(s):
-   0: CONTROL - ListBox
-   1: NUMBER - Selected index
+    Parameter(s):
+    0: CONTROL - ListBox
+    1: NUMBER - Selected index
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlLB", "_selectedIndex"];

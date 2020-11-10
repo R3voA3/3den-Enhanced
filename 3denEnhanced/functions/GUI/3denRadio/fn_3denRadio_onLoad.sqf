@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Initialises the 3den Radio GUI.
+    Description:
+    Initialises the 3den Radio GUI.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -26,7 +26,7 @@ _ctrlVol sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVo
 
 //Set up combo
 {
-	_ctrlSort lbAdd localize _x;
+    _ctrlSort lbAdd localize _x;
 } forEach ["STR_ENH_3DENRADIO_SORTBYTITLE","STR_ENH_3DENRADIO_SORTBYDURATION","STR_ENH_3DENRADIO_SORTBYTHEME"];
 
 _ctrlSort lbSetCurSel 0;
@@ -37,27 +37,27 @@ _ctrlCurSong ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSo
 //Update radio button
 switch (profileNamespace getVariable ["ENH_3DENRadio_Enabled",false]) do
 {
-	case true:
-	{
-		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
-	};
-	case false:
-	{
-		_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
-	};
+    case true:
+    {
+        _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
+    };
+    case false:
+    {
+        _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
+    };
 };
 
 //Get all music tracks
 
 if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic",[]]) isEqualTo []) then
 {
-	uiNamespace setVariable
-	[
-		"ENH_3DENRadio_cfgMusic",
-		("true" configClasses (configFile >> "CfgMusic")) +
-		("true" configClasses (missionConfigFile >> "CfgMusic")) +
-		("true" configClasses (campaignConfigFile >> "CfgMusic"))
-	];
+    uiNamespace setVariable
+    [
+        "ENH_3DENRadio_cfgMusic",
+        ("true" configClasses (configFile >> "CfgMusic")) +
+        ("true" configClasses (missionConfigFile >> "CfgMusic")) +
+        ("true" configClasses (campaignConfigFile >> "CfgMusic"))
+    ];
 };
 
 _ctrlSongList lnbAddColumn 0.59;

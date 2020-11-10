@@ -1,14 +1,14 @@
 /*
-   Author: Revo
+    Author: Revo
 
-   Description:
-   Used by the ENH_ModuleInformation GUI. Called onLoad.
+    Description:
+    Used by the ENH_ModuleInformation GUI. Called onLoad.
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -19,8 +19,8 @@ private _logicType = typeOf ((get3DENSelected "Logic") # 0);
 
 private _fnc_getValue =
 {
-	private _cfgEntry = param [0,"",[""]];
-	(configFile >> "CfgVehicles" >> _logicType >> "ModuleDescription" >> _cfgEntry) call BIS_fnc_getCfgData;
+    private _cfgEntry = param [0,"",[""]];
+    (configFile >> "CfgVehicles" >> _logicType >> "ModuleDescription" >> _cfgEntry) call BIS_fnc_getCfgData;
 };
 
 private _description = "description" call _fnc_getValue;
@@ -33,39 +33,39 @@ if (isNil "_direction") exitWith {false};
 
 private _direction = if (_direction > 0) then
 {
-	"directionEnabled" call _fnc_getValue;
+    "directionEnabled" call _fnc_getValue;
 }
 else
 {
-	"directionDisabled" call _fnc_getValue;
+    "directionDisabled" call _fnc_getValue;
 };
 
 private _duplicate = if (_duplicate > 0) then
 {
-	"duplicateEnabled" call _fnc_getValue;
+    "duplicateEnabled" call _fnc_getValue;
 }
 else
 {
-	"duplicateDisabled" call _fnc_getValue;
+    "duplicateDisabled" call _fnc_getValue;
 };
 
 private _position = if (_position > 0) then
 {
-	"positionEnabled" call _fnc_getValue;
+    "positionEnabled" call _fnc_getValue;
 }
 else
 {
-	"positionDisabled" call _fnc_getValue;
+    "positionDisabled" call _fnc_getValue;
 };
 
 private _descFinal = "";
 
 if (_description isEqualType []) then
 {
-	{
-		if (_descFinal isEqualTo "") then {_descFinal = _descFinal + _x} else {_descFinal = _descFinal + " " + _x};
-	} forEach _description;
-	_description = _descFinal;
+    {
+        if (_descFinal isEqualTo "") then {_descFinal = _descFinal + _x} else {_descFinal = _descFinal + " " + _x};
+    } forEach _description;
+    _description = _descFinal;
 };
 
 (_display displayCtrl 1400) ctrlSetText _description;

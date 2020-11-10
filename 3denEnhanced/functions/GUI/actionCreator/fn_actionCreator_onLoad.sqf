@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Used by ENH_actionCreator GUI.
+    Description:
+    Used by ENH_actionCreator GUI.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -30,18 +30,18 @@ private _save = profileNamespace getVariable ["ENH_ActionCreator_LastUsed",[]];
 
 if !(_save isEqualTo []) then
 {
-	_title ctrlSetText _save # 0;
-	_script ctrlSetText _save # 1;
-	_args ctrlSetText _save # 2;
-	_priority ctrlSetText _save # 3;
-	_toolbox ctrlSetChecked [1,_save # 4];
-	_toolbox ctrlSetChecked [2,_save # 5];
-	_shortcuts ctrlSetText _save # 6;
-	_condition ctrlSetText _save # 7;
-	_r ctrlSetText _save # 8;
-	_toolbox ctrlSetChecked [0,_save # 9];
-	_selection ctrlSetText _save # 10;
-	_memory ctrlSetText _save # 11;
+    _title ctrlSetText _save # 0;
+    _script ctrlSetText _save # 1;
+    _args ctrlSetText _save # 2;
+    _priority ctrlSetText _save # 3;
+    _toolbox ctrlSetChecked [1,_save # 4];
+    _toolbox ctrlSetChecked [2,_save # 5];
+    _shortcuts ctrlSetText _save # 6;
+    _condition ctrlSetText _save # 7;
+    _r ctrlSetText _save # 8;
+    _toolbox ctrlSetChecked [0,_save # 9];
+    _selection ctrlSetText _save # 10;
+    _memory ctrlSetText _save # 11;
 };
 
 true

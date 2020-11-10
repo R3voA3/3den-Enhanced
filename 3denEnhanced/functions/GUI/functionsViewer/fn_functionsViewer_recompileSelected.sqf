@@ -1,14 +1,14 @@
 /*
-   Author: Revo
+    Author: Revo
 
-   Description:
-   Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
+    Description:
+    Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   BOOLEAN: true / false
+    Returns:
+    BOOLEAN: true / false
 */
 
 params ["_ctrlButton"];

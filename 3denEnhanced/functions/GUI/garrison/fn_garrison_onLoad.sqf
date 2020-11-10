@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-08-03
+    Date: 2019-08-03
 
-   Description:
-   Called when ENH_Garrison GUI is created. Used to set default values.
+    Description:
+    Called when ENH_Garrison GUI is created. Used to set default values.
 
-   Parameter(s):
-   0: DISPLAY - Display
+    Parameter(s):
+    0: DISPLAY - Display
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_display"];

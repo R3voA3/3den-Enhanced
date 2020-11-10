@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Plays the selected song from one of the listboxes and updates the current song control.
+    Description:
+    Plays the selected song from one of the listboxes and updates the current song control.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -20,16 +20,16 @@ private _ctrlCurrentSong = _display displayCtrl 2200;
 
 private _class = switch (ctrlType _ctrlList) do
 {
-	case 5://Playlist
-	{
-		profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",_ctrlList lbText _selectedIndex];
-		_ctrlList lbData _selectedIndex;
-	};
-	case 102://Song List
-	{
-		profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",_ctrlList lnbText [_selectedIndex,0]];
-		_ctrlList lnbData [_selectedIndex,0];
-	};
+    case 5://Playlist
+    {
+        profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",_ctrlList lbText _selectedIndex];
+        _ctrlList lbData _selectedIndex;
+    };
+    case 102://Song List
+    {
+        profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",_ctrlList lnbText [_selectedIndex,0]];
+        _ctrlList lnbData [_selectedIndex,0];
+    };
 };
 
 //Play song and update current song control

@@ -1,14 +1,14 @@
 /*
-   Author: Revo
+    Author: Revo
 
-   Description:
-   Used by the ENH_FunctionViewer GUI. Called on load.
+    Description:
+    Used by the ENH_FunctionViewer GUI. Called on load.
 
-   Parameter(s):
-   0: DISPLAY - Display
+    Parameter(s):
+    0: DISPLAY - Display
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -22,26 +22,26 @@ _display displayCtrl 1900 ctrlEnable false;
 //Disable recompile buttons if recompiling isn't allowed
 if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 {
-	(_display displayCtrl 1600) ctrlEnable false;
-	(_display displayCtrl 1601) ctrlEnable false;
+    (_display displayCtrl 1600) ctrlEnable false;
+    (_display displayCtrl 1601) ctrlEnable false;
 };
 
 _display displayAddEventHandler ["keyDown",//Focus Search
 {
-	params ["_display", "_key", "_shift", "_ctrl"];
-	if (_key isEqualTo 33 && _ctrl) then
-	{
-		ctrlSetFocus (_display displayCtrl 1400);
-	}
+    params ["_display", "_key", "_shift", "_ctrl"];
+    if (_key isEqualTo 33 && _ctrl) then
+    {
+        ctrlSetFocus (_display displayCtrl 1400);
+    }
 }];
 
 _display displayAddEventHandler ["keyDown",//Copy
 {
-	params ["_display", "_key", "_shift", "_ctrl"];
-	if (_key isEqualTo 45 && _ctrl) then
-	{
-		(_display displayCtrl 1602) call ENH_fnc_functionsViewer_copy;
-	}
+    params ["_display", "_key", "_shift", "_ctrl"];
+    if (_key isEqualTo 45 && _ctrl) then
+    {
+        (_display displayCtrl 1602) call ENH_fnc_functionsViewer_copy;
+    }
 }];
 
 //Set number of functions

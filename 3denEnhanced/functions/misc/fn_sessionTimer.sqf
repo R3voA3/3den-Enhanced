@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-08-20
+    Date: 2019-08-20
 
-   Description:
-   Initialises the 3den Enhanced session timer. Needs to be spawned!
+    Description:
+    Initialises the 3den Enhanced session timer. Needs to be spawned!
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -18,6 +18,6 @@ private _display3DEN = findDisplay 313 displayCtrl 668;
 
 while {is3DEN} do
 {
-	_display3DEN ctrlSetText ([diag_tickTime / 3600] call BIS_fnc_timeToString);
-	uiSleep 1;
+    _display3DEN ctrlSetText ([diag_tickTime / 3600] call BIS_fnc_timeToString);
+    uiSleep 1;
 };

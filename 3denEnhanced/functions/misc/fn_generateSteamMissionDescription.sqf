@@ -1,14 +1,14 @@
 /*
-  Author: Revo
+    Author: Revo
 
-  Description:
-  Automatically creates a mission description for Steam.
+    Description:
+    Automatically creates a mission description for Steam.
 
-  Parameter(s):
-  -
+    Parameter(s):
+    -
 
-  Returns:
-  BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
@@ -26,11 +26,11 @@ private _export = "";
 	_export = _export + _text + " " + _value + endl;
 };*/
 
-_fnc_addLine = 
+_fnc_addLine =
 {
-  params [["_text",""],["_value",""]];
-  if !(_value isEqualType "") then {_value = str _value};
-  _export = _export + _text + " " + _value + endl;
+    params [["_text",""],["_value",""]];
+    if !(_value isEqualType "") then {_value = str _value};
+    _export = _export + _text + " " + _value + endl;
 };
 //General
 _description = "Scenario" get3DENMissionAttribute "OverviewText";
@@ -39,15 +39,15 @@ _appID = "Scenario" get3DENMissionAttribute "AppID";
 
 switch _appID do
 {
-  case 275700: {_appID = "Zeus"};
-  case 288520: {_appID = "Karts"};
-  case 304380: {_appID = "Helicopters"};
-  case 332350: {_appID = "Marksmen"};
-  case 395180: {_appID = "Apex"};
-  case 571710: {_appID = "Laws of War"};
-  case 601670: {_appID = "Jets"};
-  case 744950: {_appID = "Tac Ops"};
-  case 798390: {_appID = "Tanks"};
+    case 275700: {_appID = "Zeus"};
+    case 288520: {_appID = "Karts"};
+    case 304380: {_appID = "Helicopters"};
+    case 332350: {_appID = "Marksmen"};
+    case 395180: {_appID = "Apex"};
+    case 571710: {_appID = "Laws of War"};
+    case 601670: {_appID = "Jets"};
+    case 744950: {_appID = "Tac Ops"};
+    case 798390: {_appID = "Tanks"};
 };
 //Multiplayer
 _gameType = "Multiplayer" get3DENMissionAttribute "GameType";
@@ -72,32 +72,33 @@ _date = (str (_date # 1) + "-" + str (date # 2) + "-" + str (date # 0));
 
 if !(_appID == 0) then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Required DLC:",_appID] call _fnc_addLine;
+    ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
+    ["Required DLC:",_appID] call _fnc_addLine;
 };
 
 if !(_gameType == "Unknown") then
 {
-  ["","",false,false] call _fnc_addLine;
-  ["Multiplayer","",false,true] call _fnc_addLine;
-  ["Game Type:",_gameType] call _fnc_addLine;
-  ["min. Players:",_minPlayers] call _fnc_addLine;
-  ["max. Players:",_maxPlayers] call _fnc_addLine;
+    ["","",false,false] call _fnc_addLine;
+    ["Multiplayer","",false,true] call _fnc_addLine;
+    ["Game Type:",_gameType] call _fnc_addLine;
+    ["min. Players:",_minPlayers] call _fnc_addLine;
+    ["max. Players:",_maxPlayers] call _fnc_addLine;
 };
 if (_respawn == "Yes") then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Respawn System","",false,true] call _fnc_addLine;
-  ["Respawn enabled?",_respawn] call _fnc_addLine;
+    ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
+    ["Respawn System","",false,true] call _fnc_addLine;
+    ["Respawn enabled?",_respawn] call _fnc_addLine;
 };
 if (_revive == "Yes") then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Revive System","",false,true] call _fnc_addLine;
-  ["Revive enabled?",_revive] call _fnc_addLine;
-  ["Bleed Out Time:",format ["%1 seconds",_bleedOutTime]] call _fnc_addLine;
-  ["Simulation Detail:",_simulationDetail] call _fnc_addLine;
+    ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
+    ["Revive System","",false,true] call _fnc_addLine;
+    ["Revive enabled?",_revive] call _fnc_addLine;
+    ["Bleed Out Time:",format ["%1 seconds",_bleedOutTime]] call _fnc_addLine;
+    ["Simulation Detail:",_simulationDetail] call _fnc_addLine;
 };
+
 ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
 ["Environment","",false,true] call _fnc_addLine;
 ["Date:",_date] call _fnc_addLine;

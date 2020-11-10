@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-06-14
+    Date: 2020-06-14
 
-   Description:
-   Used by the ENH_InventoryManager GUI. Create a template.
+    Description:
+    Used by the ENH_InventoryManager GUI. Create a template.
 
-   Parameter(s):
-   0: CONTROL - Control Button
+    Parameter(s):
+    0: CONTROL - Control Button
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlButton"];
@@ -27,10 +27,10 @@ private _templateDescription = ctrlText (_displayChild displayCtrl 2000);
 
 if !(_templateTitle isEqualTo "") then
 {
-	_templates pushBack [_templateTitle,_templateDescription,_value];
-	profileNamespace setVariable ["ENH_IM_Templates",_templates];
-	_displayChild closeDisplay 1;
-	call ENH_fnc_IM_updateTemplateList;
+    _templates pushBack [_templateTitle,_templateDescription,_value];
+    profileNamespace setVariable ["ENH_IM_Templates",_templates];
+    _displayChild closeDisplay 1;
+    call ENH_fnc_IM_updateTemplateList;
 };
 
 true

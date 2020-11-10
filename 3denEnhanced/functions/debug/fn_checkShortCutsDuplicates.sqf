@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-08-31
+    Date: 2019-08-31
 
-   Description:
-   Check for duplicated shortcuts in the context menu and menu strip.
+    Description:
+    Check for duplicated shortcuts in the context menu and menu strip.
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   ARRAY:	0: BOOLEAN - True if no duplicates in context menu
-			1: BOOLEAN - True if no duplicates in menu strip
+    Returns:
+    ARRAY:  0: BOOLEAN - True if no duplicates in context menu
+            1: BOOLEAN - True if no duplicates in menu strip
 
 */
 
@@ -24,27 +24,27 @@ private _menuStripShortCuts = [];
 private _menuStripShortCutsUnique = [];
 
 {
-	private _shortCut = getArray (_x >> "shortcuts");
-	_shortCut = _shortCut # 0;
-	if (!(_shortCut isEqualTo [])  && !(_shortCut isEqualType 0)) then
-	{
-		_shortCut = _shortCut splitString " ";
-		_shortCut = _shortCut joinString "";
-		_contextMenuShortCuts pushBack _shortCut;
-		_contextMenuShortCutsUnique pushBackUnique _shortCut;
-	};
+    private _shortCut = getArray (_x >> "shortcuts");
+    _shortCut = _shortCut # 0;
+    if (!(_shortCut isEqualTo [])  && !(_shortCut isEqualType 0)) then
+    {
+        _shortCut = _shortCut splitString " ";
+        _shortCut = _shortCut joinString "";
+        _contextMenuShortCuts pushBack _shortCut;
+        _contextMenuShortCutsUnique pushBackUnique _shortCut;
+    };
 } forEach _contextMenuEntries;
 
 {
-	_shortCut = getArray (_x >> "shortcuts");
-	_shortCut = _shortCut # 0;
-	if (!(_shortCut isEqualTo [])  && !(_shortCut isEqualType 0)) then
-	{
-		_shortCut = _shortCut splitString " ";
-		_shortCut = _shortCut joinString "";
-		_menuStripShortCuts pushBack _shortCut;
-		_menuStripShortCutsUnique pushBackUnique _shortCut;
-	};
+    _shortCut = getArray (_x >> "shortcuts");
+    _shortCut = _shortCut # 0;
+    if (!(_shortCut isEqualTo [])  && !(_shortCut isEqualType 0)) then
+    {
+        _shortCut = _shortCut splitString " ";
+        _shortCut = _shortCut joinString "";
+        _menuStripShortCuts pushBack _shortCut;
+        _menuStripShortCutsUnique pushBackUnique _shortCut;
+    };
 } forEach _menuStripEntries;
 
 [_contextMenuShortCuts isEqualTo _contextMenuShortCutsUnique,_menuStripShortCuts isEqualTo _menuStripShortCutsUnique]

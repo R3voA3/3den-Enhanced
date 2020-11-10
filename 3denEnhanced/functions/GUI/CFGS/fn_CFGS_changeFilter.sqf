@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-10-20
+    Date: 2020-10-20
 
-   Description:
-   Used by the CfgSentences Browser GUI. Called when filter is changed.
+    Description:
+    Used by the CfgSentences Browser GUI. Called when filter is changed.
 
-   Parameter(s):
-   0: CONTROL - Toolbox
-   1: NUMBER - Index
+    Parameter(s):
+    0: CONTROL - Toolbox
+    1: NUMBER - Index
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlFilter","_selectedIndex"];

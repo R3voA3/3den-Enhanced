@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Sorts the song list listbox according to input.
+    Description:
+    Sorts the song list listbox according to input.
 
-	Parameter(s):
-	STRING: _sortBy - "TITLE","DURATION","THEME"
+    Parameter(s):
+    STRING: _sortBy - "TITLE","DURATION","THEME"
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -18,18 +18,18 @@ private _ctrlSongList = (findDisplay 60000) displayCtrl 1500;
 
 switch _sortBy do
 {
-	case "TITLE":
-	{
-		_ctrlSongList lnbSort [0,false];
-	};
-	case "DURATION":
-	{
-		_ctrlSongList lnbSort [1,true];
-	};
-	case "THEME":
-	{
-		_ctrlSongList lnbSort [2,false];
-	};
+    case "TITLE":
+    {
+        _ctrlSongList lnbSort [0,false];
+    };
+    case "DURATION":
+    {
+        _ctrlSongList lnbSort [1,true];
+    };
+    case "THEME":
+    {
+        _ctrlSongList lnbSort [2,false];
+    };
 };
 
 true

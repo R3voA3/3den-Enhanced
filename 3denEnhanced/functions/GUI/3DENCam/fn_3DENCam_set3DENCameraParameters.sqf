@@ -1,17 +1,17 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2020-01-16
+    Date: 2020-01-16
 
-   Description:
-   Sets 3DEN camera parameters according to selected list Box entry.
+    Description:
+    Sets 3DEN camera parameters according to selected list Box entry.
 
-   Parameter(s):
-   0: CONTROL - List Box
-   1: NUMBER - Selected index
+    Parameter(s):
+    0: CONTROL - List Box
+    1: NUMBER - Selected index
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_ctrlLnB","_row"];

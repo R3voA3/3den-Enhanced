@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Saves the playlist, settings and closes the radio menu.
+    Description:
+    Saves the playlist, settings and closes the radio menu.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 params ["_display"];

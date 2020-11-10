@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-06-21
+    Date: 2019-06-21
 
-   Description:
-   Creates a template and adds it to the listbox.
+    Description:
+    Creates a template and adds it to the listbox.
 
-   Parameter(s):
-   0: CONTROL - Controlb button
+    Parameter(s):
+    0: CONTROL - Controlb button
 
-   Returns:
-   BOOLEAN: true / false
+    Returns:
+    BOOLEAN: true / false
 */
 
 #define CTRL(IDC) (_display displayCtrl IDC)

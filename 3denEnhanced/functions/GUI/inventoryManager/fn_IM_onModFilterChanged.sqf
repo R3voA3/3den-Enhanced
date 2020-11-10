@@ -1,3 +1,19 @@
+/*
+   Author: R3vo
+
+   Date: 2020-11-10
+
+   Description:
+   Handles the mod filter in the IM search.
+
+   Parameter(s):
+   0: CONTROL - Combo
+   1: NUMBER - Selected index
+
+   Returns:
+   -
+*/
+
 params ["_ctrlCombo","_selectedIndex"];
 
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";

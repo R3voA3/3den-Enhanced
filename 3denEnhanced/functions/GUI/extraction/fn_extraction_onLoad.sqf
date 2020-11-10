@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-09-06
+    Date: 2019-09-06
 
-   Description:
-   Used by the ENH_Extraction GUI. Is called when display is created.
+    Description:
+    Used by the ENH_Extraction GUI. Is called when display is created.
 
-   Parameter(s):
-   0: DISPLAY - ENH_Extraction GUI
+    Parameter(s):
+    0: DISPLAY - ENH_Extraction GUI
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 #define GET_CTRL(IDC) (_display displayCtrl IDC)
@@ -35,17 +35,17 @@ _ctrlConditionStart ctrlSetText "ENH_Extraction_Start";
 
 private _ctrlGrenadeType = GET_CTRL(500);
 {
-   if (_x isEqualTo "-") then
-   {
-      _ctrlGrenadeType lbAdd _x;
-   }
-   else
-   {
-      private _cfgMagazineClass = getText (configfile >> "CfgMagazines" >> _x >> "ammo");
-      private _displayName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-      _ctrlGrenadeType lbAdd _displayName;
-	   _ctrlGrenadeType lbSetData [_forEachIndex,_cfgMagazineClass];
-   };
+    if (_x isEqualTo "-") then
+    {
+        _ctrlGrenadeType lbAdd _x;
+    }
+    else
+    {
+        private _cfgMagazineClass = getText (configfile >> "CfgMagazines" >> _x >> "ammo");
+        private _displayName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+        _ctrlGrenadeType lbAdd _displayName;
+        _ctrlGrenadeType lbSetData [_forEachIndex,_cfgMagazineClass];
+    };
 } forEach ["-"] + CFG_MAGAZINES;
 
 _ctrlGrenadeType lbSetCurSel 0;

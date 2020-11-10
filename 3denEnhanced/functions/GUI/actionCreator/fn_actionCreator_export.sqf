@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Used by ENH_actionCreator GUI.
+    Description:
+    Used by ENH_actionCreator GUI.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -35,21 +35,21 @@ if (_condition isEqualTo "") then {_condition = "true"};
 
 profileNamespace setVariable ["ENH_ActionCreator_LastUsed",[_title,_script,_args,_priority,_window,_hide,_shortcuts,_condition,_r,_unconscious,_selection,_memory]];
 
-copyToClipboard format 
+copyToClipboard format
 [
-	"this addAction [""%1"",""%2"",%3,%4,%5,%6,""%7"",""%8"",%9,%10,""%11"",""%12""];",
-	_title,
-	_script,
-	_args,
-	_priority,
-	_window,
-	_hide,
-	_shortcuts,
-	_condition,
-	_r,
-	_unconscious,
-	_selection,
-	_memory
+    "this addAction [""%1"",""%2"",%3,%4,%5,%6,""%7"",""%8"",%9,%10,""%11"",""%12""];",
+    _title,
+    _script,
+    _args,
+    _priority,
+    _window,
+    _hide,
+    _shortcuts,
+    _condition,
+    _r,
+    _unconscious,
+    _selection,
+    _memory
 ];
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;

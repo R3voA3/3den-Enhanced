@@ -1,14 +1,14 @@
 /*
-	Author: Revo
+    Author: Revo
 
-	Description:
-	Enable or disables the radio and updates other controls accordingly.
+    Description:
+    Enable or disables the radio and updates other controls accordingly.
 
-	Parameter(s):
-	STRING: _input - "BUTTON", "ONLOAD"
+    Parameter(s):
+    STRING: _input - "BUTTON", "ONLOAD"
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 disableSerialization;
@@ -23,26 +23,26 @@ private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];
 
 _fnc_enableRadio =
 {
-	call ENH_fnc_3DENRadio_selectNewSong;
-	ENH_3DENRadio_MusicEH = addMusicEventHandler ["MusicStop",
-	{
-		call ENH_fnc_3DENRadio_selectNewSong;
-	}];
+    call ENH_fnc_3DENRadio_selectNewSong;
+    ENH_3DENRadio_MusicEH = addMusicEventHandler ["MusicStop",
+    {
+        call ENH_fnc_3DENRadio_selectNewSong;
+    }];
 
-	profileNamespace setVariable ["ENH_3DENRadio_Enabled",true];
-	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_pause.paa";
+    profileNamespace setVariable ["ENH_3DENRadio_Enabled",true];
+    _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_pause.paa";
 };
 
 _fnc_disableRadio =
 {
-	playMusic "";
-	if !(isNil "ENH_3DENRadio_MusicEH") then {removeMusicEventHandler["MusicStop",ENH_3DENRadio_MusicEH]; ENH_3DENRadio_MusicEH = nil};
+    playMusic "";
+    if !(isNil "ENH_3DENRadio_MusicEH") then {removeMusicEventHandler["MusicStop",ENH_3DENRadio_MusicEH]; ENH_3DENRadio_MusicEH = nil};
 
-	profileNamespace setVariable ["ENH_3DENRadio_Enabled",false];
-	profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",""];
+    profileNamespace setVariable ["ENH_3DENRadio_Enabled",false];
+    profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",""];
 
-	_ctrlCurrentSong ctrlSetText "";
-	_ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
+    _ctrlCurrentSong ctrlSetText "";
+    _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
 };
 
 if (_input isEqualTo "BUTTON" && _radioState) exitWith {call _fnc_disableRadio};

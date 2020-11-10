@@ -1,16 +1,16 @@
 /*
-   Author: R3vo
+    Author: R3vo
 
-   Date: 2019-08-26
+    Date: 2019-08-26
 
-   Description:
-   Logs unique classes of selected eden entities to clipboard. Class names are strings "className".
+    Description:
+    Logs unique classes of selected eden entities to clipboard. Class names are strings "className".
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 private _classes = [];
@@ -18,7 +18,7 @@ private _export = "";
 private _selection = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
 
 {
-	_classes pushBackUnique typeOf _x;
+    _classes pushBackUnique typeOf _x;
 } forEach _selection;
 
 private _export = [_classes,false] call ENH_fnc_exportWithLB;

@@ -1,13 +1,13 @@
 /*  Author: Revo
 
-   Description:
-   Retrieves the template information and fills the editor with its data.
+    Description:
+    Retrieves the template information and fills the editor with its data.
 
-   Parameter(s):
-   -
+    Parameter(s):
+    -
 
-   Returns:
-   BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 #define CTRL(IDC) _display displayCtrl IDC
