@@ -206,10 +206,10 @@ class CfgFunctions
       class firstPerson;
       class 3DENCollapseAssetBrowser;
       class hasStorage;
-      class exportAttributesToWiki;
-      class exportContextMenuToWiki;
-      class exportFunctionsToWiki;
-      class exportMenuStripToWiki;
+      class exportAttributesToGitHub;
+      class exportContextMenuToGitHub;
+      class exportFunctionsToGitHub;
+      class exportMenuStripToGitHub;
       class dynamicViewDistance;
     };
     class Log
