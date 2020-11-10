@@ -24,11 +24,12 @@
 #include "GUI\inventoryManager_templateData.hpp"
 #include "GUI\inventoryManager_itemPreview.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
+#include "GUI\rpt.hpp"
 
 //Overloaded and enhanced vanilla GUIs
 #include "GUI\display3DENPublishMIssionSelectImage.hpp"
 
-/* 
+/*
   Adds button to debug menu, credits to
   Author: Connor
   Steam:  https://steamcommunity.com/id/_connor
@@ -38,7 +39,7 @@
 class RscControlsGroupNoScrollbars;
 class RscDebugConsole: RscControlsGroupNoScrollbars
 {
-	class Controls
+  class Controls
   {
     class ENH_ButtonFunctions: ctrlButtonPictureKeepAspect
     {
