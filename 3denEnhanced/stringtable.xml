@@ -6316,4 +6316,8 @@
     <English>View distance and object view distance will be changed according to camera height. This option might cause performance on weak systems</English>
     <German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
   </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">
+    <English>Scripts</English>
+    <German>Skripte</German>
+  </Key>
 </Project>
