@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-01-16
+  Date: 2020-01-16
 
-    Description:
-    Saves current 3DEN camera parameters to profileNamespace.
+  Description:
+  Saves current 3DEN camera parameters to profileNamespace.
 
-    Parameter(s):
-    0: CONTROL - Control to get parent display
+  Parameter(s):
+  0: CONTROL - Control to get parent display
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrl"];
@@ -23,7 +23,7 @@ private _description = ctrlText (_display displayCtrl 2000);
 
 if (_description isEqualTo localize "STR_ENH_3DENCAM_DESCRIPTION" || _description isEqualTo "") then
 {
-    _description = format ["#%1",round random 9999];//We don't wanna save Description... every time
+  _description = format ["#%1",round random 9999];//We don't wanna save Description... every time
 };
 
 _cam3DENSavedPositions pushBack [worldName,getPos _cam3DEN,vectorDir _cam3DEN,vectorUp _cam3DEN,_description,systemTime];

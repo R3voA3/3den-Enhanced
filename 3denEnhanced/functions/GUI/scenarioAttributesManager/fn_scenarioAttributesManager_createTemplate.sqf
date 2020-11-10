@@ -1,17 +1,17 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-24
+  Date: 2019-05-24
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
-    Used to set the title and description of the template.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
+  Used to set the title and description of the template.
 
-    Parameter(s):
-    0: CONTROL - Control button
+  Parameter(s):
+  0: CONTROL - Control button
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrlButton"];
@@ -26,20 +26,20 @@ _display closeDisplay 1;
 
 [] spawn
 {
-    waitUntil {!(isNull findDisplay 160000)};
+  waitUntil {!(isNull findDisplay 160000)};
 
-    private _display = findDisplay 160000;
-    private _ctrlLB = _display displayCtrl 1501;
+  private _display = findDisplay 160000;
+  private _ctrlLB = _display displayCtrl 1501;
 
-    private _attributeValues = call ENH_fnc_scenarioAttributesManager_getScenarioAttributes;
+  private _attributeValues = call ENH_fnc_scenarioAttributesManager_getScenarioAttributes;
 
 
-    private _index = _ctrlLB lbAdd ENH_ScenarioAttributesManager_TemplateTitle;
-    _ctrlLB lbSetTooltip [_index,ENH_ScenarioAttributesManager_TemplateDescription];
+  private _index = _ctrlLB lbAdd ENH_ScenarioAttributesManager_TemplateTitle;
+  _ctrlLB lbSetTooltip [_index,ENH_ScenarioAttributesManager_TemplateDescription];
 
-    //Save Title, Description and actual scenario attributes
-    _ctrlLB lbSetData [_index,str [ENH_ScenarioAttributesManager_TemplateTitle,ENH_ScenarioAttributesManager_TemplateDescription,_attributeValues]];
-    lbSort [_ctrlLB,"DESC"];
+  //Save Title, Description and actual scenario attributes
+  _ctrlLB lbSetData [_index,str [ENH_ScenarioAttributesManager_TemplateTitle,ENH_ScenarioAttributesManager_TemplateDescription,_attributeValues]];
+  lbSort [_ctrlLB,"DESC"];
 };
 
 true

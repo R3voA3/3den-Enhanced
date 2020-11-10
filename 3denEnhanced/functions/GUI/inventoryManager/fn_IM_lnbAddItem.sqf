@@ -1,22 +1,22 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Adds an item to a listNbox.
+  Description:
+  Used by the ENH_InventoryManager GUI. Adds an item to a listNbox.
 
-    Parameter(s):
-    0: CONTROL - Control ListNbox
-    1: STRING - Item Data
-    2: STRING - Item Text
-    3: STRING - Image of the first column
-    4: STRING - Image of the forth column
-    5: NUMBER - Value set in the second column (Text of second column will be that value)
-    6: STRING - Tooltip
+  Parameter(s):
+  0: CONTROL - Control ListNbox
+  1: STRING - Item Data
+  2: STRING - Item Text
+  3: STRING - Image of the first column
+  4: STRING - Image of the forth column
+  5: NUMBER - Value set in the second column (Text of second column will be that value)
+  6: STRING - Tooltip
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrlLnb","_data","_text","_image","_addonIcon","_value","_tooltip"];

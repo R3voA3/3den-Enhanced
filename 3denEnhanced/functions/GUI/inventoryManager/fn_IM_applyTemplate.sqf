@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Applies the selected template.
+  Description:
+  Used by the ENH_InventoryManager GUI. Applies the selected template.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";

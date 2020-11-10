@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Deletes the selected template.
+  Description:
+  Used by the ENH_InventoryManager GUI. Deletes the selected template.
 
-    Parameter(s):
-    0: CONTROL - Control Button
+  Parameter(s):
+  0: CONTROL - Control Button
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrlButton"];

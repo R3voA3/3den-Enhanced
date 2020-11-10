@@ -1,15 +1,15 @@
 /*
-    Author: Revo
+  Author: Revo
 
-    Description:
-    Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
+  Description:
+  Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
 
-    Parameter(s):
-    0: CONTROL - Tree Control
-    1: ARRAY - Path
+  Parameter(s):
+  0: CONTROL - Tree Control
+  1: ARRAY - Path
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 disableSerialization;
@@ -38,12 +38,12 @@ _ctrlCode ctrlSetText loadFile _fncPath;
 
 if (_fncName select [0,3] in ["BIS","BIN"]) then
 {
-    _ctrlBiki ctrlEnable true;
-    //_ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
+  _ctrlBiki ctrlEnable true;
+  //_ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
 }
 else
 {
-    _ctrlBiki ctrlEnable false;
+  _ctrlBiki ctrlEnable false;
 };
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
@@ -52,7 +52,7 @@ private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
 {
-    _linesText = _linesText + format ["%1<br/>",_i];
+  _linesText = _linesText + format ["%1<br/>",_i];
 };
 
 //When new function is selected, change scroll width and height dynamically

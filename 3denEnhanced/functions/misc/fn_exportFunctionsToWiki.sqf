@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-10-15
+  Date: 2020-10-15
 
-    Description:
-    Exports all ENH and ENHO functions in markdown format for the Github 3den Enhanced wiki wiki to the clipboard.
+  Description:
+  Exports all ENH and ENHO functions in markdown format for the Github 3den Enhanced wiki wiki to the clipboard.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 startLoadingScreen ["start"];

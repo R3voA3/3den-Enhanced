@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-01-18
+  Date: 2020-01-18
 
-    Description:
-    Moves 3DEN camera to eye position of selected object.
+  Description:
+  Moves 3DEN camera to eye position of selected object.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["","_selectedEntity"];

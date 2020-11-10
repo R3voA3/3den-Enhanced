@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Takes items from inventory list and applies the attribute. Can also only return the attribute value.
+  Description:
+  Used by the ENH_InventoryManager GUI. Takes items from inventory list and applies the attribute. Can also only return the attribute value.
 
-    Parameter(s):
-    0: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
+  Parameter(s):
+  0: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params [["_return",false]];
@@ -31,47 +31,47 @@ private _backpacksAmount = [];
 
 for "_i" from 0 to _rows do
 {
-    private _configName = _ctrlInventory lnbData [_i - 1,0];
-    private _amount = parseNumber (_ctrlInventory lnbText [_i - 1,2]);
-    (_configName call BIS_fnc_itemType) params ["_category","_specificType"];
+  private _configName = _ctrlInventory lnbData [_i - 1,0];
+  private _amount = parseNumber (_ctrlInventory lnbText [_i - 1,2]);
+  (_configName call BIS_fnc_itemType) params ["_category","_specificType"];
 
-    switch (true) do
+  switch (true) do
+  {
+    case (_category isEqualTo "Weapon"):
     {
-        case (_category isEqualTo "Weapon"):
-        {
-            _weapons pushBack _configName;
-            _weaponsAmount pushBack _amount;
-        };
-        case (_category in ["Mine","Magazine"]):
-        {
-            _magazines pushBack _configName;
-            _magazinesAmount pushBack _amount;
-        };
-        case (_category in ["Item","Equipment"]):
-        {
-            if (_specificType isEqualTo "Backpack") then
-            {
-                _backpacks pushBack _configName;
-                _backpacksAmount pushBack _amount;
-            }
-            else
-            {
-                _items pushBack _configName;
-                _itemsAmount pushBack _amount;
-            };
-        };
+      _weapons pushBack _configName;
+      _weaponsAmount pushBack _amount;
     };
+    case (_category in ["Mine","Magazine"]):
+    {
+      _magazines pushBack _configName;
+      _magazinesAmount pushBack _amount;
+    };
+    case (_category in ["Item","Equipment"]):
+    {
+      if (_specificType isEqualTo "Backpack") then
+      {
+        _backpacks pushBack _configName;
+        _backpacksAmount pushBack _amount;
+      }
+      else
+      {
+        _items pushBack _configName;
+        _itemsAmount pushBack _amount;
+      };
+    };
+  };
 };
 
 private _value = str
 [
-    [
-        [_weapons,_weaponsAmount],
-        [_magazines,_magazinesAmount],
-        [_items,_itemsAmount],
-        [_backpacks,_backpacksAmount]
-    ],
-    cbChecked _ctrlIsVirtual
+  [
+    [_weapons,_weaponsAmount],
+    [_magazines,_magazinesAmount],
+    [_items,_itemsAmount],
+    [_backpacks,_backpacksAmount]
+  ],
+  cbChecked _ctrlIsVirtual
 ];
 
 if (_return) exitWith {_value};

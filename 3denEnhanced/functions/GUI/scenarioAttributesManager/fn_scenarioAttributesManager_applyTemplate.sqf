@@ -1,17 +1,17 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-25
+  Date: 2019-05-25
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager GUI.
-    Applies selected template to current mission.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager GUI.
+  Applies selected template to current mission.
 
-    Parameter(s):
-    0: CONTROL - Control button
+  Parameter(s):
+  0: CONTROL - Control button
 
-    Returns:
-    BOOLEAN: true / false
+  Returns:
+  BOOLEAN: true / false
 */
 
 params ["_ctrlButton"];
@@ -30,7 +30,7 @@ _data = _data # 2;
 
 collect3DENHistory
 {
-    set3DENMissionAttributes _data;
+  set3DENMissionAttributes _data;
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

@@ -1,14 +1,14 @@
 /*
-    Author: Revo
+  Author: Revo
 
-    Description:
-    Used by the ENH_FunctionViewer GUI. Called when the Copy button is pressed.
+  Description:
+  Used by the ENH_FunctionViewer GUI. Called when the Copy button is pressed.
 
-    Parameter(s):
-    0: CONTROL: Control - Button
+  Parameter(s):
+  0: CONTROL: Control - Button
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrlButton"];

@@ -1,17 +1,17 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-24
+  Date: 2019-05-24
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
-    Removes currently selected item from template listbox.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
+  Removes currently selected item from template listbox.
 
-    Parameter(s):
-    0: CONTROL - Control button
+  Parameter(s):
+  0: CONTROL - Control button
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 params ["_ctrlButton"];
 

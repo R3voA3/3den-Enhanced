@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-08-20
+  Date: 2019-08-20
 
-    Description:
-    Logs grid positions to clipboard.
+  Description:
+  Logs grid positions to clipboard.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 private _posArray = [];
@@ -19,15 +19,15 @@ private _selection = [["Object","Logic","Trigger","Marker","Waypoint"]] call ENH
 
 if (_selection isEqualTo []) then
 {
-    (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_pos3D"];
+  (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_pos3D"];
 
-    _posArray pushBack mapGridPosition _pos3D;
+  _posArray pushBack mapGridPosition _pos3D;
 }
 else
 {
-    {
-        _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
-    } forEach _selection;
+  {
+    _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
+  } forEach _selection;
 };
 
 private _export = [_posArray,false] call ENH_fnc_exportWithLB;

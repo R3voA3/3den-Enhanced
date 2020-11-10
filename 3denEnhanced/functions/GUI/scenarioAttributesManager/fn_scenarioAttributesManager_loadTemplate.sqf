@@ -1,18 +1,18 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-24
+  Date: 2019-05-24
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
-    Loads the data from currently selected item from template listbox and adds it to the tree view.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
+  Loads the data from currently selected item from template listbox and adds it to the tree view.
 
-    Parameter(s):
-    0: CONTROL - Control listbox
-    1: NUMBER - Index of selected item
+  Parameter(s):
+  0: CONTROL - Control listbox
+  1: NUMBER - Index of selected item
 
-    Returns:
-    BOOLEAN: true / false
+  Returns:
+  BOOLEAN: true / false
 */
 
 params ["_ctrlLB","_selectedItem"];
@@ -41,23 +41,23 @@ _ctrlTV tvAdd [[],"Custom Category"];
 
 //Put all attributes into their corresponding categories
 {
-    private _baseIndex = switch (_x # 0) do
-    {
-        case "Intel": {0};
-        case "Scenario": {1};
-        case "Multiplayer": {2};
-        case "GarbageCollection": {3};
-        case "Preferences": {4};
-        default {5};
-    };
-    //_x # 0 => Attribute Section
-    //_x # 1 => PropertyName
-    //_x # 2 => Attribute Value
-    //_x # 3 => Attribute Display Name
-    private _index = _ctrlTV tvAdd [[_baseIndex],format ["%1 (%2)",_x # 3,_x # 1]];
-    _ctrlTV tvSetData [[_baseIndex,_index],str _x];
-    _ctrlTV tvSetTooltip [[_baseIndex,_index],str (_x # 2)];
-    _ctrlTV tvSort [[_baseIndex],false];
+  private _baseIndex = switch (_x # 0) do
+  {
+    case "Intel": {0};
+    case "Scenario": {1};
+    case "Multiplayer": {2};
+    case "GarbageCollection": {3};
+    case "Preferences": {4};
+    default {5};
+  };
+  //_x # 0 => Attribute Section
+  //_x # 1 => PropertyName
+  //_x # 2 => Attribute Value
+  //_x # 3 => Attribute Display Name
+  private _index = _ctrlTV tvAdd [[_baseIndex],format ["%1 (%2)",_x # 3,_x # 1]];
+  _ctrlTV tvSetData [[_baseIndex,_index],str _x];
+  _ctrlTV tvSetTooltip [[_baseIndex,_index],str (_x # 2)];
+  _ctrlTV tvSort [[_baseIndex],false];
 } forEach _attributes;
 
 true

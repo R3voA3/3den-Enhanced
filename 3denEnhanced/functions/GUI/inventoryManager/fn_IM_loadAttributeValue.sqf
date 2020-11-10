@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Used to fill the inventory listbox with set attribute value.
+  Description:
+  Used by the ENH_InventoryManager GUI. Used to fill the inventory listbox with set attribute value.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
@@ -24,19 +24,19 @@ _inventory params ["_weapons","_magazines","_items","_backpacks"];
 
 private _fnc_addItems =
 {
-    params ["_configNamesArray","_amountsArray"];
+  params ["_configNamesArray","_amountsArray"];
+  {
+    private _amount = _amountsArray param [_forEachIndex,1];//If virtual inventory, then default to amount 1
+    private _currentClass = _x;
+    _x params ["_configName","_displayName","_image","_addonIcon"];
     {
-        private _amount = _amountsArray param [_forEachIndex,1];//If virtual inventory, then default to amount 1
-        private _currentClass = _x;
+      if (_x # 0 isEqualTo _currentClass) exitWith
+      {
         _x params ["_configName","_displayName","_image","_addonIcon"];
-        {
-            if (_x # 0 isEqualTo _currentClass) exitWith
-            {
-                _x params ["_configName","_displayName","_image","_addonIcon"];
-                ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"]) call ENH_fnc_IM_lnbAddItem;
-            };
-        } forEach (uiNamespace getVariable "ENH_IM_allItems");
-    } forEach _configNamesArray;
+        ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"]) call ENH_fnc_IM_lnbAddItem;
+      };
+    } forEach (uiNamespace getVariable "ENH_IM_allItems");
+  } forEach _configNamesArray;
 };
 lnbClear _ctrlInventory;
 

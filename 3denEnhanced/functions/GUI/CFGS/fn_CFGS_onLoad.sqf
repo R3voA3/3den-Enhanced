@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-10-20
+  Date: 2020-10-20
 
-    Description:
-    Used by the CfgSentences Browser GUI. Init.
+  Description:
+  Used by the CfgSentences Browser GUI. Init.
 
-    Parameter(s):
-    0: DISPLAY
+  Parameter(s):
+  0: DISPLAY
 
-    Returns:
-    BOOLEAN: True
+  Returns:
+  BOOLEAN: True
 */
 
 params ["_display"];

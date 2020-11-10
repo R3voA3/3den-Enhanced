@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-06-05
+  Date: 2019-06-05
 
-    Description:
-    Is called by Eden event handler onMissionLoad.
+  Description:
+  Is called by Eden event handler onMissionLoad.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    -
+  Returns:
+  -
 */
 
 //Enable 3den Radio
@@ -28,9 +28,9 @@ call ENH_fnc_initAmbientAnimationsInEditor;
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
 {
-    [] spawn
-    {
-        sleep 0.1;
-        ["collapseEntityList"] call bis_fnc_3DENInterface;
-    };
+  [] spawn
+  {
+    sleep 0.1;
+    ["collapseEntityList"] call bis_fnc_3DENInterface;
+  };
 };

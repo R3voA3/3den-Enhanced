@@ -1,17 +1,17 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-06-14
+  Date: 2020-06-14
 
-    Description:
-    Used by the ENH_InventoryManager GUI. Used to remove items from inventory listbox.
+  Description:
+  Used by the ENH_InventoryManager GUI. Used to remove items from inventory listbox.
 
-    Parameter(s):
-    0: CONTROL - Control Button
-    1: NUMBER - The amount that should be removed
+  Parameter(s):
+  0: CONTROL - Control Button
+  1: NUMBER - The amount that should be removed
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_amount"];
@@ -26,8 +26,8 @@ private _newAmount = _currentAmount - _amount;
 
 if (_newAmount <= 0) exitWith
 {
-    _ctrlInventory lnbDeleteRow _row;
-    true
+  _ctrlInventory lnbDeleteRow _row;
+  true
 };
 
 _ctrlInventory lnbSetText [[_row,2],str _newAmount];

@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2020-02-11
+  Date: 2020-02-11
 
-    Description:
-    Used by the ENH_VariableViewer GUI. Used to set or create variables in the selected namespace.
+  Description:
+  Used by the ENH_VariableViewer GUI. Used to set or create variables in the selected namespace.
 
-    Parameter(s):
-    0: CONTROL - Button control
+  Parameter(s):
+  0: CONTROL - Button control
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 params ["_ctrlButton"];
@@ -40,13 +40,13 @@ private _valueTypeNew = call compile _varValue;
 //If variable isn't new, only update selected row. Else create new row and re-sort
 if (_varName in allVariables _namespace) then
 {
-    _ctrlLNB lnbSetText [[lnbCurSelRow _ctrlLNB,1],_varValue];
-    _ctrlLNB lnbSetText [[lnbCurSelRow _ctrlLNB,2],_valueTypeNew];
+  _ctrlLNB lnbSetText [[lnbCurSelRow _ctrlLNB,1],_varValue];
+  _ctrlLNB lnbSetText [[lnbCurSelRow _ctrlLNB,2],_valueTypeNew];
 }
 else
 {
-    _ctrlLNB lnbAddRow [_varName,_varValue,_valueTypeNew];
-    _ctrlLNB lnbSort [0,false];
+  _ctrlLNB lnbAddRow [_varName,_varValue,_valueTypeNew];
+  _ctrlLNB lnbSort [0,false];
 };
 
 //Set variable or create new

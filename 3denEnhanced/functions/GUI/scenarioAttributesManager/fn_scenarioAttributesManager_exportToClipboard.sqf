@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-24
+  Date: 2019-05-24
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI. Exports attributes from selected template.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI. Exports attributes from selected template.
 
-    Parameter(s):
-    0: CONTROL - Control button
+  Parameter(s):
+  0: CONTROL - Control button
 
-    Returns:
-    ARRAY: Array with attribute values, if not templates was selected it returns an empty array
+  Returns:
+  ARRAY: Array with attribute values, if not templates was selected it returns an empty array
 */
 
 params ["_ctrlButton"];

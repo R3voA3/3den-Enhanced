@@ -1,14 +1,14 @@
 /*
-    Author: Revo
+  Author: Revo
 
-    Description:
-    Called when ENH_PlacementTools GUI is closed. Used for clean up.
+  Description:
+  Called when ENH_PlacementTools GUI is closed. Used for clean up.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 delete3DENEntities [ENH_PlacementTools_AreaTrigger,ENH_PlacementTools_GarrisonTrigger];

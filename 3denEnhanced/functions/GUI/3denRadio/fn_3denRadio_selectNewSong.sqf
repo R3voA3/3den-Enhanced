@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-30
+  Date: 2019-05-30
 
-    Description:
-    Used by ENH_3DENRadio GUI. Selects and plays a new song from playlist.
+  Description:
+  Used by ENH_3DENRadio GUI. Selects and plays a new song from playlist.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 private _ctrlCurrentSong = (findDisplay 60000) displayCtrl 2200;

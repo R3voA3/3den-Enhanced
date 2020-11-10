@@ -1,23 +1,23 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-08-20
+  Date: 2019-08-20
 
-    Description:
-    Logs faction class names of selected objects to clipboard.
+  Description:
+  Logs faction class names of selected objects to clipboard.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    BOOLEAN: true
+  Returns:
+  BOOLEAN: true
 */
 
 private _selection = get3DENSelected "object";
 private _factions = [];
 
 {
-    _factions pushBackUnique faction _x;
+  _factions pushBackUnique faction _x;
 } forEach _selection;
 
 private _export = [_factions,false] call ENH_fnc_exportWithLB;

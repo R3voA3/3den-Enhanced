@@ -1,16 +1,16 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-06-05
+  Date: 2019-06-05
 
-    Description:
-    Is called by Eden event handler onTerrainNew.
+  Description:
+  Is called by Eden event handler onTerrainNew.
 
-    Parameter(s):
-    -
+  Parameter(s):
+  -
 
-    Returns:
-    -
+  Returns:
+  -
 */
 
 //Reinitialize Eden interface to prevent issues when game directly starts inside the editor via startup parameter

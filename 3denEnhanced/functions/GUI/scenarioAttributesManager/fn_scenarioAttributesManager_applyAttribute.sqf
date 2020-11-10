@@ -1,17 +1,17 @@
 /*
-    Author: R3vo
+  Author: R3vo
 
-    Date: 2019-05-24
+  Date: 2019-05-24
 
-    Description:
-    Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
-    Applies attribute selected in tree view controls via button.
+  Description:
+  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
+  Applies attribute selected in tree view controls via button.
 
-    Parameter(s):
-    0: CONTROL - Button
+  Parameter(s):
+  0: CONTROL - Button
 
-    Returns:
-    BOOLEAN: true / false
+  Returns:
+  BOOLEAN: true / false
 */
 
 //params ["_ctrlTV", "_tvPath"];
