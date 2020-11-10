@@ -34,23 +34,23 @@ ENH_TextureFinder_ClassesFound = 0;
 ENH_TextureFinder_ClassesSearched = 0;
 
 //Scan configFile for all classes
-private _fnc_searchConfig = 
+private _fnc_searchConfig =
 {
-    params [["_depth", 1], ["_class", configFile]];
-     
+    params [["_depth", 1],["_class", configFile]];
+
     if (_depth <= 0) exitWith {[]};
     _depth = _depth - 1;
     private _array = [];
-  
-    {  
+
+    {
         _array pushBack _x;
         ENH_TextureFinder_ClassesFound = ENH_TextureFinder_ClassesFound + 1;
         _array append ([_depth, _x] call _fnc_searchConfig);
     } forEach ("true" configClasses _class);
-  
+
    _array
 };
-  
+
 private _classes = [13] call _fnc_searchConfig;
 
 //Check configProperties of every class for textures

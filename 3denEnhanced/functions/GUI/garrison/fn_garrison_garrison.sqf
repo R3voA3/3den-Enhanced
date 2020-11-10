@@ -71,7 +71,7 @@ collect3DENHistory
 		};
 		switch (_stance) do
 		{
-			case 0: 
+			case 0:
 			{
 				_x set3DENAttribute ["UnitPos",3];
 			};
@@ -84,7 +84,7 @@ collect3DENHistory
 				_x set3DENAttribute ["UnitPos",selectRandom [1,3]];
 			};
 		};
-		_x set3DENAttribute ["rotation", [0,0,random 360]];
+		_x set3DENAttribute ["rotation",[0,0,random 360]];
 	} forEach _selectedObjects;
 };
 

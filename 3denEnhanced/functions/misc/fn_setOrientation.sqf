@@ -39,13 +39,13 @@ collect3DENHistory
 		{
 			{
 				private _dir = random 360;
-				_x set3DENAttribute ["rotation", [0,0,_dir]];
+				_x set3DENAttribute ["rotation",[0,0,_dir]];
 			} forEach _entities;
 		};
 		default
 		{
 			{
-				_x set3DENAttribute ["rotation", [0,0,_input]];
+				_x set3DENAttribute ["rotation",[0,0,_input]];
 			} forEach _entities;
 		};
 	};

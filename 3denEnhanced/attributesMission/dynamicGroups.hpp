@@ -21,7 +21,7 @@ class ENH_DynamicGroups
 						{\
                             scriptName 'ENH_Attribute_DynamicGroups';\
 							waitUntil {!isNull player};\
-							['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;\
+							['InitializePlayer',[player]] call BIS_fnc_dynamicGroups;\
 						};\
 					};\
 				};\

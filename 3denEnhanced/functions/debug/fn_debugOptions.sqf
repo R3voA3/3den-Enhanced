@@ -132,7 +132,7 @@ if ENABLED("Invulnerability") then
 	{
 		_x allowDamage false;
 	} forEach units player;
-	 
+
 	(vehicle player) allowDamage false;
 };
 
@@ -374,7 +374,7 @@ if ENABLED("ShowWaypoints") then
 	private _color = "";
 
 	private _waypoints = [];
-	{	
+	{
 		_color = selectRandom _markerColors;
 		{
 			_x params ["_group","_wpIndex"];
@@ -384,7 +384,7 @@ if ENABLED("ShowWaypoints") then
 				format ["ENH_debugWaypoints_%1_%2",_group,_wpIndex],
 				waypointPosition _x
 			];
-			
+
 			_marker setMarkerColor _color;
 			_marker setMarkerShape "ICON";
 			_marker setMarkerType "mil_dot";
@@ -436,8 +436,8 @@ if ENABLED("DrawViewDirection") then
 				private _beg = ASLToAGL eyePos _x;
 				private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 3));
 				private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 3));
-				drawLine3D [ _beg,_endE, [0,1,0,1]];
-				drawLine3D [_beg,_endW, [1,0,0,1]];
+				drawLine3D [ _beg,_endE,[0,1,0,1]];
+				drawLine3D [_beg,_endW,[1,0,0,1]];
 				false;
 			} count (player nearEntities [["CAManBase"],RADIUS] select {!isPlayer _x});
 		}

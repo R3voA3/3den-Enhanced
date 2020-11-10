@@ -68,7 +68,7 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 	private _itemsCache = [];
 	private _addons = [];
 	private _blacklist = ["","Unknown","UnknownEquipment","UnknownWeapon","VehicleWeapon"];
-	
+
 	{
 		private _configName = configName _x;
 		(_configName call BIS_fnc_itemType) params ["_category","_specificType"];
@@ -83,20 +83,20 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 			private _dlc = "";
 			private _addons = configSourceAddonList _x;
 			if (count _addons > 0) then
-			{ 
+			{
 				private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons # 0);
 				if (count _mods > 0) then
-				{ 
+				{
 					_dlc = _mods # 0;
 				};
 			};
-			
+
 			private _addonName = "";
 			private _addonIcon = "";
 			if (_dlc != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
 			{
-				_addonName = modParams [_dlc, ["name"]] # 0;
-				_addonIcon = modParams [_dlc, ["logoSmall"]] # 0;
+				_addonName = modParams [_dlc,["name"]] # 0;
+				_addonIcon = modParams [_dlc,["logoSmall"]] # 0;
 				//Get all addons so they can be added to filter later
 				_addons pushBackUnique [_dlc,_addonName,_addonIcon];
 			};
