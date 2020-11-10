@@ -36,8 +36,8 @@ class ENH_FunctionsViewer
       columns = 3;
       strings[] = //Do not localize
       {
-           "configFile",
-           "missionConfig",
+        "configFile",
+        "missionConfig",
         "campaignConfig"
       };
       values[] = {0,1,2};
@@ -56,7 +56,7 @@ class ENH_FunctionsViewer
         $STR_ENH_FUNCTIONSVIEWER_FULL,
         $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
         $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS,
-        "Scripts",
+        $STR_ENH_FUNCTIONSVIEWER_SCRIPTS,
         ".hpp",
         ".inc"
       };
