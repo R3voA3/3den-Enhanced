@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/steam/subscriptions/623475643.svg?color=darkgreen&label=Steam%20Subscriptions&style=flat-square">
   </a>
   </a>
-    <a href="https://github.com/RevoArma3/3den-Enhanced/blob/master/changelog.md">
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/changelog/623475643">
     <img src="https://img.shields.io/badge/Changelog-Click-blueviolet.svg?style=flat-square">
   </a>
 </p>
