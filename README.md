@@ -39,3 +39,10 @@ Found a **bug** or have a **feature request**? Visit one of the following links.
 * [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/)
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
 * [GitHub](https://github.com/RevoArma3/3den-Enhanced/issue)
+
+# License
+<a rel="license" href="http://www.bistudio.com/licenses/arma-public-license-share-alike" target="_blank" >
+ <img src="http://www.bistudio.com/license-icons/small/APL-SA.png" >
+ <br>
+ This work is licensed under a Arma Public License Share Alike
+</a>
