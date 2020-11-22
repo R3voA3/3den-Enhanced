@@ -2918,18 +2918,18 @@
     <Chinesesimp>使选定单位的小组在一个区域内巡逻。这个值定义了最大值。两个巡逻点之间的距离。\n\n0的巡逻。</Chinesesimp>
     <Czech>Skupina vybrané jednotky začne hlídkovat v oblasti. Hodnota definuje max. vzdálenost mezi dvěma hlídkovými body. \n\n0 deaktivuje hlídku.</Czech>
     <Polish>Sprawia że zaznaczona grupa będzie patrolował teren. Wartości definiuje maksymalny dystans pomiędzy dwoma punktami nawigacyjnymi patrolu. \n\n0 deaktywuje patrol</Polish>
-    <Russian>Это заставит выбранную группу патрулировать область. Значения определяют максимальное расстояние между двумя патрульными точками навигации. \ n \ n0 отключает патруль</Russian>
+    <Russian>Это заставит выбранную группу патрулировать область. Значения определяют максимальное расстояние между двумя патрульными точками навигации. \n\n0 отключает патруль</Russian>
   </Key>
   <Key ID="STR_ENH_UPDATEPROGRESSBAR">
-    <English>Classes searched: #%1 of #%2 Textures found: #%3</English>
-    <Italian>Classi ricercate: #% 1 di #% 2 Trame trovate: #% 3</Italian>
-    <German>Klassen durchsucht: #%1 von #%2 Texturen gefunden: #%3</German>
-    <Chinesesimp>类别（class）搜索：#%1 of #%2 纹理找到：#%3</Chinesesimp>
-    <Spanish>Clases buscadas: #% 1 de #% 2 Texturas encontradas: #% 3</Spanish>
-    <Czech>Prohledané třídy: #% 1 z #% 2 Nalezených textur: #% 3</Czech>
-    <French>Classes analysées : #%1 sur #%2. Textures trouvées : #%3</French>
-    <Polish>Klasy znalezione: #%1 of #%2 Tekstury znalezione: #%3</Polish>
-    <Russian>Поиск классов: #% 1 из #% 2 Найдено текстур: #% 3</Russian>
+    <English>Classes searched: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt;Textures found: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</English>
+    <Italian>Classi ricercate: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; di &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Trame trovate: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Italian>
+    <German>Klassen durchsucht: &lt;t font='RobotoCondensedBold'&gt;Bold Text&lt;/t&gt;von &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Texturen gefunden: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</German>
+    <Chinesesimp>类别（class）搜索：&lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; 纹理找到：&lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Chinesesimp>
+    <Spanish>Clases buscadas: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; de &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Texturas encontradas: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Spanish>
+    <Czech>Prohledané třídy: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; z &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Nalezených textur: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Czech>
+    <French>Classes analysées : &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; sur &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Textures trouvées : &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</French>
+    <Polish>Klasy znalezione: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Tekstury znalezione: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Polish>
+    <Russian>Поиск классов: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; из &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Найдено текстур: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Russian>
   </Key>
   <Key ID="STR_ENH_MEASUREDISTANCE_DATA">
     <English>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</English>
@@ -3567,17 +3567,6 @@
     <Polish>Wszystkie zaznaczone obiekty bedą losowo zamienione przez typy obiektów które wpiszesz poniżej.</Polish>
     <Russian>Все выбранные объекты будут заменены типами объектов, которые вы вводите в поле редактирования ниже случайным образом.</Russian>
   </Key>
-  <Key ID="STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP">
-    <English>Press CTRL + F to directly jump into the search box.</English>
-    <Italian>Premi CTRL + F per andare direttamente alla casella di ricerca.</Italian>
-    <German>Drücke STRG + F um direkt in die Suche zu springen.</German>
-    <Chinesesimp>按CTRL + F直接跳转到搜索框。</Chinesesimp>
-    <Spanish>Presione CTRL + F para saltar directamente al cuadro de búsqueda.</Spanish>
-    <Czech>Stiskněte CTRL + F pro přejití do vyhledávacího pole.</Czech>
-    <French>Appuyez sur CTRL + F pour accéder directement au champ de recherche.</French>
-    <Polish>Nacisnij CTRL + F aby przejść do wyszukiwarki</Polish>
-    <Russian>Нажмите CTRL + F, чтобы сразу перейти в окно поиска.</Russian>
-  </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_HEADER">
     <English>3den Enhanced Functions Viewer</English>
     <Italian>Visualizzatore delle funzioni di 3den Enhanced</Italian>
@@ -3612,17 +3601,6 @@
     <French>Copier la fonction</French>
     <Polish>Skopiuj funkcje</Polish>
     <Russian>Функция копирования</Russian>
-  </Key>
-  <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP">
-    <English>Copies the function's code, path and name to the clipboard. Can also be triggered by pressing CTRL + X.</English>
-    <Italian>Copia il codice, il percorso e il nome della funzione negli Appunti. Può anche essere attivato premendo CTRL + X.</Italian>
-    <German>Kopiert den Funktionsnamen, Pfad und Code in die Zwischenablage. Kopieren kann auch durch das Drücken von STRG + X durchgeführt werden.</German>
-    <Chinesesimp>将函数的代码、路径和名称复制到剪贴板。也可以通过按下CTRL + X触发。</Chinesesimp>
-    <Spanish>Copia el código de la función, la ruta y el nombre en el portapapeles. También puede activarse presionando CTRL + X.</Spanish>
-    <Czech>Zkopíruje kód, cestu a název funkce do schránky. Může být také spuštěno stisknutím kláves CTRL + X.</Czech>
-    <French>Copie le code, le chemin et le nom de la fonction dans le presse-papiers. Peut également être déclenché en appuyant sur CTRL + X.</French>
-    <Polish>Kopiuje kod funkcji, ścieżke i nazwe do schowka. Może też być aktywowane przez CTRL + X.</Polish>
-    <Russian>Копирует код функции, путь и имя в буфер обмена. Также может быть вызвано нажатием CTRL + X.</Russian>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT">
     <English>Recompile All</English>
@@ -3810,17 +3788,6 @@
     <French>Texture Finder</French>
     <Polish>Wyszukiwarka tekstur</Polish>
     <Russian>Поисковая система текстур</Russian>
-  </Key>
-  <Key ID="STR_ENH_SEARCHSTATE_PLEASEWAIT">
-    <English>Still searching. Please wait.</English>
-    <Italian>Stiamo cercando. Attendere prego.</Italian>
-    <German>Suchen in Arbeit. Bitte warten.</German>
-    <Chinesesimp>仍在搜索中。 请稍候。</Chinesesimp>
-    <Spanish>Sigue buscando. Por favor espera.</Spanish>
-    <Czech>Stále hledám. Prosím, čekejte.</Czech>
-    <French>Recherche en cours. Veuillez patienter.</French>
-    <Polish>Ciągle szukam. Proszę czekać.</Polish>
-    <Russian>Я все еще ищу. Пожалуйста, подождите.</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DESCRIPTION">
     <English>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</English>
@@ -5859,13 +5826,6 @@
     <German>- Durch Doppelklicken auf einen Listeneintrag kann zu der Position gesprungen werden</German>
     <Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
     <French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
-  </Key>
-  <Key ID="STR_ENH_CONTEXTMENU_FIRSTPERSON">
-    <English>Move Camera to First Person View</English>
-    <German>Kamera in First Person View bewegen</German>
-    <Spanish>Mover cámara a vista de primera persona</Spanish>
-    <French>Déplacer la caméro en vue à la première personne</French>
-    <Polish>Zmień na widok pierwszoosobowy</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_CONTROLTYPES">
     <English>View Control Types</English>
