@@ -23,8 +23,7 @@ class Edit
 {
   items[] +=
   {
-    "ENH_DeleteCrew",
-    "ENH_FirstPerson"
+    "ENH_DeleteCrew"
   };
 };
 class ConnectParent
