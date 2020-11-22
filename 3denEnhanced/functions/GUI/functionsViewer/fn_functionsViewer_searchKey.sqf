@@ -23,19 +23,19 @@ private _ctrlIndices = (_display displayCtrl 2100);
 
 private _fnc_findStringsInString =
 {
-   params ["_text", "_key"];
+  params ["_text", "_key"];
   if (_text == "" || {_key == ""}) exitWith {[]};
-   private _searchLength = count _key;
-   private _return = [];
-   private _i = 0;
+  private _searchLength = count _key;
+  private _return = [];
+  private _i = 0;
   private _index = 0;
-   while {_index = _text find _key; _index != -1} do
+  while {_index = _text find _key; _index != -1} do
   {
-      _text = _text select [_index + _searchLength];
-      _i = _i + _index + _searchLength;
-      _return pushBackUnique _i - _searchLength;
-   };
-   _return
+    _text = _text select [_index + _searchLength];
+    _i = _i + _index + _searchLength;
+    _return pushBackUnique _i - _searchLength;
+  };
+  _return
 };
 
 private _indices = [_text,_key] call _fnc_findStringsInString;

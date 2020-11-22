@@ -28,23 +28,21 @@ private _linesText = "";
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
-_data params ["_fncName","_fncPath"];
+_data params ["_fileName","_filePath"];
 
-uiNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
+profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_filePath];
 
-_ctrlFncName ctrlSetText _fncName;
-_ctrlFncPath ctrlSetText _fncPath;
-_ctrlCode ctrlSetText loadFile _fncPath;
+_ctrlFncName ctrlSetText _fileName;
+_ctrlFncPath ctrlSetText _filePath;
 
-if (_fncName select [0,3] in ["BIS","BIN"]) then
+_ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
 {
-  _ctrlBiki ctrlEnable true;
-  //_ctrlBiki ctrlSetURL ("https://community.bistudio.com/wiki/" + _fncName);
-}
-else
-{
-  _ctrlBiki ctrlEnable false;
-};
+  case 0: {loadFile _filePath};
+  case 1: {preprocessFile _filePath};
+  case 2: {preprocessFileLineNumbers _filePath};
+});
+
+_ctrlBiki ctrlEnable (_fileName select [0,3] in ["BIS","BIN"]);
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
 private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line

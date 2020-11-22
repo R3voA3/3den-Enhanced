@@ -1,3 +1,6 @@
+#include "\3denEnhanced\defineCommon.hpp"
+#define SIDEBAR_W 70 * GRID_W
+
 class ENH_FunctionsViewer
 {
   idd = -1;
@@ -22,7 +25,7 @@ class ENH_FunctionsViewer
       y = safezoneY;
       w = safezoneW;
       h = 5 * GRID_H;
-      colorBackground[] = {COLOUR_USER_PRESET};
+      colorBackground[] = {COLOR_ACTIVE_RGBA};
       moving = false;
     };
     class FilterConfig: ctrlToolbox
@@ -30,7 +33,7 @@ class ENH_FunctionsViewer
       idc = 1700;
       x = safezoneX + GRID_W;
       y = safezoneY + 6 * GRID_H;
-      w = 70 * GRID_W;
+      w = SIDEBAR_W;
       h = 5 * GRID_H;
       rows = 1;
       columns = 3;
@@ -48,7 +51,7 @@ class ENH_FunctionsViewer
       idc = 1800;
       x = safezoneX + GRID_W;
       y = safezoneY + 12 * GRID_H;
-      h = 10 * GRID_H;
+      h = 11 * GRID_H;
       rows = 2;
       columns = 3;
       strings[] =
@@ -57,21 +60,49 @@ class ENH_FunctionsViewer
         $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
         $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS,
         $STR_ENH_FUNCTIONSVIEWER_SCRIPTS,
-        ".hpp",
-        ".inc"
+        ".inc",
+        ".hpp"
       };
       values[] = {0,1,2,3,4,5};
       onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
+    };
+    class LoadFileMode: ctrlCombo
+    {
+      idc = 2200;
+      x = safezoneX + GRID_W;
+      y = safezoneY + 24 * GRID_H;
+      w = SIDEBAR_W;
+      h = 5 * GRID_H;
+      class Items
+      {
+        class LoadFile
+        {
+          text = "loadFile";
+          default = 1;
+        };
+        class PreprocessFile
+        {
+          text = "preprocessFile";
+        };
+        class PreprocessFileLineNumbers
+        {
+          text = "preprocessFileLineNumbers";
+        };
+      };
+      onLBSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class List: ctrlTree
     {
       idc = 1500;
       idcSearch = 1400;
       x = safezoneX + GRID_W;
-      y = safezoneY + 23 * GRID_H;
-      w = 70 * GRID_W;
-      h = safezoneH - 30 * GRID_H;
+      y = safezoneY + 30 * GRID_H;
+      w = SIDEBAR_W;
+      h = safezoneH - 37 * GRID_H;
       onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
+      colorLines[] = {1,1,1,1};
+      borderSize = 0;
+      colorBorder[] = {0,0,0,0};
     };
     class NumFunctions: ctrlStatic
     {
@@ -81,12 +112,12 @@ class ENH_FunctionsViewer
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 10 * GRID_W;
       h = 5 * GRID_H;
-      colorBackground[] = {COLOUR_USER_PRESET};
+      colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Search: ctrlEdit
     {
       idc = 1400;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP;
+      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
       x = safezoneX + 12 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 44 * GRID_W;
@@ -95,7 +126,6 @@ class ENH_FunctionsViewer
     class SearchIcon: ctrlStaticPictureKeepAspect
     {
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_SEARCH_TOOLTIP;
       x = safezoneX + 56 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
@@ -116,6 +146,17 @@ class ENH_FunctionsViewer
       w = 5 * GRID_W;
       h = 5 * GRID_H;
       onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+    };
+    class TogglePanelLeft: ctrlButton
+    {
+      idc = 1406;
+      text = "«"
+      //tooltip = __EVAL(toUpper localize "STR_DIK_E");
+      x = safezoneX + 71 * GRID_W;
+      y = safezoneY + safezoneH - 6 * GRID_H;
+      w = 5 * GRID_W;
+      h = 5 * GRID_H;
+      onButtonClick  = "_this call ENH_fnc_functionsViewer_togglePanel";
     };
     class Name: ctrlEdit
     {
@@ -152,7 +193,7 @@ class ENH_FunctionsViewer
     {
       idc = 1602;
       text = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TOOLTIP;
+      tooltip = __EVAL(toUpper format ["%1+%2",localize "STR_DIK_CONTROL","X"]);
       x = safezoneX + safezoneW - 82 * GRID_W;
       y = safezoneY + 12 * GRID_H;
       w = 40 * GRID_W;
@@ -182,6 +223,7 @@ class ENH_FunctionsViewer
     class SearchCode: ctrlEdit
     {
       idc = 2000;
+      tooltip = __EVAL(toUpper format ["%1+%2+%3",localize "STR_DIK_CONTROL",localize "STR_VK_SHIFT","F"]);
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 40 * GRID_W;
@@ -213,43 +255,45 @@ class ENH_FunctionsViewer
     };
     class Preview: ctrlControlsGroup
     {
+      idc = 5000;
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 24 * GRID_H;
       w = safezoneW - 73 * GRID_W;
       h = safeZoneH - 31 * GRID_H;
       class Controls
       {
-                class Lines: ctrlStructuredText
-                {
-                    idc = 1404;
-                    canModify = false;
-                    x = 0;
-                    y = 0;
-                    w = 0.070;
-                    h = 2;
-                    font = "EtelkaMonospacePro";
-                    shadow = 0;
-                    colorBackground[] = {COLOR_OVERLAY_RGBA};
-                };
-                class Code: ctrlEditMulti
-                {
-                    idc = 1401;
-                    canModify = false;
-                    x = 0.075;
-                    w = 4;
-                    h = 2;
-                    font = "EtelkaMonospacePro";
-                    shadow = 0;
-                    style = ST_NO_RECT + ST_MULTI;
-                };
-            };
-        };
-        class Close: ctrlButtonClose
+        class Lines: ctrlStructuredText
         {
-            x = safezoneX + safezoneW - 41 * GRID_W;
-            y = safezoneY + safezoneH - 6 * GRID_H;
-            w = 40 * GRID_W;
-            h = 5 * GRID_H;
+          idc = 1404;
+          canModify = false;
+          x = 0;
+          y = 0;
+          w = 0.070;
+          h = 2;
+          font = "EtelkaMonospacePro";
+          shadow = 0;
+          colorBackground[] = {COLOR_OVERLAY_RGBA};
         };
+        class Code: ctrlEditMulti
+        {
+          idc = 1401;
+          canModify = false;
+          x = 0.075;
+          w = 4;
+          h = 2;
+          font = "EtelkaMonospacePro";
+          shadow = 0;
+          style = ST_NO_RECT + ST_MULTI;
+        };
+      };
     };
+    class Close: ctrlButtonClose
+    {
+      tooltip = __EVAL(toUpper localize "STR_DIK_ESCAPE");
+      x = safezoneX + safezoneW - 41 * GRID_W;
+      y = safezoneY + safezoneH - 6 * GRID_H;
+      w = 40 * GRID_W;
+      h = 5 * GRID_H;
+    };
+  };
 };

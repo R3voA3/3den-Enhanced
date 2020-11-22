@@ -17,19 +17,10 @@ params ["_display"];
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
-_display displayCtrl 1900 ctrlEnable false;
-
-//Disable recompile buttons if recompiling isn't allowed
-if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
-{
-  (_display displayCtrl 1600) ctrlEnable false;
-  (_display displayCtrl 1601) ctrlEnable false;
-};
-
 _display displayAddEventHandler ["keyDown",//Focus Search
 {
   params ["_display", "_key", "_shift", "_ctrl"];
-  if (_key isEqualTo 33 && _ctrl) then
+  if (_key isEqualTo 33 && _ctrl && !_shift) then
   {
     ctrlSetFocus (_display displayCtrl 1400);
   }
@@ -44,14 +35,21 @@ _display displayAddEventHandler ["keyDown",//Copy
   }
 }];
 
-//Set number of functions
-(_display displayCtrl 1405) ctrlSetText str count ENH_FunctionsData;
+_display displayAddEventHandler ["keyDown",//Focus Search Key
+{
+  params ["_display", "_key", "_shift", "_ctrl"];
+  if (_key isEqualTo 33 && _ctrl && _shift) then
+  {
+    ctrlSetFocus (_display displayCtrl 2000);
+  }
+}];
 
 //Set filters to last used or default value
 (_display displayCtrl 1700) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
 (_display displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
+(_display displayCtrl 2200) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex",0]);
 
 //Set up tree view
-( _display displayCtrl 1500) call ENH_fnc_FunctionsViewer_fillCtrlTV;
+(_display displayCtrl 1500) call ENH_fnc_FunctionsViewer_fillCtrlTV;
 
 true
