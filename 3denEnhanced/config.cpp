@@ -1,4 +1,5 @@
-#include "defines.hpp"
+#include "defineCommon.hpp"
+#include "defineCtrls.hpp"
 #include "cfgPatches.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
@@ -26,37 +27,21 @@
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\rpt.hpp"
 
-//Overloaded and enhanced vanilla GUIs
-#include "GUI\display3DENPublishMIssionSelectImage.hpp"
-
-/*
-  Adds button to debug menu, credits to
-  Author: Connor
-  Steam:  https://steamcommunity.com/id/_connor
-  Github: https://github.com/ConnorAU
-*/
-
 class RscControlsGroupNoScrollbars;
 class RscDebugConsole: RscControlsGroupNoScrollbars
 {
   class Controls
   {
-    class ENH_ButtonFunctions: ctrlButtonPictureKeepAspect
+    class ButtonSpectatorCamera;
+    class ButtonFunctions: ButtonSpectatorCamera
     {
-      idc=0; // idc 0 to exclude from repositioning in CBA extended debug
-      deletable=0;
-      text="\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
-      tooltip="3den Enhanced Functions Viewer";
-      colorBackground[]={0,0,0,0};
-      colorBackgroundActive[]={0,0,0,0};
-      colorFocused[]={0,0,0,0};
-      colorBackgroundDisabled[]={0,0,0,0};
-      onButtonClick="ctrlParent (_this # 0) createDisplay 'ENH_FunctionsViewer'";
-      // get from title ctrl incase some mod moves it
-      x="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'w') - (4.1 * (((safezoneW / safezoneH) min 1.2) / 40))";
-      y="getNumber(configFile >> 'RscDebugConsole' >> 'controls' >> 'Title' >> 'y')";
-      w="1 * (((safezoneW / safezoneH) min 1.2) / 40)";
-      h="1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+      idc = -1;
+      //Dynamically reposition it if Connor's functions viewer is available as well.
+      onLoad = "_this # 0 ctrlSetText ('ENH_' + localize 'STR_A3_RSCDEBUGCONSOLE_BUTTONFUNCTIONS'); if (isClass (configFile >> 'RscDisplayDebugPublic' >> 'Controls' >> 'DebugConsole' >> 'controls' >> 'CAU_xFuncViewer')) then {_this # 0 ctrlSetPosition [7.5 * (((safezoneW / safezoneH) min 1.2) / 40),21.6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)]; _this # 0 ctrlCommit 0;}";
+      x = 7.5 * GUI_GRID_W;
+      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_FunctionsViewer'";
     };
   };
 };
+
+#include "RscTestControlXXX.hpp"
