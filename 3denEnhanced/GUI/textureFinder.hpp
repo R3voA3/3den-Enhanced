@@ -30,7 +30,7 @@ class ENH_TextureFinder
     };
     class TextureList: ctrlTree
     {
-      idc = 1500;
+      idc = IDC_TEXTUREFINDER_TEXTURELIST;
       idcSearch = 1600;
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
@@ -42,7 +42,7 @@ class ENH_TextureFinder
     };
     class Progress: ctrlProgress
     {
-      idc = 1800;
+      idc = IDC_TEXTUREFINDER_PROGRESS;
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 52 * GRID_H;
       w = (DIALOG_W) * GRID_W;
@@ -51,7 +51,7 @@ class ENH_TextureFinder
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
-      idc = 1200;
+      idc = IDC_TEXTUREFINDER_PREVIEW;
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 58 * GRID_H;
@@ -61,7 +61,7 @@ class ENH_TextureFinder
     };
     class ProgessText: ctrlStructuredText
     {
-      idc = 1002;
+      idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
       style = ST_LEFT;
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 99 * GRID_H;
@@ -70,7 +70,7 @@ class ENH_TextureFinder
     };
     class Search: ctrlEdit
     {
-      idc = 1600;
+      idc = IDC_TEXTUREFINDER_SEARCH;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 109 * GRID_H;
       w = 30 * GRID_W;
