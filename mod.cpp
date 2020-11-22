@@ -1,8 +1,8 @@
 name = "3den Enhanced";
 author = "R3vo";
-picture = "\3denEnhanced\data\logo.paa";
+picture = "\3denEnhanced\data\picture.paa";
 logo = "\3denEnhanced\data\logo.paa";
-logoOver = "\3denEnhanced\data\logo.paa";
+logoOver = "\3denEnhanced\data\logoOver.paa";
 logoSmall = "\3denEnhanced\data\logoSmall.paa";
 actionName = "Workshop";
 action = "http://steamcommunity.com/sharedfiles/filedetails/?id=623475643";
