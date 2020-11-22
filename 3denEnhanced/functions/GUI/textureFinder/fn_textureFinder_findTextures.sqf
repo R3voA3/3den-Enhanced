@@ -8,27 +8,21 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
 //Only add things which end with eighter jpg or paa
 #define IS_JPG (".jpg" in (_string select [count _string - 4]))
 #define IS_PAA (".paa" in (_string select [count _string - 4]))
 
-//Update progress bar (Should only run if searching is in progress, but also runs if searching was finished, optimize?)
-[] spawn ENH_fnc_textureFinder_updateProgressbar;
+//Update progress text
+[] spawn ENH_fnc_textureFinder_progressText;
 
-if !(isNil "ENH_TextureFinder_TexturesFound") exitWith {false};
+//Exit if search is running or search was already done and data was stored in uiNamespace
+if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo []) exitWith {[] spawn ENH_fnc_textureFinder_fillList};
+if (!isNil "ENH_TextureFinder_SearchRunning") exitWith {};
 
-//Check if search is already running
-if !(isNil "ENH_FindTexture_SearchRunning") exitWith {[localize "STR_ENH_searchState_pleaseWait",1] call BIS_fnc_3DENNotification; false};
-
-disableSerialization;
-
-_display = findDisplay 140000;
-_ctrlProg = _display displayCtrl 1001;
-_ctrlProgText = _display displayCtrl 1002;
-
+ENH_TextureFinder_SearchRunning = true;
 ENH_TextureFinder_TexturesFound = [];
 ENH_TextureFinder_ClassesFound = 0;
 ENH_TextureFinder_ClassesSearched = 0;
@@ -36,9 +30,9 @@ ENH_TextureFinder_ClassesSearched = 0;
 //Scan configFile for all classes
 private _fnc_searchConfig =
 {
-   params [["_depth", 1],["_class", configFile]];
+   params [["_depth", 1],["_class",configFile]];
 
-   if (_depth <= 0) exitWith {[]};
+   if (_depth == 0) exitWith {[]};
    _depth = _depth - 1;
    private _array = [];
 
@@ -51,8 +45,6 @@ private _fnc_searchConfig =
   _array
 };
 
-private _classes = [13] call _fnc_searchConfig;
-
 //Check configProperties of every class for textures
 private _addPath =
 {
@@ -63,6 +55,7 @@ private _addPath =
     ENH_TextureFinder_TexturesFound pushBackUnique toLower _string;
   };
 };
+
 private _searchArray =
 {
   if (_x isEqualType "") then {_x call _addPath} else
@@ -81,8 +74,15 @@ private _searchArray =
       _searchArray forEach getArray _x;
     };
   } forEach configProperties [_x, "isText _x || isArray _x",false];
-} forEach _classes;
+} forEach ([13] call _fnc_searchConfig);
 
-ENH_FindTexture_SearchRunning = nil;
+uiNamespace setVariable ["ENH_TextureFinder_TexturesFound",ENH_TextureFinder_TexturesFound];
+uiNamespace setVariable ["ENH_TextureFinder_ClassesFound",ENH_TextureFinder_ClassesFound];
+uiNamespace setVariable ["ENH_TextureFinder_ClassesSearched",ENH_TextureFinder_ClassesSearched];
 
-true
+ENH_TextureFinder_SearchRunning = nil;
+ENH_TextureFinder_TexturesFound = nil;
+ENH_TextureFinder_ClassesFound = nil;
+ENH_TextureFinder_ClassesSearched = nil;
+
+[] spawn ENH_fnc_textureFinder_fillList;

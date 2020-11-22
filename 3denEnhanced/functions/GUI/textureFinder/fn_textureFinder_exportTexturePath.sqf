@@ -8,7 +8,7 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
 params ["_ctrlLB","_key","","_ctrl"];
@@ -20,5 +20,3 @@ if (_key isEqualTo 46 && _ctrl) then
   copyToClipboard str _path;
   ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
-
-true
