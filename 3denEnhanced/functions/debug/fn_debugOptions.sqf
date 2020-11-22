@@ -11,7 +11,7 @@
   -
 */
 
-#define ENABLED(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
+#define GETVALUE(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 
@@ -21,7 +21,7 @@ if (!is3DENPreview || isMultiplayer) exitWith {};
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 sleep 0.5;
 
-if ENABLED("Arsenal") then
+if GETVALUE("Arsenal") then
 {
   [
     player,
@@ -42,7 +42,7 @@ if ENABLED("Arsenal") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("Garage") then
+if GETVALUE("Garage") then
 {
   [
     player,
@@ -67,7 +67,7 @@ if ENABLED("Garage") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("ShowUnits") then
+if GETVALUE("ShowUnits") then
 {
   [] spawn
   {
@@ -101,12 +101,12 @@ if ENABLED("ShowUnits") then
   };
 };
 
-if ENABLED("BulletTracking") then
+if GETVALUE("BulletTracking") then
 {
   [player] spawn BIS_fnc_traceBullets;
 };
 
-if ENABLED("Zeus") then
+if GETVALUE("Zeus") then
 {
   [] spawn
   {
@@ -127,7 +127,7 @@ if ENABLED("Zeus") then
   };
 };
 
-if ENABLED("Invulnerability") then
+if GETVALUE("Invulnerability") then
 {
   {
     _x allowDamage false;
@@ -136,21 +136,21 @@ if ENABLED("Invulnerability") then
   (vehicle player) allowDamage false;
 };
 
-if ENABLED("Captive") then
+if GETVALUE("Captive") then
 {
   {
     _x setCaptive true;
   } forEach units player;
 };
 
-if ENABLED("Stamina") then
+if GETVALUE("Stamina") then
 {
   {
     _x enableStamina false;
   } forEach units player;
 };
 
-if ENABLED("FPS") then
+if GETVALUE("FPS") then
 {
   [] spawn
   {
@@ -185,7 +185,7 @@ if ENABLED("FPS") then
   };
 };
 
-if ENABLED("KillBLUFOR") then
+if GETVALUE("KillBLUFOR") then
 {
   [
     player,
@@ -212,7 +212,7 @@ if ENABLED("KillBLUFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("KillOPFOR") then
+if GETVALUE("KillOPFOR") then
 {
   [
     player,
@@ -239,7 +239,7 @@ if ENABLED("KillOPFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("KILLINDFOR") then
+if GETVALUE("KILLINDFOR") then
 {
   [
     player,
@@ -266,7 +266,7 @@ if ENABLED("KILLINDFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("KillCIVFOR") then
+if GETVALUE("KillCIVFOR") then
 {
   [
     player,
@@ -293,7 +293,7 @@ if ENABLED("KillCIVFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("KillCurser") then
+if GETVALUE("KillCurser") then
 {
   [
     player,
@@ -314,7 +314,7 @@ if ENABLED("KillCurser") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("DrawIcons") then
+if GETVALUE("DrawIcons") then
 {
   ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
   ["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
@@ -347,7 +347,7 @@ if ENABLED("DrawIcons") then
   ] call BIS_fnc_addStackedEventHandler;
 };
 
-if ENABLED("DeleteCorpse") then
+if GETVALUE("DeleteCorpse") then
 {
   [
   player,
@@ -368,7 +368,7 @@ if ENABLED("DeleteCorpse") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("ShowWaypoints") then
+if GETVALUE("ShowWaypoints") then
 {
   _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
   private _color = "";
@@ -400,17 +400,17 @@ if ENABLED("ShowWaypoints") then
   } forEach allGroups;
 };
 
-if ENABLED("NoRecoil") then
+if GETVALUE("NoRecoil") then
 {
   player setUnitRecoilCoefficient 0;
 };
 
-if ENABLED("NoSway") then
+if GETVALUE("NoSway") then
 {
   player setCustomAimCoef 0;
 };
 
-if ENABLED("NoReload") then
+if GETVALUE("NoReload") then
 {
   player addEventHandler ["FiredMan",
   {
@@ -428,7 +428,7 @@ if ENABLED("NoReload") then
   }];
 };
 
-if ENABLED("DrawViewDirection") then
+if GETVALUE("DrawViewDirection") then
 {
   ["ENH_EH_DrawViewDirection_ID", "onEachFrame",
     {
@@ -444,7 +444,7 @@ if ENABLED("DrawViewDirection") then
   ] call BIS_fnc_addStackedEventHandler;
 };
 
-if ENABLED("Teleport") then
+if GETVALUE("Teleport") then
 {
   [
     player,
@@ -465,7 +465,7 @@ if ENABLED("Teleport") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("SkipTime") then
+if GETVALUE("SkipTime") then
 {
   [
     player,
@@ -489,7 +489,7 @@ if ENABLED("SkipTime") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("TimeMultiplier") then
+if GETVALUE("TimeMultiplier") then
 {
   [
     player,
@@ -514,7 +514,7 @@ if ENABLED("TimeMultiplier") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("VariableViewer") then
+if GETVALUE("VariableViewer") then
 {
   [
     player,
@@ -535,7 +535,7 @@ if ENABLED("VariableViewer") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ENABLED("ActiveScripts") then
+if GETVALUE("ActiveScripts") then
 {
   [
     player,
@@ -554,4 +554,45 @@ if ENABLED("ActiveScripts") then
     false,
     false
   ] call BIS_fnc_holdActionAdd;
+};
+
+if (GETVALUE("DebugPath") > 0) then
+{
+  {
+    private _target = leader _x;
+    if (expectedDestination _target # 1 != "DoNotPlan" && alive _target) then
+    {
+      _target spawn
+      {
+        scriptName 'ENH_Attribute_DebugPath';
+        private _arrow = objNull;
+        private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)',random(1),random(1),random(1)];
+        private _path = [];
+        private _marker = createMarker [format ['ENH_DebugPath_%1',str _this],_this];
+        _marker setMarkerShape "polyline";
+        _marker setMarkerColor configName selectRandom ("true" configClasses (configFile >> "CfgMarkerColors"));
+
+        private _posOld = getPos _this;
+
+        while {alive _this} do
+        {
+          if ((_this distance _posOld) > 20) then
+          {
+            if (GETVALUE("DebugPath") > 1) then
+            {
+              _arrow = createVehicle ['Sign_Arrow_Direction_Blue_F',position _this,[],0,'CAN_COLLIDE'];
+              _arrow setObjectTexture [0,_arrowColour];
+              sleep 0.1;
+              _arrow setDir (_arrow getDir _this);
+            };
+          _path append [getPos _this # 0, getPos _this # 1];
+          _posOld = getPos _this;
+          if (count _path > 3) then {_marker setMarkerPolyline _path};
+          if (count _path == 500) then {_path deleteRange [0,2]};
+          sleep 0.1;
+          };
+        };
+      };
+    };
+  } forEach allGroups;
 };

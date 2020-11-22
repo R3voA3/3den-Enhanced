@@ -134,6 +134,32 @@ class ENH_DebugOptions
     {
       description = $STR_A3_ENDGAME_DEBRIEFING_DRAW;
     };
+    class ENH_DebugOptions_DebugPath: ENH_DebugOptions_Arsenal
+    {
+      displayName = "Debug Path";
+      tooltip = "Path of all group leaders (including vehicles) is drawn on the map and and displayed by 3D-objects in the scene.";
+      property = "ENH_DebugOptions_DebugPath";
+      control = "Combo";
+      typeName = "NUMBER";
+      class Values
+      {
+        class Disabled
+        {
+          name = $STR_DISABLED;
+          value = 0;
+        };
+        class 2D
+        {
+          name = "2D";
+          value = 1;
+        };
+        class 2Dand3D
+        {
+          name = "2D + 3D";
+          value = 2;
+        };
+      };
+    };
     class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
     {
       displayName = $STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME;
