@@ -3,6 +3,17 @@ class CfgFunctions
   class 3denEnhanced
   {
     tag = "ENH";
+    #ifdef DEBUG
+    class ENH_Internal
+    {
+      file = "3denEnhanced\functions\internal";
+      class checkShortCutsDuplicates;
+      class exportAttributesToGitHub;
+      class exportContextMenuToGitHub;
+      class exportFunctionsToGitHub;
+      class exportMenuStripToGitHub;
+    };
+    #endif
     class 3DENRadio
     {
       file = "3denEnhanced\functions\GUI\3DENRadio";
@@ -32,12 +43,10 @@ class CfgFunctions
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
-      class textureFinder_updateProgressbar;
+      class textureFinder_progressText;
       class textureFinder_findTextures;
       class textureFinder_exportTexturePath;
-      class textureFinder_fillTextureLB;
-      class textureFinder_search;
-      class textureFinder_showTexture;
+      class textureFinder_fillList;
     };
     class BatchReplace
     {
@@ -56,6 +65,7 @@ class CfgFunctions
       class functionsViewer_fillCtrlTV;
       class functionsViewer_incrementKey;
       class functionsViewer_searchkey;
+      class functionsViewer_togglePanel;
     };
     class ActionCreator
     {
@@ -203,14 +213,10 @@ class CfgFunctions
       class toggleAttribute;
       class toggleAIFeatures;
       class floatToTime;
-      class firstPerson;
       class 3DENCollapseAssetBrowser;
       class hasStorage;
-      class exportAttributesToGitHub;
-      class exportContextMenuToGitHub;
-      class exportFunctionsToGitHub;
-      class exportMenuStripToGitHub;
       class dynamicViewDistance;
+      class addCustomMenuStripEntries;
     };
     class Log
     {
@@ -229,7 +235,6 @@ class CfgFunctions
       class productInfo;
       class toggleMapIDs;
       class debugOptions;
-      class checkShortCutsDuplicates;
       class activeScripts;
     };
     class EventHandlers
@@ -247,38 +252,28 @@ class CfgFunctions
       file = "3denEnhanced\functions\attributeControls";
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
-      class groupMarker_onButtonDown;
       class ambientAnimations_onAttributeLoad;
       class ambientAnimations_onAttributeSave;
-      class ambientAnimations_onButtonDown;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
-      class establishingShot_onButtonDown;
       class holdAction_onAttributeLoad;
       class holdAction_onAttributeSave;
-      class holdAction_onButtonDown;
       class introText_onAttributeLoad;
       class introText_onAttributeSave;
-      class introText_onButtonDown;
       class timeMultiplier_onAttributeLoad;
       class timeMultiplier_onAttributeSave;
       class airdrop_onAttributeLoad;
       class airdrop_onAttributeSave;
-      class airdrop_onButtonDown;
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
-      class ambientFlyby_onButtonDown;
       class dynamicSkill_onAttributeLoad;
       class dynamicSkill_onAttributeSave;
-      class dynamicSkill_onButtonDown;
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
-      class missionEndingCasualties_onButtonDown;
       class SPR_onAttributeLoad;
       class SPR_onAttributeSave;
-      class SPR_onButtonDown;
       class initDebriefingCombo;
     };
   };
