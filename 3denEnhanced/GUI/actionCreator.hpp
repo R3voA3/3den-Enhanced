@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 110
 #define DIALOG_H 82
 
 class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
 {
-  idd = ENH_IDD_ACTIONCREATOR;
+  idd = IDD_ACTIONCREATOR;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_actionCreator_onLoad";
   class ControlsBackground
@@ -35,7 +36,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
       y = DIALOG_TOP;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      colorBackground[] = {COLOUR_USER_PRESET};
+      colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Title: ctrlStatic
     {
@@ -47,7 +48,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class TitleValue: ctrlEdit
     {
-      idc = 1408;
+      idc = IDC_ACTIONCREATOR_TITLE;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 85 * GRID_W;
@@ -63,7 +64,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class ScriptValue: ctrlEditMulti
     {
-      idc = 1400;
+      idc = IDC_ACTIONCREATOR_SCRIPT;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 85 * GRID_W;
@@ -79,7 +80,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class ArgumentsValue: ctrlEdit
     {
-      idc = 1401;
+      idc = IDC_ACTIONCREATOR_ARGUMENTS;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 33 * GRID_H;
       w = 85 * GRID_W;
@@ -95,7 +96,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class PriorityValue: ctrlEdit
     {
-      idc = 1402;
+      idc = IDC_ACTIONCREATOR_PRIORITY;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 39 * GRID_H;
       w = 85 * GRID_W;
@@ -111,7 +112,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class ShortcutValue: ctrlEdit
     {
-      idc = 1405;
+      idc = IDC_ACTIONCREATOR_SHORTCUT;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 45 * GRID_H;
       w = 85 * GRID_W;
@@ -127,7 +128,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class ConditionValue: ctrlEdit
     {
-      idc = 1403;
+      idc = IDC_ACTIONCREATOR_CONDITION;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 51 * GRID_H;
       w = 85 * GRID_W;
@@ -143,7 +144,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class RadiusValue: ctrlEdit
     {
-      idc = 1404;
+      idc = IDC_ACTIONCREATOR_RADIUS;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 57 * GRID_H;
       w = 85 * GRID_W;
@@ -159,7 +160,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class SelectionValue: ctrlEdit
     {
-      idc = 1406;
+      idc = IDC_ACTIONCREATOR_SELECTION;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 63 * GRID_H;
       w = 85 * GRID_W;
@@ -175,7 +176,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class MemoryPointValue: ctrlEdit
     {
-      idc = 1407;
+      idc = IDC_ACTIONCREATOR_MEMORYPOINT;
       x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 69 * GRID_H;
       w = 85 * GRID_W;
@@ -183,7 +184,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class Toolbox: ctrlToolbox
     {
-      idc = 1000;
+      idc = IDC_ACTIONCREATOR_TOOLBOX;
       type = 7;
       style = 2;
 
@@ -207,7 +208,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     };
     class Ok: ctrlButtonOK
     {
-      idc = -1;//We don't want it to close the GUI
+      idc = IDC_ACTIONCREATOR_OK;//We don't want it to close the GUI
       action = "call ENH_fnc_actionCreator_export";
       x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
       y = DIALOG_TOP + 81 * GRID_H;
@@ -253,7 +254,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
       y = 0.136 * safezoneH + safezoneY;
       w = 0.0196875 * safezoneW;
       h = 0.028 * safezoneH;
-      colorBackground[] = {COLOUR_USER_PRESET};
+      colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Title: ctrlStatic
     {

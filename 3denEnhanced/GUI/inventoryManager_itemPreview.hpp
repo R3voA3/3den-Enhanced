@@ -1,6 +1,8 @@
+#include "\3denEnhanced\defineCommon.hpp"
+
 class ENH_InventoryManager_ItemPreview
 {
-  idd = -1;
+  idd = IDD_INVENTORYMANAGER_ITEMPREVIEW;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -16,7 +18,7 @@ class ENH_InventoryManager_ItemPreview
   {
     class Header: ctrlStaticTitle
     {
-      idc = 1000;
+      idc = IDC_INVENTORYMANAGER_ITEMPREVIEW_HEADER;
       x = CENTERED_X(60);
       y = DIALOG_TOP + 50 * GRID_H;
       w = 60 * GRID_W;
@@ -24,7 +26,7 @@ class ENH_InventoryManager_ItemPreview
     };
     class Image: ctrlStaticPictureKeepAspect
     {
-      idc = 1100;
+      idc = IDC_INVENTORYMANAGER_ITEMPREVIEW_IMAGE;
       x = CENTERED_X(60);
       y = DIALOG_TOP + 50 * GRID_H + CTRL_DEFAULT_H;
       w = 60 * GRID_W;

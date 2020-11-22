@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 70
 #define DIALOG_H 30
 
 class ENH_NameObjects
 {
-  idd = ENH_IDD_NAMEOBJECTS;
+  idd = IDD_NAMEOBJECTS;
   onLoad = "_this call ENH_fnc_nameObjects_onLoad";
   movingEnable = true;
   class ControlsBackground
@@ -37,7 +38,7 @@ class ENH_NameObjects
     };
     class VariableNameValue: ctrlEdit
     {
-      idc = 1000;
+      idc = IDC_NAMEOBJECTS_VARIABLENAME;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -53,7 +54,7 @@ class ENH_NameObjects
     };
     class IndexStartValue: ctrlEdit
     {
-      idc = 1100;
+      idc = IDC_NAMEOBJECTS_INDEXSTART;
       text = "0";
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 23 * GRID_H;
@@ -71,7 +72,7 @@ class ENH_NameObjects
     };
     class OK: ctrlButtonOK
     {
-      idc = -1;//We don't want it to close the dialog
+      idc = IDC_NAMEOBJECTS_OK;//We don't want it to close the dialog
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 29 * GRID_H;
       w = 27 * GRID_W;

@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 100
 #define DIALOG_H 89
 
 class ENH_ModuleInformation
 {
-  idd = -1;
+  idd = IDD_MODULEINFORMATION;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_moduleInformation_onLoad";
   class ControlsBackground
@@ -37,7 +38,7 @@ class ENH_ModuleInformation
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = 1400;
+      idc = IDC_MODULEINFORMATION_DESCRIPTION;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -55,7 +56,7 @@ class ENH_ModuleInformation
     };
     class PositionValue: ctrlEditMulti
     {
-      idc = 1401;
+      idc = IDC_MODULEINFORMATION_POSITION;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 41 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -73,7 +74,7 @@ class ENH_ModuleInformation
     };
     class DuplicateValue: ctrlEditMulti
     {
-      idc = 1402;
+      idc = IDC_MODULEINFORMATION_DUPLICATE;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 53 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -91,7 +92,7 @@ class ENH_ModuleInformation
     };
     class DirectionValue: ctrlEditMulti
     {
-      idc = 1403;
+      idc = IDC_MODULEINFORMATION_DIRECTION;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 65 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -109,7 +110,7 @@ class ENH_ModuleInformation
     };
     class SyncValue: ctrlEditMulti
     {
-      idc = 1404;
+      idc = IDC_MODULEINFORMATION_SYNC;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 77 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;

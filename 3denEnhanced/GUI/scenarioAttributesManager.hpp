@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 160
 #define DIALOG_H 90
 
 class ENH_ScenarioAttributesManager
 {
-  idd = ENH_IDD_SCENARIOATTRIBUTESMANAGER;
+  idd = IDD_SCENARIOATTRIBUTESMANAGER;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_scenarioAttributesManager_onLoad";
   onUnload = "_this call ENH_fnc_scenarioAttributesManager_onUnload";
@@ -55,7 +56,7 @@ class ENH_ScenarioAttributesManager
     };
     class TemplateList: ctrlListbox
     {
-      idc = 1501;
+      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES;
       x = CENTERED_X(DIALOG_W - 2);
       y = DIALOG_TOP + 12 * GRID_H;
       w = 50 * GRID_W;
@@ -64,7 +65,7 @@ class ENH_ScenarioAttributesManager
     };
     class AttributeList: ctrlTree
     {
-      idc = 1500;
+      idc = IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES;
       idcSearch = 1400;
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
@@ -100,7 +101,7 @@ class ENH_ScenarioAttributesManager
     };
     class Search: ctrlEdit
     {
-      idc = 1400;
+      idc = IDC_SCENARIOATTRIBUTESMANAGER_SEARCH;
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
       w = 25 * GRID_W;

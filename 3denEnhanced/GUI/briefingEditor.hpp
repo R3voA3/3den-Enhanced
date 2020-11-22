@@ -1,6 +1,8 @@
+#include "\3denEnhanced\defineCommon.hpp"
+
 class ENH_BriefingEditor
 {
-  idd = -1;
+  idd = IDD_BRIEFINGEDITOR;
   movingEnable = true;
   onLoad = "_this spawn ENH_fnc_briefingEditor_onLoad";
   onUnload = "_this call ENH_fnc_briefingEditor_onUnload";
@@ -35,7 +37,7 @@ class ENH_BriefingEditor
     };
     class TemplateList: ctrlListbox
     {
-      idc = 80;
+      idc = IDC_BRIEFINGEDITOR_TEMPLATES;
       x = CENTERED_X(160) + 1 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
       w = 33 * GRID_W;
@@ -53,7 +55,7 @@ class ENH_BriefingEditor
     };
     class MarkerList: ctrlListbox
     {
-      idc = 60;
+      idc = IDC_BRIEFINGEDITOR_MARKERS;
       x = CENTER_X + 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
       w = 33 * GRID_W;
@@ -69,7 +71,7 @@ class ENH_BriefingEditor
     };
      class ColourList: ctrlListbox
     {
-      idc = 100;
+      idc = IDC_BRIEFINGEDITOR_COLOURS;
       x = CENTER_X + 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 39 * GRID_H;
       w = 33 * GRID_W;
@@ -85,7 +87,7 @@ class ENH_BriefingEditor
     };
     class FontsList: ctrlListbox
     {
-      idc = 70;
+      idc = IDC_BRIEFINGEDITOR_FONTS;
       x = CENTER_X + 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 76 * GRID_H;
       w = 33 * GRID_W;
@@ -101,7 +103,7 @@ class ENH_BriefingEditor
     };
     class SubjectValue: ctrlEdit
     {
-      idc = 20;
+      idc = IDC_BRIEFINGEDITOR_SUBJECT;
       x = CENTER_X - 45 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
       w = 45 * GRID_W;
@@ -117,7 +119,7 @@ class ENH_BriefingEditor
     };
     class TitleValue: ctrlEdit
     {
-      idc = 30;
+      idc = IDC_BRIEFINGEDITOR_TITLE;
       x = CENTER_X + 1 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 7 * GRID_H;
       w = 44 * GRID_W;
@@ -134,7 +136,7 @@ class ENH_BriefingEditor
     };
     class BriefingTextValue: ctrlEditMulti
     {
-      idc = 10;
+      idc = IDC_BRIEFINGEDITOR_BRIEFINGTEXT;
       x = CENTERED_X(90);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 19 * GRID_H;
       w = 90 * GRID_W;
@@ -142,7 +144,7 @@ class ENH_BriefingEditor
     };
     class ShowTitle: ctrlToolbox
     {
-      idc = 40;
+      idc = IDC_BRIEFINGEDITOR_SHOWTITLE;
       x = CENTERED_X(90);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 80 * GRID_H;
       w = 90 * GRID_W;
@@ -175,7 +177,7 @@ class ENH_BriefingEditor
     };
      class TAGsValue: ctrlCombo
     {
-      idc = 90;
+      idc = IDC_BRIEFINGEDITOR_TAGS;
       x = CENTERED_X(90);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 92 * GRID_H;
       w = 90 * GRID_W;
@@ -184,7 +186,7 @@ class ENH_BriefingEditor
     };
     class FirstParam: ctrlStatic
     {
-      idc = 200;
+      idc = IDC_BRIEFINGEDITOR_FIRSTPARAM;
       x = CENTER_X - 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 29 * GRID_W;
@@ -192,7 +194,7 @@ class ENH_BriefingEditor
     };
     class FirstParamValue: ctrlEdit
     {
-      idc = 210;
+      idc = IDC_BRIEFINGEDITOR_FIRSTPARAMVALUE;
       x = CENTER_X - 45 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 29 * GRID_W;
@@ -200,7 +202,7 @@ class ENH_BriefingEditor
     };
     class SecondParam: ctrlStatic
     {
-      idc = 220;
+      idc = IDC_BRIEFINGEDITOR_SECONDPARAM;
       x = CENTER_X - 16 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 29 * GRID_W;
@@ -208,7 +210,7 @@ class ENH_BriefingEditor
     };
     class SecondParamValue: ctrlEdit
     {
-      idc = 230;
+      idc = IDC_BRIEFINGEDITOR_SECONDPARAMVALUE;
       x = CENTER_X - 15 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 29 * GRID_W;
@@ -216,7 +218,7 @@ class ENH_BriefingEditor
     };
     class ThirdParam: ctrlStatic
     {
-      idc = 240;
+      idc = IDC_BRIEFINGEDITOR_THIRDPARAM;
       x = CENTER_X + 14 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 31 * GRID_W;
@@ -224,7 +226,7 @@ class ENH_BriefingEditor
     };
     class ThirdParamValue: ctrlEdit
     {
-      idc = 250;
+      idc = IDC_BRIEFINGEDITOR_THIRDPARAMVALUE;
       x = CENTER_X + 15 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 30 * GRID_W;
@@ -242,8 +244,8 @@ class ENH_BriefingEditor
     class AddTAG: ctrlButton
     {
       text = $STR_ENH_BRIEFINGEDITOR_ADDTAG;
-      x = CENTERED_X(160) + 1 * GRID_W;
-      y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
+      x = CENTER_X + 46 * GRID_W;
+      y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 33 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_briefingEditor_addTAG";
@@ -251,8 +253,8 @@ class ENH_BriefingEditor
     class Export: ctrlButton
     {
       text = $STR_ENH_BRIEFINGEDITOR_EXPORT;
-      x = CENTER_X + 46 * GRID_W;
-      y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
+      x = CENTERED_X(160) + 1 * GRID_W;
+      y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 33 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_briefingEditor_export";
@@ -355,7 +357,7 @@ class ENH_BriefingEditor
       y = 0.122 * safezoneH + safezoneY;
       w = 0.111562 * safezoneW;
       h = 0.028 * safezoneH;
-         colorBackground[] = {COLOUR_USER_PRESET};
+         colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Subject_Text: ctrlStatic
     {
@@ -415,7 +417,7 @@ class ENH_BriefingEditor
       y = 0.122 * safezoneH + safezoneY;
       w = 0.111562 * safezoneW;
       h = 0.028 * safezoneH;
-         colorBackground[] = {COLOUR_USER_PRESET};
+         colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Path_Text: ctrlStatic
     {

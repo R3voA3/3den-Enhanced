@@ -1,8 +1,9 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 60
 
 class ENH_Garrison
 {
-  idd = -1;
+  idd = IDD_GARRISON;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_garrison_onLoad";
   class ControlsBackground
@@ -36,7 +37,7 @@ class ENH_Garrison
     };
     class RadiusEdit: ctrlEdit
     {
-      idc = 100;
+      idc = IDC_GARRISON_RADIUS;
       x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 43 * GRID_W;
@@ -52,7 +53,7 @@ class ENH_Garrison
     };
     class CoverageValue: ctrlToolbox
     {
-      idc = 200;
+      idc = IDC_GARRISON_COVERAGE;
       x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 43 * GRID_W;
@@ -78,7 +79,7 @@ class ENH_Garrison
     };
     class StanceValue: ctrlToolbox
     {
-      idc = 300;
+      idc = IDC_GARRISON_STANCE;
       x = CENTERED_X(DIALOG_W) + 16 * GRID_W;
       y = DIALOG_TOP + 18 * GRID_H;
       w = 43 * GRID_W;

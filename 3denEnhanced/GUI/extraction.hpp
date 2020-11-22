@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 110
 #define DIALOG_H 70
 
 class ENH_Extraction
 {
-  idd = ENH_IDD_EXTRACTION;
+  idd = IDD_EXTRACTION;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_extraction_onLoad";
   class ControlsBackground
@@ -37,7 +38,7 @@ class ENH_Extraction
     };
     class ShowRadioChatValue: ctrlCheckbox
     {
-      idc = 100;
+      idc = IDC_EXTRACTION_SHOWRADIOCHAT;
       x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 30 * pixelW;
@@ -54,7 +55,7 @@ class ENH_Extraction
     };
     class NameRequesterValue: ctrlEdit
     {
-      idc = 200;
+      idc = IDC_EXTRACTION_NAMEREQUESTER;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 79 * GRID_W;
@@ -70,7 +71,7 @@ class ENH_Extraction
     };
     class NameTransportValue: ctrlEdit
     {
-      idc = 300;
+      idc = IDC_EXTRACTION_NAMETRANSPORT;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 18 * GRID_H;
       w = 79 * GRID_W;
@@ -87,7 +88,7 @@ class ENH_Extraction
     };
     class ConditionStartValue: ctrlEditMulti
     {
-      idc = 400;
+      idc = IDC_EXTRACTION_CONDITIONSTART;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 24 * GRID_H;
       w = 79 * GRID_W;
@@ -104,7 +105,7 @@ class ENH_Extraction
     };
     class GrenadeTypeValue: ctrlCombo
     {
-      idc = 500;
+      idc = IDC_EXTRACTION_GRENADE;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 30 * GRID_H;
       w = 79 * GRID_W;
@@ -121,7 +122,7 @@ class ENH_Extraction
     };
     class ConditionValue: ctrlEditMulti
     {
-      idc = 600;
+      idc = IDC_EXTRACTION_CONDITION;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 36 * GRID_H;
       w = 79 * GRID_W;
@@ -137,7 +138,7 @@ class ENH_Extraction
     };
     class GridPositionValue: ctrlEdit
     {
-      idc = 700;
+      idc = IDC_EXTRACTION_GRID;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 57 * GRID_H;
       w = 79 * GRID_W;
@@ -145,7 +146,7 @@ class ENH_Extraction
     };
     class VehicleClass: ctrlEdit
     {
-      idc = 800;
+      idc = IDC_EXTRACTION_VEHICLE;
       x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 63 * GRID_H;
       w = 42 * GRID_W;
@@ -153,7 +154,7 @@ class ENH_Extraction
     };
     class Position: ctrlEdit
     {
-      idc = 900;
+      idc = IDC_EXTRACTION_POSITION;
       x = CENTERED_X(DIALOG_W) + 73 * GRID_W;
       y = DIALOG_TOP + 63 * GRID_H;
       w = 36 * GRID_W;
@@ -161,7 +162,7 @@ class ENH_Extraction
     };
     class VehicleImage: ctrlStaticPictureKeepAspect
     {
-      idc = 1000;
+      idc = IDC_EXTRACTION_IMAGE;
       x = CENTERED_X(DIALOG_W) + 4 * GRID_W;
       y = DIALOG_TOP + 39 * GRID_H;
       w = 20 * GRID_W;
@@ -176,7 +177,7 @@ class ENH_Extraction
     };
     class Ok: ctrlButtonOK
     {
-      idc = -1;//We don't want it to close the GUI
+      idc = IDC_EXTRACTION_OK;//We don't want it to close the GUI
       action = "call ENH_fnc_extraction_setup";
       x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
       y = DIALOG_TOP + 69 * GRID_H;

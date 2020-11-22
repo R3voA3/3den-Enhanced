@@ -1,6 +1,8 @@
+#include "\3denEnhanced\defineCommon.hpp"
+
 class ENH_ScenarioAttributesManagerTemplateData
 {
-  idd = -1;
+  idd = IDD_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
   movingEnable = true;
   onLoad = "ENH_ScenarioAttributesManager_TemplateTitle = ''; ENH_ScenarioAttributesManager_TemplateDescription = '';";
   onUnload = "";
@@ -34,7 +36,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class TitleValue: ctrlEdit
     {
-      idc = 1400;
+      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA_TITLE;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 58 * GRID_W;
@@ -50,7 +52,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = 1401;
+      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 24 * GRID_H;
       w = 58 * GRID_W;

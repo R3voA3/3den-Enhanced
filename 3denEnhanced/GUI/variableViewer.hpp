@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 170
 #define DIALOG_H 120
 
 class ENH_VariableViewer
 {
-  idd = -1;
+  idd = IDD_VARIABLEVIEWER;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_variableViewer_onLoad";
   class ControlsBackground
@@ -53,7 +54,7 @@ class ENH_VariableViewer
   {
     class List: ctrlListNBox
     {
-      idc = 1000;
+      idc = IDC_VARIABLEVIEWER_LIST;
       style = LB_MULTI + LB_TEXTURES;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
@@ -65,7 +66,7 @@ class ENH_VariableViewer
     };
     class Progress: ctrlProgress
     {
-      idc = 7000;
+      idc = IDC_VARIABLEVIEWER_PROGRESS;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = (DIALOG_TOP + DIALOG_H - 12) * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -74,7 +75,7 @@ class ENH_VariableViewer
     };
     class Namespace: ctrlCombo
     {
-      idc = 4000;
+      idc = IDC_VARIABLEVIEWER_NAMESPACE;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 35 * GRID_W;
@@ -83,7 +84,7 @@ class ENH_VariableViewer
     };
     class VariableCount: ctrlStatic
     {
-      idc = 3000;
+      idc = IDC_VARIABLEVIEWER_VARIABLECOUNT;
       x = CENTERED_X(DIALOG_W) + 37 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -91,7 +92,7 @@ class ENH_VariableViewer
     };
     class SearchEdit: ctrlEdit
     {
-      idc = 2000;
+      idc = IDC_VARIABLEVIEWER_SEARCH;
       x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -99,7 +100,7 @@ class ENH_VariableViewer
     };
     class SearchButton: ctrlButtonSearch
     {
-      idc = 6000;
+      idc = IDC_VARIABLEVIEWER_SEARCHBUTTON;
       x = CENTERED_X(DIALOG_W) + 67 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 5 * GRID_W;
@@ -116,7 +117,7 @@ class ENH_VariableViewer
     };
     class HideFunctions: ctrlCheckbox
     {
-      idc = 9000;
+      idc = IDC_VARIABLEVIEWER_HIDEFUNCTIONS;
       x = CENTERED_X(DIALOG_W) + 100 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 5 * GRID_W;
@@ -125,7 +126,7 @@ class ENH_VariableViewer
     };
     class VariableName: ctrlEdit
     {
-      idc = 8000;
+      idc = IDC_VARIABLEVIEWER_VARIABLENAME;
       text = $STR_ENH_VARIABLEVIEWER_VARIABLENAME;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H) * GRID_H;
@@ -134,7 +135,7 @@ class ENH_VariableViewer
     };
     class VariableValue: ctrlEdit
     {
-      idc = 5000;
+      idc = IDC_VARIABLEVIEWER_VARIABLEVALUE;
       text = $STR_ENH_VARIABLEVIEWER_VARIABLEVALUE;
       x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H) * GRID_H;
@@ -152,7 +153,7 @@ class ENH_VariableViewer
     };
     class Set: ctrlButton
     {
-      idc = 10000;
+      idc = IDC_VARIABLEVIEWER_SET;
       text = $STR_ENH_VARIABLEVIEWER_SET_NEW;
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 42) * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;

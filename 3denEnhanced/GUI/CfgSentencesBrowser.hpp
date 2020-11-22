@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 120
 #define DIALOG_H 100
 
 class ENH_CfgSentencesBrowser
 {
-  idd = -1;
+  idd = IDD_SENTENCES;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_CFGS_onLoad";
   onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites',ENH_CFGS_Favorites];";
@@ -26,7 +27,7 @@ class ENH_CfgSentencesBrowser
     };
     class Count: ctrlStatic
     {
-      idc = 3000;
+      idc = IDC_SENTENCES_COUNT;
       x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 11 * GRID_W;
       y = DIALOG_TOP;
       w = 11 * GRID_W;
@@ -43,7 +44,7 @@ class ENH_CfgSentencesBrowser
   {
     class Pages: ctrlToolbox
     {
-      idc = 1000;
+      idc = IDC_SENTENCES_PAGES;
       columns = 2;
       rows = 1;
       x = CENTERED_X(DIALOG_W) + GRID_W;
@@ -56,7 +57,7 @@ class ENH_CfgSentencesBrowser
     };
     class List: ctrlTree
     {
-      idc = 2000;
+      idc = IDC_SENTENCES_LIST;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -67,7 +68,7 @@ class ENH_CfgSentencesBrowser
     };
     class ListFavorites: ctrlTree
     {
-      idc = 4000;
+      idc = IDC_SENTENCES_FAVORITES;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -78,7 +79,7 @@ class ENH_CfgSentencesBrowser
     };
     class Search: ctrlEdit
     {
-      idc = 10000;
+      idc = IDC_SENTENCES_SEARCH;
       x = CENTERED_X(DIALOG_W) + 55 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -86,7 +87,7 @@ class ENH_CfgSentencesBrowser
     };
     class Filter: ctrlCombo
     {
-      idc = 5000;
+      idc = IDC_SENTENCES_FILTER;
       x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 22 * GRID_W;

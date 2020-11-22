@@ -1,3 +1,4 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define POS_X_TEXT 1 * GRID_W
 #define POS_X_VALUE 25 * GRID_W
 #define WIDTH_TEXT 23 * GRID_W
@@ -9,7 +10,7 @@
 
 class ENH_PlacementTools
 {
-  idd = -1;
+  idd = IDD_PLACEMENTTOOLS;
   onLoad = "_this call ENH_fnc_placementTools_onLoad";
   onUnload = "_this call ENH_fnc_placementTools_onUnload";
   movingEnable = true;
@@ -32,7 +33,7 @@ class ENH_PlacementTools
     };
     class FineControlStep: ctrlToolbox
     {
-      idc = 250;
+      idc = IDC_PLACEMENTTOOLS_FINECONTROL;
       x = ORIGIN_X + 1 * GRID_W;
       y = ORIGIN_Y + 113 * GRID_H;
       w = 62 * GRID_W;
@@ -64,7 +65,7 @@ class ENH_PlacementTools
     };
     class CurrentValue: ctrlEdit
     {
-      idc = 120;
+      idc = IDC_PLACEMENTTOOLS_CURRENTVALUE;
       x = ORIGIN_X + 1 * GRID_W;
       y = ORIGIN_Y + 119 * GRID_H;
       w = 30 * GRID_W;
@@ -117,7 +118,7 @@ class ENH_PlacementTools
         };
         class RadiusValue: ctrlXSliderH
         {
-          idc = 10;
+          idc = IDC_PLACEMENTTOOLS_RADIUS;
           x = POS_X_VALUE;
           y = 7 * GRID_H;
           w = WIDTH_VALUE;
@@ -135,7 +136,7 @@ class ENH_PlacementTools
         };
         class InitialAngleValue: ctrlXSliderH
         {
-          idc = 20;
+          idc = IDC_PLACEMENTTOOLS_INITIALANGLE;
           x = POS_X_VALUE;
           y = 13 * GRID_H;
           w = WIDTH_VALUE;
@@ -153,7 +154,7 @@ class ENH_PlacementTools
         };
         class CentralAngleValue: ctrlXSliderH
         {
-          idc = 30;
+          idc = IDC_PLACEMENTTOOLS_CENTRALANGLE;
           x = POS_X_VALUE;
           y = 19 * GRID_H;
           w = WIDTH_VALUE;
@@ -179,7 +180,7 @@ class ENH_PlacementTools
         };
         class SpacingValue: ctrlXSliderH
         {
-          idc = 40;
+          idc = IDC_PLACEMENTTOOLS_SPACING;
           x = POS_X_VALUE;
           y = 31 * GRID_H;
           w = WIDTH_VALUE;
@@ -205,7 +206,7 @@ class ENH_PlacementTools
         };
         class NumColumsValue: ctrlXSliderH
         {
-          idc = 50;
+          idc = IDC_PLACEMENTTOOLS_NUMCOLUMNS;
           x = POS_X_VALUE;
           y = 43 * GRID_H;
           w = WIDTH_VALUE;
@@ -223,7 +224,7 @@ class ENH_PlacementTools
         };
         class SpaceXValue: ctrlXSliderH
         {
-          idc = 60;
+          idc = IDC_PLACEMENTTOOLS_SPACEX;
           x = POS_X_VALUE;
           y = 49 * GRID_H;
           w = WIDTH_VALUE;
@@ -241,7 +242,7 @@ class ENH_PlacementTools
         };
         class SpaceYValue: ctrlXSliderH
         {
-          idc = 70;
+          idc = IDC_PLACEMENTTOOLS_SPACEY;
           x = POS_X_VALUE;
           y = 55 * GRID_H;
           w = WIDTH_VALUE;
@@ -267,7 +268,7 @@ class ENH_PlacementTools
         };
         class AValue: ctrlXSliderH
         {
-          idc = 80;
+          idc = IDC_PLACEMENTTOOLS_A;
           x = POS_X_VALUE;
           y = 67 * GRID_H;
           w = WIDTH_VALUE;
@@ -286,7 +287,7 @@ class ENH_PlacementTools
         };
         class BValue: ctrlXSliderH
         {
-          idc = 90;
+          idc = IDC_PLACEMENTTOOLS_B;
           x = POS_X_VALUE;
           y = 73 * GRID_H;
           w = WIDTH_VALUE;

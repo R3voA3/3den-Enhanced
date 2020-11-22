@@ -3,7 +3,7 @@
 
 class ENH_FunctionsViewer
 {
-  idd = -1;
+  idd = IDD_FUNCTIONSVIEWER;
   movingEnable = false;
   onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
   class ControlsBackground
@@ -30,7 +30,7 @@ class ENH_FunctionsViewer
     };
     class FilterConfig: ctrlToolbox
     {
-      idc = 1700;
+      idc = IDC_FUNCTIONSVIEWER_FILTERCONFIG;
       x = safezoneX + GRID_W;
       y = safezoneY + 6 * GRID_H;
       w = SIDEBAR_W;
@@ -48,7 +48,7 @@ class ENH_FunctionsViewer
     };
     class FilterMode: FilterConfig
     {
-      idc = 1800;
+      idc = IDC_FUNCTIONSVIEWER_FILTERMODE;
       x = safezoneX + GRID_W;
       y = safezoneY + 12 * GRID_H;
       h = 11 * GRID_H;
@@ -68,7 +68,7 @@ class ENH_FunctionsViewer
     };
     class LoadFileMode: ctrlCombo
     {
-      idc = 2200;
+      idc = IDC_FUNCTIONSVIEWER_LOADMODE;
       x = safezoneX + GRID_W;
       y = safezoneY + 24 * GRID_H;
       w = SIDEBAR_W;
@@ -93,7 +93,7 @@ class ENH_FunctionsViewer
     };
     class List: ctrlTree
     {
-      idc = 1500;
+      idc = IDC_FUNCTIONSVIEWER_LIST;
       idcSearch = 1400;
       x = safezoneX + GRID_W;
       y = safezoneY + 30 * GRID_H;
@@ -106,7 +106,7 @@ class ENH_FunctionsViewer
     };
     class NumFunctions: ctrlStatic
     {
-      idc = 1405;
+      idc = IDC_FUNCTIONSVIEWER_NUMFUNCTIONS;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP;
       x = safezoneX + GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
@@ -116,7 +116,7 @@ class ENH_FunctionsViewer
     };
     class Search: ctrlEdit
     {
-      idc = 1400;
+      idc = IDC_FUNCTIONSVIEWER_SEARCH;
       tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
       x = safezoneX + 12 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
@@ -149,7 +149,7 @@ class ENH_FunctionsViewer
     };
     class TogglePanelLeft: ctrlButton
     {
-      idc = 1406;
+      idc = IDC_FUNCTIONSVIEWER_PANNEL;
       text = "«"
       //tooltip = __EVAL(toUpper localize "STR_DIK_E");
       x = safezoneX + 71 * GRID_W;
@@ -160,7 +160,7 @@ class ENH_FunctionsViewer
     };
     class Name: ctrlEdit
     {
-      idc = 1402;
+      idc = IDC_FUNCTIONSVIEWER_NAME;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP;
       canModify = false;
       x = safezoneX + 72 * GRID_W;
@@ -170,7 +170,7 @@ class ENH_FunctionsViewer
     };
     class Path: ctrlEdit
     {
-      idc = 1403;
+      idc = IDC_FUNCTIONSVIEWER_PATH;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP;
       canModify = false;
       x = safezoneX + 72 * GRID_W;
@@ -180,7 +180,7 @@ class ENH_FunctionsViewer
     };
     class RecompileSelected: ctrlButton
     {
-      idc = 1600;
+      idc = IDC_FUNCTIONSVIEWER_RECOMPILESELECTED;
       text = $STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP;
       x = safezoneX + safezoneW - 82 * GRID_W;
@@ -191,7 +191,7 @@ class ENH_FunctionsViewer
     };
     class Copy: ctrlButton
     {
-      idc = 1602;
+      idc = IDC_FUNCTIONSVIEWER_COPY;
       text = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT;
       tooltip = __EVAL(toUpper format ["%1+%2",localize "STR_DIK_CONTROL","X"]);
       x = safezoneX + safezoneW - 82 * GRID_W;
@@ -202,7 +202,7 @@ class ENH_FunctionsViewer
     };
     class RecompileAll: ctrlButton
     {
-      idc = 1601;
+      idc = IDC_FUNCTIONSVIEWER_RECOMPILEALL;
       text = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP;
       x = safezoneX + safezoneW - 41 * GRID_W;
@@ -213,7 +213,7 @@ class ENH_FunctionsViewer
     };
     class Biki: ctrlButton
     {
-      idc = 1900;
+      idc = IDC_FUNCTIONSVIEWER_BIKI;
       text = $STR_ENH_FUNCTIONSVIEWER_BIKI;
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + 12 * GRID_H;
@@ -222,7 +222,7 @@ class ENH_FunctionsViewer
     };
     class SearchCode: ctrlEdit
     {
-      idc = 2000;
+      idc = IDC_FUNCTIONSVIEWER_SEARCHCODE;
       tooltip = __EVAL(toUpper format ["%1+%2+%3",localize "STR_DIK_CONTROL",localize "STR_VK_SHIFT","F"]);
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 18 * GRID_H;
@@ -232,7 +232,7 @@ class ENH_FunctionsViewer
     };
     class SearchText: ctrlStatic
     {
-      idc = 2100;
+      idc = IDC_FUNCTIONSVIEWER_SEARCHTEXT;
       x = safezoneX + 113 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 30 * GRID_W;
@@ -255,7 +255,7 @@ class ENH_FunctionsViewer
     };
     class Preview: ctrlControlsGroup
     {
-      idc = 5000;
+      idc = IDC_FUNCTIONSVIEWER_GROUP;
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 24 * GRID_H;
       w = safezoneW - 73 * GRID_W;
@@ -264,7 +264,7 @@ class ENH_FunctionsViewer
       {
         class Lines: ctrlStructuredText
         {
-          idc = 1404;
+          idc = IDC_FUNCTIONSVIEWER_LINES;
           canModify = false;
           x = 0;
           y = 0;
@@ -276,7 +276,7 @@ class ENH_FunctionsViewer
         };
         class Code: ctrlEditMulti
         {
-          idc = 1401;
+          idc = IDC_FUNCTIONSVIEWER_CODE;
           canModify = false;
           x = 0.075;
           w = 4;

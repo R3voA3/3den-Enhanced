@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 80
 #define DIALOG_H 42
 
 class ENH_BatchReplace
 {
-  idd = ENH_IDD_BATCHREPLACE;
+  idd = IDD_BATCHREPLACE;
   movingEnable = true;
   onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['ENH_batchReplace_lastUsed','']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
   onUnload = "profileNameSpace setVariable ['ENH_batchReplace_lastUsed',ctrlText ((_this # 0) displayCtrl 1400)]";
@@ -46,7 +47,7 @@ class ENH_BatchReplace
     };
     class ReplaceWithValue: ctrlEditMulti
     {
-      idc = 1400;
+      idc = IDC_BATCHREPLACE_REPLACEWITH;
       tooltip = $STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP;
       x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
       y = DIALOG_TOP + 20 * GRID_H;

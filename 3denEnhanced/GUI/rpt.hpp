@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 200
 #define DIALOG_H 106
 
 class ENH_RPT
 {
-  idd = -1;
+  idd = IDD_RPT;
   movingEnable = true;
   onLoad = "[_this # 0, 'onLoad'] call ENH_fnc_rpt_load";
   class ControlsBackground
@@ -38,7 +39,7 @@ class ENH_RPT
       {
         class Content: ctrlEditMulti
         {
-          idc = 100;
+          idc = IDC_RPT_CONTENT;
           x = 0;
           y = 0;
           w = DIALOG_W * GRID_W;
@@ -59,7 +60,7 @@ class ENH_RPT
     };
     class EditLines: ctrlEdit
     {
-      idc = 200;
+      idc = IDC_RPT_LINES;
       tooltip = "Define the number of lines to be shown. 30 means the last 30 lines are shown. Use a small number to speed up the process. Use a very large number to display all lines.";
       x = CENTERED_X(DIALOG_W) + (200 - 65) * GRID_W;
       y = DIALOG_TOP + 105 * GRID_H;
@@ -69,7 +70,7 @@ class ENH_RPT
     };
     class Progress: ctrlProgress
     {
-      idc = 300;
+      idc = IDC_RPT_PROGRESS;
       tooltip = "Shows the progress. A full bar indicates that all available lines were loaded.";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 104 * GRID_H;

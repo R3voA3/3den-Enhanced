@@ -1,6 +1,8 @@
+#include "\3denEnhanced\defineCommon.hpp"
+
 class ENH_InventoryManager_TemplateData
 {
-  idd = -1;
+  idd = IDD_INVENTORYMANAGER_TEMPLATEDATA;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -31,7 +33,7 @@ class ENH_InventoryManager_TemplateData
     };
     class TitleValue: ctrlEdit
     {
-      idc = 1000;
+      idc = IDC_INVENTORYMANAGER_TEMPLATEDATA_TITLE;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 62 * GRID_H;
       w = 58 * GRID_W;
@@ -47,7 +49,7 @@ class ENH_InventoryManager_TemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = 2000;
+      idc = IDD_INVENTORYMANAGER_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 74 * GRID_H;
       w = 58 * GRID_W;

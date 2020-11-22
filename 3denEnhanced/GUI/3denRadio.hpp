@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 200
 #define DIALOG_H 106
 
 class ENH_3DENRadio
 {
-  idd = ENH_IDD_3DENRADIO;
+  idd = IDD_3DENRADIO;
   movingEnable = true;
   onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
   onUnload = "_this call ENH_fnc_3DENRadio_onUnload";
@@ -62,7 +63,7 @@ class ENH_3DENRadio
   {
     class Songlist: ctrlListNBox
     {
-      idc = 1500;
+      idc = IDC_3DENRADIO_SONGLIST;
       idcLeft = -1;
       idcRight = -1;
       x = CENTERED_X(DIALOG_W);
@@ -75,7 +76,7 @@ class ENH_3DENRadio
     };
     class Playlist: ctrlListbox
     {
-      idc = 2000;
+      idc = IDC_3DENRADIO_PLAYLIST;
       x = CENTERED_X(DIALOG_W) + 150 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = (DIALOG_W - 150) * GRID_W;
@@ -85,7 +86,7 @@ class ENH_3DENRadio
     };
     class ToggleRadio: ctrlButtonPictureKeepAspect
     {
-      idc = 2300;
+      idc = IDC_3DENRADIO_TOGGLERADIO;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 105 * GRID_H;
       w = 5 * GRID_W;
@@ -102,7 +103,7 @@ class ENH_3DENRadio
     };
     class Volume: ctrlXSliderH
     {
-      idc = 1900;
+      idc = IDC_3DENRADIO_VOLUME;
       x = CENTERED_X(DIALOG_W) + 13 * GRID_W;
       y = DIALOG_TOP + 105 * GRID_H;
       w = 30 * GRID_W;
@@ -112,7 +113,7 @@ class ENH_3DENRadio
     };
     class Sort: ctrlCombo
       {
-      idc = 1600;
+      idc = IDC_3DENRADIO_SORT;
       x = CENTERED_X(DIALOG_W) + 44 * GRID_W;
       y = DIALOG_TOP + 105 * GRID_H;
       w = 35 * GRID_W;
@@ -130,7 +131,7 @@ class ENH_3DENRadio
     };
     class SearchEdit: ctrlEdit
     {
-      idc = 1400;
+      idc = IDC_3DENRADIO_SEARCH;
       x = CENTERED_X(DIALOG_W) + 85 * GRID_W;
       y = DIALOG_TOP + 105 * GRID_H;
       w = 30 * GRID_W;
@@ -162,7 +163,7 @@ class ENH_3DENRadio
     };
     class CurrentSong: ctrlStaticFooter
     {
-      idc = 2200;
+      idc = IDC_3DENRADIO_CURRENTSONG;
       x = CENTERED_X(DIALOG_W) + 10 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H + CTRL_DEFAULT_H;
       w = (DIALOG_W - 10) * GRID_W;

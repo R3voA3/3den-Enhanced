@@ -1,9 +1,10 @@
+#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 120
 #define DIALOG_H 70
 
 class ENH_3DENCamPositions
 {
-  idd = -1;
+  idd = IDD_3DENCAMPOS;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_3DENCam_updateList";
   class ControlsBackground
@@ -28,7 +29,7 @@ class ENH_3DENCamPositions
   {
     class List: ctrlListNBox
     {
-      idc = 1000;
+      idc = IDC_3DENCAMPOS_LIST;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -38,7 +39,7 @@ class ENH_3DENCamPositions
     };
     class Description: ctrlEdit
     {
-      idc = 2000;
+      idc = IDC_3DENCAMPOS_DESCRIPTION;
       text = $STR_ENH_3DENCAM_DESCRIPTION;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H) * GRID_H;
