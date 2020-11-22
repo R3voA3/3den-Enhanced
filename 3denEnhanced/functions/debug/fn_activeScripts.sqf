@@ -24,20 +24,6 @@ diag_log "------------------------------------------------ACTIVE SQF SCRIPTS STA
 } foreach diag_activeSQFScripts;
 
 diag_log "-------------------------------------------------ACTIVE SQF SCRIPTS END-------------------------------------------------";
-
-/* diag_log "------------------------------------------------ACTIVE SQS SCRIPTS START------------------------------------------------";
-
-{
-  _x params ["_scriptName", "_fileName", "_isRunning", "_currentLine"];
-  diag_log _scriptname;
-  diag_log _fileName;
-  diag_log _isRunning;
-  diag_log _currentLine;
-} foreach diag_activeSQSScripts;
-
-diag_log "-------------------------------------------------ACTIVE SQS SCRIPTS END-------------------------------------------------"; */
-
-
 diag_log "---------------------------------------------------ACTIVE FSMs START----------------------------------------------------";
 
 {
@@ -48,7 +34,6 @@ diag_log "---------------------------------------------------ACTIVE FSMs START--
 } foreach diag_activeMissionFSMs;
 
 diag_log "----------------------------------------------------ACTIVE FSMs END-----------------------------------------------------";
-
 diag_log "-----------------------------------------------ACTIVE MISSION EHs START-------------------------------------------------";
 
 private _EHs = diag_allMissionEventHandlers;
@@ -64,6 +49,6 @@ for "_i" from 0 to (count _EHs - 1) step 2 do
   };
 };
 
-diag_log "---------------------------------------------------ACTIVE MISSION EHs END---------------------------------------------------";
+diag_log "------------------------------------------------ACTIVE MISSION EHs END--------------------------------------------------";
 
 systemChat "Debug information logged.";
