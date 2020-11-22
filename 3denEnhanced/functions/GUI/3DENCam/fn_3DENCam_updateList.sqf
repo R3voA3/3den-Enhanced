@@ -13,6 +13,8 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 params ["_displayOrControl"];
 
 if (_displayOrControl isEqualType controlNull) then
@@ -20,7 +22,7 @@ if (_displayOrControl isEqualType controlNull) then
   _displayOrControl = ctrlParent _displayOrControl;
 };
 
-private _ctrlLnB = _displayOrControl displayCtrl 1000;
+private _ctrlLnB = _displayOrControl displayCtrl IDC_3DENCAMPOS_LIST;
 lbClear _ctrlLnB;
 _ctrlLnB lnbSetColumnsPos [0,0.1,0.75,0.9];
 {
