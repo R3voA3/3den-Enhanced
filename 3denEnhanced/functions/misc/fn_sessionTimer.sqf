@@ -10,11 +10,13 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
-private _display3DEN = findDisplay 313 displayCtrl 668;
+private _display3DEN = findDisplay 313 displayCtrl IDC_STATUSBAR_SESSIONTIMER;
 
 while {is3DEN} do
 {
