@@ -8,8 +8,10 @@
   0: STRING - Mode, can be INIT to show/hide controls or RUN to simply update the controls. Default: RUN
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 params [["_mode","run"]];
 
@@ -22,7 +24,7 @@ switch (_mode) do
 {
   case "init":
   {
-    for "_i" from 669 to 680 do
+    for "_i" from IDC_STATUSBAR_NUMMARKERS to IDC_STATUSBAR_ICONOBJECTS do
     {
       (_display displayCtrl _i) ctrlShow _enabled;
     };
@@ -33,8 +35,13 @@ switch (_mode) do
     {
       _x params ["_idc","_type"];
       (_display displayCtrl _idc) ctrlSetText (str count get3DENSelected _type);
-    } forEach [[669,"Marker"],[671,"Logic"],[673,"Waypoint"],[675,"Trigger"],[677,"Group"],[679,"Object"]];
+    } forEach [
+      [IDC_STATUSBAR_NUMMARKERS,"Marker"],
+      [IDC_STATUSBAR_NUMSYSTEMS,"Logic"],
+      [IDC_STATUSBAR_NUMWAYPOINTS,"Waypoint"],
+      [IDC_STATUSBAR_NUMTRIGGERS,"Trigger"],
+      [IDC_STATUSBAR_NUMGROUPS,"Group"],
+      [IDC_STATUSBAR_NUMOBJECTS,"Object"]
+    ];
   };
 };
-
-true
