@@ -10,8 +10,9 @@
   -
 
   Returns:
-  ARRAY:  0: BOOLEAN - True if no duplicates in context menu
-      1: BOOLEAN - True if no duplicates in menu strip
+  ARRAY:
+    0: BOOLEAN - True if no duplicates in context menu
+    1: BOOLEAN - True if no duplicates in menu strip
 
 */
 
