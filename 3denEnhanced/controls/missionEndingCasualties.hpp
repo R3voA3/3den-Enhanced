@@ -69,7 +69,6 @@ class ENH_MissionEnding_Casualties: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 5 * SIZE_M * GRID_H + 20 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_missionEndingCasualties_onButtonDown";
     };
   };
 };

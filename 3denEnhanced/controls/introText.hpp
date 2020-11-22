@@ -87,7 +87,6 @@ class ENH_IntroText: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 9 * SIZE_M * GRID_H + 25 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_introText_onButtonDown";
     };
   };
 };

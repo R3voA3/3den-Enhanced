@@ -2,7 +2,7 @@ class ENH_EstablishingShot: Title
 {
   attributeLoad = "[_this,_value] call ENH_fnc_establishingShot_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_establishingShot_onAttributeSave";
-  h = 7 * SIZE_M * GRID_H + 35 * pixelH;
+  h = 8 * SIZE_M * GRID_H + 35 * pixelH;
   class Controls: Controls
   {
     class CenterTitle: Title
@@ -124,8 +124,7 @@ class ENH_EstablishingShot: Title
     };
     class Reset: ENH_ResetButton_Base
     {
-      y = 6 * SIZE_M * GRID_H + 30 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_establishingShot_onButtonDown";
+      y = 7 * SIZE_M * GRID_H + 30 * pixelH;
     };
   };
 };

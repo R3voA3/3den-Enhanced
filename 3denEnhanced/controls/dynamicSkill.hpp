@@ -350,7 +350,6 @@ class ENH_DynamicSkill: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 20.5 * SIZE_M * GRID_H + 85 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_dynamicSkill_onButtonDown";
     };
   };
 };

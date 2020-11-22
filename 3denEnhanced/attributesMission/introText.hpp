@@ -13,7 +13,7 @@ class ENH_IntroText
     class ENH_IntroText
     {
       displayName = $STR_ENH_INTROTEXT_DISPLAYNAME;
-      tooltip = $STR_ENH_INTROTEXT_TOOLTIP;
+      tooltip = $STR_ENH_INTROTEXT_DESCRIPTION;
       property = "ENH_introText";
       control = "ENH_IntroText";
       expression =
@@ -24,6 +24,9 @@ class ENH_IntroText
           {\
             scriptName 'ENH_Attribute_IntroText';\
             params ['_delay','_l1','_l2','_l3','_type'];\
+            _l1 = _l1 call BIS_fnc_localize;\
+            _l2 = _l2 call BIS_fnc_localize;\
+            _l3 = _l3 call BIS_fnc_localize;\
             uiSleep _delay;\
             switch (_type) do\
             {\

@@ -32,7 +32,7 @@ class ENH_GroupMarker
           ];\
           _marker setMarkerType _type;\
           _marker setMarkerColor _color;\
-          _marker setMarkerText _text;\
+          _marker setMarkerText (_text call BIS_fnc_localize);\
           while {true} do\
           {\
             sleep 1;\

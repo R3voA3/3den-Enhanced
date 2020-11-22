@@ -124,7 +124,6 @@ class ENH_AmbientFlyby: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 12 * SIZE_M * GRID_H + 35 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_ambientFlyby_onButtonDown";
     };
   };
 };

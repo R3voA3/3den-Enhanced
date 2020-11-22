@@ -68,7 +68,7 @@ class ENH_SPR
         \
         ENH_fnc_SPR_respawn =\
         {\
-      scriptName 'ENH_Attribute_SPR_Respawn';\
+          scriptName 'ENH_Attribute_SPR_Respawn';\
           params ['_unit'];\
           if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
           if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
@@ -102,7 +102,7 @@ class ENH_SPR
         \
         ENH_fnc_SPR_respawnTimer =\
         {\
-      scriptName 'ENH_Attribute_SPR_RespawnTimer';\
+          scriptName 'ENH_Attribute_SPR_RespawnTimer';\
           params ['_unit'];\
           private _respawnTime = time + ENH_SPR_Delay;\
           if (isPlayer _unit) then\
@@ -118,7 +118,7 @@ class ENH_SPR
             showChat false;\
             while {time < _respawnTime} do\
             {\
-              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>Respawn in %1 seconds.</t>',[(_respawnTime - time),'HH:MM'] call BIS_fnc_timeToString];\
+              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>',[(_respawnTime - time),'HH:MM'] call BIS_fnc_timeToString];\
               sleep 0.1;\
             };\
             ctrlDelete _ctrlRespawnTimer;\

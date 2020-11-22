@@ -47,7 +47,6 @@ class ENH_AmbientAnimations: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_ambientAnimations_onButtonDown";
     };
   };
 };

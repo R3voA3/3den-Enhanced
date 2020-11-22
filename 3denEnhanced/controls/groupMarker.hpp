@@ -58,7 +58,6 @@ class ENH_GroupMarker: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 4 * SIZE_M * GRID_H + 20 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_groupMarker_onButtonDown";
     };
   };
 };

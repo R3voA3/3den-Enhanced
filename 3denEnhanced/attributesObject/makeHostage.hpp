@@ -15,7 +15,7 @@ class ENH_MakeHostage: ENH_SetCaptive
         _this switchMove 'Acts_AidlPsitMstpSsurWnonDnon04';\
         [\
         _this,\
-        'Free Hostage',\
+        localize 'STR_A3_OM_SYSTEM_QUEST_HOSTAGEHOLDACTION',\
         'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
         'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
         '_target getVariable [''ENH_IsHostage'',true] && {_this distance _target < 2 && {alive _target && {_target != _this}}}',\

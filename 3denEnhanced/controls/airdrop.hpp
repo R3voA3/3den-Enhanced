@@ -98,7 +98,6 @@ class ENH_Airdrop: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 10 * SIZE_M * GRID_H + 30 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_airdrop_onButtonDown";
     };
   };
 };

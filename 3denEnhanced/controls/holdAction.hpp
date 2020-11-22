@@ -174,7 +174,6 @@ class ENH_HoldAction: Title
     class Reset: ENH_ResetButton_Base
     {
       y = 25 * SIZE_M * GRID_H + 65 * pixelH;
-      onButtonDown  = "_this call ENH_fnc_holdAction_onButtonDown";
     };
   };
 };
