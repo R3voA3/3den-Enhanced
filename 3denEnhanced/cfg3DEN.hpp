@@ -55,7 +55,7 @@ class Cfg3DEN
     #include "controls\SPR.hpp"
     #include "controls\subCategoryNoHeader_Fixed.hpp"
   };
-   class Mission
+  class Mission
   {
     class Preferences
     {
@@ -89,6 +89,7 @@ class Cfg3DEN
         #include "attributesMission\airdrop.hpp"
         #include "attributesMission\establishingShot.hpp"
         #include "attributesMission\introText.hpp"
+        #include "attributesMission\briefings.hpp"
         #include "attributesMission\missionEnding.hpp"
         #include "attributesMission\SPR.hpp"
         class Misc
@@ -160,7 +161,6 @@ class Cfg3DEN
           #include "attributesObject\doStop.hpp"
           #include "attributesObject\removeFromRemainsCollector.hpp"
           #include "attributesObject\SPRTickets.hpp"
-          #include "attributesObject\debugPath.hpp"
         };
       };
       class Inventory

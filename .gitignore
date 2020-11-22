@@ -3,4 +3,4 @@
 *.zip
 *.code-workspace
 *.vscode
-3denEnhanced/ENH_customTools.sqf
+3denEnhanced/functions/misc/fn_statusbar_entityCounter.sqf

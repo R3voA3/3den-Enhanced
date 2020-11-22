@@ -26,6 +26,7 @@
 #include "GUI\inventoryManager_itemPreview.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\rpt.hpp"
+#include "GUI\RscTestControlXXX.hpp"
 
 class RscControlsGroupNoScrollbars;
 class RscDebugConsole: RscControlsGroupNoScrollbars
@@ -43,5 +44,3 @@ class RscDebugConsole: RscControlsGroupNoScrollbars
     };
   };
 };
-
-#include "RscTestControlXXX.hpp"
