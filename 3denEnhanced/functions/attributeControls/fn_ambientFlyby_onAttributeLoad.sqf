@@ -11,7 +11,7 @@
   1: ARRAY - Attribute value
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlGroup","_value"];
@@ -48,4 +48,20 @@ else
 [_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s"] call BIS_fnc_initSliderValue;
 [_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s",_delay] call BIS_fnc_initSliderValue;
 
-true
+//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+{
+  private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+  (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
+
+  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0,0,0]";
+  (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "[0,0,0]";
+
+  [_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",500] call BIS_fnc_initSliderValue;
+
+  (_ctrlGroup controlsGroupCtrl 105) lbSetCurSel 1;
+  (_ctrlGroup controlsGroupCtrl 106) lbSetCurSel 0;
+
+  [_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s",300] call BIS_fnc_initSliderValue;
+}];

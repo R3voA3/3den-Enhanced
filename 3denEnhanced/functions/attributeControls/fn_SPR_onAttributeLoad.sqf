@@ -11,7 +11,7 @@
   1: ARRAY - Attribute value
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlGroup","_value"];
@@ -36,4 +36,13 @@ _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_
 
 (_ctrlGroup controlsGroupCtrl 104) cbSetChecked _restoreLoadout;
 
-true
+//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+{
+  private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+  (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
+  [_ctrlGroup controlsGroupCtrl 101,_ctrlGroup controlsGroupCtrl 102,"s",20] call BIS_fnc_initSliderValue;
+  (_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
+  (_ctrlGroup controlsGroupCtrl 104) cbSetChecked false;
+}];

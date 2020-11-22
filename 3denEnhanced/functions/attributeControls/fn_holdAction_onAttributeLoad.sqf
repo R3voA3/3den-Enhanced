@@ -11,7 +11,7 @@
   1: ARRAY - Attribute value
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #define DEFAULT_ICONS [\
@@ -92,4 +92,23 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 (_ctrlGroup controlsGroupCtrl 113) cbSetChecked _showUnconscious;
 (_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
 
-true
+//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+{
+  private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+  (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
+  (_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
+  (_ctrlGroup controlsGroupCtrl 102) lbSetCurSel 0;
+  (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "true";
+  (_ctrlGroup controlsGroupCtrl 104) ctrlSetText "true";
+  (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "";
+  (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "";
+  (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "";
+  (_ctrlGroup controlsGroupCtrl 108) ctrlSetText "";
+  [_ctrlGroup controlsGroupCtrl 109,_ctrlGroup controlsGroupCtrl 110,"s",10] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 111,_ctrlGroup controlsGroupCtrl 112,"",1000] call BIS_fnc_initSliderValue;
+  (_ctrlGroup controlsGroupCtrl 113) cbSetChecked false;
+  (_ctrlGroup controlsGroupCtrl 114) cbSetChecked true;
+  (_ctrlGroup controlsGroupCtrl 115) lbSetCurSel 0;
+}];

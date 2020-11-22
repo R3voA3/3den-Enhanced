@@ -11,7 +11,7 @@
   1: ARRAY - Attribute value
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlGroup","_value"];
@@ -65,4 +65,12 @@ _ctrlCheckbox cbSetChecked _showGroupSize;
   };
 } foreach configproperties [configfile >> "CfgMarkerColors","isClass _x && getNumber (_x >> 'scope') > 0"];
 
-true
+//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+{
+  private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+  //Setting default values, colour and group ID cannot be retrieved from here so they are ignored
+  (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
+  (_ctrlGroup controlsGroupCtrl 103) cbSetChecked true;
+}];

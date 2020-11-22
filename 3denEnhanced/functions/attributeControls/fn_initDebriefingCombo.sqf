@@ -11,7 +11,7 @@
   1: STRING - Debriefing config name
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlCombo","_debriefing"];
@@ -33,5 +33,3 @@ params ["_ctrlCombo","_debriefing"];
     _ctrlCombo lbSetCurSel _forEachIndex;
   };
 } forEach ("isClass _x" configClasses (configFile >> "CfgDebriefing")) + ("isClass _x" configClasses (missionConfigFile >> "CfgDebriefing"));
-
-true

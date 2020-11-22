@@ -11,7 +11,7 @@
   1: ARRAY - Attribute value
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlGroup","_value"];
@@ -45,4 +45,17 @@ else
 
 (_ctrlGroup controlsGroupCtrl 107) lbSetCurSel ([west,east,independent,civilian] find _side);
 
-true
+//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+{
+  private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+  (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
+  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0,0,0]";
+  (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "false";
+
+  [_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",500] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 105,_ctrlGroup controlsGroupCtrl 106,"m",200] call BIS_fnc_initSliderValue;
+
+  (_ctrlGroup controlsGroupCtrl 107) lbSetCurSel 0;
+}];
