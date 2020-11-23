@@ -12,13 +12,17 @@
   -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+#define CHECK (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo [])
+
 disableSerialization;
 
-private _display = findDisplay 140000;
-private _ctrlProgText = _display displayCtrl 1002;
+private _display = findDisplay IDD_TEXTUREFINDER;
+private _ctrlProgText = CTRL(IDC_TEXTUREFINDER_PROGRESSTEXT);
+private _text = localize "STR_ENH_UPDATEPROGRESSBAR";
 
 //If search is done, don't loop anymore
-if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo []) exitWith
+if CHECK exitWith
 {
   _ctrlProgText ctrlSetStructuredText parseText format
   [
@@ -29,18 +33,22 @@ if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo 
   ];
 };
 
-waitUntil {!isNil "ENH_TextureFinder_SearchRunning"};
+//waitUntil {!isNil "ENH_TextureFinder_SearchRunning"};
+
 
 while {!isNull _display} do
 {
-  //Exit as soon as uiNamespace vars are set because missioNamespace wars are
-  if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo []) exitWith {[] spawn ENH_fnc_textureFinder_progressText};
+  //Exit as soon as uiNamespace vars are set because missioNamespace vars will become nil
+  if CHECK exitWith {[] spawn ENH_fnc_textureFinder_progressText; CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlSetAngle [0,0.5,0.5];};
   _ctrlProgText ctrlSetStructuredText parseText format
   [
-    localize "STR_ENH_UPDATEPROGRESSBAR",
+    _text,
     ENH_TextureFinder_ClassesSearched,
     ENH_TextureFinder_ClassesFound,
     count ENH_TextureFinder_TexturesFound
   ];
-  sleep 0.3;
+  //Let's rotate the default image, looks neat
+  CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlSetAngle [(ctrlAngle CTRL(IDC_TEXTUREFINDER_PREVIEW) # 0) + 2,0.5,0.5];
+  CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlCommit 0;
+  sleep 0.05;
 };

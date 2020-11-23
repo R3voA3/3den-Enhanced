@@ -11,11 +11,11 @@
   -
 */
 
-params ["_ctrlLB","_key","","_ctrl"];
+params ["_ctrlTV","_key","","_ctrl"];
 
 if (_key isEqualTo 46 && _ctrl) then
 {
-  private _path = _ctrlLB lbText (lbCurSel _ctrlLB);
+  private _path = _ctrlTV tvText (tvCurSel _ctrlTV);
   if (_path isEqualTo "") exitWith {false};
   copyToClipboard str _path;
   ["ENH_DataCopied"] call BIS_fnc_3DENNotification;

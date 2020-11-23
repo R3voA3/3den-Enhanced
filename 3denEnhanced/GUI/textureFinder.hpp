@@ -52,7 +52,7 @@ class ENH_TextureFinder
     class Preview: ctrlStaticPictureKeepAspect
     {
       idc = IDC_TEXTUREFINDER_PREVIEW;
-      text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+      text = "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_tablet_button_respawn02_ca.paa";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 58 * GRID_H;
       w = DIALOG_W * GRID_W;
