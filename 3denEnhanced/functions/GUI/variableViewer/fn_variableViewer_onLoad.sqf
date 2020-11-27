@@ -13,6 +13,10 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
+
 params ["_display"];
 
 private _ctrlNamespace = _display displayCtrl 4000;
@@ -29,6 +33,10 @@ _display displayAddEventHandler ["keyDown",//Focus Search
     ctrlSetFocus (_display displayCtrl 2000);
   }
 }];
+
+//Set up Filter
+CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARIABLENAME",localize "STR_ENH_VARIABLEVIEWER_VARIABLEVALUE",localize "STR_ENH_VARIABLEVIEWER_VARIABLETYPE",localize "STR_ENH_3DENRADIO_MOD","PL"];//Used for sorting
+[CTRL(IDC_VARIABLEVIEWER_FILTER),CTRL(IDC_VARIABLEVIEWER_LIST),[0,1,2]] call BIS_fnc_initListNBoxSorting;
 
 //Get all locations
 private _worldSizeHalfe = worldSize / 2;

@@ -17,36 +17,17 @@ class ENH_VariableViewer
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H + 7 * GRID_H;
     };
+    class BackgroundFilter: Background//Background used for filter buttons
+    {
+      h = CTRL_DEFAULT_H;
+      colorBackground[] = {0,0,0,1};
+    };
     class Header: ctrlStaticTitle
     {
       text = $STR_ENH_VARIABLEVIEWER_HEADER;
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class VariableNameHeader: ctrlStaticFooter
-    {
-      text = $STR_ENH_VARIABLEVIEWER_VARIABLENAME;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 5 * GRID_H;
-      w = 69 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class VariableValueHeader: ctrlStaticFooter
-    {
-      text = $STR_ENH_VARIABLEVIEWER_VARIABLEVALUE;
-      x = CENTERED_X(DIALOG_W) + 69 * GRID_W;
-      y = DIALOG_TOP + 5 * GRID_H;
-      w = 76 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class VariableTypeHeader: ctrlStaticFooter
-    {
-      text = $STR_ENH_VARIABLEVIEWER_VARIABLETYPE;
-      x = CENTERED_X(DIALOG_W) + 145 * GRID_W;
-      y = DIALOG_TOP + 5 * GRID_H;
-      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };
@@ -63,6 +44,12 @@ class ENH_VariableViewer
       disableOverflow = true;
       columns[] = {-0.008,0.4,0.85};//Create columns and move first column a tat to the left
       onLBSelChanged = "_this call ENH_fnc_variableViewer_onLNBSelChanged";
+    };
+    class Filter: List
+    {
+      idc = IDC_VARIABLEVIEWER_FILTER;
+      y = DIALOG_TOP + 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class Progress: ctrlProgress
     {
