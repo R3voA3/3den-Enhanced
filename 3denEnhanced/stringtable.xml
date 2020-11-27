@@ -23,6 +23,10 @@
     <Polish>Głośność muzyki</Polish>
     <Russian>Громкость (музыки)</Russian>
   </Key>
+  <Key ID="STR_ENH_TOOLS_CREATETRIGGER">
+    <English>Create Trigger (Whole Map Coverage)</English>
+    <German>Auslöser erstellen (Vollständige Kartenabdeckung)</German>
+  </Key>
   <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
     <English>Terrain Detail</English>
     <Italian>dettagli del terreno</Italian>
@@ -2703,40 +2707,11 @@
     <Polish>Kolor</Polish>
     <Russian>Цвет</Russian>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_CLEARPLAYLIST_TEXT">
-    <English>Clear Playlist</English>
-    <Italian>Cancella la Playlist</Italian>
-    <Czech>Vymazat playlist</Czech>
-    <Spanish>Borrar selección</Spanish>
-    <German>Playlist leeren</German>
-    <Chinesesimp>清楚播放列表</Chinesesimp>
-    <French>Effacer la liste de lecture</French>
-    <Polish>Wyczyść liste odtwarzania</Polish>
-    <Russian>Очистить список воспроизведения</Russian>
+  <Key ID="STR_ENH_3DENRADIO_END">
+    <English>Ending</English>
+    <German>Ende</German>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_EXPORTPLAYLIST_TEXT">
-    <English>Export</English>
-    <Italian>Esporta</Italian>
-    <Czech>Export</Czech>
-    <Spanish>Exportar</Spanish>
-    <German>Exportieren</German>
-    <Chinesesimp>输出</Chinesesimp>
-    <French>Exporter</French>
-    <Polish>Eksport</Polish>
-    <Russian>Экспорт</Russian>
-  </Key>
-  <Key ID="STR_ENH_3DENRADIO_IMPORTPLAYLIST_TEXT">
-    <English>Import</English>
-    <Italian>Importa</Italian>
-    <Czech>Import</Czech>
-    <Spanish>Importar</Spanish>
-    <German>Importieren</German>
-    <Chinesesimp>输入</Chinesesimp>
-    <French>Importer</French>
-    <Polish>Import</Polish>
-    <Russian>Импорт</Russian>
-  </Key>
-  <Key ID="STR_ENH_3DENRADIO_HEADLINE_TITLE">
+  <Key ID="STR_ENH_3DENRADIO_TITLE">
     <English>Title</English>
     <Italian>Titolo</Italian>
     <Czech>Název</Czech>
@@ -2747,7 +2722,7 @@
     <Polish>Tytuł</Polish>
     <Russian>Оглавление</Russian>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_HEADLINE_DURATION">
+  <Key ID="STR_ENH_3DENRADIO_DURATION">
     <English>Duration</English>
     <Italian>Durata</Italian>
     <Czech>Délka</Czech>
@@ -2758,7 +2733,7 @@
     <Polish>Czas trwania</Polish>
     <Russian>Продолжительность</Russian>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_HEADLINE_THEME">
+  <Key ID="STR_ENH_3DENRADIO_THEME">
     <English>Theme</English>
     <Italian>Tema</Italian>
     <Czech>Téma</Czech>
@@ -2769,7 +2744,7 @@
     <Polish>Motyw</Polish>
     <Russian>Тема</Russian>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_HEADLINE_MOD">
+  <Key ID="STR_ENH_3DENRADIO_MOD">
     <English>Mod</English>
     <Italian>Mod</Italian>
     <Czech>Mód</Czech>
