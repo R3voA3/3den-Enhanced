@@ -8,24 +8,20 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 disableSerialization;
 
-private _ctrl = param [0,controlNull,[controlNull]];
-private _key = param [1,46,[1]];
-private _mod = param [3,true,[true]];
+params ["_ctrlLNB","_key","","_mod"];
 
 if (_key isEqualTo 46 && _mod) then //CTRL + C
 {
-  private _class = _ctrl lnbData [lnbCurSelRow _ctrl,0];
+  private _class = _ctrlLNB lnbData [lnbCurSelRow _ctrlLNB,0];
   if (_class isEqualTo "") then
   {
-    _class = _ctrl lbData (lbCurSel _ctrl);
+    _class = _ctrlLNB lbData (lbCurSel _ctrlLNB);
   };
   copyToClipboard str _class;
   ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
-
-true

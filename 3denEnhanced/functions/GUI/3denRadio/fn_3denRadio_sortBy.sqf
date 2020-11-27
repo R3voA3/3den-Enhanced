@@ -8,28 +8,28 @@
   STRING: _sortBy - "TITLE","DURATION","THEME"
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
 params [["_sortBy","TITLE",[""]]];
-private _ctrlSongList = (findDisplay 60000) displayCtrl 1500;
+private _display = (findDisplay IDD_3DENRADIO);
 
 switch _sortBy do
 {
   case "TITLE":
   {
-    _ctrlSongList lnbSort [0,false];
+    CTRL(IDC_3DENRADIO_SONGLIST) lnbSort [0,false];
   };
   case "DURATION":
   {
-    _ctrlSongList lnbSort [1,true];
+    CTRL(IDC_3DENRADIO_SONGLIST) lnbSort [1,true];
   };
   case "THEME":
   {
-    _ctrlSongList lnbSort [2,false];
+    CTRL(IDC_3DENRADIO_SONGLIST) lnbSort [2,false];
   };
 };
-
-true

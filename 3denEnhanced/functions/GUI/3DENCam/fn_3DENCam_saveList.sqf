@@ -10,7 +10,7 @@
   0: CONTROL - ListBox control
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlLnB"];
@@ -24,5 +24,3 @@ for "_i" from 0 to _lbMaxIndex do
 };
 
 profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_data];
-
-true

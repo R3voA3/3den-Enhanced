@@ -8,13 +8,15 @@
   -
 
   Returns:
-  BOOLEAN:  true / false
+  -
 */
 
-disableSerialization;//Because of BIS_fnc_3DENNotification
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 
 private _objects = [["Object"]] call ENH_fnc_all3DENSelected;
-private _replaceWith = ctrlText (findDisplay 150000 displayCtrl 1400); //"sfd,2ffds,5,123"
+private _replaceWith = ctrlText (findDisplay IDD_BATCHREPLACE displayCtrl IDC_BATCHREPLACE_REPLACEWITH); //"sfd,2ffds,5,123"
 
 profileNameSpace setVariable ['ENH_batchReplace_lastUsed',_replaceWith];
 
@@ -34,5 +36,3 @@ collect3DENHistory
     };
   } forEach _objects;
 };
-
-true

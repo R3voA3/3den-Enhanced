@@ -10,7 +10,7 @@
   0: CONTROL - Control to get parent display
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -34,5 +34,3 @@ profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_cam3DENSavedPositions
 
 //Update list
 _ctrl call ENH_fnc_3DENCam_updateList;
-
-true

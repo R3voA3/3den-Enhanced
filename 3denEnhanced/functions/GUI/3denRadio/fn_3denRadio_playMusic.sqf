@@ -11,12 +11,13 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
 
 params ["_ctrlList","_selectedIndex"];
 
 private _display = ctrlParent _ctrlList;
-private _ctrlCurrentSong = _display displayCtrl 2200;
 
 private _class = switch (ctrlType _ctrlList) do
 {
@@ -33,7 +34,7 @@ private _class = switch (ctrlType _ctrlList) do
 };
 
 //Play song and update current song control
-_ctrlCurrentSong ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
+CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
 playMusic _class;
 
 true

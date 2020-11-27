@@ -10,7 +10,7 @@
   0: STRING - Action to be taken
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlLnB","_key"];
@@ -22,5 +22,3 @@ if (_key isEqualTo 211) then
   //Update list
   _ctrlLnB call ENH_fnc_3DENCam_saveList;
 };
-
-true

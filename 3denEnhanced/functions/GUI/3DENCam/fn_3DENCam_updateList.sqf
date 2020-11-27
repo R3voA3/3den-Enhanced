@@ -10,7 +10,7 @@
   0: DISPLAY or CONTROL - Display or control to get parent display
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -73,5 +73,3 @@ _ctrlLnB lnbSetColumnsPos [0,0.1,0.75,0.9];
     ]
   ];
 } forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions",[]]);
-
-true

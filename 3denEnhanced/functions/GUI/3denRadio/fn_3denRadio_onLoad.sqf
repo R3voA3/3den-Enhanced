@@ -11,18 +11,17 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
 
 params ["_display"];
 
-private _ctrlVol = _display displayCtrl 1900;
-private _ctrlCurSong = _display displayCtrl 2200;
-private _ctrlSongList = _display displayCtrl 1500;
-private _ctrlToggleRadio = _display displayCtrl 2300;
-private _ctrlSort = _display displayCtrl 1600;
+private _ctrlSongList = CTRL(IDC_3DENRADIO_SONGLIST);
+private _ctrlSort = CTRL(IDC_3DENRADIO_SORT);
 
 //Set up slider
-_ctrlVol sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume",0.25]);
+CTRL(IDC_3DENRADIO_VOLUME) sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume",0.25]);
 
 //Set up combo
 {
@@ -32,18 +31,18 @@ _ctrlVol sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVo
 _ctrlSort lbSetCurSel 0;
 
 //Update current song
-_ctrlCurSong ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
+CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
 
 //Update radio button
 switch (profileNamespace getVariable ["ENH_3DENRadio_Enabled",false]) do
 {
   case true:
   {
-    _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
+    CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
   };
   case false:
   {
-    _ctrlToggleRadio ctrlSetText "\3denEnhanced\data\icon_play.paa";
+    CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play.paa";
   };
 };
 

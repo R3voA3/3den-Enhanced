@@ -8,24 +8,26 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
-private _display = findDisplay 190000;
-private _title = ctrlText (_display displayCtrl 1408);
-private _script = ctrlText (_display displayCtrl 1400);
-private _args = ctrlText (_display displayCtrl 1401);
-private _priority = ctrlText (_display displayCtrl 1402);
-private _window = (_display displayCtrl 1000) ctrlChecked 1;
-private _hide = (_display displayCtrl 1000) ctrlChecked 2;
-private _shortcuts = ctrlText (_display displayCtrl 1405);
-private _condition = ctrlText (_display displayCtrl 1403);
-private _r = ctrlText (_display displayCtrl 1404);
-private _unconscious = (_display displayCtrl 1000) ctrlChecked 0;
-private _selection = ctrlText (_display displayCtrl 1406);
-private _memory = ctrlText (_display displayCtrl 1407);
+private _display = findDisplay IDD_ACTIONCREATOR;
+private _title = ctrlText CTRL(IDC_ACTIONCREATOR_TITLE);
+private _script = ctrlText CTRL(IDC_ACTIONCREATOR_SCRIPT);
+private _args = ctrlText CTRL(IDC_ACTIONCREATOR_ARGUMENTS);
+private _priority = ctrlText CTRL(IDC_ACTIONCREATOR_PRIORITY);
+private _window = CTRL(IDC_ACTIONCREATOR_TOOLBOX) ctrlChecked 1;
+private _hide = CTRL(IDC_ACTIONCREATOR_TOOLBOX) ctrlChecked 2;
+private _shortcuts = ctrlText CTRL(IDC_ACTIONCREATOR_SHORTCUT);
+private _condition = ctrlText CTRL(IDC_ACTIONCREATOR_CONDITION);
+private _r = ctrlText CTRL(IDC_ACTIONCREATOR_CONDITION);
+private _unconscious = CTRL(IDC_ACTIONCREATOR_TOOLBOX) ctrlChecked 0;
+private _selection = ctrlText CTRL(IDC_ACTIONCREATOR_SELECTION);
+private _memory = ctrlText CTRL(IDC_ACTIONCREATOR_MEMORYPOINT);
 
 if (_args isEqualTo "") then {_args = "nil"};
 if (_priority isEqualTo "") then {_priority = "1.5"};
@@ -55,5 +57,3 @@ copyToClipboard format
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 
 _display closeDisplay 1;
-
-true

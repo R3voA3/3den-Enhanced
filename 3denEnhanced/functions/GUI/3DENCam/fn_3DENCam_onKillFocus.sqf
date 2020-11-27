@@ -10,7 +10,7 @@
   0: CONTROL - TextBox control
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ['_ctrlEdit'];
@@ -19,5 +19,3 @@ if (ctrlText _ctrlEdit isEqualTo '') then
 {
   _ctrlEdit ctrlSetText localize "STR_ENH_3DENCAM_DESCRIPTION";
 };
-
-true

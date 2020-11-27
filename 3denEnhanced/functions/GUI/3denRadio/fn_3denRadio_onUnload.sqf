@@ -8,8 +8,10 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+disableSerialization;
 
 params ["_display"];
 
@@ -18,5 +20,3 @@ params ["_display"];
 profileNamespace setVariable ["ENH_3DENRadio_MusicVolume",musicVolume];
 
 _display closeDisplay 1;
-
-true

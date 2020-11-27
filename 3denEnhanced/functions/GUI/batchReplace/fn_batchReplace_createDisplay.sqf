@@ -10,17 +10,14 @@
   0: DISPLAY - Display
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
-if !(is3DEN) exitWith {false};
+if !(is3DEN) exitWith {};
 
 if ((get3DENSelected "Object") isEqualTo []) exitWith
 {
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
-  false
 };
 
 findDisplay 313 createDisplay "ENH_BatchReplace";
-
-true

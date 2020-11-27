@@ -16,15 +16,17 @@
   1: NUMBER - (Optional, default -1) - Key code used by some functionalities
 
   Returns:
-  BOOLEAN: true
+  -
  */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
 params [["_action","EXPORT",[""]],["_key",-1,[-1]]];
-private _display = findDisplay 60000;
-private _ctrlPL = _display displayCtrl 2000;
-private _ctrlSL = _display displayCtrl 1500;
+private _display = findDisplay IDD_3DENRADIO;
+private _ctrlPL = CTRL(IDC_3DENRADIO_PLAYLIST);
+private _ctrlSL = CTRL(IDC_3DENRADIO_SONGLIST);
 
 switch (_action) do
 {
@@ -71,5 +73,3 @@ switch (_action) do
     profileNamespace setVariable ["ENH_3DENRadio_Playlist",_playlist];
   };
 };
-
-true

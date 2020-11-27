@@ -11,14 +11,16 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
 
-private _display = findDisplay 60000;
-private _ctrlSongList = _display displayCtrl 1500;
-private _ctrlSearch = _display displayCtrl 1400;
-private _filter = toUpper (ctrlText _ctrlSearch);
+private _display = findDisplay IDD_3DENRADIO;
+private _ctrlSongList = CTRL(IDC_3DENRADIO_SONGLIST);
+private _filter = toUpper (ctrlText CTRL(IDC_3DENRADIO_SEARCH));
 private _filteredClasses = [];
 private _music = uiNamespace getVariable ["ENH_3DENRadio_cfgMusic",[]];
+
 lbClear _ctrlSongList;
 
 //Filter all classes according to input in search control, private here to avoid in loop

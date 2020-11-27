@@ -11,7 +11,7 @@
   1: NUMBER - Selected index
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlLnB","_row"];
@@ -22,5 +22,3 @@ _data params ["_world","_camPosition","_camVectorDir","_camVectorUp"];
 
 move3DENCamera [_camPosition,true];
 get3DENCamera setVectorDirAndUp [_camVectorDir,_camVectorUp];
-
-true
