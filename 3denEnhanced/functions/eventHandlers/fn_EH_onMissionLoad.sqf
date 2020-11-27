@@ -13,8 +13,8 @@
   -
 */
 
-//Enable 3den Radio
-'ONLOAD' call ENH_fnc_3DENRadio_toggleRadio;
+//Enable 3DEN Radio
+call ENH_fnc_3DENRadio_toggleRadio;
 
 //Enable dynamic view distance
 call ENH_fnc_dynamicViewDistance;
