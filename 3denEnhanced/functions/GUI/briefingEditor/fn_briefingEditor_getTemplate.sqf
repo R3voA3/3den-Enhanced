@@ -10,7 +10,9 @@
   BOOLEAN: true
 */
 
-#define CTRL(IDC) _display displayCtrl IDC
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 
 params ["_ctrlLB","_selectedIndex"];
 

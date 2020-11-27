@@ -10,28 +10,28 @@
   0: DISPLAy - ENH_BriefingEditor
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
 params ["_display"];
-
-#define CTRL(IDC) (_display displayCtrl IDC)
 
 //Create history of last input when closing the display
 profileNamespace setVariable
 [
   "ENH_briefingEditor_history",
   [
-    ctrlText CTRL(30),//Briefing Title
-    ctrlText CTRL(20),//Subject Text
-    ctrlText CTRL(10)//Briefing Text
+    ctrlText CTRL(IDC_BRIEFINGEDITOR_TITLE),
+    ctrlText CTRL(IDC_BRIEFINGEDITOR_SUBJECT),
+    ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT)
   ]
 ];
 
 //Save templates to profileNamespace
-private _ctrlLBTemplates = CTRL(80);
+private _ctrlLBTemplates = CTRL(IDC_BRIEFINGEDITOR_TEMPLATES);
 private _savedTemplates = [];
 
 for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
@@ -42,5 +42,3 @@ for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
 };
 
 profileNamespace setVariable ["ENH_briefingEditor_templates",_savedTemplates];
-
-true

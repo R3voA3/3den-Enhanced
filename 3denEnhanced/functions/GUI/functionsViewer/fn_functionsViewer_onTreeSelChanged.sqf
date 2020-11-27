@@ -28,8 +28,8 @@ private _linesText = "";
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
-_data params ["_fileName","_filePath"];
-
+_data params ["_fileName","_filePath"];//Filename is also Function name
+systemChat _fileName;
 profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_filePath];
 
 _ctrlFncName ctrlSetText _fileName;
@@ -42,6 +42,7 @@ _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer
   case 2: {preprocessFileLineNumbers _filePath};
 });
 
+_ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;
 _ctrlBiki ctrlEnable (_fileName select [0,3] in ["BIS","BIN"]);
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
@@ -60,7 +61,5 @@ _ctrlCode ctrlCommit 0;
 _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
-
-ENH_FunctionsViewer_CancelLoading = nil;
 
 true

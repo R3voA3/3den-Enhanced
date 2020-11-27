@@ -10,8 +10,10 @@
   0: CONTROL - Button control
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
@@ -19,17 +21,20 @@ params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
 
-private _ctrlFirstParamValue = _display displayCtrl 210;
-private _ctrlSecondParamValue = _display displayCtrl 230;
-private _ctrlThirdParamValue = _display displayCtrl 250;
-private _ctrlBriefingValue = _display displayCtrl 10;
+private _ctrlFirstParamValue = CTRL(IDC_BRIEFINGEDITOR_FIRSTPARAMVALUE);
+private _ctrlSecondParamValue = CTRL(IDC_BRIEFINGEDITOR_SECONDPARAMVALUE);
+private _ctrlThirdParamValue = CTRL(IDC_BRIEFINGEDITOR_THIRDPARAMVALUE);
+private _ctrlBriefingValue = CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT);
 
-#define SELECTEDINDEX lbCurSel (_display displayCtrl 90)
+#define SELECTEDINDEX lbCurSel CTRL(IDC_BRIEFINGEDITOR_TAGS)
 
 #define BRIEFINGTEXT ctrlText _ctrlBriefingValue
 #define VALUE1 ctrlText _ctrlFirstparamValue
 #define VALUE2 ctrlText _ctrlSecondparamValue
 #define VALUE3 ctrlText _ctrlThirdparamValue
+#define COLOURHTML (CTRL(IDC_BRIEFINGEDITOR_COLOURS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_COLOURS)
+#define FONT (CTRL(IDC_BRIEFINGEDITOR_FONTS) lbText lbCurSel CTRL(IDC_BRIEFINGEDITOR_FONTS)
+#define MARKER (CTRL(IDC_BRIEFINGEDITOR_MARKERS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_MARKERS)
 
 switch (SELECTEDINDEX) do
 {
@@ -39,7 +44,6 @@ switch (SELECTEDINDEX) do
   };
   case 1:
   {
-    #define MARKER (_display displayCtrl 60) lbData lbCurSel (_display displayCtrl 60)
     _ctrlBriefingValue ctrlSetText BRIEFINGTEXT + format ["<marker name='%1'>%2</marker>",MARKER,VALUE1];
   };
   case 2:
@@ -48,8 +52,6 @@ switch (SELECTEDINDEX) do
   };
   case 3:
   {
-    #define COLOURHTML (_display displayCtrl 100) lbData lbCurSel (_display displayCtrl 100)
-    #define FONT (_display displayCtrl 70) lbText lbCurSel (_display displayCtrl 70)
     _ctrlBriefingValue ctrlSetText BRIEFINGTEXT + format ["<font color='%1' size='%2' face='%3'>%4</font>",COLOURHTML,VALUE1,FONT,VALUE2];
   };
   case 4:
@@ -60,8 +62,5 @@ switch (SELECTEDINDEX) do
   case 5:
   {
     _ctrlBriefingValue ctrlSetText BRIEFINGTEXT + format ["<executeClose expression='%1'>%2</executeClose>",VALUE1,VALUE2];
-
   };
 };
-
-true

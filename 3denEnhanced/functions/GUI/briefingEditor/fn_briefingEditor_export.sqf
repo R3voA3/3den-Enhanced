@@ -11,15 +11,17 @@
   BOOLEAN: true
 */
 
-#define CTRL(IDC) (_display displayCtrl IDC)
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _text = ctrlText CTRL(10);
-private _subject = ctrlText CTRL(20);
-private _title = ctrlText CTRL(30);
-private _showTitle = [true,false] select (lbCurSel CTRL(40));
+private _text = ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT);
+private _subject = ctrlText CTRL(IDC_BRIEFINGEDITOR_SUBJECT);
+private _title = ctrlText CTRL(IDC_BRIEFINGEDITOR_TITLE);
+private _showTitle = [true,false] select (lbCurSel CTRL(IDC_BRIEFINGEDITOR_SHOWTITLE));
 
 if (([_text,_subject,_title] find "") > -1) exitWith {false};
 

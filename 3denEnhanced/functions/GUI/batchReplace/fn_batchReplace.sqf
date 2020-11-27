@@ -11,10 +11,6 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
-
-disableSerialization;
-
 private _objects = [["Object"]] call ENH_fnc_all3DENSelected;
 private _replaceWith = ctrlText (findDisplay IDD_BATCHREPLACE displayCtrl IDC_BATCHREPLACE_REPLACEWITH); //"sfd,2ffds,5,123"
 

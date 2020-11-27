@@ -10,13 +10,14 @@
   0: DISPLAY - ENH_BriefingEditor
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
 params ["_display"];
-#define CTRL(IDC) (_display displayCtrl IDC)
 
 private _coloursHTML =
 [
@@ -174,9 +175,9 @@ private _getColorFromHex =
 //Get history if available
 private _historyLatest = profileNamespace getVariable ["ENH_briefingEditor_history",["","Diary",""]];
 
-CTRL(30) ctrlSetText (_historyLatest # 0);//Briefing Title
-CTRL(20) ctrlSetText (_historyLatest # 1);//Subject Text
-CTRL(10) ctrlSetText (_historyLatest # 2);//Briefing Text
+CTRL(IDC_BRIEFINGEDITOR_TITLE) ctrlSetText (_historyLatest # 0);//Briefing Title
+CTRL(IDC_BRIEFINGEDITOR_SUBJECT) ctrlSetText (_historyLatest # 1);//Subject Text
+CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText (_historyLatest # 2);//Briefing Text
 
 //Load saved templates
 private _templates = profileNamespace getVariable "ENH_briefingEditor_templates";
@@ -204,7 +205,7 @@ if !(isNil "_templates") then
 } forEach _coloursHTML;
 
 //Fill marker list
-private _ctrlLBMarkers = CTRL(60);
+private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
 {
   //If marker has no name, use variable name instead
   private _name = (_x get3DENAttribute "text") # 0;
@@ -229,7 +230,7 @@ private _ctrlLBMarkers = CTRL(60);
 } forEach (all3DENEntities # 5);
 
 //Add tags to combo
-private _ctrlComboTags = CTRL(90);
+private _ctrlComboTags = CTRL(IDC_BRIEFINGEDITOR_TAGS);
 
 {
   _ctrlComboTags lbAdd _x;
@@ -238,10 +239,8 @@ private _ctrlComboTags = CTRL(90);
 _ctrlComboTags lbSetCurSel 0;
 
 //Add fonts
-private _ctrlLBFonts = CTRL(70);
+private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
 {
   _ctrlLBFonts lbAdd configName _x;
   _ctrlLBFonts lbSetTooltip [_forEachIndex,configName _x];
 } forEach ('true' configClasses (configFile >> 'CfgFontFamilies'));
-
-true

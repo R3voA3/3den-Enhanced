@@ -10,22 +10,20 @@
   0: CONTROL - Controlb button
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
 #define CTRL(IDC) (_display displayCtrl IDC)
 params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 
-private _briefingTitle = ctrlText CTRL(30);
+private _briefingTitle = ctrlText CTRL(IDC_BRIEFINGEDITOR_TITLE);
 
 if (_briefingTitle isEqualTo "") exitWith {false};
 
-private _subject = ctrlText CTRL(20);
-private _briefingText = ctrlText CTRL(10);
-private _index = CTRL(80) lbAdd _briefingTitle;
+private _subject = ctrlText CTRL(IDC_BRIEFINGEDITOR_SUBJECT);
+private _briefingText = ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT);
+private _index = CTRL(IDC_BRIEFINGEDITOR_TEMPLATES) lbAdd _briefingTitle;
 
-CTRL(80) lbSetData [_index,_briefingText];
-CTRL(80) lbSetTooltip [_index,localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
-
-true
+CTRL(IDC_BRIEFINGEDITOR_TEMPLATES) lbSetData [_index,_briefingText];
+CTRL(IDC_BRIEFINGEDITOR_TEMPLATES) lbSetTooltip [_index,localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
