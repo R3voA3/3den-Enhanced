@@ -9,7 +9,7 @@
   1: ARRAY - Path
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 disableSerialization;
@@ -29,8 +29,6 @@ if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
 _data params ["_fileName","_filePath"];//Filename is also Function name
-systemChat _fileName;
-profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_filePath];
 
 _ctrlFncName ctrlSetText _fileName;
 _ctrlFncPath ctrlSetText _filePath;
@@ -62,4 +60,4 @@ _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
-true
+profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_filePath];

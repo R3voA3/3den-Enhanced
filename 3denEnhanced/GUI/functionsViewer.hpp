@@ -151,7 +151,6 @@ class ENH_FunctionsViewer
     {
       idc = IDC_FUNCTIONSVIEWER_PANNEL;
       text = "«"
-      //tooltip = __EVAL(toUpper localize "STR_DIK_E");
       x = safezoneX + 71 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
@@ -289,7 +288,6 @@ class ENH_FunctionsViewer
     };
     class Close: ctrlButtonClose
     {
-      tooltip = __EVAL(toUpper localize "STR_DIK_ESCAPE");
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 40 * GRID_W;
