@@ -5,72 +5,59 @@
   Initialises the 3den Radio GUI.
 
   Parameter(s):
-  -
+  0: DISPLAY - 3DEN Radio
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
-
 disableSerialization;
 
 params ["_display"];
 
-private _ctrlSongList = CTRL(IDC_3DENRADIO_SONGLIST);
-private _ctrlSort = CTRL(IDC_3DENRADIO_SORT);
-
-//Set up slider
+//Set up volume slider
 CTRL(IDC_3DENRADIO_VOLUME) sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume",0.25]);
 
-//Set up combo
-{
-  _ctrlSort lbAdd localize _x;
-} forEach ["STR_ENH_3DENRADIO_SORTBYTITLE","STR_ENH_3DENRADIO_SORTBYDURATION","STR_ENH_3DENRADIO_SORTBYTHEME"];
-
-_ctrlSort lbSetCurSel 0;
-
 //Update current song
-CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (profileNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
+CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (uiNamespace getVariable ["ENH_3DENRadio_CurrentSong",""]);
 
 //Update radio button
-switch (profileNamespace getVariable ["ENH_3DENRadio_Enabled",false]) do
+CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
+  ["\3denEnhanced\data\icon_play.paa","\3denEnhanced\data\icon_Pause.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled",false]));
+
+[] spawn ENH_fnc_3DENRadio_timelineControl;
+
+//Setup list and filter
 {
-  case true:
-  {
-    CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_Pause.paa";
-  };
-  case false:
-  {
-    CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play.paa";
-  };
-};
+  _x lnbAddColumn 0.45; //Duration
+  _x lnbAddColumn 0.55; //Theme
+  _x lnbAddColumn 0.7;  //Mod + Icon
+  _x lnbAddColumn 0.92; //In Listbox
+} forEach [CTRL(IDC_3DENRADIO_SONGLIST),CTRL(IDC_3DENRADIO_FILTER)];
+
+CTRL(IDC_3DENRADIO_FILTER) lnbAddRow [localize "STR_ENH_3DENRADIO_TITLE",localize "STR_ENH_3DENRADIO_DURATION",localize "STR_ENH_3DENRADIO_THEME",localize "STR_ENH_3DENRADIO_MOD","PL"];//Used for sorting
+CTRL(IDC_3DENRADIO_FILTER) lnbSetData [[0,4],"SortByValue"];//Needed for initListBoxSorting so it knows this column should be sorted by value
+[CTRL(IDC_3DENRADIO_FILTER),CTRL(IDC_3DENRADIO_SONGLIST),[0,1,2,3]] call BIS_fnc_initListNBoxSorting;
 
 //Get all music tracks
-
 if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic",[]]) isEqualTo []) then
 {
-  uiNamespace setVariable
-  [
-    "ENH_3DENRadio_cfgMusic",
-    ("true" configClasses (configFile >> "CfgMusic")) +
-    ("true" configClasses (missionConfigFile >> "CfgMusic")) +
-    ("true" configClasses (campaignConfigFile >> "CfgMusic"))
-  ];
+  private _allMusic = configProperties [missionConfigFile >> "CfgMusic", "getNumber (_x >> 'duration') > 0", true];
+  _allMusic append configProperties [configFile >> "CfgMusic", "getNumber (_x >> 'duration') > 0", true];
+  _allMusic append configProperties [campaignConfigFile >> "CfgMusic", "getNumber (_x >> 'duration') > 0", true];
+  uiNamespace setVariable ["ENH_3DENRadio_cfgMusic",_allMusic];
 };
-
-_ctrlSongList lnbAddColumn 0.59;
-_ctrlSongList lnbAddColumn 0.7;
-_ctrlSongList lnbAddColumn 0.9;
 
 //Update list
 call ENH_fnc_3DENRadio_searchList;
 
-//Fill playlist listbox
-"UPDATE" call ENH_fnc_3DENRadio_handlePlaylist;
-
-"ONLOAD" call ENH_fnc_3DENRadio_toggleRadio;
-
-"TITLE" call ENH_fnc_3DENRadio_sortBy;
-
-true
+//Focus Search EH
+_display displayAddEventHandler ["keyDown",
+{
+  params ["_display","_key","_shift","_ctrl"];
+  if (_key isEqualTo 33 && _ctrl && _shift) then
+  {
+    ctrlSetFocus CTRL(IDC_3DENRADIO_SEARCH);
+  }
+}];

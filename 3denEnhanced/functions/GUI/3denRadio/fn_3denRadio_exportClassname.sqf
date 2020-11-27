@@ -5,7 +5,9 @@
   Exports classname of selected song and copies it to the clipboard.
 
   Parameter(s):
-  -
+  0: CONTROL - ListNBox
+  1: NUMBER - Pressed key
+  3: BOOLEAN - CTRL pressed
 
   Returns:
   -
@@ -13,15 +15,10 @@
 
 disableSerialization;
 
-params ["_ctrlLNB","_key","","_mod"];
+params ["_ctrlSongList","_key","","_ctrl"];
 
-if (_key isEqualTo 46 && _mod) then //CTRL + C
+if (_key isEqualTo 46 && _ctrl) then //CTRL + C
 {
-  private _class = _ctrlLNB lnbData [lnbCurSelRow _ctrlLNB,0];
-  if (_class isEqualTo "") then
-  {
-    _class = _ctrlLNB lbData (lbCurSel _ctrlLNB);
-  };
-  copyToClipboard str _class;
+  copyToClipboard str (_ctrlSongList lnbData [lnbCurSelRow _ctrlSongList,0]);
   ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };

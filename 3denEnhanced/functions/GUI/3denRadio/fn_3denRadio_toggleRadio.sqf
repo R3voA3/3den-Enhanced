@@ -5,7 +5,7 @@
   Enable or disables the radio and updates other controls accordingly.
 
   Parameter(s):
-  STRING: _input - "BUTTON", "ONLOAD"
+  BOOLEAN: True if called from Eden Event Handler, false if called from within GUI. Default: true
 
   Returns:
   -
@@ -15,22 +15,28 @@
 
 disableSerialization;
 
-params ["_input"];
+params [["_onLoad",true]];
 
-private _display = findDisplay IDD_3DENRADIO;
-private _radioState = profileNamespace getVariable ["ENH_3DENRadio_Enabled",false];
 private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];
+
+//Exit if playlist is empty
+if (_playlist isEqualTo []) exitWith {};
 
 private _fnc_enableRadio =
 {
-  call ENH_fnc_3DENRadio_selectNewSong;
+  true call ENH_fnc_3DENRadio_playNewSong;
   ENH_3DENRadio_MusicEH = addMusicEventHandler ["MusicStop",
   {
-    call ENH_fnc_3DENRadio_selectNewSong;
+    true call ENH_fnc_3DENRadio_playNewSong;
   }];
 
   profileNamespace setVariable ["ENH_3DENRadio_Enabled",true];
-  CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_pause.paa";
+
+  //Only change controls if GUI is visible
+  if !(isNull findDisplay IDD_3DENRADIO) then
+  {
+    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_pause.paa";
+  };
 };
 
 private _fnc_disableRadio =
@@ -39,15 +45,23 @@ private _fnc_disableRadio =
   if !(isNil "ENH_3DENRadio_MusicEH") then {removeMusicEventHandler["MusicStop",ENH_3DENRadio_MusicEH]; ENH_3DENRadio_MusicEH = nil};
 
   profileNamespace setVariable ["ENH_3DENRadio_Enabled",false];
-  profileNamespace setVariable ["ENH_3DENRadio_CurrentSong",""];
+  uiNamespace setVariable ["ENH_3DENRadio_CurrentSong",""];
 
-  CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText "";
-  CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play.paa";
+  //Only change controls if GUI is visible
+  if !(isNull findDisplay IDD_3DENRADIO) then
+  {
+    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_CURRENTSONG) ctrlSetText "";
+    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play.paa";
+  };
 };
 
-if (_input isEqualTo "BUTTON" && _radioState) exitWith {call _fnc_disableRadio};
-if (_input isEqualTo "BUTTON" && !_radioState && !(_playlist isEqualTo [])) exitWith {call _fnc_enableRadio};
+private _radioState = profileNamespace getVariable ["ENH_3DENRadio_Enabled",false];
 
-//Check if radio is enabled but not running
-if (_input isEqualTo "ONLOAD" && _radioState && isNil "ENH_3DENRadio_MusicEH") then {call _fnc_enableRadio};
-if (_input isEqualTo "ONLOAD" && (_playlist isEqualTo [])) then {call _fnc_disableRadio};
+//Check if radio should run but was not yet initialised (onTerrainNew, onMissionNew, onMissionPreviewEnd)
+if (_onLoad && _radioState) exitWith {call _fnc_enableRadio};
+
+//Turn it off by pressing the button
+if (!_onLoad && _radioState) exitWith {call _fnc_disableRadio};
+
+//Turn it on by pressing the button
+if (!_onLoad && !_radioState) exitWith {call _fnc_enableRadio};
