@@ -13,7 +13,10 @@
   -
 */
 
-#define CTRL(IDC) (_display displayCtrl IDC)
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
+
 params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 

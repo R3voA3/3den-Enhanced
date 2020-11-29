@@ -5,11 +5,13 @@
   Used by the ENH_ModuleInformation GUI. Called onLoad.
 
   Parameter(s):
-  -
+  0: DISPLAY - Module Information GUI
 
   Returns:
-  BOOLEAN: true
+  BOOLEAN: True on success, false when failed
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 
@@ -68,10 +70,10 @@ if (_description isEqualType []) then
   _description = _descFinal;
 };
 
-(_display displayCtrl 1400) ctrlSetText _description;
-(_display displayCtrl 1401) ctrlSetText _position;
-(_display displayCtrl 1402) ctrlSetText _duplicate;
-(_display displayCtrl 1403) ctrlSetText _direction;
-(_display displayCtrl 1404) ctrlSetText str _sync;
+CTRL(IDC_MODULEINFORMATION_DESCRIPTION) ctrlSetText _description;
+CTRL(IDC_MODULEINFORMATION_POSITION) ctrlSetText _position;
+CTRL(IDC_MODULEINFORMATION_DUPLICATE) ctrlSetText _duplicate;
+CTRL(IDC_MODULEINFORMATION_DIRECTION) ctrlSetText _direction;
+CTRL(IDC_MODULEINFORMATION_SYNC) ctrlSetText str _sync;
 
 true

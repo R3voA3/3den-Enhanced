@@ -10,7 +10,7 @@
   0: DISPLAY
 
   Returns:
-  BOOLEAN: true
+  BOOLEAN: true, false if executed outside of Eden Editor
 */
 
 params ['_display'];
@@ -24,7 +24,6 @@ if (([["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected) isEqu
   false
 };
 
-private _ctrlVarName = _display displayCtrl 1000;
-_ctrlVarName ctrlSetText (profileNamespace getVariable ['ENH_NameObjects_LastVarName',profileName]);
+CTRL(IDC_NAMEOBJECTS_VARIABLENAME) ctrlSetText (profileNamespace getVariable ['ENH_NameObjects_LastVarName',profileName]);
 
 true

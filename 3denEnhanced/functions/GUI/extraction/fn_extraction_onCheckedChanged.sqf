@@ -11,15 +11,15 @@
   1: NUMBER - Checkbox state
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-#define GET_CTRL(IDC) (_display displayCtrl IDC)
+#include "\3denEnhanced\defineCommon.hpp"
 
 params ["_ctrlCheckbox", "_checked"];
 
 private _display = ctrlParent _ctrlCheckbox;
 private _enable = [false,true] select _checked;
 
-GET_CTRL(200) ctrlEnable _enable;
-GET_CTRL(300) ctrlEnable _enable;
+CTRL(IDC_EXTRACTION_NAMEREQUESTER) ctrlEnable _enable;
+CTRL(IDC_EXTRACTION_NAMETRANSPORT) ctrlEnable _enable;

@@ -10,22 +10,20 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-#define GET_CTRL(IDC) (_display displayCtrl IDC)
-private _display = findDisplay 50000;
+#include "\3denEnhanced\defineCommon.hpp"
+
+private _display = findDisplay IDD_EXTRACTION;
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center","_veh"];
 
 _center set [2,0];//Set z to zero
 
 //Get values from GUI
-private _radioChat = cbChecked GET_CTRL(100);
-private _conditionStart = ctrlText GET_CTRL(400);
-private _ctrlGrenadeType = GET_CTRL(500);
+private _conditionStart = ctrlText CTRL(IDC_EXTRACTION_CONDITIONSTART);
+private _ctrlGrenadeType = CTRL(IDC_EXTRACTION_GRENADE);
 private _grenadeType = _ctrlGrenadeType lbData lbCurSel _ctrlGrenadeType;
-private _condition = ctrlText GET_CTRL(600);
-private _gridPos = ctrlText GET_CTRL(700);
 
 collect3DENHistory
 {
@@ -84,11 +82,11 @@ collect3DENHistory
   add3DENConnection ["WaypointActivation",[_triggerStart],_wpStart];
 
   //Set up radio chat trigger
-  if (_radioChat) then
+  if (cbChecked CTRL(IDC_EXTRACTION_SHOWRADIOCHAT)) then
   {
-    private _nameRequester = ctrlText GET_CTRL(200);
-    private _nameTransport = ctrlText GET_CTRL(300);
-    private _callExtractionMsg = format [localize "STR_ENH_EXTRACTION_CALLEXTRACTIONMSG",_nameRequester,_nameTransport,_gridPos];
+    private _nameRequester = ctrlText CTRL(IDC_EXTRACTION_NAMEREQUESTER);
+    private _nameTransport = ctrlText CTRL(IDC_EXTRACTION_NAMETRANSPORT);
+    private _callExtractionMsg = format [localize "STR_ENH_EXTRACTION_CALLEXTRACTIONMSG",_nameRequester,_nameTransport,ctrlText CTRL(IDC_EXTRACTION_GRID);];
     private _extractionConfirmedMsg = format [localize "STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG",_nameRequester,_nameTransport];
     _triggerStart set3DENAttribute
     [
@@ -108,7 +106,7 @@ collect3DENHistory
   private _wpTransportUnload = group _veh create3DENEntity ["Waypoint","TransportUnload",_center  vectorAdd [0,-0.5,0]];
 
   //Condition for the transport unload wp to become true.
-  _wpTransportUnload set3DENAttribute	["Condition",format ["%1",_condition]];
+  _wpTransportUnload set3DENAttribute	["Condition",format ["%1",ctrlText CTRL(IDC_EXTRACTION_CONDITION)]];
 
   private _markerLZ = create3DENEntity ["Marker","hd_pickup",_center vectorAdd [1,0,0]];
   _markerLZ set3DENAttribute ["baseColor","colorBLUFOR"];
@@ -121,7 +119,6 @@ collect3DENHistory
   } forEach [_veh,_wpStart,_wpTransportUnload,_wpEnd,_triggerStart,_triggerSmoke,_markerLZ];
 };
 
-findDisplay 50000 closeDisplay 0;
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+_display closeDisplay 0;
 
-true
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

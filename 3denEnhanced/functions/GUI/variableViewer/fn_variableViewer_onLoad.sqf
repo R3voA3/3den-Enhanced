@@ -39,13 +39,13 @@ CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARI
 [CTRL(IDC_VARIABLEVIEWER_FILTER),CTRL(IDC_VARIABLEVIEWER_LIST),[0,1,2]] call BIS_fnc_initListNBoxSorting;
 
 //Get all locations
-private _worldSizeHalfe = worldSize / 2;
-ENH_VariableViewer_AllLocationTypes = [];
-"ENH_VariableViewer_AllLocationTypes pushBack configName _x" configClasses (configFile >> "CfgLocationTypes");
+private _worldSizeHalf = worldSize / 2;
+#define LOCATION_TYPES "true" configClasses (configFile >> "CfgLocationTypes") apply {configName _x}
+
 private _allLocations = [];
 {
   _allLocations pushBack _x;
-} forEach nearestLocations [[_worldSizeHalfe,_worldSizeHalfe,0],ENH_VariableViewer_AllLocationTypes,_worldSizeHalfe * sqrt 2];
+} forEach nearestLocations [[_worldSizeHalf,_worldSizeHalf,0],LOCATION_TYPES,_worldSizeHalf * sqrt 2];
 
 //Sort units, vehicles, groups and locations first, then add special namespaces so that they are at the beginning of the combo box
 private _namespaces = allUnits + vehicles + allGroups + _allLocations;

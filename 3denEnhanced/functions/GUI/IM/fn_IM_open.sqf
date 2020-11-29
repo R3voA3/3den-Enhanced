@@ -81,10 +81,9 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 
       //Get the DLC, make sure it's a DLC and was not modified by a mod only (CBA,ACE)
       private _dlc = "";
-      private _addons = configSourceAddonList _x;
-      if (count _addons > 0) then
+      if (count configSourceAddonList _x > 0) then
       {
-        private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _addons # 0);
+        private _mods = configsourcemodlist (configfile >> "CfgPatches" >> configSourceAddonList _x # 0);
         if (count _mods > 0) then
         {
           _dlc = _mods # 0;

@@ -8,10 +8,12 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
-private _display = findDisplay 80000;
+#include "\3denEnhanced\defineCommon.hpp"
+
+private _display = findDisplay IDD_NAMEOBJECTS;
 private _input   = param [0,"UNNAME",[""]];
 private _toName = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
 
@@ -26,8 +28,8 @@ if (_input == "UNNAME") then
 }
 else
 {
-  private _varName  = ctrlText (_display displayCtrl 1000);
-  private _index = parseNumber ctrlText (_display displayCtrl 1100);
+  private _varName  = ctrlText CTRL(IDC_NAMEOBJECTS_VARIABLENAME);
+  private _index = parseNumber ctrlText CTRL(IDC_NAMEOBJECTS_INDEXSTART);
   profileNamespace setVariable ["ENH_NameObjects_LastVarName",_varName];
   _varName = _varName + "_";
 
@@ -43,5 +45,3 @@ else
 
 _display closeDisplay 0;
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-
-true

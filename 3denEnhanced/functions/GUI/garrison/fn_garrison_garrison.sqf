@@ -10,7 +10,7 @@
   CONTROL: Button control
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 disableSerialization;
@@ -23,14 +23,10 @@ private _selectedObjects = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_
 private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
 _center set [2,0];
 
-private _radius = ctrlText (_display displayCtrl 100);
-
-private _ctrlCoverage = _display displayCtrl 200;
-private _index  = lbCurSel _ctrlCoverage;
-private _step = _ctrlCoverage lbValue _index;
-
-private _stance  = lbCurSel (_display displayCtrl 300);
-private _step  = _ctrlCoverage lbValue _index;
+private _radius = ctrlText CTRL(IDC_GARRISON_RADIUS);
+private _index  = lbCurSel CTRL(IDC_GARRISON_COVERAGE);
+private _step = CTRL(IDC_GARRISON_COVERAGE) lbValue _index;
+private _stance  = lbCurSel CTRL(IDC_GARRISON_STANCE);
 
 //Save settings
 profileNamespace setVariable ['ENH_garrison_lastRadius',_radius];
@@ -38,8 +34,6 @@ profileNamespace setVariable ['ENH_garrison_lastCoverage',_index];
 profileNamespace setVariable ['ENH_garrison_lastStance',_stance];
 
 //Get nearest buildings
-private _buildings = _center nearObjects ["House",parseNumber _radius];
-
 //Get all building positions from nearby buildings
 #define BUILDINGPOS (_x buildingPos -1)
 {
@@ -48,7 +42,7 @@ for "_i" from 0 to (count BUILDINGPOS - 1) step _step do
     _positions pushBack (_x buildingPos _i);
   };
   false;
-} count _buildings;
+} count (_center nearObjects ["House",parseNumber _radius]);
 
 //Place units inside buildings
 collect3DENHistory
@@ -89,5 +83,3 @@ collect3DENHistory
 };
 
 _display closeDisplay 0;
-
-true

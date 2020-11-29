@@ -15,17 +15,13 @@
 
 disableSerialization;
 
-private _display = findDisplay 140000;
-private _ctrlTV = CTRL(1500);
-private _ctrlProgress = CTRL(1800);
+private _display = findDisplay IDD_TEXTUREFINDER;
+private _ctrlTV = CTRL(IDC_TEXTUREFINDER_TEXTURELIST);
+private _ctrlProgress = CTRL(IDC_TEXTUREFINDER_PROGRESS);
 private _tooltip = localize "STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP";
 private _textureCount = count (uiNamespace getVariable  "ENH_TextureFinder_TexturesFound");
 private _index = 0;
 private _counter = 0;
-
-//Disable update button and search
-CTRL(1900) ctrlEnable false;
-CTRL(1600) ctrlEnable false;
 
 tvClear _ctrlTV;
 _ctrlTV tvAdd [[],"PAA"];
@@ -54,7 +50,3 @@ private _fnc_addToList =
 
 _ctrlTV tvSort [[0],false];
 _ctrlTV tvSort [[1],false];
-
-//Re-enable after list was filled
-CTRL(1900) ctrlEnable true;
-CTRL(1600) ctrlEnable true;
