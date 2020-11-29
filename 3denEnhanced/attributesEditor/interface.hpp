@@ -12,35 +12,25 @@ class ENH_Interface
       expression = "";
       defaultValue = "false";
     };
-    class ENH_CollapseEntityList
+    class ENH_CollapseEntityList: ENH_CollapseAssetBrowser
     {
       displayName = $STR_ENH_COLLAPSEENTITYLIST;
       property = "ENH_CollapseEntityList";
-      control = "Checkbox";
-      expression = "";
-      defaultValue = "false";
     };
-    class ENH_ShowPanelLeft
+    class ENH_ShowPanelLeft: ENH_CollapseAssetBrowser
     {
       displayName = $STR_ENH_SHOWLEFTPANEL;
       property = "ENH_ShowPanelLeft";
-      control = "Checkbox";
-      defaultValue = "";
-      expression = "false";
     };
-    class ENH_ShowPanelRight
+    class ENH_ShowPanelRight: ENH_CollapseAssetBrowser
     {
       displayName = $STR_ENH_SHOWRIGHTPANEL;
       property = "ENH_ShowPanelRight";
-      control = "Checkbox";
-      defaultValue = "";
-      expression = "false";
     };
-    class ENH_Statusbar_EntityCounter
+    class ENH_Statusbar_EntityCounter: ENH_CollapseAssetBrowser
     {
       displayName = $STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME;
       property = "ENH_Statusbar_EntityCounter";
-      control = "Checkbox";
       expression = "'init' call ENH_fnc_statusbar_entityCounter";
       defaultValue = "true";
     };
