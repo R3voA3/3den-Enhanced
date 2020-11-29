@@ -51,15 +51,6 @@ class ENH_VariableViewer
       y = DIALOG_TOP + 5 * GRID_H;
       h = CTRL_DEFAULT_H;
     };
-    class Progress: ctrlProgress
-    {
-      idc = IDC_VARIABLEVIEWER_PROGRESS;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = (DIALOG_TOP + DIALOG_H - 12) * GRID_H;
-      w = (DIALOG_W - 2) * GRID_W;
-      h = GRID_H;
-      colorFrame[] = {0,0,0,0};
-    };
     class Namespace: ctrlCombo
     {
       idc = IDC_VARIABLEVIEWER_NAMESPACE;
