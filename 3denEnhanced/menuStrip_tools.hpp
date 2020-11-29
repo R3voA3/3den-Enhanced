@@ -36,8 +36,7 @@ class ENH_Folder_Debug
     "ENH_ProductInfo",
     "ENH_RecompileFunctions",
     "ENH_ToggleMapIDs",
-    "ENH_ClearChat",
-    "ENH_RPTViewer"
+    "ENH_ClearChat"
   };
 };
 class ENH_Folder_Loadout
@@ -68,6 +67,8 @@ class ENH_Folder_GUI
     "ENH_ExportGUIBaseClassesAll",
     "ENH_ExportGUIBaseClassesDefault",
     "ENH_ExportGUIBaseClasses3DEN",
+    "ENH_ExportBaseClassesCustomClasses",
+    "ENH_ExportBaseClassesCustomImport",
     "Separator",
     "ENH_GUITestGrids",
     "ENH_ControlStyles",
@@ -116,7 +117,9 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDynamicSimulation",
     "ENH_ToggleDrawBuildingPositions",
     "ENH_ToggleDrawDLCIcons",
-    "ENH_ToggleAIFeatures"
+    "ENH_ToggleAIFeatures",
+    "Separator",
+    "ENH_CreateTrigger"
   };
 };
 //Utilities
@@ -289,6 +292,12 @@ class ENH_ExportMissionParameters
   text = $STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS;
   action = "copyToClipboard loadFile '3denEnhanced\missionParameters.hpp'; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
+class ENH_CreateTrigger
+{
+  text = $STR_ENH_TOOLS_CREATETRIGGER;
+  picture = "\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa";
+  action = "private _trigger = create3DENEntity ['Trigger','EmptyDetectorArea10x10',[worldSize / 2, worldSize / 2,0]]; _trigger set3DENAttribute ['size3',[worldSize / 2,worldSize / 2,0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
+};
 //Vanilla
 class FunctionsViewer//Overwrites the default function viewer
 {
@@ -431,6 +440,16 @@ class ENH_ExportGUIBaseClasses3DEN
   text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN;
   action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
 };
+class ENH_ExportBaseClassesCustomClasses
+{
+  text = "Export GUI Defines (class keyword)";
+  action = "['class',''] call ENH_fnc_exportGUIDefines";
+};
+class ENH_ExportBaseClassesCustomImport
+{
+  text = "Export GUI Defines (import keyword)";
+  action = "[import',''] call ENH_fnc_exportGUIDefines";
+};
 class ENH_GUITestGrids
 {
   text = $STR_ENH_TOOLS_GUITESTGRIDS;
@@ -474,11 +493,4 @@ class ENH_ClearChat
   text = $STR_ENH_TOOLS_CLEARCHAT;
   action = "clearRadio";
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_C};
-};
-class ENH_RPTViewer
-{
-  text = "View Latest RPT";
-  action = "findDisplay 313 createDisplay 'ENH_RPT'";
-  opensNewWindow = 1;
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_D};
 };

@@ -18,14 +18,12 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\GUI\3DENRadio";
       class 3DENRadio_onLoad;
-      class 3DENRadio_onUnload;
       class 3DENRadio_exportClassname;
-      class 3DENRadio_playMusic;
+      class 3DENRadio_timelineControl;
       class 3DENRadio_toggleRadio;
-      class 3DENRadio_handlePlaylist;
-      class 3DENRadio_sortBy;
       class 3DENRadio_searchList;
-      class 3DENRadio_selectNewSong;
+      class 3DENRadio_playNewSong;
+      class 3DENRadio_handlePlaylist;
     };
     class Garrison
     {
@@ -147,9 +145,9 @@ class CfgFunctions
       class variableViewer_delete;
       class variableViewer_getNamespace;
     };
-    class InventoryManager
+    class IM
     {
-      file = "3denEnhanced\functions\GUI\inventoryManager";
+      file = "3denEnhanced\functions\GUI\IM";
       class IM_open;
       class IM_addItem;
       class IM_applyAttribute;
@@ -182,11 +180,6 @@ class CfgFunctions
       class CFGS_handleFavorites;
       class CFGS_playOrCopy;
     };
-    class RPT
-    {
-      file = "3denEnhanced\functions\GUI\rpt";
-      class rpt_load;
-    };
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
@@ -217,6 +210,7 @@ class CfgFunctions
       class hasStorage;
       class dynamicViewDistance;
       class addCustomMenuStripEntries;
+      class exportGUIDefines;
     };
     class Log
     {

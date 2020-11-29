@@ -25,7 +25,6 @@
 #include "GUI\inventoryManager_templateData.hpp"
 #include "GUI\inventoryManager_itemPreview.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
-#include "GUI\rpt.hpp"
 #include "GUI\RscTestControlXXX.hpp"
 
 class RscControlsGroupNoScrollbars;
