@@ -11,12 +11,12 @@
   1: NUMBER - Index
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 params ["_ctrlFilter","_selectedIndex"];
 [_ctrlFilter lbData _selectedIndex] call ENH_fnc_CFGS_getCfgSentences;
 
-(ctrlparent _ctrlFilter) displayCtrl 10000 ctrlSetText "";
-
-true
+(ctrlparent _ctrlFilter) displayCtrl IDC_SENTENCES_SEARCH ctrlSetText "";

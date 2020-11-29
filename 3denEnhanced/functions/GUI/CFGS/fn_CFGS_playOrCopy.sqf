@@ -10,17 +10,20 @@
   0: STRING - Mode, "play" to play the sentence, anything else to copy it
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_mode"];
 
-_tv = uiNamespace getVariable ["ENH_CFGS_ActiveList",controlNull];
-_selectionpath = tvCurSel _tv;
+private _tv = uiNamespace getVariable ["ENH_CFGS_ActiveList",controlNull];
+private _selectionpath = tvCurSel _tv;
+
 if (_selectionPath isEqualTo [] || {_tv tvData _selectionPath == ""}) exitWith {false}; // Make sure something is selected and if so, make sure data is available
+
 private _data = (_tv tvData _selectionPath) call ENH_fnc_CFGS_getSentenceDataFromConfig;
 private _soundPath = _data param [4];
 private _text = _tv tvText _selectionPath;
+
 if (_soundPath == "") exitWith {false};
 
 if (_mode == "play") then
@@ -38,5 +41,3 @@ else
   uinamespace setVariable ["Display3DENCopy_data",["",_data]];
   (uiNamespace getVariable "ENH_CFGS_Display") createdisplay "Display3DENCopy";
 };
-
-true

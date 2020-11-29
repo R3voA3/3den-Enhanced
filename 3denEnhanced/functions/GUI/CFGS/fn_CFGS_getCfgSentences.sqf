@@ -10,20 +10,21 @@
   0: STRING - Filter, can be ALL or anything else
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 private _display = uiNamespace getVariable ["ENH_CFGS_Display",displayNull];
-private _tv = _display displayCtrl 2000;
-private _ctrlFilter = _display displayCtrl 1000;
-private _ctrlCount = _display displayCtrl 3000;
+private _tv = CTRL(IDC_SENTENCES_LIST);
+private _ctrlFilter = CTRL(IDC_SENTENCES_PAGES);
+private _ctrlCount = CTRL(IDC_SENTENCES_COUNT);
 private _counter = 0;
 
 params [["_filter","ALL"]];
 
 tvClear _tv;
 
-_missions = "true" configClasses (configFile >> "CfgSentences");
 {
   if (_filter == "ALL" || {_filter in toUpper configName _x}) then //Only filter if filter is not "all"
   {
@@ -48,9 +49,7 @@ _missions = "true" configClasses (configFile >> "CfgSentences");
     } forEach _topics;
     _tv tvSort [[_indexMission], false];
   };
-} forEach _missions;
+} forEach ("true" configClasses (configFile >> "CfgSentences"));
 
 _tv tvSort [[], false];
 _ctrlCount ctrlSetText ("#" +  str _counter);
-
-true

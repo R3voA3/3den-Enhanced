@@ -10,8 +10,10 @@
   0: STRING - Mode, can be empty for deleting or adding (automatically handles) or "fill" to fill the favorites list
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 private _display = uiNamespace getVariable ["ENH_CFGS_Display",displayNull];
 
@@ -19,7 +21,7 @@ params [["_mode",""]];
 
 if (_mode == "fill") then // Fill list
 {
-  private _tvFavorites = _display displayCtrl 4000;
+  private _tvFavorites = CTRL(IDC_SENTENCES_FAVORITES);
   tvClear _tvFavorites;
   {
     _x params ["_text","_configStr"];
@@ -56,5 +58,3 @@ else
     ["ENH_ActionPerformed"] call BIS_fnc_3DENNotification;
   };
 };
-
-true

@@ -11,12 +11,14 @@
   1: NUMBER - Index
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 params ["_control", "_selectedIndex"];
-_tv = (ctrlParent _control displayCtrl 2000);
-_tvFavorites = (ctrlParent _control displayCtrl 4000);
+_tv = (ctrlParent _control displayCtrl IDC_SENTENCES_LIST);
+_tvFavorites = (ctrlParent _control displayCtrl IDC_SENTENCES_FAVORITES);
 
 _tv ctrlEnable ([true,false] select _selectedIndex);
 _tv ctrlSetFade _selectedIndex;
@@ -28,5 +30,3 @@ _tvFavorites ctrlCommit 0;
 _tv ctrlCommit 0;
 
 uiNamespace setVariable ["ENH_CFGS_ActiveList",[_tv,_tvFavorites] select _selectedIndex];
-
-true
