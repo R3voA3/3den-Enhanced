@@ -16,16 +16,14 @@
 #include "GUI\actionCreator.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\scenarioAttributesManager.hpp"
-#include "GUI\scenarioAttributesManagerTemplateData.hpp"
 #include "GUI\garrison.hpp"
 #include "GUI\extraction.hpp"
 #include "GUI\3DENCameraPositions.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\inventoryManager.hpp"
-#include "GUI\inventoryManager_templateData.hpp"
-#include "GUI\inventoryManager_itemPreview.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\RscTestControlXXX.hpp"
+#include "GUI\ExportGUIDefines.hpp"
 
 class RscControlsGroupNoScrollbars;
 class RscDebugConsole: RscControlsGroupNoScrollbars
