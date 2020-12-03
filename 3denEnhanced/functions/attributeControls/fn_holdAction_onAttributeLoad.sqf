@@ -15,22 +15,37 @@
 */
 
 #define DEFAULT_ICONS [\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_connect_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_forcerespawn_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_hack_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_revivemedic_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_search_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff1_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff2_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_unbind_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_passleadership_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_requestleadership_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_secure_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_thumbsdown_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_thumbsup_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_unloaddevice_ca.paa",\
-  "\a3\ui_f\data\igui\cfg\holdactions\holdaction_loaddevice_ca.paa"\
+  "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_loadVehicle_ca.paa",\
+  "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_unloadVehicle_ca.paa",\
+  "\a3\missions_f_oldman\data\img\holdactions\holdAction_box_ca.paa",\
+  "\a3\missions_f_oldman\data\img\holdactions\holdAction_follow_start_ca.paa",\
+  "\a3\missions_f_oldman\data\img\holdactions\holdAction_follow_stop_ca.paa",\
+  "\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_loaddevice_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_passleadership_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_reviveMedic_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff2_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_thumbsdown_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_thumbsup_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloaddevice_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\attack_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\destroy_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\holdAction_market_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\holdAction_sleep2_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\holdAction_sleep_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\map_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\meet_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\refuel_ca.paa",\
+  "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\repair_ca.paa"\
 ]
 
 params ["_ctrlGroup","_value"];
