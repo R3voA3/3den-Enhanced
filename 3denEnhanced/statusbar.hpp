@@ -1,5 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
-
 class StatusBar: ctrlControlsGroupNoScrollbars
 {
   class Controls
@@ -87,3 +85,121 @@ class StatusBar: ctrlControlsGroupNoScrollbars
     };
   };
 };
+
+/*
+#pragma region
+add3DENEventHandler ["onSelectionChange",
+{
+  toFixed 3;
+  private _display3DEN = findDisplay 313;
+  private _varNames = [];
+  {
+    private _entities = (([[""]] call ENH_fnc_all3DENSelected) # 0);
+    private _varName = (_x get3DENAttribute "Name") # 0;//Doesn't work with markers
+    if (_varName != "") then
+    {
+      if (_forEachIndex == 0) then
+      {
+
+      };
+       _varNames append [_varName];
+    };
+  } forEach (([[""]] call ENH_fnc_all3DENSelected) # 0);
+  _display3DEN displayCtrl 684 ctrlSetText str _varNames;
+
+  //Update position controls
+  _pos = ((_entities # 0) get3DENAttribute "Position") # 0;
+  _display3DEN displayCtrl 681 ctrlSetText str (_pos # 0);
+  _display3DEN displayCtrl 682 ctrlSetText str (_pos # 1);
+  _display3DEN displayCtrl 684 ctrlSetText str (_pos # 2);
+}];
+
+class StatusBarCustom: ctrlControlsGroupNoScrollbars
+{
+	idc = -1;
+	x = safezoneX + 60 * GRID_W;
+	y = safezoneY + safezoneH - 9 * GRID_H;
+	w = safezoneW - 120 * GRID_W;
+	h = CTRL_DEFAULT_H;
+	class Controls
+  {
+    class StatusBarBackground: ctrlStatic
+    {
+      idc = -1;
+      x = 0;
+      y = 0;
+      w = safezoneW - 120 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      colorBackground[] = {0.2,0.2,0.2,1};
+    };
+    class TextX: ctrlStaticPicture
+    {
+      y = "(2 * pixelH)";
+      w = "3 * (pixelW * pixelGrid * 	0.50)";
+      h = "3 * (pixelH * pixelGrid * 	0.50)";
+      sizeEx = "2.88 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
+      text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\x_ca.paa";
+      colorBackground[] = {0,0,0,0};
+      shadow = 0;
+    };
+    class ValueX: ctrlEdit
+    {
+      idc = 681;
+      style = "0x01 + 0x200";
+      x = "3 * (pixelW * pixelGrid * 	0.50)";
+      y = "(2 * pixelH)";
+      w = "16 * (pixelW * pixelGrid * 	0.50)";
+      h = "4 * (pixelH * pixelGrid * 	0.50) - 2 * (2 * pixelH)";
+      font = "EtelkaMonospacePro";
+      sizeEx = "2.945 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
+      shadow = 0;
+      colorDisabled[] = {1,1,1,0.5};
+      onLoad = "(_this select 0) ctrlenable false;";
+    };
+    class TextY: TextX
+    {
+      x = "(	3 + 	16 + 	4) * (pixelW * pixelGrid * 	0.50)";
+      text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\y_ca.paa";
+      colorBackground[] = {0,0,0,0};
+    };
+    class ValueY: ValueX
+    {
+      idc = 682;
+      x = "((	3 + 	16 + 	4) + 	3) * (pixelW * pixelGrid * 	0.50)";
+    };
+    class TextZ: TextX
+    {
+      x = "2 * (	3 + 	16 + 	4) * (pixelW * pixelGrid * 	0.50)";
+      text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\z_ca.paa";
+      colorBackground[] = {0,0,0,0};
+    };
+    class ValueZ: ValueX
+    {
+      idc = 683;
+      x = "(2 * (	3 + 	16 + 	4) + 	3) * (pixelW * pixelGrid * 	0.50)";
+    };
+    class Copy: ctrlButtonPictureKeepAspect
+    {
+      idc = -1;
+      text = "\3denEnhanced\data\icon_clipboard.paa";
+      x = "(2 * (	3 + 	16 + 	4) + 19) * (pixelW * pixelGrid * 	0.50)";
+      y = 2 * pixelH;
+      w = 4 * (pixelH * pixelGrid * 	0.50) - 2 * (2 * pixelH);
+      h = "4 * (pixelH * pixelGrid * 	0.50) - 2 * (2 * pixelH)";
+      colorBackground[] = {0,0,0,0};
+    };
+    class VariableNames: ValueX
+    {
+      idc = 684;
+      onLoad = "";
+      x = "(2 * (	3 + 	16 + 	4) + 26) * (pixelW * pixelGrid * 	0.50)";
+      w = "safeZoneW - (60 + 60 + 72 + 1) * (pixelW * pixelGrid * 	0.50)";
+      canModify = 0;
+      style = ST_LEFT + ST_NO_RECT;
+      onSetFocus = "copyToClipboard (ctrlText (_this # 0)); ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
+      text = "[""R3vo_Target_0"", ""R3vo_Target_0"", ""R3vo_Target_0""]";
+    };
+  };
+};
+#pragma endregion
+*/
