@@ -186,7 +186,6 @@ class CfgFunctions
       class sessionTimer;
       class twoDigitsStr;
       class loadoutTool;
-      class exportLoadout;
       class measureDistance;
       class switchTime;
       class toggleGrass;
@@ -196,7 +195,6 @@ class CfgFunctions
       class setOrientation;
       class all3DENSelected;
       class statusbar_entityCounter;
-      class exportWithLB;
       class generateSteamMissionDescription;
       class 3denNotificationNoSound;
       class locationList;
@@ -210,18 +208,14 @@ class CfgFunctions
       class hasStorage;
       class dynamicViewDistance;
       class addCustomMenuStripEntries;
-      class exportGUIDefines;
     };
     class Log
     {
       file = "3denEnhanced\functions\log";
-      class logPositions3D;
-      class logPositions2D;
-      class logObjectInfo;
-      class logFactions;
-      class logGridPosition;
-      class log3DENIDs;
-      class logClassesString;
+      class log;
+      class exportWithLB;
+      class exportLoadout;
+      class exportGUIDefines;
     };
     class Debug
     {
