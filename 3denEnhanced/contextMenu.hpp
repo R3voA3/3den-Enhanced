@@ -1,5 +1,6 @@
 items[] +=
 {
+  "Separator",
   "ENH_MeasureDistance",
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
@@ -11,10 +12,14 @@ class Log
   items[] +=
   {
     "ENH_LogClassesString",
+    "SeparatorSelected",
+    "ENH_LogVarNames",
     "ENH_LogFactions",
+    "SeparatorSelected",
     "ENH_LogPositions3D",
     "ENH_LogPositions2D",
     "ENH_LogGridPositon",
+    "SeparatorSelected",
     "ENH_Log3DENID",
     "ENH_LogObjectInfo"
   };
@@ -36,42 +41,48 @@ class ConnectParent
 class ENH_LogFactions
 {
   text = $STR_ENH_CONTEXTMENU_LOGFACTION;
-  action = "call ENH_fnc_logFactions";
+  action = "'FACTIONS' call ENH_fnc_log";
   conditionShow = "hoverObject";
 };
 class ENH_LogClassesString
 {
-  action = "call ENH_fnc_logClassesString";
+  action = "'CLASSES' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOGCLASSESSTRING;
   conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
 class ENH_LogPositions3D
 {
-  action = "call ENH_fnc_logPositions3D";
+  action = "'3D' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS3D;
   conditionShow = "selected - selectedMarker";
 };
 class ENH_LogPositions2D
 {
-  action = "call ENH_fnc_logPositions2D";
+  action = "'2D' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS2D;
   conditionShow = "selected";
 };
 class ENH_LogGridPositon
 {
-  action = "call ENH_fnc_logGridPosition";
+  action = "'GRIDPOS' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOGGRIDPOSITION;
   conditionShow = "1";
 };
 class ENH_Log3DENID
 {
-  action = "call ENH_fnc_log3DENIDs";
+  action = "'IDS' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOG3DENIDS;
+  conditionShow = "selected";
+};
+class ENH_LogVarNames
+{
+  action = "'VARNAMES' call ENH_fnc_log";
+  Text = "STR_ENH_CONTEXTMENU_LOGVARNAMES";
   conditionShow = "selected";
 };
 class ENH_LogObjectInfo: ENH_LogFactions
 {
-  action = "call ENH_fnc_logObjectInfo";
+  action = "'OBJECTINFO' call ENH_fnc_log";
   Text = $STR_ENH_CONTEXTMENU_LOGOBJECTINFO;
 };
 class ENH_MeasureDistance
@@ -119,10 +130,4 @@ class ENH_DeleteCrew
   action = "call ENH_fnc_deleteCrew";
   Text = $STR_ENH_CONTEXTMENU_DELETECREW;
   conditionShow = "hoverObjectVehicle";
-};
-class ENH_FirstPerson
-{
-  action = "call ENH_fnc_firstPerson";
-  Text = $STR_ENH_CONTEXTMENU_FIRSTPERSON;
-  conditionShow = "hoverObjectBrain";
 };
