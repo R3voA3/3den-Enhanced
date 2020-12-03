@@ -137,10 +137,11 @@ class ENH_DebugOptions
     class ENH_DebugOptions_DebugPath: ENH_DebugOptions_Arsenal
     {
       displayName = "Debug Path";
-      tooltip = "Path of all group leaders (including vehicles) is drawn on the map and and displayed by 3D-objects in the scene.";
+      //tooltip = "Path of all group leaders (including vehicles) is drawn on the map and displayed by 3D-objects in the scene.";
       property = "ENH_DebugOptions_DebugPath";
       control = "Combo";
       typeName = "NUMBER";
+      defaultValue = "0";
       class Values
       {
         class Disabled
