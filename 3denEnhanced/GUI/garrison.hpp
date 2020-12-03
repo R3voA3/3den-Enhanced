@@ -1,4 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 60
 
 class ENH_Garrison

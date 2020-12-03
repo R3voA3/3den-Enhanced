@@ -1,5 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
-
 class RscTestControlStyles
 {
   scriptName = "RscTestControlStyles";

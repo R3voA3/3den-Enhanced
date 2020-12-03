@@ -1,5 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
-
 class ENH_BriefingEditor
 {
   idd = IDD_BRIEFINGEDITOR;

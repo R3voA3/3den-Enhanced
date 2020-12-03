@@ -1,4 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
 #define DIALOG_W 70
 #define DIALOG_H 30
 

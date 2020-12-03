@@ -1,4 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
 #define SIDEBAR_W 70 * GRID_W
 
 class ENH_FunctionsViewer

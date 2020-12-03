@@ -1,4 +1,3 @@
-#include "\3denEnhanced\defineCommon.hpp"
 #define POS_X_TEXT 1 * GRID_W
 #define POS_X_VALUE 25 * GRID_W
 #define WIDTH_TEXT 23 * GRID_W
