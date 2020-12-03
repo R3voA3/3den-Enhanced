@@ -64,11 +64,7 @@ class ENH_Folder_GUI
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
-    "ENH_ExportGUIBaseClassesAll",
-    "ENH_ExportGUIBaseClassesDefault",
-    "ENH_ExportGUIBaseClasses3DEN",
-    "ENH_ExportBaseClassesCustomClasses",
-    "ENH_ExportBaseClassesCustomImport",
+    "ENH_ExportGUIBaseClasses",
     "Separator",
     "ENH_GUITestGrids",
     "ENH_ControlStyles",
@@ -425,7 +421,12 @@ class ENH_InventoryManager
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_I};
 };
 //GUI
-class ENH_ExportGUIBaseClassesAll
+class ENH_ExportGUIBaseClasses
+{
+  text = "Export GUI Base Classes";
+  action = "findDisplay 313 createDisplay 'ENH_ExportGUIDefines'";
+};
+/* class ENH_ExportGUIBaseClassesAll
 {
   text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
   action = "'' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
@@ -449,7 +450,7 @@ class ENH_ExportBaseClassesCustomImport
 {
   text = "Export GUI Defines (import keyword)";
   action = "[import',''] call ENH_fnc_exportGUIDefines";
-};
+}; */
 class ENH_GUITestGrids
 {
   text = $STR_ENH_TOOLS_GUITESTGRIDS;
