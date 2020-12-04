@@ -12,7 +12,7 @@
   Returns:
   ARRAY: Array containing arrays in format [_configStr,_addon,_tag,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile,_logo]
 */
-_time = diag_tickTime;
+
 private _functionsData = [];
 
 {
@@ -46,19 +46,10 @@ private _functionsData = [];
           _path = getText (_config >> "CfgFunctions" >> _addon >> _category >> "file");
           _path = format ["%1\fn_%2%3",_path,_fncShort,_extension];
         };
-        /* private _path = getText (_config >> "CfgFunctions" >> _addon >> _category >> "file");
-        _path = if (_path isEqualTo "") then
-        {
-          getText (_configPath >> "file");
-        }
-        else
-        {
-          format ["%1\fn_%2%3",_path,_fncShort,_extension];
-        }; */
         _functionsData pushBack [_configStr,_addon,_category,_fncShort,_fncLong,_path,_preInit,_preStart,_postInit,_recompile,_logo];
       } forEach ("true" configClasses (_config >> "CfgFunctions" >> _addon >> _category));
     } forEach ("true" configClasses (_config >> "CfgFunctions" >> _addon));
   } forEach ("true" configClasses (_config >> "CfgFunctions"));
 } forEach [[configFile,"configFile"],[missionConfigFile,"missionConfigFile"],[campaignConfigfile,"campaignConfigFile"]];
-diag_log (diag_tickTime - _time);
+
 _functionsData
