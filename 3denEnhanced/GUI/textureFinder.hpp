@@ -36,8 +36,6 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = 52 * GRID_H;
       colorBorder[] = {0,0,0,0};
-      onTreeSelChanged = "params ['_ctrlTV','_path']; (ctrlParent _ctrlTV displayCtrl 1200) ctrlSetText (_ctrlTV tvText _path)";
-      onKeyDown = "_this call ENH_fnc_textureFinder_exportTexturePath";
     };
     class Progress: ctrlProgress
     {
@@ -74,6 +72,7 @@ class ENH_TextureFinder
       y = DIALOG_TOP + 109 * GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
+      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
     };
     class SearchIcon: ctrlStaticPictureKeepAspect
     {

@@ -33,9 +33,6 @@ if CHECK exitWith
   ];
 };
 
-//waitUntil {!isNil "ENH_TextureFinder_SearchRunning"};
-
-
 while {!isNull _display} do
 {
   //Exit as soon as uiNamespace vars are set because missioNamespace vars will become nil
@@ -50,5 +47,5 @@ while {!isNull _display} do
   //Let's rotate the default image, looks neat
   CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlSetAngle [(ctrlAngle CTRL(IDC_TEXTUREFINDER_PREVIEW) # 0) + 2,0.5,0.5];
   CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlCommit 0;
-  sleep 0.05;
+  sleep 0.02;
 };
