@@ -10,9 +10,9 @@ class ENH_FunctionsViewer
     class Background: ctrlStaticBackground
     {
       x = safezoneX;
-      y = safezoneY + 5 * GRID_H;
+      y = safezoneY + CTRL_DEFAULT_H;
       w = safezoneW;
-      h = safezoneH - 5 * GRID_H;
+      h = safezoneH - CTRL_DEFAULT_H;
     };
   };
   class Controls
@@ -23,7 +23,7 @@ class ENH_FunctionsViewer
       x = safezoneX;
       y = safezoneY;
       w = safezoneW;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       colorBackground[] = {COLOR_ACTIVE_RGBA};
       moving = false;
     };
@@ -33,7 +33,7 @@ class ENH_FunctionsViewer
       x = safezoneX + GRID_W;
       y = safezoneY + 6 * GRID_H;
       w = SIDEBAR_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       rows = 1;
       columns = 3;
       strings[] = //Do not localize
@@ -71,7 +71,7 @@ class ENH_FunctionsViewer
       x = safezoneX + GRID_W;
       y = safezoneY + 24 * GRID_H;
       w = SIDEBAR_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       class Items
       {
         class LoadFile
@@ -110,7 +110,7 @@ class ENH_FunctionsViewer
       x = safezoneX + GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 10 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       colorBackground[] = {COLOR_ACTIVE_RGBA};
     };
     class Search: ctrlEdit
@@ -120,7 +120,7 @@ class ENH_FunctionsViewer
       x = safezoneX + 12 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 44 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class SearchIcon: ctrlStaticPictureKeepAspect
     {
@@ -128,22 +128,19 @@ class ENH_FunctionsViewer
       x = safezoneX + 56 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class Collapse: ctrlButtonCollapseAll
     {
       x = safezoneX + 61 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
-    class Expand: ctrlButtonExpandAll
+    class Expand: Collapse
     {
       x = safezoneX + 66 * GRID_W;
-      y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 5 * GRID_W;
-      h = 5 * GRID_H;
       onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class TogglePanelLeft: ctrlButton
@@ -153,7 +150,7 @@ class ENH_FunctionsViewer
       x = safezoneX + 71 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       onButtonClick  = "_this call ENH_fnc_functionsViewer_togglePanel";
     };
     class Name: ctrlEdit
@@ -164,17 +161,13 @@ class ENH_FunctionsViewer
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 6 * GRID_H;
       w = safezoneW - 155 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
-    class Path: ctrlEdit
+    class Path: Name
     {
       idc = IDC_FUNCTIONSVIEWER_PATH;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP;
-      canModify = false;
-      x = safezoneX + 72 * GRID_W;
       y = safezoneY + 12 * GRID_H;
-      w = safezoneW - 155 * GRID_W;
-      h = 5 * GRID_H;
     };
     class RecompileSelected: ctrlButton
     {
@@ -184,39 +177,31 @@ class ENH_FunctionsViewer
       x = safezoneX + safezoneW - 82 * GRID_W;
       y = safezoneY + 6 * GRID_H;
       w = 40 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_functionsViewer_recompileSelected";
     };
-    class Copy: ctrlButton
+    class Copy: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_COPY;
       text = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT;
       tooltip = __EVAL(toUpper format ["%1+%2",localize "STR_DIK_CONTROL","X"]);
-      x = safezoneX + safezoneW - 82 * GRID_W;
       y = safezoneY + 12 * GRID_H;
-      w = 40 * GRID_W;
-      h = 5 * GRID_H;
       onButtonClick = "_this call ENH_fnc_functionsViewer_copy";
     };
-    class RecompileAll: ctrlButton
+    class RecompileAll: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_RECOMPILEALL;
       text = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT;
       tooltip = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP;
       x = safezoneX + safezoneW - 41 * GRID_W;
-      y = safezoneY + 6 * GRID_H;
-      w = 40 * GRID_W;
-      h = 5 * GRID_H;
       onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
     };
-    class Biki: ctrlButton
+    class Biki: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_BIKI;
       text = $STR_ENH_FUNCTIONSVIEWER_BIKI;
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + 12 * GRID_H;
-      w = 40 * GRID_W;
-      h = 5 * GRID_H;
     };
     class SearchCode: ctrlEdit
     {
@@ -225,7 +210,7 @@ class ENH_FunctionsViewer
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 40 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       onKeyUp = "_this call ENH_fnc_functionsViewer_searchKey";
     };
     class SearchText: ctrlStatic
@@ -234,7 +219,7 @@ class ENH_FunctionsViewer
       x = safezoneX + 113 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 30 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class SearchButtonUp: ctrlButtonPictureKeepAspect
     {
@@ -242,7 +227,7 @@ class ENH_FunctionsViewer
       x = safezoneX + 135 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 5 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
       onButtonClick = "[_this # 0, -1] call ENH_fnc_FunctionsViewer_IncrementKey";
     };
     class SearchButtonDown: SearchButtonUp
@@ -290,7 +275,7 @@ class ENH_FunctionsViewer
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 40 * GRID_W;
-      h = 5 * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
   };
 };
