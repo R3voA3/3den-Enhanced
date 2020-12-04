@@ -73,7 +73,6 @@ private _fnc_addCustomFiles =
       };
     } forEach addonFiles [_addonPath,_extension];
   } forEach allAddonsInfo;
-  _ctrlTV tvSort [[],false];
 };
 
 tvClear _ctrlTV;
@@ -135,16 +134,6 @@ switch (_modeIndex) do
       true
     } count ENH_FunctionsData;
 
-    //Sort
-    for "_i" from 0 to ((_ctrlTV tvCount []) - 1) do
-    {
-      _ctrlTV tvSort [[_i],false];
-      for "_j" from 0 to ((_ctrlTV tvCount [_i]) - 1) do
-      {
-        _ctrlTV tvSort [[_i,_j],false];
-      };
-    };
-    _ctrlTV tvSort [[],false];
     _ctrlTV tvExpand [];
   };
   case 1:
@@ -176,11 +165,9 @@ switch (_modeIndex) do
         {
           _ctrlTV tvSetCurSel [_categoryIndex,_fncIndex];//Triggers onTreeSelChanged
         };
-        _ctrlTV tvSort [[_categoryIndex],false];
       };
       true
     } count ENH_FunctionsData;
-    _ctrlTV tvSort [[],false];
   };
   case 2:
   {
@@ -200,7 +187,6 @@ switch (_modeIndex) do
       };
       true
     } count ENH_FunctionsData;
-    _ctrlTV tvSort [[],false];
   };
   case 3:
   {
@@ -215,5 +201,7 @@ switch (_modeIndex) do
     [_ctrlTV,".hpp"] call _fnc_addCustomFiles;
   };
 };
+
+_ctrlTV tvSortAll [[],false];
 
 CTRL(1405) ctrlSetText str _counter;
