@@ -423,34 +423,9 @@ class ENH_InventoryManager
 //GUI
 class ENH_ExportGUIBaseClasses
 {
-  text = "Export GUI Base Classes";
+  text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
   action = "findDisplay 313 createDisplay 'ENH_ExportGUIDefines'";
 };
-/* class ENH_ExportGUIBaseClassesAll
-{
-  text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
-  action = "'' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_ExportGUIBaseClassesDefault
-{
-  text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT;
-  action = "'Default' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_ExportGUIBaseClasses3DEN
-{
-  text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN;
-  action = "'3DEN' call BIS_fnc_exportGUIBaseClasses; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
-};
-class ENH_ExportBaseClassesCustomClasses
-{
-  text = "Export GUI Defines (class keyword)";
-  action = "['class',''] call ENH_fnc_exportGUIDefines";
-};
-class ENH_ExportBaseClassesCustomImport
-{
-  text = "Export GUI Defines (import keyword)";
-  action = "[import',''] call ENH_fnc_exportGUIDefines";
-}; */
 class ENH_GUITestGrids
 {
   text = $STR_ENH_TOOLS_GUITESTGRIDS;
