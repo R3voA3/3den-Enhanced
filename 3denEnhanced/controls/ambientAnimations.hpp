@@ -18,8 +18,8 @@ class ENH_AmbientAnimations: Title
     };
     class CanExitTitle: Title
     {
-      text = $STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME;
-      tooltip = $STR_ENH_AMBIENTANIMATIONS_CANEDIT_TOOLTIP;
+      text = $STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME;
+      tooltip = $STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP;
       y = SIZE_M * GRID_H + 5 * pixelH;
     };
     class CanExit: ctrlCheckbox
