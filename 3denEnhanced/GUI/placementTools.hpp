@@ -24,7 +24,7 @@ class ENH_PlacementTools
     };
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_TOOLS_PLACEMENTTOOLS;
+      text = $STR_ENH_FOLDER_PLACEMENTTOOLS;
       x = ORIGIN_X;
       y = ORIGIN_Y;
       w = 64 * GRID_W;
