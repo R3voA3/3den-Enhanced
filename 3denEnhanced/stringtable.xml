@@ -4344,37 +4344,43 @@
     <Russian>Показать сетку</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
-    <English>Export GUI Base Classes (All)</English>
+    <English>Export GUI Base Classes</English>
     <Italian>Esporta le classi di base GUI (TUTTE).</Italian>
-    <French>Exporter les classes GUI (All)</French>
-    <Spanish>Exportar clases (classes) del GUI base (All)</Spanish>
-    <German>GUI Klassen exportieren (Alle)</German>
-    <Chinesesimp>导出GUI基本类别（全部）</Chinesesimp>
-    <Czech>Exportovat základní třídy rozhraní GUI (Všechny)</Czech>
-    <Russian>Экспорт базовых классов GUI (все)</Russian>
-    <Polish>Wyeksportuj podstawowe klasy GUI (Wszystkie)</Polish>
+    <French>Exporter les classes GUI</French>
+    <Spanish>Exportar clases (classes) del GUI base</Spanish>
+    <German>GUI Klassen exportieren</German>
+    <Chinesesimp>导出GUI基本类别</Chinesesimp>
+    <Czech>Exportovat základní třídy rozhraní GUI</Czech>
+    <Russian>Экспорт базовых классов GUI</Russian>
+    <Polish>Wyeksportuj podstawowe klasy GUI</Polish>
   </Key>
-  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_3DEN">
-    <English>Export GUI Base Classes (Eden only)</English>
-    <Italian>Esporta le classi di base GUI (Solo EDEN)</Italian>
-    <French>Exporter les classes GUI (Eden only)</French>
-    <Spanish>Exportar clases (classes) del GUI base (Eden only)</Spanish>
-    <German>GUI Klassen exportieren (Nur Eden)</German>
-    <Chinesesimp>导出GUI基本类别（仅限Eden）</Chinesesimp>
-    <Czech>Exportovat základní třídy rozhraní GUI (pouze Eden)</Czech>
-    <Russian>Экспорт базовых классов GUI (только Eden)</Russian>
-    <Polish>Wyeksportuj podstawowe klasy GUI (Tylko Eden)</Polish>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP">
+    <English>Exports Eden Editor base classes like ctrlStatic or ctrlStaticPicture.</English>
+    <German>Exportiert Eden Editor Basis-Klassen wie ctrlStatic oder ctrlStaticPicture.</German>
   </Key>
-  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_DEFAULT">
-    <English>Export GUI Base Classes (Default)</English>
-    <Italian>Esporta le classi di base GUI (Default)</Italian>
-    <French>Exporter les classes GUI (Default)</French>
-    <Spanish>Exportar clases (classes) del GUI base (Default)</Spanish>
-    <German>GUI Klassen exportieren (Standard)</German>
-    <Chinesesimp>导出GUI基本类别（默认）</Chinesesimp>
-    <Czech>Exportovat základní třídy GUI (výchozí)</Czech>
-    <Russian>Экспорт базовых классов GUI (по умолчанию)</Russian>
-    <Polish>Wyeksportuj podstawowe klasy GUI (Domyślne)</Polish>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
+    <English>Exports all GUI base classes.</English>
+    <German>Exportiert alle Basis-Klassen.</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC">
+    <English>Classic</English>
+    <German>Klassisch</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP">
+    <English>Exports classic base classes like RscText or RscPicture.</English>
+    <German>Exportiert die klassischen GUI Basis-Klassen wie RscText oder RscPicture.</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON">
+    <English>Add-on</English>
+    <German>Add-On</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP">
+    <English>Uses 'class' keyword for use in config.cpp.</English>
+    <German>Benutzt das 'class' Keyword für die Verwendung in einer config.cpp Datei.</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP">
+    <English>Uses 'import' keyword for use in description.ext.</English>
+    <German>Benutzt das 'import' Keyword für die Verwendung in einer description.ext Datei.</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
     <English>Open GUI Test Grids</English>
@@ -5262,14 +5268,14 @@
     <German>Kann ein Ende aus der Konfig oder Missionskonfig sein (CfgDebriefing).</German>
     <French>Peut-être une fin de mission issue soit d'un fichier de configuration, soit de la configuration de la mission (CfgDebriefing).</French>
   </Key>
-  <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_DISPLAYNAME">
+  <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME">
     <English>Can Exit?</English>
     <Spanish>¿Puede salir?</Spanish>
     <German>Beenden erlaubt?</German>
     <French>Peut quitter l'animation ?</French>
     <Polish>Może opuścić animacje?</Polish>
   </Key>
-  <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEDIT_TOOLTIP">
+  <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP">
     <English>If enabled, the unit will exit the animation when in danger.</English>
     <Spanish>Si está habilitada, la unidad saldrá de la animación cuando esté en peligro.</Spanish>
     <German>Wenn erlaubt, kann die Einheit die Animation beenden, wenn sie in Gefahr ist.</German>
@@ -6248,7 +6254,7 @@
     <German>Dynamische Sichtweite anschalten</German>
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
-    <English>View distance and object view distance will be changed according to camera height. This option might cause performance on weak systems</English>
+    <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems</English>
     <German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">
