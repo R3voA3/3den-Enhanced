@@ -8,7 +8,7 @@
   The function will also include commonly used files like control styles and types and will also add links to the documentation.
 
   Parameter(s):
-  0: STRING - Used keyword, can be "mod" for config or "mission" for missionConfig (Default: "mission")
+  0: STRING - Used keyword, can be "mod" for config or "scenario" for missionConfig (Default: "mission")
   1: STRING - Which classes should be exported (Default: "")
     ""        - all GUI base classes, including more exotic ones and Eden Editor ones
     "3DEN"    - Eden Editor base classes like ctrlStatic or ctrlStaticPicture
@@ -18,9 +18,9 @@
   STRING: Returns generated text on success otherwise "" and error message with expected input
 */
 
-params [["_mode","mission"], ["_classes", "classic"]];
+params [["_mode","scenario"], ["_classes", "classic"]];
 
-if !(_mode in ["mission","mod"]) exitWith {["Mode was ""%1"", expected was ""mission"" or ""mod""",_mode] call BIS_fnc_error; ""};
+if !(_mode in ["scenario","mod"]) exitWith {["Mode was ""%1"", expected was ""mission"" or ""mod""",_mode] call BIS_fnc_error; ""};
 if !(_classes in ["","3DEN","classic"]) exitWith {["Classes was ""%1"", expected was """", ""3DEN"" or ""classic""",_mode] call BIS_fnc_error; ""};
 
 private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
