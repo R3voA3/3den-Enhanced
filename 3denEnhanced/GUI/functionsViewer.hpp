@@ -200,6 +200,7 @@ class ENH_FunctionsViewer
     {
       idc = IDC_FUNCTIONSVIEWER_BIKI;
       text = $STR_ENH_FUNCTIONSVIEWER_BIKI;
+      tooltip = "";
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + 12 * GRID_H;
     };
