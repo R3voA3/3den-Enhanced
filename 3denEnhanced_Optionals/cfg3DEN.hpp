@@ -25,6 +25,15 @@ class Cfg3DEN
             #endif
           };
         };
+        class Camera
+        {
+          class Attributes
+          {
+            #ifdef HIDE_ENH_DYNAMICVIEWDISTANCE
+              delete ENH_DynamicViewDistance;
+            #endif
+          };
+        };
       };
     };
     class Intel
@@ -64,6 +73,10 @@ class Cfg3DEN
         #ifdef HIDE_ENH_MAPINDICATORS
           delete ENH_MapIndicators;
         #endif
+         #ifdef HIDE_ENH_BRIEFING
+          delete ENH_Briefing;
+        #endif
+        ENH_Briefing
         #ifdef HIDE_ENH_MISSIONENDING
           delete ENH_MissionEnding;
         #endif
@@ -88,9 +101,6 @@ class Cfg3DEN
     {
       class AttributeCategories
       {
-        #ifdef HIDE_ENH_DYNAMICSKILL
-          delete ENH_DynamicSkill;
-        #endif
         #ifdef HIDE_ENH_DYNAMICGROUPS
           delete ENH_DynamicGroups;
         #endif
@@ -98,16 +108,10 @@ class Cfg3DEN
         {
           class Attributes
           {//Doesn't work yet
-            #ifdef HIDE_ENH_TICKETSBLUFOR
+            #ifdef HIDE_ENH_RESPAWNTICKETS
               delete ENH_TicketsBLUFOR;
-            #endif
-            #ifdef HIDE_ENH_TICKETSOPFOR
               delete ENH_TicketsOPFOR;
-            #endif
-            #ifdef HIDE_ENH_TICKETSINDFOR
               delete ENH_TicketsINDFOR;
-            #endif
-            #ifdef HIDE_ENH_TICKETSCIVFOR
               delete ENH_TicketsCIVFOR;
             #endif
             #ifdef HIDE_ENH_SAVELOADOUT
@@ -146,11 +150,8 @@ class Cfg3DEN
       #ifdef HIDE_ENH_ADVANCEDDAMAGEVEHICLE
         delete ENH_AdvancedDamageVehicle;
       #endif
-      #ifdef HIDE_ENH_ADVANCEDSKILL
-        delete ENH_AdvancedSkill;
-      #endif
-      #ifdef HIDE_ENH_DISABLEAI
-        delete ENH_DisableAI;
+      #ifdef HIDE_ENH_AI
+        delete ENH_AI;
       #endif
       #ifdef HIDE_ENH_HOLDACTION
         delete ENH_HoldAction;
@@ -219,18 +220,12 @@ class Cfg3DEN
           #ifdef HIDE_ENH_VIRTUALARSENAL
             delete ENH_VirtualArsenal;
           #endif
-          #ifdef HIDE_ENH_TURRETMAGAZINES
-            delete ENH_TurretMagazines;
-          #endif
         };
       };
       class State
       {
         class Attributes
         {
-          #ifdef HIDE_ENH_ALLOWFLEEING
-            delete ENH_AllowFleeing;
-          #endif
           #ifdef HIDE_ENH_AMBIENTANIMATIONS
             delete ENH_AmbientAnimations;
           #endif
