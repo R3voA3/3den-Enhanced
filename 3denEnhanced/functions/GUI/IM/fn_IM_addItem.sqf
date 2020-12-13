@@ -19,7 +19,7 @@ disableSerialization;
 params ["_amount"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
-private _row = lbCurSel _ctrlItems;
+private _row = lbCurSel CTRL(IDC_IM_AVAILABLEITEMSLIST);
 
 if (_row isEqualTo -1) exitWith {false};
 
@@ -28,7 +28,7 @@ private _displayName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbText _row;
 private _configName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbData _row;
 private _allItems = uiNamespace getVariable "ENH_IM_allItems";
 
-_index = _allItems findIf {_x select 0 isEqualTo _configName};
+private _index = _allItems findIf {_x select 0 isEqualTo _configName};
 private _itemData = _allItems select _index;
 _itemData params ["_configName","_displayName","_image","_addonIcon"];
 
@@ -47,7 +47,7 @@ for "_i" from 0 to (( _rows - 1)) max 0 do
 };
 if !(_itemAdded) then//If item was not found in the list, add it
 {
-  [_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_LnbAddItem;
+  [_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAdd;
 };
 
 //Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
