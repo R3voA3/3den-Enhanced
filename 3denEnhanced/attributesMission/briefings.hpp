@@ -13,7 +13,7 @@ class ENH_Briefing
     class ENH_Briefing_BLUFOR_Situation
     {
       displayName = $STR_A3_DIARY_SITUATION_TITLE;
-      tooltip = "These briefings work in singleplayer, multiplayer and for JIP players. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.";
+      tooltip = $STR_ENH_BRIEFING_TOOLTIP
       property = "ENH_Briefing_BLUFOR_Situation";
       control = "EditMulti5";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == west) then {player createDiaryRecord ['Diary',[localize 'STR_A3_DIARY_SITUATION_TITLE',_this call BIS_fnc_localize]]}}};";
