@@ -13,9 +13,11 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+disableSerialization;
+
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = _display displayCtrl 2300;
-private _ctrlIsVirtual = _display displayCtrl 3200;
+private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 
 private _attributeValue = (ENH_IM_target get3DENAttribute "ammoBox") # 0;
 _attributeValue = call compile _attributeValue;//Eden saves attributes as string
@@ -46,7 +48,7 @@ _items call _fnc_addItems;
 _backpacks call _fnc_addItems;
 
 
-[_ctrlIsVirtual,_isVirtual] call ENH_fnc_IM_toggleVirtual;
-_ctrlIsVirtual cbSetChecked _isVirtual;
+[CTRL(IDC_IM_VIRTUAL),_isVirtual] call ENH_fnc_IM_toggleVirtual;
+CTRL(IDC_IM_VIRTUAL) cbSetChecked _isVirtual;
 
 true

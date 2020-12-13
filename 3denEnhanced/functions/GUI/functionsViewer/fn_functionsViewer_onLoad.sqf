@@ -8,11 +8,12 @@
   0: DISPLAY - Display
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-disableSerialization;
+#include "\3denEnhanced\defineCommon.hpp"
 
+disableSerialization;
 params ["_display"];
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
@@ -22,7 +23,7 @@ _display displayAddEventHandler ["keyDown",//Focus Search
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && !_shift) then
   {
-    ctrlSetFocus (_display displayCtrl 1400);
+    ctrlSetFocus CTRL(IDC_FUNCTIONSVIEWER_SEARCH);
   }
 }];
 
@@ -31,7 +32,7 @@ _display displayAddEventHandler ["keyDown",//Copy
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 45 && _ctrl) then
   {
-    (_display displayCtrl 1602) call ENH_fnc_functionsViewer_copy;
+    CTRL(IDC_FUNCTIONSVIEWER_COPY) call ENH_fnc_functionsViewer_copy;
   }
 }];
 
@@ -40,16 +41,14 @@ _display displayAddEventHandler ["keyDown",//Focus Search Key
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && _shift) then
   {
-    ctrlSetFocus (_display displayCtrl 2000);
+    ctrlSetFocus CTRL(IDC_FUNCTIONSVIEWER_SEARCHCODE);
   }
 }];
 
 //Set filters to last used or default value
-(_display displayCtrl 1700) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
-(_display displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
-(_display displayCtrl 2200) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex",0]);
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
+CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
+CTRL(IDC_FUNCTIONSVIEWER_LOADMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex",0]);
 
 //Set up tree view
-(_display displayCtrl 1500) call ENH_fnc_FunctionsViewer_fillCtrlTV;
-
-true
+CTRL(IDC_FUNCTIONSVIEWER_LIST) call ENH_fnc_FunctionsViewer_fillCtrlTV;

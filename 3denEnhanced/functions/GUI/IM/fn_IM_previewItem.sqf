@@ -14,6 +14,9 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlListbox","_selectedIndex"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _typeCtrl = ctrlType _ctrlListbox;
@@ -23,20 +26,20 @@ if (_typeCtrl == 5 && {ENH_IM_ShowTemplates}) exitWith {false};
 
 _display = _display createDisplay "ENH_InventoryManager_ItemPreview";
 
-private _ctrlPicture = _display displayCtrl 1100;
-private _ctrlHeader = _display displayCtrl 1000;
+private _ctrlPicture = CTRL(IDC_IM_ITEMPREVIEW_IMAGE);
+private _ctrlHeader = CTRL(IDC_IM_ITEMPREVIEW_HEADER);
 _ctrlPicture ctrlSetText (_ctrlListbox lbPicture _selectedIndex);
 _ctrlHeader ctrlSetText (_ctrlListbox lbText _selectedIndex);
 
 
 switch (true) do
 {
-  case (_typeCtrl == 102):
+  case (_typeCtrl == CT_LISTNBOX):
   {
     _ctrlPicture ctrlSetText (_ctrlListbox lnbPicture [_selectedIndex,0]);
     _ctrlHeader ctrlSetText (_ctrlListbox lnbText [_selectedIndex,1]);
   };
-  case (_typeCtrl == 5):
+  case (_typeCtrl == CT_LISTBOX):
   {
     _ctrlPicture ctrlSetText (_ctrlListbox lbPicture _selectedIndex);
     _ctrlHeader ctrlSetText (_ctrlListbox lbText _selectedIndex);

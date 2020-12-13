@@ -13,17 +13,17 @@
   BOOLEAN: true
 */
 
+disableSerialization;
 params ["_ctrlButton"];
 private _displayParent = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = _displayParent displayCtrl 2300;
 private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 
 //Return inventory data
 private _value = [true] call ENH_fnc_IM_applyAttribute;
 
 private _displayChild = ctrlParent _ctrlButton;
-private _templateTitle = ctrlText (_displayChild displayCtrl 1000);
-private _templateDescription = ctrlText (_displayChild displayCtrl 2000);
+private _templateTitle = ctrlText (_displayChild displayCtrl IDC_IM_TEMPLATEDATA_TITLE);
+private _templateDescription = ctrlText (_displayChild displayCtrl IDD_IM_TEMPLATEDATA_DESCRIPTION);
 
 if !(_templateTitle isEqualTo "") then
 {

@@ -13,9 +13,12 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
-private _ctrlItems = _display displayCtrl 2200;
+private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
 private _row = lbCurSel _ctrlItems;
 
 _ctrlItems lbDelete _row;

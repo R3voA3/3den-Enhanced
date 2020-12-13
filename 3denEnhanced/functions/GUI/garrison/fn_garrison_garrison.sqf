@@ -13,6 +13,8 @@
   -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
 
 params ["_ctrlButton"];

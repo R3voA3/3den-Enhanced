@@ -8,15 +8,16 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
-private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl 1402);
+private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl IDC_FUNCTIONSVIEWER_NAME);
 
-if (_fncName isEqualTo "") exitWith {false};
+if (_fncName isEqualTo "") exitWith {};
 _fncName call BIS_fnc_recompile;
 playSound "FD_Finish_F";
-
-true

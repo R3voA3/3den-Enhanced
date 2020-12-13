@@ -12,16 +12,15 @@
   -
 */
 
-disableSerialization;
+#include "\3denEnhanced\defineCommon.hpp"
 
+disableSerialization;
 params ["_ctrlTV", "_path"];
 
-private _disp = ctrlParent _ctrlTV;
-private _ctrlCode = _disp displayCtrl 1401;
-private _ctrlFncName = _disp displayCtrl 1402;
-private _ctrlFncPath = _disp displayCtrl 1403;
-private _ctrlLines = _disp displayCtrl 1404;
-private _ctrlBiki = _disp displayCtrl 1900;
+private _display = ctrlParent _ctrlTV;
+private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
+private _ctrlLines = CTRL(IDC_FUNCTIONSVIEWER_LINES);
+private _ctrlBiki = CTRL(IDC_FUNCTIONSVIEWER_BIKI);
 private _data = _ctrlTV tvData _path;
 private _linesText = "";
 
@@ -30,8 +29,8 @@ if (_data isEqualTo "") exitWith {false};
 _data = call compile _data;
 _data params ["_fileName","_filePath"];//Filename is also Function name
 
-_ctrlFncName ctrlSetText _fileName;
-_ctrlFncPath ctrlSetText _filePath;
+CTRL(IDC_FUNCTIONSVIEWER_NAME) ctrlSetText _fileName;
+CTRL(IDC_FUNCTIONSVIEWER_PATH) ctrlSetText _filePath;
 
 _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
 {

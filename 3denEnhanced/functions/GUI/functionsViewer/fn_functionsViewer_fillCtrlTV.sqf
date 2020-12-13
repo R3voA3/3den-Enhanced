@@ -17,33 +17,32 @@
 #define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed",""])
 
 disableSerialization;
-
 params ["_ctrl"];
+
 private _display = ctrlParent _ctrl;
-private _configIndex = lbCurSel CTRL(1700);
-private _modeIndex = lbCurSel CTRL(1800);
-private _ctrlTV = CTRL(1500);
-private _ctrlEdit = CTRL(1400);
+private _configIndex = lbCurSel CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG);
+private _modeIndex = lbCurSel CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE);
+private _ctrlTV = CTRL(IDC_FUNCTIONSVIEWER_LIST);
 private _counter = 0;
 
 //Disable BIKI Button
-if (_configIndex > 0 || _modeIndex > 2) then {CTRL(1900) ctrlEnable true};
+if (_configIndex > 0 || _modeIndex > 2) then {CTRL(IDC_FUNCTIONSVIEWER_BIKI) ctrlEnable true};
 
 //Setup buttons according to mode and config index
-CTRL(1700) ctrlEnable true;
-CTRL(1700) ctrlSetFade 0;
-CTRL(1700) ctrlCommit 0;
-CTRL(1400) ctrlSetText "";
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlEnable true;
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0;
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
+CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlSetText "";
 
 if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 {
-  CTRL(1600) ctrlEnable false;
-  CTRL(1601) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
 }
 else
 {
-  CTRL(1600) ctrlEnable true;
-  CTRL(1601) ctrlEnable true;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable true;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable true;
 };
 
 profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex",_configIndex];
@@ -52,11 +51,11 @@ profileNamespace setVariable ["ENH_FunctionsViewer_LoadFileIndex",lbCurSel CTRL(
 
 private _fnc_addCustomFiles =
 {
-  CTRL(1700) ctrlEnable false;
-  CTRL(1700) ctrlSetFade 0.5;
-  CTRL(1700) ctrlCommit 0;
-  CTRL(1600) ctrlEnable false;
-  CTRL(1601) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0.5;
+  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
   params ["_ctrlTV","_extension"];
   {
     private _addonPath = _x # 0;
@@ -204,4 +203,4 @@ switch (_modeIndex) do
 
 _ctrlTV tvSortAll [[],false];
 
-CTRL(1405) ctrlSetText str _counter;
+CTRL(IDC_FUNCTIONSVIEWER_NUMFUNCTIONS) ctrlSetText str _counter;

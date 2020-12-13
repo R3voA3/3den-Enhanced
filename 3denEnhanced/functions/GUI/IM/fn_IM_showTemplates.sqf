@@ -13,27 +13,30 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlItems = _display displayCtrl 2200;
-lbClear _ctrlItems;
+
+lbClear CTRL(IDC_IM_AVAILABLEITEMSLIST);
 
 private _showTemplate = isNil "ENH_IM_ShowTemplates";
 
 //Disable controls
 {
   _display displayCtrl _x ctrlEnable !_showTemplate;
-} forEach [2100,2400,2500,2600,2700,2800,3300,3400,3500];
+} forEach [IDC_IM_FILTER,IDC_IM_ADDONE,IDC_IM_ADDTEN,IDC_IM_REMOVEONE,IDC_IM_REMOVETEN,IDC_IM_REMOVEALL,IDC_IM_FILTERSEARCH,IDC_IM_SEARCH,IDC_IM_BUTTONSEARCH];
 
 //Enable controls
 {
   _display displayCtrl _x ctrlEnable _showTemplate;
-} forEach [2900,3000,3100];
+} forEach [IDC_IM_CREATETEMPLATE,IDC_IM_DELETETEMPLATE,IDC_IM_APPLYTEMPLATE];
 
 if (isNil "ENH_IM_ShowTemplates") then
 {
   _ctrlButton ctrlSetText localize "STR_ENH_IM_HIDETEMPLATES";
-  _display displayCtrl 1000 ctrlSetText localize "STR_ENH_IM_TEMPLATES";
+  CTRL(IDC_IM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_IM_TEMPLATES";
 
   _display call ENH_fnc_IM_updateTemplateList;
   ENH_IM_ShowTemplates = true;
@@ -41,9 +44,9 @@ if (isNil "ENH_IM_ShowTemplates") then
 else
 {
   _ctrlButton ctrlSetText localize "STR_ENH_IM_SHOWTEMPLATES";
-  _display displayCtrl 1000 ctrlSetText localize "STR_ENH_IM_AVAILABLEITEMS";
+  CTRL(IDC_IM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_IM_AVAILABLEITEMS";
   private _ctrlFilter = _display displayCtrl 2100;
-  [_ctrlFilter,lbCurSel _ctrlFilter] call ENH_fnc_IM_filterList;
+  [CTRL(IDC_IM_FILTER),lbCurSel CTRL(IDC_IM_FILTER)] call ENH_fnc_IM_filterList;
 
   ENH_IM_ShowTemplates = nil;
 };

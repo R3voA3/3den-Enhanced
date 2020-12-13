@@ -13,6 +13,6 @@
   BOOLEAN: true
 */
 
-lnbClear ((uiNamespace getVariable "Enh_Display_InventoryManager") displayCtrl 2300);
+lnbClear ((uiNamespace getVariable "Enh_Display_InventoryManager") displayCtrl IDC_IM_INVENTORYLIST);
 
 true

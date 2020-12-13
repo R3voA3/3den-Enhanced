@@ -13,13 +13,15 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlSearchCode"];
 
 private _display = ctrlParent _ctrlSearchCode;
 
-private _key = toLower ctrlText (_display displayCtrl 2000);
-private _text = toLower ctrlText (_display displayCtrl 1401);
-private _ctrlIndices = (_display displayCtrl 2100);
+private _key = toLower ctrlText CTRL(IDC_FUNCTIONSVIEWER_SEARCHCODE);
+private _text = toLower ctrlText CTRL(IDC_FUNCTIONSVIEWER_CODE);
 
 private _fnc_findStringsInString =
 {

@@ -11,6 +11,7 @@
   -
 */
 
+disableSerialization;
 params ["_ctrlTV","_key","","_ctrl"];
 
 if (_key isEqualTo 46 && _ctrl) then

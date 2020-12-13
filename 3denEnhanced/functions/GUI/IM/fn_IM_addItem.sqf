@@ -13,17 +13,19 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_amount"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = _display displayCtrl 2300;
-private _ctrlItems = _display displayCtrl 2200;
+private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 private _row = lbCurSel _ctrlItems;
 
 if (_row isEqualTo -1) exitWith {false};
 
 private _rows = lnbSize _ctrlInventory select 0;
-private _displayName = _ctrlItems lbText _row;
-private _configName = _ctrlItems lbData _row;
+private _displayName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbText _row;
+private _configName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbData _row;
 private _allItems = uiNamespace getVariable "ENH_IM_allItems";
 
 _index = _allItems findIf {_x select 0 isEqualTo _configName};

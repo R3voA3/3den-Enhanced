@@ -11,13 +11,12 @@
   1: NUMBER - State
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+disableSerialization;
 params ["_ctrlCheckbox","_state"];
 
 profileNamespace setVariable ["ENH_VariableViewer_HideFunctions",[false,true] select _state];
 
 ctrlParent _ctrlCheckbox call ENH_fnc_variableViewer_fillLNB;
-
-true

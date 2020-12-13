@@ -12,13 +12,16 @@
   1: NUMBER - Index of selected item
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlLB","_selectedItem"];
 
 private _display = ctrlParent _ctrlLB;
-private _ctrlTV = _display displayCtrl 1500;
+private _ctrlTV = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES);
 
 tvClear _ctrlTV;
 
@@ -59,5 +62,3 @@ _ctrlTV tvAdd [[],"Custom Category"];
   _ctrlTV tvSetTooltip [[_baseIndex,_index],str (_x # 2)];
   _ctrlTV tvSort [[_baseIndex],false];
 } forEach _attributes;
-
-true

@@ -14,27 +14,30 @@
   BOOLEAN: true / false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_display"];
 
-_ctrlLB = _display displayCtrl 1501;
+_ctrlLB = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES);
 _templates = profileNamespace getVariable ["ENH_ScenarioAttributesManager_Templates",[]];
 
 if (_templates isEqualTo []) exitWith {false};
 
 {
-  private _index = _ctrlLB lbAdd (_x # 0);	//Use title as lb entry
-  _ctrlLB lbSetTooltip [_index,_x # 1];		//Use description of templates as tooltip
-  _ctrlLB lbSetData [_index,str _x];			//Store the whole template data as lb data for easy access
+  private _index = _ctrlLB lbAdd (_x # 0); //Use title as lb entry
+  _ctrlLB lbSetTooltip [_index,_x # 1]; //Use description of templates as tooltip
+  _ctrlLB lbSetData [_index,str _x]; //Store the whole template data as lb data for easy access
 } forEach _templates;
 
 lbSort [_ctrlLB,"DESC"];
 
 _disp displayAddEventHandler ["keyDown",//Focus Search
 {
-  params ["_disp", "_key", "_shift", "_ctrl"];
+  params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then
   {
-    ctrlSetFocus (_disp displayCtrl 1400);
+    ctrlSetFocus CTRL(IDC_SCENARIOATTRIBUTESMANAGER_SEARCH);
   }
 }];
 

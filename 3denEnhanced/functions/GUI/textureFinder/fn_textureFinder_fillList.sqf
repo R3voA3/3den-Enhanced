@@ -12,8 +12,8 @@
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
-disableSerialization;
 
+disableSerialization;
 private _display = findDisplay IDD_TEXTUREFINDER;
 private _ctrlTV = CTRL(IDC_TEXTUREFINDER_TEXTURELIST);
 private _ctrlProgress = CTRL(IDC_TEXTUREFINDER_PROGRESS);

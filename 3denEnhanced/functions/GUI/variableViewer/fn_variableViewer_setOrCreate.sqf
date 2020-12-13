@@ -10,17 +10,18 @@
   0: CONTROL - Button control
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _ctrlVariableName = _display displayCtrl 8000;
-private _ctrlVariableValue = _display displayCtrl 5000;
-private _ctrlLNB = _display displayCtrl 1000;
-private _varName = ctrlText _ctrlVariableName;//Does not support groups, objects and locations, only real data types like string, number, array
-private _varValue = ctrlText _ctrlVariableValue;
+private _ctrlLNB = CTRL(IDC_VARIABLEVIEWER_LIST);
+private _varName = ctrlText CTRL(IDC_VARIABLEVIEWER_VARIABLENAME);//Does not support groups, objects and locations, only real data types like string, number, array
+private _varValue = ctrlText CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE);
 
 private _varType = _ctrlLNB lnbText [lnbCurSelRow _ctrlLNB,2];
 
@@ -51,5 +52,3 @@ else
 
 //Set variable or create new
 _namespace setVariable [_varName,call compile _varValue];
-
-true

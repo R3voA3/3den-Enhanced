@@ -8,8 +8,10 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 private _startPos = ENH_PlacementTools_Center;
 private _offSet = [0,0,0];
@@ -31,6 +33,4 @@ collect3DENHistory
   } forEach ENH_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl 120 ctrlSetText format ["%1 / %2 / %3 m / %4 m",ENH_PlacementTools_NumColumns,ENH_PlacementTools_SpaceX,ENH_PlacementTools_SpaceY];
-
-true
+(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText format ["%1 / %2 / %3 m / %4 m",ENH_PlacementTools_NumColumns,ENH_PlacementTools_SpaceX,ENH_PlacementTools_SpaceY];

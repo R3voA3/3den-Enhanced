@@ -8,10 +8,12 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-params ["_control", "_newValue"];
+#include "\3denEnhanced\defineCommon.hpp"
+
+params ["", "_newValue"];
 
 ENH_PlacementTools_InitialAngle = _newValue;
 private _angle = _newValue;
@@ -27,6 +29,4 @@ collect3DENHistory
   } forEach ENH_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " °");
-
-true
+(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText (str _newValue + " °");

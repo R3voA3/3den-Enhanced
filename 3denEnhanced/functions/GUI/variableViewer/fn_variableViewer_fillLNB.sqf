@@ -13,21 +13,21 @@
   -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
 #define SHOW_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions",false])
 
+disableSerialization;
 params ["_display"];
 
-private _ctrlLNB = _display displayCtrl 1000;
-private _ctrlVariableCount = _display displayCtrl 3000;
+private _ctrlLNB = CTRL(IDC_VARIABLEVIEWER_LIST);
 private _namespace = call ENH_fnc_variableViewer_getNamespace;
 private _value = "";
-private _varCount = count allVariables _namespace;
 
 lbClear _ctrlLNB;
 
 {
   _value = _namespace getVariable _x;
-  if (!SHOW_FNC && (_value isEqualType {})) then {continue};//Skip is functions should not be shown
+  if (SHOW_FNC && (_value isEqualType {})) then {continue};//Skip is functions should not be shown
   if !(isNil "_value") then
   {
     _ctrlLNB lnbAddRow
@@ -39,4 +39,4 @@ lbClear _ctrlLNB;
   };
 } forEach allVariables _namespace;
 
-_ctrlVariableCount ctrlSetText format ["#%1",_varCount];
+CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1",count allVariables _namespace];

@@ -18,6 +18,7 @@
   BOOLEAN: true
 */
 
+disableSerialization;
 params
 [
   ["_ctrlLb",controlNull],

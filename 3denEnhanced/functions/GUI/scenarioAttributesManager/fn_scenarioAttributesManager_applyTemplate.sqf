@@ -14,16 +14,19 @@
   BOOLEAN: true / false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _ctrlLB	= _display displayCtrl 1501;
-private _selectedTemplate = lbCurSel _ctrlLB;
+private _ctrlLB = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES);
+private _index = lbCurSel _ctrlLB;
 
-if (_selectedTemplate isEqualTo -1) exitWith {false};
+if (_index isEqualTo -1) exitWith {false};
 
 //Data is string but needs to be array
-_data = call compile (_ctrlLB lbData _selectedTemplate);
+_data = call compile (_ctrlLB lbData _index);
 
 //We don't need the title and description of the template, only the attributes
 _data = _data # 2;

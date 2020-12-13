@@ -13,8 +13,11 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlItems = _display displayCtrl 2200;
+private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
 _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 lbClear _ctrlItems;
 {

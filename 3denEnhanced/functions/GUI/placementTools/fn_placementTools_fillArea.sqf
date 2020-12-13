@@ -8,10 +8,10 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-params ["_control", "_newValue"];
+#include "\3denEnhanced\defineCommon.hpp"
 
 if (isNil "ENH_PlacementTools_AreaTrigger") then
 {
@@ -34,6 +34,4 @@ collect3DENHistory
   } forEach ENH_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl 120 ctrlSetText format ["%1 m / %2 m",ENH_PlacementTools_A,ENH_PlacementTools_B];
-
-true
+(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText format ["%1 m / %2 m",ENH_PlacementTools_A,ENH_PlacementTools_B];

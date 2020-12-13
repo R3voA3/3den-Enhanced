@@ -8,9 +8,12 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_display"];
 
 uiNamespace setVariable ["ENH_PlacementTools_Display",_display];
@@ -21,7 +24,7 @@ if (isNil "ENH_PlacementTools_Center") then
 {
   ENH_PlacementTools_Center = if (get3DENActionState "ToggleMap" == 1) then
   {
-    (findDisplay 313 displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
+    (findDisplay IDD_3DEN displayCtrl 51 ctrlMapScreenToWorld [0.5,0.5]) + [0];//ctrlMapScreenToWorld only returns [x,y], add another 0 to have [x,y,z]
   }
   else
   {
@@ -38,7 +41,7 @@ if (isNil "ENH_PlacementTools_Center") then
 #define STEP_SIZE_INDEX (missionNamespace getVariable ["ENH_PlacementTools_stepSizeIndex",4])
 
 //Setup toolbox
-(_display displayCtrl 250) lbSetCurSel STEP_SIZE_INDEX;
+CTRL(IDC_PLACEMENTTOOLS_FINECONTROL) lbSetCurSel STEP_SIZE_INDEX;
 
 //Set up sliders
 private _stepSize = [0.0001,0.001,0.01,0.1,1,10,100] select STEP_SIZE_INDEX;
@@ -55,18 +58,13 @@ private _stepSize = [0.0001,0.001,0.01,0.1,1,10,100] select STEP_SIZE_INDEX;
     missionNamespace setVariable [_varName,_defaultValue];
   };
 } forEach [
-  [10,"ENH_PlacementTools_Radius",50],
-  [20,"ENH_PlacementTools_InitialAngle",0],
-  [30,"ENH_PlacementTools_CentralAngle",360],
-  [40,"ENH_PlacementTools_Spacing",10],
-  [50,"ENH_PlacementTools_NumColums",2],
-  [60,"ENH_PlacementTools_SpaceX",2],
-  [70,"ENH_PlacementTools_SpaceY",2],
-  [80,"ENH_PlacementTools_A",100],
-  [90,"ENH_PlacementTools_B",100],
-  [130,"ENH_PlacementTools_RectangleA",100],
-  [140,"ENH_PlacementTools_RectangleB",100],
-  [150,"ENH_PlacementTools_RectangleSpacing",2]
+  [IDC_PLACEMENTTOOLS_RADIUS,"ENH_PlacementTools_Radius",50],
+  [IDC_PLACEMENTTOOLS_INITIALANGLE,"ENH_PlacementTools_InitialAngle",0],
+  [IDC_PLACEMENTTOOLS_CENTRALANGLE,"ENH_PlacementTools_CentralAngle",360],
+  [IDC_PLACEMENTTOOLS_SPACING,"ENH_PlacementTools_Spacing",10],
+  [IDC_PLACEMENTTOOLS_NUMCOLUMNS,"ENH_PlacementTools_NumColums",2],
+  [IDC_PLACEMENTTOOLS_SPACEX,"ENH_PlacementTools_SpaceX",2],
+  [IDC_PLACEMENTTOOLS_SPACEY,"ENH_PlacementTools_SpaceY",2],
+  [IDC_PLACEMENTTOOLS_A,"ENH_PlacementTools_A",100],
+  [IDC_PLACEMENTTOOLS_B,"ENH_PlacementTools_B",100]
 ];
-
-true

@@ -13,11 +13,14 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 
 ENH_fnc_IM_resetStorage_main =
 {
   _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-  private _ctrlInventory = _display displayCtrl 2300;
+  private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 
   //Clear inventory listbox
   call ENH_fnc_IM_clearInventory;

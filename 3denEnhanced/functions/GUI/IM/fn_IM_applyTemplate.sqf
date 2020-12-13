@@ -13,10 +13,13 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 
 //Get template data from listbox
-private _ctrlItems = _display displayCtrl 2200;
+private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
 private _row = lbCurSel _ctrlItems;
 if (_row isEqualTo -1) exitWith {false};
 private _value = _ctrlItems lbData lbCurSel _ctrlItems;

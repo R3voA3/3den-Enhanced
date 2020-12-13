@@ -13,39 +13,38 @@
   -
 */
 
-#include "\a3\3DEN\UI\macros.inc"
-#define CTRL(IDC) (_displayOrControl displayCtrl IDC)
+#include "\3denEnhanced\defineCommon.hpp"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safezoneX + GRID_W)
 #define Y (safezoneY + 24 * GRID_H)
 
 disableSerialization;
-params ["_displayOrControl"];
+params ["_display"];
 
-if (_displayOrControl isEqualType controlNull) then
+if (_display isEqualType controlNull) then
 {
-  _displayOrControl = ctrlParent (_this # 0);
+  _display = ctrlParent (_this # 0);
 };
 
-if (ctrlText CTRL(1406) == "«") then
+if (ctrlText CTRL(IDC_FUNCTIONSVIEWER_PANNEL) == "«") then
 {
   {
     CTRL(_x) ctrlSetFade 1;
     CTRL(_x) ctrlCommit 0;
-  } forEach [2200,1500];
+  } forEach [IDC_FUNCTIONSVIEWER_LOADMODE,IDC_FUNCTIONSVIEWER_LIST];
 
-  CTRL(5000) ctrlSetPosition [LEFT,Y,safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W,safeZoneH - 31 * GRID_H];
-  CTRL(5000) ctrlCommit 0;
-  CTRL(1406) ctrlSetText "»";
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT,Y,safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W,safeZoneH - 31 * GRID_H];
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlCommit 0;
+  CTRL(IDC_FUNCTIONSVIEWER_PANNEL) ctrlSetText "»";
 }
 else
 {
-  CTRL(5000) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W,Y,safezoneW - 73 * GRID_W,safeZoneH - 31 * GRID_H];
-  CTRL(5000) ctrlCommit 0;
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W,Y,safezoneW - 73 * GRID_W,safeZoneH - 31 * GRID_H];
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlCommit 0;
 
   {
     CTRL(_x) ctrlSetFade 0;
     CTRL(_x) ctrlCommit 0;
-  } forEach [2200,1500];
-  CTRL(1406) ctrlSetText "«";
+  } forEach [IDC_FUNCTIONSVIEWER_LOADMODE,IDC_FUNCTIONSVIEWER_LIST];
+  CTRL(IDC_FUNCTIONSVIEWER_PANNEL) ctrlSetText "«";
 };

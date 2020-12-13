@@ -11,7 +11,7 @@
   1: NUMBER - Selected index
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 params ["_ctrlNamespace","_index"];
@@ -27,5 +27,3 @@ uiNamespace setVariable
 ];
 
 ctrlParent _ctrlNamespace call ENH_fnc_variableViewer_fillLNB;
-
-true

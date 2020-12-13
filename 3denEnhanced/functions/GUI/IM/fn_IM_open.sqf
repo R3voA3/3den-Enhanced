@@ -13,6 +13,9 @@
   BOOLEAN: true / false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 ENH_IM_ShowTemplates = nil;
 ENH_IM_target = get3DENSelected "Object" select 0;
 
@@ -118,18 +121,15 @@ if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 };
 
 //Get all addons and add them to filter control
-private _ctrlFilterSearch = _display displayCtrl 3300;
-
 {
   _x params ["_addonClass","_addonName","_addonIcon"];
-  [_ctrlFilterSearch,_addonName,_addonClass,"",_addonIcon] call ENH_fnc_IM_lbAdd;
+  [CTRL(IDC_IM_FILTERSEARCH),_addonName,_addonClass,"",_addonIcon] call ENH_fnc_IM_lbAdd;
 } forEach (uiNamespace getVariable "ENH_IM_allAddons");
 
-[_display displayCtrl 2100,0] call ENH_fnc_IM_filterList;
+[CTRL(IDC_IM_FILTER),0] call ENH_fnc_IM_filterList;
 call ENH_fnc_IM_loadAttributeValue;
 
 //Add background icon
-private _ctrlBackgroundIcon = _display displayCtrl 2000;
 private _icon = getText (configFile >> "CfgVehicles" >> typeOf ENH_IM_target >> "icon");
 
 //Stupid workaround because some vehicles / crates don't have the icon texture in their config...
@@ -137,10 +137,10 @@ if !(".paa" in _icon) then
 {
   _icon = getText (configfile >> "CfgVehicleIcons" >> _icon);
 };
-_ctrlBackgroundIcon ctrlSetText _icon;
+CTRL(IDC_IM_BACKGROUNDICON) ctrlSetText _icon;
 
 {
-  (_display displayCtrl _x) ctrlEnable false;
-} forEach [2900,3000,3100];
+  CTRL(_x) ctrlEnable false;
+} forEach [IDC_IM_CREATETEMPLATE,IDC_IM_DELETETEMPLATE,IDC_IM_APPLYTEMPLATE];
 
 true

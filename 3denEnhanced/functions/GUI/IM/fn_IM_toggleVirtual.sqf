@@ -14,9 +14,12 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlCheckbox", "_isVirtual"];
 private _display = ctrlParent _ctrlCheckbox;
-private _ctrlInventory = _display displayCtrl 2300;
+private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 private _rows = (lnbSize _ctrlInventory) # 0;
 
 //onCheckedChange EH returns NUMBER, while other functions use BOOLEAN as parameter

@@ -56,7 +56,7 @@ class ENH_ScenarioAttributesManager
     class TemplateList: ctrlListbox
     {
       idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES;
-      x = CENTERED_X(DIALOG_W - 2);
+      x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 50 * GRID_W;
       h = 70 * GRID_H;
@@ -74,7 +74,7 @@ class ENH_ScenarioAttributesManager
     class DeleteTemplate: ctrlButton
     {
       text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE;
-      x = CENTERED_X(DIALOG_W - 2);
+      x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
       w = 50 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -83,13 +83,13 @@ class ENH_ScenarioAttributesManager
     class ApplyTemplate: ctrlButton
     {
       text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE;
-      x = CENTERED_X(DIALOG_W - 2);
+      x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 89 * GRID_H;
       w = 50 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_applyTemplate";
     };
-    class Export: ctrlButton
+    /* class Export: ctrlButton
     {
       text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT;
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
@@ -97,10 +97,11 @@ class ENH_ScenarioAttributesManager
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_exportToClipboard";
-    };
+    }; */
     class Search: ctrlEdit
     {
       idc = IDC_SCENARIOATTRIBUTESMANAGER_SEARCH;
+      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
       w = 25 * GRID_W;
@@ -133,7 +134,7 @@ class ENH_ScenarioAttributesManager
     class ApplyAttribute: ctrlButton
     {
       text = $STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE;
-      x = CENTERED_X(DIALOG_W) + 78 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 89 * GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -153,7 +154,7 @@ class ENH_ScenarioAttributesManagerTemplateData
 {
   idd = IDD_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
   movingEnable = true;
-  onLoad = "ENH_ScenarioAttributesManager_TemplateTitle = ''; ENH_ScenarioAttributesManager_TemplateDescription = '';";
+  onLoad = "ENH_ScenarioAttributesManager_TemplateTitle = ''; ENH_ScenarioAttributesManager_TemplateDescription = ''";
   onUnload = "";
   class ControlsBackground
   {

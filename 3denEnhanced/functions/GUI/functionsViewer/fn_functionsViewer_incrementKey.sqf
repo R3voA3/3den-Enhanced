@@ -14,6 +14,9 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton","_increment"];
 
 private _display = ctrlParent _ctrlButton;
@@ -23,7 +26,7 @@ private _indicesCount = count _indices;
 
 if (_indices isEqualTo []) exitWith
 {
-  (_display displayCtrl 2100) ctrlSetText "";
+  CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT) ctrlSetText "";
   false
 };
 
@@ -36,9 +39,9 @@ else
   (_currentIndex + _increment) min (_indicesCount -1);
 };
 
-(_display displayCtrl 2100) ctrlSetText format ["%1 / %2",_newIndex + 1,_indicesCount];
+(CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT)) ctrlSetText format ["%1 / %2",_newIndex + 1,_indicesCount];
 
-(_display displayCtrl 1401) ctrlSetTextSelection
+CTRL(IDC_FUNCTIONSVIEWER_CODE) ctrlSetTextSelection
 [
   _indices select _newIndex,
   count (uiNamespace getVariable ["ENH_FunctionsViewer_Key",""])

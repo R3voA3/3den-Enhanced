@@ -11,12 +11,15 @@
   1: NUMBER - The amount that should be removed
 
   Returns:
-  BOOLEAN: true
+  BOOLEAN: true/false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_amount"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = _display displayCtrl 2300;
+private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 private _row = lnbCurSelRow  _ctrlInventory;
 
 if (_row == -1) exitWith {false};

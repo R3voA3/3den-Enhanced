@@ -16,7 +16,6 @@
 #define CHECK (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo [])
 
 disableSerialization;
-
 private _display = findDisplay IDD_TEXTUREFINDER;
 private _ctrlProgText = CTRL(IDC_TEXTUREFINDER_PROGRESSTEXT);
 private _text = localize "STR_ENH_UPDATEPROGRESSBAR";

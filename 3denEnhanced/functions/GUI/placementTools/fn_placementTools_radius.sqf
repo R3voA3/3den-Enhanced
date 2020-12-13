@@ -8,10 +8,10 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-params ["_control", "_newValue"];
+params ["", "_newValue"];
 
 ENH_PlacementTools_Radius = _newValue;
 private _angle = ENH_PlacementTools_InitialAngle;
@@ -27,6 +27,4 @@ collect3DENHistory
   } forEach ENH_PlacementTools_Selected;
 };
 
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl 120 ctrlSetText (str _newValue + " m");
-
-true
+(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText (str _newValue + " m");

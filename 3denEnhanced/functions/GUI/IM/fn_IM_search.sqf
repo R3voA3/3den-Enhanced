@@ -13,9 +13,12 @@
   BOOLEAN: true
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlSearch"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlItems = _display displayCtrl 2200;
+private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
 private _filter = toUpper ctrlText (_display displayCtrl 3400);
 
 if (_filter == "") then

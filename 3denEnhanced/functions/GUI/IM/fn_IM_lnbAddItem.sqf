@@ -19,6 +19,7 @@
   BOOLEAN: true
 */
 
+disableSerialization;
 params ["_ctrlLnb","_data","_text","_image","_addonIcon","_value","_tooltip"];
 
 private _row = _ctrlLnb lnbAddRow ["",_text,str _value,""];

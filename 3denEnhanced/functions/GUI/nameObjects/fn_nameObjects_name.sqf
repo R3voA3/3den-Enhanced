@@ -13,6 +13,7 @@
 
 #include "\3denEnhanced\defineCommon.hpp"
 
+disableSerialization;
 private _display = findDisplay IDD_NAMEOBJECTS;
 private _input   = param [0,"UNNAME",[""]];
 private _toName = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;

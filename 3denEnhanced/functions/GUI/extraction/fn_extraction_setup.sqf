@@ -86,7 +86,7 @@ collect3DENHistory
   {
     private _nameRequester = ctrlText CTRL(IDC_EXTRACTION_NAMEREQUESTER);
     private _nameTransport = ctrlText CTRL(IDC_EXTRACTION_NAMETRANSPORT);
-    private _callExtractionMsg = format [localize "STR_ENH_EXTRACTION_CALLEXTRACTIONMSG",_nameRequester,_nameTransport,ctrlText CTRL(IDC_EXTRACTION_GRID);];
+    private _callExtractionMsg = format [localize "STR_ENH_EXTRACTION_CALLEXTRACTIONMSG",_nameRequester,_nameTransport,ctrlText CTRL(IDC_EXTRACTION_GRID)];
     private _extractionConfirmedMsg = format [localize "STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG",_nameRequester,_nameTransport];
     _triggerStart set3DENAttribute
     [

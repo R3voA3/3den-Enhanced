@@ -8,23 +8,24 @@
   0: CONTROL: Control - Button
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _fncCode = ctrlText (_display displayCtrl 1401);
-private _fncName = ctrlText (_display displayCtrl 1402);
-private _fncPath = ctrlText (_display displayCtrl 1403);
+private _fncCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
+private _fncName = CTRL(IDC_FUNCTIONSVIEWER_NAME);
+private _fncPath = CTRL(IDC_FUNCTIONSVIEWER_PATH);
 
 //Of one of the controls has no text, something is wrong. Exit!
 if (([_fncCode,_fncName,_fncPath] find "") > -1) exitWith {false};
 
-_export = "//" + _fncName + endl + "//" + ctrlText (_display displayCtrl 1403) + endl + endl + _fncCode;
+_export = "//" + ctrlText _fncName + endl + "//" + ctrlText _fncPath + endl + endl + ctrlText _fncCode;
 
 copyToClipboard _export;
 
 playSound "FD_Finish_F";
-
-true

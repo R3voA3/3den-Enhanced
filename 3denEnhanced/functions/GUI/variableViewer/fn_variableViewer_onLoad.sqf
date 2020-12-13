@@ -10,19 +10,17 @@
   0: Display - ENH_VariableViewer GUI
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-
 params ["_display"];
 
-private _ctrlNamespace = _display displayCtrl 4000;
-private _ctrlCheckbox = _display displayCtrl 9000;
+private _ctrlNamespace = CTRL(IDC_VARIABLEVIEWER_NAMESPACE);
 
-_ctrlCheckbox cbSetChecked (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions",false]);
+CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) cbSetChecked (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions",false]);
 
 //CTRL + F to focus search
 _display displayAddEventHandler ["keyDown",//Focus Search
@@ -94,5 +92,3 @@ private _icon = "";
 
 //Fill ListNbox
 _display call ENH_fnc_variableViewer_fillLNB;
-
-true

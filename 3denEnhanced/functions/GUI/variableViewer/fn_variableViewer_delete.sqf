@@ -13,10 +13,13 @@
   BOOLEAN: true / false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _ctrlLNB = _display displayCtrl 1000;
+private _ctrlLNB = CTRL(IDC_VARIABLEVIEWER_LIST);
 private _selectedRows = lbSelection _ctrlLNB;
 //If nothing selected, exit
 if (_selectedRows isEqualTo []) exitWith {false};
@@ -28,8 +31,6 @@ waitUntil {!isNil "ENH_VariableViewer_Modify_Confirmed"};
 //Deletion request needs to be confirmed twice
 if (ENH_VariableViewer_Modify_Confirmed) then
 {
-  private _ctrlToolbox = _display displayCtrl 4000;
-  private _ctrlVariableCount = _display displayCtrl 3000;
   private _namespace = call ENH_fnc_variableViewer_getNamespace;
 
   //Reverse array, otherwise indexes will change if entry gets deleted
@@ -42,7 +43,7 @@ if (ENH_VariableViewer_Modify_Confirmed) then
   } forEach _selectedRows;
 
   //Reduce variable count by one
-  _ctrlVariableCount ctrlSetText format ["#%1",lnbSize _ctrlLNB select 0];
+  CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1",lnbSize _ctrlLNB select 0];
 
   //Deselect everything
   _ctrlLNB lnbSetCurSelRow -1;

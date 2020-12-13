@@ -10,12 +10,15 @@
   0: DISPLAY
 
   Returns:
-  BOOLEAN: true, false if executed outside of Eden Editor
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ['_display'];
 
-if !(is3DEN) exitWith {false};
+if !(is3DEN) exitWith {};
 
 if (([["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected) isEqualTo []) exitWith
 {
@@ -25,5 +28,3 @@ if (([["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected) isEqu
 };
 
 CTRL(IDC_NAMEOBJECTS_VARIABLENAME) ctrlSetText (profileNamespace getVariable ['ENH_NameObjects_LastVarName',profileName]);
-
-true
