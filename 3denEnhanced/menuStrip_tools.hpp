@@ -33,6 +33,8 @@ class ENH_Folder_Debug
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
+    "ENH_VariableViewer",
+    "Separator",
     "ENH_ProductInfo",
     "ENH_RecompileFunctions",
     "ENH_ToggleMapIDs",
@@ -88,7 +90,6 @@ class ENH_Folder_Utilities
     "ENH_ScenarioAttributesManager",
     "ENH_CfgSentencesBrowser",
     "ENH_TextureFinder",
-    "ENH_VariableViewer",
     "Separator",
     "ENH_BriefingEditor",
     "ENH_ActionCreator",
