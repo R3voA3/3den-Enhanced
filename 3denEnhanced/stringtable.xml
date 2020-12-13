@@ -4358,6 +4358,13 @@
     <English>Exports Eden Editor base classes like ctrlStatic or ctrlStaticPicture.</English>
     <German>Exportiert Eden Editor Basis-Klassen wie ctrlStatic oder ctrlStaticPicture.</German>
   </Key>
+  <Key ID="STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
+    <English>Attribute %1 was set to %2.</English>
+    <German>Attribut %1 wurde auf %2 gesetzt.</German>
+  </Key>
+  <Key ID="STR_ENH_BRIEFING_TOOLTIP">
+    <English>These briefings work in singleplayer, multiplayer and for JIP players. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
+  </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
     <English>Exports all GUI base classes.</English>
     <German>Exportiert alle Basis-Klassen.</German>
