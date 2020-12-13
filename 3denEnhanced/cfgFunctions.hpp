@@ -157,7 +157,7 @@ class CfgFunctions
       class IM_deleteTemplate;
       class IM_filterList;
       class IM_lbAdd;
-      class IM_lnbAddItem;
+      class IM_lnbAdd;
       class IM_loadAttributeValue;
       class IM_previewItem;
       class IM_removeItem;
