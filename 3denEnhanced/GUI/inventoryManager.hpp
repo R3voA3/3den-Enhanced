@@ -24,7 +24,7 @@ class ENH_InventoryManager
     };
     class AvailableItems: ctrlStatic
     {
-      idc = IDC_INVENTORYMANAGER_AVAILABLEITEMSTEXT;
+      idc = IDC_IM_AVAILABLEITEMSTEXT;
       text = $STR_ENH_IM_AVAILABLEITEMS;
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
@@ -40,7 +40,7 @@ class ENH_InventoryManager
     };
     class InventoryListBackground: ctrlStaticPictureKeepAspect
     {
-      idc = IDC_INVENTORYMANAGER_BACKGROUNDICON;
+      idc = IDC_IM_BACKGROUNDICON;
       text = "";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
@@ -53,7 +53,7 @@ class ENH_InventoryManager
   {
     class Filter: ctrlToolbox
     {
-      idc = IDC_INVENTORYMANAGER_FILTER;
+      idc = IDC_IM_FILTER;
       columns = 7;
       rows = 3;
       x = CENTERED_X(DIALOG_W) + GRID_W;
@@ -88,7 +88,7 @@ class ENH_InventoryManager
     };
     class AvailableItemsList: ctrlListbox
     {
-      idc = IDC_INVENTORYMANAGER_AVAILABLEITEMSLIST;
+      idc = IDC_IM_AVAILABLEITEMSLIST;
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 7 * GRID_W;
@@ -98,7 +98,7 @@ class ENH_InventoryManager
     };
     class InventoryItemsList: ctrlListNBox
     {
-      idc = IDC_INVENTORYMANAGER_INVENTORYLIST;
+      idc = IDC_IM_INVENTORYLIST;
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
@@ -108,7 +108,7 @@ class ENH_InventoryManager
     };
     class AddOne: ctrlButton
     {
-      idc = IDC_INVENTORYMANAGER_ADDONE;
+      idc = IDC_IM_ADDONE;
       text = ">";
       tooltip = "+1";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
@@ -119,7 +119,7 @@ class ENH_InventoryManager
     };
     class AddTen: AddOne
     {
-      idc = IDC_INVENTORYMANAGER_ADDTEN;
+      idc = IDC_IM_ADDTEN;
       text = ">>";
       tooltip = "+10";
       y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
@@ -127,7 +127,7 @@ class ENH_InventoryManager
     };
     class RemoveOne: AddOne
     {
-      idc = IDC_INVENTORYMANAGER_REMOVEONE;
+      idc = IDC_IM_REMOVEONE;
       text = "<";
       tooltip = "-1";
       y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
@@ -135,7 +135,7 @@ class ENH_InventoryManager
     };
     class RemoveTen: AddOne
     {
-      idc = IDC_INVENTORYMANAGER_REMOVETEN;
+      idc = IDC_IM_REMOVETEN;
       text = "<<";
       tooltip = "-10";
       y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
@@ -143,7 +143,7 @@ class ENH_InventoryManager
     };
     class RemoveAll: ctrlButton
     {
-      idc = IDC_INVENTORYMANAGER_REMOVEALL;
+      idc = IDC_IM_REMOVEALL;
       text = "<<<";
       tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
@@ -163,14 +163,14 @@ class ENH_InventoryManager
     };
     class CreateTemplate: ShowTemplates
     {
-      idc = IDC_INVENTORYMANAGER_CREATETEMPLATE;
+      idc = IDC_IM_CREATETEMPLATE;
       text = $STR_ENH_IM_CREATETEMPLATE;
       x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
-      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_InventoryManager_TemplateData'";
+      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_IM_TemplateData'";
     };
     class DeleteTemplate: ctrlButtonPictureKeepAspect
     {
-      idc = IDC_INVENTORYMANAGER_DELETETEMPLATE;
+      idc = IDC_IM_DELETETEMPLATE;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
       tooltip = $STR_ENH_IM_DELETETEMPLATE;
       x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
@@ -183,14 +183,14 @@ class ENH_InventoryManager
     };
     class ApplyTemplate: ShowTemplates
     {
-      idc = IDC_INVENTORYMANAGER_APPLYTEMPLATE;
+      idc = IDC_IM_APPLYTEMPLATE;
       text = $STR_ENH_IM_APPLYTEMPLATE;
       x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
       onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
     };
     class IsVirtualCheckbox: ctrlCheckbox
     {
-      idc = IDC_INVENTORYMANAGER_VIRTUAL;
+      idc = IDC_IM_VIRTUAL;
       x = CENTERED_X(DIALOG_W) + GRID_W + 112 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -217,7 +217,7 @@ class ENH_InventoryManager
     };
     class FilterSearch: ctrlCombo
     {
-      idc = IDC_INVENTORYMANAGER_FILTERSEARCH;
+      idc = IDC_IM_FILTERSEARCH;
       x = CENTERED_X(DIALOG_W) + GRID_W + 141 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -226,7 +226,7 @@ class ENH_InventoryManager
     };
     class Search: ctrlEdit
     {
-      idc = IDC_INVENTORYMANAGER_SEARCH;
+      idc = IDC_IM_SEARCH;
       x = CENTERED_X(DIALOG_W) + GRID_W + 146 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 25 * GRID_W;
@@ -235,7 +235,7 @@ class ENH_InventoryManager
     };
     class ButtonSearch: ctrlButtonSearch
     {
-      idc = IDC_INVENTORYMANAGER_BUTTONSEARCH;
+      idc = IDC_IM_BUTTONSEARCH;
       x = CENTERED_X(DIALOG_W) + GRID_W + 171 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -244,7 +244,7 @@ class ENH_InventoryManager
     };
     class Ok: ctrlButtonOK
     {
-      idc = IDC_INVENTORYMANAGER_BUTTONOK;
+      idc = IDC_IM_BUTTONOK;
       x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
@@ -261,9 +261,9 @@ class ENH_InventoryManager
   };
 };
 
-class ENH_InventoryManager_ItemPreview
+class ENH_IM_ItemPreview
 {
-  idd = IDD_INVENTORYMANAGER_ITEMPREVIEW;
+  idd = IDD_IM_ITEMPREVIEW;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -279,7 +279,7 @@ class ENH_InventoryManager_ItemPreview
   {
     class Header: ctrlStaticTitle
     {
-      idc = IDC_INVENTORYMANAGER_ITEMPREVIEW_HEADER;
+      idc = IDC_IM_ITEMPREVIEW_HEADER;
       x = CENTERED_X(60);
       y = DIALOG_TOP + 50 * GRID_H;
       w = 60 * GRID_W;
@@ -287,7 +287,7 @@ class ENH_InventoryManager_ItemPreview
     };
     class Image: ctrlStaticPictureKeepAspect
     {
-      idc = IDC_INVENTORYMANAGER_ITEMPREVIEW_IMAGE;
+      idc = IDC_IM_ITEMPREVIEW_IMAGE;
       x = CENTERED_X(60);
       y = DIALOG_TOP + 50 * GRID_H + CTRL_DEFAULT_H;
       w = 60 * GRID_W;
@@ -303,9 +303,9 @@ class ENH_InventoryManager_ItemPreview
   };
 };
 
-class ENH_InventoryManager_TemplateData
+class ENH_IM_TemplateData
 {
-  idd = IDD_INVENTORYMANAGER_TEMPLATEDATA;
+  idd = IDD_IM_TEMPLATEDATA;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -336,7 +336,7 @@ class ENH_InventoryManager_TemplateData
     };
     class TitleValue: ctrlEdit
     {
-      idc = IDC_INVENTORYMANAGER_TEMPLATEDATA_TITLE;
+      idc = IDC_IM_TEMPLATEDATA_TITLE;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 62 * GRID_H;
       w = 58 * GRID_W;
@@ -352,7 +352,7 @@ class ENH_InventoryManager_TemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = IDD_INVENTORYMANAGER_TEMPLATEDATA_DESCRIPTION;
+      idc = IDD_IM_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 74 * GRID_H;
       w = 58 * GRID_W;

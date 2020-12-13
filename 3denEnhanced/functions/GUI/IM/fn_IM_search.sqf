@@ -19,15 +19,15 @@ disableSerialization;
 params ["_ctrlSearch"];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
-private _filter = toUpper ctrlText (_display displayCtrl 3400);
+private _filter = toUpper ctrlText _ctrlSearch;
 
 if (_filter == "") then
 {
-  (_display displayCtrl 3500) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+  CTRL(IDC_IM_BUTTONSEARCH) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
 }
 else
 {
-  (_display displayCtrl 3500) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
+  CTRL(IDC_IM_BUTTONSEARCH) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
 };
 
 lbClear _ctrlItems;

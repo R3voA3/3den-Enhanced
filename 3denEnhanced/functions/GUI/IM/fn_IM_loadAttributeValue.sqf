@@ -35,7 +35,7 @@ private _fnc_addItems =
       if (_x # 0 isEqualTo _currentClass) exitWith
       {
         _x params ["_configName","_displayName","_image","_addonIcon"];
-        ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"]) call ENH_fnc_IM_lnbAddItem;
+        ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"]) call ENH_fnc_IM_lnbAdd;
       };
     } forEach (uiNamespace getVariable "ENH_IM_allItems");
   } forEach _configNamesArray;

@@ -15,7 +15,6 @@
 
 disableSerialization;
 params ["_ctrlButton"];
-private _displayParent = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
 
 //Return inventory data
