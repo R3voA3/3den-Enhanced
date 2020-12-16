@@ -10,7 +10,6 @@
   </a>
 </p>
 <p align="center">
-  <b>3den Enhanced Documentation</b><br>
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Scenario-Attributes">Scenario Attributes</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Entity-Attributes">Entity Attributes</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Menu-Strip">Menu Strip</a> |
