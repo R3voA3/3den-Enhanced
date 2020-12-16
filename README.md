@@ -13,32 +13,29 @@
     <img src="https://img.shields.io/badge/Changelog-Click-blueviolet.svg?style=flat-square">
   </a>
 </p>
+<p align="center">
+  <b>3den Enhanced Documentation</b><br>
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Scenario-Attributes">Scenario Attributes</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Entity-Attributes">Entity Attributes</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Menu-Strip">Menu Strip</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Context-Menu">Context Menu</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs">Custom GUIs</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Functions">Functions</a>
+</p>
 
-# 3den-Enhanced
+<p align="center">
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Credits">Credits</a> |
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/changelog/623475643">Changelog</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Translation">Translation</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/FAQ">FAQ</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Contribute">Contribute</a>
+</p>
 
-Adds new functionalities to the [Eden Editor](https://community.bistudio.com/wiki/Eden_Editor).
+<p align="center">
+  <img src="https://github.com/R3voA3/3den-Enhanced/blob/master/wiki/wikiLogo.png">
+</p>
 
-Feel free to [contribute!](https://github.com/RevoArma3/3den-Enhanced)
+<p align="center">
+This modification adds new functionalities to the Eden Editor without creating any dependencies for players. That means, scenario editors can use this mod to make their life easier without making the life of the players harder, by forcing them to download an additional modification.
+</p>
 
-# Contribute
-You want to contribute? Add your own code or optimise the existing one. Feel free to do so.
-Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks.
-
-## How to?
-1. Fork this repository
-2. Make the changes
-3. Create a [pull request](https://github.com/RevoArma3/3den-Enhanced/pulls)
-
-# Bug
-Found a **bug** or have a **feature request**? Visit one of the following links.
-
-* [BIS Forums](https://forums.bohemia.net/forums/topic/188312-3den-enhanced/)
-* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
-* [GitHub](https://github.com/RevoArma3/3den-Enhanced/issue)
-
-# License
-<a rel="license" href="http://www.bistudio.com/licenses/arma-public-license-share-alike" target="_blank" >
- <img src="http://www.bistudio.com/license-icons/small/APL-SA.png" >
- <br>
- This work is licensed under a Arma Public License Share Alike
-</a>
