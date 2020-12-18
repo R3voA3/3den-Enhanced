@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Exports classname of selected song and copies it to the clipboard.

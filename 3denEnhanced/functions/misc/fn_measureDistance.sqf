@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Measures the distance between two positions.

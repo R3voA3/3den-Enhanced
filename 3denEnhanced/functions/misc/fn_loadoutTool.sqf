@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Copies loadout from selected units and applies it to all selected ones (Tools can be selected in the menu strip).

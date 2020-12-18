@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Used by the ENH_TexturFinder GUI. Exports path of selected lb entry by pressing CTRL + C.

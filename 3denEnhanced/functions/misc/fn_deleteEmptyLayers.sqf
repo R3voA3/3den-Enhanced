@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Deletes all empty layers and creates a history entry.

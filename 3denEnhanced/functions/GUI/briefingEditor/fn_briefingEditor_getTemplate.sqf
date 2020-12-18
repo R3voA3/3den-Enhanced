@@ -1,4 +1,5 @@
-/*  Author: Revo
+/*
+  Author: R3vo
 
   Description:
   Retrieves the template information and fills the editor with its data.

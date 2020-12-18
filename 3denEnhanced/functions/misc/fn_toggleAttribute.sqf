@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Toggles given attribute of selected entities of given types. Only attribute which use boolean values can be toggled.

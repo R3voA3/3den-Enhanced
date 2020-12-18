@@ -1,5 +1,5 @@
 /*
-  Author: Revo, improved by dixon13
+  Author: R3vo, improved by dixon13
 
   Description:
   Sets the orientation of all selected objects.

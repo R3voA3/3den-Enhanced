@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Modifies an array to be outputted with linebreaks for easier legibility.

@@ -1,6 +1,6 @@
 
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Used by the ENH_TexturFinder GUI. Updates the progressbar at anytime.

@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Changes the spacing. Used in the ENH_PatternTools GUI.

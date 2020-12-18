@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Places objects in pattern defined by number of columns and spacing (x,y) in meters. Used in the ENH_PatternTools GUI.

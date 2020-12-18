@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Switches time quickly to 12 o'clock and sets fog, overcast and rain to 0 for easier editing. Calling the function again, will reset the time to the original one.

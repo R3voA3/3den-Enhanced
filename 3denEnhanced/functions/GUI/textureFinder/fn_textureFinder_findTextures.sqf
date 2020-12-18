@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Used by the ENH_TexturFinder GUI. Searches the config file for useable textures.

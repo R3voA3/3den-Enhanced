@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Used by the ENH_ModuleInformation GUI. Called onLoad.

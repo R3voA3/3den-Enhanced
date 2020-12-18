@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Retrieves all information from the Briefing Editor and copies it to player's clipboard in an useable format.

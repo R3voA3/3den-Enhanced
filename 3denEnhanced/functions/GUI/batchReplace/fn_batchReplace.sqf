@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Replaces all selected objects with the types of objects defined in the GUI "ENH_BatchReplace".

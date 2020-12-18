@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Changes the rotation. Used in the ENH_PatternTools GUI.

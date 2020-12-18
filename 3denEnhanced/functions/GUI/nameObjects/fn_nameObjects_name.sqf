@@ -1,5 +1,5 @@
 /*
-  Author: Revo
+  Author: R3vo
 
   Description:
   Names all selected entities. Name is taken from the ENH_nameObjects dialog.
