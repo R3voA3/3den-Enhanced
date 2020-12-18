@@ -31,7 +31,7 @@ _ctrlTV tvAdd [[],"JPG"];
   {
     _indexType = parseNumber (".jpg" in _x);
     _index = _ctrlTV tvAdd [[_indexType],_x];
-    _ctrlTV tvSetPictureRight [[_indexType,_index],_x];  //This is soo slow (╯°□°）╯︵ ┻━┻)
+    _ctrlTV tvSetPictureRight [[_indexType,_index],_x];  //This is soo slow =(
     _ctrlTV tvSetTooltip [[_indexType,_index],_tooltip];
   };
   _ctrlProgress progressSetPosition linearConversion [0,_textureCount,_counter + 1,0,1];
