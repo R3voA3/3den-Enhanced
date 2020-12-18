@@ -47,48 +47,48 @@ class ENH_LogFactions
 class ENH_LogClassesString
 {
   action = "'CLASSES' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOGCLASSESSTRING;
+  text = $STR_ENH_CONTEXTMENU_LOGCLASSESSTRING;
   conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
 class ENH_LogPositions3D
 {
   action = "'3D' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS3D;
+  text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS3D;
   conditionShow = "selected - selectedMarker";
 };
 class ENH_LogPositions2D
 {
   action = "'2D' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS2D;
+  text = $STR_ENH_CONTEXTMENU_LOGPOSITIONS2D;
   conditionShow = "selected";
 };
 class ENH_LogGridPositon
 {
   action = "'GRIDPOS' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOGGRIDPOSITION;
+  text = $STR_ENH_CONTEXTMENU_LOGGRIDPOSITION;
   conditionShow = "1";
 };
 class ENH_Log3DENID
 {
   action = "'IDS' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOG3DENIDS;
+  text = $STR_ENH_CONTEXTMENU_LOG3DENIDS;
   conditionShow = "selected";
 };
 class ENH_LogVarNames
 {
   action = "'VARNAMES' call ENH_fnc_log";
-  Text = "STR_ENH_CONTEXTMENU_LOGVARNAMES";
+  text = "STR_ENH_CONTEXTMENU_LOGVARNAMES";
   conditionShow = "selected";
 };
 class ENH_LogObjectInfo: ENH_LogFactions
 {
   action = "'OBJECTINFO' call ENH_fnc_log";
-  Text = $STR_ENH_CONTEXTMENU_LOGOBJECTINFO;
+  text = $STR_ENH_CONTEXTMENU_LOGOBJECTINFO;
 };
 class ENH_MeasureDistance
 {
   action = "[] spawn ENH_fnc_measureDistance";
-  Text = $STR_ENH_CONTEXTMENU_MEASUREDISTANCE;
+  text = $STR_ENH_CONTEXTMENU_MEASUREDISTANCE;
   picture = "\3denEnhanced\data\icon_ruler.paa";
   conditionShow = "1";
   SHOW_IN_ROOT;
@@ -96,7 +96,7 @@ class ENH_MeasureDistance
 class ENH_ShowModuleInformation
 {
   action = "findDisplay 313 createDisplay 'ENH_ModuleInformation'";
-  Text = $STR_ENH_CONTEXTMENU_GETMODULEINFORMATION;
+  text = $STR_ENH_CONTEXTMENU_GETMODULEINFORMATION;
   conditionShow = "hoverLogic";
   opensNewWindow = 1;
   SHOW_IN_ROOT;
@@ -104,7 +104,7 @@ class ENH_ShowModuleInformation
 class ENH_Garrison
 {
   action = "findDisplay 313 createDisplay 'ENH_Garrison'";
-  Text = $STR_ENH_CONTEXTMENU_GARRISON;
+  text = $STR_ENH_CONTEXTMENU_GARRISON;
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
   conditionShow = "selected";
   opensNewWindow = 1;
@@ -113,7 +113,7 @@ class ENH_Garrison
 class ENH_Extraction
 {
   action = "findDisplay 313 createDisplay 'ENH_Extraction'";
-  Text = $STR_ENH_CONTEXTMENU_CREATEEXTRACTION;
+  text = $STR_ENH_CONTEXTMENU_CREATEEXTRACTION;
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
   conditionShow = "hoverObjectVehicle";
   opensNewWindow = 1;
@@ -122,12 +122,12 @@ class ENH_Extraction
 class ENH_TriggerOwnerPlayer
 {
   action = "add3DENConnection ['TriggerOwner',get3DENSelected 'Trigger',player]";
-  Text = $STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER;
+  text = $STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER;
   conditionShow = "hoverTrigger";
 };
 class ENH_DeleteCrew
 {
   action = "call ENH_fnc_deleteCrew";
-  Text = $STR_ENH_CONTEXTMENU_DELETECREW;
+  text = $STR_ENH_CONTEXTMENU_DELETECREW;
   conditionShow = "hoverObjectVehicle";
 };
