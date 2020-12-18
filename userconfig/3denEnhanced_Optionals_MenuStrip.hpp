@@ -5,7 +5,6 @@ private _menuStripBlacklist =
   //Main Folders
   //"STR_ENH_FOLDER_ABOUT",
   //Help
-  //"STR_ENH_FOLDER_COMMUNITY",
   //"STR_ENH_FOLDER_WIKI",
   //"STR_ENH_HELP_GETEXTENSIONS",
   //Utilities

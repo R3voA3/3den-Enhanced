@@ -31,7 +31,7 @@ class ENH_About_Steam: ENH_About_Forum
 class ENH_About_Translation: ENH_About_Forum
 {
   text = $STR_ENH_ABOUT_TRANSLATION;
-  weblink = "https://github.com/RevoArma3/3den-Enhanced";
+  weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Translation";
 };
 class ENH_About_Documentation: ENH_About_Forum
 {
