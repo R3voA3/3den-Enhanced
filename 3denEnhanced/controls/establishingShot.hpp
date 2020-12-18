@@ -8,6 +8,7 @@ class ENH_EstablishingShot: Title
     class CenterTitle: Title
     {
       text = $STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME;
+      tooltip = $STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP;
     };
     class CenterValue: ctrlEdit
     {

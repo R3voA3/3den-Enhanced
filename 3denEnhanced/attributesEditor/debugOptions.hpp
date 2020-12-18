@@ -52,6 +52,7 @@ class ENH_DebugOptions
     class ENH_DebugOptions_KillCursor: ENH_DebugOptions_KillBLUFOR
     {
       displayName = $STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME;
+      tooltip = $STR_ENH_DEBUGOPTIONS_KILLCURSOR_TOOLTIP;
       property = "ENH_DebugOptions_KillCursor";
     };
     class ENH_DebugOptions_DeleteCorpse: ENH_DebugOptions_Arsenal
@@ -170,6 +171,7 @@ class ENH_DebugOptions
     class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
     {
       displayName = $STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME;
+      tooltip = $STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP;
       property = "ENH_DebugOptions_DrawIcons";
     };
     class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal

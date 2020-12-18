@@ -99,36 +99,6 @@
     <Polish>Usuń kamizelki</Polish>
     <Russian>Удалить Жилеты</Russian>
   </Key>
-  <Key ID="STR_ENH_DEBUGPATH_DISPLAYNAME">
-    <English>Debug Path</English>
-    <Italian>Percorso per il debug</Italian>
-    <German>Debug Pfad</German>
-    <Czech>Debug cesty</Czech>
-    <French>Débogage du chemin</French>
-    <Polish>Ścieżka debugu</Polish>
-    <Spanish>Ruta de Depuración</Spanish>
-    <Russian>Путь отладки</Russian>
-  </Key>
-  <Key ID="STR_ENH_DEBUGPATH_TOOLTIP">
-    <English>Path of the unit will be marked by multiple arrows. Useful to find areas where AI might not be able to walk or drive. Do only use during mission creation.</English>
-    <Italian>Il percorso dell'unità verra segnato da molteplici freccie. Utile per trovare aree dove l'AI puo non essere in grado di camminare o guidare. Da usare solo durante la creazione della missione.</Italian>
-    <German>Pfad der Einheit wird durch mehrere Pfeile dargestellt. Nützlich um Gegenden zu erkennen in denen die KI nicht fähig ist zu laufen oder zu fahren. Nur während der Missionserstellung zu benutzen.</German>
-    <Czech>Cesta jednotky bude vyznačena několika šipkami. Užitečné pro najití oblastí kde může mít umělá inteligence problémy s chůzí nebo řízením. Používejte pouze během vytváření mise.</Czech>
-    <French>Le chemin de l'unité sera marqué par plusieurs flèches. Utile pour trouver des zones où l'IA pourrait ne pas être capable de marcher ou de conduire. Ne l'utilisez que pendant la création de la mission.</French>
-    <Polish>Ścieżka jednostki będzie zaznaczona przez strzałki. Użyteczne do znajdowania stref gdzie AI nie może przejść lub przejechać. Używać tylko w czasie tworzenia misji.</Polish>
-    <Spanish>El camino de la unidad será marcado por múltiples flechas. Útil para encontrar áreas donde la IA no pueda caminar o conducir. Usar solamente durante la creación de la misión.</Spanish>
-    <Russian>Путь отряда будет отмечен несколькими стрелками. Полезно для поиска областей, в которых ИИ не может ходить или двигаться. Используйте только во время создания миссии.</Russian>
-  </Key>
-  <Key ID="STR_ENH_DEBUGPATH_MESSAGE">
-    <English>Path debugging enabled for unit %1.</English>
-    <Italian>Percorso per il debug abilitato per l'unità %1.</Italian>
-    <German>Pfad-Debugging für Einheit %1 aktiviert.</German>
-    <Czech>Debug cesty aktivován pro jednotku %1.</Czech>
-    <French>Débogage du chemin activé pour l'unité %1.</French>
-    <Polish>Debug ścieżki ruchu włączony dla jednostki %1.</Polish>
-    <Russian>Отладка пути включена для объекта% 1</Russian>
-    <Spanish>Depurar ruta habilitado para la unidad %1</Spanish>
-  </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOG3DENIDS">
     <English>Log 3DEN Entity IDs to Clipboard</English>
     <Italian>Registra gli ID delle entità 3DEN nella cartella appunti</Italian>
@@ -504,16 +474,6 @@
     <Spanish>Configuración de habilidad dinámica para la IA</Spanish>
     <Russian>Динамические настройки искусственного интеллекта</Russian>
   </Key>
-  <Key ID="STR_ENH_CREDITS_HEADER">
-    <English>Contributors</English>
-    <Italian>Contributori</Italian>
-    <German>Mitwirkende</German>
-    <Czech>Spolutvůrci</Czech>
-    <French>Contributeurs</French>
-    <Spanish>Contribuidores</Spanish>
-    <Polish>Współtwórcy</Polish>
-    <Russian>Авторы</Russian>
-  </Key>
   <Key ID="STR_ENH_DISABLEAI_NVG_DISPLAYNAME">
     <English>Night Vision Goggles</English>
     <Italian>Visori Notturni</Italian>
@@ -596,17 +556,6 @@
     <Portuguese>Modo de velocidade</Portuguese>
     <Chinesesimp>速度模式</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_AMBIENTFLYBY_ITERATIONS_DISPLAYNAME">
-    <English>Number of Flybys</English>
-    <Italian>Numeri delle sorvolate(Flybys)</Italian>
-    <Czech>Počet přeletů</Czech>
-    <French>Nombre de survols</French>
-    <Spanish>Número de sobre vuelos</Spanish>
-    <German>Anzahl der Vorbeiflüge</German>
-    <Chinesesimp>飞行的数量</Chinesesimp>
-    <Polish>Liczba przelotów</Polish>
-    <Russian>Количество рейсов</Russian>
-  </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME">
     <English>Delay</English>
     <Italian>Ritardo</Italian>
@@ -651,18 +600,6 @@
     <Polish>Pozycja końcowa.</Polish>
     <Russian>Конечная позиция</Russian>
   </Key>
-  <Key ID="STR_ENH_AMBIENTFLYBY_SIDE_DISPLAYNAME">
-    <French>Camp</French>
-    <Spanish>Bando</Spanish>
-    <Italian>Parte</Italian>
-    <Polish>Strona</Polish>
-    <Russian>Сторона</Russian>
-    <German>Seite</German>
-    <Czech>Strana</Czech>
-    <English>Side</English>
-    <Portuguese>Lado</Portuguese>
-    <Chinesesimp>一方</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_EDITABLEOBJZEUS_DISPLAYNAME">
     <English>Editable Objects (Zeus)</English>
     <Italian>Oggetti modificabili (Zeus)</Italian>
@@ -684,28 +621,6 @@
     <French>Scanne tous les objets vivants (sauf les entités logiques) toutes les 60 secondes et les ajoute à l'interface du Zeus.\nSi aucun Zeus n'est en jeu, l'attribut ne fonctionnera pas.</French>
     <Polish>Sprawdza wszystkie żywe obiekty (oprócz logiki) co 60 sekund i sprawia że są edytowalne dla wszystkich kuratorów.\nJeżeli nie ma kuratorów w grze to atrybut nie będzie działać. </Polish>
     <Russian>Проверяет все живые объекты (кроме логики) каждые 60 секунд и делает их доступными для редактирования для всех кураторов.\nЕсли в игре нет кураторов, атрибут не будет работать.</Russian>
-  </Key>
-  <Key ID="STR_ENH_GROUPINDICATOR_DISPLAYNAME">
-    <English>Show Group Indicator</English>
-    <Italian>Mostra l'indicatore di gruppo</Italian>
-    <German>Zeige Gruppenradar</German>
-    <Spanish>Mostrar indicador de grupo</Spanish>
-    <Chinesesimp>Afficher l'indicateur de groupe</Chinesesimp>
-    <Czech>Zobrazit indikátor skupiny</Czech>
-    <French>Afficher l'indicateur de groupe</French>
-    <Polish>Pokazuje indykator grupy</Polish>
-    <Russian>Показать индикатор группы</Russian>
-  </Key>
-  <Key ID="STR_ENH_GROUPINDICATOR_TOOLTIP">
-    <English>Shows a group indicator at the right hand side of the screen.</English>
-    <Italian>Mostra l'indicatore di gruppo sul lato destro dello schermo</Italian>
-    <German>Zeigt ein Gruppenradar auf der rechten Bildschirmseite.</German>
-    <Chinesesimp>显示屏幕右侧的状态组表</Chinesesimp>
-    <Spanish>Muestra un indicador de grupo en el lado derecho de la pantalla.</Spanish>
-    <Czech>Zobrazí indikátor skupiny na pravé straně obrazovky.</Czech>
-    <French>Affiche un indicateur de groupe sur le côté droit de l'écran.</French>
-    <Polish>Pokazuje indykator grupy po prawej stronie ekranu.</Polish>
-    <Russian>Показывает индикатор группы в правой части экрана.</Russian>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_FRIENDLY">
     <English>Hide Friendly Units</English>
@@ -1399,7 +1314,7 @@
     <Polish>Dodaje Arsenał z wszystkimi przedmiotami do obiektu</Polish>
     <Russian>Добавляет арсенал со всеми предметами к объекту.</Russian>
   </Key>
-  <Key ID="str_enh_allowsprinting_displayname">
+  <Key ID="STR_ENH_ALLOWSPRINTING_DISPLAYNAME">
     <English>Allow Sprinting</English>
     <Italian>Consente lo sprint</Italian>
     <Czech>Povolit sprint</Czech>
@@ -2369,17 +2284,6 @@
     <Polish>Wyświetlany tekst</Polish>
     <Russian>Отображаемый текст</Russian>
   </Key>
-  <Key ID="STR_ENH_ESTABLISHINGSHOT_ALTITUDE_DISPLAYNAME">
-    <English>Altitude</English>
-    <Italian>Altitudine</Italian>
-    <Czech>Výška</Czech>
-    <French>Altitude</French>
-    <Spanish>Altitud</Spanish>
-    <German>Flughöhe</German>
-    <Chinesesimp>高度</Chinesesimp>
-    <Polish>Wysokość</Polish>
-    <Russian>Высота</Russian>
-  </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME">
     <English>Radius of the Orbit</English>
     <Italian>Raggio dell'orbita</Italian>
@@ -2597,28 +2501,6 @@
     <Polish>Ustawienia grafiki</Polish>
     <Russian>Визуальные настройки</Russian>
   </Key>
-  <Key ID="STR_ENH_ATTRIBUTECATEGORY_ADVANCEDSKILL">
-    <English>Advanced Skill Settings</English>
-    <Italian>Configurazione delle abilità avanzate</Italian>
-    <Czech>Pokročilé nastavení dovedností</Czech>
-    <French>Compétences avancées</French>
-    <Spanish>Configuración de habilidad avanzada</Spanish>
-    <German>Erweiterte Fähigkeiteneinstellungen</German>
-    <Chinesesimp>先进技能系统</Chinesesimp>
-    <Polish>Zaawansowane ustawienia skilla</Polish>
-    <Russian>Расширенные настройки навыков</Russian>
-  </Key>
-  <Key ID="STR_ENH_ATTRIBUTECATEGORY_DISABLEAI">
-    <English>Disable AI Features</English>
-    <Italian>Disabilita le funzionalità dell'AI</Italian>
-    <Czech>Deaktivovat možnosti umělé inteligence</Czech>
-    <French>Désactiver des fonctionnalités de l'IA</French>
-    <Spanish>Deshabilitar características de la IA</Spanish>
-    <German>Deaktiviere KI Funktionen</German>
-    <Chinesesimp>禁用AI功能</Chinesesimp>
-    <Polish>Wyłącz funkcje SI</Polish>
-    <Russian>Отключить функции AI</Russian>
-  </Key>
   <Key ID="STR_ENH_ATTRIBUTECATEGORY_UNITTRAITS">
     <English>Unit Traits</English>
     <Italian>Caratteristiche dell'unità</Italian>
@@ -2754,17 +2636,6 @@
     <French>Mod</French>
     <Polish>Mod</Polish>
     <Russian>Мод</Russian>
-  </Key>
-  <Key ID="STR_ENH_3DENRADIO_HELP_TEXT">
-    <English>Help</English>
-    <Italian>Aiuto</Italian>
-    <Czech>Pomoc</Czech>
-    <German>Hilfe</German>
-    <Spanish>Ayuda</Spanish>
-    <Chinesesimp>救命</Chinesesimp>
-    <French>Aide</French>
-    <Polish>Pomoc</Polish>
-    <Russian>Помощь</Russian>
   </Key>
   <Key ID="STR_ENH_3DENRADIO_HELP_DESCRIPTION">
     <English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
@@ -2939,28 +2810,6 @@
     <Polish>Włącz tryb "Jeniec"</Polish>
     <Russian>Включить нейтральное поведение</Russian>
   </Key>
-  <Key ID="STR_ENH_HELP_KKBLOG">
-    <English>KK's Blog</English>
-    <Italian>Blog di KillzoneKid</Italian>
-    <Czech>KK's Blog</Czech>
-    <French>Blog de KillzoneKid</French>
-    <Spanish>Blog de KillzoneKid</Spanish>
-    <German>KK's Blog</German>
-    <Chinesesimp>KK的博客</Chinesesimp>
-    <Polish>Blog KK</Polish>
-    <Russian>Блог KillzoneKid</Russian>
-  </Key>
-  <Key ID="STR_ENH_HELP_FOXHOUNDINTERNATIONAL">
-    <English>Scripting Examples by Foxhound International</English>
-    <Italian>Esempi di scripting da foxhound International</Italian>
-    <Czech>Příklady skriptů od Foxhound International</Czech>
-    <French>Exemples de rédaction de scripts par Foxhound International</French>
-    <Spanish>Ejemplos de scripts de foxhound Internacional </Spanish>
-    <German>Skriptbeispiele von Foxhound International</German>
-    <Chinesesimp>Příkladyskript od Foxhound International </Chinesesimp>
-    <Polish>Przykłady skryptów przez Foxhound International</Polish>
-    <Russian>Примеры сценариев от Foxhound International</Russian>
-  </Key>
   <Key ID="STR_ENH_HELP_SCRIPTINGBEGINNERS">
     <English>Scripting for Beginners</English>
     <Italian>Scripting per principianti</Italian>
@@ -3036,17 +2885,6 @@
     <French>Copier les positions (3D) dans le presse-papiers</French>
     <Polish>Zapisz pozycje (3D) do schowka</Polish>
     <Russian>Записать позиции (3D) в буфер обмена</Russian>
-  </Key>
-  <Key ID="STR_ENH_CONTEXTMENU_SHOW3DENID">
-    <English>Show 3DEN Entity ID</English>
-    <Italian>Mostra le ID delle entità 3DEN</Italian>
-    <German>Zeige 3DEN Objekt ID</German>
-    <Chinesesimp>显示 3DEN 对象ID</Chinesesimp>
-    <Spanish>Mostrar ID de entidad 3DEN</Spanish>
-    <Czech>Zobrazit ID 3DEN entity</Czech>
-    <French>Afficher l'identifiant d'entité 3DEN</French>
-    <Polish>Pokaż ID bytu 3DENa</Polish>
-    <Russian>Посмотреть идентификатор объекта 3DEN</Russian>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_MEASUREDISTANCE">
     <English>Measure Distance</English>
@@ -3161,15 +2999,6 @@
     <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
     <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, расстояние просмотра объекта не может быть больше расстояния просмотра.</Russian>
   </Key>
-  <Key ID="STR_ENH_HELP_ARMANETEDENTUTORIAL">
-    <English>Eden Editor Video Tuturial</English>
-    <Czech>Videonávod pro Eden Editor</Czech>
-    <German>Eden Editor Video Tuturial</German>
-    <Spanish>Video Tutorial del editor Eden</Spanish>
-    <Polish>Eden- Poradnik Wideo</Polish>
-    <Russian>Редактор Eden Видеоурок</Russian>
-    <French>Tutoriel vidéo Eden Editor</French>
-  </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
     <English>Circular Pattern</English>
     <Chinesesimp>圆形图案</Chinesesimp>
@@ -3226,16 +3055,6 @@
     <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar configurando la variable 'ENH_GroupMarker_Update' en el nombre de espacio de grupos (group's namespace) a FALSE. \n\nValue tiene que ser un nombre de clase de marcador de CfgMarkers.</Spanish>
     <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
   </Key>
-  <Key ID="STR_ENH_MAPINDICATORS_DESCRIPTION">
-    <English>Disables map indicators for friendly and hostile units, mines and tactical ping. Overwrites player's difficulty settings!</English>
-    <Chinesesimp>禁用地图友军、敌军、地雷位置显示和战术ping值。将覆盖玩家的难度设置！</Chinesesimp>
-    <Czech>Zakáže mapové indikátory pro přátelské a nepřátelské jednotky, miny a taktický ping. Přepisuje nastavení obtížnosti hráče!</Czech>
-    <French>Désactive les indicateurs de carte pour les unités amies et hostiles, les mines et le ping tactique. Écrase les paramètres de difficulté du joueur !</French>
-    <German>Deaktiviert Kartenindikatoren für freundliche und feindliche Einheiten sowie Minen und den taktischen Ping. Überschreibt die Einstellungen des Spielers!</German>
-    <Polish>Wyłącza indykator na mapie dla jednostek przyjaznych i wrogich, min i sygranłu taktycznego. Nadpisuje ustawienia trudności gracza!</Polish>
-    <Russian>Отключает индикаторы карты для дружественных и враждебных юнитов, мин и тактического пинга. Перезаписывает настройки сложности игрока!</Russian>
-    <Spanish>Desactiva los contadores de mapas de las unidades amigas y enemigas, las minas y el ping táctico. ¡Anula los ajustes del jugador!</Spanish>
-  </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
     <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
     <Spanish>Finaliza la misión con un final personalizado si una cierta cantidad de entidades de un bando del bando indicado muere. Puede ser usado para fallar la misión Se puede utilizar para fallar la misión por víctimas civiles. En multijugador, la misión finalizará para todos los clientes. Los informes personalizados deben definirse en la configuración de la misión. Ver &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;</Spanish>
@@ -3264,12 +3083,6 @@
     <Spanish>Habilita al jugador y a la IA a reaparecer en escenarios de un solo jugador. Solo están afectadas las unidades con la opción reaparición de un solo jugador habilitada. Para escenarios MP usa el sistema reaparición multijugador.</Spanish>
     <French>Permet aux IA et au joueur de réapparaître dans les scénarios solo. Seules les unités avec la 'Réapparation en solo' activée dans leurs attributs sont affectées. Pour les scénarios multijoueurs, utilisez le système de réapparition multijoueur. </French>
   </Key>
-  <Key ID="STR_ENH_SPR_ENABLESPR">
-    <English>Enable Single Player Respawn</English>
-    <German>Einzelspieler-Respawn aktivieren</German>
-    <Spanish>Habilitar reaparición un solo jugador</Spanish>
-    <French>Réapparition en solo</French>
-  </Key>
   <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
     <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
     <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für INDFOR\n* respawn_civilian - Respawn für CIVFOR</German>
@@ -3294,12 +3107,6 @@
     <Spanish>Reaparición de un solo jugador</Spanish>
     <French>Réapparition en solo</French>
   </Key>
-  <Key ID="STR_ENH_MISSIONENDING_CONDITION_TOOLTIP">
-    <English>Condition which needs to return true for the ending to be executed. The condition is checked every 10 seconds on the server.</English>
-    <German>Bedingung die erfüllt sein muss, um das Ende der Mission einzuleiten. Die Bedingung wird alle 10 Sekunden auf dem Server überprüft.</German>
-    <Spanish>Condición la cual necesita ser verdadera para que el final sea ejecutado. La condición es comprobada cada 10 segundos en el servidor.</Spanish>
-    <French>Condition qui doit être vraie pour que la fin de mission soit exécutée. Cette condition est vérifiée toutes les 10 secondes sur le serveur.</French>
-  </Key>
   <Key ID="STR_ENH_GARRISON_NOTIFICATION">
     <English>Not enough empty building positions, increase the radius or the coverage.</English>
     <Italian>Non ci sono abbastanza posizioni vuote dell'edificio, aumentare il raggio o la copertura.</Italian>
@@ -3317,17 +3124,6 @@
     <Chinesesimp>填充区域</Chinesesimp>
     <Polish>Wypełnij strefe</Polish>
     <Russian>Зона заполнения</Russian>
-  </Key>
-  <Key ID="STR_ENH_PLACEMENTTOOLS_HEADER">
-    <English>Settings: Pattern Tools</English>
-    <Italian>Impostazioni: strumento modello</Italian>
-    <Czech>Nastavení: Nástroje tvaru</Czech>
-    <French>Paramètres : Outil de Remplissage</French>
-    <Spanish>Configuración de Formaciones</Spanish>
-    <German>Einstellungen: Muster-Werkzeuge</German>
-    <Chinesesimp>设置：图案工具</Chinesesimp>
-    <Polish>Ustawienia: Narzedzia wzorów</Polish>
-    <Russian>Настройки: Шаблон инструментов</Russian>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_RADIUS">
     <English>Radius</English>
@@ -3361,15 +3157,6 @@
     <French>Espacement</French>
     <Polish>Odstęp</Polish>
     <Russian>Расстояние</Russian>
-  </Key>
-  <Key ID="STR_ENH_PLACEMENTTOOLS_RECTANGLE_HEADER">
-    <English>Rectangle Pattern</English>
-    <Italian>modello Rettangolo</Italian>
-    <Czech>Obdélníkový tvar</Czech>
-    <German>Rechteck-Muster</German>
-    <Spanish>Patrón de rectángulo</Spanish>
-    <French>Disposition en rectangle</French>
-    <Polish>Kształt Prostokąta</Polish>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_A">
     <English>A</English>
@@ -3471,33 +3258,6 @@
     <Polish>Wyszukiwarka tekstur</Polish>
     <Russian>Поисковая система текстур</Russian>
   </Key>
-  <Key ID="STR_ENH_TEXTUREFINDER_UPDATELIST">
-    <English>Update List</English>
-    <Italian>Aggiorna lista</Italian>
-    <Czech>Aktualizovat seznam</Czech>
-    <German>Liste aktualisieren</German>
-    <Spanish>Actualizar lista</Spanish>
-    <French>Actualiser la liste</French>
-    <Polish>Odśwież listę</Polish>
-  </Key>
-  <Key ID="STR_ENH_TEXTUREFINDER_FILTERJPG">
-    <English>Hide JPG</English>
-    <Italian>Nascondi JPG</Italian>
-    <Czech>Skrýt JPG</Czech>
-    <German>JPG verstecken</German>
-    <Spanish>Ocultar JPG</Spanish>
-    <French>Cacher les JPG</French>
-    <Polish>Ukryj JPG</Polish>
-  </Key>
-  <Key ID="STR_ENH_TEXTUREFINDER_FILTERPAA">
-    <English>Hide PAA</English>
-    <Italian>Nascondi PAA</Italian>
-    <Czech>Skrýt PAA</Czech>
-    <German>PAA verstecken</German>
-    <Spanish>Ocultar PAA</Spanish>
-    <French>Cacher les PAA</French>
-    <Polish>Ukryj PAA</Polish>
-  </Key>
   <Key ID="STR_ENH_BATCHREPLACE">
     <Italian>Rimpiazza in gruppo</Italian>
     <English>Batch Replace</English>
@@ -3553,18 +3313,6 @@
     <German>3den Enhanced Funktionsviewer</German>
     <Chinesesimp>3den Enhanced 函数查看器</Chinesesimp>
     <Russian>Расширенные возможности браузера 3DEN</Russian>
-  </Key>
-  <Key ID="STR_ENH_FUNCTIONSVIEWER_EXPANDALL_TEXT">
-    <English>Expand All</English>
-    <Italian>Espandi Tutto</Italian>
-    <Czech>Rozbalit vše</Czech>
-    <French>Tout développer</French>
-    <Spanish>Ampliar todo</Spanish>
-    <Polish>Rozwiń wszystko</Polish>
-    <Portuguese>Expandir tudo</Portuguese>
-    <German>Alles erweitern</German>
-    <Chinesesimp>全部展开</Chinesesimp>
-    <Russian>Развернуть все</Russian>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT">
     <English>Copy Function</English>
@@ -3646,17 +3394,6 @@
     <Polish>Patrol</Polish>
     <Russian>Патрульный</Russian>
   </Key>
-  <Key ID="STR_ENH_LOCATIONLIST_CITIES">
-    <English>Cities &amp; Villages</English>
-    <Italian>Città e Villaggi</Italian>
-    <German>Städte und Dörfer</German>
-    <Chinesesimp>城市 &amp; 村庄</Chinesesimp>
-    <Spanish>Ciudades y pueblos</Spanish>
-    <Czech>Města &amp; vesnice</Czech>
-    <French>Villes et villages</French>
-    <Polish>Miasta i wioski</Polish>
-    <Russian>Города и Деревни</Russian>
-  </Key>
   <Key ID="STR_ENH_LOCATIONLIST_AIRPORTS">
     <English>Airports</English>
     <Italian>Aeroporti</Italian>
@@ -3711,17 +3448,6 @@
     <Polish>Nadajniki</Polish>
     <Russian>Радиовышки</Russian>
   </Key>
-  <Key ID="STR_ENH_LOCATIONLIST_HOSPITALS">
-    <English>Hospitals</English>
-    <Italian>Ospedali</Italian>
-    <German>Krankenhäuser</German>
-    <Chinesesimp>医院</Chinesesimp>
-    <Spanish>Hospitales</Spanish>
-    <Czech>Nemocnice</Czech>
-    <French>Hôpitaux</French>
-    <Polish>Szpitale</Polish>
-    <Russian>Больницы</Russian>
-  </Key>
   <Key ID="STR_ENH_LOCATIONLIST_SHIPWRECKS">
     <English>Shipwrecks</English>
     <Italian>Relitti navali</Italian>
@@ -3775,17 +3501,6 @@
     <Polish>Poniższe ustawienia pozwolą ci na łatwiejsze testowanie scenariusza. Atrybuty nie zapiszą się w mission.sqm więc nie wpłyną na twój scenariusz kiedy go opublikujesz. Ustawienia są wyłączone w trybie wieloosobowym.</Polish>
     <Russian>Эти настройки помогут вам проверить ваши сценарии во время предварительного просмотра. Они не будут сохранены в файле mission.sqm, поэтому они не повлияют на ваш сценарий, когда вы его опубликуете. Отключено в мультиплеере.</Russian>
   </Key>
-  <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_DISPLAYNAME">
-    <English>Show Level of Awareness</English>
-    <Italian>Mostra il livello di consapevolezza</Italian>
-    <German>Kenntnisstand anzeigen</German>
-    <Chinesesimp>显示警觉等级</Chinesesimp>
-    <Spanish>Mostrar nivel de conciencia</Spanish>
-    <Czech>Zobrazit úroveň vědomí o jednotce</Czech>
-    <French>Montrer le niveau de conscience</French>
-    <Polish>Pokaż poziom świadomości</Polish>
-    <Russian>Показать уровень осведомленности</Russian>
-  </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
     <English>Draw Unit Icons</English>
     <Italian>Mostra le icone delle unità</Italian>
@@ -3799,17 +3514,6 @@
     <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
     <French>Affiche des informations à propos des unités et véhicules à proximité.</French>
     <Polish>Rysuj informacje o pobliskich jednostkach i pojazdach</Polish>
-  </Key>
-  <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_TOOLTIP">
-    <English>A graphic will show how much each side knows about the player during scenario preview.</English>
-    <Italian>Un grafico mostrerà quanto ogni parte sa del giocatore durante l'anteprima dello scenario.</Italian>
-    <German>Während der Szenariovorschau zeigt eine Grafik an wie viel jede Seite über den Spieler weiß.</German>
-    <Chinesesimp>图形将显示场景预览期间每个方面对玩家的了解程度。</Chinesesimp>
-    <Spanish>Un gráfico mostrará cuánto sabe cada lado sobre el jugador durante la vista previa del escenario.</Spanish>
-    <Czech>Ukáže, jak moc ví každá strana o hráči během náhledu scénáře.</Czech>
-    <French>Un graphique montrera ce que chaque camp sait sur le joueur lors de la prévisualisation du scénario.</French>
-    <Polish>Tabela pokaże ci jak dużo strony konfliktu więdzą o graczu w czasie testowania.</Polish>
-    <Russian>Графика покажет, сколько каждая сторона знает об игроке во время предварительного просмотра сценария.</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME">
     <English>Enable Zeus</English>
@@ -4021,17 +3725,6 @@
     <Chinesesimp>社区维基</Chinesesimp>
     <Russian>Сообщество Wiki</Russian>
   </Key>
-  <Key ID="STR_ENH_FOLDER_COMMUNITY">
-    <English>Community Help</English>
-    <Italian>Aiuti della comunità</Italian>
-    <Czech>Komunitní podpora</Czech>
-    <French>Aide de la Communauté</French>
-    <Spanish>Ayuda de la comunidad</Spanish>
-    <German>Community Hilfe</German>
-    <Chinesesimp>社区帮助</Chinesesimp>
-    <Polish>Pomoc społeczności</Polish>
-    <Russian>Помощь Сообщества</Russian>
-  </Key>
   <Key ID="STR_ENH_FOLDER_UTILITIES">
     <English>Utilities</English>
     <Italian>Utilità</Italian>
@@ -4133,17 +3826,6 @@
     <Polish>Pomóż tłumaczyć (GitHub)</Polish>
     <Russian>Помощь в переводе (GitHub)</Russian>
   </Key>
-  <Key ID="STR_ENH_ABOUT_FAQ">
-    <English>FAQ</English>
-    <Italian>FAQ</Italian>
-    <German>FAQ</German>
-    <Spanish>PREGUNTAS MÁS FRECUENTES</Spanish>
-    <Chinesesimp>常问问题</Chinesesimp>
-    <Czech>FAQ</Czech>
-    <French>FAQ</French>
-    <Polish>FAQ</Polish>
-    <Russian>FAQ</Russian>
-  </Key>
   <Key ID="STR_ENH_ABOUT_CREDITS">
     <English>Credits</English>
     <Italian>Ringraziamenti</Italian>
@@ -4154,18 +3836,6 @@
     <French>Crédits</French>
     <Russian>Кредиты</Russian>
     <Polish>Autorzy</Polish>
-  </Key>
-  <Key ID="STR_ENH_TOOLS_FUNCTIONSVIEWER">
-    <English>3den Enhanced Functions Viewer</English>
-    <Czech>3den Enhanced Prohlížeč funkcí</Czech>
-    <French>Afficher les fonctions 3den Enhanced</French>
-    <Spanish>3den Enhanced Visor de funciones</Spanish>
-    <Italian>Visualizzatore funzioni 3den Enhanced </Italian>
-    <Polish>3den Enhanced Przeglądarka funkcji</Polish>
-    <Portuguese>3den Enhanced Visualizador de funções</Portuguese>
-    <German>3den Enhanced Funktionsviewer</German>
-    <Chinesesimp>3den Enhanced 函数查看器</Chinesesimp>
-    <Russian>Средство просмотра расширенных функций 3DEN</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_COPYLOADOUTS">
     <English>Copy Loadout/s</English>
@@ -4210,17 +3880,6 @@
     <Chinesesimp>导出加载 （CfgRespawnInventory）</Chinesesimp>
     <Polish>Eksportuj wyposażenie (CfgRespawnInventory)</Polish>
     <Russian>Экспорт оборудования (CfgRespawnInventory)</Russian>
-  </Key>
-  <Key ID="STR_ENH_TOOLS_CIRCULARPATTERN">
-    <English>Circular Pattern</English>
-    <Italian>Disposizione a Cerchio</Italian>
-    <Czech>Kruhový vzor</Czech>
-    <French>Cercle</French>
-    <Spanish>En círculo</Spanish>
-    <German>Kreismuster</German>
-    <Chinesesimp>循环模式……</Chinesesimp>
-    <Polish>Wzór kołowy</Polish>
-    <Russian>Круговой обзор</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_REVERSEDIRECTION">
     <English>Reverse Direction</English>
@@ -4310,17 +3969,6 @@
     <Polish>Orientuj na zachód</Polish>
     <Russian>Ориентировать на Запад</Russian>
   </Key>
-  <Key ID="STR_ENH_TOOLS_LINEPATTERN">
-    <English>Linepattern</English>
-    <Italian>Linea</Italian>
-    <Czech>Zobrazit linie</Czech>
-    <French>Ligne</French>
-    <Spanish>En línea</Spanish>
-    <German>Linienmuster</German>
-    <Chinesesimp>线条图案</Chinesesimp>
-    <Polish>Wzór liniowy</Polish>
-    <Russian>Шаблон линии</Russian>
-  </Key>
   <Key ID="STR_ENH_TOOLS_TOGGLEGRASS">
     <English>Toggle Grass</English>
     <Italian>Erba Si/No</Italian>
@@ -4331,17 +3979,6 @@
     <Chinesesimp>切换草</Chinesesimp>
     <Polish>Włącz trawe</Polish>
     <Russian>Тумблер Травы</Russian>
-  </Key>
-  <Key ID="STR_ENH_TOOLS_GRIDPATTERN">
-    <English>Grid Pattern</English>
-    <Italian>Grilia</Italian>
-    <German>Im Raster anordnen</German>
-    <Chinesesimp>网格图案</Chinesesimp>
-    <Spanish>Patrón de cadrícula</Spanish>
-    <Czech>Vzor mřížky</Czech>
-    <French>Quadrillage</French>
-    <Polish>Wzór siatkowy</Polish>
-    <Russian>Показать сетку</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
     <English>Export GUI Base Classes</English>
@@ -4540,37 +4177,19 @@
     <Polish>Przełącz symulację</Polish>
   </Key>
   <Key ID="STR_ENH_HELP_FUNCTIONSOVERVIEW">
-    <English>Functions Overview</English>
+    <English>Functions by Functionality</English>
     <Italian>Panoramica delle Funzioni</Italian>
     <Czech>Přehled funkcí</Czech>
     <French>Aperçu des fonctions</French>
     <Spanish>Resumen de las funciones</Spanish>
-    <German>Funktionsübersicht</German>
+    <German>Funktionen nach Funktionalität</German>
     <Chinesesimp>功能概述</Chinesesimp>
     <Polish>Przegląd funkcji</Polish>
     <Russian>Обзор функций</Russian>
   </Key>
-  <Key ID="STR_ENH_HELP_KYLANIA">
-    <English>Script Examples by Kylania</English>
-    <Italian>Esempio di script da Kylania</Italian>
-    <Czech>Příklady skriptů od Kylania</Czech>
-    <French>Exemples de scripts par Kylania</French>
-    <Spanish>Ejemplos de scripts por Kylania</Spanish>
-    <German>Skriptbespiele von Kylania</German>
-    <Chinesesimp>Kylania的脚本示例</Chinesesimp>
-    <Polish>Przykłady skryptów Kylania</Polish>
-    <Russian>Примеры сценариев от Kylania</Russian>
-  </Key>
-  <Key ID="STR_ENH_HELP_FOCKERSSCRIPTINGTUTORIAL">
-    <English>Focker's Scripting Tutorial</English>
-    <Italian>Tutorial di scripting da Focker</Italian>
-    <Czech>Fockerovy návody na skriptování</Czech>
-    <French>Tutoriel de Scripting par Focker</French>
-    <Spanish>Tutorial scripting de Focker</Spanish>
-    <German>Focker's Skripttutorial</German>
-    <Chinesesimp>Focker的脚本教程</Chinesesimp>
-    <Polish>Poradnik skryptowania Fockera</Polish>
-    <Russian>Руководство Focker's  по написанию сценариев</Russian>
+  <Key ID="STR_ENH_HELP_COMMANDSOVERVIEW">
+    <English>Commands by Functionality</English>
+    <German>Kommandos nach Funktionalität</German>
   </Key>
   <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
     <English>Guide: Mission &amp; Campaign making</English>
@@ -4605,17 +4224,6 @@
     <Polish>Optymalizacja kodu</Polish>
     <Russian>Оптимизация кода</Russian>
   </Key>
-  <Key ID="STR_ENH_CONTEXTMENU_LOGCLASS">
-    <English>Log Class to Clipboard</English>
-    <Italian>Copia classi sulla lavagnetta</Italian>
-    <Czech>Zaznamenat třídu do schránky</Czech>
-    <French>Copier la classe vers le presse-papier</French>
-    <Spanish>Registar "Class" en el portapapeles.</Spanish>
-    <German>Kopiere Klasse in Zwischenablage</German>
-    <Chinesesimp>将类别记录到剪贴板</Chinesesimp>
-    <Polish>Zapisz klase do schowka</Polish>
-    <Russian>Записать класса в буфер обмена</Russian>
-  </Key>
   <Key ID="STR_ENH_CONTEXTMENU_GARRISON">
     <English>Garrison Buildings</English>
     <Italian>Presidiare gli edifici</Italian>
@@ -4627,27 +4235,6 @@
     <Polish>Obsadź budynki</Polish>
     <Russian>Гарнизонные Здания</Russian>
   </Key>
-  <Key ID="STR_ENH_PLACEMENTTOOLS_CURRENTVALUE">
-    <English>Current Value</English>
-    <Italian>Valore corrente</Italian>
-    <Czech>Současná hodnota</Czech>
-    <German>Aktueller Wert</German>
-    <Spanish>Valor actual</Spanish>
-    <Polish>Aktualna wartość</Polish>
-    <Russian>Текущае значение</Russian>
-    <French>Valeur actuelle</French>
-  </Key>
-  <Key ID="STR_ENH_CONTEXTMENU_GETSIZE">
-    <English>Get Object's Size</English>
-    <French>Obtenir les dimensions de l'objet</French>
-    <Italian>Ottieni le dimensioni dell'oggetto.</Italian>
-    <Spanish>Tomar el tamaño del objeto</Spanish>
-    <German>Objektgröße messen</German>
-    <Chinesesimp>获取对象的大小</Chinesesimp>
-    <Czech>Získat velikost objektu</Czech>
-    <Polish>Zmierz rozmiar obiektu</Polish>
-    <Russian>Получить размер объекта</Russian>
-  </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS2D">
     <English>Log Positions (2D) to Clipboard</English>
     <Italian>Registra la posizione 2D sulla lavagnetta</Italian>
@@ -4658,16 +4245,6 @@
     <French>Copier les positions (2D) dans le presse-papiers</French>
     <Polish>Zapisz pozycje (2D) do schowka</Polish>
     <Russian>Записать позиции (2D) в буфер обмена</Russian>
-  </Key>
-  <Key ID="STR_ENH_CONTEXTMENU_LOGMISSIONATTRIBUTES">
-    <English>Log Mission Attributes to Clipboard</English>
-    <Czech>Zaznamenat atributy mise do schránky</Czech>
-    <German>Missionsattribute in Zwischenablage kopieren</German>
-    <Chinesesimp>记录网格位置</Chinesesimp>
-    <French>Copier les attributs de mission dans le presse-papiers</French>
-    <Polish>Zapisuje atrybuty misji do schowka</Polish>
-    <Spanish>Registrar Atributos de Misión al Portapapeles</Spanish>
-    <Russian>Записать атрибуты миссии в буфер обмена</Russian>
   </Key>
   <Key ID="STR_ENH_DYNAMICGROUPS_TOOLTIP">
     <English>Enable the Dynamic Groups system.</English>
@@ -4698,16 +4275,6 @@
     <Chinesesimp>对象视距</Chinesesimp>
     <Polish>Zasięg rysowania obiektów</Polish>
     <Russian>Расстояние видимости объекта</Russian>
-  </Key>
-  <Key ID="STR_ENH_DISABLEGRASS_DISPLAYNAME">
-    <English>Disable Grass</English>
-    <Czech>Vypnout trávu</Czech>
-    <French>Désactiver l'herbe</French>
-    <Spanish>Deshabilitar hierba</Spanish>
-    <German>Gras ausschalten</German>
-    <Chinesesimp>删除草</Chinesesimp>
-    <Polish>Wyłącz trawe</Polish>
-    <Russian>Отключить траву</Russian>
   </Key>
   <Key ID="STR_ENH_TIMEMULTIPLIER_DISPLAYNAME">
     <English>Time Multiplier</English>
@@ -4753,30 +4320,6 @@
     <French>Musique :</French>
     <Polish>Piosenka:</Polish>
   </Key>
-  <Key ID="STR_ENH_3DENRADIO_SORTBYTITLE">
-    <English>Sort by Title</English>
-    <German>Sortieren nach Titel</German>
-    <Czech>Seřadit podle názvu</Czech>
-    <Spanish>Ordenar por título</Spanish>
-    <French>Trier par titre</French>
-    <Polish>Sortuj po tytule:</Polish>
-  </Key>
-  <Key ID="STR_ENH_3DENRADIO_SORTBYDURATION">
-    <English>Sort by Duration</English>
-    <German>Sortieren nach Dauer</German>
-    <Czech>Seřadit podle délky trvání</Czech>
-    <Spanish>Ordenar por duración</Spanish>
-    <French>Trier par durée</French>
-    <Polish>Sortuj po czasie trwania:</Polish>
-  </Key>
-  <Key ID="STR_ENH_3DENRADIO_SORTBYTHEME">
-    <English>Sort by Theme</English>
-    <German>Sortieren nach Thema</German>
-    <Czech>Seřadit podle žánru</Czech>
-    <Spanish>Ordenar por tema</Spanish>
-    <French>Trier par thème</French>
-    <Polish>Sortuj po temacie:</Polish>
-  </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_SHOWTITLE">
     <English>Show Title</English>
     <German>Titel zeigen</German>
@@ -4792,14 +4335,6 @@
     <Spanish>Ocultar título</Spanish>
     <French>Cacher le titre</French>
     <Polish>Ukryj tytuł</Polish>
-  </Key>
-  <Key ID="STR_ENH_TEXTUREFINDER_FILTERALL">
-    <English>PAA &amp; JPG</English>
-    <German>PAA &amp; JPG</German>
-    <Czech>PAA &amp; JPG</Czech>
-    <Spanish>PAA y JPG</Spanish>
-    <French>PAA et JPG</French>
-    <Polish>PAA &amp; JPG</Polish>
   </Key>
   <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE">
     <English>Apply Attribute</English>
@@ -4859,26 +4394,6 @@
     <Russian>Предмет</Russian>
     <Spanish>Tema</Spanish>
   </Key>
-  <Key ID="STR_ENH_BRIEFINGEDITOR_ADDPICTURE">
-    <English>Add Picture</English>
-    <Chinesesimp>添加图片</Chinesesimp>
-    <Czech>Přidat obrázek</Czech>
-    <French>Ajouter une image</French>
-    <German>Bild hinzuf.</German>
-    <Polish>Dodaj zdjęcie</Polish>
-    <Russian>Добавить изображение</Russian>
-    <Spanish>Añadir imagen</Spanish>
-  </Key>
-  <Key ID="STR_ENH_BRIEFINGEDITOR_LINEBREAK">
-    <English>Linebreak</English>
-    <Chinesesimp>换行</Chinesesimp>
-    <Czech>Zalomení řádku</Czech>
-    <French>Retour à la ligne</French>
-    <German>Zeilenumbruch</German>
-    <Polish>Następna linia</Polish>
-    <Russian>Разрыв строки</Russian>
-    <Spanish>Salto de línea</Spanish>
-  </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE">
     <English>Create Template</English>
     <Chinesesimp>创建模板</Chinesesimp>
@@ -4918,16 +4433,6 @@
     <Polish>Wysokość</Polish>
     <Russian>Высота</Russian>
     <Spanish>Altura</Spanish>
-  </Key>
-  <Key ID="STR_ENH_BRIEFINGEDITOR_PICTURE">
-    <English>Picture</English>
-    <Czech>Obrázek</Czech>
-    <Chinesesimp>图片</Chinesesimp>
-    <French>Image</French>
-    <German>Bild</German>
-    <Polish>Zdjęcie</Polish>
-    <Russian>Картинка</Russian>
-    <Spanish>Imagen</Spanish>
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_EXPRESSION">
     <English>Expression</English>
@@ -4995,16 +4500,6 @@
     <Spanish>Optimización de la misión</Spanish>
     <French>Optimiser la mission</French>
     <Polish>Optymalizacja Misji</Polish>
-  </Key>
-  <Key ID="STR_ENH_RESET">
-    <English>Reset</English>
-    <Czech>Reset</Czech>
-    <Chinesesimp>重启</Chinesesimp>
-    <French>Réinitialiser</French>
-    <German>Zurücksetzen</German>
-    <Polish>Reset</Polish>
-    <Russian>Выключить</Russian>
-    <Spanish>Reiniciar</Spanish>
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME">
     <English>Rotational Direction</English>
@@ -5111,18 +4606,6 @@
     <Spanish>Nombre</Spanish>
     <French>Nom</French>
     <Polish>Nazwa</Polish>
-  </Key>
-  <Key ID="STR_ENH_DESCRIPTION">
-    <English>Description</English>
-    <Chinesesimp>描述</Chinesesimp>
-    <Czech>Popis</Czech>
-    <French>Description</French>
-    <German>Beschreibung</German>
-    <Italian>Descrizione</Italian>
-    <Polish>Opis</Polish>
-    <Portuguese>Descrição</Portuguese>
-    <Russian>Описание</Russian>
-    <Spanish>Descripción</Spanish>
   </Key>
   <Key ID="STR_ENH_AIRDROP_DESCRIPTION">
     <English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</English>
@@ -5781,13 +5264,6 @@
     <French>Description...</French>
     <Polish>Description...</Polish>
   </Key>
-  <Key ID="STR_ENH_3DENCAM_WRONGWORLD">
-    <English>Incorrect world!</English>
-    <German>Falsche Karte!</German>
-    <Spanish>¡Palabra incorrecta!</Spanish>
-    <French>Monde incorrect !</French>
-    <Polish>Niepoprawny świat!</Polish>
-  </Key>
   <Key ID="STR_ENH_3DENCAM_SAVE">
     <English>Save</English>
     <German>Speichern</German>
@@ -5827,16 +5303,6 @@
     <Spanish>Ver estilos de control</Spanish>
     <French>Voir les styles de contrôles</French>
   </Key>
-  <Key ID="STR_ENH_RADIO_PLAYLIST_TEXT">
-    <English>Playlist</English>
-    <Chinesesimp>播放列表</Chinesesimp>
-    <Czech>Playlist</Czech>
-    <French>Liste de lecture</French>
-    <German>Playlist</German>
-    <Polish>Lista odtwarzania</Polish>
-    <Russian>Список воспроизведения</Russian>
-    <Spanish>Lista de reproducción</Spanish>
-  </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
     <English>Reset Center.</English>
     <German>Mittelpunkt zurücksetzen.</German>
@@ -5855,13 +5321,6 @@
     <German>3DEN Kamerapositionen</German>
     <Spanish>3DEN posición de la cámara</Spanish>
     <French>Positions de la caméra 3DEN</French>
-  </Key>
-  <Key ID="STR_ENH_OPTIONS">
-    <English>Options</English>
-    <German>Optionen</German>
-    <Spanish>Opciones</Spanish>
-    <French>Options</French>
-    <Polish>Opcje</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUG_OPTIONS">
     <English>Debug Options</English>
@@ -6116,12 +5575,6 @@
     <French>Les unités peuvent mourir instantanément lorsqu'elles sont touchées à la tête.</French>
     <Polish>Jednostka może zginąć na miejscu od strzału w głowę.</Polish>
   </Key>
-  <Key ID="STR_ENH_MISSIONENDING_DESCRIPTION">
-    <English>Create a custom Ending condition. If the condition returns true, the mission is ended for all player with the given settings. See &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</English>
-    <Spanish>Crear una condición de fin personalizada. Si la condición devuelve TRUE (verdadero), la misión finaliza para todos los jugadores con la configuración dada. Ver &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; for a full documentation. Custom briefing have to be define in mission config. See &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;</Spanish>
-    <French>Crée une condition de fin de mission personnalisée. Si la condition est vérifiée, la mission est terminée pour tous les joueurs avec les paramètres précisés. Voir &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; pour une documentation complète. Les débriefings personnalisés doivent être définis dans la configuration de la mission. Voir &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</French>
-    <German>Erstellt eine benutzerdefinierte Endbedingung. Falls die Bedingung wahr wird, wird die Mission für alle Spieler, mit den gegebenen Einstellungen, beendet. Siehe &lt;a href='https://community.bistudio.com/wiki/BIS_fnc_endMission'&gt;BIS_fnc_endMission&lt;/a&gt; für eine vollständige Beschreibung. Benutzerdefinierte Einsatzbesprechungen müssen in der Missionskonfig definiert werden. Siehe &lt;a href='https://community.bistudio.com/wiki/Arma_3_Debriefing'&gt;Arma 3 Debriefing&lt;/a&gt;.</German>
-  </Key>
   <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
     <English>Custom Mission Endings</English>
     <German>Benutzerdefinierte Missionsenden</German>
@@ -6139,13 +5592,6 @@
     <German>Gewinnen?</German>
     <Spanish>¿Victoria?</Spanish>
     <French>Victoire ?</French>
-  </Key>
-  <Key ID="STR_ENH_MISSIONENDING_PLAYMUSIC">
-    <English>Play Music?</English>
-    <German>Musik abspielen?</German>
-    <Spanish>¿Reproducir música?</Spanish>
-    <French>Jouer de la musique ?</French>
-    <Polish>Odtwórz muzykę?</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
     <English>Variable Viewer</English>
