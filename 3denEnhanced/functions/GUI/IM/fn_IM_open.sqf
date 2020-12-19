@@ -27,7 +27,7 @@ if (isNil "ENH_IM_target" || {ENH_IM_target isKindOf "CAManBase" || !(ENH_IM_tar
 
 private _display = findDisplay IDD_3DEN createDisplay "ENH_InventoryManager";
 uiNamespace setVariable ["Enh_Display_InventoryManager",_display];
-systemChat str _display;
+
 if ((uiNamespace getVariable ["ENH_IM_allItems",[]]) isEqualTo []) then
 {
   uiNamespace setVariable
