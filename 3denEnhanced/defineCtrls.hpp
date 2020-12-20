@@ -62,10 +62,10 @@ class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
   };
   tooltips[] =
   {
-    $STR_WEST,
-    $STR_EAST,
-    $STR_GUERRILA,
-    $STR_CIVILIAN
+    "$STR_WEST",
+    "$STR_EAST",
+    "$STR_GUERRILA",
+    "$STR_CIVILIAN"
   };
   values[] = {0,1,2,3};
 };
@@ -76,5 +76,5 @@ class ENH_ResetButton_Base: ctrlButton
   x = ATTRIBUTE_TITLE_W * GRID_W;
   w = ATTRIBUTE_CONTENT_W * GRID_W;
   h = SIZE_M * GRID_H;
-  text = $STR_ENH_RESETANDDISABLE;
+  text = "$STR_ENH_RESETANDDISABLE";
 };

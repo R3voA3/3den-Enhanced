@@ -7,8 +7,8 @@ class ENH_MapIndicators: Title
   {
     class FriendlyText: title
     {
-      text = $STR_ENH_MAPINDICATORS_FRIENDLY;
-      tooltip = $STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP;
+      text = "$STR_ENH_MAPINDICATORS_FRIENDLY";
+      tooltip = "$STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP";
     };
     class FriendlyValue: ctrlCheckbox
     {
@@ -19,8 +19,8 @@ class ENH_MapIndicators: Title
     };
     class EnemyText: FriendlyText
     {
-      text = $STR_ENH_MAPINDICATORS_ENEMY;
-      tooltip = $STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP;
+      text = "$STR_ENH_MAPINDICATORS_ENEMY";
+      tooltip = "$STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP";
       y = SIZE_M * GRID_H + 5 * pixelH;
     };
     class EnemyValue: FriendlyValue
@@ -30,8 +30,8 @@ class ENH_MapIndicators: Title
     };
     class MinesText: FriendlyText
     {
-      text = $STR_ENH_MAPINDICATORS_MINES;
-      tooltip = $STR_ENH_MAPINDICATORS_MINES_TOOLTIP;
+      text = "$STR_ENH_MAPINDICATORS_MINES";
+      tooltip = "$STR_ENH_MAPINDICATORS_MINES_TOOLTIP";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class MinesValue: FriendlyValue
@@ -41,8 +41,8 @@ class ENH_MapIndicators: Title
     };
     class PingText: FriendlyText
     {
-      text = $STR_ENH_MAPINDICATORS_PING;
-      tooltip = $STR_ENH_MAPINDICATORS_PING_TOOLTIP;
+      text = "$STR_ENH_MAPINDICATORS_PING";
+      tooltip = "$STR_ENH_MAPINDICATORS_PING_TOOLTIP";
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
     };
     class PingValue: FriendlyValue

@@ -7,7 +7,7 @@ class ENH_HoldAction: Title
   {
     class NameTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_NAME_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_NAME_DISPLAYNAME";
     };
     class Name: ctrlEdit
     {
@@ -18,7 +18,7 @@ class ENH_HoldAction: Title
     };
     class IdleIconTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME";
       y = SIZE_M * GRID_H + 5 * pixelH;
     };
     class IdleIcon: ctrlCombo
@@ -31,7 +31,7 @@ class ENH_HoldAction: Title
     };
     class ProgressIconTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class ProgressIcon: IdleIcon
@@ -41,8 +41,8 @@ class ENH_HoldAction: Title
     };
     class ConditionShowTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP";
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
     };
     class ConditionShow: ctrlEditMulti
@@ -55,8 +55,8 @@ class ENH_HoldAction: Title
     };
     class ConditionProgressTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP";
       y = 6 * SIZE_M * GRID_H + 20 * pixelH;
     };
     class ConditionProgress: ConditionShow
@@ -66,8 +66,8 @@ class ENH_HoldAction: Title
     };
     class CodeStartTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CODESTART_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CODESTART_TOOLTIP";
       y = 9 * SIZE_M * GRID_H + 25 * pixelH;
     };
     class CodeStart: ConditionShow
@@ -77,8 +77,8 @@ class ENH_HoldAction: Title
     };
     class CodeProgressTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP";
       y = 12 * SIZE_M * GRID_H + 30 * pixelH;
     };
     class CodeProgress: ConditionShow
@@ -88,8 +88,8 @@ class ENH_HoldAction: Title
     };
     class CodeCompletionTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP";
       y = 15 * SIZE_M * GRID_H + 35 * pixelH;
     };
     class CodeCompletion: ConditionShow
@@ -99,8 +99,8 @@ class ENH_HoldAction: Title
     };
     class CodeInterruptTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP;
+      text = "$STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP";
       y = 18 * SIZE_M * GRID_H + 40 * pixelH;
     };
     class CodeInterrupt: ConditionShow
@@ -110,7 +110,7 @@ class ENH_HoldAction: Title
     };
     class DurationTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_DURATION_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_DURATION_DISPLAYNAME";
       y = 21 * SIZE_M * GRID_H + 45 * pixelH;
     };
     class DurationValue: ctrlXSliderH
@@ -134,7 +134,7 @@ class ENH_HoldAction: Title
     };
     class PriorityTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME";
       y = 22 * SIZE_M * GRID_H + 50 * pixelH;
     };
     class PriorityValue: DurationValue
@@ -150,7 +150,7 @@ class ENH_HoldAction: Title
     };
     class ShowUnconsciousTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME";
       y = 23 * SIZE_M * GRID_H + 55 * pixelH;
     };
     class ShowUnconscious: ctrlCheckbox
@@ -163,7 +163,7 @@ class ENH_HoldAction: Title
     };
     class ShowWindowTitle: Title
     {
-      text = $STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME;
+      text = "$STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME";
       y = 24 * SIZE_M * GRID_H + 60 * pixelH;
     };
     class ShowWindow: ShowUnconscious

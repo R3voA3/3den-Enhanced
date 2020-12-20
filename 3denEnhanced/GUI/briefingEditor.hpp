@@ -19,7 +19,7 @@ class ENH_BriefingEditor
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_BRIEFINGEDITOR;
+      text = "$STR_ENH_BRIEFINGEDITOR";
       x = CENTERED_X(160);
       y = DIALOG_TOP;
       w = 160 * GRID_W;
@@ -27,7 +27,7 @@ class ENH_BriefingEditor
     };
     class Templates: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_TEMPLATES;
+      text = "$STR_ENH_BRIEFINGEDITOR_TEMPLATES";
       x = CENTERED_X(160);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
       w = 33 * GRID_W;
@@ -45,7 +45,7 @@ class ENH_BriefingEditor
     };
     class Marker: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_MARKER;
+      text = "$STR_ENH_BRIEFINGEDITOR_MARKER";
       x = CENTER_X + 45 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
       w = 35 * GRID_W;
@@ -61,7 +61,7 @@ class ENH_BriefingEditor
     };
     class Colours: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_COLOUR;
+      text = "$STR_ENH_BRIEFINGEDITOR_COLOUR";
       x = CENTER_X + 45 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 33 * GRID_H;
       w = 35 * GRID_W;
@@ -77,7 +77,7 @@ class ENH_BriefingEditor
     };
     class Fonts: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_FONT;
+      text = "$STR_ENH_BRIEFINGEDITOR_FONT";
       x = CENTER_X + 45 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 70 * GRID_H;
       w = 35 * GRID_W;
@@ -93,7 +93,7 @@ class ENH_BriefingEditor
     };
     class Subject: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_SUBJECT;
+      text = "$STR_ENH_BRIEFINGEDITOR_SUBJECT";
       x = CENTER_X - 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
       w = 45 * GRID_W;
@@ -109,7 +109,7 @@ class ENH_BriefingEditor
     };
     class Title: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_BRIEFINGTITLE;
+      text = "$STR_ENH_BRIEFINGEDITOR_BRIEFINGTITLE";
       x = CENTER_X;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
       w = 44 * GRID_W;
@@ -125,8 +125,8 @@ class ENH_BriefingEditor
     };
     class BriefingText: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_TEXT;
-      tooltip = $STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP;
+      text = "$STR_ENH_BRIEFINGEDITOR_TEXT";
+      tooltip = "$STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP";
       x = CENTERED_X(90);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 13 * GRID_H;
       w = 90 * GRID_W;
@@ -151,14 +151,14 @@ class ENH_BriefingEditor
       columns = 2;
       strings[] =
       {
-        $STR_ENH_BRIEFINGEDITOR_SHOWTITLE,
-        $STR_ENH_BRIEFINGEDITOR_HIDETITLE
+        "$STR_ENH_BRIEFINGEDITOR_SHOWTITLE",
+        "$STR_ENH_BRIEFINGEDITOR_HIDETITLE"
       };
       values[] = {0,1};
     };
     class TAGs: ctrlStatic
     {
-      text = $STR_ENH_BRIEFINGEDITOR_TAGS;
+      text = "$STR_ENH_BRIEFINGEDITOR_TAGS";
       x = CENTERED_X(90);
       y = DIALOG_TOP + CTRL_DEFAULT_H + 86 * GRID_H;
       w = 85 * GRID_W;
@@ -232,7 +232,7 @@ class ENH_BriefingEditor
     };
     class CreateTemplate: ctrlButton
     {
-      text = $STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE;
+      text = "$STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE";
       x = CENTERED_X(160) + 1 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 33 * GRID_W;
@@ -241,7 +241,7 @@ class ENH_BriefingEditor
     };
     class AddTAG: ctrlButton
     {
-      text = $STR_ENH_BRIEFINGEDITOR_ADDTAG;
+      text = "$STR_ENH_BRIEFINGEDITOR_ADDTAG";
       x = CENTER_X + 46 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 98 * GRID_H;
       w = 33 * GRID_W;
@@ -250,7 +250,7 @@ class ENH_BriefingEditor
     };
     class Export: ctrlButton
     {
-      text = $STR_ENH_BRIEFINGEDITOR_EXPORT;
+      text = "$STR_ENH_BRIEFINGEDITOR_EXPORT";
       x = CENTERED_X(160) + 1 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 33 * GRID_W;

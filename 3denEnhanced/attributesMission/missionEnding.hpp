@@ -1,18 +1,18 @@
 class ENH_MissionEnding
 {
   collapsed = 1;
-  displayName = $STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME;
+  displayName = "$STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME";
   class Attributes
   {
     class ENH_MissionEnding_Subcategory
     {
-      description = $STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION;
+      description = "$STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader3_Fixed";
     };
     class ENH_MissionEnding_Casualties
     {
-      displayName = $STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME;
+      displayName = "$STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME";
       property = "ENH_missionEnding_casualties";
       control = "ENH_MissionEnding_Casualties";
       expression =

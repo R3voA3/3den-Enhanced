@@ -21,7 +21,7 @@ class ENH_NameObjects
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_NAMEOBJECTS;
+      text = "$STR_ENH_NAMEOBJECTS";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -29,7 +29,7 @@ class ENH_NameObjects
     };
     class VariableName: ctrlStatic
     {
-      text = $STR_ENH_NAMEOBJECTS_NAME;
+      text = "$STR_ENH_NAMEOBJECTS_NAME";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 6 * GRID_H;
       w = DIALOG_W * GRID_W - 4 * GRID_W;
@@ -45,7 +45,7 @@ class ENH_NameObjects
     };
     class IndexStart: ctrlStatic
     {
-      text = $STR_ENH_NAMEOBJECTS_STARTINDEX;
+      text = "$STR_ENH_NAMEOBJECTS_STARTINDEX";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 17 * GRID_H;
       w = DIALOG_W * GRID_W - 4 * GRID_W;
@@ -62,7 +62,7 @@ class ENH_NameObjects
     };
     class RemoveNames: ctrlButton
     {
-      text = $STR_ENH_NAMEOBJECTS_REMOVENAME;
+      text = "$STR_ENH_NAMEOBJECTS_REMOVENAME";
       x = CENTERED_X(DIALOG_W) + 42 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 27 * GRID_W;

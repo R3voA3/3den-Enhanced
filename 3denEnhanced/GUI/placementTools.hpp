@@ -24,7 +24,7 @@ class ENH_PlacementTools
     };
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_FOLDER_PLACEMENTTOOLS;
+      text = "$STR_ENH_FOLDER_PLACEMENTTOOLS";
       x = ORIGIN_X;
       y = ORIGIN_Y;
       w = 64 * GRID_W;
@@ -51,13 +51,13 @@ class ENH_PlacementTools
       };
       tooltips[] =
       {
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP,
-        $STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
+        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP"
       };
       values[] = {0.0001,0.001,0.01,0.1,1,10,100};
       onToolBoxSelChanged  = "_this call ENH_fnc_placementTools_onToolBoxSelChanged";
@@ -74,7 +74,7 @@ class ENH_PlacementTools
      class SelectCenter: ctrlButtonPictureKeepAspect
     {
       text = "\A3\ui_f\data\igui\cfg\weaponcursors\rocket_gs.paa";
-      tooltip = $STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP;
+      tooltip = "$STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP";
       x = ORIGIN_X + 32 * GRID_W;
       y = ORIGIN_Y + 119 * GRID_H;
       w = CTRL_DEFAULT_H;
@@ -101,7 +101,7 @@ class ENH_PlacementTools
       {
         class CircularHeader: ctrlStaticFooter
         {
-          text = $STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER;
+          text = "$STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER";
           x = POS_X_TEXT;
           y = 1 * GRID_W;
           w = WIDTH_HEADER;
@@ -109,7 +109,7 @@ class ENH_PlacementTools
         };
         class Radius: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_RADIUS;
+          text = "$STR_ENH_PLACEMENTTOOLS_RADIUS";
           x = POS_X_TEXT;
           y = 7 * GRID_H;
           w = WIDTH_TEXT;
@@ -127,7 +127,7 @@ class ENH_PlacementTools
         };
         class InitialAngle: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_INITIALANGLE;
+          text = "$STR_ENH_PLACEMENTTOOLS_INITIALANGLE";
           x = POS_X_TEXT;
           y = 13 * GRID_H;
           w = WIDTH_TEXT;
@@ -145,7 +145,7 @@ class ENH_PlacementTools
         };
         class CentralAngle: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_CENTRALANGLE;
+          text = "$STR_ENH_PLACEMENTTOOLS_CENTRALANGLE";
           x = POS_X_TEXT;
           y = 19 * GRID_H;
           w = WIDTH_TEXT;
@@ -163,7 +163,7 @@ class ENH_PlacementTools
         };
         class LineHeader: ctrlStaticFooter
         {
-          text = $STR_ENH_PLACEMENTTOOLS_LINEPATTERN_HEADER;
+          text = "$STR_ENH_PLACEMENTTOOLS_LINEPATTERN_HEADER";
           x = POS_X_TEXT;
           y = 25 * GRID_H;
           W = WIDTH_HEADER;
@@ -171,7 +171,7 @@ class ENH_PlacementTools
         };
         class Spacing: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_SPACING;
+          text = "$STR_ENH_PLACEMENTTOOLS_SPACING";
           x = POS_X_TEXT;
           y = 31 * GRID_H;
           w = WIDTH_TEXT;
@@ -189,7 +189,7 @@ class ENH_PlacementTools
         };
         class GridHeader: ctrlStaticFooter
         {
-          text = $STR_ENH_PLACEMENTTOOLS_GRID_HEADER;
+          text = "$STR_ENH_PLACEMENTTOOLS_GRID_HEADER";
           x = POS_X_TEXT;
           y = 37 * GRID_H;
           W = WIDTH_HEADER;
@@ -197,7 +197,7 @@ class ENH_PlacementTools
         };
         class NumColumns: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS;
+          text = "$STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS";
           x = POS_X_TEXT;
           y = 43 * GRID_H;
           w = WIDTH_TEXT;
@@ -215,7 +215,7 @@ class ENH_PlacementTools
         };
         class SpaceX: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_SPACINGX;
+          text = "$STR_ENH_PLACEMENTTOOLS_SPACINGX";
           x = POS_X_TEXT;
           y = 49 * GRID_H;
           w = WIDTH_TEXT;
@@ -233,7 +233,7 @@ class ENH_PlacementTools
         };
         class SpaceY: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_SPACINGY;
+          text = "$STR_ENH_PLACEMENTTOOLS_SPACINGY";
           x = POS_X_TEXT;
           y = 55 * GRID_H;
           w = WIDTH_TEXT;
@@ -251,7 +251,7 @@ class ENH_PlacementTools
         };
         class FillAreaHeader: ctrlStaticFooter
         {
-          text = $STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER;
+          text = "$STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER";
           x = POS_X_TEXT;
           y = 61 * GRID_H;
           W = WIDTH_HEADER;
@@ -259,7 +259,7 @@ class ENH_PlacementTools
         };
         class A: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_A;
+          text = "$STR_ENH_PLACEMENTTOOLS_A";
           x = POS_X_TEXT;
           y = 67 * GRID_H;
           w = WIDTH_TEXT;
@@ -278,7 +278,7 @@ class ENH_PlacementTools
         };
         class B: ctrlStatic
         {
-          text = $STR_ENH_PLACEMENTTOOLS_B;
+          text = "$STR_ENH_PLACEMENTTOOLS_B";
           x = POS_X_TEXT;
           y = 73 * GRID_H;
           w = WIDTH_TEXT;
@@ -297,7 +297,7 @@ class ENH_PlacementTools
         };
         class OrientationHeader: ctrlStaticFooter
         {
-          text = $STR_ENH_PLACEMENTTOOLS_ORIENTATION;
+          text = "$STR_ENH_PLACEMENTTOOLS_ORIENTATION";
           x = POS_X_TEXT;
           y = 79 * GRID_H;
           W = WIDTH_HEADER;

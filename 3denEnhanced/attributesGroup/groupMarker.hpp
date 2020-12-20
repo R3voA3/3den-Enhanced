@@ -1,19 +1,19 @@
 class ENH_GroupMarker
 {
-  displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
+  displayName = "$STR_ENH_GROUPMARKER_DISPLAYNAME";
   collapsed = 1;
   class Attributes
   {
     class ENH_GroupMarker_Subcategory
     {
-      description = $STR_ENH_GROUPMARKER_DESCRIPTION;
+      description = "$STR_ENH_GROUPMARKER_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader3_Fixed";
     };
     class ENH_GroupMarker
     {
-      displayName = $STR_ENH_GROUPMARKER_DISPLAYNAME;
-      tooltip = $STR_ENH_GROUPMARKER_DESCRIPTION;
+      displayName = "$STR_ENH_GROUPMARKER_DISPLAYNAME";
+      tooltip = "$STR_ENH_GROUPMARKER_DESCRIPTION";
       property = "ENH_groupMarker";
       control = "ENH_GroupMarker";
       expression = "\

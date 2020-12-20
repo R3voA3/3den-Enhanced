@@ -1,7 +1,7 @@
 class ENH_MakeHostage: ENH_SetCaptive
 {
-  displayName = $STR_ENH_MAKEHOSTAGE_DISPLAYNAME;
-  tooltip = $STR_ENH_MAKEHOSTAGE_TOOLTIP;
+  displayName = "$STR_ENH_MAKEHOSTAGE_DISPLAYNAME";
+  tooltip = "$STR_ENH_MAKEHOSTAGE_TOOLTIP";
   control = "Checkbox";
   property = "ENH_makeHostage";
   expression =

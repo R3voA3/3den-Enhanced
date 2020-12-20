@@ -1,7 +1,7 @@
 class ENH_LimitSpeed
 {
-  displayName = $STR_ENH_LIMITSPEED_DISPLAYNAME;
-  tooltip = $STR_ENH_LIMITSPEED_TOOLTIP;
+  displayName = "$STR_ENH_LIMITSPEED_DISPLAYNAME";
+  tooltip = "$STR_ENH_LIMITSPEED_TOOLTIP";
   property = "ENH_limitSpeed";
   control = "EditShort";
   expression = "_this limitSpeed _value";

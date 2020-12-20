@@ -1,18 +1,18 @@
 class ENH_AmbientAnimations
 {
   collapsed = 1;
-  displayName = $STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME;
+  displayName = "$STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME";
   class Attributes
   {
     class ENH_AmbientAnimations_Subcategory
     {
-      description = $STR_ENH_AMBIENTANIMATIONS_DESCRIPTION;
+      description = "$STR_ENH_AMBIENTANIMATIONS_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader1_Fixed";
     };
     class ENH_AmbientAnimations
     {
-      displayName = $STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME;
+      displayName = "$STR_ENH_AMBIENTANIMATIONS_DISPLAYNAME";
       control = "ENH_AmbientAnimations";
       property = "ENH_AmbientAnimations";
       expression =

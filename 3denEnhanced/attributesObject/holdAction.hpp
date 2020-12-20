@@ -1,19 +1,19 @@
 class ENH_HoldAction
 {
   collapsed = 1;
-  displayName = $STR_ENH_HOLDACTION_DISPLAYNAME;
+  displayName = "$STR_ENH_HOLDACTION_DISPLAYNAME";
   class Attributes
   {
     class ENH_HoldAction_Subcategory
     {
-      description = $STR_ENH_HOLDACTION_DESCRIPTION;
+      description = "$STR_ENH_HOLDACTION_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader1_Fixed";
     };
     class ENH_HoldAction
     {
-      displayName = $STR_ENH_HOLDACTION_DISPLAYNAME;
-      tooltip = $STR_ENH_HOLDACTION_DESCRIPTION;
+      displayName = "$STR_ENH_HOLDACTION_DISPLAYNAME";
+      tooltip = "$STR_ENH_HOLDACTION_DESCRIPTION";
       property = "ENH_HoldAction";
       control = "ENH_HoldAction";
       expression = "\

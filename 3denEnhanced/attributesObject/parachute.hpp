@@ -1,7 +1,7 @@
 class ENH_Parachute
 {
-  displayName = $STR_ENH_PARACHUTE_DISPLAYNAME;
-  tooltip = $STR_ENH_PARACHUTE_TOOLTIP;
+  displayName = "$STR_ENH_PARACHUTE_DISPLAYNAME";
+  tooltip = "$STR_ENH_PARACHUTE_TOOLTIP";
   property = "ENH_parachute";
   control = "Checkbox";
   expression = "if (!is3DEN && _value) then\

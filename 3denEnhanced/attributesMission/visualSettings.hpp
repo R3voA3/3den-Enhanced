@@ -1,13 +1,13 @@
 class ENH_VisualSettings
 {
   collapsed = 1;
-  displayName = $STR_ENH_ATTRIBUTECATEGORY_VISUALSETTINGS;
+  displayName = "$STR_ENH_ATTRIBUTECATEGORY_VISUALSETTINGS";
   class Attributes
   {
     class ENH_ViewDistance
     {
-      displayName = $STR_ENH_VIEWDISTANCE_DISPLAYNAME;
-      tooltip = $STR_ENH_VIEWDISTANCE_TOOLTIP;
+      displayName = "$STR_ENH_VIEWDISTANCE_DISPLAYNAME";
+      tooltip = "$STR_ENH_VIEWDISTANCE_TOOLTIP";
       property = "ENH_viewDistance";
       control = "Edit";
       expression = "if (!is3DEN && _value > 0 && hasInterface) then {setViewDistance _value}";
@@ -16,7 +16,7 @@ class ENH_VisualSettings
     };
     class ENH_ObjViewDistance: ENH_ViewDistance
     {
-      displayName = $STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME;
+      displayName = "$STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME";
       property = "ENH_objViewDistance";
       expression = "if (!is3DEN && _value > 0 && hasInterface) then {setObjectViewDistance _value}";
     };
@@ -24,7 +24,7 @@ class ENH_VisualSettings
     {
       control = "Combo";
       property = "ENH_terrainDetail";
-      displayName = $STR_ENH_TERRAINDETAIL_DISPLAYNAME;
+      displayName = "$STR_ENH_TERRAINDETAIL_DISPLAYNAME";
       tooltip = "Sets the terrain detail.";
       expression = "if (!is3DEN && _value > 0 && hasInterface) then {setTerrainGrid _value}";
       defaultValue = -1;
@@ -33,32 +33,32 @@ class ENH_VisualSettings
       {
         class Unchanged
         {
-          name = $STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT;
+          name = "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT";
           value = -1;
         };
         class GrassDisabled
         {
-          name = $STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME;
+          name = "$STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME";
           value = 50;
         };
         class Standard
         {
-          name = $STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME;
+          name = "$STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME";
           value = 25;
         };
         class High
         {
-          name = $STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME;
+          name = "$STR_ENH_TERRAINGRID_HIGH_DISPLAYNAME";
           value = 12.5;
         };
         class VeryHigh
         {
-          name = $STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME;
+          name = "$STR_ENH_TERRAINGRID_VERYHIGH_DISPLAYNAME";
           value = 6.25;
         };
         class Ultra
         {
-          name = $STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME;
+          name = "$STR_ENH_TERRAINGRID_ULTRA_DISPLAYNAME";
           value = 3.125;
         };
       };

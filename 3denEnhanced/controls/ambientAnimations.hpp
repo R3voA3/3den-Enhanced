@@ -7,7 +7,7 @@ class ENH_AmbientAnimations: Title
   {
     class AnimTitle: Title
     {
-      text = $STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME;
+      text = "$STR_ENH_AMBIENTANIMATIONS_ANIMATION_DISPLAYNAME";
     };
     class Animation: ctrlCombo
     {
@@ -18,8 +18,8 @@ class ENH_AmbientAnimations: Title
     };
     class CanExitTitle: Title
     {
-      text = $STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME;
-      tooltip = $STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP;
+      text = "$STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME";
+      tooltip = "$STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP";
       y = SIZE_M * GRID_H + 5 * pixelH;
     };
     class CanExit: ctrlCheckbox
@@ -32,8 +32,8 @@ class ENH_AmbientAnimations: Title
     };
     class AttachTitle: Title
     {
-      text = $STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME;
-      tooltip = $STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP;
+      text = "$STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME";
+      tooltip = "$STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class Attach: ctrlCheckbox

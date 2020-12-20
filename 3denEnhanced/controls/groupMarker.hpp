@@ -7,7 +7,7 @@ class ENH_GroupMarker: Title
   {
     class TypeTitle: Title
     {
-      text = $STR_ENH_GROUPMARKER_TYPE;
+      text = "$STR_ENH_GROUPMARKER_TYPE";
     };
     class Type: ctrlCombo
     {
@@ -18,7 +18,7 @@ class ENH_GroupMarker: Title
     };
     class ColourTitle: Title
     {
-      text = $STR_ENH_GROUPMARKER_COLOUR;
+      text = "$STR_ENH_GROUPMARKER_COLOUR";
       y = 1 * SIZE_M * GRID_H + 5 * pixelH;
     };
     class Colour: ctrlCombo
@@ -31,7 +31,7 @@ class ENH_GroupMarker: Title
     };
     class TextTitle: Title
     {
-      text = $STR_ENH_GROUPMARKER_TEXT;
+      text = "$STR_ENH_GROUPMARKER_TEXT";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class Text: ctrlEdit
@@ -44,7 +44,7 @@ class ENH_GroupMarker: Title
     };
     class ShowGroupSizeTitle: Title
     {
-      text = $STR_ENH_GROUPMARKER_SHOWGROUPSIZE;
+      text = "$STR_ENH_GROUPMARKER_SHOWGROUPSIZE";
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
     };
     class ShowGroupSize: ctrlCheckbox

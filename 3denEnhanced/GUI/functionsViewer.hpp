@@ -19,7 +19,7 @@ class ENH_FunctionsViewer
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_FUNCTIONSVIEWER_HEADER;
+      text = "$STR_ENH_FUNCTIONSVIEWER_HEADER";
       x = safezoneX;
       y = safezoneY;
       w = safezoneW;
@@ -55,10 +55,10 @@ class ENH_FunctionsViewer
       columns = 3;
       strings[] =
       {
-        $STR_ENH_FUNCTIONSVIEWER_FULL,
-        $STR_ENH_FUNCTIONSVIEWER_CATEGORIES,
-        $STR_ENH_FUNCTIONSVIEWER_FUNCTIONS,
-        $STR_ENH_FUNCTIONSVIEWER_SCRIPTS,
+        "$STR_ENH_FUNCTIONSVIEWER_FULL",
+        "$STR_ENH_FUNCTIONSVIEWER_CATEGORIES",
+        "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONS",
+        "$STR_ENH_FUNCTIONSVIEWER_SCRIPTS",
         ".inc",
         ".hpp"
       };
@@ -106,7 +106,7 @@ class ENH_FunctionsViewer
     class NumFunctions: ctrlStatic
     {
       idc = IDC_FUNCTIONSVIEWER_NUMFUNCTIONS;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP;
+      tooltip = "$STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP";
       x = safezoneX + GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 10 * GRID_W;
@@ -156,7 +156,7 @@ class ENH_FunctionsViewer
     class Name: ctrlEdit
     {
       idc = IDC_FUNCTIONSVIEWER_NAME;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP;
+      tooltip = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP";
       canModify = false;
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 6 * GRID_H;
@@ -166,14 +166,14 @@ class ENH_FunctionsViewer
     class Path: Name
     {
       idc = IDC_FUNCTIONSVIEWER_PATH;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP;
+      tooltip = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP";
       y = safezoneY + 12 * GRID_H;
     };
     class RecompileSelected: ctrlButton
     {
       idc = IDC_FUNCTIONSVIEWER_RECOMPILESELECTED;
-      text = $STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP;
+      text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT";
+      tooltip = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP";
       x = safezoneX + safezoneW - 82 * GRID_W;
       y = safezoneY + 6 * GRID_H;
       w = 40 * GRID_W;
@@ -183,7 +183,7 @@ class ENH_FunctionsViewer
     class Copy: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_COPY;
-      text = $STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT;
+      text = "$STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT";
       tooltip = __EVAL(toUpper format ["%1+%2",localize "STR_DIK_CONTROL","X"]);
       y = safezoneY + 12 * GRID_H;
       onButtonClick = "_this call ENH_fnc_functionsViewer_copy";
@@ -191,15 +191,15 @@ class ENH_FunctionsViewer
     class RecompileAll: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_RECOMPILEALL;
-      text = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT;
-      tooltip = $STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP;
+      text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT";
+      tooltip = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP";
       x = safezoneX + safezoneW - 41 * GRID_W;
       onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
     };
     class Biki: RecompileSelected
     {
       idc = IDC_FUNCTIONSVIEWER_BIKI;
-      text = $STR_ENH_FUNCTIONSVIEWER_BIKI;
+      text = "$STR_ENH_FUNCTIONSVIEWER_BIKI";
       tooltip = "";
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + 12 * GRID_H;

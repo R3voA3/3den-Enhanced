@@ -1,18 +1,18 @@
 class ENH_Airdrop
 {
   collapsed = 1;
-  displayName = $STR_ENH_AIRDROP_DISPLAYNAME;
+  displayName = "$STR_ENH_AIRDROP_DISPLAYNAME";
   class Attributes
   {
     class ENH_Airdrop_Subcategory
     {
-      description = $STR_ENH_AIRDROP_DESCRIPTION;
+      description = "$STR_ENH_AIRDROP_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader3_Fixed";
     };
     class ENH_Airdrop
     {
-      displayName = $STR_ENH_AIRDROP_DISPLAYNAME;
+      displayName = "$STR_ENH_AIRDROP_DISPLAYNAME";
       property = "ENH_Airdrop";
       control = "ENH_Airdrop";
       expression =

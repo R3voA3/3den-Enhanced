@@ -7,8 +7,8 @@ class ENH_MissionEnding_Casualties: Title
   {
     class ThresholdTitle: Title
     {
-      text = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME;
-      tooltip = $STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP;
+      text = "$STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME";
+      tooltip = "$STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP";
     };
     class ThresholdValue: ctrlXSliderH
     {
@@ -30,8 +30,8 @@ class ENH_MissionEnding_Casualties: Title
     };
     class EndingTitle: Title
     {
-      text = $STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME;
-      tooltip = $STR_ENH_MISSIONENDING_ENDING_TOOLTIP;
+      text = "$STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME";
+      tooltip = "$STR_ENH_MISSIONENDING_ENDING_TOOLTIP";
       y = 1 * SIZE_M * GRID_H + 5 * pixelH;
     };
     class Ending: ctrlCombo
@@ -45,7 +45,7 @@ class ENH_MissionEnding_Casualties: Title
     };
     class IsWinTitle: Title
     {
-      text = $STR_ENH_MISSIONENDING_WIN_DISPLAYNAME;
+      text = "$STR_ENH_MISSIONENDING_WIN_DISPLAYNAME";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class IsWin: ctrlCheckbox
@@ -59,7 +59,7 @@ class ENH_MissionEnding_Casualties: Title
     class SideTitle: Title
     {
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-      text = $STR_ENH_SIDE_DISPLAYNAME;
+      text = "$STR_ENH_SIDE_DISPLAYNAME";
     };
     class SideValue: ENH_SideToolbox_Base
     {

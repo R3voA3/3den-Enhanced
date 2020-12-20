@@ -22,7 +22,7 @@ class ENH_BatchReplace
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_BATCHREPLACE;
+      text = "$STR_ENH_BATCHREPLACE";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -30,7 +30,7 @@ class ENH_BatchReplace
     };
     class Description: ctrlStructuredText
     {
-      text = $STR_ENH_BATCHREPLACE_DESCRIPTION;
+      text = "$STR_ENH_BATCHREPLACE_DESCRIPTION";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 7 * GRID_H;
       w = DIALOG_W * GRID_W;
@@ -38,7 +38,7 @@ class ENH_BatchReplace
     };
     class ReplaceWithText: ctrlStatic
     {
-      text = $STR_ENH_BATCHREPLACE_REPLACEWITH;
+      text = "$STR_ENH_BATCHREPLACE_REPLACEWITH";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 19 * GRID_H;
       w = DIALOG_W * GRID_W;
@@ -47,7 +47,7 @@ class ENH_BatchReplace
     class ReplaceWithValue: ctrlEditMulti
     {
       idc = IDC_BATCHREPLACE_REPLACEWITH;
-      tooltip = $STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP;
+      tooltip = "$STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP";
       x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
       y = DIALOG_TOP + 20 * GRID_H;
       w = 50 * GRID_W;
@@ -55,7 +55,7 @@ class ENH_BatchReplace
     };
     class Replace: ctrlButton
     {
-      text = $STR_ENH_BATCHREPLACE_REPLACE;
+      text = "$STR_ENH_BATCHREPLACE_REPLACE";
       x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
       y = DIALOG_TOP + 41 * GRID_H;
       w = 23 * GRID_W;

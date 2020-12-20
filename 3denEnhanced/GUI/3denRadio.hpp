@@ -54,7 +54,7 @@ class ENH_3DENRadio
     };
     class CurrentSongText: ctrlStaticFooter
     {
-      text = $STR_ENH_3DENRADIO_SONG;
+      text = "$STR_ENH_3DENRADIO_SONG";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + DIALOG_H * GRID_H - 7 * GRID_H;
       w = 10 * GRID_W;
@@ -96,7 +96,7 @@ class ENH_3DENRadio
     class Help: VolumeIcon
     {
       text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
-      tooltip = $STR_ENH_3DENRADIO_HELP_DESCRIPTION;
+      tooltip = "$STR_ENH_3DENRADIO_HELP_DESCRIPTION";
       x = CENTERED_X(DIALOG_W) + 44 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -129,7 +129,7 @@ class ENH_3DENRadio
       {
         class Start:  ctrlStatic
         {
-          text = $STR_A3_RSCDISPLAYINTEL_CA_TEXTSTART;
+          text = "$STR_A3_RSCDISPLAYINTEL_CA_TEXTSTART";
           x = 0;
           y = 0;
           w = 10 * GRID_W;
@@ -154,7 +154,7 @@ class ENH_3DENRadio
         };
         class End:  Start
         {
-          text = $STR_ENH_3DENRADIO_END;
+          text = "$STR_ENH_3DENRADIO_END";
           x = 69 * GRID_W;
         };
       };

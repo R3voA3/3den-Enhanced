@@ -16,7 +16,7 @@ class ENH_InventoryManager
     };
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_TOOLS_INVENTORYMANAGER;
+      text = "$STR_ENH_TOOLS_INVENTORYMANAGER";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -25,7 +25,7 @@ class ENH_InventoryManager
     class AvailableItems: ctrlStatic
     {
       idc = IDC_IM_AVAILABLEITEMSTEXT;
-      text = $STR_ENH_IM_AVAILABLEITEMS;
+      text = "$STR_ENH_IM_AVAILABLEITEMS";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
       w = 40 * GRID_W;
@@ -35,7 +35,7 @@ class ENH_InventoryManager
     };
     class InventoryItems: AvailableItems
     {
-      text = $STR_ENH_IM_ITEMSININVENTORY;
+      text = "$STR_ENH_IM_ITEMSININVENTORY";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
     };
     class InventoryListBackground: ctrlStaticPictureKeepAspect
@@ -62,27 +62,27 @@ class ENH_InventoryManager
       h = 3 * CTRL_DEFAULT_H;
       strings[] =
       {
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0,
-        $STR_A3_SNIPER1,
-        $STR_ENH_IM_SHOTGUNS,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0,
-        $STR_A3_GRENADES1,
-        $STR_GEAR_MAGAZINES,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_EXPLOSIVES0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0,
-        $STR_A3_POINTERS1,
-        $STR_A3_SCOPES1,
-        $STR_A3_CFGVEHICLECLASSES_UNIFORMS0,
-        $STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_VESTS0,
-        $STR_A3_CFGVEHICLECLASSES_BACKPACKS0,
-        $STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR,
-        $STR_A3_RSCDISPLAYARSENAL_TAB_GOGGLES,
-        $STR_A3_RSCDISPLAYARSENAL_TAB_NVGS,
-        $STR_A3_CFGVEHICLECLASSES_ITEMS0
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0",
+        "$STR_A3_SNIPER1",
+        "$STR_ENH_IM_SHOTGUNS",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0",
+        "$STR_A3_GRENADES1",
+        "$STR_GEAR_MAGAZINES",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_EXPLOSIVES0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0",
+        "$STR_A3_POINTERS1",
+        "$STR_A3_SCOPES1",
+        "$STR_A3_CFGVEHICLECLASSES_UNIFORMS0",
+        "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_VESTS0",
+        "$STR_A3_CFGVEHICLECLASSES_BACKPACKS0",
+        "$STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR",
+        "$STR_A3_RSCDISPLAYARSENAL_TAB_GOGGLES",
+        "$STR_A3_RSCDISPLAYARSENAL_TAB_NVGS",
+        "$STR_A3_CFGVEHICLECLASSES_ITEMS0"
       };
       onToolBoxSelChanged = "_this call ENH_fnc_IM_filterList";
     };
@@ -145,7 +145,7 @@ class ENH_InventoryManager
     {
       idc = IDC_IM_REMOVEALL;
       text = "<<<";
-      tooltip = $STR_ENH_IM_REMOVESELECTED_TOOLTIP;
+      tooltip = "$STR_ENH_IM_REMOVESELECTED_TOOLTIP";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
       y = DIALOG_TOP + 18 * CTRL_DEFAULT_H + 4 * GRID_W;
       w = 10 * GRID_W;
@@ -154,7 +154,7 @@ class ENH_InventoryManager
     };
     class ShowTemplates: ctrlButton
     {
-      text = $STR_ENH_IM_SHOWTEMPLATES;
+      text = "$STR_ENH_IM_SHOWTEMPLATES";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
@@ -164,7 +164,7 @@ class ENH_InventoryManager
     class CreateTemplate: ShowTemplates
     {
       idc = IDC_IM_CREATETEMPLATE;
-      text = $STR_ENH_IM_CREATETEMPLATE;
+      text = "$STR_ENH_IM_CREATETEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
       onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_IM_TemplateData'";
     };
@@ -172,7 +172,7 @@ class ENH_InventoryManager
     {
       idc = IDC_IM_DELETETEMPLATE;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-      tooltip = $STR_ENH_IM_DELETETEMPLATE;
+      tooltip = "$STR_ENH_IM_DELETETEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -184,7 +184,7 @@ class ENH_InventoryManager
     class ApplyTemplate: ShowTemplates
     {
       idc = IDC_IM_APPLYTEMPLATE;
-      text = $STR_ENH_IM_APPLYTEMPLATE;
+      text = "$STR_ENH_IM_APPLYTEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
       onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
     };
@@ -199,7 +199,7 @@ class ENH_InventoryManager
     };
     class IsVirtualText: ctrlStatic
     {
-      text = $STR_ENH_IM_ISVIRTUAL;
+      text = "$STR_ENH_IM_ISVIRTUAL";
       x = CENTERED_X(DIALOG_W) + GRID_W + 116 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 20 * GRID_W;
@@ -208,7 +208,7 @@ class ENH_InventoryManager
     class Reset: ctrlButtonPictureKeepAspect
     {
       text = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-      tooltip = $STR_ENH_IM_RESET_TOOLTIP;
+      tooltip = "$STR_ENH_IM_RESET_TOOLTIP";
       x = CENTERED_X(DIALOG_W) + GRID_W + 135 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
@@ -328,7 +328,7 @@ class ENH_IM_TemplateData
     };
     class Title: ctrlStatic
     {
-      text = $STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE;
+      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE";
       x = CENTERED_X(60);
       y = DIALOG_TOP + 56 * GRID_H;
       w = 58 * GRID_W;
@@ -344,7 +344,7 @@ class ENH_IM_TemplateData
     };
     class Description: ctrlStatic
     {
-      text = $STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION;
+      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION";
       x = CENTERED_X(60);
       y = DIALOG_TOP + 68 * GRID_H;
       w = 58 * GRID_W;

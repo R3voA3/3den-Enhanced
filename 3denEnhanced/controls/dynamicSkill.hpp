@@ -7,7 +7,7 @@ class ENH_DynamicSkill: Title
   {
     class EnableTitle: Title
     {
-      text = $STR_ENH_ENABLE;
+      text = "$STR_ENH_ENABLE";
       y = 4.5 * SIZE_M * GRID_H + 5 * pixelH;
     };
     class Enable: ctrlCheckbox
@@ -28,7 +28,7 @@ class ENH_DynamicSkill: Title
     };
     class BLUFORDescriptionHeader: ctrlStatic
     {
-      text = $STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME";
       x = 5 * GRID_W + 7 * pixelW;
       y = 5.5 * SIZE_M * GRID_H + 10 * pixelH;
       w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -39,7 +39,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillMinBLUFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME";
       y = 6.5 * SIZE_M * GRID_H + 15 * pixelH;
     };
     class SkillMinBLUFORValue: ctrlXSliderH
@@ -61,7 +61,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillAimMinBLUFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME";
       y = 7.5 * SIZE_M * GRID_H + 20 * pixelH;
     };
     class SkillAimMinBLUFORValue: ctrlXSliderH
@@ -84,7 +84,7 @@ class ENH_DynamicSkill: Title
 
     class SkillMaxBLUFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME";
       y = 8.5 * SIZE_M * GRID_H + 25 * pixelH;
     };
     class SkillMaxBLUFORValue: ctrlXSliderH
@@ -107,7 +107,7 @@ class ENH_DynamicSkill: Title
 
     class SkillAimMaxBLUFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME";
       y = 9.5 * SIZE_M * GRID_H + 30 * pixelH;
     };
     class SkillAimMaxBLUFORValue: ctrlXSliderH
@@ -138,7 +138,7 @@ class ENH_DynamicSkill: Title
     };
     class OPFORDescriptionHeader: ctrlStatic
     {
-      text = $STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME";
       x = 5 * GRID_W + 7 * pixelW;
       y = 10.5 * SIZE_M * GRID_H + 35 * pixelH;
       w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -149,7 +149,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillMinOPFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME";
       y = 11.5 * SIZE_M * GRID_H + 40 * pixelH;
     };
     class SkillMinOPFORValue: ctrlXSliderH
@@ -171,7 +171,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillAimMinOPFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME";
       y = 12.5 * SIZE_M * GRID_H + 45 * pixelH;
     };
     class SkillAimMinOPFORValue: ctrlXSliderH
@@ -194,7 +194,7 @@ class ENH_DynamicSkill: Title
 
     class SkillMaxOPFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME";
       y = 13.5 * SIZE_M * GRID_H + 50 * pixelH;
     };
     class SkillMaxOPFORValue: ctrlXSliderH
@@ -217,7 +217,7 @@ class ENH_DynamicSkill: Title
 
     class SkillAimMaxOPFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME";
       y = 14.5 * SIZE_M * GRID_H + 55 * pixelH;
     };
     class SkillAimMaxOPFORValue: ctrlXSliderH
@@ -248,7 +248,7 @@ class ENH_DynamicSkill: Title
     };
     class INDFORDescriptionHeader: ctrlStatic
     {
-      text = $STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME";
       x = 5 * GRID_W + 7 * pixelW;
       y = 15.5 * SIZE_M * GRID_H + 60 * pixelH;
       w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
@@ -259,7 +259,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillMinINDFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME";
       y = 16.5 * SIZE_M * GRID_H + 65 * pixelH;
     };
     class SkillMinINDFORValue: ctrlXSliderH
@@ -281,7 +281,7 @@ class ENH_DynamicSkill: Title
     };
     class SkillAimMinINDFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME";
       y = 17.5 * SIZE_M * GRID_H + 70 * pixelH;
     };
     class SkillAimMinINDFORValue: ctrlXSliderH
@@ -304,7 +304,7 @@ class ENH_DynamicSkill: Title
 
     class SkillMaxINDFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME";
       y = 18.5 * SIZE_M * GRID_H + 75 * pixelH;
     };
     class SkillMaxINDFORValue: ctrlXSliderH
@@ -327,7 +327,7 @@ class ENH_DynamicSkill: Title
 
     class SkillAimMaxINDFORTitle: Title
     {
-      text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
+      text = "$STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME";
       y = 19.5 * SIZE_M * GRID_H + 80 * pixelH;
     };
     class SkillAimMaxINDFORValue: ctrlXSliderH

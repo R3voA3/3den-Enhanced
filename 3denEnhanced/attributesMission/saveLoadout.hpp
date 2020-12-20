@@ -1,7 +1,7 @@
 class ENH_SaveLoadout
 {
-  displayName = $STR_ENH_SAVELOADOUT_DISPLAYNAME;
-  tooltip = $STR_ENH_SAVELOADOUT_TOOLTIP;
+  displayName = "$STR_ENH_SAVELOADOUT_DISPLAYNAME";
+  tooltip = "$STR_ENH_SAVELOADOUT_TOOLTIP";
   property = "ENH_saveLoadout";
   control = "Checkbox";
   expression =

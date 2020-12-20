@@ -20,7 +20,7 @@ class ENH_ExportGUIDefines
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES;
+      text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -28,7 +28,7 @@ class ENH_ExportGUIDefines
     };
     class Target: ctrlStatic
     {
-      text = $STR_WATCH_TARGET;
+      text = "$STR_WATCH_TARGET";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 6 * GRID_H;
       w = 15 * GRID_W;
@@ -45,22 +45,22 @@ class ENH_ExportGUIDefines
       {
         class Mod
         {
-          text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON;
-          tooltip = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP;
+          text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON";
+          tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP";
           data = "mod"
           default = 1;
         };
         class Scenario
         {
-          text = $STR_A3_CFGUIGRIDS_IGUI_VARIABLES_GRID_MISSION_0;
-          tooltip = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP;
+          text = "$STR_A3_CFGUIGRIDS_IGUI_VARIABLES_GRID_MISSION_0";
+          tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP";
           data = "scenario"
         };
       };
     };
     class Types: Target
     {
-      text = $STR_A3_TO_BASICCIVILIANPRESENCE12;
+      text = "$STR_A3_TO_BASICCIVILIANPRESENCE12";
       y = DIALOG_TOP + 13 * GRID_H;
     };
     class TypesValue: TargetValue
@@ -71,21 +71,21 @@ class ENH_ExportGUIDefines
       {
         class Classic
         {
-          text = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC;
-          tooltip = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP;
+          text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC";
+          tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP";
           data = "classic"
           default = 1;
         };
         class Eden
         {
-          text = $STR_A3_CFGMODS_APEX_FEATURE_EDEN_NAME;
-          tooltip = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP;
+          text = "$STR_A3_CFGMODS_APEX_FEATURE_EDEN_NAME";
+          tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP";
           data = "3DEN"
         };
         class All
         {
-          text = $STR_GEAR_ALL;
-          tooltip = $STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP;
+          text = "$STR_GEAR_ALL";
+          tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP";
           data = ""
         };
       };

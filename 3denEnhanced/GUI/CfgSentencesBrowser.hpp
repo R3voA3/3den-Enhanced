@@ -18,7 +18,7 @@ class ENH_CfgSentencesBrowser
     };
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_TOOLS_CFGSENTENCESBROWSER;
+      text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -50,7 +50,7 @@ class ENH_CfgSentencesBrowser
       y = DIALOG_TOP + CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
-      strings[] = {$STR_A3_WL_PARAM19_TITLE,$STR_3DEN_FAVORITE_TEXTPLURAL};
+      strings[] = {"$STR_A3_WL_PARAM19_TITLE","$STR_3DEN_FAVORITE_TEXTPLURAL"};
       colorSelectedBg[] = {0.2,0.2,0.2,1};
       onToolBoxSelChanged = "_this call ENH_fnc_CFGS_changePage";
     };
@@ -154,7 +154,7 @@ class ENH_CfgSentencesBrowser
     };
     class Play: ctrlButton
     {
-      text = $STR_A3_RSCDISPLAYWELCOME_PARD_LIST4_TITLE;
+      text = "$STR_A3_RSCDISPLAYWELCOME_PARD_LIST4_TITLE";
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -163,7 +163,7 @@ class ENH_CfgSentencesBrowser
     };
     class Copy: ctrlButton
     {
-      text = $STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT
+      text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT"
       x = CENTERED_X(DIALOG_W) + 22 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -173,7 +173,7 @@ class ENH_CfgSentencesBrowser
     class HandleFavorite: ctrlButtonPictureKeepAspect
     {
       text = "\a3\3den\data\displays\display3den\panelright\modefavorites_ca.paa";
-      tooltip = $STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP;
+      tooltip = "$STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP";
       x = CENTERED_X(DIALOG_W) + 43 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 5 * GRID_W;

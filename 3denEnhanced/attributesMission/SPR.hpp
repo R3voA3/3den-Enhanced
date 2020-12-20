@@ -1,18 +1,18 @@
 class ENH_SPR
 {
   collapsed = 1;
-  displayName = $STR_ENH_SPR;
+  displayName = "$STR_ENH_SPR";
   class Attributes
   {
     class ENH_SPR_Subcategory
     {
-      description = $STR_ENH_SPR_DESCRIPTION;
+      description = "$STR_ENH_SPR_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader3_Fixed";
     };
     class ENH_SPR
     {
-      displayName = $STR_ENH_SPR;
+      displayName = "$STR_ENH_SPR";
       property = "ENH_SPR";
       control = "ENH_SPR";
       expression =

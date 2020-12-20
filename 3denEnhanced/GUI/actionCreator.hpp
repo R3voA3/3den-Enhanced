@@ -247,7 +247,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
     class Help: ctrlButton
     {
       text = "?";
-      tooltip = $STR_ENH_actionCreator_help;
+      tooltip = "$STR_ENH_actionCreator_help";
       url = "https://community.bistudio.com/wiki/addAction";
       x = 0.650637 * safezoneW + safezoneX;
       y = 0.136 * safezoneH + safezoneY;

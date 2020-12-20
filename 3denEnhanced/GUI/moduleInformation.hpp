@@ -21,7 +21,7 @@ class ENH_ModuleInformation
   {
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_MODULEINFORMATION;
+      text = "$STR_ENH_MODULEINFORMATION";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -29,7 +29,7 @@ class ENH_ModuleInformation
     };
     class Description: ctrlStatic
     {
-      text = $STR_ENH_MODULEINFORMATION_DESCRIPTION;
+      text = "$STR_ENH_MODULEINFORMATION_DESCRIPTION";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 6 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -47,7 +47,7 @@ class ENH_ModuleInformation
     };
     class Position: ctrlStatic
     {
-      text = $STR_ENH_MODULEINFORMATION_POSITION;
+      text = "$STR_ENH_MODULEINFORMATION_POSITION";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 35 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -65,7 +65,7 @@ class ENH_ModuleInformation
     };
     class Duplicate: ctrlStatic
     {
-      text = $STR_ENH_MODULEINFORMATION_DUPLICATE;
+      text = "$STR_ENH_MODULEINFORMATION_DUPLICATE";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 47 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -83,7 +83,7 @@ class ENH_ModuleInformation
     };
     class Direction: ctrlStatic
     {
-      text = $STR_ENH_MODULEINFORMATION_DIRECTION;
+      text = "$STR_ENH_MODULEINFORMATION_DIRECTION";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 59 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;
@@ -101,7 +101,7 @@ class ENH_ModuleInformation
     };
     class Sync : ctrlStatic
     {
-      text = $STR_ENH_MODULEINFORMATION_SYNC;
+      text = "$STR_ENH_MODULEINFORMATION_SYNC";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 71 * GRID_H;
       w = (DIALOG_W - 2) * GRID_W;

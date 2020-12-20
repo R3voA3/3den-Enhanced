@@ -7,7 +7,7 @@ class ENH_SPR: Title
   {
     class RulesetTitle: Title
     {
-      text = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNTEMPLATES_DISPLAYNAME;
+      text = "$STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNTEMPLATES_DISPLAYNAME";
     };
     class Ruleset: ctrlCombo
     {
@@ -19,8 +19,8 @@ class ENH_SPR: Title
     class RespawnTimeTitle: Title
     {
       y = SIZE_M * GRID_H + 5 * pixelH;
-      text = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_DISPLAYNAME;
-      tooltip = $STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_TOOLTIP;
+      text = "$STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_DISPLAYNAME";
+      tooltip = "$STR_3DEN_MULTIPLAYER_ATTRIBUTE_RESPAWNDELAY_TOOLTIP";
     };
     class RespawnTimeValue: ctrlXSliderH
     {
@@ -44,8 +44,8 @@ class ENH_SPR: Title
     };
     class CanDieTitle: Title
     {
-      text = $STR_ENH_SPR_CANDIE_DISPLAYNAME;
-      tooltip = $STR_ENH_SPR_CANDIE_TOOLTIP;
+      text = "$STR_ENH_SPR_CANDIE_DISPLAYNAME";
+      tooltip = "$STR_ENH_SPR_CANDIE_TOOLTIP";
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class CanDie: ctrlCheckbox
@@ -58,8 +58,8 @@ class ENH_SPR: Title
     };
     class RestoreLoadoutTitle: Title
     {
-      text = $STR_ENH_SAVELOADOUT_DISPLAYNAME;
-      tooltip = $STR_ENH_SAVELOADOUT_TOOLTIP;
+      text = "$STR_ENH_SAVELOADOUT_DISPLAYNAME";
+      tooltip = "$STR_ENH_SAVELOADOUT_TOOLTIP";
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
     };
     class RestoreLoadout: CanDie

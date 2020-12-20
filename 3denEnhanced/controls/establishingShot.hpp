@@ -7,8 +7,8 @@ class ENH_EstablishingShot: Title
   {
     class CenterTitle: Title
     {
-      text = $STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME;
-      tooltip = $STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP;
+      text = "$STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME";
+      tooltip = "$STR_ENH_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP";
     };
     class CenterValue: ctrlEdit
     {
@@ -20,7 +20,7 @@ class ENH_EstablishingShot: Title
     class TextTitle: Title
     {
       y = 1 * SIZE_M * GRID_H + 5 * pixelH;
-      text = $STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT;
+      text = "$STR_ENH_ESTABLISHINGSHOT_DISPLAYEDTEXT";
     };
     class TextValue: CenterValue
     {
@@ -30,7 +30,7 @@ class ENH_EstablishingShot: Title
     class AltitudeTitle: Title
     {
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-      text = $STR_ENH_ALTITUDE_DISPLAYNAME;
+      text = "$STR_ENH_ALTITUDE_DISPLAYNAME";
     };
     class AltitudeValue: ctrlXSliderH
     {
@@ -55,7 +55,7 @@ class ENH_EstablishingShot: Title
     class RadiusTitle: Title
     {
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-      text = $STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME;
+      text = "$STR_ENH_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME";
     };
     class RadiusValue: ctrlXSliderH
     {
@@ -80,7 +80,7 @@ class ENH_EstablishingShot: Title
     class AngleTitle: Title
     {
       y = 4 * SIZE_M * GRID_H + 20 * pixelH;
-      text = $STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME;
+      text = "$STR_ENH_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME";
     };
     class AngleValue: ctrlXSliderH
     {
@@ -105,7 +105,7 @@ class ENH_EstablishingShot: Title
     class DirectionTitle: Title
     {
       y = 5 * SIZE_M * GRID_H + 25 * pixelH;
-      text = $STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME;
+      text = "$STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME";
     };
     class DirectionValue: ctrlToolbox
     {
@@ -118,8 +118,8 @@ class ENH_EstablishingShot: Title
       columns = 1;
       strings[] =
       {
-        $STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE,
-        $STR_ENH_ESTABLISHINGSHOT_CLOCKWISE
+        "$STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE",
+        "$STR_ENH_ESTABLISHINGSHOT_CLOCKWISE"
       };
       values[] = {0,1};
     };

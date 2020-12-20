@@ -23,7 +23,7 @@ class ENH_VariableViewer
     };
     class Header: ctrlStaticTitle
     {
-      text = $STR_ENH_VARIABLEVIEWER_HEADER;
+      text = "$STR_ENH_VARIABLEVIEWER_HEADER";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -86,7 +86,7 @@ class ENH_VariableViewer
     };
     class HideFunctionsText: ctrlStatic
     {
-      text = $STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS;
+      text = "$STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS";
       x = CENTERED_X(DIALOG_W) + 73 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 28 * GRID_W;
@@ -104,7 +104,7 @@ class ENH_VariableViewer
     class VariableName: ctrlEdit
     {
       idc = IDC_VARIABLEVIEWER_VARIABLENAME;
-      text = $STR_ENH_VARIABLEVIEWER_VARIABLENAME;
+      text = "$STR_ENH_VARIABLEVIEWER_VARIABLENAME";
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H) * GRID_H;
       w = 45 * GRID_W;
@@ -113,7 +113,7 @@ class ENH_VariableViewer
     class VariableValue: ctrlEdit
     {
       idc = IDC_VARIABLEVIEWER_VARIABLEVALUE;
-      text = $STR_ENH_VARIABLEVIEWER_VARIABLEVALUE;
+      text = "$STR_ENH_VARIABLEVIEWER_VARIABLEVALUE";
       x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H) * GRID_H;
       w = 122 * GRID_W;
@@ -121,7 +121,7 @@ class ENH_VariableViewer
     };
     class Delete: ctrlButton
     {
-      text = $STR_ENH_VARIABLEVIEWER_DELETE;
+      text = "$STR_ENH_VARIABLEVIEWER_DELETE";
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 63) * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -131,7 +131,7 @@ class ENH_VariableViewer
     class Set: ctrlButton
     {
       idc = IDC_VARIABLEVIEWER_SET;
-      text = $STR_ENH_VARIABLEVIEWER_SET_NEW;
+      text = "$STR_ENH_VARIABLEVIEWER_SET_NEW";
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 42) * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;

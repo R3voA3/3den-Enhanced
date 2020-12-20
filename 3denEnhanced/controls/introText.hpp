@@ -7,8 +7,8 @@ class ENH_IntroText: Title
   {
     class DelayTitle: Title
     {
-      text = $STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME;
-      tooltip = $STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP;
+      text = "$STR_ENH_INTROTEXT_INTRODELAY_DISPLAYNAME";
+      tooltip = "$STR_ENH_INTROTEXT_INTRODELAY_TOOLTIP";
     };
     class DelayValue: ctrlXSliderH
     {
@@ -31,7 +31,7 @@ class ENH_IntroText: Title
     class Line1Title: Title
     {
       y = SIZE_M * GRID_H + 5 * pixelH;
-      text = $STR_ENH_INTROTEXT_LINE1_DISPLAYNAME;
+      text = "$STR_ENH_INTROTEXT_LINE1_DISPLAYNAME";
     };
     class Line1Value: ctrlEdit
     {
@@ -44,7 +44,7 @@ class ENH_IntroText: Title
     class Line2Title: Title
     {
       y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-      text = $STR_ENH_INTROTEXT_LINE2_DISPLAYNAME;
+      text = "$STR_ENH_INTROTEXT_LINE2_DISPLAYNAME";
       tooltip = "";
     };
     class Line2Value: Line1Value
@@ -55,7 +55,7 @@ class ENH_IntroText: Title
     class Line3Title: Title
     {
       y = 3 * SIZE_M * GRID_H + 15 * pixelH;
-      text = $STR_ENH_INTROTEXT_LINE3_DISPLAYNAME;
+      text = "$STR_ENH_INTROTEXT_LINE3_DISPLAYNAME";
     };
     class Line3Value: Line1Value
     {
@@ -65,7 +65,7 @@ class ENH_IntroText: Title
     class IntroTypeTitle: Title
     {
       y = 4 * SIZE_M * GRID_H + 20 * pixelH;
-      text = $STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME;
+      text = "$STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME";
     };
     class IntroType: ctrlToolboxPictureKeepAspect
     {

@@ -7,8 +7,8 @@ class ENH_AmbientFlyby: Title
   {
     class ClassesTitle: Title
     {
-      text = $STR_ENH_AMBIENTFLYBY_CLASSES_DISPLAYNAME;
-      tooltip = $STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP;
+      text = "$STR_ENH_AMBIENTFLYBY_CLASSES_DISPLAYNAME";
+      tooltip = "$STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP";
     };
     class ClassesValue: ctrlEditMulti
     {
@@ -19,7 +19,7 @@ class ENH_AmbientFlyby: Title
     };
     class StartTitle: Title
     {
-      text = $STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME;
+      text = "$STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME";
       y = 4 * SIZE_M * GRID_H + 5 * pixelH;
     };
     class StartValue: ctrlEdit
@@ -32,7 +32,7 @@ class ENH_AmbientFlyby: Title
     };
     class EndTitle: Title
     {
-      text = $STR_ENH_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME;
+      text = "$STR_ENH_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME";
       y = 5 * SIZE_M * GRID_H + 10 * pixelH;
     };
     class EndValue: StartValue
@@ -43,7 +43,7 @@ class ENH_AmbientFlyby: Title
     class AltitudeTitle: Title
     {
       y = 6 * SIZE_M * GRID_H + 15 * pixelH;
-      text = $STR_ENH_ALTITUDE_DISPLAYNAME;
+      text = "$STR_ENH_ALTITUDE_DISPLAYNAME";
     };
     class AltitudeValue: ctrlXSliderH
     {
@@ -67,7 +67,7 @@ class ENH_AmbientFlyby: Title
     class SpeedTitle: Title
     {
       y = 7 * SIZE_M * GRID_H + 20 * pixelH;
-      text = $STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME;
+      text = "$STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME";
     };
     class SpeedValue: ctrlToolboxPictureKeepAspect
     {
@@ -86,16 +86,16 @@ class ENH_AmbientFlyby: Title
       };
       tooltips[] =
       {
-        $STR_ENH_SPEED_LIMITED,
-        $STR_ENH_SPEED_NORMAL,
-        $STR_ENH_SPEED_FULL
+        "$STR_ENH_SPEED_LIMITED",
+        "$STR_ENH_SPEED_NORMAL",
+        "$STR_ENH_SPEED_FULL"
       };
       values[] = {0,1,2};
     };
     class SideTitle: Title
     {
       y = 9 * SIZE_M * GRID_H + 25 * pixelH;
-      text = $STR_ENH_SIDE_DISPLAYNAME;
+      text = "$STR_ENH_SIDE_DISPLAYNAME";
     };
     class SideValue: ENH_SideToolbox_Base
     {
@@ -104,8 +104,8 @@ class ENH_AmbientFlyby: Title
     };
     class DelayTitle: Title
     {
-      text = $STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME;
-      tooltip = $STR_ENH_AMBIENTFLYBY_DELAY_TOOLTIP;
+      text = "$STR_ENH_AMBIENTFLYBY_DELAY_DISPLAYNAME";
+      tooltip = "$STR_ENH_AMBIENTFLYBY_DELAY_TOOLTIP";
       y = 11 * SIZE_M * GRID_H + 30 * pixelH;
     };
     class DelayValue: AltitudeValue

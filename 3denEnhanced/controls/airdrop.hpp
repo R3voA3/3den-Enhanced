@@ -7,8 +7,8 @@ class ENH_Airdrop: Title
   {
     class ClassesTitle: Title
     {
-      text = $STR_ENH_AIRDROP_CLASSES_DISPLAYNAME;
-      tooltip = $STR_ENH_AIRDROP_CLASSES_TOOLTIP;
+      text = "$STR_ENH_AIRDROP_CLASSES_DISPLAYNAME";
+      tooltip = "$STR_ENH_AIRDROP_CLASSES_TOOLTIP";
     };
     class ClassesValue: ctrlEditMulti
     {
@@ -19,8 +19,8 @@ class ENH_Airdrop: Title
     };
     class CenterTitle: Title
     {
-      text = $STR_ENH_AIRDROP_CENTER_DISPLAYNAME;
-      tooltip = $STR_ENH_AIRDROP_CENTER_TOOLTIP;
+      text = "$STR_ENH_AIRDROP_CENTER_DISPLAYNAME";
+      tooltip = "$STR_ENH_AIRDROP_CENTER_TOOLTIP";
       y = 4 * SIZE_M * GRID_H + 5 * pixelH;
     };
     class CenterValue: ctrlEdit
@@ -34,8 +34,8 @@ class ENH_Airdrop: Title
     class ConditionTitle: Title
     {
       y = 5 * SIZE_M * GRID_H + 10 * pixelH;
-      text = $STR_ENH_AIRDROP_CONDITION_DISPLAYNAME;
-      tooltip = $STR_ENH_AIRDROP_CONDITION_TOOLTIP;
+      text = "$STR_ENH_AIRDROP_CONDITION_DISPLAYNAME";
+      tooltip = "$STR_ENH_AIRDROP_CONDITION_TOOLTIP";
     };
     class ConditionValue: CenterValue
     {
@@ -45,7 +45,7 @@ class ENH_Airdrop: Title
     class AltitudeTitle: Title
     {
       y = 6 * SIZE_M * GRID_H + 15 * pixelH;
-      text = $STR_ENH_ALTITUDE_DISPLAYNAME;
+      text = "$STR_ENH_ALTITUDE_DISPLAYNAME";
     };
     class AltitudeValue: ctrlXSliderH
     {
@@ -70,8 +70,8 @@ class ENH_Airdrop: Title
     class RadiusTitle: Title
     {
       y = 7 * SIZE_M * GRID_H + 20 * pixelH;
-      text = $STR_ENH_AIRDROP_RADIUS_DISPLAYNAME;
-      tooltip = $STR_ENH_AIRDROP_RADIUS_TOOLTIP;
+      text = "$STR_ENH_AIRDROP_RADIUS_DISPLAYNAME";
+      tooltip = "$STR_ENH_AIRDROP_RADIUS_TOOLTIP";
     };
     class RadiusValue: AltitudeValue
     {
@@ -88,7 +88,7 @@ class ENH_Airdrop: Title
     class SideTitle: Title
     {
       y = 8 * SIZE_M * GRID_H + 25 * pixelH;
-      text = $STR_ENH_SIDE_DISPLAYNAME;
+      text = "$STR_ENH_SIDE_DISPLAYNAME";
     };
     class SideValue: ENH_SideToolbox_Base
     {

@@ -1,19 +1,19 @@
 class ENH_DynamicSkill
 {
   collapsed = 1;
-  displayName = $STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL;
+  displayName = "$STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL";
   class Attributes
   {
     class ENH_DynamicSkill_Subcategory
     {
-      description = $STR_ENH_DYNAMICSKILL_DESCRIPTION;
+      description = "$STR_ENH_DYNAMICSKILL_DESCRIPTION";
       data = "AttributeSystemSubcategory";
       control = "ENH_SubCategoryNoHeader2_Fixed";
     };
     class ENH_DynamicSkill_Enable
     {
-      displayName = $STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL;
-      tooltip = $STR_ENH_DYNAMICSKILL_DESCRIPTION;
+      displayName = "$STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL";
+      tooltip = "$STR_ENH_DYNAMICSKILL_DESCRIPTION";
       property = "ENH_dynamicSkill";
       control = "ENH_DynamicSkill";
       expression = "if (!is3DEN && _value # 0 && isServer) then\
