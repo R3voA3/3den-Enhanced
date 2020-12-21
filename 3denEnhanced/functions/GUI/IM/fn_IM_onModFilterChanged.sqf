@@ -25,4 +25,4 @@ private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 CTRL(IDC_IM_SEARCH) ctrlSetText "mod " + (_ctrlCombo lbData _selectedIndex);
 CTRL(IDC_IM_BUTTONSEARCH) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa";
 
-call ENH_fnc_IM_search;
+CTRL(IDC_IM_SEARCH) call ENH_fnc_IM_search;
