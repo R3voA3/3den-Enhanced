@@ -146,7 +146,7 @@ class ENH_FunctionsViewer
     class TogglePanelLeft: ctrlButton
     {
       idc = IDC_FUNCTIONSVIEWER_PANNEL;
-      text = "«"
+      text = "«";
       x = safezoneX + 71 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;

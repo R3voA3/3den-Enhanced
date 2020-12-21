@@ -73,8 +73,8 @@ class ENH_DebugOptions
     };
     class ENH_DebugOptions_ActiveScripts: ENH_DebugOptions_Arsenal
     {
-      displayName = "Log active Scripts";
-      tooltip = "When activated, all active scripts will be logged into the .rpt file."
+      displayName = "$STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP";
       property = "ENH_DebugOptions_ActiveScripts";
     };
     //----------------PLAYER

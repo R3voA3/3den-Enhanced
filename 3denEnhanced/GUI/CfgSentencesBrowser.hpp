@@ -163,7 +163,7 @@ class ENH_CfgSentencesBrowser
     };
     class Copy: ctrlButton
     {
-      text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT"
+      text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT";
       x = CENTERED_X(DIALOG_W) + 22 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;

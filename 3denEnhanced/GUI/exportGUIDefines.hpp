@@ -47,14 +47,14 @@ class ENH_ExportGUIDefines
         {
           text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP";
-          data = "mod"
+          data = "mod";
           default = 1;
         };
         class Scenario
         {
           text = "$STR_A3_CFGUIGRIDS_IGUI_VARIABLES_GRID_MISSION_0";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP";
-          data = "scenario"
+          data = "scenario";
         };
       };
     };
@@ -73,20 +73,20 @@ class ENH_ExportGUIDefines
         {
           text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP";
-          data = "classic"
+          data = "classic";
           default = 1;
         };
         class Eden
         {
           text = "$STR_A3_CFGMODS_APEX_FEATURE_EDEN_NAME";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP";
-          data = "3DEN"
+          data = "3DEN";
         };
         class All
         {
           text = "$STR_GEAR_ALL";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP";
-          data = ""
+          data = "";
         };
       };
     };
