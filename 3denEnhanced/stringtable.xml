@@ -3508,6 +3508,14 @@
     <French>Montrer les icônes des unités</French>
     <Polish>Rysuj ikony jednostek</Polish>
   </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
+    <English>Log active Scripts</English>
+    <German>Aktive Skripte loggen</German>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
+    <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
+    <German>Alle aktiven Skripte und Missions-Event-Handler werden in die .rpt Datei geschrieben.</German>
+  </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
     <English>Draws information of nearby units and vehicles.</English>
     <Italian>Mostra informazioni sulle unità e veicoli nelle vicinanze.</Italian>
