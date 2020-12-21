@@ -24,7 +24,7 @@ if (_displayOrControl isEqualType controlNull) then
 
 private _ctrlLnB = _displayOrControl displayCtrl IDC_3DENCAMPOS_LIST;
 lbClear _ctrlLnB;
-_ctrlLnB lnbSetColumnsPos [0,0.1,0.75,0.9];
+_ctrlLnB lnbSetColumnsPos [0,0.1,0.72,0.87];
 {
   _x params ["_world","_cam3DENPosition","","","_description",["_systemTime",[2020,01,01,00,00]]];
 

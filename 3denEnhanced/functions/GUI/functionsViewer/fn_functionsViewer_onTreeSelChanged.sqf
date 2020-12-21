@@ -39,7 +39,7 @@ _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer
   case 2: {preprocessFileLineNumbers _filePath};
 });
 
-_ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;
+_ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;//Tooltip is not correct, A3 bug
 _ctrlBiki ctrlEnable (_fileName select [0,3] in ["BIS","BIN"]);
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));

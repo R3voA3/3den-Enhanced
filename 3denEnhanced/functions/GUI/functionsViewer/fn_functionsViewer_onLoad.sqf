@@ -45,10 +45,21 @@ _display displayAddEventHandler ["keyDown",//Focus Search Key
   }
 }];
 
-//Set filters to last used or default value
+//Set filters to last used or default value. Will also trigger fillCtrlTv function
 CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
 CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
 CTRL(IDC_FUNCTIONSVIEWER_LOADMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex",0]);
 
+if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
+{
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
+}
+else
+{
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable true;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable true;
+};
+
 //Set up tree view
-CTRL(IDC_FUNCTIONSVIEWER_LIST) call ENH_fnc_FunctionsViewer_fillCtrlTV;
+//CTRL(IDC_FUNCTIONSVIEWER_LIST) call ENH_fnc_FunctionsViewer_fillCtrlTV;

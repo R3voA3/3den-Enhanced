@@ -138,9 +138,12 @@ class ENH_FunctionsViewer
       h = CTRL_DEFAULT_H;
       onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
-    class Expand: Collapse
+    class Expand: ctrlButtonExpandAll
     {
       x = safezoneX + 66 * GRID_W;
+      y = safezoneY + safezoneH - 6 * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
       onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class TogglePanelLeft: ctrlButton
@@ -203,6 +206,7 @@ class ENH_FunctionsViewer
       tooltip = "";
       x = safezoneX + safezoneW - 41 * GRID_W;
       y = safezoneY + 12 * GRID_H;
+      onButtonClick = "";
     };
     class SearchCode: ctrlEdit
     {

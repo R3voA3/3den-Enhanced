@@ -34,17 +34,6 @@ CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0;
 CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
 CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlSetText "";
 
-if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
-{
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
-}
-else
-{
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable true;
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable true;
-};
-
 profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex",_configIndex];
 profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex",_modeIndex];
 profileNamespace setVariable ["ENH_FunctionsViewer_LoadFileIndex",lbCurSel CTRL(2200)];
