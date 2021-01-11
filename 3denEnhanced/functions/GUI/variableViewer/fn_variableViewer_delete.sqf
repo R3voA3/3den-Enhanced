@@ -39,14 +39,12 @@ if (ENH_VariableViewer_Modify_Confirmed) then
   {
     private _LNBData = _ctrlLNB lnbText [_x,0];
     _namespace setVariable [_LNBData,nil];
+    _ctrlLNB lbSetSelected [_x,false];
     _ctrlLNB lnbDeleteRow _x;
   } forEach _selectedRows;
 
   //Reduce variable count by one
   CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1",lnbSize _ctrlLNB select 0];
-
-  //Deselect everything
-  _ctrlLNB lnbSetCurSelRow -1;
 };
 
 ENH_VariableViewer_Modify_Confirmed = nil;
