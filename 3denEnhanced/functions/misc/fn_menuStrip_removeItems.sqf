@@ -10,13 +10,18 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-#include "\userconfig\3denEnhanced_Optionals_MenuStrip.hpp"
+#include "\3denEnhanced\defineCommon.hpp"
 
-private _ctrlMenuStrip = findDisplay 313 displayCtrl 120;
-private _toDelete = _menuStripBlacklist apply {localize _x};
+disableSerialization;
+
+private _ctrlMenuStrip = findDisplay IDD_3DEN displayCtrl 120;
+private _toDelete = profileNamespace getVariable ["ENH_MenuStrip_Blacklist",[]];
+if (_toDelete isEqualTo []) exitWith {};
+
+private _toDelete = _toDelete apply {_x call BIS_fnc_localize};
 
 private _fnc_delete =
 {
@@ -38,5 +43,3 @@ for "_i" from (_ctrlMenuStrip menuSize []) to 0 step -1 do
   };
   [_i] call _fnc_delete;
 };
-
-true

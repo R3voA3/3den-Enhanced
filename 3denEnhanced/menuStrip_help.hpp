@@ -64,7 +64,7 @@ class ENH_Help_MissionPresentation: ENH_Help_GetExtensions
 };
 class ENH_Help_DescriptionExt: ENH_Help_GetExtensions
 {
-  text = "Description.ext";
+  text = "$STR_ENH_HELP_DESCRIPTIONEXT";
   weblink = "https://community.bistudio.com/wiki/Description.ext";
 };
 class ENH_Help_CodeOptimisation: ENH_Help_GetExtensions

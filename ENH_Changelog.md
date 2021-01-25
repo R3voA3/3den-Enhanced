@@ -1,3 +1,100 @@
+v5.7
+*added*
+- Added editor setting Dynamic View Distance. It removes the need to change view distance inside the editor by changing view distance depending on camera height
+- Briefing attribute
+- Added option to log var names of entities to clipboard
+- Added some separators to the context menu
+- Added another separator to the menu strip -> tools -> utilities folder
+- Added More icons for the hold action attribute
+
+*changed*
+- Batch Rename tool can now also rename markers
+- Credits were moved to the 3den Enhanced Wiki
+- FAQ was moved to the 3den Enhanced Wiki
+- Column positions in 3DEN Camera Pos GUI were tweaked
+
+- Various translation improvements
+- It's now possible to search in the CfgSentences Browser if filter is set to "ALL"
+- Documentation on GitHub has been updated
+- Some internal functions have been hidden
+- Fixed rpt spam caused by RscTestControlTypes and RscTestControlStyles (BI fix please? ;)  )
+- Toggle DLC Icons runs now much faster and will not cause lag anymore
+- Improved the way of exporting GUI base classes
+- New logoSmall, logo and logoOver
+- All log functions were merged into one function
+- Fixed that Display3DENCopy would not have the correct height when using Log Object's Info function
+
+- Attributes
+  - Debug Path attribute is now part of debug options in Editor preferences
+  - Merged onButtonDown code of attribute controls into onAttributeLoad functions
+  - Added support to most attributes for localized text
+  - Added missing tooltips for side toolbox controls
+  - Feature Type and Terrain detail attribute controls were simplyfied
+  - Task Patrol attribute uses an edit box now again to give the scenario editor more freedom
+  - AI Features and AI Skill as well as Allow Fleeing attributes were merged into category AI
+  - Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
+  - Editable Objects (Zeus) would have an incorrect property name which would conflict with Dynamic Group attribute
+  - Implementation for Debug Options in Eden Editor was changed
+  - Fixed a bug which would cause the "Disable and Reset" button for the group marker attribute not to work
+  - Size of Hold Action description has been slightly reduced
+  - Map Indicator settings are now in the Misc category
+  - All attributes now have "scriptName" defined for debugging
+  - Added a Debug Tool to log all active scripts and mission EHs to .rpt
+  - Text for Map Indicator attribute was improved
+  - Visual appearance of many attributes were improved
+
+- Inventory Manager
+  - Fixed .rpt spam caused by Inventory Manager
+  - Fixed ACE items would not be properly sorted in the Inventory Manager (Thanks to [KP] veteran29)
+  - Fixed DLC icons would be incorrect if certain mods are loaded
+  - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
+  - Mines category was renamed to Explosives in Inventory Manager
+  - Added localisation for Inventory Manager
+
+- Texture Finder
+  - Texture Finder is now faster. From 137 s down to 85 s to load all textures (Thanks to ConnorAU)
+  - Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
+  - Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
+  - Texture Finder will now store textures in uiNamespace. That way it only has to search once
+  - Progress text is now better formatted
+  - Texture finder now uses a CT_TREE with engine search
+  - CTRL + F now focuses the search edit
+
+- Functions Viewer
+  - Functions Viewer is now the default functions viewer in the Debug Console (Will not overwrite button if Connor's Functions Viewer is loaded)
+  - Functions Viewer can now view .inc and .hpp files as well as scripts used in missions and GUIs
+  - Function list in Functions Viewer can now also be searched if functions are displayed as list
+  - Behaviour of the "View on Biki" button in the Functions Viewer was improved
+  - Functions counter in Functions Viewer works properly now also for campaign config and mission config
+  - Open on Biki button in Functions Viewer is now actually a button instead of active text
+  - Fixed a bug which would cause tree view control to be updated twice
+  - It is now possible to toggle the left panel to increase space for code
+  - Updated and added shortcuts
+  - Last viewed file is now stored in profileNamespace. Restoring last viewed file is now reliable
+  - Removed root entry (configFile, missionConfigFile and campaignConfigFile) from tree view
+  - Mod icons are back due to recent optimisations
+  - Fixed an issue with functions not being displayed if path definition was defined a bit differently (╯°□°）╯︵ ┻━┻)
+  - Functions TAG is not always upper case
+
+- 3DEN Radio
+  - GUI was reworked
+  - Search is now much faster
+  - It is now possible to sort list by mods
+  - List now also shows mod names
+  - Added a timeline to the GUI
+  - Some variables were moved from profileNamespace to uiNamespace
+  - Help tooltip is now properly displayed
+  - Music will now fade in slowly
+
+- Variable Viewer
+  - Columns of Variable Viewer can now be sorted
+  - Loading the list is now four times faster
+  - Fixed rpt 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
+
+*removed*
+- Credits GUI and all related functions
+- Unused functions and config entries
+
 v5.6
 *added*
 - Vehicle Inventory Manager
@@ -389,7 +486,7 @@ v3.7
 
 v3.6
 *added*
-- added new functions ENH_fnc_all3DENSelected
+- added new function ENH_fnc_all3DENSelected
 - a control to the statusbar which shows number of selected entities
 - a tool to export and import mission attributes
 - an airdrop mission attribute

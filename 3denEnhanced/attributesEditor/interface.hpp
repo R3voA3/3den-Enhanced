@@ -34,5 +34,14 @@ class ENH_Interface
       expression = "'init' call ENH_fnc_statusbar_entityCounter";
       defaultValue = "true";
     };
+    class ENH_MenuStrip_Blacklist: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_MENUSTRIPENTRIES";
+      tooltip = "$STR_ENH_MENUSTRIPENTRIES_TOOLTIP";
+      property = "ENH_MenuStrip_Blacklist";
+      control = "ENH_MenuStripBlacklist";
+      expression = "true";
+      defaultValue = "true";
+    };
   };
 };

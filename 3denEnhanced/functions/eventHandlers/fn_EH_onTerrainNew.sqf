@@ -42,3 +42,6 @@ call ENH_fnc_initAmbientAnimationsInEditor;
 
 //Add custom menu strip entries
 call ENH_fnc_addCustomMenuStripEntries;
+
+//Remove unwanted menu strip entries
+call ENH_fnc_removeItemsFromMenu;

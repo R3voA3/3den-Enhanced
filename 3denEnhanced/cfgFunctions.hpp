@@ -208,6 +208,7 @@ class CfgFunctions
       class hasStorage;
       class dynamicViewDistance;
       class addCustomMenuStripEntries;
+      class menuStrip_removeItems;
     };
     class Log
     {
@@ -263,6 +264,7 @@ class CfgFunctions
       class SPR_onAttributeLoad;
       class SPR_onAttributeSave;
       class initDebriefingCombo;
+      class menuStripBlacklist_onAttributeLoad;
     };
   };
 };

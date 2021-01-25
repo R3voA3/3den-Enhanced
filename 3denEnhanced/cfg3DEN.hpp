@@ -54,6 +54,7 @@ class Cfg3DEN
     #include "controls\missionEndingCasualties.hpp"
     #include "controls\SPR.hpp"
     #include "controls\subCategoryNoHeader_Fixed.hpp"
+    #include "controls\menuStripBlacklist.hpp"
   };
   class Mission
   {

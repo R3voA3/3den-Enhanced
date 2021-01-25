@@ -4199,6 +4199,18 @@
     <English>Commands by Functionality</English>
     <German>Kommandos nach Funktionalität</German>
   </Key>
+  <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
+    <English>Description.ext</English>
+    <German>Description.ext</German>
+  </Key>
+  <Key ID="STR_ENH_MENUSTRIPENTRIES">
+    <English>Menu Strip Entries</English>
+    <German>Menüleisten-Einträge</German>
+  </Key>
+  <Key ID="STR_ENH_MENUSTRIPENTRIES_TOOLTIP">
+    <English>Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.\nChanges require a restart of Eden Editor to take effect!</English>
+    <German>Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.\nDamit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!</German>
+  </Key>
   <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
     <English>Guide: Mission &amp; Campaign making</English>
     <Italian>Guida: Missioni e Campagna</Italian>

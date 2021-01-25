@@ -1,13 +1,6 @@
 class Cfg3DEN
 {
-  class EventHandlers
-  {
-    class ENH_Optionals
-    {
-      onTerrainNew = "call ENHO_fnc_removeItemsFromMenu";
-    };
-  };
-   class Mission
+  class Mission
   {
     class Preferences
     {
