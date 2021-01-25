@@ -86,13 +86,8 @@ private _addPath =
 
 private _searchArray =
 {
-  if (_x isEqualType "") then {_x call _addPath} else
-  {
-    if (_x isEqualType []) then
-    {
-      _searchArray forEach _x;
-    };
-  };
+  if (_x isEqualType "") exitWith {_x call _addPath};
+  if (_x isEqualType []) exitWith {_searchArray forEach _x};
 };
 
 {
@@ -103,7 +98,7 @@ private _searchArray =
       _searchArray forEach getArray _x;
     };
   } forEach configProperties [_x, "isText _x || isArray _x",false];
-} forEach ([13] call _fnc_searchConfig);
+} forEach ([15] call _fnc_searchConfig);
 
 uiNamespace setVariable ["ENH_TextureFinder_TexturesFound",ENH_TextureFinder_TexturesFound];
 uiNamespace setVariable ["ENH_TextureFinder_ClassesFound",ENH_TextureFinder_ClassesFound];
