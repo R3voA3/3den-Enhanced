@@ -11,7 +11,7 @@
   1: NUMBER - Selected Index
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -27,7 +27,7 @@ private _filteredItems = [];
 //Collect all items which fit the filter
 {
   _x params ["_configName","_displayName","_picture","_addonClass","","_addonIcon","_category","_specificType"];
-  if ((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) then
+  if (((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) && _configName != "Zasleh2") then
   {
     _filteredItems pushBack [_configName,_displayName,_picture,_addonClass,_addonIcon];
   };
@@ -41,5 +41,3 @@ CTRL(IDC_IM_SEARCH) call ENH_fnc_IM_search;
 
 //Scroll all the way to the top to prevent items not being displayed because it was scrolled down too far
 CTRL(IDC_IM_AVAILABLEITEMSLIST) ctrlSetScrollValues [0,0];
-
-true
