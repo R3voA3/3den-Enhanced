@@ -35,6 +35,8 @@ private _showTemplate = isNil "ENH_IM_ShowTemplates";
 
 if (!ENH_IM_templatesVisible) then
 {
+  CTRL(IDC_IM_FILTER) ctrlSetFade 0.5; //No colorDisabled for CT_TOOLBOX so we use ctrlSetFade
+  CTRL(IDC_IM_FILTER) ctrlCommit 0;
   _ctrlButton ctrlSetText localize "STR_ENH_IM_HIDETEMPLATES";
   CTRL(IDC_IM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_IM_TEMPLATES";
   _display call ENH_fnc_IM_updateTemplateList;
@@ -42,6 +44,8 @@ if (!ENH_IM_templatesVisible) then
 }
 else
 {
+  CTRL(IDC_IM_FILTER) ctrlSetFade 0;
+  CTRL(IDC_IM_FILTER) ctrlCommit 0;
   _ctrlButton ctrlSetText localize "STR_ENH_IM_SHOWTEMPLATES";
   CTRL(IDC_IM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_IM_AVAILABLEITEMS";
   [CTRL(IDC_IM_FILTER),lbCurSel CTRL(IDC_IM_FILTER)] call ENH_fnc_IM_filterList;
