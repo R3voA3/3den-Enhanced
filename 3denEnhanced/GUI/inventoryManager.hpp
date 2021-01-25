@@ -94,7 +94,6 @@ class ENH_InventoryManager
       w = DIALOG_W * GRID_W  / 2 - 7 * GRID_W;
       h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
       colorBackground[] = {1,0,0,0};
-      onLBDblClick = "_this call ENH_fnc_IM_previewItem";
     };
     class InventoryItemsList: ctrlListNBox
     {
@@ -104,7 +103,6 @@ class ENH_InventoryManager
       w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
       h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
       columns[] = {0,0.08,0.8,0.88};
-      onLBDblClick = "_this call ENH_fnc_IM_previewItem";
     };
     class AddOne: ctrlButton
     {
@@ -256,48 +254,6 @@ class ENH_InventoryManager
       x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 32 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-  };
-};
-
-class ENH_IM_ItemPreview
-{
-  idd = IDD_IM_ITEMPREVIEW;
-  class ControlsBackground
-  {
-    DISABLE_BACKGROUND
-    class Background: ctrlStaticBackground
-    {
-      x = CENTERED_X(60);
-      y = DIALOG_TOP + 50 * GRID_H + CTRL_DEFAULT_H;
-      w = 60 * GRID_W;
-      h = 60 * GRID_H;
-    };
-  };
-  class Controls
-  {
-    class Header: ctrlStaticTitle
-    {
-      idc = IDC_IM_ITEMPREVIEW_HEADER;
-      x = CENTERED_X(60);
-      y = DIALOG_TOP + 50 * GRID_H;
-      w = 60 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class Image: ctrlStaticPictureKeepAspect
-    {
-      idc = IDC_IM_ITEMPREVIEW_IMAGE;
-      x = CENTERED_X(60);
-      y = DIALOG_TOP + 50 * GRID_H + CTRL_DEFAULT_H;
-      w = 60 * GRID_W;
-      h = 60 * GRID_H;
-    };
-    class Close: ctrlButtonClose
-    {
-      x = CENTERED_X(60) + 35 * GRID_W;
-      y = DIALOG_TOP + 110 * GRID_H + CTRL_DEFAULT_H;
-      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };

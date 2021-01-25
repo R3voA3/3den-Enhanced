@@ -10,7 +10,7 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -34,8 +34,8 @@ private _fnc_addItems =
     {
       if (_x # 0 isEqualTo _currentClass) exitWith
       {
-        _x params ["_configName","_displayName","_image","_addonIcon"];
-        ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName + "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"]) call ENH_fnc_IM_lnbAdd;
+        _x params ["_configName","_displayName","_image","","","_addonIcon"];
+        ([_ctrlInventory,_configName,_displayName,_image,_addonIcon,_amount,_configName]) call ENH_fnc_IM_lnbAdd;
       };
     } forEach (uiNamespace getVariable "ENH_IM_allItems");
   } forEach _configNamesArray;
@@ -50,5 +50,3 @@ _backpacks call _fnc_addItems;
 
 [CTRL(IDC_IM_VIRTUAL),_isVirtual] call ENH_fnc_IM_toggleVirtual;
 CTRL(IDC_IM_VIRTUAL) cbSetChecked _isVirtual;
-
-true

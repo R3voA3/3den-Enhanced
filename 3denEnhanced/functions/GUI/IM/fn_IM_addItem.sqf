@@ -10,7 +10,7 @@
   0: NUMBER - Amount of items to be added
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -21,7 +21,7 @@ private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
 private _row = lbCurSel CTRL(IDC_IM_AVAILABLEITEMSLIST);
 
-if (_row isEqualTo -1) exitWith {false};
+if (_row isEqualTo -1) exitWith {};
 
 private _rows = lnbSize _ctrlInventory select 0;
 private _displayName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbText _row;
@@ -30,7 +30,7 @@ private _allItems = uiNamespace getVariable "ENH_IM_allItems";
 
 private _index = _allItems findIf {_x select 0 isEqualTo _configName};
 private _itemData = _allItems select _index;
-_itemData params ["_configName","_displayName","_image","_addonIcon"];
+_itemData params ["_configName","_displayName","_image","","","_addonIcon"];
 
 private _itemAdded = false;
 
@@ -55,5 +55,3 @@ if !(_itemAdded) then//If item was not found in the list, add it
   _ctrlInventory,
   uiNamespace getVariable ["ENH_IM_IsVirtual",false]
 ] call ENH_fnc_IM_toggleVirtual;
-
-true
