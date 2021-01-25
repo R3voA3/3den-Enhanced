@@ -1,29 +1,36 @@
+/* #if __HAS_INCLUDE("\userconfig\3den_Enhanced_Config.hpp") //Check if file exists
+  #include "\userconfig\3den_Enhanced_Config.hpp"
+#endif */
+
+//Defines
 #include "defineCommon.hpp"
 #include "defineCtrls.hpp"
+
+//Configs
 #include "cfgPatches.hpp"
+#include "display3DEN.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
-#include "display3DEN.hpp"
 
 //Custom GUIs
-#include "GUI\briefingEditor.hpp"
+#include "GUI\3DENCameraPositions.hpp"
 #include "GUI\3DENRadio.hpp"
-#include "GUI\nameObjects.hpp"
-#include "GUI\moduleInformation.hpp"
-#include "GUI\textureFinder.hpp"
-#include "GUI\batchReplace.hpp"
-#include "GUI\functionsViewer.hpp"
+#include "GUI\CfgSentencesBrowser.hpp"
+#include "GUI\ExportGUIDefines.hpp"
+#include "GUI\RscTestControlXXX.hpp"
 #include "GUI\actionCreator.hpp"
+#include "GUI\batchReplace.hpp"
+#include "GUI\briefingEditor.hpp"
+#include "GUI\extraction.hpp"
+#include "GUI\functionsViewer.hpp"
+#include "GUI\garrison.hpp"
+#include "GUI\inventoryManager.hpp"
+#include "GUI\moduleInformation.hpp"
+#include "GUI\nameObjects.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\scenarioAttributesManager.hpp"
-#include "GUI\garrison.hpp"
-#include "GUI\extraction.hpp"
-#include "GUI\3DENCameraPositions.hpp"
+#include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
-#include "GUI\inventoryManager.hpp"
-#include "GUI\CfgSentencesBrowser.hpp"
-#include "GUI\RscTestControlXXX.hpp"
-#include "GUI\ExportGUIDefines.hpp"
 
 class RscControlsGroupNoScrollbars;
 class RscDebugConsole: RscControlsGroupNoScrollbars

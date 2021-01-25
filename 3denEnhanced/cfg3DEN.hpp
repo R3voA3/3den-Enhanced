@@ -41,19 +41,19 @@ class Cfg3DEN
         class Title;
       };
     };
-    #include "controls\timeMultiplier.hpp"
-    #include "controls\ambientAnimations.hpp"
-    #include "controls\introText.hpp"
-    #include "controls\establishingShot.hpp"
-    #include "controls\mapIndicators.hpp"
-    #include "controls\groupMarker.hpp"
-    #include "controls\airdrop.hpp"
-    #include "controls\ambientFlyby.hpp"
-    #include "controls\holdAction.hpp"
-    #include "controls\missionEndingCasualties.hpp"
     #include "controls\SPR.hpp"
-    #include "controls\subCategoryNoHeader_Fixed.hpp"
+    #include "controls\airdrop.hpp"
+    #include "controls\ambientAnimations.hpp"
+    #include "controls\ambientFlyby.hpp"
+    #include "controls\establishingShot.hpp"
+    #include "controls\groupMarker.hpp"
+    #include "controls\holdAction.hpp"
+    #include "controls\introText.hpp"
+    #include "controls\mapIndicators.hpp"
     #include "controls\menuStripBlacklist.hpp"
+    #include "controls\missionEndingCasualties.hpp"
+    #include "controls\subCategoryNoHeader_Fixed.hpp"
+    #include "controls\timeMultiplier.hpp"
   };
   class Mission
   {
@@ -107,7 +107,6 @@ class Cfg3DEN
       class AttributeCategories
       {
         #include "attributesMission\dynamicGroups.hpp"
-        //#include "attributesMission\dynamicSkill.hpp"
         class Respawn
         {
           class Attributes
