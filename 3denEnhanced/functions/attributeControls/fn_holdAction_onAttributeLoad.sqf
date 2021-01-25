@@ -15,6 +15,7 @@
 */
 
 #define DEFAULT_ICONS [\
+  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa",\
   "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_loadVehicle_ca.paa",\
   "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_unloadVehicle_ca.paa",\
   "\a3\missions_f_oldman\data\img\holdactions\holdAction_box_ca.paa",\
@@ -28,7 +29,6 @@
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_passleadership_ca.paa",\
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_requestleadership_ca.paa",\
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_reviveMedic_ca.paa",\
-  "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa",\
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",\
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",\
   "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",\
