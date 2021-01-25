@@ -4,14 +4,16 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_InventoryManager GUI. Create a template.
+  Used by the ENH_InventoryManager GUI. Creates a template.
 
   Parameter(s):
   0: CONTROL - Control Button
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
 params ["_ctrlButton"];
@@ -22,7 +24,7 @@ private _value = [true] call ENH_fnc_IM_applyAttribute;
 
 private _displayChild = ctrlParent _ctrlButton;
 private _templateTitle = ctrlText (_displayChild displayCtrl IDC_IM_TEMPLATEDATA_TITLE);
-private _templateDescription = ctrlText (_displayChild displayCtrl IDD_IM_TEMPLATEDATA_DESCRIPTION);
+private _templateDescription = ctrlText (_displayChild displayCtrl IDC_IM_TEMPLATEDATA_DESCRIPTION);
 
 if !(_templateTitle isEqualTo "") then
 {
@@ -31,5 +33,3 @@ if !(_templateTitle isEqualTo "") then
   _displayChild closeDisplay 1;
   call ENH_fnc_IM_updateTemplateList;
 };
-
-true

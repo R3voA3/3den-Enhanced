@@ -308,7 +308,7 @@ class ENH_IM_TemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = IDD_IM_TEMPLATEDATA_DESCRIPTION;
+      idc = IDC_IM_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 74 * GRID_H;
       w = 58 * GRID_W;
