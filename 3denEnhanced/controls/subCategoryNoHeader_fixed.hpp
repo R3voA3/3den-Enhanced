@@ -37,7 +37,7 @@ class ENH_SubCategoryNoHeader1_Fixed: SubCategoryNoHeader1
         {
           idc = 102;
           x = (5 * pixelW) + (2 * pixelW);
-          w = (  ATTRIBUTE_TITLE_W +   ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
+          w = (  ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
           h = CTRL_H(1);
           colorBackground[] = {1,1,1,0.05};
           shadow = 0;
@@ -89,7 +89,7 @@ class ENH_SubCategoryNoHeader2_Fixed: ENH_SubCategoryNoHeader1_Fixed
         {
           idc = 102;
           x = (5 * pixelW) + (2 * pixelW);
-          w = (  ATTRIBUTE_TITLE_W +   ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
+          w = (  ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
           h = CTRL_H(2);
           colorBackground[] = {1,1,1,0.05};
           shadow = 0;
@@ -141,7 +141,7 @@ class ENH_SubCategoryNoHeader3_Fixed: ENH_SubCategoryNoHeader1_Fixed
         {
           idc = 102;
           x = (5 * pixelW) + (2 * pixelW);
-          w = (  ATTRIBUTE_TITLE_W +   ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
+          w = (  ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - (5 * pixelW) - (2 * pixelW);
           h = CTRL_H(3);
           colorBackground[] = {1,1,1,0.05};
           shadow = 0;
