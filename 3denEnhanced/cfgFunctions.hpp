@@ -247,8 +247,6 @@ class CfgFunctions
       class ambientAnimations_onAttributeSave;
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
-      class dynamicSkill_onAttributeLoad;
-      class dynamicSkill_onAttributeSave;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
       class groupMarker_onAttributeLoad;

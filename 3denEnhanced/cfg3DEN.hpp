@@ -49,7 +49,6 @@ class Cfg3DEN
     #include "controls\groupMarker.hpp"
     #include "controls\airdrop.hpp"
     #include "controls\ambientFlyby.hpp"
-    #include "controls\dynamicSkill.hpp"
     #include "controls\holdAction.hpp"
     #include "controls\missionEndingCasualties.hpp"
     #include "controls\SPR.hpp"
