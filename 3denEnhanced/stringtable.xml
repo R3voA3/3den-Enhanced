@@ -5635,7 +5635,7 @@
     <German>Dynamische Sichtweite anschalten</German>
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
-    <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems</English>
+    <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
     <German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">

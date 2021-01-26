@@ -5,7 +5,7 @@ class ENH_SPR_Tickets
   property = "ENH_SPR_Tickets";
   control = "EditShort";
   expression = "if (!is3DEN && !isMultiplayer) then {_this setVariable ['%s', _value]}";
+  condition = "objectBrain";
   typeName = "NUMBER";
   defaultValue = "0";
-  condition = "objectBrain";
 };

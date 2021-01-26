@@ -13,7 +13,6 @@ class ENH_UnitTraits
     expression = "_this setUnitTrait ['Medic', _value]";
     condition = "objectBrain";
     defaultValue = "_this getUnitTrait 'Medic'";
-    typeName = "BOOL";
   };
   class ENH_Engineer: ENH_Medic
   {
@@ -47,7 +46,6 @@ class ENH_UnitTraits
     control = "SliderCameraSpeedMult";
     expression = "_this setUnitTrait ['CamouflageCoef', _value]";
     defaultValue = "1";
-    typeName = "NUMBER";
   };
   class ENH_AudibleCoef: ENH_Camouflage
   {
