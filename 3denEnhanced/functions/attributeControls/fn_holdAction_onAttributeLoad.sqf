@@ -48,7 +48,7 @@
   "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\repair_ca.paa"\
 ]
 
-params ["_ctrlGroup","_value"];
+params ["_ctrlGroup", "_value"];
 
 _value params
 [
@@ -74,7 +74,7 @@ _value params
 _ctrlIconIdle = _ctrlGroup controlsGroupCtrl 101;
 {
   _ctrlIconIdle lbAdd _x;
-  _ctrlIconIdle lbSetPicture [_forEachIndex,_x];
+  _ctrlIconIdle lbSetPicture [_forEachIndex, _x];
   if (_x isEqualTo _iconIdle) then
   {
     _ctrlIconIdle lbSetCurSel _forEachIndex;
@@ -84,7 +84,7 @@ _ctrlIconIdle = _ctrlGroup controlsGroupCtrl 101;
 _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 {
   _ctrlIconProgress lbAdd _x;
-  _ctrlIconProgress lbSetPicture [_forEachIndex,_x];
+  _ctrlIconProgress lbSetPicture [_forEachIndex, _x];
   if (_x isEqualTo _iconProgress) then
   {
     _ctrlIconProgress lbSetCurSel _forEachIndex;
@@ -98,11 +98,11 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 (_ctrlGroup controlsGroupCtrl 107) ctrlSetText _codeCompletion;
 (_ctrlGroup controlsGroupCtrl 108) ctrlSetText _codeInterrupt;
 
-[_ctrlGroup controlsGroupCtrl 109,_ctrlGroup controlsGroupCtrl 110,"s"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 109,_ctrlGroup controlsGroupCtrl 110,"s",_duration] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s", _duration] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 111,_ctrlGroup controlsGroupCtrl 112,""] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 111,_ctrlGroup controlsGroupCtrl 112,"",_priority] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, ""] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "", _priority] call BIS_fnc_initSliderValue;
 
 (_ctrlGroup controlsGroupCtrl 113) cbSetChecked _showUnconscious;
 (_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
@@ -121,8 +121,8 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
   (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "";
   (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "";
   (_ctrlGroup controlsGroupCtrl 108) ctrlSetText "";
-  [_ctrlGroup controlsGroupCtrl 109,_ctrlGroup controlsGroupCtrl 110,"s",10] call BIS_fnc_initSliderValue;
-  [_ctrlGroup controlsGroupCtrl 111,_ctrlGroup controlsGroupCtrl 112,"",1000] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s", 10] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "", 1000] call BIS_fnc_initSliderValue;
   (_ctrlGroup controlsGroupCtrl 113) cbSetChecked false;
   (_ctrlGroup controlsGroupCtrl 114) cbSetChecked true;
   (_ctrlGroup controlsGroupCtrl 115) lbSetCurSel 0;

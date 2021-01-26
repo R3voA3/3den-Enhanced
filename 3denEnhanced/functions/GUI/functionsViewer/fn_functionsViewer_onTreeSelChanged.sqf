@@ -27,7 +27,7 @@ private _linesText = "";
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
-_data params ["_fileName","_filePath"];//Filename is also Function name
+_data params ["_fileName", "_filePath"];//Filename is also Function name
 
 CTRL(IDC_FUNCTIONSVIEWER_NAME) ctrlSetText _fileName;
 CTRL(IDC_FUNCTIONSVIEWER_PATH) ctrlSetText _filePath;
@@ -40,7 +40,7 @@ _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer
 });
 
 _ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;//Tooltip is not correct, A3 bug
-_ctrlBiki ctrlEnable (_fileName select [0,3] in ["BIS","BIN"]);
+_ctrlBiki ctrlEnable (_fileName select [0, 3] in ["BIS", "BIN"]);
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
 private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
@@ -48,7 +48,7 @@ private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
 {
-  _linesText = _linesText + format ["%1<br/>",_i];
+  _linesText = _linesText + format ["%1<br/>", _i];
 };
 
 //When new function is selected, change scroll width and height dynamically
@@ -59,4 +59,4 @@ _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
-profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_filePath];
+profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed", _filePath];

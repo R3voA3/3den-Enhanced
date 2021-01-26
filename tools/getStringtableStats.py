@@ -19,7 +19,7 @@ import sys
 
 #Open file dialog and get stringtable.xml
 root = Tk()
-root.filename = filedialog.askopenfilename(initialdir = "C:/",title = "Select file",filetypes = (("xml files","*.xml"),("all files","*.*")))
+root.filename = filedialog.askopenfilename(initialdir = "C:/", title = "Select file", filetypes = (("xml files", "*.xml"), ("all files", "*.*")))
 if (root.filename == ""):
   #sys.exit("No file selected. Script terminated!")
   quit("No file selected. Script terminated!")
@@ -45,10 +45,10 @@ for elem in root:
 
 
 #Time to format everything into a markdown table
-directory = filedialog.askdirectory (initialdir = "C:/",title = "Select a directory")
+directory = filedialog.askdirectory (initialdir = "C:/", title = "Select a directory")
 
 #Create file on desktop to store the output in
-file = open(directory + "/translationProgress.txt","w+")
+file = open(directory + "/translationProgress.txt", "w+")
 
 #Print headline
 file.write("# Translation Progress\n")

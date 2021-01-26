@@ -19,5 +19,5 @@ params ["_ctrlGroup"];
   sliderPosition (_ctrlGroup controlsGroupCtrl 100),
   (_ctrlGroup controlsGroupCtrl 102) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 102),
   cbChecked (_ctrlGroup controlsGroupCtrl 103),
-  [west,east,independent,civilian] select lbCurSel (_ctrlGroup controlsGroupCtrl 104)
+  [west, east, independent, civilian] select lbCurSel (_ctrlGroup controlsGroupCtrl 104)
 ]

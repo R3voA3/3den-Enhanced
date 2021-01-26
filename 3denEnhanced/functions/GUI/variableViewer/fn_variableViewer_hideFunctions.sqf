@@ -15,8 +15,8 @@
 */
 
 disableSerialization;
-params ["_ctrlCheckbox","_state"];
+params ["_ctrlCheckbox", "_state"];
 
-profileNamespace setVariable ["ENH_VariableViewer_HideFunctions",[false,true] select _state];
+profileNamespace setVariable ["ENH_VariableViewer_HideFunctions", [false, true] select _state];
 
 ctrlParent _ctrlCheckbox call ENH_fnc_variableViewer_fillLNB;

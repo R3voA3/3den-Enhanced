@@ -13,7 +13,7 @@
 
 #include "\3denEnhanced\defineCommon.hpp"
 
-params [["_mode","run"]];
+params [["_mode", "run"]];
 
 disableSerialization;
 
@@ -33,15 +33,15 @@ switch (_mode) do
   {
     if !(_enabled) exitWith {false};
     {
-      _x params ["_idc","_type"];
+      _x params ["_idc", "_type"];
       (_display displayCtrl _idc) ctrlSetText (str count get3DENSelected _type);
     } forEach [
-      [IDC_STATUSBAR_NUMMARKERS,"Marker"],
-      [IDC_STATUSBAR_NUMSYSTEMS,"Logic"],
-      [IDC_STATUSBAR_NUMWAYPOINTS,"Waypoint"],
-      [IDC_STATUSBAR_NUMTRIGGERS,"Trigger"],
-      [IDC_STATUSBAR_NUMGROUPS,"Group"],
-      [IDC_STATUSBAR_NUMOBJECTS,"Object"]
+      [IDC_STATUSBAR_NUMMARKERS, "Marker"],
+      [IDC_STATUSBAR_NUMSYSTEMS, "Logic"],
+      [IDC_STATUSBAR_NUMWAYPOINTS, "Waypoint"],
+      [IDC_STATUSBAR_NUMTRIGGERS, "Trigger"],
+      [IDC_STATUSBAR_NUMGROUPS, "Group"],
+      [IDC_STATUSBAR_NUMOBJECTS, "Object"]
     ];
   };
 };

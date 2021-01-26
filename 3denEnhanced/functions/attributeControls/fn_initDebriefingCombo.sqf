@@ -14,7 +14,7 @@
   -
 */
 
-params ["_ctrlCombo","_debriefing"];
+params ["_ctrlCombo", "_debriefing"];
 
 {
   private _title = getText (_x >> "title");
@@ -26,7 +26,7 @@ params ["_ctrlCombo","_debriefing"];
   _ctrlCombo lbSetTooltip
   [
     _forEachIndex,
-     format ["Title: %1\nSubtitle: %2\nDescription: %3",_title,_subtitle,_description]
+     format ["Title: %1\nSubtitle: %2\nDescription: %3", _title, _subtitle, _description]
   ];
   if (_configName isEqualTo _debriefing) then
   {

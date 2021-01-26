@@ -21,7 +21,7 @@ private _logicType = typeOf ((get3DENSelected "Logic") # 0);
 
 private _fnc_getValue =
 {
-  private _cfgEntry = param [0,"",[""]];
+  private _cfgEntry = param [0, "", [""]];
   (configFile >> "CfgVehicles" >> _logicType >> "ModuleDescription" >> _cfgEntry) call BIS_fnc_getCfgData;
 };
 

@@ -15,15 +15,15 @@
 
 disableSerialization;
 private _display = findDisplay IDD_NAMEOBJECTS;
-private _input   = param [0,"UNNAME",[""]];
-private _toName = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
+private _input   = param [0, "UNNAME", [""]];
+private _toName = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DENSelected;
 
 if (_input == "UNNAME") then
 {
   collect3DENHistory
   {
     {
-      _x set3DENAttribute ["Name",""];
+      _x set3DENAttribute ["Name", ""];
     } forEach _toName;
   };
 }
@@ -31,14 +31,14 @@ else
 {
   private _varName  = ctrlText CTRL(IDC_NAMEOBJECTS_VARIABLENAME);
   private _index = parseNumber ctrlText CTRL(IDC_NAMEOBJECTS_INDEXSTART);
-  profileNamespace setVariable ["ENH_NameObjects_LastVarName",_varName];
+  profileNamespace setVariable ["ENH_NameObjects_LastVarName", _varName];
   _varName = _varName + "_";
 
   collect3DENHistory
   {
     {  //Set name attribute for object. For marker set markerName attribute
-      _x set3DENAttribute ["Name",_varName + (str _index)];
-      _x set3DENAttribute ["markerName",_varName + (str _index)];
+      _x set3DENAttribute ["Name", _varName + (str _index)];
+      _x set3DENAttribute ["markerName", _varName + (str _index)];
       _index = _index + 1;
     } forEach _toName;
   };

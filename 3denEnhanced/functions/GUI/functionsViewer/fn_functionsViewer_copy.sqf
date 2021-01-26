@@ -22,7 +22,7 @@ private _fncName = CTRL(IDC_FUNCTIONSVIEWER_NAME);
 private _fncPath = CTRL(IDC_FUNCTIONSVIEWER_PATH);
 
 //Of one of the controls has no text, something is wrong. Exit!
-if (([_fncCode,_fncName,_fncPath] find "") > -1) exitWith {false};
+if (([_fncCode, _fncName, _fncPath] find "") > -1) exitWith {false};
 
 _export = "//" + ctrlText _fncName + endl + "//" + ctrlText _fncPath + endl + endl + ctrlText _fncCode;
 

@@ -14,8 +14,8 @@
   -
 */
 
-params ["_ctrlGroup","_value"];
-_value params ["_hideFriendly","_hideEnemy","_hideMines","_hidePing"];
+params ["_ctrlGroup", "_value"];
+_value params ["_hideFriendly", "_hideEnemy", "_hideMines", "_hidePing"];
 
 (_ctrlGroup controlsGroupCtrl 100) cbSetChecked _hideFriendly;
 (_ctrlGroup controlsGroupCtrl 101) cbSetChecked _hideEnemy;

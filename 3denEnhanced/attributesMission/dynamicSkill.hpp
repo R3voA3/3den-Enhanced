@@ -37,13 +37,13 @@ class ENH_DynamicSkill
         [\
           true,\
           [\
-            [WEST,_skillMinBLUFOR,_skillAimMinBLUFOR,_skillMaxBLUFOR,_skillAimMaxBlUFOR],\
-            [EAST,_skillMinOPFOR,_skillAimMinOPFOR,_skillMaxOPFOR,_skillAimMaxOPFOR],\
-            [INDEPENDENT,_skillMinINDFOR,_skillAimMinINDFOR,_skillMaxINDFOR,_skillAimMaxINDFOR]\
+            [WEST, _skillMinBLUFOR, _skillAimMinBLUFOR, _skillMaxBLUFOR, _skillAimMaxBlUFOR],\
+            [EAST, _skillMinOPFOR, _skillAimMinOPFOR, _skillMaxOPFOR, _skillAimMaxOPFOR],\
+            [INDEPENDENT, _skillMinINDFOR, _skillAimMinINDFOR, _skillMaxINDFOR, _skillAimMaxINDFOR]\
           ]\
         ] call BIS_fnc_EXP_camp_dynamicAISkill;\
       }";
-      defaultValue = "[false,0.5,0.8,0.3,0.5,0.5,0.8,0.3,0.5,0.5,0.8,0.3,0.5,0.5,0.8,0.3,0.5]";
+      defaultValue = "[false, 0.5, 0.8, 0.3, 0.5, 0.5, 0.8, 0.3, 0.5, 0.5, 0.8, 0.3, 0.5, 0.5, 0.8, 0.3, 0.5]";
     };
   };
 };

@@ -14,7 +14,7 @@
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
-#define SHOW_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions",false])
+#define SHOW_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false])
 
 disableSerialization;
 params ["_display"];
@@ -33,10 +33,10 @@ lbClear _ctrlLNB;
     _ctrlLNB lnbAddRow
     [
       _x,
-      format ["%1",_value],
+      format ["%1", _value],
       typeName _value
     ];
   };
 } forEach allVariables _namespace;
 
-CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1",count allVariables _namespace];
+CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1", count allVariables _namespace];

@@ -38,23 +38,23 @@ switch (SELECTEDINDEX) do
   };
   case 1:
   {
-    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<marker name='%1'>%2</marker>",MARKER,VALUE1];
+    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<marker name='%1'>%2</marker>", MARKER, VALUE1];
   };
   case 2:
   {
-    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<img image='%1' width='%2' height='%3'/>",VALUE1,parseNumber VALUE2,parseNumber VALUE3];
+    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<img image='%1' width='%2' height='%3'/>", VALUE1, parseNumber VALUE2, parseNumber VALUE3];
   };
   case 3:
   {
-    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<font color='%1' size='%2' face='%3'>%4</font>",COLOURHTML,VALUE1,FONT,VALUE2];
+    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<font color='%1' size='%2' face='%3'>%4</font>", COLOURHTML, VALUE1, FONT, VALUE2];
   };
   case 4:
   {
-    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<execute expression='%1'>%2</execute>",VALUE1,VALUE2];
+    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<execute expression='%1'>%2</execute>", VALUE1, VALUE2];
 
   };
   case 5:
   {
-    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<executeClose expression='%1'>%2</executeClose>",VALUE1,VALUE2];
+    CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText BRIEFINGTEXT + format ["<executeClose expression='%1'>%2</executeClose>", VALUE1, VALUE2];
   };
 };

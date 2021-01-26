@@ -46,7 +46,7 @@ class ENH_InventoryManager
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
       h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
-      colorText[] = {0.1,0.1,0.1,0.9};
+      colorText[] = {0.1, 0.1, 0.1, 0.9};
     };
   };
   class Controls
@@ -93,7 +93,7 @@ class ENH_InventoryManager
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 7 * GRID_W;
       h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
-      colorBackground[] = {1,0,0,0};
+      colorBackground[] = {1, 0, 0, 0};
     };
     class InventoryItemsList: ctrlListNBox
     {
@@ -102,7 +102,7 @@ class ENH_InventoryManager
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
       h = DIALOG_H * GRID_H - 6 * CTRL_DEFAULT_H + 2 * GRID_H;
-      columns[] = {0,0.08,0.8,0.88};
+      columns[] = {0, 0.08, 0.8, 0.88};
     };
     class AddOne: ctrlButton
     {
@@ -176,8 +176,8 @@ class ENH_InventoryManager
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_IM_deleteTemplate";
-      colorBackground[] = {0,0,0,0};
-      colorBackgroundDisabled[] = {0,0,0,0};
+      colorBackground[] = {0, 0, 0, 0};
+      colorBackgroundDisabled[] = {0, 0, 0, 0};
     };
     class ApplyTemplate: ShowTemplates
     {

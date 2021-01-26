@@ -40,12 +40,12 @@ private _fnc_findStringsInString =
   _return
 };
 
-private _indices = [_text,_key] call _fnc_findStringsInString;
+private _indices = [_text, _key] call _fnc_findStringsInString;
 
-uiNamespace setVariable ["ENH_FunctionsViewer_SearchIndices",_indices];
-uiNamespace setVariable ["ENH_FunctionsViewer_Key",_key];
-uiNamespace setVariable ["ENH_FunctionsViewer_CurIndex",0];
+uiNamespace setVariable ["ENH_FunctionsViewer_SearchIndices", _indices];
+uiNamespace setVariable ["ENH_FunctionsViewer_Key", _key];
+uiNamespace setVariable ["ENH_FunctionsViewer_CurIndex", 0];
 
-[_ctrlSearchCode,0] call ENH_fnc_functionsViewer_incrementKey;
+[_ctrlSearchCode, 0] call ENH_fnc_functionsViewer_incrementKey;
 
 true

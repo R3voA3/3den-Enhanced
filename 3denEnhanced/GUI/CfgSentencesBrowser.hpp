@@ -6,7 +6,7 @@ class ENH_CfgSentencesBrowser
   idd = IDD_SENTENCES;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_CFGS_onLoad";
-  onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites',ENH_CFGS_Favorites];";
+  onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites', ENH_CFGS_Favorites];";
   class ControlsBackground
   {
     class Background: ctrlStaticBackground
@@ -50,8 +50,8 @@ class ENH_CfgSentencesBrowser
       y = DIALOG_TOP + CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
-      strings[] = {"$STR_A3_WL_PARAM19_TITLE","$STR_3DEN_FAVORITE_TEXTPLURAL"};
-      colorSelectedBg[] = {0.2,0.2,0.2,1};
+      strings[] = {"$STR_A3_WL_PARAM19_TITLE", "$STR_3DEN_FAVORITE_TEXTPLURAL"};
+      colorSelectedBg[] = {0.2, 0.2, 0.2, 1};
       onToolBoxSelChanged = "_this call ENH_fnc_CFGS_changePage";
     };
     class List: ctrlTree
@@ -61,7 +61,7 @@ class ENH_CfgSentencesBrowser
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = DIALOG_H * GRID_H - 7 * GRID_H;
-      colorBorder[] = {0,0,0,0};
+      colorBorder[] = {0, 0, 0, 0};
       idcSearch = 10000;
       onTreeDblClick = "'play' call ENH_fnc_CFGS_playOrCopy";
     };
@@ -72,7 +72,7 @@ class ENH_CfgSentencesBrowser
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = DIALOG_H * GRID_H - 7 * GRID_H;
-      colorBorder[] = {0,0,0,0};
+      colorBorder[] = {0, 0, 0, 0};
       idcSearch = 10000;
       onTreeDblClick = "'play' call ENH_fnc_CFGS_playOrCopy";
     };

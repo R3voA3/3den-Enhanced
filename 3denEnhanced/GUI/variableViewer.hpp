@@ -19,7 +19,7 @@ class ENH_VariableViewer
     class BackgroundFilter: Background//Background used for filter buttons
     {
       h = CTRL_DEFAULT_H;
-      colorBackground[] = {0,0,0,1};
+      colorBackground[] = {0, 0, 0, 1};
     };
     class Header: ctrlStaticTitle
     {
@@ -41,7 +41,7 @@ class ENH_VariableViewer
       w = (DIALOG_W - 2) * GRID_W;
       h = (DIALOG_H - 15) * GRID_H;
       disableOverflow = true;
-      columns[] = {-0.008,0.4,0.85};//Create columns and move first column a tat to the left
+      columns[] = {-0.008, 0.4, 0.85};//Create columns and move first column a tat to the left
       onLBSelChanged = "_this call ENH_fnc_variableViewer_onLNBSelChanged";
     };
     class Filter: List

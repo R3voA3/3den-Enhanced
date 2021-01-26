@@ -13,7 +13,7 @@
 
 #define CHECK_MAN _x isKindOf "Man"
 
-private _input = param [0,"",[""]];
+private _input = param [0, "", [""]];
 private _units = get3DENSelected "object";
 
 if (_units isEqualTo []) exitWith

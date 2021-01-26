@@ -19,9 +19,9 @@ class ENH_MissionEnding
       "\
         if (!is3DEN && isServer && (_value # 1) != 'enddefault') then\
         {\
-          ENH_Casualties_Threshold = _value param [0,5];\
-          ENH_Casualties_Debriefing = _value param [1,'enddefault'];\
-          ENH_Casualties_IsWin = _value param [2,false];\
+          ENH_Casualties_Threshold = _value param [0, 5];\
+          ENH_Casualties_Debriefing = _value param [1, 'enddefault'];\
+          ENH_Casualties_IsWin = _value param [2, false];\
           ENH_Casualties_Side = _value param [3];\
           ENH_Casualties_Counter = 0;\
           \
@@ -34,11 +34,11 @@ class ENH_MissionEnding
             };\
             if (ENH_Casualties_Counter >= ENH_Casualties_Threshold) exitWith\
             {\
-              [ENH_Casualties_Debriefing,ENH_Casualties_IsWin] remoteExecCall ['BIS_fnc_endMission',0];\
+              [ENH_Casualties_Debriefing, ENH_Casualties_IsWin] remoteExecCall ['BIS_fnc_endMission', 0];\
             };\
           }];\
         };";
-      defaultValue = "[5,'enddefault',false,civilian]";
+      defaultValue = "[5, 'enddefault', false, civilian]";
     };
   };
 };

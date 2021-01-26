@@ -17,7 +17,7 @@
 
 disableSerialization;
 params ["_ctrlButton"];
-private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
+private _templates = profileNamespace getVariable ["ENH_IM_Templates", []];
 
 //Return inventory data
 private _value = [true] call ENH_fnc_IM_applyAttribute;
@@ -28,8 +28,8 @@ private _templateDescription = ctrlText (_displayChild displayCtrl IDC_IM_TEMPLA
 
 if !(_templateTitle isEqualTo "") then
 {
-  _templates pushBack [_templateTitle,_templateDescription,_value];
-  profileNamespace setVariable ["ENH_IM_Templates",_templates];
+  _templates pushBack [_templateTitle, _templateDescription, _value];
+  profileNamespace setVariable ["ENH_IM_Templates", _templates];
   _displayChild closeDisplay 1;
   call ENH_fnc_IM_updateTemplateList;
 };

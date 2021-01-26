@@ -15,7 +15,7 @@
 
 disableSerialization;
 
-params ["_ctrlLB","_selectedIndex"];
+params ["_ctrlLB", "_selectedIndex"];
 
 private _display = ctrlparent _ctrlLB;
 private _briefingTitle = _ctrlLB lbText _selectedIndex;

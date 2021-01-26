@@ -17,6 +17,6 @@
 
 params ["_display"];
 
-CTRL(IDC_GARRISON_RADIUS) ctrlSetText (profileNamespace getVariable ['ENH_garrison_lastRadius',"500"]);
-CTRL(IDC_GARRISON_COVERAGE) lbSetCurSel (profileNamespace getVariable ['ENH_garrison_lastCoverage',1]);
-CTRL(IDC_GARRISON_STANCE) lbSetCurSel (profileNamespace getVariable ['ENH_garrison_lastStance',0]);
+CTRL(IDC_GARRISON_RADIUS) ctrlSetText (profileNamespace getVariable ['ENH_garrison_lastRadius', "500"]);
+CTRL(IDC_GARRISON_COVERAGE) lbSetCurSel (profileNamespace getVariable ['ENH_garrison_lastCoverage', 1]);
+CTRL(IDC_GARRISON_STANCE) lbSetCurSel (profileNamespace getVariable ['ENH_garrison_lastStance', 0]);

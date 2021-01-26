@@ -15,10 +15,10 @@
 
 startLoadingScreen ["start"];
 
-private _allENHFunctions = (call (uiNamespace getVariable ["BIS_functions_list",{[]}])) select {_x select [0,3] == "ENH"};
+private _allENHFunctions = (call (uiNamespace getVariable ["BIS_functions_list",{[]}])) select {_x select [0, 3] == "ENH"};
 _allENHFunctions sort true;
 
-private _export = format ["_**Number of added entries: %1**_",count _allENHFunctions] + endl + "___" + endl + endl + endl;
+private _export = format ["_**Number of added entries: %1**_", count _allENHFunctions] + endl + "___" + endl + endl + endl;
 
 {
 private _meta = _x call BIS_fnc_functionMeta;
@@ -27,7 +27,7 @@ private _file = loadFile (_meta select 0);
 private _headerStart = _file find "/*";
 private _headerEnd = _file find "*/";
 private _headerLength = _headerEnd - _headerStart;
-private _fileHeader = _file select [_headerStart + 2,_headerLength - 2];
+private _fileHeader = _file select [_headerStart + 2, _headerLength - 2];
 
 if (_fileHeader == "" || _headerStart > 5) then {_fileHeader = "N/A"};
 

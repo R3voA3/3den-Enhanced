@@ -15,9 +15,9 @@
 
 disableSerialization;
 
-params [["_onLoad",true]];
+params [["_onLoad", true]];
 
-private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];
+private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist", []];
 
 //Exit if playlist is empty
 if (_playlist isEqualTo []) exitWith {};
@@ -30,7 +30,7 @@ private _fnc_enableRadio =
     true call ENH_fnc_3DENRadio_playNewSong;
   }];
 
-  profileNamespace setVariable ["ENH_3DENRadio_Enabled",true];
+  profileNamespace setVariable ["ENH_3DENRadio_Enabled", true];
 
   //Only change controls if GUI is visible
   if !(isNull findDisplay IDD_3DENRADIO) then
@@ -42,10 +42,10 @@ private _fnc_enableRadio =
 private _fnc_disableRadio =
 {
   playMusic "";
-  if !(isNil "ENH_3DENRadio_MusicEH") then {removeMusicEventHandler["MusicStop",ENH_3DENRadio_MusicEH]; ENH_3DENRadio_MusicEH = nil};
+  if !(isNil "ENH_3DENRadio_MusicEH") then {removeMusicEventHandler["MusicStop", ENH_3DENRadio_MusicEH]; ENH_3DENRadio_MusicEH = nil};
 
-  profileNamespace setVariable ["ENH_3DENRadio_Enabled",false];
-  uiNamespace setVariable ["ENH_3DENRadio_CurrentSong",""];
+  profileNamespace setVariable ["ENH_3DENRadio_Enabled", false];
+  uiNamespace setVariable ["ENH_3DENRadio_CurrentSong", ""];
 
   //Only change controls if GUI is visible
   if !(isNull findDisplay IDD_3DENRADIO) then
@@ -55,7 +55,7 @@ private _fnc_disableRadio =
   };
 };
 
-private _radioState = profileNamespace getVariable ["ENH_3DENRadio_Enabled",false];
+private _radioState = profileNamespace getVariable ["ENH_3DENRadio_Enabled", false];
 
 //Check if radio should run but was not yet initialised (onTerrainNew, onMissionNew, onMissionPreviewEnd)
 if (_onLoad && _radioState) exitWith {call _fnc_enableRadio};

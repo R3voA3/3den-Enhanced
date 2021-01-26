@@ -17,11 +17,11 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlButton","_increment"];
+params ["_ctrlButton", "_increment"];
 
 private _display = ctrlParent _ctrlButton;
-private _currentIndex = uiNamespace getVariable ["ENH_FunctionsViewer_CurIndex",0];
-private _indices = uiNamespace getVariable ["ENH_FunctionsViewer_SearchIndices",[]];
+private _currentIndex = uiNamespace getVariable ["ENH_FunctionsViewer_CurIndex", 0];
+private _indices = uiNamespace getVariable ["ENH_FunctionsViewer_SearchIndices", []];
 private _indicesCount = count _indices;
 
 if (_indices isEqualTo []) exitWith
@@ -39,14 +39,14 @@ else
   (_currentIndex + _increment) min (_indicesCount -1);
 };
 
-(CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT)) ctrlSetText format ["%1 / %2",_newIndex + 1,_indicesCount];
+(CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT)) ctrlSetText format ["%1 / %2", _newIndex + 1, _indicesCount];
 
 CTRL(IDC_FUNCTIONSVIEWER_CODE) ctrlSetTextSelection
 [
   _indices select _newIndex,
-  count (uiNamespace getVariable ["ENH_FunctionsViewer_Key",""])
+  count (uiNamespace getVariable ["ENH_FunctionsViewer_Key", ""])
 ];
 
-uiNamespace setVariable ["ENH_FunctionsViewer_CurIndex",_newIndex];
+uiNamespace setVariable ["ENH_FunctionsViewer_CurIndex", _newIndex];
 
 true

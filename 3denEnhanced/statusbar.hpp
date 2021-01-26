@@ -130,7 +130,7 @@ class StatusBarCustom: ctrlControlsGroupNoScrollbars
       y = 0;
       w = safezoneW - 120 * GRID_W;
       h = CTRL_DEFAULT_H;
-      colorBackground[] = {0.2,0.2,0.2,1};
+      colorBackground[] = {0.2, 0.2, 0.2, 1};
     };
     class TextX: ctrlStaticPicture
     {
@@ -139,7 +139,7 @@ class StatusBarCustom: ctrlControlsGroupNoScrollbars
       h = "3 * (pixelH * pixelGrid * 	0.50)";
       sizeEx = "2.88 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
       text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\x_ca.paa";
-      colorBackground[] = {0,0,0,0};
+      colorBackground[] = {0, 0, 0, 0};
       shadow = 0;
     };
     class ValueX: ctrlEdit
@@ -153,14 +153,14 @@ class StatusBarCustom: ctrlControlsGroupNoScrollbars
       font = "EtelkaMonospacePro";
       sizeEx = "2.945 * (1 / (getResolution select 3)) * pixelGrid * 0.5";
       shadow = 0;
-      colorDisabled[] = {1,1,1,0.5};
+      colorDisabled[] = {1, 1, 1, 0.5};
       onLoad = "(_this select 0) ctrlenable false;";
     };
     class TextY: TextX
     {
       x = "(	3 + 	16 + 	4) * (pixelW * pixelGrid * 	0.50)";
       text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\y_ca.paa";
-      colorBackground[] = {0,0,0,0};
+      colorBackground[] = {0, 0, 0, 0};
     };
     class ValueY: ValueX
     {
@@ -171,7 +171,7 @@ class StatusBarCustom: ctrlControlsGroupNoScrollbars
     {
       x = "2 * (	3 + 	16 + 	4) * (pixelW * pixelGrid * 	0.50)";
       text = "\a3\3DEN\Data\Displays\Display3DEN\StatusBar\z_ca.paa";
-      colorBackground[] = {0,0,0,0};
+      colorBackground[] = {0, 0, 0, 0};
     };
     class ValueZ: ValueX
     {
@@ -186,7 +186,7 @@ class StatusBarCustom: ctrlControlsGroupNoScrollbars
       y = 2 * pixelH;
       w = 4 * (pixelH * pixelGrid * 	0.50) - 2 * (2 * pixelH);
       h = "4 * (pixelH * pixelGrid * 	0.50) - 2 * (2 * pixelH)";
-      colorBackground[] = {0,0,0,0};
+      colorBackground[] = {0, 0, 0, 0};
     };
     class VariableNames: ValueX
     {

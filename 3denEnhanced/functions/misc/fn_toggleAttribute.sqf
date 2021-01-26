@@ -14,8 +14,8 @@
 
 if !(is3DEN) exitWith {false};
 
-private _types = param [0,["Object"],[[]]];
-private _attribute = param [1,"",[""]];
+private _types = param [0, ["Object"], [[]]];
+private _attribute = param [1, "", [""]];
 private _selected = [_types] call ENH_fnc_all3DENSelected;
 
 if (_selected isEqualTo []) exitWith
@@ -31,11 +31,11 @@ collect3DENHistory
   {
     if (GET_ATTRIBUTE isEqualTo [false]) then
     {
-       _x set3DENAttribute [_attribute,true];
+       _x set3DENAttribute [_attribute, true];
     }
     else
     {
-      _x set3DENAttribute [_attribute,false];
+      _x set3DENAttribute [_attribute, false];
     };
   } forEach _selected;
 };

@@ -8,7 +8,7 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 collect3DENHistory
@@ -22,5 +22,3 @@ collect3DENHistory
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-
-true

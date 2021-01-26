@@ -194,9 +194,9 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
 
       columns = 3;
       rows = 1;
-      strings[] = {"Show Unconscious?","Show Window?","Hide on Use?"};
-      checked_strings[] = {"Show Unconscious? Yes","Show Window? Yes","Hide on Use? Yes"};
-      values[] = {0,0,0};
+      strings[] = {"Show Unconscious?", "Show Window?", "Hide on Use?"};
+      checked_strings[] = {"Show Unconscious? Yes", "Show Window? Yes", "Hide on Use? Yes"};
+      values[] = {0, 0, 0};
     };
     class Cancel: ctrlButtonCancel
     {

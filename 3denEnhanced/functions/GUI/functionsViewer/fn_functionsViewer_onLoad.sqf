@@ -18,7 +18,7 @@ params ["_display"];
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
-_display displayAddEventHandler ["keyDown",//Focus Search
+_display displayAddEventHandler ["keyDown", //Focus Search
 {
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && !_shift) then
@@ -27,7 +27,7 @@ _display displayAddEventHandler ["keyDown",//Focus Search
   }
 }];
 
-_display displayAddEventHandler ["keyDown",//Copy
+_display displayAddEventHandler ["keyDown", //Copy
 {
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 45 && _ctrl) then
@@ -36,7 +36,7 @@ _display displayAddEventHandler ["keyDown",//Copy
   }
 }];
 
-_display displayAddEventHandler ["keyDown",//Focus Search Key
+_display displayAddEventHandler ["keyDown", //Focus Search Key
 {
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && _shift) then
@@ -46,9 +46,9 @@ _display displayAddEventHandler ["keyDown",//Focus Search Key
 }];
 
 //Set filters to last used or default value. Will also trigger fillCtrlTv function
-CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
-CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
-CTRL(IDC_FUNCTIONSVIEWER_LOADMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex",0]);
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex", 0]);
+CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex", 0]);
+CTRL(IDC_FUNCTIONSVIEWER_LOADMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex", 0]);
 
 if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 {

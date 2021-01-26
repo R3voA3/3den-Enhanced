@@ -32,7 +32,7 @@ if GETVALUE("Arsenal") then
     "true",
     {},
     {},
-    {["Open",[true]] call BIS_fnc_arsenal},
+    {["Open", [true]] call BIS_fnc_arsenal},
     {},
     [],
     1,
@@ -55,8 +55,8 @@ if GETVALUE("Garage") then
     {},
     {
       if (!isNil "BIS_fnc_garage_center") then {deleteVehicle BIS_fnc_garage_center};
-      BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F",player getPos [10,getDir player],[],0,"CAN_COLLIDE"];
-      ["Open",true] call BIS_fnc_garage;
+      BIS_fnc_garage_center = createVehicle ["Land_HelipadEmpty_F", player getPos [10, getDir player], [], 0, "CAN_COLLIDE"];
+      ["Open", true] call BIS_fnc_garage;
     },
     {},
     [],
@@ -75,28 +75,28 @@ if GETVALUE("ShowUnits") then
     private _markerUnitsArray = [];
 
     {
-      private _sideColour = [side _x,true] call BIS_fnc_sideColor;
+      private _sideColour = [side _x, true] call BIS_fnc_sideColor;
       private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
 
       _name = "ENH_previewMarker_" + str _forEachIndex;
-      _name = createMarker [_name,position _x];
+      _name = createMarker [_name, position _x];
       _name setMarkerType 'mil_box';
       _name setMarkerText _displayName;
       _name setMarkerColor _sideColour;
 
-      _markerUnitsArray pushBack [_name,_x,_displayName],;
-    } forEach entities [["AllVehicles"],[],false,true];//All vehicles without crew and dead entities
+      _markerUnitsArray pushBack [_name, _x, _displayName],;
+    } forEach entities [["AllVehicles"], [], false, true];//All vehicles without crew and dead entities
 
     while {true} do
     {
       waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
       {
         sleep 0.2;//A bit more performance friendly
-        _x params ["_marker","_entity"];
+        _x params ["_marker", "_entity"];
         _displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
         _marker setMarkerText _displayName;
         _marker setMarkerPos getPos _entity;
-      } forEach _markerUnitsArray;//[markerName,entity,displayName]
+      } forEach _markerUnitsArray;//[markerName, entity, displayName]
     };
   };
 };
@@ -111,7 +111,7 @@ if GETVALUE("Zeus") then
   [] spawn
   {
     //waitUntil {!isNull player};
-    private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F",[0,0,0],[],10,"NONE"];
+    private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
     player assignCurator _zeusModule;
     //Add Interface EHs (Workaround)
     _zeusModule addCuratorEditableObjects [entities "", true];
@@ -160,7 +160,7 @@ if GETVALUE("FPS") then
     //Make sure that controls are not created twice when restart button is pressed
     if (isNull (MISSIONDISPLAY displayCtrl 992)) then
     {
-      private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText",992];
+      private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText", 992];
       _ctrlFPS ctrlSetPosition
       [
         0.94625 * safezoneW + safezoneX,
@@ -324,7 +324,7 @@ if GETVALUE("DrawIcons") then
         [
           getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "icon"),
           (side _x call BIS_fnc_sideColor),
-          _x modelToWorldVisual [0,0,0.5],
+          _x modelToWorldVisual [0, 0, 0.5],
           0.5,
           0.5,
           0,
@@ -342,7 +342,7 @@ if GETVALUE("DrawIcons") then
           true
         ];
         false;
-      } count (ASLToAGL getPosASL player nearEntities [["CAManBase","Air","Car","Tank"],RADIUS]);
+      } count (ASLToAGL getPosASL player nearEntities [["CAManBase", "Air", "Car", "Tank"], RADIUS]);
     }
   ] call BIS_fnc_addStackedEventHandler;
 };
@@ -377,11 +377,11 @@ if GETVALUE("ShowWaypoints") then
   {
     _color = selectRandom _markerColors;
     {
-      _x params ["_group","_wpIndex"];
+      _x params ["_group", "_wpIndex"];
 
       _marker = createMarker
       [
-        format ["ENH_debugWaypoints_%1_%2",_group,_wpIndex],
+        format ["ENH_debugWaypoints_%1_%2", _group, _wpIndex],
         waypointPosition _x
       ];
 
@@ -414,16 +414,16 @@ if GETVALUE("NoReload") then
 {
   player addEventHandler ["FiredMan",
   {
-    params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_vehicle"];
+    params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
     if (isNull _vehicle) then
     {
-      _unit setAmmo [_weapon,1000];
-      _unit setWeaponReloadingTime [_unit,_muzzle,0];
+      _unit setAmmo [_weapon, 1000];
+      _unit setWeaponReloadingTime [_unit, _muzzle, 0];
     }
     else
     {
       _vehicle setVehicleAmmo 1;
-      _vehicle setWeaponReloadingTime [_unit,_muzzle,0];
+      _vehicle setWeaponReloadingTime [_unit, _muzzle, 0];
     };
   }];
 };
@@ -436,10 +436,10 @@ if GETVALUE("DrawViewDirection") then
         private _beg = ASLToAGL eyePos _x;
         private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 3));
         private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 3));
-        drawLine3D [ _beg,_endE,[0,1,0,1]];
-        drawLine3D [_beg,_endW,[1,0,0,1]];
+        drawLine3D [ _beg, _endE, [0, 1, 0, 1]];
+        drawLine3D [_beg, _endW, [1, 0, 0, 1]];
         false;
-      } count (player nearEntities [["CAManBase"],RADIUS] select {!isPlayer _x});
+      } count (player nearEntities [["CAManBase"], RADIUS] select {!isPlayer _x});
     }
   ] call BIS_fnc_addStackedEventHandler;
 };
@@ -455,7 +455,7 @@ if GETVALUE("Teleport") then
     "true",
     {},
     {},
-    {player setPos screenToWorld [0.5,0.6]},//Center of action icon
+    {player setPos screenToWorld [0.5, 0.6]}, //Center of action icon
     {},
     [],
     0.2,
@@ -500,9 +500,9 @@ if GETVALUE("TimeMultiplier") then
     "true",
     {},
     {
-      private _valueArray = [0.1,0.2,0.3,0.4,1,2,5,10,15,18,20,25,30,35,40,45,50,60,70,80,90,100,110,120];
+      private _valueArray = [0.1, 0.2, 0.3, 0.4, 1, 2, 5, 10, 15, 18, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 120];
       setTimeMultiplier (_valueArray select (_this select 4));
-      hint format ["%1x",timeMultiplier];
+      hint format ["%1x", timeMultiplier];
     },
     {},
     {},
@@ -566,9 +566,9 @@ if (GETVALUE("DebugPath") > 0) then
       {
         scriptName 'ENH_Attribute_DebugPath';
         private _arrow = objNull;
-        private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)',random(1),random(1),random(1)];
+        private _arrowColour = format ['#(rgb, 8, 8, 3)color(%1,%2,%3, 1)', random(1), random(1), random(1)];
         private _path = [];
-        private _marker = createMarker [format ['ENH_DebugPath_%1',str _this],_this];
+        private _marker = createMarker [format ['ENH_DebugPath_%1', str _this], _this];
         _marker setMarkerShape "polyline";
         _marker setMarkerColor configName selectRandom ("true" configClasses (configFile >> "CfgMarkerColors"));
 
@@ -580,15 +580,15 @@ if (GETVALUE("DebugPath") > 0) then
           {
             if (GETVALUE("DebugPath") > 1) then
             {
-              _arrow = createVehicle ['Sign_Arrow_Direction_Blue_F',position _this,[],0,'CAN_COLLIDE'];
-              _arrow setObjectTexture [0,_arrowColour];
+              _arrow = createVehicle ['Sign_Arrow_Direction_Blue_F', position _this, [], 0, 'CAN_COLLIDE'];
+              _arrow setObjectTexture [0, _arrowColour];
               sleep 0.1;
               _arrow setDir (_arrow getDir _this);
             };
           _path append [getPos _this # 0, getPos _this # 1];
           _posOld = getPos _this;
           if (count _path > 3) then {_marker setMarkerPolyline _path};
-          if (count _path == 500) then {_path deleteRange [0,2]};
+          if (count _path == 500) then {_path deleteRange [0, 2]};
           sleep 0.1;
           };
         };

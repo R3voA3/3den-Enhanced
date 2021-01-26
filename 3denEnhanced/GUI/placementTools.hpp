@@ -59,7 +59,7 @@ class ENH_PlacementTools
         "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
         "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP"
       };
-      values[] = {0.0001,0.001,0.01,0.1,1,10,100};
+      values[] = {0.0001, 0.001, 0.01, 0.1, 1, 10, 100};
       onToolBoxSelChanged  = "_this call ENH_fnc_placementTools_onToolBoxSelChanged";
     };
     class CurrentValue: ctrlEdit
@@ -79,7 +79,7 @@ class ENH_PlacementTools
       y = ORIGIN_Y + 119 * GRID_H;
       w = CTRL_DEFAULT_H;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "ENH_PlacementTools_Center = screenToWorld [0.5,0.5]";
+      onButtonClick = "ENH_PlacementTools_Center = screenToWorld [0.5, 0.5]";
     };
     class Close: ctrlButtonClose
     {
@@ -122,7 +122,7 @@ class ENH_PlacementTools
           y = 7 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,200};
+          sliderRange[] = {0, 200};
           onSliderPosChanged = "_this call ENH_fnc_placementTools_radius";
         };
         class InitialAngle: ctrlStatic
@@ -140,7 +140,7 @@ class ENH_PlacementTools
           y = 13 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,359};
+          sliderRange[] = {0, 359};
           onSliderPosChanged = "call ENH_fnc_placementTools_initialAngle";
         };
         class CentralAngle: ctrlStatic
@@ -158,7 +158,7 @@ class ENH_PlacementTools
           y = 19 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,360};
+          sliderRange[] = {0, 360};
           onSliderPosChanged = "call ENH_fnc_placementTools_centralAngle";
         };
         class LineHeader: ctrlStaticFooter
@@ -184,7 +184,7 @@ class ENH_PlacementTools
           y = 31 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,50};
+          sliderRange[] = {0, 50};
           onSliderPosChanged = "call ENH_fnc_placementTools_spacing";
         };
         class GridHeader: ctrlStaticFooter
@@ -210,7 +210,7 @@ class ENH_PlacementTools
           y = 43 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1,50};
+          sliderRange[] = {1, 50};
           onSliderPosChanged = "ENH_PlacementTools_NumColumns = round (_this # 1); call ENH_fnc_placementTools_grid";
         };
         class SpaceX: ctrlStatic
@@ -228,7 +228,7 @@ class ENH_PlacementTools
           y = 49 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,50};
+          sliderRange[] = {0, 50};
           onSliderPosChanged = "ENH_PlacementTools_SpaceX = _this # 1; call ENH_fnc_placementTools_grid";
         };
         class SpaceY: ctrlStatic
@@ -246,7 +246,7 @@ class ENH_PlacementTools
           y = 55 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,50};
+          sliderRange[] = {0, 50};
           onSliderPosChanged = "ENH_PlacementTools_SpaceY = _this # 1; call ENH_fnc_placementTools_grid";
         };
         class FillAreaHeader: ctrlStaticFooter
@@ -272,7 +272,7 @@ class ENH_PlacementTools
           y = 67 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1,10000};
+          sliderRange[] = {1, 10000};
           sliderStep = 1;
           onSliderPosChanged = "ENH_PlacementTools_A = _this # 1; call ENH_fnc_placementTools_fillArea";
         };
@@ -291,7 +291,7 @@ class ENH_PlacementTools
           y = 73 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1,10000};
+          sliderRange[] = {1, 10000};
           sliderStep = 1;
           onSliderPosChanged = "ENH_PlacementTools_B = _this # 1; call ENH_fnc_placementTools_fillArea";
         };

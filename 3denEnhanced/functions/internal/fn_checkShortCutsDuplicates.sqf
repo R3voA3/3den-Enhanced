@@ -48,4 +48,4 @@ private _menuStripShortCutsUnique = [];
   };
 } forEach _menuStripEntries;
 
-[_contextMenuShortCuts isEqualTo _contextMenuShortCutsUnique,_menuStripShortCuts isEqualTo _menuStripShortCutsUnique]
+[_contextMenuShortCuts isEqualTo _contextMenuShortCutsUnique, _menuStripShortCuts isEqualTo _menuStripShortCutsUnique]

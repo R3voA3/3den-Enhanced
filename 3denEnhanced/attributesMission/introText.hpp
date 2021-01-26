@@ -23,7 +23,7 @@ class ENH_IntroText
           _value spawn\
           {\
             scriptName 'ENH_Attribute_IntroText';\
-            params ['_delay','_l1','_l2','_l3','_type'];\
+            params ['_delay', '_l1', '_l2', '_l3', '_type'];\
             _l1 = _l1 call BIS_fnc_localize;\
             _l2 = _l2 call BIS_fnc_localize;\
             _l3 = _l3 call BIS_fnc_localize;\
@@ -39,20 +39,20 @@ class ENH_IntroText
                   _l2,\
                   _l3\
                 ];\
-                [_text,true] spawn BIS_fnc_textTiles;\
+                [_text, true] spawn BIS_fnc_textTiles;\
               };\
               case 1:\
               {\
-                [_l1,_l2,_l3] spawn BIS_fnc_infoText;\
+                [_l1, _l2, _l3] spawn BIS_fnc_infoText;\
               };\
               case 2:\
               {\
-                [_l1,_l2,_l3] spawn BIS_fnc_EXP_camp_SITREP;\
+                [_l1, _l2, _l3] spawn BIS_fnc_EXP_camp_SITREP;\
               };\
             };\
           };\
         }";
-      defaultValue = "[0,briefingName,'by ' + profileName,[daytime,'HH:MM'] call BIS_fnc_TimeToString,0]";
+      defaultValue = "[0, briefingName, 'by ' + profileName, [daytime, 'HH:MM'] call BIS_fnc_TimeToString, 0]";
     };
   };
 };

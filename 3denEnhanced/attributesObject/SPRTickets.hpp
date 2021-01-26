@@ -4,7 +4,7 @@ class ENH_SPR_Tickets
   tooltip = "$STR_ENH_RESPAWNTICKETS_TOOLTIP";
   property = "ENH_SPR_Tickets";
   control = "EditShort";
-  expression = "if (!is3DEN && !isMultiplayer) then {_this setVariable ['%s',_value]}";
+  expression = "if (!is3DEN && !isMultiplayer) then {_this setVariable ['%s', _value]}";
   typeName = "NUMBER";
   defaultValue = "0";
   condition = "objectBrain";

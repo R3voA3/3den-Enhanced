@@ -21,18 +21,18 @@
 disableSerialization;
 params
 [
-  ["_ctrlLb",controlNull],
-  ["_lbText",""],
-  ["_lbData",""],
-  ["_pictureLeft",""],
-  ["_pictureRight",""],
-  ["_tooltip",""]
+  ["_ctrlLb", controlNull],
+  ["_lbText", ""],
+  ["_lbData", ""],
+  ["_pictureLeft", ""],
+  ["_pictureRight", ""],
+  ["_tooltip", ""]
 ];
 
 private _index = _ctrlLb lbAdd _lbText;
-_ctrlLb lbSetData [_index,_lbData];
-_ctrlLb lbSetPicture [_index,_pictureLeft];
-_ctrlLb lbSetPictureRight [_index,_pictureRight];
-_ctrlLb lbSetTooltip [_index,_tooltip];
+_ctrlLb lbSetData [_index, _lbData];
+_ctrlLb lbSetPicture [_index, _pictureLeft];
+_ctrlLb lbSetPictureRight [_index, _pictureRight];
+_ctrlLb lbSetTooltip [_index, _tooltip];
 
 true

@@ -14,7 +14,7 @@
   -
 */
 
-params ["_ctrlNamespace","_index"];
+params ["_ctrlNamespace", "_index"];
 
 uiNamespace setVariable
 [
@@ -23,7 +23,7 @@ uiNamespace setVariable
   [
     "ENH_VariableViewer_Namespaces",
     ["missionNamespace"]
-  ]) param [_index,"missionNamespace",["",objNull,locationNull,grpNull]]
+  ]) param [_index, "missionNamespace", ["", objNull, locationNull, grpNull]]
 ];
 
 ctrlParent _ctrlNamespace call ENH_fnc_variableViewer_fillLNB;

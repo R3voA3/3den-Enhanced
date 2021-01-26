@@ -20,14 +20,14 @@
 */
 
 disableSerialization;
-params ["_ctrlLnb","_data","_text","_image","_addonIcon","_value","_tooltip"];
+params ["_ctrlLnb", "_data", "_text", "_image", "_addonIcon", "_value", "_tooltip"];
 
-private _row = _ctrlLnb lnbAddRow ["",_text,str _value,""];
-_ctrlLnb lnbSetData [[_row,0],_data];
-_ctrlLnb lnbSetValue [[_row,1],_value];
-_ctrlLnb lnbSetText [[_row,2],str _value];
-_ctrlLnb lnbSetPicture [[_row,0],_image];
-_ctrlLnb lnbSetPicture [[_row,3],_addonIcon];
-_ctrlLnb lnbSetTooltip [[_row,0],_tooltip];
+private _row = _ctrlLnb lnbAddRow ["", _text, str _value, ""];
+_ctrlLnb lnbSetData [[_row, 0], _data];
+_ctrlLnb lnbSetValue [[_row, 1], _value];
+_ctrlLnb lnbSetText [[_row, 2], str _value];
+_ctrlLnb lnbSetPicture [[_row, 0], _image];
+_ctrlLnb lnbSetPicture [[_row, 3], _addonIcon];
+_ctrlLnb lnbSetTooltip [[_row, 0], _tooltip];
 
 true

@@ -16,7 +16,7 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params [["_return",false]];
+params [["_return", false]];
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlInventory = _display displayCtrl 2300;
 private _rows = lnbSize CTRL(IDC_IM_INVENTORYLIST) select 0;
@@ -33,9 +33,9 @@ private _backpacksAmount = [];
 
 for "_i" from 0 to _rows do
 {
-  private _configName = CTRL(IDC_IM_INVENTORYLIST) lnbData [_i - 1,0];
-  private _amount = parseNumber (CTRL(IDC_IM_INVENTORYLIST) lnbText [_i - 1,2]);
-  (_configName call BIS_fnc_itemType) params ["_category","_specificType"];
+  private _configName = CTRL(IDC_IM_INVENTORYLIST) lnbData [_i - 1, 0];
+  private _amount = parseNumber (CTRL(IDC_IM_INVENTORYLIST) lnbText [_i - 1, 2]);
+  (_configName call BIS_fnc_itemType) params ["_category", "_specificType"];
 
   switch (true) do
   {
@@ -44,12 +44,12 @@ for "_i" from 0 to _rows do
       _weapons pushBack _configName;
       _weaponsAmount pushBack _amount;
     };
-    case (_category in ["Mine","Magazine"]):
+    case (_category in ["Mine", "Magazine"]):
     {
       _magazines pushBack _configName;
       _magazinesAmount pushBack _amount;
     };
-    case (_category in ["Item","Equipment"]):
+    case (_category in ["Item", "Equipment"]):
     {
       if (_specificType isEqualTo "Backpack") then
       {
@@ -68,16 +68,16 @@ for "_i" from 0 to _rows do
 private _value = str
 [
   [
-    [_weapons,_weaponsAmount],
-    [_magazines,_magazinesAmount],
-    [_items,_itemsAmount],
-    [_backpacks,_backpacksAmount]
+    [_weapons, _weaponsAmount],
+    [_magazines, _magazinesAmount],
+    [_items, _itemsAmount],
+    [_backpacks, _backpacksAmount]
   ],
   cbChecked CTRL(IDC_IM_VIRTUAL)
 ];
 
 if (_return) exitWith {_value};
-ENH_IM_target set3DENAttribute ["ammoBox",_value];
+ENH_IM_target set3DENAttribute ["ammoBox", _value];
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

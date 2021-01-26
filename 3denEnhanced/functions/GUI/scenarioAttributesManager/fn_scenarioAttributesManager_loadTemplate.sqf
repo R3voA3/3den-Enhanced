@@ -18,7 +18,7 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlLB","_selectedItem"];
+params ["_ctrlLB", "_selectedItem"];
 
 private _display = ctrlParent _ctrlLB;
 private _ctrlTV = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES);
@@ -35,12 +35,12 @@ _attributes = _templateData # 2;
 if (_templateData isEqualTo []) exitWith {false};
 
 //Add base categories and a custom one used for modded attributes
-_ctrlTV tvAdd [[],"Intel"];
-_ctrlTV tvAdd [[],"Scenario"];
-_ctrlTV tvAdd [[],"Multiplayer"];
-_ctrlTV tvAdd [[],"GarbageCollection"];
-_ctrlTV tvAdd [[],"Preferences"];
-_ctrlTV tvAdd [[],"Custom Category"];
+_ctrlTV tvAdd [[], "Intel"];
+_ctrlTV tvAdd [[], "Scenario"];
+_ctrlTV tvAdd [[], "Multiplayer"];
+_ctrlTV tvAdd [[], "GarbageCollection"];
+_ctrlTV tvAdd [[], "Preferences"];
+_ctrlTV tvAdd [[], "Custom Category"];
 
 //Put all attributes into their corresponding categories
 {
@@ -57,8 +57,8 @@ _ctrlTV tvAdd [[],"Custom Category"];
   //_x # 1 => PropertyName
   //_x # 2 => Attribute Value
   //_x # 3 => Attribute Display Name
-  private _index = _ctrlTV tvAdd [[_baseIndex],format ["%1 (%2)",_x # 3,_x # 1]];
-  _ctrlTV tvSetData [[_baseIndex,_index],str _x];
-  _ctrlTV tvSetTooltip [[_baseIndex,_index],str (_x # 2)];
-  _ctrlTV tvSort [[_baseIndex],false];
+  private _index = _ctrlTV tvAdd [[_baseIndex], format ["%1 (%2)", _x # 3, _x # 1]];
+  _ctrlTV tvSetData [[_baseIndex, _index], str _x];
+  _ctrlTV tvSetTooltip [[_baseIndex, _index], str (_x # 2)];
+  _ctrlTV tvSort [[_baseIndex], false];
 } forEach _attributes;

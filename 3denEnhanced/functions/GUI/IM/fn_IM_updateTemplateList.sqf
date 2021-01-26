@@ -18,13 +18,13 @@
 disableSerialization;
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
-_templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
+_templates = profileNamespace getVariable ["ENH_IM_Templates", []];
 lbClear _ctrlItems;
 {
-  _x params ["_name","_description","_data"];
+  _x params ["_name", "_description", "_data"];
   _test = _ctrlItems lbAdd _name;
-  _ctrlItems lbSetData [_forEachIndex,_data];
-  _ctrlItems lbSetTooltip [_forEachIndex,_description];
+  _ctrlItems lbSetData [_forEachIndex, _data];
+  _ctrlItems lbSetTooltip [_forEachIndex, _description];
 } forEach _templates;
 
 true

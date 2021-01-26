@@ -17,7 +17,7 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlCombo","_selectedIndex"];
+params ["_ctrlCombo", "_selectedIndex"];
 
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
 

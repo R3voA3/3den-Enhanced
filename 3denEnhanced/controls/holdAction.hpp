@@ -1,6 +1,6 @@
 class ENH_HoldAction: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_holdAction_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_holdAction_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_holdAction_onAttributeSave";
   h = 26 * SIZE_M * GRID_H + 70 * pixelH;
   class Controls: Controls
@@ -120,7 +120,7 @@ class ENH_HoldAction: Title
       y = 21 * SIZE_M * GRID_H + 45 * pixelH;
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
-      sliderRange[] = {1,60};
+      sliderRange[] = {1, 60};
       sliderStep = 1;
       lineSize = 1;
     };
@@ -141,7 +141,7 @@ class ENH_HoldAction: Title
     {
       idc = 111;
       y = 22 * SIZE_M * GRID_H + 50 * pixelH;
-      sliderRange[] = {1,1000};
+      sliderRange[] = {1, 1000};
     };
     class PriorityEdit: DurationEdit
     {

@@ -35,7 +35,7 @@ class ENH_TextureFinder
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
       h = 52 * GRID_H;
-      colorBorder[] = {0,0,0,0};
+      colorBorder[] = {0, 0, 0, 0};
     };
     class Progress: ctrlProgress
     {
@@ -44,7 +44,7 @@ class ENH_TextureFinder
       y = DIALOG_TOP + CTRL_DEFAULT_H + 52 * GRID_H;
       w = (DIALOG_W) * GRID_W;
       h = GRID_H;
-      colorFrame[] = {0,0,0,0};
+      colorFrame[] = {0, 0, 0, 0};
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
@@ -54,7 +54,7 @@ class ENH_TextureFinder
       y = DIALOG_TOP + 58 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = 40 * GRID_H;
-      colorBackground[] = {1,1,1,1};
+      colorBackground[] = {1, 1, 1, 1};
     };
     class ProgessText: ctrlStructuredText
     {
@@ -72,7 +72,7 @@ class ENH_TextureFinder
       y = DIALOG_TOP + 109 * GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
-      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
+      tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
     };
     class SearchIcon: ctrlStaticPictureKeepAspect
     {

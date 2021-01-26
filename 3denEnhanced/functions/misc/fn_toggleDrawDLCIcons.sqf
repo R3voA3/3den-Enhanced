@@ -28,9 +28,9 @@ if (["ENH_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHan
       {
         drawIcon3D
         [
-          (modParams [_mod,["logoSmall"]]) # 0,
-          [1,1,1,0.8],
-          _x modelToWorldVisual [0,0,0.5],
+          (modParams [_mod, ["logoSmall"]]) # 0,
+          [1, 1, 1, 0.8],
+          _x modelToWorldVisual [0, 0, 0.5],
           0.5,
           0.5,
           0

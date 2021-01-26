@@ -13,7 +13,7 @@
   -
 */
 
-params ["_ctrlLnB","_key"];
+params ["_ctrlLnB", "_key"];
 
 if (_key isEqualTo 211) then
 {

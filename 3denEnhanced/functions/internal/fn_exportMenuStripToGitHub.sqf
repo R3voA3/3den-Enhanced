@@ -13,8 +13,8 @@
   BOOLEAN: true
 */
 
-private _menuStipEntries = "configName _x select [0,3] == 'ENH'" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");
-private _export = format ["_**Number of added entries: %1**_",count _menuStipEntries] + endl + "___" + endl + endl + endl;
+private _menuStipEntries = "configName _x select [0, 3] == 'ENH'" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");
+private _export = format ["_**Number of added entries: %1**_", count _menuStipEntries] + endl + "___" + endl + endl + endl;
 
 {
 	if !(getArray (_x >> "items") isEqualTo []) then

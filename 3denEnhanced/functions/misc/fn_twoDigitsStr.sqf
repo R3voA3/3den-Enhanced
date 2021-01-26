@@ -15,10 +15,4 @@
 
 params ["_number"];
 
-if (_number < 10) then
-{
-  "0" + str _number;
-} else
-{
-  str _number;
-};
+if (_number < 10) then {"0" + str _number} else {str _number};

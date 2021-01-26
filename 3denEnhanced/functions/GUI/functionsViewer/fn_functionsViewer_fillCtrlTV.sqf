@@ -14,7 +14,7 @@
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
-#define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed",""])
+#define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed", ""])
 
 disableSerialization;
 params ["_ctrl"];
@@ -34,9 +34,9 @@ CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0;
 CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
 CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlSetText "";
 
-profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex",_configIndex];
-profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex",_modeIndex];
-profileNamespace setVariable ["ENH_FunctionsViewer_LoadFileIndex",lbCurSel CTRL(2200)];
+profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex", _configIndex];
+profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex", _modeIndex];
+profileNamespace setVariable ["ENH_FunctionsViewer_LoadFileIndex", lbCurSel CTRL(2200)];
 
 private _fnc_addCustomFiles =
 {
@@ -45,7 +45,7 @@ private _fnc_addCustomFiles =
   CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
   CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
   CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
-  params ["_ctrlTV","_extension"];
+  params ["_ctrlTV", "_extension"];
   {
     private _addonPath = _x # 0;
     {
@@ -53,13 +53,13 @@ private _fnc_addCustomFiles =
       {
         private _fileName = _x splitString "\";
         _fileName = _fileName select (count _fileName - 1);
-        private _index = _ctrlTV tvAdd [[],_fileName];
+        private _index = _ctrlTV tvAdd [[], _fileName];
         _counter = _counter + 1;
-        _ctrlTV tvSetData [[_index],str [_fileName,_x]];
-        _ctrlTV tvSetTooltip [[_index],_addonPath];
+        _ctrlTV tvSetData [[_index], str [_fileName, _x]];
+        _ctrlTV tvSetTooltip [[_index], _addonPath];
         if (_x isEqualTo LAST_VIEWED) then {_ctrlTV tvSetCurSel [_index]};
       };
-    } forEach addonFiles [_addonPath,_extension];
+    } forEach addonFiles [_addonPath, _extension];
   } forEach allAddonsInfo;
 };
 
@@ -76,8 +76,8 @@ switch (_modeIndex) do
     private _addons = [];
     private _categories = [];
     {
-      _x params ["_configStr","_addon","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
-      if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
+      _x params ["_configStr", "_addon", "_category", "_fncShort", "_fncLong", "_path", "_preInit", "_preStart", "_postInit", "_recompile", "_logo"];
+      if (_configStr == (["configFile", "missionConfigFile", "campaignConfigFile"] select _configIndex)) then
       {
         if (_addonOld isEqualTo []) then {_addonOld = _addon};
         if (_addon in _addons) then
@@ -87,8 +87,8 @@ switch (_modeIndex) do
         else
         {
           _addons pushBack _addon;
-          _addonIndex = _ctrlTV tvAdd [[],_addon];
-          _ctrlTV tvSetPictureRight [[_addonIndex],_logo];
+          _addonIndex = _ctrlTV tvAdd [[], _addon];
+          _ctrlTV tvSetPictureRight [[_addonIndex], _logo];
         };
 
         if !(_addonOld isEqualTo _addon) then
@@ -96,7 +96,7 @@ switch (_modeIndex) do
           _categories = [];
           _addonOld = _addon;
           _categories pushBack _category;
-          _categoryIndex = _ctrlTV tvAdd [[_addonIndex],_category];
+          _categoryIndex = _ctrlTV tvAdd [[_addonIndex], _category];
         }
         else
         {
@@ -107,16 +107,16 @@ switch (_modeIndex) do
           else
           {
             _categories pushBack _category;
-            _categoryIndex = _ctrlTV tvAdd [[_addonIndex],_category];
+            _categoryIndex = _ctrlTV tvAdd [[_addonIndex], _category];
           };
         };
-        _fncIndex = _ctrlTV tvAdd [[_addonIndex,_categoryIndex],_fncShort];
+        _fncIndex = _ctrlTV tvAdd [[_addonIndex, _categoryIndex], _fncShort];
         _counter = _counter + 1;
-        _ctrlTV tvSetTooltip [[_addonIndex,_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
-        _ctrlTV tvSetData [[_addonIndex,_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+        _ctrlTV tvSetTooltip [[_addonIndex, _categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+        _ctrlTV tvSetData [[_addonIndex, _categoryIndex, _fncIndex], format ["['%1', '%2']", _fncLong, _path]];
         if (_path isEqualTo LAST_VIEWED) then
         {
-          _ctrlTV tvSetCurSel [_addonIndex,_categoryIndex,_fncIndex];//Triggers onTreeSelChanged
+          _ctrlTV tvSetCurSel [_addonIndex, _categoryIndex, _fncIndex];//Triggers onTreeSelChanged
         };
       };
       true
@@ -130,9 +130,9 @@ switch (_modeIndex) do
     private _categoryOld = [];
     private _categoryIndex = [];
     {
-      _x params ["_configStr","","_category","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
+      _x params ["_configStr", "", "_category", "_fncShort", "_fncLong", "_path", "_preInit", "_preStart", "_postInit", "_recompile", "_logo"];
 
-      if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
+      if (_configStr == (["configFile", "missionConfigFile", "campaignConfigFile"] select _configIndex)) then
       {
         if (_categoryOld isEqualTo []) then {_categoryOld = _category};
         if (_category in _categories) then
@@ -142,16 +142,16 @@ switch (_modeIndex) do
         else
         {
           _categories pushBack _category;
-          _categoryIndex = _ctrlTV tvAdd [[],_category];
-          _ctrlTV tvSetPictureRight [[_categoryIndex],_logo];
+          _categoryIndex = _ctrlTV tvAdd [[], _category];
+          _ctrlTV tvSetPictureRight [[_categoryIndex], _logo];
         };
-        private _fncIndex = _ctrlTV tvAdd [[_categoryIndex],_fncShort];
+        private _fncIndex = _ctrlTV tvAdd [[_categoryIndex], _fncShort];
         _counter = _counter + 1;
-        _ctrlTV tvSetTooltip [[_categoryIndex,_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
-        _ctrlTV tvSetData [[_categoryIndex,_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+        _ctrlTV tvSetTooltip [[_categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+        _ctrlTV tvSetData [[_categoryIndex, _fncIndex], format ["['%1', '%2']", _fncLong, _path]];
         if (_path isEqualTo LAST_VIEWED) then
         {
-          _ctrlTV tvSetCurSel [_categoryIndex,_fncIndex];//Triggers onTreeSelChanged
+          _ctrlTV tvSetCurSel [_categoryIndex, _fncIndex];//Triggers onTreeSelChanged
         };
       };
       true
@@ -160,13 +160,13 @@ switch (_modeIndex) do
   case 2:
   {
     {
-      _x params ["_configStr","","","_fncShort","_fncLong","_path","_preInit","_preStart","_postInit","_recompile","_logo"];
-      if (_configStr == (["configFile","missionConfigFile","campaignConfigFile"] select _configIndex)) then
+      _x params ["_configStr", "", "", "_fncShort", "_fncLong", "_path", "_preInit", "_preStart", "_postInit", "_recompile", "_logo"];
+      if (_configStr == (["configFile", "missionConfigFile", "campaignConfigFile"] select _configIndex)) then
       {
-        private _fncIndex = _ctrlTV tvAdd [[],_fncShort];
-        _ctrlTV tvSetPictureRight [[_fncIndex],_logo];
-        _ctrlTV tvSetTooltip [[_fncIndex],format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4",_preInit,_preStart,_postInit,_recompile]];//Do not localize
-        _ctrlTV tvSetData [[_fncIndex],format ["['%1','%2']",_fncLong,_path]];
+        private _fncIndex = _ctrlTV tvAdd [[], _fncShort];
+        _ctrlTV tvSetPictureRight [[_fncIndex], _logo];
+        _ctrlTV tvSetTooltip [[_fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+        _ctrlTV tvSetData [[_fncIndex], format ["['%1', '%2']", _fncLong, _path]];
         _counter = _counter + 1;
         if (_path isEqualTo LAST_VIEWED) then
         {
@@ -178,18 +178,18 @@ switch (_modeIndex) do
   };
   case 3:
   {
-    [_ctrlTV,".sqf"] call _fnc_addCustomFiles;
+    [_ctrlTV, ".sqf"] call _fnc_addCustomFiles;
   };
   case 4:
   {
-    [_ctrlTV,".inc"] call _fnc_addCustomFiles;
+    [_ctrlTV, ".inc"] call _fnc_addCustomFiles;
   };
   case 5:
   {
-    [_ctrlTV,".hpp"] call _fnc_addCustomFiles;
+    [_ctrlTV, ".hpp"] call _fnc_addCustomFiles;
   };
 };
 
-_ctrlTV tvSortAll [[],false];
+_ctrlTV tvSortAll [[], false];
 
 CTRL(IDC_FUNCTIONSVIEWER_NUMFUNCTIONS) ctrlSetText str _counter;

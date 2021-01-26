@@ -21,13 +21,13 @@ private _display = ctrlParent _ctrlButton;
 private _text = ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT);
 private _subject = ctrlText CTRL(IDC_BRIEFINGEDITOR_SUBJECT);
 private _title = ctrlText CTRL(IDC_BRIEFINGEDITOR_TITLE);
-private _showTitle = [true,false] select (lbCurSel CTRL(IDC_BRIEFINGEDITOR_SHOWTITLE));
+private _showTitle = [true, false] select (lbCurSel CTRL(IDC_BRIEFINGEDITOR_SHOWTITLE));
 
-if (([_text,_subject,_title] find "") > -1) exitWith {false};
+if (([_text, _subject, _title] find "") > -1) exitWith {false};
 
 private _createBriefing = format
 [
-  "0 = player createDiaryRecord [""%1"",[""%2"",""%3""],%4,""%5"",%6];",
+  "0 = player createDiaryRecord [""%1"", [""%2"", ""%3""],%4, ""%5"",%6];",
   _subject,
   _title,
   _text,
@@ -38,7 +38,7 @@ private _createBriefing = format
 
 if !(_subject isEqualTo "Diary") then//If user uses a non default subject, create it and export the code for it
 {
-  private _createSubject = format ["0 = player createDiarySubject [""%1"",""%1""];",_subject];
+  private _createSubject = format ["0 = player createDiarySubject [""%1"", ""%1""];", _subject];
   copyToClipboard (_createSubject + endl + _createBriefing);
 }
 else

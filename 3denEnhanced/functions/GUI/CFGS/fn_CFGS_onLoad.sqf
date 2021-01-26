@@ -17,9 +17,9 @@
 
 params ["_display"];
 
-uiNamespace setVariable ["ENH_CFGS_Display",_display];
-uiNamespace setVariable ["ENH_CFGS_ActiveList",CTRL(IDC_SENTENCES_LIST)];
-ENH_CFGS_Favorites = profileNamespace getVariable ["ENH_CFGS_Favorites",[]];
+uiNamespace setVariable ["ENH_CFGS_Display", _display];
+uiNamespace setVariable ["ENH_CFGS_ActiveList", CTRL(IDC_SENTENCES_LIST)];
+ENH_CFGS_Favorites = profileNamespace getVariable ["ENH_CFGS_Favorites", []];
 
 CTRL(IDC_SENTENCES_FAVORITES) ctrlSetFade 1;
 CTRL(IDC_SENTENCES_FAVORITES) ctrlEnable false;

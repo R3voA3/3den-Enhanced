@@ -1,6 +1,6 @@
 class ENH_EstablishingShot: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_establishingShot_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_establishingShot_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_establishingShot_onAttributeSave";
   h = 8 * SIZE_M * GRID_H + 35 * pixelH;
   class Controls: Controls
@@ -40,7 +40,7 @@ class ENH_EstablishingShot: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 500;
-      sliderRange[] = {50,2000};
+      sliderRange[] = {50, 2000};
       sliderStep = 50;
       lineSize = 50;
     };
@@ -65,7 +65,7 @@ class ENH_EstablishingShot: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 200;
-      sliderRange[] = {50,2000};
+      sliderRange[] = {50, 2000};
       sliderStep = 50;
       lineSize = 50;
     };
@@ -90,7 +90,7 @@ class ENH_EstablishingShot: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 45;
-      sliderRange[] = {0,360};
+      sliderRange[] = {0, 360};
       sliderStep = 5;
       lineSize = 5;
     };
@@ -121,7 +121,7 @@ class ENH_EstablishingShot: Title
         "$STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE",
         "$STR_ENH_ESTABLISHINGSHOT_CLOCKWISE"
       };
-      values[] = {0,1};
+      values[] = {0, 1};
     };
     class Reset: ENH_ResetButton_Base
     {

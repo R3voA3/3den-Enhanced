@@ -1,6 +1,6 @@
 class ENH_Airdrop: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_airdrop_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_airdrop_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_airdrop_onAttributeSave";
   h = 11 * SIZE_M * GRID_H + 35 * pixelH;//We make it 5 * pixelH larger to prevent scrolling issues
   class Controls: Controls
@@ -55,7 +55,7 @@ class ENH_Airdrop: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 500;
-      sliderRange[] = {200,5000};
+      sliderRange[] = {200, 5000};
       sliderStep = 50;
       lineSize = 50;
     };
@@ -78,7 +78,7 @@ class ENH_Airdrop: Title
       idc = 105;
       y = 7 * SIZE_M * GRID_H + 20 * pixelH;
        sliderPosition = 200;
-      sliderRange[] = {50,2000};
+      sliderRange[] = {50, 2000};
     };
     class RadiusEdit: AltitudeEdit
     {

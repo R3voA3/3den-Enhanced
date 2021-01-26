@@ -22,15 +22,15 @@ class ENH_AmbientFlyby
         _value spawn\
         {\
           scriptName 'ENH_Attribute_AmbientFlyby';\
-          params ['_classes','_startPos','_endPos','_alt','_speed','_side','_delay'];\
+          params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', '_delay'];\
           while {ENH_AmbientFlyby_Enabled} do\
           {\
             sleep _delay;\
-            [_startPos,_endPos,_alt,_speed,selectRandom _classes,_side] call BIS_fnc_ambientFlyby;\
+            [_startPos, _endPos, _alt, _speed, selectRandom _classes, _side] call BIS_fnc_ambientFlyby;\
           };\
         };\
       }";
-      defaultValue = "[[],[0,0,0],[0,0,0],500,'normal',west,300]";
+      defaultValue = "[[], [0, 0, 0], [0, 0, 0], 500, 'normal', west, 300]";
     };
   };
 };

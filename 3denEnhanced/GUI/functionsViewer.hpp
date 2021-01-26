@@ -42,7 +42,7 @@ class ENH_FunctionsViewer
         "missionConfig",
         "campaignConfig"
       };
-      values[] = {0,1,2};
+      values[] = {0, 1, 2};
       onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class FilterMode: FilterConfig
@@ -62,7 +62,7 @@ class ENH_FunctionsViewer
         ".inc",
         ".hpp"
       };
-      values[] = {0,1,2,3,4,5};
+      values[] = {0, 1, 2, 3, 4, 5};
       onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class LoadFileMode: ctrlCombo
@@ -99,9 +99,9 @@ class ENH_FunctionsViewer
       w = SIDEBAR_W;
       h = safezoneH - 37 * GRID_H;
       onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
-      colorLines[] = {1,1,1,1};
+      colorLines[] = {1, 1, 1, 1};
       borderSize = 0;
-      colorBorder[] = {0,0,0,0};
+      colorBorder[] = {0, 0, 0, 0};
     };
     class NumFunctions: ctrlStatic
     {
@@ -116,7 +116,7 @@ class ENH_FunctionsViewer
     class Search: ctrlEdit
     {
       idc = IDC_FUNCTIONSVIEWER_SEARCH;
-      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
+      tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = safezoneX + 12 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 44 * GRID_W;
@@ -187,7 +187,7 @@ class ENH_FunctionsViewer
     {
       idc = IDC_FUNCTIONSVIEWER_COPY;
       text = "$STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT";
-      tooltip = __EVAL(toUpper format ["%1+%2",localize "STR_DIK_CONTROL","X"]);
+      tooltip = __EVAL(toUpper format ["%1+%2", localize "STR_DIK_CONTROL", "X"]);
       y = safezoneY + 12 * GRID_H;
       onButtonClick = "_this call ENH_fnc_functionsViewer_copy";
     };
@@ -211,7 +211,7 @@ class ENH_FunctionsViewer
     class SearchCode: ctrlEdit
     {
       idc = IDC_FUNCTIONSVIEWER_SEARCHCODE;
-      tooltip = __EVAL(toUpper format ["%1+%2+%3",localize "STR_DIK_CONTROL",localize "STR_VK_SHIFT","F"]);
+      tooltip = __EVAL(toUpper format ["%1+%2+%3", localize "STR_DIK_CONTROL", localize "STR_VK_SHIFT", "F"]);
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 18 * GRID_H;
       w = 40 * GRID_W;

@@ -66,7 +66,7 @@ class ENH_Garrison
         "$STR_ENH_GARRISON_50PERCENT",
         "$STR_ENH_GARRISON_100PERCENT"
       };
-      values[] = {10,4,2,1};
+      values[] = {10, 4, 2, 1};
     };
     class Stance: ctrlStatic
     {
@@ -91,7 +91,7 @@ class ENH_Garrison
         "$STR_ENH_GARRISON_STANCE_CROUCH",
         "$STR_ENH_GARRISON_STANCE_STAND"
       };
-      values[] = {0,1,2,3};
+      values[] = {0, 1, 2, 3};
     };
     class Cancel: ctrlButtonCancel
     {

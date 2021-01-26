@@ -154,7 +154,7 @@ class ENH_BriefingEditor
         "$STR_ENH_BRIEFINGEDITOR_SHOWTITLE",
         "$STR_ENH_BRIEFINGEDITOR_HIDETITLE"
       };
-      values[] = {0,1};
+      values[] = {0, 1};
     };
     class TAGs: ctrlStatic
     {

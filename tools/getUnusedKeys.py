@@ -27,13 +27,13 @@ def validateFile(path):
 def scanFile(path):
   fileText = path.read_text()
   global word
-  words = re.split('"|;|[|]| |=|;|,|{|}|\n',fileText) #split things up
+  words = re.split('"|;|[|]| |=|;|,|{|}|\n', fileText) #split things up
   for word in words:
     if "STR_ENH" in word:
       if word.startswith("$"):
-        word = word.replace("$","")
+        word = word.replace("$", "")
       if word not in usedKeys: #only safe unique keys
-        usedKeys.insert(0,word)
+        usedKeys.insert(0, word)
 
 def getUsedKeysFromFiles():
   path = Path(r'C:\Users\rober\OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced\3denEnhanced')
@@ -58,9 +58,9 @@ def getKeysFromStringtable():
   keysInXML = []
   for elem in root:
     if elem not in keysInXML:
-      keyName = str(elem.attrib).replace("{'ID': '","")
-      keyName = keyName.replace("'}","")
-      keysInXML.insert(0,keyName)
+      keyName = str(elem.attrib).replace("{'ID': '", "")
+      keyName = keyName.replace("'}", "")
+      keysInXML.insert(0, keyName)
 
 def compareLists(keysInXML, usedKeys):
   for key in keysInXML:

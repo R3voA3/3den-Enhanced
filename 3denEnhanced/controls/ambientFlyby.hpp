@@ -1,6 +1,6 @@
 class ENH_AmbientFlyby: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_ambientFlyby_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_ambientFlyby_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_ambientFlyby_onAttributeSave";
   h = 13 * SIZE_M * GRID_H + 40 * pixelH;
   class Controls: Controls
@@ -53,7 +53,7 @@ class ENH_AmbientFlyby: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 500;
-      sliderRange[] = {50,3000};
+      sliderRange[] = {50, 3000};
       sliderStep = 50;
       lineSize = 50;
     };
@@ -90,7 +90,7 @@ class ENH_AmbientFlyby: Title
         "$STR_ENH_SPEED_NORMAL",
         "$STR_ENH_SPEED_FULL"
       };
-      values[] = {0,1,2};
+      values[] = {0, 1, 2};
     };
     class SideTitle: Title
     {
@@ -113,7 +113,7 @@ class ENH_AmbientFlyby: Title
       idc = 107;
       y = 11 * SIZE_M * GRID_H + 30 * pixelH;
        sliderPosition = 300;
-      sliderRange[] = {60,3600};
+      sliderRange[] = {60, 3600};
       sliderStep = 5;
     };
     class DelayEdit: AltitudeEdit

@@ -24,8 +24,8 @@ private _row = lbCurSel _ctrlItems;
 _ctrlItems lbDelete _row;
 
 //Update templates variable
-private _templates = profileNamespace getVariable ["ENH_IM_Templates",[]];
+private _templates = profileNamespace getVariable ["ENH_IM_Templates", []];
 _templates deleteAt _row;
-profileNamespace setVariable ["ENH_IM_Templates",_templates];
+profileNamespace setVariable ["ENH_IM_Templates", _templates];
 
 true

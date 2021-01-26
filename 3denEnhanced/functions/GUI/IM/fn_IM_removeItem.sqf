@@ -24,7 +24,7 @@ private _row = lnbCurSelRow  _ctrlInventory;
 
 if (_row == -1) exitWith {false};
 
-private _currentAmount = _ctrlInventory lnbValue [_row,1];
+private _currentAmount = _ctrlInventory lnbValue [_row, 1];
 private _newAmount = _currentAmount - _amount;
 
 if (_newAmount <= 0) exitWith
@@ -33,7 +33,7 @@ if (_newAmount <= 0) exitWith
   true
 };
 
-_ctrlInventory lnbSetText [[_row,2],str _newAmount];
-_ctrlInventory lnbSetValue [[_row,1],_newAmount];
+_ctrlInventory lnbSetText [[_row, 2], str _newAmount];
+_ctrlInventory lnbSetValue [[_row, 1], _newAmount];
 
 true

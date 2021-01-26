@@ -15,7 +15,7 @@
 
 #include "\3denEnhanced\defineCommon.hpp"
 
-ENH_PlacementTools_Selected = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3DENSelected;
+ENH_PlacementTools_Selected = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DENSelected;
 
 if (ENH_PlacementTools_Selected isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
 

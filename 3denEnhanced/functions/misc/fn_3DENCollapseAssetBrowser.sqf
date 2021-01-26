@@ -19,13 +19,13 @@ private _display3DEN = findDisplay 313;
 private _ctrlTV = controlNull;
 private _tvIDCs =
 [
-  61,//Groups BLUFOR
-  62,//Groups OPFOR
-  63,//Groups INDFOR
-  64,//Groups CIVFOR
-  56,//Objects BLUFOR
-  57,//Objects OPFOR
-  58,//Objects INDFOR
+  61, //Groups BLUFOR
+  62, //Groups OPFOR
+  63, //Groups INDFOR
+  64, //Groups CIVFOR
+  56, //Objects BLUFOR
+  57, //Objects OPFOR
+  58, //Objects INDFOR
   59 //Objects CIVFOR
 ];
 

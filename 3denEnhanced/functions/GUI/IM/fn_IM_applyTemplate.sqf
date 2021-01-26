@@ -23,7 +23,7 @@ private _ctrlItems = CTRL(IDC_IM_AVAILABLEITEMSLIST);
 private _row = lbCurSel _ctrlItems;
 if (_row isEqualTo -1) exitWith {false};
 private _value = _ctrlItems lbData lbCurSel _ctrlItems;
-ENH_IM_target set3DENAttribute ["ammoBox",_value];
+ENH_IM_target set3DENAttribute ["ammoBox", _value];
 call ENH_fnc_IM_loadAttributeValue;
 
 true

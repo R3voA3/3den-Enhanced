@@ -121,7 +121,7 @@ class ENH_Extraction
 };
 class ENH_TriggerOwnerPlayer
 {
-  action = "add3DENConnection ['TriggerOwner',get3DENSelected 'Trigger',player]";
+  action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
   text = "$STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER";
   conditionShow = "hoverTrigger";
 };

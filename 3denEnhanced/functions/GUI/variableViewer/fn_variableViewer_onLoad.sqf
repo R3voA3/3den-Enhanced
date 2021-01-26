@@ -20,10 +20,10 @@ params ["_display"];
 
 private _ctrlNamespace = CTRL(IDC_VARIABLEVIEWER_NAMESPACE);
 
-CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) cbSetChecked (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions",false]);
+CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) cbSetChecked (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false]);
 
 //CTRL + F to focus search
-_display displayAddEventHandler ["keyDown",//Focus Search
+_display displayAddEventHandler ["keyDown", //Focus Search
 {
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then
@@ -33,8 +33,8 @@ _display displayAddEventHandler ["keyDown",//Focus Search
 }];
 
 //Set up Filter
-CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARIABLENAME",localize "STR_ENH_VARIABLEVIEWER_VARIABLEVALUE",localize "STR_ENH_VARIABLEVIEWER_VARIABLETYPE",localize "STR_ENH_3DENRADIO_MOD","PL"];//Used for sorting
-[CTRL(IDC_VARIABLEVIEWER_FILTER),CTRL(IDC_VARIABLEVIEWER_LIST),[0,1,2]] call BIS_fnc_initListNBoxSorting;
+CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARIABLENAME", localize "STR_ENH_VARIABLEVIEWER_VARIABLEVALUE", localize "STR_ENH_VARIABLEVIEWER_VARIABLETYPE", localize "STR_ENH_3DENRADIO_MOD", "PL"];//Used for sorting
+[CTRL(IDC_VARIABLEVIEWER_FILTER), CTRL(IDC_VARIABLEVIEWER_LIST), [0, 1, 2]] call BIS_fnc_initListNBoxSorting;
 
 //Get all locations
 private _worldSizeHalf = worldSize / 2;
@@ -43,17 +43,17 @@ private _worldSizeHalf = worldSize / 2;
 private _allLocations = [];
 {
   _allLocations pushBack _x;
-} forEach nearestLocations [[_worldSizeHalf,_worldSizeHalf,0],LOCATION_TYPES,_worldSizeHalf * sqrt 2];
+} forEach nearestLocations [[_worldSizeHalf, _worldSizeHalf, 0], LOCATION_TYPES, _worldSizeHalf * sqrt 2];
 
 //Sort units, vehicles, groups and locations first, then add special namespaces so that they are at the beginning of the combo box
 private _namespaces = allUnits + vehicles + allGroups + _allLocations;
 _namespaces sort true;
-_namespaces = ["missionNamespace","localNamespace","profileNamespace","parsingNamespace","uiNamespace","player","cursorTarget"] + _namespaces;
+_namespaces = ["missionNamespace", "localNamespace", "profileNamespace", "parsingNamespace", "uiNamespace", "player", "cursorTarget"] + _namespaces;
 
-uiNamespace setVariable ["ENH_VariableViewer_Namespaces",_namespaces];
+uiNamespace setVariable ["ENH_VariableViewer_Namespaces", _namespaces];
 
 //We add special namespaces first, otherwise they are all named NAMESPACE
-private _lastNamespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace","missionNamespace"];
+private _lastNamespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];
 private _icon = "";
 {
   if (_x isEqualType "") then
@@ -87,7 +87,7 @@ private _icon = "";
       _icon = "\a3\Modules_F_Curator\Data\portraitLightning_ca.paa";
     };
   };
-  _ctrlNamespace lbSetPicture [_forEachIndex,_icon];
+  _ctrlNamespace lbSetPicture [_forEachIndex, _icon];
 } forEach _namespaces;
 
 //Fill ListNbox

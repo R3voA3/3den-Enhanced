@@ -13,7 +13,7 @@
   NAMESPACE
 */
 
-private _namespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace","missionNamespace"];
+private _namespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];
 
 if (_namespace isEqualType "") then
 {

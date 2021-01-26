@@ -30,11 +30,11 @@ ENH_fnc_IM_resetStorage_main =
     private _classes = "true" configClasses (configOf ENH_IM_target >> _x);
     {
         _count = getNumber (_x >> "count");
-        _configName = configName _x select [4,count (configName _x) -1];
+        _configName = configName _x select [4, count (configName _x) -1];
 
-        [_ctrlInventory,_configName,"","","",_count,_configName +  "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAdd;
+        [_ctrlInventory, _configName, "", "", "", _count, _configName +  "\n" + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAdd;
     } forEach _classes;
-  } forEach ["TransportWeapons","TransportMagazines","TransportItems","TransportBackpacks"];
+  } forEach ["TransportWeapons", "TransportMagazines", "TransportItems", "TransportBackpacks"];
 
   //Apply attribute will read the listbox content and set the attribute
   false call ENH_fnc_IM_applyAttribute;

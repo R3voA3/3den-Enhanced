@@ -13,7 +13,7 @@
   BOOLEAN: true
 */
 
-params [["_entityAttributes",true]];
+params [["_entityAttributes", true]];
 
 private _export = "";
 private _counter = 0;
@@ -24,18 +24,18 @@ private _configClasses = [];
 if (_entityAttributes) then
 {
   _config = configFile >> "Cfg3DEN";
-  _configClasses = ["Group","Marker","Object","Trigger","Waypoint","Logic","Comment"];
+  _configClasses = ["Group", "Marker", "Object", "Trigger", "Waypoint", "Logic", "Comment"];
 }
 else
 {
   _config = configFile >> "Cfg3DEN" >> "Mission";
-  _configClasses = ["GargabeCollection","Intel","Multiplayer","Preferences","Scenario"];
+  _configClasses = ["GargabeCollection", "Intel", "Multiplayer", "Preferences", "Scenario"];
 };
 
 {
   private _attributeCategories = "true" configClasses (_config >> _x >> "AttributeCategories");
   {
-    private _attributes = "configName _x select [0,3] == 'ENH'" configClasses (_x >> "attributes");
+    private _attributes = "configName _x select [0, 3] == 'ENH'" configClasses (_x >> "attributes");
     private _categoryName = getText (_x >> "displayName");
     {
       if ("Subcategory" in configName _x) then
@@ -72,7 +72,7 @@ else
   } forEach _attributeCategories;
 } forEach _configClasses;
 
-_export = format ["_**Number of added entries: %1**_",_counter] + endl + "___" + endl + endl + endl + _export;
+_export = format ["_**Number of added entries: %1**_", _counter] + endl + "___" + endl + endl + endl + _export;
 
 copyToClipboard _export;
 

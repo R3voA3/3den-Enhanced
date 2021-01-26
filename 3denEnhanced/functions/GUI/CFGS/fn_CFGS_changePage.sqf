@@ -20,13 +20,13 @@ params ["_control", "_selectedIndex"];
 _tv = (ctrlParent _control displayCtrl IDC_SENTENCES_LIST);
 _tvFavorites = (ctrlParent _control displayCtrl IDC_SENTENCES_FAVORITES);
 
-_tv ctrlEnable ([true,false] select _selectedIndex);
+_tv ctrlEnable ([true, false] select _selectedIndex);
 _tv ctrlSetFade _selectedIndex;
 
-_tvFavorites ctrlEnable ([false,true] select _selectedIndex);
-_tvFavorites ctrlSetFade ([1,0] select _selectedIndex);
+_tvFavorites ctrlEnable ([false, true] select _selectedIndex);
+_tvFavorites ctrlSetFade ([1, 0] select _selectedIndex);
 
 _tvFavorites ctrlCommit 0;
 _tv ctrlCommit 0;
 
-uiNamespace setVariable ["ENH_CFGS_ActiveList",[_tv,_tvFavorites] select _selectedIndex];
+uiNamespace setVariable ["ENH_CFGS_ActiveList", [_tv, _tvFavorites] select _selectedIndex];

@@ -14,11 +14,11 @@
   -
 */
 
-params ["_ctrlLnB","_row"];
+params ["_ctrlLnB", "_row"];
 
-private _data = call compile (_ctrlLnB lnbData [_row,0]);
+private _data = call compile (_ctrlLnB lnbData [_row, 0]);
 
-_data params ["_world","_camPosition","_camVectorDir","_camVectorUp"];
+_data params ["_world", "_camPosition", "_camVectorDir", "_camVectorUp"];
 
-move3DENCamera [_camPosition,true];
-get3DENCamera setVectorDirAndUp [_camVectorDir,_camVectorUp];
+move3DENCamera [_camPosition, true];
+get3DENCamera setVectorDirAndUp [_camVectorDir, _camVectorUp];

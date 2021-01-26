@@ -33,7 +33,7 @@ if (isNil "ENH_VariableViewer_SearchStarted") then
 
   for "_i" from 0 to _lbSize -1 do
   {
-    if !(_searchFor in toLower (_ctrlLNB lnbText [_i,0])) then
+    if !(_searchFor in toLower (_ctrlLNB lnbText [_i, 0])) then
     {
       _toDelete pushBack _i;
     };
@@ -45,7 +45,7 @@ if (isNil "ENH_VariableViewer_SearchStarted") then
     _ctrlLNB lnbDeleteRow _x;
   } forEach _toDelete;
   ENH_VariableViewer_SearchStarted = true;
-  CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1",lnbSize _ctrlLNB # 0];
+  CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1", lnbSize _ctrlLNB # 0];
 }
 else
 {

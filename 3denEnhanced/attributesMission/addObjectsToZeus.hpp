@@ -16,7 +16,7 @@ class ENH_AddObjectsToZeus
           {\
           _x addCuratorEditableObjects\
             [\
-              entities [[],['Logic'],true],\
+              entities [[], ['Logic'], true],\
               true\
             ];\
           } count allCurators;\

@@ -15,7 +15,7 @@
 
 #define CENTER (getPos get3DENCamera)
 #define RADIUS 100
-#define GET_BUILDINGS (CENTER nearObjects ["House",RADIUS])
+#define GET_BUILDINGS (CENTER nearObjects ["House", RADIUS])
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
@@ -31,7 +31,7 @@ if (["ENH_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStacke
         drawIcon3D
         [
           "\A3\modules_f\data\iconStrategicMapMission_ca.paa",
-          [1,0.1,1,1],
+          [1, 0.1, 1, 1],
           _x buildingPos _i,
           0.5,
           0.5,

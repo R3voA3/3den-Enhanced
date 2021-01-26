@@ -19,7 +19,7 @@ private _export = "";
 //Steam formatting has been removed due to incompatibility issues. Code stays for now.
 /*_fnc_addLine =
 {
-	params [["_text",""],["_value",""],["_bold",true],["_headline",false]];
+	params [["_text", ""], ["_value", ""], ["_bold", true], ["_headline", false]];
 	if !(_value isEqualType "") then {_value = str _value};
 	if (_bold) then {_text = "[b]" + _text + "[/b]"};
 	if (_headline) then {_text = "[h1]" + _text + "[/h1]"};
@@ -28,7 +28,7 @@ private _export = "";
 
 _fnc_addLine =
 {
-  params [["_text",""],["_value",""]];
+  params [["_text", ""], ["_value", ""]];
   if !(_value isEqualType "") then {_value = str _value};
   _export = _export + _text + " " + _value + endl;
 };
@@ -67,49 +67,49 @@ _rain = ("Intel" get3DENMissionAttribute "IntelRainStart");
 _date = ("Intel" get3DENMissionAttribute "IntelDate");
 _date = (str (_date # 1) + "-" + str (date # 2) + "-" + str (date # 0));
 
-["Mission Description",""] call _fnc_addLine;
-["",_description,false,false] call _fnc_addLine;
+["Mission Description", ""] call _fnc_addLine;
+["", _description, false, false] call _fnc_addLine;
 
 if !(_appID == 0) then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Required DLC:",_appID] call _fnc_addLine;
+  ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
+  ["Required DLC:", _appID] call _fnc_addLine;
 };
 
 if !(_gameType == "Unknown") then
 {
-  ["","",false,false] call _fnc_addLine;
-  ["Multiplayer","",false,true] call _fnc_addLine;
-  ["Game Type:",_gameType] call _fnc_addLine;
-  ["min. Players:",_minPlayers] call _fnc_addLine;
-  ["max. Players:",_maxPlayers] call _fnc_addLine;
+  ["", "", false, false] call _fnc_addLine;
+  ["Multiplayer", "", false, true] call _fnc_addLine;
+  ["Game Type:", _gameType] call _fnc_addLine;
+  ["min. Players:", _minPlayers] call _fnc_addLine;
+  ["max. Players:", _maxPlayers] call _fnc_addLine;
 };
 if (_respawn == "Yes") then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Respawn System","",false,true] call _fnc_addLine;
-  ["Respawn enabled?",_respawn] call _fnc_addLine;
+  ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
+  ["Respawn System", "", false, true] call _fnc_addLine;
+  ["Respawn enabled?", _respawn] call _fnc_addLine;
 };
 if (_revive == "Yes") then
 {
-  ["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-  ["Revive System","",false,true] call _fnc_addLine;
-  ["Revive enabled?",_revive] call _fnc_addLine;
-  ["Bleed Out Time:",format ["%1 seconds",_bleedOutTime]] call _fnc_addLine;
-  ["Simulation Detail:",_simulationDetail] call _fnc_addLine;
+  ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
+  ["Revive System", "", false, true] call _fnc_addLine;
+  ["Revive enabled?", _revive] call _fnc_addLine;
+  ["Bleed Out Time:", format ["%1 seconds", _bleedOutTime]] call _fnc_addLine;
+  ["Simulation Detail:", _simulationDetail] call _fnc_addLine;
 };
 
-["","",false,false] call _fnc_addLine;//Empty line because of Steam formatting
-["Environment","",false,true] call _fnc_addLine;
-["Date:",_date] call _fnc_addLine;
-["Time:",_time] call _fnc_addLine;
-["Fog:",format ["%1%2",round (_fog * 100),"%"]] call _fnc_addLine;
-["Rain:",format ["%1%2",round (_rain * 100),"%"]] call _fnc_addLine;
-["Map:",getText (configfile >> "CfgWorlds" >> worldName >> "description")] call _fnc_addLine;
-["","",false,false] call _fnc_addLine;
-["[img]https://i.imgur.com/p7Fv1Z6.gif[/img]","",false,false] call _fnc_addLine;
-["","",false,false] call _fnc_addLine;
-["Rate, favorite and comment! Feedback is always appreciated!","",false,true] call _fnc_addLine;
+["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
+["Environment", "", false, true] call _fnc_addLine;
+["Date:", _date] call _fnc_addLine;
+["Time:", _time] call _fnc_addLine;
+["Fog:", format ["%1%2", round (_fog * 100), "%"]] call _fnc_addLine;
+["Rain:", format ["%1%2", round (_rain * 100), "%"]] call _fnc_addLine;
+["Map:", getText (configfile >> "CfgWorlds" >> worldName >> "description")] call _fnc_addLine;
+["", "", false, false] call _fnc_addLine;
+["[img]https://i.imgur.com/p7Fv1Z6.gif[/img]", "", false, false] call _fnc_addLine;
+["", "", false, false] call _fnc_addLine;
+["Rate, favorite and comment! Feedback is always appreciated!", "", false, true] call _fnc_addLine;
 
 copyToClipboard _export;
 

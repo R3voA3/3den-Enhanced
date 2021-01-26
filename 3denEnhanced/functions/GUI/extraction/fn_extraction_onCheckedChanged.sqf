@@ -19,7 +19,7 @@
 params ["_ctrlCheckbox", "_checked"];
 
 private _display = ctrlParent _ctrlCheckbox;
-private _enable = [false,true] select _checked;
+private _enable = [false, true] select _checked;
 
 CTRL(IDC_EXTRACTION_NAMEREQUESTER) ctrlEnable _enable;
 CTRL(IDC_EXTRACTION_NAMETRANSPORT) ctrlEnable _enable;

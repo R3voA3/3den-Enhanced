@@ -101,7 +101,7 @@ class ENH_ScenarioAttributesManager
     class Search: ctrlEdit
     {
       idc = IDC_SCENARIOATTRIBUTESMANAGER_SEARCH;
-      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
+      tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
       w = 25 * GRID_W;

@@ -15,10 +15,10 @@
 
 #include "\3denEnhanced\defineCommon.hpp"
 
-#define CFG_MAGAZINES ["SmokeShell","smokeShellGreen","smokeShellOrange","smokeShellBlue","smokeShellRed","smokeShellPurple","smokeShellYellow","Chemlight_blue","Chemlight_red","Chemlight_green","Chemlight_yellow","B_IR_Grenade"]
+#define CFG_MAGAZINES ["SmokeShell", "smokeShellGreen", "smokeShellOrange", "smokeShellBlue", "smokeShellRed", "smokeShellPurple", "smokeShellYellow", "Chemlight_blue", "Chemlight_red", "Chemlight_green", "Chemlight_yellow", "B_IR_Grenade"]
 
 params ["_display"];
-(uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center","_veh"];
+(uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center", "_veh"];
 
 CTRL(IDC_EXTRACTION_SHOWRADIOCHAT) cbSetChecked false;
 
@@ -41,7 +41,7 @@ private _ctrlGrenadeType = CTRL(IDC_EXTRACTION_GRENADE);
     private _cfgMagazineClass = getText (configfile >> "CfgMagazines" >> _x >> "ammo");
     private _displayName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
     _ctrlGrenadeType lbAdd _displayName;
-    _ctrlGrenadeType lbSetData [_forEachIndex,_cfgMagazineClass];
+    _ctrlGrenadeType lbSetData [_forEachIndex, _cfgMagazineClass];
   };
 } forEach ["-"] + CFG_MAGAZINES;
 

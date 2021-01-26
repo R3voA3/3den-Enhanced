@@ -16,16 +16,16 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlToolbox","_selectedIndex"];
+params ["_ctrlToolbox", "_selectedIndex"];
 
 private _display = ctrlParent _ctrlToolbox;
 private _stepSize = _ctrlToolbox lbValue _selectedIndex;
 
-missionNamespace setVariable ["ENH_PlacementTools_stepSizeIndex",_selectedIndex];
+missionNamespace setVariable ["ENH_PlacementTools_stepSizeIndex", _selectedIndex];
 
 //Set slider speed
 {
-  (_display displayCtrl _x) sliderSetSpeed [_stepSize,_stepSize];
+  (_display displayCtrl _x) sliderSetSpeed [_stepSize, _stepSize];
 } forEach
 [
   IDC_PLACEMENTTOOLS_RADIUS,
@@ -35,5 +35,5 @@ missionNamespace setVariable ["ENH_PlacementTools_stepSizeIndex",_selectedIndex]
   IDC_PLACEMENTTOOLS_NUMCOLUMNS,
   IDC_PLACEMENTTOOLS_SPACEX,
   IDC_PLACEMENTTOOLS_SPACEY,
-  IDC_PLACEMENTTOOLS_A,IDC_PLACEMENTTOOLS_B
+  IDC_PLACEMENTTOOLS_A, IDC_PLACEMENTTOOLS_B
 ];

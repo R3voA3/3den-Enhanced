@@ -6,8 +6,8 @@
 
   Parameter(s):
   NUMBER: -1: random
-      -2: reverse
-      >-1: Direction in degrees
+          -2: reverse
+         >-1: Direction in degrees
 
   Returns:
   BOOLEAN: true / false
@@ -15,8 +15,8 @@
 
 if (!is3DEN) exitWith {false};
 
-private _input = param [0,0,[0]];
-private _entities = [["Object","Logic","Trigger","Marker"]] call ENH_fnc_all3denSelected;
+private _input = param [0, 0, [0]];
+private _entities = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3denSelected;
 
 if (_entities isEqualTo []) exitWith
 {
@@ -31,21 +31,21 @@ collect3DENHistory
     {
       {
         private _dir = (_x get3DENAttribute "Rotation") # 0;
-        _dir set [2,(_dir # 2) + 180];
-        _x set3DENAttribute ["rotation",_dir];
+        _dir set [2, (_dir # 2) + 180];
+        _x set3DENAttribute ["rotation", _dir];
       } forEach _entities;
     };
     case -1://randomise
     {
       {
         private _dir = random 360;
-        _x set3DENAttribute ["rotation",[0,0,_dir]];
+        _x set3DENAttribute ["rotation", [0, 0, _dir]];
       } forEach _entities;
     };
     default
     {
       {
-        _x set3DENAttribute ["rotation",[0,0,_input]];
+        _x set3DENAttribute ["rotation", [0, 0, _input]];
       } forEach _entities;
     };
   };

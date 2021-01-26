@@ -1,6 +1,6 @@
 class ENH_SPR: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_SPR_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_SPR_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_SPR_onAttributeSave";
   h = 5 * SIZE_M * GRID_H + 25 * pixelH;
   class Controls: Controls
@@ -30,7 +30,7 @@ class ENH_SPR: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 20;
-      sliderRange[] = {2,360};
+      sliderRange[] = {2, 360};
       sliderStep = 1;
       lineSize = 1;
     };

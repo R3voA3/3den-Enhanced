@@ -1,6 +1,6 @@
 class ENH_MissionEnding_Casualties: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_missionEndingCasualties_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_missionEndingCasualties_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_missionEndingCasualties_onAttributeSave";
   h = 6 * SIZE_M * GRID_H + 25 * pixelH;
   class Controls: Controls
@@ -17,7 +17,7 @@ class ENH_MissionEnding_Casualties: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 5;
-      sliderRange[] = {1,100};
+      sliderRange[] = {1, 100};
       sliderStep = 1;
       lineSize = 1;
     };

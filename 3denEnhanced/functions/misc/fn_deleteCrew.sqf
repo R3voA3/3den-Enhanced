@@ -8,7 +8,7 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 private _toReplace = get3DENSelected "Object";
@@ -19,5 +19,3 @@ private _toReplace = get3DENSelected "Object";
 
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-
-true

@@ -244,21 +244,21 @@ class ENH_ToggleSimpleObject
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMPLEOBJECT";
   picture = "";
-  action = "[['Object'],'objectIsSimple'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], 'objectIsSimple'] call ENH_fnc_toggleAttribute";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
 };
 class ENH_ToggleSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMULATION";
   picture = "";
-  action = "[['Object'],'enableSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], 'enableSimulation'] call ENH_fnc_toggleAttribute";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
 class ENH_ToggleDynamicSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION";
   picture = "";
-  action = "[['Object','Group'],'dynamicSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object', 'Group'], 'dynamicSimulation'] call ENH_fnc_toggleAttribute";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class ENH_ToggleDrawBuildingPositions
@@ -293,7 +293,7 @@ class ENH_CreateTrigger
 {
   text = "$STR_ENH_TOOLS_CREATETRIGGER";
   picture = "\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa";
-  action = "private _trigger = create3DENEntity ['Trigger','EmptyDetectorArea10x10',[worldSize / 2, worldSize / 2,0]]; _trigger set3DENAttribute ['size3',[worldSize / 2,worldSize / 2,0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
+  action = "private _trigger = create3DENEntity ['Trigger', 'EmptyDetectorArea10x10', [worldSize / 2, worldSize / 2, 0]]; _trigger set3DENAttribute ['size3', [worldSize / 2, worldSize / 2, 0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
 };
 //Vanilla
 class FunctionsViewer//Overwrites the default function viewer

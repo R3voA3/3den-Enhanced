@@ -14,7 +14,7 @@
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
-#define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration",0]
+#define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration", 0]
 
 disableSerialization;
 
@@ -24,8 +24,8 @@ if (isNull _display) exitWith {};
 
 //Set slider up
 CTRL(IDC_3DENRADIO_POSITION) sliderSetPosition getMusicPlayedTime;
-CTRL(IDC_3DENRADIO_POSITION) sliderSetRange [0,DURATION];
-CTRL(IDC_3DENRADIO_POSITION) sliderSetSpeed [10,5];
+CTRL(IDC_3DENRADIO_POSITION) sliderSetRange [0, DURATION];
+CTRL(IDC_3DENRADIO_POSITION) sliderSetSpeed [10, 5];
 
 //Update text control while display is opened. Do not update slider since that would bug it
 while {!isNull findDisplay IDD_3DENRADIO} do

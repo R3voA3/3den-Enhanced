@@ -67,7 +67,7 @@ class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
     "$STR_GUERRILA",
     "$STR_CIVILIAN"
   };
-  values[] = {0,1,2,3};
+  values[] = {0, 1, 2, 3};
 };
 
 class ENH_ResetButton_Base: ctrlButton

@@ -105,7 +105,7 @@ class ENH_ExportGUIDefines
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_display = ctrlParent (_this # 0);\
-      [(_display displayCtrl 10) lbData (lbCurSel (_display displayCtrl 10)),(_display displayCtrl 20) lbData (lbCurSel (_display displayCtrl 20))]\
+      [(_display displayCtrl 10) lbData (lbCurSel (_display displayCtrl 10)), (_display displayCtrl 20) lbData (lbCurSel (_display displayCtrl 20))]\
       call ENH_fnc_exportGUIDefines; _display closeDisplay 0";
     };
   };

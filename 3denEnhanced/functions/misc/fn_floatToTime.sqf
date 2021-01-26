@@ -23,6 +23,6 @@ private _seconds = _mod / 1;
 format
 [
   "%1:%2",
-  if (_minutes < 10) then {format ["0%1",_minutes]} else {format ["%1",_minutes]},
-  if (_seconds < 10) then {format ["0%1",_seconds]} else {format ["%1",_seconds]}
+  if (_minutes < 10) then {format ["0%1", _minutes]} else {format ["%1", _minutes]},
+  if (_seconds < 10) then {format ["0%1", _seconds]} else {format ["%1", _seconds]}
 ]

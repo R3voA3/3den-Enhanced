@@ -14,8 +14,8 @@
   -
 */
 
-params ["_ctrlGroup","_value"];
-_value params ["_classes","_startPos","_endPos","_alt","_speed","_side","_delay"];
+params ["_ctrlGroup", "_value"];
+_value params ["_classes", "_startPos", "_endPos", "_alt", "_speed", "_side", "_delay"];
 
 if (_classes isEqualType "") then
 {
@@ -27,7 +27,7 @@ else
   private _valueClasses = "";
 
   {
-    private _add = if (_foreachindex == 0) then {_x} else {format [", %1",_x]};
+    private _add = if (_foreachindex == 0) then {_x} else {format [", %1", _x]};
     _valueClasses= _valueClasses + _add;
   } foreach _classes;
 
@@ -39,14 +39,14 @@ else
 (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str _startPos;
 (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str _endPos;
 
-[_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",_alt] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", _alt] call BIS_fnc_initSliderValue;
 
-(_ctrlGroup controlsGroupCtrl 105) lbSetCurSel (["limited","normal","full"] find _speed);
-(_ctrlGroup controlsGroupCtrl 106) lbSetCurSel ([west,east,independent,civilian] find _side);
+(_ctrlGroup controlsGroupCtrl 105) lbSetCurSel (["limited", "normal", "full"] find _speed);
+(_ctrlGroup controlsGroupCtrl 106) lbSetCurSel ([west, east, independent, civilian] find _side);
 
-[_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s",_delay] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "s"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "s", _delay] call BIS_fnc_initSliderValue;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
@@ -55,13 +55,13 @@ else
 
   (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
 
-  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0,0,0]";
-  (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "[0,0,0]";
+  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0, 0, 0]";
+  (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "[0, 0, 0]";
 
-  [_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",500] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", 500] call BIS_fnc_initSliderValue;
 
   (_ctrlGroup controlsGroupCtrl 105) lbSetCurSel 1;
   (_ctrlGroup controlsGroupCtrl 106) lbSetCurSel 0;
 
-  [_ctrlGroup controlsGroupCtrl 107,_ctrlGroup controlsGroupCtrl 108,"s",300] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "s", 300] call BIS_fnc_initSliderValue;
 }];

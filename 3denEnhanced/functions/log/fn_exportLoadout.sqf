@@ -24,33 +24,33 @@ if (isNil "_object") exitWith
 #define LB endl
 #define IND "  "
 
-params [["_mode",true]];
+params [["_mode", true]];
 
 //From BIS_fnc_exportLoadout START
 private _fnc_addArray =
 {
-  params ["_name","_array"];
-  _export = _export + format [IND + "%1[] = {",_name];
+  params ["_name", "_array"];
+  _export = _export + format [IND + "%1[] = {", _name];
   {
-    if (_foreachindex > 0) then {_export = _export + ","};
-    _export = _export + format ["""%1""",_x];
+    if (_foreachindex > 0) then {_export = _export + ", "};
+    _export = _export + format ["""%1""", _x];
   } foreach _array;
   _export = _export + "};" + LB;
 };
 
 private _class = typeOf _object;
-private _uniformClass = format ["uniformClass = ""%1"";",uniform _object];
-private _backpack = format ["backpack = ""%1"";",backpack _object];
+private _uniformClass = format ["uniformClass = ""%1"";", uniform _object];
+private _backpack = format ["backpack = ""%1"";", backpack _object];
 private _weapons = weapons _object;
 private _primWeaponItems = primaryWeaponItems _object;
 private _secWeaponItems = secondaryWeaponItems _object;
 private _assignedItems = assigneditems _object;
 private _export = "";
 
-["weapons",_weapons + ["Throw","Put"]] call _fnc_addArray;
-["magazines",magazines _object] call _fnc_addArray;
-["items",items _object] call _fnc_addArray;
-["linkedItems",[vest _object,headgear _object,goggles _object] + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems] call _fnc_addArray;
+["weapons", _weapons + ["Throw", "Put"]] call _fnc_addArray;
+["magazines", magazines _object] call _fnc_addArray;
+["items", items _object] call _fnc_addArray;
+["linkedItems", [vest _object, headgear _object, goggles _object] + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems] call _fnc_addArray;
 
 if (_mode) then
 {//Respawn Loadout for config
@@ -58,7 +58,7 @@ if (_mode) then
 }
 else
 {//CfgRespawnLoadout
-  private _displayName = format ["displayName = ""%1"";",getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
+  private _displayName = format ["displayName = ""%1"";", getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
   private _icon = "icon = ""\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"";";
   private _role = "role = ""Default"";";
   private _show = "show = ""true"";";

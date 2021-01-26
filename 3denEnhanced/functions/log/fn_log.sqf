@@ -21,19 +21,19 @@
   BOOLEAN: true or false
 */
 
-params [["_mode",""]];
+params [["_mode", ""]];
 
 if (_mode == "") exitWith {false};
 
 private _export = "";
-private _selection = [["Object","Logic","Trigger","Marker","Waypoint"]] call ENH_fnc_all3DENSelected;
+private _selection = [["Object", "Logic", "Trigger", "Marker", "Waypoint"]] call ENH_fnc_all3DENSelected;
 
 switch (_mode) do
 {
   case "IDS":
   {
     private _IDs = _selection apply {get3DENEntityID _x};
-    _export = [_IDs,false] call ENH_fnc_exportWithLB;
+    _export = [_IDs, false] call ENH_fnc_exportWithLB;
   };
   case "CLASSES":
   {
@@ -41,7 +41,7 @@ switch (_mode) do
     {
       _classes pushBackUnique ((_x get3DENAttribute "ItemClass") # 0);
     } forEach _selection;
-    _export = [_classes,false] call ENH_fnc_exportWithLB;
+    _export = [_classes, false] call ENH_fnc_exportWithLB;
   };
   case "FACTIONS":
   {
@@ -49,7 +49,7 @@ switch (_mode) do
     {
       _factions pushBackUnique faction _x;
     } forEach (get3DENSelected "object");
-    _export = [_factions,false] call ENH_fnc_exportWithLB;
+    _export = [_factions, false] call ENH_fnc_exportWithLB;
   };
   case "GRIDPOS":
   {
@@ -67,7 +67,7 @@ switch (_mode) do
         _posArray pushBackUnique mapGridPosition ((_x get3DENAttribute "Position") # 0);
       } forEach _selection;
     };
-    _export = [_posArray,false] call ENH_fnc_exportWithLB;
+    _export = [_posArray, false] call ENH_fnc_exportWithLB;
   };
   case "2D":
   {
@@ -78,7 +78,7 @@ switch (_mode) do
       _pos resize 2;
       _posArray pushBack _pos;
     } forEach _selection;
-    _export = [_posArray,false] call ENH_fnc_exportWithLB;
+    _export = [_posArray, false] call ENH_fnc_exportWithLB;
   };
   case "3D":
   {
@@ -87,7 +87,7 @@ switch (_mode) do
       _posArray pushBack ((_x get3DENAttribute "Position") # 0);
     } forEach _selection;
 
-    _export = [_posArray,false] call ENH_fnc_exportWithLB;
+    _export = [_posArray, false] call ENH_fnc_exportWithLB;
   };
   case "VARNAMES":
   {
@@ -105,7 +105,7 @@ switch (_mode) do
         _varNames pushBack ((_x get3DENAttribute "MarkerName") # 0);
       } forEach _markers;
     };
-    _export = [_varNames select {_x != ""},false] call ENH_fnc_exportWithLB;
+    _export = [_varNames select {_x != ""}, false] call ENH_fnc_exportWithLB;
   };
   case "OBJECTINFO":
   {
@@ -120,7 +120,7 @@ switch (_mode) do
       private _maxWidth = abs ((_p2 # 0) - (_p1 # 0));
       private _maxLength = abs ((_p2 # 1) - (_p1 # 1));
       private _maxHeight = abs ((_p2 # 2) - (_p1 # 2));
-      _size = str [_maxWidth,_maxLength,_maxHeight];
+      _size = str [_maxWidth, _maxLength, _maxHeight];
 
       private _parents = str ([configfile >> "CfgVehicles" >> _class, true] call BIS_fnc_returnParents);
       private _modelInfo = str getModelInfo _x;
@@ -129,7 +129,7 @@ switch (_mode) do
       private _obj = _x;
       {
         if (_obj isKindOf _x) then {_kind = _x};
-      } forEach ["Air","Land","Sea","Tank","Man"];
+      } forEach ["Air", "Land", "Sea", "Tank", "Man"];
 
       private _selectionNames = selectionNames _x;
 
@@ -137,7 +137,7 @@ switch (_mode) do
       {
         if (_forEachIndex != (count _selectionNames) - 1 ) then
         {
-          _selectionNamesFormatted = _selectionNamesFormatted + _x + "," + endl;
+          _selectionNamesFormatted = _selectionNamesFormatted + _x + ", " + endl;
         }
         else
         {
@@ -197,7 +197,7 @@ switch (_mode) do
     if (true) exitWith
     {
       //Set variable used by Display3denCopy and create the display
-      uinamespace setVariable ["Display3DENCopy_data",[localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO",_text]];
+      uinamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
 
       //Stupid workaround because BI is not able to fix this
       _display = findDisplay 313 createDisplay "Display3denCopy";

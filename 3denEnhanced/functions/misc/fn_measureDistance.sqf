@@ -44,7 +44,7 @@ else
 
   if (get3DENActionState "toggleMap" == 1) then
   {
-    ENH_MeasureDist_Markers = [ENH_Pos_Start,ENH_Pos_End,50] call BIS_fnc_markerPath;
+    ENH_MeasureDist_Markers = [ENH_Pos_Start, ENH_Pos_End, 50] call BIS_fnc_markerPath;
     sleep 5;
     {deleteMarker _x} forEach ENH_MeasureDist_Markers;
     ENH_MeasureDist_Markers = nil;
@@ -53,10 +53,10 @@ else
   {
     ENH_EH_DrawDist = addMissionEventHandler ["Draw3D",
     {
-      drawLine3D [ASLToAGL ENH_Pos_Start,ASLToAGL ENH_Pos_End,[1,0,0,1]];
+      drawLine3D [ASLToAGL ENH_Pos_Start, ASLToAGL ENH_Pos_End, [1, 0, 0, 1]];
     }];
     sleep 5;
-    removeMissionEventHandler ["Draw3D",ENH_EH_DrawDist];
+    removeMissionEventHandler ["Draw3D", ENH_EH_DrawDist];
     ENH_EH_DrawDist = nil;
   };
 

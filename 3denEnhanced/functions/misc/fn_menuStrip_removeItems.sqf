@@ -18,7 +18,7 @@
 disableSerialization;
 
 private _ctrlMenuStrip = findDisplay IDD_3DEN displayCtrl 120;
-private _toDelete = profileNamespace getVariable ["ENH_MenuStrip_Blacklist",[]];
+private _toDelete = profileNamespace getVariable ["ENH_MenuStrip_Blacklist", []];
 if (_toDelete isEqualTo []) exitWith {};
 
 private _toDelete = _toDelete apply {_x call BIS_fnc_localize};
@@ -35,11 +35,11 @@ for "_i" from (_ctrlMenuStrip menuSize []) to 0 step -1 do
 {
   for "_j" from (_ctrlMenuStrip menuSize [_i]) to 0 step -1 do
   {
-    for "_k" from (_ctrlMenuStrip menuSize [_i,_j]) to 0 step -1 do
+    for "_k" from (_ctrlMenuStrip menuSize [_i, _j]) to 0 step -1 do
     {
-      [_i,_j,_k] call _fnc_delete;
+      [_i, _j, _k] call _fnc_delete;
     };
-    [_i,_j] call _fnc_delete;
+    [_i, _j] call _fnc_delete;
   };
   [_i] call _fnc_delete;
 };

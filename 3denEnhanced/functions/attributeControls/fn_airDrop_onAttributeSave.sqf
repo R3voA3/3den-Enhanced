@@ -16,10 +16,10 @@
 params ["_ctrlGroup"];
 
 [
-  ctrlText (_ctrlGroup controlsGroupCtrl 100) splitString ";,[] " + endl,//Convert string to array with strings
+  ctrlText (_ctrlGroup controlsGroupCtrl 100) splitString ";, [] " + endl, //Convert string to array with strings
   parseSimpleArray ctrlText (_ctrlGroup controlsGroupCtrl 101),
   ctrlText (_ctrlGroup controlsGroupCtrl 102),
   sliderPosition (_ctrlGroup controlsGroupCtrl 103),
   sliderPosition (_ctrlGroup controlsGroupCtrl 105),
-  [west,east,independent,civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 107)
+  [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 107)
 ]

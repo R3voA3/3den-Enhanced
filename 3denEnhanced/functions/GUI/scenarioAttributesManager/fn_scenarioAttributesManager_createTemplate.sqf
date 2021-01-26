@@ -38,9 +38,9 @@ _display closeDisplay 1;
 
 
   private _index = _ctrlLB lbAdd ENH_ScenarioAttributesManager_TemplateTitle;
-  _ctrlLB lbSetTooltip [_index,ENH_ScenarioAttributesManager_TemplateDescription];
+  _ctrlLB lbSetTooltip [_index, ENH_ScenarioAttributesManager_TemplateDescription];
 
   //Save Title, Description and actual scenario attributes
-  _ctrlLB lbSetData [_index,str [ENH_ScenarioAttributesManager_TemplateTitle,ENH_ScenarioAttributesManager_TemplateDescription,_attributeValues]];
-  lbSort [_ctrlLB,"DESC"];
+  _ctrlLB lbSetData [_index, str [ENH_ScenarioAttributesManager_TemplateTitle, ENH_ScenarioAttributesManager_TemplateDescription, _attributeValues]];
+  lbSort [_ctrlLB, "DESC"];
 };

@@ -38,7 +38,7 @@ for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
 {
   private _briefingTitle =_ctrlLBTemplates lbText _index;
   private _briefingText = _ctrlLBTemplates lbData _index;
-  _savedTemplates pushBack [_briefingTitle,_briefingText];
+  _savedTemplates pushBack [_briefingTitle, _briefingText];
 };
 
-profileNamespace setVariable ["ENH_briefingEditor_templates",_savedTemplates];
+profileNamespace setVariable ["ENH_briefingEditor_templates", _savedTemplates];

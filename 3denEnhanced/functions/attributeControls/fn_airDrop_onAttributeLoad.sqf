@@ -14,8 +14,8 @@
   -
 */
 
-params ["_ctrlGroup","_value"];
-_value params ["_classes","_center","_condition","_alt","_r","_side"];
+params ["_ctrlGroup", "_value"];
+_value params ["_classes", "_center", "_condition", "_alt", "_r", "_side"];
 
 if (_classes isEqualType "") then
 {
@@ -27,7 +27,7 @@ else
   private _valueClasses = "";
 
   {
-    private _add = if (_foreachindex == 0) then {_x} else {format [", %1",_x]};
+    private _add = if (_foreachindex == 0) then {_x} else {format [", %1", _x]};
     _valueClasses= _valueClasses + _add;
   } foreach _classes;
 
@@ -37,13 +37,13 @@ else
 (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str _center;
 (_ctrlGroup controlsGroupCtrl 102) ctrlSetText _condition;
 
-[_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",_alt] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", _alt] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 105,_ctrlGroup controlsGroupCtrl 106,"m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 105,_ctrlGroup controlsGroupCtrl 106,"m",_r] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m", _r] call BIS_fnc_initSliderValue;
 
-(_ctrlGroup controlsGroupCtrl 107) lbSetCurSel ([west,east,independent,civilian] find _side);
+(_ctrlGroup controlsGroupCtrl 107) lbSetCurSel ([west, east, independent, civilian] find _side);
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
@@ -51,11 +51,11 @@ else
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
   (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
-  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0,0,0]";
+  (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0, 0, 0]";
   (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "false";
 
-  [_ctrlGroup controlsGroupCtrl 103,_ctrlGroup controlsGroupCtrl 104,"m",500] call BIS_fnc_initSliderValue;
-  [_ctrlGroup controlsGroupCtrl 105,_ctrlGroup controlsGroupCtrl 106,"m",200] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", 500] call BIS_fnc_initSliderValue;
+  [_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m", 200] call BIS_fnc_initSliderValue;
 
   (_ctrlGroup controlsGroupCtrl 107) lbSetCurSel 0;
 }];

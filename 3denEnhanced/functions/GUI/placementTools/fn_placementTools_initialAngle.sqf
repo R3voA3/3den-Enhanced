@@ -22,9 +22,9 @@ private _angleStep = ENH_PlacementTools_CentralAngle / count ENH_PlacementTools_
 collect3DENHistory
 {
   {
-    private _pos = ENH_PlacementTools_Center getPos [ENH_PlacementTools_Radius,_angle];
-    _x set3DENAttribute ["Position",_pos];
-    _x set3DENAttribute ["Rotation",[0,0,_angle]];
+    private _pos = ENH_PlacementTools_Center getPos [ENH_PlacementTools_Radius, _angle];
+    _x set3DENAttribute ["Position", _pos];
+    _x set3DENAttribute ["Rotation", [0, 0, _angle]];
     _angle = _angle + _angleStep;
   } forEach ENH_PlacementTools_Selected;
 };

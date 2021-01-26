@@ -15,23 +15,23 @@
 
 #include "\3denEnhanced\defineCommon.hpp"
 
-private _display = uiNamespace getVariable ["ENH_CFGS_Display",displayNull];
+private _display = uiNamespace getVariable ["ENH_CFGS_Display", displayNull];
 private _tv = CTRL(IDC_SENTENCES_LIST);
 private _ctrlFilter = CTRL(IDC_SENTENCES_PAGES);
 private _ctrlCount = CTRL(IDC_SENTENCES_COUNT);
 private _counter = 0;
 
-params [["_filter","ALL"]];
+params [["_filter", "ALL"]];
 
 tvClear _tv;
 
 {
   if (_filter == "ALL" || {_filter in toUpper configName _x}) then //Only filter if filter is not "all"
   {
-    _indexMission = _tv tvAdd [[],toUpper configName _x];
+    _indexMission = _tv tvAdd [[], toUpper configName _x];
     _topics = "true" configClasses (_x);
     {
-      _indexDialogue = _tv tvAdd [[_indexMission],toUpper configName _x];
+      _indexDialogue = _tv tvAdd [[_indexMission], toUpper configName _x];
       _sentences = "true" configClasses (_x >> "Sentences");
       {
         _text = getText (_x >> "text");
@@ -41,8 +41,8 @@ tvClear _tv;
         _soundArray = getArray (_x >> "speech");
         if !(_soundArray isEqualTo []) then
         {
-          _tv tvAdd [[_indexMission,_indexDialogue],_text];
-          _tv tvSetData [[_indexMission,_indexDialogue,_forEachIndex],str _x];
+          _tv tvAdd [[_indexMission, _indexDialogue], _text];
+          _tv tvSetData [[_indexMission, _indexDialogue, _forEachIndex], str _x];
           _counter = _counter + 1;
         };
       } forEach _sentences;

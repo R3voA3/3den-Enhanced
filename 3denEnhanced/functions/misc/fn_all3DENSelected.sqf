@@ -8,7 +8,7 @@
 
   Parameter(s):
   0: ARRAY - Array of strings. Entity types to return. For possible values see https://community.bistudio.com/wiki/get3DENSelected
-    Default: ["Object","Group","Trigger","Logic","Waypoint","Marker"]
+    Default: ["Object", "Group", "Trigger", "Logic", "Waypoint", "Marker"]
 
   Returns:
   ARRAY - List of selected entities
@@ -18,7 +18,7 @@
 
 */
 
-params [["_whiteList",["Object","Group","Trigger","Logic","Waypoint","Marker"]]];
+params [["_whiteList", ["Object", "Group", "Trigger", "Logic", "Waypoint", "Marker"]]];
 
 private _return = [];
 

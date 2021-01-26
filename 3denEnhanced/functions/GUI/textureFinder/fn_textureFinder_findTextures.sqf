@@ -30,7 +30,7 @@ findDisplay IDD_TEXTUREFINDER displayAddEventHandler ["keyDown",
 //Update preview
 findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeSelChanged",
 {
-  params ["_ctrlTV","_path"];
+  params ["_ctrlTV", "_path"];
   if (count _path == 2) then
   {
     (ctrlParent _ctrlTV displayCtrl 1200) ctrlSetText (_ctrlTV tvText _path)
@@ -47,7 +47,7 @@ findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddE
 [] spawn ENH_fnc_textureFinder_progressText;
 
 //Exit if search is running or search was already done and data was stored in uiNamespace
-if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound",[]] isNotEqualTo []) exitWith {[] spawn ENH_fnc_textureFinder_fillList};
+if (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound", []] isNotEqualTo []) exitWith {[] spawn ENH_fnc_textureFinder_fillList};
 if (!isNil "ENH_TextureFinder_SearchRunning") exitWith {};
 
 ENH_TextureFinder_SearchRunning = true;
@@ -58,7 +58,7 @@ ENH_TextureFinder_ClassesSearched = 0;
 //Scan configFile for all classes
 private _fnc_searchConfig =
 {
-   params [["_depth", 1],["_class",configFile]];
+   params [["_depth", 1], ["_class", configFile]];
 
    if (_depth == 0) exitWith {[]};
    _depth = _depth - 1;
@@ -97,12 +97,12 @@ private _searchArray =
     {
       _searchArray forEach getArray _x;
     };
-  } forEach configProperties [_x, "isText _x || isArray _x",false];
+  } forEach configProperties [_x, "isText _x || isArray _x", false];
 } forEach ([15] call _fnc_searchConfig);
 
-uiNamespace setVariable ["ENH_TextureFinder_TexturesFound",ENH_TextureFinder_TexturesFound];
-uiNamespace setVariable ["ENH_TextureFinder_ClassesFound",ENH_TextureFinder_ClassesFound];
-uiNamespace setVariable ["ENH_TextureFinder_ClassesSearched",ENH_TextureFinder_ClassesSearched];
+uiNamespace setVariable ["ENH_TextureFinder_TexturesFound", ENH_TextureFinder_TexturesFound];
+uiNamespace setVariable ["ENH_TextureFinder_ClassesFound", ENH_TextureFinder_ClassesFound];
+uiNamespace setVariable ["ENH_TextureFinder_ClassesSearched", ENH_TextureFinder_ClassesSearched];
 
 ENH_TextureFinder_SearchRunning = nil;
 ENH_TextureFinder_TexturesFound = nil;

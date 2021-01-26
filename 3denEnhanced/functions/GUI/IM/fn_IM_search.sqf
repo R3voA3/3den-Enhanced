@@ -32,18 +32,18 @@ else
 
 lbClear _ctrlItems;
 {
-  _x params ["_configName","_displayName","_picture","_addonClass","_addonIcon"];
+  _x params ["_configName", "_displayName", "_picture", "_addonClass", "_addonIcon"];
   if (_filter in ("MOD" + " " + toUpper _addonClass)) then
   {
-    [_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName] call ENH_fnc_IM_lbAdd;
+    [_ctrlItems, _displayName, _configName, _picture, _addonIcon, _configName] call ENH_fnc_IM_lbAdd;
   }
   else
   {
     if ((_filter in toUpper _displayName) || (_filter == "")) then
     {
-      [_ctrlItems,_displayName,_configName,_picture,_addonIcon,_configName] call ENH_fnc_IM_lbAdd;
+      [_ctrlItems, _displayName, _configName, _picture, _addonIcon, _configName] call ENH_fnc_IM_lbAdd;
     };
   };
-} forEach (uiNamespace getVariable ["ENH_IM_FilteredItems",[]]);
+} forEach (uiNamespace getVariable ["ENH_IM_FilteredItems", []]);
 
-lbSort [_ctrlItems,"ASC"];
+lbSort [_ctrlItems, "ASC"];

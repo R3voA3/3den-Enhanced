@@ -24,13 +24,13 @@ if (_displayOrControl isEqualType controlNull) then
 
 private _ctrlLnB = _displayOrControl displayCtrl IDC_3DENCAMPOS_LIST;
 lbClear _ctrlLnB;
-_ctrlLnB lnbSetColumnsPos [0,0.1,0.72,0.87];
+_ctrlLnB lnbSetColumnsPos [0, 0.1, 0.72, 0.87];
 {
-  _x params ["_world","_cam3DENPosition","","","_description",["_systemTime",[2020,01,01,00,00]]];
+  _x params ["_world", "_cam3DENPosition", "", "", "_description", ["_systemTime", [2020, 01, 01, 00, 00]]];
 
   if (count _description > 45) then
   {
-    _description = ((_description select [0,45]) + "...");
+    _description = ((_description select [0, 45]) + "...");
   };
 
   _date = format
@@ -49,18 +49,18 @@ _ctrlLnB lnbSetColumnsPos [0,0.1,0.72,0.87];
   ];
 
 
-  private _index = _ctrlLnB lnbAddRow ["",_description,_date,_time];
+  private _index = _ctrlLnB lnbAddRow ["", _description, _date, _time];
 
-  _ctrlLnB lnbSetPicture [[_index,0],getText (configFile >> "CfgWorlds" >> _world >> "pictureMap")];
-  _ctrlLnB lnbSetData [[_index,0],str _x];
+  _ctrlLnB lnbSetPicture [[_index, 0], getText (configFile >> "CfgWorlds" >> _world >> "pictureMap")];
+  _ctrlLnB lnbSetData [[_index, 0], str _x];
 
   private _number = ((_index + 1) call ENH_fnc_twoDigitsStr) + ".";
-  _ctrlLnB lnbSetText [[_index,0],_number];
+  _ctrlLnB lnbSetText [[_index, 0], _number];
 
-  _cam3DENPosition params ["_xC","_yC","_zC"];
+  _cam3DENPosition params ["_xC", "_yC", "_zC"];
   _ctrlLnB lnbSetTooltip
   [
-    [_index,0],
+    [_index, 0],
     format
     [
       "X: %1 Y: %2 Z: %3\n\n%4\n\n%5\n%6",
@@ -72,4 +72,4 @@ _ctrlLnB lnbSetColumnsPos [0,0.1,0.72,0.87];
       localize "STR_ENH_3DENCAM_HELPMOVETO"
     ]
   ];
-} forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions",[]]);
+} forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions", []]);

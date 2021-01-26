@@ -20,7 +20,7 @@ private _data = [];
 
 for "_i" from 0 to _lbMaxIndex do
 {
-  _data pushBack call compile (_ctrlLnB lnbData [_i,0]);
+  _data pushBack call compile (_ctrlLnB lnbData [_i, 0]);
 };
 
-profileNamespace setVariable ["ENH_Cam3DENSavedPositions",_data];
+profileNamespace setVariable ["ENH_Cam3DENSavedPositions", _data];

@@ -3,7 +3,7 @@
 
   Description:
   Modifies an array to be outputted with linebreaks for easier legibility.
-  ["test","test","test"]
+  ["test", "test", "test"]
 
   ["test",
   "test",
@@ -17,14 +17,14 @@
   STRING - Modified array as string
 */
 
-private _array = param [0,[],[[]]];
-private _addBrackets = param [1,true,[true]];
+private _array = param [0, [], [[]]];
+private _addBrackets = param [1, true, [true]];
 
 private _export = "";
 {
   if (_forEachindex < count _array - 1) then
   {
-    _export = _export + str _x + "," + endl;
+    _export = _export + str _x + ", " + endl;
   }
   else
   {

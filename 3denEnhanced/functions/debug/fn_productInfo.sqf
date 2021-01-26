@@ -28,7 +28,7 @@ _configClasses = ("true" configClasses (configFile >> "CfgMods")) + ("true" conf
 
 copyToClipboard format
 [
-  "Game: %1" + endl + "Version: %2" + endl + "Build: %3" + endl + "Branch: %4" + endl + "Mods enabled: %5" + endl + "Operating System: %6" + endl + "Architecture: %10" + endl + endl + "Resolution:" + endl + "Width: %7" + endl + "Height: %8" + endl + "UI Scale: %9" + endl + endl + "Mod List:" + endl + "%11",//Do not localize, the devs speak English
+  "Game: %1" + endl + "Version: %2" + endl + "Build: %3" + endl + "Branch: %4" + endl + "Mods enabled: %5" + endl + "Operating System: %6" + endl + "Architecture: %10" + endl + endl + "Resolution:" + endl + "Width: %7" + endl + "Height: %8" + endl + "UI Scale: %9" + endl + endl + "Mod List:" + endl + "%11", //Do not localize, the devs speak English
   productVersion # 0,
   (productVersion # 2) / 100,
   productVersion # 3,

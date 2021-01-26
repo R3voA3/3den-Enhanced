@@ -18,10 +18,10 @@
   STRING: Returns generated text on success otherwise "" and error message with expected input
 */
 
-params [["_mode","scenario"], ["_classes", "classic"]];
+params [["_mode", "scenario"], ["_classes", "classic"]];
 
-if !(_mode in ["scenario","mod"]) exitWith {["Mode was ""%1"", expected was ""mission"" or ""mod""",_mode] call BIS_fnc_error; ""};
-if !(_classes in ["","3DEN","classic"]) exitWith {["Classes was ""%1"", expected was """", ""3DEN"" or ""classic""",_mode] call BIS_fnc_error; ""};
+if !(_mode in ["scenario", "mod"]) exitWith {["Mode was ""%1"", expected was ""mission"" or ""mod""", _mode] call BIS_fnc_error; ""};
+if !(_classes in ["", "3DEN", "classic"]) exitWith {["Classes was ""%1"", expected was """", ""3DEN"" or ""classic""", _mode] call BIS_fnc_error; ""};
 
 private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
 _return = _return + "//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
@@ -73,13 +73,13 @@ _return = _return + "//GRIDs" + endl + "#include ""\a3\ui_f\hpp\definecommongrid
 _return = _return + "//DIK Key Codes" + endl + "#include ""\a3\ui_f\hpp\definedikcodes.inc""" + endl;
 _return = _return + "//Eden Editor IDDs and IDCs as well as control types, styles and macros" + endl + "#include ""\a3\3den\ui\resincl.inc""" + endl + endl;
 
-if (_classes in ["","3DEN"]) then
+if (_classes in ["", "3DEN"]) then
 {
   private _3DENBaseControls = [];
   {
     _3DENBaseControls pushBack configName _x;
   } forEach ("isClass _x &&
-              configName _x select [0,4] == ""ctrl"" &&
+              configName _x select [0, 4] == ""ctrl"" &&
               isNumber (_x >> ""deletable"") &&
               count (_x >> ""controls"") == 0" configClasses configFile);
 
@@ -91,7 +91,7 @@ if (_classes in ["","3DEN"]) then
   } forEach _3DENBaseControls;
 };
 
-if (_classes in ["","classic"]) then
+if (_classes in ["", "classic"]) then
 {
   _return = _return + endl + "//Classic Base Controls" + endl;
   {

@@ -1,6 +1,6 @@
 class ENH_IntroText: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_introText_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_introText_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_introText_onAttributeSave";
   h = 10 * SIZE_M * GRID_H + 30 * pixelH;
   class Controls: Controls
@@ -17,7 +17,7 @@ class ENH_IntroText: Title
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
        sliderPosition = 0;
-      sliderRange[] = {0,360};
+      sliderRange[] = {0, 360};
       sliderStep = 1;
       lineSize = 1;
     };
@@ -82,7 +82,7 @@ class ENH_IntroText: Title
         "\3denEnhanced\data\BIS_fnc_infoText_preview.paa",
         "\3denEnhanced\data\BIS_fnc_EXP_camp_SITREP_preview.paa"
       };
-      values[] = {0,1,2};
+      values[] = {0, 1, 2};
     };
     class Reset: ENH_ResetButton_Base
     {

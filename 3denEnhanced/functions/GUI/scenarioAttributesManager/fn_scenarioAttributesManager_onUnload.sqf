@@ -30,5 +30,5 @@ for "_i" from 0 to _lbSize - 1 do
 };
 
 //Store templates in profilenamespace and save it.
-profileNamespace setVariable ["ENH_ScenarioAttributesManager_Templates",_templates];
+profileNamespace setVariable ["ENH_ScenarioAttributesManager_Templates", _templates];
 saveprofileNamespace;

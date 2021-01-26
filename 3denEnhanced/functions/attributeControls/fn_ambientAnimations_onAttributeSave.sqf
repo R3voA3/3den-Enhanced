@@ -45,15 +45,15 @@ private _anims = switch (_animSet) do
   };
   case "SIT_HANDCUFFED":
   {
-    ["Acts_AidlPsitMstpSsurWnonDnon01","Acts_AidlPsitMstpSsurWnonDnon02","Acts_AidlPsitMstpSsurWnonDnon03","Acts_AidlPsitMstpSsurWnonDnon04","Acts_AidlPsitMstpSsurWnonDnon05"];
+    ["Acts_AidlPsitMstpSsurWnonDnon01", "Acts_AidlPsitMstpSsurWnonDnon02", "Acts_AidlPsitMstpSsurWnonDnon03", "Acts_AidlPsitMstpSsurWnonDnon04", "Acts_AidlPsitMstpSsurWnonDnon05"];
   };
   case "STAND_TALKING":
   {
-    ["Acts_CivilTalking_1","Acts_CivilTalking_2"];
+    ["Acts_CivilTalking_1", "Acts_CivilTalking_2"];
   };
   case "STAND_IDLE":
   {
-    ["Acts_CivilIdle_1","Acts_CivilIdle_2"];
+    ["Acts_CivilIdle_1", "Acts_CivilIdle_2"];
   };
   case "STAND_PISTOL":
   {
@@ -61,15 +61,15 @@ private _anims = switch (_animSet) do
   };
   default
   {
-    (_animSet call BIS_fnc_ambientAnimGetParams) param [0,[]];
+    (_animSet call BIS_fnc_ambientAnimGetParams) param [0, []];
   };
 };
 
 //Make sure to exit with exact default value if nothing was set, so attribute data is not written to mission.sqf (Workaround)
-if (_animSet isEqualTo "") exitWith {['',[],false,false]};
+if (_animSet isEqualTo "") exitWith {['', [], false, false]};
 
 [
-  _animSet,//Needs to be saved to restore the value when attribute is loaded
+  _animSet, //Needs to be saved to restore the value when attribute is loaded
 	_anims,
 	cbChecked (_ctrlGroup controlsGroupCtrl 101),
   cbChecked (_ctrlGroup controlsGroupCtrl 102)

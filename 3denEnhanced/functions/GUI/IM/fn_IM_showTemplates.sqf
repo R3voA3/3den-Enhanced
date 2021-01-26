@@ -26,12 +26,12 @@ private _showTemplate = isNil "ENH_IM_ShowTemplates";
 //Disable controls
 {
   _display displayCtrl _x ctrlEnable ENH_IM_templatesVisible;
-} forEach [IDC_IM_FILTER,IDC_IM_ADDONE,IDC_IM_ADDTEN,IDC_IM_REMOVEONE,IDC_IM_REMOVETEN,IDC_IM_REMOVEALL,IDC_IM_FILTERSEARCH,IDC_IM_SEARCH,IDC_IM_BUTTONSEARCH];
+} forEach [IDC_IM_FILTER, IDC_IM_ADDONE, IDC_IM_ADDTEN, IDC_IM_REMOVEONE, IDC_IM_REMOVETEN, IDC_IM_REMOVEALL, IDC_IM_FILTERSEARCH, IDC_IM_SEARCH, IDC_IM_BUTTONSEARCH];
 
 //Enable controls
 {
   _display displayCtrl _x ctrlEnable !ENH_IM_templatesVisible;
-} forEach [IDC_IM_CREATETEMPLATE,IDC_IM_DELETETEMPLATE,IDC_IM_APPLYTEMPLATE];
+} forEach [IDC_IM_CREATETEMPLATE, IDC_IM_DELETETEMPLATE, IDC_IM_APPLYTEMPLATE];
 
 if (!ENH_IM_templatesVisible) then
 {
@@ -48,6 +48,6 @@ else
   CTRL(IDC_IM_FILTER) ctrlCommit 0;
   _ctrlButton ctrlSetText localize "STR_ENH_IM_SHOWTEMPLATES";
   CTRL(IDC_IM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_IM_AVAILABLEITEMS";
-  [CTRL(IDC_IM_FILTER),lbCurSel CTRL(IDC_IM_FILTER)] call ENH_fnc_IM_filterList;
+  [CTRL(IDC_IM_FILTER), lbCurSel CTRL(IDC_IM_FILTER)] call ENH_fnc_IM_filterList;
   ENH_IM_templatesVisible = false;
 };

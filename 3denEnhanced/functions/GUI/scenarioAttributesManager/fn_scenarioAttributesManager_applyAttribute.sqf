@@ -25,12 +25,12 @@ private _tvPath = tvCurSel CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES);
 if (count _tvPath < 2) exitWith {false};
 
 //Data is string, we need an array, so compiling it is
-_attributeData = call compile (CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES) tvData _tvPath);//["Section","PropertyName",value];
+_attributeData = call compile (CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES) tvData _tvPath);//["Section", "PropertyName", value];
 
 set3DENMissionAttributes [_attributeData];
 
 [
-  format [localize "STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION",_attributeData # 1, _attributeData # 2]
+  format [localize "STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION", _attributeData # 1, _attributeData # 2]
 ] call BIS_fnc_3DENNotification;
 
 true

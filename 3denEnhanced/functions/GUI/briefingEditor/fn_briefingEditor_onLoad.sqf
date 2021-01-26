@@ -169,11 +169,11 @@ private _getColorFromHex =
    private _g = (_nums find (_hex # 2)) * 16 + (_nums find (_hex # 3));
    private _b = (_nums find (_hex # 4)) * 16 + (_nums find (_hex # 5));
 
-  [(_r/255),(_g/255),(_b/255),1];
+  [(_r/255), (_g/255), (_b/255), 1];
 };
 
 //Get history if available
-private _historyLatest = profileNamespace getVariable ["ENH_briefingEditor_history",["","Diary",""]];
+private _historyLatest = profileNamespace getVariable ["ENH_briefingEditor_history", ["", "Diary", ""]];
 
 CTRL(IDC_BRIEFINGEDITOR_TITLE) ctrlSetText (_historyLatest # 0);//Briefing Title
 CTRL(IDC_BRIEFINGEDITOR_SUBJECT) ctrlSetText (_historyLatest # 1);//Subject Text
@@ -188,20 +188,20 @@ if !(isNil "_templates") then
   private _ctrlTemplateList = CTRL(80);
 
   {
-    _x params ["_briefingTitle","_briefingText"];
+    _x params ["_briefingTitle", "_briefingText"];
 
     _ctrlTemplateList lbAdd _briefingTitle;
-    _ctrlTemplateList lbSetData [_forEachIndex,_briefingText];
-    _ctrlTemplateList lbSetTooltip [_forEachIndex,localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
+    _ctrlTemplateList lbSetData [_forEachIndex, _briefingText];
+    _ctrlTemplateList lbSetTooltip [_forEachIndex, localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
   } forEach _templates;
 };
 
  private _ctrlLBColours = _display displayCtrl 100;
 {
-  _ctrlLBColours lbAdd format ["%1 %2",localize "STR_ENH_BRIEFINGEDITOR_COLOUR",_forEachIndex];
-  _ctrlLBColours lbSetData [_forEachIndex,_x];
-  _ctrlLBColours lbSetColor [_forEachIndex,[_x] call _getColorFromHex];
-  _ctrlLBColours lbSetTooltip [_forEachIndex,_x];
+  _ctrlLBColours lbAdd format ["%1 %2", localize "STR_ENH_BRIEFINGEDITOR_COLOUR", _forEachIndex];
+  _ctrlLBColours lbSetData [_forEachIndex, _x];
+  _ctrlLBColours lbSetColor [_forEachIndex, [_x] call _getColorFromHex];
+  _ctrlLBColours lbSetTooltip [_forEachIndex, _x];
 } forEach _coloursHTML;
 
 //Fill marker list
@@ -213,13 +213,13 @@ private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
   if (_name isEqualTo "") then {_name = _varName};
 
   _ctrlLBMarkers lbAdd _name;
-  _ctrlLBMarkers lbSetData [_forEachIndex,_varName];
-  _ctrlLBMarkers lbSetTooltip [_forEachIndex,localize "STR_ENH_BRIEFINGEDITOR_ADDMARKER_TOOLTIP"];
+  _ctrlLBMarkers lbSetData [_forEachIndex, _varName];
+  _ctrlLBMarkers lbSetTooltip [_forEachIndex, localize "STR_ENH_BRIEFINGEDITOR_ADDMARKER_TOOLTIP"];
 
   //Get icon
   private _markerType = (_x get3DENAttribute "itemClass") # 0;
   private _icon = getText (configfile >> "CfgMarkers" >> _markerType >> "icon");
-  _ctrlLBMarkers lbSetPictureRight [_forEachIndex,_icon];
+  _ctrlLBMarkers lbSetPictureRight [_forEachIndex, _icon];
 
   //Get colour
   _ctrlLBMarkers lbSetPictureRightColor
@@ -234,7 +234,7 @@ private _ctrlComboTags = CTRL(IDC_BRIEFINGEDITOR_TAGS);
 
 {
   _ctrlComboTags lbAdd _x;
-} forEach ["Linebreak","Marker","Image","Font","Execute","ExecuteClose"];//Do not localize. Biki description is English
+} forEach ["Linebreak", "Marker", "Image", "Font", "Execute", "ExecuteClose"];//Do not localize. Biki description is English
 
 _ctrlComboTags lbSetCurSel 0;
 
@@ -242,5 +242,5 @@ _ctrlComboTags lbSetCurSel 0;
 private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
 {
   _ctrlLBFonts lbAdd configName _x;
-  _ctrlLBFonts lbSetTooltip [_forEachIndex,configName _x];
+  _ctrlLBFonts lbSetTooltip [_forEachIndex, configName _x];
 } forEach ('true' configClasses (configFile >> 'CfgFontFamilies'));

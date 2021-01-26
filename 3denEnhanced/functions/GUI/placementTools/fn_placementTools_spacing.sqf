@@ -19,8 +19,8 @@ ENH_PlacementTools_Spacing = _newValue;
 collect3DENHistory
 {
   {
-    _x set3DENAttribute ["Position",_newPos];
-    _newPos = _newPos getPos [_newValue,0];
+    _x set3DENAttribute ["Position", _newPos];
+    _newPos = _newPos getPos [_newValue, 0];
   } forEach ENH_PlacementTools_Selected;
 };
 

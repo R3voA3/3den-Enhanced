@@ -17,9 +17,9 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlLNB","_selectedRow"];
+params ["_ctrlLNB", "_selectedRow"];
 
 private _display = ctrlParent _ctrlLNB;
 
-CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText (_ctrlLNB lnbText [_selectedRow,0]);
-CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText (_ctrlLNB lnbText [_selectedRow,1]);
+CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 0]);
+CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 1]);

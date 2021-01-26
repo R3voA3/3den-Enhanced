@@ -36,8 +36,8 @@ collect3DENHistory
     private _entity = _x;
     {
       private _attributeName = "ENH_disableAI_" + _x;
-      _entity set3DENAttribute [_attributeName,ENH_attribute_disableAI_state];
-    } forEach ["move","target","cover","autotarget","anim","FSM","aimingError","teamswitch","suppression","checkVisible","autocombat","path","mineDetection","weaponAim","NVG","lights","radioProtocol"];
+      _entity set3DENAttribute [_attributeName, ENH_attribute_disableAI_state];
+    } forEach ["move", "target", "cover", "autotarget", "anim", "FSM", "aimingError", "teamswitch", "suppression", "checkVisible", "autocombat", "path", "mineDetection", "weaponAim", "NVG", "lights", "radioProtocol"];
   } forEach _entities;
 };
 
@@ -45,7 +45,7 @@ collect3DENHistory
   format
   [
     localize "STR_ENH_TOGGLEAIFEATURES_NOTIFICATION",
-    [localize "STR_ENH_DISABLED",localize "STR_ENH_ENABLED"] select ENH_attribute_disableAI_state
+    [localize "STR_ENH_DISABLED", localize "STR_ENH_ENABLED"] select ENH_attribute_disableAI_state
   ]
 ] call BIS_fnc_3DENNotification;
 

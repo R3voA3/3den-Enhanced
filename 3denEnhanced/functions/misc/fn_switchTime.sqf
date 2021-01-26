@@ -15,7 +15,7 @@ if !(is3DEN) exitWith {false};
 
 if (isNil "ENH_savedEnvironment") then
 {
-  ENH_savedEnvironment = [daytime,fog,overcast,rain];
+  ENH_savedEnvironment = [daytime, fog, overcast, rain];
   0 setFog 0;
   0 setOvercast 0;
   0 setRain 0;
@@ -24,7 +24,7 @@ if (isNil "ENH_savedEnvironment") then
 }
 else
 {
-  ENH_savedEnvironment params ["_daytime","_fog","_overcast","_rain"];
+  ENH_savedEnvironment params ["_daytime", "_fog", "_overcast", "_rain"];
   0 setFog _fog;
   0 setOvercast _overcast;
   0 setRain _rain;

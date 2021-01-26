@@ -5,8 +5,8 @@ class ENH_BatchReplace
 {
   idd = IDD_BATCHREPLACE;
   movingEnable = true;
-  onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['ENH_batchReplace_lastUsed','']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
-  onUnload = "profileNameSpace setVariable ['ENH_batchReplace_lastUsed',ctrlText ((_this # 0) displayCtrl 1400)]";
+  onLoad = "((_this # 0) displayCtrl 1400) ctrlSetText (profileNameSpace getVariable ['ENH_batchReplace_lastUsed', '']); ctrlSetFocus ((_this # 0) displayCtrl 1400)";
+  onUnload = "profileNameSpace setVariable ['ENH_batchReplace_lastUsed', ctrlText ((_this # 0) displayCtrl 1400)]";
   class ControlsBackground
   {
     DISABLE_BACKGROUND

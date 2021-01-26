@@ -28,7 +28,7 @@ class ENH_3DENRadio
     class BackgroundFilter: Background//Background used for filter buttons
     {
       h = CTRL_DEFAULT_H;
-      colorBackground[] = {0,0,0,1};
+      colorBackground[] = {0, 0, 0, 1};
     };
   };
   class Controls
@@ -49,7 +49,7 @@ class ENH_3DENRadio
       y = DIALOG_TOP + 2 * CTRL_DEFAULT_H;
       h = DIALOG_H * GRID_H - 18 * GRID_H;
       disableOverflow = 1;
-      onLBDblClick  = "params ['_ctrl','_row']; [[_ctrl lnbText [_row,0],_ctrl lnbData [_row,0],_ctrl lnbData [_row,1]]] call ENH_fnc_3DENRadio_playNewSong";
+      onLBDblClick  = "params ['_ctrl', '_row']; [[_ctrl lnbText [_row, 0], _ctrl lnbData [_row, 0], _ctrl lnbData [_row, 1]]] call ENH_fnc_3DENRadio_playNewSong";
       onKeyDown = "_this call ENH_fnc_3DENRadio_handlePlaylist; _this call ENH_fnc_3DENRadio_exportClassname";
     };
     class CurrentSongText: ctrlStaticFooter
@@ -90,8 +90,8 @@ class ENH_3DENRadio
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
-      sliderRange[] = {0,1.5};
-      onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0)); profileNamespace setVariable ['ENH_3DENRadio_MusicVolume',musicVolume]";
+      sliderRange[] = {0, 1.5};
+      onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0)); profileNamespace setVariable ['ENH_3DENRadio_MusicVolume', musicVolume]";
     };
     class Help: VolumeIcon
     {
@@ -106,7 +106,7 @@ class ENH_3DENRadio
     class SearchEdit: ctrlEdit
     {
       idc = IDC_3DENRADIO_SEARCH;
-      tooltip = __EVAL(format ["%1+%2",toUpper localize "STR_DIK_CONTROL","F"]);
+      tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = CENTERED_X(DIALOG_W) + 50 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
@@ -142,9 +142,9 @@ class ENH_3DENRadio
           y = 0;
           w = 58 * GRID_W;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0,1.5};
-          colorActive[] = {1,1,1,0.6};
-          onSliderPosChanged = "playMusic [uiNamespace getVariable ['ENH_3DENRadio_CurrentSongClass',''],sliderPosition (_this # 0)]";
+          sliderRange[] = {0, 1.5};
+          colorActive[] = {1, 1, 1, 0.6};
+          onSliderPosChanged = "playMusic [uiNamespace getVariable ['ENH_3DENRadio_CurrentSongClass', ''], sliderPosition (_this # 0)]";
         };
         class Time:  Start
         {
