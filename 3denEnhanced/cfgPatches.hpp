@@ -4,7 +4,7 @@ class CfgPatches
   {
     name = "3den Enhanced";
     author = "R3vo";
-    url = "https://forums.bistudio.com/topic/188312-3den-enhanced/";
+    url = "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643";
     requiredVersion = 1.7;
     requiredAddons[] = {"3den", "A3_Data_F_Sams_Loadorder"};
     units[] = {};
