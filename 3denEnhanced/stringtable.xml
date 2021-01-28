@@ -2795,6 +2795,10 @@
     <Polish>Zapisz nazwy frakcji do schowka</Polish>
     <Russian>Записать имена фракций в буфер обмена</Russian>
   </Key>
+  <Key ID="STR_ENH_CONTEXTMENU_LOGVARNAMES">
+    <English>Log Variable Names to Clipboard</English>
+    <German>Variablennamen in Zwischenablage kopieren</German>
+  </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
     <English>Log Positions (3D) to Clipboard</English>
     <Italian>Registra la posizione 3D sulla lavagnetta</Italian>

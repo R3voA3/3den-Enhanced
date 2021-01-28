@@ -8,7 +8,7 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\defineCommon.hpp"
@@ -24,5 +24,3 @@ private _briefingText = _ctrlLB lbData _selectedIndex;
 CTRL(30) ctrlSetText _briefingTitle;
 CTRL(20) ctrlSetText "Diary";//Set it to diary by default
 CTRL(10) ctrlSetText _briefingText;
-
-true

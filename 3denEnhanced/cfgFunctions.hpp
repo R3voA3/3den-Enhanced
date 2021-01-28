@@ -184,7 +184,6 @@ class CfgFunctions
       file = "3denEnhanced\functions\Misc";
       class 3DENCollapseAssetBrowser;
       class 3denNotificationNoSound;
-      class addCustomMenuStripEntries;
       class all3DENSelected;
       class deleteCrew;
       class deleteEmptyLayers;

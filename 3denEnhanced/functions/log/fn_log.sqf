@@ -21,6 +21,8 @@
   BOOLEAN: true or false
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 params [["_mode", ""]];
 
 if (_mode == "") exitWith {false};
@@ -200,7 +202,7 @@ switch (_mode) do
       uinamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
 
       //Stupid workaround because BI is not able to fix this
-      _display = findDisplay 313 createDisplay "Display3denCopy";
+      _display = findDisplay IDD_3DEN createDisplay "Display3denCopy";
       _ctrlGroup = _display displayCtrl 201;
       _ctrlEdit = _display displayCtrl 202;
       _ctrlEditFake = _display displayCtrl 203;

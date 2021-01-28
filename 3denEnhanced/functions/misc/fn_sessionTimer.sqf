@@ -16,7 +16,7 @@
 #include "\3denEnhanced\defineCommon.hpp"
 
 disableSerialization;
-private _display3DEN = findDisplay 313 displayCtrl IDC_STATUSBAR_SESSIONTIMER;
+private _display3DEN = findDisplay IDD_3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER;
 
 while {is3DEN} do
 {

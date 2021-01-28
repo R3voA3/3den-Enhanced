@@ -15,7 +15,7 @@
 
 disableSerialization;
 
-private _ctrlMenuStrip = findDisplay 313 displayCtrl 120;
+private _ctrlMenuStrip = findDisplay IDD_3DEN displayCtrl 120;
 
 //Prevent it from running twice by comparing existing entries with the once that should be added
 private _defaultEntries = [];

@@ -214,7 +214,6 @@ private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
 
   _ctrlLBMarkers lbAdd _name;
   _ctrlLBMarkers lbSetData [_forEachIndex, _varName];
-  _ctrlLBMarkers lbSetTooltip [_forEachIndex, localize "STR_ENH_BRIEFINGEDITOR_ADDMARKER_TOOLTIP"];
 
   //Get icon
   private _markerType = (_x get3DENAttribute "itemClass") # 0;

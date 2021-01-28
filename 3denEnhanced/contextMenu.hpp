@@ -77,7 +77,7 @@ class ENH_Log3DENID
 class ENH_LogVarNames
 {
   action = "'VARNAMES' call ENH_fnc_log";
-  text = "STR_ENH_CONTEXTMENU_LOGVARNAMES";
+  text = "$STR_ENH_CONTEXTMENU_LOGVARNAMES";
   conditionShow = "selected";
 };
 class ENH_LogObjectInfo: ENH_LogFactions

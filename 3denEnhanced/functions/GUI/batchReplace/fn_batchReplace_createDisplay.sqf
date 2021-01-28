@@ -13,6 +13,8 @@
   -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 if !(is3DEN) exitWith {};
 
 if ((get3DENSelected "Object") isEqualTo []) exitWith
@@ -20,4 +22,4 @@ if ((get3DENSelected "Object") isEqualTo []) exitWith
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 };
 
-findDisplay 313 createDisplay "ENH_BatchReplace";
+findDisplay IDD_3DEN createDisplay "ENH_BatchReplace";
