@@ -5,7 +5,7 @@ v5.7
 - Added option to log var names of entities to clipboard
 - Added some separators to the context menu
 - Added another separator to the menu strip -> tools -> utilities folder
-- Added More icons for the hold action attribute
+- Added more icons for the hold action attribute
 
 *changed*
 - Batch Rename tool can now also rename markers
@@ -44,12 +44,12 @@ v5.7
   - Visual appearance of many attributes were improved
 
 - Inventory Manager
-  - Fixed .rpt spam caused by Inventory Manager
-  - Fixed ACE items would not be properly sorted in the Inventory Manager (Thanks to [KP] veteran29)
+  - Fixed .rpt spam caused by the Inventory Manager
+  - Fixed ACE items would not be properly sorted (Thanks to [KP] veteran29)
   - Fixed DLC icons would be incorrect if certain mods are loaded
   - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
-  - Mines category was renamed to Explosives in Inventory Manager
-  - Added localisation for Inventory Manager
+  - Mines category was renamed to Explosives
+  - Added localisation
 
 - Texture Finder
   - Texture Finder is now faster. From 137 s down to 85 s to load all textures (Thanks to ConnorAU)
@@ -57,7 +57,7 @@ v5.7
   - Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
   - Texture Finder will now store textures in uiNamespace. That way it only has to search once
   - Progress text is now better formatted
-  - Texture finder now uses a CT_TREE with engine search
+  - Texture Finder now uses a CT_TREE with engine search
   - CTRL + F now focuses the search edit
 
 - Functions Viewer
@@ -74,7 +74,7 @@ v5.7
   - Removed root entry (configFile, missionConfigFile and campaignConfigFile) from tree view
   - Mod icons are back due to recent optimisations
   - Fixed an issue with functions not being displayed if path definition was defined a bit differently (╯°□°）╯︵ ┻━┻)
-  - Functions TAG is not always upper case
+  - Functions TAG is now always upper case
 
 - 3DEN Radio
   - GUI was reworked
@@ -88,12 +88,17 @@ v5.7
 
 - Variable Viewer
   - Columns of Variable Viewer can now be sorted
-  - Loading the list is now four times faster
+  - Loading the list is now ~four times faster
   - Fixed rpt 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
+  - Fixed Variable Viewer not deselecting row on variable delete (Thanks to ConnorAU)
+
+- Briefing Editor
+  - Fixed missing localisation key
 
 *removed*
 - Credits GUI and all related functions
 - Unused functions and config entries
+- Dynamic Skill attribute (due to some limitations)
 
 v5.6
 *added*
@@ -355,7 +360,7 @@ v4.3
 - Task Patrol attribute now uses a slider control
 - Logging of multiple map grid positions is now possible. Only unique value will be logged
 - Faction are now logged to clipboard without [ ]
-- Added context menu enty to log classes in format "class1","class2",...
+- Added context menu enty to log classes in format "class1", "class2",...
 - Added new folder to menu strip
 - Added option to garrision tool to change stance of units
 - Fixed missing shortcuts for some tools
@@ -847,7 +852,7 @@ v1.8
 - mission stats tool now displays the number of simple objects
 - context menu entries are now only shown when necessary
 - improved tooltip for the "on event" attributes
-- game info tool now also logs architecture (x64,x86)
+- game info tool now also logs architecture (x64, x86)
 - fixed missing localisation when using the garrison function
 - removed obsolete variable from fn_getModuleDescription.sqf
 - toggle Map IDs would only work when the map was opened manually beforehand
@@ -1055,7 +1060,7 @@ v1.3
 - added hostage attribute:
   A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
   Mission designers can check whether the unit is hostage or not by retrieving the following variable:
-  _unit getVariable "ENH_isHostage"; (true,is hostage/false,isn't hostage)
+  _unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
 *changed*
 - UAV intro center position attribute tooltip was using a wrong string
 - removed the tooltip from Advanced Damage Attributes
@@ -1089,7 +1094,7 @@ v1.2
 - mission attribute to create an establishing shot
 - mission attribute for display text on mission start
 - currently played song of the playMusic preference attribute is now displayed at the bottom of the screen
-- attribute to play random music at the beginning of the mission -> Scenario Attributs -> Music,Sound & Radiosettings
+- attribute to play random music at the beginning of the mission -> Scenario Attributs -> Music, Sound & Radiosettings
 - attribute to set respawn tickets for all sides
 - version check. Player will now recieve a warning if game version is greater than required version and dev branch is used
 - version check function
