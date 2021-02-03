@@ -1,16 +1,16 @@
-/* #if __HAS_INCLUDE("\userconfig\3den_Enhanced_Config.hpp") //Check if file exists
-  #include "\userconfig\3den_Enhanced_Config.hpp"
-#endif */
-
+/* #if __has_include("\userconfig\ENH_Config.hpp")
+  #include "\userconfig\ENH_Config.hpp"
+#endif
+ */
 //Defines
 #include "defineCommon.hpp"
 #include "defineCtrls.hpp"
 
 //Configs
 #include "cfgPatches.hpp"
-#include "display3DEN.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
+#include "display3DEN\display3DEN.hpp"
 
 //Custom GUIs
 #include "GUI\3DENCameraPositions.hpp"
