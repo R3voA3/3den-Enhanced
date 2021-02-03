@@ -11,9 +11,6 @@
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
 
-//DEBUG
-//#define DEBUG
-
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11

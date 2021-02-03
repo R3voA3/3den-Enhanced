@@ -60,13 +60,7 @@ class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
     "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa",
     "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_civ_ca.paa"
   };
-  tooltips[] =
-  {
-    "$STR_WEST",
-    "$STR_EAST",
-    "$STR_GUERRILA",
-    "$STR_CIVILIAN"
-  };
+  tooltips[] = {"$STR_WEST", "$STR_EAST", "$STR_GUERRILA", "$STR_CIVILIAN"};
   values[] = {0, 1, 2, 3};
 };
 
