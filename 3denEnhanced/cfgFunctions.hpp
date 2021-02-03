@@ -3,7 +3,7 @@ class CfgFunctions
   class 3denEnhanced
   {
     tag = "ENH";
-    #ifdef DEBUG
+    #ifdef __A3_DEBUG__
     class ENH_Internal
     {
       file = "3denEnhanced\functions\internal";
