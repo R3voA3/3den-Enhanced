@@ -220,8 +220,6 @@ class CfgFunctions
     class Debug
     {
       file = "3denEnhanced\functions\debug";
-      class activeScripts;
-      class debugOptions;
       class productInfo;
       class toggleMapIDs;
     };
@@ -246,18 +244,20 @@ class CfgFunctions
       class ambientAnimations_onAttributeSave;
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
+      class debugOptions_activeScripts;
+      class debugOptions_init;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class holdAction_onAttributeLoad;
       class holdAction_onAttributeSave;
-      class initDebriefingCombo;
       class introText_onAttributeLoad;
       class introText_onAttributeSave;
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
       class menuStripBlacklist_onAttributeLoad;
+      class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
       class timeMultiplier_onAttributeLoad;
