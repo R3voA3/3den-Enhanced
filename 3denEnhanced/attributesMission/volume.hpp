@@ -25,6 +25,12 @@ class ENH_Volume
       property = "ENH_radioVolume";
       expression = "if (!is3DEN && hasInterface) then {0 fadeRadio _value}";
     };
+    /* class ENH_EnvironmentVolume: ENH_SoundVolume
+    {
+      displayName = "$STR_ENH_ENVIRONMENTVOLUME_DISPLAYNAME";
+      property = "ENH_environmentVolume";
+      expression = "if (!is3DEN && hasInterface) then {0 fadeEnvironment _value}";
+    }; */
     class ENH_RandomMusic
     {
       displayName = "$STR_ENH_RANDOMMUSIC_DISPLAYNAME";

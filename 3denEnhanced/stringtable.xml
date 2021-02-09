@@ -5629,6 +5629,10 @@
     <Polish>CfgSentences Browser</Polish>
     <French>Navigateur CfgSentences</French>
   </Key>
+  <Key ID="STR_ENH_ENVIRONMENTVOLUME_DISPLAYNAME">
+    <English>Volume (Environment)</English>
+    <German>Volume (Umwelt)</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
     <English>Placement Tool</English>
     <German>Platzierungs-Werkzeug</German>
