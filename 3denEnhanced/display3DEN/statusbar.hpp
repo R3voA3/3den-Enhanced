@@ -33,7 +33,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = IDC_STATUSBAR_NUMSYSTEMS;
       x = ORIGIN_X_STATUSBAR - 66 * GRID_W - 2 * SPACE_X;
     };
-    class ENH_IconSystems: TextZ
+    class ENH_IconSystems: ENH_IconMarkers
     {
       idc = IDC_STATUSBAR_ICONSYSTEMS;
       x = ORIGIN_X_STATUSBAR - 69 * GRID_W - 2 * SPACE_X;
@@ -44,7 +44,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = IDC_STATUSBAR_NUMWAYPOINTS;
       x = ORIGIN_X_STATUSBAR - 76 * GRID_W - 2 * SPACE_X;
     };
-    class ENH_IconWaypoints: TextZ
+    class ENH_IconWaypoints: ENH_IconMarkers
     {
       idc = IDC_STATUSBAR_ICONWAYPOINTS;
       x = ORIGIN_X_STATUSBAR - 79 * GRID_W - 2 * SPACE_X;
@@ -55,7 +55,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = IDC_STATUSBAR_NUMTRIGGERS;
       x = ORIGIN_X_STATUSBAR - 86 * GRID_W - 2 * SPACE_X;
     };
-    class ENH_IconTriggers: TextZ
+    class ENH_IconTriggers: ENH_IconMarkers
     {
       idc = IDC_STATUSBAR_ICONTRIGGERS;
       x = ORIGIN_X_STATUSBAR - 89 * GRID_W - 2 * SPACE_X;
@@ -66,7 +66,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = IDC_STATUSBAR_NUMGROUPS;
       x = ORIGIN_X_STATUSBAR - 96 * GRID_W - 2 * SPACE_X;
     };
-    class ENH_IconGroups: TextZ
+    class ENH_IconGroups: ENH_IconMarkers
     {
       idc = IDC_STATUSBAR_ICONGROUPS;
       x = ORIGIN_X_STATUSBAR - 99 * GRID_W - 2 * SPACE_X;
@@ -77,7 +77,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = IDC_STATUSBAR_NUMOBJECTS;
       x = ORIGIN_X_STATUSBAR - 106 * GRID_W - 2 * SPACE_X;
     };
-    class ENH_IconObjects: TextZ
+    class ENH_IconObjects: ENH_IconMarkers
     {
       idc = IDC_STATUSBAR_ICONOBJECTS;
       x = ORIGIN_X_STATUSBAR - 109 * GRID_W - 2 * SPACE_X;
