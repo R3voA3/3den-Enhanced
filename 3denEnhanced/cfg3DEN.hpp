@@ -41,19 +41,43 @@ class Cfg3DEN
         class Title;
       };
     };
-    #include "controls\SPR.hpp"
-    #include "controls\airdrop.hpp"
-    #include "controls\ambientAnimations.hpp"
-    #include "controls\ambientFlyby.hpp"
-    #include "controls\establishingShot.hpp"
-    #include "controls\groupMarker.hpp"
-    #include "controls\holdAction.hpp"
-    #include "controls\introText.hpp"
-    #include "controls\mapIndicators.hpp"
-    #include "controls\menuStripBlacklist.hpp"
-    #include "controls\missionEndingCasualties.hpp"
+    #ifndef ENH_HIDE_SPR
+      #include "controls\SPR.hpp"
+    #endif
+    #ifndef ENH_HIDE_AIRDROP
+      #include "controls\airdrop.hpp"
+    #endif
+    #ifndef ENH_HIDE_AMBIENTANIMATIONS
+      #include "controls\ambientAnimations.hpp"
+    #endif
+    #ifndef ENH_HIDE_AMBIENTFLYBY
+      #include "controls\ambientFlyby.hpp"
+    #endif
+    #ifndef ENH_HIDE_ESTABLISHINGSHOT
+      #include "controls\establishingShot.hpp"
+    #endif
+    #ifndef ENH_HIDE_GROUPMARKER
+      #include "controls\groupMarker.hpp"
+    #endif
+    #ifndef ENH_HIDE_HOLDACTION
+      #include "controls\holdAction.hpp"
+    #endif
+    #ifndef ENH_HIDE_INTROTEXT
+      #include "controls\introText.hpp"
+    #endif
+    #ifndef ENH_HIDE_MAPINDICATORS
+      #include "controls\mapIndicators.hpp"
+    #endif
+    #ifndef ENH_HIDE_INTERFACE
+      #include "controls\menuStripBlacklist.hpp"
+    #endif
+    #ifndef ENH_HIDE_MISSIONENDING
+      #include "controls\missionEndingCasualties.hpp"
+    #endif
     #include "controls\subCategoryNoHeader_Fixed.hpp"
-    #include "controls\timeMultiplier.hpp"
+    #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
+      #include "controls\timeMultiplier.hpp"
+    #endif
   };
   class Mission
   {
@@ -65,39 +89,69 @@ class Cfg3DEN
         {
           class Attributes
           {
-            #include "attributesEditor\dynamicViewDistance.hpp"
+            #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
+              #include "attributesEditor\dynamicViewDistance.hpp"
+            #endif
           };
         };
-        #include "attributesEditor\interface.hpp"
-        #include "attributesEditor\debugOptions.hpp"
+        #ifndef ENH_HIDE_INTERFACE
+          #include "attributesEditor\interface.hpp"
+        #endif
+        #ifndef ENH_HIDE_DEBUGOPTIONS
+          #include "attributesEditor\debugOptions.hpp"
+        #endif
       };
     };
     class Intel
     {
       class AttributeCategories
       {
-        #include "attributesMission\timeMultiplier.hpp"
-        #include "attributesMission\visualSettings.hpp"
+        #ifndef ENH_HIDE_VISUALSETTINGS
+          #include "attributesMission\timeMultiplier.hpp"
+        #endif
+        #ifndef ENH_HIDE_TIMEMULTIPLIER
+          #include "attributesMission\visualSettings.hpp"
+        #endif
       };
     };
     class Scenario
     {
       class AttributeCategories
       {
-        #include "attributesMission\volume.hpp"
-        #include "attributesMission\ambientFlyby.hpp"
-        #include "attributesMission\airdrop.hpp"
+        #ifndef ENH_HIDE_AIRDROP
+          #include "attributesMission\airdrop.hpp"
+        #endif
+        #ifndef ENH_HIDE_AMBIENTFLYBY
+          #include "attributesMission\ambientFlyby.hpp"
+        #endif
+        #ifndef ENH_HIDE_AIRDROP
+          #include "attributesMission\briefings.hpp"
+        #endif
+        #ifndef ENH_HIDE_ESTABLISHINGSHOT
         #include "attributesMission\establishingShot.hpp"
-        #include "attributesMission\introText.hpp"
-        #include "attributesMission\briefings.hpp"
-        #include "attributesMission\missionEnding.hpp"
-        #include "attributesMission\SPR.hpp"
+          #endif
+        #ifndef ENH_HIDE_INTROTEXT
+          #include "attributesMission\introText.hpp"
+        #endif
+        #ifndef ENH_HIDE_MISSIONENDING
+          #include "attributesMission\missionEnding.hpp"
+        #endif
+        #ifndef ENH_HIDE_VOLUME
+          #include "attributesMission\volume.hpp"
+        #endif
+        #ifndef ENH_HIDE_SPR
+          #include "attributesMission\SPR.hpp"
+        #endif
         class Misc
         {
           class Attributes
           {
-            #include "attributesMission\addObjectsToZeus.hpp"
-            #include "attributesMission\mapIndicators.hpp"
+            #ifndef ENH_HIDE_ADDOBJECTSTOZEUS
+              #include "attributesMission\addObjectsToZeus.hpp"
+            #endif
+            #ifndef ENH_HIDE_MAPINDICATORS
+              #include "attributesMission\mapIndicators.hpp"
+            #endif
           };
         };
       };
@@ -106,13 +160,19 @@ class Cfg3DEN
     {
       class AttributeCategories
       {
-        #include "attributesMission\dynamicGroups.hpp"
+        #ifndef ENH_HIDE_DYNAMICGROUPS
+          #include "attributesMission\dynamicGroups.hpp"
+        #endif
         class Respawn
         {
           class Attributes
           {
-            #include "attributesMission\respawnTickets.hpp"
-            #include "attributesMission\saveLoadout.hpp"
+            #ifndef ENH_HIDE_RESPAWNTICKETS
+              #include "attributesMission\respawnTickets.hpp"
+            #endif
+            #ifndef ENH_HIDE_SAVELOADOUT
+              #include "attributesMission\saveLoadout.hpp"
+            #endif
           };
         };
       };
@@ -122,12 +182,16 @@ class Cfg3DEN
   {
     class AttributeCategories
     {
-      #include "attributesGroup\groupMarker.hpp"
+      #ifndef ENH_HIDE_GROUPMARKER
+        #include "attributesGroup\groupMarker.hpp"
+      #endif
       class State
       {
         class Attributes
         {
-          #include "attributesGroup\taskPatrol.hpp"
+          #ifndef ENH_HIDE_TASKPATROL
+            #include "attributesGroup\taskPatrol.hpp"
+          #endif
         };
       };
     };
@@ -136,47 +200,97 @@ class Cfg3DEN
   {
     class AttributeCategories
     {
-      #include "attributesObject\ambientAnimations.hpp"
-      #include "attributesObject\AI.hpp"
-      #include "attributesObject\advancedDamageUnit.hpp"
-      #include "attributesObject\advancedDamageVehicle.hpp"
-      #include "attributesObject\unitTraits.hpp"
-      #include "attributesObject\holdAction.hpp"
+      #ifndef ENH_HIDE_AMBIENTANIMATIONS
+        #include "attributesObject\ambientAnimations.hpp"
+      #endif
+      #ifndef ENH_HIDE_AI
+        #include "attributesObject\AI.hpp"
+      #endif
+      #ifndef ENH_HIDE_ADVANCEDDAMAGEUNIT
+        #include "attributesObject\advancedDamageUnit.hpp"
+      #endif
+      #ifndef ENH_HIDE_ADVANCEDDAMAGEVEHICLE
+        #include "attributesObject\advancedDamageVehicle.hpp"
+      #endif
+      #ifndef ENH_HIDE_UNITTRAITS
+        #include "attributesObject\unitTraits.hpp"
+      #endif
+      #ifndef ENH_HIDE_HOLDACTION
+        #include "attributesObject\holdAction.hpp"
+      #endif
       class StateSpecial
       {
         class Attributes
         {
-          #include "attributesObject\setCaptive.hpp"
-          #include "attributesObject\allowSprint.hpp"
-          #include "attributesObject\forceWalk.hpp"
-          #include "attributesObject\makeHostage.hpp"
-          #include "attributesObject\parachute.hpp"
-          #include "attributesObject\enableHeadlights.hpp"
-          #include "attributesObject\allowCrewInImmobile.hpp"
-          #include "attributesObject\engineOn.hpp"
-          #include "attributesObject\disableNVGE.hpp"
-          #include "attributesObject\disableTIE.hpp"
-          #include "attributesObject\limitSpeed.hpp"
-          #include "attributesObject\doStop.hpp"
-          #include "attributesObject\removeFromRemainsCollector.hpp"
-          #include "attributesObject\SPRTickets.hpp"
+          #ifndef ENH_HIDE_SETCAPTIVE
+            #include "attributesObject\setCaptive.hpp"
+          #endif
+          #ifndef ENH_HIDE_ALLOWSPRINT
+            #include "attributesObject\allowSprint.hpp"
+          #endif
+          #ifndef ENH_HIDE_FORCEWALK
+            #include "attributesObject\forceWalk.hpp"
+          #endif
+          #ifndef ENH_HIDE_MAKEHOSTAGE
+            #include "attributesObject\makeHostage.hpp"
+          #endif
+          #ifndef ENH_HIDE_PARACHUTE
+            #include "attributesObject\parachute.hpp"
+          #endif
+          #ifndef ENH_HIDE_ENABLEHEADLIGHTS
+            #include "attributesObject\enableHeadlights.hpp"
+          #endif
+          #ifndef ENH_HIDE_ALLOWCREWINIMMOBILE
+            #include "attributesObject\allowCrewInImmobile.hpp"
+          #endif
+          #ifndef ENH_HIDE_ENGINEON
+            #include "attributesObject\engineOn.hpp"
+          #endif
+          #ifndef ENH_HIDE_DISABLENVGE
+            #include "attributesObject\disableNVGE.hpp"
+          #endif
+          #ifndef ENH_HIDE_DISABLETIE
+            #include "attributesObject\disableTIE.hpp"
+          #endif
+          #ifndef ENH_HIDE_LIMITSPEED
+            #include "attributesObject\limitSpeed.hpp"
+          #endif
+          #ifndef ENH_HIDE_AIRDROP
+            #include "attributesObject\doStop.hpp"
+          #endif
+          #ifndef ENH_HIDE_REMOVEFROMREMAINSCOLLECTOR
+            #include "attributesObject\removeFromRemainsCollector.hpp"
+          #endif
+          #ifndef ENH_HIDE_SPR
+            #include "attributesObject\SPRTickets.hpp"
+          #endif
         };
       };
       class Inventory
       {
         class Attributes
         {
-          #include "attributesObject\addGunLight.hpp"
-          #include "attributesObject\arsenal.hpp"
+          #ifndef ENH_HIDE_ADDGUNLIGHT
+            #include "attributesObject\addGunLight.hpp"
+          #endif
+          #ifndef ENH_HIDE_VIRTUALARSENAL
+            #include "attributesObject\arsenal.hpp"
+          #endif
         };
       };
       class State
       {
         class Attributes
         {
-          #include "attributesObject\setMass.hpp"
-          #include "attributesObject\featureType.hpp"
-          #include "attributesObject\forceFlag.hpp"
+          #ifndef ENH_HIDE_SETMASS
+            #include "attributesObject\setMass.hpp"
+          #endif
+          #ifndef ENH_HIDE_FEATURETYPE
+            #include "attributesObject\featureType.hpp"
+          #endif
+          #ifndef ENH_HIDE_FORCEFLAG
+            #include "attributesObject\forceFlag.hpp"
+          #endif
         };
       };
     };

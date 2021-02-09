@@ -1,7 +1,8 @@
-/* #if __has_include("\userconfig\ENH_Config.hpp")
-  #include "\userconfig\ENH_Config.hpp"
+#if __has_include("\userconfig\ENH_Config.hpp")
+
+#include "\userconfig\ENH_Config.hpp"
 #endif
- */
+
 //Defines
 #include "defineCommon.hpp"
 #include "defineCtrls.hpp"
@@ -16,7 +17,7 @@
 #include "GUI\3DENCameraPositions.hpp"
 #include "GUI\3DENRadio.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
-#include "GUI\ExportGUIDefines.hpp"
+#include "GUI\exportGUIDefines.hpp"
 #include "GUI\RscTestControlXXX.hpp"
 #include "GUI\actionCreator.hpp"
 #include "GUI\batchReplace.hpp"
