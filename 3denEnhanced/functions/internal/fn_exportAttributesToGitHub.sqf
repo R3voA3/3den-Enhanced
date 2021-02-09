@@ -74,6 +74,4 @@ else
 
 _export = format ["_**Number of added entries: %1**_", _counter] + endl + "___" + endl + endl + endl + _export;
 
-copyToClipboard _export;
-
-true
+copyToClipboard _export

@@ -10,7 +10,7 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 startLoadingScreen ["start"];
@@ -31,12 +31,10 @@ private _fileHeader = _file select [_headerStart + 2, _headerLength - 2];
 
 if (_fileHeader == "" || _headerStart > 5) then {_fileHeader = "N/A"};
 
-_export = _export + endl + "## " + _x + endl + "```"  + _fileHeader + "```";
+_export = _export + endl + "# " + _x + endl + "```"  + _fileHeader + "```";
 
 } forEach _allENHFunctions;
 
 copyToClipboard _export;
 
-endLoadingScreen;
-
-true
+endLoadingScreen
