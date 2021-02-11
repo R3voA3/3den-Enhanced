@@ -3,17 +3,6 @@ class CfgFunctions
   class 3denEnhanced
   {
     tag = "ENH";
-    #ifdef __A3_DEBUG__
-    class ENH_Internal
-    {
-      file = "3denEnhanced\functions\internal";
-      class checkShortCutsDuplicates;
-      class exportAttributesToGitHub;
-      class exportContextMenuToGitHub;
-      class exportFunctionsToGitHub;
-      class exportMenuStripToGitHub;
-    };
-    #endif
     class 3DENRadio
     {
       file = "3denEnhanced\functions\GUI\3DENRadio";
@@ -182,25 +171,21 @@ class CfgFunctions
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
-      class 3DENCollapseAssetBrowser;
       class 3denNotificationNoSound;
       class all3DENSelected;
       class deleteCrew;
       class deleteEmptyLayers;
+      #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       class dynamicViewDistance;
+      #endif
       class floatToTime;
       class generateSteamMissionDescription;
       class getAllItems;
       class hasStorage;
-      class initAmbientAnimationsInEditor;
       class loadoutTool;
-      class locationList;
       class measureDistance;
-      class menuStrip_removeItems;
       class removeGear;
-      class sessionTimer;
       class setOrientation;
-      class statusbar_entityCounter;
       class switchTime;
       class toggleAIFeatures;
       class toggleAttribute;
@@ -209,6 +194,17 @@ class CfgFunctions
       class toggleGrass;
       class twoDigitsStr;
     };
+    #ifndef ENH_HIDE_INTERFACE
+    class Interface
+    {
+      file = "3denEnhanced\functions\interface";
+      class 3DENCollapseAssetBrowser;
+      class locationList;
+      class menuStrip_removeItems;
+      class sessionTimer;
+      class statusbar_entityCounter;
+    };
+    #endif
     class Log
     {
       file = "3denEnhanced\functions\log";
@@ -236,32 +232,70 @@ class CfgFunctions
     class AttributeControls
     {
       file = "3denEnhanced\functions\attributeControls";
-      class SPR_onAttributeLoad;
-      class SPR_onAttributeSave;
+      #ifndef ENH_HIDE_AIRDROP
       class airdrop_onAttributeLoad;
       class airdrop_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_AMBIENTANIMATIONS
+      class ambientAnimations_initInEditor;
       class ambientAnimations_onAttributeLoad;
       class ambientAnimations_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_AMBIENTFLYBY
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_DEBUGOPTIONS
       class debugOptions_activeScripts;
       class debugOptions_init;
+      #endif
+      #ifndef ENH_HIDE_ESTABLISHINGSHOT
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_GROUPMARKER
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_HOLDACTION
       class holdAction_onAttributeLoad;
       class holdAction_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_INTROTEXT
       class introText_onAttributeLoad;
       class introText_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_MAPINDICATORS
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_INTERFACE
       class menuStripBlacklist_onAttributeLoad;
+      #endif
+      #ifndef ENH_HIDE_MISSIONENDING
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_SPR
+      class SPR_onAttributeLoad;
+      class SPR_onAttributeSave;
+      #endif
+      #ifndef ENH_HIDE_TIMEMULTIPLIER
       class timeMultiplier_onAttributeLoad;
       class timeMultiplier_onAttributeSave;
+      #endif
     };
+    #ifdef __A3_DEBUG__
+    class ENH_Internal
+    {
+      file = "3denEnhanced\functions\internal";
+      class checkShortCutsDuplicates;
+      class exportAttributesToGitHub;
+      class exportContextMenuToGitHub;
+      class exportFunctionsToGitHub;
+      class exportMenuStripToGitHub;
+    };
+    #endif
   };
 };

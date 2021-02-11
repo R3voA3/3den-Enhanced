@@ -9,7 +9,9 @@ class Display3DEN
   };
   class Controls
   {
-    #include "statusbar.hpp"
+    #ifndef ENH_HIDE_INTERFACE
+      #include "statusbar.hpp"
+    #endif
     class MenuStrip: ctrlMenuStrip
     {
       class Items

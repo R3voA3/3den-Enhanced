@@ -1,5 +1,4 @@
 #if __has_include("\userconfig\ENH_Config.hpp")
-
 #include "\userconfig\ENH_Config.hpp"
 #endif
 

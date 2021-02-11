@@ -4,17 +4,23 @@
   Date: 2019-06-05
 
   Description:
-  Is called by Eden event handler onMissionPreviewEnd.
+  Is called by Eden event handler onMissionPreviewEnd. Content of this function may be altered by ENH_Config.hpp.
 
   Parameter(s):
   -
 
-  Returns:
+  Returns:€
   -
 */
+
+#if __has_include("\userconfig\ENH_Config.hpp")
+#include "\userconfig\ENH_Config.hpp"
+#endif
 
 //Enable 3DEN Radio
 call ENH_fnc_3DENRadio_toggleRadio;
 
+#ifndef ENH_HIDE_INTERFACE
 //Enable session timer
 [] spawn ENH_fnc_sessionTimer;
+#endif
