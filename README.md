@@ -15,7 +15,8 @@
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Menu-Strip">Menu Strip</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Context-Menu">Context Menu</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs">Custom GUIs</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Functions">Functions</a>
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Functions">Functions</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Customisation">Customisation</a>
 </p>
 
 <p align="center">
