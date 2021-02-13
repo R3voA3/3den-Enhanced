@@ -4,6 +4,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
   {
     class Version;//EditBox
     class TextZ;//Icon
+    #ifndef ENH_HIDE_INTERFACE
     class ENH_SessionTime: Version
     {
       idc = IDC_STATUSBAR_SESSIONTIMER;
@@ -83,5 +84,15 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       x = ORIGIN_X_STATUSBAR - 109 * GRID_W - 2 * SPACE_X;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeObjects_ca.paa";
     };
+    #endif
+    #if __has_include("\userconfig\ENH_Config.hpp")
+    class ENH_UserconfigWarning: TextZ
+    {
+      idc = -1;
+      x = 102 * GRID_W + 2 * SPACE_X;
+      text = "\a3\ui_f\data\map\markers\military\warning_ca.paa";
+      tooltip = "You have customised 3den Enhanced with the userconfig 'ENH_Config.hpp'. Please make sure you are not accidentally removing attributes from your mission!"
+    };
+    #endif
   };
 };
