@@ -249,6 +249,10 @@ class CfgFunctions
       class debugOptions_activeScripts;
       class debugOptions_init;
       #endif
+      #ifndef ENH_HIDE_DYNAMICSKILL
+      class dynamicSkill_onAttributeLoad;
+      class dynamicSkill_onAttributeSave;
+      #endif
       #ifndef ENH_HIDE_ESTABLISHINGSHOT
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
