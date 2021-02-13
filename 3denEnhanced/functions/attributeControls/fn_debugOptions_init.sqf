@@ -414,7 +414,7 @@ if GETVALUE("NoReload") then
 {
   player addEventHandler ["FiredMan",
   {
-    params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+    params ["_unit", "_weapon", "_muzzle", "", "", "", "", "_vehicle"];
     if (isNull _vehicle) then
     {
       _unit setAmmo [_weapon, 1000];
@@ -436,7 +436,7 @@ if GETVALUE("DrawViewDirection") then
         private _beg = ASLToAGL eyePos _x;
         private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 3));
         private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 3));
-        drawLine3D [ _beg, _endE, [0, 1, 0, 1]];
+        drawLine3D [_beg, _endE, [0, 1, 0, 1]];
         drawLine3D [_beg, _endW, [1, 0, 0, 1]];
         false;
       } count (player nearEntities [["CAManBase"], RADIUS] select {!isPlayer _x});
