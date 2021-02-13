@@ -16,17 +16,17 @@
 params ["_ctrlGroup"];
 
 [
-	cbChecked (_ctrlGroup controlsGroupCtrl 100),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 101),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 103),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 105),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 107),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 109),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 111),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 113),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 115),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 117),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 119),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 121),
-	sliderPosition (_ctrlGroup controlsGroupCtrl 123)
+  cbChecked (_ctrlGroup controlsGroupCtrl 100),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 101),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 103),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 105),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 107),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 109),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 111),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 113),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 115),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 117),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 119),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 121),
+  sliderPosition (_ctrlGroup controlsGroupCtrl 123)
 ]

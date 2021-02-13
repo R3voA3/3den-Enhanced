@@ -1,6 +1,6 @@
 class ENH_DynamicSkill: Title
 {
-  attributeLoad = "[_this,_value] call ENH_fnc_dynamicSkill_onAttributeLoad";
+  attributeLoad = "[_this, _value] call ENH_fnc_dynamicSkill_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_dynamicSkill_onAttributeSave";
   h = 17 * SIZE_M * GRID_H + 90 * pixelH;
   class Controls: Controls
@@ -22,7 +22,7 @@ class ENH_DynamicSkill: Title
       y = SIZE_M * GRID_H + 10 * pixelH;
       w = 5 * pixelW;
       h = SIZE_M * GRID_H;
-      colorBackground[] = {1,1,1,0.05};
+      colorBackground[] = {1, 1, 1, 0.05};
     };
     class BLUFORDescriptionHeader: ctrlStatic
     {
@@ -31,9 +31,9 @@ class ENH_DynamicSkill: Title
       y = SIZE_M * GRID_H + 10 * pixelH;
       w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
       h = SIZE_M * GRID_H;
-      colorText[] = {1,1,1,0.4};
-      colorBackground[] = {1,1,1,0.05};
-      colorShadow[] = {0,0,0,0};
+      colorText[] = {1, 1, 1, 0.4};
+      colorBackground[] = {1, 1, 1, 0.05};
+      colorShadow[] = {0, 0, 0, 0};
     };
     class SkillMinBLUFORTitle: Title
     {
@@ -47,7 +47,7 @@ class ENH_DynamicSkill: Title
       y = 2 * SIZE_M * GRID_H + 15 * pixelH;
       w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
+      sliderRange[] = {0.2, 1};
     };
     class SkillMinBLUFOREdit: ctrlEdit
     {
@@ -62,22 +62,15 @@ class ENH_DynamicSkill: Title
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
       y = 3 * SIZE_M * GRID_H + 20 * pixelH;
     };
-    class SkillAimMinBLUFORValue: ctrlXSliderH
+    class SkillAimMinBLUFORValue: SkillMinBLUFORValue
     {
       idc = 103;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 3 * SIZE_M * GRID_H + 20 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMinBLUFOREdit: ctrlEdit
+    class SkillAimMinBLUFOREdit: SkillMinBLUFOREdit
     {
       idc = 104;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 3 * SIZE_M * GRID_H + 20 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
 
     class SkillMaxBLUFORTitle: Title
@@ -85,241 +78,155 @@ class ENH_DynamicSkill: Title
       text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
       y = 4 * SIZE_M * GRID_H + 25 * pixelH;
     };
-    class SkillMaxBLUFORValue: ctrlXSliderH
+    class SkillMaxBLUFORValue: SkillMinBLUFORValue
     {
       idc = 105;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 4 * SIZE_M * GRID_H + 25 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillMaxBLUFOREdit: ctrlEdit
+    class SkillMaxBLUFOREdit: SkillMinBLUFOREdit
     {
       idc = 106;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 4 * SIZE_M * GRID_H + 25 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     class SkillAimMaxBLUFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
       y = 5 * SIZE_M * GRID_H + 30 * pixelH;
     };
-    class SkillAimMaxBLUFORValue: ctrlXSliderH
+    class SkillAimMaxBLUFORValue: SkillMinBLUFORValue
     {
       idc = 107;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 5 * SIZE_M * GRID_H + 30 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMaxBLUFOREdit: ctrlEdit
+    class SkillAimMaxBLUFOREdit: SkillMinBLUFOREdit
     {
       idc = 108;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 5 * SIZE_M * GRID_H + 30 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     //OPFOR
-    class OPFORDescriptionDeco: ctrlStatic
+    class OPFORDescriptionDeco: BLUFORDescriptionDeco
     {
-      x = 5 * GRID_W;
       y = 6 * SIZE_M * GRID_H + 35 * pixelH;
-      w = 5 * pixelW;
-      h = SIZE_M * GRID_H;
-      colorBackground[] = {1,1,1,0.05};
     };
-    class OPFORDescriptionHeader: ctrlStatic
+    class OPFORDescriptionHeader: BLUFORDescriptionHeader
     {
       text = $STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME;
-      x = 5 * GRID_W + 7 * pixelW;
       y = 6 * SIZE_M * GRID_H + 35 * pixelH;
-      w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
-      h = SIZE_M * GRID_H;
-      colorText[] = {1,1,1,0.4};
-      colorBackground[] = {1,1,1,0.05};
-      colorShadow[] = {0,0,0,0};
     };
     class SkillMinOPFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
       y = 7 * SIZE_M * GRID_H + 40 * pixelH;
     };
-    class SkillMinOPFORValue: ctrlXSliderH
+    class SkillMinOPFORValue: SkillMinBLUFORValue
     {
       idc = 109;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 7 * SIZE_M * GRID_H + 40 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillMinOPFOREdit: ctrlEdit
+    class SkillMinOPFOREdit: SkillMinBLUFOREdit
     {
       idc = 110;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 7 * SIZE_M * GRID_H + 40 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     class SkillAimMinOPFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
       y = 8 * SIZE_M * GRID_H + 45 * pixelH;
     };
-    class SkillAimMinOPFORValue: ctrlXSliderH
+    class SkillAimMinOPFORValue: SkillMinBLUFORValue
     {
       idc = 111;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 8 * SIZE_M * GRID_H + 45 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMinOPFOREdit: ctrlEdit
+    class SkillAimMinOPFOREdit: SkillMinBLUFOREdit
     {
       idc = 112;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 8 * SIZE_M * GRID_H + 45 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
-
     class SkillMaxOPFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
       y = 9 * SIZE_M * GRID_H + 50 * pixelH;
     };
-    class SkillMaxOPFORValue: ctrlXSliderH
+    class SkillMaxOPFORValue: SkillMinBLUFORValue
     {
       idc = 113;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 9 * SIZE_M * GRID_H + 50 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillMaxOPFOREdit: ctrlEdit
+    class SkillMaxOPFOREdit: SkillMinBLUFOREdit
     {
       idc = 114;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 9 * SIZE_M * GRID_H + 50 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
-
     class SkillAimMaxOPFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
       y = 10 * SIZE_M * GRID_H + 55 * pixelH;
     };
-    class SkillAimMaxOPFORValue: ctrlXSliderH
+    class SkillAimMaxOPFORValue: SkillMinBLUFORValue
     {
       idc = 115;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 10 * SIZE_M * GRID_H + 55 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMaxOPFOREdit: ctrlEdit
+    class SkillAimMaxOPFOREdit: SkillMinBLUFOREdit
     {
       idc = 116;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 10 * SIZE_M * GRID_H + 55 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     //INDFOR
-    class INDFORDescriptionDeco: ctrlStatic
+    class INDFORDescriptionDeco: BLUFORDescriptionDeco
     {
-      x = 5 * GRID_W;
       y = 11 * SIZE_M * GRID_H + 60 * pixelH;
-      w = 5 * pixelW;
-      h = SIZE_M * GRID_H;
-      colorBackground[] = {1,1,1,0.05};
     };
-    class INDFORDescriptionHeader: ctrlStatic
+    class INDFORDescriptionHeader: BLUFORDescriptionHeader
     {
       text = $STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME;
-      x = 5 * GRID_W + 7 * pixelW;
       y = 11 * SIZE_M * GRID_H + 60 * pixelH;
-      w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 4) * GRID_W - 7 * pixelW;
-      h = SIZE_M * GRID_H;
-      colorText[] = {1,1,1,0.4};
-      colorBackground[] = {1,1,1,0.05};
-      colorShadow[] = {0,0,0,0};
     };
     class SkillMinINDFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
       y = 12 * SIZE_M * GRID_H + 65 * pixelH;
     };
-    class SkillMinINDFORValue: ctrlXSliderH
+    class SkillMinINDFORValue: SkillMinBLUFORValue
     {
       idc = 117;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 12 * SIZE_M * GRID_H + 65 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillMinINDFOREdit: ctrlEdit
+    class SkillMinINDFOREdit: SkillMinBLUFOREdit
     {
       idc = 118;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 12 * SIZE_M * GRID_H + 65 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     class SkillAimMinINDFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
       y = 13 * SIZE_M * GRID_H + 70 * pixelH;
     };
-    class SkillAimMinINDFORValue: ctrlXSliderH
+    class SkillAimMinINDFORValue: SkillMinBLUFORValue
     {
       idc = 119;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 13 * SIZE_M * GRID_H + 70 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMinINDFOREdit: ctrlEdit
+    class SkillAimMinINDFOREdit: SkillMinBLUFOREdit
     {
       idc = 120;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 13 * SIZE_M * GRID_H + 70 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
-
     class SkillMaxINDFORTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
       y = 14 * SIZE_M * GRID_H + 75 * pixelH;
     };
-    class SkillMaxINDFORValue: ctrlXSliderH
+    class SkillMaxINDFORValue: SkillMinBLUFORValue
     {
       idc = 121;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 14 * SIZE_M * GRID_H + 75 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillMaxINDFOREdit: ctrlEdit
+    class SkillMaxINDFOREdit: SkillMinBLUFOREdit
     {
       idc = 122;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 14 * SIZE_M * GRID_H + 75 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
 
     class SkillAimMaxINDFORTitle: Title
@@ -327,22 +234,15 @@ class ENH_DynamicSkill: Title
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
       y = 15 * SIZE_M * GRID_H + 80 * pixelH;
     };
-    class SkillAimMaxINDFORValue: ctrlXSliderH
+    class SkillAimMaxINDFORValue: SkillMinBLUFORValue
     {
       idc = 123;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = 15 * SIZE_M * GRID_H + 80 * pixelH;
-      w = (ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
-      h = SIZE_M * GRID_H;
-      sliderRange[] = {0.2,1};
     };
-    class SkillAimMaxINDFOREdit: ctrlEdit
+    class SkillAimMaxINDFOREdit: SkillMinBLUFOREdit
     {
       idc = 124;
-      x = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W;
       y = 15 * SIZE_M * GRID_H + 80 * pixelH;
-      w = EDIT_W_WIDE * GRID_W;
-      h = SIZE_M * GRID_H;
     };
     class Reset: ENH_ResetButton_Base
     {
