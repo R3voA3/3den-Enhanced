@@ -53,6 +53,9 @@ class Cfg3DEN
     #ifndef ENH_HIDE_AMBIENTFLYBY
       #include "controls\ambientFlyby.hpp"
     #endif
+    #ifndef ENH_HIDE_DYNAMICSKILL
+      #include "controls\dynamicSkill.hpp"
+    #endif
     #ifndef ENH_HIDE_ESTABLISHINGSHOT
       #include "controls\establishingShot.hpp"
     #endif
@@ -162,6 +165,9 @@ class Cfg3DEN
       {
         #ifndef ENH_HIDE_DYNAMICGROUPS
           #include "attributesMission\dynamicGroups.hpp"
+        #endif
+        #ifndef ENH_HIDE_DYNAMICSKILL
+          #include "attributesMission\dynamicSkill.hpp"
         #endif
         class Respawn
         {
