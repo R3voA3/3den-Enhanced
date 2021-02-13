@@ -12,6 +12,96 @@
     <Portuguese>Volume (som)</Portuguese>
     <Russian>Громкость (звук)</Russian>
   </Key>
+  	<Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
+		<English>Dynamic AI Skill Settings</English>
+		<Italian>Configurazione Dinamica delle abilità AI</Italian>
+		<German>Dynamische KI-Fähigkeitseinstellungen</German>
+		<Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
+		<French>Paramètres de compétence dynamique de l'IA</French>
+		<Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
+		<Spanish>Configuración de habilidad dinámica para la IA</Spanish>
+		<Russian>Динамические настройки искусственного интеллекта</Russian>
+	</Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
+		<English>BLUFOR Skill Settings</English>
+		<Italian>Parametri delle abilità BLUFOR</Italian>
+		<German>BLUFOR Fähigkeitseinstellungen</German>
+		<Czech>Nastavení zkušenosti BLUFOR</Czech>
+		<French>Paramètres de compétences BLUFOR</French>
+		<Polish>BLUFOR Ustawienia umiejętności</Polish>
+		<Spanish>Habilidades de BLUFOR</Spanish>
+		<Russian>Настройки навыков BLUFOR</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME">
+		<English>Min. Skill</English>
+		<Italian>Abilità minima.</Italian>
+		<German>Min. Fähigkeit</German>
+		<Czech>Minimální zkušenost</Czech>
+		<French>Compétence min.</French>
+		<Polish>Min. poz. umiejętności</Polish>
+		<Spanish>Habilidad Min.</Spanish>
+		<Russian>Минимальный навык</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
+		<English>Min. Aiming Skill</English>
+		<Italian>Min. Abilità di mira</Italian>
+		<German>Min. Zielfähigkeit</German>
+		<Czech>Minimální zkušenost s mířením</Czech>
+		<French>Compétence de visée min.</French>
+		<Polish>Min. Celność</Polish>
+		<Spanish>Habilidad de Apuntado Min.</Spanish>
+		<Russian>Минимальный навык прицельвания</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
+		<English>Max. Skill</English>
+		<Italian>Abilità Massima.</Italian>
+		<German>Max. Fähigkeit</German>
+		<Czech>Maximální zkušenost</Czech>
+		<French>Compétence max.</French>
+		<Polish>Max. poz. umiejętnościl</Polish>
+		<Spanish>Habilidad Max.</Spanish>
+		<Russian>Максимальный навык</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME">
+		<English>Max. Aiming Skill</English>
+		<Italian>Abilità di mira massima.</Italian>
+		<German>Max. Zielfähigkeit</German>
+		<Czech>Maximální zkušenost s mířením</Czech>
+		<French>Compétence de visée max.</French>
+		<Polish>Max. Celność</Polish>
+		<Spanish>Habilida de Apuntado Max.</Spanish>
+		<Russian>Максимальный навык прицельвания</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
+		<English>OPFOR Skill Settings</English>
+		<Italian>Parametri delle abilità OPFOR</Italian>
+		<German>OPFOR Fähigkeitseinstellungen</German>
+		<Czech>Nastavení zkušenosti OPFOR</Czech>
+		<French>Paramètres de compétences OPFOR</French>
+		<Polish>OPFOR Ustawienia umiejętności</Polish>
+		<Spanish>Habilidad de OPFOR</Spanish>
+		<Russian>Настройки навыков OPFOR</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
+		<English>INDFOR Skill Settings</English>
+		<Italian>Parametri delle abilità INDFOR</Italian>
+		<German>INDFOR Fähigkeitseinstellungen</German>
+		<Czech>Nastavení zkušenosti INDFOR</Czech>
+		<French>Paramètres de compétences INDFOR</French>
+		<Polish>INDFOR Ustawienia umiejętności</Polish>
+		<Spanish>Habilidad de INDEPENDIENTE</Spanish>
+		<Russian>Настройки навыков INDFOR</Russian>
+	</Key>
+	<Key ID="STR_ENH_DYNAMICSKILL_DESCRIPTION">
+		<English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects. Works for up to four players only!</English>
+		<Italian>Calcola le abilità AI in base al conteggio dei giocatori e imposta i valori di base. L'abilità verrà modificata in modo dinamico quando un giocatore si connette o si disconnette.</Italian>
+		<German>Berechnet den KI-Skill auf Basis der Spieleranzahl und den eingestellten Basiswerten. Die Fähigkeit wird dynamisch angepasst wenn ein Spieler sich verbindet, oder das Spiel verlässt. Funktioniert nur bis zu vier Spielern.</German>
+		<Czech>Spočítá zkušenosti umělé inteligence na základě počtu hráčů a nastaví základní hodnoty. Zkušenost se bude dynamicky měnit když se hráč připojí či odpojí.</Czech>
+		<French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera adaptée dynamiquement lorsqu'un joueur se connecte ou se déconnecte.</French>
+		<Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
+		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
+		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
+	</Key>
   <Key ID="STR_ENH_MUSICVOLUME_DISPLAYNAME">
     <English>Volume (Music)</English>
     <Italian>Volume (Musica)</Italian>
