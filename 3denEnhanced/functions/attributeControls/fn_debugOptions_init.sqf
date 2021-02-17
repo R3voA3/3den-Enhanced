@@ -91,7 +91,7 @@ if GETVALUE("ShowUnits") then
     {
       waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
       {
-        sleep 0.2;//A bit more performance friendly
+        sleep 0.05;//A bit more performance friendly
         _x params ["_marker", "_entity"];
         _displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
         _marker setMarkerText _displayName;
@@ -322,27 +322,26 @@ if GETVALUE("DrawIcons") then
       {
         drawIcon3D
         [
-          getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "icon"),
+          "",/* getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "icon"), */
           (side _x call BIS_fnc_sideColor),
-          _x modelToWorldVisual [0, 0, 0.5],
+          _x modelToWorldVisual [0, 0, 0],
           0.5,
           0.5,
           0,
           format
           [
-            "%1 (%2 %3 HP, %4, %5 %6, %7 m)",
+            "%1 (%2 %3 HP, %4, %5 m)",
             getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
             (1 - damage _x) * 100,
             "%",
             behaviour _x,
-            (_x knowsAbout player) * 100 / 4,
-            "%",
             round (player distance _x)
           ],
-          true
+          true,
+          3 * (1 / (getResolution select 3)) * pixelGrid * 0.5
         ];
-        false;
-      } count (ASLToAGL getPosASL player nearEntities [["CAManBase", "Air", "Car", "Tank"], RADIUS]);
+        true
+      } count ((ASLToAGL getPosASL player nearEntities [["CAManBase", "Air", "Car", "Tank"], RADIUS]) - [player]);
     }
   ] call BIS_fnc_addStackedEventHandler;
 };
@@ -434,12 +433,10 @@ if GETVALUE("DrawViewDirection") then
     {
       {
         private _beg = ASLToAGL eyePos _x;
-        private _endE = (_beg vectorAdd (eyeDirection _x vectorMultiply 3));
-        private _endW = (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 3));
-        drawLine3D [_beg, _endE, [0, 1, 0, 1]];
-        drawLine3D [_beg, _endW, [1, 0, 0, 1]];
+        drawLine3D [_beg, (_beg vectorAdd (eyeDirection _x vectorMultiply 1)), [0, 1, 0, 1]];
+        drawLine3D [_beg, (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 1)), [1, 0, 0, 1]];
         false;
-      } count (player nearEntities [["CAManBase"], RADIUS] select {!isPlayer _x});
+      } count ((player nearEntities [["CAManBase"], RADIUS]) - [player]);
     }
   ] call BIS_fnc_addStackedEventHandler;
 };
@@ -566,7 +563,7 @@ if (GETVALUE("DebugPath") > 0) then
       {
         scriptName 'ENH_Attribute_DebugPath';
         private _arrow = objNull;
-        private _arrowColour = format ['#(rgb, 8, 8, 3)color(%1,%2,%3, 1)', random(1), random(1), random(1)];
+        private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)', random(1), random(1), random(1)];
         private _path = [];
         private _marker = createMarker [format ['ENH_DebugPath_%1', str _this], _this];
         _marker setMarkerShape "polyline";

@@ -67,6 +67,4 @@ else
 };
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-copyToClipboard _export;
-
-true
+copyToClipboard _export

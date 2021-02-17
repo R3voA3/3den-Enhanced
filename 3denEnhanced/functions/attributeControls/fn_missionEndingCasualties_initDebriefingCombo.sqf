@@ -15,7 +15,8 @@
 */
 
 params ["_ctrlCombo", "_debriefing"];
-
+diag_log _scriptName;
+diag_log _debriefing;
 {
   private _title = getText (_x >> "title");
   private _subtitle = getText (_x >> "subtitle");
@@ -32,4 +33,4 @@ params ["_ctrlCombo", "_debriefing"];
   {
     _ctrlCombo lbSetCurSel _forEachIndex;
   };
-} forEach ("isClass _x" configClasses (configFile >> "CfgDebriefing")) + ("isClass _x" configClasses (missionConfigFile >> "CfgDebriefing"));
+} forEach ("true" configClasses (configFile >> "CfgDebriefing")) + ("true" configClasses (missionConfigFile >> "CfgDebriefing"));
