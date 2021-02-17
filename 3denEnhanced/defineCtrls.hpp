@@ -50,7 +50,7 @@ class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
   idc = -1;
   x = ATTRIBUTE_TITLE_W * GRID_W;
   w = ATTRIBUTE_CONTENT_W * GRID_W;
-  h = 2 * SIZE_M * GRID_H;
+  h = 2 * CTRL_DEFAULT_H;
   rows = 1;
   columns = 4;
   strings[] =
@@ -69,6 +69,6 @@ class ENH_ResetButton_Base: ctrlButton
   idc = 5;
   x = ATTRIBUTE_TITLE_W * GRID_W;
   w = ATTRIBUTE_CONTENT_W * GRID_W;
-  h = SIZE_M * GRID_H;
+  h = CTRL_DEFAULT_H;
   text = "$STR_ENH_RESETANDDISABLE";
 };
