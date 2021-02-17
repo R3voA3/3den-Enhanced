@@ -2,7 +2,7 @@ class ENH_AmbientAnimations: Title
 {
   attributeLoad = "[_this, _value] call ENH_fnc_ambientAnimations_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_ambientAnimations_onAttributeSave";
-  h = 4 * SIZE_M * GRID_H + 20 * pixelH;
+  h = 4 * CTRL_DEFAULT_H + 20 * pixelH;
   class Controls: Controls
   {
     class AnimTitle: Title
@@ -14,39 +14,36 @@ class ENH_AmbientAnimations: Title
       idc = 100;
       x = ATTRIBUTE_TITLE_W * GRID_W;
       w = ATTRIBUTE_CONTENT_W * GRID_W;
-      h = SIZE_M * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class CanExitTitle: Title
     {
       text = "$STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME";
       tooltip = "$STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP";
-      y = SIZE_M * GRID_H + 5 * pixelH;
+      y = CTRL_DEFAULT_H + 5 * pixelH;
     };
     class CanExit: ctrlCheckbox
     {
       idc = 101;
       x = ATTRIBUTE_TITLE_W * GRID_W;
-      y = SIZE_M * GRID_H + 5 * pixelH;
+      y = CTRL_DEFAULT_H + 5 * pixelH;
       w = 5 * GRID_W;
-      h = SIZE_M * GRID_H;
+      h = CTRL_DEFAULT_H;
     };
     class AttachTitle: Title
     {
       text = "$STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME";
       tooltip = "$STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP";
-      y = 2 * SIZE_M * GRID_H + 10 * pixelH;
+      y = 2 * CTRL_DEFAULT_H + 10 * pixelH;
     };
-    class Attach: ctrlCheckbox
+    class Attach: CanExit
     {
       idc = 102;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
-      y = 2 * SIZE_M * GRID_H + 10 * pixelH;
-      w = 5 * GRID_W;
-      h = SIZE_M * GRID_H;
+      y = 2 * CTRL_DEFAULT_H + 10 * pixelH;
     };
     class Reset: ENH_ResetButton_Base
     {
-      y = 3 * SIZE_M * GRID_H + 15 * pixelH;
+      y = 3 * CTRL_DEFAULT_H + 15 * pixelH;
     };
   };
 };
