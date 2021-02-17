@@ -474,16 +474,6 @@
     <Spanish>Entrega por paracaídas</Spanish>
     <Russian>Выброска десанта</Russian>
   </Key>
-  <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
-    <English>Dynamic AI Skill Settings</English>
-    <Italian>Configurazione Dinamica delle abilità AI</Italian>
-    <German>Dynamische KI-Fähigkeitseinstellungen</German>
-    <Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
-    <French>Paramètres de compétence dynamique de l'IA</French>
-    <Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
-    <Spanish>Configuración de habilidad dinámica para la IA</Spanish>
-    <Russian>Динамические настройки искусственного интеллекта</Russian>
-  </Key>
   <Key ID="STR_ENH_DISABLEAI_NVG_DISPLAYNAME">
     <English>Night Vision Goggles</English>
     <Italian>Visori Notturni</Italian>
@@ -2260,6 +2250,10 @@
     <Chinesesimp>会话时间</Chinesesimp>
     <Polish>Czas sesji</Polish>
     <Russian>Время сеанса</Russian>
+  </Key>
+  <Key ID="STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP">
+    <English>You are running a customised version of 3den Enhanced. Please make sure you are not accidentally removing attributes from your mission!</English>
+    <German>Du verwendest eine benutzerdefinierte Version von 3den Enhanced. Stelle sicher das du nicht aus Versehen Attribute aus der jetzigen Mission entfernst!</German>
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
     <English>Center Position</English>

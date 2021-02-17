@@ -91,7 +91,7 @@ class StatusBar: ctrlControlsGroupNoScrollbars
       idc = -1;
       x = 102 * GRID_W + 2 * SPACE_X;
       text = "\a3\ui_f\data\map\markers\military\warning_ca.paa";
-      tooltip = "You have customised 3den Enhanced with the userconfig 'ENH_Config.hpp'. Please make sure you are not accidentally removing attributes from your mission!"
+      tooltip = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
     };
     #endif
   };

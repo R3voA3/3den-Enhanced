@@ -17,6 +17,11 @@ class Cfg3DEN
       isWarning = 1;
       text = "$STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED";
     };
+    class ENH_Customised_Warning
+    {
+      isWarning = 1;
+      text = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
+    };
   };
   class EventHandlers
   {

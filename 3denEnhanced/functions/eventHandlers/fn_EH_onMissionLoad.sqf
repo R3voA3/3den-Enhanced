@@ -15,6 +15,7 @@
 
 #if __has_include("\userconfig\ENH_Config.hpp")
 #include "\userconfig\ENH_Config.hpp"
+["ENH_Customised_Warning", 1, 10] call BIS_fnc_3DENNotification;
 #endif
 
 #ifndef ENH_HIDE_AMBIENTANIMATIONS
