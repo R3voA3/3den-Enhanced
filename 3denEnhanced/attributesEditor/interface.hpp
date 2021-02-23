@@ -1,48 +1,47 @@
 class ENH_Interface
 {
-	collapsed = 0;
-	displayName = $STR_ENH_INTERFACE;
-	class Attributes
-	{
-		class ENH_CollapseAssetBrowser
-		{
-			displayName = $STR_ENH_COLLAPSEASSETBROWSER;
-			property = "ENH_CollapseAssetBrowser";
-			control = "Checkbox";
-			expression = "profileNamespace setVariable ['%s',_value]";
-			defaultValue = "profileNamespace getVariable ['ENH_CollapseAssetBrowser',false]";
-		};
-		class ENH_CollapseEntityList
-		{
-			displayName = $STR_ENH_COLLAPSEENTITYLIST;
-			property = "ENH_CollapseEntityList";
-			control = "Checkbox";
-			expression = "profileNamespace setVariable ['%s',_value]";
-			defaultValue = "profileNamespace getVariable ['ENH_CollapseEntityList',false]";
-		};
-		class ENH_ShowPanelLeft
-		{
-			displayName = $STR_ENH_SHOWLEFTPANEL;
-			property = "ENH_ShowPanelLeft";
-			control = "Checkbox";
-			defaultValue = "profileNamespace getVariable ['ENH_ShowPanelLeft',true]";
-			expression = "profileNamespace setVariable ['ENH_ShowPanelLeft',_value]";
-		};
-		class ENH_ShowPanelRight
-		{
-			displayName = $STR_ENH_SHOWRIGHTPANEL;
-			property = "ENH_ShowPanelRight";
-			control = "Checkbox";
-			defaultValue = "profileNamespace getVariable ['ENH_ShowPanelRight',true]";
-			expression = "profileNamespace setVariable ['ENH_ShowPanelRight',_value]";
-		};
-		class ENH_Statusbar_EntityCounter
-		{
-			displayName = $STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME;
-			property = "ENH_Statusbar_EntityCounter";
-			control = "Checkbox";
-			expression = "profileNamespace setVariable ['%s',_value]; 'init' call ENH_fnc_statusbar_entityCounter";
-			defaultValue = "profileNamespace getVariable ['ENH_Statusbar_EntityCounter',true]";
-		};
-	};
+  collapsed = 1;
+  displayName = "$STR_ENH_INTERFACE";
+  class Attributes
+  {
+    class ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_COLLAPSEASSETBROWSER";
+      property = "ENH_CollapseAssetBrowser";
+      control = "Checkbox";
+      expression = "";
+      defaultValue = "false";
+    };
+    class ENH_CollapseEntityList: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_COLLAPSEENTITYLIST";
+      property = "ENH_CollapseEntityList";
+    };
+    class ENH_ShowPanelLeft: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_SHOWLEFTPANEL";
+      property = "ENH_ShowPanelLeft";
+    };
+    class ENH_ShowPanelRight: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_SHOWRIGHTPANEL";
+      property = "ENH_ShowPanelRight";
+    };
+    class ENH_Statusbar_EntityCounter: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME";
+      property = "ENH_Statusbar_EntityCounter";
+      expression = "'init' call ENH_fnc_statusbar_entityCounter";
+      defaultValue = "true";
+    };
+    class ENH_MenuStrip_Blacklist: ENH_CollapseAssetBrowser
+    {
+      displayName = "$STR_ENH_MENUSTRIPENTRIES";
+      tooltip = "$STR_ENH_MENUSTRIPENTRIES_TOOLTIP";
+      property = "ENH_MenuStrip_Blacklist";
+      control = "ENH_MenuStripBlacklist";
+      expression = "true";
+      defaultValue = "true";
+    };
+  };
 };

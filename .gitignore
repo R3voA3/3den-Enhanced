@@ -1,16 +1,6 @@
 #Excluded file extentions
 *.biprivatekey
-*.log
-*.pbo
-*.log
-*.7z
 *.zip
-*.txt
-
-#Exluded files
-.vscode
-ENH_GitHub.code-workspace
-
-#Excluded folders
-Old Files/
-Old Versions/
+*.code-workspace
+*.vscode
+*.code-workspace

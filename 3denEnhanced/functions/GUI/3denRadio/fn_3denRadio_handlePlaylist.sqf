@@ -1,89 +1,43 @@
-/* 
-	Author: Revo
+/*
+  Author: R3vo
 
-	Description:
-	Handles the playlist of 3DENRadio GUI.
+  Description:
+  Handles the playlist of 3DENRadio GUI.
 
-	Parameter(s):
-	0: STRING - Action to be taken, can be:
-		"EXPORT"
-		"IMPORT"
-		"UPDATE"
-		"SAVE"
-		"ADDSONG"
-		"REMOVESONG"
-		"CLEAR"
-	1: NUMBER - (Optional, default -1) - Key code used by some functionalities
+  Parameter(s):
+  0: CONTROL - ListNBox
+  1: NUMBER - Key
 
-	Returns:
-	BOOLEAN: true
+  Returns:
+  -
  */
+
+#include "\3denEnhanced\defineCommon.hpp"
+#define IN_PLAYLIST [_songName, _songClass, _songDuration] in _playlist
 
 disableSerialization;
 
-params [["_action","EXPORT",[""]],["_key",-1,[-1]]];
-private _display = findDisplay 60000;
-private _ctrlPL = _display displayCtrl 2000;
-private _ctrlSL = _display displayCtrl 1500;
+params ["_ctrlSongList", "_key"];
 
-switch (_action) do
+if (_key in [DIK_SPACE, DIK_DELETE]) then
 {
-	case "EXPORT":
-	{
-		"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
-		copyToClipboard str (profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]]);
-		["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-	};
-	case "IMPORT":
-	{
-		private _clipboard = call compile copyFromClipboard;
-		if !(_clipboard isEqualTypeParams [["",""]]) exitWith {false};
-		profileNamespace setVariable ["ENH_3DENRadio_Playlist",_clipboard];
-		["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-		"UPDATE" call ENH_fnc_3DENRadio_handlePlaylist;
-	};
-	case "UPDATE":
-	{
-		private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist",[]];
-		lbClear _ctrlPL;
-		{
-			_x params ["_name","_class"];
-			private _index = _ctrlPL lbAdd _name;
-			_ctrlPL lbSetTooltip [_index,_name];
-			_ctrlPL lbSetData [_index,_class];
-		} forEach _playlist;
+  private _playlist = profileNamespace getVariable ["ENH_3DENRadio_playlist", []];
+  private _row = lnbCurSelRow _ctrlSongList;
+  private _songName = _ctrlSongList lnbText [_row, 0];
+  private _songClass = _ctrlSongList lnbData [_row, 0];
+  private _songDuration = _ctrlSongList lnbData [_row, 1];
 
-		lbSort _ctrlPL;
-	};
-	case "ADDSONG":
-	{
-		if (_key == 57) then
-		{
-			private _name = _ctrlSL lnbText [(lbCurSel _ctrlSL),0];
-			private _class = _ctrlSL lnbData [(lbCurSel _ctrlSL),0];
-			private _index = _ctrlPL lbAdd _name;
-			_ctrlPL lbSetTooltip [_index,_name];
-			_ctrlPL lbSetData [_index,_class];
-			"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
-		};
-	};
-	case "REMOVESONG":
-	{
-		if (_key == 211) then
-		{
-			_ctrlPL lbDelete (lbCurSel _ctrlPL);
-		};
-		"SAVE" call ENH_fnc_3DENRadio_handlePlaylist;
-	};
-	case "SAVE":
-	{
-		private _playlist = [];
-		for "_i" from 0 to (lbSize _ctrlPL - 1) do
-		{
-			_playlist pushBack [_ctrlPL lbText _i,_ctrlPL lbData _i];
-		};
-		profileNamespace setVariable ["ENH_3DENRadio_Playlist",_playlist];
-	};
+  if (IN_PLAYLIST) then
+  {
+    _ctrlSongList lnbSetPicture [[_row, 4], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+    _ctrlSongList lnbSetValue [[_row, 4], 0];
+    _playlist = _playlist - [[_songName, _songClass, _songDuration]];
+  }
+  else
+  {
+    _ctrlSongList lnbSetPicture [[_row, 4], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
+    _ctrlSongList lnbSetValue [[_row, 4], 1];
+    _playlist append [[_songName, _songClass, _songDuration]];
+  };
+  profileNamespace setVariable ["ENH_3DENRadio_playlist", _playlist];
 };
-
-true

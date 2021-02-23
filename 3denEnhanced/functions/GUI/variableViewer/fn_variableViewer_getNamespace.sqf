@@ -1,25 +1,25 @@
 /*
-   Author: R3vo
+  Author: R3vo
 
-   Date: 2020-02-11
+  Date: 2020-02-11
 
-   Description:
-   Used by the ENH_VariableViewer GUI. Used to get selected namespace from uiNamespace.
+  Description:
+  Used by the ENH_VariableViewer GUI. Used to get selected namespace from uiNamespace.
 
-   Parameter(s):
-   -
+  Parameter(s):
+  -
 
-   Returns:
-   NAMESPACE
+  Returns:
+  NAMESPACE
 */
 
-private _namespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace","missionNamespace"];
+private _namespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];
 
 if (_namespace isEqualType "") then
 {
-	call compile _namespace;
+  call compile _namespace;
 }
 else
 {
-	_namespace;
+  _namespace;
 };

@@ -1,26 +1,24 @@
 /*
-   Author: R3vo
+  Author: R3vo
 
-   Date: 2020-01-16
+  Date: 2020-01-16
 
-   Description:
-   Removes an entry from listBox. Saves list to profileNamespace.
+  Description:
+  Removes an entry from listBox. Saves list to profileNamespace.
 
-   Parameter(s):
-   0: STRING - Action to be taken
+  Parameter(s):
+  0: STRING - Action to be taken
 
-   Returns:
-   BOOLEAN: true
+  Returns:
+  -
 */
 
-params ["_ctrlLB", "_key", "_shift", "_ctrl", "_alt"];
+params ["_ctrlLnB", "_key"];
 
 if (_key isEqualTo 211) then
 {
-	_ctrlLB lbDelete lbCurSel _ctrlLB;
+  _ctrlLnB lnbDeleteRow lnbCurSelRow _ctrlLnB;
 
-	//Update list
-	_ctrlLB call ENH_fnc_3DENCam_saveList;
+  //Update list
+  _ctrlLnB call ENH_fnc_3DENCam_saveList;
 };
-
-true

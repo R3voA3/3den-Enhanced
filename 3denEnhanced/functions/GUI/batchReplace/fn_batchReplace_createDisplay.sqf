@@ -1,26 +1,25 @@
 /*
-   Author: R3vo
+  Author: R3vo
 
-   Date: 2019-07-30
+  Date: 2019-07-30
 
-   Description:
-   Creates the ENH_BatchReplace GUI if objects are selected, if not it shows an error message.
+  Description:
+  Creates the ENH_BatchReplace GUI if objects are selected, if not it shows an error message.
 
-   Parameter(s):
-   0: DISPLAY - Display
+  Parameter(s):
+  0: DISPLAY - Display
 
-   Returns:
-   BOOLEAN: true / false
+  Returns:
+  -
 */
 
-if !(is3DEN) exitWith {false};
+#include "\3denEnhanced\defineCommon.hpp"
 
-if ((get3DENSelected "Object") isEqualTo []) exitWith 
+if !(is3DEN) exitWith {};
+
+if ((get3DENSelected "Object") isEqualTo []) exitWith
 {
-	["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; 
-	false
+  ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 };
 
-findDisplay 313 createDisplay "ENH_BatchReplace";
-
-true
+findDisplay IDD_3DEN createDisplay "ENH_BatchReplace";

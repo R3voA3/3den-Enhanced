@@ -1,22 +1,23 @@
 /*
-   Author: Revo
+  Author: R3vo
 
-   Description:
-   Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
+  Description:
+  Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
 
-   Parameter(s):
-   -
+  Parameter(s):
+  -
 
-   Returns:
-   BOOLEAN: true / false
+  Returns:
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlButton"];
 
-private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl 1402);
+private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl IDC_FUNCTIONSVIEWER_NAME);
 
-if (_fncName isEqualTo "") exitWith {false};
+if (_fncName isEqualTo "") exitWith {};
 _fncName call BIS_fnc_recompile;
 playSound "FD_Finish_F";
-
-true

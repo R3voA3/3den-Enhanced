@@ -1,62 +1,65 @@
 /*
-   Author: Revo
+  Author: R3vo
 
-   Description:
-   Used by the ENH_FunctionViewer GUI. Called on load.
+  Description:
+  Used by the ENH_FunctionViewer GUI. Called on load.
 
-   Parameter(s):
-   0: DISPLAY - Display
+  Parameter(s):
+  0: DISPLAY - Display
 
-   Returns:
-   BOOLEAN: true
+  Returns:
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
 disableSerialization;
-
-params ["_disp"];
-
-private _ctrlTV = _disp displayCtrl 1500;
+params ["_display"];
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
-if (round (ctrlfade (findDisplay 313 displayctrl 1023)) < 1) then
+_display displayAddEventHandler ["keyDown", //Focus Search
 {
-	"showinterface" call BIS_fnc_3DENInterface
-};
+  params ["_display", "_key", "_shift", "_ctrl"];
+  if (_key isEqualTo 33 && _ctrl && !_shift) then
+  {
+    ctrlSetFocus CTRL(IDC_FUNCTIONSVIEWER_SEARCH);
+  }
+}];
 
-//Disable recompile buttons if recompiling isn't allowed
+_display displayAddEventHandler ["keyDown", //Copy
+{
+  params ["_display", "_key", "_shift", "_ctrl"];
+  if (_key isEqualTo 45 && _ctrl) then
+  {
+    CTRL(IDC_FUNCTIONSVIEWER_COPY) call ENH_fnc_functionsViewer_copy;
+  }
+}];
+
+_display displayAddEventHandler ["keyDown", //Focus Search Key
+{
+  params ["_display", "_key", "_shift", "_ctrl"];
+  if (_key isEqualTo 33 && _ctrl && _shift) then
+  {
+    ctrlSetFocus CTRL(IDC_FUNCTIONSVIEWER_SEARCHCODE);
+  }
+}];
+
+//Set filters to last used or default value. Will also trigger fillCtrlTv function
+CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex", 0]);
+CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex", 0]);
+CTRL(IDC_FUNCTIONSVIEWER_LOADMODE) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex", 0]);
+
 if (getNumber (missionConfigfile >> "allowFunctionsRecompile") == 0) then
 {
-	(_disp displayCtrl 1600) ctrlEnable false;
-	(_disp displayCtrl 1601) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
+}
+else
+{
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable true;
+  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable true;
 };
 
-_disp displayAddEventHandler ["keyDown",//Focus Search
-{
-	params ["_disp", "_key", "_shift", "_ctrl"];
-	if (_key isEqualTo 33 && _ctrl) then
-	{
-		ctrlSetFocus (_disp displayCtrl 1400);
-	}
-}];
-
-_disp displayAddEventHandler ["keyDown",//Copy
-{
-	params ["_disp", "_key", "_shift", "_ctrl"];
-	if (_key isEqualTo 45 && _ctrl) then
-	{
-		call ENH_fnc_functionsViewer_copy;
-	}
-}];
-
-//Set number of functions
-(_disp displayCtrl 1405) ctrlSetText str count ENH_FunctionsData;
-
-//Set filters to last used or default value
-(_disp displayCtrl 1700) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex",0]);
-(_disp displayCtrl 1800) lbSetCurSel (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex",0]);
-
 //Set up tree view
-_ctrlTV call ENH_fnc_FunctionsViewer_fillCtrlTV;
-
-true
+//CTRL(IDC_FUNCTIONSVIEWER_LIST) call ENH_fnc_FunctionsViewer_fillCtrlTV;

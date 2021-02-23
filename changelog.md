@@ -1,3 +1,56 @@
+
+
+v5.6
+*added*
+- Vehicle Inventory Manager
+- Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
+- It's now possible to search a function in the Functions Viewer for a specific keyword
+- Added CfgSentences Browser
+
+*changed*
+- Texture Finder will no longer list some textures multiple times
+- Debug path attributes now uses is3DENPreview command to make sure it only runs in the editor
+- Debug Options use is3DENPreview now
+- Remove 3rdPartyTools folder from menu strip. Instead there is now a link to a Steam collection in the Help folder
+- Removed obsolete stuff from configs
+- Fixed missing string in 3den Radio
+- 3DEN Cam Positions will now also show the time and date when the position was saved
+- Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
+- German translation has recieved some fixes thanks to Mr-Melker
+- Fixed a wrong condition in context menu causing some .rpt entries
+- Fixed an issue which caused CTRL + X shortcut in the Functions Viewer to cause a script error
+- Custom GUIs will no longer hide Eden Interface.
+- Fixed a bug which would cause Grid Pattern to not work
+- Increased max number of columns in Grid Pattern from 20 to 50
+- Polish translation was updated by Krzyciu
+- 3DEN Cam Positions will now properly display the tooltip for each entry
+- Debug path attribute will only show for AI and player units now
+- SPR Tickets attribute will only show for objectBrain
+- Menu Strip was tidied up a bit
+
+v5.5
+*changed*
+- Italian translation was updated by zagor64bz
+- Fixed a bug which caused Hold Action attribute to be always created in mission.sqm
+
+v5.4
+*changed*
+- Many translation tweaks, thanks to Poslovitch
+- Fixed an issue with randomize directon tool
+
+v5.3
+*added*
+
+*changed*
+- ENH_fnc_setOrientation can now reverse and randomise directions
+- "Show Radio Message" would be cut off in the extraction GUI
+- Updated Spanish translation (Thanks to arv187)
+- Tweaked some functions
+- Several fixes for Single Player respawn.
+
+*removed*
+- remove obsolete functions
+
 v5.2
 *added*
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
@@ -15,11 +68,11 @@ v5.2
 - Improved localisations
 - Added a delay before resetting captive mode on respawn (Single Player Respawn), to prevent the unit to be shot instantly again on respawn before they exit the animation
 - Fixed some RPT spam
-- Increased placement tools height
+- Increase GUI height of Placement Tools
 
 *removed*
 - removed some old, obsolete functions
-+ 
+
 v5.1
 *added*
 - Added Single Player Respawn
@@ -42,7 +95,7 @@ v5.1
 v5.0
 *added*
 - Context menu tool to move camera into first person view of selected entity
-- Added shortcuts to GUIs to preview controls styles and types (menu strip) 
+- Added shortcuts to GUIs to preview controls styles and types (menu strip)
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
 - Added Debug Option to show waypoints of all group on the map
 - Added Debug Option to enable unlimited ammo
@@ -58,7 +111,7 @@ v5.0
 *changed*
 - 3DEN Camera Positions UI now properly checks for incorrect description
 - Icons updated
-- Texture Finder 
+- Texture Finder
   - Will now search ~200.000 classes instead of ~30.000 for textures and images
   - Added search to Texture Finder tool
   - Optimized Texture Finder functions to be more performant (Thanks to shukari)
@@ -184,7 +237,7 @@ v4.3
   - Removed X button and replaced it with the close button in the lower right corner to be consitent with all other UIs in Eden Editor
   - Functions Viewer shows mod icons again
   - Functions Viewer now displays line numbers
-  
+
 - Updated and revised Czech translation thanks to XerXesCZ
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
 - Merged serveral functions into one
@@ -207,7 +260,7 @@ v4.3
 - Task Patrol attribute now uses a slider control
 - Logging of multiple map grid positions is now possible. Only unique value will be logged
 - Faction are now logged to clipboard without [ ]
-- Added context menu enty to log classes in format "class1","class2",...
+- Added context menu enty to log classes in format "class1", "class2",...
 - Added new folder to menu strip
 - Added option to garrision tool to change stance of units
 - Fixed missing shortcuts for some tools
@@ -338,7 +391,7 @@ v3.7
 
 v3.6
 *added*
-- added new functions ENH_fnc_all3DENSelected
+- added new function ENH_fnc_all3DENSelected
 - a control to the statusbar which shows number of selected entities
 - a tool to export and import mission attributes
 - an airdrop mission attribute
@@ -413,13 +466,13 @@ v3.1
 - Select Image GUI when publishing a mission to steam has been widened to allow the ctrlTree to expand further
 - Some general GUI overhauls
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
-		- briefing editor shortcut was changed from CTRL + B to ALT + B
-		- Texture Finder can now be opened by pretting ALT + T
-		- Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut.
-		- Clear chat can now be performed by pressing ALT + CTRL + C
-		- all debug tools have got a shortcut now
-		- Loadout tools can now be accessed by CTRL + SHIFT shortcuts
-		- Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
+    - briefing editor shortcut was changed from CTRL + B to ALT + B
+    - Texture Finder can now be opened by pretting ALT + T
+    - Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut.
+    - Clear chat can now be performed by pressing ALT + CTRL + C
+    - all debug tools have got a shortcut now
+    - Loadout tools can now be accessed by CTRL + SHIFT shortcuts
+    - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
 - Added search icon next to search edit control in 3den Radio
 - 3den Radio will now loop through playlist again one enabled
 
@@ -499,16 +552,16 @@ v2.7
 - added grid pattern tool
 - added tool to export all Arsenal loadout templates for backup
 - On preview debug (Those settings will only work during mission preview and won't influence the published scenario)
-	- show all units on map
-	- disable damage
-	- toggle captive mode
-	- enable bullet tracing
-	- enable Virtual Garage
-	- enable Virtual Arsenal
-	- disable stamina
-	- enable Zeus
-	- show awareness of all sides
-	- options to quickly kill all units of given side during scenario preview
+  - show all units on map
+  - disable damage
+  - toggle captive mode
+  - enable bullet tracing
+  - enable Virtual Garage
+  - enable Virtual Arsenal
+  - disable stamina
+  - enable Zeus
+  - show awareness of all sides
+  - options to quickly kill all units of given side during scenario preview
 
 *changed*
 - removed obsolete function call from ENH_Changelog GUI
@@ -545,8 +598,8 @@ v2.6
 - improved appearance of combo box control types
 - some config cleanup
 - measure distance functionality was rewritten and improved:
-	If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
-	If map is opened, then markers are drawn from point A to B showing the direct path
+  If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
+  If map is opened, then markers are drawn from point A to B showing the direct path
 - several menu entriess were missing "..." to indicate they are opening a new window
 
 v2.5
@@ -699,7 +752,7 @@ v1.8
 - mission stats tool now displays the number of simple objects
 - context menu entries are now only shown when necessary
 - improved tooltip for the "on event" attributes
-- game info tool now also logs architecture (x64,x86)
+- game info tool now also logs architecture (x64, x86)
 - fixed missing localisation when using the garrison function
 - removed obsolete variable from fn_getModuleDescription.sqf
 - toggle Map IDs would only work when the map was opened manually beforehand
@@ -841,8 +894,8 @@ v1.5
 - Moved most of the code from control configs to global functions
 - Preferences are now applied when a preview ends, or a new scenario is created.
 - Ambient animation attribute is now easier to use:
-	- 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied.
-		In older versions, one had to deactivate the animation first.
+  - 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied.
+    In older versions, one had to deactivate the animation first.
 - Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
 NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function.
 - Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
@@ -905,9 +958,9 @@ v1.3
 - attribute for unit traits
 
 - added hostage attribute:
-	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
-	Mission designers can check whether the unit is hostage or not by retrieving the following variable:
-	_unit getVariable "ENH_isHostage"; (true,is hostage/false,isn't hostage)
+  A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
+  Mission designers can check whether the unit is hostage or not by retrieving the following variable:
+  _unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
 *changed*
 - UAV intro center position attribute tooltip was using a wrong string
 - removed the tooltip from Advanced Damage Attributes
@@ -941,7 +994,7 @@ v1.2
 - mission attribute to create an establishing shot
 - mission attribute for display text on mission start
 - currently played song of the playMusic preference attribute is now displayed at the bottom of the screen
-- attribute to play random music at the beginning of the mission -> Scenario Attributs -> Music,Sound & Radiosettings
+- attribute to play random music at the beginning of the mission -> Scenario Attributs -> Music, Sound & Radiosettings
 - attribute to set respawn tickets for all sides
 - version check. Player will now recieve a warning if game version is greater than required version and dev branch is used
 - version check function
@@ -984,9 +1037,9 @@ v1.1
 - view distance and disable grass option to environment mission attribute (Will be executed globally and for JIP playes)
 - attribute to create a small mission intro containing three lines (See scenario attribute -> general)
 - quick links for:(Can be found in the menu strip -> help)
-	- Arma 3 Assets
-	- Arma 3 Function Overview
-	- 3den Enhanced Forum thread
+  - Arma 3 Assets
+  - Arma 3 Function Overview
+  - 3den Enhanced Forum thread
 - ability to quickly copy class name of selected unit to clipboard
 - ability to quickly set random rotation for all selected entities
 - attribute to force walk

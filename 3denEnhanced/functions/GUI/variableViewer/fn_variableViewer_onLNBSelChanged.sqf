@@ -1,29 +1,25 @@
 /*
-   Author: R3vo
+  Author: R3vo
 
-   Date: 2020-02-11
+  Date: 2020-02-11
 
-   Description:
-   Used by the ENH_VariableViewer GUI. Called when listNbox selection changed.
+  Description:
+  Used by the ENH_VariableViewer GUI. Called when listNbox selection changed.
 
-   Parameter(s):
-   0: CONTROL - ListNBox control
-   1: NUMBER - Selected index
+  Parameter(s):
+  0: CONTROL - ListNBox control
+  1: NUMBER - Selected index
 
-   Returns:
-   BOOLEAN: true
+  Returns:
+  -
 */
 
-params ["_ctrlLNB","_selectedRow"];
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
+params ["_ctrlLNB", "_selectedRow"];
 
 private _display = ctrlParent _ctrlLNB;
-private _ctrlVariableName = _display displayCtrl 8000;
-private _ctrlVariableValue = _display displayCtrl 5000;
 
-private _varName = _ctrlLNB lnbText [_selectedRow,0];
-private _varData = _ctrlLNB lnbText [_selectedRow,1];
-
-_ctrlVariableName ctrlSetText _varName;
-_ctrlVariableValue ctrlSetText _varData;
-
-true
+CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 0]);
+CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 1]);

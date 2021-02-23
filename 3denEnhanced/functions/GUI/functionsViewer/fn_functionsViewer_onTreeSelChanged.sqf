@@ -1,39 +1,46 @@
 /*
-   Author: Revo
+  Author: R3vo
 
-   Description:
-   Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
+  Description:
+  Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
 
-   Parameter(s):
-   0: CONTROL - Tree Control
-   1: ARRAY - Path
+  Parameter(s):
+  0: CONTROL - Tree Control
+  1: ARRAY - Path
 
-   Returns:
-   BOOLEAN: true
+  Returns:
+  -
 */
 
+#include "\3denEnhanced\defineCommon.hpp"
+
+disableSerialization;
 params ["_ctrlTV", "_path"];
 
-private _disp = ctrlParent _ctrlTV;
-private _ctrlCode = _disp displayCtrl 1401;
-private _ctrlFncName = _disp displayCtrl 1402;
-private _ctrlFncPath = _disp displayCtrl 1403;
-private _ctrlLines = _disp displayCtrl 1404;
-private _ctrlBiki = _disp displayCtrl 1900;
+private _display = ctrlParent _ctrlTV;
+private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
+private _ctrlLines = CTRL(IDC_FUNCTIONSVIEWER_LINES);
+private _ctrlBiki = CTRL(IDC_FUNCTIONSVIEWER_BIKI);
 private _data = _ctrlTV tvData _path;
 private _linesText = "";
 
 if (_data isEqualTo "") exitWith {false};
 
 _data = call compile _data;
-_data params ["_fncName","_fncPath"];
+_data params ["_fileName", "_filePath"];//Filename is also Function name
 
-uiNamespace setVariable ["ENH_FunctionsViewer_LastViewed",_ctrlTV tvText _path];
-_ctrlFncName ctrlSetText _fncName;
-_ctrlFncPath ctrlSetText _fncPath;
-_ctrlCode ctrlSetText loadFile _fncPath;
+CTRL(IDC_FUNCTIONSVIEWER_NAME) ctrlSetText _fileName;
+CTRL(IDC_FUNCTIONSVIEWER_PATH) ctrlSetText _filePath;
 
-_ctrlBiki ctrlSetStructuredText parseText format ["<a href='https://community.bistudio.com/wiki/%1'>%2</a>",_fncName,localize "STR_ENH_FUNCTIONSVIEWER_BIKI"];
+_ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
+{
+  case 0: {loadFile _filePath};
+  case 1: {preprocessFile _filePath};
+  case 2: {preprocessFileLineNumbers _filePath};
+});
+
+_ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;//Tooltip is not correct, A3 bug
+_ctrlBiki ctrlEnable (_fileName select [0, 3] in ["BIS", "BIN"]);
 
 private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
 private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
@@ -41,7 +48,7 @@ private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
 {
-   _linesText = _linesText + format ["%1<br/>",_i];
+  _linesText = _linesText + format ["%1<br/>", _i];
 };
 
 //When new function is selected, change scroll width and height dynamically
@@ -52,4 +59,4 @@ _ctrlLines ctrlSetPositionH _textHeight;
 _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
-true
+profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed", _filePath];

@@ -1,74 +1,75 @@
 /*
-   Author: R3vo
+  Author: R3vo
 
-   Date: 2020-01-16
+  Date: 2020-01-16
 
-   Description:
-   Updates listbox of 3DENCameraPositions UI.
+  Description:
+  Updates listbox of 3DENCameraPositions UI.
 
-   Parameter(s):
-   0: DISPLAY or CONTROL - Display or control to get parent display
+  Parameter(s):
+  0: DISPLAY or CONTROL - Display or control to get parent display
 
-   Returns:
-   BOOLEAN: true
+  Returns:
+  -
 */
+
+#include "\3denEnhanced\defineCommon.hpp"
 
 params ["_displayOrControl"];
 
-if (_displayOrControl isEqualType controlNull) then 
+if (_displayOrControl isEqualType controlNull) then
 {
-	_displayOrControl = ctrlParent _displayOrControl;
+  _displayOrControl = ctrlParent _displayOrControl;
 };
 
-private _ctrlLB = _displayOrControl displayCtrl 1000;
-lbClear _ctrlLB;
-
+private _ctrlLnB = _displayOrControl displayCtrl IDC_3DENCAMPOS_LIST;
+lbClear _ctrlLnB;
+_ctrlLnB lnbSetColumnsPos [0, 0.1, 0.72, 0.87];
 {
-	_x params ["_world","_cam3DENPosition","","","_description"];
+  _x params ["_world", "_cam3DENPosition", "", "", "_description", ["_systemTime", [2020, 01, 01, 00, 00]]];
 
-	private _icon = getText (configFile >> "CfgWorlds" >> _world >> "pictureMap");
-	private _worldDisplayName = getText (configFile >> "CfgWorlds" >> _world >> "description");
-	private _index = 0;
-	
-	if (count _description > 50) then
-	{
-		_index = _ctrlLB lbAdd ((_description select [0,50]) + "...");
-	}
-	else
-	{
-		_index = _ctrlLB lbAdd _description;
-	};
-		
-	//Format position and add it as tooltip
-	_cam3DENPosition params ["_xC","_yC","_zC"];
-	_ctrlLB lbSetTooltip 
-	[
-		_index,
-		format 
-		[
-			"X: %1 Y: %2 Z: %3\n\n%4\n\n%5\n%6",
-			_xC,
-			_yC,
-			_zC,
-			_description,
-			localize "STR_ENH_3DENCAM_HELPDELETE",
-			localize "STR_ENH_3DENCAM_HELPMOVETO"
-		]
-	];
+  if (count _description > 45) then
+  {
+    _description = ((_description select [0, 45]) + "...");
+  };
 
-	_ctrlLB lbSetPictureRight [_index,_icon];
-	_ctrlLB lbSetTextRight [_index,_worldDisplayName];
+  _date = format
+  [
+    "%1/%2/%3",
+    (_systemTime # 2) call ENH_fnc_twoDigitsStr,
+    (_systemTime # 1) call ENH_fnc_twoDigitsStr,
+    (_systemTime # 0) call ENH_fnc_twoDigitsStr
+  ];
 
-	//Save whole data set to listbox. It's used to update the profileNamespace variable later
-	_ctrlLB lbSetData [_index,str _x];
+  _time = format
+  [
+    "%1:%2",
+    (_systemTime # 3) call ENH_fnc_twoDigitsStr,
+    (_systemTime # 4) call ENH_fnc_twoDigitsStr
+  ];
 
-	if !(_world isEqualTo worldName) then
-	{
-		_ctrlLB lbSetColor [_index,[1,0,0,1]];
-		_ctrlLB lbSetColorRight [_index,[1,0,0,1]];
-	};
-} forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions",[]]);
 
-lbSort [_ctrlLB,"DESC"];
+  private _index = _ctrlLnB lnbAddRow ["", _description, _date, _time];
 
-true
+  _ctrlLnB lnbSetPicture [[_index, 0], getText (configFile >> "CfgWorlds" >> _world >> "pictureMap")];
+  _ctrlLnB lnbSetData [[_index, 0], str _x];
+
+  private _number = ((_index + 1) call ENH_fnc_twoDigitsStr) + ".";
+  _ctrlLnB lnbSetText [[_index, 0], _number];
+
+  _cam3DENPosition params ["_xC", "_yC", "_zC"];
+  _ctrlLnB lnbSetTooltip
+  [
+    [_index, 0],
+    format
+    [
+      "X: %1 Y: %2 Z: %3\n\n%4\n\n%5\n%6",
+      _xC,
+      _yC,
+      _zC,
+      _description,
+      localize "STR_ENH_3DENCAM_HELPDELETE",
+      localize "STR_ENH_3DENCAM_HELPMOVETO"
+    ]
+  ];
+} forEach (profileNamespace getVariable ["ENH_Cam3DENSavedPositions", []]);

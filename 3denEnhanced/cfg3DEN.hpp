@@ -1,220 +1,309 @@
 class Cfg3DEN
 {
-	class Notifications
-	{
-		class ENH_DataCopied
-		{
-			isWarning = 0;
-			text = $STR_A3_RSCDISPLAYARSENAL_MESSAGE_CLIPBOARD;
-		};
-		class ENH_ActionPerformed
-		{
-			isWarning = 0;
-			text = $STR_ENH_NOTIFICATIONS_ACTIONPERFORMED;
-		};
-		class ENH_NoEntitiesSelected
-		{
-			isWarning = 1;
-			text = $STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED;
-		};
-	};
-	class EventHandlers
-	{
-		class ENH
-		{
-			onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
-			onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
-			onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
-			onMissionNew = "call ENH_fnc_EH_onMissionNew";
-			onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
-			onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
-		};
-	};
-	class Attributes
-	{
-		// Base class templates
-		class Default;
-		class Title: Default
-		{
-			class Controls
-			{
-				class Title;
-			};
-		};
-		#include "controls\timeMultiplier.hpp"
-		#include "controls\featureType.hpp"
-		#include "controls\terrainDetail.hpp"
-		#include "controls\ambientAnimations.hpp"
-		#include "controls\introText.hpp"
-		#include "controls\establishingShot.hpp"
-		#include "controls\mapIndicators.hpp"
-		#include "controls\groupMarker.hpp"
-		#include "controls\airdrop.hpp"
-		#include "controls\ambientFlyby.hpp"
-		#include "controls\dynamicSkill.hpp"
-		#include "controls\holdAction.hpp"
-		#include "controls\missionEndingCasualties.hpp"
-		//#include "controls\missionEnding.hpp"
-		#include "controls\taskPatrol.hpp"
-		#include "controls\debugOptions.hpp"
-		#include "controls\SPR.hpp"
-	};
- 	class Mission
-	{
-		class Preferences
-		{
-			class AttributeCategories
-			{
-				class Misc
-				{
-					class Attributes
-					{
-						#include "attributesEditor\debugOptions.hpp"
-					};
-				};
-				#include "attributesEditor\interface.hpp"
-			};
-		};
-		class Intel
-		{
-			class AttributeCategories
-			{
-				#include "attributesMission\timeMultiplier.hpp"
-				#include "attributesMission\visualSettings.hpp"
-			};
-		};
-		class Scenario
-		{
-			class AttributeCategories
-			{
-				#include "attributesMission\volume.hpp"
-				#include "attributesMission\mapIndicators.hpp"
-				#include "attributesMission\ambientFlyby.hpp"
-				#include "attributesMission\airdrop.hpp"
-				#include "attributesMission\establishingShot.hpp"
-				#include "attributesMission\introText.hpp"
-				#include "attributesMission\missionEnding.hpp"
-				#include "attributesMission\SPR.hpp"
-				class Misc
-				{
-					class Attributes
-					{
-						#include "attributesMission\addObjectsToZeus.hpp"
-					};
-				};
-			};
-		};
-		class Multiplayer
-		{
-			class AttributeCategories
-			{
-				#include "attributesMission\dynamicGroups.hpp"
-				#include "attributesMission\dynamicSkill.hpp"
-				class Respawn
-				{
-					class Attributes
-					{
-						#include "attributesMission\respawnTickets.hpp"
-						#include "attributesMission\saveLoadout.hpp"
-					};
-				};
-			};
-		};
-	};
-	class Group
-	{
-		class AttributeCategories
-		{
-			#include "attributesGroup\groupMarker.hpp"
-			class State
-			{
-				class Attributes
-				{
-					#include "attributesGroup\taskPatrol.hpp"
-				};
-			};
-		};
-	};
-	class Object
-	{
-		class AttributeCategories
-		{
-			#include "attributesObject\advancedDamageUnit.hpp"
-			#include "attributesObject\advancedDamageVehicle.hpp"
-			#include "attributesObject\disableAI.hpp"
-			#include "attributesObject\advancedSkill.hpp"
-			#include "attributesObject\unitTraits.hpp"
-			#include "attributesObject\holdAction.hpp"
-			class StateSpecial
-			{
-				class Attributes
-				{
-					#include "attributesObject\setCaptive.hpp"
-					#include "attributesObject\allowSprint.hpp"
-					#include "attributesObject\forceWalk.hpp"
-					#include "attributesObject\makeHostage.hpp"
-					#include "attributesObject\parachute.hpp"
-					#include "attributesObject\enableHeadlights.hpp"
-					#include "attributesObject\allowCrewInImmobile.hpp"
-					#include "attributesObject\engineOn.hpp"
-					#include "attributesObject\disableNVGE.hpp"
-					#include "attributesObject\disableTIE.hpp"
-					#include "attributesObject\limitSpeed.hpp"
-					#include "attributesObject\doStop.hpp"
-					#include "attributesObject\removeFromRemainsCollector.hpp"
-					#include "attributesObject\SPRTickets.hpp"
-					#include "attributesObject\debugPath.hpp"
-				};
-			};
-			class Inventory
-			{
-				class Attributes
-				{
-					#include "attributesObject\addGunLight.hpp"
-					#include "attributesObject\arsenal.hpp"
-				};
-			};
-			class State
-			{
-				class Attributes
-				{
-					#include "attributesObject\allowFleeing.hpp"
-					#include "attributesObject\setMass.hpp"
-					#include "attributesObject\featureType.hpp"
-					#include "attributesObject\forceFlag.hpp"
-					#include "attributesObject\ambientAnimations.hpp"
-				};
-			};
-		};
-	};
-	/* class Waypoint
-	{
-		class AttributeCategories
-		{
-			#include "attributesWaypoint\presence.hpp"
-		};
-	};
-	class Trigger
-	{
-		class AttributeCategories
-		{
-			class  Activation
-			{
-				class Attributes
-				{
-					class ENH_TriggerInterval
-					{
-						displayName = "Trigger Interval";
-						tooltip = "Sets the interval of how often the trigger's condition is checked.";
-						property = "ENH_TriggerInterval";
-						control = "EditShort";
-						expression = "[_this,_value] spawn {sleep 1; [_this # 0,_this # 1] remoteExec ['setTriggerInterval',0,true]}";
-						typeName = "NUMBER";
-						validate = "number";
-						defaultValue = "0.5";
-					};
-				};
-			};
-		};
-	}; */
+  class Notifications
+  {
+    class ENH_DataCopied
+    {
+      isWarning = 0;
+      text = "$STR_A3_RSCDISPLAYARSENAL_MESSAGE_CLIPBOARD";
+    };
+    class ENH_ActionPerformed
+    {
+      isWarning = 0;
+      text = "$STR_ENH_NOTIFICATIONS_ACTIONPERFORMED";
+    };
+    class ENH_NoEntitiesSelected
+    {
+      isWarning = 1;
+      text = "$STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED";
+    };
+    class ENH_Customised_Warning
+    {
+      isWarning = 1;
+      text = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
+    };
+  };
+  class EventHandlers
+  {
+    class ENH
+    {
+      onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
+      onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
+      onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
+      onMissionNew = "call ENH_fnc_EH_onMissionNew";
+      onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
+      onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
+    };
+  };
+  class Attributes
+  {
+    // Base class templates
+    class Default; // Empty template with pre-defined width and single line height
+    class Title: Default
+    {
+      class Controls
+      {
+        class Title;
+      };
+    };
+    #ifndef ENH_HIDE_SPR
+      #include "controls\SPR.hpp"
+    #endif
+    #ifndef ENH_HIDE_AIRDROP
+      #include "controls\airdrop.hpp"
+    #endif
+    #ifndef ENH_HIDE_AMBIENTANIMATIONS
+      #include "controls\ambientAnimations.hpp"
+    #endif
+    #ifndef ENH_HIDE_AMBIENTFLYBY
+      #include "controls\ambientFlyby.hpp"
+    #endif
+    #ifndef ENH_HIDE_DYNAMICSKILL
+      #include "controls\dynamicSkill.hpp"
+    #endif
+    #ifndef ENH_HIDE_ESTABLISHINGSHOT
+      #include "controls\establishingShot.hpp"
+    #endif
+    #ifndef ENH_HIDE_GROUPMARKER
+      #include "controls\groupMarker.hpp"
+    #endif
+    #ifndef ENH_HIDE_HOLDACTION
+      #include "controls\holdAction.hpp"
+    #endif
+    #ifndef ENH_HIDE_INTROTEXT
+      #include "controls\introText.hpp"
+    #endif
+    #ifndef ENH_HIDE_MAPINDICATORS
+      #include "controls\mapIndicators.hpp"
+    #endif
+    #ifndef ENH_HIDE_INTERFACE
+      #include "controls\menuStripBlacklist.hpp"
+    #endif
+    #ifndef ENH_HIDE_MISSIONENDING
+      #include "controls\missionEndingCasualties.hpp"
+    #endif
+    #include "controls\subCategoryNoHeader_Fixed.hpp"
+    #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
+      #include "controls\timeMultiplier.hpp"
+    #endif
+  };
+  class Mission
+  {
+    class Preferences
+    {
+      class AttributeCategories
+      {
+        class Camera
+        {
+          class Attributes
+          {
+            #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
+              #include "attributesEditor\dynamicViewDistance.hpp"
+            #endif
+          };
+        };
+        #ifndef ENH_HIDE_INTERFACE
+          #include "attributesEditor\interface.hpp"
+        #endif
+        #ifndef ENH_HIDE_DEBUGOPTIONS
+          #include "attributesEditor\debugOptions.hpp"
+        #endif
+      };
+    };
+    class Intel
+    {
+      class AttributeCategories
+      {
+        #ifndef ENH_HIDE_VISUALSETTINGS
+          #include "attributesMission\timeMultiplier.hpp"
+        #endif
+        #ifndef ENH_HIDE_TIMEMULTIPLIER
+          #include "attributesMission\visualSettings.hpp"
+        #endif
+      };
+    };
+    class Scenario
+    {
+      class AttributeCategories
+      {
+        #ifndef ENH_HIDE_AIRDROP
+          #include "attributesMission\airdrop.hpp"
+        #endif
+        #ifndef ENH_HIDE_AMBIENTFLYBY
+          #include "attributesMission\ambientFlyby.hpp"
+        #endif
+        #ifndef ENH_HIDE_AIRDROP
+          #include "attributesMission\briefings.hpp"
+        #endif
+        #ifndef ENH_HIDE_ESTABLISHINGSHOT
+        #include "attributesMission\establishingShot.hpp"
+          #endif
+        #ifndef ENH_HIDE_INTROTEXT
+          #include "attributesMission\introText.hpp"
+        #endif
+        #ifndef ENH_HIDE_MISSIONENDING
+          #include "attributesMission\missionEnding.hpp"
+        #endif
+        #ifndef ENH_HIDE_VOLUME
+          #include "attributesMission\volume.hpp"
+        #endif
+        #ifndef ENH_HIDE_SPR
+          #include "attributesMission\SPR.hpp"
+        #endif
+        class Misc
+        {
+          class Attributes
+          {
+            #ifndef ENH_HIDE_ADDOBJECTSTOZEUS
+              #include "attributesMission\addObjectsToZeus.hpp"
+            #endif
+            #ifndef ENH_HIDE_MAPINDICATORS
+              #include "attributesMission\mapIndicators.hpp"
+            #endif
+          };
+        };
+      };
+    };
+    class Multiplayer
+    {
+      class AttributeCategories
+      {
+        #ifndef ENH_HIDE_DYNAMICGROUPS
+          #include "attributesMission\dynamicGroups.hpp"
+        #endif
+        #ifndef ENH_HIDE_DYNAMICSKILL
+          #include "attributesMission\dynamicSkill.hpp"
+        #endif
+        class Respawn
+        {
+          class Attributes
+          {
+            #ifndef ENH_HIDE_RESPAWNTICKETS
+              #include "attributesMission\respawnTickets.hpp"
+            #endif
+            #ifndef ENH_HIDE_SAVELOADOUT
+              #include "attributesMission\saveLoadout.hpp"
+            #endif
+          };
+        };
+      };
+    };
+  };
+  class Group
+  {
+    class AttributeCategories
+    {
+      #ifndef ENH_HIDE_GROUPMARKER
+        #include "attributesGroup\groupMarker.hpp"
+      #endif
+      class State
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_TASKPATROL
+            #include "attributesGroup\taskPatrol.hpp"
+          #endif
+        };
+      };
+    };
+  };
+  class Object
+  {
+    class AttributeCategories
+    {
+      #ifndef ENH_HIDE_AMBIENTANIMATIONS
+        #include "attributesObject\ambientAnimations.hpp"
+      #endif
+      #ifndef ENH_HIDE_AI
+        #include "attributesObject\AI.hpp"
+      #endif
+      #ifndef ENH_HIDE_ADVANCEDDAMAGEUNIT
+        #include "attributesObject\advancedDamageUnit.hpp"
+      #endif
+      #ifndef ENH_HIDE_ADVANCEDDAMAGEVEHICLE
+        #include "attributesObject\advancedDamageVehicle.hpp"
+      #endif
+      #ifndef ENH_HIDE_UNITTRAITS
+        #include "attributesObject\unitTraits.hpp"
+      #endif
+      #ifndef ENH_HIDE_HOLDACTION
+        #include "attributesObject\holdAction.hpp"
+      #endif
+      class StateSpecial
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_SETCAPTIVE
+            #include "attributesObject\setCaptive.hpp"
+          #endif
+          #ifndef ENH_HIDE_ALLOWSPRINT
+            #include "attributesObject\allowSprint.hpp"
+          #endif
+          #ifndef ENH_HIDE_FORCEWALK
+            #include "attributesObject\forceWalk.hpp"
+          #endif
+          #ifndef ENH_HIDE_MAKEHOSTAGE
+            #include "attributesObject\makeHostage.hpp"
+          #endif
+          #ifndef ENH_HIDE_PARACHUTE
+            #include "attributesObject\parachute.hpp"
+          #endif
+          #ifndef ENH_HIDE_ENABLEHEADLIGHTS
+            #include "attributesObject\enableHeadlights.hpp"
+          #endif
+          #ifndef ENH_HIDE_ALLOWCREWINIMMOBILE
+            #include "attributesObject\allowCrewInImmobile.hpp"
+          #endif
+          #ifndef ENH_HIDE_ENGINEON
+            #include "attributesObject\engineOn.hpp"
+          #endif
+          #ifndef ENH_HIDE_DISABLENVGE
+            #include "attributesObject\disableNVGE.hpp"
+          #endif
+          #ifndef ENH_HIDE_DISABLETIE
+            #include "attributesObject\disableTIE.hpp"
+          #endif
+          #ifndef ENH_HIDE_LIMITSPEED
+            #include "attributesObject\limitSpeed.hpp"
+          #endif
+          #ifndef ENH_HIDE_AIRDROP
+            #include "attributesObject\doStop.hpp"
+          #endif
+          #ifndef ENH_HIDE_REMOVEFROMREMAINSCOLLECTOR
+            #include "attributesObject\removeFromRemainsCollector.hpp"
+          #endif
+          #ifndef ENH_HIDE_SPR
+            #include "attributesObject\SPRTickets.hpp"
+          #endif
+        };
+      };
+      class Inventory
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_ADDGUNLIGHT
+            #include "attributesObject\addGunLight.hpp"
+          #endif
+          #ifndef ENH_HIDE_VIRTUALARSENAL
+            #include "attributesObject\arsenal.hpp"
+          #endif
+        };
+      };
+      class State
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_SETMASS
+            #include "attributesObject\setMass.hpp"
+          #endif
+          #ifndef ENH_HIDE_FEATURETYPE
+            #include "attributesObject\featureType.hpp"
+          #endif
+          #ifndef ENH_HIDE_FORCEFLAG
+            #include "attributesObject\forceFlag.hpp"
+          #endif
+        };
+      };
+    };
+  };
 };

@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "*.bikb": "cpp"
+        },
+        "files.trimTrailingWhitespace": true,
+        "editor.tabSize": 1
+  }
+}

@@ -1,31 +1,24 @@
 /*
-	Author: Revo
+  Author: R3vo
 
-	Description:
-	Exports classname of selected song and copies it to the clipboard.
+  Description:
+  Exports classname of selected song and copies it to the clipboard.
 
-	Parameter(s):
-	-
+  Parameter(s):
+  0: CONTROL - ListNBox
+  1: NUMBER - Pressed key
+  3: BOOLEAN - CTRL pressed
 
-	Returns:
-	BOOLEAN: true
+  Returns:
+  -
 */
 
 disableSerialization;
 
-private _ctrl = param [0,controlNull,[controlNull]];
-private _key = param [1,46,[1]];
-private _mod = param [3,true,[true]];
+params ["_ctrlSongList", "_key", "", "_ctrl"];
 
-if (_key isEqualTo 46 && _mod) then //CTRL + C
+if (_key isEqualTo 46 && _ctrl) then //CTRL + C
 {
-	private _class = _ctrl lnbData [lnbCurSelRow _ctrl,0];
-	if (_class isEqualTo "") then
-	{
-		_class = _ctrl lbData (lbCurSel _ctrl);
-	};
-	copyToClipboard str _class;
-	["ENH_DataCopied"] call BIS_fnc_3DENNotification;
+  copyToClipboard str (_ctrlSongList lnbData [lnbCurSelRow _ctrlSongList, 0]);
+  ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
-
-true
