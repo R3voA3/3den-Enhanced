@@ -1196,7 +1196,7 @@
         <English>Aeronautical Vehicles</English>
         <German>Luftfahrzeuge</German>
         <Chinesesimp>航空载具</Chinesesimp>
-        <Spanish>Vehículos aeronáuticos</Spanish>
+        <Spanish>Vehículos aéreos</Spanish>
         <Czech>Letadla</Czech>
         <French>Véhicules aéronautiques</French>
         <Polish>Pojazdy powietrzne</Polish>
@@ -1229,7 +1229,7 @@
         <English>Used by aeronautical vehicles.</English>
         <German>Verwendet von Luftfahrzeugen.</German>
         <Chinesesimp>由航空载具使用</Chinesesimp>
-        <Spanish>Utilizado por vehículos aeronáuticos.</Spanish>
+        <Spanish>Utilizado por vehículos aéreos.</Spanish>
         <Czech>Používáno letadly.</Czech>
         <French>Utilisé par les véhicules aéronautiques.</French>
         <Polish>Używane przez pojazdy powietrzne.</Polish>
@@ -2837,6 +2837,7 @@
         <Original>Not enough empty building positions, increase the radius or the coverage.</Original>
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
         <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
+        <Spanish>No hay suficientes posiciones libres en edificios, incrementa el radio o la covertura.</Spanish>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
         <Original>Fill Area </Original>
@@ -3460,11 +3461,13 @@
         <Original>Draw Unit Icons</Original>
         <English>Draw Unit Icons</English>
         <German>Einheitenicons darstellen</German>
+        <Spanish>Dibujar iconos de unidades</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
         <Original>Draws information of nearby units and vehicles.</Original>
         <English>Draws information of nearby units and vehicles.</English>
         <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
+        <Spanish>Dibujar información de unidades y vehículos cercanos</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_AWARENESS_TOOLTIP">
         <Original>A graphic will show how much each side knows about the player during scenario preview.</Original>
@@ -4474,6 +4477,7 @@
         <Original>Dynamic Groups</Original>
         <English>Dynamic Groups</English>
         <German>Gruppenverwaltung</German>
+        <Spanish>Grupos dinámicos</Spanish>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_BLUFOR_DISPLAYNAME">
         <Original>Respawn Tickets BLUFOR</Original>
