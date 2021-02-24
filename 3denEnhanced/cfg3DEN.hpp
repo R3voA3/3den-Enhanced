@@ -49,6 +49,9 @@ class Cfg3DEN
     #ifndef ENH_HIDE_SPR
       #include "controls\SPR.hpp"
     #endif
+    #ifndef ENH_HIDE_ADVANCEDDAMAGE
+      #include "controls\advancedDamage.hpp"
+    #endif
     #ifndef ENH_HIDE_AIRDROP
       #include "controls\airdrop.hpp"
     #endif
@@ -211,17 +214,14 @@ class Cfg3DEN
   {
     class AttributeCategories
     {
+      #ifndef ENH_HIDE_ADVANCEDDAMAGE
+        #include "attributesObject\advancedDamage.hpp"
+      #endif
       #ifndef ENH_HIDE_AMBIENTANIMATIONS
         #include "attributesObject\ambientAnimations.hpp"
       #endif
       #ifndef ENH_HIDE_AI
         #include "attributesObject\AI.hpp"
-      #endif
-      #ifndef ENH_HIDE_ADVANCEDDAMAGEUNIT
-        #include "attributesObject\advancedDamageUnit.hpp"
-      #endif
-      #ifndef ENH_HIDE_ADVANCEDDAMAGEVEHICLE
-        #include "attributesObject\advancedDamageVehicle.hpp"
       #endif
       #ifndef ENH_HIDE_UNITTRAITS
         #include "attributesObject\unitTraits.hpp"

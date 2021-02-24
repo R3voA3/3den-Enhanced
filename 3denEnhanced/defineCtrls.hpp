@@ -72,3 +72,9 @@ class ENH_ResetButton_Base: ctrlButton
   h = CTRL_DEFAULT_H;
   text = "$STR_ENH_RESETANDDISABLE";
 };
+
+//Used for Advanced Damage attribute
+class ENH_AttributeTitle: ctrlStatic
+{
+  style = ST_RIGHT;
+};

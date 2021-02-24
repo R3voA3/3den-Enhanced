@@ -541,7 +541,7 @@ if GETVALUE("ActiveScripts") then
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
     "true",
     "true",
-    {call ENH_fnc_activeScripts},
+    {call ENH_fnc_debugOptions_activeScripts},
     {},
     {},
     {},
@@ -592,4 +592,32 @@ if (GETVALUE("DebugPath") > 0) then
       };
     };
   } forEach allGroups;
+};
+
+if GETVALUE("DrawTriggers") then
+{
+  {
+    private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
+    private _borderPos = [];
+    triggerArea _x params ["_a", "_b"];
+    if (_a <= 1 || _b <= 1) then {continue};
+    for "_i" from 0 to 360 step 5 do
+    {
+      private _distance = _a min _b;
+      private _initialPos = position _x;
+      while {_initialPos inArea _x} do
+      {
+        _initialPos = _x getPos [_distance, _i];
+        _borderPos = +_initialPos;
+        _distance = _distance + 0.05;
+      };
+      for "_hOffset" from 0 to 15 step 5 do
+      {
+        ATLToASL _borderPos params ["_x", "_y", "_z"];
+        private _arrow = createSimpleObject ["Sign_Sphere25cm_F", [_x, _y, _z + _hOffset + 0.1], true];
+        _arrow setObjectTexture [0, _colour];
+        //_arrow setObjectScale 5;
+      };
+    };
+  } forEach (allMissionObjects "EmptyDetector");
 };
