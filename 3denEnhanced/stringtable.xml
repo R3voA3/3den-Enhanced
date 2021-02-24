@@ -4042,6 +4042,10 @@
     <French>Réinitialiser et désactiver</French>
     <Polish>Zresetuj i zablokuj</Polish>
   </Key>
+  <Key ID="STR_ENH_DISABLEAI_SUBCATEGORY">
+    <English>AI Features</English>
+    <German>KI Funktionen</German>
+  </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
     <English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
     <Chinesesimp>用于飞行的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:Classname_1 Classname_2 Classname_n 以此类推</Chinesesimp>
@@ -4051,6 +4055,16 @@
     <Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
     <Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: Classname_1 Classname_2 Classname_n.</Russian>
     <Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_n.</Spanish>
+  </Key>
+  <Key ID="STR_ENH_GROUPMARKER_DISPLAYNAME">
+    <English>Group Marker</English>
+    <Italian>Marcatore del gruppo</Italian>
+    <Czech>Značka skupiny</Czech>
+    <German>Gruppenmarker</German>
+    <Spanish>Marcado de Grupo</Spanish>
+    <Polish>Marker grupy</Polish>
+    <Russian>Маркер группы</Russian>
+    <French>Marqueur de groupe</French>
   </Key>
   <Key ID="STR_ENH_SIDE_DISPLAYNAME">
     <English>Side</English>
