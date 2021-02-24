@@ -13,6 +13,8 @@
   -
 */
 
+if (true) exitWith {systemChat "DO NOT USE! FUNCTIONS WILL NO LONGER BE DOCUMENTED ON THE WIKI. THEY ARE DOCUMENTED IN THE FUNCTIONS VIEWER."};
+
 startLoadingScreen ["start"];
 
 private _allENHFunctions = (call (uiNamespace getVariable ["BIS_functions_list",{[]}])) select {_x select [0, 3] == "ENH"};

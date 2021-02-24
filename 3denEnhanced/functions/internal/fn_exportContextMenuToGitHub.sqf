@@ -13,6 +13,8 @@
   -
 */
 
+if (true) exitWith {systemChat "DO NOT USE! DOCUMENTATION IS WRITTEN MANUALLY!"};
+
 private _contextMenuEntries = "configName _x select [0, 3] == 'ENH'" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items");
 
 private _export = format ["_**Number of added entries: %1**_", count _contextMenuEntries] + endl + "___" + endl + endl + endl;
