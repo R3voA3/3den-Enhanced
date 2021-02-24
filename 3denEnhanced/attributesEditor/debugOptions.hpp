@@ -135,6 +135,12 @@ class ENH_DebugOptions
     {
       description = "$STR_A3_ENDGAME_DEBRIEFING_DRAW";
     };
+    class ENH_DebugOptions_DrawTriggers: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP";
+      property = "ENH_DebugOptions_DrawTriggers";
+    };
     class ENH_DebugOptions_DebugPath: ENH_DebugOptions_Arsenal
     {
       displayName = "Debug Path";
