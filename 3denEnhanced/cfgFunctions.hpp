@@ -232,6 +232,10 @@ class CfgFunctions
     class AttributeControls
     {
       file = "3denEnhanced\functions\attributeControls";
+      #ifndef ENH_HIDE_ADVANCEDDAMAGE
+      class advancedDamage_onAttributeLoad;
+      class advancedDamage_onAttributeSave;
+      #endif
       #ifndef ENH_HIDE_AIRDROP
       class airdrop_onAttributeLoad;
       class airdrop_onAttributeSave;

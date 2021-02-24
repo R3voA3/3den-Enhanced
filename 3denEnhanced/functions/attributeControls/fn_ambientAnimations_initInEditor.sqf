@@ -4,13 +4,13 @@
   Date: 2019-08-18
 
   Description:
-  Is called onTerrainNew Eden attribute. Used to activate ambient animation in the editor for proper visualisation.
+  Is called onTerrainNew and onMissionLoad. Used to activate ambient animation in the editor for proper visualisation.
 
   Parameter(s):
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #define ATTRIBUTE (_x get3DENAttribute "ENH_AmbientAnimations")
@@ -30,5 +30,3 @@ EXIT
   private _animations = ATTRIBUTE # 0 # 1;
   _x switchMove selectRandom _animations;
 } forEach _units;
-
-true
