@@ -12,96 +12,96 @@
     <Portuguese>Volume (som)</Portuguese>
     <Russian>Громкость (звук)</Russian>
   </Key>
-  	<Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
-		<English>Dynamic AI Skill Settings</English>
-		<Italian>Configurazione Dinamica delle abilità AI</Italian>
-		<German>Dynamische KI-Fähigkeitseinstellungen</German>
-		<Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
-		<French>Paramètres de compétence dynamique de l'IA</French>
-		<Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
-		<Spanish>Configuración de habilidad dinámica para la IA</Spanish>
-		<Russian>Динамические настройки искусственного интеллекта</Russian>
-	</Key>
+  <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
+    <English>Dynamic AI Skill Settings</English>
+    <Italian>Configurazione Dinamica delle abilità AI</Italian>
+    <German>Dynamische KI-Fähigkeitseinstellungen</German>
+    <Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
+    <French>Paramètres de compétence dynamique de l'IA</French>
+    <Polish>Ustawienia Dynamicznego poziomu umiejętności SI</Polish>
+    <Spanish>Configuración de habilidad dinámica para la IA</Spanish>
+    <Russian>Динамические настройки искусственного интеллекта</Russian>
+  </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
-		<English>BLUFOR Skill Settings</English>
-		<Italian>Parametri delle abilità BLUFOR</Italian>
-		<German>BLUFOR Fähigkeitseinstellungen</German>
-		<Czech>Nastavení zkušenosti BLUFOR</Czech>
-		<French>Paramètres de compétences BLUFOR</French>
-		<Polish>BLUFOR Ustawienia umiejętności</Polish>
-		<Spanish>Habilidades de BLUFOR</Spanish>
-		<Russian>Настройки навыков BLUFOR</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME">
-		<English>Min. Skill</English>
-		<Italian>Abilità minima.</Italian>
-		<German>Min. Fähigkeit</German>
-		<Czech>Minimální zkušenost</Czech>
-		<French>Compétence min.</French>
-		<Polish>Min. poz. umiejętności</Polish>
-		<Spanish>Habilidad Min.</Spanish>
-		<Russian>Минимальный навык</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
-		<English>Min. Aiming Skill</English>
-		<Italian>Min. Abilità di mira</Italian>
-		<German>Min. Zielfähigkeit</German>
-		<Czech>Minimální zkušenost s mířením</Czech>
-		<French>Compétence de visée min.</French>
-		<Polish>Min. Celność</Polish>
-		<Spanish>Habilidad de Apuntado Min.</Spanish>
-		<Russian>Минимальный навык прицельвания</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
-		<English>Max. Skill</English>
-		<Italian>Abilità Massima.</Italian>
-		<German>Max. Fähigkeit</German>
-		<Czech>Maximální zkušenost</Czech>
-		<French>Compétence max.</French>
-		<Polish>Max. poz. umiejętnościl</Polish>
-		<Spanish>Habilidad Max.</Spanish>
-		<Russian>Максимальный навык</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME">
-		<English>Max. Aiming Skill</English>
-		<Italian>Abilità di mira massima.</Italian>
-		<German>Max. Zielfähigkeit</German>
-		<Czech>Maximální zkušenost s mířením</Czech>
-		<French>Compétence de visée max.</French>
-		<Polish>Max. Celność</Polish>
-		<Spanish>Habilida de Apuntado Max.</Spanish>
-		<Russian>Максимальный навык прицельвания</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
-		<English>OPFOR Skill Settings</English>
-		<Italian>Parametri delle abilità OPFOR</Italian>
-		<German>OPFOR Fähigkeitseinstellungen</German>
-		<Czech>Nastavení zkušenosti OPFOR</Czech>
-		<French>Paramètres de compétences OPFOR</French>
-		<Polish>OPFOR Ustawienia umiejętności</Polish>
-		<Spanish>Habilidad de OPFOR</Spanish>
-		<Russian>Настройки навыков OPFOR</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
-		<English>INDFOR Skill Settings</English>
-		<Italian>Parametri delle abilità INDFOR</Italian>
-		<German>INDFOR Fähigkeitseinstellungen</German>
-		<Czech>Nastavení zkušenosti INDFOR</Czech>
-		<French>Paramètres de compétences INDFOR</French>
-		<Polish>INDFOR Ustawienia umiejętności</Polish>
-		<Spanish>Habilidad de INDEPENDIENTE</Spanish>
-		<Russian>Настройки навыков INDFOR</Russian>
-	</Key>
-	<Key ID="STR_ENH_DYNAMICSKILL_DESCRIPTION">
-		<English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects. Works for up to four players only!</English>
-		<Italian>Calcola le abilità AI in base al conteggio dei giocatori e imposta i valori di base. L'abilità verrà modificata in modo dinamico quando un giocatore si connette o si disconnette.</Italian>
-		<German>Berechnet den KI-Skill auf Basis der Spieleranzahl und den eingestellten Basiswerten. Die Fähigkeit wird dynamisch angepasst wenn ein Spieler sich verbindet, oder das Spiel verlässt. Funktioniert nur bis zu vier Spielern.</German>
-		<Czech>Spočítá zkušenosti umělé inteligence na základě počtu hráčů a nastaví základní hodnoty. Zkušenost se bude dynamicky měnit když se hráč připojí či odpojí.</Czech>
-		<French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera adaptée dynamiquement lorsqu'un joueur se connecte ou se déconnecte.</French>
-		<Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
-		<Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
-		<Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
-	</Key>
+    <English>BLUFOR Skill Settings</English>
+    <Italian>Parametri delle abilità BLUFOR</Italian>
+    <German>BLUFOR Fähigkeitseinstellungen</German>
+    <Czech>Nastavení zkušenosti BLUFOR</Czech>
+    <French>Paramètres de compétences BLUFOR</French>
+    <Polish>BLUFOR Ustawienia umiejętności</Polish>
+    <Spanish>Habilidades de BLUFOR</Spanish>
+    <Russian>Настройки навыков BLUFOR</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME">
+    <English>Min. Skill</English>
+    <Italian>Abilità minima.</Italian>
+    <German>Min. Fähigkeit</German>
+    <Czech>Minimální zkušenost</Czech>
+    <French>Compétence min.</French>
+    <Polish>Min. poz. umiejętności</Polish>
+    <Spanish>Habilidad Min.</Spanish>
+    <Russian>Минимальный навык</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
+    <English>Min. Aiming Skill</English>
+    <Italian>Min. Abilità di mira</Italian>
+    <German>Min. Zielfähigkeit</German>
+    <Czech>Minimální zkušenost s mířením</Czech>
+    <French>Compétence de visée min.</French>
+    <Polish>Min. Celność</Polish>
+    <Spanish>Habilidad de Apuntado Min.</Spanish>
+    <Russian>Минимальный навык прицельвания</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
+    <English>Max. Skill</English>
+    <Italian>Abilità Massima.</Italian>
+    <German>Max. Fähigkeit</German>
+    <Czech>Maximální zkušenost</Czech>
+    <French>Compétence max.</French>
+    <Polish>Max. poz. umiejętnościl</Polish>
+    <Spanish>Habilidad Max.</Spanish>
+    <Russian>Максимальный навык</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME">
+    <English>Max. Aiming Skill</English>
+    <Italian>Abilità di mira massima.</Italian>
+    <German>Max. Zielfähigkeit</German>
+    <Czech>Maximální zkušenost s mířením</Czech>
+    <French>Compétence de visée max.</French>
+    <Polish>Max. Celność</Polish>
+    <Spanish>Habilida de Apuntado Max.</Spanish>
+    <Russian>Максимальный навык прицельвания</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
+    <English>OPFOR Skill Settings</English>
+    <Italian>Parametri delle abilità OPFOR</Italian>
+    <German>OPFOR Fähigkeitseinstellungen</German>
+    <Czech>Nastavení zkušenosti OPFOR</Czech>
+    <French>Paramètres de compétences OPFOR</French>
+    <Polish>OPFOR Ustawienia umiejętności</Polish>
+    <Spanish>Habilidad de OPFOR</Spanish>
+    <Russian>Настройки навыков OPFOR</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
+    <English>INDFOR Skill Settings</English>
+    <Italian>Parametri delle abilità INDFOR</Italian>
+    <German>INDFOR Fähigkeitseinstellungen</German>
+    <Czech>Nastavení zkušenosti INDFOR</Czech>
+    <French>Paramètres de compétences INDFOR</French>
+    <Polish>INDFOR Ustawienia umiejętności</Polish>
+    <Spanish>Habilidad de INDEPENDIENTE</Spanish>
+    <Russian>Настройки навыков INDFOR</Russian>
+  </Key>
+  <Key ID="STR_ENH_DYNAMICSKILL_DESCRIPTION">
+    <English>Calculates AI skill based on player count and set base values. Skill will be dynamically changed when a player connects or disconnects. Works for up to four players only!</English>
+    <Italian>Calcola le abilità AI in base al conteggio dei giocatori e imposta i valori di base. L'abilità verrà modificata in modo dinamico quando un giocatore si connette o si disconnette.</Italian>
+    <German>Berechnet den KI-Skill auf Basis der Spieleranzahl und den eingestellten Basiswerten. Die Fähigkeit wird dynamisch angepasst wenn ein Spieler sich verbindet, oder das Spiel verlässt. Funktioniert nur bis zu vier Spielern.</German>
+    <Czech>Spočítá zkušenosti umělé inteligence na základě počtu hráčů a nastaví základní hodnoty. Zkušenost se bude dynamicky měnit když se hráč připojí či odpojí.</Czech>
+    <French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera adaptée dynamiquement lorsqu'un joueur se connecte ou se déconnecte.</French>
+    <Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
+    <Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
+    <Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
+  </Key>
   <Key ID="STR_ENH_MUSICVOLUME_DISPLAYNAME">
     <English>Volume (Music)</English>
     <Italian>Volume (Musica)</Italian>
@@ -116,6 +116,7 @@
   <Key ID="STR_ENH_TOOLS_CREATETRIGGER">
     <English>Create Trigger (Whole Map Coverage)</English>
     <German>Auslöser erstellen (Vollständige Kartenabdeckung)</German>
+    <Spanish>Crear activador (Covertura completa del mapa)</Spanish>
   </Key>
   <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
     <English>Terrain Detail</English>
@@ -670,21 +671,25 @@
     <English>Hide Friendly Units on the Map.</English>
     <German>Freundliche Einheiten verstecken.</German>
     <French>Ne pas afficher les unités amies sur la carte.</French>
+    <Spanish>Ocultar unidades aliadas en el mapa</Spanish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
     <English>Hide Hostile Units on the Map.</English>
     <German>Feindliche Einheiten auf der Karte verstecken.</German>
     <French>Ne pas afficher les unités hostiles sur la carte.</French>
+    <Spanish>Ocultar unidades hostiles en el mapa</Spanish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
     <English>Hide Mines on the Map.</English>
     <German>Minen auf der Karte verstecken.</German>
     <French>Ne pas afficher les mines sur la carte.</French>
+    <Spanish>Ocultar minas en el mapa</Spanish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
     <English>Hide Tactical Pings on the Map.</English>
     <German>Taktischen Pings auf der Karte verstecken.</German>
     <French>Ne pas afficher les pings tactiques sur la carte.</French>
+    <Spanish>Ocultar pings tácticos en el mapa</Spanish>
   </Key>
   <Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
     <English>Add Flag</English>
@@ -726,548 +731,6 @@
     <Spanish>Evita que la IA entre en formación al inicio de la misión. Desactivado en MP!</Spanish>
     <French>Empêche les IA de se mettre en formation lors du démarrage de la mission. Ce paramètre est désactivé en multijoueur!</French>
     <Polish>Powstrzymuje AI przed dołączaniem do formacji na starcie misji. Nieaktywne w multiplayerze!</Polish>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE1">
-    <English>Engine #1</English>
-    <Italian>Motore #1</Italian>
-    <Czech>Motor #1</Czech>
-    <French>Moteur #1</French>
-    <Spanish>Motor #1</Spanish>
-    <German>Motor #1</German>
-    <Chinesesimp>引擎 #1</Chinesesimp>
-    <Polish>Silnik #1</Polish>
-    <Russian>Двигатель #1</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_HULL">
-    <English>Hull</English>
-    <Italian>Scafo</Italian>
-    <Czech>Pancíř</Czech>
-    <French>Blindage</French>
-    <Spanish>Casco</Spanish>
-    <German>Hülle</German>
-    <Chinesesimp>船体</Chinesesimp>
-    <Polish>Kadłub</Polish>
-    <Russian>Броня</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_ENGINE2">
-    <English>Engine #2</English>
-    <Italian>Motore #2</Italian>
-    <Czech>Motor #2</Czech>
-    <French>Moteur #2</French>
-    <Spanish>Motor #2</Spanish>
-    <German>Motor #2</German>
-    <Chinesesimp>引擎 #2</Chinesesimp>
-    <Polish>Silnik #2</Polish>
-    <Russian>Двигатель #2</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_GUN">
-    <English>Gun</English>
-    <Italian>Arma</Italian>
-    <Czech>Zbraň</Czech>
-    <French>Arme</French>
-    <Spanish>Arma</Spanish>
-    <German>Geschütz</German>
-    <Chinesesimp>枪</Chinesesimp>
-    <Polish>Uzbrojenie</Polish>
-    <Russian>Вооружение</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_FUELTANK1">
-    <English>Fuel Tank #1</English>
-    <Italian>Serbatoio carburante #1</Italian>
-    <Czech>Palivová nádrž #1</Czech>
-    <French>Réservoir #1</French>
-    <Spanish>Tanque de combustible #1</Spanish>
-    <German>Treibstofftank #1</German>
-    <Chinesesimp>油箱 #1</Chinesesimp>
-    <Polish>Zbiornik paliwa #1</Polish>
-    <Russian>Топливный бак #1</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_FUELTANK2">
-    <English>Fuel Tank #2</English>
-    <Italian>Serbatoio carburante #2</Italian>
-    <Czech>Palivová nádrž #2</Czech>
-    <French>Réservoir #2</French>
-    <Spanish>Tanque de combustible #2</Spanish>
-    <German>Treibstofftank #2</German>
-    <Chinesesimp>油箱 #2</Chinesesimp>
-    <Polish>Zbiornik paliwa #2</Polish>
-    <Russian>Топливный бак #2</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_TURRET">
-    <English>Turret</English>
-    <Italian>Torretta veicolo</Italian>
-    <Czech>Věž</Czech>
-    <French>Tourelle</French>
-    <Spanish>Torreta</Spanish>
-    <German>Geschützturm</German>
-    <Chinesesimp>炮塔</Chinesesimp>
-    <Polish>Wieża</Polish>
-    <Russian>Орудийная башня</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS1">
-    <English>Window #1</English>
-    <Italian>Finestra #1</Italian>
-    <Czech>Okno #1</Czech>
-    <French>Fenêtre #1</French>
-    <Spanish>Ventana #1</Spanish>
-    <German>Fenster #1</German>
-    <Chinesesimp>窗户 #1</Chinesesimp>
-    <Polish>Okno #1</Polish>
-    <Russian>Окно #1</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS2">
-    <English>Window #2</English>
-    <Italian>Finestra #2</Italian>
-    <Czech>Okno #2</Czech>
-    <French>Fenêtre #2</French>
-    <Spanish>Ventana #2</Spanish>
-    <German>Fenster #2</German>
-    <Chinesesimp>窗户 #2</Chinesesimp>
-    <Polish>Okno #2</Polish>
-    <Russian>Окно #2</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS3">
-    <English>Window #3</English>
-    <Italian>Finestra #3</Italian>
-    <Czech>Okno #3</Czech>
-    <French>Fenêtre #3</French>
-    <Spanish>Ventana #3</Spanish>
-    <German>Fenster #3</German>
-    <Chinesesimp>窗户 #3</Chinesesimp>
-    <Polish>Okno #3</Polish>
-    <Russian>Окно #3</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS4">
-    <English>Window #4</English>
-    <Italian>Finestra #4</Italian>
-    <Czech>Okno #4</Czech>
-    <French>Fenêtre #4</French>
-    <Spanish>Ventana #4</Spanish>
-    <German>Fenster #4</German>
-    <Chinesesimp>窗户 #4</Chinesesimp>
-    <Polish>Okno #4</Polish>
-    <Russian>Окно #4</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS5">
-    <English>Window #5</English>
-    <Italian>Finestra #5</Italian>
-    <Czech>Okno #5</Czech>
-    <French>Fenêtre #5</French>
-    <Spanish>Ventana #5</Spanish>
-    <German>Fenster #5</German>
-    <Chinesesimp>窗户 #5</Chinesesimp>
-    <Polish>Okno #5</Polish>
-    <Russian>Окно #5</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS6">
-    <English>Window #6</English>
-    <Italian>Finestra #6</Italian>
-    <Czech>Okno #6</Czech>
-    <French>Fenêtre #6</French>
-    <Spanish>Ventana #6</Spanish>
-    <German>Fenster #6</German>
-    <Chinesesimp>窗户 #6</Chinesesimp>
-    <Polish>Okno #6</Polish>
-    <Russian>Окно #6</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_WINDOWS7">
-    <English>Window #7</English>
-    <Italian>Finestra #7</Italian>
-    <Czech>Okno #7</Czech>
-    <French>Fenêtre #7</French>
-    <Spanish>Ventana #7</Spanish>
-    <German>Fenster #7</German>
-    <Chinesesimp>窗户 #7</Chinesesimp>
-    <Polish>Okno #7</Polish>
-    <Russian>Окно #7</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LFWHEEL">
-    <English>1st axle left wheel</English>
-    <Italian>Ruota sinistra del 1° asse</Italian>
-    <Czech>První náprava levé kolo</Czech>
-    <French>1er essieu, roue gauche</French>
-    <Spanish>Rueda izquierda 1er eje</Spanish>
-    <German>1. Achse, linkes Rad</German>
-    <Chinesesimp>第一轴左轮</Chinesesimp>
-    <Polish>1sza oś lewe koło</Polish>
-    <Russian>1-я ось левое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RFWHEEL">
-    <English>1st axle right wheel</English>
-    <Italian>Ruota destra del 1° asse</Italian>
-    <Czech>První náprava pravé kolo</Czech>
-    <French>1er essieu, roue droite</French>
-    <Spanish>Rueda derecha 1er eje</Spanish>
-    <German>1. Achse, rechtes Rad</German>
-    <Chinesesimp>第一轴右轮</Chinesesimp>
-    <Polish>1sza oś prawe koło</Polish>
-    <Russian>1-я ось правое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LF2WHEEL">
-    <English>2nd axle left wheel</English>
-    <Italian>Ruota sinistra del 2° asse</Italian>
-    <Czech>Druhá náprava levé kolo</Czech>
-    <French>2ème essieu, roue gauche</French>
-    <Spanish>Rueda izquierda 2º eje</Spanish>
-    <German>2. Achse, linkes Rad</German>
-    <Chinesesimp>第二轴左轮</Chinesesimp>
-    <Polish>2ga oś lewe koło</Polish>
-    <Russian>2-я ось левое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RF2WHEEL">
-    <English>2nd axle right wheel</English>
-    <Italian>Ruota destra del 2° asse</Italian>
-    <Czech>Druhá náprava pravé kolo</Czech>
-    <French>2ème essieu, roue droite</French>
-    <Spanish>Rueda derecha 2º eje</Spanish>
-    <German>2. Achse, rechtes Rad</German>
-    <Chinesesimp>第二轴右轮</Chinesesimp>
-    <Polish>2ga oś prawe koło</Polish>
-    <Russian>2-я ось правое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LMWHEEL">
-    <English>3rd axle left wheel</English>
-    <Italian>Ruota sinistra del 3° asse</Italian>
-    <Czech>Třetí náprava levé kolo</Czech>
-    <French>3ème essieu, roue gauche</French>
-    <Spanish>Rueda izquierda 3er eje</Spanish>
-    <German>3. Achse, linkes Rad</German>
-    <Chinesesimp>第三轴左轮</Chinesesimp>
-    <Polish>3cia oś lewe koło</Polish>
-    <Russian>3-я ось левое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RMWHEEL">
-    <English>3rd axle right wheel</English>
-    <Italian>Ruota destra del 3° asse</Italian>
-    <Czech>Třetí náprava pravé kolo</Czech>
-    <French>3ème essieu, roue droite</French>
-    <Spanish>Rueda derecha 3er eje</Spanish>
-    <German>3. Achse, rechtes Rad</German>
-    <Chinesesimp>第三轴右轮</Chinesesimp>
-    <Polish>3cia oś prawe koło</Polish>
-    <Russian>3-я ось правое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LBWHEEL">
-    <English>4th axle left wheel</English>
-    <Italian>Ruota sinistra del 4° asse</Italian>
-    <Czech>Čtvrtá náprava levé kolo</Czech>
-    <French>4ème essieu, roue gauche</French>
-    <Spanish>Rueda izquierda 4º eje</Spanish>
-    <German>4. Achse, linkes Rad</German>
-    <Chinesesimp>第四轴左轮</Chinesesimp>
-    <Polish>4ta oś lewe koło</Polish>
-    <Russian>4-я ось левое колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_GROUPMARKER_DISPLAYNAME">
-    <English>Group Marker</English>
-    <Italian>Marcatore del gruppo</Italian>
-    <Czech>Značka skupiny</Czech>
-    <German>Gruppenmarker</German>
-    <Spanish>Marcado de Grupo</Spanish>
-    <Polish>Marker grupy</Polish>
-    <Russian>Маркер группы</Russian>
-    <French>Marqueur de groupe</French>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RBWHEEL">
-    <English>4th axle right wheel</English>
-    <Italian>Ruota destra del 4° asse</Italian>
-    <Czech>Čtvrtá náprava pravé kolo</Czech>
-    <French>4ème essieu, roue droite</French>
-    <Spanish>Rueda derecha 4º eje</Spanish>
-    <German>4. Achse, rechtes Rad</German>
-    <Chinesesimp>第四轴右轮</Chinesesimp>
-    <Polish>4ta oś prawe koło</Polish>
-    <Russian>4-я ось правое  колесо</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_BODY">
-    <English>Body</English>
-    <Italian>Carrozzeria</Italian>
-    <Czech>Karoserie</Czech>
-    <French>Carrosserie</French>
-    <Spanish>Chasis</Spanish>
-    <German>Karrosserie</German>
-    <Chinesesimp>车身</Chinesesimp>
-    <Polish>Karoseria</Polish>
-    <Russian>Кузов</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LTRACK">
-    <English>Left track</English>
-    <Italian>Cingolo sinistro</Italian>
-    <Czech>Levý pás</Czech>
-    <French>Chenille gauche</French>
-    <Spanish>Oruga izquierda</Spanish>
-    <German>Linke Kette</German>
-    <Chinesesimp>左侧履带</Chinesesimp>
-    <Polish>Lewa gąsienica</Polish>
-    <Russian>Левая гусеница </Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RTRACK">
-    <English>Right track</English>
-    <Italian>Cingolo destro</Italian>
-    <Czech>Pravý pás</Czech>
-    <French>Chenille droite</French>
-    <Spanish>Oruga derecha</Spanish>
-    <German>Rechte Kette</German>
-    <Chinesesimp>右侧履带</Chinesesimp>
-    <Polish>Prawa gąsienica</Polish>
-    <Russian>Правая гусеница</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_AVIONICS">
-    <English>Avionics</English>
-    <Italian>Avionica</Italian>
-    <Czech>Avionika</Czech>
-    <French>Avionique</French>
-    <Spanish>Aviónica</Spanish>
-    <German>Bordelektronik</German>
-    <Chinesesimp>航空电子设备</Chinesesimp>
-    <Polish>Awionika</Polish>
-    <Russian>Авиационная радиоэлектротехника (Авионика)</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_MAINROTOR">
-    <English>Main rotor</English>
-    <Italian>Rotore principale</Italian>
-    <Czech>Hlavní rotor</Czech>
-    <French>Rotor principal</French>
-    <Spanish>Rotor principal</Spanish>
-    <German>Hauptrotor</German>
-    <Chinesesimp>主旋翼</Chinesesimp>
-    <Polish>Głowny rotor</Polish>
-    <Russian>Главный двигатель</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_TAILROTOR">
-    <English>Tail Rotor</English>
-    <Italian>Rotore di coda</Italian>
-    <Czech>Zadní rotor</Czech>
-    <French>Rotor de queue</French>
-    <Spanish>Rotor de cola</Spanish>
-    <German>Heckrotor</German>
-    <Chinesesimp>尾部旋翼</Chinesesimp>
-    <Polish>Tylni rotor</Polish>
-    <Russian>Хвостовой руль</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTAILERON">
-    <English>Left Aileron</English>
-    <Italian>Alettone sinistro</Italian>
-    <German>Linkes Querruder</German>
-    <Chinesesimp>左副翼</Chinesesimp>
-    <Spanish>Alerón izquierdo</Spanish>
-    <Czech>Levé křidélko</Czech>
-    <French>Aileron gauche</French>
-    <Polish>Lewa lotka</Polish>
-    <Russian>Левый элерон</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTRUDDER">
-    <English>Left Rudder</English>
-    <Italian>Timone di direzione sinistro</Italian>
-    <German>Linkes Ruder</German>
-    <Chinesesimp>左舵</Chinesesimp>
-    <Spanish>Timón izquierdo</Spanish>
-    <Czech>Levá směrovka</Czech>
-    <French>Gouvernail gauche</French>
-    <Polish>Lewy ster kierunku</Polish>
-    <Russian>Левый руль</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTRUDDER">
-    <English>Right Rudder</English>
-    <Italian>Timone di direzione destro</Italian>
-    <German>Rechtes Ruder</German>
-    <Chinesesimp>右舵</Chinesesimp>
-    <Spanish>Timón derecho</Spanish>
-    <Czech>Pravá směrovka</Czech>
-    <French>Gouvernail droit</French>
-    <Polish>Prawy ster kierunku</Polish>
-    <Russian>Правый руль</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTAILERON">
-    <English>Right Aileron</English>
-    <Italian>Alettone destro</Italian>
-    <German>Rechtes Querruder</German>
-    <Chinesesimp>右副翼</Chinesesimp>
-    <Spanish>Aileron derecho</Spanish>
-    <Czech>Pravé křidélko</Czech>
-    <French>Aileron droit</French>
-    <Polish>Prawa lotka</Polish>
-    <Russian>Правый элерон</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_RIGHTELEVATOR">
-    <English>Right Elevator</English>
-    <Italian>Timone elevatore destro</Italian>
-    <German>Rechtes Höhenruder</German>
-    <Chinesesimp>右升降舵</Chinesesimp>
-    <Spanish>Elevador derecho</Spanish>
-    <Czech>Pravé výškové kormidlo</Czech>
-    <French>Ascenseur droit</French>
-    <Polish>Prawy ster wysokości</Polish>
-    <Russian>Правый руль высоты</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_LEFTELEVATOR">
-    <English>Left Elevator</English>
-    <Italian>Timone elevatore sinistro</Italian>
-    <German>Linkes Höhenruder</German>
-    <Chinesesimp>左升降舵</Chinesesimp>
-    <Spanish>Elevador izquierdo</Spanish>
-    <Czech>Levé výškové kormidlo</Czech>
-    <French>Ascenseur gauche</French>
-    <Polish>Lewy ster wysokości</Polish>
-    <Russian>Левый руль высоты</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_GEARLIGHTS">
-    <English>Gear Lights</English>
-    <Italian>Luce carrello</Italian>
-    <German>Fahrwerklichter</German>
-    <Chinesesimp>车灯</Chinesesimp>
-    <Spanish>Luces de engranajes</Spanish>
-    <Czech>Světla podvozku</Czech>
-    <French>Feux de vitesse</French>
-    <Polish>Światło podwozia</Polish>
-    <Russian>Габаритные огни</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_ALLVEHICLES_TITLE">
-    <English>Various Vehicles</English>
-    <Italian>Veicoli vari</Italian>
-    <German>Verschiedene Fahrzeuge</German>
-    <Chinesesimp>所有载具</Chinesesimp>
-    <Spanish>Varios vehículos</Spanish>
-    <Czech>Různá vozidla</Czech>
-    <French>Divers véhicules</French>
-    <Polish>Różne pojazdy</Polish>
-    <Russian>Разные транспортные средства</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_LANDVEHICLES_TITLE">
-    <English>Land Vehicles</English>
-    <Italian>Veicoli di terra</Italian>
-    <German>Landfahrzeuge</German>
-    <Chinesesimp>地面载具</Chinesesimp>
-    <Spanish>Vehículos terrestres</Spanish>
-    <Czech>Pozemní vozidla</Czech>
-    <French>Véhicules terrestres</French>
-    <Polish>Pojazdy lądowe</Polish>
-    <Russian>Наземные транспортные средства</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEVEH_CATEGORIES_AERONAUTICALVEHICLES_TITLE">
-    <English>Aeronautical Vehicles</English>
-    <Italian>Velivoli</Italian>
-    <German>Luftfahrzeuge</German>
-    <Chinesesimp>航空载具</Chinesesimp>
-    <Spanish>Vehículos aeronáuticos</Spanish>
-    <Czech>Letadla</Czech>
-    <French>Véhicules aéronautiques</French>
-    <Polish>Pojazdy powietrzne</Polish>
-    <Russian>Авиационные транспортные средства</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_HEAD">
-    <English>Head</English>
-    <Italian>testa</Italian>
-    <Czech>Hlava</Czech>
-    <French>Tête</French>
-    <Spanish>Cabeza</Spanish>
-    <German>Kopf</German>
-    <Chinesesimp>头部</Chinesesimp>
-    <Polish>Głowa</Polish>
-    <Russian>Голова</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_FACE">
-    <English>Face</English>
-    <Italian>Faccia</Italian>
-    <Czech>Obličej</Czech>
-    <French>Visage</French>
-    <Spanish>Cara</Spanish>
-    <German>Gesicht</German>
-    <Chinesesimp>脸部</Chinesesimp>
-    <Polish>Twarz</Polish>
-    <Russian>Лицо</Russian>
-  </Key>
-  <Key ID="STR_ENH_DISABLEAI_SUBCATEGORY">
-    <English>AI Features</English>
-    <German>KI Funktionen</German>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_NECK">
-    <English>Neck</English>
-    <Italian>Collo</Italian>
-    <Czech>Krk</Czech>
-    <French>Cou</French>
-    <Spanish>Cuello</Spanish>
-    <German>Hals</German>
-    <Chinesesimp>颈部</Chinesesimp>
-    <Polish>Szyja</Polish>
-    <Russian>Шея</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_CHEST">
-    <English>Chest</English>
-    <Italian>Torace</Italian>
-    <Czech>Trup</Czech>
-    <French>Poitrine</French>
-    <Spanish>Tórax</Spanish>
-    <German>Brustkorb</German>
-    <Chinesesimp>胸部</Chinesesimp>
-    <Polish>Klatka</Polish>
-    <Russian>Грудная клетка</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_ARMS">
-    <English>Arms</English>
-    <Italian>Braccia</Italian>
-    <Czech>Paže</Czech>
-    <French>Bras</French>
-    <Spanish>Brazos</Spanish>
-    <German>Arme</German>
-    <Chinesesimp>臂部</Chinesesimp>
-    <Polish>Ramiona</Polish>
-    <Russian>Оружие</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_HANDS">
-    <English>Hands</English>
-    <Italian>Mani</Italian>
-    <Czech>Ruce</Czech>
-    <French>Mains</French>
-    <Spanish>Manos</Spanish>
-    <German>Hände</German>
-    <Chinesesimp>手部</Chinesesimp>
-    <Polish>Dłonie</Polish>
-    <Russian>Руки</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_ABDOMEN">
-    <English>Abdomen</English>
-    <Italian>Addome</Italian>
-    <Czech>Břicho</Czech>
-    <French>Abdomen</French>
-    <Spanish>Abdomen</Spanish>
-    <German>Unterleib</German>
-    <Chinesesimp>腹部</Chinesesimp>
-    <Polish>Brzuch</Polish>
-    <Russian>Живот</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_PELVIS">
-    <English>Pelvis</English>
-    <Italian>Bacino</Italian>
-    <Czech>Pánev</Czech>
-    <French>Bassin</French>
-    <Spanish>Pelvis</Spanish>
-    <German>Becken</German>
-    <Chinesesimp>盆骨</Chinesesimp>
-    <Polish>Miednica</Polish>
-    <Russian>Таз</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_DIAPHRAGM">
-    <English>Diaphragm</English>
-    <Italian>Diaframma</Italian>
-    <Czech>Bránice</Czech>
-    <French>Diaphragme</French>
-    <Spanish>Diafragma</Spanish>
-    <German>Zwerchfell</German>
-    <Chinesesimp>隔膜</Chinesesimp>
-    <Polish>Przepona brzuszna</Polish>
-    <Russian>Диафрагма</Russian>
-  </Key>
-  <Key ID="STR_ENH_ADVANCEDDAMAGEUNIT_LEGS">
-    <English>Legs</English>
-    <Italian>Gambe</Italian>
-    <Czech>Nohy</Czech>
-    <French>Jambes</French>
-    <Spanish>Piernas</Spanish>
-    <German>Beine</German>
-    <Chinesesimp>腿部</Chinesesimp>
-    <Polish>Nogi</Polish>
-    <Russian>Ноги</Russian>
   </Key>
   <Key ID="STR_ENH_ADDGUNLIGHT_DISPLAYNAME">
     <English>Add Gun Light</English>
@@ -1372,6 +835,7 @@
   <Key ID="STR_ENH_ALLOWCREWIMMOBILE_DISPLAYNAME">
     <English>Forbid Disembarking</English>
     <German>Aussteigen verbieten</German>
+    <Spanish>Prohibir desembarco</Spanish>
   </Key>
   <Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
     <English>Crew stays in vehicle even though the vehicle is disabled.</English>
@@ -1653,7 +1117,7 @@
     <Italian>Copertura</Italian>
     <Czech>Krytí</Czech>
     <French>Couverture</French>
-    <Spanish>Covertura</Spanish>
+    <Spanish>Cobertura</Spanish>
     <German>Deckung</German>
     <Chinesesimp>掩护</Chinesesimp>
     <Polish>Krycie się</Polish>
@@ -1675,7 +1139,7 @@
     <Italian>Cerca Bersagli</Italian>
     <Czech>Vyhledávání cílů</Czech>
     <French>Ciblage automatique</French>
-    <Spanish>Auto objetivo.</Spanish>
+    <Spanish>Objetivo automático</Spanish>
     <German>Ziele suchen</German>
     <Chinesesimp>自动索敌</Chinesesimp>
     <Polish>Automatyczny cel</Polish>
@@ -2254,6 +1718,7 @@
   <Key ID="STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP">
     <English>You are running a customised version of 3den Enhanced. Please make sure you are not accidentally removing attributes from your mission!</English>
     <German>Du verwendest eine benutzerdefinierte Version von 3den Enhanced. Stelle sicher das du nicht aus Versehen Attribute aus der jetzigen Mission entfernst!</German>
+    <Spanish>¡Está ejecutando una versión personalizada de 3den Enhanced. ¡Asegúrate de no eliminar accidentalmente atributos de tu misión!</Spanish>
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
     <English>Center Position</English>
@@ -2596,6 +2061,7 @@
   <Key ID="STR_ENH_3DENRADIO_END">
     <English>Ending</English>
     <German>Ende</German>
+    <Spanish>Final</Spanish>
   </Key>
   <Key ID="STR_ENH_3DENRADIO_TITLE">
     <English>Title</English>
@@ -2873,7 +2339,7 @@
     <Italian>Registra il nome della fazione sulla lavagnetta</Italian>
     <Czech>Zaznamenat názvy frakcí do schránky</Czech>
     <French>Copier les noms des factions dans le presse-papiers</French>
-    <Spanish>Registrar nombres de facción</Spanish>
+    <Spanish>Registrar nombres de facción al portapepeles</Spanish>
     <German>Fraktionsnamen in Zwischenablage kopieren</German>
     <Chinesesimp>记录派系名称</Chinesesimp>
     <Polish>Zapisz nazwy frakcji do schowka</Polish>
@@ -2882,13 +2348,14 @@
   <Key ID="STR_ENH_CONTEXTMENU_LOGVARNAMES">
     <English>Log Variable Names to Clipboard</English>
     <German>Variablennamen in Zwischenablage kopieren</German>
+    <Spanish>Registrar nombres de variables al portapapeles</Spanish>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
     <English>Log Positions (3D) to Clipboard</English>
     <Italian>Registra la posizione 3D sulla lavagnetta</Italian>
     <German>Positionen (3D) in Zwischenablage kopieren</German>
     <Chinesesimp>记录位置（3D）</Chinesesimp>
-    <Spanish>Posiciones de registro (3D)</Spanish>
+    <Spanish>Posiciones de registro (3D) al portapapeles</Spanish>
     <Czech>Zaznamenat pozice ve 3D do schránky</Czech>
     <French>Copier les positions (3D) dans le presse-papiers</French>
     <Polish>Zapisz pozycje (3D) do schowka</Polish>
@@ -2921,7 +2388,7 @@
     <Italian>Registra la posisione della griglia sulla lavagnetta.</Italian>
     <German>Rasterposition in Zwischenablage kopieren</German>
     <Chinesesimp>记录网格位置</Chinesesimp>
-    <Spanish>Posición de la cuadrícula de registro</Spanish>
+    <Spanish>Posición de la cuadrícula de registro al portapeles</Spanish>
     <Czech>Zaznamenat pozici mřížky do schránky</Czech>
     <French>Copier la position (sur la grille) dans le presse-papiers</French>
     <Polish>Zapisuje pozycje geograficzną do schowka</Polish>
@@ -3121,6 +2588,7 @@
     <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
     <French>Il n'y a pas assez de bâtiments vides à proximité. Augmentez le rayon ou le pourcentage de couverture.</French>
     <Polish>Niewystarczająca ilość pustych pozycji w budynku, zwiększ zasięg lub procent pokrycia.</Polish>
+    <Spanish>No hay suficientes posiciones libres en edificios, incrementa el radio o la covertura.</Spanish>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
     <English>Fill Area </English>
@@ -3346,7 +2814,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP">
     <English>Recompiles all functions. This may take a moment.</English>h&gt;
-    <Italian>Ricompila tutte le funzioni. Questo puo richiedere un momento.</Italian><German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German><Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp><Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish><Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French><Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian><Polish>Rekompiluje wszytkie funkcje. To może chwilę potrwać.</Polish></Key>
+<Italian>Ricompila tutte le funzioni. Questo puo richiedere un momento.</Italian><German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German><Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp><Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish><Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French><Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian><Polish>Rekompiluje wszytkie funkcje. To może chwilę potrwać.</Polish></Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT">
     <English>Recompile Selected</English>
     <Italian>Ricompila Selezione</Italian>
@@ -3515,14 +2983,25 @@
     <German>Einheitenicons darstellen</German>
     <French>Montrer les icônes des unités</French>
     <Polish>Rysuj ikony jednostek</Polish>
+    <Spanish>Dibujar iconos de unidades</Spanish>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME">
+    <English>Draw Trigger Areas</English>
+    <German>Auslöserbereiche zeichnen</German>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
+    <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
+    <German>Auslöserbereiche werden wärend der Vorschau angezeigt. Kleine Auslöserbereiche werden nicht angezeigt.</German>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
     <English>Log active Scripts</English>
     <German>Aktive Skripte loggen</German>
+    <Spanish>Registrar Scripts activos</Spanish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
     <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
     <German>Alle aktiven Skripte und Missions-Event-Handler werden in die .rpt Datei geschrieben.</German>
+    <Spanish>Todos los scripts activos y los controladores de eventos de la misión se registrarán en el archivo .rpt</Spanish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
     <English>Draws information of nearby units and vehicles.</English>
@@ -3530,6 +3009,7 @@
     <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
     <French>Affiche des informations à propos des unités et véhicules à proximité.</French>
     <Polish>Rysuj informacje o pobliskich jednostkach i pojazdach</Polish>
+    <Spanish>Dibujar información de unidades y vehículos cercanos</Spanish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_ZEUS_DISPLAYNAME">
     <English>Enable Zeus</English>
@@ -3998,37 +3478,46 @@
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP">
     <English>Exports Eden Editor base classes like ctrlStatic or ctrlStaticPicture.</English>
     <German>Exportiert Eden Editor Basis-Klassen wie ctrlStatic oder ctrlStaticPicture.</German>
+    <Spanish>Exporta clases base de Eden Editor como ctrlStatic o ctrlStaticPicture.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
     <English>Attribute %1 was set to %2.</English>
     <German>Attribut %1 wurde auf %2 gesetzt.</German>
+    <Spanish>El atributo %1 se estableció en %2</Spanish>
   </Key>
   <Key ID="STR_ENH_BRIEFING_TOOLTIP">
     <English>These briefings work in singleplayer, multiplayer and for JIP players. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
+    <Spanish>Estos informes funcionan para un jugador, multijugador y para jugadores JIP. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información. \n \n Si se proporciona una Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
     <English>Exports all GUI base classes.</English>
     <German>Exportiert alle Basis-Klassen.</German>
+    <Spanish>Exporta todas las clases base de GUI.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC">
     <English>Classic</English>
     <German>Klassisch</German>
+    <Spanish>Clásico</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP">
     <English>Exports classic base classes like RscText or RscPicture.</English>
     <German>Exportiert die klassischen GUI Basis-Klassen wie RscText oder RscPicture.</German>
+    <Spanish>Exporta clases base clásicas como RscText o RscPicture.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON">
     <English>Add-on</English>
     <German>Add-On</German>
+    <Spanish>Añadido (Add-on)</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP">
     <English>Uses 'class' keyword for use in config.cpp.</English>
     <German>Benutzt das 'class' Keyword für die Verwendung in einer config.cpp Datei.</German>
+    <Spanish>Utiliza la palabra clave 'class' para usar en config.cpp.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP">
     <English>Uses 'import' keyword for use in description.ext.</English>
     <German>Benutzt das 'import' Keyword für die Verwendung in einer description.ext Datei.</German>
+    <Spanish>Utiliza la palabra clave 'import' para usar en description.ext</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
     <English>Open GUI Test Grids</English>
@@ -4194,18 +3683,22 @@
   <Key ID="STR_ENH_HELP_COMMANDSOVERVIEW">
     <English>Commands by Functionality</English>
     <German>Kommandos nach Funktionalität</German>
+    <Spanish>Comandos por funcionalidad</Spanish>
   </Key>
   <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
     <English>Description.ext</English>
     <German>Description.ext</German>
+    <Spanish>Description.ext</Spanish>
   </Key>
   <Key ID="STR_ENH_MENUSTRIPENTRIES">
     <English>Menu Strip Entries</English>
     <German>Menüleisten-Einträge</German>
+    <Spanish>Entradas de la tira de menú</Spanish>
   </Key>
   <Key ID="STR_ENH_MENUSTRIPENTRIES_TOOLTIP">
     <English>Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.\nChanges require a restart of Eden Editor to take effect!</English>
     <German>Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.\nDamit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!</German>
+    <Spanish>Desmarque las entradas para ocultarlas. Al desmarcar las carpetas, se eliminarán todas las entradas de la carpeta. \n ¡Los cambios requieren reiniciar Eden Editor para que surtan efecto!</Spanish>
   </Key>
   <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
     <English>Guide: Mission &amp; Campaign making</English>
@@ -5613,28 +5106,33 @@
     <English>Variable Viewer</English>
     <German>Variable Viewer</German>
     <Polish>Przeglądarka zmiennych</Polish>
+    <Spanish>Visor de variables</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_INVENTORYMANAGER">
     <English>Vehicle Inventory Manager</English>
     <German>Vehicle-Inventar-Manager</German>
     <French>Gestionnaire d'inventaire de véhicule</French>
+    <Spanish>Gestor de inventario de vehículos</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_AVAILABLEITEMS">
     <English>Available Items</English>
     <German>Verfügbare Gegenstände</German>
     <Polish>Dostępne przedmioty</Polish>
     <French>Items disponibles</French>
+    <Spanish>Objetos disponibles</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_PREVIEW_TOOLTIP">
     <English>Double click on an item to preview it.</English>
     <German>Doppelklick auf einen Gegenstand, um ihn anzuzeigen.</German>
     <French>Double-cliquez sur un item pour le prévisualiser.</French>
+    <Spanish>Doble clic en un objeto para previsualizarlo</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_ITEMSININVENTORY">
     <English>Items in Inventory</English>
     <German>Gegenstände im Inventar</German>
     <Polish>Przedmioty w ekwipunku</Polish>
     <French>Items dans l'inventaire</French>
+    <Spanish>Objetos en el inventario</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_SHOTGUNS">
     <English>Shotguns</English>
@@ -5648,90 +5146,1313 @@
     <German>Vorlagen anz.</German>
     <Polish>Pokaż szablony</Polish>
     <French>Afficher les modèles</French>
+    <Spanish>Mostrar plantillas</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_CREATETEMPLATE">
     <English>Create Template</English>
     <German>Vorlage erstellen</German>
     <Polish>Stwórz szablon</Polish>
     <French>Créer un modèle</French>
+    <Spanish>Crear plantilla</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_APPLYTEMPLATE">
     <English>Apply Template</English>
     <German>Vorlage anwenden</German>
     <Polish>Zastosuj szablon</Polish>
     <French>Appliquer un modèle</French>
+    <Spanish>Aplicar plantilla</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_ISVIRTUAL">
     <English>Is Virtual?</English>
     <German>Virtuell?</German>
     <Polish>Jest wirtualne?</Polish>
     <French>Virtuel ?</French>
+    <Spanish>¿Es virtual?</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_REMOVESELECTED_TOOLTIP">
     <English>Clear Inventory</English>
     <German>Inventar leeren</German>
     <Polish>Wyczyść ekwipunek</Polish>
     <French>Vider l'inventaire</French>
+    <Spanish>Vaciar inventario</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_DELETETEMPLATE">
     <English>Delete selected Template.</English>
     <German>Ausgewählte Vorlage löschen.</German>
     <Polish>Skasuj zaznaczony szablon</Polish>
     <French>Supprimer le modèle sélectionné</French>
+    <Spanish>Borrar la plantilla seleccionada</Spanish>
   </Key>
   <Key ID="STR_ENH_HELP_GETEXTENSIONS">
     <English>Additional Eden Editor Extentions</English>
     <German>Zusätzliche Eden Editor Erweiterungen</German>
     <French>Extensions Eden Editor supplémentaires</French>
+    <Spanish>Extensiones de Eden adicionales</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_HIDETEMPLATES">
     <English>Hide Templates</English>
     <German>Vorlagen versteck.</German>
     <Polish>Ukryj szablony</Polish>
     <French>Ne pas afficher les modèles</French>
+    <Spanish>Ocultar plantillas</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_TEMPLATES">
     <English>Templates</English>
     <German>Vorlagen</German>
     <Polish>Szablony</Polish>
     <French>Modèles</French>
+    <Spanish>Plantillas</Spanish>
   </Key>
   <Key ID="STR_ENH_IM_RESET_TOOLTIP">
     <English>Reset to default items defined in object's config.</English>
     <German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
     <Polish>Zresetuj ekwipunek</Polish>
     <French>Réinitialiser aux items par défaut définis dans la configuration de l'objet.</French>
+    <Spanish>Restablezca los elementos predeterminados definidos en la configuración del objeto.</Spanish>
   </Key>
   <Key ID="STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP">
     <English>Add entry to favorites or remove it from favorites depending on the selected list.</English>
     <German>Entfernt einen Eintrag aus den Favoriten oder fügt einen Eintrag zu den Favoriten hinzu. Dies ist Abhängig von der aktiven Liste.</German>
     <French>Ajouter ou retirer des favoris un élément de la liste sélectionnée.</French>
+    <Spanish>Agregue una entrada a favoritos o elimínela de favoritos según la lista seleccionada.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_CFGSENTENCESBROWSER">
     <English>CfgSentences Browser</English>
     <German>CfgSentences Browser</German>
     <Polish>CfgSentences Browser</Polish>
     <French>Navigateur CfgSentences</French>
+    <Spanish>Navegador de CfgSentences</Spanish>
   </Key>
   <Key ID="STR_ENH_ENVIRONMENTVOLUME_DISPLAYNAME">
     <English>Volume (Environment)</English>
     <German>Volume (Umwelt)</German>
+    <Spanish>Volumen (Entorno)</Spanish>
   </Key>
   <Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
     <English>Placement Tool</English>
     <German>Platzierungs-Werkzeug</German>
     <French>Outil de placement</French>
+    <Spanish>Herramienta de emplazamiento</Spanish>
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_DISPLAYNAME">
     <English>Enable Dynamic View Distance</English>
     <German>Dynamische Sichtweite anschalten</German>
+    <Spanish>Habilitar la distancia de visualización dinámica</Spanish>
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
     <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
     <German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
+    <Spanish>La distancia de visualización y la distancia de visualización del objeto se cambiarán según la altura de la cámara. Esta opción puede causar problemas de rendimiento en sistemas débiles.</Spanish>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">
     <English>Scripts</English>
     <German>Skripte</German>
+    <Spanish>Scripts</Spanish>
+
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITENGINE">
+    <English>Engine</English>
+    <Italian>Motore</Italian>
+    <Czech>Motor</Czech>
+    <French>Moteur</French>
+    <Spanish>Motor</Spanish>
+    <German>Motor</German>
+    <Chinesesimp>引擎</Chinesesimp>
+    <Polish>Silnik</Polish>
+    <Russian>Двигатель</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITENGINE1">
+    <English>Engine #01</English>
+    <Italian>Motore #01</Italian>
+    <Czech>Motor #01</Czech>
+    <French>Moteur #01</French>
+    <Spanish>Motor #01</Spanish>
+    <German>Motor #01</German>
+    <Chinesesimp>引擎 #01</Chinesesimp>
+    <Polish>Silnik #01</Polish>
+    <Russian>Двигатель #01</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHULL">
+    <English>Hull</English>
+    <Italian>Scafo</Italian>
+    <Czech>Pancíř</Czech>
+    <French>Blindage</French>
+    <Spanish>Casco</Spanish>
+    <German>Hülle</German>
+    <Chinesesimp>船体</Chinesesimp>
+    <Polish>Kadłub</Polish>
+    <Russian>Броня</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITENGINE2">
+    <English>Engine #02</English>
+    <Italian>Motore #02</Italian>
+    <Czech>Motor #02</Czech>
+    <French>Moteur #02</French>
+    <Spanish>Motor #02</Spanish>
+    <German>Motor #02</German>
+    <Chinesesimp>引擎 #02</Chinesesimp>
+    <Polish>Silnik #02</Polish>
+    <Russian>Двигатель #02</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGUN">
+    <English>Gun</English>
+    <Italian>Arma</Italian>
+    <Czech>Zbraň</Czech>
+    <French>Arme</French>
+    <Spanish>Arma</Spanish>
+    <German>Geschütz</German>
+    <Chinesesimp>枪</Chinesesimp>
+    <Polish>Uzbrojenie</Polish>
+    <Russian>Вооружение</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL">
+    <English>Fuel Tank</English>
+    <Italian>Serbatoio carburante</Italian>
+    <Czech>Palivová nádrž</Czech>
+    <French>Réservoir</French>
+    <Spanish>Tanque de combustible</Spanish>
+    <German>Treibstofftank</German>
+    <Chinesesimp>油箱</Chinesesimp>
+    <Polish>Zbiornik paliwa</Polish>
+    <Russian>Топливный бак</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUELL">
+    <English>Fuel Tank (Left)</English>
+    <Italian>Serbatoio carburante (Left)</Italian>
+    <Czech>Palivová nádrž (Left)</Czech>
+    <French>Réservoir (Left)</French>
+    <Spanish>Tanque de combustible (Left)</Spanish>
+    <German>Treibstofftank (Links)</German>
+    <Chinesesimp>油箱 (Left)</Chinesesimp>
+    <Polish>Zbiornik paliwa (Left)</Polish>
+    <Russian>Топливный бак (Left)</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUELR">
+    <English>Fuel Tank (Right)</English>
+    <Italian>Serbatoio carburante (Right)</Italian>
+    <Czech>Palivová nádrž (Right)</Czech>
+    <French>Réservoir (Right)</French>
+    <Spanish>Tanque de combustible (Right)</Spanish>
+    <German>Treibstofftank (Rechts)</German>
+    <Chinesesimp>油箱 (Right)</Chinesesimp>
+    <Polish>Zbiornik paliwa (Right)</Polish>
+    <Russian>Топливный бак (Right)</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL1">
+    <English>Fuel Tank #01</English>
+    <Italian>Serbatoio carburante #01</Italian>
+    <Czech>Palivová nádrž #01</Czech>
+    <French>Réservoir #01</French>
+    <Spanish>Tanque de combustible #01</Spanish>
+    <German>Treibstofftank #01</German>
+    <Chinesesimp>油箱 #01</Chinesesimp>
+    <Polish>Zbiornik paliwa #01</Polish>
+    <Russian>Топливный бак #01</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL2">
+    <English>Fuel Tank #02</English>
+    <Italian>Serbatoio carburante #02</Italian>
+    <Czech>Palivová nádrž #02</Czech>
+    <French>Réservoir #02</French>
+    <Spanish>Tanque de combustible #02</Spanish>
+    <German>Treibstofftank #02</German>
+    <Chinesesimp>油箱 #02</Chinesesimp>
+    <Polish>Zbiornik paliwa #02</Polish>
+    <Russian>Топливный бак #02</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITTURRET">
+    <English>Turret</English>
+    <Italian>Torretta veicolo</Italian>
+    <Czech>Věž</Czech>
+    <French>Tourelle</French>
+    <Spanish>Torreta</Spanish>
+    <German>Geschützturm</German>
+    <Chinesesimp>炮塔</Chinesesimp>
+    <Polish>Wieża</Polish>
+    <Russian>Орудийная башня</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS1">
+    <English>Window #01</English>
+    <Italian>Finestra #01</Italian>
+    <Czech>Okno #01</Czech>
+    <French>Fenêtre #01</French>
+    <Spanish>Ventana #01</Spanish>
+    <German>Fenster #01</German>
+    <Chinesesimp>窗户 #01</Chinesesimp>
+    <Polish>Okno #01</Polish>
+    <Russian>Окно #01</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS2">
+    <English>Window #02</English>
+    <Italian>Finestra #02</Italian>
+    <Czech>Okno #02</Czech>
+    <French>Fenêtre #02</French>
+    <Spanish>Ventana #02</Spanish>
+    <German>Fenster #02</German>
+    <Chinesesimp>窗户 #02</Chinesesimp>
+    <Polish>Okno #02</Polish>
+    <Russian>Окно #02</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS3">
+    <English>Window #03</English>
+    <Italian>Finestra #03</Italian>
+    <Czech>Okno #03</Czech>
+    <French>Fenêtre #03</French>
+    <Spanish>Ventana #03</Spanish>
+    <German>Fenster #03</German>
+    <Chinesesimp>窗户 #03</Chinesesimp>
+    <Polish>Okno #03</Polish>
+    <Russian>Окно #03</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS4">
+    <English>Window #04</English>
+    <Italian>Finestra #04</Italian>
+    <Czech>Okno #04</Czech>
+    <French>Fenêtre #04</French>
+    <Spanish>Ventana #04</Spanish>
+    <German>Fenster #04</German>
+    <Chinesesimp>窗户 #04</Chinesesimp>
+    <Polish>Okno #04</Polish>
+    <Russian>Окно #04</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS5">
+    <English>Window #05</English>
+    <Italian>Finestra #05</Italian>
+    <Czech>Okno #05</Czech>
+    <French>Fenêtre #05</French>
+    <Spanish>Ventana #05</Spanish>
+    <German>Fenster #05</German>
+    <Chinesesimp>窗户 #05</Chinesesimp>
+    <Polish>Okno #05</Polish>
+    <Russian>Окно #05</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS6">
+    <English>Window #06</English>
+    <Italian>Finestra #06</Italian>
+    <Czech>Okno #06</Czech>
+    <French>Fenêtre #06</French>
+    <Spanish>Ventana #06</Spanish>
+    <German>Fenster #06</German>
+    <Chinesesimp>窗户 #06</Chinesesimp>
+    <Polish>Okno #06</Polish>
+    <Russian>Окно #06</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS7">
+    <English>Window #07</English>
+    <Italian>Finestra #07</Italian>
+    <Czech>Okno #07</Czech>
+    <French>Fenêtre #07</French>
+    <Spanish>Ventana #07</Spanish>
+    <German>Fenster #07</German>
+    <Chinesesimp>窗户 #07</Chinesesimp>
+    <Polish>Okno #07</Polish>
+    <Russian>Окно #07</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS8">
+    <English>Window #08</English>
+    <Italian>Finestra #08</Italian>
+    <Czech>Okno #08</Czech>
+    <French>Fenêtre #08</French>
+    <Spanish>Ventana #08</Spanish>
+    <German>Fenster #08</German>
+    <Chinesesimp>窗户 #08</Chinesesimp>
+    <Polish>Okno #08</Polish>
+    <Russian>Окно #08</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS9">
+    <English>Window #09</English>
+    <Italian>Finestra #09</Italian>
+    <Czech>Okno #09</Czech>
+    <French>Fenêtre #09</French>
+    <Spanish>Ventana #09</Spanish>
+    <German>Fenster #09</German>
+    <Chinesesimp>窗户 #09</Chinesesimp>
+    <Polish>Okno #09</Polish>
+    <Russian>Окно #09</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS10">
+    <English>Window #10</English>
+    <Italian>Finestra #10</Italian>
+    <Czech>Okno #10</Czech>
+    <French>Fenêtre #10</French>
+    <Spanish>Ventana #10</Spanish>
+    <German>Fenster #10</German>
+    <Chinesesimp>窗户 #10</Chinesesimp>
+    <Polish>Okno #10</Polish>
+    <Russian>Окно #10</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS11">
+    <English>Window #11</English>
+    <Italian>Finestra #11</Italian>
+    <Czech>Okno #11</Czech>
+    <French>Fenêtre #11</French>
+    <Spanish>Ventana #11</Spanish>
+    <German>Fenster #11</German>
+    <Chinesesimp>窗户 #11</Chinesesimp>
+    <Polish>Okno #11</Polish>
+    <Russian>Окно #11</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS12">
+    <English>Window #12</English>
+    <Italian>Finestra #12</Italian>
+    <Czech>Okno #12</Czech>
+    <French>Fenêtre #12</French>
+    <Spanish>Ventana #12</Spanish>
+    <German>Fenster #12</German>
+    <Chinesesimp>窗户 #12</Chinesesimp>
+    <Polish>Okno #12</Polish>
+    <Russian>Окно #12</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS13">
+    <English>Window #13</English>
+    <Italian>Finestra #13</Italian>
+    <Czech>Okno #13</Czech>
+    <French>Fenêtre #13</French>
+    <Spanish>Ventana #13</Spanish>
+    <German>Fenster #13</German>
+    <Chinesesimp>窗户 #13</Chinesesimp>
+    <Polish>Okno #13</Polish>
+    <Russian>Окно #13</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS14">
+    <English>Window #14</English>
+    <Italian>Finestra #14</Italian>
+    <Czech>Okno #14</Czech>
+    <French>Fenêtre #14</French>
+    <Spanish>Ventana #14</Spanish>
+    <German>Fenster #14</German>
+    <Chinesesimp>窗户 #14</Chinesesimp>
+    <Polish>Okno #14</Polish>
+    <Russian>Окно #14</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS15">
+    <English>Window #15</English>
+    <Italian>Finestra #15</Italian>
+    <Czech>Okno #15</Czech>
+    <French>Fenêtre #15</French>
+    <Spanish>Ventana #15</Spanish>
+    <German>Fenster #15</German>
+    <Chinesesimp>窗户 #15</Chinesesimp>
+    <Polish>Okno #15</Polish>
+    <Russian>Окно #15</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLFWHEEL">
+    <English>1st axle left wheel</English>
+    <Italian>Ruota sinistra del 1° asse</Italian>
+    <Czech>První náprava levé kolo</Czech>
+    <French>1er essieu, roue gauche</French>
+    <Spanish>Rueda izquierda 1er eje</Spanish>
+    <German>1. Achse, linkes Rad</German>
+    <Chinesesimp>第一轴左轮</Chinesesimp>
+    <Polish>1sza oś lewe koło</Polish>
+    <Russian>1-я ось левое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRFWHEEL">
+    <English>1st axle right wheel</English>
+    <Italian>Ruota destra del 1° asse</Italian>
+    <Czech>První náprava pravé kolo</Czech>
+    <French>1er essieu, roue droite</French>
+    <Spanish>Rueda derecha 1er eje</Spanish>
+    <German>1. Achse, rechtes Rad</German>
+    <Chinesesimp>第一轴右轮</Chinesesimp>
+    <Polish>1sza oś prawe koło</Polish>
+    <Russian>1-я ось правое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLF2WHEEL">
+    <English>2nd axle left wheel</English>
+    <Italian>Ruota sinistra del 2° asse</Italian>
+    <Czech>Druhá náprava levé kolo</Czech>
+    <French>2ème essieu, roue gauche</French>
+    <Spanish>Rueda izquierda 2º eje</Spanish>
+    <German>2. Achse, linkes Rad</German>
+    <Chinesesimp>第二轴左轮</Chinesesimp>
+    <Polish>2ga oś lewe koło</Polish>
+    <Russian>2-я ось левое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRF2WHEEL">
+    <English>2nd axle right wheel</English>
+    <Italian>Ruota destra del 2° asse</Italian>
+    <Czech>Druhá náprava pravé kolo</Czech>
+    <French>2ème essieu, roue droite</French>
+    <Spanish>Rueda derecha 2º eje</Spanish>
+    <German>2. Achse, rechtes Rad</German>
+    <Chinesesimp>第二轴右轮</Chinesesimp>
+    <Polish>2ga oś prawe koło</Polish>
+    <Russian>2-я ось правое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLMWHEEL">
+    <English>3rd axle left wheel</English>
+    <Italian>Ruota sinistra del 3° asse</Italian>
+    <Czech>Třetí náprava levé kolo</Czech>
+    <French>3ème essieu, roue gauche</French>
+    <Spanish>Rueda izquierda 3er eje</Spanish>
+    <German>3. Achse, linkes Rad</German>
+    <Chinesesimp>第三轴左轮</Chinesesimp>
+    <Polish>3cia oś lewe koło</Polish>
+    <Russian>3-я ось левое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRMWHEEL">
+    <English>3rd axle right wheel</English>
+    <Italian>Ruota destra del 3° asse</Italian>
+    <Czech>Třetí náprava pravé kolo</Czech>
+    <French>3ème essieu, roue droite</French>
+    <Spanish>Rueda derecha 3er eje</Spanish>
+    <German>3. Achse, rechtes Rad</German>
+    <Chinesesimp>第三轴右轮</Chinesesimp>
+    <Polish>3cia oś prawe koło</Polish>
+    <Russian>3-я ось правое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLBWHEEL">
+    <English>4th axle left wheel</English>
+    <Italian>Ruota sinistra del 4° asse</Italian>
+    <Czech>Čtvrtá náprava levé kolo</Czech>
+    <French>4ème essieu, roue gauche</French>
+    <Spanish>Rueda izquierda 4º eje</Spanish>
+    <German>4. Achse, linkes Rad</German>
+    <Chinesesimp>第四轴左轮</Chinesesimp>
+    <Polish>4ta oś lewe koło</Polish>
+    <Russian>4-я ось левое колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRBWHEEL">
+    <English>4th axle right wheel</English>
+    <Italian>Ruota destra del 4° asse</Italian>
+    <Czech>Čtvrtá náprava pravé kolo</Czech>
+    <French>4ème essieu, roue droite</French>
+    <Spanish>Rueda derecha 4º eje</Spanish>
+    <German>4. Achse, rechtes Rad</German>
+    <Chinesesimp>第四轴右轮</Chinesesimp>
+    <Polish>4ta oś prawe koło</Polish>
+    <Russian>4-я ось правое  колесо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLTRACK">
+    <English>Left track</English>
+    <Italian>Cingolo sinistro</Italian>
+    <Czech>Levý pás</Czech>
+    <French>Chenille gauche</French>
+    <Spanish>Oruga izquierda</Spanish>
+    <German>Linke Kette</German>
+    <Chinesesimp>左侧履带</Chinesesimp>
+    <Polish>Lewa gąsienica</Polish>
+    <Russian>Левая гусеница </Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRTRACK">
+    <English>Right track</English>
+    <Italian>Cingolo destro</Italian>
+    <Czech>Pravý pás</Czech>
+    <French>Chenille droite</French>
+    <Spanish>Oruga derecha</Spanish>
+    <German>Rechte Kette</German>
+    <Chinesesimp>右侧履带</Chinesesimp>
+    <Polish>Prawa gąsienica</Polish>
+    <Russian>Правая гусеница</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITAVIONICS">
+    <English>Avionics</English>
+    <Italian>Avionica</Italian>
+    <Czech>Avionika</Czech>
+    <French>Avionique</French>
+    <Spanish>Aviónica</Spanish>
+    <German>Bordelektronik</German>
+    <Chinesesimp>航空电子设备</Chinesesimp>
+    <Polish>Awionika</Polish>
+    <Russian>Авиационная радиоэлектротехника (Авионика)</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHROTOR">
+    <English>Main rotor</English>
+    <Italian>Rotore principale</Italian>
+    <Czech>Hlavní rotor</Czech>
+    <French>Rotor principal</French>
+    <Spanish>Rotor principal</Spanish>
+    <German>Hauptrotor</German>
+    <Chinesesimp>主旋翼</Chinesesimp>
+    <Polish>Głowny rotor</Polish>
+    <Russian>Главный двигатель</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITTAIL">
+    <English>Tail</English>
+    <German>Heck</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITVROTOR">
+    <English>Tail Rotor</English>
+    <Italian>Rotore di coda</Italian>
+    <Czech>Zadní rotor</Czech>
+    <French>Rotor de queue</French>
+    <Spanish>Rotor de cola</Spanish>
+    <German>Heckrotor</German>
+    <Chinesesimp>尾部旋翼</Chinesesimp>
+    <Polish>Tylni rotor</Polish>
+    <Russian>Хвостовой руль</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLAILERON">
+    <English>Left Aileron</English>
+    <Italian>Alettone sinistro</Italian>
+    <German>Linkes Querruder</German>
+    <Chinesesimp>左副翼</Chinesesimp>
+    <Spanish>Alerón izquierdo</Spanish>
+    <Czech>Levé křidélko</Czech>
+    <French>Aileron gauche</French>
+    <Polish>Lewa lotka</Polish>
+    <Russian>Левый элерон</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLCRUDDER">
+    <English>Left Rudder</English>
+    <Italian>Timone di direzione sinistro</Italian>
+    <German>Linkes Ruder</German>
+    <Chinesesimp>左舵</Chinesesimp>
+    <Spanish>Timón izquierdo</Spanish>
+    <Czech>Levá směrovka</Czech>
+    <French>Gouvernail gauche</French>
+    <Polish>Lewy ster kierunku</Polish>
+    <Russian>Левый руль</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRRUDDER">
+    <English>Right Rudder</English>
+    <Italian>Timone di direzione destro</Italian>
+    <German>Rechtes Ruder</German>
+    <Chinesesimp>右舵</Chinesesimp>
+    <Spanish>Timón derecho</Spanish>
+    <Czech>Pravá směrovka</Czech>
+    <French>Gouvernail droit</French>
+    <Polish>Prawy ster kierunku</Polish>
+    <Russian>Правый руль</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRAILERON">
+    <English>Right Aileron</English>
+    <Italian>Alettone destro</Italian>
+    <German>Rechtes Querruder</German>
+    <Chinesesimp>右副翼</Chinesesimp>
+    <Spanish>Aileron derecho</Spanish>
+    <Czech>Pravé křidélko</Czech>
+    <French>Aileron droit</French>
+    <Polish>Prawa lotka</Polish>
+    <Russian>Правый элерон</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRELEVATOR">
+    <English>Right Elevator</English>
+    <Italian>Timone elevatore destro</Italian>
+    <German>Rechtes Höhenruder</German>
+    <Chinesesimp>右升降舵</Chinesesimp>
+    <Spanish>Elevador derecho</Spanish>
+    <Czech>Pravé výškové kormidlo</Czech>
+    <French>Ascenseur droit</French>
+    <Polish>Prawy ster wysokości</Polish>
+    <Russian>Правый руль высоты</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLCELEVATOR">
+    <English>Left Elevator</English>
+    <Italian>Timone elevatore sinistro</Italian>
+    <German>Linkes Höhenruder</German>
+    <Chinesesimp>左升降舵</Chinesesimp>
+    <Spanish>Elevador izquierdo</Spanish>
+    <Czech>Levé výškové kormidlo</Czech>
+    <French>Ascenseur gauche</French>
+    <Polish>Lewy ster wysokości</Polish>
+    <Russian>Левый руль высоты</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGEARLIGHTS">
+    <English>Gear Lights</English>
+    <Italian>Luce carrello</Italian>
+    <German>Fahrwerklichter</German>
+    <Chinesesimp>车灯</Chinesesimp>
+    <Spanish>Luces de engranajes</Spanish>
+    <Czech>Světla podvozku</Czech>
+    <French>Feux de vitesse</French>
+    <Polish>Światło podwozia</Polish>
+    <Russian>Габаритные огни</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHEAD">
+    <English>Head</English>
+    <Italian>testa</Italian>
+    <Czech>Hlava</Czech>
+    <French>Tête</French>
+    <Spanish>Cabeza</Spanish>
+    <German>Kopf</German>
+    <Chinesesimp>头部</Chinesesimp>
+    <Polish>Głowa</Polish>
+    <Russian>Голова</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFACE">
+    <English>Face</English>
+    <Italian>Faccia</Italian>
+    <Czech>Obličej</Czech>
+    <French>Visage</French>
+    <Spanish>Cara</Spanish>
+    <German>Gesicht</German>
+    <Chinesesimp>脸部</Chinesesimp>
+    <Polish>Twarz</Polish>
+    <Russian>Лицо</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITNECK">
+    <English>Neck</English>
+    <Italian>Collo</Italian>
+    <Czech>Krk</Czech>
+    <French>Cou</French>
+    <Spanish>Cuello</Spanish>
+    <German>Hals</German>
+    <Chinesesimp>颈部</Chinesesimp>
+    <Polish>Szyja</Polish>
+    <Russian>Шея</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITCHEST">
+    <English>Chest</English>
+    <Italian>Torace</Italian>
+    <Czech>Trup</Czech>
+    <French>Poitrine</French>
+    <Spanish>Tórax</Spanish>
+    <German>Brustkorb</German>
+    <Chinesesimp>胸部</Chinesesimp>
+    <Polish>Klatka</Polish>
+    <Russian>Грудная клетка</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITBODY">
+    <English>Body</English>
+    <German>Körper</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
+    <English>Commander Turret</English>
+    <German>Geschützturm (Kommandant)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITCOMGUN">
+    <English>Commander Gun</English>
+    <German>Geschütz (Kommandant)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_1">
+    <English>Slat Armour (Left, #01)</English>
+    <German>Käfigpanzerung (Links, #01)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_2">
+    <English>Slat Armour (Left, #02)</English>
+    <German>Käfigpanzerung (Links, #02)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_3">
+    <English>Slat Armour (Left, #03)</English>
+    <German>Käfigpanzerung (Links, #03)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_1">
+    <English>Slat Armour (Right, #01)</English>
+    <German>Käfigpanzerung (Rechts, #01)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_2">
+    <English>Slat Armour (Right, #02)</English>
+    <German>Käfigpanzerung (Rechts, #02)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_3">
+    <English>Slat Armour (Right, #03)</English>
+    <German>Käfigpanzerung (Rechts, #03)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_RIGHT">
+    <English>Slat Armour (Top right)</English>
+    <German>Käfigpanzerung (Oben rechts)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_LEFT">
+    <English>Slat Armour (Top left)</English>
+    <German>Käfigpanzerung (Oben links)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_BACK">
+    <English>Slat Armour (Top back)</English>
+    <German>Käfigpanzerung (Oben hinten)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_FRONT">
+    <English>Slat Armour (Front)</English>
+    <German>Käfigpanzerung (Vorne)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_BACK">
+    <English>Slat Armour (Front)</English>
+    <German>Käfigpanzerung (Vorne)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITMISSILES">
+    <English>Missiles</English>
+    <German>Raketen</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITAMMO">
+    <English>Ammunition</English>
+    <German>Munition</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRGLASS">
+    <English>Window (Right)</English>
+    <German>Fenster (Rechts)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLGLASS">
+    <English>Window (Left)</English>
+    <German>Fenster (Links)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITWINCH">
+    <English>Winch</English>
+    <German>Winde</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITENGINE3">
+    <English>Engine #03</English>
+    <German>Triebwerk #03</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGEAR">
+    <English>Gear</English>
+    <German>Fahrwerk</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
+    <English>Hydraulics</English>
+    <German>Hydraulik</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASSR">
+    <English>Glass (Right)</English>
+    <German>Glas (Rechts)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASSL">
+    <English>Glass (Left)</English>
+    <German>Glas (Links)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
+    <English>Transmission</English>
+    <German>Getriebe</German>
+  </Key>
+  <Key ID="STR_ENH_AI_CATEGORY">
+    <English>AI</English>
+    <German>KI</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITARMS">
+    <English>Arms</English>
+    <Italian>Braccia</Italian>
+    <Czech>Paže</Czech>
+    <French>Bras</French>
+    <Spanish>Brazos</Spanish>
+    <German>Arme</German>
+    <Chinesesimp>臂部</Chinesesimp>
+    <Polish>Ramiona</Polish>
+    <Russian>Оружие</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHANDS">
+    <English>Hands</English>
+    <Italian>Mani</Italian>
+    <Czech>Ruce</Czech>
+    <French>Mains</French>
+    <Spanish>Manos</Spanish>
+    <German>Hände</German>
+    <Chinesesimp>手部</Chinesesimp>
+    <Polish>Dłonie</Polish>
+    <Russian>Руки</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITABDOMEN">
+    <English>Abdomen</English>
+    <Italian>Addome</Italian>
+    <Czech>Břicho</Czech>
+    <French>Abdomen</French>
+    <Spanish>Abdomen</Spanish>
+    <German>Unterleib</German>
+    <Chinesesimp>腹部</Chinesesimp>
+    <Polish>Brzuch</Polish>
+    <Russian>Живот</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITPELVIS">
+    <English>Pelvis</English>
+    <Italian>Bacino</Italian>
+    <Czech>Pánev</Czech>
+    <French>Bassin</French>
+    <Spanish>Pelvis</Spanish>
+    <German>Becken</German>
+    <Chinesesimp>盆骨</Chinesesimp>
+    <Polish>Miednica</Polish>
+    <Russian>Таз</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITDIAPHRAGM">
+    <English>Diaphragm</English>
+    <Italian>Diaframma</Italian>
+    <Czech>Bránice</Czech>
+    <French>Diaphragme</French>
+    <Spanish>Diafragma</Spanish>
+    <German>Zwerchfell</German>
+    <Chinesesimp>隔膜</Chinesesimp>
+    <Polish>Przepona brzuszna</Polish>
+    <Russian>Диафрагма</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLEGS">
+    <English>Legs</English>
+    <Italian>Gambe</Italian>
+    <Czech>Nohy</Czech>
+    <French>Jambes</French>
+    <Spanish>Piernas</Spanish>
+    <German>Beine</German>
+    <Chinesesimp>腿部</Chinesesimp>
+    <Polish>Nogi</Polish>
+    <Russian>Ноги</Russian>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#CAM_GUNNER">
+    <English>Camera Gunner</English>
+    <German>Kamera Schütze</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GLASS11">
+    <English>Window #11</English>
+    <German>Fenster #11</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
+    <English>Light #01</English>
+    <German>Licht #01</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
+    <English>Light #02</English>
+    <German>Licht #02</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
+    <English>Light #03</English>
+    <German>Licht #03</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
+    <English>Spotlight</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
+    <English>Wing Light (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
+    <English>Wing Light (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HAND_L">
+    <English>Hand (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HAND_R">
+    <English>Hand Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
+    <English>Battery (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
+    <English>Battery (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITENGINE4">
+    <English>Engine #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
+    <English>Era (Back)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_FRONT">
+    <English>Era (Front)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_LEFT">
+    <English>Era (left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_1">
+    <English>Era (Left, #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_2">
+    <English>Era (Left, #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_3">
+    <English>Era (Left, #03)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_4">
+    <English>Era (Left, #04)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT">
+    <English>Era (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_1">
+    <English>Era (Right, #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_2">
+    <English>Era (Right, #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_3">
+    <English>Era (Right, #03)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_4">
+    <English>Era (Right, #04)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP">
+    <English>Era (Top)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_FRONT">
+    <English>Era (Top, Front)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT">
+    <English>Era (Top, Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_1">
+    <English>Era (Top, Left, #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_2">
+    <English>Era (Top, Left, #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT">
+    <English>Era (Top, Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_1">
+    <English>Era (Top, Right, #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_2">
+    <English>Era (Top, Right, #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
+    <English>FuelTank (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
+    <English>Fuel Tank (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
+    <English>Fuel Tank</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS16">
+    <English>Window #16</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS17">
+    <English>Window #17</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS18">
+    <English>Window #18</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS19">
+    <English>Window #19</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
+    <English>Window 1A</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
+    <English>Window 1B</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITGLASS20">
+    <English>Window #20</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
+    <English>Horizontal Stabilizer (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
+    <English>Horizontal Stabilizer (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLIGHT">
+    <English>Light</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
+    <English>Light (Back)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
+    <English>Light (Front)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
+    <English>Light (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
+    <English>Light (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITOPTIC">
+    <English>Optic</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITOPTICS">
+    <English>Optics</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
+    <English>Reserve Wheel</English>
+    <German>Ersatzrad</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITROTOR">
+    <English>Rotor</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
+    <English>Rotor (Virtual)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT">
+    <English>Slat (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT">
+    <English>Slat (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSTARTER1">
+    <English>Starter #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSTARTER2">
+    <English>Starter #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSTARTER3">
+    <English>Starter #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITSTATICPORT">
+    <English>Static Port</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITVSTABILIZER1">
+    <English>Vertical Stabilizer #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITZONE_1_HITPOINT">
+    <English>Hitzone #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITZONE_2_HITPOINT">
+    <English>Hitzone #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITZONE_3_HITPOINT">
+    <English>Hitzone #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITZONE_4_HITPOINT">
+    <English>Hitzone #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_INCAPACITATED">
+    <English>Incapacitated</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LEG_L">
+    <English>Leg (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LEG_R">
+    <English>Leg (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LIGHT_1_HITPOINT">
+    <English>Light #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LIGHT_2_HITPOINT">
+    <English>Light #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LIGHT_3_HITPOINT">
+    <English>Light #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
+    <English>Light #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS" />
+  <Key ID="STR_ENH_DAMAGE_#L SVETLO" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE" />
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_#P SVETLO" />
+  <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
+    <English>Gear Light (Front)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_10_HITPOINT">
+    <English>Window #10</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_11_HITPOINT">
+    <English>Window #11</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_12_HITPOINT">
+    <English>Window #12</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_13_HITPOINT">
+    <English>Window #13</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_14_HITPOINT">
+    <English>Window #14</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_15_HITPOINT">
+    <English>Window #15</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_16_HITPOINT">
+    <English>Window #16</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_17_HITPOINT">
+    <English>Window #17</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_18_HITPOINT">
+    <English>Window #18</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_19_HITPOINT">
+    <English>Window #19</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_1_HITPOINT">
+    <English>Window #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_20_HITPOINT">
+    <English>Window #20</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_21_HITPOINT">
+    <English>Window #21</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_22_HITPOINT">
+    <English>Window #22</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_23_HITPOINT">
+    <English>Window #23</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_24_HITPOINT">
+    <English>Window #24</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_25_HITPOINT">
+    <English>Window #25</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_26_HITPOINT">
+    <English>Window #26</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_27_HITPOINT">
+    <English>Window #27</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_28_HITPOINT">
+    <English>Window #28</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_29_HITPOINT">
+    <English>Window #29</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_2_HITPOINT">
+    <English>Window #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_30_HITPOINT">
+    <English>Window #30</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_31_HITPOINT">
+    <English>Window #31</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_32_HITPOINT">
+    <English>Window #32</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_33_HITPOINT">
+    <English>Window #33</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_34_HITPOINT">
+    <English>Window #34</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_35_HITPOINT">
+    <English>Window #35</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_36_HITPOINT">
+    <English>Window #36</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_37_HITPOINT">
+    <English>Window #37</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_38_HITPOINT">
+    <English>Window #38</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
+    <English>Window #39</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
+    <English>Window #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_40_HITPOINT">
+    <English>Window #40</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_41_HITPOINT">
+    <English>Window #41</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_42_HITPOINT">
+    <English>Window #42</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_43_HITPOINT">
+    <English>Window #43</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_44_HITPOINT">
+    <English>Window #44</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_45_HITPOINT">
+    <English>Window #45</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_46_HITPOINT">
+    <English>Window #46</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_47_HITPOINT">
+    <English>Window #47</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_48_HITPOINT">
+    <English>Window #48</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_49_HITPOINT">
+    <English>Window #49</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_4_HITPOINT">
+    <English>Window #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_50_HITPOINT">
+    <English>Window #50</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_51_HITPOINT">
+    <English>Windoe #51</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_52_HITPOINT">
+    <English>Window #52</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_53_HITPOINT">
+    <English>Window #53</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_54_HITPOINT">
+    <English>Window #54</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_55_HITPOINT">
+    <English>Window #55</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_56_HITPOINT">
+    <English>Windoe #56</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_57_HITPOINT">
+    <English>Window #57</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_58_HITPOINT">
+    <English>Window #58</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_59_HITPOINT">
+    <English>Window #59</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_5_HITPOINT">
+    <English>Window #05</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_60_HITPOINT">
+    <English>Window #60</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_61_HITPOINT">
+    <English>Window #61</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_62_HITPOINT">
+    <English>Window #62</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_6_HITPOINT">
+    <English>Window #06</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_7_HITPOINT">
+    <English>Window #07</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_8_HITPOINT">
+    <English>Window #08</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
+    <English>Window #09</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_01_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_02_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_03_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_04_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_05_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_06_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_07_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_08_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_GLASS_POD_09_HITPOINT" />
+  <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
+    <English>Light #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1_FLARE">
+    <English>Light Flare #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_2">
+    <English>Light #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_3">
+    <English>Light #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
+    <English>Light #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT" />
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT" />
+  <Key ID="STR_ENH_DAMAGE_HITLAILERON_LINK">
+    <English>Aileron Link (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE" />
+  <Key ID="STR_ENH_DAMAGE_HITRAILERON_LINK">
+    <English>Aileron Link (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_ADVANCEDDAMAGE_DESCRIPTION">
+    <English>Allows to add damage to all available hit points of this entity.</English>
+    <German>Ermöglicht das Hinzufügen von Schaden zu allen verfügbaren 'HitPoints' dieser Entität.</German>
   </Key>
 </Project>
