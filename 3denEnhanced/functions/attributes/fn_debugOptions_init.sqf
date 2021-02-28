@@ -14,7 +14,7 @@
 #define GETVALUE(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
-#define DELAY 0.05
+#define DELAY 0.1
 
 //To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview || isMultiplayer) exitWith {};
