@@ -31,12 +31,11 @@ _ctrlGroup ctrlCommit 0;
 
 if (_hitPoints isEqualTo []) exitWith
 {
-  systemChat "go";
   private _ctrlHintNoHitPoints = _display ctrlCreate ["ctrlStructuredText", -1, _ctrlGroup];
   _ctrlHintNoHitPoints ctrlSetPosition [5 * GRID_W, 0, (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W, CTRL_DEFAULT_H];
   _ctrlHintNoHitPoints ctrlCommit 0;
   _ctrlHintNoHitPoints ctrlSetBackgroundColor [1, 1, 1, 0.05];
-  private _txt = text "No hitpoints available for this object! :(";
+  private _txt = text localize "STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS";
   _txt setAttributes ["align", "center", "size", "1.2"];
   _ctrlHintNoHitPoints ctrlSetStructuredText composeText [_txt];
 };
