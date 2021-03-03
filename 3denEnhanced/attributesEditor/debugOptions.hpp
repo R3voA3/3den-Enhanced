@@ -23,11 +23,6 @@ class ENH_DebugOptions
       displayName = "$STR_ENH_DEBUGOPTIONS_GARAGE_DISPLAYNAME";
       property = "ENH_DebugOptions_Garage";
     };
-    class ENH_DebugOptions_FPS: ENH_DebugOptions_Arsenal
-    {
-      displayName = "$STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME";
-      property = "ENH_DebugOptions_FPS";
-    };
     class ENH_DebugOptions_KillBLUFOR: ENH_DebugOptions_Arsenal
     {
       displayName = "$STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME";
@@ -134,6 +129,11 @@ class ENH_DebugOptions
     class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Player_Subcategory
     {
       description = "$STR_A3_ENDGAME_DEBRIEFING_DRAW";
+    };
+    class ENH_DebugOptions_FPS: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME";
+      property = "ENH_DebugOptions_FPS";
     };
     class ENH_DebugOptions_DrawTriggers: ENH_DebugOptions_Arsenal
     {

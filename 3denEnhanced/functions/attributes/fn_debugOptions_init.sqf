@@ -14,12 +14,13 @@
 #define GETVALUE(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
+#define DELAY 0.1
 
 //To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview || isMultiplayer) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
-sleep 0.5;
+sleep DELAY;
 
 if GETVALUE("Arsenal") then
 {
@@ -89,9 +90,9 @@ if GETVALUE("ShowUnits") then
 
     while {true} do
     {
-      waitUntil{sleep 0.2; visibleMap};//Only updated markers when visible
+      waitUntil{sleep DELAY; visibleMap};//Only updated markers when visible
       {
-        sleep 0.05;//A bit more performance friendly
+        sleep DELAY;//A bit more performance friendly
         _x params ["_marker", "_entity"];
         _displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
         _marker setMarkerText _displayName;
@@ -110,7 +111,6 @@ if GETVALUE("Zeus") then
 {
   [] spawn
   {
-    //waitUntil {!isNull player};
     private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
     player assignCurator _zeusModule;
     //Add Interface EHs (Workaround)
@@ -180,7 +180,7 @@ if GETVALUE("FPS") then
         round diag_fps,
         round diag_fpsmin
       ];
-      sleep 1;
+      sleep DELAY;
     };
   };
 };
@@ -197,12 +197,8 @@ if GETVALUE("KillBLUFOR") then
     {},
     {},
     {
-      {
-        if (side _x == WEST) then
-        {
-          _x setDamage 1;
-        }
-      } forEach allUnits - units player},
+      {_x setDamage 1} forEach (units west - units player)
+    },
     {},
     [],
     1,
@@ -224,12 +220,8 @@ if GETVALUE("KillOPFOR") then
     {},
     {},
     {
-      {
-        if (side _x == EAST) then
-        {
-          _x setDamage 1;
-        }
-      } forEach allUnits - units player},
+      {_x setDamage 1} forEach (units east - units player)
+    },
     {},
     [],
     1,
@@ -249,12 +241,8 @@ if GETVALUE("KILLINDFOR") then
     "true",
     "true",
     {
-      {
-        if (side _x == INDEPENDENT) then
-        {
-          _x setDamage 1;
-        }
-      } forEach allUnits - units player},
+      {_x setDamage 1} forEach (units independent - units player)
+    },
     {},
     {},
     {},
@@ -278,12 +266,8 @@ if GETVALUE("KillCIVFOR") then
     {},
     {},
     {
-      {
-        if (side _x == CIVILIAN) then
-        {
-          _x setDamage 1;
-        }
-      } forEach allUnits - units player},
+      {_x setDamage 1} forEach (units civilian - units player)
+    },
     {},
     [],
     1,
@@ -322,7 +306,7 @@ if GETVALUE("DrawIcons") then
       {
         drawIcon3D
         [
-          "",/* getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "icon"), */
+          "",
           (side _x call BIS_fnc_sideColor),
           _x modelToWorldVisual [0, 0, 0],
           0.5,
@@ -341,7 +325,7 @@ if GETVALUE("DrawIcons") then
           3 * (1 / (getResolution select 3)) * pixelGrid * 0.5
         ];
         true
-      } count ((ASLToAGL getPosASL player nearEntities [["CAManBase", "Air", "Car", "Tank"], RADIUS]) - [player]);
+      } count ((ASLToAGL getPosASL player nearEntities [["AllVehicles"], RADIUS]) - [player]);
     }
   ] call BIS_fnc_addStackedEventHandler;
 };
@@ -369,7 +353,7 @@ if GETVALUE("DeleteCorpse") then
 
 if GETVALUE("ShowWaypoints") then
 {
-  _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
+  private _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
   private _color = "";
 
   private _waypoints = [];
@@ -555,38 +539,40 @@ if GETVALUE("ActiveScripts") then
 
 if (GETVALUE("DebugPath") > 0) then
 {
+  private _cfgMarkerColors = ("true" configClasses (configFile >> "CfgMarkerColors"));
+  private _is3DEnabled = GETVALUE("DebugPath") > 1;
   {
-    private _target = leader _x;
-    if (expectedDestination _target # 1 != "DoNotPlan" && alive _target) then
+    private _leader = leader _x;
+    if (expectedDestination _leader # 1 != "DoNotPlan" && alive _leader) then
     {
-      _target spawn
+      [_leader, _cfgMarkerColors, _is3DEnabled] spawn
       {
         scriptName 'ENH_Attribute_DebugPath';
+        params ["_leader", "_cfgMarkerColors", "_is3DEnabled"];
         private _arrow = objNull;
         private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)', random(1), random(1), random(1)];
         private _path = [];
-        private _marker = createMarker [format ['ENH_DebugPath_%1', str _this], _this];
-        _marker setMarkerShape "polyline";
-        _marker setMarkerColor configName selectRandom ("true" configClasses (configFile >> "CfgMarkerColors"));
+        private _marker = createMarkerLocal [format ['ENH_DebugPath_%1', str _leader], _leader];
+        _marker setMarkerShapeLocal "polyline";
+        _marker setMarkerColorLocal configName selectRandom _cfgMarkerColors;
 
-        private _posOld = getPos _this;
+        private _posOld = getPos _leader;
 
-        while {alive _this} do
+        while {alive _leader} do
         {
-          if ((_this distance _posOld) > 20) then
+          if ((_leader distance _posOld) > 20) then
           {
-            if (GETVALUE("DebugPath") > 1) then
+            if (_is3DEnabled) then
             {
-              _arrow = createVehicle ['Sign_Arrow_Direction_Blue_F', position _this, [], 0, 'CAN_COLLIDE'];
+              _arrow = createVehicle ["Sign_Arrow_Direction_Blue_F", position _leader, [], 0, "CAN_COLLIDE"];
               _arrow setObjectTexture [0, _arrowColour];
-              sleep 0.1;
-              _arrow setDir (_arrow getDir _this);
+              _arrow setDir (_posOld getDir _leader);
             };
-          _path append [getPos _this # 0, getPos _this # 1];
-          _posOld = getPos _this;
-          if (count _path > 3) then {_marker setMarkerPolyline _path};
-          if (count _path == 500) then {_path deleteRange [0, 2]};
-          sleep 0.1;
+            _path append [getPos _leader # 0, getPos _leader # 1];
+            _posOld = getPos _leader;
+            if (count _path > 3) then {_marker setMarkerPolyline _path};
+            if (count _path == 500) then {_path deleteRange [0, 2]};
+            sleep DELAY;
           };
         };
       };
@@ -616,7 +602,6 @@ if GETVALUE("DrawTriggers") then
         ATLToASL _borderPos params ["_x", "_y", "_z"];
         private _arrow = createSimpleObject ["Sign_Sphere25cm_F", [_x, _y, _z + _hOffset + 0.1], true];
         _arrow setObjectTexture [0, _colour];
-        //_arrow setObjectScale 5;
       };
     };
   } forEach (allMissionObjects "EmptyDetector");

@@ -231,7 +231,7 @@ class CfgFunctions
     };
     class AttributeControls
     {
-      file = "3denEnhanced\functions\attributeControls";
+      file = "3denEnhanced\functions\attributes";
       #ifndef ENH_HIDE_ADVANCEDDAMAGE
       class advancedDamage_onAttributeLoad;
       class advancedDamage_onAttributeSave;
