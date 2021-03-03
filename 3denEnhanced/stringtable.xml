@@ -5262,7 +5262,6 @@
     <English>Scripts</English>
     <German>Skripte</German>
     <Spanish>Scripts</Spanish>
-
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE">
     <English>Engine</English>
@@ -5871,8 +5870,8 @@
     <German>Käfigpanzerung (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_BACK">
-    <English>Slat Armour (Front)</English>
-    <German>Käfigpanzerung (Vorne)</German>
+    <English>Slat Armour (Back)</English>
+    <German>Käfigpanzerung (Hinten)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITMISSILES">
     <English>Missiles</English>
@@ -6213,36 +6212,99 @@
   <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
     <English>Light #04</English>
   </Key>
-  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS" />
-  <Key ID="STR_ENH_DAMAGE_#L SVETLO" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_1" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_2" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_L" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_R" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE" />
-  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_#P SVETLO" />
+  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT">
+    <English>Gear #01 (Light #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT">
+    <English>Gear #01 (Light #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT">
+    <English>Gear #02 (Light #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT">
+    <English>Gear #02 (Light #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT">
+    <English>Gear #03 (Light #01)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT">
+    <English>Gear #03 (Light #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS">
+    <English>Gear Light (Front)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#L SVETLO">
+    <English>Light (Left)</English>
+    <German>Licht (Links)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1">
+    <English>Light #01</English>
+    <German>Licht #01</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT">
+    <English>Light #01</English>
+    <German>Licht #01</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT">
+    <English>Light #01</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2">
+    <English>Light #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT">
+    <English>Light #02</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT">
+    <English>Light #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT">
+    <English>Light #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT">
+    <English>Light #03</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT">
+    <English>Light #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT">
+    <English>Light #04</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT">
+    <English>Light</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L">
+    <English>Light (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2">
+    <English>Light (Left #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE">
+    <English>Light (Left #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE">
+    <English>Light (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT">
+    <English>Light (Left)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R">
+    <English>Light (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2">
+    <English>Light (Right #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE">
+    <English>Light (Right #02)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE">
+    <English>Light (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT">
+    <English>Light (Right)</English>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_#P SVETLO">
+    <English>Licht (Links)</English>
+  </Key>
   <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
     <English>Gear Light (Front)</English>
   </Key>
@@ -6432,15 +6494,6 @@
   <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
     <English>Window #09</English>
   </Key>
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_01_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_02_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_03_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_04_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_05_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_06_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_07_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_08_HITPOINT" />
-  <Key ID="STR_ENH_DAMAGE_GLASS_POD_09_HITPOINT" />
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
     <English>Light #01</English>
   </Key>
@@ -6456,17 +6509,32 @@
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
     <English>Light #04</English>
   </Key>
-  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT" />
-  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT" />
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT">
+    <English>Fuel Lead (Left)</English>
+    <German>Treibstoffleitung (Links)</German>
+  </Key>
+  <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT">
+    <English>Fuel Lead (Right)</English>
+    <German>Treibstoffleitung (Rechts)</German>
+  </Key>
   <Key ID="STR_ENH_DAMAGE_HITLAILERON_LINK">
     <English>Aileron Link (Left)</English>
+    <German>Querruder (Links)</German>
   </Key>
-  <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE" />
+  <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE">
+    <English>Pitot Tube</English>
+    <German>Pitot-Sonde</German>
+  </Key>
   <Key ID="STR_ENH_DAMAGE_HITRAILERON_LINK">
     <English>Aileron Link (Right)</English>
+    <German>Querrruder (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_ADVANCEDDAMAGE_DESCRIPTION">
-    <English>Allows to add damage to all available hit points of this entity.</English>
-    <German>Ermöglicht das Hinzufügen von Schaden zu allen verfügbaren 'HitPoints' dieser Entität.</German>
+    <English>Allows to add damage to all available hit points of this entity. Some hitpoints might not have an effect!</English>
+    <German>Ermöglicht das Hinzufügen von Schaden zu allen verfügbaren 'HitPoints' dieser Entität. Es kann sein das manche 'HitPoints' keinen Effekt haben!</German>
+  </Key>
+  <Key ID="STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS">
+    <English>No hitpoints available for this object!</English>
+    <German>Keine 'Hitpoints' vorhanden!</German>
   </Key>
 </Project>
