@@ -5092,8 +5092,8 @@
     <Polish>Może umrzeć?</Polish>
   </Key>
   <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
-    <English>Units can instantly die by getting shot in the head.</English>
-    <German>Einheiten können durch einen kritischen Treffer in den Kopf sofort sterben</German>
+    <English>Units can instantly die by getting shot in the head. They cannot respawn after a fatal hit.</English>
+    <German>Einheiten können durch einen kritischen Treffer in den Kopf sofort sterben. Der Wiedereinstieg ist anschließend deaktiviert.</German>
     <Spanish>Las unidades mueren instantaneamente al recibir un tiro en la cabeza.</Spanish>
     <French>Les unités peuvent mourir instantanément lorsqu'elles sont touchées à la tête.</French>
     <Polish>Jednostka może zginąć na miejscu od strzału w głowę.</Polish>
@@ -5550,7 +5550,7 @@
     <Russian>Окно #15</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLFWHEEL">
-    <English>1st axle left wheel</English>
+    <English>1st Axle Left Wheel</English>
     <Italian>Ruota sinistra del 1° asse</Italian>
     <Czech>První náprava levé kolo</Czech>
     <French>1er essieu, roue gauche</French>
@@ -5561,7 +5561,7 @@
     <Russian>1-я ось левое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRFWHEEL">
-    <English>1st axle right wheel</English>
+    <English>1st Axle Right Wheel</English>
     <Italian>Ruota destra del 1° asse</Italian>
     <Czech>První náprava pravé kolo</Czech>
     <French>1er essieu, roue droite</French>
@@ -5572,7 +5572,7 @@
     <Russian>1-я ось правое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLF2WHEEL">
-    <English>2nd axle left wheel</English>
+    <English>2nd Axle Left Wheel</English>
     <Italian>Ruota sinistra del 2° asse</Italian>
     <Czech>Druhá náprava levé kolo</Czech>
     <French>2ème essieu, roue gauche</French>
@@ -5583,7 +5583,7 @@
     <Russian>2-я ось левое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRF2WHEEL">
-    <English>2nd axle right wheel</English>
+    <English>2nd Axle Right Wheel</English>
     <Italian>Ruota destra del 2° asse</Italian>
     <Czech>Druhá náprava pravé kolo</Czech>
     <French>2ème essieu, roue droite</French>
@@ -5594,7 +5594,7 @@
     <Russian>2-я ось правое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLMWHEEL">
-    <English>3rd axle left wheel</English>
+    <English>3rd Axle Left Wheel</English>
     <Italian>Ruota sinistra del 3° asse</Italian>
     <Czech>Třetí náprava levé kolo</Czech>
     <French>3ème essieu, roue gauche</French>
@@ -5605,7 +5605,7 @@
     <Russian>3-я ось левое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRMWHEEL">
-    <English>3rd axle right wheel</English>
+    <English>3rd Axle Right Wheel</English>
     <Italian>Ruota destra del 3° asse</Italian>
     <Czech>Třetí náprava pravé kolo</Czech>
     <French>3ème essieu, roue droite</French>
@@ -5616,7 +5616,7 @@
     <Russian>3-я ось правое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLBWHEEL">
-    <English>4th axle left wheel</English>
+    <English>4th Axle Left Wheel</English>
     <Italian>Ruota sinistra del 4° asse</Italian>
     <Czech>Čtvrtá náprava levé kolo</Czech>
     <French>4ème essieu, roue gauche</French>
@@ -5627,7 +5627,7 @@
     <Russian>4-я ось левое колесо</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRBWHEEL">
-    <English>4th axle right wheel</English>
+    <English>4th Axle Right Wheel</English>
     <Italian>Ruota destra del 4° asse</Italian>
     <Czech>Čtvrtá náprava pravé kolo</Czech>
     <French>4ème essieu, roue droite</French>

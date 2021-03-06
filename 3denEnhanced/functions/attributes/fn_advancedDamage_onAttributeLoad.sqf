@@ -45,8 +45,9 @@ private _counter = 0;
 {
   _counter = _counter + 1;
   private _ctrlLabel = _display ctrlCreate ["ENH_AttributeTitle", 20000 + _forEachIndex, _ctrlGroup];
-  private _name = localize ("STR_ENH_DAMAGE_" + toUpper _x);
-  if (_name isEqualTo "") then {_ctrlLabel ctrlSetText _x} else {_ctrlLabel ctrlSetText _name};
+  private _name = "STR_ENH_DAMAGE_" + toUpper _x;
+
+  _ctrlLabel ctrlSetText (if (isLocalized _name) then {localize _name} else {_x});
   _ctrlLabel ctrlSetTooltip _x;
   _ctrlLabel ctrlSetPosition [0, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H];
   _ctrllabel ctrlCommit 0;
