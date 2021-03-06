@@ -229,7 +229,7 @@ class CfgFunctions
       class EH_onSelectionChange;
       class EH_onTerrainNew;
     };
-    class AttributeControls
+    class Attributes
     {
       file = "3denEnhanced\functions\attributes";
       #ifndef ENH_HIDE_ADVANCEDDAMAGE
