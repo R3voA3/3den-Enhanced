@@ -5,20 +5,19 @@
 
   Description:
   Draws the mod icon next to the Eden entity.
+
   Parameter(s):
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 //Remove icons if EH already exists and exit
-if (["ENH_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
+if (["ENH_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {};
 
-//Loop though all object
 ["ENH_EH_DrawDLCIcons_ID", "onEachFrame",
   {
     {
@@ -36,8 +35,6 @@ if (["ENH_EH_DrawDLCIcons_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHan
           0
         ];
       }
-    } count (vehicles + allUnits);//vehicles is alot faster than all3DENEntities # 0;
+    } count ((vehicles + allUnits) select {get3DENCamera distance _x <= 100});
   }
 ] call BIS_fnc_addStackedEventHandler;
-
-true
