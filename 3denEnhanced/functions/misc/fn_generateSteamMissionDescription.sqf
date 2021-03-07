@@ -8,14 +8,9 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-sleep 0.5;
-do3DENAction 'OpenSteamPublishDialog';
-
-private _export = "";
 //Steam formatting has been removed due to incompatibility issues. Code stays for now.
 /*_fnc_addLine =
 {
@@ -26,29 +21,19 @@ private _export = "";
 	_export = _export + _text + " " + _value + endl;
 };*/
 
-_fnc_addLine =
+private _export = "";
+private _fnc_addLine =
 {
   params [["_text", ""], ["_value", ""]];
   if !(_value isEqualType "") then {_value = str _value};
   _export = _export + _text + " " + _value + endl;
 };
-//General
-_description = "Scenario" get3DENMissionAttribute "OverviewText";
-//DLC
-_appID = "Scenario" get3DENMissionAttribute "AppID";
 
-switch _appID do
-{
-  case 275700: {_appID = "Zeus"};
-  case 288520: {_appID = "Karts"};
-  case 304380: {_appID = "Helicopters"};
-  case 332350: {_appID = "Marksmen"};
-  case 395180: {_appID = "Apex"};
-  case 571710: {_appID = "Laws of War"};
-  case 601670: {_appID = "Jets"};
-  case 744950: {_appID = "Tac Ops"};
-  case 798390: {_appID = "Tanks"};
-};
+_description = "Scenario" get3DENMissionAttribute "OverviewText";
+_appID = "Scenario" get3DENMissionAttribute "AppID";
+_appID = "getNumber (_x >> 'appID') == _appID" configClasses (configFile >> "CfgMods");
+_appID = getText (_appID select 0 >> "nameShort");
+
 //Multiplayer
 _gameType = "Multiplayer" get3DENMissionAttribute "GameType";
 _minPlayers = "Multiplayer" get3DENMissionAttribute "MinPlayers";
@@ -60,6 +45,7 @@ if (_revive > 0) then {_revive= "Yes"} else {_revive = "No"};
 _bleedOutTime = "Multiplayer" get3DENMissionAttribute "ReviveBleedOutDelay";
 _simulationDetail = "Multiplayer" get3DENMissionAttribute "ReviveUnconsciousStateMode";
 if (_simulationDetail > 0) then {_simulationDetail = "Advanced"} else {_simulationDetail = "Basic"};
+
 //Environment
 _time = ("Intel" get3DENMissionAttribute "IntelTime") call BIS_fnc_TimetoString;
 _fog = ("Intel" get3DENMissionAttribute "IntelFogStart") # 0;
@@ -68,15 +54,15 @@ _date = ("Intel" get3DENMissionAttribute "IntelDate");
 _date = (str (_date # 1) + "-" + str (date # 2) + "-" + str (date # 0));
 
 ["Mission Description", ""] call _fnc_addLine;
-["", _description, false, false] call _fnc_addLine;
+[_description, "", false, false] call _fnc_addLine;
 
-if !(_appID == 0) then
+if (_appID != "") then
 {
   ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
   ["Required DLC:", _appID] call _fnc_addLine;
 };
 
-if !(_gameType == "Unknown") then
+if (_gameType != "Unknown") then
 {
   ["", "", false, false] call _fnc_addLine;
   ["Multiplayer", "", false, true] call _fnc_addLine;
@@ -84,12 +70,14 @@ if !(_gameType == "Unknown") then
   ["min. Players:", _minPlayers] call _fnc_addLine;
   ["max. Players:", _maxPlayers] call _fnc_addLine;
 };
+
 if (_respawn == "Yes") then
 {
   ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
   ["Respawn System", "", false, true] call _fnc_addLine;
   ["Respawn enabled?", _respawn] call _fnc_addLine;
 };
+
 if (_revive == "Yes") then
 {
   ["", "", false, false] call _fnc_addLine;//Empty line because of Steam formatting
@@ -106,11 +94,6 @@ if (_revive == "Yes") then
 ["Fog:", format ["%1%2", round (_fog * 100), "%"]] call _fnc_addLine;
 ["Rain:", format ["%1%2", round (_rain * 100), "%"]] call _fnc_addLine;
 ["Map:", getText (configfile >> "CfgWorlds" >> worldName >> "description")] call _fnc_addLine;
-["", "", false, false] call _fnc_addLine;
-["[img]https://i.imgur.com/p7Fv1Z6.gif[/img]", "", false, false] call _fnc_addLine;
-["", "", false, false] call _fnc_addLine;
-["Rate, favorite and comment! Feedback is always appreciated!", "", false, true] call _fnc_addLine;
 
-copyToClipboard _export;
-
-true
+do3DENAction 'OpenSteamPublishDialog';
+findDisplay 165 displayCtrl 104 ctrlSetText _export;
