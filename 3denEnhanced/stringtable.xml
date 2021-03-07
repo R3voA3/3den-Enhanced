@@ -4562,6 +4562,10 @@
     <French>Activer/désactiver l'affichage des positions de bâtiments</French>
     <Polish>Przełącz rysowanie pozycji w budynkach</Polish>
   </Key>
+  <Key ID="STR_ENH_TOOLS_DRAWHITPOINTS">
+    <English>Toggle Drawing of Vehicle Hitpoints</English>
+    <German>Fahrzeugtrefferpunkte anzeigen an/aus</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER">
     <English>Scenario Attributes Manager</English>
     <Spanish>Manejador de atributos de escenario</Spanish>

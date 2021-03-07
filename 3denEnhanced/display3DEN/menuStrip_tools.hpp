@@ -114,6 +114,7 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDynamicSimulation",
     "ENH_ToggleDrawBuildingPositions",
     "ENH_ToggleDrawDLCIcons",
+    "ENH_ToggleDrawHitpoints",
     "ENH_ToggleAIFeatures",
     "Separator",
     "ENH_CreateTrigger"
@@ -272,6 +273,11 @@ class ENH_ToggleDrawDLCIcons
   text = "$STR_ENH_TOOLS_DRAWDLCICONS";
   action = "call ENH_fnc_toggleDrawDLCIcons";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
+};
+class ENH_ToggleDrawDLCIcons
+{
+  text = "$STR_ENH_TOOLS_DRAWDLCICONS";
+  action = "call ENH_fnc_toggleDrawHitpoints";
 };
 class ENH_ToggleAIFeatures
 {

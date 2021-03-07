@@ -191,6 +191,7 @@ class CfgFunctions
       class toggleAttribute;
       class toggleDrawBuildingPositions;
       class toggleDrawDLCIcons;
+      class toggleDrawHitpoints;
       class toggleGrass;
       class twoDigitsStr;
     };
