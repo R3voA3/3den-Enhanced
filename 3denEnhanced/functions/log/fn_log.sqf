@@ -199,18 +199,18 @@ switch (_mode) do
     if (true) exitWith
     {
       //Set variable used by Display3denCopy and create the display
-      uinamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
+      uiNamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
 
       //Stupid workaround because BI is not able to fix this
-      _display = findDisplay IDD_3DEN createDisplay "Display3denCopy";
-      _ctrlGroup = _display displayCtrl 201;
-      _ctrlEdit = _display displayCtrl 202;
-      _ctrlEditFake = _display displayCtrl 203;
+      private _display = findDisplay IDD_3DEN createDisplay "Display3denCopy";
+      private _ctrlGroup = _display displayCtrl 201;
+      private _ctrlEdit = _display displayCtrl 202;
+      private _ctrlEditFake = _display displayCtrl 203;
 
       _ctrlEdit ctrlSetPositionH (ctrlTextHeight _ctrlEdit max (ctrlPosition _ctrlGroup # 3));
       _ctrlEditFake ctrlSetPositionH (ctrlTextHeight _ctrlEditFake max (ctrlPosition _ctrlGroup # 3));
-      _ctrlEdit ctrlcommit 0;
-      _ctrlEditFake ctrlcommit 0;
+      _ctrlEdit ctrlCommit 0;
+      _ctrlEditFake ctrlCommit 0;
     };
   };
 };
@@ -218,5 +218,5 @@ switch (_mode) do
 if (_export != "") then
 {
   copyToClipboard _export;
-  ['ENH_DataCopied'] call BIS_fnc_3DENNotification;
+  ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 };
