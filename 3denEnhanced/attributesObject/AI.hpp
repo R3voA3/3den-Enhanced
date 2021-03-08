@@ -17,7 +17,7 @@ class ENH_AI
       tooltip = "$STR_ENH_AIMINGSHAKE_TOOLTIP";
       property = "ENH_aimingShake";
       expression = "_this setSkill ['aimingShake', _value]";
-      control = "Skill";
+      control = "Slider";
       defaultValue = "0.5";
       condition = "objectBrain";
     };
