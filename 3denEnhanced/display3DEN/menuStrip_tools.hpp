@@ -57,7 +57,8 @@ class ENH_Folder_Loadout
     "ENH_RemoveVests",
     "ENH_RemoveGoggles",
     "ENH_RemoveHeadgear",
-    "ENH_RemoveWeapons"
+    "ENH_RemoveWeapons",
+    "ENH_RemoveGear"
   };
 };
 class ENH_Folder_GUI
@@ -419,6 +420,12 @@ class ENH_RemoveWeapons
   text = "$STR_ENH_TOOLS_REMOVEWEAPONS";
   action = "4 call ENH_fnc_removeGear";
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
+};
+class ENH_RemoveGear
+{
+  text = "$STR_ENH_TOOLS_REMOVEGEAR";
+  action = "7 call ENH_fnc_removeGear";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_F};
 };
 class ENH_InventoryManager
 {
