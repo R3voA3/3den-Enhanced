@@ -2890,10 +2890,9 @@
     <English>Recompiles all functions. This may take a moment.</English>h&gt;
     <Italian>Ricompila tutte le funzioni. Questo puo richiedere un momento.</Italian>
     <German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German>
-    <Chinesesimp>重新编译所有功能。 这可能需要一些时间。</Chinesesimp>
+    <Chinesesimp>重新编译所有功能。 这可能需要一些时间</Chinesesimp>
     <Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish>
-    <Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech>
-    <French>Recompile toutes les fonctions. Cela peut prendre un moment.</French>
+    <Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French>
     <Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian>
     <Polish>Rekompiluje wszytkie funkcje. To może chwilę potrwać.</Polish></Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT">
@@ -3369,7 +3368,6 @@
   <Key ID="STR_ENH_ABOUT_CHANGELOG">
     <English>Changelog</English>
     <German>Changelog</German>
-    <Chinesesimp>Changelog</Chinesesimp>
     <Czech>Changelog</Czech>
     <French>Changelog</French>
     <Italian>Changelog</Italian>
@@ -3580,9 +3578,10 @@
     <Chinesesimp>属性 %1 已设置为 %2.</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_BRIEFING_TOOLTIP">
-    <English>These briefings work in singleplayer, multiplayer and for JIP players. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
+    <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
     <Spanish>Estos informes funcionan para un jugador, multijugador y para jugadores JIP. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información. \n \n Si se proporciona una Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
     <Chinesesimp>这些简介适用于单人游戏，多人游戏和中途加入的玩家。 您也可以插入使用简报编辑器创建的格式化文本。 有关更多信息，请参见BI Wiki上的"createDiaryRecord"。\n\n如果提供了stringtable.xml，则简报将以玩家的语言显示。</Chinesesimp>
+    <German>Erstellt Einsatzbesprechungseinträge für alle Spieler der gegebenen Seite. Du kannst außerdem Text der mit dem Briefing Editor formatiert wurde, einfügen. Besuche die 'createDiaryRecord' Seite auf der BI Wiki für mehr Informationen.\n\nWenn ein 'Stringtable' Eintrag angegeben wird, wird dieser in der Sprache des jeweiligen Spieler angezeigt.</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
     <English>Exports all GUI base classes.</English>
@@ -3875,7 +3874,6 @@
     <English>Dynamic Groups</English>
     <German>Gruppenverwaltung</German>
     <French>Groupes dynamiques</French>
-    <Chinesesimp>Dynamic Groups</Chinesesimp>
     <Czech>Dynamic Groups</Czech>
     <Polish>Dynamic Groups</Polish>
     <Russian>Dynamic Groups</Russian>
@@ -4445,7 +4443,7 @@
     <German>Wenn erlaubt, kann die Einheit die Animation beenden, wenn sie in Gefahr ist.</German>
     <French>Si activé, l'unité quittera l'animation lorsqu'elle est en danger;</French>
     <Polish>Jeżeli włączone, jednostka opuści animacje kiedy w niebezpieczeństwie.</Polish>
-    <Chinesesimp>如果启用，则当单位处于危险中时，将退出动画。Chinesesimp>
+    <Chinesesimp>如果启用，则当单位处于危险中时，将退出动画。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME">
     <English>Attach?</English>
@@ -4860,7 +4858,7 @@
     <German>Skriptbefehle</German>
     <Spanish>Comandos de Scripts</Spanish>
     <French>Commandes script</French>
-    <Chinesesimp></Chinesesimp>
+    <Chinesesimp>Script Commands</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
     <English>Create Extraction</English>
@@ -4899,7 +4897,7 @@
     <German>%2 von %1. Sofortige Extraktion benötigt. Koordinaten sind %3, kommen.</German>
     <Spanish>%2, aquí %1. Solicita extracción inmediata en la posición de cuadrícula %3, terminado.</Spanish>
     <French>%2 de %1. Demandons extraction immédiate à la position %3. Terminé.</French>
-    <Chinesesimp%2，这里是 %1，请求立即撤离，坐标位置 %3，完毕。</Chinesesimp>
+    <Chinesesimp>%2，这里是 %1，请求立即撤离，坐标位置 %3，完毕。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
     <English>%1 this is %2, coordinates received. Standby, over.</English>
@@ -6324,200 +6322,247 @@
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
     <English>Light #02</English>
     <German>Licht #02</German>
-    <Chinesesimp>>灯光 #02</Chinesesimp>
+    <Chinesesimp>&gt;灯光 #02</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
     <English>Light #03</English>
     <German>Licht #03</German>
-    <Chinesesimp>>灯光 #03</Chinesesimp>
+    <Chinesesimp>&gt;灯光 #03</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
     <English>Spotlight</English>
     <Chinesesimp>聚光灯</Chinesesimp>
+    <German>Suchscheinwerfer</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
     <English>Wing Light (Left)</English>
     <Chinesesimp>翼灯（左）</Chinesesimp>
+    <German>Flügellicht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
     <English>Wing Light (Right)</English>
     <Chinesesimp>翼灯（右）</Chinesesimp>
+    <German>Flügellicht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_L">
     <English>Hand (Left)</English>
     <Chinesesimp>手（左）</Chinesesimp>
+    <German>Hand (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_R">
     <English>Hand (Right)</English>
     <Chinesesimp>手（右）</Chinesesimp>
+    <German>Hand (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
     <English>Battery (Left)</English>
     <Chinesesimp>电池（左）</Chinesesimp>
+    <German>Batterie (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
     <English>Battery (Right)</English>
     <Chinesesimp>电池（右）</Chinesesimp>
+    <German>Batterie (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE4">
     <English>Engine #04</English>
     <Chinesesimp>引擎 #04</Chinesesimp>
+    <German>Motor #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
     <English>Era (Back)</English>
     <Chinesesimp>年代（后）</Chinesesimp>
+    <German>Era (Hinten)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_FRONT">
     <English>Era (Front)</English>
     <Chinesesimp>年代（前）</Chinesesimp>
+    <German>Era (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT">
     <English>Era (left)</English>
     <Chinesesimp>年代（左）</Chinesesimp>
+    <German>Era (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_1">
     <English>Era (Left, #01)</English>
     <Chinesesimp>年代（左, #01）</Chinesesimp>
+    <German>Era (Links, #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_2">
     <English>Era (Left, #02)</English>
     <Chinesesimp>年代（左, #02）</Chinesesimp>
+    <German>Era (Links, #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_3">
     <English>Era (Left, #03)</English>
     <Chinesesimp>年代（左, #03）</Chinesesimp>
+    <German>Era (Links, #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_4">
     <English>Era (Left, #04)</English>
     <Chinesesimp>年代（左, #04）</Chinesesimp>
+    <German>Era (Links, #04)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT">
     <English>Era (Right)</English>
     <Chinesesimp>年代（右）</Chinesesimp>
+    <German>Era (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_1">
     <English>Era (Right, #01)</English>
     <Chinesesimp>年代（右, #01）</Chinesesimp>
+    <German>Era (Rechts, #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_2">
     <English>Era (Right, #02)</English>
     <Chinesesimp>年代（右, #02）</Chinesesimp>
+    <German>Era (Rechts, #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_3">
     <English>Era (Right, #03)</English>
     <Chinesesimp>年代（右, #03）</Chinesesimp>
+    <German>Era (Rechts, #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_4">
     <English>Era (Right, #04)</English>
     <Chinesesimp>年代（右, #04）</Chinesesimp>
+    <German>Era (Rechts, #04)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP">
     <English>Era (Top)</English>
     <Chinesesimp>年代（上方）</Chinesesimp>
+    <German>Era (Oben)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_FRONT">
     <English>Era (Top, Front)</English>
     <Chinesesimp>年代（上前方）</Chinesesimp>
+    <German>Era (Oben, Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT">
     <English>Era (Top, Left)</English>
     <Chinesesimp>年代（左上方）</Chinesesimp>
+    <German>Era (Oben, Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_1">
     <English>Era (Top, Left, #01)</English>
     <Chinesesimp>年代 (左上方, #01)</Chinesesimp>
+    <German>Era (Oben, Links, #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_2">
     <English>Era (Top, Left, #02)</English>
     <Chinesesimp>年代 (左上方, #02)</Chinesesimp>
+    <German>Era (Oben, Links, #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT">
     <English>Era (Top, Right)</English>
     <Chinesesimp>年代 (右上方)</Chinesesimp>
+    <German>Era (Oben, Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_1">
     <English>Era (Top, Right, #01)</English>
     <Chinesesimp>年代 (右上方, #01)</Chinesesimp>
+    <German>Era (Oben, Rechts, #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_2">
     <English>Era (Top, Right, #02)</English>
     <Chinesesimp>年代 (右上方, #02)</Chinesesimp>
+    <German>Era (Oben, Rechts #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
     <English>FuelTank (Left)</English>
     <Chinesesimp>油箱（左）</Chinesesimp>
+    <German>Tank (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
     <English>Fuel Tank (Right)</English>
     <Chinesesimp>油缸(右)</Chinesesimp>
+    <German>Tank (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
     <English>Fuel Tank</English>
     <Chinesesimp>油缸</Chinesesimp>
+    <German>Tank</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS16">
     <English>Window #16</English>
     <Chinesesimp>窗户 #16</Chinesesimp>
+    <German>Fenster #16</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS17">
     <English>Window #17</English>
     <Chinesesimp>窗户 #17</Chinesesimp>
+    <German>Fenster #17</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS18">
     <English>Window #18</English>
     <Chinesesimp>窗户 #18</Chinesesimp>
+    <German>Fenster #18</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS19">
     <English>Window #19</English>
     <Chinesesimp>窗户 #19</Chinesesimp>
+    <German>Fenster #19</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
     <English>Window 1A</English>
     <Chinesesimp>窗户 1A</Chinesesimp>
+    <German>Fenster 1A</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
     <English>Window 1B</English>
     <Chinesesimp>窗户 1B</Chinesesimp>
+    <German>Fenster 1B</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS20">
     <English>Window #20</English>
     <Chinesesimp>窗户 #20</Chinesesimp>
+    <German>Fenster #20</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
     <English>Horizontal Stabilizer (Left)</English>
     <Chinesesimp>水平安定面(左)</Chinesesimp>
+    <German>Horizontaler Stabilisator (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
     <English>Horizontal Stabilizer (Right)</English>
     <Chinesesimp>水平安定面(右)</Chinesesimp>
+    <German>Horizontaler Stabilisator (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHT">
     <English>Light</English>
     <Chinesesimp>灯光</Chinesesimp>
+    <German>Licht</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
     <English>Light (Back)</English>
     <Chinesesimp>灯光 (背面)</Chinesesimp>
+    <German>Licht (Hinten)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
     <English>Light (Front)</English>
     <Chinesesimp>灯光 (前面)</Chinesesimp>
+    <German>Licht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
     <English>Light (Left)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
     <English>Light (Right)</English>
     <Chinesesimp>灯光 (右)</Chinesesimp>
+    <German>Light (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTIC">
     <English>Optic</English>
     <Chinesesimp>视力</Chinesesimp>
+    <German>Optik</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTICS">
     <English>Optics</English>
     <Chinesesimp>光学</Chinesesimp>
+    <German>Optiken</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
     <English>Reserve Wheel</English>
@@ -6527,110 +6572,137 @@
   <Key ID="STR_ENH_DAMAGE_HITROTOR">
     <English>Rotor</English>
     <Chinesesimp>水平旋翼</Chinesesimp>
+    <German>Rotor</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
     <English>Rotor (Virtual)</English>
     <Chinesesimp>水平旋翼(虚拟)</Chinesesimp>
+    <German>Rotor (Virtuell)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT">
     <English>Slat (Left)</English>
     <Chinesesimp>缝翼(左)</Chinesesimp>
+    <German>Käfig (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT">
     <English>Slat (Right)</English>
     <Chinesesimp>缝翼(右)</Chinesesimp>
+    <German>Käfig (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER1">
     <English>Starter #01</English>
     <Chinesesimp>起动机 #01</Chinesesimp>
+    <German>Starter #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER2">
     <English>Starter #02</English>
     <Chinesesimp>起动机 #02</Chinesesimp>
+    <German>Starter #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER3">
     <English>Starter #03</English>
     <Chinesesimp>起动机 #03</Chinesesimp>
+    <German>Starter #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTATICPORT">
     <English>Static Port</English>
     <Chinesesimp>静压汽门</Chinesesimp>
+    <German>Statikanschluss</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITVSTABILIZER1">
     <English>Vertical Stabilizer #01</English>
     <Chinesesimp>垂直安定面 #01</Chinesesimp>
+    <German>Vertikaler Stabilisator #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_1_HITPOINT">
     <English>Hitzone #01</English>
     <Chinesesimp>Hitzone #01</Chinesesimp>
+    <German>Hitzone #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_2_HITPOINT">
     <English>Hitzone #02</English>
     <Chinesesimp>Hitzone #02</Chinesesimp>
+    <German>Hitzone #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_3_HITPOINT">
     <English>Hitzone #03</English>
     <Chinesesimp>Hitzone #03</Chinesesimp>
+    <German>Hitzone #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_4_HITPOINT">
     <English>Hitzone #04</English>
     <Chinesesimp>Hitzone #04</Chinesesimp>
+    <German>Hitzone #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_INCAPACITATED">
     <English>Incapacitated</English>
     <Chinesesimp>丧失行动能力</Chinesesimp>
+    <German>Bewusstlos</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LEG_L">
     <English>Leg (Left)</English>
     <Chinesesimp>腿（左）</Chinesesimp>
+    <German>Bein (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LEG_R">
     <English>Leg (Right)</English>
     <Chinesesimp>腿（右）</Chinesesimp>
+    <German>Bein (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_1_HITPOINT">
     <English>Light #01</English>
     <Chinesesimp>灯光 #01</Chinesesimp>
+    <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_2_HITPOINT">
     <English>Light #02</English>
     <Chinesesimp>灯光 #02</Chinesesimp>
+    <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_3_HITPOINT">
     <English>Light #03</English>
     <Chinesesimp>灯光 #03</Chinesesimp>
+    <German>Light #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
     <English>Light #04</English>
     <Chinesesimp>灯光 #04</Chinesesimp>
+    <German>Light #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT">
     <English>Gear #01 (Light #01)</English>
     <Chinesesimp>起落架 #01 (灯光 #01)</Chinesesimp>
+    <German>Fahrwerk #01 (Licht #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT">
     <English>Gear #01 (Light #02)</English>
     <Chinesesimp>起落架 #01 (灯光 #02)</Chinesesimp>
+    <German>Fahrwerk #01 (Licht #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT">
     <English>Gear #02 (Light #01)</English>
     <Chinesesimp>起落架 #02 (灯光 #01)</Chinesesimp>
+    <German>Fahrwerk #02 (Licht #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT">
     <English>Gear #02 (Light #02)</English>
     <Chinesesimp>起落架 #02 (灯光 #02)</Chinesesimp>
+    <German>Fahrwerk #02 (Licht #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT">
     <English>Gear #03 (Light #01)</English>
     <Chinesesimp>起落架 #03 (灯光 #01)</Chinesesimp>
+    <German>Fahrwerk #03 (Licht #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT">
     <English>Gear #03 (Light #02)</English>
     <Chinesesimp>起落架 #03 (灯光 #02)</Chinesesimp>
+    <German>Fahrwerk #03 (Licht #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS">
     <English>Gear Light (Front)</English>
     <Chinesesimp>起落架灯 (前部)</Chinesesimp>
+    <German>Fahrwerkslicht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#L SVETLO">
     <English>Light (Left)</English>
@@ -6650,353 +6722,441 @@
   <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT">
     <English>Light #01</English>
     <Chinesesimp>灯光 #01</Chinesesimp>
+    <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2">
     <English>Light #02</English>
     <Chinesesimp>灯光 #02</Chinesesimp>
+    <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT">
     <English>Light #02</English>
     <Chinesesimp>灯光 #02</Chinesesimp>
+    <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT">
     <English>Light #03</English>
     <Chinesesimp>灯光 #03</Chinesesimp>
+    <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT">
     <English>Light #03</English>
     <Chinesesimp>灯光 #03</Chinesesimp>
+    <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT">
     <English>Light #03</English>
     <Chinesesimp>灯光 #03</Chinesesimp>
+    <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT">
     <English>Light #04</English>
     <Chinesesimp>灯光 #04</Chinesesimp>
+    <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT">
     <English>Light #04</English>
     <Chinesesimp>灯光 #04</Chinesesimp>
+    <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT">
     <English>Light</English>
     <Chinesesimp>灯光</Chinesesimp>
+    <German>Licht</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L">
     <English>Light (Left)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L2">
     <English>Light (Left #02)</English>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
+    <German>Licht (Links #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE">
     <English>Light (Left #02)</English>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
+    <German>Licht (Links #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE">
     <English>Light (Left)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT">
     <English>Light (Left)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R">
     <English>Light (Right)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R2">
     <English>Light (Right #02)</English>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
+    <German>Licht (Rechts #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE">
     <English>Light (Right #02)</English>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
+    <German>Licht (Rechts #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE">
     <English>Light (Right)</English>
     <Chinesesimp>灯光 (右)</Chinesesimp>
+    <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT">
     <English>Light (Right)</English>
     <Chinesesimp>灯光 (左)</Chinesesimp>
+    <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#P SVETLO">
     <English>Licht (Links)</English>
     <Chinesesimp>灯（左）</Chinesesimp>
+    <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
     <English>Gear Light (Front)</English>
     <Chinesesimp>起落架灯（前）</Chinesesimp>
+    <German>Fahrwerkslicht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_10_HITPOINT">
     <English>Window #10</English>
     <Chinesesimp>窗户 #10</Chinesesimp>
+    <German>Fenster #10</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_11_HITPOINT">
     <English>Window #11</English>
     <Chinesesimp>窗户 #11</Chinesesimp>
+    <German>Fenster #11</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_12_HITPOINT">
     <English>Window #12</English>
     <Chinesesimp>窗户 #12</Chinesesimp>
+    <German>Fenster #12</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_13_HITPOINT">
     <English>Window #13</English>
     <Chinesesimp>窗户 #13</Chinesesimp>
+    <German>Fenster #13</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_14_HITPOINT">
     <English>Window #14</English>
     <Chinesesimp>窗户 #14</Chinesesimp>
+    <German>Fenster #14</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_15_HITPOINT">
     <English>Window #15</English>
     <Chinesesimp>窗户 #15</Chinesesimp>
+    <German>Fenster #15</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_16_HITPOINT">
     <English>Window #16</English>
     <Chinesesimp>窗户 #16</Chinesesimp>
+    <German>Fenster #16</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_17_HITPOINT">
     <English>Window #17</English>
     <Chinesesimp>窗户 #17</Chinesesimp>
+    <German>Fenster #17</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_18_HITPOINT">
     <English>Window #18</English>
     <Chinesesimp>窗户 #18</Chinesesimp>
+    <German>Fenster #18</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_19_HITPOINT">
     <English>Window #19</English>
     <Chinesesimp>窗户 #19</Chinesesimp>
+    <German>Fenster #19</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_1_HITPOINT">
     <English>Window #01</English>
     <Chinesesimp>窗户 #01</Chinesesimp>
+    <German>Fenster #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_20_HITPOINT">
     <English>Window #20</English>
     <Chinesesimp>窗户 #20</Chinesesimp>
+    <German>Fenster #20</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_21_HITPOINT">
     <English>Window #21</English>
     <Chinesesimp>窗户 #21</Chinesesimp>
+    <German>Fenster #21</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_22_HITPOINT">
     <English>Window #22</English>
     <Chinesesimp>窗户 #22</Chinesesimp>
+    <German>Fenster #22</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_23_HITPOINT">
     <English>Window #23</English>
     <Chinesesimp>窗户 #23</Chinesesimp>
+    <German>Fenster #23</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_24_HITPOINT">
     <English>Window #24</English>
     <Chinesesimp>窗户 #24</Chinesesimp>
+    <German>Fenster #24</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_25_HITPOINT">
     <English>Window #25</English>
     <Chinesesimp>窗户 #25</Chinesesimp>
+    <German>Fenster #25</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_26_HITPOINT">
     <English>Window #26</English>
     <Chinesesimp>窗户 #26</Chinesesimp>
+    <German>Fenster #26</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_27_HITPOINT">
     <English>Window #27</English>
     <Chinesesimp>窗户 #27</Chinesesimp>
+    <German>Fenster #27</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_28_HITPOINT">
     <English>Window #28</English>
     <Chinesesimp>窗户 #28</Chinesesimp>
+    <German>Fenster #28</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_29_HITPOINT">
     <English>Window #29</English>
     <Chinesesimp>窗户 #29</Chinesesimp>
+    <German>Fenster #29</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_2_HITPOINT">
     <English>Window #02</English>
     <Chinesesimp>窗户 #02</Chinesesimp>
+    <German>Fenster #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_30_HITPOINT">
     <English>Window #30</English>
     <Chinesesimp>窗户 #30</Chinesesimp>
+    <German>Fenster #30</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_31_HITPOINT">
     <English>Window #31</English>
     <Chinesesimp>窗户 #31</Chinesesimp>
+    <German>Fenster #31</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_32_HITPOINT">
     <English>Window #32</English>
     <Chinesesimp>窗户 #32</Chinesesimp>
+    <German>Fenster #32</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_33_HITPOINT">
     <English>Window #33</English>
     <Chinesesimp>窗户 #33</Chinesesimp>
+    <German>Fenster #33</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_34_HITPOINT">
     <English>Window #34</English>
     <Chinesesimp>窗户 #34</Chinesesimp>
+    <German>Fenster #34</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_35_HITPOINT">
     <English>Window #35</English>
     <Chinesesimp>窗户 #35</Chinesesimp>
+    <German>Fenster #35</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_36_HITPOINT">
     <English>Window #36</English>
     <Chinesesimp>窗户 #36</Chinesesimp>
+    <German>Fenster #36</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_37_HITPOINT">
     <English>Window #37</English>
     <Chinesesimp>窗户 #37</Chinesesimp>
+    <German>Fenster #37</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_38_HITPOINT">
     <English>Window #38</English>
     <Chinesesimp>窗户 #38</Chinesesimp>
+    <German>Fenster #38</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
     <English>Window #39</English>
     <Chinesesimp>窗户 #39</Chinesesimp>
-    </Key>
+    <German>Fenster #39</German>
+  </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
     <English>Window #03</English>
     <Chinesesimp>窗户 #03</Chinesesimp>
+    <German>Fenster #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_40_HITPOINT">
     <English>Window #40</English>
     <Chinesesimp>窗户 #40</Chinesesimp>
+    <German>Fenster #40</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_41_HITPOINT">
     <English>Window #41</English>
     <Chinesesimp>窗户 #41</Chinesesimp>
+    <German>Fenster #41</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_42_HITPOINT">
     <English>Window #42</English>
     <Chinesesimp>窗户 #42</Chinesesimp>
+    <German>Fenster #42</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_43_HITPOINT">
     <English>Window #43</English>
     <Chinesesimp>窗户 #43</Chinesesimp>
+    <German>Fenster #43</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_44_HITPOINT">
     <English>Window #44</English>
     <Chinesesimp>窗户 #44</Chinesesimp>
+    <German>Fenster #44</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_45_HITPOINT">
     <English>Window #45</English>
     <Chinesesimp>窗户 #45</Chinesesimp>
+    <German>Fenster #45</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_46_HITPOINT">
     <English>Window #46</English>
+    <German>Fenster #46</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_47_HITPOINT">
     <English>Window #47</English>
     <Chinesesimp>窗户 #47</Chinesesimp>
+    <German>Fenster #47</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_48_HITPOINT">
     <English>Window #48</English>
     <Chinesesimp>窗户 #48</Chinesesimp>
+    <German>Fenster #48</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_49_HITPOINT">
     <English>Window #49</English>
     <Chinesesimp>窗户 #49</Chinesesimp>
+    <German>Fenster #49</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_4_HITPOINT">
     <English>Window #04</English>
     <Chinesesimp>窗户 #04</Chinesesimp>
+    <German>Fenster #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_50_HITPOINT">
     <English>Window #50</English>
     <Chinesesimp>窗户 #50</Chinesesimp>
+    <German>Fenster #50</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_51_HITPOINT">
     <English>Windoe #51</English>
     <Chinesesimp>窗户 #51</Chinesesimp>
+    <German>Fenster #51</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_52_HITPOINT">
     <English>Window #52</English>
     <Chinesesimp>窗户 #52</Chinesesimp>
+    <German>Fenster #52</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_53_HITPOINT">
     <English>Window #53</English>
     <Chinesesimp>窗户 #53</Chinesesimp>
+    <German>Fenster #53</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_54_HITPOINT">
     <English>Window #54</English>
     <Chinesesimp>窗户 #54</Chinesesimp>
+    <German>Fenster #54</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_55_HITPOINT">
     <English>Window #55</English>
     <Chinesesimp>窗户 #55</Chinesesimp>
+    <German>Fenster #55</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_56_HITPOINT">
     <English>Windoe #56</English>
     <Chinesesimp>窗户 #56</Chinesesimp>
+    <German>Fenster #56</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_57_HITPOINT">
     <English>Window #57</English>
     <Chinesesimp>窗户 #57</Chinesesimp>
+    <German>Fenster #57</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_58_HITPOINT">
     <English>Window #58</English>
     <Chinesesimp>窗户 #58</Chinesesimp>
+    <German>Fenster #58</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_59_HITPOINT">
     <English>Window #59</English>
     <Chinesesimp>窗户 #59</Chinesesimp>
+    <German>Fenster #59</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_5_HITPOINT">
     <English>Window #05</English>
     <Chinesesimp>窗户 #05</Chinesesimp>
+    <German>Fenster #05</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_60_HITPOINT">
     <English>Window #60</English>
     <Chinesesimp>窗户 #60</Chinesesimp>
+    <German>Fenster #60</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_61_HITPOINT">
     <English>Window #61</English>
     <Chinesesimp>窗户 #61</Chinesesimp>
+    <German>Fenster #61</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_62_HITPOINT">
     <English>Window #62</English>
     <Chinesesimp>窗户 #62</Chinesesimp>
+    <German>Fenster #62</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_6_HITPOINT">
     <English>Window #06</English>
     <Chinesesimp>窗户 #06</Chinesesimp>
+    <German>Fenster #06</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_7_HITPOINT">
     <English>Window #07</English>
     <Chinesesimp>窗户 #07</Chinesesimp>
+    <German>Fenster #07</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_8_HITPOINT">
     <English>Window #08</English>
     <Chinesesimp>窗户 #08</Chinesesimp>
+    <German>Fenster #08</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
     <English>Window #09</English>
     <Chinesesimp>窗户 #09</Chinesesimp>
+    <German>Fenster #09</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
     <English>Light #01</English>
     <Chinesesimp>灯光 #01</Chinesesimp>
+    <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1_FLARE">
     <English>Light Flare #01</English>
     <Chinesesimp>闪光灯 #01</Chinesesimp>
+    <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_2">
     <English>Light #02</English>
     <Chinesesimp>灯光 #02</Chinesesimp>
+    <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_3">
     <English>Light #03</English>
     <Chinesesimp>灯光 #03</Chinesesimp>
+    <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
     <English>Light #04</English>
     <Chinesesimp>灯光 #04</Chinesesimp>
+    <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT">
     <English>Fuel Lead (Left)</English>
