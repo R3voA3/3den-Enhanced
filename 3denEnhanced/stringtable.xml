@@ -160,6 +160,10 @@
     <Polish>Losowa muzyka</Polish>
     <Russian>Случайная музыка</Russian>
   </Key>
+  <Key ID="STR_ENH_TOOLS_REMOVEGEAR">
+    <English>Remove Everything</English>
+    <German>Alles entfernen</German>
+  </Key>
   <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
     <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
     <Italian>Fa partire una musica scelta a caso all'inizio della missione. L'imput deve apparire come segue: Classname_1 Classname_2 Classname_3 Classname_n.</Italian>
@@ -6853,7 +6857,7 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
     <English>Window #39</English>
-    <Chinesesimp>窗户 #39</Chinesesimp>  
+    <Chinesesimp>窗户 #39</Chinesesimp>
     </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
     <English>Window #03</English>
