@@ -1067,7 +1067,7 @@
     <Russian>Дистанция обнаружения</Russian>
   </Key>
   <Key ID="STR_ENH_SPOTDISTANCE_TOOLTIP">
-    <English>Affects the AI's ability to spot targets within it's visual or audible range and also affects the accuracy of the information (Higher value = better spotting, more accurate information).</English>
+    <English>Affects the AI's ability to spot targets within it is visual or audible range and also affects the accuracy of the information (Higher value = better spotting, more accurate information).</English>
     <Italian>Influenza la capacità dell'IA di riconoscere i bersagli all'interno del proprio campo visivo e sonoro. Inoltre, viene influenzata la precisione del riconoscimento del target (valore più alto = migliore riconoscimento del target e informazioni più precise).</Italian>
     <Czech>Ovlivňuje schopnost umělé inteligence rozpoznat cíle podle vizuálních a zvukových podnětů a také ovlivňuje přesnost těchto informací (vyšší hodnota = lepší pozorovací schopnost, přesnější informace).</Czech>
     <French>Affecte la capacité de l'IA à repérer des cibles au sein de son champ de détection visuel et/ou sonore. Affecte également la pertinence de l'information (valeur élevée = meilleur temps de repérage et identification plus pertinente).</French>
@@ -1529,7 +1529,7 @@
     <Russian>Коэффициент камуфляжа</Russian>
   </Key>
   <Key ID="STR_ENH_CAMOUFLAGECOEF_TOOLTIP">
-    <English>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it's more difficult to spot it.</English>
+    <English>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it is more difficult to spot it.</English>
     <Italian>Il coefficente di camuffamento determina la facilita con cui un'unità puo essere avvistata dall'AI. Un valore minore significa piu difficoltà ad essere avvistati</Italian>
     <Czech>Tento koeficient určuje jak snadno může být jednotka zpozorována umělou inteligencí. Nižší hodnota znamená že je jednotku těžší odhalit.</Czech>
     <French>Détermine la facilité avec laquelle l'unité peut être repérée visuellement par l'IA (valeur faible = plus difficile à voir).</French>
@@ -1551,7 +1551,7 @@
     <Russian>Коэффициент слышимости</Russian>
   </Key>
   <Key ID="STR_ENH_AUDIBLECOEF_TOOLTIP">
-    <English>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it's more difficult to hear it.</English>
+    <English>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it is more difficult to hear it.</English>
     <Italian>Il coefficiente audibile determina quanto facilmente l'AI possa sentire l'unità. Un valore basso significa che è piu difficile sentirla</Italian>
     <Czech>Tento koeficient určuje jak snadno může být jednotka zaslechnuta umělou inteligencí. Nižší hodnota znamená že je jednotku hůře slyšet.</Czech>
     <French>Détermine la facilité avec laquelle l'unité peut être entendue par l'IA (valeur faible = plus difficile à entendre).</French>
@@ -1573,7 +1573,7 @@
     <Russian>Коэффициент выносливости</Russian>
   </Key>
   <Key ID="STR_ENH_LOADCOEF_TOOLTIP">
-    <English>The load coefficient determines how much influence the unit's loadout weight has on it's stamina. A higher value means the weight has a higher influence.</English>
+    <English>The load coefficient determines how much influence the unit's loadout weight has on it is stamina. A higher value means the weight has a higher influence.</English>
     <Italian>Il coefficiente di carico determina quanto il peso del carico influisca sulla stamina di un'unità. Un maggior valore significa che il peso ha maggiore influenza.</Italian>
     <Czech>Tento koeficient určuje jak moc velký vliv má váha výstroje jednotky vliv na její výdrž. Vyšší hodnota znamená že váha má větší vliv na výdrž.</Czech>
     <French>Détermine l'influence que peut avoir la charge d'équipement de l'unité sur son endurance (valeur élevée = plus grande influence).</French>
@@ -4482,7 +4482,7 @@
     <Spanish>Animaciones de ambiente</Spanish>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_DESCRIPTION">
-    <English>Adds a hold action to this entity. Once the action was completed it's removed for all clients.</English>
+    <English>Adds a hold action to this entity. Once the action was completed it is removed for all clients.</English>
     <Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes.</Spanish>
     <German>Fügt dieser Entität eine 'HoldAction' hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt.</German>
     <French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients.</French>
@@ -4536,11 +4536,11 @@
     <Chinesesimp>条件进展</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP">
-    <English>Condition for the action to progress. Passed arguments are:\n_target, _caller, _actionID.</English>
-    <Spanish>Condición para que la acción progrese. Los argumentos aprobados son: \n_target, _caller, _actionID.</Spanish>
-    <German>Bedingung die erfüllt sein muss damit die Aktion fortschreitet. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
-    <French>Condition pour que l'action progresse. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
-    <Chinesesimp>采取动作的条件。 传递的参数是:\n_target, _caller, _actionID.</Chinesesimp>
+    <English>Condition for the action to progress. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Spanish>Condición para que la acción progrese. Los argumentos aprobados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
+    <German>Bedingung die erfüllt sein muss damit die Aktion fortschreitet. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
+    <French>Condition pour que l'action progresse. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
+    <Chinesesimp>采取动作的条件。 传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME">
     <English>Code Start</English>
@@ -4551,11 +4551,11 @@
     <Chinesesimp>代码开始</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODESTART_TOOLTIP">
-    <English>Code executed when action starts.  Passed arguments are:\n_target, _caller, _actionID.</English>
-    <Spanish>Código ejecutado cuando la acción se inicia. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
-    <German>Code der ausgeführt wird, wenn die Aktion gestartet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
-    <French>Code exécuté lorsque le joueur commence à effectuer l'action. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
-    <Chinesesimp>动作开始时执行的代码。 传递的参数是:\n_target, _caller, _actionID.</Chinesesimp>
+    <English>Code executed when action starts.  Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Spanish>Código ejecutado cuando la acción se inicia. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
+    <German>Code der ausgeführt wird, wenn die Aktion gestartet wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
+    <French>Code exécuté lorsque le joueur commence à effectuer l'action. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
+    <Chinesesimp>动作开始时执行的代码。 传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME">
     <English>Code Progress</English>
@@ -4566,11 +4566,11 @@
     <Chinesesimp>代码进展</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP">
-    <English>Code executed on every progress tick. Passed arguments are:\n_target, _caller, _actionID, _progress, _maxProgress.</English>
-    <Spanish>Código ejecutado en cada marca de progreso. Los argumentos pasados son: \n_target, _caller, _actionID, _progress, _maxProgress.</Spanish>
-    <German>Code der bei jedem Tick ausgeführt wird. Übergebene Parameter sind:\n_target, _caller, _actionID, _progress, _maxProgress.</German>
-    <French>Code exécuté à chaque tick durant lequel l'action progresse. Les variables disponibles sont :\n_target, _caller, _actionID, _progress, _maxProgress.</French>
-    <Chinesesimp>在每个进度计时执行的代码。传递的参数是:\n_target, _caller, _actionID, _progress, _maxProgress.</Chinesesimp>
+    <English>Code executed on every progress tick. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</English>
+    <Spanish>Código ejecutado en cada marca de progreso. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</Spanish>
+    <German>Code der bei jedem Tick ausgeführt wird. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</German>
+    <French>Code exécuté à chaque tick durant lequel l'action progresse. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</French>
+    <Chinesesimp>在每个进度计时执行的代码。传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME">
     <English>Code Complete</English>
@@ -4581,11 +4581,11 @@
     <Chinesesimp>代码完成</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP">
-    <English>Code executed on completion. Passed arguments are:\n_target, _caller, _actionID.</English>
-    <Spanish>Código ejecutado al completar. Argumentos pasados: \n_target, _caller, _actionID.</Spanish>
-    <German>Code der ausgeführt wird, wenn die Aktion beendet wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
-    <French>Code exécuté lorsque l'action est complétée. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
-    <Chinesesimp>完成后执行的代码。传递的参数是:\n_target, _caller, _actionID.</Chinesesimp>
+    <English>Code executed on completion. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Spanish>Código ejecutado al completar. Argumentos pasados: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
+    <German>Code der ausgeführt wird, wenn die Aktion beendet wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
+    <French>Code exécuté lorsque l'action est complétée. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
+    <Chinesesimp>完成后执行的代码。传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME">
     <English>Code Interrupt</English>
@@ -4596,11 +4596,11 @@
     <Chinesesimp>代码中断</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP">
-    <English>Code executed when action is interrupted. Passed arguments are:\n_target, _caller, _actionID.</English>
-    <Spanish>Código ejecutado cuando se interrumpe la acción. Los argumentos pasados son: \n_target, _caller, _actionID.</Spanish>
-    <German>Code der ausgeführt wird, wenn die Aktion unterbrochen wurde. Übergebene Parameter sind:\n_target, _caller, _actionID.</German>
-    <French>Code exécuté lorsque l'action est interrompue. Les variables disponibles sont :\n_target, _caller, _actionID.</French>
-    <Chinesesimp>动作中断时执行的代码。传递的参数是:\n_target, _caller, _actionID.</Chinesesimp>
+    <English>Code executed when action is interrupted. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Spanish>Código ejecutado cuando se interrumpe la acción. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
+    <German>Code der ausgeführt wird, wenn die Aktion unterbrochen wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
+    <French>Code exécuté lorsque l'action est interrompue. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
+    <Chinesesimp>动作中断时执行的代码。传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HOLDACTION_DURATION_DISPLAYNAME">
     <English>Duration</English>
@@ -5339,7 +5339,7 @@
     <Russian>Respawn Билеты</Russian>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
-    <English>Every unit can respawn as long as it hasn't run out of tickets.</English>
+    <English>Every unit can respawn as long as it has not run out of tickets.</English>
     <German>Einheiten können Wiedereinsteigen, solange sie noch Tickets haben.</German>
     <Spanish>Cada unidad puede reaparecer siempre que no se quede sin tickets</Spanish>
     <French>Chaque unité peut réapparaître tant qu'elle n'a pas épuisé ses tickets de réapparition.</French>
