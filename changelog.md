@@ -1,4 +1,21 @@
+---
+v5.8
+- Added a tool to display vehicle hitpoints. Useful for the Advance Damage attribute
+- Added missing translations for Advanced Damage attribute
+
+*changed*
+- Markers for 3D Path debugging are not oriented correctly
+- Debug Option "Show FPS" is now in the "Draw" category
+- Remove a debug message which was still left in code
+- Updated overview text in Expansion Menu
+- Fixed .rpt spam caused by missing translations
+- DLC icons are not limited to 100m
+- Draw functions optimized
+- Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window". Additionally, it now supports all DLCs (Was fixed by a hotfix)
+
+---
 v5.7
+
 *added*
 - It is now possible to customize the available functionalities though an OPTIONAL userconfig. See https://github.com/R3voA3/3den-Enhanced/wiki/Customisation
 - Added editor setting Dynamic View Distance. It removes the need to change view distance inside the editor by changing view distance depending on camera height
@@ -102,7 +119,9 @@ v5.7
 - Credits GUI and all related functions
 - Unused functions and config entries
 
+---
 v5.6
+
 *added*
 - Vehicle Inventory Manager
 - Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
@@ -130,17 +149,21 @@ v5.6
 - SPR Tickets attribute will only show for objectBrain
 - Menu Strip was tidied up a bit
 
+---
 v5.5
 *changed*
 - Italian translation was updated by zagor64bz
 - Fixed a bug which caused Hold Action attribute to be always created in mission.sqm
 
+---
 v5.4
 *changed*
 - Many translation tweaks, thanks to Poslovitch
 - Fixed an issue with randomize directon tool
 
+---
 v5.3
+
 *added*
 
 *changed*
@@ -153,7 +176,9 @@ v5.3
 *removed*
 - remove obsolete functions
 
+---
 v5.2
+
 *added*
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
 - Added tool to quickly export mission parameters (https://community.bistudio.com/wiki/Arma_3_Mission_Parameters)
@@ -175,7 +200,9 @@ v5.2
 *removed*
 - removed some old, obsolete functions
 
+---
 v5.1
+
 *added*
 - Added Single Player Respawn
 - Added debug option to skip time
@@ -194,7 +221,9 @@ v5.1
 - Debug option Teleport now teleports the player to the position at the center of the action icon
 - Mission Ending attribute was only counting units killed by a player
 
+---
 v5.0
+
 *added*
 - Context menu tool to move camera into first person view of selected entity
 - Added shortcuts to GUIs to preview controls styles and types (menu strip)
@@ -241,16 +270,21 @@ v5.0
 - Module Information GUI got tweaked so that the description doesn't extent over the bottom of the control
 - Fill Area tools max area was increased from 500x500 to 10.000 by 10.000
 
+---
 v4.9
+
 *added*
 - menu strip entry for additional 3rd party tools
 - a UI to save 3den Camera positions in. You can use it to save interesting places
 
+---
 v4.8
 *changed*
 - updated Spanish translation by arv187
 
+---
 v4.7
+
 *added*
 - an attribute to disable AIs radio protocol
 
@@ -258,22 +292,27 @@ v4.7
 - fixed mission semicolons in some configs
 - units using ambient animation will now reliably exit their animation if enemies are nearby
 
+---
 v4.6
 *changed*
 - fixed incorrect labeling of Dynamic Skill controls
 - added check to prevent player from exiting hostage state
 
+---
 v4.5
 *changed*
 - animations will now be exited when unit enters combat mode
 
+---
 v4.4
 *changed*
 - fixed Log position 3D tool
 - fixed Log classes as string tool
 - improved performance of functions viewer
 
+---
 v4.3
+
 *added*
 - Scenario Attributes Manager
 - Link to Mission Optimisation Biki page
@@ -377,7 +416,9 @@ v4.3
 
 
 
+---
 v4.2
+
 *added*
 
 *changed*
@@ -399,7 +440,9 @@ v4.2
 - Event Code Attribute does not work on dedicated servers
 - Stay on Position attribute sometimes fails on dedicated server
 
+---
 v4.1
+
 *added*
 - tools to remove heargear, googles and weapons from characters
 - tool to generate mission description for the Steam page (Steam formatting is not supported because A3 does not support it)
@@ -443,7 +486,9 @@ v4.1
 - Stay on Position attribute sometimes fails on dedicated server
 
 
+---
 v4.0
+
 *added*
 
 *changed*
@@ -456,7 +501,9 @@ v4.0
 - Event Code Attribute does not work on dedicated servers
 - Stay on Position attribute sometime fails on dedicated server
 
+---
 v3.9
+
 *added*
 - diableAI "NVG" attribute
 - disable AI "LIGHTS" attribute
@@ -470,7 +517,9 @@ v3.9
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
 
+---
 v3.8
+
 *added*
 - Polish translation by Kofeina101
 
@@ -482,7 +531,9 @@ v3.8
 - Credits have they own UI now because CfgORBAT wouldn't work sometimes
 - it's now possible to measure distance between two entities
 
+---
 v3.7
+
 *added*
 - translation of credits
 
@@ -491,7 +542,9 @@ v3.7
 - Updated some French, Czech and Chinesesimple thanks to TaktischerSpeck
 - name of the pbo changed from 3den Enhanced to 3den_enhanced to prevent a crash on linux server (Thanks to Dedmen)
 
+---
 v3.6
+
 *added*
 - added new function ENH_fnc_all3DENSelected
 - a control to the statusbar which shows number of selected entities
@@ -517,6 +570,7 @@ v3.6
 - removed obsolete functions
 - show mission stats tool. It's now in the statusbar
 
+---
 v3.5
 *changed*
 - added "A3_Data_F_Sams_Loadorder" to CfgPatches to prevent overwriting of config entries
@@ -526,6 +580,7 @@ v3.5
 - added Action Creator GUI
 - Added Path Debugging attribute
 
+---
 v3.4
 *changed*
 - added missing semicolon
@@ -540,15 +595,19 @@ v3.4
 - added Action Creator GUI
 - Added Path Debugging attribute
 
+---
 v3.3
 *changed*
 - some shortcuts were interfering with vanilla shortcuts
 
+---
 v3.2
 *changed*
 - fixed some issues with new shortcuts
 
+---
 v3.1
+
 *added*
 - added missing attribute to disable map indicators
 - respawn tickets for civilian side
@@ -591,10 +650,13 @@ v3.1
 - a few missing translations in the menu strip
 - missing 3den Radio translation
 
+---
 v3.0.01
 - added new logo (Steam)
 
+---
 v3.0
+
 *added*
 - credits (Menu Strip -> About 3den Enhanced -> Credits...) Shows all contributors. If I forgot about someone please let me know.
 - added tool to log map grid position to clipboard
@@ -617,10 +679,13 @@ v3.0
 - obsolete function
 
 
+---
 v2.9
+
 *added*
 - link to FAQ
 
+---
 v2.8
 *changed*
 - fixed error message caused by the visibility attribute
@@ -645,7 +710,9 @@ v2.8
 - removed assets overview from help menu. It's quicker to just search for object directly within the Eden interface
 - obsolete function call via Eden EH
 
+---
 v2.7
+
 *added*
 - it's now possible to either export GUI base classes of Eden, default or all
 - added missing translation
@@ -684,7 +751,9 @@ v2.7
 - FPS gauge in Eden (It's available now during preview)
 - removed debug triggers (They are available now during preview, see "Preferences")
 
+---
 v2.6
+
 *added*
 - tool to export selected Eden objects to sqf format(Thanks to Theassassinzz for sharing)
 - context menu function to show Eden entity ID
@@ -704,7 +773,9 @@ v2.6
   If map is opened, then markers are drawn from point A to B showing the direct path
 - several menu entriess were missing "..." to indicate they are opening a new window
 
+---
 v2.5
+
 *added*
 - attribute which adds all alive entities to allCurators regulary during a mission
 - colour picker. Can be found in the debug tools category
@@ -733,17 +804,21 @@ v2.5
 - removed "Stay on road" attribute (The command seems to not have the desired effect and causes more issues)
 - hide terrain objects trigger (There is a vanilla module for this)
 
+---
 v2.4
 *changed*
 - "Arsenal" and "Add Gun Light" attributes were missing there default values
 
+---
 v2.3
 
 *changed*
 - "Arsenal" and "Add Gun Light" attribute should not be activated by default
 
 
+---
 v2.2
+
 *added*
 - tool to log positions of multiple objects
 
@@ -759,6 +834,7 @@ v2.2
 - removed obsolete controls
 - removed "Remove x items" attributes. Conflict with Eden editor behaviour
 
+---
 v2.1
 *changed*
 - replaced 3den Radio defines with variables to improve performance
@@ -789,7 +865,9 @@ v2
 *removed*
 
 
+---
 v1.9
+
 *added*
 - attribute to set weapon sway coef
 - tool to quickly name multiple entities
@@ -813,7 +891,9 @@ v1.9
 
 
 
+---
 v1.8
+
 *added*
 - scripting examples by Foxhound International (Help section)
 - readded the UAV intro (establishing shot), hopefully working more reliably than before
@@ -875,7 +955,9 @@ v1.8
 - log class name tool (Functionality already exists)
 - ambient animations (Too many issues in multiplayer and general incompatibility with Eden)
 
+---
 v1.7
+
 *added*
 - tool to display module description
 - save gear on respawn (readded)
@@ -885,11 +967,13 @@ v1.7
 - fixed the dynamic group attribute
 - a few new help links
 
+---
 v1.6 HOTFIX
 *changed*
 - warning messages would not be displayed properly
 - added missing server key
 
+---
 v1.6
 *changed*
 - fixed position of song name display
@@ -982,6 +1066,7 @@ v1.6
 - removed some none-working animations
 
 
+---
 v1.5
 *changed*
 - CfgPatches was changed to the up-to-date format
@@ -1032,6 +1117,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Added setMass attribute
 - Added advanced briefing att.
 
+---
 v1.4
 *changed*
 - fixed position of time multiplier attribute
@@ -1050,11 +1136,14 @@ v1.4
 - added translation for insignia attribute
 - corrected camouCoef & audibleCoef tooltip
 
+---
 v1.3.1
 *changed*
 - fixed a bug which would reset the unit traits controls
 
+---
 v1.3
+
 *added*
 - one can now define a delay for the intro text attribute
 - attribute for unit traits
@@ -1074,6 +1163,7 @@ v1.3
 - added German translation for intro text delay
 - updated French translation (thanks to solentis)
 
+---
 v1.2.1
 - completely overhauled the garrison function
 1. Select the units/objects you want to place in houses and place them near the buildings
@@ -1081,6 +1171,7 @@ v1.2.1
 3. Objects/Units will now be automatically be placed inside buildings, you'll recieve a msg in case some units/objects could no be placed
 4. The size and coverage of the area can be changed in the preferences menu of Eden
 
+---
 v1.2
 *removed*
 - custom compositions
@@ -1124,6 +1215,7 @@ v1.2
 *fixed*
 - log classname function would not return classname of logics and modules
 
+---
 v1.1
 
 *removed*

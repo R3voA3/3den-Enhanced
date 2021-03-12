@@ -38,4 +38,6 @@ POWERSHELL compress-archive -Path """%TARGET_FOLDER%""" -DestinationPath """%PRO
 ECHO Clearing log files of AddonBuilder.
 DEL "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Logs" /Q
 
+:: TODO: Automate publishing to Steam
+
 PAUSE
