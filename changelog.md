@@ -3,7 +3,7 @@ v5.8
 - Added a tool to display vehicle hitpoints. Useful for the Advance Damage attribute
 - Added missing translations for Advanced Damage attribute
 
-*changed*
+*CHANGED*
 - Markers for 3D Path debugging are not oriented correctly
 - Debug Option "Show FPS" is now in the "Draw" category
 - Remove a debug message which was still left in code
@@ -16,7 +16,7 @@ v5.8
 ---
 v5.7
 
-*added*
+*ADDED*
 - It is now possible to customize the available functionalities though an OPTIONAL userconfig. See https://github.com/R3voA3/3den-Enhanced/wiki/Customisation
 - Added editor setting Dynamic View Distance. It removes the need to change view distance inside the editor by changing view distance depending on camera height
 - Briefing attribute
@@ -27,7 +27,7 @@ v5.7
 - Added a debug options to draw trigger areas during preview
 - Added new Advanced Damage attribute to replace the old system. The new attribute gets all available hit points dynamically and adds attribute controls for them
 
-*changed*
+*CHANGED*
 - Batch Rename tool can now also rename markers
 - Credits were moved to the 3den Enhanced Wiki
 - FAQ was moved to the 3den Enhanced Wiki
@@ -115,20 +115,20 @@ v5.7
 - Briefing Editor
   - Fixed missing localisation key
 
-*removed*
+*REMOVED*
 - Credits GUI and all related functions
 - Unused functions and config entries
 
 ---
 v5.6
 
-*added*
+*ADDED*
 - Vehicle Inventory Manager
 - Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
 - It's now possible to search a function in the Functions Viewer for a specific keyword
 - Added CfgSentences Browser
 
-*changed*
+*CHANGED*
 - Texture Finder will no longer list some textures multiple times
 - Debug path attributes now uses is3DENPreview command to make sure it only runs in the editor
 - Debug Options use is3DENPreview now
@@ -151,39 +151,40 @@ v5.6
 
 ---
 v5.5
-*changed*
+*CHANGED*
 - Italian translation was updated by zagor64bz
 - Fixed a bug which caused Hold Action attribute to be always created in mission.sqm
 
 ---
 v5.4
-*changed*
+
+*CHANGED*
 - Many translation tweaks, thanks to Poslovitch
 - Fixed an issue with randomize directon tool
 
 ---
 v5.3
 
-*added*
+*ADDED*
 
-*changed*
+*CHANGED*
 - ENH_fnc_setOrientation can now reverse and randomise directions
 - "Show Radio Message" would be cut off in the extraction GUI
 - Updated Spanish translation (Thanks to arv187)
 - Tweaked some functions
 - Several fixes for Single Player respawn.
 
-*removed*
+*REMOVED*
 - remove obsolete functions
 
 ---
 v5.2
 
-*added*
+*ADDED*
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
 - Added tool to quickly export mission parameters (https://community.bistudio.com/wiki/Arma_3_Mission_Parameters)
 
-*changed*
+*CHANGED*
 - It's no longer possible to switch to a unit which is about to respawn (Single Player Revive)
 - Optimized Make Hostage attribute condition
 - Handling of location list was changed
@@ -197,19 +198,19 @@ v5.2
 - Fixed some RPT spam
 - Increase GUI height of Placement Tools
 
-*removed*
+*REMOVED*
 - removed some old, obsolete functions
 
 ---
 v5.1
 
-*added*
+*ADDED*
 - Added Single Player Respawn
 - Added debug option to skip time
 - Added debug option to change time multiplier
 - Added Variable Browser to debug options
 
-*changed*
+*CHANGED*
 - Debug options are now using BIS_fnc_holdAction
 - Updated icon for debug options and tweaked several values
 - Lenght of "laser beams" indicating view and aiming direction was shortened
@@ -224,7 +225,7 @@ v5.1
 ---
 v5.0
 
-*added*
+*ADDED*
 - Context menu tool to move camera into first person view of selected entity
 - Added shortcuts to GUIs to preview controls styles and types (menu strip)
 - Added Debug Option to draw icons of nearby units and vehicles together with some basic information
@@ -239,7 +240,7 @@ v5.0
 - Added option to collapse entity list (left panel) on startup
 - Added option to hide left and rigt panel on startup
 
-*changed*
+*CHANGED*
 - 3DEN Camera Positions UI now properly checks for incorrect description
 - Icons updated
 - Texture Finder
@@ -273,39 +274,39 @@ v5.0
 ---
 v4.9
 
-*added*
+*ADDED*
 - menu strip entry for additional 3rd party tools
 - a UI to save 3den Camera positions in. You can use it to save interesting places
 
 ---
 v4.8
-*changed*
+*CHANGED*
 - updated Spanish translation by arv187
 
 ---
 v4.7
 
-*added*
+*ADDED*
 - an attribute to disable AIs radio protocol
 
-*changed*
+*CHANGED*
 - fixed mission semicolons in some configs
 - units using ambient animation will now reliably exit their animation if enemies are nearby
 
 ---
 v4.6
-*changed*
+*CHANGED*
 - fixed incorrect labeling of Dynamic Skill controls
 - added check to prevent player from exiting hostage state
 
 ---
 v4.5
-*changed*
+*CHANGED*
 - animations will now be exited when unit enters combat mode
 
 ---
 v4.4
-*changed*
+*CHANGED*
 - fixed Log position 3D tool
 - fixed Log classes as string tool
 - improved performance of functions viewer
@@ -313,7 +314,7 @@ v4.4
 ---
 v4.3
 
-*added*
+*ADDED*
 - Scenario Attributes Manager
 - Link to Mission Optimisation Biki page
 - DisableAI "radioprotocol"
@@ -324,7 +325,7 @@ v4.3
 - Script Commands Viewer to menu strip -> tools -> utilities
 - A function to convert floats to time format minutes:seconds
 
-*changed*
+*CHANGED*
 - Combo Box controls were replaced with Toolbox controls if possible
 - Code cleanup
 - Debug console now uses CTRL+D as shortcut (Same as CBA)
@@ -408,7 +409,7 @@ v4.3
 - Fixed Switch Time would not properly set overcast, rain and fog to 0. Change is forced now.
 - Song duration in 3den Radio is no displayed in format minutes:seconds (00:00)
 
-*removed*
+*REMOVED*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
 - Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
@@ -419,9 +420,9 @@ v4.3
 ---
 v4.2
 
-*added*
+*ADDED*
 
-*changed*
+*CHANGED*
 - updated credits
 - Briefing Editor: If marker has no name, the variable name is displayed instead
 - Condition for Airdrop attribute is now checked every second. Instead of every frame
@@ -432,7 +433,7 @@ v4.2
 - Debug Console now uses the Eden Enhanced Functions Viewer
 - ENH_fnc_FunctionsViewer was split into multiple function files
 
-*removed*
+*REMOVED*
 - Export Inventory to Config GUI->Wasn't needed any longer
 - Removed obsolete Icons
 
@@ -443,14 +444,14 @@ v4.2
 ---
 v4.1
 
-*added*
+*ADDED*
 - tools to remove heargear, googles and weapons from characters
 - tool to generate mission description for the Steam page (Steam formatting is not supported because A3 does not support it)
 - Move to To-do List attribute for comments
 - Link to ARMAnet Eden Editor tutorial to the help section
 - Brand new Placement Tools GUI
 
-*changed*
+*CHANGED*
 - Debug Path attribute now also draws map markers
 - Log Mission Attributes was moved from the context menu to the menu strip
 - some localisation tweaks
@@ -479,7 +480,7 @@ v4.1
 
 
 
-*removed*
+*REMOVED*
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
@@ -489,13 +490,13 @@ v4.1
 ---
 v4.0
 
-*added*
+*ADDED*
 
-*changed*
+*CHANGED*
 - Feature Type attribute would sometimes cause issues because of wrong datatype. Type STRING and NUMBER can now be handled for backwards compatibility
 - Readded Stay on Position attribute
 
-*removed*
+*REMOVED*
 
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
@@ -504,14 +505,14 @@ v4.0
 ---
 v3.9
 
-*added*
+*ADDED*
 - diableAI "NVG" attribute
 - disable AI "LIGHTS" attribute
 
-*changed*
+*CHANGED*
 - updated translation, thanks to IllidanS4
 
-*removed*
+*REMOVED*
 - Stay on Position attribute. It was not behaving as expected.
 
 *known Issues*
@@ -520,10 +521,10 @@ v3.9
 ---
 v3.8
 
-*added*
+*ADDED*
 - Polish translation by Kofeina101
 
-*changed*
+*CHANGED*
 - reduced distance from which a hostage can be freed from 15m to 2m
 - if the hostage is dead, it cannot be freed anymore
 - some localisation fixes
@@ -534,10 +535,10 @@ v3.8
 ---
 v3.7
 
-*added*
+*ADDED*
 - translation of credits
 
-*changed*
+*CHANGED*
 - expanded French translation thanks to pokertour
 - Updated some French, Czech and Chinesesimple thanks to TaktischerSpeck
 - name of the pbo changed from 3den Enhanced to 3den_enhanced to prevent a crash on linux server (Thanks to Dedmen)
@@ -545,7 +546,7 @@ v3.7
 ---
 v3.6
 
-*added*
+*ADDED*
 - added new function ENH_fnc_all3DENSelected
 - a control to the statusbar which shows number of selected entities
 - a tool to export and import mission attributes
@@ -553,7 +554,7 @@ v3.6
 - many missing translations
 - new function ENH_fnc_exportWithLB
 
-*changed*
+*CHANGED*
 - some shortcuts were changed for pattern tools
 - improved translation of some context menu entries
 - order of some context menu entries was changed
@@ -566,29 +567,29 @@ v3.6
 - updated all log functions
 - 3den Enhanced function viewer now correctly restores last viewed function
 
-*removed*
+*REMOVED*
 - removed obsolete functions
 - show mission stats tool. It's now in the statusbar
 
 ---
 v3.5
-*changed*
+*CHANGED*
 - added "A3_Data_F_Sams_Loadorder" to CfgPatches to prevent overwriting of config entries
 
-*added*
+*ADDED*
 - added link to 3den Enhanced Youtube videos (Menu Strip -> About 3den Enhanced)
 - added Action Creator GUI
 - Added Path Debugging attribute
 
 ---
 v3.4
-*changed*
+*CHANGED*
 - added missing semicolon
 - chinese translation was added by Jason Bert
 - updated credits
 - on preview debug attribute state was not shared between different missions
 
-*added*
+*ADDED*
 - loadout tool to remove NVGs from several units at once
 - loadout tool to remove vests from several units at once
 - added link to 3den Enhanced Youtube videos (Menu Strip -> About 3den Enhanced)
@@ -597,25 +598,25 @@ v3.4
 
 ---
 v3.3
-*changed*
+*CHANGED*
 - some shortcuts were interfering with vanilla shortcuts
 
 ---
 v3.2
-*changed*
+*CHANGED*
 - fixed some issues with new shortcuts
 
 ---
 v3.1
 
-*added*
+*ADDED*
 - added missing attribute to disable map indicators
 - respawn tickets for civilian side
 - 3den Radio has got an incremental seach now
 - 3den Enhanced is now using the CBA versioning system (Only if CBA is used)
 - new functions viewer with incremental search, new design, tree view etc.
 
-*changed*
+*CHANGED*
 - Log object info tool has been overhauled and uses display3denCopy now
 - pattern tools can now be used multiple times without reloading the GUI
 - serveral logic errors in pattern tools GUI and its functions
@@ -637,11 +638,11 @@ v3.1
 - Added search icon next to search edit control in 3den Radio
 - 3den Radio will now loop through playlist again one enabled
 
-*removed*
+*REMOVED*
 - disable team switch attribute, it's already available in the multiplayer attribute section
 - obsolete functions
 
-*translation*
+*TRANSLATION*
 - removed obsolete translations
 - changed German translation of respawn tickets
 - improved german translation of task patrol tooltip
@@ -657,11 +658,11 @@ v3.0.01
 ---
 v3.0
 
-*added*
+*ADDED*
 - credits (Menu Strip -> About 3den Enhanced -> Credits...) Shows all contributors. If I forgot about someone please let me know.
 - added tool to log map grid position to clipboard
 
-*changed*
+*CHANGED*
 - some base defines clean up
 - Right-clicking on a group icon will now also show "Garrison Buildings..."
 - Log 3den Entity ID is now available for all Eden entities
@@ -675,19 +676,19 @@ v3.0
 - new mod logo/icon
 - DebugOptions - Player was not able to edit objects in Zeus interface
 
-*removed*
+*REMOVED*
 - obsolete function
 
 
 ---
 v2.9
 
-*added*
+*ADDED*
 - link to FAQ
 
 ---
 v2.8
-*changed*
+*CHANGED*
 - fixed error message caused by the visibility attribute
 - improved disableAI attribute expression, thanks to shukari
 - fixed issue with Eden removing Zeus in multiplayer
@@ -696,13 +697,13 @@ v2.8
 - replaced icons in menu strip to indicate folders better
 - session timer was not working after preview ended
 
-*added*
+*ADDED*
 - menu strip tool to quickly toggle simple object state
 - context menu tool to log 2D positions of selected entites to clipboard
 - added help entry for description.ext
 - "About 3den++" menu strip category
 
-*removed*
+*REMOVED*
 - removed "Export Arsenal Templates" was not ment to be released
 - tool to grab compositions (Was not working reliably)
 - removed changelog UI
@@ -713,7 +714,7 @@ v2.8
 ---
 v2.7
 
-*added*
+*ADDED*
 - it's now possible to either export GUI base classes of Eden, default or all
 - added missing translation
 - tool to quickly clear chat. Very handy when debugging via systemChat in the Editor
@@ -732,7 +733,7 @@ v2.7
   - show awareness of all sides
   - options to quickly kill all units of given side during scenario preview
 
-*changed*
+*CHANGED*
 - removed obsolete function call from ENH_Changelog GUI
 - Changed/removed some icons from menu strip
 - reordered menu strip tools for easier access
@@ -745,7 +746,7 @@ v2.7
 - translation cleanup
 - translation improvements
 
-*removed*
+*REMOVED*
 - export/import camera parameters (Functionality is available through the vanilla "Splendid Camera")
 - obsolete translations
 - FPS gauge in Eden (It's available now during preview)
@@ -754,14 +755,14 @@ v2.7
 ---
 v2.6
 
-*added*
+*ADDED*
 - tool to export selected Eden objects to sqf format(Thanks to Theassassinzz for sharing)
 - context menu function to show Eden entity ID
 - attribute to remove entity from garbage collector
 - the location list has been expanded and now shows more points of interest
 
 
-*changed*
+*CHANGED*
 - AI will now exit animations when damaged or in combat mode
 - fixed issue with garrison function not detecting building positions in some cases (Thanks to http://steamcommunity.com/id/Aestheticwww)
 - several translation improvements
@@ -776,7 +777,7 @@ v2.6
 ---
 v2.5
 
-*added*
+*ADDED*
 - attribute which adds all alive entities to allCurators regulary during a mission
 - colour picker. Can be found in the debug tools category
 - attribute to disable team switch
@@ -787,7 +788,7 @@ v2.5
 - context menu entry to quickly group selected entities to the player unit
 - translation for debug triggers
 
-*changed*
+*CHANGED*
 - some default attribute values
 - pattern tools feature has got its own GUI now
 - some attributes are now hidden where not appropriate
@@ -798,7 +799,7 @@ v2.5
 - improved reveal code (debug trigger)
 - updated Czech translation, thanks to XerXesCZ
 
-*removed*
+*REMOVED*
 - pattern tool settings from preferences menu
 - some functions became obsolete with the new pattern tool GUI
 - removed "Stay on road" attribute (The command seems to not have the desired effect and causes more issues)
@@ -806,37 +807,37 @@ v2.5
 
 ---
 v2.4
-*changed*
+*CHANGED*
 - "Arsenal" and "Add Gun Light" attributes were missing there default values
 
 ---
 v2.3
 
-*changed*
+*CHANGED*
 - "Arsenal" and "Add Gun Light" attribute should not be activated by default
 
 
 ---
 v2.2
 
-*added*
+*ADDED*
 - tool to log positions of multiple objects
 
-*changed*
+*CHANGED*
 - garrison function feature now a custom UI
 - ENH_fnc_garrisonNearest.sqf has been improved
 - one wasn't able to play a song from the playlist via double click
 - "Measure Distance" tool now also works when the map is opened
 - "Establishing Shot" attribute has been overhauled and should now be less performance hungry and more reliable
 
-*removed*
+*REMOVED*
 - garrison settings were removed from the preferences menu
 - removed obsolete controls
 - removed "Remove x items" attributes. Conflict with Eden editor behaviour
 
 ---
 v2.1
-*changed*
+*CHANGED*
 - replaced 3den Radio defines with variables to improve performance
 - changelog can now be viewed in game (Menu Strip -> Help -> 3den Enhanced Changelog)
 - added shortcut for opening 3den Radio (ALT-R)
@@ -847,12 +848,12 @@ v2.1
 - "batch naming" features now a GUI, making the naming of large quantities of entities much quicker
 - new mod logo & picture
 
-*removed*
+*REMOVED*
 - removed batch naming from preferences
 
 
 v2
-*changed*
+*CHANGED*
 - updated Spanish translation (kudos to arv187)
 - fixed some log entries
 - volume of 3den Radio can no be controlled more precisely via the arrows
@@ -862,13 +863,13 @@ v2
 - all custom UIs are now using the same defines in order to make them consistent
 - various translation tweaks
 
-*removed*
+*REMOVED*
 
 
 ---
 v1.9
 
-*added*
+*ADDED*
 - attribute to set weapon sway coef
 - tool to quickly name multiple entities
 - debug trigger for healing and repairing
@@ -880,21 +881,21 @@ v1.9
 
 
 
-*changed*
+*CHANGED*
 - debug trigger "Toggle Invulnerability" is now using isDamageAllowed and also applies to player vehicle
 - fixed error when debug trigger "Reveal Units" was activated twice within short time
 - briefing editor can now be securily be closed by pressing Ctrl + B or ESC
 - A new template can now be loaded by double clicking on the template list, preventing unwanted loading and overwriting
 - improved code behind time multiplier control
 
-*removed*
+*REMOVED*
 
 
 
 ---
 v1.8
 
-*added*
+*ADDED*
 - scripting examples by Foxhound International (Help section)
 - readded the UAV intro (establishing shot), hopefully working more reliably than before
 - the intro text attribute now supports a new type of intro text used in the Apex Protocol campaign
@@ -907,7 +908,7 @@ v1.8
 - added French translation thanks to Artenis
 - new tool to create "debug triggers" to make testing missions easier for beginners
 
-*changed*
+*CHANGED*
 - fixed issue with invisible logic creation causing low FPS in missions with many players
 - improved random patrol function
 - sound volume and random music attribute will no longer run on headless clients
@@ -947,7 +948,7 @@ v1.8
 - task patrol is now using BIS_fnc_taskPatrol
 - updated stringtable.xml
 
-*removed*
+*REMOVED*
 - tutorials
 - preload arsenal settings
 - warning messages
@@ -958,24 +959,25 @@ v1.8
 ---
 v1.7
 
-*added*
+*ADDED*
 - tool to display module description
 - save gear on respawn (readded)
 
-*changed*
+*CHANGED*
 - fixed issue with toggle grass function
 - fixed the dynamic group attribute
 - a few new help links
 
 ---
 v1.6 HOTFIX
-*changed*
+
+*CHANGED*
 - warning messages would not be displayed properly
 - added missing server key
 
 ---
 v1.6
-*changed*
+*CHANGED*
 - fixed position of song name display
 - display for name of currently played song is now integrated into the EDEN statusbar, should  now properly scale with different resolutions and display sizes
 - improved delay attribute for intro text
@@ -1010,7 +1012,7 @@ v1.6
 - fixed an issue with grass not being visible
 - the code for all mission attribute was overhauled. It should now properly execute for each JIP player without effecting players which were ingame already
 
-*added*
+*ADDED*
 - added tool to set all selected entities to ATL/ASL 0
 - select new song button for the 3den Radio (Implemented into the status bar)
 - one can now set the combat mode and formation of a random patrol
@@ -1047,7 +1049,7 @@ v1.6
   The output can also be pasted into BIS' Splendid Camera
 - added tool to quickly toggle Grass on/off (This will not effect the mission in any way)
 
-*removed*
+*REMOVED*
 - removed suppression level att.
 - removed fatigue level att.
 - removed obsolete entries from the stringtable.xml
@@ -1068,7 +1070,8 @@ v1.6
 
 ---
 v1.5
-*changed*
+
+*CHANGED*
 - CfgPatches was changed to the up-to-date format
 - 3den Enhanced tools now have their own folder
 - Default insignia is an empty string now
@@ -1099,7 +1102,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - improve ENH_fnc_playMusic, it now filters out classes which have no soundtrack defined and it's slightly faster
 - Insignias are now also read from the local missionConfigfile
 
-*added*
+*ADDED*
 - Tool to recompile functions
 - Five animations
 - Several new functions for internal use
@@ -1119,32 +1122,34 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 
 ---
 v1.4
-*changed*
+
+*CHANGED*
 - fixed position of time multiplier attribute
 - time multiplier edit box is now properly formatted
 - fixed position of song name display
 - fixed position of view distance setting attribute
 - removed some obsolete code from control configs
 
-*added*
+*ADDED*
 - added attribute for rainbow probability
 - added insignia attribute
 - added preference attribute to enable preloading of the Arsenal -> Preferences-> Misc
 
-*translation*
+*TRANSLATION*
 - added translation for rainbow attribute
 - added translation for insignia attribute
 - corrected camouCoef & audibleCoef tooltip
 
 ---
 v1.3.1
-*changed*
+
+*CHANGED*
 - fixed a bug which would reset the unit traits controls
 
 ---
 v1.3
 
-*added*
+*ADDED*
 - one can now define a delay for the intro text attribute
 - attribute for unit traits
 
@@ -1152,12 +1157,13 @@ v1.3
   A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
   Mission designers can check whether the unit is hostage or not by retrieving the following variable:
   _unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
-*changed*
+
+*CHANGED*
 - UAV intro center position attribute tooltip was using a wrong string
 - removed the tooltip from Advanced Damage Attributes
 - UAV intro loiter direction is now using a better control
 
-*translation*
+*TRANSLATION*
 - added German translation for "Hide Map Objects" context menu entry
 - added German translation for unit traits attribute
 - added German translation for intro text delay
@@ -1173,10 +1179,8 @@ v1.2.1
 
 ---
 v1.2
-*removed*
-- custom compositions
 
-*added*
+*ADDED*
 - function to quickly garrison placed building. Settings can be changed in the preferences
 - attribute to toggle map object IDs on/off
 - attribute to turn off/on vehicles engines
@@ -1193,7 +1197,7 @@ v1.2
 - version check function
 - french translation
 
-*changed*
+*CHANGED*
 - added check to prevent vanilla fog to be overwritten by advanced fog
 - music loop is not restarted every time the preference settings are confirmed
 - some attributes were executed where not needed
@@ -1211,18 +1215,15 @@ v1.2
 - removed toggleMapIDs attribute from Preferences and moved it to the Menu Strip -> Tools
 - added ID icon for ToggleMapIDs tool
 - new server key
-
-*fixed*
 - log classname function would not return classname of logics and modules
+
+*REMOVED*
+- custom compositions
 
 ---
 v1.1
 
-*removed*
-- removed composition tool
-- removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvinience that caused)
-
-*added*
+*ADDED*
 - time multiplier to environment attribute
 - advanced fog settings to environment attributes.
 - remove map attribute
@@ -1244,7 +1245,7 @@ v1.1
 - fatigue level attribute
 - attribute to enable headlights of empty vehicles
 
-*changed*
+*CHANGED*
 - renamed some attributes
 - save gear now also works on dedicated, not only on hosted server (Thanks to larrow!)
 - crew in immobile is now only shown for vehicle entities
@@ -1253,3 +1254,7 @@ v1.1
 - allowCrewImmobile attribute has been tweaked
 - shortened ambient anim init time
 - removed some ambient animation that would not work, e.g sit and treat_injured
+
+*REMOVED*
+- removed composition tool
+- removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvinience that caused)
