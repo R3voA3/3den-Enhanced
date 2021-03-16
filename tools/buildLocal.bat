@@ -2,15 +2,14 @@
 :: @ECHO off
 
 :: Ask user for version
-SET /P VERSION_MAJOR=Major Version?
-SET /P VERSION_MINOR=Minor Version?
+SET /P VERSION=Version (MAJOR.MINOR, X.X)?
 
 :: Display version
-ECHO v%VERSION_MAJOR%.%VERSION_MINOR%
+ECHO v%VERSION%
 
 :: Define paths
 SET "PROJECT_FOLDER=C:\Users\rober\OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-SET "TARGET_FOLDER=C:\Users\rober\Desktop\@3den Enhanced v%VERSION_MAJOR%.%VERSION_MINOR%"
+SET "TARGET_FOLDER=C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v%VERSION%"
 
 :: Create directories
 ECHO Creating directories in %TARGET_FOLDER%.
@@ -29,16 +28,6 @@ COPY "%PROJECT_FOLDER%\userconfig\ENH_Config.hpp" "%TARGET_FOLDER%\userconfig\EN
 CD "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\AddonBuilder\"
 ::Start AddonBuilder and pack mod and wait until it's done
 START /WAIT AddonBuilder.exe "%PROJECT_FOLDER%\3denEnhanced" "%TARGET_FOLDER%\addons" -packonly -sign="%PROJECT_FOLDER%\3denEnhanced.biprivatekey"
-
-:: Pack everything into .zip file
-ECHO .zip created and moved to OneDrive.
-POWERSHELL compress-archive -Path """%TARGET_FOLDER%""" -DestinationPath """%PROJECT_FOLDER%\versions\@3den Enhanced v%VERSION_MAJOR%.%VERSION_MINOR%.zip""" -force
-
-:: Update Steam Version via Publisher
-:: Change dir
-CD "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Publisher"
-::Start AddonBuilder and pack mod
-PublisherCmd update /id:2422196882 /changeNote:"Auto Update: Changelog will follow!" /path:"%TARGET_FOLDER%"
 
 :: Clear AddonBuilder log folder
 ECHO Clearing log files of AddonBuilder.
