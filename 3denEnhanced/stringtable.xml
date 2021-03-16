@@ -2888,13 +2888,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP">
     <English>Recompiles all functions. This may take a moment.</English>h&gt;
-    <Italian>Ricompila tutte le funzioni. Questo puo richiedere un momento.</Italian>
-    <German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German>
-    <Chinesesimp>重新编译所有功能。 这可能需要一些时间</Chinesesimp>
-    <Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish>
-    <Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French>
-    <Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian>
-    <Polish>Rekompiluje wszytkie funkcje. To może chwilę potrwać.</Polish></Key>
+    <Italian>Ricompila tutte le funzioni. Questo puo richiedere un momento.</Italian><German>Rekompiliert all Funktionen. Dies kann einen Moment dauern.</German><Chinesesimp>重新编译所有功能。 这可能需要一些时间</Chinesesimp><Spanish>Recompila todas las funciones. Esto puede tomar un momento.</Spanish><Czech>Překompiluje všechny funkce. Může to chvíli trvat.</Czech><French>Recompile toutes les fonctions. Cela peut prendre un moment.</French><Russian>Перекомпилирует все функции. Это может занять некоторое время.</Russian><Polish>Rekompiluje wszytkie funkcje. To może chwilę potrwać.</Polish></Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT">
     <English>Recompile Selected</English>
     <Italian>Ricompila Selezione</Italian>
@@ -7192,5 +7186,13 @@
     <English>No hitpoints available for this object!</English>
     <German>Keine 'Hitpoints' vorhanden!</German>
     <Chinesesimp>该对象没有生命值！</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER">
+    <English>Debug options initializing in %1 seconds.</English>
+    <German>Debug Optionen werden in %1 Sekunden initialisiert.</German>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT">
+    <English>Debug options initialized.</English>
+    <German>Debug Optionen initialisiert.</German>
   </Key>
 </Project>
