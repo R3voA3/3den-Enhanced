@@ -20,7 +20,14 @@
 if (!is3DENPreview || isMultiplayer) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
-sleep DELAY;
+//Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
+systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
+sleep 1;
+systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 2];
+sleep 1;
+systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 1];
+sleep 1;
+systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT";
 
 if GETVALUE("Arsenal") then
 {
@@ -79,7 +86,7 @@ if GETVALUE("ShowUnits") then
       private _sideColour = [side _x, true] call BIS_fnc_sideColor;
       private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
 
-      _name = "ENH_previewMarker_" + str _forEachIndex;
+      _name = "ENH_debug_groupMarker_" + str _forEachIndex;
       _name = createMarker [_name, position _x];
       _name setMarkerType 'mil_box';
       _name setMarkerText _displayName;
@@ -308,7 +315,7 @@ if GETVALUE("DrawIcons") then
         [
           "",
           (side _x call BIS_fnc_sideColor),
-          _x modelToWorldVisual [0, 0, 0],
+          _x modelToWorldVisual [0, 0, 0 boundingBox _x select 1 select 2],
           0.5,
           0.5,
           0,
@@ -354,33 +361,41 @@ if GETVALUE("DeleteCorpse") then
 if GETVALUE("ShowWaypoints") then
 {
   private _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
-  private _color = "";
-
-  private _waypoints = [];
   {
-    _color = selectRandom _markerColors;
+    private _path = [];
+    private _markerText = "";
+    private _color = selectRandom _markerColors;
     {
       _x params ["_group", "_wpIndex"];
-
-      _marker = createMarker
+      private _marker = createMarkerLocal
       [
         format ["ENH_debugWaypoints_%1_%2", _group, _wpIndex],
         waypointPosition _x
       ];
-
-      _marker setMarkerColor _color;
-      _marker setMarkerShape "ICON";
-      _marker setMarkerType "mil_dot";
-      _marker setMarkerText format
-      [
-        "%1/%2/%3/%4",
-        _group,
-        _wpIndex,
-        waypointSpeed _x,
-        waypointType _x
-      ];
+      private _markerTextNew  = format ["%1/%2/%3/%4", _group, waypointSpeed _x, waypointType _x];
+      if (_markerText != _markerTextNew) then
+      {
+        _marker setMarkerTextLocal (_markerTextNew + str _wpIndex);
+        _markerText = _markerTextNew;
+      }
+      else
+      {
+        _marker setMarkerTextLocal str _wpIndex;
+      };
+      _marker setMarkerColorLocal _color;
+      _marker setMarkerShapeLocal "ICON";
+      _marker setMarkerTypeLocal "mil_dot";
+      //_marker setMarkerShadow false;
+      _path append [waypointPosition _x select 0, waypointPosition _x select 1];
     } forEach waypoints _x;
-  } forEach allGroups;
+
+    //Create poly markers
+    if (count _path < 4) then {continue};
+    private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _x], leader _x];
+    _markerPoly setMarkerShapeLocal "polyline";
+    _markerPoly setMarkerColorLocal _color;
+    _markerPoly setMarkerPolylineLocal _path;
+  } forEach (allGroups select {count waypoints _x > 1});
 };
 
 if GETVALUE("NoRecoil") then
@@ -547,12 +562,12 @@ if (GETVALUE("DebugPath") > 0) then
     {
       [_leader, _cfgMarkerColors, _is3DEnabled] spawn
       {
-        scriptName 'ENH_Attribute_DebugPath';
+        scriptName "ENH_Attribute_DebugPath";
         params ["_leader", "_cfgMarkerColors", "_is3DEnabled"];
         private _arrow = objNull;
-        private _arrowColour = format ['#(rgb,8,8,3)color(%1,%2,%3,1)', random(1), random(1), random(1)];
+        private _arrowColour = format ["#(rgb,8,8,3)color(%1,%2,%3,1)", random(1), random(1), random(1)];
         private _path = [];
-        private _marker = createMarkerLocal [format ['ENH_DebugPath_%1', str _leader], _leader];
+        private _marker = createMarkerLocal [format ["ENH_DebugPath_%1", str _leader], _leader];
         _marker setMarkerShapeLocal "polyline";
         _marker setMarkerColorLocal configName selectRandom _cfgMarkerColors;
 
@@ -570,7 +585,7 @@ if (GETVALUE("DebugPath") > 0) then
             };
             _path append [getPos _leader # 0, getPos _leader # 1];
             _posOld = getPos _leader;
-            if (count _path > 3) then {_marker setMarkerPolyline _path};
+            if (count _path > 3) then {_marker setMarkerPolylineLocal _path};
             if (count _path == 500) then {_path deleteRange [0, 2]};
             sleep DELAY;
           };
