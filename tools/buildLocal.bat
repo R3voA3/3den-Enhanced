@@ -33,4 +33,4 @@ START /WAIT AddonBuilder.exe "%PROJECT_FOLDER%\3denEnhanced" "%TARGET_FOLDER%\ad
 ECHO Clearing log files of AddonBuilder.
 DEL "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Logs" /Q
 
-PAUSE
+::PAUSE
