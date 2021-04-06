@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 //Only add things which end with either .jpg or .paa
 #define IS_JPG (".jpg" in (_string select [count _string - 4]))

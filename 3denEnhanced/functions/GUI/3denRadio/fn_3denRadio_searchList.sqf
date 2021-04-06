@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 #define IN_PLAYLIST [_songName, _songClass, str _songDuration] in _playlist
 
 disableSerialization;
@@ -42,7 +42,7 @@ lbClear _ctrlSongList;
     _songDurationStr = _songDuration call ENH_fnc_floatToTime;
     _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 
-    _modData = if (configSourceMod _x != '') then {modParams [configSourceMod  _x, ["name", "logoSmall"]]} else {["", ""]};
+    _modData = if (configSourceMod _x != '') then {modParams [configSourceMod _x, ["name", "logoSmall"]]} else {["", ""]};
     _modData params [["_modName", ""], ["_modLogo", ""]];
 
     //Add filtered entries

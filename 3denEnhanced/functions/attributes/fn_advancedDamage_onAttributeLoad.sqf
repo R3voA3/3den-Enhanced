@@ -17,7 +17,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 params ["_ctrlGroup", "_value"];
 parseSimpleArray _value params ["_hitpoints", "_damage"];
@@ -53,12 +53,10 @@ private _counter = 0;
   _ctrllabel ctrlCommit 0;
 
   private _ctrlSlider = _display ctrlCreate ["ctrlXSliderH", 30000 + _forEachIndex, _ctrlGroup];
-  _ctrlSlider ctrlSetText _x;
   _ctrlSlider ctrlSetPosition [ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W, CTRL_DEFAULT_H];
   _ctrlSlider ctrlCommit 0;
 
   private _ctrlEdit = _display ctrlCreate ["ctrlEdit", 40000 + _forEachIndex, _ctrlGroup];
-  _ctrlEdit ctrlSetText _x;
   _ctrlEdit ctrlSetPosition [(ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, EDIT_W * GRID_W, CTRL_DEFAULT_H];
   _ctrlEdit ctrlCommit 0;
 

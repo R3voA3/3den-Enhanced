@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 private _display = findDisplay IDD_EXTRACTION;
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center", "_veh"];

@@ -11,7 +11,7 @@
   BOOLEAN: True on success, false when failed
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
 

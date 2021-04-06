@@ -13,7 +13,7 @@
   BOOLEAN: true
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
 private _display = uiNamespace getVariable "Enh_Display_InventoryManager";

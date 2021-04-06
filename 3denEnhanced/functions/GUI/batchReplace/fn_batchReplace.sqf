@@ -11,12 +11,12 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 private _objects = [["Object"]] call ENH_fnc_all3DENSelected;
 private _replaceWith = ctrlText (findDisplay IDD_BATCHREPLACE displayCtrl IDC_BATCHREPLACE_REPLACEWITH); //"sfd, 2ffds, 5, 123"
 
-profileNameSpace setVariable ['ENH_batchReplace_lastUsed', _replaceWith];
+uiNamespace setVariable ['ENH_batchReplace_lastUsed', _replaceWith];
 
 private _replaceWithArray = _replaceWith splitString ", ";//Separates string by comma and values into an array //["sfd", "2ffds", "5", "123"]
 

@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 #define CFG_MAGAZINES ["SmokeShell", "smokeShellGreen", "smokeShellOrange", "smokeShellBlue", "smokeShellRed", "smokeShellPurple", "smokeShellYellow", "Chemlight_blue", "Chemlight_red", "Chemlight_green", "Chemlight_yellow", "B_IR_Grenade"]
 

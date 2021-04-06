@@ -13,6 +13,6 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 lnbClear ((uiNamespace getVariable "Enh_Display_InventoryManager") displayCtrl IDC_IM_INVENTORYLIST)

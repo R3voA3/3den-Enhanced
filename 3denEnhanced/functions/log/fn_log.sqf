@@ -21,7 +21,7 @@
   BOOLEAN: true or false
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 params [["_mode", ""]];
 

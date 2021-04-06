@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
 private _display3DEN = findDisplay IDD_3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER;
