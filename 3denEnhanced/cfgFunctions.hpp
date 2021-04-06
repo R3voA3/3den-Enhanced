@@ -39,7 +39,10 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\GUI\batchReplace";
       class batchReplace;
+      class batchReplace_onLoad;
       class batchReplace_createDisplay;
+      class batchReplace_onTreeSelChanged;
+      class batchReplace_fillTreeView;
     };
     class FunctionsViewer
     {
