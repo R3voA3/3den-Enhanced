@@ -32,9 +32,9 @@ class ENH_SPR
           _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];\
           _x addEventHandler ['handleDamage',\
           {\
-            params ['_unit', '_selection', '_damage', '', '', '_hitIndex'];\
-            if (_handleDamage < 0.1 || {!alive _unit || {lifeState _unit isEqualTo 'INCAPACITATED'}}) exitWith {0};\
-            if (ENH_SPR_CanDie && {_selection == 'head' && {_damage >= 1.2}}) exitWith\
+            params ['_unit', '_selection', '_damage'];\
+            if (_damage < 0.1 || !alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};\
+            if (ENH_SPR_CanDie && _selection == 'head' && _damage >= 1.2) exitWith\
             {\
               _unit setDamage 1;\
               _unit removeEventHandler ['handleDamage', _thisEventHandler];\
@@ -45,7 +45,7 @@ class ENH_SPR
             }\
             else\
             {\
-              if(_selection == '' && {_damage >= 0.95}) then\
+              if(_selection == '' && _damage >= 0.95) then\
               {\
                 setAccTime 1;\
                 _unit allowDamage false;\
