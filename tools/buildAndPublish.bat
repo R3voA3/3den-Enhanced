@@ -43,4 +43,4 @@ PublisherCmd update /id:2422196882 /changeNote:"Auto Update: Changelog will foll
 ECHO Clearing log files of AddonBuilder.
 DEL "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Logs" /Q
 
-PAUSE
+::PAUSE
