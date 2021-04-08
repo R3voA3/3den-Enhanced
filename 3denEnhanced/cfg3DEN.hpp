@@ -302,6 +302,9 @@ class Cfg3DEN
           #ifndef ENH_HIDE_FORCEFLAG
             #include "attributesObject\forceFlag.hpp"
           #endif
+          #ifndef ENH_HIDE_OBJECTSCALE
+            #include "attributesObject\objectScale.hpp"
+          #endif
         };
       };
     };
