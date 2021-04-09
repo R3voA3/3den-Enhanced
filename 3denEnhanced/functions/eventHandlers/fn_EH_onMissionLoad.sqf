@@ -15,7 +15,6 @@
 
 #if __has_include("\userconfig\ENH_Config.hpp")
 #include "\userconfig\ENH_Config.hpp"
-["ENH_Customised_Warning", 1, 10] call BIS_fnc_3DENNotification;
 #endif
 
 #ifndef ENH_HIDE_AMBIENTANIMATIONS
@@ -41,7 +40,7 @@ if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
   [] spawn
   {
     sleep 0.1;
-    ["collapseEntityList"] call bis_fnc_3DENInterface;
+    ["collapseEntityList"] call BIS_fnc_3DENInterface;
   };
 };
 #endif
