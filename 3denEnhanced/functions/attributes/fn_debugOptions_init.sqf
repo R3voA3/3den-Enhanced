@@ -16,8 +16,40 @@
 #define RADIUS 150
 #define DELAY 0.1
 
-//To prevent issues in multiplayer games started from multiplayer editor
-if (!is3DENPreview || isMultiplayer) exitWith {};
+private _states =
+[
+  GETVALUE("Arsenal"),
+  GETVALUE("Garage"),
+  GETVALUE("ShowUnits"),
+  GETVALUE("BulletTracking"),
+  GETVALUE("Zeus"),
+  GETVALUE("Invulnerability"),
+  GETVALUE("Captive"),
+  GETVALUE("Stamina"),
+  GETVALUE("FPS"),
+  GETVALUE("KillBLUFOR"),
+  GETVALUE("KillOPFOR"),
+  GETVALUE("KillINDFOR"),
+  GETVALUE("KillCIVFOR"),
+  GETVALUE("KillCurser"),
+  GETVALUE("DrawIcons"),
+  GETVALUE("DeleteCorpse"),
+  GETVALUE("ShowWaypoints"),
+  GETVALUE("NoRecoil"),
+  GETVALUE("NoSway"),
+  GETVALUE("NoReload"),
+  GETVALUE("DrawViewDirection"),
+  GETVALUE("Teleport"),
+  GETVALUE("SkipTime"),
+  GETVALUE("TimeMultiplier"),
+  GETVALUE("VariableViewer"),
+  GETVALUE("ActiveScripts"),
+  GETVALUE("DebugPath"),
+  GETVALUE("DrawTriggers")
+];
+diag_log "DEBUG OPTIONS: FIX ISSUE WITH WRONG VALUES!";
+//To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
+if (isMultiplayer || !is3DENPreview || !(true in _states || 1 in _states || 2 in _states)) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 //Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
@@ -29,7 +61,7 @@ systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 1];
 sleep 1;
 systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT";
 
-if GETVALUE("Arsenal") then
+if (_states select 0) then
 {
   [
     player,
@@ -50,7 +82,7 @@ if GETVALUE("Arsenal") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("Garage") then
+if (_states select 1) then
 {
   [
     player,
@@ -75,7 +107,7 @@ if GETVALUE("Garage") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("ShowUnits") then
+if (_states select 2) then
 {
   [] spawn
   {
@@ -109,12 +141,12 @@ if GETVALUE("ShowUnits") then
   };
 };
 
-if GETVALUE("BulletTracking") then
+if (_states select 3) then
 {
   [player] spawn BIS_fnc_traceBullets;
 };
 
-if GETVALUE("Zeus") then
+if (_states select 4) then
 {
   [] spawn
   {
@@ -134,7 +166,7 @@ if GETVALUE("Zeus") then
   };
 };
 
-if GETVALUE("Invulnerability") then
+if (_states select 5) then
 {
   {
     _x allowDamage false;
@@ -143,21 +175,21 @@ if GETVALUE("Invulnerability") then
   (vehicle player) allowDamage false;
 };
 
-if GETVALUE("Captive") then
+if (_states select 6) then
 {
   {
     _x setCaptive true;
   } forEach units player;
 };
 
-if GETVALUE("Stamina") then
+if (_states select 7) then
 {
   {
     _x enableStamina false;
   } forEach units player;
 };
 
-if GETVALUE("FPS") then
+if (_states select 8) then
 {
   [] spawn
   {
@@ -192,7 +224,7 @@ if GETVALUE("FPS") then
   };
 };
 
-if GETVALUE("KillBLUFOR") then
+if (_states select 9) then
 {
   [
     player,
@@ -215,7 +247,7 @@ if GETVALUE("KillBLUFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KillOPFOR") then
+if (_states select 10) then
 {
   [
     player,
@@ -238,7 +270,7 @@ if GETVALUE("KillOPFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KILLINDFOR") then
+if (_states select 11) then
 {
   [
     player,
@@ -261,7 +293,7 @@ if GETVALUE("KILLINDFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KillCIVFOR") then
+if (_states select 12) then
 {
   [
     player,
@@ -284,7 +316,7 @@ if GETVALUE("KillCIVFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KillCurser") then
+if (_states select 13) then
 {
   [
     player,
@@ -305,7 +337,7 @@ if GETVALUE("KillCurser") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("DrawIcons") then
+if (_states select 14) then
 {
   ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
   ["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
@@ -337,7 +369,7 @@ if GETVALUE("DrawIcons") then
   ] call BIS_fnc_addStackedEventHandler;
 };
 
-if GETVALUE("DeleteCorpse") then
+if (_states select 15) then
 {
   [
   player,
@@ -358,7 +390,7 @@ if GETVALUE("DeleteCorpse") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("ShowWaypoints") then
+if (_states select 16) then
 {
   private _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
   {
@@ -398,17 +430,17 @@ if GETVALUE("ShowWaypoints") then
   } forEach (allGroups select {count waypoints _x > 1});
 };
 
-if GETVALUE("NoRecoil") then
+if (_states select 17) then
 {
   player setUnitRecoilCoefficient 0;
 };
 
-if GETVALUE("NoSway") then
+if (_states select 18) then
 {
   player setCustomAimCoef 0;
 };
 
-if GETVALUE("NoReload") then
+if (_states select 19) then
 {
   player addEventHandler ["FiredMan",
   {
@@ -426,7 +458,7 @@ if GETVALUE("NoReload") then
   }];
 };
 
-if GETVALUE("DrawViewDirection") then
+if (_states select 20) then
 {
   ["ENH_EH_DrawViewDirection_ID", "onEachFrame",
     {
@@ -440,7 +472,7 @@ if GETVALUE("DrawViewDirection") then
   ] call BIS_fnc_addStackedEventHandler;
 };
 
-if GETVALUE("Teleport") then
+if (_states select 21) then
 {
   [
     player,
@@ -461,7 +493,7 @@ if GETVALUE("Teleport") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("SkipTime") then
+if (_states select 22) then
 {
   [
     player,
@@ -485,7 +517,7 @@ if GETVALUE("SkipTime") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("TimeMultiplier") then
+if (_states select 23) then
 {
   [
     player,
@@ -510,7 +542,7 @@ if GETVALUE("TimeMultiplier") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("VariableViewer") then
+if (_states select 24) then
 {
   [
     player,
@@ -531,11 +563,11 @@ if GETVALUE("VariableViewer") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("ActiveScripts") then
+if (_states select 25) then
 {
   [
     player,
-    "Log active Scripts",
+    localize "STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
     "true",
@@ -552,7 +584,7 @@ if GETVALUE("ActiveScripts") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (GETVALUE("DebugPath") > 0) then
+if ((_states select 26) > 0) then
 {
   private _cfgMarkerColors = ("true" configClasses (configFile >> "CfgMarkerColors"));
   private _is3DEnabled = GETVALUE("DebugPath") > 1;
@@ -595,7 +627,7 @@ if (GETVALUE("DebugPath") > 0) then
   } forEach allGroups;
 };
 
-if GETVALUE("DrawTriggers") then
+if (_states select 27) then
 {
   {
     private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
