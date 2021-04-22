@@ -275,7 +275,7 @@ class Cfg3DEN
           #ifndef ENH_HIDE_SPR
             #include "attributesObject\SPRTickets.hpp"
           #endif
-          ifndef ENH_HIDE_ATTACHTO
+          #ifndef ENH_HIDE_ATTACHTO
             #include "attributesObject\attachTo.hpp"
           #endif
         };
