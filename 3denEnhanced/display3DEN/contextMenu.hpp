@@ -8,7 +8,7 @@ items[] +=
 };
 class Log
 {
-  picture = "\3denEnhanced\data\icon_clipboard.paa";
+  picture = "\3denEnhanced\data\icon_clipboard_ca.paa";
   items[] +=
   {
     "ENH_LogClassesString",
@@ -89,7 +89,7 @@ class ENH_MeasureDistance
 {
   action = "[] spawn ENH_fnc_measureDistance";
   text = "$STR_ENH_CONTEXTMENU_MEASUREDISTANCE";
-  picture = "\3denEnhanced\data\icon_ruler.paa";
+  picture = "\3denEnhanced\data\icon_ruler_ca.paa";
   conditionShow = "1";
   SHOW_IN_ROOT;
 };

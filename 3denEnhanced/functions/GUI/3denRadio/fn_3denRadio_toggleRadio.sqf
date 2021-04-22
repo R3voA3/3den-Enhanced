@@ -35,7 +35,7 @@ private _fnc_enableRadio =
   //Only change controls if GUI is visible
   if !(isNull findDisplay IDD_3DENRADIO) then
   {
-    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_pause.paa";
+    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_pause_ca.paa";
   };
 };
 

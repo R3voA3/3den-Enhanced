@@ -462,7 +462,7 @@ class ENH_ControlTypes
 class ENH_ToggleMapIDs
 {
   text = "$STR_ENH_TOOLS_SHOWMAPIDS";
-  picture = "\3DENEnhanced\data\icon_id.paa";
+  picture = "\3DENEnhanced\data\icon_id_ca.paa";
   action = "call ENH_fnc_toggleMapIDs";
 };
 class ENH_ProductInfo
