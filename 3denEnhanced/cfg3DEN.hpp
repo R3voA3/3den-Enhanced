@@ -275,6 +275,9 @@ class Cfg3DEN
           #ifndef ENH_HIDE_SPR
             #include "attributesObject\SPRTickets.hpp"
           #endif
+          ifndef ENH_HIDE_ATTACHTO
+            #include "attributesObject\attachTo.hpp"
+          #endif
         };
       };
       class Inventory
@@ -302,9 +305,9 @@ class Cfg3DEN
           #ifndef ENH_HIDE_FORCEFLAG
             #include "attributesObject\forceFlag.hpp"
           #endif
-          #ifndef ENH_HIDE_OBJECTSCALE
+          /* #ifndef ENH_HIDE_OBJECTSCALE
             #include "attributesObject\objectScale.hpp"
-          #endif
+          #endif */
         };
       };
     };
