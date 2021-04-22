@@ -60,6 +60,3 @@ else
   CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable true;
   CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable true;
 };
-
-//Set up tree view
-//CTRL(IDC_FUNCTIONSVIEWER_LIST) call ENH_fnc_FunctionsViewer_fillCtrlTV;

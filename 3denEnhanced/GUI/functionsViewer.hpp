@@ -43,7 +43,7 @@ class ENH_FunctionsViewer
         "campaignConfig"
       };
       values[] = {0, 1, 2};
-      onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
+      onToolBoxSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class FilterMode: FilterConfig
     {
@@ -63,7 +63,7 @@ class ENH_FunctionsViewer
         ".hpp"
       };
       values[] = {0, 1, 2, 3, 4, 5};
-      onToolBoxSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
+      onToolBoxSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class LoadFileMode: ctrlCombo
     {
@@ -88,7 +88,7 @@ class ENH_FunctionsViewer
           text = "preprocessFileLineNumbers";
         };
       };
-      onLBSelChanged  = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
+      onLBSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
     };
     class List: ctrlTree
     {
@@ -136,7 +136,7 @@ class ENH_FunctionsViewer
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
+      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class Expand: ctrlButtonExpandAll
     {
@@ -144,7 +144,7 @@ class ENH_FunctionsViewer
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class TogglePanelLeft: ctrlButton
     {
@@ -154,7 +154,7 @@ class ENH_FunctionsViewer
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick  = "_this call ENH_fnc_functionsViewer_togglePanel";
+      onButtonClick = "_this call ENH_fnc_functionsViewer_togglePanel";
     };
     class Name: ctrlEdit
     {

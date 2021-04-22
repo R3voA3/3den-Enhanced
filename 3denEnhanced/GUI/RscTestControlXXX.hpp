@@ -2,8 +2,8 @@ class RscTestControlStyles
 {
   scriptName = "RscTestControlStyles";
   scriptPath = "GUI";
-  onLoad = "[""onLoad"", _this, ""RscTestControlStyles"", 'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
-  onUnload = "[""onUnload"", _this, ""RscTestControlStyles"", 'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+  onLoad = "[""onLoad"", _this, ""RscTestControlStyles"", 'GUI'] call (uinamespace getVariable 'BIS_fnc_initDisplay')";
+  onUnload = "[""onUnload"", _this, ""RscTestControlStyles"", 'GUI'] call (uinamespace getVariable 'BIS_fnc_initDisplay')";
   idd = 999;
   enableSimulation = 1;
   movingEnable = 0;
@@ -304,8 +304,8 @@ class RscTestControlTypes
 {
   scriptName = "RscTestControlTypes";
   scriptPath = "GUI";
-  onLoad = "[""onLoad"", _this, ""RscTestControlTypes"", 'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
-  onUnload = "[""onUnload"", _this, ""RscTestControlTypes"", 'GUI'] call (uinamespace getvariable 'BIS_fnc_initDisplay')";
+  onLoad = "[""onLoad"", _this, ""RscTestControlTypes"", 'GUI'] call (uinamespace getVariable 'BIS_fnc_initDisplay')";
+  onUnload = "[""onUnload"", _this, ""RscTestControlTypes"", 'GUI'] call (uinamespace getVariable 'BIS_fnc_initDisplay')";
   idd = 999;
   enableSimulation = 0;
   enableDisplay = 0;
