@@ -27,7 +27,7 @@ class ENH_GroupMarker
           private _leader = leader _group;\
           private _marker = createMarker\
           [\
-            format ['ENH_GroupMarker_%1', str floor random 10e5],\
+            format ['ENH_GroupMarker_%1', str _group],\
             _leader\
           ];\
           _marker setMarkerType _type;\
