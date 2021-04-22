@@ -1649,6 +1649,14 @@
     <Polish>Ustawia poziom tchórzostwa (niedostatek odwagi czy męstwa) jednostki. Im więcej tchórzostwa posiada jednostka tym wcześniej zaczną uciekać. 0 oznacza maksymalną odwage, a 1 minimalną, czyli zawsze będą uciekać.</Polish>
     <Russian>Устанавливает уровень трусости (отсутствие смелости или храбрости) отряда. Чем больше трусости имеет подразделение, тем скорее оно начнет убегать. 0 означает максимальную смелость, а 1 означает всегда бежать.</Russian>
   </Key>
+  <Key ID="STR_ENH_ATTACHTO_DISPLAYNAME">
+    <English>Attach</English>
+    <German>Befestigen</German>
+  </Key>
+  <Key ID="STR_ENH_ATTACHTO_TOOLTIP">
+    <English>Attaches this object to the closest object.</English>
+    <German>Befestigt dieses Objekt an dem nächstgelegensten Objekt.</German>
+  </Key>
   <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
     <English>Unladen Weight</English>
     <Italian>peso a Vuoto</Italian>
