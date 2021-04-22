@@ -171,6 +171,12 @@ class CfgFunctions
       class CFGS_onLoad;
       class CFGS_playOrCopy;
     };
+    class 3DENShortcuts
+    {
+      file = "3denEnhanced\functions\GUI\3DENShortcuts";
+      class 3DENShortcuts_init;
+      class 3DENShortcuts_fillList;
+    };
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
