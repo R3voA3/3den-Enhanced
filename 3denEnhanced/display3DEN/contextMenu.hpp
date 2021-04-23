@@ -8,7 +8,6 @@ items[] +=
 };
 class Log
 {
-  picture = "\3denEnhanced\data\icon_clipboard_ca.paa";
   items[] +=
   {
     "ENH_LogClassesString",
