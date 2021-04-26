@@ -30,10 +30,11 @@ class CfgFunctions
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
-      class textureFinder_exportTexturePath;
+      class textureFinder_copyPath;
       class textureFinder_fillList;
       class textureFinder_findTextures;
       class textureFinder_progressText;
+      class textureFinder_updatePreview;
     };
     class BatchReplace
     {
@@ -42,7 +43,7 @@ class CfgFunctions
       class batchReplace_onLoad;
       class batchReplace_createDisplay;
       class batchReplace_onTreeSelChanged;
-      class batchReplace_fillTreeView;
+      class batchReplace_initTreeView;
     };
     class FunctionsViewer
     {
