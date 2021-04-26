@@ -23,7 +23,7 @@ CTRL(IDC_BATCHREPLACE_REPLACEWITH) ctrlSetText (uiNamespace getVariable ["ENH_ba
 
 CTRL(IDC_BATCHREPLACE_SEARCH) ctrlEnable false;
 
-[CTRL(IDC_BATCHREPLACE_LIST)] call ENH_fnc_batchReplace_fillTreeView;
+[CTRL(IDC_BATCHREPLACE_LIST)] call ENH_fnc_batchReplace_initTreeView;
 
 CTRL(IDC_BATCHREPLACE_LIST) ctrlAddEventHandler ["treeSelChanged", {_this call ENH_fnc_batchReplace_onTreeSelChanged}];
 

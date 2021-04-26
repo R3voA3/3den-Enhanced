@@ -95,5 +95,29 @@ class ENH_BatchReplace
       w = 23 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class CollapseAll: ctrlButtonCollapseAll
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
+    };
+    class ExpandAll: ctrlButtonExpandAll
+    {
+      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
+    };
+    class Preview: ctrlStaticPictureKeepAspect
+    {
+      idc = IDC_BATCHREPLACE_PREVIEW;
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = (DIALOG_H - 21) * GRID_H;
+    };
   };
 };
