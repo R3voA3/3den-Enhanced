@@ -28,19 +28,20 @@ findDisplay IDD_TEXTUREFINDER displayAddEventHandler ["keyDown",
 }];
 
 //Update preview
-findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeSelChanged",
+findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseMove",
 {
-  params ["_ctrlTV", "_path"];
-  if (count _path == 2) then
-  {
-    (ctrlParent _ctrlTV displayCtrl 1200) ctrlSetText (_ctrlTV tvText _path)
-  }
+  _this call ENH_fnc_textureFinder_updatePreview;
+}];
+
+findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseHold",
+{
+  _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
 //Copy path
 findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["keyDown",
 {
-  _this call ENH_fnc_textureFinder_exportTexturePath;
+  _this call ENH_fnc_textureFinder_copyPath;
 }];
 
 //Update progress text
@@ -58,47 +59,51 @@ ENH_TextureFinder_ClassesSearched = 0;
 //Scan configFile for all classes
 private _fnc_searchConfig =
 {
-   params [["_depth", 1], ["_class", configFile]];
+  params [["_depth", 1], ["_config", configFile]];
 
-   if (_depth == 0) exitWith {[]};
-   _depth = _depth - 1;
-   private _array = [];
+  if (_depth == 0) exitWith {[]};
+  _depth = _depth - 1;
+  private _array = [];
 
-   {
-      _array pushBack _x;
-      ENH_TextureFinder_ClassesFound = ENH_TextureFinder_ClassesFound + 1;
-      _array append ([_depth, _x] call _fnc_searchConfig);
-   } forEach ("true" configClasses _class);
-
+  ("true" configClasses _config) apply
+  {
+    _array pushBack _x;
+    _array append ([_depth, _x] call _fnc_searchConfig);
+    ENH_TextureFinder_ClassesFound = ENH_TextureFinder_ClassesFound + 1;
+  };
   _array
 };
 
 //Check configProperties of every class for textures
-private _addPath =
+private _fnc_addPath =
 {
   params ["_string"];
   if (IS_PAA || IS_JPG) then
   {
     if (_string find "\" != 0) then {_string = "\" + _string};
+    if !(fileExists _string) then {continue};
     ENH_TextureFinder_TexturesFound pushBackUnique toLowerANSI _string;
   };
 };
 
-private _searchArray =
+private _fnc_searchArray =
 {
-  if (_x isEqualType "") exitWith {_x call _addPath};
-  if (_x isEqualType []) exitWith {_searchArray forEach _x};
+  if (_x isEqualType "") exitWith {_x call _fnc_addPath};
+  if (_x isEqualType []) exitWith {_x apply _fnc_searchArray};
 };
 
+([15] call _fnc_searchConfig) apply
 {
   ENH_TextureFinder_ClassesSearched = ENH_TextureFinder_ClassesSearched + 1;
+
+  configProperties [_x, "isText _x || isArray _x", false] apply
   {
-    if (isText _x) then {getText _x call _addPath} else
+    if (isText _x) then {getText _x call _fnc_addPath} else
     {
-      _searchArray forEach getArray _x;
+      getArray _x apply _fnc_searchArray;
     };
-  } forEach configProperties [_x, "isText _x || isArray _x", false];
-} forEach ([15] call _fnc_searchConfig);
+  };
+};
 
 uiNamespace setVariable ["ENH_TextureFinder_TexturesFound", ENH_TextureFinder_TexturesFound];
 uiNamespace setVariable ["ENH_TextureFinder_ClassesFound", ENH_TextureFinder_ClassesFound];
