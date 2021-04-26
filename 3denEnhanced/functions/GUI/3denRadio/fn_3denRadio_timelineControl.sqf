@@ -28,7 +28,7 @@ CTRL(IDC_3DENRADIO_POSITION) sliderSetRange [0, DURATION];
 CTRL(IDC_3DENRADIO_POSITION) sliderSetSpeed [10, 5];
 
 //Update text control while display is opened. Do not update slider since that would bug it
-while {!isNull findDisplay IDD_3DENRADIO} do
+while {!isNull _display} do
 {
   CTRL(IDC_3DENRADIO_TIME) ctrlSetText (getMusicPlayedTime call ENH_fnc_floatToTime);
   CTRL(IDC_3DENRADIO_POSITION) sliderSetPosition getMusicPlayedTime;
