@@ -1,4 +1,33 @@
 ---
+v5.9
+*ADDED*
+- Added an attribute to change sound volume of environment sounds
+- Added GUI to quickly view all Eden Editor shortcuts (ALT + F1)
+
+*CHANGED*
+- ChineseImp translation was updated
+- Unit icons are now drawn above the unit
+- Debug waypoints improvements
+  - Marker text will only show the waypoint ID if nothing else changed compared to the previous marker
+  - Markers are now connected by poly lines
+  - Groups with only one waypoint e.g., units placed in the editor are now ignored (These changes should reduce the clutter on the map)
+- Fixed rpt spam caused by 3den Radio if a song was in playlist but not available in-game anymore
+- Batch Replace GUI has now a list with all vehicles to choose from. Pasting class names is still possible
+- Batch Replace values are no longer saved persistently. They will be reset when the game is closed
+- Fixed undefined variable in SRP code
+- Fixed the height of some header controls
+- Debug Options function will no longer run if not at least one action is activated
+- Removed warning about custom userconfig
+- Fixed left and right panel would be hidden by default
+- Vanilla Config Viewer
+  - Updated the design
+  - Properties list can now be scrolled horizontally to view long values
+- Texture Finder has an updated preview
+- Slight performance improvement of the Inventory Manager
+- Inventory Manager now also lists Oldman specific objects
+
+
+---
 v5.8
 - Added a tool to display vehicle hitpoints. Useful for the Advance Damage attribute
 - Added missing translations for Advanced Damage attribute
@@ -11,7 +40,7 @@ v5.8
 - Fixed .rpt spam caused by missing translations
 - DLC icons are not limited to 100m
 - Draw functions optimized
-- Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window". Additionally, it now supports all DLCs (Was fixed by a hotfix)
+- Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window".     Additionally, it now supports all DLCs (Was fixed by a hotfix)
 
 ---
 v5.7
@@ -140,8 +169,7 @@ v5.6
 - German translation has recieved some fixes thanks to Mr-Melker
 - Fixed a wrong condition in context menu causing some .rpt entries
 - Fixed an issue which caused CTRL + X shortcut in the Functions Viewer to cause a script error
-- Custom GUIs will no longer hide Eden Interface.
-- Fixed a bug which would cause Grid Pattern to not work
+- Custom GUIs will no longer hide Eden Interface- Fixed a bug which would cause Grid Pattern to not work
 - Increased max number of columns in Grid Pattern from 20 to 50
 - Polish translation was updated by Krzyciu
 - 3DEN Cam Positions will now properly display the tooltip for each entry
@@ -172,8 +200,7 @@ v5.3
 - "Show Radio Message" would be cut off in the extraction GUI
 - Updated Spanish translation (Thanks to arv187)
 - Tweaked some functions
-- Several fixes for Single Player respawn.
-
+- Several fixes for Single Player respawn
 *REMOVED*
 - remove obsolete functions
 
@@ -319,8 +346,7 @@ v4.3
 - Link to Mission Optimisation Biki page
 - DisableAI "radioprotocol"
 - Attribute to end mission after certain number of units of given side were killed (e.g. civilian casualties)
-- Added Editor Attribute to toggle Entity Counter in status bar.
-- Added a tool to quickly toggle simulation of selected objects
+- Added Editor Attribute to toggle Entity Counter in status bar- Added a tool to quickly toggle simulation of selected objects
 - Added a tool to quickly setup a simple extraction
 - Script Commands Viewer to menu strip -> tools -> utilities
 - A function to convert floats to time format minutes:seconds
@@ -354,15 +380,12 @@ v4.3
 - Ambient Flyby attribute was overhauled and optimized
 - Intro Text attribute was overhauled and optimized
 - Airdrop Shot attribute was overhauled and optimized
-- Some attributes have now a button to reset and disable them.
-- All substantial attributes have now got their own attribute control, therefore no unnecessary missionNamespace variables are declared.
-- All mission attribute are now collapsed by default
+- Some attributes have now a button to reset and disable them- All substantial attributes have now got their own attribute control, therefore no unnecessary missionNamespace variables are declared- All mission attribute are now collapsed by default
 - Fixed various missing semicolons
 - Fixed an issue where Preview Debug options would not apply to player when option "Play the Character" was used to preview the scenario
 - Changed 3den notification for ENH_fnc_loadoutTools
 - Added various new internal macros
-- All substantial attributes now have a proper description of what they do, and links to further information if available.
-- Rearanged some scenario attributes
+- All substantial attributes now have a proper description of what they do, and links to further information if available- Rearanged some scenario attributes
 - Intro text attribute now supports BIS_fnc_infoText
 - Intro text attribute has a new control with images to select the  intro type
 - Values of Dynamic skill attributes are now handled by attribute control and not writting into mission namespace variables
@@ -387,9 +410,7 @@ v4.3
 - Placement Tools GUI now also supports setting of object orientation
 - Added fine control to Placement Tools GUI
 - Batch Replace GUI is now only opened when objects are selected
-- Center of Placement Tools will now stay the same until reset.
-- Replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier.
-- Old garrison UI is back
+- Center of Placement Tools will now stay the same until reset- Replaced waitUntil {time > x} with sleep x to prevent inconsistencies in multiplier- Old garrison UI is back
 - Added hold action attribute (WIP)
 - Fixed feature type attribute would use incorrect data type
 - Ambient Animation attribute uses Listbox control instead of Combobox control
@@ -402,12 +423,10 @@ v4.3
 - Task Patrol attribute now uses a slider control
 - Logging of multiple map grid positions is now possible. Only unique value will be logged
 - Faction are now logged to clipboard without [ ]
-- Added context menu enty to log classes in format "class1", "class2",...
-- Added new folder to menu strip
+- Added context menu enty to log classes in format "class1", "class2",..- Added new folder to menu strip
 - Added option to garrision tool to change stance of units
 - Fixed missing shortcuts for some tools
-- Fixed Switch Time would not properly set overcast, rain and fog to 0. Change is forced now.
-- Song duration in 3den Radio is no displayed in format minutes:seconds (00:00)
+- Fixed Switch Time would not properly set overcast, rain and fog to 0. Change is forced now- Song duration in 3den Radio is no displayed in format minutes:seconds (00:00)
 
 *REMOVED*
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
@@ -513,8 +532,7 @@ v3.9
 - updated translation, thanks to IllidanS4
 
 *REMOVED*
-- Stay on Position attribute. It was not behaving as expected.
-
+- Stay on Position attribute. It was not behaving as expected
 *known Issues*
 - Event Code Attribute does not work on dedicated servers
 
@@ -614,14 +632,12 @@ v3.1
 - respawn tickets for civilian side
 - 3den Radio has got an incremental seach now
 - 3den Enhanced is now using the CBA versioning system (Only if CBA is used)
-- new functions viewer with incremental search, new design, tree view etc.
-
+- new functions viewer with incremental search, new design, tree view etc
 *CHANGED*
 - Log object info tool has been overhauled and uses display3denCopy now
 - pattern tools can now be used multiple times without reloading the GUI
 - serveral logic errors in pattern tools GUI and its functions
-- the export loadout to config tool has got a GUI now.
-- some minor function improvements
+- the export loadout to config tool has got a GUI now- some minor function improvements
 - 3den Radio functionalities were mostly rewritten to solve serveral issues and make code more efficient
 - readded server key
 - All GUIs are now using the BackgroundDisable and BackgroundDisableTiles controls
@@ -630,8 +646,7 @@ v3.1
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
     - briefing editor shortcut was changed from CTRL + B to ALT + B
     - Texture Finder can now be opened by pretting ALT + T
-    - Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut.
-    - Clear chat can now be performed by pressing ALT + CTRL + C
+    - Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut    - Clear chat can now be performed by pressing ALT + CTRL + C
     - all debug tools have got a shortcut now
     - Loadout tools can now be accessed by CTRL + SHIFT shortcuts
     - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
@@ -659,8 +674,7 @@ v3.0.01
 v3.0
 
 *ADDED*
-- credits (Menu Strip -> About 3den Enhanced -> Credits...) Shows all contributors. If I forgot about someone please let me know.
-- added tool to log map grid position to clipboard
+- credits (Menu Strip -> About 3den Enhanced -> Credits...) Shows all contributors. If I forgot about someone please let me know- added tool to log map grid position to clipboard
 
 *CHANGED*
 - some base defines clean up
@@ -741,8 +755,7 @@ v2.7
 - The debug tool "Log Game Info" will now also copy the list of mods used
 - some improvements to the location list
 - increased size of Module Description GUI to improve legibility
-- GUI of pattern tools was improved. Unused controls are now 50% faded and disabled. Used controls are now focused when GUI is opened for quicker usage.
-- some config cleanup
+- GUI of pattern tools was improved. Unused controls are now 50% faded and disabled. Used controls are now focused when GUI is opened for quicker usage- some config cleanup
 - translation cleanup
 - translation improvements
 
@@ -874,8 +887,7 @@ v1.9
 - tool to quickly name multiple entities
 - debug trigger for healing and repairing
 - attribute to set the feature type
-- ambient animations. They only work in single player now and can be found in the "State" category.
-- added Arma 3 Utilities (Thanks to KK for those awesome tools)
+- ambient animations. They only work in single player now and can be found in the "State" category- added Arma 3 Utilities (Thanks to KK for those awesome tools)
 - added attribute to set weapon recoil coef
 - addes spanish translation (kudos to arv187)
 
@@ -985,8 +997,7 @@ v1.6
 - improved behaviour and speed mode control of random patrol
 - improved speed mode control for ambient flyby
 - improved some tooltips
-- fixed bug caused by event att.
-- fixed some inconsistencies in the configs
+- fixed bug caused by event att- fixed some inconsistencies in the configs
 - various improvements to the Random Patrol code with the goal to improve reliability
 - replaced some of my own translations with ones from BIS
 - improved code of remove NVG attribute
@@ -1022,11 +1033,9 @@ v1.6
 - added tutorial for 3den Radio
 - added shortcuts for various tools and context menu entries
 - added help entry redirecting to youtube tutorials
-- a warning message is now shown when patrol radius is smaller than 51 m to prevent unexpected behaviour.
-- session timer
+- a warning message is now shown when patrol radius is smaller than 51 m to prevent unexpected behaviour- session timer
 - a tool to show amount of objects placed in a mission
-- a new tool which retrieves all product information and formats it so it can directly be used inside a bug report etc.
-- added help link to KK's Blog
+- a new tool which retrieves all product information and formats it so it can directly be used inside a bug report etc- added help link to KK's Blog
 - added Briefing Editor
 - added loadout tool. Select one or multiple units and use the "Copy Loadout" tool. Then select the units you want the loadout to apply to. If multiply loadouts were saved. A random one will be selected for each unit
 - warning message when new scenario is opened (If accepted it won't appear again)
@@ -1045,14 +1054,11 @@ v1.6
 - added version attribute to CfgPatches for internal use
 - improve the way the dev branch warning is displayed
 - added tool to display FPS while in Eden
-- added a tool to export and import eden camera params, like position, direction and pitch/bank. Mainly for debug purpose, but be creative.
-  The output can also be pasted into BIS' Splendid Camera
+- added a tool to export and import eden camera params, like position, direction and pitch/bank. Mainly for debug purpose, but be creative  The output can also be pasted into BIS' Splendid Camera
 - added tool to quickly toggle Grass on/off (This will not effect the mission in any way)
 
 *REMOVED*
-- removed suppression level att.
-- removed fatigue level att.
-- removed obsolete entries from the stringtable.xml
+- removed suppression level att- removed fatigue level att- removed obsolete entries from the stringtable.xml
 - removed side attribute from ambient fly by (Will always be civilian anyway)
 - removed rainbow att. (Functionality was not 100% clear to the user)
 - removed "hide map object" context menu entry (The code is not properly optimised and reliable yet)
@@ -1082,21 +1088,16 @@ v1.5
 - Fixed aspec ratio of loiter attribute
 - Reduced size of insignia attribute (Please report any issues, controls might overlap)
 - Moved most of the code from control configs to global functions
-- Preferences are now applied when a preview ends, or a new scenario is created.
-- Ambient animation attribute is now easier to use:
-  - 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied.
-    In older versions, one had to deactivate the animation first.
-- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
-NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function.
-- Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
+- Preferences are now applied when a preview ends, or a new scenario is created- Ambient animation attribute is now easier to use:
+  - 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied    In older versions, one had to deactivate the animation first- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
+NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function- Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
 - Respawn tickets are now not always set to 0 when untouched
 - Corrected some localisations
 - Blacklisted another music track in the playMusic fnc
 - Improved advanced fog attribute
 - Replaced custom control for view distance att. with a edit box
 - Improved view distance code
-- All class names are not using the Enh TAG.
-- Removed activate checkbox from intro text attribute. It can not be disable by leaving the delay undefined(empty)
+- All class names are not using the Enh TAG- Removed activate checkbox from intro text attribute. It can not be disable by leaving the delay undefined(empty)
 - Changed config name of save gear attribute
 - Improved code for hide terrain object trigger
 - improve ENH_fnc_playMusic, it now filters out classes which have no soundtrack defined and it's slightly faster
@@ -1118,8 +1119,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Added unit marker attribute
 - Flyby mission attribute
 - Added setMass attribute
-- Added advanced briefing att.
-
+- Added advanced briefing att
 ---
 v1.4
 
@@ -1154,8 +1154,7 @@ v1.3
 - attribute for unit traits
 
 - added hostage attribute:
-  A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage.
-  Mission designers can check whether the unit is hostage or not by retrieving the following variable:
+  A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage  Mission designers can check whether the unit is hostage or not by retrieving the following variable:
   _unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
 
 *CHANGED*
@@ -1225,8 +1224,7 @@ v1.1
 
 *ADDED*
 - time multiplier to environment attribute
-- advanced fog settings to environment attributes.
-- remove map attribute
+- advanced fog settings to environment attributes- remove map attribute
 - remove GPS attribute
 - ambient combat animation
 - view distance and disable grass option to environment mission attribute (Will be executed globally and for JIP playes)
