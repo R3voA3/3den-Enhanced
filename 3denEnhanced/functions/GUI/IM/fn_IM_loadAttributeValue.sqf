@@ -34,7 +34,7 @@ private _fnc_addItems =
     {
       if (_x # 0 isEqualTo _currentClass) exitWith
       {
-        _x params ["_configName", "_displayName", "_image", "", "", "_addonIcon"];
+        _x params ["_configName", "_displayName", "_image", "", "_addonIcon"];
         ([_ctrlInventory, _configName, _displayName, _image, _addonIcon, _amount, _configName]) call ENH_fnc_IM_lnbAdd;
       };
     } forEach (uiNamespace getVariable "ENH_IM_allItems");

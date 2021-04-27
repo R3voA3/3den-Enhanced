@@ -30,7 +30,7 @@ private _allItems = uiNamespace getVariable "ENH_IM_allItems";
 
 private _index = _allItems findIf {_x select 0 isEqualTo _configName};
 private _itemData = _allItems select _index;
-_itemData params ["_configName", "_displayName", "_image", "", "", "_addonIcon"];
+_itemData params ["_configName", "_displayName", "_image", "", "_addonIcon"];
 
 private _itemAdded = false;
 
