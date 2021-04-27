@@ -37,10 +37,10 @@ POWERSHELL compress-archive -Path """%TARGET_FOLDER%""" -DestinationPath """%PRO
 :: Change dir
 CD "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Publisher"
 ::Start AddonBuilder and pack mod
-PublisherCmd update /id:2422196882 /changeNote:"Auto Update: Changelog will follow!" /path:"%TARGET_FOLDER%"
+PublisherCmd update /id:623475643 /changeNote:"Auto Update: Changelog will follow!" /path:"%TARGET_FOLDER%"
 
 :: Clear AddonBuilder log folder
 ECHO Clearing log files of AddonBuilder.
 DEL "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\Logs" /Q
 
-::PAUSE
+PAUSE
