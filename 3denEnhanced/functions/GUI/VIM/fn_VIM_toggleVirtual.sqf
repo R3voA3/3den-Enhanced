@@ -4,22 +4,22 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_InventoryManager GUI. Used to search the item listbox.
+  Used by the ENH_VIM GUI. Used to search the item listbox.
 
   Parameter(s):
-  0: CONTROL - Some control within the GUI
+  0: Not used. Left for backwards compatibility
   1: BOOLEAN - True to set to virtual
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
-params ["_ctrlCheckbox", "_isVirtual"];
-private _display = ctrlParent _ctrlCheckbox;
-private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
+params ["", "_isVirtual"];
+private _display = uiNamespace getVariable "ENH_Display_VIM";
+private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
 private _rows = (lnbSize _ctrlInventory) # 0;
 
 //onCheckedChange EH returns NUMBER, while other functions use BOOLEAN as parameter
@@ -40,6 +40,6 @@ else
   };
 };
 
-uiNamespace setVariable ["ENH_IM_IsVirtual", _isVirtual];
+uiNamespace setVariable ["ENH_VIM_IsVirtual", _isVirtual];
 
-true
+CTRL(IDC_VIM_VIRTUAL) cbSetChecked _isVirtual;

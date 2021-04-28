@@ -1,9 +1,9 @@
 #define DIALOG_W 240
 #define DIALOG_H 140
 
-class ENH_InventoryManager
+class ENH_VIM
 {
-  idd = IDD_INVENTORYMANAGER;
+  idd = IDD_VIM;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -16,7 +16,7 @@ class ENH_InventoryManager
     };
     class Header: ctrlStaticTitle
     {
-      text = "$STR_ENH_TOOLS_INVENTORYMANAGER";
+      text = "$STR_ENH_TOOLS_VIM";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
@@ -24,8 +24,8 @@ class ENH_InventoryManager
     };
     class AvailableItems: ctrlStatic
     {
-      idc = IDC_IM_AVAILABLEITEMSTEXT;
-      text = "$STR_ENH_IM_AVAILABLEITEMS";
+      idc = IDC_VIM_AVAILABLEITEMSTEXT;
+      text = "$STR_ENH_VIM_AVAILABLEITEMS";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
       w = 40 * GRID_W;
@@ -35,12 +35,12 @@ class ENH_InventoryManager
     };
     class InventoryItems: AvailableItems
     {
-      text = "$STR_ENH_IM_ITEMSININVENTORY";
+      text = "$STR_ENH_VIM_ITEMSININVENTORY";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
     };
     class InventoryListBackground: ctrlStaticPictureKeepAspect
     {
-      idc = IDC_IM_BACKGROUNDICON;
+      idc = IDC_VIM_BACKGROUNDICON;
       text = "";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
@@ -53,7 +53,7 @@ class ENH_InventoryManager
   {
     class Filter: ctrlToolbox
     {
-      idc = IDC_IM_FILTER;
+      idc = IDC_VIM_FILTER;
       columns = 7;
       rows = 3;
       x = CENTERED_X(DIALOG_W) + GRID_W;
@@ -65,7 +65,7 @@ class ENH_InventoryManager
         "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0",
         "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0",
         "$STR_A3_SNIPER1",
-        "$STR_ENH_IM_SHOTGUNS",
+        "$STR_ENH_VIM_SHOTGUNS",
         "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0",
         "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0",
         "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0",
@@ -84,11 +84,11 @@ class ENH_InventoryManager
         "$STR_A3_RSCDISPLAYARSENAL_TAB_NVGS",
         "$STR_A3_CFGVEHICLECLASSES_ITEMS0"
       };
-      onToolBoxSelChanged = "_this call ENH_fnc_IM_filterList";
+      onToolBoxSelChanged = "_this call ENH_fnc_VIM_filterList";
     };
     class AvailableItemsList: ctrlListbox
     {
-      idc = IDC_IM_AVAILABLEITEMSLIST;
+      idc = IDC_VIM_AVAILABLEITEMSLIST;
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 7 * GRID_W;
@@ -97,7 +97,7 @@ class ENH_InventoryManager
     };
     class InventoryItemsList: ctrlListNBox
     {
-      idc = IDC_IM_INVENTORYLIST;
+      idc = IDC_VIM_INVENTORYLIST;
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + 6 * GRID_W;
       y = DIALOG_TOP + 5 * CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W  / 2 - 8 * GRID_W;
@@ -106,148 +106,156 @@ class ENH_InventoryManager
     };
     class AddOne: ctrlButton
     {
-      idc = IDC_IM_ADDONE;
+      idc = IDC_VIM_ADDONE;
       text = ">";
       tooltip = "+1";
       x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
       y = DIALOG_TOP + 10 * CTRL_DEFAULT_H;
       w = 10 * GRID_W;
       h = 2 * CTRL_DEFAULT_H;
-      onButtonClick = "1 call ENH_fnc_IM_AddItem";
+      onButtonClick = "1 call ENH_fnc_VIM_addItem";
     };
     class AddTen: AddOne
     {
-      idc = IDC_IM_ADDTEN;
+      idc = IDC_VIM_ADDTEN;
       text = ">>";
       tooltip = "+10";
       y = DIALOG_TOP + 12 * CTRL_DEFAULT_H + GRID_W;
-      onButtonClick = "10 call ENH_fnc_IM_AddItem";
+      onButtonClick = "10 call ENH_fnc_VIM_addItem";
     };
     class RemoveOne: AddOne
     {
-      idc = IDC_IM_REMOVEONE;
+      idc = IDC_VIM_REMOVEONE;
       text = "<";
       tooltip = "-1";
       y = DIALOG_TOP + 14 * CTRL_DEFAULT_H + 2 * GRID_W;
-      onButtonClick = "1 call ENH_fnc_IM_RemoveItem";
+      onButtonClick = "1 call ENH_fnc_VIM_removeItem";
     };
     class RemoveTen: AddOne
     {
-      idc = IDC_IM_REMOVETEN;
+      idc = IDC_VIM_REMOVETEN;
       text = "<<";
       tooltip = "-10";
       y = DIALOG_TOP + 16 * CTRL_DEFAULT_H + 3 * GRID_W;
-      onButtonClick = "10 call ENH_fnc_IM_RemoveItem";
+      onButtonClick = "10 call ENH_fnc_VIM_removeItem";
     };
-    class RemoveAll: ctrlButton
+    class RemoveAll: AddOne
     {
-      idc = IDC_IM_REMOVEALL;
+      idc = IDC_VIM_REMOVEALL;
       text = "<<<";
-      tooltip = "$STR_ENH_IM_REMOVESELECTED_TOOLTIP";
-      x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W - 5 * GRID_W;
+      tooltip = "$STR_ENH_VIM_REMOVESELECTED_TOOLTIP";
       y = DIALOG_TOP + 18 * CTRL_DEFAULT_H + 4 * GRID_W;
-      w = 10 * GRID_W;
-      h = 2 * CTRL_DEFAULT_H;
-      onButtonClick = "call ENH_fnc_IM_clearInventory";
+      onButtonClick = "call ENH_fnc_VIM_clearInventory";
+    };
+    class FullArsenal: AddOne
+    {
+      idc = IDC_VIM_FULLARSENAL;
+      text = "A";
+      tooltip = "Create a virtual Arsenal with all weapons of selected mod filter.";
+      y = DIALOG_TOP + 20 * CTRL_DEFAULT_H + 5 * GRID_W;
+      colorBackground[] = {1, 0, 0, 1};
+      onButtonClick = "call ENH_fnc_VIM_fullArsenal";
     };
     class ShowTemplates: ctrlButton
     {
-      text = "$STR_ENH_IM_SHOWTEMPLATES";
+      text = "$STR_ENH_VIM_SHOWTEMPLATES";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_IM_showTemplates";
+      onButtonClick = "_this call ENH_fnc_VIM_showTemplates";
     };
     class CreateTemplate: ShowTemplates
     {
-      idc = IDC_IM_CREATETEMPLATE;
-      text = "$STR_ENH_IM_CREATETEMPLATE";
+      idc = IDC_VIM_CREATETEMPLATE;
+      text = "$STR_ENH_VIM_CREATETEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 31 * GRID_W;
-      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_IM_TemplateData'";
+      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_VIM_TemplateData'";
     };
     class DeleteTemplate: ctrlButtonPictureKeepAspect
     {
-      idc = IDC_IM_DELETETEMPLATE;
+      idc = IDC_VIM_DELETETEMPLATE;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-      tooltip = "$STR_ENH_IM_DELETETEMPLATE";
+      tooltip = "$STR_ENH_VIM_DELETETEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 62 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_IM_deleteTemplate";
+      onButtonClick = "_this call ENH_fnc_VIM_deleteTemplate";
       colorBackground[] = {0, 0, 0, 0};
       colorBackgroundDisabled[] = {0, 0, 0, 0};
     };
     class ApplyTemplate: ShowTemplates
     {
-      idc = IDC_IM_APPLYTEMPLATE;
-      text = "$STR_ENH_IM_APPLYTEMPLATE";
+      idc = IDC_VIM_APPLYTEMPLATE;
+      text = "$STR_ENH_VIM_APPLYTEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
-      onButtonClick = "_this call ENH_fnc_IM_applyTemplate";
-    };
-    class IsVirtualCheckbox: ctrlCheckbox
-    {
-      idc = IDC_IM_VIRTUAL;
-      x = CENTERED_X(DIALOG_W) + GRID_W + 112 * GRID_W;
-      y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onCheckedChanged = "_this call ENH_fnc_IM_toggleVirtual";
+      onButtonClick = "_this call ENH_fnc_VIM_applyTemplate";
     };
     class IsVirtualText: ctrlStatic
     {
-      text = "$STR_ENH_IM_ISVIRTUAL";
-      x = CENTERED_X(DIALOG_W) + GRID_W + 116 * GRID_W;
+      idc = IDC_VIM_VIRTUAL_TEXT;
+      text = "$STR_ENH_VIM_ISVIRTUAL";
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 125 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-      w = 20 * GRID_W;
+      w = 15 * GRID_W;
       h = CTRL_DEFAULT_H;
+    };
+    class IsVirtualCheckbox: ctrlCheckbox
+    {
+      idc = IDC_VIM_VIRTUAL;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 110 * GRID_W;
+      y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onCheckedChanged = "call ENH_fnc_VIM_toggleVirtual";
     };
     class Reset: ctrlButtonPictureKeepAspect
     {
+      idc = IDC_VIM_RESET;
       text = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-      tooltip = "$STR_ENH_IM_RESET_TOOLTIP";
-      x = CENTERED_X(DIALOG_W) + GRID_W + 135 * GRID_W;
+      tooltip = "$STR_ENH_VIM_RESET_TOOLTIP";
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 105 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      action = "call ENH_fnc_IM_resetStorage";
+      action = "call ENH_fnc_VIM_resetStorage";
     };
     class FilterSearch: ctrlCombo
     {
-      idc = IDC_IM_FILTERSEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + 141 * GRID_W;
+      idc = IDC_VIM_FILTERSEARCH;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 99 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onLBSelChanged = "_this call ENH_fnc_IM_onModFilterChanged";
+      onLBSelChanged = "_this call ENH_fnc_VIM_onModFilterChanged";
     };
     class Search: ctrlEdit
     {
-      idc = IDC_IM_SEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + 146 * GRID_W;
+      idc = IDC_VIM_SEARCH;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 94 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onKeyUp = "_this call ENH_fnc_IM_Search";
+      onKeyUp = "_this call ENH_fnc_VIM_search";
     };
     class ButtonSearch: ctrlButtonSearch
     {
-      idc = IDC_IM_BUTTONSEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + 171 * GRID_W;
+      idc = IDC_VIM_BUTTONSEARCH;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 69 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_IM_resetSearch";
+      onButtonClick = "_this call ENH_fnc_VIM_resetSearch";
     };
     class Ok: ctrlButtonOK
     {
-      idc = IDC_IM_BUTTONOK;
+      idc = IDC_VIM_BUTTONOK;
       x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "[] call ENH_fnc_IM_ApplyAttribute";
+      onButtonClick = "[] call ENH_fnc_VIM_applyAttribute";
     };
     class Close: ctrlButtonClose
     {
@@ -259,9 +267,9 @@ class ENH_InventoryManager
   };
 };
 
-class ENH_IM_TemplateData
+class ENH_VIM_TemplateData
 {
-  idd = IDD_IM_TEMPLATEDATA;
+  idd = IDD_VIM_TEMPLATEDATA;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -292,7 +300,7 @@ class ENH_IM_TemplateData
     };
     class TitleValue: ctrlEdit
     {
-      idc = IDC_IM_TEMPLATEDATA_TITLE;
+      idc = IDC_VIM_TEMPLATEDATA_TITLE;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 62 * GRID_H;
       w = 58 * GRID_W;
@@ -308,7 +316,7 @@ class ENH_IM_TemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = IDC_IM_TEMPLATEDATA_DESCRIPTION;
+      idc = IDC_VIM_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 74 * GRID_H;
       w = 58 * GRID_W;
@@ -327,7 +335,7 @@ class ENH_IM_TemplateData
       y = DIALOG_TOP + 100 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_IM_createTemplate";
+      onButtonClick = "_this call ENH_fnc_VIM_createTemplate";
     };
   };
 };

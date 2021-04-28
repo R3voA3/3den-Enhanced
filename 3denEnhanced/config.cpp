@@ -24,7 +24,7 @@
 #include "GUI\extraction.hpp"
 #include "GUI\functionsViewer.hpp"
 #include "GUI\garrison.hpp"
-#include "GUI\inventoryManager.hpp"
+#include "GUI\VIM.hpp"
 #include "GUI\moduleInformation.hpp"
 #include "GUI\nameObjects.hpp"
 #include "GUI\placementTools.hpp"

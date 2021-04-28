@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_InventoryManager GUI. Filters the item list.
+  Used by the ENH_VIM GUI. Filters the item list.
 
   Parameter(s):
   0: CONTROL - Control Toolbox
@@ -20,7 +20,7 @@ disableSerialization;
 params ["_ctrlFilter", "_selectedIndex"];
 
 private _display = ctrlparent _ctrlFilter;
-private _types = uiNamespace getVariable "ENH_IM_Types";
+private _types = uiNamespace getVariable "ENH_VIM_Types";
 private _filterType = _types select _selectedIndex;
 private _filteredItems = [];
 
@@ -31,13 +31,13 @@ private _filteredItems = [];
   {
     _filteredItems pushBack [_configName, _displayName, _picture, _addonClass, _addonIcon];
   };
-} forEach (uiNamespace getVariable "ENH_IM_allItems");
+} forEach (uiNamespace getVariable "ENH_VIM_allItems");
 
 //Store items to improve search later
-uiNamespace setVariable ["ENH_IM_FilteredItems", _filteredItems];
+uiNamespace setVariable ["ENH_VIM_FilteredItems", _filteredItems];
 
 //Fill listbox via the search function
-CTRL(IDC_IM_SEARCH) call ENH_fnc_IM_search;
+CTRL(IDC_VIM_SEARCH) call ENH_fnc_VIM_search;
 
 //Scroll all the way to the top to prevent items not being displayed because it was scrolled down too far
-CTRL(IDC_IM_AVAILABLEITEMSLIST) ctrlSetScrollValues [0, 0];
+CTRL(IDC_VIM_AVAILABLEITEMSLIST) ctrlSetScrollValues [0, 0];

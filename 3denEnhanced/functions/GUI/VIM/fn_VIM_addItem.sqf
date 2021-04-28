@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_InventoryManager GUI. Adds an item to the inventory list.
+  Used by the ENH_VIM GUI. Adds an item to the inventory list.
 
   Parameter(s):
   0: NUMBER - Amount of items to be added
@@ -17,16 +17,16 @@
 
 disableSerialization;
 params ["_amount"];
-private _display = uiNamespace getVariable "Enh_Display_InventoryManager";
-private _ctrlInventory = CTRL(IDC_IM_INVENTORYLIST);
-private _row = lbCurSel CTRL(IDC_IM_AVAILABLEITEMSLIST);
+private _display = uiNamespace getVariable "ENH_Display_VIM";
+private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
+private _row = lbCurSel CTRL(IDC_VIM_AVAILABLEITEMSLIST);
 
 if (_row isEqualTo -1) exitWith {};
 
 private _rows = lnbSize _ctrlInventory select 0;
-private _displayName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbText _row;
-private _configName = CTRL(IDC_IM_AVAILABLEITEMSLIST) lbData _row;
-private _allItems = uiNamespace getVariable "ENH_IM_allItems";
+private _displayName = CTRL(IDC_VIM_AVAILABLEITEMSLIST) lbText _row;
+private _configName = CTRL(IDC_VIM_AVAILABLEITEMSLIST) lbData _row;
+private _allItems = uiNamespace getVariable "ENH_VIM_allItems";
 
 private _index = _allItems findIf {_x select 0 isEqualTo _configName};
 private _itemData = _allItems select _index;
@@ -47,11 +47,11 @@ for "_i" from 0 to (( _rows - 1)) max 0 do
 };
 if !(_itemAdded) then//If item was not found in the list, add it
 {
-  [_ctrlInventory, _configName, _displayName, _image, _addonIcon, _amount, _configName + localize "STR_ENH_IM_PREVIEW_TOOLTIP"] call ENH_fnc_IM_lnbAdd;
+  [_ctrlInventory, _configName, _displayName, _image, _addonIcon, _amount, _configName] call ENH_fnc_VIM_lnbAdd;
 };
 
 //Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
 [
   _ctrlInventory,
-  uiNamespace getVariable ["ENH_IM_IsVirtual", false]
-] call ENH_fnc_IM_toggleVirtual;
+  uiNamespace getVariable ["ENH_VIM_IsVirtual", false]
+] call ENH_fnc_VIM_toggleVirtual;

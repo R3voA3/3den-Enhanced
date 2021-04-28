@@ -138,28 +138,29 @@ class CfgFunctions
       class variableViewer_onSearch;
       class variableViewer_setOrCreate;
     };
-    class IM
+    class VIM
     {
-      file = "3denEnhanced\functions\GUI\IM";
-      class IM_addItem;
-      class IM_applyAttribute;
-      class IM_applyTemplate;
-      class IM_clearInventory;
-      class IM_createTemplate;
-      class IM_deleteTemplate;
-      class IM_filterList;
-      class IM_lbAdd;
-      class IM_lnbAdd;
-      class IM_loadAttributeValue;
-      class IM_onModFilterChanged;
-      class IM_open;
-      class IM_removeItem;
-      class IM_resetSearch;
-      class IM_resetStorage;
-      class IM_search;
-      class IM_showTemplates;
-      class IM_toggleVirtual;
-      class IM_updateTemplateList;
+      file = "3denEnhanced\functions\GUI\VIM";
+      class VIM_addItem;
+      class VIM_applyAttribute;
+      class VIM_applyTemplate;
+      class VIM_clearInventory;
+      class VIM_createTemplate;
+      class VIM_deleteTemplate;
+      class VIM_filterList;
+      class VIM_fullArsenal;
+      class VIM_lbAdd;
+      class VIM_lnbAdd;
+      class VIM_loadAttributeValue;
+      class VIM_onModFilterChanged;
+      class VIM_open;
+      class VIM_removeItem;
+      class VIM_resetSearch;
+      class VIM_resetStorage;
+      class VIM_search;
+      class VIM_showTemplates;
+      class VIM_toggleVirtual;
+      class VIM_updateTemplateList;
     };
     class CfgSentencesBrowser
     {

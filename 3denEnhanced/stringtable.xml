@@ -5392,14 +5392,14 @@
     <Spanish>Visor de variables</Spanish>
     <Chinesesimp>变量查看器</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_TOOLS_INVENTORYMANAGER">
+  <Key ID="STR_ENH_TOOLS_VIM">
     <English>Vehicle Inventory Manager</English>
     <German>Vehicle-Inventar-Manager</German>
     <French>Gestionnaire d'inventaire de véhicule</French>
     <Spanish>Gestor de inventario de vehículos</Spanish>
     <Chinesesimp>载具库存管理</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_AVAILABLEITEMS">
+  <Key ID="STR_ENH_VIM_AVAILABLEITEMS">
     <English>Available Items</English>
     <German>Verfügbare Gegenstände</German>
     <Polish>Dostępne przedmioty</Polish>
@@ -5407,14 +5407,14 @@
     <Spanish>Objetos disponibles</Spanish>
     <Chinesesimp>可用物品</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_PREVIEW_TOOLTIP">
+  <Key ID="STR_ENH_VIM_PREVIEW_TOOLTIP">
     <English>Double click on an item to preview it.</English>
     <German>Doppelklick auf einen Gegenstand, um ihn anzuzeigen.</German>
     <French>Double-cliquez sur un item pour le prévisualiser.</French>
     <Spanish>Doble clic en un objeto para previsualizarlo</Spanish>
     <Chinesesimp>双击一个项目以预览它。</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_ITEMSININVENTORY">
+  <Key ID="STR_ENH_VIM_ITEMSININVENTORY">
     <English>Items in Inventory</English>
     <German>Gegenstände im Inventar</German>
     <Polish>Przedmioty w ekwipunku</Polish>
@@ -5422,7 +5422,7 @@
     <Spanish>Objetos en el inventario</Spanish>
     <Chinesesimp>库存物品</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_SHOTGUNS">
+  <Key ID="STR_ENH_VIM_SHOTGUNS">
     <English>Shotguns</English>
     <German>Schrotflinten</German>
     <French>Fusil à pompe</French>
@@ -5430,7 +5430,7 @@
     <Polish>Strzelby</Polish>
     <Chinesesimp>散弹枪</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_SHOWTEMPLATES">
+  <Key ID="STR_ENH_VIM_SHOWTEMPLATES">
     <English>Show Templates</English>
     <German>Vorlagen anz.</German>
     <Polish>Pokaż szablony</Polish>
@@ -5438,7 +5438,7 @@
     <Spanish>Mostrar plantillas</Spanish>
     <Chinesesimp>显示模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_CREATETEMPLATE">
+  <Key ID="STR_ENH_VIM_CREATETEMPLATE">
     <English>Create Template</English>
     <German>Vorlage erstellen</German>
     <Polish>Stwórz szablon</Polish>
@@ -5446,7 +5446,7 @@
     <Spanish>Crear plantilla</Spanish>
     <Chinesesimp>创建模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_APPLYTEMPLATE">
+  <Key ID="STR_ENH_VIM_APPLYTEMPLATE">
     <English>Apply Template</English>
     <German>Vorlage anwenden</German>
     <Polish>Zastosuj szablon</Polish>
@@ -5454,7 +5454,7 @@
     <Spanish>Aplicar plantilla</Spanish>
     <Chinesesimp>应用模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_ISVIRTUAL">
+  <Key ID="STR_ENH_VIM_ISVIRTUAL">
     <English>Is Virtual?</English>
     <German>Virtuell?</German>
     <Polish>Jest wirtualne?</Polish>
@@ -5462,7 +5462,7 @@
     <Spanish>¿Es virtual?</Spanish>
     <Chinesesimp>是否为虚拟军火库？</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_REMOVESELECTED_TOOLTIP">
+  <Key ID="STR_ENH_VIM_REMOVESELECTED_TOOLTIP">
     <English>Clear Inventory</English>
     <German>Inventar leeren</German>
     <Polish>Wyczyść ekwipunek</Polish>
@@ -5470,7 +5470,7 @@
     <Spanish>Vaciar inventario</Spanish>
     <Chinesesimp>清除库存</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_DELETETEMPLATE">
+  <Key ID="STR_ENH_VIM_DELETETEMPLATE">
     <English>Delete selected Template.</English>
     <German>Ausgewählte Vorlage löschen.</German>
     <Polish>Skasuj zaznaczony szablon</Polish>
@@ -5485,7 +5485,7 @@
     <Spanish>Extensiones de Eden adicionales</Spanish>
     <Chinesesimp>其他Eden编辑器扩展</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_HIDETEMPLATES">
+  <Key ID="STR_ENH_VIM_HIDETEMPLATES">
     <English>Hide Templates</English>
     <German>Vorlagen versteck.</German>
     <Polish>Ukryj szablony</Polish>
@@ -5493,7 +5493,7 @@
     <Spanish>Ocultar plantillas</Spanish>
     <Chinesesimp>隐藏模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_TEMPLATES">
+  <Key ID="STR_ENH_VIM_TEMPLATES">
     <English>Templates</English>
     <German>Vorlagen</German>
     <Polish>Szablony</Polish>
@@ -5501,7 +5501,7 @@
     <Spanish>Plantillas</Spanish>
     <Chinesesimp>模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_IM_RESET_TOOLTIP">
+  <Key ID="STR_ENH_VIM_RESET_TOOLTIP">
     <English>Reset to default items defined in object's config.</English>
     <German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
     <Polish>Zresetuj ekwipunek</Polish>

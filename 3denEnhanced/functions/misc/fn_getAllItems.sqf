@@ -4,8 +4,8 @@
   Date: 2021-01-24
 
   Description:
-  Gets all items available for unit and vehicle loadouts and saves them int he uiNamespace avariables ENH_IM_allItems. See _items array in the for the format.
-  Furthermore, it stores all addons in the uiNamespace variable ENH_IM_allAddons.
+  Gets all items available for unit and vehicle loadouts and saves them int he uiNamespace avariables ENH_VIM_allItems. See _items array in the for the format.
+  Furthermore, it stores all addons in the uiNamespace variable ENH_VIM_allAddons.
 
   Parameter(s):
   -
@@ -21,9 +21,9 @@
 
 #define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
 
-if (uiNamespace getVariable ["ENH_IM_allItems", []] isNotEqualTo []) exitWith {};
+if (uiNamespace getVariable ["ENH_VIM_allItems", []] isNotEqualTo []) exitWith {};
 
-private _addons = [];
+private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _items = [];
 
 private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
@@ -63,6 +63,6 @@ private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons"))
   };
 } forEach _allItemConfigs;
 
-uiNamespace setVariable ["ENH_IM_types", ITEM_TYPES_WHITELIST];
-uiNamespace setVariable ["ENH_IM_allItems", _items + SPECIAL_ITEMS];
-uiNamespace setVariable ["ENH_IM_allAddons", _addons];
+uiNamespace setVariable ["ENH_VIM_types", ITEM_TYPES_WHITELIST];
+uiNamespace setVariable ["ENH_VIM_allItems", _items + SPECIAL_ITEMS];
+uiNamespace setVariable ["ENH_VIM_allAddons", _addons];

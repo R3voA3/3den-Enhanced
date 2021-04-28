@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_InventoryManager GUI. Adds an item to a listNbox.
+  Used by the ENH_VIM GUI. Adds an item to a listNbox.
 
   Parameter(s):
   0: CONTROL - Control ListNbox
@@ -16,7 +16,7 @@
   6: STRING - Tooltip
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 disableSerialization;
@@ -29,5 +29,3 @@ _ctrlLnb lnbSetText [[_row, 2], str _value];
 _ctrlLnb lnbSetPicture [[_row, 0], _image];
 _ctrlLnb lnbSetPicture [[_row, 3], _addonIcon];
 _ctrlLnb lnbSetTooltip [[_row, 0], _tooltip];
-
-true
