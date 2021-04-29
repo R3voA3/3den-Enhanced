@@ -151,7 +151,7 @@ class ENH_VIM
     {
       idc = IDC_VIM_FULLARSENAL;
       text = "A";
-      tooltip = "Create a virtual Arsenal with all weapons of selected mod filter.";
+      tooltip = "$STR_ENH_VIM_FULLARSENAL_TOOLTIP";
       y = DIALOG_TOP + 20 * CTRL_DEFAULT_H + 5 * GRID_W;
       colorBackground[] = {1, 0, 0, 1};
       onButtonClick = "call ENH_fnc_VIM_fullArsenal";
