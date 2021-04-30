@@ -14,6 +14,7 @@
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
+#define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration", 0]
 params [["_songData", ["", "", ""], [true, []], 3]];
 
 //If param is bool, a random song is wanted otherwise it's a songclass selected from the listNBox
@@ -35,5 +36,7 @@ uiNamespace setVariable ["ENH_3DENRadio_CurrentSongDuration", _songDuration];
 0 fadeMusic 0;
 3 fadeMusic (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume", 0.25]);
 playMusic _songClass;
+
+findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_POSITION sliderSetRange [0, DURATION];
 
 if !(isNull findDisplay IDD_3DENRADIO) then {(findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_CURRENTSONG) ctrlSetText _songName};
