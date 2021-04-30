@@ -50,7 +50,7 @@ if !(".paa" in _icon) then
   _icon = getText (configfile >> "CfgVehicleIcons" >> _icon);
 };
 CTRL(IDC_VIM_BACKGROUNDICON) ctrlSetText _icon;
-/*
+
 {
-  CTRL(_x) ctrlEnable false;
-} forEach [IDC_VIM_CREATETEMPLATE, IDC_VIM_DELETETEMPLATE, IDC_VIM_APPLYTEMPLATE]; */
+  CTRL(_x) ctrlShow false;
+} forEach [IDC_VIM_CREATETEMPLATE, IDC_VIM_DELETETEMPLATE, IDC_VIM_APPLYTEMPLATE];
