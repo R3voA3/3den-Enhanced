@@ -143,7 +143,6 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\VIM";
       class VIM_addItem;
       class VIM_applyAttribute;
-      class VIM_applyTemplate;
       class VIM_clearInventory;
       class VIM_createTemplate;
       class VIM_deleteTemplate;
@@ -154,6 +153,7 @@ class CfgFunctions
       class VIM_loadAttributeValue;
       class VIM_onModFilterChanged;
       class VIM_open;
+      class VIM_previewTemplate;
       class VIM_removeItem;
       class VIM_resetSearch;
       class VIM_resetStorage;

@@ -190,7 +190,7 @@ class ENH_VIM
       idc = IDC_VIM_APPLYTEMPLATE;
       text = "$STR_EDITOR_MENU_FILE_PREVIEW";
       x = CENTERED_X(DIALOG_W) + GRID_W + 68 * GRID_W;
-      onButtonClick = "_this call ENH_fnc_VIM_applyTemplate";
+      onButtonClick = "_this call ENH_fnc_VIM_previewTemplate";
     };
     class IsVirtualText: ctrlStatic
     {
