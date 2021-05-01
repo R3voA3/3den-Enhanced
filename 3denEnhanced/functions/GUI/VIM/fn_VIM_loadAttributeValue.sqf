@@ -7,7 +7,7 @@
   Used by the ENH_VIM GUI. Used to fill the inventory listbox with set attribute value.
 
   Parameter(s):
-  -
+  0: BOOLEAN - Mode. False to load attribute value, true to insert external value
 
   Returns:
   -
@@ -16,10 +16,16 @@
 #include "\3denEnhanced\ENH_defineCommon.hpp"
 disableSerialization;
 
+params [["_loadAttribute", true], ["_attributeValue", []]];
+
 private _display = uiNamespace getVariable "ENH_Display_VIM";
 private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
 
-private _attributeValue = (ENH_VIM_target get3DENAttribute "ammoBox") # 0;
+if (_loadAttribute) then
+{
+  _attributeValue = (ENH_VIM_target get3DENAttribute "ammoBox") # 0;
+};
+
 _attributeValue = call compile _attributeValue;//Eden saves attributes as string
 _attributeValue params ["_inventory", "_isVirtual"];
 _inventory params ["_weapons", "_magazines", "_items", "_backpacks"];

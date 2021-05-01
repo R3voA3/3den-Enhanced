@@ -27,8 +27,8 @@ if (isNil "ENH_VIM_target" || {ENH_VIM_target isKindOf "CAManBase" || !(ENH_VIM_
 private _display = findDisplay IDD_3DEN createDisplay "ENH_VIM";
 uiNamespace setVariable ["ENH_Display_VIM", _display];
 
-call ENH_fnc_getAllItems;
-call ENH_fnc_VIM_loadAttributeValue;
+[] call ENH_fnc_getAllItems;
+[] call ENH_fnc_VIM_loadAttributeValue;
 
 //Get all addons and add them to filter control
 {

@@ -25,5 +25,4 @@ private _row = lbCurSel _ctrlItems;
 if (_row isEqualTo -1) exitWith {};
 
 private _value = _ctrlItems lbData lbCurSel _ctrlItems;
-ENH_VIM_target set3DENAttribute ["ammoBox", _value];
-call ENH_fnc_VIM_loadAttributeValue;
+[false, _value] call ENH_fnc_VIM_loadAttributeValue;
