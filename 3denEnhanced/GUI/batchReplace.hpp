@@ -16,6 +16,22 @@ class ENH_BatchReplace
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
+    class CollapseAll: ctrlButtonCollapseAll //Need to be background controls. Otherwise they get rendered on top of the list when expanded
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
+    };
+    class ExpandAll: ctrlButtonExpandAll
+    {
+      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
+    };
   };
   class Controls
   {
@@ -55,12 +71,13 @@ class ENH_BatchReplace
     {
       idc = IDC_BATCHREPLACE_LIST;
       idcSearch = IDC_BATCHREPLACE_SEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W;
+      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 19 * GRID_H;
-      w = DIALOG_W / 2 * GRID_W - GRID_W;
+      w = DIALOG_W / 2 * GRID_W;
       h = (DIALOG_H - 21) * GRID_H;
       colorLines[] = {1, 1, 1, 1};
       colorBorder[] = {1, 1, 1, 0};
+      colorBackGround[] = {COLOR_BACKGROUND_RGBA};
     };
     class ReplaceWithText: ctrlStatic
     {
@@ -94,22 +111,6 @@ class ENH_BatchReplace
       y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
       w = 23 * GRID_W;
       h = CTRL_DEFAULT_H;
-    };
-    class CollapseAll: ctrlButtonCollapseAll
-    {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
-    };
-    class ExpandAll: ctrlButtonExpandAll
-    {
-      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
