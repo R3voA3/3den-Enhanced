@@ -18,8 +18,9 @@
 disableSerialization;
 params [["_return", false]];
 private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _ctrlInventory = _display displayCtrl 2300;
-private _rows = lnbSize CTRL(IDC_VIM_INVENTORYLIST) select 0;
+private _itemsHashMap = uiNamespace getVariable "ENH_VIM_allItemsHashMap";
+private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
+private _rows = lnbSize _ctrlInventory select 0;
 
 private _weapons = [];
 private _magazines = [];
@@ -33,10 +34,9 @@ private _backpacksAmount = [];
 
 for "_i" from 0 to _rows do
 {
-  private _configName = CTRL(IDC_VIM_INVENTORYLIST) lnbData [_i - 1, 0];
-  private _amount = parseNumber (CTRL(IDC_VIM_INVENTORYLIST) lnbText [_i - 1, 2]);
-  (_configName call BIS_fnc_itemType) params ["_category", "_specificType"];
-
+  private _configName = _ctrlInventory lnbData [_i - 1, 0];
+  private _amount = _ctrlInventory lnbValue [_i - 1, 1];
+  (_itemsHashMap get _configName) params ["", "", "", "", "_category", "_specificType"];
   switch (true) do
   {
     case (_category isEqualTo "Weapon"):

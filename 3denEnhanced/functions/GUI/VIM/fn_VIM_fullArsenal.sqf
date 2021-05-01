@@ -31,7 +31,7 @@ call ENH_fnc_VIM_clearInventory;
 
   if (_addonClass == _addonClassWanted || _addonClassWanted == "" || (_addonClass == "" && _addonClassWanted == "vanilla")) then
   {
-    [CTRL(IDC_VIM_INVENTORYLIST), _configName, _displayName, _image, _addonIcon, 1, _configName] call ENH_fnc_VIM_lnbAdd;
+    [CTRL(IDC_VIM_INVENTORYLIST), _configName, _displayName, _image, _addonIcon, 99, _configName] call ENH_fnc_VIM_lnbAdd;
   };
 };
 

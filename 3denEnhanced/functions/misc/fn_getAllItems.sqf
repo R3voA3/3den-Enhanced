@@ -26,6 +26,8 @@ if (uiNamespace getVariable ["ENH_VIM_allItems", []] isNotEqualTo []) exitWith {
 private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _items = [];
 
+private _itemsHashMap = createHashMap;
+
 private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
                           (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
 
@@ -60,9 +62,12 @@ private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons"))
       _addons pushBackUnique [_addonClass, _addonName, _addonIcon];
     };
     _items append [[_configName, getText (_x >> "DisplayName"), getText (_x >> "Picture"), _addonClass, _addonIcon, _category, _specificType]];
+
+    _itemsHashMap insert [[_configName, [getText (_x >> "DisplayName"), getText (_x >> "Picture"), _addonClass, _addonIcon, _category, _specificType]]];
   };
 } forEach _allItemConfigs;
 
 uiNamespace setVariable ["ENH_VIM_types", ITEM_TYPES_WHITELIST];
+uiNamespace setVariable ["ENH_VIM_allItemsHashMap", _itemsHashMap];
 uiNamespace setVariable ["ENH_VIM_allItems", _items + SPECIAL_ITEMS];
 uiNamespace setVariable ["ENH_VIM_allAddons", _addons];

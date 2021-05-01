@@ -248,9 +248,10 @@ class ENH_VIM
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_VIM_resetSearch";
     };
-    class Ok: ctrlButtonOK
+    class Save: ctrlButton
     {
       idc = IDC_VIM_BUTTONOK;
+      text = "$STR_DISP_INT_SAVE";
       x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 30 * GRID_W;

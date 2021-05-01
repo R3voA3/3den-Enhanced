@@ -26,11 +26,9 @@ if (_row isEqualTo -1) exitWith {};
 private _rows = lnbSize _ctrlInventory select 0;
 private _displayName = CTRL(IDC_VIM_AVAILABLEITEMSLIST) lbText _row;
 private _configName = CTRL(IDC_VIM_AVAILABLEITEMSLIST) lbData _row;
-private _allItems = uiNamespace getVariable "ENH_VIM_allItems";
+private _itemsHashMap = uiNamespace getVariable "ENH_VIM_allItemsHashMap";
 
-private _index = _allItems findIf {_x select 0 isEqualTo _configName};
-private _itemData = _allItems select _index;
-_itemData params ["_configName", "_displayName", "_image", "", "_addonIcon"];
+(_itemsHashMap get _configName) params ["_displayName", "_image", "", "_addonIcon"];
 
 private _itemAdded = false;
 

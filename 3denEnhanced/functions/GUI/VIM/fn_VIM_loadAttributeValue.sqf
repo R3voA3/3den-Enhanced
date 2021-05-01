@@ -24,29 +24,24 @@ _attributeValue = call compile _attributeValue;//Eden saves attributes as string
 _attributeValue params ["_inventory", "_isVirtual"];
 _inventory params ["_weapons", "_magazines", "_items", "_backpacks"];
 
+private _itemsHashMap = uiNamespace getVariable "ENH_VIM_allItemsHashMap";
+
 private _fnc_addItems =
 {
   params ["_configNamesArray", "_amountsArray"];
   {
     private _amount = _amountsArray param [_forEachIndex, 1];//If virtual inventory, then default to amount 1
-    private _currentClass = _x;
-    _x params ["_configName", "_displayName", "_image", "_addonIcon"];
-    {
-      if (_x # 0 isEqualTo _currentClass) exitWith
-      {
-        _x params ["_configName", "_displayName", "_image", "", "_addonIcon"];
-        ([_ctrlInventory, _configName, _displayName, _image, _addonIcon, _amount, _configName]) call ENH_fnc_VIM_lnbAdd;
-      };
-    } forEach (uiNamespace getVariable "ENH_VIM_allItems");
+    (_itemsHashMap get _x) params ["_displayName", "_image", "", "_addonIcon"];
+    [_ctrlInventory, _x, _displayName, _image, _addonIcon, _amount, _x] call ENH_fnc_VIM_lnbAdd;
   } forEach _configNamesArray;
 };
-lnbClear _ctrlInventory;
+
+call ENH_fnc_VIM_clearInventory;
 
 _weapons call _fnc_addItems;
 _magazines call _fnc_addItems;
 _items call _fnc_addItems;
 _backpacks call _fnc_addItems;
-
 
 [CTRL(IDC_VIM_VIRTUAL), _isVirtual] call ENH_fnc_VIM_toggleVirtual;
 CTRL(IDC_VIM_VIRTUAL) cbSetChecked _isVirtual;
