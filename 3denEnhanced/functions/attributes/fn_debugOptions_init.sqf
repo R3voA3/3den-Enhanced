@@ -47,7 +47,7 @@ private _states =
   GETVALUE("DebugPath"),
   GETVALUE("DrawTriggers")
 ];
-diag_log "DEBUG OPTIONS: FIX ISSUE WITH WRONG VALUES!";
+
 //To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
 if (isMultiplayer || !is3DENPreview || !(true in _states || 1 in _states || 2 in _states)) exitWith {};
 
