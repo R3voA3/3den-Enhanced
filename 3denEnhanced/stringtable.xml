@@ -852,15 +852,8 @@
     <Russian>Отряд\единица не может бегать, если отключено</Russian>
   </Key>
   <Key ID="STR_ENH_CAPTIVE_TOOLTIP">
-    <English>Unit will behave neutral and will join the civilian side.</English>
-    <Italian>L'unità si comporterà neutralmente e si unirà ai civili</Italian>
-    <Czech>Jednotka se bude chovat neutrálně a bude přiřazena na stranu civilistů.</Czech>
-    <French>L'unité adoptera un comprtement neutre et rejoindra la faction civile.</French>
-    <Spanish>Unidad se comportará neutral y se unirá al bando civil.</Spanish>
-    <German>Einheit wechselt auf die zivile Seite und verhält sich neutral.</German>
-    <Chinesesimp>单位将保持中立，并加入平民阵营。</Chinesesimp>
-    <Polish>Jednostka będzie zachowywać się neutralnie i dołączy do strony cywilnej.</Polish>
-    <Russian>Подразделение будет вести себя нейтрально и вступит в гражданскую сторону.</Russian>
+    <English>The unit will not be attacked and will join the civilian side. The unit will still attack enemies!</English>
+    <German>Die Einheit wechselt auf die zivile Seite und wird nicht angegriffen. Die Einheit greift feindliche Einheiten trotzdem an!</German>
   </Key>
   <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
     <English>Enable Headlights</English>

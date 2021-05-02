@@ -1,4 +1,21 @@
 ---
+v6.0
+*ADDED*
+
+*CHANGED*
+- Vehicle Inventory Manager (VIM)
+  - Is now able to create a full arsenal with selected addon items
+  - Is using HashMaps where possible now to improve performance when many items are available
+  - Fixed the issue where the amount would not properly be saved if inventory was set to be virtual
+  - Ok button was renamed to Save. Pressing this button is the only way to save the currently set up inventory
+  - Removed the dialog when resetting the inventory to default
+  - Various visual tweaks
+- Timeline in 3DEN Radio is now working correctly
+- Fixed an issue with Feature Type attribute sometimes not working on DS
+- Fixed an issue with the briefing attribute
+- Changed "Enable Captive Mode" tooltip to better descripe the behaviour
+
+---
 v5.9
 *ADDED*
 - Added an attribute to change sound volume of environment sounds
