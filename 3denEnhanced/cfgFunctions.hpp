@@ -179,6 +179,11 @@ class CfgFunctions
       class 3DENShortcuts_init;
       class 3DENShortcuts_fillList;
     };
+    class RPTViewer
+    {
+      file = "3denEnhanced\functions\GUI\RPTViewer";
+      class RPTViewer;
+    };
     class Misc
     {
       file = "3denEnhanced\functions\Misc";

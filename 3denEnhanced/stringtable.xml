@@ -2219,6 +2219,10 @@
     <Polish>Wzór siatki</Polish>
     <Russian>Сетка</Russian>
   </Key>
+  <Key ID="STR_ENH_RPTVIEWER_NUMBEROFLINES">
+    <English>Number of Lines</English>
+    <German>Zeilenanzahl</German>
+  </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
     <English>#Colums</English>
     <Italian>#Colonne</Italian>

@@ -34,6 +34,7 @@ class ENH_Folder_Debug
   items[] +=
   {
     "ENH_VariableViewer",
+    "ENH_RPTViewer",
     "Separator",
     "ENH_ProductInfo",
     "ENH_RecompileFunctions",
@@ -208,12 +209,6 @@ class ENH_3DENCamPositions
   picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
   action = "findDisplay 313 createDisplay 'ENH_3DENCamPositions'";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
-  opensNewWindow = 1;
-};
-class ENH_VariableViewer
-{
-  text = "$STR_ENH_TOOLS_VARIABLEVIEWER";
-  action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
   opensNewWindow = 1;
 };
 class ENH_CfgSentencesBrowser
@@ -459,6 +454,19 @@ class ENH_ControlTypes
   opensNewWindow = 1;
 };
 //Debug Tools
+class ENH_VariableViewer
+{
+  text = "$STR_ENH_TOOLS_VARIABLEVIEWER";
+  action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
+  opensNewWindow = 1;
+};
+class ENH_RPTViewer
+{
+  text = "RPT Viewer";
+  action = "'open' call ENH_fnc_RPTViewer";
+  opensNewWindow = 1;
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_V};
+};
 class ENH_ToggleMapIDs
 {
   text = "$STR_ENH_TOOLS_SHOWMAPIDS";
