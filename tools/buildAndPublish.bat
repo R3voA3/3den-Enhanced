@@ -17,12 +17,15 @@ MD "%TARGET_FOLDER%"
 MD "%TARGET_FOLDER%\keys"
 MD "%TARGET_FOLDER%\addons"
 MD "%TARGET_FOLDER%\userconfig"
+MD "%TARGET_FOLDER%\python_code"
 
 :: Copy important files
 ECHO Copying files from %PROJECT_FOLDER% to %TARGET_FOLDER%.
 COPY "%PROJECT_FOLDER%\mod.cpp" "%TARGET_FOLDER%\mod.cpp"
 COPY "%PROJECT_FOLDER%\keys\3denEnhanced.bikey" "%TARGET_FOLDER%\keys\3denEnhanced.bikey"
 COPY "%PROJECT_FOLDER%\userconfig\ENH_Config.hpp" "%TARGET_FOLDER%\userconfig\ENH_Config.hpp"
+COPY "%PROJECT_FOLDER%\python_code\$PYTHIA$" "%TARGET_FOLDER%\python_code\$PYTHIA$"
+COPY "%PROJECT_FOLDER%\python_code\__init__.py" "%TARGET_FOLDER%\python_code\__init__.py"
 
 :: Change dir
 CD "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\AddonBuilder\"
