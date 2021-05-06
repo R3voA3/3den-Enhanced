@@ -17,10 +17,10 @@ class Cfg3DEN
       isWarning = 1;
       text = "$STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED";
     };
-    class ENH_Customised_Warning
+    class ENH_GetPythiaMod_Warning
     {
       isWarning = 1;
-      text = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
+      text = "$STR_ENH_NOTIFICATIONS_GETPYTHIA";
     };
   };
   class EventHandlers

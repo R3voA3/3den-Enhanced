@@ -23,6 +23,10 @@
     <Russian>Динамические настройки искусственного интеллекта</Russian>
     <Chinesesimp>动态AI技能设置</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
+    <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
+    <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
+  </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
     <English>BLUFOR Skill Settings</English>
     <Italian>Parametri delle abilità BLUFOR</Italian>
