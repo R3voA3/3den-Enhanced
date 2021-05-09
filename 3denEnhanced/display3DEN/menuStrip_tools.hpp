@@ -118,6 +118,7 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDrawDLCIcons",
     "ENH_ToggleDrawHitpoints",
     "ENH_ToggleAIFeatures",
+    "ENH_TogglePlayable",
     "Separator",
     "ENH_CreateTrigger"
   };
@@ -262,7 +263,6 @@ class ENH_ToggleDrawBuildingPositions
 {
   text = "$STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS";
   action = "call ENH_fnc_toggleDrawBuildingPositions";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
 };
 class ENH_ToggleDrawDLCIcons
 {
@@ -279,6 +279,13 @@ class ENH_ToggleAIFeatures
 {
   text = "$STR_ENH_TOOLS_TOGGLEAIFEATURES";
   action = "call ENH_fnc_toggleAIFeatures";
+};
+class ENH_TogglePlayable
+{
+  text = "$STR_ENH_TOOLS_PLAYABLE";
+  action = "[['Object'], 'ControlMP'] call ENH_fnc_toggleAttribute; systemChat 'Translate!'";
+  picture = "\a3\3den\data\cfg3den\object\iconplayer_ca.paa";
+  shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
 };
 class ENH_GenerateSteamMissionDescription
 {
@@ -484,7 +491,6 @@ class ENH_RecompileFunctions
   text = "$STR_ENH_TOOLS_RECOMPILEFUNCTIONS";
   picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
   action = "1 call BIS_fnc_recompile; ['ENH_actionPerformed'] call BIS_fnc_3DENNotification";
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_R};
 };
 class ENH_ClearChat
 {
