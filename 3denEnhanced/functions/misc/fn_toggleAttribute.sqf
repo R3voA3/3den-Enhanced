@@ -6,13 +6,13 @@
 
   Parameter(s):
   0: ARRAY - Array of types to select. See ENH_fnc_all3DENSelected for values
-  1: STRING - Attribute name
+  1: STRING - Attribute name. Only attributes which have boolean values are supported
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
-if !(is3DEN) exitWith {false};
+if !(is3DEN) exitWith {};
 
 private _types = param [0, ["Object"], [[]]];
 private _attribute = param [1, "", [""]];
@@ -21,25 +21,13 @@ private _selected = [_types] call ENH_fnc_all3DENSelected;
 if (_selected isEqualTo []) exitWith
 {
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
-  false
 };
-
-#define GET_ATTRIBUTE (_x get3DENAttribute _attribute)
 
 collect3DENHistory
 {
   {
-    if (GET_ATTRIBUTE isEqualTo [false]) then
-    {
-       _x set3DENAttribute [_attribute, true];
-    }
-    else
-    {
-      _x set3DENAttribute [_attribute, false];
-    };
+    _x set3DENAttribute [_attribute, !((_x get3DENAttribute _attribute) select 0)];
   } forEach _selected;
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-
-true
