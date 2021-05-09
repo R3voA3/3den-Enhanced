@@ -27,12 +27,11 @@
 #include "GUI\nameObjects.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\RPTViewer.hpp"
-#include "GUI\RscTestControlXXX.hpp"
 #include "GUI\scenarioAttributesManager.hpp"
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\VIM.hpp"
-
 //Improved vanilla GUIs
-#include "RscDisplayConfigViewer.hpp"
-#include "RscDebugConsole.hpp"
+#include "GUI\RscDebugConsole.hpp"
+#include "GUI\RscDisplayConfigViewer.hpp"
+#include "GUI\RscTestControlXXX.hpp"

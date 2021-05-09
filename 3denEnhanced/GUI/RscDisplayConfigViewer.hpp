@@ -191,7 +191,7 @@ class RscDisplayConfigViewer
     class ButtonPreviewClass: ButtonClose
     {
       idc = 2400;
-      x = safezoneX + safezoneW - 82 * GRID_W
+      x = safezoneX + safezoneW - 82 * GRID_W;
       y = safezoneY + safezoneH - CTRL_DEFAULT_H - GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
