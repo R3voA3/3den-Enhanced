@@ -178,7 +178,7 @@ class ENH_ActionCreator
 };
 class ENH_ScenarioAttributesManager
 {
-  text = "$STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER";
+  text = "$STR_ENH_TOOLS_SAM";
   action = "findDisplay 313 createDisplay 'ENH_ScenarioAttributesManager'";
   opensNewWindow = 1;
 };
