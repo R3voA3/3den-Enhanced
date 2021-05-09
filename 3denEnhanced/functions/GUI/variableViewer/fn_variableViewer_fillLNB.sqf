@@ -27,7 +27,7 @@ lbClear _ctrlLNB;
 
 {
   _value = _namespace getVariable _x;
-  if (SHOW_FNC && (_value isEqualType {})) then {continue};//Skip is functions should not be shown
+  if (SHOW_FNC && (_value isEqualType {})) then {continue};//Skip, functions should not be shown
   if !(isNil "_value") then
   {
     _ctrlLNB lnbAddRow
