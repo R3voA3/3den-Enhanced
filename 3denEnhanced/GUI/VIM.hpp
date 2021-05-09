@@ -196,7 +196,7 @@ class ENH_VIM
     {
       idc = IDC_VIM_VIRTUAL_TEXT;
       text = "$STR_ENH_VIM_ISVIRTUAL";
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 125 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 128 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 15 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -204,7 +204,7 @@ class ENH_VIM
     class IsVirtualCheckbox: ctrlCheckbox
     {
       idc = IDC_VIM_VIRTUAL;
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 110 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 113 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -215,7 +215,7 @@ class ENH_VIM
       idc = IDC_VIM_RESET;
       text = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
       tooltip = "$STR_ENH_VIM_RESET_TOOLTIP";
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 105 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 107 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -224,7 +224,7 @@ class ENH_VIM
     class FilterSearch: ctrlCombo
     {
       idc = IDC_VIM_FILTERSEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 99 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 101 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -233,36 +233,47 @@ class ENH_VIM
     class Search: ctrlEdit
     {
       idc = IDC_VIM_SEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 94 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 96 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-      w = 25 * GRID_W;
+      w = 20 * GRID_W;
       h = CTRL_DEFAULT_H;
       onKeyUp = "_this call ENH_fnc_VIM_search";
     };
     class ButtonSearch: ctrlButtonSearch
     {
       idc = IDC_VIM_BUTTONSEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 69 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 76 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_VIM_resetSearch";
     };
+    class ExportACE: ctrlButton
+    {
+      idc = -1;
+      text = "EXPORT (ACE)";
+      tooltip = "Export current loadout in a way it can be imported into the ACE 3 Arsenal.";
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 70 * GRID_W;
+      y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
+      w = 22 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "[] call ENH_fnc_VIM_exportAsACEArsenal";
+    };
     class Save: ctrlButton
     {
       idc = IDC_VIM_BUTTONOK;
       text = "$STR_DISP_INT_SAVE";
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 63 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 47 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-      w = 30 * GRID_W;
+      w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "[] call ENH_fnc_VIM_applyAttribute";
     };
     class Close: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 32 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + GRID_W + DIALOG_W * GRID_W - 24 * GRID_W;
       y = DIALOG_TOP + DIALOG_H * GRID_H - GRID_H;
-      w = 30 * GRID_W;
+      w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };
@@ -293,7 +304,7 @@ class ENH_VIM_TemplateData
     };
     class Title: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE";
+      text = "$STR_ENH_SAM_TEMPLATE_DATA_TITLE";
       x = CENTERED_X(60);
       y = DIALOG_TOP + 56 * GRID_H;
       w = 58 * GRID_W;
@@ -309,7 +320,7 @@ class ENH_VIM_TemplateData
     };
     class Description: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION";
+      text = "$STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION";
       x = CENTERED_X(60);
       y = DIALOG_TOP + 68 * GRID_H;
       w = 58 * GRID_W;
