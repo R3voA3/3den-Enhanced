@@ -21,4 +21,4 @@ params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
 
-CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES) lbDelete (lbCurSel CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES));
+CTRL(IDC_SAM_TEMPLATES) lbDelete (lbCurSel CTRL(IDC_SAM_TEMPLATES));

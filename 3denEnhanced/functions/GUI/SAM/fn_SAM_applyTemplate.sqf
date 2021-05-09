@@ -20,7 +20,7 @@ disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _ctrlLB = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES);
+private _ctrlLB = CTRL(IDC_SAM_TEMPLATES);
 private _index = lbCurSel _ctrlLB;
 
 if (_index isEqualTo -1) exitWith {false};

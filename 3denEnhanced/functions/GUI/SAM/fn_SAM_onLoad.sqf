@@ -19,7 +19,7 @@
 disableSerialization;
 params ["_display"];
 
-_ctrlLB = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES);
+_ctrlLB = CTRL(IDC_SAM_TEMPLATES);
 _templates = profileNamespace getVariable ["ENH_ScenarioAttributesManager_Templates", []];
 
 if (_templates isEqualTo []) exitWith {false};
@@ -37,7 +37,7 @@ _disp displayAddEventHandler ["keyDown", //Focus Search
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then
   {
-    ctrlSetFocus CTRL(IDC_SCENARIOATTRIBUTESMANAGER_SEARCH);
+    ctrlSetFocus CTRL(IDC_SAM_SEARCH);
   }
 }];
 

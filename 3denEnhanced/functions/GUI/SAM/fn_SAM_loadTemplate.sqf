@@ -21,7 +21,7 @@ disableSerialization;
 params ["_ctrlLB", "_selectedItem"];
 
 private _display = ctrlParent _ctrlLB;
-private _ctrlTV = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES);
+private _ctrlTV = CTRL(IDC_SAM_ATTRIBUTES);
 
 tvClear _ctrlTV;
 
@@ -40,7 +40,7 @@ _ctrlTV tvAdd [[], "Scenario"];
 _ctrlTV tvAdd [[], "Multiplayer"];
 _ctrlTV tvAdd [[], "GarbageCollection"];
 _ctrlTV tvAdd [[], "Preferences"];
-_ctrlTV tvAdd [[], "Custom Category"];
+_ctrlTV tvAdd [[], "Mods"];
 
 //Put all attributes into their corresponding categories
 {
@@ -60,5 +60,6 @@ _ctrlTV tvAdd [[], "Custom Category"];
   private _index = _ctrlTV tvAdd [[_baseIndex], format ["%1 (%2)", _x # 3, _x # 1]];
   _ctrlTV tvSetData [[_baseIndex, _index], str _x];
   _ctrlTV tvSetTooltip [[_baseIndex, _index], str (_x # 2)];
-  _ctrlTV tvSort [[_baseIndex], false];
 } forEach _attributes;
+
+_ctrlTV tvSortAll [[], false];

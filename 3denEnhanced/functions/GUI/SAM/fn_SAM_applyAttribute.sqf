@@ -20,12 +20,12 @@ disableSerialization;
 params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
-private _tvPath = tvCurSel CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES);
+private _tvPath = tvCurSel CTRL(IDC_SAM_ATTRIBUTES);
 
 if (count _tvPath < 2) exitWith {false};
 
 //Data is string, we need an array, so compiling it is
-_attributeData = call compile (CTRL(IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES) tvData _tvPath);//["Section", "PropertyName", value];
+_attributeData = call compile (CTRL(IDC_SAM_ATTRIBUTES) tvData _tvPath);//["Section", "PropertyName", value];
 
 set3DENMissionAttributes [_attributeData];
 

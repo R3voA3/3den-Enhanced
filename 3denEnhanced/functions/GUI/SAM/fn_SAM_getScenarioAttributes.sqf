@@ -11,7 +11,7 @@
   -
 
   Returns:
-  ARRAY: Array in format [["section", "attributeName", attributeValue]]
+  ARRAY: Array in format [["section", "attributeName", attributeValue, "attributeDisplayName"]]
 */
 
 private _attributeValues = [];

@@ -19,7 +19,7 @@
 disableSerialization;
 params ["_display"];
 
-private _ctrlLB = CTRL(IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES);
+private _ctrlLB = CTRL(IDC_SAM_TEMPLATES);
 private _lbSize = lbSize _ctrlLB;
 private _templates = [];
 

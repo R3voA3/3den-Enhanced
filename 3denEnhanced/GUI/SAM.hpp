@@ -5,8 +5,8 @@ class ENH_ScenarioAttributesManager
 {
   idd = IDD_SCENARIOATTRIBUTESMANAGER;
   movingEnable = true;
-  onLoad = "_this call ENH_fnc_scenarioAttributesManager_onLoad";
-  onUnload = "_this call ENH_fnc_scenarioAttributesManager_onUnload";
+  onLoad = "_this call ENH_fnc_SAM_onLoad";
+  onUnload = "_this call ENH_fnc_SAM_onUnload";
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -30,7 +30,7 @@ class ENH_ScenarioAttributesManager
     };
     class Templates: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES";
+      text = "$STR_ENH_SAM_TEMPLATES";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 6 * GRID_H;
       w = 25 * GRID_W;
@@ -38,7 +38,7 @@ class ENH_ScenarioAttributesManager
     };
     class Attributes: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES";
+      text = "$STR_ENH_SAM_ATTRIBUTES";
       x = CENTERED_X(DIALOG_W) + 51 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 25 * GRID_W;
@@ -46,25 +46,25 @@ class ENH_ScenarioAttributesManager
     };
     class CreateTemplate: ctrlButton
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE";
+      text = "$STR_ENH_SAM_CREATETEMPLATE";
       x = CENTERED_X(DIALOG_W) + 98 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
       w = 61 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_ScenarioAttributesManagerTemplateData'";
+      onButtonClick = "ctrlParent (_this # 0) createDisplay 'ENH_SAM_TemplateData'";
     };
     class TemplateList: ctrlListbox
     {
-      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATES;
+      idc = IDC_SAM_TEMPLATES;
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 50 * GRID_W;
       h = 70 * GRID_H;
-      onLBSelChanged = "_this call ENH_fnc_scenarioAttributesManager_loadTemplate";
+      onLBSelChanged = "_this call ENH_fnc_SAM_loadTemplate";
     };
     class AttributeList: ctrlTree
     {
-      idc = IDC_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES;
+      idc = IDC_SAM_ATTRIBUTES;
       idcSearch = 1400;
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
@@ -73,34 +73,25 @@ class ENH_ScenarioAttributesManager
     };
     class DeleteTemplate: ctrlButton
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE";
+      text = "$STR_ENH_SAM_DELETETEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
       w = 50 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_deleteTemplate";
+      onButtonClick = "_this call ENH_fnc_SAM_deleteTemplate";
     };
     class ApplyTemplate: ctrlButton
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE";
+      text = "$STR_ENH_SAM_APPLYTEMPLATE";
       x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 89 * GRID_H;
       w = 50 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_applyTemplate";
+      onButtonClick = "_this call ENH_fnc_SAM_applyTemplate";
     };
-    /* class Export: ctrlButton
-    {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT";
-      x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
-      y = DIALOG_TOP + 89 * GRID_H;
-      w = 25 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_exportToClipboard";
-    }; */
     class Search: ctrlEdit
     {
-      idc = IDC_SCENARIOATTRIBUTESMANAGER_SEARCH;
+      idc = IDC_SAM_SEARCH;
       tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 83 * GRID_H;
@@ -133,13 +124,22 @@ class ENH_ScenarioAttributesManager
     };
     class ApplyAttribute: ctrlButton
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE";
+      text = "$STR_ENH_SAM_APPLYATTRIBUTE";
       x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 89 * GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_applyAttribute";
+      onButtonClick = "_this call ENH_fnc_SAM_applyAttribute";
     };
+    /* class Export: ctrlButton
+    {
+      text = "$STR_ENH_SAM_EXPORT";
+      x = CENTERED_X(DIALOG_W) + 118 * GRID_W;
+      y = DIALOG_TOP + 89 * GRID_H;
+      w = 25 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "_this call ENH_fnc_SAM_exportToClipboard";
+    }; */
     class Close: ctrlButtonClose
     {
       x = CENTERED_X(DIALOG_W) + 134 * GRID_W;
@@ -150,11 +150,11 @@ class ENH_ScenarioAttributesManager
   };
 };
 
-class ENH_ScenarioAttributesManagerTemplateData
+class ENH_SAM_TemplateData
 {
   idd = IDD_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
   movingEnable = true;
-  onLoad = "ENH_ScenarioAttributesManager_TemplateTitle = ''; ENH_ScenarioAttributesManager_TemplateDescription = ''";
+  onLoad = "ENH_SAM_TemplateTitle = ''; ENH_SAM_TemplateDescription = ''";
   onUnload = "";
   class ControlsBackground
   {
@@ -178,7 +178,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class Title: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE";
+      text = "$STR_ENH_SAM_TEMPLATE_DATA_TITLE";
       x = CENTERED_X(60);
       y = DIALOG_TOP + 6 * GRID_H;
       w = 58 * GRID_W;
@@ -186,7 +186,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class TitleValue: ctrlEdit
     {
-      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA_TITLE;
+      idc = IDC_SAM_TEMPLATEDATA_TITLE;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = 58 * GRID_W;
@@ -194,7 +194,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class Description: ctrlStatic
     {
-      text = "$STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION";
+      text = "$STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION";
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 18 * GRID_H;
       w = 58 * GRID_W;
@@ -202,7 +202,7 @@ class ENH_ScenarioAttributesManagerTemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = IDC_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA_DESCRIPTION;
+      idc = IDC_SAM_TEMPLATEDATA_DESCRIPTION;
       x = CENTERED_X(60) + 1 * GRID_W;
       y = DIALOG_TOP + 24 * GRID_H;
       w = 58 * GRID_W;
@@ -221,7 +221,7 @@ class ENH_ScenarioAttributesManagerTemplateData
       y = DIALOG_TOP + 50 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_scenarioAttributesManager_createTemplate";
+      onButtonClick = "_this call ENH_fnc_SAM_createTemplate";
     };
   };
 };
