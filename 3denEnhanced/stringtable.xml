@@ -3582,8 +3582,6 @@
   </Key>
   <Key ID="STR_ENH_BRIEFING_TOOLTIP">
     <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
-    <Spanish>Estos informes funcionan para un jugador, multijugador y para jugadores JIP. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información. \n \n Si se proporciona una Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
-    <Chinesesimp>这些简介适用于单人游戏，多人游戏和中途加入的玩家。 您也可以插入使用简报编辑器创建的格式化文本。 有关更多信息，请参见BI Wiki上的"createDiaryRecord"。\n\n如果提供了stringtable.xml，则简报将以玩家的语言显示。</Chinesesimp>
     <German>Erstellt Einsatzbesprechungseinträge für alle Spieler der gegebenen Seite. Du kannst außerdem Text der mit dem Briefing Editor formatiert wurde, einfügen. Besuche die 'createDiaryRecord' Seite auf der BI Wiki für mehr Informationen.\n\nWenn ein 'Stringtable' Eintrag angegeben wird, wird dieser in der Sprache des jeweiligen Spieler angezeigt.</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
@@ -3958,7 +3956,7 @@
     <Polish>Ukryj tytuł</Polish>
     <Chinesesimp>隐藏标题</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYATTRIBUTE">
+  <Key ID="STR_ENH_SAM_APPLYATTRIBUTE">
     <English>Apply Attribute</English>
     <German>Attribut setzen</German>
     <Czech>Použít atribut</Czech>
@@ -4637,7 +4635,7 @@
     <Polish>Pokaż okienko</Polish>
     <Chinesesimp>窗口显示</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_TEMPLATES">
+  <Key ID="STR_ENH_SAM_TEMPLATES">
     <English>Templates</English>
     <Czech>Šablony</Czech>
     <German>Vorlagen</German>
@@ -4646,7 +4644,7 @@
     <Polish>Szablony</Polish>
     <Chinesesimp>模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_ATTRIBUTES">
+  <Key ID="STR_ENH_SAM_ATTRIBUTES">
     <English>Attributes</English>
     <Czech>Atributy</Czech>
     <German>Attribute</German>
@@ -4655,7 +4653,7 @@
     <Polish>Atrybuty</Polish>
     <Chinesesimp>属性</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_DELETETEMPLATE">
+  <Key ID="STR_ENH_SAM_DELETETEMPLATE">
     <English>Delete Template</English>
     <Czech>Smazat šablonu</Czech>
     <German>Vorlage löschen</German>
@@ -4664,7 +4662,7 @@
     <Polish>Skasuj Szablony</Polish>
     <Chinesesimp>删除模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_CREATETEMPLATE">
+  <Key ID="STR_ENH_SAM_CREATETEMPLATE">
     <English>Create Template from Scenario</English>
     <Czech>Vytvořit šablonu ze scénáře</Czech>
     <German>Vorlage aus Szenario erstellen</German>
@@ -4673,7 +4671,7 @@
     <Polish>Stwórz szablon ze scenariusza</Polish>
     <Chinesesimp>从场景创建模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_APPLYTEMPLATE">
+  <Key ID="STR_ENH_SAM_APPLYTEMPLATE">
     <English>Apply Template</English>
     <Czech>Použít šablonu</Czech>
     <German>Vorlage anwenden</German>
@@ -4682,7 +4680,7 @@
     <Polish>Zastosuj szablon</Polish>
     <Chinesesimp>应用模板</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGER_EXPORT">
+  <Key ID="STR_ENH_SAM_EXPORT">
     <English>Export</English>
     <Chinesesimp>导出</Chinesesimp>
     <Czech>Export</Czech>
@@ -4691,7 +4689,7 @@
     <Polish>Eksport</Polish>
     <Spanish>Exportar</Spanish>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_DESCRIPTION">
+  <Key ID="STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION">
     <English>Template Description</English>
     <Czech>Popis šablony</Czech>
     <German>Vorlagenbeschreibung</German>
@@ -4700,7 +4698,7 @@
     <Polish>Opis szablonu</Polish>
     <Chinesesimp>模板说明</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_SCENARIOATTRIBUTESMANAGERTEMPLATEDATA_TITLE">
+  <Key ID="STR_ENH_SAM_TEMPLATE_DATA_TITLE">
     <English>Title</English>
     <Czech>Název</Czech>
     <German>Titel</German>
@@ -4754,7 +4752,7 @@
     <German>Fahrzeugtrefferpunkte anzeigen an/aus</German>
     <Chinesesimp>切换车辆血量视图</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER">
+  <Key ID="STR_ENH_TOOLS_SAM">
     <English>Scenario Attributes Manager</English>
     <Spanish>Manejador de atributos de escenario</Spanish>
     <German>Szenarioattribute-Manager</German>
@@ -5116,6 +5114,10 @@
     <French>Activer la simulation dynamique</French>
     <Polish>Przelącz dynamiczną symulację</Polish>
     <Chinesesimp>切换动态模拟</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_PLAYABLE">
+    <English>Toggle Playable State</English>
+    <German>Spielbarkeitsstatus umschalten</German>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
     <English>Delete Corpses</English>
