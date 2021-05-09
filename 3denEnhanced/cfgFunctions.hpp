@@ -89,18 +89,18 @@ class CfgFunctions
       class placementTools_radius;
       class placementTools_spacing;
     };
-    class ScenarioAttributesManager
+    class SAM
     {
-      file = "3denEnhanced\functions\GUI\scenarioAttributesManager";
-      class scenarioAttributesManager_applyAttribute;
-      class scenarioAttributesManager_applyTemplate;
-      class scenarioAttributesManager_createTemplate;
-      class scenarioAttributesManager_deleteTemplate;
-      class scenarioAttributesManager_exportToClipboard;
-      class scenarioAttributesManager_getScenarioAttributes;
-      class scenarioAttributesManager_loadTemplate;
-      class scenarioAttributesManager_onLoad;
-      class scenarioAttributesManager_onUnload;
+      file = "3denEnhanced\functions\GUI\SAM";
+      class SAM_applyAttribute;
+      class SAM_applyTemplate;
+      class SAM_createTemplate;
+      class SAM_deleteTemplate;
+      class SAM_exportToClipboard;
+      class SAM_getScenarioAttributes;
+      class SAM_loadTemplate;
+      class SAM_onLoad;
+      class SAM_onUnload;
     };
     class NameObjects
     {
@@ -161,6 +161,7 @@ class CfgFunctions
       class VIM_showTemplates;
       class VIM_toggleVirtual;
       class VIM_updateTemplateList;
+      class VIM_exportAsACEArsenal;
     };
     class CfgSentencesBrowser
     {

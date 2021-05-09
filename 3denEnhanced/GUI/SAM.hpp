@@ -1,9 +1,9 @@
 #define DIALOG_W 160
 #define DIALOG_H 90
 
-class ENH_ScenarioAttributesManager
+class ENH_SAM
 {
-  idd = IDD_SCENARIOATTRIBUTESMANAGER;
+  idd = IDD_SAM;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_SAM_onLoad";
   onUnload = "_this call ENH_fnc_SAM_onUnload";
@@ -22,7 +22,7 @@ class ENH_ScenarioAttributesManager
   {
     class Header: ctrlStaticTitle
     {
-      text = "$STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER";
+      text = "$STR_ENH_TOOLS_SAM";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP;
       w = DIALOG_W * GRID_W;
