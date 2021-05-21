@@ -24,6 +24,7 @@
     <Chinesesimp>动态AI技能设置</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
+    <English>Скачайте модификацию ""Pythia"" из Steam Workshop!</English>
     <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
     <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
   </Key>
@@ -57,7 +58,7 @@
     <French>Compétence de visée min.</French>
     <Polish>Min. Celność</Polish>
     <Spanish>Habilidad de Apuntado Min.</Spanish>
-    <Russian>Минимальный навык прицельвания</Russian>
+    <Russian>Минимальный навык прицеливания</Russian>
     <Chinesesimp>最低精度</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME">
@@ -79,7 +80,7 @@
     <French>Compétence de visée max.</French>
     <Polish>Max. Celność</Polish>
     <Spanish>Habilida de Apuntado Max.</Spanish>
-    <Russian>Максимальный навык прицельвания</Russian>
+    <Russian>Максимальный навык прицеливания</Russian>
     <Chinesesimp>最高精度</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_OPFORSKILL_DISPLAYNAME">
@@ -112,7 +113,7 @@
     <French>Calcule la compétence IA en fonction du nombre de joueurs et de la définition des valeurs de base. La compétence sera adaptée dynamiquement lorsqu'un joueur se connecte ou se déconnecte.</French>
     <Polish>Oblicza poziom umiejętności SI w zależności od liczby graczy i ustawionych wartości bazowych. Poziom umiejętności będzie zmieniał się dynamicznie w momencie łączenia i rozłączania się graczy.</Polish>
     <Spanish>Calcula la habilidad de la IA basado en el conteo de jugadores y valores base, La habilidad será dinámicamente cambiada cuando se conecte un jugador o se desconecte.</Spanish>
-    <Russian>Рассчитывает искусственный интеллект на основе количества игроков и установить базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
+    <Russian>Рассчитывает искусственный интеллект на основе количества игроков и устанавливет базовые значения. Навык будет динамически меняться, когда игрок подключается или отключается.</Russian>
     <Chinesesimp>根据玩家人数来计算AI技能并设置基础值。 当玩家连接或断开连接时，技能将动态变化。 最多适用于四名玩家！</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_MUSICVOLUME_DISPLAYNAME">
@@ -124,16 +125,18 @@
     <German>Lautstärke (Musik)</German>
     <Chinesesimp>音乐音量</Chinesesimp>
     <Polish>Głośność muzyki</Polish>
-    <Russian>Громкость (музыки)</Russian>
+    <Russian>Громкость музыки</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_CREATETRIGGER">
     <English>Create Trigger (Whole Map Coverage)</English>
+    <Russian>Создать триггер (покрытие всей карты)</Russian>
     <German>Auslöser erstellen (Vollständige Kartenabdeckung)</German>
     <Spanish>Crear activador (Covertura completa del mapa)</Spanish>
     <Chinesesimp>创建触发器(全地图覆盖)</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
     <English>Terrain Detail</English>
+    <Russian>Детализация ландшафта</Russian>
     <Italian>dettagli del terreno</Italian>
     <Czech>Detail krajiny</Czech>
     <Spanish>Detalle del terreno</Spanish>
@@ -151,7 +154,7 @@
     <German>Lautstärke (Radio)</German>
     <Chinesesimp>无线电音量</Chinesesimp>
     <Polish>Głośność radia</Polish>
-    <Russian>Громкость (радио)</Russian>
+    <Russian>Громкость радио</Russian>
   </Key>
   <Key ID="STR_ENH_RANDOMMUSIC_DISPLAYNAME">
     <English>Random Music</English>
@@ -166,6 +169,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_REMOVEGEAR">
     <English>Remove Everything</English>
+    <Russian>Удалить всё</Russian>
     <German>Alles entfernen</German>
   </Key>
   <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
@@ -188,10 +192,11 @@
     <Czech>Odstranit NVG</Czech>
     <French>Supprimer les JVNs</French>
     <Polish>Usuń noktowizje</Polish>
-    <Russian>Удалить NVG</Russian>
+    <Russian>Удалить ПНВ</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS">
     <English>Export Mission Parameters</English>
+    <Russian>Экспорт параметров миссии</Russian>
     <Italian>Esporta i parametri della missione</Italian>
     <German>Missionsparameter exportieren</German>
     <Spanish>Exportar parámetros de misión</Spanish>
@@ -201,6 +206,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_REMOVEVESTS">
     <English>Remove Vests</English>
+    <Russian>Удалить разгрузки (бронежилеты)</Russian>
     <Italian>Rimuove il corpetto antiproiettile</Italian>
     <German>Schutzwesten entfernen</German>
     <Spanish>Retirar Vests (Chalecos)</Spanish>
@@ -208,7 +214,6 @@
     <Czech>Odstranit vesty</Czech>
     <French>Retirer les gilets</French>
     <Polish>Usuń kamizelki</Polish>
-    <Russian>Удалить Жилеты</Russian>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOG3DENIDS">
     <English>Log 3DEN Entity IDs to Clipboard</English>
@@ -219,7 +224,7 @@
     <French>Copier les IDs des entités 3DEN dans le presse-papiers</French>
     <Polish>Zapisz ID bytu 3DEN do schowka</Polish>
     <Spanish>Registrar IDs de la entidad al portapapeles.</Spanish>
-    <Russian>Записать идентификаторы объектов 3DEN в буфер обмена</Russian>
+    <Russian>Скопировать ID объектов 3DEN в буфер обмена</Russian>
   </Key>
   <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
     <English>No valid Classname!</English>
@@ -228,7 +233,7 @@
     <Czech>Žádné validní Classname!</Czech>
     <French>Pas de Classname valide!</French>
     <Polish>Brak poprawnych Classname!</Polish>
-    <Russian>Нет действительного имени класса!</Russian>
+    <Russian>Недействительное имя класса!</Russian>
     <Spanish>¡Classname no valido!</Spanish>
     <Chinesesimp>无有效的Classname！</Chinesesimp>
   </Key>
@@ -305,7 +310,7 @@
     <French> NOM DE LA SÉLECTION :</French>
     <Spanish>NOMBRES DE SELECCIÓN:</Spanish>
     <German>AUSWAHLNAMEN:</German>
-    <Russian>Выбор Имени:</Russian>
+    <Russian>Выбор имени:</Russian>
     <Polish>WYBRANE NAZWY:</Polish>
     <Chinesesimp>选择名称:</Chinesesimp>
   </Key>
@@ -316,7 +321,7 @@
     <Polish>RODZICE:</Polish>
     <French>PARENTS :</French>
     <German>ELTERN:</German>
-    <Russian>Родительи:</Russian>
+    <Russian>Родители:</Russian>
     <Spanish>PADRES:</Spanish>
     <Chinesesimp>父母:</Chinesesimp>
   </Key>
@@ -328,7 +333,7 @@
     <French>TYPE DE L'OBJET :</French>
     <Spanish>TIPO DE OBJETO:</Spanish>
     <German>OBJEKT TYP:</German>
-    <Russian>Тип Объекта:</Russian>
+    <Russian>Тип объекта:</Russian>
     <Chinesesimp>对象类型:</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_MATERIALS">
@@ -372,14 +377,14 @@
     <French>NOMS DES ANIMATIONS :</French>
     <Spanish>NOMBRE DE ANIMACIÓN:</Spanish>
     <German>ANIMATIONS NAMEN:</German>
-    <Russian>Имя анимации:</Russian>
+    <Russian>Название анимации:</Russian>
     <Chinesesimp>动画名称:</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_FUNCTIONS_LOGOBJECTINFO_PRIMARY">
     <English>Normal object placed in Visitor, part of landscape</English>
     <Italian>Oggetto normale posizionato in Visitor, parte del paesaggio</Italian>
     <Czech>Normální objekt umístěný ve Visitoru, část krajiny</Czech>
-    <Russian>Обычный объект, помещен в гостевой, часть ландшафта</Russian>
+    <Russian>Объекты, размещенные в редакторе карты, часть карты:</Russian>
     <Spanish>Objeto normal puesto en Visitor, parte del paisaje.</Spanish>
     <German>Normales Objekt das in Visitor platziert wurde und Teil der Landschaft ist</German>
     <French>Objet simple placé avec Visitor et faisant partie du paysage</French>
@@ -390,7 +395,7 @@
     <English>Road placed in Visitor, part of landscape</English>
     <Italian>Strada posizionata nel Visitor, parte del paesaggio</Italian>
     <Czech>Cesta umístěná ve Visitoru, část krajiny</Czech>
-    <Russian>Путь в гостевой, часть ландшафта</Russian>
+    <Russian>Дороги, размещенные в редакторе карты, часть карты:</Russian>
     <Spanish>Carretera situada en Visitor, parte del paisaje.</Spanish>
     <German>Straße die in Visitor platziert wurde und Teil der Landschaft ist</German>
     <French>Route placée avec Visitor et faisant partie du terrain</French>
@@ -404,7 +409,7 @@
     <French>Objet temporaire (comme des traces)</French>
     <Spanish>Objetos temporales (Como orugas)</Spanish>
     <German>Temporäres Objekt, zum Beispiel Spuren</German>
-    <Russian>Временный объект (например, треки)</Russian>
+    <Russian>Временный объект (например следы от шин)</Russian>
     <Polish>Obiekty tymczasowe(np. ślady opon)</Polish>
     <Chinesesimp>临时物体（如轨道）</Chinesesimp>
   </Key>
@@ -415,7 +420,7 @@
     <French>Diverses entités ajoutées par le jeu</French>
     <Spanish>Alguna entidad agregada por el juego</Spanish>
     <German>Eine vom Spiel hinzugefügte Entität</German>
-    <Russian>Случайная сущность добавленая ​​игрой</Russian>
+    <Russian>Объекты добавленные ​​игрой</Russian>
     <Polish>Obiekty dodane przez grę</Polish>
     <Chinesesimp>游戏中添加的某些实体</Chinesesimp>
   </Key>
@@ -426,7 +431,7 @@
     <French>Entité temporaire</French>
     <Spanish>Entidad Temporal</Spanish>
     <German>Temporäre Entität</German>
-    <Russian>Временная сущность</Russian>
+    <Russian>Временный объект</Russian>
     <Polish>Obiekty tymczasowe</Polish>
     <Chinesesimp>临时实体</Chinesesimp>
   </Key>
@@ -436,7 +441,7 @@
     <Czech>Otisk na zemi</Czech>
     <Spanish>Calcomanía de tierra</Spanish>
     <German>Gelände Texturaufkleber (Decal)</German>
-    <Russian>Деколь земли</Russian>
+    <Russian>Текстура земли</Russian>
     <French>Texture du terrain</French>
     <Polish>Tekstura widoczna na ziemii</Polish>
     <Chinesesimp>地面贴图</Chinesesimp>
@@ -484,7 +489,7 @@
     <German>Radius des Gebietes</German>
     <Spanish>Radio del área</Spanish>
     <Polish>Promień strefy</Polish>
-    <Russian>Рациус арены</Russian>
+    <Russian>Радиус зоны</Russian>
   </Key>
   <Key ID="STR_ENH_AIRDROP_CENTER_TOOLTIP">
     <English>Center of the drop zone.</English>
@@ -527,7 +532,7 @@
     <French>Lunettes de vision nocture</French>
     <Spanish>Gafas de Visión Nocturna</Spanish>
     <Polish>Gogle Noktowizyjne</Polish>
-    <Russian>Прибор Ночного Видения</Russian>
+    <Russian>Прибор ночного видения</Russian>
     <Chinesesimp>夜视仪</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
@@ -549,7 +554,7 @@
     <French>Générer la description de la mission pour Steam</French>
     <Spanish>Generar Descripción de Misión de Steam</Spanish>
     <Polish>Wygeneruj Opis Misji Steam.</Polish>
-    <Russian>Создать описание миссии Steam</Russian>
+    <Russian>Создать описание миссии в Steam</Russian>
     <Chinesesimp>生成Steam任务说明</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_REMOVEGOGGLES">
@@ -582,7 +587,7 @@
     <French>Supprimer les armes</French>
     <Spanish>Remover Carmas</Spanish>
     <Polish>Usuń broń</Polish>
-    <Russian>Убрать оружие</Russian>
+    <Russian>Снять оружие</Russian>
     <Chinesesimp>移除武器</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP">
@@ -592,7 +597,7 @@
     <Czech>Dvojklikem načtete šablonu. Ze seznamu ji odstraníte stisknutím DELETE.</Czech>
     <Spanish>Cargar plantilla haciendo doble click. Borrar con tecla DELETE</Spanish>
     <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
-    <Russian>Загрузите шаблон двойным щелчком мыши. Удалить, нажав DELETE.</Russian>
+    <Russian>Загрузите шаблон двойным щелчком мыши. Удалите, нажав DELETE.</Russian>
     <French>Chargez un template en double-cliquant. Supprimez-le de la liste en appuyant sur 'SUPPR'.</French>
     <Chinesesimp>双击以加载模板。按 DELETE 从列表中删除模板。</Chinesesimp>
   </Key>
@@ -628,7 +633,7 @@
     <German>Zeit bis zum ersten Vorbeiflug und Zeit zwischen zwei Vorbeiflügen. Bedenke das kleine Werte (n-&gt;0) einen größeren Einfluss auf die Leistung haben.</German>
     <Chinesesimp>延迟到第一次飞行开始和两次飞行之间的延迟。注意，较小的值(n-&gt;0)对性能的影响较大。</Chinesesimp>
     <Polish>Opóźnienie przed pierwszym przelotem oraz pomiędzy dwoma przelotami. Uwaga, mniejsze wartości (n-&gt;0) będą miały większy wpływ na wydajność. </Polish>
-    <Russian>Отсрочка до начала первого полета и отсрочка между двумя рейсами. Обратите внимание, что меньшие значения (n-&gt; 0) будут иметь большее влияние на производительность.</Russian>
+    <Russian>Отсрочка до начала и отсрочка между двумя точками. Обратите внимание, меньшие значения (n-&gt; 0) будут иметь большее влияние на производительность.</Russian>
   </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME">
     <English>Starting Position</English>
@@ -661,7 +666,7 @@
     <Spanish>Objetos editables (Zeus)</Spanish>
     <French>Objets modifiables (Zeus)</French>
     <Polish>Edytowalne obiekty (Zeus)</Polish>
-    <Russian>Редактируемые объекты (Зевс)</Russian>
+    <Russian>Редактируемые объекты (Zeus)</Russian>
   </Key>
   <Key ID="STR_ENH_EDITABLEOBJZEUS_TOOLTIP">
     <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>
@@ -683,7 +688,7 @@
     <Czech>Nezobrazovat přátelské jednotky</Czech>
     <French>Ne pas afficher les unités amies</French>
     <Polish>Nie pokazuj jednostek przyjaznych</Polish>
-    <Russian>Не показывать дружественные отряды</Russian>
+    <Russian>Не показывать союзные отряды</Russian>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_ENEMY">
     <English>Hide Hostile Units</English>
@@ -694,7 +699,7 @@
     <Czech>Nezobrazovat nepřátelské jednotky</Czech>
     <French>Ne pas afficher les unités hostiles</French>
     <Polish>Nie pokazuj jednostek wrogich</Polish>
-    <Russian>Не показывать враждебные отряды</Russian>
+    <Russian>Не показывать отряды противника</Russian>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_MINES">
     <English>Hide Mines</English>
@@ -716,10 +721,11 @@
     <Czech>Nezobrazovat taktický ping</Czech>
     <French>Ne pas afficher les pings tactiques</French>
     <Polish>Nie pokazuj sygnału taktycznego</Polish>
-    <Russian>Не показывать тактический пинг</Russian>
+    <Russian>Не показывать тактический сигнал</Russian>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_FRIENDLY_TOOLTIP">
     <English>Hide Friendly Units on the Map.</English>
+    <Russian>Скрыть союзные отряды на карте</Russian>
     <German>Freundliche Einheiten verstecken.</German>
     <French>Ne pas afficher les unités amies sur la carte.</French>
     <Spanish>Ocultar unidades aliadas en el mapa</Spanish>
@@ -727,6 +733,7 @@
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
     <English>Hide Hostile Units on the Map.</English>
+    <Russian>Скрыть отряды противника на карте</Russian>
     <German>Feindliche Einheiten auf der Karte verstecken.</German>
     <French>Ne pas afficher les unités hostiles sur la carte.</French>
     <Spanish>Ocultar unidades hostiles en el mapa</Spanish>
@@ -734,6 +741,7 @@
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
     <English>Hide Mines on the Map.</English>
+    <Russian>Скрыть мины на карте</Russian>
     <German>Minen auf der Karte verstecken.</German>
     <French>Ne pas afficher les mines sur la carte.</French>
     <Spanish>Ocultar minas en el mapa</Spanish>
@@ -741,6 +749,7 @@
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
     <English>Hide Tactical Pings on the Map.</English>
+    <Russian>Скрыть тактические сигналы на карте</Russian>
     <German>Taktischen Pings auf der Karte verstecken.</German>
     <French>Ne pas afficher les pings tactiques sur la carte.</French>
     <Spanish>Ocultar pings tácticos en el mapa</Spanish>
@@ -755,7 +764,7 @@
     <Czech>Přidat vlajku</Czech>
     <French>Ajouter un drapeau</French>
     <Polish>Dodaj flage</Polish>
-    <Russian>Регулирует колебания оружия игрока. Состояние сохраняется даже после возрождения.</Russian>
+    <Russian>Добавить флаг</Russian>
   </Key>
   <Key ID="STR_ENH_FORCEFLAG_TOOLTIP">
     <English>Forces a flag texture onto a flag carrier (unit, vehicle or flag pole). No flag holder is required.</English>
@@ -766,7 +775,7 @@
     <Czech>Vynucuje texturu vlajky na nosiči vlajky (jednotky, vozidla nebo vlajkového stožáru). Není vyžadován žádný držák vlajky.</Czech>
     <French>Impose une texture de drapeau sur un porteur de drapeau (unité, véhicule ou mât de drapeau). Aucun porte-drapeau n'est requis.</French>
     <Polish>Wymusza teksture flagi na nośnik flagi (jednostka, pojazd czy maszt). No flag holder is required.</Polish>
-    <Russian>Поместить текстуру флага на флагманский носитель (юнит, транспортное средство или флагшток). Держатель флага не требуется.</Russian>
+    <Russian>Поместить текстуру флага на носитель (юнит, транспортное средство или флагшток). Держатель флага не требуется.</Russian>
   </Key>
   <Key ID="STR_ENH_DOSTOP_DISPLAYNAME">
     <English>Stay on position</English>
@@ -781,6 +790,7 @@
   </Key>
   <Key ID="STR_ENH_DOSTOP_TOOLTIP">
     <English>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</English>
+    <Russian>Не позволяет ИИ вставать в тактическое построение. Отключено в мультиплеере</Russian>
     <Italian>Impedisce all'AI di muoversi in formazione all'inizio della missione. Disattivato in multiplayer!</Italian>
     <German>Verhindert, dass die KI beim Missionsstart in Formation tritt. In Mehrspielermissionen deaktiviert!</German>
     <Spanish>Evita que la IA entre en formación al inicio de la misión. Desactivado en MP!</Spanish>
@@ -797,7 +807,7 @@
     <German>Taschenlampe anbauen</German>
     <Chinesesimp>添加枪支手电筒配件</Chinesesimp>
     <Polish>Dodaj latarkę na broń</Polish>
-    <Russian>Добавить лгкое оружие</Russian>
+    <Russian>Добавить фонарик на оружие</Russian>
   </Key>
   <Key ID="STR_ENH_ADDGUNLIGHT_TOOLTIP">
     <English>Forces unit to have gun light turned on.</English>
@@ -808,7 +818,7 @@
     <German>Baut eine Taschenlampe an die Waffe der Einheit, und schaltet diese an.</German>
     <Chinesesimp>对象会打开枪灯</Chinesesimp>
     <Polish>Zmusza jednostkę do włączenia latarki na broni.</Polish>
-    <Russian>Заставляет подразделение включать световой на оружии.</Russian>
+    <Russian>Заставляет подразделение включать свет на оружии.</Russian>
   </Key>
   <Key ID="STR_ENH_ARSENAL_DISPLAYNAME">
     <English>Arsenal</English>
@@ -853,10 +863,11 @@
     <German>Einheit kann nicht Sprinten wenn deaktiviert.</German>
     <Chinesesimp>如果不加控制，单位就不能冲刺。</Chinesesimp>
     <Polish>Jednostka nie może sprintować jeżeli nie zaznaczone.</Polish>
-    <Russian>Отряд\единица не может бегать, если отключено</Russian>
+    <Russian>Отряд не может бегать, если отключено</Russian>
   </Key>
   <Key ID="STR_ENH_CAPTIVE_TOOLTIP">
     <English>The unit will not be attacked and will join the civilian side. The unit will still attack enemies!</English>
+    <Russian>Отряд переходит на гражданскую сторону и не будет подтвергаться атаке. Всё равно будет атаковать врагов</Russian>
     <German>Die Einheit wechselt auf die zivile Seite und wird nicht angegriffen. Die Einheit greift feindliche Einheiten trotzdem an!</German>
   </Key>
   <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
@@ -883,6 +894,7 @@
   </Key>
   <Key ID="STR_ENH_ALLOWCREWIMMOBILE_DISPLAYNAME">
     <English>Forbid Disembarking</English>
+    <Russian>Запретить высадку</Russian>
     <German>Aussteigen verbieten</German>
     <Spanish>Prohibir desembarco</Spanish>
     <Chinesesimp>禁止下载具</Chinesesimp>
@@ -896,7 +908,7 @@
     <German>Fahrzeugbesatzung bleibt im Fahrzeug auch wenn dieses kampfunfähig ist.</German>
     <Chinesesimp>乘员待在车内，并且车辆是被禁用的。</Chinesesimp>
     <Polish>Załoga zostaje w pojeździe nawet jeżeli pojazd jest niesprawny.</Polish>
-    <Russian>Экипаж остается в автомобиле, даже если автомобиль отключен.</Russian>
+    <Russian>Экипаж остается в автомобиле, даже если автомобиль неисправен</Russian>
   </Key>
   <Key ID="STR_ENH_AIMINGSHAKE_DISPLAYNAME">
     <English>Aiming Shake</English>
@@ -940,7 +952,7 @@
     <German>Beeinflusst wie schnell eine KI sich herumdrehen und ihr Zielen stabilisieren kann (Höherer Wert = schneller, weniger Fehler).</German>
     <Chinesesimp>影响AI持武器旋转和稳定其目标的速度(更高的数值=更快，更少的错误)。</Chinesesimp>
     <Polish>Wpływa na to jak szybko SI może się obrócić i ustabilizować na celu (Wyższa wartość = szybciej, i efektywniej)</Polish>
-    <Russian>Влияет на то, как быстро ИИ может вращаться и определить свою цель (чем выше значение, тем быстрее, меньше ошибка).</Russian>
+    <Russian>Влияет на то, как быстро ИИ может вращаться и определить свою цель (чем выше значение, тем больше эффективность).</Russian>
   </Key>
   <Key ID="STR_ENH_AIMINGACCURACY_DISPLAYNAME">
     <English>Aiming Accuracy</English>
@@ -1006,7 +1018,7 @@
     <German>Beeinflusst die Tapferkeit der KI im Kampf (Höherer Wert = mehr Mut).</German>
     <Chinesesimp>影响下属的士气(更高的数值=更大的勇气)。</Chinesesimp>
     <Polish>Wpływa na morale podwładnych (Wyższa wartość = więcej odwagi)</Polish>
-    <Russian>Влияет на моральное состояние подчиненных подразделения (чем выше значение, тем больше смелости).</Russian>
+    <Russian>Влияет на моральное состояние подчиненных подразделения (чем выше значение, тем больше отвага).</Russian>
   </Key>
   <Key ID="STR_ENH_GENERAL_DISPLAYNAME">
     <English>General</English>
@@ -1259,7 +1271,7 @@
     <German>Das Zielen der KI wird nicht mehr durch Schießen, Bewegen, Nachladen, von Treffern bzw. Verletzungen, Erschöpfung, Unterdrückungsfeuer und das Verlieren von Zielen beeinflusst.</German>
     <Chinesesimp>防止AI的目标被它的射击、移动、旋转、重新装弹、命中、伤害、疲劳、压制或隐藏/丢失的目标所分散。</Chinesesimp>
     <Polish>Zapobiega SI przed byciem rozproszonym przez strzelanie, przemieszczanie, obracanie, przeładowywanie, rany, zmęczenie. przygwożdżenie czy utratą widoku na cel. </Polish>
-    <Russian>Предотвращает отвлечение ИИ от цели, прекращение стрельбы, перемещения, повороты, перезарядки, удара, травмы, усталость, подавления или скрытой / потеря цели.</Russian>
+    <Russian>Предотвращает отвлечение ИИ от цели из-за: прекращения стрельбы, перемещения, поворотов, перезарядки, удара, травмы, усталости, подавления или потери цели.</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_TEAMSWITCH_DISPLAYNAME">
     <English>Team Switch</English>
@@ -1270,7 +1282,7 @@
     <German>Teamwechsel</German>
     <Chinesesimp>小组开关</Chinesesimp>
     <Polish>Zmiana strony</Polish>
-    <Russian>Изменение группы</Russian>
+    <Russian>Смена группы</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_TEAMSWITCH_TOOLTIP">
     <English>AI disabled because of Team Switch.</English>
@@ -1314,7 +1326,7 @@
     <German>Niederhaltung</German>
     <Chinesesimp>压制</Chinesesimp>
     <Polish>Przygwożdżenie</Polish>
-    <Russian>Предотвращение угнетения</Russian>
+    <Russian>Подавление</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_SUPPRESSION_TOOLTIP">
     <English>Prevents AI from being suppressed.</English>
@@ -1325,7 +1337,7 @@
     <German>Unterdrückungsfeuer hat keine Wirkung mehr auf die KI.</German>
     <Chinesesimp>放止AI被压制</Chinesesimp>
     <Polish>Zapobiega SI przed byciem przygwożdżonym.</Polish>
-    <Russian>Предотвращает угнетение ИИ.</Russian>
+    <Russian>Предотвращает подавление ИИ.</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_AUTOCOMBAT_DISPLAYNAME">
     <English>Autocombat</English>
@@ -1347,7 +1359,7 @@
     <German>Pfad</German>
     <Chinesesimp>路径</Chinesesimp>
     <Polish>Ścieżka</Polish>
-    <Russian>Траэктория</Russian>
+    <Russian>Траектория</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_PATH_TOOLTIP">
     <English>Stops the AI’s movement but not the target alignment.</English>
@@ -1369,7 +1381,7 @@
     <German>Die KI wechselt nicht mehr automatisch in den Gefahrenmodus.</German>
     <Chinesesimp>在危险时禁用自动切换到战斗状态。</Chinesesimp>
     <Polish>Wyłącza automatyczną zmiane do "WALKI" w momencie zagrożenia.</Polish>
-    <Russian>Отключает автоматическое переключение ИИ  на «Опасно» в момент опасности.</Russian>
+    <Russian>Отключает автоматическое переключение ИИ на «Опасно» в момент опасности.</Russian>
   </Key>
   <Key ID="STR_ENH_ENGINEON_DISPLAYNAME">
     <English>Engine on/off</English>
@@ -1402,7 +1414,7 @@
     <German>Begrenzt die Geschwindigkeit des Fahrzeuges (km/h). Funktioniert nur bei KI gesteuerten Fahrzeugen.</German>
     <Chinesesimp>指定车辆或人的车速限制(以公里/公里)。只适用于AI控制的车辆。</Chinesesimp>
     <Polish>Limituje prędkość danego pojazdu lub osoby do danej wartości (w km/h). Działa tylko w pojazdach kontrolowanych przez SI.</Polish>
-    <Russian>Ограничить скорость данного транспортного средства или человека до данного значения (в км / ч). Работает только для автомобилей, контролируемых AI.</Russian>
+    <Russian>Ограничить скорость данного транспортного средства или человека до данного значения (в км / ч). Работает только для автомобилей, контролируемых ИИ.</Russian>
   </Key>
   <Key ID="STR_ENH_MAKEHOSTAGE_DISPLAYNAME">
     <English>Make Hostage</English>
@@ -1424,7 +1436,7 @@
     <German>Die Einheit wird zu einer Geisel und jeder Spieler erhält eine Action diese zu befreien, ob die Geisel befreit wurde kann mit folgendermaßen überprüft werden: _unitName getVariable 'ENH_isHostage';</German>
     <Chinesesimp>让这个单位成为人质，并增加一个“解救人质”的动作菜单。该单位是否仍然是人质，可以用_unitName getVariable 'ENH_isHostage';来检查。</Chinesesimp>
     <Polish>Sprawia że jednostka staję się zakładnikiem i dodaje opcje 'Uwolnij zakładnika'. Czy jednostka jest dalej zakładnikiem można sprawdzić przy pomocy _unitName getVariable 'ENH_isHostage'; </Polish>
-    <Russian>Делает юнит заложником и добавляет действие «Свободный заложник». Может ли устройство оставаться заложником, можно проверить с помощью _unitName getVariable 'ENH_isHostage';</Russian>
+    <Russian>Делает юнит заложником и добавляет действие «Освободить заложника». Остаётся ли объект заложником, можно проверить с помощью _unitName getVariable 'ENH_isHostage';</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_MEDIC_DISPLAYNAME">
     <English>Is Medic?</English>
@@ -1435,7 +1447,7 @@
     <German>Ist Sanitäter?</German>
     <Chinesesimp>是否是医疗兵？</Chinesesimp>
     <Polish>Jest medykiem?</Polish>
-    <Russian>Кто медик?</Russian>
+    <Russian>Он медик?</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_MEDIC_TOOLTIP">
     <English>Defines whether the unit can fully heal other units.</English>
@@ -1446,7 +1458,7 @@
     <German>Bestimmt ob die Einheit andere Einheiten vollständig heilen kann.</German>
     <Chinesesimp>设定该单位是否能治愈其他单位</Chinesesimp>
     <Polish>Definiuje czy jednostka może w pełni leczyć inne jednostki.</Polish>
-    <Russian>Определяет, может ли Юнит полностью лечить других юнитов.</Russian>
+    <Russian>Определяет, может ли юнит полностью лечить других юнитов.</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_ENGINEER_DISPLAYNAME">
     <English>Is Engineer?</English>
@@ -1457,7 +1469,7 @@
     <German>Ist Ingenieur?</German>
     <Chinesesimp>是否是工兵？</Chinesesimp>
     <Polish>Jest inżynierem?</Polish>
-    <Russian>Кто инженер?</Russian>
+    <Russian>Он инженер?</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_ENGINEER_TOOLTIP">
     <English>Defines whether or not the unit can repair vehicles.</English>
@@ -1468,7 +1480,7 @@
     <German>Bestimmt ob die Einheit Fahrzeuge reparieren kann.</German>
     <Chinesesimp>设定该单位是否能够维修车辆。</Chinesesimp>
     <Polish>Definiuje czy jednostka może lub nie naprawiać pojazdy</Polish>
-    <Russian>Определяет, может ли Юнит ремонтировать автомобили.</Russian>
+    <Russian>Определяет, может ли юнит ремонтировать автомобили.</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_DISPLAYNAME">
     <English>Is Explosive Specialist?</English>
@@ -1479,7 +1491,7 @@
     <German>Ist Sprengmeister?</German>
     <Chinesesimp>是否是爆破兵？</Chinesesimp>
     <Polish>Jest saperem?</Polish>
-    <Russian>Кто сапер?</Russian>
+    <Russian>Он сапер?</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_EXPLOSIVESPECIALIST_TOOLTIP">
     <English>Defines whether the unit can defuse explosives.</English>
@@ -1490,7 +1502,7 @@
     <German>Bestimmt ob die Einheit Sprengsätze entschärfen kann.</German>
     <Chinesesimp>设定该单位是否能拆除爆炸物。</Chinesesimp>
     <Polish>Definiuje czy jednostka może rozbrajać ładunki wybuchowe.</Polish>
-    <Russian>Определяет, может ли Юник обезвредить взрывчатку.</Russian>
+    <Russian>Определяет, может ли юнит обезвредить взрывчатку.</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_DISPLAYNAME">
     <English>Is UAV Hacker?</English>
@@ -1501,7 +1513,7 @@
     <German>Ist UAV Hacker?</German>
     <Chinesesimp>是否是无人载具操作员？</Chinesesimp>
     <Polish>Czy jest hakerem BSP?</Polish>
-    <Russian>Кто взламывает беспилоьник?</Russian>
+    <Russian>Он БПЛА хакер?</Russian>
   </Key>
   <Key ID="STR_ENH_UNITTRAITS_UAVHACKER_TOOLTIP">
     <English>Defines whether the unit can hack hostile UAVs.</English>
@@ -1512,7 +1524,7 @@
     <German>Bestimmt ob die Einheit feindliche Drohnen übernehmen kann.</German>
     <Chinesesimp>设定该单位是否能操作无人载具。</Chinesesimp>
     <Polish>Definiuje czy jednostka może hakować wrogie BSP.</Polish>
-    <Russian>Определяет, может ли Юнит взломать вражеские беспилотники.</Russian>
+    <Russian>Определяет, может ли юнит взломать вражеские беспилотники.</Russian>
   </Key>
   <Key ID="STR_ENH_CAMOUFLAGECOEF_DISPLAYNAME">
     <English>Camouflage Coefficent</English>
@@ -1523,7 +1535,7 @@
     <German>Tarnungskoeffizient</German>
     <Chinesesimp>伪装系数</Chinesesimp>
     <Polish>Współczynnik kamuflażu</Polish>
-    <Russian>Коэффициент камуфляжа</Russian>
+    <Russian>Эффективность камуфляжа</Russian>
   </Key>
   <Key ID="STR_ENH_CAMOUFLAGECOEF_TOOLTIP">
     <English>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it is more difficult to spot it.</English>
@@ -1534,7 +1546,7 @@
     <German>Der Tarnungskoeffizient bestimmt wie leicht eine Einheit von anderen KI Einheiten erkannt werden kann, ein niedriger Wert bedeutet, dass die Einheit schwerer zu erkennen ist.</German>
     <Chinesesimp>伪装数率决定了一个单位能否被AI发现。较低的数值意味着更难以发现。</Chinesesimp>
     <Polish>Współczynnik kamuflażu określa jak łatwo jednostka może być wykryta przez SI. Mniejsza wartość oznacz iż jednostka jest trudniejsza do wykrycia.</Polish>
-    <Russian>Коэффициент камуфляжа определяет, насколько легко ИИ может обнаружить единицу. Чем ниже значение, тем сложнее его обнаружить.</Russian>
+    <Russian>Эффективность камуфляжа определяет, насколько легко ИИ может обнаружить единицу. Чем ниже значение, тем сложнее его обнаружить.</Russian>
   </Key>
   <Key ID="STR_ENH_AUDIBLECOEF_DISPLAYNAME">
     <English>Audible Coefficient</English>
@@ -1545,7 +1557,7 @@
     <German>Hörbereichskoeffizient</German>
     <Chinesesimp>听力系数</Chinesesimp>
     <Polish>Współczynnik słyszalności</Polish>
-    <Russian>Коэффициент слышимости</Russian>
+    <Russian>Уровень слышимости</Russian>
   </Key>
   <Key ID="STR_ENH_AUDIBLECOEF_TOOLTIP">
     <English>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it is more difficult to hear it.</English>
@@ -1556,7 +1568,7 @@
     <German>Der Hörbereichskoeffizient bestimmt wie leicht eine Einheit zu hören ist. Ein niedriger Wert bedeutet, dass die Einheit schwieriger zu hören ist.</German>
     <Chinesesimp>听力系数决定了一个单位能否被AI所听到。较低的数值代表着更难以听到。</Chinesesimp>
     <Polish>Współczynnik słyszalności określa jak łatwo SI może usłyszeć gracza. Im mniejsza wartość tym trudniej usłyszeć gracza. </Polish>
-    <Russian>Коэффициент слышимости определяет, насколько легко устройство может быть услышано AI. Чем ниже значение, тем сложнее его услышать.</Russian>
+    <Russian>Уровень слышимости определяет, насколько легко устройство может быть услышано ИИ. Чем ниже значение, тем сложнее его услышать.</Russian>
   </Key>
   <Key ID="STR_ENH_LOADCOEF_DISPLAYNAME">
     <English>Load Coefficient</English>
@@ -1567,7 +1579,7 @@
     <German>Belastungskoeffizient</German>
     <Chinesesimp>负载系数</Chinesesimp>
     <Polish>Wpływ obciążenia</Polish>
-    <Russian>Коэффициент выносливости</Russian>
+    <Russian>Коэффицент выносливости</Russian>
   </Key>
   <Key ID="STR_ENH_LOADCOEF_TOOLTIP">
     <English>The load coefficient determines how much influence the unit's loadout weight has on it is stamina. A higher value means the weight has a higher influence.</English>
@@ -1578,10 +1590,11 @@
     <German>Der Belastungskoeffizient bestimmt wie viel Einfluss das Ausrüstungsgewicht auf die Ausdauer der Einheit hat. Ein höherer Wert verringert die zur Verfügung stehende Ausdauer.</German>
     <Chinesesimp>负载系数决定了单位的负载对其耐力有多大的影响。较高的数值意味着重量具有更高的影响力。</Chinesesimp>
     <Polish>Wpływ obciążenia ustala jak duży wpływ ma waga na stamine jednostki. Wyższa wartość oznacza większy wpływ wagi na stamine.</Polish>
-    <Russian>Коэффициент выносливости определяет, насколько сильно вес снаряда влияет на его выносливость. Более высокое значение означает, что вес имеет большее влияние.</Russian>
+    <Russian>Коэффицент выносливости определяет, насколько сильно вес снаряжения влияет на персонажа. Чем выше значение, тем больше влияния вес влияет на выносливость</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLENVGEQUIPMENT_TOOLTIP">
     <English>If enabled, night vision optics can no longer be used.</English>
+    <Russian>Отключение работы ПНВ</Russian>
     <Italian>Se attivato, il visore notturno non puo più essere usato.</Italian>
     <Czech>Zamezí použití brýlí pro noční vidění.</Czech>
     <French>Si activé, les optiques de visée intégrant une vision nocturne ne peuvent pas être utilisées.</French>
@@ -1589,7 +1602,6 @@
     <German>Wenn aktiviert können Nachtsichtoptiken nicht mehr verwendet werden.</German>
     <Chinesesimp>如果启用，夜视光学便无法使用。</Chinesesimp>
     <Polish>Jeżeli włączone, optyka noktowizyjna nie może być używana.</Polish>
-    <Russian>Если включено, оптику ночного видения больше нельзя использовать.</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLENVGEQUIPMENT_DISPLAYNAME">
     <English>Disable NVG Equipment</English>
@@ -1604,6 +1616,7 @@
   </Key>
   <Key ID="STR_ENH_DISABLETIEQUIPMENT_DISPLAYNAME">
     <English>Disable Thermal Optics</English>
+    <Russian>Отключить ТВП</Russian>
     <Italian>Disabilita i Visori Termici</Italian>
     <Czech>Zakázat použití termální optiky</Czech>
     <French>Désactiver les optiques à vision thermique</French>
@@ -1611,10 +1624,10 @@
     <German>Verbiete Wärmebildoptik</German>
     <Chinesesimp>禁用热成像</Chinesesimp>
     <Polish>Wyłącza optyke termowizyjną</Polish>
-    <Russian>Отключить тепловую оптику</Russian>
   </Key>
   <Key ID="STR_ENH_DISABLETIEQUIPMENT_TOOLTIP">
     <English>If enabled, thermal optics can no longer be used.</English>
+    <Russian>Отключение работы ТВП</Russian>
     <Italian>Se attivato, i visori termici non potranno essere più utilizzati.</Italian>
     <Czech>Zamezí použití termální optiky.</Czech>
     <French>Si activé, les optiques de visée intégrant une vision thermique ne peuvent pas être utilisées.</French>
@@ -1622,7 +1635,6 @@
     <German>Wenn aktiviert können Wärmebildoptiken nicht mehr verwendet werden.</German>
     <Chinesesimp>如果启用，热成像便无法使用。</Chinesesimp>
     <Polish>Jeżeli włączone, optyka termowizyjna nie może być używana.</Polish>
-    <Russian>Если включено, тепловая оптика больше не может использоваться.</Russian>
   </Key>
   <Key ID="STR_ENH_ALLOWFLEEING_DISPLAYNAME">
     <English>Fleeing Coefficient</English>
@@ -1644,14 +1656,16 @@
     <German>Definiert den Feigheitsgrad der Einheit. Ein höherer Wert bedeutet, dass die Einheit früher versucht aus einem Kampf zu fliehen.</German>
     <Chinesesimp>设置单位的胆怯程度(缺乏勇气或胆量)。单位越胆怯，就越早开始逃跑。0意味着最大的勇气，而1意味着总是逃避。</Chinesesimp>
     <Polish>Ustawia poziom tchórzostwa (niedostatek odwagi czy męstwa) jednostki. Im więcej tchórzostwa posiada jednostka tym wcześniej zaczną uciekać. 0 oznacza maksymalną odwage, a 1 minimalną, czyli zawsze będą uciekać.</Polish>
-    <Russian>Устанавливает уровень трусости (отсутствие смелости или храбрости) отряда. Чем больше трусости имеет подразделение, тем скорее оно начнет убегать. 0 означает максимальную смелость, а 1 означает всегда бежать.</Russian>
+    <Russian>Устанавливает уровень трусости (отсутствие смелости или храбрости) отряда. Чем больше трусости имеет подразделение, тем скорее оно начнет убегать. 0 означает максимальную смелость, а при выборе 1 ИИ будет всегда убегать.</Russian>
   </Key>
   <Key ID="STR_ENH_ATTACHTO_DISPLAYNAME">
     <English>Attach</English>
+    <Russian>Прикрепление</Russian>
     <German>Befestigen</German>
   </Key>
   <Key ID="STR_ENH_ATTACHTO_TOOLTIP">
     <English>Attaches this object to the closest object.</English>
+    <Russian>Присоединяет этот объект к ближайшему объекту</Russian>
     <German>Befestigt dieses Objekt an dem nächstgelegensten Objekt.</German>
   </Key>
   <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
@@ -1776,6 +1790,7 @@
   </Key>
   <Key ID="STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP">
     <English>You are running a customised version of 3den Enhanced. Please make sure you are not accidentally removing attributes from your mission!</English>
+    <English>Вы используете кастомную версию 3den Enhanced. Пожалуйста, убедитесь, что вы случайно не удалили атрибуты своей миссии!</English>
     <German>Du verwendest eine benutzerdefinierte Version von 3den Enhanced. Stelle sicher das du nicht aus Versehen Attribute aus der jetzigen Mission entfernst!</German>
     <Spanish>¡Está ejecutando una versión personalizada de 3den Enhanced. ¡Asegúrate de no eliminar accidentalmente atributos de tu misión!</Spanish>
     <Chinesesimp>您正在运行自定义版的3den增强。 请确保您不会意外删除任务中的属性！</Chinesesimp>
@@ -1892,6 +1907,7 @@
   </Key>
   <Key ID="STR_ENH_INTROTEXT_INTROTYPE_DISPLAYNAME">
     <English>Intro Type</English>
+    <Russian>Тип интро</Russian>
     <Italian>Tipo di introduzione</Italian>
     <Czech>Druh Intra</Czech>
     <German>Introtyp</German>
@@ -1908,7 +1924,7 @@
     <German>Gras deaktiviert</German>
     <Chinesesimp>禁用草地</Chinesesimp>
     <Polish>Trawa wyłączona</Polish>
-    <Russian>Трава отключена</Russian>
+    <Russian>Отключение травы</Russian>
   </Key>
   <Key ID="STR_ENH_TERRAINGRID_STANDARD_DISPLAYNAME">
     <English>Standard</English>
@@ -2061,7 +2077,7 @@
     <Spanish>Introducción con UAV</Spanish>
     <German>UAV Intro</German>
     <Chinesesimp>无人机初始介绍镜头</Chinesesimp>
-    <Russian>Создать выстрел</Russian>
+    <Russian>UAV Intro</Russian>
     <Polish>Ujęcie początkowe</Polish>
   </Key>
   <Key ID="STR_ENH_ATTRIBUTECATEGORY_MAPINDICATORS">
@@ -2084,7 +2100,7 @@
     <German>Intro Text</German>
     <Chinesesimp>介绍文本</Chinesesimp>
     <Polish>Tekst intro</Polish>
-    <Russian>Вывод текста</Russian>
+    <Russian>Текстовое интро</Russian>
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR">
     <English>Briefing Editor</English>
@@ -2095,7 +2111,7 @@
     <German>Einsatzbesprechungs-Editor</German>
     <Chinesesimp>简报编辑</Chinesesimp>
     <Polish>Edytor odprawy</Polish>
-    <Russian>Редактор брифингов</Russian>
+    <Russian>Редактор брифинга</Russian>
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_COLOUR">
     <English>Colour</English>
@@ -2121,6 +2137,7 @@
   </Key>
   <Key ID="STR_ENH_3DENRADIO_END">
     <English>Ending</English>
+    <Russian>Конец</Russian>
     <German>Ende</German>
     <Spanish>Final</Spanish>
     <Chinesesimp>结束</Chinesesimp>
@@ -2171,6 +2188,7 @@
   </Key>
   <Key ID="STR_ENH_3DENRADIO_HELP_DESCRIPTION">
     <English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
+    <Russian>- 2xЛКМ по записи в списке включает воспроизведение\n- Добавить песню в список нажав "Пробел"\n- Скопировать название класса песни нажав на Ctrl+C\n- Чтобы удалить запись из списка воспроизведения выделите её и нажмите "Delete"</Russian>
     <Italian>- Fai doppio clic con il pulsante sinistro del mouse su una voce della casella di riepilogo per riprodurre immediatamente il brano \ n- Aggiungi un brano alla playlist premendo SPACE \ n- Copia il nome della classe di un brano negli appunti premendo CTRL + C \ n- Rimuovi una voce dal Playlist selezionandola e premendo CANC</Italian>
     <Czech>- Dvojí kliknutí levým tlačítkem na záznam v seznamu přehraje hudbu okamžitě\n- Přidejte hudbu do svého playlistu stisknutím SPACE\n - Zkopírujte jméno třídy (class name) hudby do své schránky stisknutím CTRL + C\n - Odstraňte záznam z playlistu jeho vybráním a stisknutím DELETE</Czech>
     <German>- Doppelt Linksklick auf einen Listeneintrag spielt das Lied sofort\n- Füge ein Lied zur Playlist hinzu, indem du das Lied markierst und SPACE drückst\n- Ein Klassenname kann mit CTRL+C in die Zwischenablage kopiert werden</German>
@@ -2225,6 +2243,7 @@
   </Key>
   <Key ID="STR_ENH_RPTVIEWER_NUMBEROFLINES">
     <English>Number of Lines</English>
+    <Russian>Количество строк</Russian>
     <German>Zeilenanzahl</German>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
@@ -2236,7 +2255,7 @@
     <Spanish>#Columnas</Spanish>
     <French>#Colonnes</French>
     <Polish>#Kolumny</Polish>
-    <Russian>#Колонны</Russian>
+    <Russian>#Колонки</Russian>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_SPACINGX">
     <English>Spacing X</English>
@@ -2367,7 +2386,7 @@
     <German>KI Mod- und Skriptesammlung von Gunter Severloh</German>
     <Chinesesimp>Gunter Severloh的AI编译列表</Chinesesimp>
     <Czech>Kompendium skriptů umělé inteligence od Gunter Severloh </Czech>
-    <Russian>Список компиляции AI от Gunter Severloh</Russian>
+    <Russian>Список компиляции ИИ от Gunter Severloh</Russian>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_GETMODULEINFORMATION">
     <English>Module Information</English>
@@ -2411,10 +2430,11 @@
     <German>Fraktionsnamen in Zwischenablage kopieren</German>
     <Chinesesimp>记录派系名称</Chinesesimp>
     <Polish>Zapisz nazwy frakcji do schowka</Polish>
-    <Russian>Записать имена фракций в буфер обмена</Russian>
+    <Russian>Скопировать имена фракций в буфер обмена</Russian>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGVARNAMES">
     <English>Log Variable Names to Clipboard</English>
+    <Russian>Скопировать имена переменных в буфер обмена</Russian>
     <German>Variablennamen in Zwischenablage kopieren</German>
     <Spanish>Registrar nombres de variables al portapapeles</Spanish>
     <Chinesesimp>将变量名称记录到剪贴板</Chinesesimp>
@@ -2471,7 +2491,7 @@
     <German>Respawntickets BLUFOR</German>
     <Chinesesimp>BLUFOR 重生票</Chinesesimp>
     <Polish>Punkty odrodzenia BLUFOR</Polish>
-    <Russian>Respawn Билеты BLUFOR</Russian>
+    <Russian>Очки возрождения BLUFOR</Russian>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_INDFOR_DISPLAYNAME">
     <English>Respawn Tickets INDFOR</English>
@@ -2481,7 +2501,7 @@
     <German>Respawntickets INDFOR</German>
     <Chinesesimp>独立部队重生票</Chinesesimp>
     <Polish>Punkty odrodzenia INDFOR</Polish>
-    <Russian>Respawn Билеты INDFOR</Russian>
+    <Russian>Очки возрождения INDFOR</Russian>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
     <English>Respawn Tickets OPFOR</English>
@@ -2491,7 +2511,7 @@
     <German>Respawntickets OPFOR</German>
     <Chinesesimp>OPFOR 重生票</Chinesesimp>
     <Polish>Punkty odrodzenia OPFOR</Polish>
-    <Russian>Respawn Билеты OPFOR</Russian>
+    <Russian>Очки возрождения OPFOR</Russian>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_CIVFOR_DISPLAYNAME">
     <English>Respawn Tickets CIVFOR</English>
@@ -2501,7 +2521,7 @@
     <German>Respawntickets CIVFOR</German>
     <Chinesesimp>平民重生票</Chinesesimp>
     <Polish>Punkty odrodzenia CYW</Polish>
-    <Russian>Respawn Билеты CIVFOR</Russian>
+    <Russian>Очки возрождения CIVFOR</Russian>
   </Key>
   <Key ID="STR_ENH_SAVELOADOUT_DISPLAYNAME">
     <English>Save Loadout</English>
@@ -2511,7 +2531,7 @@
     <German>Ausrüstung speichern</German>
     <Chinesesimp>保存加载</Chinesesimp>
     <Polish>Zapisz wyposażenie</Polish>
-    <Russian>Сохранить выгрузку</Russian>
+    <Russian>Сохранить экипировку</Russian>
   </Key>
   <Key ID="STR_ENH_SAVELOADOUT_TOOLTIP">
     <English>Restores the loadout on respawn.</English>
@@ -2521,7 +2541,7 @@
     <German>Ausrüstung wird beim Respawn wiederhergestellt.</German>
     <Chinesesimp>在重生时恢复加载。</Chinesesimp>
     <Polish>Przywraca wyposażenie podczas odrodzenia.</Polish>
-    <Russian>Восстанавливает оборудование, когда оно появляется снова.</Russian>
+    <Russian>Восстанавливает экипировку при возрождении.</Russian>
   </Key>
   <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
     <English>View Distance</English>
@@ -2531,7 +2551,7 @@
     <German>Sichtweite</German>
     <Chinesesimp>视距</Chinesesimp>
     <Polish>Zasięg widoku</Polish>
-    <Russian>Расстояние обзора</Russian>
+    <Russian>Дистанция обзора</Russian>
   </Key>
   <Key ID="STR_ENH_VIEWDISTANCE_TOOLTIP">
     <English>Keep in mind that this setting can be limited bei either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</English>
@@ -2541,7 +2561,7 @@
     <German>Bedenke, dass diese Einstellung vom Server oder den persönlichen Einstellungen des Spielers limitiert werden können. Ausserdem kann die Objektsichtweite nicht höher als die allgemeine Sichtweite sein.</German>
     <Chinesesimp>请记住，此设置可以限制服务器或玩家的视距。此外，对象视图距离不能高于视图距离。</Chinesesimp>
     <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
-    <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, расстояние просмотра объекта не может быть больше расстояния просмотра.</Russian>
+    <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, дистанция видимости объектов не может быть больше дистанции обзора.</Russian>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
     <English>Circular Pattern</English>
@@ -2551,7 +2571,7 @@
     <German>Kreismuster</German>
     <Polish>Wzór kołowy</Polish>
     <Spanish>En círculo</Spanish>
-    <Russian>Обзор шаблонов</Russian>
+    <Russian>Круговой паттерн</Russian>
   </Key>
   <Key ID="STR_ENH_AIRDROP_CONDITION_TOOLTIP">
     <English>This condition has to be become true during the mission for the airdrop to start.</English>
@@ -2559,12 +2579,13 @@
     <French>Cette condition doit être remplie au cours de la mission pour que le largage commence.</French>
     <German>Diese Bedingung muss während der Mission erfüllt werden damit Einheiten abgeworfen werden.</German>
     <Polish>Ten warunek musi być spełniony w czasie misji aby zrzut się odbył.</Polish>
-    <Russian>Это условие должно быть выполнено во время миссии, чтобы отряды были сброшены.</Russian>
+    <Russian>Это условие должно быть выполнено во время миссии, чтобы произошёл сброс.</Russian>
     <Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
     <Chinesesimp>在任务执行之前，必须先实现此条件，然后才能开始空投。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_AIRDROP_CLASSES_TOOLTIP">
     <English>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</English>
+    <Russian>Класснеймы юнитов, которые будут десантироваться в формате:\nимя_класса_1 имя_класса_2 имя_класса_3.</Russian>
     <Czech>Třídy vojáků kteří budou shozeni výsadkem ve formátu:\nClassname_1 Classname_2 Classname_n.</Czech>
     <Spanish>Clases de los soldados que deben soltarse en formato:\nClassname_1 Classname_2 Classname_n.</Spanish>
     <German>Klassennamen der Einheiten die abspringen sollen im Format:\nClassname_1 Classname_2 Classname_n. </German>
@@ -2573,6 +2594,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
     <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
+    <Russian>Создаёт воздушный юнит, который летит из точки А в точку Б, никогда не останавливаясь и не подвергаясь атаке. Будет удалён, как только достигнет места назначения. Полёт можно остановить, установив для параметра "ENH_AmbientFlyby_Enabled" значение "false" на стороне сервера.</Russian>
     <Czech>Vytvoří leteckou jednotku která se pohybuje z bodu A do bodu B, nikdy neútočí a ani na ní není útočeno. Je nastavena jako zajatec a vymaže se v okamžiku kdy dosáhne svého cíle. Přelety mohou být zastaveny nastavením proměnné "ENH_AmbientFlyby_Enabled" jako nepravdu (false) na straně serveru.</Czech>
     <Spanish>Genera una unidad aérea que se mueve desde el punto A al punto B, nunca atacando ni siendo atacado. Se establece como cautivo y desaparecerá una vez que llegue a su destino. Los sobrevuelos se pueden detener configurando 'ENH_AmbientFlyby_Enabled' en falso en la máquina del servidor.</Spanish>
     <German>Spawnt eine Lufteinheit die von Punkt A zu Punkt B fliegt. Sie wird niemals angegriffen oder angreifen. Sie wird gelöscht sobalt sie ihren Zielpunkt erreicht hat. Die Vorbeiflüge können gestoppt werden durch das setzten von 'ENH_AmbientFlyby_Enabled' zu 'false' auf dem Server.</German>
@@ -2581,6 +2603,7 @@
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
     <English>Plays a fake UAV observational sequence which serves as an establishing shot.</English>
+    <Russian>Временно создаёт БПЛА для создания начального изображения</Russian>
     <Czech>Přehrává falešnou pozorovací UAV sekvenci která slouží jako úvodní snímek.</Czech>
     <Spanish>Reproduce una secuencia de observación falsa de UAV que sirve como un toma de establecimiento.</Spanish>
     <German>Spielt eine gestellte UAV Kamerafahrt ab, welche zu Beginn der Mission gezeigt wird.</German>
@@ -2589,6 +2612,7 @@
   </Key>
   <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
     <English>Shows an animated text. Can be used to display mission name.</English>
+    <Russian>Показывает анимированный текст. Может использоваться для отображения названия миссии.</Russian>
     <Czech>Zobrazí animovaný text. Nemůže být použitý pro zobrazení názvu mise.</Czech>
     <Spanish>Muestra un texto animado. Se puede usar para mostrar el nombre de la misión.</Spanish>
     <German>Zeigt einen animierten Text. Kann dazu verwendet werden den Missionsname bei Start der Mission darzustellen.</German>
@@ -2600,13 +2624,14 @@
     <Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "ENH_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).Hodnota musí být název třídy značky z CfgMarkers.</Czech>
     <German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht. Das Aktualisieren des Markers kann durch das Setzen der Variablen 'ENH_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
     <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
-    <Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной 'ENH_GroupMarker_Update' в пространстве имен групп значение false.</Russian>
+    <Russian>Показывает положение групп на карте. Положение обновляется каждую секунду. Если группа становится пустой, маркер удаляется. Процесс обновления можно приостановить, задав для переменной "ENH_GroupMarker_Update" в "namespace" значение "false".</Russian>
     <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar configurando la variable 'ENH_GroupMarker_Update' en el nombre de espacio de grupos (group's namespace) a FALSE. \n\nValue tiene que ser un nombre de clase de marcador de CfgMarkers.</Spanish>
     <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
     <Chinesesimp>在地图上显示小队位置。位置每秒更新一次。 如果该小队为空，则标记将被删除。 可以通过将小队名称空间中的变量"ENH_GroupMarker_Update"设置为false来暂停更新过程。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
     <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config.</English>
+    <Russian>Завершает миссию индивидуальным окончанием, когда определенное количество юнитов на данной стороне будет убито. Может использоваться для завершения миссии, если слишком много жертв среди гражданского населения. Пользовательские брифинги должны быть определены в конфигурации миссии.</Russian>
     <Spanish>Finaliza la misión con un final personalizado si una cierta cantidad de entidades de un bando del bando indicado muere. Puede ser usado para fallar la misión Se puede utilizar para fallar la misión por víctimas civiles. En multijugador, la misión finalizará para todos los clientes. Los informes personalizados deben definirse en la configuración de la misión.</Spanish>
     <German>Beendet die Mission mit einem benutzerdefinierten Ende, wenn eine definierte Anzahl von Einheiten einer bestimmten Seite getötet wurden. Kann dazu verwendet werden die Mission zu beenden wenn zu viele zivile Opfer zu beklagen sind. Benutzerdefinierte Einsatzbesprechnungen müssen in der Missionskonfig definiert werden.</German>
     <French>Termine la mission avec une fin de mission personnalisée si un certain nombre d'unités d'un certain camp sont morts. Peut être employée pour l'échec d'une mission en cas de pertes civiles. En multijoueur, la mission sera terminée pour tous les clients. Le débriefing personnalisé doit être défini dans la configuration de la mission.</French>
@@ -2619,11 +2644,12 @@
     <French>Placer en garnison</French>
     <German>Gebäude besetzen</German>
     <Polish>Obsadź budynki</Polish>
-    <Russian>Гарнизонные Здания</Russian>
+    <Russian>Здания гарнизона</Russian>
     <Spanish>Guarnicionar edificios.</Spanish>
   </Key>
   <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
     <English>AI features %1.</English>
+    <Russian>Особенности ИИ %1.</Russian>
     <German>KI Funktionen%1</German>
     <Spanish>Características IA %1.</Spanish>
     <French>Fonctionnalités IA %1.</French>
@@ -2631,6 +2657,7 @@
   </Key>
   <Key ID="STR_ENH_SPR_DESCRIPTION">
     <English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
+    <Russian> Позволяет игроку и ИИ возрождаться в одиночных сценариях. Затрагиваются только юниты, для которых в атрибутах активировано возрождение одиночной игры. Для многопользовательских миссий используйте многопользовательский респаун.</Russian>
     <German>Erlaubt dem Spieler und KI-Einheiten in Einzelspielerszenarios zu respawnen. Nur Einheiten für die der Einzelspieler-Respawn in den Attributen aktiviert wurde, sind betroffen. Für Mehrspielermissionen benutze den Mehrspieler-Respawn.</German>
     <Spanish>Habilita al jugador y a la IA a reaparecer en escenarios de un solo jugador. Solo están afectadas las unidades con la opción reaparición de un solo jugador habilitada. Para escenarios MP usa el sistema reaparición multijugador.</Spanish>
     <French>Permet aux IA et au joueur de réapparaître dans les scénarios solo. Seules les unités avec la 'Réapparation en solo' activée dans leurs attributs sont affectées. Pour les scénarios multijoueurs, utilisez le système de réapparition multijoueur. </French>
@@ -2638,6 +2665,7 @@
   </Key>
   <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
     <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
+    <Russian>Все маркера с префиксом 'respawn_SIDE' считаются точками возрождения. Например OPFOR могут использовать все маркера с именем respawn_east_xxx.\n\n* respawn_east - точка возрождения OPFOR\n* respawn_west - точка возрождения BLUFOR\n* respawn_guerilla - точка возрождения INDFOR\n* respawn_civilian - точка возрождения CIVFOR</Russian>
     <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für INDFOR\n* respawn_civilian - Respawn für CIVFOR</German>
     <Spanish>Todos los marcadores con el prefijo 'respawn_SIDE' cuentan como posición de reaparición. Por ejemplo: unidades OPFOR pueden usar todos los marcadores llamados respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Spanish>
     <French>Tous les marqueurs avec le préfix 'respawn_CAMP' comptent comme des points de réapparition. Par exemple, les unités OPFOR peuvent utiliser tous les marqueurs respawn_est_xxx comme points de réapparition.\n\n* respawn_east - réapparition OPFOR.\n* respawn_west - réapparition BLUFOR.\n* respawn_guerilla - réapparition INDFOR.\n* respawn_civilian - réapparition CIVFOR.</French>
@@ -2645,6 +2673,7 @@
   </Key>
   <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
     <English>Respawn at nearest Respawn Position</English>
+    <Russian>Возрождение в ближайшей точке возрождения</Russian>
     <German>Bei nähester Respawn-Position wiedereinsteigen</German>
     <Spanish>Reaparecer en la posición de reaparición más cercana</Spanish>
     <French>Réapparaître au plus proche point de réapparition</French>
@@ -2652,6 +2681,7 @@
   </Key>
   <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
     <English>Respawn at random Respawn Position</English>
+    <Russian>Возрождение в случайной точке возрождения</Russian>
     <German>Bei einer willkürlichen Respawn-Position wiedereinsteigen</German>
     <Spanish>Reaparecer en una posición de reaparición aleatoria</Spanish>
     <French>Réapparaître à un point de réapparition aléatoire</French>
@@ -2659,6 +2689,7 @@
   </Key>
   <Key ID="STR_ENH_SPR">
     <English>Single Player Respawn</English>
+    <Russian>точка возрождения Single Player</Russian>
     <German>Einzelspieler-Respawn</German>
     <Spanish>Reaparición de un solo jugador</Spanish>
     <French>Réapparition en solo</French>
@@ -2666,6 +2697,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_NOTIFICATION">
     <English>Not enough empty building positions, increase the radius or the coverage.</English>
+    <Russian>В здании недостаточно пустых мест, увеличьте радиус или покрытие.</Russian>
     <Italian>Non ci sono abbastanza posizioni vuote dell'edificio, aumentare il raggio o la copertura.</Italian>
     <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
     <French>Il n'y a pas assez de bâtiments vides à proximité. Augmentez le rayon ou le pourcentage de couverture.</French>
@@ -2815,7 +2847,7 @@
     <Spanish>Buscador de texturas</Spanish>
     <French>Texture Finder</French>
     <Polish>Wyszukiwarka tekstur</Polish>
-    <Russian>Поисковая система текстур</Russian>
+    <Russian>Поиск текстуры</Russian>
   </Key>
   <Key ID="STR_ENH_BATCHREPLACE">
     <Italian>Rimpiazza in gruppo</Italian>
@@ -2825,7 +2857,7 @@
     <Chinesesimp>批量替换</Chinesesimp>
     <Spanish>Reemplazar por lotes</Spanish>
     <French>Remplacer les objets</French>
-    <Russian>Пакетная замена</Russian>
+    <Russian>Заменить группой</Russian>
     <Polish>Zastąp obiekty</Polish>
   </Key>
   <Key ID="STR_ENH_BATCHREPLACE_REPLACE">
@@ -2871,7 +2903,7 @@
     <Portuguese>3den Enhanced Visualizador de funções</Portuguese>
     <German>3den Enhanced Funktionsviewer</German>
     <Chinesesimp>3den Enhanced 函数查看器</Chinesesimp>
-    <Russian>Расширенные возможности браузера 3DEN</Russian>
+    <Russian>Средство для просмотра функций 3DEN Enhanced</Russian>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT">
     <English>Copy Function</English>
@@ -3037,7 +3069,7 @@
     <German>Unbekannt</German>
     <Spanish>Desconocido</Spanish>
     <Polish>Nieznane</Polish>
-    <Russian>Неизвестные</Russian>
+    <Russian>Неизвестное</Russian>
     <French>Inconnu</French>
     <Chinesesimp>未知</Chinesesimp>
   </Key>
@@ -3050,7 +3082,7 @@
     <Spanish>Buscador de texturas</Spanish>
     <French>Texture Finder</French>
     <Polish>Wyszukiwarka tekstur</Polish>
-    <Russian>Поисковая система текстур</Russian>
+    <Russian>Поиск текстур</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DESCRIPTION">
     <English>These settings help you test your scenarios during preview. They will not be saved in the mission.sqm so they won't effect your scenario when you publish it. Disabled in multiplayer.</English>
@@ -3065,6 +3097,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
     <English>Draw Unit Icons</English>
+    <Russian>Отобразить иконки юнитов </Russian>
     <Italian>Mostra le icone delle unità</Italian>
     <German>Einheitenicons darstellen</German>
     <French>Montrer les icônes des unités</French>
@@ -3074,28 +3107,33 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME">
     <English>Draw Trigger Areas</English>
+    <Russian>Отобразить область триггера</Russian>
     <German>Auslöserbereiche zeichnen</German>
     <Chinesesimp>绘制触发区域</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
     <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
+    <Russian>Во время предварительного просмотра будут отображены триггерные области. Маленькие триггера отрисовываться не будут.</Russian>
     <German>Auslöserbereiche werden wärend der Vorschau angezeigt. Kleine Auslöserbereiche werden nicht angezeigt.</German>
     <Chinesesimp>触发区域将在预览期间绘制。 小区域触发器将不会绘制。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
     <English>Log active Scripts</English>
+    <Russian>Логгировать активные скрипты</Russian>
     <German>Aktive Skripte loggen</German>
     <Spanish>Registrar Scripts activos</Spanish>
     <Chinesesimp>记录激活的脚本</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
     <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
+    <Russian>Все активные скрипты и события миссии будут записаны в rpt-файл</Russian>
     <German>Alle aktiven Skripte und Missions-Event-Handler werden in die .rpt Datei geschrieben.</German>
     <Spanish>Todos los scripts activos y los controladores de eventos de la misión se registrarán en el archivo .rpt</Spanish>
     <Chinesesimp>所有激活的脚本和任务事件处理程序都将记录到.rpt日志文件中。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
     <English>Draws information of nearby units and vehicles.</English>
+    <Russian>Отобразить информацию о ближайших юнитах и технике</Russian>
     <Italian>Mostra informazioni sulle unità e veicoli nelle vicinanze.</Italian>
     <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
     <French>Affiche des informations à propos des unités et véhicules à proximité.</French>
@@ -3112,7 +3150,7 @@
     <Czech>Povolit Zeus</Czech>
     <French>Activer Zeus</French>
     <Polish>Włącz Zeusa</Polish>
-    <Russian>Включить Зевс</Russian>
+    <Russian>Включить Zeus</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_ARSENAL_DISPLAYNAME">
     <English>Enable Arsenal</English>
@@ -3200,7 +3238,7 @@
     <Czech>Zobrazit jednotky</Czech>
     <French>Afficher les unités</French>
     <Polish>Pokaż jednostki</Polish>
-    <Russian>Показать отряды</Russian>
+    <Russian>Показать отделения</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP">
     <English>All units and their movement will be visible on the map during scenario preview.</English>
@@ -3211,7 +3249,7 @@
     <Czech>Všechny jednotky a jejich pohyb budou zobrazeny na mapě během náhledu scénáře.</Czech>
     <French>Toutes les unités et leurs mouvements seront visibles sur la carte lors de la prévisualisation du scénario.</French>
     <Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
-    <Russian>Все отряды и их движения будут видны на карте во время предварительного просмотра сценария.</Russian>
+    <Russian>Все отделения и их движения будут видны на карте во время предварительного просмотра сценария.</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
     <English>Kill Units (BLUFOR)</English>
@@ -3222,7 +3260,7 @@
     <Czech>Zabíjet jednotky (Západ)</Czech>
     <French>Tuer des unités (BLUFOR)</French>
     <Polish>Zabij jednostki (BLUFOR)</Polish>
-    <Russian>Убить оиряды (Запад)</Russian>
+    <Russian>Убить отделения (BLUFOR)</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_KILLUNITS_TOOLTIP">
     <English>Adds an entry to the action menu during scenario preview which instantly kills all units of given side.</English>
@@ -3244,7 +3282,7 @@
     <Czech>Zabíjet jednotky (Civilisté)</Czech>
     <French>Tuer des unités (civils)</French>
     <Polish>Zabij jednostki (CIVFOR)</Polish>
-    <Russian>Убить отряды (гражданский)</Russian>
+    <Russian>Убить отряды (CIVFOR)</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME">
     <English>Kill Cursor Target</English>
@@ -3255,7 +3293,7 @@
     <Czech>Zabije jednotku označenou kurzorem</Czech>
     <French>Tuer la cible du curseur</French>
     <Polish>Zabij jednostke na kursorze</Polish>
-    <Russian>Убить цель под курсором</Russian>
+    <Russian>Убить цель курсором</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_TOOLTIP">
     <English>Adds an entry to the action menu during scenario preview which instantly kills the unit the player is looking at.</English>
@@ -3277,7 +3315,7 @@
     <Czech>Kill Units (INDFOR)</Czech>
     <French>Tuer des unités (INDFOR)</French>
     <Polish>Zabij jednostki (INDFOR)</Polish>
-    <Russian>Убить отряды (независимых)</Russian>
+    <Russian>Убить отряды (INDFOR)</Russian>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME">
     <English>Kill Units (OPFOR)</English>
@@ -3288,7 +3326,7 @@
     <Czech>Zabíjet jednotky (OPFOR)</Czech>
     <French>Tuer des unités (OPFOR)</French>
     <Polish>Zabij jednostki (OPFOR)</Polish>
-    <Russian>Убить отряды (Восток)</Russian>
+    <Russian>Убить отряды (OPFOR)</Russian>
   </Key>
   <Key ID="STR_ENH_FOLDER_ABOUT">
     <English>About 3den Enhanced</English>
@@ -3411,7 +3449,7 @@
     <Chinesesimp>鸣谢</Chinesesimp>
     <Czech>Poděkování</Czech>
     <French>Crédits</French>
-    <Russian>Кредиты</Russian>
+    <Russian>Авторы</Russian>
     <Polish>Autorzy</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_COPYLOADOUTS">
@@ -3423,7 +3461,7 @@
     <German>Kopiere Ausrüstung</German>
     <Chinesesimp>复制加载/s</Chinesesimp>
     <Polish>Skopiuj wyposażenie</Polish>
-    <Russian>Копировальная техника</Russian>
+    <Russian>Копировать экипировку</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
     <Italian>Applica Equipaggiamento/i</Italian>
@@ -3434,7 +3472,7 @@
     <German>Ausrüstung zuweisen</German>
     <Chinesesimp>同意加载/s</Chinesesimp>
     <Polish>Zastosuj wyposażenie</Polish>
-    <Russian>Назначить оборудование</Russian>
+    <Russian>Применить экипировку</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CONFIG">
     <English>Export Loadout (Config)</English>
@@ -3445,7 +3483,7 @@
     <German>Ausrüstung exportieren (Konfig)</German>
     <Chinesesimp>导出加载 （配置config）</Chinesesimp>
     <Polish>Eksportuj wyposażenie (konfig)</Polish>
-    <Russian>Экспорт оборудования (конфиг)</Russian>
+    <Russian>Экспорт экипировки (конфиг)</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTLOADOUT_CFGRESPAWNINVENTORY">
     <English>Export Loadout (CfgRespawnInventory)</English>
@@ -3456,7 +3494,7 @@
     <German>Ausrüstung exportieren (CfgRespawnInventory)</German>
     <Chinesesimp>导出加载 （CfgRespawnInventory）</Chinesesimp>
     <Polish>Eksportuj wyposażenie (CfgRespawnInventory)</Polish>
-    <Russian>Экспорт оборудования (CfgRespawnInventory)</Russian>
+    <Russian>Экспорт экипировки (CfgRespawnInventory)</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_REVERSEDIRECTION">
     <English>Reverse Direction</English>
@@ -3555,7 +3593,7 @@
     <German>Gras umschalten</German>
     <Chinesesimp>切换草</Chinesesimp>
     <Polish>Włącz trawe</Polish>
-    <Russian>Тумблер Травы</Russian>
+    <Russian>Переключить траву</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
     <English>Export GUI Base Classes</English>
@@ -3570,52 +3608,61 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_EDEN_TOOLTIP">
     <English>Exports Eden Editor base classes like ctrlStatic or ctrlStaticPicture.</English>
+    <Russian>Экспорт базовых классов редактора Eden, такие как ctrlStatic или ctrlStaticPicture.</Russian>
     <German>Exportiert Eden Editor Basis-Klassen wie ctrlStatic oder ctrlStaticPicture.</German>
     <Spanish>Exporta clases base de Eden Editor como ctrlStatic o ctrlStaticPicture.</Spanish>
     <Chinesesimp>导出Eden编辑器基本类别，如ctrlStatic或ctrlStaticPicture。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
     <English>Attribute %1 was set to %2.</English>
+    <Russian>Атрибут %1 был установлен на %2.</Russian>
     <German>Attribut %1 wurde auf %2 gesetzt.</German>
     <Spanish>El atributo %1 se estableció en %2</Spanish>
     <Chinesesimp>属性 %1 已设置为 %2.</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_BRIEFING_TOOLTIP">
     <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
+    <Russian>Создает брифинговые записи для всех игроков данной стороны. Вы также можете вставить форматированный текст, созданный с помощью редактора брифинга. См. 'CreateDiaryRecord' в BI Wiki для получения дополнительной информации.\n\nЕсли указана запись в виде stringtable, брифинг будет отображаться на языке игрока.</Russian>
     <German>Erstellt Einsatzbesprechungseinträge für alle Spieler der gegebenen Seite. Du kannst außerdem Text der mit dem Briefing Editor formatiert wurde, einfügen. Besuche die 'createDiaryRecord' Seite auf der BI Wiki für mehr Informationen.\n\nWenn ein 'Stringtable' Eintrag angegeben wird, wird dieser in der Sprache des jeweiligen Spieler angezeigt.</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
     <English>Exports all GUI base classes.</English>
+    <Russian>Экспорт всех классов на основе GUI</Russian>
     <German>Exportiert alle Basis-Klassen.</German>
     <Spanish>Exporta todas las clases base de GUI.</Spanish>
     <Chinesesimp>导出所有 GUI 基本类别。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC">
     <English>Classic</English>
+    <Russian>Классический</Russian>
     <German>Klassisch</German>
     <Spanish>Clásico</Spanish>
     <Chinesesimp>经典</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP">
     <English>Exports classic base classes like RscText or RscPicture.</English>
+    <Russian>Экспорт базовых классов, таких как RscText или RscPicture.</Russian>
     <German>Exportiert die klassischen GUI Basis-Klassen wie RscText oder RscPicture.</German>
     <Spanish>Exporta clases base clásicas como RscText o RscPicture.</Spanish>
     <Chinesesimp>导出经典的基本类别，例如RscText或RscPicture。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON">
     <English>Add-on</English>
+    <Russian>Add-on</Russian>
     <German>Add-On</German>
     <Spanish>Añadido (Add-on)</Spanish>
     <Chinesesimp>附加</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP">
     <English>Uses 'class' keyword for use in config.cpp.</English>
+    <Russian>Использует ключ "class" для использования в config.cpp.</Russian>
     <German>Benutzt das 'class' Keyword für die Verwendung in einer config.cpp Datei.</German>
     <Spanish>Utiliza la palabra clave 'class' para usar en config.cpp.</Spanish>
     <Chinesesimp>在config.cpp中使用'class'关键字.</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP">
     <English>Uses 'import' keyword for use in description.ext.</English>
+    <Russian>Использует ключ "import" для использования в description.ext.</Russian>
     <German>Benutzt das 'import' Keyword für die Verwendung in einer description.ext Datei.</German>
     <Spanish>Utiliza la palabra clave 'import' para usar en description.ext</Spanish>
     <Chinesesimp>在description.ext中使用'import'关键字.</Chinesesimp>
@@ -3651,7 +3698,7 @@
     <Czech>Jukebox</Czech>
     <French>Juke-box</French>
     <Polish>Maszyna grająca</Polish>
-    <Russian>Игровой автомат</Russian>
+    <Russian>Музыкальный автомат</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_PRINTCONFIG">
     <English>Print Config</English>
@@ -3727,7 +3774,7 @@
     <German>Kopiere Spieleinformationen</German>
     <Chinesesimp>记录游戏信息</Chinesesimp>
     <Polish>Zapisz informacje o grze</Polish>
-    <Russian>Информация об игре</Russian>
+    <Russian>Логи игровой информации</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_SHOWMAPIDS">
     <English>Show Map IDs</English>
@@ -3738,7 +3785,7 @@
     <German>Zeige Karten IDs</German>
     <Chinesesimp>显示地图ID</Chinesesimp>
     <Polish>Pokaż ID mapy</Polish>
-    <Russian>Показать идентификаторы карты</Russian>
+    <Russian>Показать ID на карте</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_BATCHNAMING">
     <English>Name Objects</English>
@@ -3764,6 +3811,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
     <English>Toggle Simulation</English>
+    <Russian>Вкл/выкл симуляцию</Russian>
     <Italian>Alterna Simulazione</Italian>
     <German>Simulation umschalten</German>
     <Spanish>Alternar simulación</Spanish>
@@ -3784,24 +3832,28 @@
   </Key>
   <Key ID="STR_ENH_HELP_COMMANDSOVERVIEW">
     <English>Commands by Functionality</English>
+    <Russian>Команды по функциям</Russian>
     <German>Kommandos nach Funktionalität</German>
     <Spanish>Comandos por funcionalidad</Spanish>
     <Chinesesimp>命令(功能排列)</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
     <English>Description.ext</English>
+    <Russian>Description.ext</Russian>
     <German>Description.ext</German>
     <Spanish>Description.ext</Spanish>
     <Chinesesimp>Description.ext</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_MENUSTRIPENTRIES">
     <English>Menu Strip Entries</English>
+    <Russian>Записи в полосе Меню</Russian>
     <German>Menüleisten-Einträge</German>
     <Spanish>Entradas de la tira de menú</Spanish>
     <Chinesesimp>菜单条目</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_MENUSTRIPENTRIES_TOOLTIP">
     <English>Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.\nChanges require a restart of Eden Editor to take effect!</English>
+    <Russian>Снимите отметки с записей, чтобы скрыть их. Если флажок рядом с папками снят, все записи также удалятся\nЧтобы изменения вступили в силу необходимо перезапустить редактор Eden!</Russian>
     <German>Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.\nDamit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!</German>
     <Spanish>Desmarque las entradas para ocultarlas. Al desmarcar las carpetas, se eliminarán todas las entradas de la carpeta. \n ¡Los cambios requieren reiniciar Eden Editor para que surtan efecto!</Spanish>
     <Chinesesimp>取消选中条目以隐藏它们。 取消选中文件夹将导致文件夹中的所有条目被删除。\n更改需要重新启动Eden编辑器才能生效！</Chinesesimp>
@@ -3848,7 +3900,7 @@
     <German>Gebäude besetzen</German>
     <Chinesesimp>驻军建筑物</Chinesesimp>
     <Polish>Obsadź budynki</Polish>
-    <Russian>Гарнизонные Здания</Russian>
+    <Russian>Здания гарнизона</Russian>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS2D">
     <English>Log Positions (2D) to Clipboard</English>
@@ -3877,7 +3929,7 @@
     <French>Groupes dynamiques</French>
     <Czech>Dynamic Groups</Czech>
     <Polish>Dynamic Groups</Polish>
-    <Russian>Dynamic Groups</Russian>
+    <Russian>Динамические группы</Russian>
     <Spanish>Dynamic Groups</Spanish>
     <Chinesesimp>动态小队</Chinesesimp>
   </Key>
@@ -3889,7 +3941,7 @@
     <German>Objektsichtweite</German>
     <Chinesesimp>对象视距</Chinesesimp>
     <Polish>Zasięg rysowania obiektów</Polish>
-    <Russian>Расстояние видимости объекта</Russian>
+    <Russian>Дистанция отображения объектов</Russian>
   </Key>
   <Key ID="STR_ENH_TIMEMULTIPLIER_DISPLAYNAME">
     <English>Time Multiplier</English>
@@ -3913,6 +3965,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_ACTIONCREATOR">
     <English>Action Creator</English>
+    <Russian>Создатель действий</Russian>
     <German>Aktion erstellen</German>
     <Czech>Vytvářeč akcí</Czech>
     <Spanish>Creador de acción</Spanish>
@@ -3922,6 +3975,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_3DENRADIO">
     <English>3DEN Radio</English>
+    <Russian>3DEN Радио</Russian>
     <German>3DEN Radio</German>
     <Czech>3DEN rádio</Czech>
     <Spanish>3DEN Radio</Spanish>
@@ -3931,6 +3985,7 @@
   </Key>
   <Key ID="STR_ENH_3DENRADIO_SONG">
     <English>Song:</English>
+    <Russian>Песня</Russian>
     <German>Lied:</German>
     <Czech>Skladba:</Czech>
     <Spanish>Canción:</Spanish>
@@ -3940,6 +3995,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_SHOWTITLE">
     <English>Show Title</English>
+    <Russian>Показать заголовок</Russian>
     <German>Titel zeigen</German>
     <Czech>Zobrazit název</Czech>
     <Spanish>Mostrar título</Spanish>
@@ -3949,6 +4005,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
     <English>Hide Title</English>
+    <Russian>Скрыть заголовок</Russian>
     <German>Titel verstecken</German>
     <Czech>Skrýt název</Czech>
     <Spanish>Ocultar título</Spanish>
@@ -3958,6 +4015,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_APPLYATTRIBUTE">
     <English>Apply Attribute</English>
+    <Russian>Применить атрибуты</Russian>
     <German>Attribut setzen</German>
     <Czech>Použít atribut</Czech>
     <Spanish>Aplicar atributo</Spanish>
@@ -4067,6 +4125,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_SIZE">
     <English>Size</English>
+    <Russian>Размер</Russian>
     <German>Größe</German>
     <Czech>Velikost</Czech>
     <Spanish>Tamaño</Spanish>
@@ -4076,6 +4135,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_TAGS">
     <English>TAGs</English>
+    <Russian>Тэги</Russian>
     <German>TAGs</German>
     <Czech>TAGy</Czech>
     <Spanish>Etiquetas</Spanish>
@@ -4085,6 +4145,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_ADDTAG">
     <English>Add TAG</English>
+    <Russian>Добавить тэг</Russian>
     <German>TAG hinzufügen</German>
     <Czech>Přidat TAG</Czech>
     <Spanish>Añadir etiqueta</Spanish>
@@ -4094,16 +4155,17 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
     <English>Export</English>
+    <Russian>Экспорт</Russian>
     <Chinesesimp>导出</Chinesesimp>
     <Czech>Export</Czech>
     <French>Exporter</French>
     <German>Exportieren</German>
     <Polish>Eksport</Polish>
-    <Russian>Экспорт</Russian>
     <Spanish>Exportar</Spanish>
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
     <English>Font</English>
+    <Russian>Шрифт</Russian>
     <German>Schriftart</German>
     <Czech>Písmo</Czech>
     <Spanish>Fuente</Spanish>
@@ -4113,6 +4175,7 @@
   </Key>
   <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP">
     <English>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</English>
+    <Russian>Это необработанный текст, используемый в "createDiaryRecord". Его также можно использовать внутри модуля «Создать задачу», чтобы изменить внешний вид ваших задач. </Russian>
     <Czech>Toto je čistý  text použitý ve "createDiaryRecord". Může být také použit v modulu "Vytvoření úkolu (Create Task)"" pro změnění vzhledu vašich úkolů."</Czech>
     <Spanish>Este es el texto sin formato utilizado en 'createDiaryRecord'. También se puede usar dentro del módulo 'Crear tarea' para cambiar la apariencia de sus tareas.</Spanish>
     <German>Dieser Text wird von 'createDiaryRecord' verwendet. Er kann auch im 'Aufgabe erstellen' Modul verwendet werden. </German>
@@ -4121,6 +4184,7 @@
   </Key>
   <Key ID="STR_ENH_HELP_MISSIONOPTIMISATION">
     <English>Mission Optimisation</English>
+    <Russian>Оптимизация миссии</Russian>
     <German>Missions-Optimierung</German>
     <Czech>Optimalizace Mise</Czech>
     <Spanish>Optimización de la misión</Spanish>
@@ -4130,6 +4194,7 @@
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME">
     <English>Rotational Direction</English>
+    <Russian>Направление вращения</Russian>
     <German>Drehsinn</German>
     <Czech>Směr otáčení</Czech>
     <Spanish>Dirección rotacional</Spanish>
@@ -4139,6 +4204,7 @@
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE">
     <English>Anti-Clockwise</English>
+    <Russian>Против часовой стрелки</Russian>
     <German>Gegen den Uhrzeigersinn</German>
     <Czech>Proti směru hodinových ručiček</Czech>
     <Spanish>Antihoraria</Spanish>
@@ -4148,6 +4214,7 @@
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_CLOCKWISE">
     <English>Clockwise</English>
+    <Russian>По часовой стрелке</Russian>
     <German>Mit dem Uhrzeigersinn</German>
     <Czech>Po směru hodinových ručiček</Czech>
     <Spanish>Horaria</Spanish>
@@ -4157,6 +4224,7 @@
   </Key>
   <Key ID="STR_ENH_RESETANDDISABLE">
     <English>Reset and Disable</English>
+    <Russian>Сбросить и отключить</Russian>
     <German>Zurücksetzen und Deaktivieren</German>
     <Czech>Resetovat &amp; deaktivovat</Czech>
     <Spanish>Resetear y deshabilitar</Spanish>
@@ -4166,6 +4234,7 @@
   </Key>
   <Key ID="STR_ENH_DISABLEAI_SUBCATEGORY">
     <English>AI Features</English>
+    <Russian>Возможности AI</Russian>
     <German>KI Funktionen</German>
     <Chinesesimp>AI功能</Chinesesimp>
   </Key>
@@ -4176,7 +4245,7 @@
     <French>Classes des véhicules utilisés pour le(s) survol(s). Si plusieurs Classname sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : Classname_1 Classname_2 Classname_n.</French>
     <German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_n.</German>
     <Polish>Nazwy klas pojazdów które powinny być użyte do przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem jeden będzie wybrany losowo. Kod musi wyglądać tak: Classname_1 Classname_2 Classname_n.</Polish>
-    <Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: Classname_1 Classname_2 Classname_n.</Russian>
+    <Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: имя_класса_1 имя_класса_2 имя_класса_n.</Russian>
     <Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_n.</Spanish>
   </Key>
   <Key ID="STR_ENH_GROUPMARKER_DISPLAYNAME">
@@ -4214,6 +4283,7 @@
   </Key>
   <Key ID="STR_ENH_SPEED_LIMITED">
     <English>Limited</English>
+    <Russian>Ограничение скорости</Russian>
     <Czech>Omezený</Czech>
     <Spanish>Limitada</Spanish>
     <German>Beschränkt</German>
@@ -4223,6 +4293,7 @@
   </Key>
   <Key ID="STR_ENH_SPEED_NORMAL">
     <English>Normal</English>
+    <Russian>Нормальное</Russian>
     <Czech>Normální</Czech>
     <Spanish>Normal</Spanish>
     <German>Normal</German>
@@ -4232,6 +4303,7 @@
   </Key>
   <Key ID="STR_ENH_SPEED_FULL">
     <English>Full</English>
+    <Russian>Полное</Russian>
     <Czech>Plný</Czech>
     <Spanish>Completa</Spanish>
     <German>Voll</German>
@@ -4241,16 +4313,17 @@
   </Key>
   <Key ID="STR_ENH_ALTITUDE_DISPLAYNAME">
     <English>Altitude</English>
+    <Russian>Высота</Russian>
     <Chinesesimp>高度</Chinesesimp>
     <Czech>Výška</Czech>
     <French>Altitude</French>
     <German>Flughöhe</German>
     <Polish>Wysokość</Polish>
-    <Russian>Высота</Russian>
     <Spanish>Altitud</Spanish>
   </Key>
   <Key ID="STR_ENH_NAMEOBJECTS_NAME">
     <English>Name</English>
+    <Russian>Название</Russian>
     <German>Name</German>
     <Czech>Název</Czech>
     <Spanish>Nombre</Spanish>
@@ -4260,6 +4333,7 @@
   </Key>
   <Key ID="STR_ENH_AIRDROP_DESCRIPTION">
     <English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</English>
+    <Russian>Создает парашют. Юниты с указанными классами и страницей выбрасываются, когда условие возвращает "true". Созданные единицы хранятся в переменной «ENH_Airdrop_Units», доступной на стороне сервера.</Russian>
     <Czech>Vytvoří výsadek. Jednotky se zadanými třídami a stranou jsou shozeny v okamžiku kdy se podmínka vrátí jako pravdivá (true). Vytvořené jednotky jsou uloženy v proměnné "ENH_Airdrop_Units" která je dostupná na straně serveru.</Czech>
     <Spanish>Crea un lanzamiento aéreo. Las unidades con clases y bandos dados se descartan una vez que la condición devuelve verdadero. Las unidades creadas se almacenan en la variable 'ENH_Airdrop_Units' que está disponible en la máquina del servidor.</Spanish>
     <German>Erstellt einen Luftabwurf. Einheiten mit den angegebenen Klassennamen und Seite werden abgeworfen sobald die Bedingungen erfüllt ist. Dir erstellen Einheiten stehen in der Variable 'ENH_Airdrop_Units' auf dem Server zur Verfügung.</German>
@@ -4268,6 +4342,7 @@
   </Key>
   <Key ID="STR_ENH_GROUPMARKER_TYPE">
     <English>Type</English>
+    <Russian>Тип</Russian>
     <Czech>Typ</Czech>
     <Spanish>Tipo</Spanish>
     <German>Typ</German>
@@ -4277,6 +4352,7 @@
   </Key>
   <Key ID="STR_ENH_GROUPMARKER_SHOWGROUPSIZE">
     <English>Show Group Size</English>
+    <Russian>Показывать размер группы</Russian>
     <Czech>Zobrazit velikost skupiny</Czech>
     <Spanish>Mostrar tamaño</Spanish>
     <German>Zeige Gruppengrößen</German>
@@ -4286,6 +4362,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
     <English>Number of Functions</English>
+    <Russian>Номер функции</Russian>
     <German>Anzahl an Funktionen</German>
     <Czech>Počet funkcí</Czech>
     <Spanish>Número de funciones</Spanish>
@@ -4295,6 +4372,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_FULL">
     <English>Full</English>
+    <Russian>Полное</Russian>
     <German>Komplett</German>
     <Czech>Plné</Czech>
     <Spanish>Completo</Spanish>
@@ -4304,6 +4382,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
     <English>Categories</English>
+    <Russian>Категории</Russian>
     <German>Kategorien</German>
     <Czech>Kategorie</Czech>
     <Spanish>Categorias</Spanish>
@@ -4313,6 +4392,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONS">
     <English>Functions</English>
+    <Russian>Функции</Russian>
     <German>Funktionen</German>
     <Czech>Funkce</Czech>
     <Spanish>Funciones</Spanish>
@@ -4322,6 +4402,7 @@
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_BIKI">
     <English>OPEN ON BIKI</English>
+    <Russian>Открыть BIKI</Russian>
     <German>IM BIKI ÖFFEN</German>
     <Spanish>Abrir BIKI</Spanish>
     <French>Ouvrir sur le BIKI</French>
@@ -4330,6 +4411,7 @@
   </Key>
   <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME">
     <English>Radio Protocol</English>
+    <Russian>Радиопротокол</Russian>
     <German>Radio Protokoll</German>
     <Spanish>Protocolo de radio</Spanish>
     <French>Protocole radio</French>
@@ -4338,6 +4420,7 @@
   </Key>
   <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_TOOLTIP">
     <English>Stops AI from talking and texting while still being able to issue orders.</English>
+    <Russian>ИИ не может говорить и писать текстовые сообщения, но при этом может отдавать приказы.</Russian>
     <German>Deaktivert Funksprüche und Radiochat der KI. Das Verteilen von Befehlen bleibt möglich.</German>
     <Spanish>No permitir que la IA hable o escriba mientras da ordenes.</Spanish>
     <French>Empêche l'IA de parler ou d'envoyer des messages radio tout en l'autorisant à donner des ordres.</French>
@@ -4346,6 +4429,7 @@
   </Key>
   <Key ID="STR_ENH_PARACHUTE_DISPLAYNAME">
     <English>Start in Parachute</English>
+    <Russian>Старт в парашюте</Russian>
     <German>An Fallschirm starten</German>
     <Spanish>Empezar en paracaídas</Spanish>
     <French>Démarrer en parachute</French>
@@ -4354,6 +4438,7 @@
   </Key>
   <Key ID="STR_ENH_PARACHUTE_TOOLTIP">
     <English>When activated the unit will start the mission in a parachute. Start height is always 150 m.</English>
+    <Russian>При активации отряд начнёт прыжки при высоте от 150 м.</Russian>
     <German>Wenn aktiviert, started die Einheit die Mission am Fallschirm hängend. Die Höhe ist immer 150 m.</German>
     <Spanish>Cuando está activo la unidad inicia la misión en paracaídas. La altura de inicio es siempre 150mts</Spanish>
     <French>Si activé, l'unité commencera la mission en parchute. La hauteur de saut est toujours de 150 m.</French>
@@ -4362,6 +4447,7 @@
   </Key>
   <Key ID="STR_ENH_HELP_MULTIPLAYERSCRIPTING">
     <English>Multiplayer Scripting</English>
+    <Russian>Многопользовательские скрипты</Russian>
     <Spanish>Scripting multiplayer</Spanish>
     <German>Mehrspieler Skripten</German>
     <French>Scripting multijoueur</French>
@@ -4369,6 +4455,7 @@
   </Key>
   <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
     <English>Show Entity Counter</English>
+    <Russian>Показать счётчик объектов</Russian>
     <German>Entitätenzähler anzeigen</German>
     <Spanish>Mostrar contador de entidades</Spanish>
     <French>Afficher le compteur d'entités</French>
@@ -4377,6 +4464,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
     <English>Mission Ending (Casualties)</English>
+    <Russian>Конец миссии (по потерям)</Russian>
     <German>Missionsende (Verluste)</German>
     <Spanish>Final de misión (Bajas)</Spanish>
     <French>Fin de mission (pertes)</French>
@@ -4385,6 +4473,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
     <English>Hold Action</English>
+    <Russian>Действие при удержании кнопки</Russian>
     <German>Hold Action</German>
     <Spanish>Detener acción</Spanish>
     <French>Hold Action</French>
@@ -4393,6 +4482,7 @@
   </Key>
   <Key ID="STR_ENH_GROUPMARKER_TEXT">
     <English>Text</English>
+    <Russian>Текст</Russian>
     <German>Text</German>
     <Spanish>Texto</Spanish>
     <French>Texte</French>
@@ -4401,6 +4491,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
     <English>Plays a selected animation set. The gear needs to be set up manually.</English>
+    <Russian>Воспроизводит выбранный набор анимации. Механизм нужно настраивать вручную.</Russian>
     <Spanish>Reproducir una animación seleccionada. El engranaje necesita ser seleccionado manualmente.</Spanish>
     <German>Spielt das ausgewählte Animationsset. Die Ausrüstung der Einheit muss manuell angepasst werden.</German>
     <French>Joue un ensemble d'animations. L'équipement doit être manuellement sélectionné.</French>
@@ -4409,6 +4500,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
     <English>Threshold</English>
+    <Russian>Порог</Russian>
     <Spanish>Límite</Spanish>
     <German>Schwellenwert</German>
     <French>Limite</French>
@@ -4417,6 +4509,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_THRESHOLD_TOOLTIP">
     <English>When the amount of killed entities of given side reaches the threshold, the mission is ended.</English>
+    <Russian>Когда количество убитых на стороне достигает порогового значения, миссия завершается.</Russian>
     <Spanish>Cuando la cantidad de entidades asesinadas de un bando determinado alcanza el límite, la misión finaliza.</Spanish>
     <German>Wenn die Anzahl von getöteten Einheiten der angegebenen Seite den Schwellenwert überschreitet, wird die Mission beendet.</German>
     <French>Quand le nombre de pertes dans le camp spécifie atteint la limite, la mission est terminée.</French>
@@ -4425,6 +4518,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_ENDING_TOOLTIP">
     <English>Can be ending from config file or mission config (CfgDebriefing).</English>
+    <Russian>Может заканчиваться конфигурационным файлом или конфигурацией миссии (CfgDebriefing).</Russian>
     <Spanish>Puede terminar desde el archivo de configuración o la configuración de la misión (CfgDebriefing).</Spanish>
     <German>Kann ein Ende aus der Konfig oder Missionskonfig sein (CfgDebriefing).</German>
     <French>Peut-être une fin de mission issue soit d'un fichier de configuration, soit de la configuration de la mission (CfgDebriefing).</French>
@@ -4432,6 +4526,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME">
     <English>Can Exit?</English>
+    <Russian>Возможность выхода из анимации?</Russian>
     <Spanish>¿Puede salir?</Spanish>
     <German>Beenden erlaubt?</German>
     <French>Peut quitter l'animation ?</French>
@@ -4440,6 +4535,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_CANEXIT_TOOLTIP">
     <English>If enabled, the unit will exit the animation when in danger.</English>
+    <Russian>Если включено, при опасности юнит будет выходить из анимации</Russian>
     <Spanish>Si está habilitada, la unidad saldrá de la animación cuando esté en peligro.</Spanish>
     <German>Wenn erlaubt, kann die Einheit die Animation beenden, wenn sie in Gefahr ist.</German>
     <French>Si activé, l'unité quittera l'animation lorsqu'elle est en danger;</French>
@@ -4448,6 +4544,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME">
     <English>Attach?</English>
+    <Russian>Возможность прикреплять</Russian>
     <Spanish>¿Adjuntar?</Spanish>
     <German>Befestigen?</German>
     <French>Attacher ?</French>
@@ -4456,6 +4553,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_ATTACH_TOOLTIP">
     <English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</English>
+    <Russian>Если включить появится возможность прикреплять объекты. Включать, когда необходимо размещать объект на стене, либо на другом объекте</Russian>
     <Spanish>Si está habilitado, la unidad se conectará a una lógica invisible. Solo habilite esta opción si necesita colocar la unidad encima de una pared o cerca de otro objeto.</Spanish>
     <German>Wenn angeschaltet, wird die Einheit an einer unsichtbaren Logik befestigt. Verwende diese Option nur, wenn die Einheit auf einem Gegenstand oder nah an einer Wand platziert werden soll.</German>
     <French>Si activé, l'unité sera attachée à une entité logique invisible. Activez cette option si vous devez placer l'unité sur un mur ou proche d'un objet.</French>
@@ -4484,6 +4582,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_DESCRIPTION">
     <English>Adds a hold action to this entity. Once the action was completed it is removed for all clients.</English>
+    <Russian>Добавляет к объекту действие при удержании кнопки. После завершения действия оно удаляется для всех клиентов.</Russian>
     <Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes.</Spanish>
     <German>Fügt dieser Entität eine 'HoldAction' hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt.</German>
     <French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients.</French>
@@ -4491,6 +4590,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_NAME_DISPLAYNAME">
     <English>Name</English>
+    <Russian>Имя</Russian>
     <German>Name</German>
     <Spanish>Nombre</Spanish>
     <French>Nom</French>
@@ -4499,6 +4599,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_ICONIDLE_DISPLAYNAME">
     <English>Icon Idle</English>
+    <Russian>Иконка удержания</Russian>
     <Spanish>Icono de espera</Spanish>
     <German>Icon Inaktiv</German>
     <French>Icône en inactivité</French>
@@ -4507,6 +4608,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_ICONPROGRESS_DISPLAYNAME">
     <English>Icon Progress</English>
+    <Russian>Иконка прогресса</Russian>
     <Spanish>Icono de progreso</Spanish>
     <German>Icon Fortschritt</German>
     <French>Icône de progression</French>
@@ -4515,6 +4617,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_DISPLAYNAME">
     <English>Condition Show</English>
+    <Russian>Показать состояния</Russian>
     <Spanish>Mostrar condición</Spanish>
     <German>Anzeigebedingung</German>
     <French>Condition d'affichage</French>
@@ -4523,6 +4626,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CONDITIONSHOW_TOOLTIP">
     <English>Condition for the action to be shown. Passed arguments are:\n_target, _this (caller).</English>
+    <Russian>Условие, которое должно быть выполнено для отображения действия. Передаваемые параметры:  \n_target, _this (caller).</Russian>
     <Spanish>Condición para que se muestre la acción. Los argumentos aprobados son: \n_target, _this (caller).</Spanish>
     <German>Bedingung die erfüllt sein muss damit die Aktion angezeigt wird. Übergebene Parameter sind:\n_target, _this (caller).</German>
     <French>Condition pour que l'action apparaisse. Les variables disponibles sont :\n_target, _this (caller).</French>
@@ -4530,6 +4634,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME">
     <English>Condition Progress</English>
+    <Russian>Прогресс состояния</Russian>
     <Spanish>Progreso de la condición</Spanish>
     <German>Fortschrittsbedingung</German>
     <French>Condition de progression</French>
@@ -4538,6 +4643,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CONDITIONPROGRESS_TOOLTIP">
     <English>Condition for the action to progress. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Russian>Условие для продолжения действия. Передаваемые аргументы:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Russian>
     <Spanish>Condición para que la acción progrese. Los argumentos aprobados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
     <German>Bedingung die erfüllt sein muss damit die Aktion fortschreitet. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
     <French>Condition pour que l'action progresse. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
@@ -4545,6 +4651,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODESTART_DISPLAYNAME">
     <English>Code Start</English>
+    <Russian>Старт кода</Russian>
     <Spanish>Iniciar código</Spanish>
     <German>Code Start</German>
     <French>Code au démarrage</French>
@@ -4553,6 +4660,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODESTART_TOOLTIP">
     <English>Code executed when action starts.  Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Russian>Код выполняется при запуске действия. Передаваемые аргументы:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Russian>
     <Spanish>Código ejecutado cuando la acción se inicia. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
     <German>Code der ausgeführt wird, wenn die Aktion gestartet wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
     <French>Code exécuté lorsque le joueur commence à effectuer l'action. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
@@ -4560,6 +4668,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_DISPLAYNAME">
     <English>Code Progress</English>
+    <Russian>Прогресс кода</Russian>
     <Spanish>Progreso del código</Spanish>
     <German>Code Fortschritt</German>
     <French>Code de progression</French>
@@ -4568,6 +4677,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEPROGRESS_TOOLTIP">
     <English>Code executed on every progress tick. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</English>
+    <Russian>Код выполняется на каждом тике выполнения. Принятые аргументы:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</Russian>
     <Spanish>Código ejecutado en cada marca de progreso. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</Spanish>
     <German>Code der bei jedem Tick ausgeführt wird. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</German>
     <French>Code exécuté à chaque tick durant lequel l'action progresse. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];</French>
@@ -4575,6 +4685,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_DISPLAYNAME">
     <English>Code Complete</English>
+    <Russian>Код выполнен</Russian>
     <Spanish>Código completado</Spanish>
     <German>Code Beendet</German>
     <French>Code de complétion</French>
@@ -4583,6 +4694,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODECOMPLETE_TOOLTIP">
     <English>Code executed on completion. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Russian>Код выполняется по завершении. Принятые аргументы:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Russian>
     <Spanish>Código ejecutado al completar. Argumentos pasados: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
     <German>Code der ausgeführt wird, wenn die Aktion beendet wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
     <French>Code exécuté lorsque l'action est complétée. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
@@ -4590,6 +4702,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_DISPLAYNAME">
     <English>Code Interrupt</English>
+    <Russian>Прерывание кода</Russian>
     <Spanish>Código interrumpido</Spanish>
     <German>Code Unterbrochen</German>
     <French>Code d'interruption</French>
@@ -4598,6 +4711,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_CODEINTERRUPT_TOOLTIP">
     <English>Code executed when action is interrupted. Passed arguments are:\nparams ["_target", "_caller", "_actionId", "_arguments"];</English>
+    <Russian>Код, который выполняется, когда действие прерывается. Передаваемые параметры:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Russian>
     <Spanish>Código ejecutado cuando se interrumpe la acción. Los argumentos pasados son: \nparams ["_target", "_caller", "_actionId", "_arguments"];</Spanish>
     <German>Code der ausgeführt wird, wenn die Aktion unterbrochen wurde. Übergebene Parameter sind:\nparams ["_target", "_caller", "_actionId", "_arguments"];</German>
     <French>Code exécuté lorsque l'action est interrompue. Les variables disponibles sont :\nparams ["_target", "_caller", "_actionId", "_arguments"];</French>
@@ -4605,6 +4719,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_DURATION_DISPLAYNAME">
     <English>Duration</English>
+    <Russian>Продолжительность</Russian>
     <Spanish>Duración</Spanish>
     <German>Dauer</German>
     <French>Durée</French>
@@ -4613,6 +4728,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_PRIORITY_DISPLAYNAME">
     <English>Priority</English>
+    <Russian>Приоритет</Russian>
     <Spanish>Prioridad</Spanish>
     <German>Priorität</German>
     <French>Priorité</French>
@@ -4621,6 +4737,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME">
     <English>Show when Unconscious?</English>
+    <Russian>Показать, когда в бессознательном состоянии?</Russian>
     <Spanish>Mostrar cuando está inconsciente</Spanish>
     <German>Anzeigen wenn Bewusstlos?</German>
     <French>Afficher lorsqu'inconscient ?</French>
@@ -4629,6 +4746,7 @@
   </Key>
   <Key ID="STR_ENH_HOLDACTION_SHOWWINDOW_DISPLAYNAME">
     <English>Show Window</English>
+    <Russian>Показывать окно</Russian>
     <Spanish>Mostrar ventana</Spanish>
     <German>In Bildschirmmitte anzeigen</German>
     <French>Afficher au centre de l'écran</French>
@@ -4637,6 +4755,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_TEMPLATES">
     <English>Templates</English>
+    <Russian>Шаблоны</Russian>
     <Czech>Šablony</Czech>
     <German>Vorlagen</German>
     <Spanish>Plantillas</Spanish>
@@ -4646,6 +4765,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_ATTRIBUTES">
     <English>Attributes</English>
+    <Russian>Атрибуты</Russian>
     <Czech>Atributy</Czech>
     <German>Attribute</German>
     <Spanish>Atributos</Spanish>
@@ -4655,6 +4775,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_DELETETEMPLATE">
     <English>Delete Template</English>
+    <Russian>Удалить шаблон</Russian>
     <Czech>Smazat šablonu</Czech>
     <German>Vorlage löschen</German>
     <Spanish>Borrar plantilla</Spanish>
@@ -4664,6 +4785,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_CREATETEMPLATE">
     <English>Create Template from Scenario</English>
+    <Russian>Создать шаблон из сценария</Russian>
     <Czech>Vytvořit šablonu ze scénáře</Czech>
     <German>Vorlage aus Szenario erstellen</German>
     <Spanish>Crear plantilla desde escenario</Spanish>
@@ -4673,6 +4795,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_APPLYTEMPLATE">
     <English>Apply Template</English>
+    <Russian>Добавить шаблон</Russian>
     <Czech>Použít šablonu</Czech>
     <German>Vorlage anwenden</German>
     <Spanish>Aplicar plantilla</Spanish>
@@ -4682,6 +4805,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_EXPORT">
     <English>Export</English>
+    <Russian>Экспорт</Russian>
     <Chinesesimp>导出</Chinesesimp>
     <Czech>Export</Czech>
     <French>Exporter</French>
@@ -4691,6 +4815,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION">
     <English>Template Description</English>
+    <Russian>Шаблон описания</Russian>
     <Czech>Popis šablony</Czech>
     <German>Vorlagenbeschreibung</German>
     <Spanish>Descripción de la plantilla</Spanish>
@@ -4700,6 +4825,7 @@
   </Key>
   <Key ID="STR_ENH_SAM_TEMPLATE_DATA_TITLE">
     <English>Title</English>
+    <Russian>Заголовок</Russian>
     <Czech>Název</Czech>
     <German>Titel</German>
     <Spanish>Título</Spanish>
@@ -4709,6 +4835,7 @@
   </Key>
   <Key ID="STR_ENH_YES">
     <English>Yes</English>
+    <Russian>Да</Russian>
     <German>Ja</German>
     <Spanish>Sí</Spanish>
     <French>Oui</French>
@@ -4717,6 +4844,7 @@
   </Key>
   <Key ID="STR_ENH_NO">
     <English>No</English>
+    <Russian>Нет</Russian>
     <German>Nein</German>
     <Spanish>Sí</Spanish>
     <French>Non</French>
@@ -4725,6 +4853,7 @@
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_UNARMED">
     <English>Unarmed:</English>
+    <Russian>Без оружия:</Russian>
     <German>Unbewaffnet:</German>
     <Spanish>Sin nombre:</Spanish>
     <French>Désarmé :</French>
@@ -4733,6 +4862,7 @@
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
     <English>Log Classes as String to Clipboard</English>
+    <Russian>Копировать классы в виде строки в буфер обмена</Russian>
     <Spanish>Registrar clases en el portapapeles (String)</Spanish>
     <German>Klassen als String in Zwischenablage kopieren</German>
     <French>Copier les classes (en String) dans le presse-papiers</French>
@@ -4741,6 +4871,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
     <English>Toggle Drawing of Building Positions</English>
+    <Russian>Переключить отображение позиций зданий</Russian>
     <Spanish>Conmutar dibujos la posición de los edificios</Spanish>
     <German>Gebäudepositionen anzeigen an/aus</German>
     <French>Activer/désactiver l'affichage des positions de bâtiments</French>
@@ -4749,11 +4880,13 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_DRAWHITPOINTS">
     <English>Toggle Drawing of Vehicle Hitpoints</English>
+    <Russian>Вкл/выкл отображение хитпоинтов техники</Russian>
     <German>Fahrzeugtrefferpunkte anzeigen an/aus</German>
     <Chinesesimp>切换车辆血量视图</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_SAM">
     <English>Scenario Attributes Manager</English>
+    <Russian>Менеджер атрибутов сценария</Russian>
     <Spanish>Manejador de atributos de escenario</Spanish>
     <German>Szenarioattribute-Manager</German>
     <French>Gestionnaire des attributs du scénario</French>
@@ -4762,6 +4895,7 @@
   </Key>
   <Key ID="STR_ENH_FOLDER_MISCELLANEOUS">
     <English>Miscellaneous Tools</English>
+    <Russian>Инструменты (Разное)</Russian>
     <Spanish>Herramientas misceláneas</Spanish>
     <German>Sonstige Werkzeuge</German>
     <French>Outils divers</French>
@@ -4770,6 +4904,7 @@
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_ORIENTATION">
     <English>Orientation</English>
+    <Russian>Ориентация</Russian>
     <Spanish>Orientación</Spanish>
     <German>Ausrichtung</German>
     <French>Orientation</French>
@@ -4778,6 +4913,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE">
     <English>Stance</English>
+    <Russian>Позиция</Russian>
     <Spanish>Postura</Spanish>
     <German>Haltung</German>
     <French>Posture</French>
@@ -4786,6 +4922,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_AUTO">
     <English>Auto</English>
+    <Russian>Авто</Russian>
     <Spanish>Auto</Spanish>
     <German>Auto</German>
     <French>Automatique</French>
@@ -4794,6 +4931,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_CROUCH">
     <English>Crouch</English>
+    <Russian>Приседать</Russian>
     <Spanish>Agachado</Spanish>
     <German>Hocke</German>
     <French>Accroupi</French>
@@ -4802,16 +4940,17 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_COVERAGE">
     <English>Coverage</English>
+    <Russian>Покрытие здания</Russian>
     <Chinesesimp>覆盖建筑位置</Chinesesimp>
     <Czech>Kryté pozice v budově</Czech>
     <French>Positions de couverture dans le bâtiment</French>
     <German>Abdeckung</German>
     <Polish>Pokrycie budynków</Polish>
-    <Russian>Индекс запуска</Russian>
     <Spanish>Posiciones de covertura en edificios</Spanish>
   </Key>
   <Key ID="STR_ENH_GARRISON_10PERCENT">
     <English>10 %</English>
+    <Russian>10 %</Russian>
     <Czech>10 %</Czech>
     <German>10 %</German>
     <Spanish>10%</Spanish>
@@ -4821,6 +4960,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_25PERCENT">
     <English>25 %</English>
+    <Russian>25 %</Russian>
     <Czech>25 %</Czech>
     <German>25 %</German>
     <Spanish>25%</Spanish>
@@ -4830,6 +4970,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_50PERCENT">
     <English>50 %</English>
+    <Russian>50 %</Russian>
     <Czech>50 %</Czech>
     <German>50 %</German>
     <Spanish>50%</Spanish>
@@ -4839,6 +4980,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_100PERCENT">
     <English>100 %</English>
+    <Russian>100 %</Russian>
     <Czech>100 %</Czech>
     <German>100 %</German>
     <Spanish>100%</Spanish>
@@ -4848,6 +4990,7 @@
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_STAND">
     <English>Stand</English>
+    <Russian>Стоять</Russian>
     <Spanish>De pie</Spanish>
     <German>Stehen</German>
     <French>Debout</French>
@@ -4856,6 +4999,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_SCRIPTCOMMANDS">
     <English>Script Commands</English>
+    <Russian>Команды сценария</Russian>
     <German>Skriptbefehle</German>
     <Spanish>Comandos de Scripts</Spanish>
     <French>Commandes script</French>
@@ -4863,6 +5007,7 @@
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
     <English>Create Extraction</English>
+    <Russian>Создать точку извлечения</Russian>
     <German>Extraktion erstellen</German>
     <Spanish>Crear extracción</Spanish>
     <French>Créer une extraction</French>
@@ -4871,6 +5016,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_LAYER">
     <English>Extraction</English>
+    <Russian>Извлечение</Russian>
     <German>Extraktion</German>
     <Spanish>Extracción</Spanish>
     <French>Extraction</French>
@@ -4879,6 +5025,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_TRIGGERSMOKETEXT">
     <English>Mark LZ</English>
+    <Russian>Зона приземления</Russian>
     <German>LZ markieren</German>
     <Spanish>Marcar LZ</Spanish>
     <French>Marquer la zone d'atterissage</French>
@@ -4887,6 +5034,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT">
     <English>Start Extraction</English>
+    <Russian>Начало эв</Russian>
     <German>Extraktion ausführen</German>
     <Spanish>Iniciar extracción</Spanish>
     <French>Démarrer l'extraction</French>
@@ -4895,6 +5043,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CALLEXTRACTIONMSG">
     <English>%2, this is %1. Requesting immediate extraction at grid position %3, over.</English>
+    <Russian>%2, это %1. Требуется немедленная эвакуация. Координаты %3, приём.</Russian>
     <German>%2 von %1. Sofortige Extraktion benötigt. Koordinaten sind %3, kommen.</German>
     <Spanish>%2, aquí %1. Solicita extracción inmediata en la posición de cuadrícula %3, terminado.</Spanish>
     <French>%2 de %1. Demandons extraction immédiate à la position %3. Terminé.</French>
@@ -4902,6 +5051,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
     <English>%1 this is %2, coordinates received. Standby, over.</English>
+    <Russian>%1, это %2. Координаты получены. Ждите, приём.</Russian>
     <German>%1 von %2, Koordinaten erhalten. Bereithalten, Ende.</German>
     <Spanish>1% aquí %2, Coordenadas recibidas. A la espera, corto.</Spanish>
     <French>%1 de %2, coordonnées reçues. On arrive. Terminé.</French>
@@ -4909,6 +5059,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_HEADER">
     <English>Extraction Creator</English>
+    <Russian>Эвакуатор</Russian>
     <German>Extraktions-Konfigurator</German>
     <Spanish>Creador de Extracción</Spanish>
     <French>Créateur d'extraction</French>
@@ -4917,6 +5068,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_SHOWRADIOCHAT">
     <English>Show Radio Chat?</English>
+    <Russian>Показывать радиочат</Russian>
     <Spanish>Mostrar radio chat</Spanish>
     <German>Radiochat anzeigen?</German>
     <French>Afficher la discussion radio ?</French>
@@ -4925,6 +5077,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CALLSIGNREQUESTER">
     <English>Call Sign Requester</English>
+    <Russian>Запрос позывного</Russian>
     <German>Rufzeichen Anforderer</German>
     <Spanish>Call sign del solicitante</Spanish>
     <French>Indicatif du requérant</French>
@@ -4933,6 +5086,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CALLSIGNTRANSPORT">
     <English>Call Sign Transport</English>
+    <Russian>Позывной транспорта</Russian>
     <German>Rufzeichen Transport</German>
     <Spanish>Call sign del transporte</Spanish>
     <French>Indicatif du transport</French>
@@ -4941,6 +5095,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART">
     <English>Condition Start</English>
+    <Russian>Условие запуска</Russian>
     <German>Startbedingung</German>
     <Spanish>Condición de inicio</Spanish>
     <French>Condition de démarrage</French>
@@ -4949,6 +5104,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CONDITIONSTART_TOOLTIP">
     <English>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
+    <Russian>Условие для начала эвакуации. По умолчанию переменная "ENH_Extraction_Start" должна иметь значение "true". Оставьте поле пустым, если хотите запустить его по триггеру.</Russian>
     <German>Bedingung für den Start der Extraktion. Standardmäßig muss die Variable 'ENH_Extraction_Start' auf true gesetzt werden. Lassen Sie das Feld leer, wenn Sie es durch einen Trigger starten möchten.</German>
     <Spanish>Condición para que comience la extracción. Por defecto, la variable ENH_Extraction_Start debe establecerse en true. Deje en blanco si desea iniciarlo con un disparador.</Spanish>
     <French>Condition pour que l'extraction démarre. Par défaut, la variable ENH_Extraction_Start doit être définie en true. Laissez vide si vous souhaitez démarrer l'extraction avec un trigger.</French>
@@ -4956,6 +5112,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_GRENADETYPE">
     <English>Grenade Type</English>
+    <Russian>Тип гранаты</Russian>
     <Spanish>Tipo de granada</Spanish>
     <German>Granatentyp</German>
     <French>Type de grenade</French>
@@ -4964,6 +5121,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_GRENADETYPE_TOOLTIP">
     <English>The landing zone is marked by this grenade type.</English>
+    <Russian>Зона приземления обозначена этим типом гранаты.</Russian>
     <Spanish>La landing zone está marcada por el tipo de granada</Spanish>
     <German>Die Landezone wird durch diese Granate markiert.</German>
     <French>La zone d'atterissage est indiquée par ce type de grenade.</French>
@@ -4971,6 +5129,7 @@
   </Key>
   <Key ID="STR_ENH_CONDITION">
     <English>Condition</English>
+    <Russian>Условие</Russian>
     <German>Bedingung</German>
     <Spanish>Condición</Spanish>
     <French>Condition</French>
@@ -4979,6 +5138,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_CONDITION_TOOLTIP">
     <English>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</English>
+    <Russian>Это условие должно выполняться, чтобы техника переместилась на конечную точку маршрута. По умолчанию все живые юниты в группе игрока должны находиться внутри машины.</Russian>
     <German>Diese Bedingung muss erfüllt sein, damit sich das Fahrzeug zum Endwegpunkt bewegt. Standardmäßig müssen sich alle lebenden Einheiten in der Spielergruppe im Fahrzeug befinden.</German>
     <Spanish>Esta condición tiene que hacerse true para que el vehículo se mueva hasta el punto final. Por defecto, todas las unidades vivas del grupo de jugadores deben estar dentro del vehículo de recogida.</Spanish>
     <French>La condition doit être remplie pour que le véhicule se dirige vers son point de passage final. Par défaut, toutes les unités en vie du groupe du joueur doivent être dans le véhicule d'extraction.</French>
@@ -4986,6 +5146,7 @@
   </Key>
   <Key ID="STR_ENH_EXTRACTION_GRIDPOSITION">
     <English>Grid Position</English>
+    <Russian>Координаты</Russian>
     <German>Koordinaten</German>
     <Spanish>Posición de regilla</Spanish>
     <French>Coordonnées</French>
@@ -4994,6 +5155,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_DRAWDLCICONS">
     <English>Toggle Drawing of DLC Icons</English>
+    <Russian>Вкл/выкл отображение значков DLC</Russian>
     <Spanish>Alternar dibujo de iconos DLC</Spanish>
     <German>Anzeige der DLC Icons an/aus</German>
     <French>Activer/désactiver l'affichage des DLCs</French>
@@ -5002,6 +5164,7 @@
   </Key>
   <Key ID="STR_ENH_3DENCAM_DESCRIPTION">
     <English>Description...</English>
+    <Russian>Описание...</Russian>
     <German>Beschreibung...</German>
     <Spanish>Descripción...</Spanish>
     <French>Description...</French>
@@ -5010,6 +5173,7 @@
   </Key>
   <Key ID="STR_ENH_3DENCAM_SAVE">
     <English>Save</English>
+    <Russian>Сохранить</Russian>
     <German>Speichern</German>
     <Spanish>Guardar</Spanish>
     <French>Sauvegarder</French>
@@ -5018,6 +5182,7 @@
   </Key>
   <Key ID="STR_ENH_3DENCAM_HEADER">
     <English>3DEN Camera Positions</English>
+    <Russian>Позиции камеры 3den</Russian>
     <German>3DEN Kamerapositionen</German>
     <Spanish>3DEN posición de la cámara</Spanish>
     <French>Positions de la caméra 3DEN</French>
@@ -5026,6 +5191,7 @@
   </Key>
   <Key ID="STR_ENH_3DENCAM_HELPDELETE">
     <English>- To delete an entry press the DELETE key</English>
+    <Russian>- Чтобы удалить запись, нажмите клавишу DELETE</Russian>
     <German>- Um einen Eintrag zu löschen drücke die ENTFERNEN Taste</German>
     <Spanish>- Para borrar una entrada pulsa la tecla DELETE</Spanish>
     <French>- Pour supprimer une position, appuyez sur 'SUPPR'.</French>
@@ -5034,6 +5200,7 @@
   </Key>
   <Key ID="STR_ENH_3DENCAM_HELPMOVETO">
     <English>- To move to a selected position, double click on the entry</English>
+    <Russian>- Чтобы перейти в выбранное место, дважды щелкните на запись</Russian>
     <German>- Durch Doppelklicken auf einen Listeneintrag kann zu der Position gesprungen werden</German>
     <Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
     <French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
@@ -5041,6 +5208,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_CONTROLTYPES">
     <English>View Control Types</English>
+    <Russian>Просмотр типов управления</Russian>
     <German>Steuerelementtypen anzeigen</German>
     <Spanish>Ver tipos de control</Spanish>
     <French>Voir les types de contrôles</French>
@@ -5048,6 +5216,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_CONTROLSTYLES">
     <English>View Control Styles</English>
+    <Russian>Просмотр стилей управления</Russian>
     <German>Steuerelementstile anzeigen</German>
     <Spanish>Ver estilos de control</Spanish>
     <French>Voir les styles de contrôles</French>
@@ -5055,6 +5224,7 @@
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
     <English>Reset Center.</English>
+    <Russian>Центр сброса</Russian>
     <German>Mittelpunkt zurücksetzen.</German>
     <Spanish>Resetear centro</Spanish>
     <French>Réinitialiser le centre</French>
@@ -5063,6 +5233,7 @@
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
     <English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
+    <Russian>Установите размер шага при нажатии стрелок рядом с ползунком</Russian>
     <German>Legt die Größe eines Inkrementes fest, wenn einer der Pfeile eines Schiebereglers angeklickt wird.</German>
     <Spanish>Fijar el tamaño del incremento cuando se pulsan las flechas junto al deslizador</Spanish>
     <French>Définissez la taille de l'incrémentation des flèches à côté des curseurs.</French>
@@ -5070,6 +5241,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_3DENCAM">
     <English>3DEN Camera Positions</English>
+    <Russian>Позиции камеры 3den</Russian>
     <German>3DEN Kamerapositionen</German>
     <Spanish>3DEN posición de la cámara</Spanish>
     <French>Positions de la caméra 3DEN</French>
@@ -5077,6 +5249,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUG_OPTIONS">
     <English>Debug Options</English>
+    <Russian>Параметры отладки</Russian>
     <German>Debugoptionen</German>
     <Spanish>Opciones de Debug</Spanish>
     <French>Options de débogage</French>
@@ -5085,6 +5258,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_TOGGLEAIFEATURES">
     <English>Toggle AI Features</English>
+    <Russian>Переключить функции ИИ</Russian>
     <German>KI Funktionen umschalten</German>
     <Spanish>Conmutar características IA</Spanish>
     <French>Désactiver des fonctionnalités IA</French>
@@ -5093,6 +5267,7 @@
   </Key>
   <Key ID="STR_ENH_DISABLED">
     <English>disabled</English>
+    <Russian>заблокирован</Russian>
     <German>deaktiviert</German>
     <Spanish>deshabilitado</Spanish>
     <French>désactivé</French>
@@ -5101,6 +5276,7 @@
   </Key>
   <Key ID="STR_ENH_ENABLED">
     <English>enabled</English>
+    <Russian>разблокирован</Russian>
     <German>aktiviert</German>
     <Spanish>habilitado</Spanish>
     <French>activé</French>
@@ -5109,6 +5285,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION">
     <English>Toggle Dynamic Simulation</English>
+    <Russian>Вкл/откл динамическую симуляцию</Russian>
     <German>Dynamische Simulation umschalten</German>
     <Spanish>Conmutar simulación dinámica</Spanish>
     <French>Activer la simulation dynamique</French>
@@ -5117,10 +5294,12 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_PLAYABLE">
     <English>Toggle Playable State</English>
+    <Russian>Переключить игровое состояние</Russian>
     <German>Spielbarkeitsstatus umschalten</German>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
     <English>Delete Corpses</English>
+    <Russian>Удалить труп</Russian>
     <German>Leichen löschen</German>
     <Spanish>Borrar cuerpos</Spanish>
     <French>Supprimer les corps</French>
@@ -5129,6 +5308,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_HEADER">
     <English>Variable Viewer</English>
+    <Russian>Просмотр переменных</Russian>
     <German>Variablen-Viewer</German>
     <Spanish>Visor variable</Spanish>
     <French>Afficher les variables</French>
@@ -5137,6 +5317,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
     <English>Variable Value</English>
+    <Russian>Значение переменной</Russian>
     <German>Variablenwert</German>
     <Spanish>Valor variable</Spanish>
     <French>Valeur de la variable</French>
@@ -5145,6 +5326,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
     <English>Variable Name</English>
+    <Russian>Имя переменной</Russian>
     <German>Variablenname</German>
     <Spanish>Nombre variable</Spanish>
     <French>Nom de la variable</French>
@@ -5153,6 +5335,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
     <English>Variable Type</English>
+    <Russian>Тип переменной</Russian>
     <German>Variablentyp</German>
     <Spanish>Tipo variable</Spanish>
     <French>Type de la variable</French>
@@ -5161,6 +5344,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
     <English>Hide Functions</English>
+    <Russian>Скрыть функции</Russian>
     <German>Funktionen verst.</German>
     <Spanish>Funciones ocultas</Spanish>
     <French>Cacher les fonctions</French>
@@ -5169,6 +5353,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_DELETE">
     <English>Delete</English>
+    <Russian>Удалить</Russian>
     <German>Löschen</German>
     <Spanish>Borrar</Spanish>
     <French>Supprimer</French>
@@ -5177,6 +5362,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_SET_NEW">
     <English>Set/New</English>
+    <Russian>Выбрать/Создать</Russian>
     <German>Setzen/Neu</German>
     <Spanish>Fijar/Nuevo</Spanish>
     <French>Définir/Nouveau</French>
@@ -5185,6 +5371,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
     <English>Confirm</English>
+    <Russian>Подтвердить</Russian>
     <German>Bestätigen</German>
     <Spanish>Confirmar</Spanish>
     <French>Confirmer</French>
@@ -5193,6 +5380,7 @@
   </Key>
   <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG">
     <English>Are you sure?</English>
+    <Russian>Вы уверены?</Russian>
     <German>Bist du sicher?</German>
     <Spanish>¿Estás seguro?</Spanish>
     <French>Êtes-vous sûr ?</French>
@@ -5201,6 +5389,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
     <English>Show Waypoints</English>
+    <Russian>Показать Waypoint-ы</Russian>
     <German>Wegpunkte anzeigen</German>
     <Spanish>Mostrar waypoints</Spanish>
     <French>Afficher les points de passage</French>
@@ -5209,6 +5398,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
     <English>Shows the waypoints of all groups on the map.</English>
+    <Russian>Показывает waypoint-ы всех групп на карте</Russian>
     <German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
     <Spanish>Mostrar los waypoints de todos los grupos en el mapa</Spanish>
     <French>Affiche les points de passage de tous les groupes sur la carte.</French>
@@ -5217,6 +5407,7 @@
   </Key>
   <Key ID="STR_ENH_COLLAPSEASSETBROWSER">
     <English>Collapse Asset Browser on Start</English>
+    <Russian>Свернуть список ассетов при старте</Russian>
     <German>Asset-Browser beim Start minimieren</German>
     <Spanish>Colapsar navegador de assets al inicio</Spanish>
     <French>Réduire le navigateur d'objets au lancement</French>
@@ -5225,6 +5416,7 @@
   </Key>
   <Key ID="STR_ENH_COLLAPSEENTITYLIST">
     <English>Collapse Entity List on Start</English>
+    <Russian>Свернуть список объектов при старте</Russian>
     <German>Entitäten-Liste beim Start minimieren</German>
     <Spanish>Colapsar lista de entidades al inicio</Spanish>
     <French>Réduire la liste des entités au lancement</French>
@@ -5233,6 +5425,7 @@
   </Key>
   <Key ID="STR_ENH_INTERFACE">
     <English>Interface</English>
+    <Russian>Интерфейс</Russian>
     <German>Benutzeroberfläche</German>
     <Spanish>Interfaz</Spanish>
     <French>Interface</French>
@@ -5241,6 +5434,7 @@
   </Key>
   <Key ID="STR_ENH_SHOWRIGHTPANEL">
     <English>Show Right Panel on Start</English>
+    <Russian>Показывать правую панель при запуске</Russian>
     <German>Rechtes Panel beim Start anzeigen</German>
     <Spanish>Mostrar panel derecho al inicio</Spanish>
     <French>Afficher le panel de droite au lancement</French>
@@ -5249,6 +5443,7 @@
   </Key>
   <Key ID="STR_ENH_SHOWLEFTPANEL">
     <English>Show Left Panel on Start</English>
+    <Russian>Показывать левую панель при запуске</Russian>
     <German>Linkes Panel beim Start anzeigen</German>
     <Spanish>Mostrar panel izquierdo al inicio</Spanish>
     <French>Afficher le panel de gauche au lancement</French>
@@ -5257,6 +5452,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
     <English>Disable Weapon Recoil</English>
+    <Russian>Отключить отдачу оружия</Russian>
     <German>Waffenrückstoß ausschalten</German>
     <Spanish>Deshabilitar retroceso de arma</Spanish>
     <French>Désactiver le recul de l'arme</French>
@@ -5265,6 +5461,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
     <English>Disable Weapon Sway</English>
+    <Russian>Отключить раскачивание оружия</Russian>
     <German>Waffenverwacklung ausschalten</German>
     <Spanish>Deshabilitar balanceo de arma</Spanish>
     <French>Désactiver le balancement de l'arme</French>
@@ -5273,6 +5470,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
     <English>Disable Reload Time</English>
+    <Russian>Отключить время перезарядки</Russian>
     <German>Nachladezeit entfernen</German>
     <Spanish>Deshabilitar tiempo de recarga</Spanish>
     <French>Recharge instantanée</French>
@@ -5281,6 +5479,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
     <English>Enable Unlimited Ammunition</English>
+    <Russian>Включить бесконечные патроны</Russian>
     <German>Unendlich Munition anschalten</German>
     <Spanish>Habilitar munición ilimitada</Spanish>
     <French>Activer les munitions illimitées</French>
@@ -5289,6 +5488,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
     <English>Draw View Direction</English>
+    <Russian>Отображать поле зрения</Russian>
     <German>Blickrichtung darstellen</German>
     <Spanish>Dibujar dirección de vista</Spanish>
     <French>Afficher le champ de vision</French>
@@ -5297,6 +5497,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP">
     <English>Draws the view- and aiming position of nearby units.</English>
+    <Russian>Отображает обзор и прицеливание ближайших юнитов</Russian>
     <German>Stellt die Blick- und Zielrichtung von sich in der Nähe befindenden Einheiten dar.</German>
     <Spanish>Dibujar la vista y posición de apuntado de las unidades cercanas</Spanish>
     <French>Afficher le champ de vision et la visée des unités proches</French>
@@ -5304,6 +5505,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT">
     <English>Teleport</English>
+    <Russian>Телепорт</Russian>
     <German>Teleportieren</German>
     <Spanish>Teletransporte</Spanish>
     <French>Téléportation</French>
@@ -5312,6 +5514,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
     <English>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</English>
+    <Russian>Позволяет телепортироваться в 3D-сцену. Игрок всегда телепортируется на позицию в центре экрана.</Russian>
     <German>Erlaubt das Teleportieren in der 3D-Szene. Der Spieler wird immer zur Position in der Bildschirmmitte teleportiert.</German>
     <Spanish>Permite el teletransporte en la escena 3D. El jugador es siempre teletransportado a la posición central de la pantalla</Spanish>
     <French>Permet de se téléporter dans la scène 3D. Le joueur est toujours téléporté à la position au centre de son écran.</French>
@@ -5319,6 +5522,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_SKIPTIME">
     <English>Skip Time</English>
+    <Russian>Пропустить время</Russian>
     <German>Zeit überspringen</German>
     <Spanish>Saltar tiempo</Spanish>
     <French>Passer le temps</French>
@@ -5327,6 +5531,7 @@
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
     <English>Time Multiplier</English>
+    <Russian>Время в мультиплеере</Russian>
     <German>Zeit-Multiplikator</German>
     <Spanish>Multiplicador de tiempo</Spanish>
     <French>Multiplicateur de temps</French>
@@ -5335,6 +5540,7 @@
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
     <English>Respawn Tickets</English>
+    <Russian>Очки возрождения</Russian>
     <Czech>Počet respawn tiketů</Czech>
     <French>Tickets de réapparition</French>
     <Spanish>Tickets de respawn</Spanish>
@@ -5345,6 +5551,7 @@
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
     <English>Every unit can respawn as long as it has not run out of tickets.</English>
+    <Russian>Каждый боец может возродиться пока есть очки возрождения</Russian>
     <German>Einheiten können Wiedereinsteigen, solange sie noch Tickets haben.</German>
     <Spanish>Cada unidad puede reaparecer siempre que no se quede sin tickets</Spanish>
     <French>Chaque unité peut réapparaître tant qu'elle n'a pas épuisé ses tickets de réapparition.</French>
@@ -5352,7 +5559,8 @@
     <Chinesesimp>每个单位都可以重生，只要没有耗尽重生票。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_SPR_CANDIE_DISPLAYNAME">
-    <English>Can Die?</English>
+    <English>Can Die?</English>  
+    <Russian>Может умереть?</Russian>
     <German>Sterben zulassen?</German>
     <Spanish>¿Puede morir?</Spanish>
     <French>Peut mourir ?</French>
@@ -5361,6 +5569,7 @@
   </Key>
   <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
     <English>Units can instantly die by getting shot in the head. They cannot respawn after a fatal hit.</English>
+    <Russian>Бойцы могут мгновенно погибнуть, получив выстрел в голову. Они не смогут возродиться после смертельного выстрела</Russian>
     <German>Einheiten können durch einen kritischen Treffer in den Kopf sofort sterben. Der Wiedereinstieg ist anschließend deaktiviert.</German>
     <Spanish>Las unidades mueren instantaneamente al recibir un tiro en la cabeza.</Spanish>
     <French>Les unités peuvent mourir instantanément lorsqu'elles sont touchées à la tête.</French>
@@ -5369,6 +5578,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
     <English>Custom Mission Endings</English>
+    <Russian>Пользовательское окончание миссии</Russian>
     <German>Benutzerdefinierte Missionsenden</German>
     <Spanish>Final de misión</Spanish>
     <French>Fins de mission personnalisées</French>
@@ -5376,6 +5586,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME">
     <English>Ending</English>
+    <Russian>Конец</Russian>
     <German>Ende</German>
     <Spanish>Final</Spanish>
     <French>Fin de mission</French>
@@ -5383,6 +5594,7 @@
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
     <English>Win?</English>
+    <Russian>Победа?</Russian>
     <German>Gewinnen?</German>
     <Spanish>¿Victoria?</Spanish>
     <French>Victoire ?</French>
@@ -5390,6 +5602,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
     <English>Variable Viewer</English>
+    <Russian>Просмотр переменных</Russian>
     <German>Variable Viewer</German>
     <Polish>Przeglądarka zmiennych</Polish>
     <Spanish>Visor de variables</Spanish>
@@ -5397,6 +5610,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_VIM">
     <English>Vehicle Inventory Manager</English>
+    <Russian>Менеджер инвентаря в технике</Russian>
     <German>Vehicle-Inventar-Manager</German>
     <French>Gestionnaire d'inventaire de véhicule</French>
     <Spanish>Gestor de inventario de vehículos</Spanish>
@@ -5404,6 +5618,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_AVAILABLEITEMS">
     <English>Available Items</English>
+    <Russian>Доступные объекты</Russian>
     <German>Verfügbare Gegenstände</German>
     <Polish>Dostępne przedmioty</Polish>
     <French>Items disponibles</French>
@@ -5412,10 +5627,12 @@
   </Key>
   <Key ID="STR_ENH_VIM_FULLARSENAL_TOOLTIP">
     <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
+    <Russian>Добавляет все предметы выбранного аддона в инвентарь и делает его виртуальным (Арсенал).</Russian>
     <German>Fügt alle Gegenstände des ausgewählten Addons dem Inventar hinzu und setzt das Inventar auf virtuell (Arsenal).</German>
   </Key>
   <Key ID="STR_ENH_VIM_PREVIEW_TOOLTIP">
     <English>Double click on an item to preview it.</English>
+    <Russian>Дважды щелкните на элемент, чтобы просмотреть его.</Russian>
     <German>Doppelklick auf einen Gegenstand, um ihn anzuzeigen.</German>
     <French>Double-cliquez sur un item pour le prévisualiser.</French>
     <Spanish>Doble clic en un objeto para previsualizarlo</Spanish>
@@ -5423,6 +5640,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_ITEMSININVENTORY">
     <English>Items in Inventory</English>
+    <Russian>Элементы в инвентаре</Russian>
     <German>Gegenstände im Inventar</German>
     <Polish>Przedmioty w ekwipunku</Polish>
     <French>Items dans l'inventaire</French>
@@ -5431,6 +5649,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_SHOTGUNS">
     <English>Shotguns</English>
+    <Russian>Дробовики</Russian>
     <German>Schrotflinten</German>
     <French>Fusil à pompe</French>
     <Spanish>Escopetas</Spanish>
@@ -5439,6 +5658,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_SHOWTEMPLATES">
     <English>Show Templates</English>
+    <Russian>Показать шаблоны</Russian>
     <German>Vorlagen anz.</German>
     <Polish>Pokaż szablony</Polish>
     <French>Afficher les modèles</French>
@@ -5447,6 +5667,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_CREATETEMPLATE">
     <English>Create Template</English>
+    <Russian>Создать шаблон</Russian>
     <German>Vorlage erstellen</German>
     <Polish>Stwórz szablon</Polish>
     <French>Créer un modèle</French>
@@ -5455,6 +5676,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_APPLYTEMPLATE">
     <English>Apply Template</English>
+    <Russian>Применить шаблон</Russian>
     <German>Vorlage anwenden</German>
     <Polish>Zastosuj szablon</Polish>
     <French>Appliquer un modèle</French>
@@ -5463,6 +5685,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_ISVIRTUAL">
     <English>Is Virtual?</English>
+    <Russian>Это виртуальный арсенал?</Russian>
     <German>Virtuell?</German>
     <Polish>Jest wirtualne?</Polish>
     <French>Virtuel ?</French>
@@ -5471,6 +5694,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_REMOVESELECTED_TOOLTIP">
     <English>Clear Inventory</English>
+    <Russian>Очистить инвентарь</Russian>
     <German>Inventar leeren</German>
     <Polish>Wyczyść ekwipunek</Polish>
     <French>Vider l'inventaire</French>
@@ -5479,6 +5703,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_DELETETEMPLATE">
     <English>Delete selected Template.</English>
+    <Russian>Удалить выбранный шаблон</Russian>
     <German>Ausgewählte Vorlage löschen.</German>
     <Polish>Skasuj zaznaczony szablon</Polish>
     <French>Supprimer le modèle sélectionné</French>
@@ -5487,6 +5712,7 @@
   </Key>
   <Key ID="STR_ENH_HELP_GETEXTENSIONS">
     <English>Additional Eden Editor Extentions</English>
+    <Russian>Дополнительные расширения редактора Eden</Russian>
     <German>Zusätzliche Eden Editor Erweiterungen</German>
     <French>Extensions Eden Editor supplémentaires</French>
     <Spanish>Extensiones de Eden adicionales</Spanish>
@@ -5494,6 +5720,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_HIDETEMPLATES">
     <English>Hide Templates</English>
+    <Russian>Скрыть шаблоны</Russian>
     <German>Vorlagen versteck.</German>
     <Polish>Ukryj szablony</Polish>
     <French>Ne pas afficher les modèles</French>
@@ -5502,6 +5729,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_TEMPLATES">
     <English>Templates</English>
+    <Russian>Шаблоны</Russian>
     <German>Vorlagen</German>
     <Polish>Szablony</Polish>
     <French>Modèles</French>
@@ -5510,6 +5738,7 @@
   </Key>
   <Key ID="STR_ENH_VIM_RESET_TOOLTIP">
     <English>Reset to default items defined in object's config.</English>
+    <Russian>Восстановить элементы по умолчанию, определенные в конфигурации объекта.</Russian>
     <German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
     <Polish>Zresetuj ekwipunek</Polish>
     <French>Réinitialiser aux items par défaut définis dans la configuration de l'objet.</French>
@@ -5518,6 +5747,7 @@
   </Key>
   <Key ID="STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP">
     <English>Add entry to favorites or remove it from favorites depending on the selected list.</English>
+    <Russian>Добавить запись в избранное или удалить ее из избранного в зависимости от выбранного списка.</Russian>
     <German>Entfernt einen Eintrag aus den Favoriten oder fügt einen Eintrag zu den Favoriten hinzu. Dies ist Abhängig von der aktiven Liste.</German>
     <French>Ajouter ou retirer des favoris un élément de la liste sélectionnée.</French>
     <Spanish>Agregue una entrada a favoritos o elimínela de favoritos según la lista seleccionada.</Spanish>
@@ -5525,6 +5755,7 @@
   </Key>
   <Key ID="STR_ENH_TOOLS_CFGSENTENCESBROWSER">
     <English>CfgSentences Browser</English>
+    <Russian>CfgSentences Браузер</Russian>
     <German>CfgSentences Browser</German>
     <Polish>CfgSentences Browser</Polish>
     <French>Navigateur CfgSentences</French>
@@ -5533,12 +5764,14 @@
   </Key>
   <Key ID="STR_ENH_ENVIRONMENTVOLUME_DISPLAYNAME">
     <English>Volume (Environment)</English>
+    <Russian>Громкость окружения</Russian>
     <German>Volume (Umwelt)</German>
     <Spanish>Volumen (Entorno)</Spanish>
     <Chinesesimp>体积（环境）</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
     <English>Placement Tool</English>
+    <Russian>Инструмент размещения</Russian>
     <German>Platzierungs-Werkzeug</German>
     <French>Outil de placement</French>
     <Spanish>Herramienta de emplazamiento</Spanish>
@@ -5546,18 +5779,21 @@
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_DISPLAYNAME">
     <English>Enable Dynamic View Distance</English>
+    <Russian>Включить динамическую дальность прорисовки</Russian>
     <German>Dynamische Sichtweite anschalten</German>
     <Spanish>Habilitar la distancia de visualización dinámica</Spanish>
     <Chinesesimp>启用动态视距</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
     <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
+    <Russian>Дальность прорисовки и дальность прорисовки объектов будут изменены в зависимости от высоты камеры. Этот параметр может вызвать проблемы с производительностью на слабых системах.</Russian>
     <German>Die Sichtweite und Object-Sichtweite wird in Abhängikeit zur Kamerahöhe angepasst. Auf schwächeren Systemen kann es zu Leistungseinbußen kommen.</German>
     <Spanish>La distancia de visualización y la distancia de visualización del objeto se cambiarán según la altura de la cámara. Esta opción puede causar problemas de rendimiento en sistemas débiles.</Spanish>
     <Chinesesimp>视距和物体视距将根据相机高度而改变。 此选项可能会在弱系统上引起性能问题。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">
     <English>Scripts</English>
+    <Russian>Скрипты</Russian>
     <German>Skripte</German>
     <Spanish>Scripts</Spanish>
     <Chinesesimp>脚本</Chinesesimp>
@@ -5593,7 +5829,7 @@
     <German>Hülle</German>
     <Chinesesimp>船体</Chinesesimp>
     <Polish>Kadłub</Polish>
-    <Russian>Броня</Russian>
+    <Russian>Корпус</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE2">
     <English>Engine #02</English>
@@ -5637,7 +5873,7 @@
     <German>Treibstofftank (Links)</German>
     <Chinesesimp>油箱 (Left)</Chinesesimp>
     <Polish>Zbiornik paliwa (Left)</Polish>
-    <Russian>Топливный бак (Left)</Russian>
+    <Russian>Топливный бак (Левый)</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUELR">
     <English>Fuel Tank (Right)</English>
@@ -5648,7 +5884,7 @@
     <German>Treibstofftank (Rechts)</German>
     <Chinesesimp>油箱 (Right)</Chinesesimp>
     <Polish>Zbiornik paliwa (Right)</Polish>
-    <Russian>Топливный бак (Right)</Russian>
+    <Russian>Топливный бак (Правый)</Russian>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL1">
     <English>Fuel Tank #01</English>
@@ -5982,6 +6218,7 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITTAIL">
     <English>Tail</English>
+    <Russian>Хвост</Russian>
     <German>Heck</German>
     <Chinesesimp>机尾</Chinesesimp>
   </Key>
@@ -6119,16 +6356,19 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBODY">
     <English>Body</English>
+    <Russian>Тело</Russian>
     <German>Körper</German>
     <Chinesesimp>身体</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
     <English>Commander Turret</English>
+    <Russian>Командирская турель</Russian>
     <German>Geschützturm (Kommandant)</German>
     <Chinesesimp>指挥官炮塔</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITCOMGUN">
     <English>Commander Gun</English>
+    <Russian>Командирское оружие</Russian>
     <German>Geschütz (Kommandant)</German>
     <Chinesesimp>指挥官机枪</Chinesesimp>
   </Key>
@@ -6315,66 +6555,79 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_#CAM_GUNNER">
     <English>Camera Gunner</English>
+    <Russian>Камера стрелка</Russian>
     <German>Kamera Schütze</German>
     <Chinesesimp>摄影机炮手</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GLASS11">
     <English>Window #11</English>
+    <Russian>Окно #11</Russian>
     <German>Fenster #11</German>
     <Chinesesimp>窗户 #11</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
     <English>Light #01</English>
+    <Russian>Cвет #01</Russian>
     <German>Licht #01</German>
     <Chinesesimp>灯光 #01</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
     <English>Light #02</English>
+    <Russian>Cвет #02</Russian>
     <German>Licht #02</German>
     <Chinesesimp>&gt;灯光 #02</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
     <English>Light #03</English>
+    <Russian>Cвет #03</Russian>
     <German>Licht #03</German>
     <Chinesesimp>&gt;灯光 #03</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
     <English>Spotlight</English>
+    <Russian>Прожектор</Russian>
     <Chinesesimp>聚光灯</Chinesesimp>
     <German>Suchscheinwerfer</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
     <English>Wing Light (Left)</English>
+    <Russian>Свет крыла (Слева)</Russian>
     <Chinesesimp>翼灯（左）</Chinesesimp>
     <German>Flügellicht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
     <English>Wing Light (Right)</English>
+    <Russian>Свет крыла (Справа)</Russian>
     <Chinesesimp>翼灯（右）</Chinesesimp>
     <German>Flügellicht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_L">
     <English>Hand (Left)</English>
+    <Russian>Рука (Левая)</Russian>
     <Chinesesimp>手（左）</Chinesesimp>
     <German>Hand (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_R">
     <English>Hand (Right)</English>
+    <Russian>Рука (Правая)</Russian>
     <Chinesesimp>手（右）</Chinesesimp>
     <German>Hand (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
     <English>Battery (Left)</English>
+    <Russian>Батарея (Левая)</Russian>
     <Chinesesimp>电池（左）</Chinesesimp>
     <German>Batterie (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
     <English>Battery (Right)</English>
+    <Russian>Батарея (Правая)</Russian>
     <Chinesesimp>电池（右）</Chinesesimp>
     <German>Batterie (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE4">
     <English>Engine #04</English>
+    <Russian>Двигатель #04</Russian>
     <Chinesesimp>引擎 #04</Chinesesimp>
     <German>Motor #04</German>
   </Key>
@@ -6480,111 +6733,133 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
     <English>FuelTank (Left)</English>
+    <Russian>Топливный бак (Слева)</Russian>
     <Chinesesimp>油箱（左）</Chinesesimp>
     <German>Tank (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
     <English>Fuel Tank (Right)</English>
+    <Russian>Топливный бак (Справа)</Russian>
     <Chinesesimp>油缸(右)</Chinesesimp>
     <German>Tank (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
     <English>Fuel Tank</English>
+    <Russian>Топливный бак</Russian>
     <Chinesesimp>油缸</Chinesesimp>
     <German>Tank</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS16">
     <English>Window #16</English>
+    <Russian>Окно #16</Russian>
     <Chinesesimp>窗户 #16</Chinesesimp>
     <German>Fenster #16</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS17">
     <English>Window #17</English>
+    <Russian>Окно #17</Russian>
     <Chinesesimp>窗户 #17</Chinesesimp>
     <German>Fenster #17</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS18">
     <English>Window #18</English>
+    <Russian>Окно #18</Russian>
     <Chinesesimp>窗户 #18</Chinesesimp>
     <German>Fenster #18</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS19">
     <English>Window #19</English>
+    <Russian>Окно #19</Russian>
     <Chinesesimp>窗户 #19</Chinesesimp>
     <German>Fenster #19</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
     <English>Window 1A</English>
+    <Russian>Окно 1A</Russian>
     <Chinesesimp>窗户 1A</Chinesesimp>
     <German>Fenster 1A</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
     <English>Window 1B</English>
+    <Russian>Окно 1B</Russian>
     <Chinesesimp>窗户 1B</Chinesesimp>
     <German>Fenster 1B</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS20">
     <English>Window #20</English>
+    <Russian>Окно #20</Russian>
     <Chinesesimp>窗户 #20</Chinesesimp>
     <German>Fenster #20</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
     <English>Horizontal Stabilizer (Left)</English>
+    <Russian>Горизонтальный стабилизатор (Слева)</Russian>
     <Chinesesimp>水平安定面(左)</Chinesesimp>
     <German>Horizontaler Stabilisator (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
     <English>Horizontal Stabilizer (Right)</English>
+    <Russian>Горизонтальный стабилизатор (Справа)</Russian>
     <Chinesesimp>水平安定面(右)</Chinesesimp>
     <German>Horizontaler Stabilisator (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHT">
     <English>Light</English>
+    <Russian>Свет</Russian>
     <Chinesesimp>灯光</Chinesesimp>
     <German>Licht</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
     <English>Light (Back)</English>
+    <Russian>Свет (Сзади)</Russian>
     <Chinesesimp>灯光 (背面)</Chinesesimp>
     <German>Licht (Hinten)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
     <English>Light (Front)</English>
+    <Russian>Свет (Спереди)</Russian>
     <Chinesesimp>灯光 (前面)</Chinesesimp>
     <German>Licht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
     <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
     <English>Light (Right)</English>
+    <Russian>Свет (Справа)</Russian>
     <Chinesesimp>灯光 (右)</Chinesesimp>
     <German>Light (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTIC">
     <English>Optic</English>
+    <Russian>Оптический</Russian>
     <Chinesesimp>视力</Chinesesimp>
     <German>Optik</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTICS">
     <English>Optics</English>
+    <Russian>Оптика</Russian>
     <Chinesesimp>光学</Chinesesimp>
     <German>Optiken</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
     <English>Reserve Wheel</English>
+    <Russian>Запасное колесо</Russian>
     <German>Ersatzrad</German>
     <Chinesesimp>备用车轮</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITROTOR">
     <English>Rotor</English>
+    <Russian>Ротор</Russian>
     <Chinesesimp>水平旋翼</Chinesesimp>
     <German>Rotor</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
     <English>Rotor (Virtual)</English>
+    <Russian>Ротор (Виртуальный)</Russian>
     <Chinesesimp>水平旋翼(虚拟)</Chinesesimp>
     <German>Rotor (Virtuell)</German>
   </Key>
@@ -6600,614 +6875,738 @@
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER1">
     <English>Starter #01</English>
+    <Russian>Стартер #01</Russian>
     <Chinesesimp>起动机 #01</Chinesesimp>
     <German>Starter #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER2">
     <English>Starter #02</English>
+    <Russian>Стартер #02</Russian>
     <Chinesesimp>起动机 #02</Chinesesimp>
     <German>Starter #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTARTER3">
     <English>Starter #03</English>
+    <Russian>Стартер #03</Russian>
     <Chinesesimp>起动机 #03</Chinesesimp>
     <German>Starter #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSTATICPORT">
     <English>Static Port</English>
+    <Russian>Статическое соединение</Russian>
     <Chinesesimp>静压汽门</Chinesesimp>
     <German>Statikanschluss</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITVSTABILIZER1">
     <English>Vertical Stabilizer #01</English>
+    <Russian>Вертикальный стабилизатор #01</Russian>
     <Chinesesimp>垂直安定面 #01</Chinesesimp>
     <German>Vertikaler Stabilisator #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_1_HITPOINT">
     <English>Hitzone #01</English>
+    <Russian>Хитзона #01</Russian>
     <Chinesesimp>Hitzone #01</Chinesesimp>
     <German>Hitzone #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_2_HITPOINT">
     <English>Hitzone #02</English>
+    <Russian>Хитзона #02</Russian>
     <Chinesesimp>Hitzone #02</Chinesesimp>
     <German>Hitzone #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_3_HITPOINT">
     <English>Hitzone #03</English>
+    <Russian>Хитзона #03</Russian>
     <Chinesesimp>Hitzone #03</Chinesesimp>
     <German>Hitzone #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITZONE_4_HITPOINT">
     <English>Hitzone #04</English>
+    <Russian>Хитзона #04</Russian>
     <Chinesesimp>Hitzone #04</Chinesesimp>
     <German>Hitzone #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_INCAPACITATED">
     <English>Incapacitated</English>
+    <Russian>Без сознания</Russian>
     <Chinesesimp>丧失行动能力</Chinesesimp>
     <German>Bewusstlos</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LEG_L">
     <English>Leg (Left)</English>
+    <Russian>Нога (Левая)</Russian>
     <Chinesesimp>腿（左）</Chinesesimp>
     <German>Bein (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LEG_R">
     <English>Leg (Right)</English>
+    <Russian>Нога (Правая)</Russian>
     <Chinesesimp>腿（右）</Chinesesimp>
     <German>Bein (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_1_HITPOINT">
     <English>Light #01</English>
+    <Russian>Свет #01</Russian>
     <Chinesesimp>灯光 #01</Chinesesimp>
     <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_2_HITPOINT">
     <English>Light #02</English>
+    <Russian>Свет #02</Russian>
     <Chinesesimp>灯光 #02</Chinesesimp>
     <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_3_HITPOINT">
     <English>Light #03</English>
+    <Russian>Свет #03</Russian>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <German>Light #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
     <English>Light #04</English>
+    <Russian>Свет #04</Russian>
     <Chinesesimp>灯光 #04</Chinesesimp>
     <German>Light #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT">
     <English>Gear #01 (Light #01)</English>
+    <Russian>Шасси #01 (Свет #01)</Russian>
     <Chinesesimp>起落架 #01 (灯光 #01)</Chinesesimp>
     <German>Fahrwerk #01 (Licht #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT">
     <English>Gear #01 (Light #02)</English>
+    <Russian>Шасси #01 (Свет #02)</Russian>
     <Chinesesimp>起落架 #01 (灯光 #02)</Chinesesimp>
     <German>Fahrwerk #01 (Licht #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT">
     <English>Gear #02 (Light #01)</English>
+    <Russian>Шасси #02 (Свет #01)</Russian>
     <Chinesesimp>起落架 #02 (灯光 #01)</Chinesesimp>
     <German>Fahrwerk #02 (Licht #01)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT">
     <English>Gear #02 (Light #02)</English>
+    <Russian>Шасси #01 (Свет #02)</Russian>
     <Chinesesimp>起落架 #02 (灯光 #02)</Chinesesimp>
     <German>Fahrwerk #02 (Licht #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT">
     <English>Gear #03 (Light #01)</English>
+    <Russian>Шасси #03 (Свет #01)</Russian>
     <Chinesesimp>起落架 #03 (灯光 #01)</Chinesesimp>
     <German>Fahrwerk #03 (Licht #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT">
     <English>Gear #03 (Light #02)</English>
+    <Russian>Шасси #03 (Свет #01)</Russian>
     <Chinesesimp>起落架 #03 (灯光 #02)</Chinesesimp>
     <German>Fahrwerk #03 (Licht #03)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS">
     <English>Gear Light (Front)</English>
+    <Russian>Фонарь шасси (Передний)</Russian>
     <Chinesesimp>起落架灯 (前部)</Chinesesimp>
     <German>Fahrwerkslicht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#L SVETLO">
     <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <German>Licht (Links)</German>
     <Chinesesimp>灯光 (左)</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_1">
     <English>Light #01</English>
+    <Russian>Свет #01</Russian>
     <German>Licht #01</German>
     <Chinesesimp>灯光 #01</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT">
     <English>Light #01</English>
+    <Russian>Свет #01</Russian>
     <German>Licht #01</German>
     <Chinesesimp>灯光 #01</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT">
     <English>Light #01</English>
+    <Russian>Свет #01</Russian>
     <Chinesesimp>灯光 #01</Chinesesimp>
     <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2">
     <English>Light #02</English>
+    <Russian>Свет #02</Russian>
     <Chinesesimp>灯光 #02</Chinesesimp>
     <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT">
     <English>Light #02</English>
+    <Russian>Свет #02</Russian>
     <Chinesesimp>灯光 #02</Chinesesimp>
     <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT">
     <English>Light #03</English>
+    <Russian>Свет #03</Russian>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT">
     <English>Light #03</English>
+    <Russian>Свет #03</Russian>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT">
     <English>Light #03</English>
+    <Russian>Свет #03</Russian>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT">
     <English>Light #04</English>
+    <Russian>Свет #04</Russian>
     <Chinesesimp>灯光 #04</Chinesesimp>
     <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT">
     <English>Light #04</English>
+    <Russian>Свет #04</Russian>
     <Chinesesimp>灯光 #04</Chinesesimp>
     <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT">
     <English>Light</English>
+    <Russian>Свет</Russian>
     <Chinesesimp>灯光</Chinesesimp>
     <German>Licht</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L">
     <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L2">
     <English>Light (Left #02)</English>
+    <Russian>Свет (Слева #02)</Russian>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
     <German>Licht (Links #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE">
     <English>Light (Left #02)</English>
+    <Russian>Свет (Слева #02)</Russian>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
     <German>Licht (Links #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE">
     <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT">
     <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R">
     <English>Light (Right)</English>
+    <Russian>Свет (Справа)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R2">
     <English>Light (Right #02)</English>
+    <Russian>Свет (Справа #02)</Russian>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
     <German>Licht (Rechts #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE">
     <English>Light (Right #02)</English>
+    <Russian>Свет (Справа #02)</Russian>
     <Chinesesimp>灯光 (左 #02)</Chinesesimp>
     <German>Licht (Rechts #02)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE">
     <English>Light (Right)</English>
+    <Russian>Свет (Справа)</Russian>
     <Chinesesimp>灯光 (右)</Chinesesimp>
     <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT">
     <English>Light (Right)</English>
+    <Russian>Свет (Справа)</Russian>
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <German>Licht (Rechts)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#P SVETLO">
-    <English>Licht (Links)</English>
+    <English>Light (Left)</English>
+    <Russian>Свет (Слева)</Russian>
     <Chinesesimp>灯（左）</Chinesesimp>
     <German>Licht (Links)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
     <English>Gear Light (Front)</English>
+    <Russian>Фонарь шасси (Передний)</Russian>
     <Chinesesimp>起落架灯（前）</Chinesesimp>
     <German>Fahrwerkslicht (Vorne)</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_10_HITPOINT">
     <English>Window #10</English>
+    <Russian>Окно #10</Russian>
     <Chinesesimp>窗户 #10</Chinesesimp>
     <German>Fenster #10</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_11_HITPOINT">
     <English>Window #11</English>
+    <Russian>Окно #11</Russian>
     <Chinesesimp>窗户 #11</Chinesesimp>
     <German>Fenster #11</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_12_HITPOINT">
     <English>Window #12</English>
+    <Russian>Окно #12</Russian>
     <Chinesesimp>窗户 #12</Chinesesimp>
     <German>Fenster #12</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_13_HITPOINT">
     <English>Window #13</English>
+    <Russian>Окно #13</Russian>
     <Chinesesimp>窗户 #13</Chinesesimp>
     <German>Fenster #13</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_14_HITPOINT">
     <English>Window #14</English>
+    <Russian>Окно #14</Russian>
     <Chinesesimp>窗户 #14</Chinesesimp>
     <German>Fenster #14</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_15_HITPOINT">
     <English>Window #15</English>
+    <Russian>Окно #15</Russian>
     <Chinesesimp>窗户 #15</Chinesesimp>
     <German>Fenster #15</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_16_HITPOINT">
     <English>Window #16</English>
+    <Russian>Окно #16</Russian>
     <Chinesesimp>窗户 #16</Chinesesimp>
     <German>Fenster #16</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_17_HITPOINT">
     <English>Window #17</English>
+    <Russian>Окно #17</Russian>
     <Chinesesimp>窗户 #17</Chinesesimp>
     <German>Fenster #17</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_18_HITPOINT">
     <English>Window #18</English>
+    <Russian>Окно #18</Russian>
     <Chinesesimp>窗户 #18</Chinesesimp>
     <German>Fenster #18</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_19_HITPOINT">
     <English>Window #19</English>
+    <Russian>Окно #19</Russian>
     <Chinesesimp>窗户 #19</Chinesesimp>
     <German>Fenster #19</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_1_HITPOINT">
     <English>Window #01</English>
+    <Russian>Окно #01</Russian>
     <Chinesesimp>窗户 #01</Chinesesimp>
     <German>Fenster #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_20_HITPOINT">
     <English>Window #20</English>
+    <Russian>Окно #20</Russian>
     <Chinesesimp>窗户 #20</Chinesesimp>
     <German>Fenster #20</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_21_HITPOINT">
     <English>Window #21</English>
+    <Russian>Окно #21</Russian>
     <Chinesesimp>窗户 #21</Chinesesimp>
     <German>Fenster #21</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_22_HITPOINT">
     <English>Window #22</English>
+    <Russian>Окно #22</Russian>
     <Chinesesimp>窗户 #22</Chinesesimp>
     <German>Fenster #22</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_23_HITPOINT">
     <English>Window #23</English>
+    <Russian>Окно #23</Russian>
     <Chinesesimp>窗户 #23</Chinesesimp>
     <German>Fenster #23</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_24_HITPOINT">
     <English>Window #24</English>
+    <Russian>Окно #24</Russian>
     <Chinesesimp>窗户 #24</Chinesesimp>
     <German>Fenster #24</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_25_HITPOINT">
     <English>Window #25</English>
+    <Russian>Окно #25</Russian>
     <Chinesesimp>窗户 #25</Chinesesimp>
     <German>Fenster #25</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_26_HITPOINT">
     <English>Window #26</English>
+    <Russian>Окно #26</Russian>
     <Chinesesimp>窗户 #26</Chinesesimp>
     <German>Fenster #26</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_27_HITPOINT">
     <English>Window #27</English>
+    <Russian>Окно #27</Russian>
     <Chinesesimp>窗户 #27</Chinesesimp>
     <German>Fenster #27</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_28_HITPOINT">
     <English>Window #28</English>
+    <Russian>Окно #28</Russian>
     <Chinesesimp>窗户 #28</Chinesesimp>
     <German>Fenster #28</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_29_HITPOINT">
     <English>Window #29</English>
+    <Russian>Окно #29</Russian>
     <Chinesesimp>窗户 #29</Chinesesimp>
     <German>Fenster #29</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_2_HITPOINT">
     <English>Window #02</English>
+    <Russian>Окно #02</Russian>
     <Chinesesimp>窗户 #02</Chinesesimp>
     <German>Fenster #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_30_HITPOINT">
     <English>Window #30</English>
+    <Russian>Окно #30</Russian>
     <Chinesesimp>窗户 #30</Chinesesimp>
     <German>Fenster #30</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_31_HITPOINT">
     <English>Window #31</English>
+    <Russian>Окно #31</Russian>
     <Chinesesimp>窗户 #31</Chinesesimp>
     <German>Fenster #31</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_32_HITPOINT">
     <English>Window #32</English>
+    <Russian>Окно #32</Russian>
     <Chinesesimp>窗户 #32</Chinesesimp>
     <German>Fenster #32</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_33_HITPOINT">
     <English>Window #33</English>
+    <Russian>Окно #33</Russian>
     <Chinesesimp>窗户 #33</Chinesesimp>
     <German>Fenster #33</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_34_HITPOINT">
     <English>Window #34</English>
+    <Russian>Окно #34</Russian>
     <Chinesesimp>窗户 #34</Chinesesimp>
     <German>Fenster #34</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_35_HITPOINT">
     <English>Window #35</English>
+    <Russian>Окно #35</Russian>
     <Chinesesimp>窗户 #35</Chinesesimp>
     <German>Fenster #35</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_36_HITPOINT">
     <English>Window #36</English>
+    <Russian>Окно #36</Russian>
     <Chinesesimp>窗户 #36</Chinesesimp>
     <German>Fenster #36</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_37_HITPOINT">
     <English>Window #37</English>
+    <Russian>Окно #37</Russian>
     <Chinesesimp>窗户 #37</Chinesesimp>
     <German>Fenster #37</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_38_HITPOINT">
     <English>Window #38</English>
+    <Russian>Окно #38</Russian>
     <Chinesesimp>窗户 #38</Chinesesimp>
     <German>Fenster #38</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
     <English>Window #39</English>
+    <Russian>Окно #39</Russian>
     <Chinesesimp>窗户 #39</Chinesesimp>
     <German>Fenster #39</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
     <English>Window #03</English>
+    <Russian>Окно #03</Russian>
     <Chinesesimp>窗户 #03</Chinesesimp>
     <German>Fenster #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_40_HITPOINT">
     <English>Window #40</English>
+    <Russian>Окно #40</Russian>
     <Chinesesimp>窗户 #40</Chinesesimp>
     <German>Fenster #40</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_41_HITPOINT">
     <English>Window #41</English>
+    <Russian>Окно #41</Russian>
     <Chinesesimp>窗户 #41</Chinesesimp>
     <German>Fenster #41</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_42_HITPOINT">
     <English>Window #42</English>
+    <Russian>Окно #42</Russian>
     <Chinesesimp>窗户 #42</Chinesesimp>
     <German>Fenster #42</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_43_HITPOINT">
     <English>Window #43</English>
+    <Russian>Окно #43</Russian>
     <Chinesesimp>窗户 #43</Chinesesimp>
     <German>Fenster #43</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_44_HITPOINT">
     <English>Window #44</English>
+    <Russian>Окно #44</Russian>
     <Chinesesimp>窗户 #44</Chinesesimp>
     <German>Fenster #44</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_45_HITPOINT">
     <English>Window #45</English>
+    <Russian>Окно #45</Russian>
     <Chinesesimp>窗户 #45</Chinesesimp>
     <German>Fenster #45</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_46_HITPOINT">
     <English>Window #46</English>
+    <Russian>Окно #46</Russian>
+    <Chinesesimp>窗户 #46</Chinesesimp>
     <German>Fenster #46</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_47_HITPOINT">
     <English>Window #47</English>
+    <Russian>Окно #47</Russian>
     <Chinesesimp>窗户 #47</Chinesesimp>
     <German>Fenster #47</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_48_HITPOINT">
     <English>Window #48</English>
+    <Russian>Окно #48</Russian>
     <Chinesesimp>窗户 #48</Chinesesimp>
     <German>Fenster #48</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_49_HITPOINT">
     <English>Window #49</English>
+    <Russian>Окно #49</Russian>
     <Chinesesimp>窗户 #49</Chinesesimp>
     <German>Fenster #49</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_4_HITPOINT">
     <English>Window #04</English>
+    <Russian>Окно #04</Russian>
     <Chinesesimp>窗户 #04</Chinesesimp>
     <German>Fenster #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_50_HITPOINT">
     <English>Window #50</English>
+    <Russian>Окно #50</Russian>
     <Chinesesimp>窗户 #50</Chinesesimp>
     <German>Fenster #50</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_51_HITPOINT">
     <English>Windoe #51</English>
+    <Russian>Окно #51</Russian>
     <Chinesesimp>窗户 #51</Chinesesimp>
     <German>Fenster #51</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_52_HITPOINT">
     <English>Window #52</English>
+    <Russian>Окно #52</Russian>
     <Chinesesimp>窗户 #52</Chinesesimp>
     <German>Fenster #52</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_53_HITPOINT">
     <English>Window #53</English>
+    <Russian>Окно #53</Russian>
     <Chinesesimp>窗户 #53</Chinesesimp>
     <German>Fenster #53</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_54_HITPOINT">
     <English>Window #54</English>
+    <Russian>Окно #54</Russian>
     <Chinesesimp>窗户 #54</Chinesesimp>
     <German>Fenster #54</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_55_HITPOINT">
     <English>Window #55</English>
+    <Russian>Окно #55</Russian>
     <Chinesesimp>窗户 #55</Chinesesimp>
     <German>Fenster #55</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_56_HITPOINT">
     <English>Windoe #56</English>
+    <Russian>Окно #56</Russian>
     <Chinesesimp>窗户 #56</Chinesesimp>
     <German>Fenster #56</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_57_HITPOINT">
     <English>Window #57</English>
+    <Russian>Окно #57</Russian>
     <Chinesesimp>窗户 #57</Chinesesimp>
     <German>Fenster #57</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_58_HITPOINT">
     <English>Window #58</English>
+    <Russian>Окно #58</Russian>
     <Chinesesimp>窗户 #58</Chinesesimp>
     <German>Fenster #58</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_59_HITPOINT">
     <English>Window #59</English>
+    <Russian>Окно #59</Russian>
     <Chinesesimp>窗户 #59</Chinesesimp>
     <German>Fenster #59</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_5_HITPOINT">
     <English>Window #05</English>
+    <Russian>Окно #05</Russian>
     <Chinesesimp>窗户 #05</Chinesesimp>
     <German>Fenster #05</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_60_HITPOINT">
     <English>Window #60</English>
+    <Russian>Окно #60</Russian>
     <Chinesesimp>窗户 #60</Chinesesimp>
     <German>Fenster #60</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_61_HITPOINT">
     <English>Window #61</English>
+    <Russian>Окно #61</Russian>
     <Chinesesimp>窗户 #61</Chinesesimp>
     <German>Fenster #61</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_62_HITPOINT">
     <English>Window #62</English>
+    <Russian>Окно #62</Russian>
     <Chinesesimp>窗户 #62</Chinesesimp>
     <German>Fenster #62</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_6_HITPOINT">
     <English>Window #06</English>
+    <Russian>Окно #63</Russian>
     <Chinesesimp>窗户 #06</Chinesesimp>
     <German>Fenster #06</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_7_HITPOINT">
     <English>Window #07</English>
+    <Russian>Окно #70</Russian>
     <Chinesesimp>窗户 #07</Chinesesimp>
     <German>Fenster #07</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_8_HITPOINT">
     <English>Window #08</English>
+    <Russian>Окно #08</Russian>
     <Chinesesimp>窗户 #08</Chinesesimp>
     <German>Fenster #08</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
     <English>Window #09</English>
+    <Russian>Окно #09</Russian>
     <Chinesesimp>窗户 #09</Chinesesimp>
     <German>Fenster #09</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
     <English>Light #01</English>
+    <Russian>Свет #01</Russian>
     <Chinesesimp>灯光 #01</Chinesesimp>
     <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1_FLARE">
     <English>Light Flare #01</English>
+    <Russian>Флаер #01</Russian>
     <Chinesesimp>闪光灯 #01</Chinesesimp>
     <German>Licht #01</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_2">
     <English>Light #02</English>
+    <Russian>Свет #02</Russian>
     <Chinesesimp>灯光 #02</Chinesesimp>
     <German>Licht #02</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_3">
     <English>Light #03</English>
+    <Russian>Свет #03</Russian>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <German>Licht #03</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
     <English>Light #04</English>
+    <Russian>Свет #04</Russian>
     <Chinesesimp>灯光 #04</Chinesesimp>
     <German>Licht #04</German>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT">
     <English>Fuel Lead (Left)</English>
+    <Russian>Топливопровод (Слева)</Russian>
     <German>Treibstoffleitung (Links)</German>
     <Chinesesimp>含铅燃油（左）</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT">
     <English>Fuel Lead (Right)</English>
+    <Russian>Топливопровод (Справа)</Russian>
     <German>Treibstoffleitung (Rechts)</German>
     <Chinesesimp>含铅燃油（右）</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLAILERON_LINK">
     <English>Aileron Link (Left)</English>
+    <Russian>Звено элеронов (Слева)</Russian>
     <German>Querruder (Links)</German>
     <Chinesesimp>副翼链接（左）</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE">
     <English>Pitot Tube</English>
+    <Russian>Трубка Пито</Russian>
     <German>Pitot-Sonde</German>
     <Chinesesimp>皮托管/空速管</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRAILERON_LINK">
     <English>Aileron Link (Right)</English>
+    <Russian>Звено элеронов (Справа)</Russian>
     <German>Querrruder (Rechts)</German>
     <Chinesesimp>副翼链接（右）</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_ADVANCEDDAMAGE_DESCRIPTION">
     <English>Allows to add damage to all available hit points of this entity. Some hitpoints might not have an effect!</English>
+    <Russian>Позволяет добавлять урон ко всем доступным 'HitPoints' этого объекта. Может быть такое, что некоторые 'HitPoints' не имеют эффекта!</Russian>
     <German>Ermöglicht das Hinzufügen von Schaden zu allen verfügbaren 'HitPoints' dieser Entität. Es kann sein das manche 'HitPoints' keinen Effekt haben!</German>
     <Chinesesimp>可以增加对该实体所有可用生命值的伤害。 某些生命值可能没有效果！</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS">
     <English>No hitpoints available for this object!</English>
+    <Russian>Для этого объекта нет хитпоинтов!</Russian>
     <German>Keine 'Hitpoints' vorhanden!</German>
     <Chinesesimp>该对象没有生命值！</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER">
     <English>Debug options initializing in %1 seconds.</English>
+    <Russian>Инициализация параметров отладки в течение %1 секунд.</Russian>
     <German>Debug Optionen werden in %1 Sekunden initialisiert.</German>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT">
     <English>Debug options initialized.</English>
+    <Russian>Инициализированы параметры отладки.</Russian>
     <German>Debug Optionen initialisiert.</German>
   </Key>
 </Project>
