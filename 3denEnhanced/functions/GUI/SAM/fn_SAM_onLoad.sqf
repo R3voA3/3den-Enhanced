@@ -4,14 +4,14 @@
   Date: 2019-05-25
 
   Description:
-  Used by the ENH_ENH_ScenarioAttributesManager GUI.
+  Used by the ENH_ENH_SAM GUI.
   Fills listbox with templates stored in profilenamespace when UI is loaded.
 
   Parameter(s):
   0: DISPLAY - Display
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
@@ -20,7 +20,7 @@ disableSerialization;
 params ["_display"];
 
 _ctrlLB = CTRL(IDC_SAM_TEMPLATES);
-_templates = profileNamespace getVariable ["ENH_ScenarioAttributesManager_Templates", []];
+_templates = profileNamespace getVariable ["ENH_SAM_Templates", []];
 
 if (_templates isEqualTo []) exitWith {false};
 
@@ -34,11 +34,9 @@ lbSort [_ctrlLB, "DESC"];
 
 _disp displayAddEventHandler ["keyDown", //Focus Search
 {
-  params ["_display", "_key", "_shift", "_ctrl"];
+  params ["_display", "_key", "", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then
   {
     ctrlSetFocus CTRL(IDC_SAM_SEARCH);
   }
 }];
-
-true

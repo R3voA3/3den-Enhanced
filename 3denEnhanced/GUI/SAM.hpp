@@ -152,7 +152,7 @@ class ENH_SAM
 
 class ENH_SAM_TemplateData
 {
-  idd = IDD_SCENARIOATTRIBUTESMANAGER_TEMPLATEDATA;
+  idd = IDD_SAM_TEMPLATEDATA;
   movingEnable = true;
   onLoad = "ENH_SAM_TemplateTitle = ''; ENH_SAM_TemplateDescription = ''";
   onUnload = "";

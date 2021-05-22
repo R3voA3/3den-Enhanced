@@ -4,7 +4,7 @@
   Date: 2019-05-24
 
   Description:
-  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI.
+  Used by the ENH_ENH_SAM_TemplateData GUI.
   Loads the data from currently selected item from template listbox and adds it to the tree view.
 
   Parameter(s):

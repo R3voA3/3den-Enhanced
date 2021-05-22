@@ -4,7 +4,7 @@
   Date: 2019-05-24
 
   Description:
-  Used by the ENH_ENH_ScenarioAttributesManager_TemplateData GUI. Exports attributes from selected template.
+  Used by the ENH_ENH_SAM_TemplateData GUI. Exports attributes from selected template.
 
   Parameter(s):
   0: CONTROL - Control button

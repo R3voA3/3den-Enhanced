@@ -4,7 +4,7 @@
   Date: 2019-05-25
 
   Description:
-  Used by the ENH_ENH_ScenarioAttributesManager GUI.
+  Used by the ENH_ENH_SAM GUI.
   Applies selected template to current mission.
 
   Parameter(s):
