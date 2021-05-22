@@ -25,7 +25,7 @@
   </Key>
   <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
     <English>Скачайте модификацию ""Pythia"" из Steam Workshop!</English>
-    <Russian>Get the ""Pythia"" modification from the Steam Workshop!</English>
+    <Russian>Get the ""Pythia"" modification from the Steam Workshop!</Russian>
     <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
   </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
@@ -1790,7 +1790,7 @@
   </Key>
   <Key ID="STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP">
     <English>You are running a customised version of 3den Enhanced. Please make sure you are not accidentally removing attributes from your mission!</English>
-    <English>Вы используете кастомную версию 3den Enhanced. Пожалуйста, убедитесь, что вы случайно не удалили атрибуты своей миссии!</English>
+    <Russian>Вы используете кастомную версию 3den Enhanced. Пожалуйста, убедитесь, что вы случайно не удалили атрибуты своей миссии!</Russian>
     <German>Du verwendest eine benutzerdefinierte Version von 3den Enhanced. Stelle sicher das du nicht aus Versehen Attribute aus der jetzigen Mission entfernst!</German>
     <Spanish>¡Está ejecutando una versión personalizada de 3den Enhanced. ¡Asegúrate de no eliminar accidentalmente atributos de tu misión!</Spanish>
     <Chinesesimp>您正在运行自定义版的3den增强。 请确保您不会意外删除任务中的属性！</Chinesesimp>
@@ -3112,12 +3112,8 @@
     <Chinesesimp>绘制触发区域</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
-<<<<<<< HEAD
-    <English>Trigger areas will be drawn during preview. Small trigger areas are not drawn.</English>
-=======
     <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
     <Russian>Во время предварительного просмотра будут отображены триггерные области. Маленькие триггера отрисовываться не будут.</Russian>
->>>>>>> 86d265b2eef90b923807fc818e58c5169bd56369
     <German>Auslöserbereiche werden wärend der Vorschau angezeigt. Kleine Auslöserbereiche werden nicht angezeigt.</German>
     <Chinesesimp>触发区域将在预览期间绘制。 小区域触发器将不会绘制。</Chinesesimp>
   </Key>
@@ -5570,7 +5566,6 @@
     <German>Respawntickets</German>
     <Chinesesimp>重生票</Chinesesimp>
     <Polish>Punkty odrodzenia</Polish>
-    <Russian>Respawn Билеты</Russian>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
     <English>Every unit can respawn as long as it has not run out of tickets.</English>
