@@ -135,6 +135,42 @@ class ENH_DebugOptions
       displayName = "$STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME";
       property = "ENH_DebugOptions_FPS";
     };
+    class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP";
+      property = "ENH_DebugOptions_DrawIcons";
+    };
+    class ENH_DebugOptions_DrawViewDirection: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP";
+      property = "ENH_DebugOptions_DrawViewDirection";
+    };
+    //----------------MAP
+    class ENH_DebugOptions_Map_Subcategory: ENH_DebugOptions_Subcategory
+    {
+      description = "$STR_USRACT_MAP";
+      control = "ENH_SubCategoryNoHeader1_Fixed";
+    };
+    class ENH_DebugOptions_DynSimDebug: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_3DEN_DYNAMICSIMULATION_TEXTSINGULAR";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_DYNSIMDEBUG_TOOLTIP";
+      property = "ENH_DebugOptions_DynSimDebug";
+    };
+    class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP";
+      property = "ENH_DebugOptions_ShowWaypoints";
+    };
+    class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
+    {
+      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP";
+      property = "ENH_DebugOptions_ShowUnits";
+    };
     class ENH_DebugOptions_DrawTriggers: ENH_DebugOptions_Arsenal
     {
       displayName = "$STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME";
@@ -144,7 +180,6 @@ class ENH_DebugOptions
     class ENH_DebugOptions_DebugPath: ENH_DebugOptions_Arsenal
     {
       displayName = "Debug Path";
-      //tooltip = "Path of all group leaders (including vehicles) is drawn on the map and displayed by 3D-objects in the scene.";
       property = "ENH_DebugOptions_DebugPath";
       control = "Combo";
       typeName = "NUMBER";
@@ -167,30 +202,6 @@ class ENH_DebugOptions
           value = 2;
         };
       };
-    };
-    class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
-    {
-      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME";
-      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP";
-      property = "ENH_DebugOptions_ShowUnits";
-    };
-    class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
-    {
-      displayName = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME";
-      tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP";
-      property = "ENH_DebugOptions_DrawIcons";
-    };
-    class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
-    {
-      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME";
-      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP";
-      property = "ENH_DebugOptions_ShowWaypoints";
-    };
-    class ENH_DebugOptions_DrawViewDirection: ENH_DebugOptions_Arsenal
-    {
-      displayName = "$STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION";
-      tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION_TOOLTIP";
-      property = "ENH_DebugOptions_DrawViewDirection";
     };
     //----------------ENVIRONMENT
     class ENH_DebugOptions_Environment_Subcategory: ENH_DebugOptions_Player_Subcategory
