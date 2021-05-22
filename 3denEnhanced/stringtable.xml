@@ -2141,6 +2141,10 @@
     <German>Ende</German>
     <Spanish>Final</Spanish>
     <Chinesesimp>结束</Chinesesimp>
+    <Czech>Konec</Czech>
+    <French>Fin</French>
+    <Italian>Fine</Italian>
+    <Polish>Koniec</Polish>
   </Key>
   <Key ID="STR_ENH_3DENRADIO_TITLE">
     <English>Title</English>
@@ -2245,6 +2249,11 @@
     <English>Number of Lines</English>
     <Russian>Количество строк</Russian>
     <German>Zeilenanzahl</German>
+    <Chinesesimp>行数</Chinesesimp>
+    <Czech>Počet řádků</Czech>
+    <French>Nombre de lignes</French>
+    <Italian>Numero di linee</Italian>
+    <Polish>Liczba wierszy</Polish>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
     <English>#Colums</English>
@@ -2438,6 +2447,10 @@
     <German>Variablennamen in Zwischenablage kopieren</German>
     <Spanish>Registrar nombres de variables al portapapeles</Spanish>
     <Chinesesimp>将变量名称记录到剪贴板</Chinesesimp>
+    <Czech>Kopírování názvů proměnných do schránky</Czech>
+    <French>Copier les noms de variables dans le presse-papiers</French>
+    <Italian>Copiare i nomi delle variabili negli appunti</Italian>
+    <Polish>Kopiowanie nazw zmiennych do schowka</Polish>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
     <English>Log Positions (3D) to Clipboard</English>
@@ -2704,6 +2717,7 @@
     <Polish>Niewystarczająca ilość pustych pozycji w budynku, zwiększ zasięg lub procent pokrycia.</Polish>
     <Spanish>No hay suficientes posiciones libres en edificios, incrementa el radio o la covertura.</Spanish>
     <Chinesesimp>空的建筑物位置不足，请增加半径或覆盖范围。</Chinesesimp>
+    <Czech>Nedostatek volných pozic v budovách, zvětšení poloměru nebo pokrytí.</Czech>
   </Key>
   <Key ID="STR_ENH_PLACEMENTTOOLS_FILLAREA_HEADER">
     <English>Fill Area </English>
@@ -3104,6 +3118,7 @@
     <Polish>Rysuj ikony jednostek</Polish>
     <Spanish>Dibujar iconos de unidades</Spanish>
     <Chinesesimp>绘制单元图标</Chinesesimp>
+    <Czech>Kreslení ikon jednotek</Czech>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME">
     <English>Draw Trigger Areas</English>
@@ -3466,6 +3481,12 @@
   <Key ID="STR_ENH_TOOLS_TOGGLEMARKERALPHA">
     <English>Toggle Marker Alpha</English>
     <German>Marker Alpha umschalten</German>
+    <Chinesesimp>切换标记阿尔法</Chinesesimp>
+    <Czech>Přepínání značky Alpha</Czech>
+    <French>Basculer le marqueur Alpha</French>
+    <Italian>Alterna l'alfa al marker</Italian>
+    <Polish>Przełączanie znacznika Alfa</Polish>
+    <Russian>Переключение маркера Альфа</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
     <Italian>Applica Equipaggiamento/i</Italian>
@@ -3833,6 +3854,7 @@
     <French>Activer/désactiver la simulation</French>
     <Polish>Przełącz symulację</Polish>
     <Chinesesimp>切换模拟</Chinesesimp>
+    <Czech>切换模拟</Czech>
   </Key>
   <Key ID="STR_ENH_HELP_FUNCTIONSOVERVIEW">
     <English>Functions by Functionality</English>
@@ -4252,6 +4274,10 @@
     <Russian>Возможности AI</Russian>
     <German>KI Funktionen</German>
     <Chinesesimp>AI功能</Chinesesimp>
+    <Czech>Funkce umělé inteligence</Czech>
+    <French>Caractéristiques de l'IA</French>
+    <Italian>Caratteristiche AI</Italian>
+    <Polish>Cechy AI</Polish>
   </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
     <English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
@@ -5310,6 +5336,12 @@
   <Key ID="STR_ENH_DEBUGOPTIONS_DYNSIMDEBUG_TOOLTIP">
     <English>Visualizes the behaviour of the dynamic simulation system on the map.</English>
     <German>Stellt das Verhalten der dynamischen Simulation auf der Karte dar.</German>
+    <Chinesesimp>将动态模拟系统的行为在地图上可视化。</Chinesesimp>
+    <Czech>Vizualizuje chování dynamického simulačního systému na mapě.</Czech>
+    <French>Visualise le comportement du système de simulation dynamique sur la carte.</French>
+    <Italian>Visualizza il comportamento del sistema di simulazione dinamica sulla mappa.</Italian>
+    <Polish>Wizualizuje zachowanie systemu symulacji dynamicznej na mapie.</Polish>
+    <Russian>Визуализирует поведение системы динамического моделирования на карте.</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_PLAYABLE">
     <English>Toggle Playable State</English>
