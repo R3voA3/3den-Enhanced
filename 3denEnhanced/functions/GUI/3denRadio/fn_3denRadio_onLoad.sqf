@@ -24,7 +24,7 @@ CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (uiNamespace getVariable ["ENH_3DENR
 
 //Update radio button
 CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
-  ["\3denEnhanced\data\icon_play.paa", "\3denEnhanced\data\icon_Pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
+  ["\3denEnhanced\data\icon_play_ca.paa", "\3denEnhanced\data\icon_Pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
 
 [] spawn ENH_fnc_3DENRadio_timelineControl;
 
@@ -32,7 +32,7 @@ CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
 {
   _x lnbAddColumn 0.45; //Duration
   _x lnbAddColumn 0.55; //Theme
-  _x lnbAddColumn 0.7;  //Mod + Icon
+  _x lnbAddColumn 0.67; //Mod + Icon
   _x lnbAddColumn 0.92; //In Listbox
 } forEach [CTRL(IDC_3DENRADIO_SONGLIST), CTRL(IDC_3DENRADIO_FILTER)];
 

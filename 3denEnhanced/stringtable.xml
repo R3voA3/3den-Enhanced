@@ -3078,7 +3078,7 @@
     <Chinesesimp>绘制触发区域</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
-    <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
+    <English>Trigger areas will be drawn during preview. Small trigger areas are not drawn.</English>
     <German>Auslöserbereiche werden wärend der Vorschau angezeigt. Kleine Auslöserbereiche werden nicht angezeigt.</German>
     <Chinesesimp>触发区域将在预览期间绘制。 小区域触发器将不会绘制。</Chinesesimp>
   </Key>
@@ -3425,6 +3425,10 @@
     <Polish>Skopiuj wyposażenie</Polish>
     <Russian>Копировальная техника</Russian>
   </Key>
+  <Key ID="STR_ENH_TOOLS_TOGGLEMARKERALPHA">
+    <English>Toggle Marker Alpha</English>
+    <German>Marker Alpha umschalten</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
     <Italian>Applica Equipaggiamento/i</Italian>
     <English>Apply Loadout/s</English>
@@ -3490,6 +3494,17 @@
     <Chinesesimp>随机选择方向</Chinesesimp>
     <Polish>Losowy kierunek</Polish>
     <Russian>Случайное направление</Russian>
+  </Key>
+  <Key ID="STR_ENH_3DENSHORTCUTS_DISPLAYNAME">
+    <English>Shortcuts</English>
+    <Italian>Scorciatoie</Italian>
+    <Czech>Zkratky</Czech>
+    <French>Raccourcise</French>
+    <Spanish>Atajos</Spanish>
+    <German>Tastaturkürzel</German>
+    <Chinesesimp>捷径</Chinesesimp>
+    <Polish>Skróty</Polish>
+    <Russian>Ярлыки</Russian>
   </Key>
   <Key ID="STR_ENH_TOOLS_SWITCHTIME">
     <English>Switch Time</English>
@@ -5114,6 +5129,10 @@
     <French>Activer la simulation dynamique</French>
     <Polish>Przelącz dynamiczną symulację</Polish>
     <Chinesesimp>切换动态模拟</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_DEBUGOPTIONS_DYNSIMDEBUG_TOOLTIP">
+    <English>Visualizes the behaviour of the dynamic simulation system on the map.</English>
+    <German>Stell das Verhalten der dynamischen Simulation auf der Karte dar.</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_PLAYABLE">
     <English>Toggle Playable State</English>

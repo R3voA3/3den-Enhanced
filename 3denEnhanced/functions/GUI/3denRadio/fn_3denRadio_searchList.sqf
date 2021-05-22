@@ -12,7 +12,7 @@
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
-#define IN_PLAYLIST [_songName, _songClass, str _songDuration] in _playlist
+#define IN_PLAYLIST [_songName, _class, str _duraton] in _playlist
 
 disableSerialization;
 
@@ -22,11 +22,10 @@ private _filter = toUpper (ctrlText CTRL(IDC_3DENRADIO_SEARCH));
 private _filteredClasses = [];
 private _playlist = profileNamespace getVariable ["ENH_3DENRadio_playlist", []];
 private _songName = "";
-private _songDuration = 0;
-private _songDurationStr = "00:00";
+private _duraton = 0;
+private _duratonStr = "00:00";
 private _theme = "";
-private _songClass = "";
-private _modData = ["", ""];
+private _class = "";
 private _row = 0;
 
 lbClear _ctrlSongList;
@@ -34,22 +33,21 @@ lbClear _ctrlSongList;
 //Filter all classes according to input in search control
 {
   _songName = getText (_x >> "name");
-  _songClass = configName _x;
-  if (_songName == "") then {_songName = _songClass};
+  _class = configName _x;
+  if (_songName == "") then {_songName = _class};
   if ((toUpper _songName find _filter) >= 0 || _filter == "") then
   {
-    _songDuration =  getNumber (_x >> "duration");
-    _songDurationStr = _songDuration call ENH_fnc_floatToTime;
+    _duraton =  getNumber (_x >> "duration");
+    _duratonStr = _duraton call ENH_fnc_floatToTime;
     _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 
-    _modData = if (configSourceMod _x != '') then {modParams [configSourceMod _x, ["name", "logoSmall"]]} else {["", ""]};
-    _modData params [["_modName", ""], ["_modLogo", ""]];
+    (_x call ENH_fnc_getConfigSourceAddon) params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
 
     //Add filtered entries
-    _row = _ctrlSongList lnbAddRow [_songName, _songDurationStr, _theme, _modName, ""];
-    _ctrlSongList lnbSetData [[_row, 0], _songClass];
-    _ctrlSongList lnbSetData [[_row, 1], str _songDuration];
-    _ctrlSongList lnbSetPicture [[_row, 3], _modLogo];
+    _row = _ctrlSongList lnbAddRow [_songName, _duratonStr, _theme, _addonName, ""];
+    _ctrlSongList lnbSetData [[_row, 0], _class];
+    _ctrlSongList lnbSetData [[_row, 1], str _duraton];
+    _ctrlSongList lnbSetPicture [[_row, 3], _addonIcon];
 
     if (IN_PLAYLIST) then
     {

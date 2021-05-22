@@ -23,8 +23,8 @@
 ['init'] call BIS_fnc_3DENInterface;
 
 //Show or hide panels
-["ShowPanelRight", "Preferences" get3DENMissionAttribute "ENH_ShowPanelRight"] call BIS_fnc_3DENINterface;
-["ShowPanelLeft", "Preferences" get3DENMissionAttribute "ENH_ShowPanelLeft"] call BIS_fnc_3DENINterface;
+["ShowPanelRight", "Preferences" get3DENMissionAttribute "ENH_ShowPanelRight"] call BIS_fnc_3DENInterface;
+["ShowPanelLeft", "Preferences" get3DENMissionAttribute "ENH_ShowPanelLeft"] call BIS_fnc_3DENInterface;
 
 //Collapse asset browser
 call ENH_fnc_3DENCollapseAssetBrowser;
@@ -50,3 +50,21 @@ call ENH_fnc_3DENRadio_toggleRadio;
 //Initialize ambient animations
 call ENH_fnc_ambientAnimations_initInEditor;
 #endif
+
+findDisplay 313 displayAddEventHandler ["keyDown",
+{
+  params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
+  toFixed 2;
+  if (_key == 78 && _ctrl && _alt) exitWith
+  {
+    private _newAperture = ((apertureParams # 0 + 10) min 100);
+    setAperture _newAperture;
+    systemChat str _newAperture;
+  };
+  if (_key == 74 && _ctrl && _alt) exitWith
+  {
+    private _newAperture = ((apertureParams # 0 - 10) max 0.001);//Weird value to set max to 0
+    setAperture _newAperture;
+    systemChat str _newAperture;
+  };
+}];

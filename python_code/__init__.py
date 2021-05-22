@@ -24,6 +24,18 @@ def write_descriptionExt(path, content):
   file.close()
   return True
 
+def EXT_read(path_to_file):
+  path_to_file = str(path_to_file).replace("\\", "/") # Convert path
+  if os.path.exists(path_to_file):
+    EXT_file = open(path_to_file, encoding="utf-8")
+    content = ""
+    for line in EXT_file.readlines():
+      content += line
+    print(content)
+    return content
+  else:
+    return ("File {} does not exist!".format(path_to_file))
+
 def findSoundFiles(path):
  # try:
    soundFolder = Path(path).iterdir()
@@ -79,3 +91,26 @@ def RPT_read(line_count):
    counter += 1
   RPT_file.close()
   return RPT_content
+
+def get_mission_files():
+  path = r"C:\Users\rober\OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR"
+  mission_files = []
+  files_and_folders = Path(path).iterdir()
+
+  for item in files_and_folders:
+    if item.is_dir():
+      folder = Path(item).iterdir()
+      files_in_folder = []
+      files_in_folder.append(os.path.basename(item))
+      #print(os.path.basename(item))
+      for file in folder:
+        files_in_folder.append(os.path.basename(file))
+        #print("|")
+        #print("-----" + os.path.basename(file))
+      mission_files.append(files_in_folder)
+    else:
+      mission_files.append(os.path.basename(item))
+  #print(mission_files)
+  return mission_files
+
+#get_mission_files()

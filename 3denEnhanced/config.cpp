@@ -27,7 +27,7 @@
 #include "GUI\nameObjects.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\RPTViewer.hpp"
-#include "GUI\scenarioAttributesManager.hpp"
+#include "GUI\SAM.hpp"
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\VIM.hpp"

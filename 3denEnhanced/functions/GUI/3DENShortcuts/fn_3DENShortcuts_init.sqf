@@ -31,7 +31,7 @@ _display ctrlCreate ["ctrlStaticBackgroundDisableTiles", IDC_SHORTCUTS_DISABLEDT
 
 private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", IDC_SHORTCUTS_TITLE];
 _ctrlTitle ctrlSetPosition [DIALOG_LEFT, safeZoneY + 17 * GRID_H, DIALOG_W * GRID_W, 5 * GRID_H];
-_ctrlTitle ctrlSetText localize "STR_DISP_CONF_KEYS";
+_ctrlTitle ctrlSetText localize "STR_ENH_3DENSHORTCUTS_DISPLAYNAME";
 _ctrlTitle ctrlCommit 0;
 
 private _ctrlContentBackground = _display ctrlCreate ["ctrlStatic", IDC_SHORTCUTS_CONTENTBG];

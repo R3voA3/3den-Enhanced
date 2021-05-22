@@ -26,11 +26,10 @@ if (uiNamespace getVariable ["ENH_VIM_allItems", []] isNotEqualTo []) exitWith {
 private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _items = [];
 
-private _itemsHashMap = createHashMap;
-
 private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
                           (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
 
+_allItemConfigs apply
 {
   private _configName = configName _x;
   (_configName call BIS_fnc_itemType) params ["_category", "_specificType"];
@@ -42,32 +41,26 @@ private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons"))
     if (_specificType == "AccessoryBipod" && (_configName isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"])) then {_specificType = "Item"};
 
     //Get the DLC, make sure it's a DLC and was not modified by a mod (CBA, ACE)
-    private _addonClass = "";
-    if (count configSourceAddonList _x > 0) then
-    {
-      private _mods = configsourcemodlist (configfile >> "CfgPatches" >> configSourceAddonList _x # 0);
-      if (count _mods > 0) then
-      {
-        _addonClass = _mods # 0;
-      };
-    };
+    (_x call ENH_fnc_getConfigSourceAddon) params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
 
-    //Get all addons so they can be added to filter later
-    private _addonName = "";
-    private _addonIcon = "";
     if (_addonClass != "") then //To prevent "ModParams - Undefined or empty mod directory" rpt spam
     {
-      _addonName = modParams [_addonClass, ["name"]] # 0;
-      _addonIcon = modParams [_addonClass, ["logoSmall"]] # 0;
       _addons pushBackUnique [_addonClass, _addonName, _addonIcon];
     };
     _items append [[_configName, getText (_x >> "DisplayName"), getText (_x >> "Picture"), _addonClass, _addonIcon, _category, _specificType]];
-
-    _itemsHashMap insert [[_configName, [getText (_x >> "DisplayName"), getText (_x >> "Picture"), _addonClass, _addonIcon, _category, _specificType]]];
   };
-} forEach _allItemConfigs;
+};
+
+//Convert array to hashmap for faster lookup later
+private _itemsHashMap = createHashMap;
+_items append SPECIAL_ITEMS;
+_items apply
+{
+  _x params ["_configName", "_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType"];
+  _itemsHashMap set [_configName, [_displayName, _picture, _addonClass, _addonIcon, _category, _specificType]];
+};
 
 uiNamespace setVariable ["ENH_VIM_types", ITEM_TYPES_WHITELIST];
 uiNamespace setVariable ["ENH_VIM_allItemsHashMap", _itemsHashMap];
-uiNamespace setVariable ["ENH_VIM_allItems", _items + SPECIAL_ITEMS];
+uiNamespace setVariable ["ENH_VIM_allItems", _items];
 uiNamespace setVariable ["ENH_VIM_allAddons", _addons];

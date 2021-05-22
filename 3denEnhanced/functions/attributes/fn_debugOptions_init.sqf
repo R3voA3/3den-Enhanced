@@ -31,7 +31,7 @@ private _states =
   GETVALUE("KillOPFOR"),
   GETVALUE("KillINDFOR"),
   GETVALUE("KillCIVFOR"),
-  GETVALUE("KillCurser"),
+  GETVALUE("KillCursor"),
   GETVALUE("DrawIcons"),
   GETVALUE("DeleteCorpse"),
   GETVALUE("ShowWaypoints"),
@@ -45,7 +45,8 @@ private _states =
   GETVALUE("VariableViewer"),
   GETVALUE("ActiveScripts"),
   GETVALUE("DebugPath"),
-  GETVALUE("DrawTriggers")
+  GETVALUE("DrawTriggers"),
+  GETVALUE("DynSimDebug")
 ];
 
 //To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
@@ -129,7 +130,7 @@ if (_states select 2) then
 
     while {true} do
     {
-      waitUntil{sleep DELAY; visibleMap};//Only updated markers when visible
+      waitUntil{sleep DELAY; visibleMap};//Only update markers when visible
       {
         sleep DELAY;//A bit more performance friendly
         _x params ["_marker", "_entity"];
@@ -154,15 +155,15 @@ if (_states select 4) then
     player assignCurator _zeusModule;
     //Add Interface EHs (Workaround)
     _zeusModule addCuratorEditableObjects [entities "", true];
-    _zeusModule addeventhandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
-    _zeusModule addeventhandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
-    _zeusModule addeventhandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
-    _zeusModule addeventhandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
-    _zeusModule addeventhandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
-    _zeusModule addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-    _zeusModule addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-    _zeusModule addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-    _zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+    _zeusModule addeventhandler ["curatorFeedbackMessage",{_this call BIS_fnc_showCuratorFeedbackMessage;}];
+    _zeusModule addeventhandler ["curatorPinged",{_this call BIS_fnc_curatorPinged;}];
+    _zeusModule addeventhandler ["curatorObjectPlaced",{_this call BIS_fnc_curatorObjectPlaced;}];
+    _zeusModule addeventhandler ["curatorObjectEdited",{_this call BIS_fnc_curatorObjectEdited;}];
+    _zeusModule addeventhandler ["curatorWaypointPlaced",{_this call BIS_fnc_curatorWaypointPlaced;}];
+    _zeusModule addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+    _zeusModule addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+    _zeusModule addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+    _zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
   };
 };
 
@@ -652,4 +653,95 @@ if (_states select 27) then
       };
     };
   } forEach (allMissionObjects "EmptyDetector");
+};
+
+if (_states select 28 && dynamicSimulationSystemEnabled) then
+{
+  #define UNITS_ENABLED {simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits
+  #define ALL_UNITS {dynamicSimulationEnabled group _x} count allUnits
+  #define GROUPS_ENABLED {simulationEnabled leader _x && dynamicSimulationEnabled _x} count allGroups
+  #define ALL_GROUPS {dynamicSimulationEnabled _x} count allGroups
+
+  #define DISTANCE_GROUPS_UNITS dynamicSimulationDistance "Group"
+  #define DISTANCE_VEHICLES dynamicSimulationDistance "Vehicle"
+  #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
+  #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
+  #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
+
+  ENH_dynSimDebug_Text = "<t size='1.3' align='center'>Dynamic Simulation Stats</t>   <br/>
+<t align='left'>Enabled Units:<t/>              <t align='right'>%1 / %2</t>        <br/>
+<t align='left'>Enabled Groups:<t/>             <t align='right'>%3 / %4</t>        <br/>
+
+<t size='1.3' align='center'>Settings</t>                                           <br/>
+
+<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%5 m</t>           <br/>
+<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%6 m</t>           <br/>
+<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%7 m</t>           <br/>
+<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%8 m</t>           <br/>
+<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%9</t>           <br/>
+<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%10 m</t>          <br/>
+<t align='left'>View Distance too large:<t/>    <t align='right'>%11</t><br/>
+<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%12 m</t>";
+
+  ENH_dynSimDebug_markerUnitsArray = [];
+
+  {
+    private _leader = leader _x;
+    _marker = "ENH_dynSimDebugMarker_" + str _forEachIndex;
+    _marker = createMarker [_marker, position _leader];
+    if (isPlayer _leader) then
+    {
+      _marker setMarkerType "mil_dot";
+      _marker setMarkerText name _leader;
+      _marker setMarkerColor "ColorRed";
+      _marker setMarkerSize [1.5, 1.5];
+    }
+    else
+    {
+      _marker setMarkerType "mil_box";
+      _marker setMarkerText (getText (configfile >> "CfgVehicles" >> typeOf vehicle _leader >> "displayName"));
+      _marker setMarkerColor ([side _leader, true] call BIS_fnc_sideColor);
+    };
+    ENH_dynSimDebug_markerUnitsArray pushBack [_marker, _leader];
+  } forEach allGroups;
+
+  addMissionEventHandler ["EachFrame",
+  {
+    private _recommendedViewDistance = selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8;
+    hintSilent parseText format
+    [
+      ENH_dynSimDebug_Text,
+      UNITS_ENABLED,
+      ALL_UNITS,
+      GROUPS_ENABLED,
+      ALL_GROUPS,
+      DISTANCE_GROUPS_UNITS,
+      DISTANCE_VEHICLES,
+      DISTANCE_EMPTY_VEHICLES,
+      DISTANCE_PROPS,
+      DISTANCE_COEF,
+      viewDistance,
+      viewDistance > _recommendedViewDistance,
+      _recommendedViewDistance
+    ];
+    if (visibleMap) then
+    {
+      ENH_dynSimDebug_markerUnitsArray apply
+      {
+        _x params ["_marker", "_leader"];
+        _marker setMarkerPos getPosWorld _leader;
+        _marker setMarkerAlpha ([0.2, 1] select simulationEnabled _leader);
+      };
+    };
+  }];
+
+  findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
+  {
+    params ["_ctrlMap"];
+    _ctrlMap drawEllipse [player, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
+    _ctrlMap drawEllipse [player, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
+    _ctrlMap drawEllipse [player, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
+    _ctrlMap drawEllipse [player, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
+    _ctrlMap drawEllipse [player, viewDistance, viewDistance, 0, [1, 0, 0, 1], ""];//Props
+  }];
 };

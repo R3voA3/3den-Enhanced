@@ -14,7 +14,7 @@
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
-#define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 20])
+#define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 100])
 
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
