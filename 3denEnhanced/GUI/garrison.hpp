@@ -36,7 +36,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
       h = CTRL_DEFAULT_H;
       rows = 1;
       columns = 2;
-      strings[] = {"Blacklist", "Whitelist"};
+      strings[] = {"$STR_ENH_GARRISON_BLACKLIST", "$STR_ENH_GARRISON_WHITELIST"};
       values[] = {0, 1};
     };
     class Blacklist: ctrlStatic
@@ -111,7 +111,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     };
     class Mode: Blacklist
     {
-      text = "Mode";
+      text = "$STR_ENH_GARRISON_MODE";
       y = 8 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
     };
     class ModeValue: ctrlCombo
@@ -167,7 +167,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     class UpdateSelection: ctrlButton
     {
       idc = IDC_GARRISON_UPDATE_SELECTION;
-      text = "Update Selection";
+      text = "$STR_ENH_GARRISON_UPDATESELECTION";
       x = DIALOG_W / 2 * GRID_W - 20 * GRID_W;
       y = 12 * (CTRL_DEFAULT_H + GRID_H) - 5 * GRID_H;
       w = 40 * GRID_W;

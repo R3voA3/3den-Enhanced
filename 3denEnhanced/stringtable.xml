@@ -2658,7 +2658,47 @@
     <German>Gebäude besetzen</German>
     <Polish>Obsadź budynki</Polish>
     <Russian>Здания гарнизона</Russian>
-    <Spanish>Guarnicionar edificios.</Spanish>
+    <Spanish>Guarnicionar edificios</Spanish>
+  </Key>
+  <Key ID="STR_ENH_GARRISON_MODE">
+    <English>Mode</English>
+    <Chinesesimp>模式</Chinesesimp>
+    <Czech>Režim</Czech>
+    <French>Mode</French>
+    <German>Modus</German>
+    <Polish>Tryb</Polish>
+    <Russian>Режим</Russian>
+    <Spanish>Modo</Spanish>
+  </Key>
+  <Key ID="STR_ENH_GARRISON_BLACKLIST">
+    <English>Blacklist</English>
+    <Chinesesimp>黑名单</Chinesesimp>
+    <Czech>Černá listina</Czech>
+    <French>Liste noire</French>
+    <German>Blacklist</German>
+    <Polish>Czarna lista</Polish>
+    <Russian>Черный список</Russian>
+    <Spanish>Lista negra</Spanish>
+  </Key>
+  <Key ID="STR_ENH_GARRISON_WHITELIST">
+    <English>Blacklist</English>
+    <Chinesesimp>白名单</Chinesesimp>
+    <Czech>Bílá listina</Czech>
+    <French>Liste blanche</French>
+    <German>Whitelist</German>
+    <Polish>Whitelista</Polish>
+    <Russian>Белый список</Russian>
+    <Spanish>Lista blanca</Spanish>
+  </Key>
+  <Key ID="STR_ENH_GARRISON_UPDATESELECTION">
+    <English>Update Selection</English>
+    <Chinesesimp>更新选择</Chinesesimp>
+    <Czech>Výběr aktualizací</Czech>
+    <French>Sélection de la mise à jour</French>
+    <German>Auswahl aktualisieren</German>
+    <Polish>Aktualizacja Wybór</Polish>
+    <Russian>Выбор обновления</Russian>
+    <Spanish>Actualizar la selección</Spanish>
   </Key>
   <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
     <English>AI features %1.</English>
