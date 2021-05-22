@@ -89,7 +89,7 @@ class ENH_Folder_Utilities
     "Separator",
     "ENH_3DENRadio",
     "ENH_3DENCamPositions",
-    "ENH_ScenarioAttributesManager",
+    "ENH_SAM",
     "ENH_CfgSentencesBrowser",
     "ENH_TextureFinder",
     "Separator",
@@ -119,6 +119,7 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDrawHitpoints",
     "ENH_ToggleAIFeatures",
     "ENH_TogglePlayable",
+    "ENH_ToggleMarkerAlpha",
     "Separator",
     "ENH_CreateTrigger"
   };
@@ -176,10 +177,10 @@ class ENH_ActionCreator
   action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
   opensNewWindow = 1;
 };
-class ENH_ScenarioAttributesManager
+class ENH_SAM
 {
   text = "$STR_ENH_TOOLS_SAM";
-  action = "findDisplay 313 createDisplay 'ENH_ScenarioAttributesManager'";
+  action = "findDisplay 313 createDisplay 'ENH_SAM'";
   opensNewWindow = 1;
 };
 class ENH_BatchReplace
@@ -283,9 +284,16 @@ class ENH_ToggleAIFeatures
 class ENH_TogglePlayable
 {
   text = "$STR_ENH_TOOLS_PLAYABLE";
-  action = "[['Object'], 'ControlMP'] call ENH_fnc_toggleAttribute; systemChat 'Translate!'";
+  action = "[['Object'], 'ControlMP'] call ENH_fnc_toggleAttribute";
   picture = "\a3\3den\data\cfg3den\object\iconplayer_ca.paa";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
+};
+class ENH_ToggleMarkerAlpha
+{
+  text = "$STR_ENH_TOOLS_TOGGLEMARKERALPHA";
+  action = "call ENH_fnc_toggleMarkerAlpha";
+  picture = "\a3\3den\data\displays\display3den\panelright\modemarkers_ca.paa";
+  shortcuts[] = {DIK_V};
 };
 class ENH_GenerateSteamMissionDescription
 {
