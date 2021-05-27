@@ -7699,4 +7699,34 @@
     <Russian>Инициализированы параметры отладки.</Russian>
     <German>Debug Optionen initialisiert.</German>
   </Key>
+  <Key ID="STR_ENH_ZEUSADDONS_HEADER">
+    <English>Manage Zeus Addons</English>
+    <German>Zeus Erweiterungen verwalten</German>
+  </Key>
+  <Key ID="STR_ENH_ZEUSADDONS_CFGPATCHES">
+    <English>CfgPatches</English>
+    <German>CfgPatches</German>
+  </Key>
+  <Key ID="STR_ENH_ZEUSADDONS_CONTENT">
+    <English>Content</English>
+    <German>Inhalt</German>
+    <Italian>Contenuto</Italian>
+    <Czech>Obsah</Czech>
+    <Chinesesimp>内容</Chinesesimp>
+    <Spanish>Contenido</Spanish>
+    <French>Contenu</French>
+    <Polish>Treść</Polish>
+    <Russian>Содержание</Russian>
+  </Key>
+  <Key ID="STR_ENH_ZEUSADDONS_INVERT">
+    <English>Invert</English>
+    <German>Invertieren</German>
+    <Italian>Invertire</Italian>
+    <Czech>Invertovat</Czech>
+    <Chinesesimp>反转</Chinesesimp>
+    <Spanish>Invertir</Spanish>
+    <French>Inverser</French>
+    <Polish>Odwróć</Polish>
+    <Russian>Инвертировать</Russian>
+  </Key>
 </Project>

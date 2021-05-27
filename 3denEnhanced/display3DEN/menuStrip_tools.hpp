@@ -96,7 +96,8 @@ class ENH_Folder_Utilities
     "ENH_BriefingEditor",
     "ENH_ActionCreator",
     "ENH_BatchReplace",
-    "ENH_NameObjects"
+    "ENH_NameObjects",
+    "ENH_ZeusAddons"
   };
 };
 class ENH_Folder_Miscellaneous
@@ -217,6 +218,12 @@ class ENH_CfgSentencesBrowser
 {
   text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
   action = "findDisplay 313 createDisplay 'ENH_CfgSentencesBrowser'";
+  opensNewWindow = 1;
+};
+class ENH_ZeusAddons
+{
+  text = "$STR_ENH_ZEUSADDONS_HEADER";
+  action = "call ENH_fnc_zeusAddons";
   opensNewWindow = 1;
 };
 //Miscellaneous

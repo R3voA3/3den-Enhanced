@@ -31,6 +31,7 @@
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\VIM.hpp"
+#include "GUI\zeusAddons.hpp"
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
 #include "GUI\RscDisplayConfigViewer.hpp"

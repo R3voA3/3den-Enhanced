@@ -189,6 +189,11 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\RPTViewer";
       class RPTViewer;
     };
+    class ZeusAddons
+    {
+      file = "3denEnhanced\functions\GUI\ZeusAddons";
+      class zeusAddons;
+    };
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
