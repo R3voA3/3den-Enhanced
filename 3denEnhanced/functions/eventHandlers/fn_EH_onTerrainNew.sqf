@@ -37,7 +37,7 @@ call ENH_fnc_3DENCollapseAssetBrowser;
 [] spawn ENH_fnc_sessionTimer;
 
 //Remove unwanted menu strip entries
-call ENH_fnc_removeItemsFromMenu;
+call ENH_fnc_menuStrip_removeItems;
 
 //Update location list
 call ENH_fnc_locationList;
