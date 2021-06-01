@@ -1,4 +1,5 @@
 #Excluded file extentions
 *.biprivatekey
-*.zip
-tools/
+
+#Folders
+versions/
