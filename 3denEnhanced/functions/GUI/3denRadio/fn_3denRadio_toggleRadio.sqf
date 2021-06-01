@@ -51,7 +51,7 @@ private _fnc_disableRadio =
   if !(isNull findDisplay IDD_3DENRADIO) then
   {
     (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_CURRENTSONG) ctrlSetText "";
-    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play.paa";
+    (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\3denEnhanced\data\icon_play_ca.paa";
   };
 };
 
