@@ -89,6 +89,7 @@ class Cfg3DEN
     #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       #include "controls\timeMultiplier.hpp"
     #endif
+    #include "controls\objectScaling.hpp"
   };
   class Mission
   {
@@ -305,9 +306,9 @@ class Cfg3DEN
           #ifndef ENH_HIDE_FORCEFLAG
             #include "attributesObject\forceFlag.hpp"
           #endif
-          /* #ifndef ENH_HIDE_OBJECTSCALE
+          #ifndef ENH_HIDE_OBJECTSCALE
             #include "attributesObject\objectScale.hpp"
-          #endif */
+          #endif
         };
       };
     };

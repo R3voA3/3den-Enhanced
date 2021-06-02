@@ -318,10 +318,8 @@ class CfgFunctions
       class SPR_onAttributeLoad;
       class SPR_onAttributeSave;
       #endif
-      #ifndef ENH_HIDE_TIMEMULTIPLIER
-      class timeMultiplier_onAttributeLoad;
-      class timeMultiplier_onAttributeSave;
-      #endif
+      class slider_onAttributeLoad;
+      class slider_onAttributeSave;
     };
     #ifdef __A3_DEBUG__
     class ENH_Internal
