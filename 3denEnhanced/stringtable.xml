@@ -5069,6 +5069,26 @@
     <Polish>100 %</Polish>
     <Chinesesimp>100 %</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_OBJECTSCALING_DISPLAYNAME">
+    <English>Scale</English>
+    <Russian>Масштаб</Russian>
+    <Czech>Měřítko</Czech>
+    <German>Maßstab</German>
+    <Spanish>Escala</Spanish>
+    <French>Échelle</French>
+    <Polish>Skala</Polish>
+    <Chinesesimp>规模</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_OBJECTSCALING_TOOLTIP">
+    <English>Scale</English>
+    <Russian>Масштаб</Russian>
+    <Czech>Měřítko</Czech>
+    <German>Maßstab</German>
+    <Spanish>Escala</Spanish>
+    <French>Échelle</French>
+    <Polish>Skala</Polish>
+    <Chinesesimp>规模</Chinesesimp>
+  </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_STAND">
     <English>Stand</English>
     <Russian>Стоять</Russian>
