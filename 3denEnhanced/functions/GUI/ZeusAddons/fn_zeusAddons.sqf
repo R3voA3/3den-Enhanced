@@ -50,7 +50,7 @@ if (uiNamespace getVariable ["ENH_ZeusAddons_ValidPatches", []] isEqualTo []) th
     _units apply
     {
       //Exit if first vehicle with scopeCurator == 2 is found
-      if (getNumber (configFile >> "CfgVehicles" >> _x >> "scopeCurator") == 2) exitWith {_validCfgPatches pushBack _patch; diag_log _patch; diag_log _x};
+      if (getNumber (configFile >> "CfgVehicles" >> _x >> "scopeCurator") == 2) exitWith {_validCfgPatches pushBack _patch};
     };
   };
   uiNamespace setVariable ["ENH_ZeusAddons_ValidPatches", _validCfgPatches]

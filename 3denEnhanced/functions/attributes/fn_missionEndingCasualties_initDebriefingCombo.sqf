@@ -15,8 +15,7 @@
 */
 
 params ["_ctrlCombo", "_debriefing"];
-diag_log _scriptName;
-diag_log _debriefing;
+
 {
   private _title = getText (_x >> "title");
   private _subtitle = getText (_x >> "subtitle");
