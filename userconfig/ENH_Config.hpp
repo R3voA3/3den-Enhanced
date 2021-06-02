@@ -1,18 +1,19 @@
 //Visit https://github.com/R3voA3/3den-Enhanced/wiki/Customisation for the documentation.
 
-//Editor Preferences
+//------------Editor Preferences------------//
 //#define ENH_HIDE_DEBUGOPTIONS
 //#define ENH_HIDE_DYNAMICVIEWDISTANCE
 //#define ENH_HIDE_INTERFACE
 
-//Environment Attributes
+//------------Environment Attributes------------//
 //#define ENH_HIDE_TIMEMULTIPLIER
 //#define ENH_HIDE_VISUALSETTINGS
 
-//General Attributes
+//------------General Attributes------------//
 //#define ENH_HIDE_ADDOBJECTSTOZEUS
 //#define ENH_HIDE_AIRDROP
 //#define ENH_HIDE_AMBIENTFLYBY
+//#define ENH_HIDE_BRIEFING
 //#define ENH_HIDE_DYNAMICSKILL
 //#define ENH_HIDE_ESTABLISHINGSHOT
 //#define ENH_HIDE_INTROTEXT
@@ -21,24 +22,22 @@
 //#define ENH_HIDE_SPR
 //#define ENH_HIDE_VOLUME
 
-//Multiplayer Attributes
+//------------Multiplayer Attributes------------//
 //#define ENH_HIDE_DYNAMICGROUPS
 //#define ENH_HIDE_RESPAWNTICKETS
 //#define ENH_HIDE_SAVELOADOUT
 
-//Group Attributes
+//------------Group Attributes------------//
 //#define ENH_HIDE_GROUPMARKER
 //#define ENH_HIDE_TASKPATROL
 
-//Object Attributes
+//------------Object Attributes------------//
 //#define ENH_HIDE_ADDGUNLIGHT
-//#define ENH_HIDE_ADVANCEDDAMAGEUNIT
-//#define ENH_HIDE_ADVANCEDDAMAGEVEHICLE
+//#define ENH_HIDE_ADVANCEDDAMAGE
 //#define ENH_HIDE_AI
 //#define ENH_HIDE_ALLOWCREWINIMMOBILE
 //#define ENH_HIDE_ALLOWSPRINT
 //#define ENH_HIDE_AMBIENTANIMATIONS
-//#define ENH_HIDE_ATTACHTO
 //#define ENH_HIDE_DISABLENVGE
 //#define ENH_HIDE_DISABLETIE
 //#define ENH_HIDE_DOSTOP
@@ -50,9 +49,7 @@
 //#define ENH_HIDE_HOLDACTION
 //#define ENH_HIDE_LIMITSPEED
 //#define ENH_HIDE_MAKEHOSTAGE
-//#define ENH_HIDE_MAKEHOSTAGE
-//#define ENH_HIDE_OBJECTSCALE
-//#define ENH_HIDE_PARACHUTE
+//#define ENH_HIDE_OBJECTSCALING
 //#define ENH_HIDE_PARACHUTE
 //#define ENH_HIDE_REMOVEFROMREMAINSCOLLECTOR
 //#define ENH_HIDE_SETCAPTIVE
