@@ -89,7 +89,9 @@ class Cfg3DEN
     #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       #include "controls\timeMultiplier.hpp"
     #endif
-    #include "controls\objectScaling.hpp"
+    #ifndef ENH_HIDE_OBJECTSCALING
+      #include "controls\objectScaling.hpp"
+    #endif
   };
   class Mission
   {
@@ -136,7 +138,7 @@ class Cfg3DEN
         #ifndef ENH_HIDE_AMBIENTFLYBY
           #include "attributesMission\ambientFlyby.hpp"
         #endif
-        #ifndef ENH_HIDE_AIRDROP
+        #ifndef ENH_HIDE_BRIEFING
           #include "attributesMission\briefings.hpp"
         #endif
         #ifndef ENH_HIDE_ESTABLISHINGSHOT
@@ -276,9 +278,18 @@ class Cfg3DEN
           #ifndef ENH_HIDE_SPR
             #include "attributesObject\SPRTickets.hpp"
           #endif
-          /* #ifndef ENH_HIDE_ATTACHTO
-            #include "attributesObject\attachTo.hpp"
-          #endif */
+        };
+      };
+      class Transformation
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_OBJECTSCALE
+            #include "attributesObject\objectScale.hpp"
+          #endif
+          #ifndef ENH_HIDE_SETMASS
+            #include "attributesObject\setMass.hpp"
+          #endif
         };
       };
       class Inventory
@@ -297,17 +308,11 @@ class Cfg3DEN
       {
         class Attributes
         {
-          #ifndef ENH_HIDE_SETMASS
-            #include "attributesObject\setMass.hpp"
-          #endif
           #ifndef ENH_HIDE_FEATURETYPE
             #include "attributesObject\featureType.hpp"
           #endif
           #ifndef ENH_HIDE_FORCEFLAG
             #include "attributesObject\forceFlag.hpp"
-          #endif
-          #ifndef ENH_HIDE_OBJECTSCALE
-            #include "attributesObject\objectScale.hpp"
           #endif
         };
       };
