@@ -17,7 +17,6 @@ class CfgFunctions
     class Garrison
     {
       file = "3denEnhanced\functions\GUI\garrison";
-      //class garrison_garrison;
       class garrison_onLoad;
       class garrison_drawBuildingInfo;
       class garrison_fillBuildings;
