@@ -22,13 +22,13 @@ class ENH_SPR
         ENH_SPR_Delay = _value param [1, 20];\
         ENH_SPR_CanDie = _value param [2, false];\
         ENH_SPR_RestoreLoadout = _value param [3, false];\
-        ENH_SPR_Positions_West = allMapMarkers select {'respawn_west' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_East = allMapMarkers select {'respawn_east' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_Guerilla = allMapMarkers select {'respawn_guerilla' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civilian' in _x} apply {getMarkerPos _x};\
+        ENH_SPR_Positions_West = allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x};\
+        ENH_SPR_Positions_East = allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x};\
+        ENH_SPR_Positions_Guerilla = allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x};\
+        ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x};\
         \
         {\
-          _x setVariable ['ENH_SPR_OriginalSide', side _x];\
+          _x setVariable ['ENH_SPR_OriginalSide', side group _x];\
           _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];\
           _x addEventHandler ['handleDamage',\
           {\
@@ -72,21 +72,20 @@ class ENH_SPR
           params ['_unit'];\
           if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
           if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
-          if (ENH_SPR_Ruleset >= 2) then\
+          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;\
+          private _positions = [ENH_SPR_Positions_East, ENH_SPR_Positions_West, ENH_SPR_Positions_Guerilla, ENH_SPR_Positions_Civilian] select _sideID;\
+          if (_positions isNotEqualTo []) then\
           {\
-            private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;\
-            private _positions = [ENH_SPR_Positions_East, ENH_SPR_Positions_West, ENH_SPR_Positions_Guerilla, ENH_SPR_Positions_Civilian] select _sideID;\
-            if !(_positions isEqualTo []) then\
+            switch (ENH_SPR_Ruleset) do\
             {\
-              private _respawnPos = if (ENH_SPR_Ruleset == 2) then\
+              case 3:\
               {\
-                selectRandom _positions;\
-              }\
-              else\
-              {\
-                ([_positions, [],{_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0;\
+                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);\
               };\
-              _unit setPos _respawnPos;\
+              case 2:\
+              {\
+                _unit setPos selectRandom _positions;\
+              };\
             };\
           };\
           _unit setUnconscious false;\
