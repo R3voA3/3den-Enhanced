@@ -24,7 +24,6 @@
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Credits">Credits</a> |
   <a href="https://steamcommunity.com/sharedfiles/filedetails/changelog/623475643">Changelog</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Translation">Translation</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/FAQ">FAQ</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Contribute">Contribute</a>
 </p>
 
