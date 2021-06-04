@@ -34,7 +34,44 @@
 This modification adds new functionalities to the Eden Editor without creating any dependencies for players. That means, scenario editors can use this mod to make their life easier without making the life of the players harder, by forcing them to download an additional modification.
 </p>
 
-## End User License Agreement
+# End User License Agreement
 [<img src="https://raw.githubusercontent.com/R3voA3/3den-Enhanced/master/wiki/APL-SA.png">](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
 
 **Re-uploading this modification to the Steam Workshop is prohibited!**
+
+# Credits
+**Thanks** to all the people who contributed to this project! 
+
+_Should you find yourself missing entirely or any information is incorrect, feel free to write me a message!_
+
+|Name | Field of Action|
+--- | --- |
+| 11RDP | 
+| LoupVert |
+| 2RIMa |
+|PapaBear |
+| a1044438870 |
+| Artenis |
+| arv187 | Spanish Translation |
+| ConnorAU | Scripting |
+| Counserf | Russian Translation |
+| dardothemaster |
+| dixon13 |
+| GhostJumper | German Translation |
+| IllidanS4 |
+| Jason Bert |
+| KiritoKun223 |
+| Kofeina101 | Polish Translation |
+| Krzyciu | Polish Translation |
+| lex__1 |
+| mihuan-0 | Chinese Translation |
+| Mr-Melker | German Translation |
+| niquenensolentis |
+| pokertour |
+| Poslovitch | French Translation |
+| shukari | Scripting |
+| SynchronizedHD |
+| TaktischerSpeck |
+| Theassassinzz |
+| XerXesCZ | Czech Translation |
+| zagor64bz | Italian Translation |
