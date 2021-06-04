@@ -1,3 +1,38 @@
+# v6.2
+
+
+# v6.1
+
+## ADDED
+- Tool to quickly toggle the playable state of multiple units
+- Vehicle Inventory Manager now has an option to export all items in format of ACE Arsenal. Just import the value into the ACE Arsenal attribute
+- Added debugging mode for Dynamic Simulation during preview
+- Added a tool which allows you to quickly show all markers in Eden Editor whose alpha value was set to 0. No more guessing where the markers are! (Shortcut: V)
+- Updated Russian translation by Counserf
+- Various translation tweaks
+- Added tools to quickly select available addons for Zeus. See https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#zeus-addons
+- More ambient animations
+- Object scaling for objects without simulation
+
+## CHANGED
+- Found some stray semicolons and put them back in the correct place
+- Fixed an issue with a missing texture. Blame Lou for reporting it ;)
+- Fixed an issue with 3den Radio when mod name was too long
+- Fixed an issue which would cause some special items not to be added to an inventory via the Vehicle Inventory Manager
+- Debug options now have another category called "Map". Every option in there will draw information on the map
+- Various improvements to the translations
+- Fixed a bug with debug options
+- 3DEN Radio will no longer list CBA or ACE3 as music addon
+- Fixed issue with Menu Strip items not getting removed if set in the preferences (https://github.com/R3voA3/3den-Enhanced/issues/194)
+- Moved object scaling and vehicle mass to transformation category
+- Fixed some duplicates in the userconfig. Userconfig was also updated to support all new features
+- Fixed an issue where respawn positions of SPR would not be recognized if they are not named all lower case
+- Removed all debug logs
+- Fixed an issue with SPR where the side of the unit which is respawning was incorrect
+
+## REMOVED
+- Removed shortcut from recompile all functions tool
+
 # v6.0
 
 ## CHANGED
