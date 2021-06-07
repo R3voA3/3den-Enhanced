@@ -3,7 +3,7 @@
 
 :: Ask user for version
 ::SET /P VERSION=Version (MAJOR.MINOR, X.X)?
-SET VERSION=6.1
+SET VERSION=6.2
 :: Display version
 ECHO v%VERSION%
 
