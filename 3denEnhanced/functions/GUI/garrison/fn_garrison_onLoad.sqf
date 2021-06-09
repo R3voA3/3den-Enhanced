@@ -70,9 +70,11 @@ CTRL(IDC_GARRISON_OK) ctrlAddEventHandler ["ButtonClick",
   call ENH_fnc_garrison_fillBuildings;
 }];
 
+CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlSetText (profileNamespace getVariable ["ENH_Garrison_Classes", ""]);
+
 do3DENAction "WidgetArea";
 
-private _ctrlMode = CTRL(20004);
+private _ctrlMode = CTRL(IDC_GARRISON_MODE);
 _ctrlMode lbAdd "Closest Building only";
 _ctrlMode lbSetTooltip [0, "Only the closest building to the center (ENH_Garrison_AreaHelper) will be garrisoned."];
 _ctrlMode lbAdd "From Center";
