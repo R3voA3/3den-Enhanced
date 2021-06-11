@@ -484,7 +484,7 @@ class ENH_VariableViewer
 };
 class ENH_RPTViewer
 {
-  text = "RPT Viewer";
+  text = "$STR_ENH_TOOLS_RPTVIEWER";
   action = "'open' call ENH_fnc_RPTViewer";
   opensNewWindow = 1;
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_V};

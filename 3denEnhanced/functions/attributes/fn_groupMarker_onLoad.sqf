@@ -1,30 +1,26 @@
 /*
   Author: R3vo
 
-  Date: 2019-07-15
+  Date: 2021-06-07
 
   Description:
-  Used by the group marker attribute. Call when attribute is loaded.
+  Is called when the group marker attribute is loaded. Properly inits all controls when multiple groups are edited.
+  Needs to be spawned to make sure all controls are loaded.
 
   Parameter(s):
-  0: CONTROL - Controls group
-  1: ARRAY - Attribute value
+  0: CONTROL - Any attribute control
 
   Returns:
   -
 */
 
-params ["_ctrlGroup", "_value"];
-_value params ["_typeValue", "_colorValue", "_textValue", "_showGroupSize"];
+//Exit if only one group is selected
+if (count (get3DENSelected "Group") == 1) exitWith {};
 
+params ["_ctrl"];
+private _ctrlGroup = ctrlParentControlsGroup _ctrl;
 private _ctrlComboType =_ctrlGroup controlsGroupCtrl 100;
 private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
-private _ctrlEdit =_ctrlGroup controlsGroupCtrl 102;
-private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
-
-//Set up checkbox and edit control
-_ctrlEdit ctrlSetText _textValue;
-_ctrlCheckbox cbSetChecked _showGroupSize;
 
 //Get all markers and sort them
 private _markers = ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkers")) apply
@@ -47,7 +43,6 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
   _ctrlComboType lbSetPicture [_i, _icon];
   _ctrlComboType lbSetTooltip [_i, _class];
   _ctrlComboType lbSetPictureColor [_i, _color];
-  if (_class == _typeValue) then {_ctrlComboType lbSetCurSel _i};
 } forEach _markers;
 
 //Fill marker color combo
@@ -60,19 +55,14 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
   _ctrlComboColor lbSetPictureColor [_i, _color];
   _ctrlComboColor lbSetPictureColorSelected [_i, _color];
   _ctrlComboColor lbSetTooltip [_i, _ctrlComboColor lbData _i];
-  if (_colorValue isEqualTo _class) then
-  {
-    _ctrlComboColor lbSetCurSel _i;
-  };
-} foreach configproperties [configfile >> "CfgMarkerColors", "isClass _x && getNumber (_x >> 'scope') > 0"];
+} foreach ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkerColors"));
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-
-  //Setting default values, colour and group ID cannot be retrieved from here so they are ignored
   (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
   (_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
+  (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "";
   (_ctrlGroup controlsGroupCtrl 103) cbSetChecked true;
 }];

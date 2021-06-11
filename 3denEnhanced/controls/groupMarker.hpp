@@ -8,6 +8,7 @@ class ENH_GroupMarker: Title
     class TypeTitle: Title
     {
       text = "$STR_ENH_GROUPMARKER_TYPE";
+      tooltip = "$STR_3DEN_MARKER_ATTRIBUTE_TYPE_TOOLTIP";
     };
     class Type: ctrlCombo
     {
@@ -15,23 +16,25 @@ class ENH_GroupMarker: Title
       x = ATTRIBUTE_TITLE_W * GRID_W;
       w = ATTRIBUTE_CONTENT_W * GRID_W;
       h = CTRL_DEFAULT_H;
+      colorBackground[] = {COLOR_TAB_RGBA};
+      onLoad = "_this spawn ENH_fnc_groupMarker_onLoad";
     };
     class ColourTitle: Title
     {
       text = "$STR_ENH_GROUPMARKER_COLOUR";
+      tooltip = "$STR_3DEN_MARKER_ATTRIBUTE_COLOR_TOOLTIP";
       y = CTRL_DEFAULT_H + 5 * pixelH;
     };
-    class Colour: ctrlCombo
+    class Colour: Type
     {
       idc = 101;
-      x = ATTRIBUTE_TITLE_W * GRID_W;
       y = CTRL_DEFAULT_H + 5 * pixelH;
-      w = ATTRIBUTE_CONTENT_W * GRID_W;
-      h = CTRL_DEFAULT_H;
+      onload = "";
     };
     class TextTitle: Title
     {
       text = "$STR_ENH_GROUPMARKER_TEXT";
+      tooltip = "$STR_3DEN_MARKER_ATTRIBUTE_TEXT_TOOLTIP";
       y = 2 * CTRL_DEFAULT_H + 10 * pixelH;
     };
     class Text: ctrlEdit
