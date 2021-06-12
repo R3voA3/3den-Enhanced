@@ -1,5 +1,19 @@
 # v6.2
+## CHANGED
+- Fixed an issue which would prevent 'Export Mission to SQF' to work properly with some attributes
+- Group Marker Attribute
+  - Attribute is now also properly loaded if multiple entites are edited at once
+  - Minor network optimisations to the Group Marker attribute
+  - Added tooltips to the controls
+  - Tweaked default value
+  - Changed the color of the combo box controls to increase the contrast when selecting the texture type
+- Fixed a missing name in Preferences Menu
+- Garrison GUI will now save and restore the blacklist value
 
+# v6.1.1
+
+## REMOVED
+- Removed Object Scaling attribute. There is an issue with Export Mission to SQF. See https://feedback.bistudio.com/T158949.
 
 # v6.1
 
