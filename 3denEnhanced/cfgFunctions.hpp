@@ -226,11 +226,12 @@ class CfgFunctions
     class Interface
     {
       file = "3denEnhanced\functions\interface";
-      class 3DENCollapseAssetBrowser;
+      class assetBrowser_collapse;
+      //class assetBrowser_removeItems;
       class locationList;
       class menuStrip_removeItems;
-      class sessionTimer;
       class statusbar_entityCounter;
+      class statusbar_sessionTimer;
     };
     #endif
     class Log
@@ -292,6 +293,7 @@ class CfgFunctions
       #ifndef ENH_HIDE_GROUPMARKER
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
+      class groupMarker_onLoad;
       #endif
       #ifndef ENH_HIDE_HOLDACTION
       class holdAction_onAttributeLoad;

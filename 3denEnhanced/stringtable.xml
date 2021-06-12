@@ -4950,6 +4950,10 @@
     <Polish>Zapisz klasy do schowka jako String</Polish>
     <Chinesesimp>将Classes作为字符串记录到剪贴板</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_TOOLS_RPTVIEWER">
+    <English>RPT Viewer</English>
+    <German>RPT Viewer</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
     <English>Toggle Drawing of Building Positions</English>
     <Russian>Переключить отображение позиций зданий</Russian>
