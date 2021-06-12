@@ -32,7 +32,7 @@ call ENH_fnc_dynamicViewDistance;
 
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
-[] spawn ENH_fnc_sessionTimer;
+[] spawn ENH_fnc_statusbar_sessionTimer;
 
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then

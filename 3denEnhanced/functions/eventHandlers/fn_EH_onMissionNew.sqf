@@ -22,7 +22,7 @@ call ENH_fnc_3DENRadio_toggleRadio;
 
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
-[] spawn ENH_fnc_sessionTimer;
+[] spawn ENH_fnc_statusbar_sessionTimer;
 #endif
 
 #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
