@@ -22,7 +22,7 @@ class ENH_ZeusAddons
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
-      h = (DIALOG_H + 7) * GRID_H
+      h = (DIALOG_H + 7) * GRID_H;
     };
     class BackgroundButtons: ctrlStaticFooter
     {

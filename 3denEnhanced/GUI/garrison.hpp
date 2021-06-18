@@ -29,7 +29,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     };
     class BlacklistToggle: ctrlToolbox
     {
-      idc = IDC_GARRISON_BLACKLIST_TOGGLE
+      idc = IDC_GARRISON_BLACKLIST_TOGGLE;
       x = GRID_W;
       y = CTRL_DEFAULT_H + GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -146,7 +146,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     };
     class Info: ctrlStructuredText
     {
-      idc = IDC_GARRISON_INFO
+      idc = IDC_GARRISON_INFO;
       y = 10 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = DIALOG_W * GRID_W - GRID_W;
       h = 2 * CTRL_DEFAULT_H;
