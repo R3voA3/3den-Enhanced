@@ -164,17 +164,6 @@ ctrlParent _ctrlTVPatches displayCtrl 30 ctrlAddEventHandler ["ButtonClick",
   //Set variable used by display3denCopy and create the display
   uiNamespace setVariable ["display3DENCopy_data", ["CfgPatches", _export trim [", ", 2]]];
   private _display = ctrlParent _ctrlButton createDisplay "display3denCopy";
-
-  //Get the relevant controls
-  private _ctrlGroup = _display displayCtrl 201;
-  private _ctrlEdit = _display displayCtrl 202;
-  private _ctrlEditFake = _display displayCtrl 203;
-
-  //Adjust the height of the edit control properly
-  _ctrlEdit ctrlSetPositionH (ctrlTextHeight _ctrlEdit max (ctrlPosition _ctrlGroup # 3));
-  _ctrlEditFake ctrlSetPositionH (ctrlTextHeight _ctrlEditFake max (ctrlPosition _ctrlGroup # 3));
-  _ctrlEdit ctrlCommit 0;
-  _ctrlEditFake ctrlCommit 0;
 }];
 
 //Invert selection

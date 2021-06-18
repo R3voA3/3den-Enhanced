@@ -200,18 +200,7 @@ switch (_mode) do
     {
       //Set variable used by Display3denCopy and create the display
       uiNamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
-
-      //Stupid workaround because BI is not able to fix this
       private _display = findDisplay IDD_3DEN createDisplay "Display3denCopy";
-      private _ctrlGroup = _display displayCtrl 201;
-      private _ctrlEdit = _display displayCtrl 202;
-      private _ctrlEditFake = _display displayCtrl 203;
-
-      _ctrlEdit ctrlSetPositionH (ctrlTextHeight _ctrlEdit max (ctrlPosition _ctrlGroup # 3));
-      _ctrlEditFake ctrlSetPositionH (ctrlTextHeight _ctrlEditFake max (ctrlPosition _ctrlGroup # 3));
-      _ctrlEdit ctrlCommit 0;
-      _ctrlEditFake ctrlCommit 0;
-    };
   };
 };
 
