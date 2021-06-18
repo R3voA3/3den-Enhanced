@@ -7753,4 +7753,8 @@
     <Polish>Odwróć</Polish>
     <Russian>Инвертировать</Russian>
   </Key>
+  <Key ID="STR_ENH_CREATEOBJECT_CLASSNAME">
+    <English>Class Name</English>
+    <German>Klassenname</German>
+  </Key>
 </Project>

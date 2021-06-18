@@ -30,6 +30,11 @@ class CfgFunctions
       class extraction_onLoad;
       class extraction_setup;
     };
+    class CreateObject
+    {
+      file = "3denEnhanced\functions\GUI\createObject";
+      class createObject_create;
+    };
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -71,9 +76,8 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\GUI\briefingEditor";
       class briefingEditor_addTAG;
-      class briefingEditor_createTemplate;
+      class briefingEditor_handleTemplates;
       class briefingEditor_export;
-      class briefingEditor_getTemplate;
       class briefingEditor_onLBSelChanged;
       class briefingEditor_onLoad;
       class briefingEditor_onUnload;
