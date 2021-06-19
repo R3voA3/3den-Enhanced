@@ -312,7 +312,7 @@ class ENH_GenerateSteamMissionDescription
 class ENH_ExportMissionParameters
 {
   text = "$STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS";
-  action = "copyToClipboard loadFile '3denEnhanced\missionParameters.hpp'; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
+  action = "call ENH_fnc_exportMissionParams";
 };
 class ENH_CreateTrigger
 {

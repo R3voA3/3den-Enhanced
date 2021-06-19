@@ -8,6 +8,7 @@
 
 //Configs
 #include "cfgPatches.hpp"
+#include "cfgFontFamilies.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
 #include "display3DEN\display3DEN.hpp"
@@ -19,6 +20,7 @@
 #include "GUI\batchReplace.hpp"
 #include "GUI\briefingEditor.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
+#include "GUI\createObject.hpp"
 #include "GUI\exportGUIDefines.hpp"
 #include "GUI\extraction.hpp"
 #include "GUI\functionsViewer.hpp"
@@ -32,7 +34,9 @@
 #include "GUI\variableViewer.hpp"
 #include "GUI\VIM.hpp"
 #include "GUI\zeusAddons.hpp"
+
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
 #include "GUI\RscDisplayConfigViewer.hpp"
 #include "GUI\RscTestControlXXX.hpp"
+
