@@ -81,6 +81,7 @@ class CfgFunctions
       class briefingEditor_onLBSelChanged;
       class briefingEditor_onLoad;
       class briefingEditor_onUnload;
+      class briefingEditor_htmlHighlight;
     };
     class PlacementTools
     {
@@ -207,9 +208,11 @@ class CfgFunctions
       #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       class dynamicViewDistance;
       #endif
+      class exportMissionParams;
       class floatToTime;
       class generateSteamMissionDescription;
       class getAllItems;
+      class getConfigSourceAddon;
       class hasStorage;
       class loadoutTool;
       class measureDistance;
@@ -222,16 +225,14 @@ class CfgFunctions
       class toggleDrawDLCIcons;
       class toggleDrawHitpoints;
       class toggleGrass;
-      class twoDigitsStr;
       class toggleMarkerAlpha;
-      class getConfigSourceAddon;
+      class twoDigitsStr;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface
     {
       file = "3denEnhanced\functions\interface";
       class assetBrowser_collapse;
-      //class assetBrowser_removeItems;
       class locationList;
       class menuStrip_removeItems;
       class statusbar_entityCounter;
