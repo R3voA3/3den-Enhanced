@@ -46,6 +46,15 @@ class ENH_TextureFinder
       h = GRID_H;
       colorFrame[] = {0, 0, 0, 0};
     };
+    class ProgessText: ctrlStructuredText
+    {
+      idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
+      style = ST_LEFT;
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 99 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = 2 * CTRL_DEFAULT_H;
+    };
     class Preview: ctrlStaticPictureKeepAspect
     {
       idc = IDC_TEXTUREFINDER_PREVIEW;
@@ -55,15 +64,6 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = 40 * GRID_H;
       colorBackground[] = {1, 1, 1, 1};
-    };
-    class ProgessText: ctrlStructuredText
-    {
-      idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
-      style = ST_LEFT;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 99 * GRID_H;
-      w = DIALOG_W * GRID_W;
-      h = 2 * CTRL_DEFAULT_H;
     };
     class Search: ctrlEdit
     {
