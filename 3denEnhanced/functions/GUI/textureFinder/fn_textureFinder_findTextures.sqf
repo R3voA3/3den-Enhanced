@@ -114,4 +114,4 @@ ENH_TextureFinder_TexturesFound = nil;
 ENH_TextureFinder_ClassesFound = nil;
 ENH_TextureFinder_ClassesSearched = nil;
 
-[] spawn ENH_fnc_textureFinder_fillList;
+[] call ENH_fnc_textureFinder_fillList;

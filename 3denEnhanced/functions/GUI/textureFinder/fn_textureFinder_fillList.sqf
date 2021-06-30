@@ -61,7 +61,6 @@ _ctrlTV tvAdd [[], "PAA"];
   //Loop in reverse order to prevent index shift when deleting
   for "_indexSize" from (count SIZES - 1) to 0 step -1 do
   {
-    systemChat str (_ctrlTV tvCount [_indexType, _forEachIndex]);
     if ((_ctrlTV tvCount [_indexType, _forEachIndex]) == 0) then
     {
       _ctrlTV tvDelete [_indexType, _forEachIndex];
