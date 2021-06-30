@@ -4,7 +4,7 @@ class ENH_AdvancedDamage
   collapsed = 1;
   class Attributes
   {
-    class ENH_ADVANCEDDAMAGE_Subcategory
+    class ENH_AdvancedDamage_Subcategory
     {
       description = "$STR_ENH_ADVANCEDDAMAGE_DESCRIPTION";
       data = "AttributeSystemSubcategory";
