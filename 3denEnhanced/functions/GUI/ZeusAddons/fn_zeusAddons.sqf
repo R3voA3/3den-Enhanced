@@ -163,7 +163,7 @@ ctrlParent _ctrlTVPatches displayCtrl 30 ctrlAddEventHandler ["ButtonClick",
 
   //Set variable used by display3denCopy and create the display
   uiNamespace setVariable ["display3DENCopy_data", ["CfgPatches", _export trim [", ", 2]]];
-  private _display = ctrlParent _ctrlButton createDisplay "display3denCopy";
+  ctrlParent _ctrlButton createDisplay "display3denCopy";
 }];
 
 //Invert selection

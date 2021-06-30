@@ -66,10 +66,8 @@ lbClear _ctrlTemplateList;
 
 {
   _x params [["_title", ""], ["_text", ""], ["_subject", "Diary"], ["_t", systemTime]];
-
-  _t = _t apply {if (_x < 10) then {"0" + str _x} else {str _x}};
-  private _tStr = format ["%1/%2/%3 %4:%5:%6", _t # 0, _t # 1, _t # 2, _t # 3, _t # 4, _t # 5];
+  _t = [_t] call ENH_fnc_systemTimeFormatted;
   _ctrlTemplateList lbAdd _title;
-  _ctrlTemplateList lbSetTextRight [_forEachIndex, _tStr];
-  _ctrlTemplateList lbSetTooltip [_forEachIndex, format ["Date Created: %1\nSubject: %2\nTitle: %3\nText: %4", _tStr, _subject, _title, _text]];
+  _ctrlTemplateList lbSetTextRight [_forEachIndex, _t];
+  _ctrlTemplateList lbSetTooltip [_forEachIndex, format ["Date Created: %1\nSubject: %2\nTitle: %3\nText: %4", _t, _subject, _title, _text]];
 } forEach (profileNamespace getVariable ["ENH_briefingEditor_templates", []]);

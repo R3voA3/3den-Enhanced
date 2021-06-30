@@ -2335,7 +2335,7 @@
   <Key ID="STR_ENH_UPDATEPROGRESSBAR">
     <English>Classes searched: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt;Textures found: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</English>
     <Italian>Classi ricercate: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; di &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Trame trovate: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Italian>
-    <German>Klassen durchsucht: &lt;t font='RobotoCondensedBold'&gt;Bold Text&lt;/t&gt;von &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Texturen gefunden: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</German>
+    <German>Klassen durchsucht: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; von &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Texturen gefunden: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</German>
     <Chinesesimp>类别（class）搜索：&lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; 纹理找到：&lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Chinesesimp>
     <Spanish>Clases buscadas: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; de &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Texturas encontradas: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Spanish>
     <Czech>Prohledané třídy: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; z &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt;&lt;br/&gt; Nalezených textur: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Czech>
@@ -2567,11 +2567,20 @@
     <Russian>Дистанция обзора</Russian>
   </Key>
   <Key ID="STR_ENH_VIEWDISTANCE_TOOLTIP">
-    <English>Keep in mind that this setting can be limited bei either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</English>
+    <English>Defines the view distance in meters. Keep in mind that this setting can be limited by either the server or the player's visual settings.</English>
+    <Czech>Mějte na paměti že toto nastavení může být omezeno nastavením na straně serveru či hráče.</Czech>
+    <French>Attention : ces paramètres peuvent être limités par le serveur et/ou par les paramètres d'affichage des joueurs.</French>
+    <Spanish>Tenga en cuenta que esta configuración puede estar limitada tanto en el servidor como en la configuración visual del jugador.</Spanish>
+    <German>Legt die Sichtweite in Metern fest. Bedenke, dass diese Einstellung vom Server oder den persönlichen Einstellungen des Spielers limitiert werden können.</German>
+    <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza.</Polish>
+    <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя.</Russian>
+  </Key>
+  <Key ID="STR_ENH_OBJVIEWDISTANCE_TOOLTIP">
+    <English>Defines the object view distance in meters. Keep in mind that this setting can be limited by either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</English>
     <Czech>Mějte na paměti že toto nastavení může být omezeno nastavením na straně serveru či hráče. Dále pak, vykreslovací vzdálenost objektu nesmí být vyšší než celková vykreslovací vzdálenost</Czech>
     <French>Attention : ces paramètres peuvent être limités par le serveur et/ou par les paramètres d'affichage des joueurs. La distance d'affichage des objets ne peut être supérieure à la distance d'affichage globale.</French>
     <Spanish>Tenga en cuenta que esta configuración puede estar limitada tanto en el servidor como en la configuración visual del jugador. Además, la distancia de visión de objetos no puede ser mayor que la distancia de visión.</Spanish>
-    <German>Bedenke, dass diese Einstellung vom Server oder den persönlichen Einstellungen des Spielers limitiert werden können. Ausserdem kann die Objektsichtweite nicht höher als die allgemeine Sichtweite sein.</German>
+    <German>Legt die Objektsichtweite in Metern fest. Bedenke, dass diese Einstellung vom Server oder den persönlichen Einstellungen des Spielers limitiert werden können. Ausserdem kann die Objektsichtweite nicht höher als die allgemeine Sichtweite sein.</German>
     <Chinesesimp>请记住，此设置可以限制服务器或玩家的视距。此外，对象视图距离不能高于视图距离。</Chinesesimp>
     <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
     <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, дистанция видимости объектов не может быть больше дистанции обзора.</Russian>
@@ -2633,7 +2642,7 @@
     <Chinesesimp>显示动画文本。 可用于显示任务名称。</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
-    <English>Shows the groups position on the map.The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
+    <English>Shows the groups position on the map. The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
     <Czech>Zobrazí pozici skupiny na mapě. Pozice je aktualizována každou sekundu. Pokud se skupina stane prázdnou, značka se vymaže. Proces aktualizace pozice může být pozastaven nastavením proměnné "ENH_GroupMarker_Update" v jmenném prostoru skupin na nepravdu (false).Hodnota musí být název třídy značky z CfgMarkers.</Czech>
     <German>Zeigt die Gruppenposition auf der Karte. Die Position wird sekündlich aktualisiert. Falls die Gruppe sich auflöst, wird der Marker gelöscht. Das Aktualisieren des Markers kann durch das Setzen der Variablen 'ENH_GroupMarker_Update' im namespace der Gruppe zu 'false' pausiert werden.</German>
     <Polish>Pokazuje pozycje grupy na mapie. Pozycja jest aktualizowana co sekunde. Jeżeli grupa stanie się pusta, to marker zostanie usunięty. Aktualizacja może byc zatrzymana poprzez ustawienie zmiennej 'ENH_GroupMarker_Update' w 'namespace' na 'false'.</Polish>
@@ -2641,6 +2650,10 @@
     <Spanish>Muestra la posición del grupo en el mapa. La posición se actualiza cada segundo. Si el grupo se vuelve vacío el marcador se borra. El proceso de Actualización se puede pausar configurando la variable 'ENH_GroupMarker_Update' en el nombre de espacio de grupos (group's namespace) a FALSE. \n\nValue tiene que ser un nombre de clase de marcador de CfgMarkers.</Spanish>
     <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
     <Chinesesimp>在地图上显示小队位置。位置每秒更新一次。 如果该小队为空，则标记将被删除。 可以通过将小队名称空间中的变量"ENH_GroupMarker_Update"设置为false来暂停更新过程。</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
+    <English>Mission Ending (Casualties)</English>
+    <German>Scenarioende (Verluste)</German>
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
     <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config.</English>
@@ -4031,7 +4044,7 @@
     <Russian>Множитель времени</Russian>
   </Key>
   <Key ID="STR_ENH_TIMEMULTIPLIER_TOOLTIP">
-    <English>Set how fast the time will pass.</English>
+    <English>Sets how fast the time will pass.</English>
     <Czech>Nastaví jak rychle bude ubíhat čas.</Czech>
     <French>Défini la vitesse d'écoulement du temps</French>
     <Spanish>Ajusta cómo de rápido pasará el tiempo</Spanish>
@@ -5084,14 +5097,8 @@
     <Chinesesimp>规模</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_OBJECTSCALING_TOOLTIP">
-    <English>Scale</English>
-    <Russian>Масштаб</Russian>
-    <Czech>Měřítko</Czech>
-    <German>Maßstab</German>
-    <Spanish>Escala</Spanish>
-    <French>Échelle</French>
-    <Polish>Skala</Polish>
-    <Chinesesimp>规模</Chinesesimp>
+    <English>Scales the size of the object. Only works for objects without simulation.</English>
+    <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben.</German>
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_STAND">
     <English>Stand</English>
@@ -5730,6 +5737,22 @@
     <Spanish>Gestor de inventario de vehículos</Spanish>
     <Chinesesimp>载具库存管理</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_VIM_EXIT_TEXT">
+    <English>You have unsaved changes. Close anyway?</English>
+    <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_EXIT_TEXT">
+    <English>You have unsaved changes. Close anyway?</English>
+    <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_EXPORTACE_DISPLAYNAME">
+    <English>Export (ACE)</English>
+    <German>Export (ACE)</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_EXPORTACE_TOOLTIP">
+    <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
+    <German>Exportiere die derzeitige Ausrüstung in einem Format die im ACE 3 Arsenal Attribute verwendet werden kann.</German>
+  </Key>
   <Key ID="STR_ENH_VIM_AVAILABLEITEMS">
     <English>Available Items</English>
     <Russian>Доступные объекты</Russian>
@@ -5840,6 +5863,37 @@
     <French>Ne pas afficher les modèles</French>
     <Spanish>Ocultar plantillas</Spanish>
     <Chinesesimp>隐藏模板</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_VIM_EXPORTTOSACEARSENAL">
+    <English>Export to ACE Arsenal</English>
+    <German>Als ACE Arsenal exportieren</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_EXPORTTOARSENAL">
+    <English>Export to Arsenal</English>
+    <German>Als Arsenal exportieren</German>
+  </Key>
+
+
+<Key ID="STR_ENH_VIM_SORTBYNAME">
+    <English>Sort by Name</English>
+    <German>Nach Namen sortieren</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_SORTBYCLASS">
+    <English>Sort by Class Name</English>
+    <German>Nach Klassennamen sortieren</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_SORTBYCOUNT">
+    <English>Sort by Count</English>
+    <German>Nach Anzahl sortieren</German>
+  </Key>
+
+<Key ID="STR_ENH_VIM_SORTBYTYPE">
+    <English>Sort by Type</English>
+    <German>Nach Typ sortieren</German>
+  </Key>
+  <Key ID="STR_ENH_VIM_SORTBYMOD">
+    <English>Sort by Mod</English>
+    <German>Nach Modifikation sortieren</German>
   </Key>
   <Key ID="STR_ENH_VIM_TEMPLATES">
     <English>Templates</English>

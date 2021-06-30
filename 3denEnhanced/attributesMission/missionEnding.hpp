@@ -1,7 +1,7 @@
-class ENH_MissionEnding
+class ENH_MissionEnding_Casualties
 {
   collapsed = 1;
-  displayName = "$STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME";
+  displayName = "$STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME";
   class Attributes
   {
     class ENH_MissionEnding_Subcategory
@@ -13,6 +13,7 @@ class ENH_MissionEnding
     class ENH_MissionEnding_Casualties
     {
       displayName = "$STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME";
+      tooltip = "$STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION";
       property = "ENH_missionEnding_casualties";
       control = "ENH_MissionEnding_Casualties";
       expression =

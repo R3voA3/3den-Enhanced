@@ -55,4 +55,4 @@ class Params
 };";
 
 uinamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS", _text]];
-private _display = findDisplay 313 createDisplay "display3denCopy";
+findDisplay 313 createDisplay "display3denCopy";
