@@ -25,14 +25,13 @@ _addonClassWanted = (uiNamespace getVariable ["ENH_VIM_allAddons", []]) select _
 
 call ENH_fnc_VIM_clearInventory;
 
-(uiNamespace getVariable ["ENH_VIM_allItems", []]) apply
 {
-  _x params ["_configName", "_displayName", "_image", "_addonClass", "_addonIcon"];
+  _y params ["_displayName", "_image", "_addonClass", "_addonIcon", "", "_specificType", "_descriptionShort"];
 
-  if (_addonClass == _addonClassWanted || _addonClassWanted == "" || (_addonClass == "" && _addonClassWanted == "vanilla")) then
+  if (_addonClass == _addonClassWanted || _addonClassWanted == "") then
   {
-    [CTRL(IDC_VIM_INVENTORYLIST), _configName, _displayName, _image, _addonIcon, 99, _configName] call ENH_fnc_VIM_lnbAdd;
+    [CTRL(IDC_VIM_INVENTORYLIST), _x, _displayName, _image, _addonIcon, 10, _x + "\n" + _descriptionShort, _specificType] call ENH_fnc_VIM_lnbAdd;
   };
-};
+} forEach (uiNamespace getVariable ["ENH_VIM_itemsHashmap", []]);
 
-[nil, true] call ENH_fnc_VIM_toggleVirtual;
+[true] call ENH_fnc_VIM_toggleVirtual;

@@ -18,7 +18,7 @@
 disableSerialization;
 params [["_return", false]];
 private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _itemsHashMap = uiNamespace getVariable "ENH_VIM_allItemsHashMap";
+private _itemsHashMap = uiNamespace getVariable "ENH_VIM_itemsHashMap";
 private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
 private _rows = lnbSize _ctrlInventory select 0;
 
@@ -32,11 +32,11 @@ private _magazinesAmount = [];
 private _itemsAmount = [];
 private _backpacksAmount = [];
 
-for "_i" from 0 to _rows do
+for "_i" from 0 to _rows - 1 do
 {
-  private _configName = _ctrlInventory lnbData [_i - 1, 0];
-  private _amount = _ctrlInventory lnbValue [_i - 1, 1];
-  (_itemsHashMap get _configName) params ["", "", "", "", "_category", "_specificType"];
+  private _configName = _ctrlInventory lnbData [_i, 0];
+  private _amount = _ctrlInventory lnbValue [_i, 1];
+  (_itemsHashMap get toLower _configName) params ["", "", "", "", "_category", "_specificType"];
   switch (true) do
   {
     case (_category isEqualTo "Weapon"):
@@ -73,9 +73,10 @@ private _value = str
     [_items, _itemsAmount],
     [_backpacks, _backpacksAmount]
   ],
-  cbChecked CTRL(IDC_VIM_VIRTUAL)
+  _display getVariable ["ENH_VIM_IsVirtual", false]
 ];
 
 if (_return) exitWith {_value};
 ENH_VIM_target set3DENAttribute ["ammoBox", _value];
+
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

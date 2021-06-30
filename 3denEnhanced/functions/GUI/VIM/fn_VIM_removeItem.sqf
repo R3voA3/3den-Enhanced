@@ -19,9 +19,9 @@ disableSerialization;
 params ["_amount"];
 private _display = uiNamespace getVariable "ENH_Display_VIM";
 private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
-private _row = lnbCurSelRow  _ctrlInventory;
+private _row = lnbCurSelRow _ctrlInventory;
 
-if (_row == -1) exitWith {false};
+if (_row == -1) exitWith {};
 
 private _currentAmount = _ctrlInventory lnbValue [_row, 1];
 private _newAmount = _currentAmount - _amount;

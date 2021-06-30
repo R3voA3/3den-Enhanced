@@ -19,7 +19,7 @@ disableSerialization;
 
 private _display = uiNamespace getVariable "ENH_Display_VIM";
 private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
-private _itemsHashMap = uiNamespace getVariable "ENH_VIM_allItemsHashMap";
+private _itemsHashMap = uiNamespace getVariable "ENH_VIM_itemsHashMap";
 
 call ENH_fnc_VIM_clearInventory;
 
@@ -29,9 +29,10 @@ call ENH_fnc_VIM_clearInventory;
   {
     private _amount = getNumber (_x >> "count");
     private _configName = configName _x trim ["_xx_", 1];
-    (_itemsHashMap get _configName) params ["_displayName", "_image", "", "_addonIcon"];
-    [_ctrlInventory, _configName, _displayName, _image, _addonIcon, _amount, _configName] call ENH_fnc_VIM_lnbAdd;
+    (_itemsHashMap get toLower _configName) params ["_displayName", "_image", "", "_addonIcon", "", "_specificType", "_descriptionShort", "_configNameCaseSens"];
+
+    [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_VIM_lnbAdd;
   } forEach _classes;
 } forEach ["TransportWeapons", "TransportMagazines", "TransportItems", "TransportBackpacks"];
 
-[nil, false] call ENH_fnc_VIM_toggleVirtual;
+[false] call ENH_fnc_VIM_toggleVirtual;

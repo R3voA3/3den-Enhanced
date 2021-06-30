@@ -16,7 +16,7 @@
 #include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
-ENH_VIM_templatesVisible = false;
+
 ENH_VIM_target = get3DENSelected "Object" select 0;
 
 if (isNil "ENH_VIM_target" || {ENH_VIM_target isKindOf "CAManBase" || !(ENH_VIM_target call ENH_fnc_hasStorage)}) exitWith
@@ -40,17 +40,11 @@ uiNamespace setVariable ["ENH_Display_VIM", _display];
 CTRL(IDC_VIM_FILTERSEARCH) lbSetCurSel 0;
 
 [CTRL(IDC_VIM_FILTER), 0] call ENH_fnc_VIM_filterList;
+[CTRL(20), [2, 0]] call ENH_fnc_VIM_changeFilter; //Load ARs as default
 
-//Add background icon
-private _icon = getText (configFile >> "CfgVehicles" >> typeOf ENH_VIM_target >> "icon");
-
-//Stupid workaround because some vehicles / crates don't have the icon texture in their config...
-if !(".paa" in _icon) then
+// Overwrite default ESC behaviour
+_display displayAddEventHandler ["KeyDown",
 {
-  _icon = getText (configfile >> "CfgVehicleIcons" >> _icon);
-};
-CTRL(IDC_VIM_BACKGROUNDICON) ctrlSetText _icon;
-
-{
-  CTRL(_x) ctrlShow false;
-} forEach [IDC_VIM_CREATETEMPLATE, IDC_VIM_DELETETEMPLATE, IDC_VIM_APPLYTEMPLATE];
+  params ["", "_key"];
+  if (_key == DIK_ESCAPE) then {execVM 'close.sqf'; true};
+}];

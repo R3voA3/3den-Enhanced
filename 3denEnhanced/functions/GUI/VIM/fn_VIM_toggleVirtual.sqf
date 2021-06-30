@@ -1,14 +1,13 @@
 /*
   Author: R3vo
 
-  Date: 2020-06-14
+  Date: 2021-06-22
 
   Description:
-  Used by the ENH_VIM GUI. Used to search the item listbox.
+  Used by the ENH_VIM GUI. Used to change virtual state
 
   Parameter(s):
-  0: Not used. Left for backwards compatibility
-  1: BOOLEAN - True to set to virtual
+  1: BOOLEAN or NUMBER - -1 to invert current state, true to set to virtual, false to set to normal
 
   Returns:
   -
@@ -17,13 +16,18 @@
 #include "\3denEnhanced\ENH_defineCommon.hpp"
 
 disableSerialization;
-params ["", "_isVirtual"];
+//params ["", "_isVirtual"];
+params [["_isVirtual", [-1], [true, 0]]];
+
 private _display = uiNamespace getVariable "ENH_Display_VIM";
 private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
 private _rows = (lnbSize _ctrlInventory) # 0;
 
-//onCheckedChange EH returns NUMBER, while other functions use BOOLEAN as parameter
-if (_isVirtual isEqualType 0) then {_isVirtual = [false, true] select _isVirtual};
+//Reverse state
+if (_isVirtual isEqualTo -1) then
+{
+  _isVirtual = !(_display getVariable ["ENH_VIM_IsVirtual", false]);
+};
 
 if (_isVirtual) then
 {
@@ -40,6 +44,4 @@ else
   };
 };
 
-uiNamespace setVariable ["ENH_VIM_IsVirtual", _isVirtual];
-
-CTRL(IDC_VIM_VIRTUAL) cbSetChecked _isVirtual;
+_display setVariable ["ENH_VIM_IsVirtual", _isVirtual];

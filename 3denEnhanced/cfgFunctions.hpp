@@ -151,25 +151,23 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\VIM";
       class VIM_addItem;
       class VIM_applyAttribute;
+      class VIM_changeFilter;
       class VIM_clearInventory;
-      class VIM_createTemplate;
-      class VIM_deleteTemplate;
-      class VIM_filterList;
+      class VIM_close;
+      class VIM_export;
       class VIM_fullArsenal;
+      class VIM_handleTemplates;
       class VIM_lbAdd;
       class VIM_lnbAdd;
       class VIM_loadAttributeValue;
       class VIM_onModFilterChanged;
       class VIM_open;
-      class VIM_previewTemplate;
       class VIM_removeItem;
       class VIM_resetSearch;
       class VIM_resetStorage;
       class VIM_search;
-      class VIM_showTemplates;
+      class VIM_sort;
       class VIM_toggleVirtual;
-      class VIM_updateTemplateList;
-      class VIM_exportAsACEArsenal;
     };
     class CfgSentencesBrowser
     {
@@ -227,6 +225,7 @@ class CfgFunctions
       class toggleGrass;
       class toggleMarkerAlpha;
       class twoDigitsStr;
+      class systemTimeFormatted;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface
@@ -333,8 +332,6 @@ class CfgFunctions
       file = "3denEnhanced\functions\internal";
       class checkShortCutsDuplicates;
       class exportAttributesToGitHub;
-      class exportContextMenuToGitHub;
-      class exportFunctionsToGitHub;
       class exportMenuStripToGitHub;
     };
     #endif
