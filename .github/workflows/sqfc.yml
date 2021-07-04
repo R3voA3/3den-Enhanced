@@ -6,16 +6,7 @@ name: SQF to SQFC
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
-        
+
 jobs:
   windows:
     name: Windows
@@ -25,9 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Create work drive
-        run: 'subst P: .'
-
       - uses: arma-actions/sqfc@latest
         with:
-          directory: .
+          directory: "C:/Users/rober/OneDrive/Games/Arma 3/Arma 3 Mods/3den-Enhanced/"
