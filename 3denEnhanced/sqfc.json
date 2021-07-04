@@ -1,0 +1,12 @@
+{
+  "inputDirs": [
+    "P:/"
+  ],
+  "includePaths": [
+    "P:/"
+  ],
+  "excludeList": [
+  ],
+  "outputDir": "P:/",
+  "workerThreads": 2
+}
