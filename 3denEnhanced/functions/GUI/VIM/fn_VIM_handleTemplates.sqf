@@ -9,7 +9,6 @@ switch (_mode) do
 {
   case "openCreateGUI":
   {
-    if !(_display getVariable ["ENH_VIM_templatesVisible", false]) then {'toggle' execVM 'handleTemplates.sqf'};
     _display createDisplay "ENH_VIM_TemplateData";
   };
   case "create":
@@ -26,12 +25,11 @@ switch (_mode) do
       _templates pushBack [_templateTitle, _templateDescription, _value];
       profileNamespace setVariable ["ENH_VIM_Templates", _templates];
       _displayTemplateData closeDisplay 1;
-      call ENH_fnc_VIM_updateTemplateList;
+      "update" call ENH_fnc_VIM_handleTemplates;
     };
   };
   case "delete":
   {
-    if !(_display getVariable ["ENH_VIM_templatesVisible", false]) then {'toggle' execVM 'handleTemplates.sqf'};
     private _ctrlItems = CTRL(IDC_VIM_AVAILABLEITEMSLIST);
     private _row = lbCurSel _ctrlItems;
 
@@ -45,27 +43,35 @@ switch (_mode) do
   case "toggle":
   {
     lbClear CTRL(IDC_VIM_AVAILABLEITEMSLIST);
-
-    if (_display getVariable ["ENH_VIM_templatesVisible", false]) then
+    private _templatesVisible = _display getVariable ["ENH_VIM_templatesVisible", false];
+    if (_templatesVisible) then
     {
-      CTRL(20) menuSetText [[3, 0], localize "STR_ENH_VIM_SHOWTEMPLATES"];
+      CTRL(IDC_VIM_MENU) menuSetText [[3, 0], localize "STR_ENH_VIM_SHOWTEMPLATES"];
       CTRL(IDC_VIM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_VIM_AVAILABLEITEMS";
-      [CTRL(20), [2, 0]] execVM "changeFilter.sqf"; //Use default path. Workaround because I am lazy. Sue me if you want.
-      _display setVariable ["ENH_VIM_templatesVisible", false];
+      [CTRL(IDC_VIM_MENU), [2, 0]] call ENH_fnc_VIM_changeFIlter; //Use default path. Workaround because I am lazy. Sue me if you want.
     }
     else
     {
-      CTRL(20) menuSetText [[3, 0], localize "STR_ENH_VIM_HIDETEMPLATES"];
+      CTRL(IDC_VIM_MENU) menuSetText [[3, 0], localize "STR_ENH_VIM_HIDETEMPLATES"];
       CTRL(IDC_VIM_AVAILABLEITEMSTEXT) ctrlSetText localize "STR_ENH_VIM_TEMPLATES";
-      'update' execVM 'handleTemplates.sqf';
-      _display setVariable ["ENH_VIM_templatesVisible", true];
+      "update" call ENH_fnc_VIM_handleTemplates;
     };
+
+    //Disable template options
+    CTRL(IDC_VIM_MENU) menuEnable [[3, 1], !_templatesVisible];
+    CTRL(IDC_VIM_MENU) menuEnable [[3, 2], !_templatesVisible];
+    CTRL(IDC_VIM_MENU) menuEnable [[3, 3], !_templatesVisible];
+    CTRL(IDC_VIM_MENU) menuEnable [[3, 5], !_templatesVisible];
+
+    for "_i" from 0 to ((CTRL(IDC_VIM_MENU) menuSize [2]) - 1) do
+    {
+      CTRL(IDC_VIM_MENU) menuEnable [[2, _i], _templatesVisible];
+    };
+
+    _display setVariable ["ENH_VIM_templatesVisible", !_templatesVisible];
   };
   case "preview":
   {
-    //Make sure to show template list first
-    if !(_display getVariable ["ENH_VIM_templatesVisible", false]) then {'toggle' execVM 'handleTemplates.sqf'};
-
     //Get template data from listbox
     private _ctrlItems = CTRL(IDC_VIM_AVAILABLEITEMSLIST);
     private _row = lbCurSel _ctrlItems;
@@ -77,8 +83,6 @@ switch (_mode) do
   };
   case "update":
   {
-    //Make sure to show template list first
-    if !(_display getVariable ["ENH_VIM_templatesVisible", false]) then {'toggle' execVM 'handleTemplates.sqf'};
     private _ctrlItems = CTRL(IDC_VIM_AVAILABLEITEMSLIST);
     lbClear _ctrlItems;
     {

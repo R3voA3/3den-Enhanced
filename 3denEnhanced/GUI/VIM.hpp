@@ -43,7 +43,7 @@ class ENH_VIM
   {
     class MenuStrip: ctrlMenuStrip
     {
-      idc = 20;
+      idc = IDC_VIM_MENU;
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
@@ -128,12 +128,12 @@ class ENH_VIM
           action = "'sqf' call ENH_fnc_VIM_export";
           opensNewWindow = 1;
         };
-        class ExportToACEArsenal
+        class ExportToACEArsenal: ExportToSQF
         {
           text = "$STR_ENH_VIM_EXPORTTOSACEARSENAL";
           action = "'ace' call ENH_fnc_VIM_export";
         };
-        class ExportArsenal
+        class ExportArsenal: ExportToSQF
         {
           text = "$STR_ENH_VIM_EXPORTTOARSENAL";
           action = "'arsenal' call ENH_fnc_VIM_export";
@@ -157,7 +157,7 @@ class ENH_VIM
         };
         class DeleteTemplate
         {
-          text = "$STR_ENH_VIM_DELETETEMPLATE";
+          text = "$STR_3DEN_DISPLAY3DEN_ENTITYMENU_DELETE_TEXT";
           action = "'delete' call ENH_fnc_VIM_handleTemplates";
           shortcuts[] = {DIK_DELETE};
         };
@@ -220,28 +220,32 @@ class ENH_VIM
           text = "$STR_ENH_VIM_SORTBYNAME";
           picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\A_ca.paa";
           action = "'name' call ENH_fnc_VIM_sort";
-
+          shortcuts[] = {DIK_1};
         };
         class SortbyClass
         {
           text = "$STR_ENH_VIM_SORTBYCLASS";
           action = "'class' call ENH_fnc_VIM_sort";
+          shortcuts[] = {DIK_2};
         };
         class SortbyCount
         {
           text = "$STR_ENH_VIM_SORTBYCOUNT";
           action = "'count' call ENH_fnc_VIM_sort";
+          shortcuts[] = {DIK_3};
         };
         class SortbyMod
         {
           text = "$STR_ENH_VIM_SORTBYMOD";
           picture = "\a3\ui_f\data\logos\arma3_bundle_logo_ca.paa";
           action = "'mod' call ENH_fnc_VIM_sort";
+          shortcuts[] = {DIK_4};
         };
         class SortbyType
         {
           text = "$STR_ENH_VIM_SORTBYTYPE";
           action = "'type' call ENH_fnc_VIM_sort";
+          shortcuts[] = {DIK_5};
         };
         //Filter
         class ARs

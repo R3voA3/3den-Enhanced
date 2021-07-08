@@ -40,11 +40,17 @@ uiNamespace setVariable ["ENH_Display_VIM", _display];
 CTRL(IDC_VIM_FILTERSEARCH) lbSetCurSel 0;
 
 [CTRL(IDC_VIM_FILTER), 0] call ENH_fnc_VIM_filterList;
-[CTRL(20), [2, 0]] call ENH_fnc_VIM_changeFilter; //Load ARs as default
+[CTRL(IDC_VIM_MENU), [2, 0]] call ENH_fnc_VIM_changeFilter; //Load ARs as default
 
-// Overwrite default ESC behaviour
+//Disable template options
+CTRL(IDC_VIM_MENU) menuEnable [[3, 1], false];
+CTRL(IDC_VIM_MENU) menuEnable [[3, 2], false];
+CTRL(IDC_VIM_MENU) menuEnable [[3, 3], false];
+CTRL(IDC_VIM_MENU) menuEnable [[3, 5], false];
+
+//Overwrite default ESC behaviour
 _display displayAddEventHandler ["KeyDown",
 {
   params ["", "_key"];
-  if (_key == DIK_ESCAPE) then {execVM 'close.sqf'; true};
+  if (_key == DIK_ESCAPE) then {call ENH_fnc_VIM_close; true};
 }];
