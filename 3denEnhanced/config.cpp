@@ -39,4 +39,3 @@
 #include "GUI\RscDebugConsole.hpp"
 #include "GUI\RscDisplayConfigViewer.hpp"
 #include "GUI\RscTestControlXXX.hpp"
-
