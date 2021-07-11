@@ -43,6 +43,6 @@ Start-Sleep 5
 
 if ($DoPublish -eq "true")
 {
-  Addon-Publish
   Addon-Compress
+  Addon-Publish
 }
