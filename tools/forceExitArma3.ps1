@@ -1,0 +1,1 @@
+Get-Process -Name arma3_x64 | Stop-Process -force
