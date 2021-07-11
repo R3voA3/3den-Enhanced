@@ -4,7 +4,7 @@ $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
 $ModVersion = Get-Content -Path "$ProjectFolder\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
-$WorkshopID = 2544001308 #623475643
+$WorkshopID = 623475643
 
 function Addon-PrepareBuild
 {
