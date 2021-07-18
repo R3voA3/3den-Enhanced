@@ -40,48 +40,48 @@ class ConnectParent
 class ENH_LogFactions
 {
   text = "$STR_ENH_CONTEXTMENU_LOGFACTION";
-  action = "'FACTIONS' call ENH_fnc_log";
+  action = "'FACTIONS' call ENH_fnc_3DENLog";
   conditionShow = "hoverObject";
 };
 class ENH_LogClassesString
 {
-  action = "'CLASSES' call ENH_fnc_log";
+  action = "'CLASSES' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGCLASSESSTRING";
   conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
 };
 class ENH_LogPositions3D
 {
-  action = "'3D' call ENH_fnc_log";
+  action = "'3D' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGPOSITIONS3D";
   conditionShow = "selected - selectedMarker";
 };
 class ENH_LogPositions2D
 {
-  action = "'2D' call ENH_fnc_log";
+  action = "'2D' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGPOSITIONS2D";
   conditionShow = "selected";
 };
 class ENH_LogGridPositon
 {
-  action = "'GRIDPOS' call ENH_fnc_log";
+  action = "'GRIDPOS' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGGRIDPOSITION";
   conditionShow = "1";
 };
 class ENH_Log3DENID
 {
-  action = "'IDS' call ENH_fnc_log";
+  action = "'IDS' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOG3DENIDS";
   conditionShow = "selected";
 };
 class ENH_LogVarNames
 {
-  action = "'VARNAMES' call ENH_fnc_log";
+  action = "'VARNAMES' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGVARNAMES";
   conditionShow = "selected";
 };
 class ENH_LogObjectInfo: ENH_LogFactions
 {
-  action = "'OBJECTINFO' call ENH_fnc_log";
+  action = "'OBJECTINFO' call ENH_fnc_3DENLog";
   text = "$STR_ENH_CONTEXTMENU_LOGOBJECTINFO";
 };
 class ENH_MeasureDistance
