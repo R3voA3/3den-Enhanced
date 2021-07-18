@@ -221,8 +221,7 @@ class CfgFunctions
       class spaceEqually;
       class switchTime;
       class systemTimeFormatted;
-      class toggleAIFeatures;
-      class toggleAttribute;
+      class toggleAttributes;
       class toggleDrawBuildingPositions;
       class toggleDrawDLCIcons;
       class toggleDrawHitpoints;
