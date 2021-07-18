@@ -288,21 +288,21 @@ class ENH_ToggleSimpleObject
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMPLEOBJECT";
   picture = "";
-  action = "[['Object'], 'objectIsSimple'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], ['objectIsSimple']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
 };
 class ENH_ToggleSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMULATION";
   picture = "";
-  action = "[['Object'], 'enableSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], ['enableSimulation']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
 class ENH_ToggleDynamicSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION";
   picture = "";
-  action = "[['Object', 'Group'], 'dynamicSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object', 'Group'], ['dynamicSimulation']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class ENH_ToggleDrawBuildingPositions
@@ -324,12 +324,12 @@ class ENH_ToggleDrawHitpoints
 class ENH_ToggleAIFeatures
 {
   text = "$STR_ENH_TOOLS_TOGGLEAIFEATURES";
-  action = "call ENH_fnc_toggleAIFeatures";
+  action = "[['object'], ['ENH_disableAI_all']] call ENH_fnc_toggleAttributes";
 };
 class ENH_TogglePlayable
 {
   text = "$STR_ENH_TOOLS_PLAYABLE";
-  action = "[['Object'], 'ControlMP'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], ['ControlMP']] call ENH_fnc_toggleAttributes";
   picture = "\a3\3den\data\cfg3den\object\iconplayer_ca.paa";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
 };
