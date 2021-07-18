@@ -535,6 +535,14 @@
     <Russian>Прибор ночного видения</Russian>
     <Chinesesimp>夜视仪</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_DISABLEAI_ALL_DISPLAYNAME">
+    <English>All Features</English>
+    <German>Alle Funktionen</German>
+  </Key>
+  <Key ID="STR_ENH_DISABLEAI_ALL_TOOLTIP">
+    <English>Disables all features uncluding the ones below.</English>
+    <German>Deaktiviert alle, inklusive der nachfolgenden, Funktionen.</German>
+  </Key>
   <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
     <English>Lights</English>
     <Italian>Luci</Italian>
@@ -2651,10 +2659,6 @@
     <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
     <Chinesesimp>在地图上显示小队位置。位置每秒更新一次。 如果该小队为空，则标记将被删除。 可以通过将小队名称空间中的变量"ENH_GroupMarker_Update"设置为false来暂停更新过程。</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
-    <English>Mission Ending (Casualties)</English>
-    <German>Scenarioende (Verluste)</German>
-  </Key>
   <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
     <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config.</English>
     <Russian>Завершает миссию индивидуальным окончанием, когда определенное количество юнитов на данной стороне будет убито. Может использоваться для завершения миссии, если слишком много жертв среди гражданского населения. Пользовательские брифинги должны быть определены в конфигурации миссии.</Russian>
@@ -2760,6 +2764,14 @@
     <Spanish>Reaparición de un solo jugador</Spanish>
     <French>Réapparition en solo</French>
     <Chinesesimp>单人玩家重生</Chinesesimp>
+  </Key>
+  <Key ID="STR_ENH_SPR_ONRESPAWNCODE_DISPLAYNAME">
+    <English>Respawn Code</English>
+    <German>Respawn-Code</German>
+  </Key>
+  <Key ID="STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP">
+    <English>Code executed after respawn. _this refers to the respawned entity.</English>
+    <German>Code der nach dem Respawn ausgeführt wird. _this beinhaltet die Entität die gerespawned ist.</German>
   </Key>
   <Key ID="STR_ENH_GARRISON_NOTIFICATION">
     <English>Not enough empty building positions, increase the radius or the coverage.</English>
@@ -5740,10 +5752,6 @@
     <French>Gestionnaire d'inventaire de véhicule</French>
     <Spanish>Gestor de inventario de vehículos</Spanish>
     <Chinesesimp>载具库存管理</Chinesesimp>
-  </Key>
-  <Key ID="STR_ENH_VIM_EXIT_TEXT">
-    <English>You have unsaved changes. Close anyway?</English>
-    <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
   </Key>
   <Key ID="STR_ENH_VIM_EXIT_TEXT">
     <English>You have unsaved changes. Close anyway?</English>
