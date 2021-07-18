@@ -18,14 +18,14 @@
     "OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
   Returns:
-  BOOLEAN: true or false
+  -
 */
 
 #include "\3denEnhanced\ENH_defineCommon.hpp"
 
 params [["_mode", ""]];
 
-if (_mode == "") exitWith {false};
+if (_mode == "") exitWith {};
 
 private _export = "";
 private _selection = [["Object", "Logic", "Trigger", "Marker", "Waypoint"]] call ENH_fnc_all3DENSelected;
@@ -200,7 +200,9 @@ switch (_mode) do
     {
       //Set variable used by Display3denCopy and create the display
       uiNamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
-      private _display = findDisplay IDD_3DEN createDisplay "Display3denCopy";
+      findDisplay IDD_3DEN createDisplay "Display3denCopy";
+      nil
+    };
   };
 };
 
@@ -208,4 +210,5 @@ if (_export != "") then
 {
   copyToClipboard _export;
   ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
+  nil
 };

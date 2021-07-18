@@ -200,6 +200,7 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\Misc";
       class 3denNotificationNoSound;
+      class alignEntities;
       class all3DENSelected;
       class deleteCrew;
       class deleteEmptyLayers;
@@ -214,9 +215,12 @@ class CfgFunctions
       class hasStorage;
       class loadoutTool;
       class measureDistance;
+      class preloadAmmoAttribute;
       class removeGear;
       class setOrientation;
+      class spaceEqually;
       class switchTime;
+      class systemTimeFormatted;
       class toggleAIFeatures;
       class toggleAttribute;
       class toggleDrawBuildingPositions;
@@ -225,7 +229,6 @@ class CfgFunctions
       class toggleGrass;
       class toggleMarkerAlpha;
       class twoDigitsStr;
-      class systemTimeFormatted;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface
@@ -241,10 +244,11 @@ class CfgFunctions
     class Log
     {
       file = "3denEnhanced\functions\log";
+      class 3DENLog;
       class exportGUIDefines;
       class exportLoadout;
       class exportWithLB;
-      class log;
+
     };
     class Debug
     {
