@@ -34,6 +34,12 @@
       "command": "tools/build.ps1",
       "args": ["true"],
       "problemMatcher": []
+    },
+    {
+      "label": "Clear Log Files",
+      "type": "shell",
+      "command": "tools/clearLogs.ps1",
+      "problemMatcher": []
     }
   ]
 }
