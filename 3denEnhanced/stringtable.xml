@@ -5670,6 +5670,10 @@
     <Chinesesimp>重生票</Chinesesimp>
     <Polish>Punkty odrodzenia</Polish>
   </Key>
+  <Key ID="STR_ENH_SPR_RESPAWNTICKETS_DISPLAYNAME">
+    <English>Single Player Respawn Tickets</English>
+    <German>Einzelspieler-Respawntickets</German>
+  </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
     <English>Every unit can respawn as long as it has not run out of tickets.</English>
     <Russian>Каждый боец может возродиться пока есть очки возрождения</Russian>
@@ -7810,5 +7814,53 @@
   <Key ID="STR_ENH_CREATEOBJECT_CLASSNAME">
     <English>Class Name</English>
     <German>Klassenname</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_X_MAX">
+    <English>Align to X+</English>
+    <German>Nach X+ ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_X_MIN">
+    <English>Align to X-</English>
+    <German>Nach X- ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_Y_MAX">
+    <English>Align to Y+</English>
+    <German>Nach Y+ ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_Y_MIN">
+    <English>Align to Y-</English>
+    <German>Nach Y- ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_Z_MAX">
+    <English>Align to Z+</English>
+    <German>Nach Z+ ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_ALIGN_Z_MIN">
+    <English>Align to Z-</English>
+    <German>Nach Z- ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_X">
+    <English>Space along X-Axis</English>
+    <German>Entlang X-Achse verteilen</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Y">
+    <English>Space along Y-Axis</English>
+    <German>Entlang Y-Achse verteilen</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Z">
+    <English>Space along Z-Axis</English>
+    <German>Entlang Z-Achse verteilen</German>
+  </Key>
+  <Key ID="STR_ENH_FOLDER_ORIENT">
+    <English>Orient</English>
+    <German>Orientieren</German>
+  </Key>
+  <Key ID="STR_ENH_FOLDER_ALIGN">
+    <English>Align</English>
+    <German>Ausrichten</German>
+  </Key>
+  <Key ID="STR_ENH_FOLDER_SPACE">
+    <English>Space</English>
+    <German>Verteilen</German>
   </Key>
 </Project>
