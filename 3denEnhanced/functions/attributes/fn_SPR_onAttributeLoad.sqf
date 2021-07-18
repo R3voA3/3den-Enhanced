@@ -15,7 +15,7 @@
 */
 
 params ["_ctrlGroup", "_value"];
-_value params ["_ruletSet", "_respawnTime", "_canDie", "_restoreLoadout"];
+_value params ["_ruletSet", "_respawnTime", "_canDie", "_restoreLoadout", "_onRespawnCode"];
 
 (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
 
@@ -36,6 +36,8 @@ _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_
 
 (_ctrlGroup controlsGroupCtrl 104) cbSetChecked _restoreLoadout;
 
+(_ctrlGroup controlsGroupCtrl 105) ctrlSetText _onRespawnCode;
+
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
 {
@@ -45,4 +47,5 @@ _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_SPR_RULESET_
   [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s", 20] call BIS_fnc_initSliderValue;
   (_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
   (_ctrlGroup controlsGroupCtrl 104) cbSetChecked false;
+  (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "";
 }];

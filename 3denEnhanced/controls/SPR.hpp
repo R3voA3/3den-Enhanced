@@ -69,8 +69,8 @@ class ENH_SPR: Title
     };
     class CodeTitle: Title
     {
-      text = "Code (LOC)";
-      tooltip = "Code executed after the unit respawned. (LOC)";
+      text = "$STR_ENH_SPR_ONRESPAWNCODE_DISPLAYNAME";
+      tooltip = "$STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP";
       y = 4 * CTRL_DEFAULT_H + 20 * pixelH;
     };
     class Code: ctrlEditMulti
