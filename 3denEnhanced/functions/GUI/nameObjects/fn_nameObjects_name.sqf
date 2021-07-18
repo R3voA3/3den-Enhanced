@@ -20,7 +20,7 @@ private _toName = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DE
 
 if (_input == "UNNAME") then
 {
-  collect3DENHistory
+  [localize "STR_ENH_NAMEOBJECTS"] collect3DENHistory
   {
     {
       _x set3DENAttribute ["Name", ""];
@@ -34,7 +34,7 @@ else
   profileNamespace setVariable ["ENH_NameObjects_LastVarName", _varName];
   _varName = _varName + "_";
 
-  collect3DENHistory
+  [localize "STR_ENH_NAMEOBJECTS"] collect3DENHistory
   {
     {  //Set name attribute for object. For marker set markerName attribute
       _x set3DENAttribute ["Name", _varName + (str _index)];

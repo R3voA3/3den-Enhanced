@@ -20,7 +20,7 @@ uiNamespace setVariable ['ENH_batchReplace_lastUsed', _replaceWith];
 
 private _replaceWithArray = _replaceWith splitString ", ";//Separates string by comma and values into an array //["sfd", "2ffds", "5", "123"]
 
-collect3DENHistory
+[localize "STR_ENH_BATCHREPLACE"] collect3DENHistory
 {
   {
     private _class = selectRandom _replaceWithArray;

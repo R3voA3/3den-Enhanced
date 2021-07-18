@@ -30,7 +30,7 @@ else
   ENH_attribute_disableAI_state = !ENH_attribute_disableAI_state;
 };
 
-collect3DENHistory
+[localize "STR_ENH_TOOLS_TOGGLEAIFEATURES"] collect3DENHistory
 {
   {
     private _entity = _x;

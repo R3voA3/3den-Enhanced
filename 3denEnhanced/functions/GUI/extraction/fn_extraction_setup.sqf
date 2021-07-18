@@ -25,7 +25,7 @@ private _conditionStart = ctrlText CTRL(IDC_EXTRACTION_CONDITIONSTART);
 private _ctrlGrenadeType = CTRL(IDC_EXTRACTION_GRENADE);
 private _grenadeType = _ctrlGrenadeType lbData lbCurSel _ctrlGrenadeType;
 
-collect3DENHistory
+[localize "STR_ENH_CONTEXTMENU_CREATEEXTRACTION"] collect3DENHistory
 {
   _veh set3DENAttribute ["Position", _center vectorAdd [0,-120, 0]];
   private _layer = -1 add3DENLayer localize "STR_ENH_EXTRACTION_LAYER";

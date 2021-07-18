@@ -25,7 +25,7 @@ private _enablePath = [true, false] select (lbCurSel CTRL(IDC_GARRISON_PATH));
 private _fnc_setAttributes =
 {
   params ["_entity", "_pos", "_unitPos"];
-  collect3DENHistory
+  [localize "STR_ENH_GARRISON_HEADER"] collect3DENHistory
   {
     _entity set3DENAttribute ["position", _pos];
     _entity set3DENAttribute ["unitPos", if (_unitPos == 4) then {selectRandom [0, 1, 2, 3]} else {_unitPos}];
