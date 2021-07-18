@@ -19,28 +19,31 @@ disableSerialization;
 
 params ["_ctrlButton"];
 
-private _modeID = lbCurSel (ctrlParent _ctrlButton displayCtrl 10);
+//Get mode
+private _modeID = lbCurSel (ctrlParent _ctrlButton displayCtrl IDC_CREATEOBJECT_MODE);
 private _modeStr = ["object", "marker"] select _modeID;
-private _class = ctrlText (ctrlParent _ctrlButton displayCtrl 20);
 
-//Remove quotes if present, bugged in v2.04, gonna hopefully be fixed in v2.06
-_class = _class trim ["""", 0];
+//Get selected index
+private _ctrlListbox = ctrlParent _ctrlButton displayCtrl IDC_CREATEOBJECT_LIST;
+private _selectedRow = lbCurSel _ctrlListbox;
 
-//Validate
-if (_class isEqualTo "") exitWith
+//Warning if nothing is selected
+if (_selectedRow == -1) then
 {
-  (ctrlParent _ctrlButton displayCtrl 20) spawn
+  (ctrlParent _ctrlButton displayCtrl IDC_CREATEOBJECT_LIST) spawn
   {
     disableSerialization;
     private _ctrlHighlight = [_this, 5] call BIS_fnc_highlightControl;
     sleep 2;
     ctrlDelete _ctrlHighlight;
   };
+}
+else
+//Create object
+{
+  create3DENEntity [_modeStr, _ctrlListbox lbText _selectedRow, screenToWorld [0.5, 0.5], true];
+  if (_modeStr == "marker" && (get3DENActionState "ToggleMap" == 0)) then {do3DENAction "ToggleMap"};
+  if (_modeStr == "object" && (get3DENActionState "ToggleMap" == 1)) then {do3DENAction "ToggleMap"};
+
+  move3DENCamera [screenToWorld [0.5, 0.5], true];
 };
-if (_modeStr == "object" && {"true" configClasses (configFile >> "CfgVehicles") findIf {configName _x == _class} == -1}) exitWith {[localize "STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR", 1] call BIS_fnc_3DENNotification};
-if (_modeStr == "marker" && {"true" configClasses (configFile >> "CfgMarkers") findIf {configName _x == _class} == -1}) exitWith {[localize "STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR", 1] call BIS_fnc_3DENNotification};
-
-create3DENEntity [_modeStr, _class, screenToWorld [0.5, 0.5], true];
-if (_modeStr == "marker" && (get3DENActionState "ToggleMap" == 0)) then {do3DENAction "ToggleMap"};
-
-move3DENCamera [screenToWorld [0.5, 0.5], true];

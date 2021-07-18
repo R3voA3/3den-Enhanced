@@ -1,5 +1,5 @@
-#define DIALOG_W 70
-#define DIALOG_H 30
+#define DIALOG_W 100
+#define DIALOG_H 44
 
 class ENH_CreateObject
 {
@@ -18,7 +18,7 @@ class ENH_CreateObject
     class BackgroundButton: ctrlStaticFooter
     {
       x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 29 * GRID_H;
+      y = DIALOG_TOP + 43 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -48,6 +48,8 @@ class ENH_CreateObject
       y = DIALOG_TOP + 12 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
+      colorSelectedBg[] = {COLOR_TAB_RGBA};
+      colorBackground[] = {COLOR_BACKGROUND_RGBA};
       columns = 2;
       rows = 1;
       strings[] =
@@ -55,37 +57,32 @@ class ENH_CreateObject
         "$STR_3DEN_HISTORY_CREATEOBJECT_DISPLAYNAME",
         "$STR_3DEN_HISTORY_CREATEMARKER_DISPLAYNAME"
       };
+      onToolBoxSelChanged = "_this call ENH_fnc_createObject_changeFilter";
     };
-    class Class: ctrlStatic
+    class ObjectList: ctrlListBox
     {
-      text = "$STR_ENH_CREATEOBJECT_CLASSNAME";
-      x = CENTERED_X(DIALOG_W);
+      idc = IDC_CREATEOBJECT_LIST;
+      x = CENTERED_X(DIALOG_W) + GRID_W;
       y = DIALOG_TOP + 17 * GRID_H;
-      w = DIALOG_W * GRID_W - 4 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class ClassValue: ctrlEdit
-    {
-      idc = IDC_CREATEOBJECT_CLASS;
-      text = "";
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 23 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
-      h = CTRL_DEFAULT_H;
+      h = 5 * CTRL_DEFAULT_H;
+      onLoad = "[_this select 0, 0] call ENH_fnc_createObject_changeFilter"; //Fill list
+      rowHeight = 2 * CTRL_DEFAULT_H;
     };
     class OK: ctrlButtonOK
     {
       idc = IDC_CREATEOBJECT_CLOSE;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 30 * GRID_H;
+      text = "$STR_SINGLE_CREATE";
+      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 57 * GRID_W;
+      y = DIALOG_TOP + 44 * GRID_H;
       w = 27 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_createObject_create";
     };
     class Cancel: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + 42 * GRID_W;
-      y = DIALOG_TOP + 30 * GRID_H;
+      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 28 * GRID_W;
+      y = DIALOG_TOP + 44 * GRID_H;
       w = 27 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

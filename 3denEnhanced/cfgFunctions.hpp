@@ -34,6 +34,7 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\GUI\createObject";
       class createObject_create;
+      class createObject_changeFilter;
     };
     class TextureFinder
     {
