@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 private _display = uiNamespace getVariable ["ENH_CFGS_Display", displayNull];
 private _tv = CTRL(IDC_SENTENCES_LIST);

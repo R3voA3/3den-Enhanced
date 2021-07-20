@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 private _display = uiNamespace getVariable "ENH_Display_VIM";

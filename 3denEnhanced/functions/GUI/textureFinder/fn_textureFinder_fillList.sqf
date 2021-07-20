@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 #define TINY [0, 512]
 #define SMALL [513, 1024]
@@ -74,7 +74,7 @@ _ctrlTV tvAdd [[], "PAA"];
 
 
 /* Old way without sizes
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 private _display = findDisplay IDD_TEXTUREFINDER;

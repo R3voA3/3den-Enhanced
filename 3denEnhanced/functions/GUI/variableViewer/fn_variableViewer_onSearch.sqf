@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
 

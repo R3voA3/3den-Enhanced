@@ -13,7 +13,7 @@
   ARRAY: Array with attribute values, if not templates was selected it returns an empty array
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 params ["_ctrlButton"];

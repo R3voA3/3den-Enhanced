@@ -13,6 +13,6 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 lnbClear ((uiNamespace getVariable "ENH_Display_VIM") displayCtrl IDC_VIM_INVENTORYLIST)

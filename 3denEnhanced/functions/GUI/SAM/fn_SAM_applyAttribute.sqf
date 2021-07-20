@@ -14,7 +14,7 @@
   true
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 params ["_ctrlButton"];

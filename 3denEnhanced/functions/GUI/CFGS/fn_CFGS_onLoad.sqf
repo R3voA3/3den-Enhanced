@@ -13,7 +13,7 @@
   BOOLEAN: True
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 params ["_display"];
 

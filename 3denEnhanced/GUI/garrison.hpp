@@ -1,4 +1,4 @@
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define DIALOG_W 60
 #define DIALOG_H 80
 

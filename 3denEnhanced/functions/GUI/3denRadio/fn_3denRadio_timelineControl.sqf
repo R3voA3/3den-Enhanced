@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration", 0]
 
 disableSerialization;

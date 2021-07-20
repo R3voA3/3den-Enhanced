@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define CLASSES ("getNumber (_x >> 'scope') == 2 && getNumber (_x >> 'scopeCurator') == 2" configClasses (configFile >> "CfgVehicles"))
 disableSerialization;
 

@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed", ""])
 
 disableSerialization;

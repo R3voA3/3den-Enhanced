@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define COL_POS [0, 0.04, 0.5]
 #define COL_POS_FILTER [0, 0.07, 0.53]
 
