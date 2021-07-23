@@ -1,7 +1,7 @@
 param($DoPublish = "false")
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = Get-Content -Path "$ProjectFolder\tool\`$VERSION`$"
+$ModVersion = Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $WorkshopID = 623475643
