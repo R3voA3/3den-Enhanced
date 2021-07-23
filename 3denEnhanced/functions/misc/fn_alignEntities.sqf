@@ -38,7 +38,7 @@ else
   _max = selectMin _positions;
 };
 
-[localize "STR_ENH_FOLDER_ALIGN", nil, "\a3\3den\data\cfg3den\history\moveitems_ca.paa"] collect3DENHistory
+[localize "STR_ENH_FOLDER_ALIGN", nil, "a3\3den\data\cfg3den\history\moveitems_ca.paa"] collect3DENHistory
 {
   _entities apply
   {
