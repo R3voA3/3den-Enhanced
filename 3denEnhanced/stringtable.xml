@@ -24,8 +24,8 @@
     <Chinesesimp>动态AI技能设置</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
-    <English>Скачайте модификацию ""Pythia"" из Steam Workshop!</English>
-    <Russian>Get the ""Pythia"" modification from the Steam Workshop!</Russian>
+    <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
+    <Russian>Скачайте модификацию ""Pythia"" из Steam Workshop!</Russian>
     <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
   </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">

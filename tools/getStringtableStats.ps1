@@ -16,8 +16,11 @@
 $Content = Get-Content $env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\3denEnhanced\stringtable.xml"
 
 # Add the number of translations per language in an array
-$Counts = $Patterns | forEach-Object { $Matches = Select-String -InputObject $Content -Pattern $_ -AllMatches
-$Matches.Matches.Count}
+$Counts = $Patterns | forEach-Object
+{
+  $AllMatches = Select-String -InputObject $Content -Pattern $_ -AllMatches
+  $AllMatches.Matches.Count
+}
 
 $TotalKeys = $Counts[0]
 
