@@ -26,7 +26,6 @@ body:
     validations:
       required: true
   - type: input
-    id: 3den-enhanced-version
     attributes:
       label: 3den Enhanced Version
       description: What version of Files are you using?
@@ -34,7 +33,6 @@ body:
     validations:
       required: true
   - type: input
-    id: arma3-version
     attributes:
       label: Arma 3 Version
       description: What version of Arma 3 are you using?
@@ -42,7 +40,6 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: reproduceable
     attributes:
       label: Is the issue reproduceable?
       description: Only select one!
@@ -50,7 +47,6 @@ body:
         - label: Always
         - label: Sometimes
         - label: Only once
-    id: arma3-version
     attributes:
       label: Arma 3 Version
       description: What version of Arma 3 are you using?
