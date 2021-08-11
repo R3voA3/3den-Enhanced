@@ -39,3 +39,11 @@ body:
       placeholder: vX.XX
     validations:
       required: true
+  - type: checkboxes
+    attributes:
+      label: Is the issue reproduceable?
+      description: Only select one!
+      options:
+        - label: Always
+        - label: Sometimes
+        - label: Only once
