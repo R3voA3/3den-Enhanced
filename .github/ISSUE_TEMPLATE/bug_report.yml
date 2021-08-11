@@ -32,3 +32,10 @@ body:
       placeholder: vX.X
     validations:
       required: true
+  - type: input
+    attributes:
+      label: Arma 3 Version
+      description: What version of Arma 3 are you using?
+      placeholder: vX.XX
+    validations:
+      required: true
