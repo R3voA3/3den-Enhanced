@@ -19,7 +19,6 @@ body:
         4. See the error
     validations:
       required: false
-
    - type: textarea
     attributes:
       label: Expected behavior
