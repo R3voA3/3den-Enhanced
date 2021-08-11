@@ -25,3 +25,10 @@ body:
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
+  - type: input
+    attributes:
+      label: 3den Enhanced Version
+      description: What version of Files are you using?
+      placeholder: vX.X
+    validations:
+      required: true
