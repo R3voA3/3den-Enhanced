@@ -19,4 +19,24 @@ body:
         4. See the error
     validations:
       required: false
+ - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 3den Enhanced Version
+      description: What version of Files are you using?
+      placeholder: vX.X
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Arma 3 Version
+      description: What version of Arma 3 are you using?
+      placeholder: vX.XX
+    validations:
+      required: true
   
