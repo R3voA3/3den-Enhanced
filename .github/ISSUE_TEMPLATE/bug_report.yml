@@ -52,8 +52,8 @@ body:
       label: Game breaking?
       description: Is this bug game breaking?
       options:
-        - label: Yes
-        - label: No
+        - label: Yes, it is
+        - label: No, it isn't
   - type: textarea
     attributes:
       label: Relevant Assets
