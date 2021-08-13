@@ -19,5 +19,6 @@ params ["_ctrlGroup"];
   lbCurSel (_ctrlGroup controlsGroupCtrl 100),
   sliderPosition (_ctrlGroup controlsGroupCtrl 101),
   cbChecked (_ctrlGroup controlsGroupCtrl 103),
-  cbChecked (_ctrlGroup controlsGroupCtrl 104)
+  cbChecked (_ctrlGroup controlsGroupCtrl 104),
+  ctrlText (_ctrlGroup controlsGroupCtrl 105)
 ]

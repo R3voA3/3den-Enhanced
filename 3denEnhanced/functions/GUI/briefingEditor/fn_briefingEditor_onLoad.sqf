@@ -13,11 +13,13 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 
 params ["_display"];
+
+uiNamespace setVariable ["ENH_BriefingEditor_Display", _display];
 
 private _coloursHTML =
 [
@@ -173,30 +175,16 @@ private _getColorFromHex =
 };
 
 //Get history if available
-private _historyLatest = profileNamespace getVariable ["ENH_briefingEditor_history", ["", "Diary", ""]];
+(profileNamespace getVariable ["ENH_briefingEditor_history", ["", "Diary", ""]]) params ["_title", "_subject", "_text"];
 
-CTRL(IDC_BRIEFINGEDITOR_TITLE) ctrlSetText (_historyLatest # 0);//Briefing Title
-CTRL(IDC_BRIEFINGEDITOR_SUBJECT) ctrlSetText (_historyLatest # 1);//Subject Text
-CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText (_historyLatest # 2);//Briefing Text
+CTRL(IDC_BRIEFINGEDITOR_TITLE) ctrlSetText _title;
+CTRL(IDC_BRIEFINGEDITOR_SUBJECT) ctrlSetText _subject;
+CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText _text;
 
-//Load saved templates
-private _templates = profileNamespace getVariable "ENH_briefingEditor_templates";
+//Load templates
+["", CTRL(IDC_BRIEFINGEDITOR_TITLE)] call ENH_fnc_briefingEditor_handleTemplates;
 
-//Exit in case the template list is empty
-if !(isNil "_templates") then
-{
-  private _ctrlTemplateList = CTRL(80);
-
-  {
-    _x params ["_briefingTitle", "_briefingText"];
-
-    _ctrlTemplateList lbAdd _briefingTitle;
-    _ctrlTemplateList lbSetData [_forEachIndex, _briefingText];
-    _ctrlTemplateList lbSetTooltip [_forEachIndex, localize "STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP"];
-  } forEach _templates;
-};
-
- private _ctrlLBColours = _display displayCtrl 100;
+private _ctrlLBColours = CTRL(IDC_BRIEFINGEDITOR_COLOURS);
 {
   _ctrlLBColours lbAdd format ["%1 %2", localize "STR_ENH_BRIEFINGEDITOR_COLOUR", _forEachIndex];
   _ctrlLBColours lbSetData [_forEachIndex, _x];
@@ -218,14 +206,18 @@ private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
   //Get icon
   private _markerType = (_x get3DENAttribute "itemClass") # 0;
   private _icon = getText (configfile >> "CfgMarkers" >> _markerType >> "icon");
-  _ctrlLBMarkers lbSetPictureRight [_forEachIndex, _icon];
 
   //Get colour
-  _ctrlLBMarkers lbSetPictureRightColor
-  [
-    _forEachIndex,
-    getArray (configfile >> "CfgMarkerColors" >> (_x get3DENAttribute "baseColor") # 0 >> "color") call BIS_fnc_colorConfigToRGBA //Function is needed to because some colours are defined as string
-  ];
+  private _markerColor = (_x get3DENAttribute "baseColor") # 0;
+  private _color = getArray (configFile >> "CfgMarkerColors" >> _markerColor >> "color");
+  if (_markerColor isEqualTo "Default") then
+  {
+    _color = getArray (configfile >> "CfgMarkers" >> _markerType >> "color");
+    if (count _color == 4) then {_color = _color call BIS_fnc_parseNumberSafe} else {_color = [1, 1, 1, 1]};
+    if (_color isEqualTo [0, 0, 0, 1]) then {_color = [1, 1, 1, 1]};
+  };
+  _ctrlLBMarkers lbSetPictureRight [_forEachIndex, _icon];
+  _ctrlLBMarkers lbSetPictureRightColor [_forEachIndex, _color];
 } forEach (all3DENEntities # 5);
 
 //Add tags to combo
@@ -242,4 +234,17 @@ private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
 {
   _ctrlLBFonts lbAdd configName _x;
   _ctrlLBFonts lbSetTooltip [_forEachIndex, configName _x];
-} forEach ('true' configClasses (configFile >> 'CfgFontFamilies'));
+} forEach ("true" configClasses (configFile >> "CfgFontFamilies"));
+
+lbSort _ctrlLBFonts;
+lbSort _ctrlLBMarkers;
+
+//Redraw stuff on each frame. Easiest way.
+addMissionEventHandler ["EachFrame",
+{
+  if (isNull (uiNamespace getVariable ["ENH_BriefingEditor_Display", displayNull])) exitWith
+  {
+    removeMissionEventHandler ["EachFrame", _thisEventHandler];
+  };
+  call ENH_fnc_briefingEditor_htmlHighlight
+}];

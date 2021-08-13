@@ -17,7 +17,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 params ["_ctrlGroup", "_value"];
 parseSimpleArray _value params ["_hitpoints", "_damage"];
@@ -31,12 +31,11 @@ _ctrlGroup ctrlCommit 0;
 
 if (_hitPoints isEqualTo []) exitWith
 {
-  systemChat "go";
   private _ctrlHintNoHitPoints = _display ctrlCreate ["ctrlStructuredText", -1, _ctrlGroup];
   _ctrlHintNoHitPoints ctrlSetPosition [5 * GRID_W, 0, (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W, CTRL_DEFAULT_H];
   _ctrlHintNoHitPoints ctrlCommit 0;
   _ctrlHintNoHitPoints ctrlSetBackgroundColor [1, 1, 1, 0.05];
-  private _txt = text "No hitpoints available for this object! :(";
+  private _txt = text localize "STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS";
   _txt setAttributes ["align", "center", "size", "1.2"];
   _ctrlHintNoHitPoints ctrlSetStructuredText composeText [_txt];
 };
@@ -46,19 +45,18 @@ private _counter = 0;
 {
   _counter = _counter + 1;
   private _ctrlLabel = _display ctrlCreate ["ENH_AttributeTitle", 20000 + _forEachIndex, _ctrlGroup];
-  private _name = localize ("STR_ENH_DAMAGE_" + toUpper _x);
-  if (_name isEqualTo "") then {_ctrlLabel ctrlSetText _x} else {_ctrlLabel ctrlSetText _name};
+  private _name = "STR_ENH_DAMAGE_" + toUpper _x;
+
+  _ctrlLabel ctrlSetText (if (isLocalized _name) then {localize _name} else {_x});
   _ctrlLabel ctrlSetTooltip _x;
   _ctrlLabel ctrlSetPosition [0, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H];
   _ctrllabel ctrlCommit 0;
 
   private _ctrlSlider = _display ctrlCreate ["ctrlXSliderH", 30000 + _forEachIndex, _ctrlGroup];
-  _ctrlSlider ctrlSetText _x;
   _ctrlSlider ctrlSetPosition [ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W, CTRL_DEFAULT_H];
   _ctrlSlider ctrlCommit 0;
 
   private _ctrlEdit = _display ctrlCreate ["ctrlEdit", 40000 + _forEachIndex, _ctrlGroup];
-  _ctrlEdit ctrlSetText _x;
   _ctrlEdit ctrlSetPosition [(ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, EDIT_W * GRID_W, CTRL_DEFAULT_H];
   _ctrlEdit ctrlCommit 0;
 

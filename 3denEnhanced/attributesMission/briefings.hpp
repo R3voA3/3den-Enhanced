@@ -45,7 +45,7 @@ class ENH_Briefing
     class ENH_Briefing_OPFOR_Situation: ENH_Briefing_BLUFOR_Situation
     {
       property = "ENH_Briefing_OPFOR_Situation";
-      expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == east) then {player createDiaryRecord [Diary, [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
+      expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == east) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
     class ENH_Briefing_OPFOR_Mission: ENH_Briefing_BLUFOR_Situation
     {

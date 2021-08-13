@@ -13,7 +13,7 @@
   BOOLEAN: true / false
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 ENH_PlacementTools_Selected = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DENSelected;
 

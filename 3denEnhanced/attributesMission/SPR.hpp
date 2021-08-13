@@ -8,7 +8,7 @@ class ENH_SPR
     {
       description = "$STR_ENH_SPR_DESCRIPTION";
       data = "AttributeSystemSubcategory";
-      control = "ENH_SubCategoryNoHeader3_Fixed";
+      control = "ENH_SubCategoryNoHeader2_Fixed";
     };
     class ENH_SPR
     {
@@ -22,47 +22,43 @@ class ENH_SPR
         ENH_SPR_Delay = _value param [1, 20];\
         ENH_SPR_CanDie = _value param [2, false];\
         ENH_SPR_RestoreLoadout = _value param [3, false];\
-        ENH_SPR_Positions_West = allMapMarkers select {'respawn_west' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_East = allMapMarkers select {'respawn_east' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_Guerilla = allMapMarkers select {'respawn_guerilla' in _x} apply {getMarkerPos _x};\
-        ENH_SPR_Positions_Civilian = allMapMarkers select {'respawn_civilian' in _x} apply {getMarkerPos _x};\
-        \
+        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);\
+        ENH_SPR_Positions =\
+        [\
+          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},\
+          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},\
+          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},\
+          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}\
+        ];\
         {\
-          _x setVariable ['ENH_SPR_OriginalSide', side _x];\
+          _x setVariable ['ENH_SPR_OriginalSide', side group _x];\
           _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];\
           _x addEventHandler ['handleDamage',\
           {\
-            params ['_unit', '_selection', '_damage', '', '', '_hitIndex'];\
-            if (_handleDamage < 0.1 || {!alive _unit || {lifeState _unit isEqualTo 'INCAPACITATED'}}) exitWith {0};\
-            if (ENH_SPR_CanDie && {_selection == 'head' && {_damage >= 1.2}}) exitWith\
-            {\
-              _unit setDamage 1;\
-              _unit removeEventHandler ['handleDamage', _thisEventHandler];\
-            };\
+            params ['_unit', '', '_damage', '', '', '_index'];\
+            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};\
             if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then\
             {\
               _unit removeEventHandler ['handleDamage', _thisEventHandler];\
-            }\
-            else\
-            {\
-              if(_selection == '' && {_damage >= 0.95}) then\
-              {\
-                setAccTime 1;\
-                _unit allowDamage false;\
-                _unit setCaptive true;\
-                _unit setUnconscious true;\
-                _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];\
-                if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};\
-                moveOut _unit;\
-                _unit spawn ENH_fnc_SPR_respawnTimer;\
-                _damage = 0;\
-              }\
-              else\
-              {\
-                _damage = _damage min 0.95;\
-              };\
+              _damage;\
             };\
-            _damage;\
+            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith\
+            {\
+              _unit removeEventHandler ['handleDamage', _thisEventHandler];\
+              1;\
+            };\
+            if (_index < 8 && (_damage min 0.95) == 0.95) then\
+            {\
+              setAccTime 1;\
+              _unit allowDamage false;\
+              _unit setCaptive true;\
+              _unit setUnconscious true;\
+              _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];\
+              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};\
+              moveOut _unit;\
+              _unit spawn ENH_fnc_SPR_respawnTimer;\
+            };\
+            _damage min 0.95;\
           }];\
         } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});\
         \
@@ -72,27 +68,27 @@ class ENH_SPR
           params ['_unit'];\
           if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};\
           if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};\
-          if (ENH_SPR_Ruleset >= 2) then\
+          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;\
+          private _positions = ENH_SPR_Positions select _sideID;\
+          if (_positions isNotEqualTo []) then\
           {\
-            private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;\
-            private _positions = [ENH_SPR_Positions_East, ENH_SPR_Positions_West, ENH_SPR_Positions_Guerilla, ENH_SPR_Positions_Civilian] select _sideID;\
-            if !(_positions isEqualTo []) then\
+            switch (ENH_SPR_Ruleset) do\
             {\
-              private _respawnPos = if (ENH_SPR_Ruleset == 2) then\
+              case 3:\
               {\
-                selectRandom _positions;\
-              }\
-              else\
-              {\
-                ([_positions, [],{_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0;\
+                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);\
               };\
-              _unit setPos _respawnPos;\
+              case 2:\
+              {\
+                _unit setPos selectRandom _positions;\
+              };\
             };\
           };\
           _unit setUnconscious false;\
           _unit allowDamage true;\
           _unit setDamage 0;\
           _unit switchMove '';\
+          _unit call ENH_SPR_OnRespawnCode;\
           _unit spawn\
           {\
             sleep 8;\
@@ -111,10 +107,13 @@ class ENH_SPR
             _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];\
             _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];\
             _ctrlRespawnTimer ctrlCommit 0;\
+            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];\
             0 cutText ['', 'BLACK OUT', 0.3];\
+            0.3 fadeSound 0;\
             0.3 fadeMusic 0;\
             0.3 fadeRadio 0;\
             0.3 fadeSpeech 0;\
+            0.3 fadeEnvironment 0;\
             showChat false;\
             while {time < _respawnTime} do\
             {\
@@ -123,9 +122,11 @@ class ENH_SPR
             };\
             ctrlDelete _ctrlRespawnTimer;\
             0 cutText ['', 'BLACK IN', 8];\
-            8 fadeMusic 1;\
-            8 fadeRadio 1;\
-            8 fadeSpeech 1;\
+            8 fadeSound (ENH_SPR_OriginalVolume # 0);\
+            8 fadeMusic (ENH_SPR_OriginalVolume # 1);\
+            8 fadeRadio (ENH_SPR_OriginalVolume # 2);\
+            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);\
+            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);\
             showChat true;\
             [\
               ['Respawned'],\
@@ -153,5 +154,6 @@ class ENH_SPR
       }";
       defaultValue = "[0, 20, false, false]";
     };
+
   };
 };

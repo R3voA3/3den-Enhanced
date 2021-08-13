@@ -1,77 +1,83 @@
 /*
   Author: R3vo
 
-  Date: 2020-10-20
+  Date: 2021-06-20
 
   Description:
-  Exports attribute to GitHub wiki in markdown format. Copies result to clipboard.
+  Exports attribute to GitHub wiki in markdown format.
 
   Parameter(s):
-  0: BOOLEAN - True for entity attributes, false for mission attributes
+  0: STRING - Class whose attributes should be exported. Can be:
+  - "GROUP"
+  - "OBJECT"
+  - "MARKER"
+  - "TRIGGER"
+  - "WAYPOINTS"
+  - "LOGIC"
+  - "COMMENT"
+  - "GARBAGECOLLECTION"
+  - "INTEL"
+  - "MULTIPLAYER"
+  - "PREFERENCES"
+  - "SCENARIO"
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
-params [["_entityAttributes", true]];
+params [["_class", "Scenario"]];
 
 private _export = "";
 private _counter = 0;
 private _config = configNull;
 private _configClasses = [];
 
-// Switch between mission attributes and entity attributes
-if (_entityAttributes) then
+if (_class in ["Group", "Marker", "Object", "Trigger", "Waypoint", "Logic", "Comment"]) then
 {
-  _config = configFile >> "Cfg3DEN";
-  _configClasses = ["Group", "Marker", "Object", "Trigger", "Waypoint", "Logic", "Comment"];
-}
-else
-{
-  _config = configFile >> "Cfg3DEN" >> "Mission";
-  _configClasses = ["GargabeCollection", "Intel", "Multiplayer", "Preferences", "Scenario"];
+  _config = configFile >> "Cfg3DEN" >> _class;
 };
 
+if (_class in ["GargabeCollection", "Intel", "Multiplayer", "Preferences", "Scenario"]) then
 {
-  private _attributeCategories = "true" configClasses (_config >> _x >> "AttributeCategories");
+  _config = configFile >> "Cfg3DEN" >> "Mission" >> _class;
+};
+
+if (isNull _config) exitWith {systemChat "Wrong input. Check function header!"};
+
+private _attributeCategories = "true" configClasses (_config >> "AttributeCategories");
+{
+  private _attributes = "configName _x select [0, 3] == 'ENH'" configClasses (_x >> "attributes");
+  private _categoryName = getText (_x >> "displayName");
   {
-    private _attributes = "configName _x select [0, 3] == 'ENH'" configClasses (_x >> "attributes");
-    private _categoryName = getText (_x >> "displayName");
+    if ("Subcategory" in configName _x) then
     {
-      if ("Subcategory" in configName _x) then
+      private _tooltip = getText (_x >> "description");
+      if (_forEachIndex == 0) then //Used subcategories as description for the category
       {
-        private _displayName = "Subcategory (Used for describing the following attributes)";
-        private _tooltip = getText (_x >> "description");
-        if (_forEachIndex == 0) then
-        {
-          _export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl;
-        }
-        else
-        {
-          _export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl;
-        };
+        _export = _export + "# " + _categoryName + endl + endl + "Description: " + _tooltip + endl + endl;
+      };
+    }
+    else
+    {
+      private _displayName = getText (_x >> "displayName");
+      private _tooltip = getText (_x >> "tooltip");
+      if (_tooltip == "") then {_tooltip = _displayName};
+      private _defaultValue = getText (_x >> "defaultValue");
+      private _property = getText (_x >> "property");
+      if (_forEachIndex == 0) then
+      {
+        _export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
       }
       else
       {
-        private _displayName = getText (_x >> "displayName");
-        private _tooltip = getText (_x >> "tooltip");
-        if (_tooltip == "") then {_tooltip = _displayName};
-        private _defaultValue = getText (_x >> "defaultValue");
-        private _property = getText (_x >> "property");
-        if (_forEachIndex == 0) then
-        {
-          _export = _export + "# " + _categoryName + endl + endl + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
-        }
-        else
-        {
-          _export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
-        };
+        _export = _export + "## " + _displayName + endl + "Description: " + _tooltip + endl + endl + "Property: " + "```" + _property + "```" + endl + endl + endl + "DefaultValue: " + "```" + _defaultValue + "```" + endl + endl;
       };
-      _counter = _counter + 1;
-    } forEach _attributes;
-  } forEach _attributeCategories;
-} forEach _configClasses;
+    };
+    _counter = _counter + 1;
+  } forEach _attributes;
+} forEach _attributeCategories;
 
 _export = format ["_**Number of added entries: %1**_", _counter] + endl + "___" + endl + endl + endl + _export;
 
-copyToClipboard _export
+uinamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", _export]];
+findDisplay 313 createDisplay "display3denCopy";

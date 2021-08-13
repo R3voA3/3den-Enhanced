@@ -23,7 +23,7 @@ if (_entities isEqualTo []) exitWith
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
   false
 };
-collect3DENHistory
+[localize "STR_ENH_FOLDER_ORIENT", nil, "a3\ui_f\data\gui\rsc\rscdisplayarsenal\compass_ca.paa"] collect3DENHistory
 {
   switch _input do
   {

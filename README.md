@@ -20,9 +20,8 @@
 
 <p align="center">
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Credits">Credits</a> |
-  <a href="https://steamcommunity.com/sharedfiles/filedetails/changelog/623475643">Changelog</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/blob/7c7111da08e56dabb3244870754c7f5936742c48/changelog.md">Changelog</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Translation">Translation</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/FAQ">FAQ</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Contribute">Contribute</a>
 </p>
 
@@ -34,6 +33,7 @@
 This modification adds new functionalities to the Eden Editor without creating any dependencies for players. That means, scenario editors can use this mod to make their life easier without making the life of the players harder, by forcing them to download an additional modification.
 </p>
 
-## End User License Agreement
+# End User License Agreement
 [<img src="https://raw.githubusercontent.com/R3voA3/3den-Enhanced/master/wiki/APL-SA.png">](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
-### Re-uploading this modification to the Steam Workshop is prohibited!
+
+**Re-uploading this modification to the Steam Workshop is prohibited!**

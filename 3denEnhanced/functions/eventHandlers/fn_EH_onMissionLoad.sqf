@@ -15,7 +15,6 @@
 
 #if __has_include("\userconfig\ENH_Config.hpp")
 #include "\userconfig\ENH_Config.hpp"
-["ENH_Customised_Warning", 1, 10] call BIS_fnc_3DENNotification;
 #endif
 
 #ifndef ENH_HIDE_AMBIENTANIMATIONS
@@ -33,7 +32,7 @@ call ENH_fnc_dynamicViewDistance;
 
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
-[] spawn ENH_fnc_sessionTimer;
+[] spawn ENH_fnc_statusbar_sessionTimer;
 
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
@@ -41,7 +40,7 @@ if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
   [] spawn
   {
     sleep 0.1;
-    ["collapseEntityList"] call bis_fnc_3DENInterface;
+    ["collapseEntityList"] call BIS_fnc_3DENInterface;
   };
 };
 #endif

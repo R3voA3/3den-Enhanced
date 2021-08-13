@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 private _display = uiNamespace getVariable ["ENH_CFGS_Display", displayNull];
 

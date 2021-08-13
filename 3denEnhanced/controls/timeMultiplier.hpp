@@ -1,7 +1,7 @@
 class ENH_TimeMultiplier: Title
 {
-  attributeLoad = "[_this, _value] call ENH_fnc_timeMultiplier_onAttributeLoad";
-  attributeSave = "_this call ENH_fnc_timeMultiplier_onAttributeSave";
+  attributeLoad = "[_this, _value] call ENH_fnc_slider_onAttributeLoad";
+  attributeSave = "_this call ENH_fnc_slider_onAttributeSave";
   class Controls: Controls
   {
     class Title: Title {};

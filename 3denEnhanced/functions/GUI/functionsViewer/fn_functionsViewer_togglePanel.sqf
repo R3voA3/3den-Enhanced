@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safezoneX + GRID_W)
 #define Y (safezoneY + 24 * GRID_H)

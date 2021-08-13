@@ -17,10 +17,10 @@ class Cfg3DEN
       isWarning = 1;
       text = "$STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED";
     };
-    class ENH_Customised_Warning
+    class ENH_GetPythiaMod_Warning
     {
       isWarning = 1;
-      text = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
+      text = "$STR_ENH_NOTIFICATIONS_GETPYTHIA";
     };
   };
   class EventHandlers
@@ -89,6 +89,9 @@ class Cfg3DEN
     #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       #include "controls\timeMultiplier.hpp"
     #endif
+    #ifndef ENH_HIDE_OBJECTSCALING
+      #include "controls\objectScaling.hpp"
+    #endif
   };
   class Mission
   {
@@ -135,7 +138,7 @@ class Cfg3DEN
         #ifndef ENH_HIDE_AMBIENTFLYBY
           #include "attributesMission\ambientFlyby.hpp"
         #endif
-        #ifndef ENH_HIDE_AIRDROP
+        #ifndef ENH_HIDE_BRIEFING
           #include "attributesMission\briefings.hpp"
         #endif
         #ifndef ENH_HIDE_ESTABLISHINGSHOT
@@ -277,6 +280,18 @@ class Cfg3DEN
           #endif
         };
       };
+      class Transformation
+      {
+        class Attributes
+        {
+          #ifndef ENH_HIDE_OBJECTSCALE
+            #include "attributesObject\objectScale.hpp"
+          #endif
+          #ifndef ENH_HIDE_SETMASS
+            #include "attributesObject\setMass.hpp"
+          #endif
+        };
+      };
       class Inventory
       {
         class Attributes
@@ -293,9 +308,6 @@ class Cfg3DEN
       {
         class Attributes
         {
-          #ifndef ENH_HIDE_SETMASS
-            #include "attributesObject\setMass.hpp"
-          #endif
           #ifndef ENH_HIDE_FEATURETYPE
             #include "attributesObject\featureType.hpp"
           #endif

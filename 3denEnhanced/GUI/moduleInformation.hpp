@@ -1,4 +1,59 @@
 #define DIALOG_W 100
+#define DIALOG_H 90
+
+class ENH_ModuleInformation
+{
+  idd = IDD_MODULEINFORMATION;
+  movingEnable = true;
+  onLoad = "_this call ENH_fnc_moduleInformation_onLoad";
+  class ControlsBackground
+  {
+    DISABLE_BACKGROUND
+    class Header: ctrlStaticTitle
+    {
+      text = "$STR_ENH_MODULEINFORMATION";
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class Background: ctrlStaticBackground
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + CTRL_DEFAULT_H;
+      w = DIALOG_W * GRID_W;
+      h = DIALOG_H * GRID_H;
+    };
+    class BackgroundButtons: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H - 2) * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = 7 * GRID_H;
+    };
+  };
+  class Controls
+  {
+    class DescriptionValue: ctrlStructuredText
+    {
+      idc = IDC_MODULEINFORMATION_DESCRIPTION;
+      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+      y = DIALOG_TOP + 6 * GRID_H;
+      w = (DIALOG_W - 2) * GRID_W;
+      h = (DIALOG_H - 9) * GRID_H;
+      colorBackground[] = {COLOR_OVERLAY_RGBA};
+    };
+    class Close: ctrlButtonClose
+    {
+      x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 23 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+  };
+};
+
+/* #define DIALOG_W 100
 #define DIALOG_H 89
 
 class ENH_ModuleInformation
@@ -125,4 +180,4 @@ class ENH_ModuleInformation
       h = CTRL_DEFAULT_H;
     };
   };
-};
+}; */

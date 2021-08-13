@@ -19,7 +19,7 @@
 _showSmoke = true;
 _center set [2, 0];//Set z to zero
 
-collect3DENHistory
+[localize "STR_ENH_CONTEXTMENU_CREATEEXTRACTION"] collect3DENHistory
 {
   private _layer = -1 add3DENLayer "Extraction";
   //private _veh = create3DENEntity ["Object", _veh, _center vectorAdd [0,-120, 0]];

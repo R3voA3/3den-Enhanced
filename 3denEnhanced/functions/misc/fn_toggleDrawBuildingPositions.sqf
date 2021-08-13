@@ -10,17 +10,16 @@
   -
 
   Returns:
-  BOOLEAN: true / false
+  -
 */
 
 #define CENTER (getPos get3DENCamera)
 #define RADIUS 100
-#define GET_BUILDINGS (CENTER nearObjects ["House", RADIUS])
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 //Remove icons if EH already exists and exit
-if (["ENH_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {false};
+if (["ENH_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStackedEventHandler) exitWith {};
 
 //Get all building positions from nearby buildings
 ["ENH_EH_DrawBuildingPositions_ID", "onEachFrame",
@@ -40,8 +39,6 @@ if (["ENH_EH_DrawBuildingPositions_ID", "onEachFrame"] call BIS_fnc_removeStacke
         ];
       };
       false;
-    } count GET_BUILDINGS;
+    } count (CENTER nearObjects ["House", RADIUS]);
   }
 ] call BIS_fnc_addStackedEventHandler;
-
-true

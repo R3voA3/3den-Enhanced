@@ -14,7 +14,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 params ["_ctrlFilter", "_selectedIndex"];
 [_ctrlFilter lbData _selectedIndex] call ENH_fnc_CFGS_getCfgSentences;

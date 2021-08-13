@@ -5,6 +5,7 @@ class Help
     "ENH_Help_GetExtensions",
     "ENH_Help_MissionCampaignGuide",
     "ENH_Help_AICompilationList",
+    "ENH_Help_3DENShortcuts",
     "ENH_Help_Folder_Wiki"
   };
 };
@@ -81,4 +82,11 @@ class ENH_Help_MultiplayerScripting: ENH_Help_GetExtensions
 {
   text = "$STR_ENH_HELP_MULTIPLAYERSCRIPTING";
   weblink = "https://community.bistudio.com/wiki/Multiplayer_Scripting";
+};
+class ENH_Help_3DENShortcuts
+{
+  text = "$STR_ENH_3DENSHORTCUTS_DISPLAYNAME";
+  action = "call ENH_fnc_3DENShortcuts_init";
+  opensNewWindow = 1;
+  shortcuts[] = {INPUT_ALT_OFFSET + DIK_F1};
 };

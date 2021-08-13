@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 params ["_display"];
@@ -33,7 +33,7 @@ _display displayAddEventHandler ["keyDown", //Focus Search
 }];
 
 //Set up Filter
-CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARIABLENAME", localize "STR_ENH_VARIABLEVIEWER_VARIABLEVALUE", localize "STR_ENH_VARIABLEVIEWER_VARIABLETYPE", localize "STR_ENH_3DENRADIO_MOD", "PL"];//Used for sorting
+CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_VARIABLEVIEWER_VARIABLENAME", localize "STR_ENH_VARIABLEVIEWER_VARIABLEVALUE", localize "STR_ENH_VARIABLEVIEWER_VARIABLETYPE"];//Used for sorting
 [CTRL(IDC_VARIABLEVIEWER_FILTER), CTRL(IDC_VARIABLEVIEWER_LIST), [0, 1, 2]] call BIS_fnc_initListNBoxSorting;
 
 //Get all locations

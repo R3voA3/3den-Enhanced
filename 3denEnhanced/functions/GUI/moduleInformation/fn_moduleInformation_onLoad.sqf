@@ -8,10 +8,11 @@
   0: DISPLAY - Module Information GUI
 
   Returns:
-  BOOLEAN: True on success, false when failed
+ -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#define LB "<br/>"
 
 disableSerialization;
 
@@ -70,10 +71,20 @@ if (_description isEqualType []) then
   _description = _descFinal;
 };
 
-CTRL(IDC_MODULEINFORMATION_DESCRIPTION) ctrlSetText _description;
-CTRL(IDC_MODULEINFORMATION_POSITION) ctrlSetText _position;
-CTRL(IDC_MODULEINFORMATION_DUPLICATE) ctrlSetText _duplicate;
-CTRL(IDC_MODULEINFORMATION_DIRECTION) ctrlSetText _direction;
-CTRL(IDC_MODULEINFORMATION_SYNC) ctrlSetText str _sync;
+_description = "<t font='RobotoCondensedBold'>" + localize "STR_ENH_MODULEINFORMATION_DESCRIPTION" + "</t> " + _description + format
+[
+  "%1%1<t font='RobotoCondensedBold'>%2</t> %3%1<t font='RobotoCondensedBold'>%4</t> %5%1<t font='RobotoCondensedBold'>%6</t> %7",
+  LB, localize "STR_ENH_MODULEINFORMATION_POSITION", _position,
+  localize "STR_ENH_MODULEINFORMATION_DUPLICATE", _duplicate,
+  localize "STR_ENH_MODULEINFORMATION_DIRECTION", _direction
+];
 
-true
+if (_sync isNotEqualto []) then
+{
+  _description = _description + format ["%1<t font='RobotoCondensedBold'>%2</t>%1", LB, localize "STR_ENH_MODULEINFORMATION_SYNC"];
+  {
+    _description = _description + "    - " + _x + LB;
+  } forEach _sync;
+};
+
+CTRL(IDC_MODULEINFORMATION_DESCRIPTION) ctrlSetStructuredText parseText _description;

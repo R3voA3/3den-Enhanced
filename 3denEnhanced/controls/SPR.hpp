@@ -2,7 +2,7 @@ class ENH_SPR: Title
 {
   attributeLoad = "[_this, _value] call ENH_fnc_SPR_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_SPR_onAttributeSave";
-  h = 5 * CTRL_DEFAULT_H + 25 * pixelH;
+  h = 10 * CTRL_DEFAULT_H + 35 * pixelH;
   class Controls: Controls
   {
     class RulesetTitle: Title
@@ -67,9 +67,23 @@ class ENH_SPR: Title
       idc = 104;
       y = 3 * CTRL_DEFAULT_H + 15 * pixelH;
     };
+    class CodeTitle: Title
+    {
+      text = "$STR_ENH_SPR_ONRESPAWNCODE_DISPLAYNAME";
+      tooltip = "$STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP";
+      y = 4 * CTRL_DEFAULT_H + 20 * pixelH;
+    };
+    class Code: ctrlEditMulti
+    {
+      idc = 105;
+      x = ATTRIBUTE_TITLE_W * GRID_W;
+      y = 4 * CTRL_DEFAULT_H + 20 * pixelH;
+      w = ATTRIBUTE_CONTENT_W * GRID_W;
+      h = 5 * CTRL_DEFAULT_H;
+    };
     class Reset: ENH_ResetButton_Base
     {
-      y = 4 * CTRL_DEFAULT_H + 20 * pixelH;
+      y = 9 * CTRL_DEFAULT_H + 30 * pixelH;
     };
   };
 };

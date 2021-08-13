@@ -12,7 +12,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define CHECK (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound", []] isNotEqualTo [])
 
 disableSerialization;

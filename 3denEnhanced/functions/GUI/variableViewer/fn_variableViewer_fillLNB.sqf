@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define SHOW_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false])
 
 disableSerialization;
@@ -27,7 +27,7 @@ lbClear _ctrlLNB;
 
 {
   _value = _namespace getVariable _x;
-  if (SHOW_FNC && (_value isEqualType {})) then {continue};//Skip is functions should not be shown
+  if (SHOW_FNC && (_value isEqualType {})) then {continue};//Skip, functions should not be shown
   if !(isNil "_value") then
   {
     _ctrlLNB lnbAddRow

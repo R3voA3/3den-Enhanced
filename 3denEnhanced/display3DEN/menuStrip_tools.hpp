@@ -18,6 +18,17 @@ class ENH_Folder_Placement
   {
     "ENH_PlacementTools",
     "Separator",
+    "ENH_Folder_Orient",
+    "ENH_Folder_Align",
+    "ENH_Folder_Space"
+  };
+};
+class ENH_Folder_Orient
+{
+  text = "$STR_ENH_FOLDER_ORIENT";
+  picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+  items[] +=
+  {
     "ENH_SetRandomDir",
     "ENH_ReverseDirection",
     "Separator",
@@ -27,6 +38,31 @@ class ENH_Folder_Placement
     "ENH_OrientateWest"
   };
 };
+class ENH_Folder_Align
+{
+  text = "$STR_ENH_FOLDER_ALIGN";
+  picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+  items[] +=
+  {
+    "ENH_AlignXMax",
+    "ENH_AlignXMin",
+    "ENH_AlignYMax",
+    "ENH_AlignYMin",
+    "ENH_AlignZMax",
+    "ENH_AlignZMin"
+  };
+};
+class ENH_Folder_Space
+{
+  text = "$STR_ENH_FOLDER_SPACE";
+  picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
+  items[] +=
+  {
+    "ENH_SpaceEquallyX",
+    "ENH_SpaceEquallyY",
+    "ENH_SpaceEquallyZ"
+  };
+};
 class ENH_Folder_Debug
 {
   text = "$STR_ENH_FOLDER_DEBUGTOOLS";
@@ -34,6 +70,8 @@ class ENH_Folder_Debug
   items[] +=
   {
     "ENH_VariableViewer",
+    "ENH_RPTViewer",
+    "ENH_CreateObject",
     "Separator",
     "ENH_ProductInfo",
     "ENH_RecompileFunctions",
@@ -47,7 +85,7 @@ class ENH_Folder_Loadout
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
-    "ENH_InventoryManager",
+    "ENH_VIM",
     "ENH_CopyLoadout",
     "ENH_ApplyLoadout",
     "ENH_ExportLoadoutConfig",
@@ -57,7 +95,8 @@ class ENH_Folder_Loadout
     "ENH_RemoveVests",
     "ENH_RemoveGoggles",
     "ENH_RemoveHeadgear",
-    "ENH_RemoveWeapons"
+    "ENH_RemoveWeapons",
+    "ENH_RemoveGear"
   };
 };
 class ENH_Folder_GUI
@@ -87,14 +126,15 @@ class ENH_Folder_Utilities
     "Separator",
     "ENH_3DENRadio",
     "ENH_3DENCamPositions",
-    "ENH_ScenarioAttributesManager",
+    "ENH_SAM",
     "ENH_CfgSentencesBrowser",
     "ENH_TextureFinder",
     "Separator",
     "ENH_BriefingEditor",
     "ENH_ActionCreator",
     "ENH_BatchReplace",
-    "ENH_NameObjects"
+    "ENH_NameObjects",
+    "ENH_ZeusAddons"
   };
 };
 class ENH_Folder_Miscellaneous
@@ -114,7 +154,10 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDynamicSimulation",
     "ENH_ToggleDrawBuildingPositions",
     "ENH_ToggleDrawDLCIcons",
+    "ENH_ToggleDrawHitpoints",
     "ENH_ToggleAIFeatures",
+    "ENH_TogglePlayable",
+    "ENH_ToggleMarkerAlpha",
     "Separator",
     "ENH_CreateTrigger"
   };
@@ -172,10 +215,10 @@ class ENH_ActionCreator
   action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
   opensNewWindow = 1;
 };
-class ENH_ScenarioAttributesManager
+class ENH_SAM
 {
-  text = "$STR_ENH_TOOLS_SCENARIOATTRIBUTESMANAGER";
-  action = "findDisplay 313 createDisplay 'ENH_ScenarioAttributesManager'";
+  text = "$STR_ENH_TOOLS_SAM";
+  action = "findDisplay 313 createDisplay 'ENH_SAM'";
   opensNewWindow = 1;
 };
 class ENH_BatchReplace
@@ -208,16 +251,16 @@ class ENH_3DENCamPositions
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
   opensNewWindow = 1;
 };
-class ENH_VariableViewer
-{
-  text = "$STR_ENH_TOOLS_VARIABLEVIEWER";
-  action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
-  opensNewWindow = 1;
-};
 class ENH_CfgSentencesBrowser
 {
   text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
   action = "findDisplay 313 createDisplay 'ENH_CfgSentencesBrowser'";
+  opensNewWindow = 1;
+};
+class ENH_ZeusAddons
+{
+  text = "$STR_ENH_ZEUSADDONS_HEADER";
+  action = "call ENH_fnc_zeusAddons";
   opensNewWindow = 1;
 };
 //Miscellaneous
@@ -226,6 +269,7 @@ class ENH_DeleteEmptyLayers
   text = "$STR_ENH_TOOLS_DELETEEMPTYLAYERS";
   picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
   action = "call ENH_fnc_deleteEmptyLayers";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_BACKSPACE};
 };
 class ENH_SwitchTime
 {
@@ -244,28 +288,27 @@ class ENH_ToggleSimpleObject
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMPLEOBJECT";
   picture = "";
-  action = "[['Object'], 'objectIsSimple'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], ['objectIsSimple']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_S};
 };
 class ENH_ToggleSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLESIMULATION";
   picture = "";
-  action = "[['Object'], 'enableSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object'], ['enableSimulation']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_E};
 };
 class ENH_ToggleDynamicSimulation
 {
   text = "$STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION";
   picture = "";
-  action = "[['Object', 'Group'], 'dynamicSimulation'] call ENH_fnc_toggleAttribute";
+  action = "[['Object', 'Group'], ['dynamicSimulation']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
 class ENH_ToggleDrawBuildingPositions
 {
   text = "$STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS";
   action = "call ENH_fnc_toggleDrawBuildingPositions";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
 };
 class ENH_ToggleDrawDLCIcons
 {
@@ -273,10 +316,29 @@ class ENH_ToggleDrawDLCIcons
   action = "call ENH_fnc_toggleDrawDLCIcons";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
 };
+class ENH_ToggleDrawHitpoints
+{
+  text = "$STR_ENH_TOOLS_DRAWHITPOINTS";
+  action = "call ENH_fnc_toggleDrawHitpoints";
+};
 class ENH_ToggleAIFeatures
 {
   text = "$STR_ENH_TOOLS_TOGGLEAIFEATURES";
-  action = "call ENH_fnc_toggleAIFeatures";
+  action = "[['object'], ['ENH_disableAI_all']] call ENH_fnc_toggleAttributes";
+};
+class ENH_TogglePlayable
+{
+  text = "$STR_ENH_TOOLS_PLAYABLE";
+  action = "[['Object'], ['ControlMP']] call ENH_fnc_toggleAttributes";
+  picture = "\a3\3den\data\cfg3den\object\iconplayer_ca.paa";
+  shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
+};
+class ENH_ToggleMarkerAlpha
+{
+  text = "$STR_ENH_TOOLS_TOGGLEMARKERALPHA";
+  action = "call ENH_fnc_toggleMarkerAlpha";
+  picture = "\a3\3den\data\displays\display3den\panelright\modemarkers_ca.paa";
+  shortcuts[] = {DIK_V};
 };
 class ENH_GenerateSteamMissionDescription
 {
@@ -287,7 +349,7 @@ class ENH_GenerateSteamMissionDescription
 class ENH_ExportMissionParameters
 {
   text = "$STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS";
-  action = "copyToClipboard loadFile '3denEnhanced\missionParameters.hpp'; ['ENH_DataCopied'] call BIS_fnc_3DENNotification";
+  action = "call ENH_fnc_exportMissionParams";
 };
 class ENH_CreateTrigger
 {
@@ -362,6 +424,57 @@ class ENH_OrientateWest: ENH_OrientateNorth
   action = "270 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD4};
 };
+class ENH_AlignXMax
+{
+  text = "$STR_ENH_TOOLS_ALIGN_X_MAX";
+  action = "[0] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD6};
+};
+class ENH_AlignXMin
+{
+  text = "$STR_ENH_TOOLS_ALIGN_X_MIN";
+  action = "[0, false] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD4};
+};
+class ENH_AlignYMax
+{
+  text = "$STR_ENH_TOOLS_ALIGN_Y_MAX";
+  action = "[1] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD8};
+};
+class ENH_AlignYMin
+{
+  text = "$STR_ENH_TOOLS_ALIGN_Y_MIN";
+  action = "[1, false] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD2};
+};
+class ENH_AlignZMax
+{
+  text = "$STR_ENH_TOOLS_ALIGN_Z_MAX";
+  action = "[2] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD9};
+};
+class ENH_AlignZMin
+{
+  text = "$STR_ENH_TOOLS_ALIGN_Z_MIN";
+  action = "[2, false] call (uiNamespace getVariable 'ENH_fnc_alignEntities')";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_NUMPAD1};
+};
+class ENH_SpaceEquallyX
+{
+  text = "$STR_ENH_TOOLS_SPACEEQUALLY_X";
+  action = "0 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+};
+class ENH_SpaceEquallyY
+{
+  text = "$STR_ENH_TOOLS_SPACEEQUALLY_Y";
+  action = "1 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+};
+class ENH_SpaceEquallyZ
+{
+  text = "$STR_ENH_TOOLS_SPACEEQUALLY_Z";
+  action = "2 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+};
 //Loadout Tools
 class ENH_CopyLoadout
 {
@@ -414,10 +527,16 @@ class ENH_RemoveWeapons
   action = "4 call ENH_fnc_removeGear";
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_W};
 };
-class ENH_InventoryManager
+class ENH_RemoveGear
 {
-  text = "$STR_ENH_TOOLS_INVENTORYMANAGER";
-  action = "call ENH_fnc_IM_open";
+  text = "$STR_ENH_TOOLS_REMOVEGEAR";
+  action = "7 call ENH_fnc_removeGear";
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_F};
+};
+class ENH_VIM
+{
+  text = "$STR_ENH_TOOLS_VIM";
+  action = "call ENH_fnc_VIM_open";
   opensNewWindow = 1;
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_I};
 };
@@ -446,10 +565,29 @@ class ENH_ControlTypes
   opensNewWindow = 1;
 };
 //Debug Tools
+class ENH_VariableViewer
+{
+  text = "$STR_ENH_TOOLS_VARIABLEVIEWER";
+  action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
+  opensNewWindow = 1;
+};
+class ENH_RPTViewer
+{
+  text = "$STR_ENH_TOOLS_RPTVIEWER";
+  action = "'open' call ENH_fnc_RPTViewer";
+  opensNewWindow = 1;
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_V};
+};
+class ENH_CreateObject
+{
+  text = "$STR_3DEN_HISTORY_CREATEOBJECT_DISPLAYNAME";
+  action = "findDisplay 313 createDisplay 'ENH_CreateObject'";
+  opensNewWindow = 1;
+};
 class ENH_ToggleMapIDs
 {
   text = "$STR_ENH_TOOLS_SHOWMAPIDS";
-  picture = "\3DENEnhanced\data\icon_id.paa";
+  picture = "\3DENEnhanced\data\icon_id_ca.paa";
   action = "call ENH_fnc_toggleMapIDs";
 };
 class ENH_ProductInfo
@@ -463,7 +601,6 @@ class ENH_RecompileFunctions
   text = "$STR_ENH_TOOLS_RECOMPILEFUNCTIONS";
   picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa";
   action = "1 call BIS_fnc_recompile; ['ENH_actionPerformed'] call BIS_fnc_3DENNotification";
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_R};
 };
 class ENH_ClearChat
 {

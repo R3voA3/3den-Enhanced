@@ -7,13 +7,13 @@
   Closes the briefing editor and creates a history.
 
   Parameter(s):
-  0: DISPLAy - ENH_BriefingEditor
+  0: DISPLAY - ENH_BriefingEditor
 
   Returns:
   -
 */
 
-#include "\3denEnhanced\defineCommon.hpp"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
 
@@ -29,16 +29,3 @@ profileNamespace setVariable
     ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT)
   ]
 ];
-
-//Save templates to profileNamespace
-private _ctrlLBTemplates = CTRL(IDC_BRIEFINGEDITOR_TEMPLATES);
-private _savedTemplates = [];
-
-for "_index" from 0 to (lbSize _ctrlLBTemplates - 1) do
-{
-  private _briefingTitle =_ctrlLBTemplates lbText _index;
-  private _briefingText = _ctrlLBTemplates lbData _index;
-  _savedTemplates pushBack [_briefingTitle, _briefingText];
-};
-
-profileNamespace setVariable ["ENH_briefingEditor_templates", _savedTemplates];

@@ -1,6 +1,5 @@
 #Excluded file extentions
 *.biprivatekey
-*.zip
-*.code-workspace
-*.vscode
-*.code-workspace
+
+#Folders
+versions/

@@ -9,6 +9,7 @@
       "*.bikb": "cpp"
         },
         "files.trimTrailingWhitespace": true,
-        "editor.tabSize": 1
+        "editor.tabSize": 1,
+        "workbench.startupEditor": "none"
   }
 }
