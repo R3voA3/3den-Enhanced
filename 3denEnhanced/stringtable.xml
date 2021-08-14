@@ -3498,6 +3498,18 @@
     <Russian>Изменения</Russian>
     <Chinesesimp>变更日志</Chinesesimp>
   </Key>
+  <Key ID="STR_ENH_ABOUT_REPORT">
+    <English>Report an Issue</English>
+    <German>Ein Problem melden</German>
+    <Czech>Nahlášení problému</Czech>
+    <French>Signaler un problème</French>
+    <Italian>Segnala un problema</Italian>
+    <Polish>Zgłoś problem</Polish>
+    <Portuguese>Relatar um problema</Portuguese>
+    <Spanish>Informar de un problema</Spanish>
+    <Russian>Сообщить о проблеме</Russian>
+    <Chinesesimp>报告一个问题</Chinesesimp>
+  </Key>
   <Key ID="STR_ENH_ABOUT_STEAM">
     <English>Steam</English>
     <German>Steam</German>
