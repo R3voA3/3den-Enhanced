@@ -4,7 +4,7 @@ class ENH_FeatureType
   property = "ENH_featureTypeNew";
   displayName = "$STR_ENH_FEATURETYPE_DISPLAYNAME";
   tooltip = "$STR_ENH_FEATURETYPE_TOOLTIP";
-  expression = "_value remoteExec ['setFeatureType', _this]";
+  expression = "_value remoteExec ['setFeatureType', 0, _this]";
   defaultValue = 0;
   typeName = "NUMBER";
   class Values
