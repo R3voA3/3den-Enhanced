@@ -1,3 +1,8 @@
+# Store start time
+$StartTime = Get-Date
+
+Write-Host "Conversion in progress..."
+
 # Force unicode for all cmdlets
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
@@ -10,13 +15,13 @@ $PathXLSX = $env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\stringtable
 $Excel = New-Object -ComObject Excel.Application
 
 # Make Excel visible
-$Excel.visible = $True
+$Excel.visible = $False
 
 # Add a workbook (A new file basically)
 $Workbook = $Excel.Workbooks.Add()
 
 # Define the headers
-$Headers = @(
+$Languages = @(
   "English",
   "German",
   "Italian",
@@ -29,9 +34,9 @@ $Headers = @(
   "Portuguese"
 )
 
-for ($i = $Headers.Length - 1; $i -ge 0; $i--) # Reverse so English is first
+for ($i = $Languages.Length - 1; $i -ge 0; $i--) # Reverse so English is first
 {
-    $Language = $Headers[$i]
+    $Language = $Languages[$i]
 
     # Use the default sheet for the Portuguese language
     if ($Language -eq "Portuguese")
@@ -46,14 +51,14 @@ for ($i = $Headers.Length - 1; $i -ge 0; $i--) # Reverse so English is first
     }
 
     #Add header to each sheet
-    $Worksheet.Cells.Item(1, 1) = "Keys"
-    $Worksheet.Cells.Item(1, 2) = $Language
+    $Headers = @("Keys", "Original", $Language)
 
-    $Worksheet.Cells.Item(1, 1).Font.Bold = $True
-    $Worksheet.Cells.Item(1, 2).Font.Bold = $True
-
-    $Worksheet.Cells.Item(1, 1).Font.Size = 18
-    $Worksheet.Cells.Item(1, 2).Font.Size = 18
+    for ($Column = 1; $Column -ile 3; $Column++)
+    {
+        $Worksheet.Cells.Item(1, $Column) = $Headers[$Column - 1]
+        $Worksheet.Cells.Item(1, $Column).Font.Bold = $True
+        $Worksheet.Cells.Item(1, $Column).Font.Size = 18
+    }
 
     # Get keys
     $Col = 1
@@ -64,14 +69,25 @@ for ($i = $Headers.Length - 1; $i -ge 0; $i--) # Reverse so English is first
         $row++
     };
 
-    # Get translation for each key
+    # Get original (English) translation for easier editing
     $Col = 2
+    $row = 2
+    $XML.Project.ChildNodes.English | ForEach-Object {
+        $Worksheet.Cells.Item($row, $Col) = $_
+        $row++
+    }
+
+    # Get translation for each key
+    $Col = 3
     $row = 2
     $XML.Project.ChildNodes.$Language | ForEach-Object {
         $Worksheet.Cells.Item($row, $Col) = $_
         $row++
     }
-    $Worksheet.columns.AutoFit()
+
+    
+    # Use void to return nothing
+    [Void] $Worksheet.columns.AutoFit()
 
     Write-Host $Language, "finished loading."
 }
@@ -87,7 +103,10 @@ $Workbook.SaveAs($PathXLSX, 51) # http://msdn.microsoft.com/en-us/library/bb2412
 $Workbook.Close()
 $excel.Quit()
 
-Write-Host "stringtable.xml to stringtable.xlsx convertion completed!"
+# Print final message
+$EndTime = Get-Date
+
+Write-Host "stringtable.xml to stringtable.xlsx convertion completed after", ($EndTime.Second - $StartTime.Second), "seconds."
 
 <# # Force unicode for all cmdlets
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
@@ -112,7 +131,7 @@ $Worksheet= $workbook.Worksheets.Item(1)
 $Worksheet.Name = "Translations"
 
 # Define the headers
-$Headers = @(
+$Languages = @(
   "Key",
   "English",
   "German",
@@ -130,7 +149,7 @@ $Headers = @(
 $Col = 1
 $row = 1
 
-$Headers | ForEach-Object -Process
+$Languages | ForEach-Object -Process
 {
   $Worksheet.Cells.Item($row, $col) = $_
   $Worksheet.Cells.Item($row, $col).Font.Bold = $True
