@@ -598,17 +598,6 @@
     <Russian>Снять оружие</Russian>
     <Chinesesimp>移除武器</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_BRIEFINGEDITOR_LOADTEMPLATE_TOOLTIP">
-    <English>Load template by double clicking. Delete it from list by pressing DELETE.</English>
-    <Italian>Caricare il modello facendo doppio clic. Eliminalo dall'elenco premendo CANC.</Italian>
-    <German>Vorlage durch Doppelklicken laden. Löschen durch Drücken von ENTFERNEN.</German>
-    <Czech>Dvojklikem načtete šablonu. Ze seznamu ji odstraníte stisknutím DELETE.</Czech>
-    <Spanish>Cargar plantilla haciendo doble click. Borrar con tecla DELETE</Spanish>
-    <Polish>Załaduj szablon poprzez podwójne kliknięcie. Usuń go z listy poprzez naciśniecie DELETE.</Polish>
-    <Russian>Загрузите шаблон двойным щелчком мыши. Удалите, нажав DELETE.</Russian>
-    <French>Chargez un template en double-cliquant. Supprimez-le de la liste en appuyant sur 'SUPPR'.</French>
-    <Chinesesimp>双击以加载模板。按 DELETE 从列表中删除模板。</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_SPEED_DISPLAYNAME">
     <English>Speed Mode</English>
     <Czech>Rychlý režim</Czech>
@@ -2716,14 +2705,6 @@
     <Polish>Aktualizacja Wybór</Polish>
     <Russian>Выбор обновления</Russian>
     <Spanish>Actualizar la selección</Spanish>
-  </Key>
-  <Key ID="STR_ENH_TOGGLEAIFEATURES_NOTIFICATION">
-    <English>AI features %1.</English>
-    <Russian>Особенности ИИ %1.</Russian>
-    <German>KI Funktionen%1</German>
-    <Spanish>Características IA %1.</Spanish>
-    <French>Fonctionnalités IA %1.</French>
-    <Chinesesimp>AI特性 %1.</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_SPR_DESCRIPTION">
     <English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
@@ -4969,15 +4950,6 @@
     <Polish>Nie</Polish>
     <Chinesesimp>否</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_AMBIENTANIMATIONS_UNARMED">
-    <English>Unarmed:</English>
-    <Russian>Без оружия:</Russian>
-    <German>Unbewaffnet:</German>
-    <Spanish>Sin nombre:</Spanish>
-    <French>Désarmé :</French>
-    <Polish>Nieuzbrojony:</Polish>
-    <Chinesesimp>无武装:</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_CONTEXTMENU_LOGCLASSESSTRING">
     <English>Log Classes as String to Clipboard</English>
     <Russian>Копировать классы в виде строки в буфер обмена</Russian>
@@ -5401,24 +5373,6 @@
     <Polish>Przełącz wszystkie funkcje AI</Polish>
     <Chinesesimp>切换AI功能</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_DISABLED">
-    <English>disabled</English>
-    <Russian>заблокирован</Russian>
-    <German>deaktiviert</German>
-    <Spanish>deshabilitado</Spanish>
-    <French>désactivé</French>
-    <Polish>zablokowane</Polish>
-    <Chinesesimp>禁用</Chinesesimp>
-  </Key>
-  <Key ID="STR_ENH_ENABLED">
-    <English>enabled</English>
-    <Russian>разблокирован</Russian>
-    <German>aktiviert</German>
-    <Spanish>habilitado</Spanish>
-    <French>activé</French>
-    <Polish>odblokowane</Polish>
-    <Chinesesimp>启用</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_TOOLS_TOGGLEDYNAMICSIMULATION">
     <English>Toggle Dynamic Simulation</English>
     <Russian>Вкл/откл динамическую симуляцию</Russian>
@@ -5725,14 +5679,6 @@
     <Polish>Jednostka może zginąć na miejscu od strzału w głowę.</Polish>
     <Chinesesimp>单位可因头部中弹而立即死亡。 致命一击后它们无法重生。</Chinesesimp>
   </Key>
-  <Key ID="STR_ENH_MISSIONENDING_CATEGORY_DISPLAYNNAME">
-    <English>Custom Mission Endings</English>
-    <Russian>Пользовательское окончание миссии</Russian>
-    <German>Benutzerdefinierte Missionsenden</German>
-    <Spanish>Final de misión</Spanish>
-    <French>Fins de mission personnalisées</French>
-    <Chinesesimp>自定义任务结局</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_MISSIONENDING_ENDING_DISPLAYNAME">
     <English>Ending</English>
     <Russian>Конец</Russian>
@@ -5791,14 +5737,6 @@
     <Russian>Добавляет все предметы выбранного аддона в инвентарь и делает его виртуальным (Арсенал).</Russian>
     <German>Fügt alle Gegenstände des ausgewählten Addons dem Inventar hinzu und setzt das Inventar auf virtuell (Arsenal).</German>
   </Key>
-  <Key ID="STR_ENH_VIM_PREVIEW_TOOLTIP">
-    <English>Double click on an item to preview it.</English>
-    <Russian>Дважды щелкните на элемент, чтобы просмотреть его.</Russian>
-    <German>Doppelklick auf einen Gegenstand, um ihn anzuzeigen.</German>
-    <French>Double-cliquez sur un item pour le prévisualiser.</French>
-    <Spanish>Doble clic en un objeto para previsualizarlo</Spanish>
-    <Chinesesimp>双击一个项目以预览它。</Chinesesimp>
-  </Key>
   <Key ID="STR_ENH_VIM_ITEMSININVENTORY">
     <English>Items in Inventory</English>
     <Russian>Элементы в инвентаре</Russian>
@@ -5834,15 +5772,6 @@
     <French>Créer un modèle</French>
     <Spanish>Crear plantilla</Spanish>
     <Chinesesimp>创建模板</Chinesesimp>
-  </Key>
-  <Key ID="STR_ENH_VIM_APPLYTEMPLATE">
-    <English>Apply Template</English>
-    <Russian>Применить шаблон</Russian>
-    <German>Vorlage anwenden</German>
-    <Polish>Zastosuj szablon</Polish>
-    <French>Appliquer un modèle</French>
-    <Spanish>Aplicar plantilla</Spanish>
-    <Chinesesimp>应用模板</Chinesesimp>
   </Key>
   <Key ID="STR_ENH_VIM_ISVIRTUAL">
     <English>Is Virtual?</English>
@@ -7830,10 +7759,6 @@
     <French>Inverser</French>
     <Polish>Odwróć</Polish>
     <Russian>Инвертировать</Russian>
-  </Key>
-  <Key ID="STR_ENH_CREATEOBJECT_CLASSNAME">
-    <English>Class Name</English>
-    <German>Klassenname</German>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_X_MAX">
     <English>Align to X+</English>
