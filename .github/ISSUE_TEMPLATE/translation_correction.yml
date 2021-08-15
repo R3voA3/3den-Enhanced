@@ -30,7 +30,7 @@ body:
       label: Current Translation
     validations:
       required: true
-   - type: input
+  - type: input
     attributes:
       label: New Translation
     validations:
