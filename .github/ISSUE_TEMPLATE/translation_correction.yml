@@ -25,12 +25,12 @@ body:
         - Spanish
     validations:
       required: true
-  - type: input
+  - type: textarea
     attributes:
       label: Current Translation
     validations:
       required: true
-   - type: input
+  - type: textarea
     attributes:
       label: New Translation
     validations:
