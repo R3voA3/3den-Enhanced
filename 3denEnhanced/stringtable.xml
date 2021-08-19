@@ -7737,6 +7737,13 @@
   <Key ID="STR_ENH_ZEUSADDONS_CFGPATCHES">
     <English>CfgPatches</English>
     <German>CfgPatches</German>
+    <Italian>CfgPatches</Italian>
+    <Czech>CfgPatches</Czech>
+    <Chinesesimp>CfgPatches</Chinesesimp>
+    <Spanish>CfgPatches</Spanish>
+    <French>CfgPatches</French>
+    <Polish>CfgPatches</Polish>
+    <Russian>CfgPatches</Russian>
   </Key>
   <Key ID="STR_ENH_ZEUSADDONS_CONTENT">
     <English>Content</English>
