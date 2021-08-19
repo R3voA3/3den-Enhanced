@@ -29,7 +29,7 @@ Function Print-Line
 $directory = Get-Folder
 $Items = Get-ChildItem -Path $directory -Name
 
-Print-Line "0" "CfgFunctions"
+Print-Line "0" "class CfgFunctions"
 Print-Line "0" "{"
 Print-Line "2" "class ENH"
 Print-Line "2" "{"
@@ -41,6 +41,6 @@ $Items | forEach-Object {
     Print-Line "6" $FunctionName.Replace(".sqf", ";")
 }
 
-Print-Line "4" "}"
-Print-Line "2" "}"
-Print-Line "0" "}"
+Print-Line "4" "};"
+Print-Line "2" "};"
+Print-Line "0" "};"

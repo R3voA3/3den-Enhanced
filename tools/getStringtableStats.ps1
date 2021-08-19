@@ -10,6 +10,10 @@
     "<Polish>",
     "<Russian>",
     "<Portuguese>"
+    "<Turkish>",
+    "<Chinese>",
+    "<Korean>",
+    "<Hungarian>"
 )
 
 # Get content of stringtable.xml

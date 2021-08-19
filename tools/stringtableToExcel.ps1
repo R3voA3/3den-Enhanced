@@ -31,7 +31,11 @@ $Languages = @(
   "French",
   "Polish",
   "Russian",
-  "Portuguese"
+  "Portuguese",
+  "Turkish",
+  "Chinese",
+  "Korean",
+  "Hungarian"
 )
 
 for ($i = $Languages.Length - 1; $i -ge 0; $i--) # Reverse so English is first
@@ -85,7 +89,7 @@ for ($i = $Languages.Length - 1; $i -ge 0; $i--) # Reverse so English is first
         $row++
     }
 
-    
+
     # Use void to return nothing
     [Void] $Worksheet.columns.AutoFit()
 
