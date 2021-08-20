@@ -46,10 +46,10 @@ class ENH_GroupMarker
                   } else {\
                     _marker setMarkerTextLocal (_groupString + _vehicleString);\
                   };\
-                } else {\
-                  if (_showGroupSize) then {\
-                    _marker setMarkerTextLocal (_groupString + _sizeString);\
-                  };\
+                };\
+              } else {\
+                if (_showGroupSize) then {\
+                  _marker setMarkerTextLocal (_groupString + _sizeString);\
                 };\
               };\
             };\
