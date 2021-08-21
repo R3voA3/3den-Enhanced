@@ -1,9 +1,9 @@
 # Translation Progress
-**Last update:** 15.52.2021
+**Last update:** 21.57.2021
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
-879 | 6055 | 68,89 % |
+879 | 6979 | 56,71 % |
 
 | Language | Translated Entries | Missing Entries | Progress |
 |----------|:-----------------:|--------:|--------:|
@@ -12,18 +12,26 @@
 | | | |
 | German | 879 | 0 | 100,00 %
 | | | |
-| Italian | 384 | 495 | 43,69 %
+| Italian | 385 | 494 | 43,80 %
 | | | |
-| Czech | 466 | 413 | 53,01 %
+| Czech | 467 | 412 | 53,13 %
 | | | |
-| Chinesesimp | 837 | 42 | 95,22 %
+| Chinesesimp | 878 | 1 | 99,89 %
 | | | |
-| Spanish | 626 | 253 | 71,22 %
+| Spanish | 627 | 252 | 71,33 %
 | | | |
-| French | 608 | 271 | 69,17 %
+| French | 609 | 270 | 69,28 %
 | | | |
-| Polish | 562 | 317 | 63,94 %
+| Polish | 563 | 316 | 64,05 %
 | | | |
-| Russian | 803 | 76 | 91,35 %
+| Russian | 804 | 75 | 91,47 %
 | | | |
 | Portuguese | 11 | 868 | 1,25 %
+| | | |
+| Turkish | 0 | 879 | 0,00 %
+| | | |
+| Chinese | 877 | 2 | 99,77 %
+| | | |
+| Korean | 0 | 879 | 0,00 %
+| | | |
+| Hungarian | 0 | 879 | 0,00 %
