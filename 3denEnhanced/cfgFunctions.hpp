@@ -217,6 +217,7 @@ class CfgFunctions
       class loadoutTool;
       class measureDistance;
       class preloadAmmoAttribute;
+      class pylonTools;
       class removeGear;
       class setOrientation;
       class spaceEqually;
