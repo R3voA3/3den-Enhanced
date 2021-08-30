@@ -3741,6 +3741,34 @@
     <Polish>O 3den Enhanced</Polish>
     <Russian>О 3den Enhanced</Russian>
   </Key>
+  <Key ID="STR_ENH_FOLDER_PYLONS">
+    <English>Pylon Tools</English>
+    <German>Pylonen-Werkzeuge</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_COPYPYLONS">
+    <English>Copy Pylon Settings</English>
+    <German>Pylonen-Einstellungen kopieren</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
+    <English>Apply Pylon Settings</English>
+    <German>Pylonen-Einstellungen anwenden</German>
+  </Key>
+  <Key ID="STR_ENH_FOLDER_VHC">
+    <English>Vehicle Customization Tools</English>
+    <German>Fahrzeugmodifikations-Werkzeuge</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_COPYVHC">
+    <English>Copy Vehicle Customization</English>
+    <German>Fahrzeuganpassung kopieren</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_APPLYVHC">
+    <English>Apply Vehicle Customization</English>
+    <German>Fahrzeuganpassung anwenden</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
+    <English>Randomize Vehicle Customization</English>
+    <German>Fahrzeuganpassung zufällig ändern</German>
+  </Key>
   <Key ID="STR_ENH_FOLDER_WIKI">
     <English>Community Wiki</English>
     <Czech>Komunitní Wiki</Czech>

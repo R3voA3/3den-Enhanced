@@ -6,6 +6,7 @@ class Tools
     "ENH_Folder_Placement",
     "ENH_Folder_Loadout",
     "ENH_Folder_Pylons",
+    "ENH_Folder_VHC",
     "ENH_Folder_Debug",
     "ENH_Folder_GUI",
     "ENH_Folder_Miscellaneous"
@@ -16,6 +17,7 @@ class Tools
 #include "menuStrip_tools_placement.hpp"
 #include "menuStrip_tools_loadout.hpp"
 #include "menuStrip_tools_pylons.hpp"
+#include "menuStrip_tools_VHC.hpp"
 #include "menuStrip_tools_debug.hpp"
 #include "menuStrip_tools_GUI.hpp"
 #include "menuStrip_tools_miscellaneous.hpp"

@@ -230,6 +230,7 @@ class CfgFunctions
       class toggleGrass;
       class toggleMarkerAlpha;
       class twoDigitsStr;
+      class VHCTools;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface

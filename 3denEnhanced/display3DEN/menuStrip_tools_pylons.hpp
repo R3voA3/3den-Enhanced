@@ -1,6 +1,6 @@
 class ENH_Folder_Pylons
 {
-  text = "Pylon Tools";
+  text = "$STR_ENH_FOLDER_PYLONS";
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
@@ -10,11 +10,11 @@ class ENH_Folder_Pylons
 };
 class ENH_CopyPylonSettings
 {
-  text = "Copy Pylon Settings (localize)";
-  action = "'copy' call ENH_fnc_pylonTools";
+  text = "$STR_ENH_TOOLS_COPYPYLONS";
+  action = "'copy' call (uiNamespace getVariable 'ENH_fnc_pylonTools')";
 };
 class ENH_ApplyPylonSettings
 {
-  text = "Apply Pylon Settings (localize)";
-  action = "'apply' call ENH_fnc_pylonTools";
+  text = "$STR_ENH_TOOLS_APPLYPYLONS";
+  action = "'apply' call (uiNamespace getVariable 'ENH_fnc_pylonTools')";
 };
