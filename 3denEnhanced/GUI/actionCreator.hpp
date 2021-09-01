@@ -5,7 +5,7 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
 {
   idd = IDD_ACTIONCREATOR;
   movingEnable = true;
-  onLoad = "_this call ENH_fnc_actionCreator_onLoad";
+  onLoad = "[_this # 0, 'onLoad'] call ENH_fnc_actionCreator_onLoad";
   class ControlsBackground
   {
     DISABLE_BACKGROUND
