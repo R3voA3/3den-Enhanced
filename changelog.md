@@ -1,7 +1,19 @@
 # v6.2
+## ADDED
+- A simple GUI to create Eden Entities that are not present in the Asset Browser e.g. (scope = 0)
+- Readded object scaling for objects without simulation
+- Alignment tools
+- Spacing tools
+- Disable AI "all"
+- Added a link to quickly report an issue
+- Some basic pylon tools
+- Some basic vehicle customization tools
+
 ## CHANGED
-- Fixed an issue which would prevent 'Export Mission to SQF' to work properly with some attributes
+- Increased the height of all large edit boxes in Eden Editor
+- Fixed an issue that would prevent 'Export Mission to SQF' to work properly with some attributes
 - Group Marker Attribute
+  - Fixed an issue that would cause a script error popping up
   - Attribute is now also properly loaded if multiple entites are edited at once
   - Minor network optimisations to the Group Marker attribute
   - Added tooltips to the controls
@@ -9,6 +21,48 @@
   - Changed the color of the combo box controls to increase the contrast when selecting the texture type
 - Fixed a missing name in Preferences Menu
 - Garrison GUI will now save and restore the blacklist value
+- Visual tweaks to the Ambient Animations UI. Icons will not indicate if the animation uses a weapon
+- Ambient Animation attribute will now be set to "Disabled" if no animation is selected
+- Remove obsolete code that was used as workaround https://feedback.bistudio.com/T141001
+- Added some missing ;
+- Briefing Editor
+  - Changed the way templates are stored (backwards compatible)
+  - Added basic syntax highlighting for easier editing
+  - Redesigned parts of the UI
+  - Changed how briefing text is exported
+- Export Mission Parameters tool is now using display3denCopy
+- Images in Texture Finder are now categorised by their size
+- Image preview in Texture Finder GUI will now display images in original size if possible
+- 3den Enhanced documenation has been updated (https://github.com/R3voA3/3den-Enhanced/wiki). This is an ongoing effort.
+- Some tweaks and fixes to RscTestControlTypes and RscTestControlStyles
+- Tweaked the tooltips of the view distance settings
+- Delete empty layers tool will now also delete sublayers
+- Fixed an issue which causes the progress text in the Texture Viewer to not work when language = German
+- Visual overhaul of the Module Information GUI
+- SPR will now restore original volumes after respawn
+- Vehicle inventories are now preloaded to get rid of the initial lag and loading screen when opening the first vehicle
+- Placement tools folder was reworked
+- History entries will now use custom text, tooltip and icon if applicable
+- Damage calculation of the SPR should now closer to the original damage values
+- SPR now supports "After respawn code"
+- Fixed an issue that causes the Functions Viewer to not properly generate the path to the function file
+
+- Vehicle Inventory Manager
+  - Completely redesigned the GUI
+  - Fully using HashMap now
+  - Added warning about unsaved changes when closing the GUI
+  - New icons
+  - Added function to export to sqf
+  - Added function to export to scripted arsenal
+  - Added direct link to online documention
+  - Added shortcuts for most actions
+  - Loadout is now properly reset even if config name in vehicle config has not got the proper casing
+  - DescriptionShort is now shown in the tooltip as well
+  - Fixed a rare "undefined variable" error when using the Vehicle Inventory Manager
+  - Fixed empty value when exporting vehicle inventory in ACE format
+- Chinese simplefied and Chinese traditional updated by mihuan-0
+- Fixed an issue that would cause Export GUI Defines UI to export wrong values
+- Export GUI Defines now uses display3denCopy
 
 # v6.1.1
 

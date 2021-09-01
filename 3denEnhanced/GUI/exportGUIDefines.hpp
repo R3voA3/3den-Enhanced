@@ -1,8 +1,10 @@
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+
 #define DIALOG_W 53
 
 class ENH_ExportGUIDefines
 {
-  idd = -1;
+  idd = IDD_EXPORTGUIDEFINES;
   movingEnable = true;
   onLoad = "";
   class ControlsBackground
@@ -47,14 +49,12 @@ class ENH_ExportGUIDefines
         {
           text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP";
-          data = "mod";
           default = 1;
         };
         class Scenario
         {
           text = "$STR_A3_CFGUIGRIDS_IGUI_VARIABLES_GRID_MISSION_0";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP";
-          data = "scenario";
         };
       };
     };
@@ -104,9 +104,7 @@ class ENH_ExportGUIDefines
       y = DIALOG_TOP + 19 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_display = ctrlParent (_this # 0);\
-      [(_display displayCtrl 10) lbData (lbCurSel (_display displayCtrl 10)), (_display displayCtrl 20) lbData (lbCurSel (_display displayCtrl 20))]\
-      call ENH_fnc_exportGUIDefines; _display closeDisplay 0";
+      onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";
     };
   };
 };
