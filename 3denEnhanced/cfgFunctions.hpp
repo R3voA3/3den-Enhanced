@@ -70,7 +70,7 @@ class CfgFunctions
     class ActionCreator
     {
       file = "3denEnhanced\functions\GUI\actionCreator";
-      class actionCreator_onLoad;
+      class actionCreator;
     };
     class BriefingEditor
     {

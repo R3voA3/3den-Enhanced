@@ -42,17 +42,28 @@ switch (_mode) do
     CTRL(IDC_ACTIONCREATOR_ARGUMENTS) ctrlSetText _arguments;
 
     CTRL(IDC_ACTIONCREATOR_PRIORITY) sliderSetPosition parseNumber _priority;
-    CTRL(IDC_ACTIONCREATOR_PRIORITY) ctrlSetTooltip _priority;
+    CTRL(IDC_ACTIONCREATOR_PRIORITY) ctrlSetTooltip format ["%1.", _priority];
+    CTRL(IDC_ACTIONCREATOR_PRIORITY) ctrlAddEventHandler ["SliderPosChanged",
+    {
+      params ["_ctrlSlider", "_value"];
+      toFixed 1;
+      _ctrlSlider ctrlSetTooltip format ["%1.", _value];
+    }];
 
-    CTRL(IDC_ACTIONCREATOR_SHOWWINDOW) ctrlSetChecked call compile _showWindow;
-    CTRL(IDC_ACTIONCREATOR_HIDEONUSE) ctrlSetChecked call compile _hideOnUse;
+    CTRL(IDC_ACTIONCREATOR_SHOWWINDOW) cbSetChecked call compile _showWindow;
+    CTRL(IDC_ACTIONCREATOR_HIDEONUSE) cbSetChecked call compile _hideOnUse;
     CTRL(IDC_ACTIONCREATOR_SHORTCUT) ctrlSetText _shortCut;
     CTRL(IDC_ACTIONCREATOR_CONDITION) ctrlSetText _condition;
 
     CTRL(IDC_ACTIONCREATOR_RADIUS) sliderSetPosition parseNumber _radius;
-    CTRL(IDC_ACTIONCREATOR_RADIUS) ctrlSetTooltip _radius;
+    CTRL(IDC_ACTIONCREATOR_RADIUS) ctrlSetTooltip format ["%1 m.", _radius];
+    CTRL(IDC_ACTIONCREATOR_RADIUS) ctrlAddEventHandler ["SliderPosChanged",
+    {
+      params ["_ctrlSlider", "_value"];
+      _ctrlSlider ctrlSetTooltip format ["%1 m.", _value];
+    }];
 
-    CTRL(IDC_ACTIONCREATOR_SHOWUNCONCIOUS) ctrlSetChecked call compile _showUnconcious;
+    CTRL(IDC_ACTIONCREATOR_SHOWUNCONCIOUS) cbSetChecked call compile _showUnconcious;
   };
   case "export":
   {
@@ -67,7 +78,7 @@ switch (_mode) do
     private _radius = sliderPosition CTRL(IDC_ACTIONCREATOR_RADIUS);
     private _showUnconcious = cbChecked CTRL(IDC_ACTIONCREATOR_SHOWUNCONCIOUS);
 
-    if (_args isEqualTo "") then {_args = "nil"} else {_args = format ["[%1]", _args]};
+    if (_args isEqualTo "") then {_args = "nil"};
     if (_condition isEqualTo "") then {_condition = "true"};
 
     profileNamespace setVariable ["ENH_ActionCreator_History", [_title, _script, _args, str _priority, str _showWindow, str _hideOnUse, _shortcut, _condition, str _radius, str _showUnconcious]];
@@ -82,7 +93,7 @@ switch (_mode) do
     _export = _export + format ["""%1"",", _shortcut] + endl + "  ";
     _export = _export + format ["""%1"",", _condition] + endl + "  ";
     _export = _export + format ["%1,", _radius] + endl + "  ";
-    _export = _export + format ["%1,", _showUnconcious] + endl + "];";
+    _export = _export + format ["%1", _showUnconcious] + endl + "];";
 
     //Set variable used by display3denCopy and create the display
     uinamespace setVariable ["display3DENCopy_data", ["", _export]];

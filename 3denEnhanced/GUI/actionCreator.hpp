@@ -5,10 +5,18 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
 {
   idd = IDD_ACTIONCREATOR;
   movingEnable = true;
-  onLoad = "[_this # 0, 'onLoad'] call ENH_fnc_actionCreator_onLoad";
+  onLoad = "[_this # 0, 'onLoad'] call ENH_fnc_actionCreator";
   class ControlsBackground
   {
     DISABLE_BACKGROUND
+    class Header: ctrlStaticTitle
+    {
+      text = """AddAction"" Creator";
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
     class Background: ctrlStaticBackground
     {
       x = CENTERED_X(DIALOG_W);
@@ -16,203 +24,161 @@ class ENH_ActionCreator//Do not localize. Text should be identical to wiki page
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
+    class BackgroundButtons: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 80 * GRID_H;
+      w = 110 * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
   };
   class Controls
   {
-    class Header: ctrlStaticTitle
-    {
-      text = """AddAction"" Creator";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W - 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class Help: ctrlButton
-    {
-      text = "?";
-      url = "https://community.bistudio.com/wiki/addAction";
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 5) * GRID_W;
-      y = DIALOG_TOP;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      colorBackground[] = {COLOR_ACTIVE_RGBA};
-    };
     class Title: ctrlStatic
     {
       text = "Title";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 6 * GRID_H;
-      w = 23 * GRID_W;
+      w = 28 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class TitleValue: ctrlEdit
     {
       idc = IDC_ACTIONCREATOR_TITLE;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 6 * GRID_H;
-      w = 85 * GRID_W;
+      w = 79 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class Script: ctrlStatic
+    class Script: Title
     {
       text = "Script";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 12 * GRID_H;
-      w = 23 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class ScriptValue: ctrlEditMulti
     {
       idc = IDC_ACTIONCREATOR_SCRIPT;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
-      w = 85 * GRID_W;
+      w = 79 * GRID_W;
       h = 20 * GRID_H;
+      autocomplete = "Scripting";
     };
-    class Arguments: ctrlStatic
+    class Arguments: Title
     {
       text = "Arguments";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 33 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class ArgumentsValue: ctrlEdit
+    class ArgumentsValue: TitleValue
     {
       idc = IDC_ACTIONCREATOR_ARGUMENTS;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 33 * GRID_H;
-      w = 85 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class Priority: ctrlStatic
+    class Priority: Title
     {
       text = "Priority";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 39 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class PriorityValue: ctrlEdit
+    class PriorityValue: ctrlXSliderH
     {
       idc = IDC_ACTIONCREATOR_PRIORITY;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 30 * GRID_W;
       y = DIALOG_TOP + 39 * GRID_H;
-      w = 85 * GRID_W;
+      w = 79 * GRID_W;
       h = CTRL_DEFAULT_H;
+      sliderRange[] = {1.5,50};
+      sliderStep = 0.5;
     };
-    class Shortcut: ctrlStatic
+    class Shortcut: Title
     {
       text = "Shortcut";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 45 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class ShortcutValue: ctrlEdit
+    class ShortcutValue: TitleValue
     {
       idc = IDC_ACTIONCREATOR_SHORTCUT;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 45 * GRID_H;
-      w = 85 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class Condition: ctrlStatic
+    class Condition: Title
     {
       text = "Condition";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 51 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class ConditionValue: ctrlEdit
+    class ConditionValue: TitleValue
     {
       idc = IDC_ACTIONCREATOR_CONDITION;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 51 * GRID_H;
-      w = 85 * GRID_W;
-      h = CTRL_DEFAULT_H;
+      autocomplete = "Scripting";
     };
-    class Radius: ctrlStatic
+    class Radius: Title
     {
       text = "Radius";
-      x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 57 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class RadiusValue: ctrlEdit
+    class RadiusValue: PriorityValue
     {
       idc = IDC_ACTIONCREATOR_RADIUS;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
       y = DIALOG_TOP + 57 * GRID_H;
-      w = 85 * GRID_W;
-      h = CTRL_DEFAULT_H;
+      sliderRange[] = {1,200};
+      sliderStep = 1;
     };
-    class Selection: ctrlStatic
+    class ShowUnconcious: Title
     {
-      text = "Selection";
-      x = CENTERED_X(DIALOG_W);
+      text = "Show unconscious";
       y = DIALOG_TOP + 63 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class SelectionValue: ctrlEdit
+    class ShowUnconciousValue: ctrlCheckbox
     {
-      idc = IDC_ACTIONCREATOR_SELECTION;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+      idc = IDC_ACTIONCREATOR_SHOWUNCONCIOUS;
+      x = CENTERED_X(DIALOG_W) + 29 * GRID_W;
       y = DIALOG_TOP + 63 * GRID_H;
-      w = 85 * GRID_W;
+      w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class MemoryPoint: ctrlStatic
+    class ShowWindow: Title
     {
-      text = "Memory Point";
-      x = CENTERED_X(DIALOG_W);
+      text = "Show window";
       y = DIALOG_TOP + 69 * GRID_H;
-      w = 23 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class MemoryPointValue: ctrlEdit
+    class ShowWindowValue: ShowUnconciousValue
     {
-      idc = IDC_ACTIONCREATOR_MEMORYPOINT;
-      x = CENTERED_X(DIALOG_W) + 24 * GRID_W;
+      idc = IDC_ACTIONCREATOR_SHOWWINDOW;
       y = DIALOG_TOP + 69 * GRID_H;
-      w = 85 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
-    class Toolbox: ctrlToolbox
+    class HideOnUse: Title
     {
-      idc = IDC_ACTIONCREATOR_TOOLBOX;
-      type = 7;
-      style = 2;
-
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+      text = "Hide on use";
       y = DIALOG_TOP + 75 * GRID_H;
-      w = (DIALOG_W - 2) * GRID_W;
-      h = CTRL_DEFAULT_H;
-
-      columns = 3;
-      rows = 1;
-      strings[] = {"Show Unconscious?", "Show Window?", "Hide on Use?"};
-      checked_strings[] = {"Show Unconscious? Yes", "Show Window? Yes", "Hide on Use? Yes"};
-      values[] = {0, 0, 0};
+    };
+    class HideOnUseValue: ShowUnconciousValue
+    {
+      idc = IDC_ACTIONCREATOR_HIDEONUSE;
+      y = DIALOG_TOP + 75 * GRID_H;
     };
     class Cancel: ctrlButtonCancel
     {
-      x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 81 * GRID_W;
       y = DIALOG_TOP + 81 * GRID_H;
-      w = 23 * GRID_W;
+      w = 28 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Ok: ctrlButtonOK
     {
       idc = IDC_ACTIONCREATOR_OK;//We don't want it to close the GUI
-      action = "call ENH_fnc_actionCreator_export";
-      x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
+      x = CENTERED_X(DIALOG_W) + 52 * GRID_W;
       y = DIALOG_TOP + 81 * GRID_H;
-      w = 23 * GRID_W;
+      w = 28 * GRID_W;
       h = CTRL_DEFAULT_H;
+      onButtonClick = "[ctrlParent (_this # 0), 'export'] call ENH_fnc_actionCreator";
+    };
+    class Help: Ok
+    {
+      idc = -1;
+      text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPBIKI_TEXT";
+      url = "https://community.bistudio.com/wiki/addAction";
+      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
+      onButtonClick = "";
     };
   };
 };
