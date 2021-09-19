@@ -2948,7 +2948,7 @@
     <Spanish>Lista negra</Spanish>
   </Key>
   <Key ID="STR_ENH_GARRISON_WHITELIST">
-    <English>Blacklist</English>
+    <English>Whitelist</English>
     <Chinesesimp>白名单</Chinesesimp>
     <Chinese>白名單</Chinese>
     <Czech>Bílá listina</Czech>
@@ -3752,6 +3752,10 @@
   <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
     <English>Apply Pylon Settings</English>
     <German>Pylonen-Einstellungen anwenden</German>
+  </Key>
+  <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
+    <English>Export Pylons to SQF</English>
+    <German>Pylonen-Einstellungen als SQF exportieren</German>
   </Key>
   <Key ID="STR_ENH_FOLDER_VHC">
     <English>Vehicle Customization Tools</English>

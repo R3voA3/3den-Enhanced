@@ -39,6 +39,33 @@ switch (_mode) do
     } forEach (get3DENSelected "Object");
     ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
   };
+  case "exportToSQF":
+  {
+    private _value = ((get3DENSelected "object" # 0) get3DENAttribute "Pylons") # 0;
+    private _export = "";
+    private _pylons = [];
+
+    while {_value != ""} do
+    {
+      private _index = _value find ";";
+      if (_index < 0) then {_index = count _value - 1};
+      private _pylon = _value select [0, _index];
+      private _turretIndex = _pylon find "[";
+      if (_turretIndex >= 0) then
+      {
+        _pylon = _pylon select [0, _turretIndex];
+      };
+      _pylons pushback _pylon;
+      _value = _value select [_index + 1, count _value - 1];
+    };
+
+    {
+      _export = _export + format ["this setPylonLoadout [%1, ""%2""];", _foreachindex + 1, _x] + endl
+    } foreach _pylons;
+
+    uinamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_TOOLS_EXPORTPYLONSTOSQF", _export]];
+    findDisplay 313 createDisplay "display3denCopy";
+  };
 };
 
 nil

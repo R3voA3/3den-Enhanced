@@ -5,7 +5,8 @@ class ENH_Folder_Pylons
   items[] +=
   {
     "ENH_CopyPylonSettings",
-    "ENH_ApplyPylonSettings"
+    "ENH_ApplyPylonSettings",
+    "ENH_ExportPylonsToSQF"
   };
 };
 class ENH_CopyPylonSettings
@@ -17,4 +18,9 @@ class ENH_ApplyPylonSettings
 {
   text = "$STR_ENH_TOOLS_APPLYPYLONS";
   action = "'apply' call (uiNamespace getVariable 'ENH_fnc_pylonTools')";
+};
+class ENH_ExportPylonsToSQF
+{
+  text = "$STR_ENH_TOOLS_EXPORTPYLONSTOSQF";
+  action = "'exportToSQF' call (uiNamespace getVariable 'ENH_fnc_pylonTools')";
 };
