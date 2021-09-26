@@ -12,7 +12,7 @@
 */
 
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
-#define IN_PLAYLIST [_songName, _class, str _duraton] in _playlist
+#define IN_PLAYLIST [_songName, _class, str _duration] in _playlist
 
 disableSerialization;
 
@@ -22,8 +22,8 @@ private _filter = toUpper (ctrlText CTRL(IDC_3DENRADIO_SEARCH));
 private _filteredClasses = [];
 private _playlist = profileNamespace getVariable ["ENH_3DENRadio_playlist", []];
 private _songName = "";
-private _duraton = 0;
-private _duratonStr = "00:00";
+private _duration = 0;
+private _durationStr = "00:00";
 private _theme = "";
 private _class = "";
 private _row = 0;
@@ -37,16 +37,16 @@ lbClear _ctrlSongList;
   if (_songName == "") then {_songName = _class};
   if ((toUpper _songName find _filter) >= 0 || _filter == "") then
   {
-    _duraton =  getNumber (_x >> "duration");
-    _duratonStr = _duraton call ENH_fnc_floatToTime;
+    _duration =  getNumber (_x >> "duration");
+    _durationStr = _duration call ENH_fnc_floatToTime;
     _theme = getText (configFile >> "CfgMusicClasses" >> getText (_x >> "musicClass") >> "displayName");
 
     (_x call ENH_fnc_getConfigSourceAddon) params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
 
     //Add filtered entries
-    _row = _ctrlSongList lnbAddRow [_songName, _duratonStr, _theme, _addonName, ""];
+    _row = _ctrlSongList lnbAddRow [_songName, _durationStr, _theme, _addonName, ""];
     _ctrlSongList lnbSetData [[_row, 0], _class];
-    _ctrlSongList lnbSetData [[_row, 1], str _duraton];
+    _ctrlSongList lnbSetData [[_row, 1], str _duration];
     _ctrlSongList lnbSetPicture [[_row, 3], _addonIcon];
 
     if (IN_PLAYLIST) then

@@ -58,12 +58,12 @@ private _vehiclesArray = "true" configClasses (configFile >> "CfgVehicles");
 
         if (_weaponPublic) then
         {
-          _listType pushback
+          _listType pushBack
           [
-            ([gettext (_weaponCfg >> "displayName")] + (((_weaponCfg >> "linkeditems") call BIS_fnc_returnchildren) apply { getText (_CfgWeapons >> getText (_x >> "item") >> "displayName") })) joinString " + ",
+            ([getText (_weaponCfg >> "displayName")] + (((_weaponCfg >> "linkeditems") call BIS_fnc_returnchildren) apply { getText (_CfgWeapons >> getText (_x >> "item") >> "displayName") })) joinString " + ",
             _weapon,
             getText (_weaponCfg >> "picture"),
-            parseNumber (getnumber (_weaponCfg >> "type") in [4096,131072]),
+            parseNumber (getNumber (_weaponCfg >> "type") in [4096,131072]),
             false
           ];
         };
@@ -87,7 +87,7 @@ private _vehiclesArray = "true" configClasses (configFile >> "CfgVehicles");
 
                 if (getNumber (_magCfg >> "scope") isEqualTo 2) then
                 {
-                  _listType pushback
+                  _listType pushBack
                   [
                     getText (_magCfg >> "displayName"),
                     _mag,
@@ -95,22 +95,16 @@ private _vehiclesArray = "true" configClasses (configFile >> "CfgVehicles");
                     2,
                     _mag in _magazines
                   ];
-
-                  _magazines pushback _mag;
+                  _magazines pushBack _mag;
                 };
               };
-            }
-            forEach _magazinesList;
-          }
-          forEach getArray (_weaponCfg >> "muzzles");
+            } forEach _magazinesList;
+          } forEach getArray (_weaponCfg >> "muzzles");
         };
       };
     };
-  }
-  forEach _types;
-
-}
-forEach _weaponsArray;
+  } forEach _types;
+} forEach _weaponsArray;
 
 //--- Backpacks
 {
@@ -122,40 +116,37 @@ forEach _weaponsArray;
   {
     if (_weaponTypeSpecific in _x) exitWith
     {
-      if (getnumber (_weaponCfg >> "scope") == 2) then
+      if (getNumber (_weaponCfg >> "scope") == 2) then
       {
-        _list select _forEachIndex pushback
+        _list select _forEachIndex pushBack
         [
-          gettext (_weaponCfg >> "displayName"),
+          getText (_weaponCfg >> "displayName"),
           _weapon,
-          gettext (_weaponCfg >> "picture"),
+          getText (_weaponCfg >> "picture"),
           3,
           false
         ];
       };
     };
-  }
-  forEach _types;
-}
-forEach _vehiclesArray;
+  } forEach _types;
+} forEach _vehiclesArray;
 
 //--- Glasses
 {
   private _weaponCfg = _x;
   private _weapon = toLower configName _weaponCfg;
 
-  if (getnumber (_weaponCfg >> "scope") == 2) then
+  if (getNumber (_weaponCfg >> "scope") == 2) then
   {
-    _list select 10 pushback
+    _list select 10 pushBack
     [
-      gettext (_weaponCfg >> "displayName"),
+      getText (_weaponCfg >> "displayName"),
       _weapon,
-      gettext (_weaponCfg >> "picture"),
+      getText (_weaponCfg >> "picture"),
       3,
       false
     ];
   };
-}
-forEach _glassesArray;
+} forEach _glassesArray;
 
 uiNamespace setVariable ["AmmoBox_list", _list];
