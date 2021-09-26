@@ -16,9 +16,6 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
-  };
-  class Controls
-  {
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TEXTUREFINDER";
@@ -27,6 +24,16 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 108 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
+  };
+  class Controls
+  {
     class TextureList: ctrlTree
     {
       idc = IDC_TEXTUREFINDER_TEXTURELIST;

@@ -24,6 +24,13 @@ class ENH_CfgSentencesBrowser
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
     class Count: ctrlStatic
     {
       idc = IDC_SENTENCES_COUNT;
@@ -31,12 +38,6 @@ class ENH_CfgSentencesBrowser
       y = DIALOG_TOP;
       w = 11 * GRID_W;
       h = CTRL_DEFAULT_H;
-    };
-    class Separator: ctrlStaticFrame
-    {
-      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
-      w = DIALOG_W * GRID_W - 10 * GRID_W;
     };
   };
   class Controls

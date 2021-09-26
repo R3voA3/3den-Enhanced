@@ -17,17 +17,16 @@ class ENH_SAM
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 88 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
   };
   class Controls
   {
-    class Header: ctrlStaticTitle
-    {
-      text = "$STR_ENH_TOOLS_SAM";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
     class Templates: ctrlStatic
     {
       text = "$STR_ENH_SAM_TEMPLATES";
@@ -131,15 +130,6 @@ class ENH_SAM
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_SAM_applyAttribute";
     };
-    /* class Export: ctrlButton
-    {
-      text = "$STR_ENH_SAM_EXPORT";
-      x = CENTERED_X(DIALOG_W) + 118 * GRID_W;
-      y = DIALOG_TOP + 89 * GRID_H;
-      w = 25 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_SAM_exportToClipboard";
-    }; */
     class Close: ctrlButtonClose
     {
       x = CENTERED_X(DIALOG_W) + 134 * GRID_W;

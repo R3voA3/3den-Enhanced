@@ -27,6 +27,14 @@ class ENH_Extraction
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+      y = DIALOG_TOP + 68 * GRID_H;
+    };
     class ShowRadioChat: ctrlStatic
     {
       text = "$STR_ENH_EXTRACTION_SHOWRADIOCHAT";
