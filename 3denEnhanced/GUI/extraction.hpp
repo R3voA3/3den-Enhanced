@@ -14,11 +14,8 @@ class ENH_Extraction
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
-      h = DIALOG_H * GRID_H;
+      h = (DIALOG_H + 1) * GRID_H;
     };
-  };
-  class Controls
-  {
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_EXTRACTION_HEADER";
@@ -30,11 +27,13 @@ class ENH_Extraction
     class Footer: ctrlStaticFooter
     {
       x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
+      y = DIALOG_TOP + 69 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
-      y = DIALOG_TOP + 68 * GRID_H;
     };
+  };
+  class Controls
+  {
     class ShowRadioChat: ctrlStatic
     {
       text = "$STR_ENH_EXTRACTION_SHOWRADIOCHAT";
@@ -178,7 +177,7 @@ class ENH_Extraction
     class Cancel: ctrlButtonCancel
     {
       x = CENTERED_X(DIALOG_W) + 86 * GRID_W;
-      y = DIALOG_TOP + 69 * GRID_H;
+      y = DIALOG_TOP + 70 * GRID_H;
       w = 23 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -187,7 +186,7 @@ class ENH_Extraction
       idc = IDC_EXTRACTION_OK;//We don't want it to close the GUI
       action = "call ENH_fnc_extraction_setup";
       x = CENTERED_X(DIALOG_W) + 61 * GRID_W;
-      y = DIALOG_TOP + 69 * GRID_H;
+      y = DIALOG_TOP + 70 * GRID_H;
       w = 23 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

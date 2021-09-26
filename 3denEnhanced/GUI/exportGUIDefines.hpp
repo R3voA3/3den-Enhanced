@@ -15,7 +15,7 @@ class ENH_ExportGUIDefines
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
-      h = 20 * GRID_H;
+      h = 21 * GRID_H;
     };
     class Header: ctrlStaticTitle
     {
@@ -30,7 +30,7 @@ class ENH_ExportGUIDefines
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 18 * GRID_H;
       w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H + 2 * GRID_H;
+      h = CTRL_DEFAULT_H + 3 * GRID_H;
     };
   };
   class Controls
@@ -100,7 +100,7 @@ class ENH_ExportGUIDefines
     class Cancel: ctrlButtonCancel
     {
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 26) * GRID_W;
-      y = DIALOG_TOP + 19 * GRID_H;
+      y = DIALOG_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -108,7 +108,7 @@ class ENH_ExportGUIDefines
     {
       idc = -1;//We don't want it to close the GUI. The function does that.
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 52) * GRID_W;
-      y = DIALOG_TOP + 19 * GRID_H;
+      y = DIALOG_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";

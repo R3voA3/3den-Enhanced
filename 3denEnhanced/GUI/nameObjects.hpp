@@ -24,7 +24,7 @@ class ENH_NameObjects
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class Footer: ctrlStaticTitle
+    class Footer: ctrlStaticFooter
     {
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 28 * GRID_H;

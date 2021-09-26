@@ -16,26 +16,18 @@ class ENH_BatchReplace
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
-    class CollapseAll: ctrlButtonCollapseAll //Need to be background controls. Otherwise they get rendered on top of the list when expanded
+    class Header: ctrlStaticTitle
     {
+      text = "$STR_ENH_BATCHREPLACE";
       x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 5 * GRID_W;
+      y = DIALOG_TOP;
+      w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
-    };
-    class ExpandAll: ctrlButtonExpandAll
-    {
-      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
+      y = DIALOG_TOP + (DIALOG_H - 2) * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -77,6 +69,22 @@ class ENH_BatchReplace
       colorLines[] = {1, 1, 1, 1};
       colorBorder[] = {1, 1, 1, 0};
       colorBackGround[] = {COLOR_BACKGROUND_RGBA};
+    };
+    class CollapseAll: ctrlButtonCollapseAll
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
+    };
+    class ExpandAll: ctrlButtonExpandAll
+    {
+      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
+      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
     };
     class ReplaceWithText: ctrlStatic
     {

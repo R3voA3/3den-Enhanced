@@ -34,8 +34,8 @@ CLASSES apply
   if (_sideID == 3 && getText (_x >> "faction") == "default") then {_sideID = 8};
   _color = _sideID call BIS_fnc_sideColor;
 
-  _icon = getText (configFile >> "CfgVehicleIcons" >> (getText (_x >> "icon")));
-  if (_icon == "") then {_icon = getText (_x >> "icon")};
+  /* _icon = getText (configFile >> "CfgVehicleIcons" >> (getText (_x >> "icon")));
+  if (_icon == "") then {_icon = getText (_x >> "icon")}; */
 
   _cat = getText (configFile >> "CfgEditorSubcategories" >> getText (_x >> "editorSubcategory") >> "displayName");
 
@@ -55,7 +55,7 @@ CLASSES apply
 
   _ctrlTV tvSetData [[_indexCat, _indexItem], configName _x];
   _ctrlTV tvSetTooltip [[_indexCat, _indexItem], configName _x];
-  _ctrlTV tvSetPicture [[_indexCat, _indexItem], _icon];
+  //_ctrlTV tvSetPicture [[_indexCat, _indexItem], _icon];
   _ctrlTV tvSetPictureColor [[_indexCat, _indexItem], _color];
 };
 
@@ -77,24 +77,8 @@ _ctrlTV ctrlAddEventHandler ["treeMouseMove",
   params ["_ctrlTV", "_path"];
   private _ctrlPreview = (ctrlparent _ctrlTV displayCtrl IDC_BATCHREPLACE_PREVIEW);
   private _class = _ctrlTV tvData _path;
-  private _picture = (getText (configFile >> "CfgVehicles" >> _class >> "editorPreview"));
+  private _picture = getText (configFile >> "CfgVehicles" >> _class >> "editorPreview");
 
   _ctrlPreview ctrlShow !(_picture == "");
   _ctrlPreview ctrlSetText _picture;
 }];
-
-/* _ctrlTV ctrlAddEventHandler ["mouseEnter",
-{
-  params ["_ctrlTV"];
-  private _posHOld = ctrlPosition _ctrlTV select 3;
-  _ctrlTV ctrlSetPositionH _posHOld * 3;
-  _ctrlTV ctrlCommit 0;
-}];
-
-_ctrlTV ctrlAddEventHandler ["mouseExit",
-{
-  params ["_ctrlTV"];
-  private _posHOld = ctrlPosition _ctrlTV select 3;
-  _ctrlTV ctrlSetPositionH _posHOld / 3;
-  _ctrlTV ctrlCommit 0;
-}]; */
