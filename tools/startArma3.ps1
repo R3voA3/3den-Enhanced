@@ -1,5 +1,5 @@
 Start-Process "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\arma3_x64.exe" -argumentList @(
-  "-debug",
+  #"-debug",
   "-filePatching",
   "-noSplash",
   "-showScriptErrors",
