@@ -10,6 +10,11 @@
 - Some basic vehicle customization tools
 
 ## CHANGED
+- Locations list will now show the class name if no displayname is available instead of "Unknown"
+- Removed icons from Batch Replace list to speed up loading
+- Minor visual tweaks to almost all GUIs
+- Fixed the incorrect shortcut in 3DEN Radio to focus search
+- 3DEN Radio now has a dynamic width to make use to screen space when using UW screens
 - Increased the height of all large edit boxes in Eden Editor
 - Fixed an issue that would prevent 'Export Mission to SQF' to work properly with some attributes
 - Group Marker Attribute
