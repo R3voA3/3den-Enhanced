@@ -236,6 +236,7 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\interface";
       class assetBrowser_collapse;
+      class favoritesList;
       class locationList;
       class menuStrip_removeItems;
       class statusbar_entityCounter;

@@ -13,23 +13,25 @@
 
 #include "\a3\3DEN\UI\resincl.inc"
 
-//Exit when Virtual Reality map, nothing to add
+disableSerialization;
+private _ctrlTV = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_LOCATIONS;
+tvClear _ctrlTV;
+
+//Clear list and exit in VR map
 if (worldName isEqualTo "vr") exitWith {false};
 
-private _icon = gettext (configfile >> "cfg3DEN" >> "Default" >> "Draw" >> "locationList");
-private _ctrlTV = finddisplay IDD_DISPLAY3DEN displayctrl IDC_DISPLAY3DEN_LOCATIONS;
-tvclear _ctrlTV;
+private _icon = getText (configFile >> "cfg3DEN" >> "Default" >> "Draw" >> "locationList");
 
 //Locations
-private _idCategory = _ctrlTV tvadd [[], gettext (configfile >> "cfgWorlds" >> worldname >> "description")];
+private _idCategory = _ctrlTV tvAdd [[], getText (configFile >> "cfgWorlds" >> worldName >> "description")];
 {
-  _idLocation = _ctrlTV tvadd [[_idCategory], text _x];
-  _ctrlTV tvsetdata [[_idCategory, _idLocation], str locationposition _x];
-  _ctrlTV tvsetpicture [[_idCategory, _idLocation], _icon];
-} foreach nearestlocations [[0, 0, 0], ["nameVillage", "nameCity", "nameCityCapital"], worldsize * sqrt 2];
+  _idLocation = _ctrlTV tvAdd [[_idCategory], text _x];
+  _ctrlTV tvSetData [[_idCategory, _idLocation], str locationPosition _x];
+  _ctrlTV tvSetPicture [[_idCategory, _idLocation], _icon];
+} foreach nearestLocations [[0, 0, 0], ["nameVillage", "nameCity", "nameCityCapital"], worldSize * sqrt 2];
 
-_ctrlTV tvsort [[_idCategory], false];
-_ctrlTV tvexpand [_idCategory];
+_ctrlTV tvSort [[_idCategory], false];
+_ctrlTV tvExpand [_idCategory];
 
 private _fn_addTerrainObjects =
 {
@@ -42,7 +44,12 @@ private _fn_addTerrainObjects =
   private _parentIndex = _ctrlTV tvAdd [[0], localize _parentName];
   {
     private _name = getText (configfile >> "CfgVehicles" >> typeOf _x >> "displayName");
-    if (_name isEqualTo "") then {_name = localize "STR_ENH_LOCATIONLIST_UNKNOWN"}; // str_dn_wreck
+    if (_name isEqualTo "") then
+    {
+      //_name = localize "STR_ENH_LOCATIONLIST_UNKNOWN";
+      _name = getModelInfo _x # 0;
+      _name = _name trim [".p3d", 2];
+    };
     private _index = _ctrlTV tvAdd [[0, _parentIndex], _name];
 
     _ctrlTV tvSetData [[0, _parentIndex, _index], str position _x];

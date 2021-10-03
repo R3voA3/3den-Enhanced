@@ -34,9 +34,6 @@ CLASSES apply
   if (_sideID == 3 && getText (_x >> "faction") == "default") then {_sideID = 8};
   _color = _sideID call BIS_fnc_sideColor;
 
-  /* _icon = getText (configFile >> "CfgVehicleIcons" >> (getText (_x >> "icon")));
-  if (_icon == "") then {_icon = getText (_x >> "icon")}; */
-
   _cat = getText (configFile >> "CfgEditorSubcategories" >> getText (_x >> "editorSubcategory") >> "displayName");
 
   if (_cat == "") then {_cat = localize "STR_A3_RSCDISPLAYWELCOME_EXPA_PARC_LIST6_TITLE"};
@@ -55,7 +52,6 @@ CLASSES apply
 
   _ctrlTV tvSetData [[_indexCat, _indexItem], configName _x];
   _ctrlTV tvSetTooltip [[_indexCat, _indexItem], configName _x];
-  //_ctrlTV tvSetPicture [[_indexCat, _indexItem], _icon];
   _ctrlTV tvSetPictureColor [[_indexCat, _indexItem], _color];
 };
 
