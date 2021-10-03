@@ -3745,6 +3745,14 @@
     <English>Pylon Tools</English>
     <German>Pylonen-Werkzeuge</German>
   </Key>
+  <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
+    <English>Place entity with by couble clicking.</English>
+    <German>Entität mit Doppelklick platzieren.</German>
+  </Key>
+  <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
+    <English>Add to Favorites</English>
+    <German>Zu Favoriten hinzufügen</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_COPYPYLONS">
     <English>Copy Pylon Settings</English>
     <German>Pylonen-Einstellungen kopieren</German>

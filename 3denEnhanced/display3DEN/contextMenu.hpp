@@ -4,7 +4,8 @@ items[] +=
   "ENH_MeasureDistance",
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
-  "ENH_Extraction"
+  "ENH_Extraction",
+  "ENH_AddToFavorites"
 };
 class Log
 {
@@ -129,4 +130,12 @@ class ENH_DeleteCrew
   action = "call ENH_fnc_deleteCrew";
   text = "$STR_ENH_CONTEXTMENU_DELETECREW";
   conditionShow = "hoverObjectVehicle";
+};
+class ENH_AddToFavorites
+{
+  action = "['contextMenu'] call ENH_fnc_favoritesList";
+  text = "$STR_ENH_CONTEXTMENU_FAVORITES";
+  picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
+  conditionShow = "hoverObject + hoverLogic";
+  SHOW_IN_ROOT;
 };
