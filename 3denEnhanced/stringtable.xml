@@ -7815,4 +7815,17 @@
     <English>Space</English>
     <German>Verteilen</German>
   </Key>
+    <Key ID="STR_ENH_GROUPMARKER_SHOWGROUPVEHICLE">
+    <English>Show Vehicle Names</English>
+    <Czech></Czech>
+    <French></French>
+    <Spanish></Spanish>
+    <German></German>
+    <Chinesesimp></Chinesesimp>
+    <Chinese></Chinese>
+    <Polish></Polish>
+    <Italian></Italian>
+    <Portuguese></Portuguese>
+    <Russian></Russian>
+  </Key>
 </Project>
