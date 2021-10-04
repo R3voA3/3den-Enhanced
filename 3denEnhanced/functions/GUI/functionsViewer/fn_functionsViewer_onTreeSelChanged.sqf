@@ -32,18 +32,32 @@ _data params ["_fileName", "_filePath"];//Filename is also Function name
 CTRL(IDC_FUNCTIONSVIEWER_NAME) ctrlSetText _fileName;
 CTRL(IDC_FUNCTIONSVIEWER_PATH) ctrlSetText _filePath;
 
-_ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
+private _loadFileIndex = profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex", 0];
+
+private _text = call
+{
+  if (_loadFileIndex == 0) exitWith {loadFile _filePath};
+  if (_loadFileIndex == 1) exitWith {preprocessFile _filePath};
+  if (_loadFileIndex == 2) exitWith {preprocessFileLineNumbers _filePath};
+};
+
+_ctrlCode ctrlSetText _text;
+
+/* _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
 {
   case 0: {loadFile _filePath};
   case 1: {preprocessFile _filePath};
   case 2: {preprocessFileLineNumbers _filePath};
-});
+}); */
 
 _ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;//Tooltip is not correct, A3 bug
 _ctrlBiki ctrlEnable (_fileName select [0, 3] in ["BIS", "BIN"]);
 
-private _textHeight = (1.2 max (ctrlTextHeight _ctrlCode));
-private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
+private _textHeight = (safeZoneH - 31 * GRID_H) max (ctrlTextHeight _ctrlCode);
+//private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
+
+//private _numLines = count (_text regexFind ["\n", 0]);
+private _numLines = count (_text regexFind [endl, 0]) + 1;
 
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
