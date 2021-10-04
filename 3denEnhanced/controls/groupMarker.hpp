@@ -60,7 +60,7 @@ class ENH_GroupMarker: Title
     };
     class ShowGroupVehicleTitle: Title
     {
-      text = "$STR_ENH_GROUPMARKER_SHOWGROUPVEHICLE";
+      text = "$STR_ENH_GROUPMARKER_VEHICLENAME";
       y = 4 * CTRL_DEFAULT_H + 15 * pixelH;
     };
     class ShowGroupVehicle: ctrlCheckbox

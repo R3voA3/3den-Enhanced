@@ -17,11 +17,12 @@ class ENH_GroupMarker
       property = "ENH_groupMarker";
       control = "ENH_GroupMarker";
       expression = "\
-      if (!is3DEN && (_value # 0 != '')) then {\
+      if (!is3DEN && (_value # 0 != '')) then\
+      {\
         [_this, _value] spawn {\
           scriptName 'ENH_Attribute_GroupMarker';\
           params ['_group', '_parameters'];\
-          _parameters params ['_type', '_color', '_text', '_showGroupSize', '_showVehicle'];\
+          _parameters params [['_type', ''], ['_color', 'Default'], ['_text', groupID _group], ['_showGroupSize', true], ['_showVehicle', true]];\
           private _leader = leader _group;\
           private _marker = createMarkerLocal [\
             'ENH_GroupMarker_' + str _group,\
@@ -30,7 +31,8 @@ class ENH_GroupMarker
           _marker setMarkerTypeLocal _type;\
           _marker setMarkerColorLocal _color;\
           _marker setMarkerTextLocal (_text call BIS_fnc_localize);\
-          while {true} do {\
+          while {true} do\
+          {\
             sleep 1;\
             if (units _group isEqualTo []) exitWith {deleteMarker _marker};\
             if (_group getVariable ['ENH_GroupMarker_Update', true]) then {\
@@ -47,7 +49,8 @@ class ENH_GroupMarker
                     _marker setMarkerTextLocal (_groupString + _vehicleString);\
                   };\
                 };\
-              } else {\
+              } else\
+              {\
                 if (_showGroupSize) then {\
                   _marker setMarkerTextLocal (_groupString + _sizeString);\
                 };\
