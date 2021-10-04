@@ -123,7 +123,7 @@ switch (_mode) do
     _arguments params ["_ctrlFavorites", "_selectionPath"];
     private _class = _ctrlFavorites tvData _selectionPath;
     private _type = ["Object", "Logic"] select (_class isKindOf "Logic");
-    set3DENSelected [create3DENEntity [_type, _class, screenToWorld [0.5, 0.5]]];
+    set3DENSelected [create3DENEntity [_type, _class, screenToWorld [0.5, 0.5], [false, true] select (get3DENActionState "TogglePlaceEmptyVehicle")]];
   };
   case "showPreview":
   {
