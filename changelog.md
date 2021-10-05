@@ -10,6 +10,9 @@
 - Some basic vehicle customization tools
 
 ## CHANGED
+- Fixed an issue that would make the Functions Viewer use an incorrect path in some rare cases
+- Fixed incorrect line count in Functions Viewer
+- Fixed to small control height in Functions Viewer if function was really short
 - Locations list will now show the class name if no displayname is available instead of "Unknown"
 - Removed icons from Batch Replace list to speed up loading
 - Minor visual tweaks to almost all GUIs
@@ -17,6 +20,7 @@
 - 3DEN Radio now has a dynamic width to make use to screen space when using UW screens
 - Increased the height of all large edit boxes in Eden Editor
 - Fixed an issue that would prevent 'Export Mission to SQF' to work properly with some attributes
+
 - Group Marker Attribute
   - Fixed an issue that would cause a script error popping up
   - Attribute is now also properly loaded if multiple entites are edited at once
@@ -24,12 +28,15 @@
   - Added tooltips to the controls
   - Tweaked default value
   - Changed the color of the combo box controls to increase the contrast when selecting the texture type
+  - Thanks to Hypoxic, vehicle names can now also be displayed
+
 - Fixed a missing name in Preferences Menu
 - Garrison GUI will now save and restore the blacklist value
 - Visual tweaks to the Ambient Animations UI. Icons will not indicate if the animation uses a weapon
 - Ambient Animation attribute will now be set to "Disabled" if no animation is selected
 - Remove obsolete code that was used as workaround https://feedback.bistudio.com/T141001
 - Added some missing ;
+
 - Briefing Editor
   - Changed the way templates are stored (backwards compatible)
   - Added basic syntax highlighting for easier editing

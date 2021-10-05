@@ -47,7 +47,7 @@ private _functionsData = [];
         };
 
         //See if path is defined in the category
-        if (isText (_config >> "CfgFunctions" >> _addon >> _category >> "file")) then
+        if (_path isEqualTo "" && {isText (_config >> "CfgFunctions" >> _addon >> _category >> "file")}) then
         {
           _path = getText (_config >> "CfgFunctions" >> _addon >> _category >> "file");
           _path = format ["%1\fn_%2%3", _path, _fncShort, _extension];

@@ -37,12 +37,19 @@ function Addon-Compress
 }
 
 Addon-PrepareBuild
-Start-Sleep 1
+Write-Host "Copying files."
+Start-Sleep 2
 Addon-Build
-Start-Sleep 5
+Write-Host "Creating pbo."
+Start-Sleep 20
+Write-Host "Packing done."
+
 
 if ($DoPublish -eq "true")
 {
+  Write-Host "Publishing to Steam"
   Addon-Compress
   Addon-Publish
 }
+
+Write-Host "All done!"

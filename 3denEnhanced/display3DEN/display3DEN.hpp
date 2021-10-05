@@ -32,14 +32,14 @@ class Display3DEN
           {
             class Footer: ctrlStaticFooter
             {
-              y = safezoneH - (28 + 14) * GRID_H;
+              y = safezoneH - (28 + 13) * GRID_H;
               w = 60 * GRID_W;
-              h = 14 * GRID_H;
+              h = 13 * GRID_H;
             };
             class Text: ctrlStatic
             {
               text = "$STR_ENH_DISPLAY3DEN_PLACEENTITY";
-              y = safezoneH - (28 + 13) * GRID_H;
+              y = safezoneH - (28 + 12) * GRID_H;
               w = 60 * GRID_W;
               h = CTRL_DEFAULT_H;
               style = 2;
@@ -69,7 +69,7 @@ class Display3DEN
               idc = 1339
               text = "$STR_DISP_DELETE";
               x = GRID_W;
-              y = safezoneH - (28 + 7) * GRID_H;
+              y = safezoneH - (28 + 6) * GRID_H;
               w = 58 * GRID_W;
               h = CTRL_DEFAULT_H;
             };
