@@ -15,11 +15,10 @@ class ENH_AdvancedDamage
       displayName = "$STR_ENH_ATTRIBUTECATEGORY_ADVANCEDDAMAGE";
       tooltip = "$STR_ENH_ADVANCEDDAMAGE_DESCRIPTION";
       property = "ENH_AdvancedDamage";
-      expression = "parseSimpleArray _value params ['_hitpoints', '_damage']; {_this setHitPointDamage [_x, _damage # _forEachIndex, false]} forEach _hitpoints";
+      expression = "if (local _this) then {parseSimpleArray _value params ['_hitpoints', '_damage']; {if ((_damage # _forEachIndex) == 0) then {continue}; _this setHitPointDamage [_x, _damage # _forEachIndex, false]} forEach _hitpoints}";
       control = "ENH_AdvancedDamage";
       defaultValue = "if (getAllHitPointsDamage _this isNotEqualTo []) then {str [getAllHitPointsDamage _this # 0, getAllHitPointsDamage _this # 2]} else {str [[], []]}";
       typeName = "STRING";
-      //condition = "objectDestructable + objectVehicle + objectBrain";
       condition = "objectVehicle + objectBrain"; //Perhaps this is better to avoid issues with buildings.
     };
   };

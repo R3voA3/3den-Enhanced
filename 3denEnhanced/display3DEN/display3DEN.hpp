@@ -46,15 +46,15 @@ class Display3DEN
             };
             class Search: ctrlEdit
             {
-              idc = 1336
+              idc = 1336;
               x = GRID_W;
-              y = GRID_H
+              y = GRID_H;
               w = 58 * GRID_W;
               h = CTRL_DEFAULT_H;
             };
             class Favorites: ctrlTree
             {
-              idc = 1338
+              idc = 1338;
               idcSearch = 1336;
               x = 0;
               y = 7 * GRID_H;
@@ -66,7 +66,7 @@ class Display3DEN
             };
             class RemoveFromList: ctrlButton
             {
-              idc = 1339
+              idc = 1339;
               text = "$STR_DISP_DELETE";
               x = GRID_W;
               y = safezoneH - (28 + 6) * GRID_H;
