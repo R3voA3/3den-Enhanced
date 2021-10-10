@@ -45,6 +45,7 @@ _ctrlTV tvAdd [[], "PAA"];
 
 (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound", []]) apply
 {
+  if (isNull _display) exitWith {uiNamespace setVariable ["ENH_TextureFinder_isFillingList", false]};
   getTextureInfo _x params ["_w", "_h"];
   _pixelCount = _w * _h;
   _indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
@@ -57,6 +58,7 @@ _ctrlTV tvAdd [[], "PAA"];
 
 //Sort only the groups which contain images, if group is empty delete it
 {
+  if (isNull _display) exitWith {uiNamespace setVariable ["ENH_TextureFinder_isFillingList", false]};
   private _indexType = _forEachIndex;
   //Loop in reverse order to prevent index shift when deleting
   for "_indexSize" from (count SIZES - 1) to 0 step -1 do
@@ -72,6 +74,8 @@ _ctrlTV tvAdd [[], "PAA"];
   };
 } forEach [0, 1];
 
+CTRL(IDC_TEXTUREFINDER_SEARCH) ctrlEnable true;
+CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlEnable true;
 
 /* Old way without sizes
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"

@@ -44,15 +44,6 @@ class ENH_TextureFinder
       h = 52 * GRID_H;
       colorBorder[] = {0, 0, 0, 0};
     };
-    class Progress: ctrlProgress
-    {
-      idc = IDC_TEXTUREFINDER_PROGRESS;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H + 52 * GRID_H;
-      w = (DIALOG_W) * GRID_W;
-      h = GRID_H;
-      colorFrame[] = {0, 0, 0, 0};
-    };
     class ProgessText: ctrlStructuredText
     {
       idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
