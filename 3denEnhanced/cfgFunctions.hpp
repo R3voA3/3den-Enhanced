@@ -65,6 +65,7 @@ class CfgFunctions
       class functionsViewer_onTreeSelChanged;
       class functionsViewer_recompileSelected;
       class functionsViewer_searchkey;
+      class functionsViewer_setUpMenuStrip;
       class functionsViewer_togglePanel;
     };
     class ActionCreator

@@ -7,7 +7,7 @@
   Toggles the side panel of the ENH_FunctionsViewer GUI.
 
   Parameter(s):
-  0: CONTROL: Collapse Button
+  -
 
   Returns:
   -
@@ -16,35 +16,24 @@
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safezoneX + GRID_W)
-#define Y (safezoneY + 24 * GRID_H)
+#define Y (safezoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H)
+#define H (safeZoneH - 4 * CTRL_DEFAULT_H - 4 * GRID_H)
 
 disableSerialization;
-params ["_display"];
+private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
+private _state = _display getVariable ["SideBarCollapsed", false];
 
-if (_display isEqualType controlNull) then
+if !(_state) then
 {
-  _display = ctrlParent (_this # 0);
-};
-
-if (ctrlText CTRL(IDC_FUNCTIONSVIEWER_PANNEL) == "«") then
-{
-  {
-    CTRL(_x) ctrlSetFade 1;
-    CTRL(_x) ctrlCommit 0;
-  } forEach [IDC_FUNCTIONSVIEWER_LOADMODE, IDC_FUNCTIONSVIEWER_LIST];
-
-  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT, Y, safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W, safeZoneH - 31 * GRID_H];
-  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlCommit 0;
-  CTRL(IDC_FUNCTIONSVIEWER_PANNEL) ctrlSetText "»";
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT, Y, safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W, H];
 }
 else
 {
-  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W, Y, safezoneW - 73 * GRID_W, safeZoneH - 31 * GRID_H];
-  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlCommit 0;
-
-  {
-    CTRL(_x) ctrlSetFade 0;
-    CTRL(_x) ctrlCommit 0;
-  } forEach [IDC_FUNCTIONSVIEWER_LOADMODE, IDC_FUNCTIONSVIEWER_LIST];
-  CTRL(IDC_FUNCTIONSVIEWER_PANNEL) ctrlSetText "«";
+  CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W, Y, safezoneW - 73 * GRID_W, H];
 };
+
+CTRL(IDC_FUNCTIONSVIEWER_LIST) ctrlShow _state;
+CTRL(IDC_FUNCTIONSVIEWER_LIST) ctrlCommit 0;
+CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlCommit 0;
+
+_display setVariable ["SideBarCollapsed", !_state];

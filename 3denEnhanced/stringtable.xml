@@ -3777,6 +3777,38 @@
     <English>Apply Vehicle Customization</English>
     <German>Fahrzeuganpassung anwenden</German>
   </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
+    <English>Open Legacy Functions Viewer</English>
+    <German>Alten 'Functions Viewer' öffnen</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_OTHERFILES">
+    <English>Other Files</English>
+    <German>Andere Dateien</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_LOADFILE">
+    <English>Load File</English>
+    <German>Dateien laden</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE">
+    <English>Preprocess File</English>
+    <German>Dateien vorbereiten</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES">
+    <English>Preprocess File with Line Numbers</English>
+    <German>Dateien mit Zeilenangaben vorbereiten</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG">
+    <English>Addon Config</English>
+    <German>Erweiterungs-Konfig</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
+    <English>Scenario Config</English>
+    <German>Szenario-Konfig</German>
+  </Key>
+  <Key ID="STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
+    <English>Campaign Config</English>
+    <German>Kampagnen-Konfig</German>
+  </Key>
   <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
     <English>Randomize Vehicle Customization</English>
     <German>Fahrzeuganpassung zufällig ändern</German>

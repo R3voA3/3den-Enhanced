@@ -15,16 +15,20 @@
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 disableSerialization;
+forceunicode 0;
+
 params ["_ctrlTV", "_path"];
 
-private _display = ctrlParent _ctrlTV;
+private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
 private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
 private _ctrlLines = CTRL(IDC_FUNCTIONSVIEWER_LINES);
-private _ctrlBiki = CTRL(IDC_FUNCTIONSVIEWER_BIKI);
 private _data = _ctrlTV tvData _path;
 private _linesText = "";
 
-if (_data isEqualTo "") exitWith {false};
+//If a category is selected, exit and disable biki entry
+if (_data isEqualTo "") exitWith {CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[2, 1], false]};
+
+CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetScrollValues [0, 0];
 
 _data = call compile _data;
 _data params ["_fileName", "_filePath"];//Filename is also Function name
@@ -43,21 +47,11 @@ private _text = call
 
 _ctrlCode ctrlSetText _text;
 
-/* _ctrlCode ctrlSetText (switch (profileNamespace getVariable 'ENH_FunctionsViewer_LoadFileIndex') do
-{
-  case 0: {loadFile _filePath};
-  case 1: {preprocessFile _filePath};
-  case 2: {preprocessFileLineNumbers _filePath};
-}); */
+CTRL(IDC_FUNCTIONSVIEWER_MENU) menuSetURL [[2, 1], format ["https://community.bistudio.com/wiki/%1", _fileName]];
+CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[2, 1], _fileName select [0, 3] in ["BIS", "BIN"]];
 
-_ctrlBIKI ctrlSetURL "https://community.bistudio.com/wiki/" + _fileName;//Tooltip is not correct, A3 bug
-_ctrlBiki ctrlEnable (_fileName select [0, 3] in ["BIS", "BIN"]);
-
-private _textHeight = (safeZoneH - 31 * GRID_H) max (ctrlTextHeight _ctrlCode);
-//private _numLines = round (_textHeight / 0.0315);//0.0315 = Height of one line
-
-//private _numLines = count (_text regexFind ["\n", 0]);
-private _numLines = count (_text regexFind [endl, 0]) + 1;
+private _textHeight = (safeZoneH - 26 * GRID_H) max (ctrlTextHeight _ctrlCode);
+private _numLines = count (_text regexFind ["\r\n", 0]) + 5;
 
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
@@ -65,7 +59,7 @@ for "_i" from 1 to _numLines do
   _linesText = _linesText + format ["%1<br/>", _i];
 };
 
-//When new function is selected, change scroll width and height dynamically
+//When a new function is selected, change scroll width and height dynamically
 _ctrlCode ctrlSetPositionH _textHeight;
 _ctrlCode ctrlCommit 0;
 
