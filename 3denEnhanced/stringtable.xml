@@ -31,6 +31,7 @@
     <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
     <Chinesesimp>从Steam创意工坊获得""Pythia""修改！</Chinesesimp>
     <Chinese>從Steam創意工坊獲得""Pythia""修改！</Chinese>
+    <Polish>Pobierz modyfikację ""Pythia"" z Warszatu Steam!</Polish>
   </Key>
   <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
     <English>BLUFOR Skill Settings</English>
@@ -147,6 +148,7 @@
     <Spanish>Crear activador (Covertura completa del mapa)</Spanish>
     <Chinesesimp>创建触发器(全地图覆盖)</Chinesesimp>
     <Chinese>創建觸發器(全地圖覆蓋)</Chinese>
+    <Polish>Utwórz trigger (Zakrywający całą mapę)</Polish>
   </Key>
   <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
     <English>Terrain Detail</English>
@@ -190,6 +192,7 @@
     <German>Alles entfernen</German>
     <Chinesesimp>移除一切</Chinesesimp>
     <Chinese>移除一切</Chinese>
+    <Polish>Usuń wszystko</Polish>
   </Key>
   <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
     <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
@@ -592,12 +595,14 @@
     <German>Alle Funktionen</German>
     <Chinesesimp>所有功能</Chinesesimp>
     <Chinese>所有功能</Chinese>
+    <Polish>Wszystkie funkcje</Polish>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_ALL_TOOLTIP">
     <English>Disables all features uncluding the ones below.</English>
     <German>Deaktiviert alle, inklusive der nachfolgenden, Funktionen.</German>
     <Chinesesimp>禁用所有功能，但不包括以下功能。</Chinesesimp>
     <Chinese>禁用所有功能，但不包括以下功能。</Chinese>
+    <Polish>Wyłącz wszystkie funkcje z wyłączeniem tych poniżej.</Polish>
   </Key>
   <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
     <English>Lights</English>
@@ -800,6 +805,7 @@
     <Spanish>Ocultar unidades aliadas en el mapa</Spanish>
     <Chinesesimp>在地图上隐藏友军单位.</Chinesesimp>
     <Chinese>在地圖上隱藏友軍單位.</Chinese>
+    <Polish>Ukryj sojusznicze jednostki na mapie</Polish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
     <English>Hide Hostile Units on the Map.</English>
@@ -809,6 +815,7 @@
     <Spanish>Ocultar unidades hostiles en el mapa</Spanish>
     <Chinesesimp>在地图上隐藏敌军单位.</Chinesesimp>
     <Chinese>在地圖上隱藏敵軍單位.</Chinese>
+    <Polish>Ukryj wrogie jednostki na mapie</Polish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
     <English>Hide Mines on the Map.</English>
@@ -818,6 +825,7 @@
     <Spanish>Ocultar minas en el mapa</Spanish>
     <Chinesesimp>在地图上隐藏地雷.</Chinesesimp>
     <Chinese>在地圖上隱藏地雷.</Chinese>
+    <Polish>Ukryj miny na mapie.</Polish>
   </Key>
   <Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
     <English>Hide Tactical Pings on the Map.</English>
@@ -827,6 +835,7 @@
     <Spanish>Ocultar pings tácticos en el mapa</Spanish>
     <Chinesesimp>在地图上隐藏战术Ping.</Chinesesimp>
     <Chinese>在地圖上隱藏戰術ping.</Chinese>
+    <Polish>Ukryj taktyczne pingi na mapie.</Polish>
   </Key>
   <Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
     <English>Add Flag</English>
@@ -954,6 +963,7 @@
     <German>Die Einheit wechselt auf die zivile Seite und wird nicht angegriffen. Die Einheit greift feindliche Einheiten trotzdem an!</German>
     <Chinesesimp>该单位不会受到攻击，并将加入平民阵营。但该单位仍然会攻击敌人！</Chinesesimp>
     <Chinese>該單位不會受到攻擊，並將加入平民陣營。但該單位仍然會攻擊敵人！</Chinese>
+    <Polish>Jednostka nie będzie atakowana i dołączy do strony cywilów. Jednostka wciąż będzie atakowała wrogów!</Polish>
   </Key>
   <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
     <English>Enable Headlights</English>
@@ -986,6 +996,7 @@
     <Spanish>Prohibir desembarco</Spanish>
     <Chinesesimp>禁止下车</Chinesesimp>
     <Chinese>禁止下載具</Chinese>
+    <Polish>Zakaż wysiadania z pojazdu</Polish>
   </Key>
   <Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
     <English>Crew stays in vehicle even though the vehicle is disabled.</English>
@@ -1967,6 +1978,7 @@
     <Spanish>¡Está ejecutando una versión personalizada de 3den Enhanced. ¡Asegúrate de no eliminar accidentalmente atributos de tu misión!</Spanish>
     <Chinesesimp>您正在运行自定义版的3den增强。请确保您不会意外删除任务中的属性！</Chinesesimp>
     <Chinese>您正在運行自定義版的3den增強。請確保您不會意外刪除任務中的屬性！</Chinese>
+    <Polish>Uruchomiono customową wersję 3den Enhanced. Upewnij się, że nie usuniesz przypadkowo atrybutów ze swojej misji!</Polish>
   </Key>
   <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
     <English>Center Position</English>
@@ -2098,6 +2110,7 @@
     <French>Type d'introduction</French>
     <Chinesesimp>简介类型</Chinesesimp>
     <Chinese>簡介類型</Chinese>
+    <Polish>Typ intra</Polish>
   </Key>
   <Key ID="STR_ENH_TERRAINGRID_GRASSDISABLED_DISPLAYNAME">
     <English>Grass disabled</English>
@@ -2863,6 +2876,7 @@
     <French>Classes des soldats qui seront largués, dans le format suivant : \nClassname_1 Classname_2 </French>
     <Chinesesimp>空降的士兵类别格式应为:\nClassname_1、Classname_2、Classname_n.</Chinesesimp>
     <Chinese>空投的士兵類別格式應為:\nClassname_1、Classname_2、Classname_n.</Chinese>
+    <Polish>Klasy żołnierzy, powinny zostać wprowadzone w formacie: \nClassname_1 Classname_2 </Polish>
   </Key>
   <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
     <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
@@ -2977,6 +2991,7 @@
     <French>Permet aux IA et au joueur de réapparaître dans les scénarios solo. Seules les unités avec la 'Réapparation en solo' activée dans leurs attributs sont affectées. Pour les scénarios multijoueurs, utilisez le système de réapparition multijoueur. </French>
     <Chinesesimp>使玩家和AI在单人游戏场景中重生。仅在其属性中启用了“单人重生”的单位才会受到影响。对于多人游戏场景，请使用多人游戏重生系统。</Chinesesimp>
     <Chinese>使玩家和AI在單人遊戲場景中重生。僅在其屬性中啟用了“單人重生”的單位才會受到影響。對於多人遊戲場景，請使用多人遊戲重生系統。</Chinese>
+    <Polish>Umożliwia graczowi i AI odradzanie się w scenariuszach dla jednego gracza. Dotyczy to tylko jednostek z włączonym odradzaniem dla pojedynczego gracza w ich atrybutach. W scenariuszach wieloosobowych użyj systemu odradzania się dla wielu graczy.</Polish>
   </Key>
   <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
     <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
@@ -2995,6 +3010,7 @@
     <French>Réapparaître au plus proche point de réapparition</French>
     <Chinesesimp>在最近的重生位置重生</Chinesesimp>
     <Chinese>在最近的重生位置重生</Chinese>
+    <Polish>Odrodzenie na najbliżej Pozycji Odrodzenia</Polish>
   </Key>
   <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
     <English>Respawn at random Respawn Position</English>
@@ -3004,6 +3020,7 @@
     <French>Réapparaître à un point de réapparition aléatoire</French>
     <Chinesesimp>随机重生位置重生</Chinesesimp>
     <Chinese>隨機重生位置重生</Chinese>
+    <Polish>Odrodzenie na losowej Pozycji Odrodzenia</Polish>
   </Key>
   <Key ID="STR_ENH_SPR">
     <English>Single Player Respawn</English>
@@ -3013,18 +3030,21 @@
     <French>Réapparition en solo</French>
     <Chinesesimp>单人玩家重生</Chinesesimp>
     <Chinese>單人玩家重生</Chinese>
+    <Polish>Odrodzenie w trybie Single Player</Polish>
   </Key>
   <Key ID="STR_ENH_SPR_ONRESPAWNCODE_DISPLAYNAME">
     <English>Respawn Code</English>
     <German>Respawn-Code</German>
     <Chinesesimp>重生代码</Chinesesimp>
     <Chinese>重生代碼</Chinese>
+    <Polish>Kod po odrodzeniu</Polish>
   </Key>
   <Key ID="STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP">
     <English>Code executed after respawn. _this refers to the respawned entity.</English>
     <German>Code der nach dem Respawn ausgeführt wird. _this beinhaltet die Entität die gerespawned ist.</German>
     <Chinesesimp>重生后执行的代码。_this指的是重生实体。</Chinesesimp>
     <Chinese>重生後執行的代碼。 _this指的是重生實體。</Chinese>
+    <Polish>Kod wykonywany po odrodzeniu. _this odnosi się do odrodzonej jednostki.</Polish>
   </Key>
   <Key ID="STR_ENH_GARRISON_NOTIFICATION">
     <English>Not enough empty building positions, increase the radius or the coverage.</English>
@@ -3490,6 +3510,7 @@
     <German>Auslöserbereiche zeichnen</German>
     <Chinesesimp>绘制触发区域</Chinesesimp>
     <Chinese>繪製觸發區域</Chinese>
+    <Polish>Rysuj obszary wyzwalaczy</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
     <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
@@ -3497,6 +3518,7 @@
     <German>Auslöserbereiche werden wärend der Vorschau angezeigt. Kleine Auslöserbereiche werden nicht angezeigt.</German>
     <Chinesesimp>触发区域将在预览期间绘制。小区域触发器将不会绘制。</Chinesesimp>
     <Chinese>觸發區域將在預覽期間繪製。小區域觸發器將不會繪製。</Chinese>
+    <Polish>Obszary triggerów będą rysowane w czasie podglądu. Małe obszary wyzwalaczy nie będą rysowane.</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
     <English>Log active Scripts</English>
@@ -3505,6 +3527,7 @@
     <Spanish>Registrar Scripts activos</Spanish>
     <Chinesesimp>记录激活的脚本</Chinesesimp>
     <Chinese>記錄激活的腳本</Chinese>
+    <Polish>Zarejestruj aktywne skrypty</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
     <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
@@ -3513,6 +3536,7 @@
     <Spanish>Todos los scripts activos y los controladores de eventos de la misión se registrarán en el archivo .rpt</Spanish>
     <Chinesesimp>所有激活的脚本和任务事件处理程序都将记录到.rpt日志文件中。</Chinesesimp>
     <Chinese>所有激活的腳本和任務事件處理程序都將記錄到.rpt日誌文件中。</Chinese>
+    <Polish>Wszystkie aktywne skrypty i event handlery misji zostanązapisane to pliku .rpt</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
     <English>Draws information of nearby units and vehicles.</English>
@@ -3744,38 +3768,47 @@
   <Key ID="STR_ENH_FOLDER_PYLONS">
     <English>Pylon Tools</English>
     <German>Pylonen-Werkzeuge</German>
+    <Polish>Narzędzie pylonów</Polish>
   </Key>
   <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
     <English>Place entity with by double clicking.</English>
     <German>Entität mit Doppelklick platzieren.</German>
+    <Polish>Postaw obiekt za pomocą podwójnego kliknięcia.</Polish>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
     <English>Add to Favorites</English>
     <German>Zu Favoriten hinzufügen</German>
+    <Polish>Dodaj do ulubionych</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_COPYPYLONS">
     <English>Copy Pylon Settings</English>
     <German>Pylonen-Einstellungen kopieren</German>
+    <Polish>Skopiuj ustawienia pylonów</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
     <English>Apply Pylon Settings</English>
     <German>Pylonen-Einstellungen anwenden</German>
+    <Polish>Zastosuj ustawienia pylonów</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
     <English>Export Pylons to SQF</English>
     <German>Pylonen-Einstellungen als SQF exportieren</German>
+    <Polish>Wyeksportuj pylony do SQF</Polish>
   </Key>
   <Key ID="STR_ENH_FOLDER_VHC">
     <English>Vehicle Customization Tools</English>
     <German>Fahrzeugmodifikations-Werkzeuge</German>
+    <Polish>Narzędzie dostosowywania pojazdów</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_COPYVHC">
     <English>Copy Vehicle Customization</English>
     <German>Fahrzeuganpassung kopieren</German>
+    <Polish>Skopiuj wygląd pojazdu</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_APPLYVHC">
     <English>Apply Vehicle Customization</English>
     <German>Fahrzeuganpassung anwenden</German>
+    <Polish>Zastosuj wygląd pojazdu</Polish>
   </Key>
   <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
     <English>Open Legacy Functions Viewer</English>
@@ -3812,6 +3845,7 @@
   <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
     <English>Randomize Vehicle Customization</English>
     <German>Fahrzeuganpassung zufällig ändern</German>
+    <Polish>Randomizuj wygląd pojazdu</Polish>
   </Key>
   <Key ID="STR_ENH_FOLDER_WIKI">
     <English>Community Wiki</English>
@@ -4155,6 +4189,7 @@
     <Spanish>El atributo %1 se estableció en %2</Spanish>
     <Chinesesimp>属性 %1 已设置为 %2.</Chinesesimp>
     <Chinese>屬性 %1 已設置為 %2.</Chinese>
+    <Polish>Atrybut %1 został ustawiony na %2</Polish>
   </Key>
   <Key ID="STR_ENH_BRIEFING_TOOLTIP">
     <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
@@ -4397,6 +4432,7 @@
     <Spanish>Comandos por funcionalidad</Spanish>
     <Chinesesimp>命令(功能排列)</Chinesesimp>
     <Chinese>命令(功能排列)</Chinese>
+    <Polish>Komendy według funkcjonalności</Polish>
   </Key>
   <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
     <English>Description.ext</English>
@@ -4405,6 +4441,7 @@
     <Spanish>Description.ext</Spanish>
     <Chinesesimp>Description.ext</Chinesesimp>
     <Chinese>Description.ext</Chinese>
+    <Polish>Description.ext</Polish>
   </Key>
   <Key ID="STR_ENH_MENUSTRIPENTRIES">
     <English>Menu Strip Entries</English>
@@ -5080,6 +5117,7 @@
     <French>Scripting multijoueur</French>
     <Chinesesimp>多人游戏脚本</Chinesesimp>
     <Chinese>多人遊戲腳本</Chinese>
+    <Polish>Skrypty trybu dla wielugraczy</Polish>
   </Key>
   <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
     <English>Show Entity Counter</English>
@@ -5124,6 +5162,7 @@
   <Key ID="STR_ENH_GROUPMARKER_VEHICLENAME">
     <English>Vehicle Name</English>
     <German>Fahrzeugname</German>
+    <Polish>Nazwa pojazdu</Polish>
   </Key>
   <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
     <English>Plays a selected animation set. The gear needs to be set up manually.</English>
@@ -5542,6 +5581,7 @@
     <German>RPT Viewer</German>
     <Chinesesimp>RPT查看器</Chinesesimp>
     <Chinese>RPT查看器</Chinese>
+    <Polish>RPT Viewer</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
     <English>Toggle Drawing of Building Positions</English>
@@ -5559,6 +5599,7 @@
     <German>Fahrzeugtrefferpunkte anzeigen an/aus</German>
     <Chinesesimp>切换车辆血量视图</Chinesesimp>
     <Chinese>切換車輛血量視圖</Chinese>
+    <Polish>Przełącz rysowanie hitpointów pojazdów</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_SAM">
     <English>Scenario Attributes Manager</English>
@@ -5691,6 +5732,7 @@
     <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben.</German>
     <Chinesesimp>缩放物体的大小。仅适用于没有模拟的对象。</Chinesesimp>
     <Chinese>縮放對象的大小。 僅適用於沒有模擬的對象。</Chinese>
+    <Polish>Skaluje rozmiar obiektu. Działa tylko dla obiektów z wyłączoną symulacją.</Polish>
   </Key>
   <Key ID="STR_ENH_GARRISON_STANCE_STAND">
     <English>Stand</English>
@@ -5710,6 +5752,7 @@
     <French>Commandes script</French>
     <Chinesesimp>脚本命令</Chinesesimp>
     <Chinese>腳本命令</Chinese>
+    <Polish>Komedny skryptowe</Polish>
   </Key>
   <Key ID="STR_ENH_CONTEXTMENU_CREATEEXTRACTION">
     <English>Create Extraction</English>
@@ -6028,6 +6071,7 @@
     <German>Spielbarkeitsstatus umschalten</German>
     <Chinesesimp>切换游戏状态</Chinesesimp>
     <Chinese>切換遊戲狀態</Chinese>
+    <Polish>Przełącz grywalność</Polish>
   </Key>
   <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
     <English>Delete Corpses</English>
@@ -6311,6 +6355,7 @@
   <Key ID="STR_ENH_SPR_RESPAWNTICKETS_DISPLAYNAME">
     <English>Single Player Respawn Tickets</English>
     <German>Einzelspieler-Respawntickets</German>
+    <Polish>Punkty odrodzenia jednego gracza</Polish>
   </Key>
   <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
     <English>Every unit can respawn as long as it has not run out of tickets.</English>
@@ -6350,6 +6395,7 @@
     <French>Fin de mission</French>
     <Chinesesimp>结束</Chinesesimp>
     <Chinese>結束</Chinese>
+    <Polish>Zakończenie</Polish>
   </Key>
   <Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
     <English>Win?</English>
@@ -6359,6 +6405,7 @@
     <French>Victoire ?</French>
     <Chinesesimp>胜利？</Chinesesimp>
     <Chinese>勝利？</Chinese>
+    <Polish>Wygrana?</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
     <English>Variable Viewer</English>
@@ -6377,18 +6424,21 @@
     <Spanish>Gestor de inventario de vehículos</Spanish>
     <Chinesesimp>载具库存管理</Chinesesimp>
     <Chinese>載具庫存管理</Chinese>
+    <Polish>Zarządzanie Wyposażeniem Pojazdów</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_EXIT_TEXT">
     <English>You have unsaved changes. Close anyway?</English>
     <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
     <Chinesesimp>您有未保存的更改。仍然关闭？</Chinesesimp>
     <Chinese>您有未保存的更改。仍然關閉？</Chinese>
+    <Polish>Masz niezapisane zmiany. Kontynuować mimo to?</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_EXPORTACE_DISPLAYNAME">
     <English>Export (ACE)</English>
     <German>Export (ACE)</German>
     <Chinesesimp>导出 (ACE)</Chinesesimp>
     <Chinese>導出 (ACE)</Chinese>
+    <Polish>Wyeksportuj (ACE)</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_EXPORTACE_TOOLTIP">
     <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
@@ -6507,45 +6557,49 @@
     <German>Als ACE Arsenal exportieren</German>
     <Chinesesimp>导出到ACE武器库</Chinesesimp>
     <Chinese>導出到ACE武器庫</Chinese>
+    <Polish>Wyeksportuj do Arsenału ACE</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_EXPORTTOARSENAL">
     <English>Export to Arsenal</English>
     <German>Als Arsenal exportieren</German>
     <Chinesesimp>导出到ACE武器库</Chinesesimp>
     <Chinese>導出到ACE武器庫</Chinese>
+    <Polish>Wyeksportuj do Arsenału</Polish>
   </Key>
-
-
-<Key ID="STR_ENH_VIM_SORTBYNAME">
+  <Key ID="STR_ENH_VIM_SORTBYNAME">
     <English>Sort by Name</English>
     <German>Nach Namen sortieren</German>
     <Chinesesimp>按名称排序</Chinesesimp>
     <Chinese>按名稱排序</Chinese>
+    <Polish>Sortuj według Nazw</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_SORTBYCLASS">
     <English>Sort by Class Name</English>
     <German>Nach Klassennamen sortieren</German>
     <Chinesesimp>按类名排序</Chinesesimp>
     <Chinese>按類名排序</Chinese>
+    <Polish>Sortuj według Klas</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_SORTBYCOUNT">
     <English>Sort by Count</English>
     <German>Nach Anzahl sortieren</German>
     <Chinesesimp>按数量排序</Chinesesimp>
     <Chinese>按數量排序</Chinese>
+    <Polish>Sortuj według Ilości</Polish>
   </Key>
-
-<Key ID="STR_ENH_VIM_SORTBYTYPE">
+  <Key ID="STR_ENH_VIM_SORTBYTYPE">
     <English>Sort by Type</English>
     <German>Nach Typ sortieren</German>
     <Chinesesimp>按类型排序</Chinesesimp>
     <Chinese>按類型排序</Chinese>
+    <Polish>Sortuj według Typu</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_SORTBYMOD">
     <English>Sort by Mod</English>
     <German>Nach Modifikation sortieren</German>
     <Chinesesimp>按Mod排序</Chinesesimp>
     <Chinese>按Mod排序</Chinese>
+    <Polish>Sortuj według Modyfikacji</Polish>
   </Key>
   <Key ID="STR_ENH_VIM_TEMPLATES">
     <English>Templates</English>
@@ -6626,6 +6680,7 @@
     <Spanish>Scripts</Spanish>
     <Chinesesimp>脚本</Chinesesimp>
     <Chinese>腳本</Chinese>
+    <Polish>Skrypty</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE">
     <English>Engine</English>
@@ -7089,6 +7144,7 @@
     <German>Heck</German>
     <Chinesesimp>机尾</Chinesesimp>
     <Chinese>機尾</Chinese>
+    <Polish>Ogon</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITVROTOR">
     <English>Tail Rotor</English>
@@ -7240,6 +7296,7 @@
     <German>Körper</German>
     <Chinesesimp>躯干</Chinesesimp>
     <Chinese>軀幹</Chinese>
+    <Polish>Ciało</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
     <English>Commander Turret</English>
@@ -7247,6 +7304,7 @@
     <German>Geschützturm (Kommandant)</German>
     <Chinesesimp>指挥官炮塔</Chinesesimp>
     <Chinese>指揮官砲塔</Chinese>
+    <Polish>Wieża dowódcy</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITCOMGUN">
     <English>Commander Gun</English>
@@ -7254,144 +7312,168 @@
     <German>Geschütz (Kommandant)</German>
     <Chinesesimp>指挥官机枪</Chinesesimp>
     <Chinese>指揮官機槍</Chinese>
+    <Polish>Działko dowódcy</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_1">
     <English>Slat Armour (Left, #01)</English>
     <German>Käfigpanzerung (Links, #01)</German>
     <Chinesesimp>防弹格栅 (左, #01)</Chinesesimp>
     <Chinese>防彈格柵 (左, #01)</Chinese>
+    <Polish>Kratownica (Lewa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_2">
     <English>Slat Armour (Left, #02)</English>
     <German>Käfigpanzerung (Links, #02)</German>
     <Chinesesimp>防弹格栅 (左, #02)</Chinesesimp>
     <Chinese>防彈格柵 (左, #02)</Chinese>
+    <Polish>Kratownica (Lewa, #02)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_3">
     <English>Slat Armour (Left, #03)</English>
     <German>Käfigpanzerung (Links, #03)</German>
     <Chinesesimp>防弹格栅 (左, #03)</Chinesesimp>
     <Chinese>防彈格柵 (左, #03)</Chinese>
+    <Polish>Kratownica (Lewa, #03)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_1">
     <English>Slat Armour (Right, #01)</English>
     <German>Käfigpanzerung (Rechts, #01)</German>
     <Chinesesimp>防弹格栅 (右, #01)</Chinesesimp>
     <Chinese>防彈格柵 (右, #01)</Chinese>
+    <Polish>Kratownica (Prawa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_2">
     <English>Slat Armour (Right, #02)</English>
     <German>Käfigpanzerung (Rechts, #02)</German>
     <Chinesesimp>防弹格栅 (右, #02)</Chinesesimp>
     <Chinese>防彈格柵 (右, #02)</Chinese>
+    <Polish>Kratownica (Prawa, #02)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_3">
     <English>Slat Armour (Right, #03)</English>
     <German>Käfigpanzerung (Rechts, #03)</German>
     <Chinesesimp>防弹格栅 (右, #03)</Chinesesimp>
     <Chinese>防彈格柵 (右, #03)</Chinese>
+    <Polish>Kratownica (Prawa, #03)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_RIGHT">
     <English>Slat Armour (Top right)</English>
     <German>Käfigpanzerung (Oben rechts)</German>
     <Chinesesimp>防弹格栅 (右前方)</Chinesesimp>
     <Chinese>防彈格柵 (右前方)</Chinese>
+    <Polish>Kratownica (Prawa Górna)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_LEFT">
     <English>Slat Armour (Top left)</English>
     <German>Käfigpanzerung (Oben links)</German>
     <Chinesesimp>防弹格栅 (左前方)</Chinesesimp>
     <Chinese>防彈格柵 (左前方)</Chinese>
+    <Polish>Kratownica (Lewa Górna)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_BACK">
     <English>Slat Armour (Top back)</English>
     <German>Käfigpanzerung (Oben hinten)</German>
     <Chinesesimp>防弹格栅 (上背部)</Chinesesimp>
     <Chinese>防彈格柵 (上背部)</Chinese>
+    <Polish>Kratownica (Tylnia Górna)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_FRONT">
     <English>Slat Armour (Front)</English>
     <German>Käfigpanzerung (Vorne)</German>
     <Chinesesimp>防弹格栅 (正面)</Chinesesimp>
     <Chinese>防彈格柵 (正面)</Chinese>
+    <Polish>Kratownica (Front)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_BACK">
     <English>Slat Armour (Back)</English>
     <German>Käfigpanzerung (Hinten)</German>
     <Chinesesimp>防弹格栅 (背面)</Chinesesimp>
     <Chinese>防彈格柵 (背面)</Chinese>
+    <Polish>Kratownica (Tył)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITMISSILES">
     <English>Missiles</English>
     <German>Raketen</German>
     <Chinesesimp>导弹</Chinesesimp>
     <Chinese>導彈</Chinese>
+    <Polish>Rakiety</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITAMMO">
     <English>Ammunition</English>
     <German>Munition</German>
     <Chinesesimp>弹药</Chinesesimp>
     <Chinese>彈藥</Chinese>
+    <Polish>Amunicja</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRGLASS">
     <English>Window (Right)</English>
     <German>Fenster (Rechts)</German>
     <Chinesesimp>窗口(右)</Chinesesimp>
     <Chinese>窗口(右)</Chinese>
+    <Polish>Okno (Prawe)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLGLASS">
     <English>Window (Left)</English>
     <German>Fenster (Links)</German>
     <Chinesesimp>窗口(左)</Chinesesimp>
     <Chinese>窗口(左)</Chinese>
+    <Polish>Okno (Lewe)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITWINCH">
     <English>Winch</English>
     <German>Winde</German>
     <Chinesesimp>绞盘</Chinesesimp>
     <Chinese>絞盤</Chinese>
+    <Polish>Dźwig</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE3">
     <English>Engine #03</English>
     <German>Triebwerk #03</German>
     <Chinesesimp>引擎 #03</Chinesesimp>
     <Chinese>引擎 #03</Chinese>
+    <Polish>Silnik #03</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGEAR">
     <English>Gear</English>
     <German>Fahrwerk</German>
     <Chinesesimp>起落架</Chinesesimp>
     <Chinese>起落架</Chinese>
+    <Polish>Przekładnia</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
     <English>Hydraulics</English>
     <German>Hydraulik</German>
     <Chinesesimp>液压系统</Chinesesimp>
     <Chinese>液壓系統</Chinese>
+    <Polish>Hydraulika</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASSR">
     <English>Glass (Right)</English>
     <German>Glas (Rechts)</German>
     <Chinesesimp>玻璃（右）</Chinesesimp>
     <Chinese>玻璃（右）</Chinese>
+    <Polish>Szyba (Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASSL">
     <English>Glass (Left)</English>
     <German>Glas (Links)</German>
     <Chinesesimp>玻璃（左）</Chinesesimp>
     <Chinese>玻璃（左）</Chinese>
+    <Polish>Szyba (Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
     <English>Transmission</English>
     <German>Getriebe</German>
     <Chinesesimp>变速器</Chinesesimp>
     <Chinese>變速器</Chinese>
+    <Polish>Przekładnia</Polish>
   </Key>
   <Key ID="STR_ENH_AI_CATEGORY">
     <English>AI</English>
     <German>KI</German>
     <Chinesesimp>AI</Chinesesimp>
     <Chinese>AI</Chinese>
+    <Polish>AI</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITARMS">
     <English>Arms</English>
@@ -7471,6 +7553,7 @@
     <German>Kamera Schütze</German>
     <Chinesesimp>摄影机炮手</Chinesesimp>
     <Chinese>攝影機砲手</Chinese>
+    <Polish>Kamera Strzelca</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#GLASS11">
     <English>Window #11</English>
@@ -7478,6 +7561,7 @@
     <German>Fenster #11</German>
     <Chinesesimp>窗口 #11</Chinesesimp>
     <Chinese>窗口 #11</Chinese>
+    <Polish>Okno #11</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
     <English>Light #01</English>
@@ -7485,6 +7569,7 @@
     <German>Licht #01</German>
     <Chinesesimp>灯光 #01</Chinesesimp>
     <Chinese>燈光 #01</Chinese>
+    <Polish>Światło #01</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
     <English>Light #02</English>
@@ -7492,6 +7577,7 @@
     <German>Licht #02</German>
     <Chinesesimp>灯光 #02</Chinesesimp>
     <Chinese>燈光 #02</Chinese>
+    <Polish>Światło #02</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
     <English>Light #03</English>
@@ -7499,6 +7585,7 @@
     <German>Licht #03</German>
     <Chinesesimp>灯光 #03</Chinesesimp>
     <Chinese>燈光 #03</Chinese>
+    <Polish>Światło #03</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
     <English>Spotlight</English>
@@ -7506,6 +7593,7 @@
     <Chinesesimp>聚光灯</Chinesesimp>
     <Chinese>聚光燈</Chinese>
     <German>Suchscheinwerfer</German>
+    <Polish>Szperacz</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
     <English>Wing Light (Left)</English>
@@ -7513,6 +7601,7 @@
     <Chinesesimp>翼灯（左）</Chinesesimp>
     <Chinese>翼燈（左）</Chinese>
     <German>Flügellicht (Links)</German>
+    <Polish>Światło Pozycyjne (Lewe)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
     <English>Wing Light (Right)</English>
@@ -7520,6 +7609,7 @@
     <Chinesesimp>翼灯（右）</Chinesesimp>
     <Chinese>翼燈（右）</Chinese>
     <German>Flügellicht (Rechts)</German>
+    <Polish>Światło Pozycyjne (Prawe)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_L">
     <English>Hand (Left)</English>
@@ -7527,6 +7617,7 @@
     <Chinesesimp>手（左）</Chinesesimp>
     <Chinese>手（左）</Chinese>
     <German>Hand (Links)</German>
+    <Polish>Dłoń (Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HAND_R">
     <English>Hand (Right)</English>
@@ -7534,6 +7625,7 @@
     <Chinesesimp>手（右）</Chinesesimp>
     <Chinese>手（右）</Chinese>
     <German>Hand (Rechts)</German>
+    <Polish>Dłoń (Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
     <English>Battery (Left)</English>
@@ -7541,6 +7633,7 @@
     <Chinesesimp>电池（左）</Chinesesimp>
     <Chinese>電池（左）</Chinese>
     <German>Batterie (Links)</German>
+    <Polish>Bateria (Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
     <English>Battery (Right)</English>
@@ -7548,6 +7641,7 @@
     <Chinesesimp>电池（右）</Chinesesimp>
     <Chinese>電池（右）</Chinese>
     <German>Batterie (Rechts)</German>
+    <Polish>Bateria (Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITENGINE4">
     <English>Engine #04</English>
@@ -7555,126 +7649,147 @@
     <Chinesesimp>引擎 #04</Chinesesimp>
     <Chinese>引擎 #04</Chinese>
     <German>Motor #04</German>
+    <Polish>Silnik #04</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
     <English>Era (Back)</English>
     <Chinesesimp>年代（后）</Chinesesimp>
     <Chinese>年代（後）</Chinese>
     <German>Era (Hinten)</German>
+    <Polish>Era (Tył)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_FRONT">
     <English>Era (Front)</English>
     <Chinesesimp>年代（前）</Chinesesimp>
     <Chinese>年代（前）</Chinese>
     <German>Era (Vorne)</German>
+    <Polish>Era (Front)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT">
     <English>Era (left)</English>
     <Chinesesimp>年代（左）</Chinesesimp>
     <Chinese>年代（左）</Chinese>
     <German>Era (Links)</German>
+    <Polish>Era (Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_1">
     <English>Era (Left, #01)</English>
     <Chinesesimp>年代（左, #01）</Chinesesimp>
     <Chinese>年代（左, #01）</Chinese>
     <German>Era (Links, #01)</German>
+    <Polish>Era (Lewa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_2">
     <English>Era (Left, #02)</English>
     <Chinesesimp>年代（左, #02）</Chinesesimp>
     <Chinese>年代（左, #02）</Chinese>
     <German>Era (Links, #02)</German>
+    <Polish>Era (Lewa, #02)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_3">
     <English>Era (Left, #03)</English>
     <Chinesesimp>年代（左, #03）</Chinesesimp>
     <Chinese>年代（左, #03）</Chinese>
     <German>Era (Links, #03)</German>
+    <Polish>Era (Lewa, #03)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_4">
     <English>Era (Left, #04)</English>
     <Chinesesimp>年代（左, #04）</Chinesesimp>
     <Chinese>年代（左, #04）</Chinese>
     <German>Era (Links, #04)</German>
+    <Polish>Era (Lewa, #04)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT">
     <English>Era (Right)</English>
     <Chinesesimp>年代（右）</Chinesesimp>
     <Chinese>年代（右）</Chinese>
     <German>Era (Rechts)</German>
+    <Polish>Era (Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_1">
     <English>Era (Right, #01)</English>
     <Chinesesimp>年代（右, #01）</Chinesesimp>
     <Chinese>年代（右, #01）</Chinese>
     <German>Era (Rechts, #01)</German>
+    <Polish>Era (Prawa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_2">
     <English>Era (Right, #02)</English>
     <Chinesesimp>年代（右, #02）</Chinesesimp>
     <Chinese>年代（右, #02）</Chinese>
     <German>Era (Rechts, #02)</German>
+    <Polish>Era (Prawa, #02)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_3">
     <English>Era (Right, #03)</English>
     <Chinesesimp>年代（右, #03）</Chinesesimp>
     <Chinese>年代（右, #03）</Chinese>
     <German>Era (Rechts, #03)</German>
+    <Polish>Era (Prawa, #03)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_4">
     <English>Era (Right, #04)</English>
     <Chinesesimp>年代（右, #04）</Chinesesimp>
     <Chinese>年代（右, #04）</Chinese>
     <German>Era (Rechts, #04)</German>
+    <Polish>Era (Prawa, #04)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP">
     <English>Era (Top)</English>
     <Chinesesimp>年代（上方）</Chinesesimp>
     <Chinese>年代（上方）</Chinese>
     <German>Era (Oben)</German>
+    <Polish>Era (Góra)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_FRONT">
     <English>Era (Top, Front)</English>
     <Chinesesimp>年代（上前方）</Chinesesimp>
     <Chinese>年代（上前方）</Chinese>
     <German>Era (Oben, Vorne)</German>
+    <Polish>Era (Góra, Front)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT">
     <English>Era (Top, Left)</English>
     <Chinesesimp>年代（左上方）</Chinesesimp>
     <Chinese>年代 (左上方)</Chinese>
     <German>Era (Oben, Links)</German>
+    <Polish>Era (Góra, Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_1">
     <English>Era (Top, Left, #01)</English>
     <Chinesesimp>年代 (左上方, #01)</Chinesesimp>
     <Chinese>年代 (左上方, #01)</Chinese>
     <German>Era (Oben, Links, #01)</German>
+    <Polish>Era (Góra, Lewa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_2">
     <English>Era (Top, Left, #02)</English>
     <Chinesesimp>年代 (左上方, #02)</Chinesesimp>
     <Chinese>年代 (左上方, #02)</Chinese>
     <German>Era (Oben, Links, #02)</German>
+    <Polish>Era (Góra, Lewa, #02</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT">
     <English>Era (Top, Right)</English>
     <Chinesesimp>年代 (右上方)</Chinesesimp>
     <Chinese>年代 (右上方)</Chinese>
     <German>Era (Oben, Rechts)</German>
+    <Polish>Era (Góra, Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_1">
     <English>Era (Top, Right, #01)</English>
     <Chinesesimp>年代 (右上方, #01)</Chinesesimp>
     <Chinese>年代 (右上方, #01)</Chinese>
     <German>Era (Oben, Rechts, #01)</German>
+    <Polish>Era (Góra, Prawa, #01)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_2">
     <English>Era (Top, Right, #02)</English>
     <Chinesesimp>年代 (右上方, #02)</Chinesesimp>
     <Chinese>年代 (右上方, #02)</Chinese>
     <German>Era (Oben, Rechts #02)</German>
+    <Polish>Era (Góra, Prawa, #02)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
     <English>FuelTank (Left)</English>
@@ -7682,6 +7797,7 @@
     <Chinesesimp>油箱（左）</Chinesesimp>
     <Chinese>油箱（左）</Chinese>
     <German>Tank (Links)</German>
+    <Polish>Zbiornik Paliwa (Lewy)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
     <English>Fuel Tank (Right)</English>
@@ -7689,6 +7805,7 @@
     <Chinesesimp>油缸(右)</Chinesesimp>
     <Chinese>油缸(右)</Chinese>
     <German>Tank (Rechts)</German>
+    <Polish>Zbiornik Paliwa (Prawy)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
     <English>Fuel Tank</English>
@@ -7696,6 +7813,7 @@
     <Chinesesimp>油缸</Chinesesimp>
     <Chinese>油缸</Chinese>
     <German>Tank</German>
+    <Polish>Zbiornik Paliwa</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS16">
     <English>Window #16</English>
@@ -7703,6 +7821,7 @@
     <Chinesesimp>窗口 #16</Chinesesimp>
     <Chinese>窗口 #16</Chinese>
     <German>Fenster #16</German>
+    <Polish>Okno #16</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS17">
     <English>Window #17</English>
@@ -7710,6 +7829,7 @@
     <Chinesesimp>窗口 #17</Chinesesimp>
     <Chinese>窗口 #17</Chinese>
     <German>Fenster #17</German>
+    <Polish>Okno #17</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS18">
     <English>Window #18</English>
@@ -7717,6 +7837,7 @@
     <Chinesesimp>窗口 #18</Chinesesimp>
     <Chinese>窗口 #19</Chinese>
     <German>Fenster #18</German>
+    <Polish>Okno #18</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS19">
     <English>Window #19</English>
@@ -7724,6 +7845,7 @@
     <Chinesesimp>窗口 #19</Chinesesimp>
     <Chinese>窗口 #19</Chinese>
     <German>Fenster #19</German>
+    <Polish>Okno #19</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
     <English>Window 1A</English>
@@ -7731,6 +7853,7 @@
     <Chinesesimp>窗口 1A</Chinesesimp>
     <Chinese>窗口 1A</Chinese>
     <German>Fenster 1A</German>
+    <Polish>Okno 1A</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
     <English>Window 1B</English>
@@ -7738,6 +7861,7 @@
     <Chinesesimp>窗口 1B</Chinesesimp>
     <Chinese>窗口 1B</Chinese>
     <German>Fenster 1B</German>
+    <Polish>Okno 1B</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITGLASS20">
     <English>Window #20</English>
@@ -7745,6 +7869,7 @@
     <Chinesesimp>窗口 #20</Chinesesimp>
     <Chinese>窗口 #20</Chinese>
     <German>Fenster #20</German>
+    <Polish>Okno #20</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
     <English>Horizontal Stabilizer (Left)</English>
@@ -7752,6 +7877,7 @@
     <Chinesesimp>水平安定面(左)</Chinesesimp>
     <Chinese>水平安定面(左)</Chinese>
     <German>Horizontaler Stabilisator (Links)</German>
+    <Polish>Stabilizator poziomy (Lewy)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
     <English>Horizontal Stabilizer (Right)</English>
@@ -7759,6 +7885,7 @@
     <Chinesesimp>水平安定面(右)</Chinesesimp>
     <Chinese>水平安定面(右)</Chinese>
     <German>Horizontaler Stabilisator (Rechts)</German>
+    <Polish>Stabilizator poziomy (Prawy)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHT">
     <English>Light</English>
@@ -7766,6 +7893,7 @@
     <Chinesesimp>灯光</Chinesesimp>
     <Chinese>燈光</Chinese>
     <German>Licht</German>
+    <Polish>Światła</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
     <English>Light (Back)</English>
@@ -7773,6 +7901,7 @@
     <Chinesesimp>灯光 (背面)</Chinesesimp>
     <Chinese>燈光 (背面)</Chinese>
     <German>Licht (Hinten)</German>
+    <Polish>Światła (Tył)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
     <English>Light (Front)</English>
@@ -7780,6 +7909,7 @@
     <Chinesesimp>灯光 (前面)</Chinesesimp>
     <Chinese>燈光 (前面)</Chinese>
     <German>Licht (Vorne)</German>
+    <Polish>Światła (Front)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
     <English>Light (Left)</English>
@@ -7787,6 +7917,7 @@
     <Chinesesimp>灯光 (左)</Chinesesimp>
     <Chinese>燈光 (左)</Chinese>
     <German>Licht (Links)</German>
+    <Polish>Światła (Lewa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
     <English>Light (Right)</English>
@@ -7794,6 +7925,7 @@
     <Chinesesimp>灯光 (右)</Chinesesimp>
     <Chinese>燈光 (右)</Chinese>
     <German>Light (Rechts)</German>
+    <Polish>Światła (Prawa)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTIC">
     <English>Optic</English>
@@ -7801,6 +7933,7 @@
     <Chinesesimp>光学瞄具</Chinesesimp>
     <Chinese>光學瞄具</Chinese>
     <German>Optik</German>
+    <Polish>Optyka</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITOPTICS">
     <English>Optics</English>
@@ -7808,6 +7941,7 @@
     <Chinesesimp>光学瞄具</Chinesesimp>
     <Chinese>光學瞄具</Chinese>
     <German>Optiken</German>
+    <Polish>Optyka</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
     <English>Reserve Wheel</English>
@@ -7815,6 +7949,7 @@
     <German>Ersatzrad</German>
     <Chinesesimp>备用车轮</Chinesesimp>
     <Chinese>備用車輪</Chinese>
+    <Polish>Zapasowe koło</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITROTOR">
     <English>Rotor</English>
@@ -7822,6 +7957,7 @@
     <Chinesesimp>水平旋翼</Chinesesimp>
     <Chinese>水平旋翼</Chinese>
     <German>Rotor</German>
+    <Polish>Rotor</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
     <English>Rotor (Virtual)</English>
@@ -7829,6 +7965,7 @@
     <Chinesesimp>水平旋翼(虚拟)</Chinesesimp>
     <Chinese>水平旋翼(虛擬)</Chinese>
     <German>Rotor (Virtuell)</German>
+    <Polish>Rotor (Wirtualny)</Polish>
   </Key>
   <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT">
     <English>Slat (Left)</English>
@@ -8750,71 +8887,83 @@
     <German>Nach X+ ausrichten</German>
     <Chinesesimp>对齐X+</Chinesesimp>
     <Chinese>對齊 X+</Chinese>
+    <Polish>Wyrównaj do X+</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_X_MIN">
     <English>Align to X-</English>
     <German>Nach X- ausrichten</German>
     <Chinesesimp>对齐X-</Chinesesimp>
     <Chinese>對齊 X-</Chinese>
+    <Polish>Wyrównaj do X-</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_Y_MAX">
     <English>Align to Y+</English>
     <German>Nach Y+ ausrichten</German>
     <Chinesesimp>对齐Y+</Chinesesimp>
     <Chinese>對齊 Y+</Chinese>
+    <Polish>Wyrównaj do Y+</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_Y_MIN">
     <English>Align to Y-</English>
     <German>Nach Y- ausrichten</German>
     <Chinesesimp>对齐Y-</Chinesesimp>
     <Chinese>對齊 Y-</Chinese>
+    <Polish>Wyrównaj do Y-</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_Z_MAX">
     <English>Align to Z+</English>
     <German>Nach Z+ ausrichten</German>
     <Chinesesimp>对齐Z+</Chinesesimp>
     <Chinese>對齊 Z+</Chinese>
+    <Polish>Wyrównaj do Z+</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_ALIGN_Z_MIN">
     <English>Align to Z-</English>
     <German>Nach Z- ausrichten</German>
     <Chinesesimp>对齐Z-</Chinesesimp>
     <Chinese>對齊 Z-</Chinese>
+    <Polish>Wyrównaj do Z-</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_X">
     <English>Space along X-Axis</English>
     <German>Entlang X-Achse verteilen</German>
     <Chinesesimp>沿X-轴的空间</Chinesesimp>
     <Chinese>沿X-軸的空間</Chinese>
+    <Polish>Odstęp wzdłuż Osi X</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Y">
     <English>Space along Y-Axis</English>
     <German>Entlang Y-Achse verteilen</German>
     <Chinesesimp>沿Y-轴的空间</Chinesesimp>
     <Chinese>沿Y-軸的空間</Chinese>
+    <Polish>Odstęp wzdłuż Osi Y</Polish>
   </Key>
   <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Z">
     <English>Space along Z-Axis</English>
     <German>Entlang Z-Achse verteilen</German>
     <Chinesesimp>沿Z-轴的空间</Chinesesimp>
     <Chinese>沿Z-軸的空間</Chinese>
+    <Polish>Odstęp wzdłuż Osi Z</Polish>
   </Key>
   <Key ID="STR_ENH_FOLDER_ORIENT">
     <English>Orient</English>
     <German>Orientieren</German>
     <Chinesesimp>定向</Chinesesimp>
     <Chinese>定向</Chinese>
+    <Polish>Orientacja</Polish>
   </Key>
   <Key ID="STR_ENH_FOLDER_ALIGN">
     <English>Align</English>
     <German>Ausrichten</German>
     <Chinesesimp>对齐</Chinesesimp>
     <Chinese>對齊</Chinese>
+    <Polish>Wyrównaj</Polish>
   </Key>
   <Key ID="STR_ENH_FOLDER_SPACE">
     <English>Space</English>
     <German>Verteilen</German>
     <Chinesesimp>隔开</Chinesesimp>
     <Chinese>分發</Chinese>
+    <Polish>Odstęp</Polish>
   </Key>
 </Project>
