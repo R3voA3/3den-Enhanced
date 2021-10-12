@@ -1,3 +1,10 @@
+# v6.3
+## CHANGED
+- Fixed missing ; in display3DEN
+- Fixed ENH_AllowSprint being available for non Brain objects
+- It's no longer possible to use the search in the Texture viewer before the list is fully filled
+- Functions Viewer overhaul
+
 # v6.2
 ## ADDED
 - A simple GUI to create Eden Entities that are not present in the Asset Browser e.g. (scope = 0)
