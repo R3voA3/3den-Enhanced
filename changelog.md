@@ -8,6 +8,7 @@
 - Typo in stringtable.xml
 - Improved the Texture Viewer UI by adding better feedback to indicate when loading is done
 - Some other visual tweaks to the Texture Viewer
+- Fixed a script error with VIM if ACE was used
 
 # v6.2
 ## ADDED

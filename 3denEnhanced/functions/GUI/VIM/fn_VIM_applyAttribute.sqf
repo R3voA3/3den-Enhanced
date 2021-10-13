@@ -36,7 +36,7 @@ for "_i" from 0 to _rows - 1 do
 {
   private _configName = _ctrlInventory lnbData [_i, 0];
   private _amount = _ctrlInventory lnbValue [_i, 1];
-  (_itemsHashMap get toLower _configName) params ["", "", "", "", "_category", "_specificType"];
+  (_itemsHashMap getOrDefault [toLower _configName, []]) params ["", "", "", "", ["_category", ""], ["_specificType", ""]];
   switch (true) do
   {
     case (_category isEqualTo "Weapon"):
