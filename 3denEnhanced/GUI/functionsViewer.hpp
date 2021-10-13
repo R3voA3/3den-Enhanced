@@ -316,7 +316,7 @@ class ENH_FunctionsViewer
     };
     class Close: ctrlButtonClose
     {
-      x = safezoneX + safezoneW - 26 * GRID_W;
+      x = safezoneX + safezoneW - 31 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
