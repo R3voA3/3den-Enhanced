@@ -4,6 +4,10 @@
 - Fixed ENH_AllowSprint being available for non Brain objects
 - It's no longer possible to use the search in the Texture viewer before the list is fully filled
 - Functions Viewer overhaul
+- Polish translation was updated by Krzyciu. Thanks ;)
+- Typo in stringtable.xml
+- Improved the Texture Viewer UI by adding better feedback to indicate when loading is done
+- Some other visual tweaks to the Texture Viewer
 
 # v6.2
 ## ADDED
