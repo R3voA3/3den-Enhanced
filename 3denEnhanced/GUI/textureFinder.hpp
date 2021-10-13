@@ -16,6 +16,13 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
+    class BackgroundList: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + CTRL_DEFAULT_H;
+      w = DIALOG_W * GRID_W;
+      h = 52 * GRID_H;
+    };
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TEXTUREFINDER";
@@ -43,20 +50,20 @@ class ENH_TextureFinder
       w = DIALOG_W * GRID_W;
       h = 52 * GRID_H;
       colorBorder[] = {0, 0, 0, 0};
+      colorLines[] = {1, 1, 1, 1};
     };
     class ProgessText: ctrlStructuredText
     {
       idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
       style = ST_LEFT;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 99 * GRID_H;
+      x = CENTERED_X(DIALOG_W) + 36 * GRID_W;
+      y = DIALOG_TOP + 109 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = 2 * CTRL_DEFAULT_H;
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
       idc = IDC_TEXTUREFINDER_PREVIEW;
-      text = "\a3\missions_f_exp\data\img\lobby\ui_campaign_lobby_background_tablet_button_respawn02_ca.paa";
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + 58 * GRID_H;
       w = DIALOG_W * GRID_W;

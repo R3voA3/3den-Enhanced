@@ -23,11 +23,14 @@
 disableSerialization;
 private _display = findDisplay IDD_TEXTUREFINDER;
 private _ctrlTV = CTRL(IDC_TEXTUREFINDER_TEXTURELIST);
-private _tooltip = localize "STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP";
+private _ctrlProgText = CTRL(IDC_TEXTUREFINDER_PROGRESSTEXT);
 private _indexItem = 0;
 private _indexType = 0;
 private _pixelCount = 0;
 private _indexSize = 0;
+private _counter = 0;
+private _shortcutText = localize "STR_ENH_FUNCTIONS_FILLTEXTURELB_TOOLTIP";
+private _listStatusText = localize "STR_ENH_TEXTUREFINDER_LISTSTATUS";
 
 tvClear _ctrlTV;
 
@@ -46,14 +49,15 @@ _ctrlTV tvAdd [[], "PAA"];
 (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound", []]) apply
 {
   if (isNull _display) exitWith {uiNamespace setVariable ["ENH_TextureFinder_isFillingList", false]};
+  _counter = _counter + 1;
   getTextureInfo _x params ["_w", "_h"];
   _pixelCount = _w * _h;
   _indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
   _indexType = parseNumber (".paa" in _x);
-
+  _ctrlProgText ctrlSetStructuredText parseText format [_listStatusText, _counter, count (uiNamespace getVariable "ENH_TextureFinder_TexturesFound")];
   _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], _x];
   _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
-  _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3", _x, _w, _h]];
+  _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\n%4", _x, _w, _h, _shortcutText]];
 };
 
 //Sort only the groups which contain images, if group is empty delete it
