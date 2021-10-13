@@ -1,4 +1,8 @@
-# v6.3
+# v6.4.1
+## CHANGED
+- Fixed a script error with VIM if ACE was used
+
+# v6.4
 ## CHANGED
 - Fixed missing ; in display3DEN
 - Fixed ENH_AllowSprint being available for non Brain objects
@@ -8,7 +12,6 @@
 - Typo in stringtable.xml
 - Improved the Texture Viewer UI by adding better feedback to indicate when loading is done
 - Some other visual tweaks to the Texture Viewer
-- Fixed a script error with VIM if ACE was used
 
 # v6.2
 ## ADDED
