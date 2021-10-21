@@ -33,18 +33,9 @@ _h = _h * pixelH min 400 * pixelH;
 _ctrlTexturePreview ctrlSetPosition
 [
   CENTERED_X(160) + 80 * GRID_W - _w / 2,
-  DIALOG_TOP + 58 * GRID_H + 200 * pixelH - (_h min 200 * pixelH),
+  DIALOG_TOP + 58 * GRID_H + 199 * pixelH - (_h min 199 * pixelH),
   _w,
   _h
 ];
 
 _ctrlTexturePreview ctrlCommit 0;
-
-/* #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
-
-params ["_ctrlTV", "_path"];
-
-//Exit if category or nothing is selected
-if (count _path < 3) exitWith {};
-
-(ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW) ctrlSetText (_ctrlTV tvText _path); */

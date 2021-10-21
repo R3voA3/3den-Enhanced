@@ -1,11 +1,11 @@
 #define POS_X_TEXT 1 * GRID_W
-#define POS_X_VALUE 25 * GRID_W
+#define POS_X_VALUE 27 * GRID_W
 #define WIDTH_TEXT 23 * GRID_W
 #define WIDTH_VALUE 36 * GRID_W
-#define WIDTH_HEADER 60 * GRID_W
+#define WIDTH_HEADER 62 * GRID_W
 
-#define ORIGIN_X  safeZoneX + 6 * GRID_W
-#define ORIGIN_Y  safezoneY	+ 18 * GRID_H
+#define ORIGIN_X safeZoneX + 6 * GRID_W
+#define ORIGIN_Y safezoneY + 18 * GRID_H
 
 class ENH_PlacementTools
 {
@@ -30,11 +30,18 @@ class ENH_PlacementTools
       w = 64 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = ORIGIN_X;
+      y = ORIGIN_Y + 118 * GRID_H;
+      w = 64 * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
     class FineControlStep: ctrlToolbox
     {
       idc = IDC_PLACEMENTTOOLS_FINECONTROL;
       x = ORIGIN_X + 1 * GRID_W;
-      y = ORIGIN_Y + 113 * GRID_H;
+      y = ORIGIN_Y + 112 * GRID_H;
       w = 62 * GRID_W;
       h = CTRL_DEFAULT_H;
       rows = 1;
@@ -60,7 +67,7 @@ class ENH_PlacementTools
         "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP"
       };
       values[] = {0.0001, 0.001, 0.01, 0.1, 1, 10, 100};
-      onToolBoxSelChanged  = "_this call ENH_fnc_placementTools_onToolBoxSelChanged";
+      onToolBoxSelChanged = "_this call ENH_fnc_placementTools_onToolBoxSelChanged";
     };
     class CurrentValue: ctrlEdit
     {

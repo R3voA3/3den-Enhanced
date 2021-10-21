@@ -10,14 +10,17 @@
     "<Polish>",
     "<Russian>",
     "<Portuguese>"
+    "<Turkish>",
+    "<Chinese>",
+    "<Korean>",
+    "<Hungarian>"
 )
 
 # Get content of stringtable.xml
-$Content = Get-Content $env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\3denEnhanced\stringtable.xml"
+$Content = Get-Content ($env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\3denEnhanced\stringtable.xml")
 
 # Add the number of translations per language in an array
-$Counts = $Patterns | forEach-Object
-{
+$Counts = $Patterns | forEach-Object {
   $AllMatches = Select-String -InputObject $Content -Pattern $_ -AllMatches
   $AllMatches.Matches.Count
 }

@@ -1,6 +1,6 @@
 class ENH_SPR_Tickets
 {
-  displayName = "$STR_ENH_RESPAWNTICKETS_DISPLAYNAME";
+  displayName = "$STR_ENH_SPR_RESPAWNTICKETS_DISPLAYNAME";
   tooltip = "$STR_ENH_RESPAWNTICKETS_TOOLTIP";
   property = "ENH_SPR_Tickets";
   control = "EditShort";

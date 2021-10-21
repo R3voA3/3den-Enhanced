@@ -17,8 +17,14 @@
 #define IS_JPG (".jpg" in (_string select [count _string - 4]))
 #define IS_PAA (".paa" in (_string select [count _string - 4]))
 
+disableSerialization;
+private _display = findDisplay IDD_TEXTUREFINDER;
+
+CTRL(IDC_TEXTUREFINDER_SEARCH) ctrlEnable false;
+CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlEnable false;
+
 //Focus Search CTRL + F
-findDisplay IDD_TEXTUREFINDER displayAddEventHandler ["keyDown",
+_display displayAddEventHandler ["keyDown",
 {
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && !_shift) then
@@ -28,18 +34,18 @@ findDisplay IDD_TEXTUREFINDER displayAddEventHandler ["keyDown",
 }];
 
 //Update preview
-findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseMove",
+_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseMove",
 {
   _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
-findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseHold",
+_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseHold",
 {
   _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
 //Copy path
-findDisplay IDD_TEXTUREFINDER displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["keyDown",
+_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["keyDown",
 {
   _this call ENH_fnc_textureFinder_copyPath;
 }];

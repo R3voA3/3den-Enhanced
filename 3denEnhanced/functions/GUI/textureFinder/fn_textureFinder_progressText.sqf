@@ -18,14 +18,14 @@
 disableSerialization;
 private _display = findDisplay IDD_TEXTUREFINDER;
 private _ctrlProgText = CTRL(IDC_TEXTUREFINDER_PROGRESSTEXT);
-private _text = localize "STR_ENH_UPDATEPROGRESSBAR";
+private _text = localize "STR_ENH_TEXTUREFINDER_PROGRESSTEXT";
 
 //If search is done, don't loop anymore
 if CHECK exitWith
 {
   _ctrlProgText ctrlSetStructuredText parseText format
   [
-    localize "STR_ENH_UPDATEPROGRESSBAR",
+    localize "STR_ENH_TEXTUREFINDER_PROGRESSTEXT",
     uiNamespace getVariable "ENH_TextureFinder_ClassesSearched",
     uiNamespace getVariable "ENH_TextureFinder_ClassesFound",
     count (uiNamespace getVariable "ENH_TextureFinder_TexturesFound")
@@ -43,8 +43,5 @@ while {!isNull _display} do
     ENH_TextureFinder_ClassesFound,
     count ENH_TextureFinder_TexturesFound
   ];
-  //Let's rotate the default image, looks neat
-  CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlSetAngle [(ctrlAngle CTRL(IDC_TEXTUREFINDER_PREVIEW) # 0) + 2, 0.5, 0.5];
-  CTRL(IDC_TEXTUREFINDER_PREVIEW) ctrlCommit 0;
   sleep 0.02;
 };

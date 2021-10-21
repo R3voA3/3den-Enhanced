@@ -29,9 +29,6 @@
 //Collapse asset browser
 call ENH_fnc_assetBrowser_collapse;
 
-//Customize Asset Browser
-//call ENH_fnc_assetBrowser_removeItems;
-
 //Set up entity counter in status bar according to preferences
 "init" call ENH_fnc_statusbar_entityCounter;
 "run" call ENH_fnc_statusbar_entityCounter;
@@ -56,3 +53,6 @@ call ENH_fnc_ambientAnimations_initInEditor;
 
 //Preload the ammo attribute to get rid of initial freeze and loading screen
 [] call ENH_fnc_preloadAmmoAttribute;
+
+//Init favorites list
+["onLoad", []] call ENH_fnc_favoritesList;

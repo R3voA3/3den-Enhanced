@@ -2,7 +2,7 @@
   Author: R3vo
 
   Description:
-  Used by the ENH_FunctionViewer GUI. Called when Recompile Selected button is pressed.
+  Used by the ENH_FunctionViewer GUI.
 
   Parameter(s):
   -
@@ -11,12 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
-
-disableSerialization;
-params ["_ctrlButton"];
-
-private _fncName = ctrlText ((ctrlParent _ctrlButton) displayCtrl IDC_FUNCTIONSVIEWER_NAME);
+private _fncName = ctrlText ((uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull]) displayCtrl IDC_FUNCTIONSVIEWER_NAME);
 
 if (_fncName isEqualTo "") exitWith {};
 _fncName call BIS_fnc_recompile;

@@ -65,13 +65,13 @@ class CfgFunctions
       class functionsViewer_onTreeSelChanged;
       class functionsViewer_recompileSelected;
       class functionsViewer_searchkey;
+      class functionsViewer_setUpMenuStrip;
       class functionsViewer_togglePanel;
     };
     class ActionCreator
     {
       file = "3denEnhanced\functions\GUI\actionCreator";
-      class actionCreator_export;
-      class actionCreator_onLoad;
+      class actionCreator;
     };
     class BriefingEditor
     {
@@ -217,6 +217,7 @@ class CfgFunctions
       class loadoutTool;
       class measureDistance;
       class preloadAmmoAttribute;
+      class pylonTools;
       class removeGear;
       class setOrientation;
       class spaceEqually;
@@ -229,12 +230,14 @@ class CfgFunctions
       class toggleGrass;
       class toggleMarkerAlpha;
       class twoDigitsStr;
+      class VHCTools;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface
     {
       file = "3denEnhanced\functions\interface";
       class assetBrowser_collapse;
+      class favoritesList;
       class locationList;
       class menuStrip_removeItems;
       class statusbar_entityCounter;

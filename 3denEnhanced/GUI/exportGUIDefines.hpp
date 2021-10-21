@@ -1,8 +1,10 @@
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+
 #define DIALOG_W 53
 
 class ENH_ExportGUIDefines
 {
-  idd = -1;
+  idd = IDD_EXPORTGUIDEFINES;
   movingEnable = true;
   onLoad = "";
   class ControlsBackground
@@ -13,11 +15,8 @@ class ENH_ExportGUIDefines
       x = CENTERED_X(DIALOG_W);
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = DIALOG_W * GRID_W;
-      h = 20 * GRID_H;
+      h = 21 * GRID_H;
     };
-  };
-  class Controls
-  {
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES";
@@ -26,6 +25,16 @@ class ENH_ExportGUIDefines
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 18 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 3 * GRID_H;
+    };
+  };
+  class Controls
+  {
     class Target: ctrlStatic
     {
       text = "$STR_WATCH_TARGET";
@@ -47,14 +56,12 @@ class ENH_ExportGUIDefines
         {
           text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP";
-          data = "mod";
           default = 1;
         };
         class Scenario
         {
           text = "$STR_A3_CFGUIGRIDS_IGUI_VARIABLES_GRID_MISSION_0";
           tooltip = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP";
-          data = "scenario";
         };
       };
     };
@@ -93,7 +100,7 @@ class ENH_ExportGUIDefines
     class Cancel: ctrlButtonCancel
     {
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 26) * GRID_W;
-      y = DIALOG_TOP + 19 * GRID_H;
+      y = DIALOG_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -101,12 +108,10 @@ class ENH_ExportGUIDefines
     {
       idc = -1;//We don't want it to close the GUI. The function does that.
       x = CENTERED_X(DIALOG_W) + (DIALOG_W - 52) * GRID_W;
-      y = DIALOG_TOP + 19 * GRID_H;
+      y = DIALOG_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "_display = ctrlParent (_this # 0);\
-      [(_display displayCtrl 10) lbData (lbCurSel (_display displayCtrl 10)), (_display displayCtrl 20) lbData (lbCurSel (_display displayCtrl 20))]\
-      call ENH_fnc_exportGUIDefines; _display closeDisplay 0";
+      onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";
     };
   };
 };

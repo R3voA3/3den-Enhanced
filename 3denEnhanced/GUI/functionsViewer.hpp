@@ -7,16 +7,6 @@ class ENH_FunctionsViewer
   onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
   class ControlsBackground
   {
-    class Background: ctrlStaticBackground
-    {
-      x = safezoneX;
-      y = safezoneY + CTRL_DEFAULT_H;
-      w = safezoneW;
-      h = safezoneH - CTRL_DEFAULT_H;
-    };
-  };
-  class Controls
-  {
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_FUNCTIONSVIEWER_HEADER";
@@ -27,81 +17,12 @@ class ENH_FunctionsViewer
       colorBackground[] = {COLOR_ACTIVE_RGBA};
       moving = false;
     };
-    class FilterConfig: ctrlToolbox
+    class Background: ctrlStaticBackground
     {
-      idc = IDC_FUNCTIONSVIEWER_FILTERCONFIG;
-      x = safezoneX + GRID_W;
-      y = safezoneY + 6 * GRID_H;
-      w = SIDEBAR_W;
-      h = CTRL_DEFAULT_H;
-      rows = 1;
-      columns = 3;
-      strings[] = //Do not localize
-      {
-        "configFile",
-        "missionConfig",
-        "campaignConfig"
-      };
-      values[] = {0, 1, 2};
-      onToolBoxSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
-    };
-    class FilterMode: FilterConfig
-    {
-      idc = IDC_FUNCTIONSVIEWER_FILTERMODE;
-      x = safezoneX + GRID_W;
-      y = safezoneY + 12 * GRID_H;
-      h = 11 * GRID_H;
-      rows = 2;
-      columns = 3;
-      strings[] =
-      {
-        "$STR_ENH_FUNCTIONSVIEWER_FULL",
-        "$STR_ENH_FUNCTIONSVIEWER_CATEGORIES",
-        "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONS",
-        "$STR_ENH_FUNCTIONSVIEWER_SCRIPTS",
-        ".inc",
-        ".hpp"
-      };
-      values[] = {0, 1, 2, 3, 4, 5};
-      onToolBoxSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
-    };
-    class LoadFileMode: ctrlCombo
-    {
-      idc = IDC_FUNCTIONSVIEWER_LOADMODE;
-      x = safezoneX + GRID_W;
-      y = safezoneY + 24 * GRID_H;
-      w = SIDEBAR_W;
-      h = CTRL_DEFAULT_H;
-      class Items
-      {
-        class LoadFile
-        {
-          text = "loadFile";
-          default = 1;
-        };
-        class PreprocessFile
-        {
-          text = "preprocessFile";
-        };
-        class PreprocessFileLineNumbers
-        {
-          text = "preprocessFileLineNumbers";
-        };
-      };
-      onLBSelChanged = "_this call ENH_fnc_functionsViewer_fillCtrlTV";
-    };
-    class List: ctrlTree
-    {
-      idc = IDC_FUNCTIONSVIEWER_LIST;
-      idcSearch = 1400;
-      x = safezoneX + GRID_W;
-      y = safezoneY + 30 * GRID_H;
-      w = SIDEBAR_W;
-      h = safezoneH - 37 * GRID_H;
-      onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
-      colorLines[] = {1, 1, 1, 1};
-      borderSize = 0;
-      colorBorder[] = {0, 0, 0, 0};
+      x = safezoneX;
+      y = safezoneY + CTRL_DEFAULT_H;
+      w = safezoneW;
+      h = safezoneH - CTRL_DEFAULT_H;
     };
     class NumFunctions: ctrlStatic
     {
@@ -111,7 +32,186 @@ class ENH_FunctionsViewer
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 10 * GRID_W;
       h = CTRL_DEFAULT_H;
-      colorBackground[] = {COLOR_ACTIVE_RGBA};
+    };
+    class Footer: ctrlStaticFooter
+    {
+      x = safezoneX;
+      y = safezoneY + safezoneH - 7 * GRID_H;
+      w = safezoneW;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
+  };
+  class Controls
+  {
+    class MenuStrip: ctrlMenuStrip
+    {
+      idc = 2200; //IDC_FUNCTIONSVIEWER_MENU
+      x = safezoneX;
+      y = safezoneY + CTRL_DEFAULT_H;
+      w = safezoneW;
+      h = CTRL_DEFAULT_H;
+      class Items
+      {
+        items[] =
+        {
+          "FolderFilter",
+          "FolderEdit",
+          "FolderHelp"
+        };
+        class FolderFilter
+        {
+          text = "Filter";
+          items[] = {"ConfigFile", "MissionConfigFile", "CampaignConfigFile", "Separator", "Full", "Categories", "Functions", "OtherFiles", "Separator", "LoadFile", "PreprocessFile", "PreprocessFileLineNumbers"};
+        };
+        class FolderEdit
+        {
+          text = "Edit";
+          items[] = {"ToggleSidebar", "CollapseAll", "ExpandAll", "Separator", "RecompileSelected", "RecompileAll", "Separator", "Copy", "Separator", "LegacyFunctionsViewer"};
+        };
+        class FolderHelp
+        {
+          text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELP_TEXT";
+          items[] = {"Documentation", "ShowOnBiki"};
+        };
+        //Edit
+        class ToggleSidebar
+        {
+          text = "$STR_USRACT_CURATOR_COLLAPSE_PARENT";
+          shortcuts[] = {INPUT_CTRL_OFFSET + DIK_B};
+          action = "_this call ENH_fnc_functionsViewer_togglePanel";
+          picture = "\a3\ui_f_orange\data\igui\rscingameui\elevationarrow_ca.paa";
+        };
+        class CollapseAll
+        {
+          text = "$STR_3DEN_CTRLBUTTONCOLLAPSEALL_TEXT";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
+          action = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
+          picture = "\a3\3den\data\displays\display3den\tree_expand_ca.paa";
+        };
+        class ExpandAll
+        {
+          text = "$STR_3DEN_CTRLBUTTONEXPANDALL_TEXT";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
+          action = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+          picture = "\a3\3den\data\displays\display3den\tree_collapse_ca.paa";
+        };
+        class RecompileSelected
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
+          picture = "\a3\3den\data\displays\display3den\entitymenu\functions_ca.paa";
+          action = "[] call ENH_fnc_functionsViewer_recompileSelected";
+        };
+        class RecompileAll: RecompileSelected
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_A};
+          action = "[1] call BIS_fnc_recompile";
+        };
+        class Copy
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT";
+          shortcuts[] = {INPUT_CTRL_OFFSET + DIK_C};
+          action = "_this call ENH_fnc_functionsViewer_copy";
+        };
+        class LegacyFunctionsViewer
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_LEGACY";
+          action = "[ctrlParent (_this # 0)] call BIS_fnc_help";
+        };
+        //Config
+        class ConfigFile
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 0]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {DIK_1};
+        };
+        class MissionConfigFile: ConfigFile
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG";
+          shortcuts[] = {DIK_2};
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 1]; call ENH_fnc_functionsViewer_fillCtrlTV";
+        };
+        class CampaignConfigFile: ConfigFile
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG";
+          shortcuts[] = {DIK_3};
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 2]; call ENH_fnc_functionsViewer_fillCtrlTV";
+        };
+        //Filter
+        class Full
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_FULL";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 0]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_1};
+        };
+        class Categories
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_CATEGORIES";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 1]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_2};
+        };
+        class Functions
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONS";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 2]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_3};
+        };
+        class OtherFiles
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_OTHERFILES";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 3]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {INPUT_ALT_OFFSET + DIK_4};
+        };
+        //Loading Method
+        class LoadFile
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_LOADFILE";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 0]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_1};
+        };
+        class PreprocessFile
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 1]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_2};
+        };
+        class PreprocessFileLineNumbers
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 2]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_3};
+        };
+        //Help
+        class Documentation
+        {
+          text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";
+          picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
+          weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#vehicle-inventory-manager-vim";
+          opensNewWindow = 1;
+        };
+        class ShowOnBiki
+        {
+          text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPBIKI_TEXT";
+          picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
+          opensNewWindow = 1;
+        };
+        class Default;
+        class Separator;
+      };
+    };
+    class List: ctrlTree
+    {
+      idc = IDC_FUNCTIONSVIEWER_LIST;
+      idcSearch = 1400;
+      x = safezoneX + GRID_W;
+      y = safezoneY + 2 * CTRL_DEFAULT_H + GRID_H;
+      w = SIDEBAR_W;
+      h = safezoneH - 3 * CTRL_DEFAULT_H - 3 * GRID_H;
+      onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
+      colorLines[] = {1, 1, 1, 1};
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
     };
     class Search: ctrlEdit
     {
@@ -119,42 +219,16 @@ class ENH_FunctionsViewer
       tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = safezoneX + 12 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 44 * GRID_W;
+      w = 53 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class SearchIcon: ctrlStaticPictureKeepAspect
     {
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-      x = safezoneX + 56 * GRID_W;
+      x = safezoneX + 65 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-    };
-    class Collapse: ctrlButtonCollapseAll
-    {
-      x = safezoneX + 61 * GRID_W;
-      y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
-    };
-    class Expand: ctrlButtonExpandAll
-    {
-      x = safezoneX + 66 * GRID_W;
-      y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
-    };
-    class TogglePanelLeft: ctrlButton
-    {
-      idc = IDC_FUNCTIONSVIEWER_PANNEL;
-      text = "«";
-      x = safezoneX + 71 * GRID_W;
-      y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_functionsViewer_togglePanel";
     };
     class Name: ctrlEdit
     {
@@ -162,58 +236,23 @@ class ENH_FunctionsViewer
       tooltip = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP";
       canModify = false;
       x = safezoneX + 72 * GRID_W;
-      y = safezoneY + 6 * GRID_H;
-      w = safezoneW - 155 * GRID_W;
+      y = safezoneY + 2 * CTRL_DEFAULT_H + GRID_H;
+      w = 140 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Path: Name
     {
       idc = IDC_FUNCTIONSVIEWER_PATH;
       tooltip = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP";
-      y = safezoneY + 12 * GRID_H;
-    };
-    class RecompileSelected: ctrlButton
-    {
-      idc = IDC_FUNCTIONSVIEWER_RECOMPILESELECTED;
-      text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT";
-      tooltip = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP";
-      x = safezoneX + safezoneW - 82 * GRID_W;
-      y = safezoneY + 6 * GRID_H;
-      w = 40 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_functionsViewer_recompileSelected";
-    };
-    class Copy: RecompileSelected
-    {
-      idc = IDC_FUNCTIONSVIEWER_COPY;
-      text = "$STR_ENH_FUNCTIONSVIEWER_COPYFUNCTION_TEXT";
-      tooltip = __EVAL(toUpper format ["%1+%2", localize "STR_DIK_CONTROL", "X"]);
-      y = safezoneY + 12 * GRID_H;
-      onButtonClick = "_this call ENH_fnc_functionsViewer_copy";
-    };
-    class RecompileAll: RecompileSelected
-    {
-      idc = IDC_FUNCTIONSVIEWER_RECOMPILEALL;
-      text = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TEXT";
-      tooltip = "$STR_ENH_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP";
-      x = safezoneX + safezoneW - 41 * GRID_W;
-      onButtonClick = "1 call BIS_fnc_recompile; playSound 'FD_Finish_F'";
-    };
-    class Biki: RecompileSelected
-    {
-      idc = IDC_FUNCTIONSVIEWER_BIKI;
-      text = "$STR_ENH_FUNCTIONSVIEWER_BIKI";
-      tooltip = "";
-      x = safezoneX + safezoneW - 41 * GRID_W;
-      y = safezoneY + 12 * GRID_H;
-      onButtonClick = "";
+      x = safezoneX + 213 * GRID_W;
+      w = safezoneW - 214 * GRID_W;
     };
     class SearchCode: ctrlEdit
     {
       idc = IDC_FUNCTIONSVIEWER_SEARCHCODE;
       tooltip = __EVAL(toUpper format ["%1+%2+%3", localize "STR_DIK_CONTROL", localize "STR_VK_SHIFT", "F"]);
       x = safezoneX + 72 * GRID_W;
-      y = safezoneY + 18 * GRID_H;
+      y = safezoneY + safezoneH - 6 * GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
       onKeyUp = "_this call ENH_fnc_functionsViewer_searchKey";
@@ -222,7 +261,7 @@ class ENH_FunctionsViewer
     {
       idc = IDC_FUNCTIONSVIEWER_SEARCHTEXT;
       x = safezoneX + 113 * GRID_W;
-      y = safezoneY + 18 * GRID_H;
+      y = safezoneY + safezoneH - 6 * GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -230,7 +269,7 @@ class ENH_FunctionsViewer
     {
       text = "\a3\ui_f\data\gui\rsc\rscdisplaymultiplayer\arrow_up_ca.paa";
       x = safezoneX + 135 * GRID_W;
-      y = safezoneY + 18 * GRID_H;
+      y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "[_this # 0, -1] call ENH_fnc_FunctionsViewer_IncrementKey";
@@ -245,9 +284,9 @@ class ENH_FunctionsViewer
     {
       idc = IDC_FUNCTIONSVIEWER_GROUP;
       x = safezoneX + 72 * GRID_W;
-      y = safezoneY + 24 * GRID_H;
+      y = safezoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H;
       w = safezoneW - 73 * GRID_W;
-      h = safeZoneH - 31 * GRID_H;
+      h = safeZoneH - 4 * CTRL_DEFAULT_H - 4 * GRID_H;
       class Controls
       {
         class Lines: ctrlStructuredText
@@ -277,9 +316,9 @@ class ENH_FunctionsViewer
     };
     class Close: ctrlButtonClose
     {
-      x = safezoneX + safezoneW - 41 * GRID_W;
+      x = safezoneX + safezoneW - 31 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 40 * GRID_W;
+      w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };

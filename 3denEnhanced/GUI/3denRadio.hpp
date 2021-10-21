@@ -1,5 +1,5 @@
-#define DIALOG_W 195
-#define DIALOG_H 120
+#define DIALOG_W (safezoneW - 120 * (pixelW * pixelGrid *  0.50)) / (pixelW * pixelGrid *  0.50)
+#define DIALOG_H 140
 
 class ENH_3DENRadio
 {

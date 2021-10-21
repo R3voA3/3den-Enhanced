@@ -56,3 +56,6 @@
 //#define ENH_HIDE_SETMASS
 //#define ENH_HIDE_UNITTRAITS
 //#define ENH_HIDE_VIRTUALARSENAL
+
+//------------Other------------//
+//#define ENH_LARGER_EDITBOXES

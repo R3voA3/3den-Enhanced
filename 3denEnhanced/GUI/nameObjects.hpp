@@ -16,9 +16,6 @@ class ENH_NameObjects
       w = DIALOG_W * GRID_W;
       h = DIALOG_H * GRID_H;
     };
-  };
-  class Controls
-  {
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_NAMEOBJECTS";
@@ -27,6 +24,16 @@ class ENH_NameObjects
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + 28 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
+  };
+  class Controls
+  {
     class VariableName: ctrlStatic
     {
       text = "$STR_ENH_NAMEOBJECTS_NAME";

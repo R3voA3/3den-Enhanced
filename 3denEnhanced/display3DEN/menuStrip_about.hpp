@@ -7,7 +7,8 @@ class ENH_About
     "ENH_About_Steam",
     "ENH_About_Translation",
     "ENH_About_Documentation",
-    "ENH_About_Credits"
+    "ENH_About_Credits",
+    "ENH_About_BugReport"
   };
 };
 class ENH_About_Changelog
@@ -36,4 +37,9 @@ class ENH_About_Credits: ENH_About_Changelog
 {
   text = "$STR_ENH_ABOUT_CREDITS";
   weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Credits";
+};
+class ENH_About_BugReport: ENH_About_Changelog
+{
+  text = "$STR_ENH_ABOUT_REPORT";
+  weblink = "https://github.com/R3voA3/3den-Enhanced/issues/new/choose";
 };

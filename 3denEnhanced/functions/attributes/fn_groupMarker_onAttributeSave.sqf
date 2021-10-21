@@ -19,10 +19,12 @@ private _ctrlComboType =_ctrlGroup controlsGroupCtrl 100;
 private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
 private _ctrlEdit =_ctrlGroup controlsGroupCtrl 102;
 private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
+private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl 104;
 
 [
   _ctrlComboType lbData lbCurSel _ctrlComboType,
   _ctrlComboColor lbData lbCurSel _ctrlComboColor,
   ctrlText _ctrlEdit,
-  cbChecked _ctrlCheckbox
+  cbChecked _ctrlCheckbox,
+  cbChecked _ctrlCheckbox2
 ]

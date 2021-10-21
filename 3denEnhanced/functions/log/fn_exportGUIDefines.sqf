@@ -8,25 +8,21 @@
   The function will also include commonly used files like control styles and types and will also add links to the documentation.
 
   Parameter(s):
-  0: STRING - Used keyword, can be "mod" for config or "scenario" for missionConfig (Default: "mission")
-  1: STRING - Which classes should be exported (Default: "")
-    ""        - all GUI base classes, including more exotic ones and Eden Editor ones
-    "3DEN"    - Eden Editor base classes like ctrlStatic or ctrlStaticPicture
-    "classic" - classic base classes like RscText or RscPicture
+  0: NUMBER - 0 for mod (class), 1 for scenario (import)
+  1: NUMBER - Which classes should be exported (Default: "")
+    0 - all GUI base classes, including more exotic ones and Eden Editor ones
+    1 - Eden Editor base classes like ctrlStatic or ctrlStaticPicture
+    2 - classic base classes like RscText or RscPicture
 
   Returns:
-  STRING: Returns generated text on success otherwise "" and error message with expected input
+  -
 */
 
-params [["_mode", "scenario"], ["_classes", "classic"]];
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
-if !(_mode in ["scenario", "mod"]) exitWith {["Mode was ""%1"", expected was ""mission"" or ""mod""", _mode] call BIS_fnc_error; ""};
-if !(_classes in ["", "3DEN", "classic"]) exitWith {["Classes was ""%1"", expected was """", ""3DEN"" or ""classic""", _mode] call BIS_fnc_error; ""};
+params [["_mode", 0], ["_classes", 0]];
+_mode = ["class", "import"] select _mode;
 
-private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
-_return = _return + "//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
-_return = _return + "//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles" + endl + endl;
-_mode = if (_mode == "mission") then {"import"} else {"class"};
 private _baseControls =
 [
     "RscActivePicture",
@@ -68,12 +64,15 @@ private _baseControls =
     "Scrollbar"
 ];
 
+private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
+_return = _return + "//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
+_return = _return + "//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles" + endl + endl;
 _return = _return + "//Eden Editor macros such as background colour and pixel grid" + endl + "#include ""\a3\3DEN\UI\macros.inc""" + endl;
 _return = _return + "//GRIDs" + endl + "#include ""\a3\ui_f\hpp\definecommongrids.inc""" + endl;
 _return = _return + "//DIK Key Codes" + endl + "#include ""\a3\ui_f\hpp\definedikcodes.inc""" + endl;
 _return = _return + "//Eden Editor IDDs and IDCs as well as control types, styles and macros" + endl + "#include ""\a3\3den\ui\resincl.inc""" + endl + endl;
 
-if (_classes in ["", "3DEN"]) then
+if (_classes in [2, 1]) then
 {
   private _3DENBaseControls = [];
   {
@@ -91,7 +90,7 @@ if (_classes in ["", "3DEN"]) then
   } forEach _3DENBaseControls;
 };
 
-if (_classes in ["", "classic"]) then
+if (_classes in [0, 2]) then
 {
   _return = _return + endl + "//Classic Base Controls" + endl;
   {
@@ -99,7 +98,7 @@ if (_classes in ["", "classic"]) then
   } forEach _baseControls;
 };
 
-if (_classes in [""]) then
+if (_classes == 0) then
 {
   private _exoticClassed = [];
   {
@@ -117,8 +116,9 @@ if (_classes in [""]) then
   } forEach (_exoticClassed - _baseControls);
 };
 
-copyToClipboard _return;
+//Set variable used by display3denCopy and create the display
+uinamespace setVariable ["display3DENCopy_data", ["", _return]];
 
-if (is3DEN) then {[localize "STR_A3_RSCDISPLAYARSENAL_MESSAGE_CLIPBOARD"] call BIS_fnc_3DENNotification} else {hint localize "STR_A3_RSCDISPLAYARSENAL_MESSAGE_CLIPBOARD"};
+findDisplay IDD_EXPORTGUIDEFINES createDisplay "display3denCopy";
 
-_return
+nil

@@ -46,6 +46,38 @@ class Cfg3DEN
         class Title;
       };
     };
+    // Increase height of EditCodeMulti5
+    #ifndef ENH_LARGER_EDITBOXES
+    class EditMulti3;
+    class EditCodeMulti3: EditMulti3
+    {
+      class Controls
+      {
+        class Value;
+        class Background;
+        class Title;
+      };
+    };
+    class EditCodeMulti5: EditCodeMulti3
+    {
+      h = 61.5 * GRID_H;
+      class Controls: Controls
+      {
+        class Background: Background
+        {
+          h = 53.5 * GRID_H;
+        };
+        class Value: Value
+        {
+          h = 55.5 * GRID_H;
+        };
+        class Title: Title
+        {
+          h = 55.5 * GRID_H;
+        };
+      };
+    };
+    #endif
     #ifndef ENH_HIDE_SPR
       #include "controls\SPR.hpp"
     #endif

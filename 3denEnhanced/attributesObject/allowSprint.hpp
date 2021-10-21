@@ -6,4 +6,5 @@ class ENH_AllowSprint
   property = "ENH_allowSprint";
   expression = "_this allowSprint _value";
   defaultValue = "true";
+  condition = "objectBrain";
 };

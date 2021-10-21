@@ -6,4 +6,5 @@ class ENH_removeFromRemainsCollector
   property = "ENH_removeFromRemainsCollector";
   expression = "if (!is3DEN && _value) then {removeFromRemainsCollector [this]}";
   defaultValue = "false";
+  condition = "objectSimulated";
 };

@@ -2,7 +2,7 @@ class ENH_GroupMarker: Title
 {
   attributeLoad = "[_this, _value] call ENH_fnc_groupMarker_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_groupMarker_onAttributeSave";
-  h = 5 * CTRL_DEFAULT_H + 25 * pixelH;
+  h = 6 * CTRL_DEFAULT_H + 25 * pixelH;
   class Controls: Controls
   {
     class TypeTitle: Title
@@ -58,9 +58,22 @@ class ENH_GroupMarker: Title
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class ShowGroupVehicleTitle: Title
+    {
+      text = "$STR_ENH_GROUPMARKER_VEHICLENAME";
+      y = 4 * CTRL_DEFAULT_H + 15 * pixelH;
+    };
+    class ShowGroupVehicle: ctrlCheckbox
+    {
+      idc = 104;
+      x = ATTRIBUTE_TITLE_W * GRID_W;
+      y = 4 * CTRL_DEFAULT_H + 15 * pixelH;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
     class Reset: ENH_ResetButton_Base
     {
-      y = 4 * CTRL_DEFAULT_H + 20 * pixelH;
+      y = 5 * CTRL_DEFAULT_H + 20 * pixelH;
     };
   };
 };

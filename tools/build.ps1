@@ -1,7 +1,7 @@
 param($DoPublish = "false")
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
+$ModVersion = "6.4.1" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $WorkshopID = 623475643
@@ -37,12 +37,19 @@ function Addon-Compress
 }
 
 Addon-PrepareBuild
-Start-Sleep 1
+Write-Host "Copying files."
+Start-Sleep 2
 Addon-Build
-Start-Sleep 5
+Write-Host "Creating pbo."
+Start-Sleep 20
+Write-Host "Packing done."
+
 
 if ($DoPublish -eq "true")
 {
+  Write-Host "Publishing to Steam"
   Addon-Compress
   Addon-Publish
 }
+
+Write-Host "All done!"

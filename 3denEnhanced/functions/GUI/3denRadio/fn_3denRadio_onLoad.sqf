@@ -55,8 +55,8 @@ call ENH_fnc_3DENRadio_searchList;
 //Focus Search EH
 _display displayAddEventHandler ["keyDown",
 {
-  params ["_display", "_key", "_shift", "_ctrl"];
-  if (_key isEqualTo 33 && _ctrl && _shift) then
+  params ["_display", "_key", "", "_ctrl"];
+  if (_key isEqualTo 33 && _ctrl) then
   {
     ctrlSetFocus CTRL(IDC_3DENRADIO_SEARCH);
   }

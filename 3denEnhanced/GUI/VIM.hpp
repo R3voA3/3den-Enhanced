@@ -22,6 +22,13 @@ class ENH_VIM
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTERED_X(DIALOG_W);
+      y = DIALOG_TOP + DIALOG_H * GRID_H - 2 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
     class AvailableItems: ctrlStatic
     {
       idc = IDC_VIM_AVAILABLEITEMSTEXT;

@@ -7,7 +7,7 @@
   Used by ENH_FunctionsViewer GUI. Fill the tree view control.
 
   Parameter(s):
-  0: CONTROL - Any control used to get the display
+  -
 
   Returns:
   -
@@ -17,51 +17,12 @@
 #define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed", ""])
 
 disableSerialization;
-params ["_ctrl"];
 
-private _display = ctrlParent _ctrl;
-private _configIndex = lbCurSel CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG);
-private _modeIndex = lbCurSel CTRL(IDC_FUNCTIONSVIEWER_FILTERMODE);
+private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
+private _configIndex = profileNamespace getVariable ["ENH_FunctionsViewer_ConfigIndex", 0];
+private _modeIndex = profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex", 0];
 private _ctrlTV = CTRL(IDC_FUNCTIONSVIEWER_LIST);
 private _counter = 0;
-
-//Disable BIKI Button
-if (_configIndex > 0 || _modeIndex > 2) then {CTRL(IDC_FUNCTIONSVIEWER_BIKI) ctrlEnable true};
-
-//Setup buttons according to mode and config index
-CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlEnable true;
-CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0;
-CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
-CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlSetText "";
-
-profileNamespace setVariable ["ENH_FunctionsViewer_ConfigIndex", _configIndex];
-profileNamespace setVariable ["ENH_FunctionsViewer_ModeIndex", _modeIndex];
-profileNamespace setVariable ["ENH_FunctionsViewer_LoadFileIndex", lbCurSel CTRL(2200)];
-
-private _fnc_addCustomFiles =
-{
-  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlEnable false;
-  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlSetFade 0.5;
-  CTRL(IDC_FUNCTIONSVIEWER_FILTERCONFIG) ctrlCommit 0;
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILESELECTED) ctrlEnable false;
-  CTRL(IDC_FUNCTIONSVIEWER_RECOMPILEALL) ctrlEnable false;
-  params ["_ctrlTV", "_extension"];
-  {
-    private _addonPath = _x # 0;
-    {
-      if !("fn_" in _x) then
-      {
-        private _fileName = _x splitString "\";
-        _fileName = _fileName select (count _fileName - 1);
-        private _index = _ctrlTV tvAdd [[], _fileName];
-        _counter = _counter + 1;
-        _ctrlTV tvSetData [[_index], str [_fileName, _x]];
-        _ctrlTV tvSetTooltip [[_index], _addonPath];
-        if (_x isEqualTo LAST_VIEWED) then {_ctrlTV tvSetCurSel [_index]};
-      };
-    } forEach addonFiles [_addonPath, _extension];
-  } forEach allAddonsInfo;
-};
 
 tvClear _ctrlTV;
 
@@ -178,18 +139,33 @@ switch (_modeIndex) do
   };
   case 3:
   {
-    [_ctrlTV, ".sqf"] call _fnc_addCustomFiles;
-  };
-  case 4:
-  {
-    [_ctrlTV, ".inc"] call _fnc_addCustomFiles;
-  };
-  case 5:
-  {
-    [_ctrlTV, ".hpp"] call _fnc_addCustomFiles;
+    _ctrlTV tvAdd [[], ".sqf"];
+    _ctrlTV tvAdd [[], ".inc"];
+    _ctrlTV tvAdd [[], ".hpp"];
+
+    {
+      private _addonPath = _x # 0;
+      {
+        if ("fn_" in _x) then {continue};
+
+        private _extension = _x select [count _x - 4, count _x - 1];
+        private _index = [".sqf", ".inc", ".hpp"] find _extension;
+        private _fileName = _x splitString "\";
+        _fileName = _fileName select (count _fileName - 1);
+
+        private _itemIndex = _ctrlTV tvAdd [[_index], _fileName];
+        _ctrlTV tvSetData [[_index, _itemIndex], str [_fileName, _x]];
+        _ctrlTV tvSetTooltip [[_index, _itemIndex], _addonPath];
+
+        if (_x isEqualTo LAST_VIEWED) then {_ctrlTV tvSetCurSel [_index, _itemIndex]};
+        _counter = _counter + 1;
+      } forEach (addonFiles [_addonPath, ".sqf"] + addonFiles [_addonPath, ".inc"] + addonFiles [_addonPath, ".hpp"]);
+    } forEach allAddonsInfo;
   };
 };
 
 _ctrlTV tvSortAll [[], false];
+
+call ENH_fnc_functionsViewer_setUpMenuStrip;
 
 CTRL(IDC_FUNCTIONSVIEWER_NUMFUNCTIONS) ctrlSetText str _counter;
