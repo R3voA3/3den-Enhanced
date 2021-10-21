@@ -3769,83 +3769,119 @@
         <English>Pylon Tools</English>
         <German>Pylonen-Werkzeuge</German>
         <Polish>Narzędzie pylonów</Polish>
+        <Chinesesimp>挂架工具</Chinesesimp>
+        <Chinese>掛架工具</Chinese>
     </Key>
     <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
         <English>Place entity by double clicking.</English>
         <German>Entität mit Doppelklick platzieren.</German>
         <Polish>Postaw obiekt za pomocą podwójnego kliknięcia.</Polish>
+        <Chinesesimp>通过双击来放置实体。</Chinesesimp>
+        <Chinese>通過雙擊來放置實體。</Chinese>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
         <English>Add to Favorites</English>
         <German>Zu Favoriten hinzufügen</German>
         <Polish>Dodaj do ulubionych</Polish>
+        <Chinesesimp>添加至收藏夹</Chinesesimp>
+        <Chinese>添加到收藏夾</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYPYLONS">
         <English>Copy Pylon Settings</English>
         <German>Pylonen-Einstellungen kopieren</German>
         <Polish>Skopiuj ustawienia pylonów</Polish>
+        <Chinesesimp>复制挂架设置</Chinesesimp>
+        <Chinese>複製掛架設置</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
         <English>Apply Pylon Settings</English>
         <German>Pylonen-Einstellungen anwenden</German>
         <Polish>Zastosuj ustawienia pylonów</Polish>
+        <Chinesesimp>应用挂架设置</Chinesesimp>
+        <Chinese>應用掛架設置</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
         <English>Export Pylons to SQF</English>
         <German>Pylonen-Einstellungen als SQF exportieren</German>
         <Polish>Wyeksportuj pylony do SQF</Polish>
+        <Chinesesimp>将挂架导出为SQF</Chinesesimp>
+        <Chinese>將掛架導出為SQF</Chinese>
     </Key>
     <Key ID="STR_ENH_FOLDER_VHC">
         <English>Vehicle Customization Tools</English>
         <German>Fahrzeugmodifikations-Werkzeuge</German>
         <Polish>Narzędzie dostosowywania pojazdów</Polish>
+        <Chinesesimp>车辆自定义工具</Chinesesimp>
+        <Chinese>車輛自定義工具</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYVHC">
         <English>Copy Vehicle Customization</English>
         <German>Fahrzeuganpassung kopieren</German>
         <Polish>Skopiuj wygląd pojazdu</Polish>
+        <Chinesesimp>复制车辆自定义</Chinesesimp>
+        <Chinese>複製車輛自定義</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYVHC">
         <English>Apply Vehicle Customization</English>
         <German>Fahrzeuganpassung anwenden</German>
         <Polish>Zastosuj wygląd pojazdu</Polish>
+        <Chinesesimp>应用车辆自定义</Chinesesimp>
+        <Chinese>應用車輛自定義</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
         <English>Open Legacy Functions Viewer</English>
         <German>Alten 'Functions Viewer' öffnen</German>
+        <Chinesesimp>打开旧版Functions查看器</Chinesesimp>
+        <Chinese>打開舊版Functions查看器</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_OTHERFILES">
         <English>Other Files</English>
         <German>Andere Dateien</German>
+        <Chinesesimp>其它文件</Chinesesimp>
+        <Chinese>其它文件</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LOADFILE">
         <English>Load File</English>
         <German>Dateien laden</German>
+        <Chinesesimp>加载文件</Chinesesimp>
+        <Chinese>加載文件</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE">
         <English>Preprocess File</English>
         <German>Dateien vorbereiten</German>
+        <Chinesesimp>预处理文件</Chinesesimp>
+        <Chinese>預處理文件</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES">
         <English>Preprocess File with Line Numbers</English>
         <German>Dateien mit Zeilenangaben vorbereiten</German>
+        <Chinesesimp>带有行号的预处理文件</Chinesesimp>
+        <Chinese>帶有行號的預處理文件</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG">
         <English>Addon Config</English>
         <German>Erweiterungs-Konfig</German>
+        <Chinesesimp>Addon Config</Chinesesimp>
+        <Chinese>Addon Config</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
         <English>Scenario Config</English>
         <German>Szenario-Konfig</German>
+        <Chinesesimp>场景Config</Chinesesimp>
+        <Chinese>場景Config</Chinese>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
         <English>Campaign Config</English>
         <German>Kampagnen-Konfig</German>
+        <Chinesesimp>战役Config</Chinesesimp>
+        <Chinese>戰役Config</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
         <English>Randomize Vehicle Customization</English>
         <German>Fahrzeuganpassung zufällig ändern</German>
         <Polish>Randomizuj wygląd pojazdu</Polish>
+        <Chinesesimp>随机化车辆自定义</Chinesesimp>
+        <Chinese>隨機化車輛自定義</Chinese>
     </Key>
     <Key ID="STR_ENH_FOLDER_WIKI">
         <English>Community Wiki</English>
@@ -8969,5 +9005,7 @@
     <Key ID="STR_ENH_TEXTUREFINDER_LISTSTATUS">
         <English>Entries in List: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</English>
         <German>Anzahl an Listeneinträgen: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</German>
+        <Chinesesimp>列表条目数: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinesesimp>
+        <Chinese>列表條目數: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinese>
     </Key>
 </Project>
