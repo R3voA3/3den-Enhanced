@@ -52,6 +52,7 @@ if ($DoPublish -eq "true")
   Write-Host "Publishing to Steam"
   Addon-Publish
   Write-Host "Publishing finished"
+  Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
 
 Write-Host "All done!"
