@@ -1,3 +1,7 @@
+# v6.5
+## CHANGED
+- Updated Chinese translation thanks to mihuan-0
+
 # v6.4.1
 ## CHANGED
 - Fixed a script error with VIM if ACE was used

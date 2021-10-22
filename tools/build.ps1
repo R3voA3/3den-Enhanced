@@ -1,7 +1,7 @@
 param($DoPublish = "false")
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = "6.4.1" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
+$ModVersion = "6.5" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $WorkshopID = 623475643
@@ -9,15 +9,15 @@ $WorkshopID = 623475643
 function Addon-PrepareBuild
 {
   #Clear target folder
-  Remove-Item -Force -Path "$TargetFolder" -Recurse
+  Remove-Item -Force -Path "$TargetFolder" -Recurse -Verbose -errorAction SilentlyContinue
 
   #Copy or create all files
-  New-Item -Force -Path "$TargetFolder" -Name "addons" -ItemType "Directory"
+  New-Item -Force -Path "$TargetFolder" -Name "addons" -ItemType "Directory" -Verbose
 
-  Copy-Item -Force -Path "$ProjectFolder\keys" -Destination "$TargetFolder\keys" -Recurse
-  Copy-Item -Force -Path "$ProjectFolder\userconfig" -Destination "$TargetFolder\userconfig" -Recurse
-  Copy-Item -Force -Path "$ProjectFolder\python_code" -Destination "$TargetFolder\python_code" -Recurse
-  Copy-Item -Force -Path "$ProjectFolder\mod.cpp" -Destination "$TargetFolder"
+  Copy-Item -Force -Path "$ProjectFolder\keys" -Destination "$TargetFolder\keys" -Recurse -Verbose
+  Copy-Item -Force -Path "$ProjectFolder\userconfig" -Destination "$TargetFolder\userconfig" -Recurse -Verbose
+  Copy-Item -Force -Path "$ProjectFolder\python_code" -Destination "$TargetFolder\python_code" -Recurse -Verbose
+  Copy-Item -Force -Path "$ProjectFolder\mod.cpp" -Destination "$TargetFolder" -Verbose
 };
 
 function Addon-Build
@@ -41,15 +41,17 @@ Write-Host "Copying files."
 Start-Sleep 2
 Addon-Build
 Write-Host "Creating pbo."
-Start-Sleep 20
+Start-Sleep 30
 Write-Host "Packing done."
-
 
 if ($DoPublish -eq "true")
 {
-  Write-Host "Publishing to Steam"
+  Write-Host "Creating zip file."
   Addon-Compress
+  Write-Host "Zip file created."
+  Write-Host "Publishing to Steam"
   Addon-Publish
+  Write-Host "Publishing finished"
 }
 
 Write-Host "All done!"
