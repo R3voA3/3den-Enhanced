@@ -1,3 +1,11 @@
+# v6.7
+## CHANGED
+
+# v6.6
+## CHANGED
+- updated Spanish translation. Thanks to arv187!
+- fixed wrong control size in Texture Viewer GUI
+
 # v6.5
 ## CHANGED
 - Updated Chinese translation thanks to mihuan-0

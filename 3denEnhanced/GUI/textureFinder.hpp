@@ -58,8 +58,8 @@ class ENH_TextureFinder
       style = ST_LEFT;
       x = CENTERED_X(DIALOG_W) + 36 * GRID_W;
       y = DIALOG_TOP + 109 * GRID_H;
-      w = DIALOG_W * GRID_W;
-      h = 2 * CTRL_DEFAULT_H;
+      w = 80 * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
