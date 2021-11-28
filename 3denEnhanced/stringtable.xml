@@ -32,6 +32,7 @@
         <Chinesesimp>从Steam创意工坊获得""Pythia""修改！</Chinesesimp>
         <Chinese>從Steam創意工坊獲得""Pythia""修改！</Chinese>
         <Polish>Pobierz modyfikację ""Pythia"" z Warszatu Steam!</Polish>
+        <Spanish>Obtener la modificación ""Pythia"" de Steam Workshop.</Spanish>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
         <English>BLUFOR Skill Settings</English>
@@ -193,6 +194,7 @@
         <Chinesesimp>移除一切</Chinesesimp>
         <Chinese>移除一切</Chinese>
         <Polish>Usuń wszystko</Polish>
+        <Spanish>Quitar todo</Spanish>
     </Key>
     <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
         <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
@@ -596,6 +598,7 @@
         <Chinesesimp>所有功能</Chinesesimp>
         <Chinese>所有功能</Chinese>
         <Polish>Wszystkie funkcje</Polish>
+        <Spanish>Todas las funcionalidades</Spanish>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_ALL_TOOLTIP">
         <English>Disables all features uncluding the ones below.</English>
@@ -603,6 +606,7 @@
         <Chinesesimp>禁用所有功能，但不包括以下功能。</Chinesesimp>
         <Chinese>禁用所有功能，但不包括以下功能。</Chinese>
         <Polish>Wyłącz wszystkie funkcje z wyłączeniem tych poniżej.</Polish>
+        <Spanish>Desactive todas las funciones, incluidas las siguientes.</Spanish>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
         <English>Lights</English>
@@ -964,6 +968,7 @@
         <Chinesesimp>该单位不会受到攻击，并将加入平民阵营。但该单位仍然会攻击敌人！</Chinesesimp>
         <Chinese>該單位不會受到攻擊，並將加入平民陣營。但該單位仍然會攻擊敵人！</Chinese>
         <Polish>Jednostka nie będzie atakowana i dołączy do strony cywilów. Jednostka wciąż będzie atakowała wrogów!</Polish>
+        <Spanish>La unidad no será atacada y se unirá al bando civil. ¡La unidad seguirá atacando a los enemigos!</Spanish>
     </Key>
     <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
         <English>Enable Headlights</English>
@@ -1832,6 +1837,7 @@
         <German>Befestigen</German>
         <Chinesesimp>附加</Chinesesimp>
         <Chinese>附加</Chinese>
+        <Spanish>Acoplar</Spanish>
     </Key>
     <Key ID="STR_ENH_ATTACHTO_TOOLTIP">
         <English>Attaches this object to the closest object.</English>
@@ -1839,6 +1845,7 @@
         <German>Befestigt dieses Objekt an dem nächstgelegensten Objekt.</German>
         <Chinesesimp>将此对象附加到最近的对象上。</Chinesesimp>
         <Chinese>將此對象附加到最近的對像上。</Chinese>
+        <Spanish>Acoplar este objeto al objeto más cercano.</Spanish>
     </Key>
     <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
         <English>Unladen Weight</English>
@@ -2482,6 +2489,7 @@
         <French>Nombre de lignes</French>
         <Italian>Numero di linee</Italian>
         <Polish>Liczba wierszy</Polish>
+        <Spanish>Número de líneas.</Spanish>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_NUMCOLUMNS">
         <English>#Colums</English>
@@ -3038,6 +3046,7 @@
         <Chinesesimp>重生代码</Chinesesimp>
         <Chinese>重生代碼</Chinese>
         <Polish>Kod po odrodzeniu</Polish>
+        <Spanish>Código de respawn</Spanish>
     </Key>
     <Key ID="STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP">
         <English>Code executed after respawn. _this refers to the respawned entity.</English>
@@ -3045,6 +3054,7 @@
         <Chinesesimp>重生后执行的代码。_this指的是重生实体。</Chinesesimp>
         <Chinese>重生後執行的代碼。 _this指的是重生實體。</Chinese>
         <Polish>Kod wykonywany po odrodzeniu. _this odnosi się do odrodzonej jednostki.</Polish>
+        <Spanish>Código ejecutado después del respawn. _this Se refiere a la entidad reaparecida.</Spanish>
     </Key>
     <Key ID="STR_ENH_GARRISON_NOTIFICATION">
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
@@ -3511,6 +3521,7 @@
         <Chinesesimp>绘制触发区域</Chinesesimp>
         <Chinese>繪製觸發區域</Chinese>
         <Polish>Rysuj obszary wyzwalaczy</Polish>
+        <Spanish>Dibujar áreas de activación</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
         <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
@@ -3519,6 +3530,7 @@
         <Chinesesimp>触发区域将在预览期间绘制。小区域触发器将不会绘制。</Chinesesimp>
         <Chinese>觸發區域將在預覽期間繪製。小區域觸發器將不會繪製。</Chinese>
         <Polish>Obszary triggerów będą rysowane w czasie podglądu. Małe obszary wyzwalaczy nie będą rysowane.</Polish>
+        <Spanish>Las áreas de activación se dibujarán durante la vista previa. No se dibujan las áreas de pequeños disparadores</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
         <English>Log active Scripts</English>
@@ -3771,6 +3783,7 @@
         <Polish>Narzędzie pylonów</Polish>
         <Chinesesimp>挂架工具</Chinesesimp>
         <Chinese>掛架工具</Chinese>
+        <Spanish>Herramientas de pilón</Spanish>
     </Key>
     <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
         <English>Place entity by double clicking.</English>
@@ -3778,6 +3791,7 @@
         <Polish>Postaw obiekt za pomocą podwójnego kliknięcia.</Polish>
         <Chinesesimp>通过双击来放置实体。</Chinesesimp>
         <Chinese>通過雙擊來放置實體。</Chinese>
+        <Spanish>Poner una entidad con doble clic</Spanish>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
         <English>Add to Favorites</English>
@@ -3785,6 +3799,7 @@
         <Polish>Dodaj do ulubionych</Polish>
         <Chinesesimp>添加至收藏夹</Chinesesimp>
         <Chinese>添加到收藏夾</Chinese>
+        <Spanish>Añadir a favoritos</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYPYLONS">
         <English>Copy Pylon Settings</English>
@@ -3792,6 +3807,7 @@
         <Polish>Skopiuj ustawienia pylonów</Polish>
         <Chinesesimp>复制挂架设置</Chinesesimp>
         <Chinese>複製掛架設置</Chinese>
+        <Spanish>Copiar configuración de pilones</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
         <English>Apply Pylon Settings</English>
@@ -3799,6 +3815,7 @@
         <Polish>Zastosuj ustawienia pylonów</Polish>
         <Chinesesimp>应用挂架设置</Chinesesimp>
         <Chinese>應用掛架設置</Chinese>
+        <Spanish>Aplicar configuración de pilones</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
         <English>Export Pylons to SQF</English>
@@ -3806,6 +3823,7 @@
         <Polish>Wyeksportuj pylony do SQF</Polish>
         <Chinesesimp>将挂架导出为SQF</Chinesesimp>
         <Chinese>將掛架導出為SQF</Chinese>
+        <Spanish>Exportar pilones a SQF</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_VHC">
         <English>Vehicle Customization Tools</English>
@@ -3813,6 +3831,7 @@
         <Polish>Narzędzie dostosowywania pojazdów</Polish>
         <Chinesesimp>车辆自定义工具</Chinesesimp>
         <Chinese>車輛自定義工具</Chinese>
+        <Spanish>Herramientas de personalización de vehículos</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYVHC">
         <English>Copy Vehicle Customization</English>
@@ -3820,6 +3839,7 @@
         <Polish>Skopiuj wygląd pojazdu</Polish>
         <Chinesesimp>复制车辆自定义</Chinesesimp>
         <Chinese>複製車輛自定義</Chinese>
+        <Spanish>Copiar personalización de vehículo</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYVHC">
         <English>Apply Vehicle Customization</English>
@@ -3827,54 +3847,63 @@
         <Polish>Zastosuj wygląd pojazdu</Polish>
         <Chinesesimp>应用车辆自定义</Chinesesimp>
         <Chinese>應用車輛自定義</Chinese>
+        <Spanish>Aplicar personalización de vehículo</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
         <English>Open Legacy Functions Viewer</English>
         <German>Alten 'Functions Viewer' öffnen</German>
         <Chinesesimp>打开旧版Functions查看器</Chinesesimp>
         <Chinese>打開舊版Functions查看器</Chinese>
+        <Spanish>Abrir visor de funciones heredado</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_OTHERFILES">
         <English>Other Files</English>
         <German>Andere Dateien</German>
         <Chinesesimp>其它文件</Chinesesimp>
         <Chinese>其它文件</Chinese>
+        <Spanish>Otros archivos</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LOADFILE">
         <English>Load File</English>
         <German>Dateien laden</German>
         <Chinesesimp>加载文件</Chinesesimp>
         <Chinese>加載文件</Chinese>
+        <Spanish>Cargar archivo</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE">
         <English>Preprocess File</English>
         <German>Dateien vorbereiten</German>
         <Chinesesimp>预处理文件</Chinesesimp>
         <Chinese>預處理文件</Chinese>
+        <Spanish>Procesar archivo</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES">
         <English>Preprocess File with Line Numbers</English>
         <German>Dateien mit Zeilenangaben vorbereiten</German>
         <Chinesesimp>带有行号的预处理文件</Chinesesimp>
         <Chinese>帶有行號的預處理文件</Chinese>
+        <Spanish>Procesar archivo con número de líneas</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG">
         <English>Addon Config</English>
         <German>Erweiterungs-Konfig</German>
         <Chinesesimp>Addon Config</Chinesesimp>
         <Chinese>Addon Config</Chinese>
+        <Spanish>Añadir configuración</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
         <English>Scenario Config</English>
         <German>Szenario-Konfig</German>
         <Chinesesimp>场景Config</Chinesesimp>
         <Chinese>場景Config</Chinese>
+        <Spanish>Configuración de escenario</Spanish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
         <English>Campaign Config</English>
         <German>Kampagnen-Konfig</German>
         <Chinesesimp>战役Config</Chinesesimp>
         <Chinese>戰役Config</Chinese>
+        <Spanish>Configuración de campaña</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
         <English>Randomize Vehicle Customization</English>
@@ -3882,6 +3911,7 @@
         <Polish>Randomizuj wygląd pojazdu</Polish>
         <Chinesesimp>随机化车辆自定义</Chinesesimp>
         <Chinese>隨機化車輛自定義</Chinese>
+        <Spanish>Aleatorizar personalización de vehículo</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_WIKI">
         <English>Community Wiki</English>
@@ -4041,6 +4071,7 @@
         <Italian>Alterna l'alfa al marker</Italian>
         <Polish>Przełączanie znacznika Alfa</Polish>
         <Russian>Переключение маркера Альфа</Russian>
+        <Spanish>Conmutar marcador alfa</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYLOADOUTS">
         <Italian>Applica Equipaggiamento/i</Italian>
@@ -4233,6 +4264,7 @@
         <German>Erstellt Einsatzbesprechungseinträge für alle Spieler der gegebenen Seite. Du kannst außerdem Text der mit dem Briefing Editor formatiert wurde, einfügen. Besuche die 'createDiaryRecord' Seite auf der BI Wiki für mehr Informationen.\n\nWenn ein 'Stringtable' Eintrag angegeben wird, wird dieser in der Sprache des jeweiligen Spieler angezeigt.</German>
         <Chinesesimp>为指定一方的所有玩家创建简报词条。你也可以插入用简报编辑器创建的格式化文本。更多信息请参见BI Wiki上的'createDiaryRecord'。\n\n如果提供了一个stringtable 词条，简报将以玩家的语言显示。</Chinesesimp>
         <Chinese>為指定一方的所有玩家創建簡報詞條。你也可以插入用簡報編輯器創建的格式化文本。更多信息請參見BI Wiki上的'createDiaryRecord'。 \n\n如果提供了一個stringtable詞條，簡報將以玩家的語言顯示。</Chinese>
+        <Spanish>Crea Briefings para todos los jugadores de un bando determinado. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información.\n\n Si se proporciona una entrada de Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
         <English>Exports all GUI base classes.</English>
@@ -4916,6 +4948,7 @@
         <French>Caractéristiques de l'IA</French>
         <Italian>Caratteristiche AI</Italian>
         <Polish>Cechy AI</Polish>
+        <Spanish>Características de la IA</Spanish>
     </Key>
     <Key ID="STR_ENH_AMBIENTFLYBY_CLASSES_TOOLTIP">
         <English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
@@ -5199,6 +5232,7 @@
         <English>Vehicle Name</English>
         <German>Fahrzeugname</German>
         <Polish>Nazwa pojazdu</Polish>
+        <Spanish>Nombre de vehículo</Spanish>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
         <English>Plays a selected animation set. The gear needs to be set up manually.</English>
@@ -5618,6 +5652,7 @@
         <Chinesesimp>RPT查看器</Chinesesimp>
         <Chinese>RPT查看器</Chinese>
         <Polish>RPT Viewer</Polish>
+        <Spanish>RPT Viewer</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
         <English>Toggle Drawing of Building Positions</English>
@@ -5636,6 +5671,7 @@
         <Chinesesimp>切换车辆血量视图</Chinesesimp>
         <Chinese>切換車輛血量視圖</Chinese>
         <Polish>Przełącz rysowanie hitpointów pojazdów</Polish>
+        <Spanish>Conmutador de Dibujo de puntos de vida de vehículos</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_SAM">
         <English>Scenario Attributes Manager</English>
@@ -5769,6 +5805,7 @@
         <Chinesesimp>缩放物体的大小。仅适用于没有模拟的对象。</Chinesesimp>
         <Chinese>縮放對象的大小。 僅適用於沒有模擬的對象。</Chinese>
         <Polish>Skaluje rozmiar obiektu. Działa tylko dla obiektów z wyłączoną symulacją.</Polish>
+        <Spanish>Escala el tamaño del objeto. Solo funciona para objetos sin simulación.</Spanish>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_STAND">
         <English>Stand</English>
@@ -6074,7 +6111,7 @@
         <English>Toggle AI Features</English>
         <Russian>Переключить функции ИИ</Russian>
         <German>KI Funktionen umschalten</German>
-        <Spanish>Conmutar características IA</Spanish>
+        <Spanish>Alternar características IA</Spanish>
         <French>Désactiver des fonctionnalités IA</French>
         <Polish>Przełącz wszystkie funkcje AI</Polish>
         <Chinesesimp>切换AI功能</Chinesesimp>
@@ -6084,7 +6121,7 @@
         <English>Toggle Dynamic Simulation</English>
         <Russian>Вкл/откл динамическую симуляцию</Russian>
         <German>Dynamische Simulation umschalten</German>
-        <Spanish>Conmutar simulación dinámica</Spanish>
+        <Spanish>Alternar simulación dinámica</Spanish>
         <French>Activer la simulation dynamique</French>
         <Polish>Przelącz dynamiczną symulację</Polish>
         <Chinesesimp>切换动态模拟</Chinesesimp>
@@ -6100,6 +6137,7 @@
         <Italian>Visualizza il comportamento del sistema di simulazione dinamica sulla mappa.</Italian>
         <Polish>Wizualizuje zachowanie systemu symulacji dynamicznej na mapie.</Polish>
         <Russian>Визуализирует поведение системы динамического моделирования на карте.</Russian>
+        <Spanish>Visualiza el comportamiento del sistema de simulación dinámica en el mapa.</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_PLAYABLE">
         <English>Toggle Playable State</English>
@@ -6108,6 +6146,7 @@
         <Chinesesimp>切换游戏状态</Chinesesimp>
         <Chinese>切換遊戲狀態</Chinese>
         <Polish>Przełącz grywalność</Polish>
+        <Spanish>Alternar estado jugable</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
         <English>Delete Corpses</English>
@@ -6392,6 +6431,7 @@
         <English>Single Player Respawn Tickets</English>
         <German>Einzelspieler-Respawntickets</German>
         <Polish>Punkty odrodzenia jednego gracza</Polish>
+        <Spanish>Tickets de respawn modo un jugador</Spanish>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
         <English>Every unit can respawn as long as it has not run out of tickets.</English>
@@ -6468,6 +6508,7 @@
         <Chinesesimp>您有未保存的更改。仍然关闭？</Chinesesimp>
         <Chinese>您有未保存的更改。仍然關閉？</Chinese>
         <Polish>Masz niezapisane zmiany. Kontynuować mimo to?</Polish>
+        <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
@@ -6475,12 +6516,14 @@
         <Chinesesimp>导出 (ACE)</Chinesesimp>
         <Chinese>導出 (ACE)</Chinese>
         <Polish>Wyeksportuj (ACE)</Polish>
+        <Spanish>Exportar (ACE)</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTACE_TOOLTIP">
         <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
         <German>Exportiere die derzeitige Ausrüstung in einem Format die im ACE 3 Arsenal Attribute verwendet werden kann.</German>
         <Chinesesimp>以可在 ACE 3 军械库属性中使用的格式导出当前装备。</Chinesesimp>
         <Chinese>以可在 ACE 3 軍械庫屬性中使用的格式導出當前裝備。</Chinese>
+        <Spanish>Exporte la plantilla actual lista para ser importada en el atributo ACE 3 Arsenal.</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_AVAILABLEITEMS">
         <English>Available Items</English>
@@ -6498,6 +6541,7 @@
         <German>Fügt alle Gegenstände des ausgewählten Addons dem Inventar hinzu und setzt das Inventar auf virtuell (Arsenal).</German>
         <Chinesesimp>将所选附加插件的所有物品添加到库存中，并将其设置为虚拟(武器库)。</Chinesesimp>
         <Chinese>將所選附加插件的所有物品添加到庫存中，並將其設置為虛擬(武器庫)。</Chinese>
+        <Spanish>Agrega todos los elementos del addon seleccionado al inventario y lo configura para que sea virtual (Arsenal).</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_ITEMSININVENTORY">
         <English>Items in Inventory</English>
@@ -6594,6 +6638,7 @@
         <Chinesesimp>导出到ACE武器库</Chinesesimp>
         <Chinese>導出到ACE武器庫</Chinese>
         <Polish>Wyeksportuj do Arsenału ACE</Polish>
+        <Spanish>Exportar a ACE Arsenal</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTTOARSENAL">
         <English>Export to Arsenal</English>
@@ -6601,6 +6646,7 @@
         <Chinesesimp>导出到ACE武器库</Chinesesimp>
         <Chinese>導出到ACE武器庫</Chinese>
         <Polish>Wyeksportuj do Arsenału</Polish>
+        <Spanish>Exportar a Arsenal</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYNAME">
         <English>Sort by Name</English>
@@ -6608,6 +6654,7 @@
         <Chinesesimp>按名称排序</Chinesesimp>
         <Chinese>按名稱排序</Chinese>
         <Polish>Sortuj według Nazw</Polish>
+        <Spanish>Ordenar por nombre</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYCLASS">
         <English>Sort by Class Name</English>
@@ -6615,6 +6662,7 @@
         <Chinesesimp>按类名排序</Chinesesimp>
         <Chinese>按類名排序</Chinese>
         <Polish>Sortuj według Klas</Polish>
+        <Spanish>Ordenar por ClassName</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYCOUNT">
         <English>Sort by Count</English>
@@ -6622,6 +6670,7 @@
         <Chinesesimp>按数量排序</Chinesesimp>
         <Chinese>按數量排序</Chinese>
         <Polish>Sortuj według Ilości</Polish>
+        <Spanish>Ordenar por cantidad</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYTYPE">
         <English>Sort by Type</English>
@@ -6629,6 +6678,7 @@
         <Chinesesimp>按类型排序</Chinesesimp>
         <Chinese>按類型排序</Chinese>
         <Polish>Sortuj według Typu</Polish>
+        <Spanish>Ordenar por tipo</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYMOD">
         <English>Sort by Mod</English>
@@ -6636,6 +6686,7 @@
         <Chinesesimp>按Mod排序</Chinesesimp>
         <Chinese>按Mod排序</Chinese>
         <Polish>Sortuj według Modyfikacji</Polish>
+        <Spanish>Ordenar por Mod</Spanish>
     </Key>
     <Key ID="STR_ENH_VIM_TEMPLATES">
         <English>Templates</English>
@@ -7181,6 +7232,7 @@
         <Chinesesimp>机尾</Chinesesimp>
         <Chinese>機尾</Chinese>
         <Polish>Ogon</Polish>
+        <Spanish>Cola</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITVROTOR">
         <English>Tail Rotor</English>
@@ -7333,6 +7385,7 @@
         <Chinesesimp>躯干</Chinesesimp>
         <Chinese>軀幹</Chinese>
         <Polish>Ciało</Polish>
+        <Spanish>Cuerpo</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
         <English>Commander Turret</English>
@@ -7510,6 +7563,7 @@
         <Chinesesimp>AI</Chinesesimp>
         <Chinese>AI</Chinese>
         <Polish>AI</Polish>
+        <Spanish>IA</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITARMS">
         <English>Arms</English>
@@ -8854,6 +8908,7 @@
         <German>Ermöglicht das Hinzufügen von Schaden zu allen verfügbaren 'HitPoints' dieser Entität. Es kann sein das manche 'HitPoints' keinen Effekt haben!</German>
         <Chinesesimp>允许添加伤害到这个实体的所有可用血量上。某些血量可能没有效果！</Chinesesimp>
         <Chinese>允許添加傷害到這個實體的所有可用血量上。某些血量可能沒有效果！</Chinese>
+        <Spanish>Permite agregar daño a todos los puntos de vida disponibles de esta entidad. ¡Es posible que algunos puntos de vida no surtan efecto!</Spanish>
     </Key>
     <Key ID="STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS">
         <English>No hitpoints available for this object!</English>
@@ -8861,6 +8916,7 @@
         <German>Keine 'Hitpoints' vorhanden!</German>
         <Chinesesimp>该对象没有生命值！</Chinesesimp>
         <Chinese>該對像沒有生命值！</Chinese>
+        <Spanish>No hay puntos de vida disponibles para este objeto</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER">
         <English>Debug options initializing in %1 seconds.</English>
@@ -8868,6 +8924,7 @@
         <German>Debug Optionen werden in %1 Sekunden initialisiert.</German>
         <Chinesesimp>调试选项在%1秒内初始化。</Chinesesimp>
         <Chinese>調試選項在%1秒內初始化。</Chinese>
+        <Spanish>Iniciando opciones de depurado en %1 segundos</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT">
         <English>Debug options initialized.</English>
@@ -8875,12 +8932,14 @@
         <German>Debug Optionen initialisiert.</German>
         <Chinesesimp>调试选项已初始化。</Chinesesimp>
         <Chinese>調試選項已初始化。</Chinese>
+        <Spanish>Opciones de depurado iniciadas</Spanish>
     </Key>
     <Key ID="STR_ENH_ZEUSADDONS_HEADER">
         <English>Manage Zeus Addons</English>
         <German>Zeus Erweiterungen verwalten</German>
         <Chinesesimp>管理Zeus插件</Chinesesimp>
         <Chinese>管理Zeus插件</Chinese>
+        <Spanish>Manejar Addons de Zeus</Spanish>
     </Key>
     <Key ID="STR_ENH_ZEUSADDONS_CFGPATCHES">
         <English>CfgPatches</English>
