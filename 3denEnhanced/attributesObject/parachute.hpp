@@ -6,7 +6,7 @@ class ENH_Parachute
   control = "Checkbox";
   expression = "if (!is3DEN && _value) then\
   {\
-    _this moveInDriver (createVehicle ['Steerable_Parachute_F', getPos _this, [], 0, 'FLY']);\
+    _this moveInDriver (createVehicle ['Steerable_Parachute_F', getPosATL _this, [], 0, 'FLY']);\
   }";
   condition = "objectBrain";
   defaultValue = "false";

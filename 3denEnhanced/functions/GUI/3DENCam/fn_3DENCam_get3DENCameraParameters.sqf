@@ -28,7 +28,7 @@ if (_description isEqualTo localize "STR_ENH_3DENCAM_DESCRIPTION" || _descriptio
   _description = format ["#%1", (lnbSize CTRL(IDC_3DENCAMPOS_LIST) # 0) + 1];
 };
 
-_cam3DENSavedPositions pushBack [worldName, getPos _cam3DEN, vectorDir _cam3DEN, vectorUp _cam3DEN, _description, systemTime];
+_cam3DENSavedPositions pushBack [worldName, getPosATL _cam3DEN, vectorDir _cam3DEN, vectorUp _cam3DEN, _description, systemTime];
 
 profileNamespace setVariable ["ENH_Cam3DENSavedPositions", _cam3DENSavedPositions];
 

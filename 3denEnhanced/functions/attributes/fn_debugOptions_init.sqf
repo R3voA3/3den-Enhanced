@@ -136,7 +136,7 @@ if (_states select 2) then
         _x params ["_marker", "_entity"];
         _displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
         _marker setMarkerText _displayName;
-        _marker setMarkerPos getPos _entity;
+        _marker setMarkerPos getPosWorld _entity;
       } forEach _markerUnitsArray;//[markerName, entity, displayName]
     };
   };
@@ -604,7 +604,7 @@ if ((_states select 26) > 0) then
         _marker setMarkerShapeLocal "polyline";
         _marker setMarkerColorLocal configName selectRandom _cfgMarkerColors;
 
-        private _posOld = getPos _leader;
+        private _posOld = getPosWorld _leader;
 
         while {alive _leader} do
         {
@@ -616,8 +616,8 @@ if ((_states select 26) > 0) then
               _arrow setObjectTexture [0, _arrowColour];
               _arrow setDir (_posOld getDir _leader);
             };
-            _path append [getPos _leader # 0, getPos _leader # 1];
-            _posOld = getPos _leader;
+            _path append [getPosWorld _leader # 0, getPosWorld _leader # 1];
+            _posOld = getPosWorld _leader;
             if (count _path > 3) then {_marker setMarkerPolylineLocal _path};
             if (count _path == 500) then {_path deleteRange [0, 2]};
             sleep DELAY;

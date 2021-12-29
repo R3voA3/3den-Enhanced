@@ -13,7 +13,7 @@
   -
 */
 
-#define CENTER (getPos get3DENCamera)
+#define CENTER (getPosWorld get3DENCamera)
 #define RADIUS 100
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
