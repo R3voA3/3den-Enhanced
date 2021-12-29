@@ -1,5 +1,7 @@
 # v6.7
 ## CHANGED
+- optimizations in regards to setPos vs setPos*
+- fixed bug with feature type attribute (Thanks to IllidanS4)
 
 # v6.6
 ## CHANGED
