@@ -1,3 +1,8 @@
+# v6.8
+## CHANGED
+- fixed that terrain quality would reset itself
+
+
 # v6.7
 ## CHANGED
 - optimizations in regards to setPos vs setPos*
