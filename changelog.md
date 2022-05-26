@@ -1,17 +1,24 @@
+# v6.9
+## ADDED
+- The ability to move entities into layers from the context menu
+
+## CHANGED
+- Increased initial delay for object scaling. Attempt to fix issue in MP
+
 # v6.8
 ## CHANGED
-- fixed that terrain quality would reset itself
+- Fixed that terrain quality would reset itself
 
 
 # v6.7
 ## CHANGED
-- optimizations in regards to setPos vs setPos*
-- fixed bug with feature type attribute (Thanks to IllidanS4)
+- Optimizations in regards to setPos vs setPos*
+- Fixed bug with feature type attribute (Thanks to IllidanS4)
 
 # v6.6
 ## CHANGED
-- updated Spanish translation. Thanks to arv187!
-- fixed wrong control size in Texture Viewer GUI
+- Updated Spanish translation. Thanks to arv187!
+- Fixed wrong control size in Texture Viewer GUI
 
 # v6.5
 ## CHANGED
