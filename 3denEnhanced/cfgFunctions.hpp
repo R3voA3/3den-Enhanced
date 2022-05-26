@@ -197,10 +197,16 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\ZeusAddons";
       class zeusAddons;
     };
+    class MoveToLayer
+    {
+      file = "3denEnhanced\functions\GUI\moveTolayer";
+      class moveToLayer_onLoad;
+      class moveToLayer_move;
+    };
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
-      class 3denNotificationNoSound;
+      //class 3denNotificationNoSound;
       class alignEntities;
       class all3DENSelected;
       class deleteCrew;

@@ -3777,6 +3777,10 @@
         <Polish>O 3den Enhanced</Polish>
         <Russian>О 3den Enhanced</Russian>
     </Key>
+    <Key ID="STR_ENH_SELECTLAYER_MOVETOLAYER">
+        <English>Move to layer...</English>
+        <German>Nach Layer verschieben...</German>
+    </Key>
     <Key ID="STR_ENH_FOLDER_PYLONS">
         <English>Pylon Tools</English>
         <German>Pylonen-Werkzeuge</German>

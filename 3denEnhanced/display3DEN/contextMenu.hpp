@@ -5,7 +5,8 @@ items[] +=
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
   "ENH_Extraction",
-  "ENH_AddToFavorites"
+  "ENH_AddToFavorites",
+  "ENH_MoveToLayer"
 };
 class Log
 {
@@ -137,5 +138,12 @@ class ENH_AddToFavorites
   text = "$STR_ENH_CONTEXTMENU_FAVORITES";
   picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
   conditionShow = "hoverObject + hoverLogic";
+  SHOW_IN_ROOT;
+};
+class ENH_MoveToLayer
+{
+  action = "findDisplay 313 createDisplay 'ENH_MoveToLayer'";
+  text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
+  conditionShow = "selected";
   SHOW_IN_ROOT;
 };

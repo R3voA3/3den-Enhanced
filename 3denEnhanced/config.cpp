@@ -26,6 +26,7 @@
 #include "GUI\functionsViewer.hpp"
 #include "GUI\garrison.hpp"
 #include "GUI\moduleInformation.hpp"
+#include "GUI\moveToLayer.hpp"
 #include "GUI\nameObjects.hpp"
 #include "GUI\placementTools.hpp"
 #include "GUI\RPTViewer.hpp"
