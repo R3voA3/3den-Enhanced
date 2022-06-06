@@ -1,4 +1,10 @@
 # v6.9
+## CHANGED
+- Debug Options now work in Eden Multiplayer hosted
+- Fixed a bug with recompiling functions in functions viewer
+
+
+# v6.9
 ## ADDED
 - The ability to move entities into layers from the context menu
 
