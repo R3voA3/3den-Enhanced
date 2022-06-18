@@ -15,11 +15,11 @@
 
 params ["_ctrlButton"];
 
-private _ctrlListBox = ctrlParent _ctrlButton displayCtrl 100;
+private _ctrlTV = ctrlParent _ctrlButton displayCtrl 100;
 
-if (lbCurSel _ctrlListBox == -1) exitWith {false};
+if (tvCurSel _ctrlTV isEqualTo []) exitWith {false};
 
-private _layerID = _ctrlListBox lbValue (lbCurSel _ctrlListbox);
+private _layerID = _ctrlTV tvValue (tvCurSel _ctrlTV);
 
 collect3DENHistory
 {

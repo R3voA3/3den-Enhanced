@@ -1,8 +1,9 @@
-# v6.9
+# v7.0
 ## CHANGED
 - Debug Options now work in Eden Multiplayer hosted
 - Fixed a bug with recompiling functions in functions viewer
-
+- Move to Layer UI now uses tree view with search
+- Move to Layer UI size increased
 
 # v6.9
 ## ADDED

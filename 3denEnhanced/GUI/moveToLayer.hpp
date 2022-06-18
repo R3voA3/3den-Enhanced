@@ -1,5 +1,5 @@
-#define DIALOG_W 100
-#define DIALOG_H 60
+#define DIALOG_W 140
+#define DIALOG_H 120
 
 class ENH_MoveToLayer
 {
@@ -8,55 +8,77 @@ class ENH_MoveToLayer
   class ControlsBackground
   {
     DISABLE_BACKGROUND
+	class Header: ctrlStaticTitle
+    {
+      text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 5 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 10 * GRID_H;
       w = DIALOG_W * GRID_W;
-      h = (DIALOG_H + 1) * GRID_H;
+      h = WINDOW_HAbs - 15 * GRID_H;
     };
     class BackgroundButton: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 59 * GRID_H;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 12 * GRID_H;
+      w = DIALOG_W * GRID_W
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };
   class Controls
   {
-    class Header: ctrlStaticTitle
-    {
-      text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class LayerList: ctrlListBox
+    class LayerList: ctrlTree
     {
       idc = 100;
-      x = CENTERED_X(DIALOG_W) + GRID_W;
-      y = DIALOG_TOP + 6 * GRID_H;
+	  idcSearch = 101;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
-      h = 11 * CTRL_DEFAULT_H - 3 * GRID_H;
+      h = WINDOW_HAbs - 23 * GRID_H;
       onLoad = "_this call ENH_fnc_moveToLayer_onLoad";
+	  borderSize = 0;
+	  colorBorder[] = {0,0,0,0};
+	  colorLines[] = {1,1,1,1};
+    };
+	class Search: ctrlEdit
+    {
+      idc = 101;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+      w = 44 * GRID_W;
+      h = CTRL_DEFAULT_H;
+      onButtonClick = "_this call ENH_fnc_moveToLayer_move";
+    };
+	class SearchIcon: ctrlStaticPictureKeepAspect
+    {
+      text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+      tooltip = "";
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + 45 * GRID_W;
+	  y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+	  w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
     class Move: ctrlButtonOK
     {
-      idc = IDC_CREATEOBJECT_CLOSE;
+      idc = -1;
       text = "$STR_A3_BOOT_M02_BIS_SIGN_MARKER";
-      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 57 * GRID_W;
-      y = DIALOG_TOP + 60 * GRID_H;
-      w = 27 * GRID_W;
+      x = CENTER_X + DIALOG_W * 0.5 * GRID_W - 52 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
     };
     class Cancel: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 28 * GRID_W;
-      y = DIALOG_TOP + 60 * GRID_H;
-      w = 27 * GRID_W;
+      x = CENTER_X + DIALOG_W * 0.5 * GRID_W - 26 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };
