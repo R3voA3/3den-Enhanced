@@ -1,3 +1,12 @@
+# v7.2
+## CHANGED
+- Updated batch replace UI
+
+# v7.1
+## CHANGED
+- Fixed that Debug Options wouldn't get initialized
+- Fixed missing ; in Move to Layer UI
+
 # v7.0
 ## CHANGED
 - Debug Options now work in Eden Multiplayer hosted

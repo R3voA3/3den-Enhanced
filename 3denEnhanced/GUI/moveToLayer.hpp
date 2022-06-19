@@ -27,7 +27,7 @@ class ENH_MoveToLayer
     {
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
       y = 0.5 + WINDOW_HAbs * 0.5 - 12 * GRID_H;
-      w = DIALOG_W * GRID_W
+      w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };

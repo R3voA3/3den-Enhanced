@@ -1,5 +1,4 @@
 #define DIALOG_W 120
-#define DIALOG_H 47
 
 class ENH_BatchReplace
 {
@@ -11,121 +10,121 @@ class ENH_BatchReplace
     DISABLE_BACKGROUND
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 10 * GRID_H;
       w = DIALOG_W * GRID_W;
-      h = DIALOG_H * GRID_H;
+      h = WINDOW_HAbs - 15 * GRID_H;
     };
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_BATCHREPLACE";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 5 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H - 2) * GRID_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 12 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
+    class Description: ctrlStructuredText
+    {
+      text = "$STR_ENH_BATCHREPLACE_DESCRIPTION";
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 10 * GRID_H;
+      w = DIALOG_W * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
   };
   class Controls
   {
-    class Description: ctrlStructuredText
-    {
-      text = "$STR_ENH_BATCHREPLACE_DESCRIPTION";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
-      w = DIALOG_W * GRID_W;
-      h = 2 * CTRL_DEFAULT_H;
-    };
     class Search: ctrlEdit
     {
       idc = IDC_BATCHREPLACE_SEARCH;
-      x = CENTERED_X(DIALOG_W) + GRID_W;
-      y = DIALOG_TOP + 14 * GRID_H;
-      w = DIALOG_W / 2 * GRID_W - 5 * GRID_W;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 16 * GRID_H;
+      w = 44 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class SearchIcon: ctrlStaticPictureKeepAspect
     {
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W / 2 - 4) * GRID_W;
-      y = DIALOG_TOP + 14 * GRID_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + 45 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 16 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class List: ctrlTree
-    {
-      idc = IDC_BATCHREPLACE_LIST;
-      idcSearch = IDC_BATCHREPLACE_SEARCH;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 19 * GRID_H;
-      w = DIALOG_W / 2 * GRID_W;
-      h = (DIALOG_H - 21) * GRID_H;
-      colorLines[] = {1, 1, 1, 1};
-      colorBorder[] = {1, 1, 1, 0};
-      colorBackGround[] = {COLOR_BACKGROUND_RGBA};
-    };
     class CollapseAll: ctrlButtonCollapseAll
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + 50 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 16 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1600)";
     };
     class ExpandAll: ctrlButtonExpandAll
     {
-      x = CENTERED_X(DIALOG_W) + 5 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + 55 * GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 16 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1600)";
     };
+    class List: ctrlTree
+    {
+      idc = IDC_BATCHREPLACE_LIST;
+      idcSearch = IDC_BATCHREPLACE_SEARCH;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 22 * GRID_H;
+      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      h = WINDOW_HAbs * 0.3;
+      colorLines[] = {1, 1, 1, 1};
+      colorBorder[] = {1, 1, 1, 0};
+      colorBackGround[] = {COLOR_BACKGROUND_RGBA};
+    };
     class ReplaceWithText: ctrlStatic
     {
       text = "$STR_ENH_BATCHREPLACE_REPLACEWITH";
-      x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W;
-      y = DIALOG_TOP + 14 * GRID_H;
-      w = DIALOG_W / 2 * GRID_W - GRID_W;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 22 * GRID_H +  WINDOW_HAbs * 0.3 + GRID_H;
+      w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class ReplaceWithValue: ctrlEditMulti
     {
       idc = IDC_BATCHREPLACE_REPLACEWITH;
       tooltip = "$STR_ENH_BATCHREPLACE_REPLACEWITH_TOOLTIP";
-      x = CENTERED_X(DIALOG_W) + DIALOG_W / 2 * GRID_W + GRID_W;
-      y = DIALOG_TOP + 19 * GRID_H;
-      w = DIALOG_W / 2 * GRID_W - 2 * GRID_W;
-      h = (DIALOG_H - 21) * GRID_H;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 22 * GRID_H +  WINDOW_HAbs * 0.3 + 6 * GRID_H;
+      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      h = WINDOW_HAbs * 0.1 + 2 * GRID_H;
+    };
+    class Preview: ctrlStaticPicture
+    {
+      idc = IDC_BATCHREPLACE_PREVIEW;
+      x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
+      y = 0.5 - WINDOW_HAbs * 0.5 + 22 * GRID_H +  WINDOW_HAbs * 0.3 + 9 * GRID_H + WINDOW_HAbs * 0.1;
+      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      h = (DIALOG_W * GRID_W - 2 * GRID_W) / 16 * 9;
     };
     class Replace: ctrlButton
     {
       text = "$STR_ENH_BATCHREPLACE_REPLACE";
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 48)* GRID_W;
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 23 * GRID_W;
+      x = CENTER_X + DIALOG_W * 0.5 * GRID_W - 52 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "call ENH_fnc_batchReplace";
     };
     class Close: ctrlButtonCancel
     {
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 24)* GRID_W;
-      y = DIALOG_TOP + (DIALOG_H - 1) * GRID_H;
-      w = 23 * GRID_W;
+      x = CENTER_X + DIALOG_W * 0.5 * GRID_W - 26 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-    };
-    class Preview: ctrlStaticPictureKeepAspect
-    {
-      idc = IDC_BATCHREPLACE_PREVIEW;
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = DIALOG_W * GRID_W;
-      h = (DIALOG_H - 21) * GRID_H;
     };
   };
 };

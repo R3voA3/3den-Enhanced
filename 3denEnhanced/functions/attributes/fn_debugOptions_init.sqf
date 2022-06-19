@@ -50,7 +50,7 @@ private _states =
 ];
 
 //To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
-if (!is3DENMultiplayer || !is3DENPreview || !(true in _states || 1 in _states || 2 in _states)) exitWith {};
+if (!is3DENPreview || !(true in _states || 1 in _states || 2 in _states)) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 //Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
