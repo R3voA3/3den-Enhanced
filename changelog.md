@@ -1,3 +1,8 @@
+# v7.3
+## CHANGED
+- Updated Create Object UI
+- Updated Camera Position UI
+
 # v7.2
 ## CHANGED
 - Updated batch replace UI
