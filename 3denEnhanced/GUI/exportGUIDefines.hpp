@@ -28,9 +28,9 @@ class ENH_ExportGUIDefines
     class Footer: ctrlStaticFooter
     {
       x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 18 * GRID_H;
+      y = DIALOG_TOP + 19 * GRID_H;
       w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H + 3 * GRID_H;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };
   class Controls

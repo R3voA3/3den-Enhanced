@@ -1,3 +1,8 @@
+# v7.4
+## CHANGED
+- Small tweak to Export GUI defines UI
+- Hopefully fixed objectScale not working in MP
+
 # v7.3
 ## CHANGED
 - Updated Create Object UI
