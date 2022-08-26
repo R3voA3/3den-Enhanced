@@ -6,10 +6,10 @@ class ENH_AllowCrewInImmobile
   control = "Checkbox";
   expression =
   "\
-  _this allowCrewInImmobile _value;\
+  [_this, _value] remoteExec ['allowCrewInImmobile', _this];\
   {\
-    _x disableAI 'FSM';\
-    _x setBehaviour 'CARELESS';\
+    [_x, 'FSM'] remoteExec ['disableAI', _x];\
+    [_x, 'CARELESS'] remoteExec ['setBehaviour', _x];\
   } forEach crew _this;\
   ";
   condition = "objectVehicle";

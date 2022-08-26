@@ -4,7 +4,7 @@ class ENH_DisableTIE
   tooltip = "$STR_ENH_DISABLETIEQUIPMENT_TOOLTIP";
   control = "Checkbox";
   property = "ENH_disableTIEquipment";
-  expression = "_this disableTIEquipment _value";
+  expression = "if (isServer) then {_this disableTIEquipment _value}";
   condition = "objectVehicle";
   defaultValue = "false";
 };

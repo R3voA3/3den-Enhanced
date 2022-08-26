@@ -4,7 +4,7 @@ class ENH_EnableHeadlights
   tooltip = "$STR_ENH_ENABLEHEADLIGHTS_TOOLTIP";
   control = "Checkbox";
   property = "ENH_enableHeadlights";
-  expression = "_this setPilotLight _value";
+  expression = "[_this, _value] remoteExec ['setPilotLight', _this]";
   condition = "objectVehicle";
   defaultValue = "false";
 };

@@ -1,3 +1,8 @@
+# v7.5
+## CHANGED
+- Improved locality handling of several object attributes
+- Enable Gun Lights attribute now check if the slot of the gun light is already filled. This allows units to use modded gun light attachments.
+
 # v7.4
 ## CHANGED
 - Small tweak to Export GUI defines UI

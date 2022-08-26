@@ -4,7 +4,7 @@ class ENH_SetCaptive
   tooltip = "$STR_ENH_CAPTIVE_TOOLTIP";
   property = "ENH_setCaptive";
   control = "Checkbox";
-  expression = "_this setCaptive _value";
+  expression = "[_this, _value] remoteExec ['setCaptive', _this]";
   condition = "objectBrain";
   defaultValue = "false";
 };

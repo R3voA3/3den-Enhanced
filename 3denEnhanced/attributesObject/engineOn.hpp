@@ -4,7 +4,7 @@ class ENH_EngineOn
   tooltip = "";
   control = "Checkbox";
   property = "ENH_engineOn";
-  expression = "_this engineOn _value";
+  expression = "[_this, _value] remoteExec ['engineOn', _this]";
   condition = "objectVehicle";
   defaultValue = "false";
 };

@@ -4,7 +4,7 @@ class ENH_ForceWalk
   tooltip = "";
   property = "ENH_forceWalk";
   control = "Checkbox";
-  expression = "_this forceWalk _value";
+  expression = "[_this, _value] remoteExec ['forceWalk', _this]";
   condition = "objectBrain";
   defaultValue = "false";
 };

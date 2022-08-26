@@ -4,9 +4,14 @@ class ENH_Parachute
   tooltip = "$STR_ENH_PARACHUTE_TOOLTIP";
   property = "ENH_parachute";
   control = "Checkbox";
-  expression = "if (!is3DEN && _value) then\
+  expression = "\
+  if (!is3DEN && _value) then\
   {\
-    _this moveInDriver (createVehicle ['Steerable_Parachute_F', getPosATL _this, [], 0, 'FLY']);\
+    if (local _this) then\
+    {\
+      private _parachute = createVehicle ['Steerable_Parachute_F', getPosATL _this, [], 0, 'FLY'];\
+      _this moveInDriver _parachute;\
+    };\
   }";
   condition = "objectBrain";
   defaultValue = "false";

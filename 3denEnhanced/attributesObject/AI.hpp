@@ -16,7 +16,7 @@ class ENH_AI
       displayName = "$STR_ENH_AIMINGSHAKE_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGSHAKE_TOOLTIP";
       property = "ENH_aimingShake";
-      expression = "_this setSkill ['aimingShake', _value]";
+      expression = "[_this, ['aimingShake', _value]] remoteExec ['setSkill', _this]";
       control = "Slider";
       defaultValue = "0.5";
       condition = "objectBrain";
@@ -26,56 +26,56 @@ class ENH_AI
       displayName = "$STR_ENH_AIMINGSPEED_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGSPEED_TOOLTIP";
       property = "ENH_aimingSpeed";
-      expression = "_this setSkill ['aimingSpeed', _value]";
+      expression = "[_this, ['aimingSpeed', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_AimingAccuracy: ENH_AimingShake
     {
       displayName = "$STR_ENH_AIMINGACCURACY_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGACCURACY_TOOLTIP";
       property = "ENH_aimingAccuracy";
-      expression = "_this setSkill ['aimingAccuracy', _value]";
+      expression = "[_this, ['aimingAccuracy', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_Commanding: ENH_AimingShake
     {
       displayName = "$STR_ENH_COMMANDING_DISPLAYNAME";
       tooltip = "$STR_ENH_COMMANDING_TOOLTIP";
       property = "ENH_commanding";
-      expression = "_this setSkill ['commanding', _value]";
+      expression = "[_this, ['commanding', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_Courage: ENH_AimingShake
     {
       displayName = "$STR_ENH_COURAGE_DISPLAYNAME";
       tooltip = "$STR_ENH_COURAGE_TOOLTIP";
       property = "ENH_courage";
-      expression = "_this setSkill ['courage', _value]";
+      expression = "[_this, ['courage', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_General: ENH_AimingShake
     {
       displayName = "$STR_ENH_GENERAL_DISPLAYNAME";
       tooltip = "$STR_ENH_GENERAL_TOOLTIP";
       property = "enh_general";
-      expression = "_this setSkill ['general', _value]";
+      expression = "[_this, ['general', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_ReloadSpeed: ENH_AimingShake
     {
       displayName = "$STR_ENH_RELOADSPEED_DISPLAYNAME";
       tooltip = "$STR_ENH_RELOADSPEED_TOOLTIP";
       property = "ENH_reloadingSpeed";
-      expression = "_this setSkill ['reloadSpeed', _value]";
+      expression = "[_this, ['reloadSpeed', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_SpotDistance: ENH_AimingShake
     {
       displayName = "$STR_ENH_SPOTDISTANCE_DISPLAYNAME";
       tooltip = "$STR_ENH_SPOTDISTANCE_TOOLTIP";
       property = "ENH_spotDistance";
-      expression = "_this setSkill ['spotDistance', _value]";
+      expression = "[_this, ['spotDistance', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_SpotTime: ENH_AimingShake
     {
       displayName = "$STR_ENH_SPOTTIME_DISPLAYNAME";
       tooltip = "$STR_ENH_SPOTTIME_TOOLTIP";
       property = "ENH_spotTime";
-      expression = "_this setSkill ['spotTime', _value]";
+      expression = "[_this, ['spotTime', _value]] remoteExec ['setSkill', _this]";
     };
     //----------------Not really skill, but still related to behaviour of AI
     class ENH_AllowFleeing: ENH_AimingShake
@@ -83,7 +83,7 @@ class ENH_AI
       displayName = "$STR_ENH_ALLOWFLEEING_DISPLAYNAME";
       tooltip = "$STR_ENH_ALLOWFLEEING_TOOLTIP";
       property = "ENH_allowFleeing";
-      expression = "_this allowFleeing _value";
+      expression = "[_this, _value] remoteExec ['allowFleeing', _this]";
     };
     //----------------AI Features
     class ENH_AI_Features_Subcategory: ENH_AI_Skill_SubCategory
@@ -97,7 +97,7 @@ class ENH_AI
       tooltip = "$STR_ENH_DISABLEAI_ALL_TOOLTIP";
       property = "ENH_disableAI_all";
       control = "Checkbox";
-      expression = "if (_value) then {_this disableAI 'all'}";
+      expression = "if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
       defaultValue = "false";
       condition = "objectBrain";
     };
@@ -106,119 +106,119 @@ class ENH_AI
       displayName = "$STR_ENH_DISABLEAI_MOVE_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_MOVE_TOOLTIP";
       property = "ENH_disableAI_move";
-      expression = "if (_value) then {_this disableAI 'MOVE'}";
+      expression = "if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Target: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_TARGET_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_TARGET_TOOLTIP";
       property = "ENH_disableAI_target";
-      expression = "if (_value) then {_this disableAI 'TARGET'}";
+      expression = "if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Cover: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_COVER_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_COVER_TOOLTIP";
       property = "ENH_disableAI_cover";
-      expression = "if (_value) then {_this disableAI 'COVER'}";
+      expression = "if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Autotarget: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_AUTOTARGET_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_AUTOTARGET_TOOLTIP";
       property = "ENH_disableAI_autotarget";
-      expression = "if (_value) then {_this disableAI 'AUTOTARGET'}";
+      expression = "if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Animation: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_ANIM_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_ANIM_TOOLTIP";
       property = "ENH_disableAI_anim";
-      expression = "if (_value) then {_this disableAI 'ANIM'}";
+      expression = "if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
     };
     class ENH_FSM: ENH_All
     {
       displayName = "FSM";
       tooltip = "$STR_ENH_DISABLEAI_FSM_TOOLTIP";
       property = "ENH_disableAI_FSM";
-      expression = "if (_value) then {_this disableAI 'FSM'}";
+      expression = "if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
     };
     class ENH_AimingError: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_AIMINGERROR_DISPLAYNAME";
       tooltip =  "$STR_ENH_DISABLEAI_AIMINGERROR_TOOLTIP";
       property = "ENH_disableAI_aimingError";
-      expression = "if (_value) then {_this disableAI 'AIMINGERROR'}";
+      expression = "if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
     };
     class ENH_TeamSwitch: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_TEAMSWITCH_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_TEAMSWITCH_TOOLTIP";
       property = "ENH_disableAI_teamswitch";
-      expression = "if (_value) then {_this disableAI 'TEAMSWITCH'}";
+      expression = "if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Suppression: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_SUPPRESSION_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_SUPPRESSION_TOOLTIP";
       property = "ENH_disableAI_suppression";
-      expression = "if (_value) then {_this disableAI 'SUPPRESSION'}";
+      expression = "if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
     };
     class ENH_CheckVisible: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_RAYCASTS_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_RAYCASTS_TOOLTIP";
       property = "ENH_disableAI_checkVisible";
-      expression = "if (_value) then {_this disableAI 'CHECKVISIBLE'}";
+      expression = "if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Autocombat: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_AUTOCOMBAT_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_AUTOCOMBAT_TOOLTIP";
       property = "ENH_disableAI_autocombat";
-      expression = "if (_value) then {_this disableAI 'AUTOCOMBAT'}";
+      expression = "if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Path: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_PATH_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_PATH_TOOLTIP";
       property = "ENH_disableAI_path";
-      expression = "if (_value) then {_this disableAI 'PATH'}";
+      expression = "if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
     };
     class ENH_MineDetection: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_MINEDETECTION_DISPLAYNAME";
       tooltip = "";
       property = "ENH_disableAI_mineDetection";
-      expression = "if (_value) then {_this disableAI 'MINEDETECTION'}";
+      expression = "if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
     };
     class ENH_WeaponAim: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_WEAPONAIM_DISPLAYNAME";
       tooltip = "";
       property = "ENH_disableAI_weaponAim";
-      expression = "if (_value) then {_this disableAI 'WEAPONAIM'}";
+      expression = "if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
     };
     class ENH_NVG: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_NVG_DISPLAYNAME";
       tooltip = "";
       property = "ENH_disableAI_NVG";
-      expression = "if (_value) then {_this disableAI 'NVG'}";
+      expression = "if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
     };
     class ENH_Lights: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME";
       tooltip = "";
       property = "ENH_disableAI_lights";
-      expression = "if (_value) then {_this disableAI 'LIGHTS'}";
+      expression = "if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
     };
     class ENH_RadioProtocol: ENH_All
     {
       displayName = "$STR_ENH_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_RADIOPROTOCOL_TOOLTIP";
       property = "ENH_disableAI_radioProtocol";
-      expression = "if (_value) then {_this disableAI 'RADIOPROTOCOL'}";
+      expression = "if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
     };
   };
 };

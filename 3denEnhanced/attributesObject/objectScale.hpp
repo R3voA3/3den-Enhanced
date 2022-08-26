@@ -18,7 +18,15 @@ class ENH_ObjectScaling
       _object setObjectScale ((_object get3DENAttribute 'ENH_objectScaling') # 0);\
     }];\
   };\
-  [_this, _value] remoteExec ['setObjectScale', _this]";
+  [_this, _value] spawn\
+  {\
+    params ['_object', '_value'];\
+    while {getObjectScale _object != _value} do\
+    {\
+      [_object, _value] remoteExec ['setObjectScale', _object];\
+      sleep 0.05;\
+    };\
+  };"
   condition = "1 - objectSimulated";
   defaultValue = "1";
   typeName = "NUMBER";

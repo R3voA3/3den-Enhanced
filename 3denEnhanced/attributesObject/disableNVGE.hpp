@@ -4,7 +4,7 @@ class ENH_DisableNVGE
   tooltip = "$STR_ENH_DISABLENVGEQUIPMENT_TOOLTIP";
   control = "Checkbox";
   property = "ENH_disableNVGEquipment";
-  expression = "_this disableNVGEquipment _value";
+  expression = "if (isServer) then {_this disableNVGEquipment _value}";
   condition = "objectVehicle";
   defaultValue = "false";
 };

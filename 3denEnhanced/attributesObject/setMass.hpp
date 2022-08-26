@@ -4,7 +4,7 @@ class ENH_SetMass
   tooltip = "$STR_ENH_SETMASS_TOOLTIP";
   property = "ENH_setMass";
   control = "Slider";
-  expression = "if (!is3DEN) then {_this setMass ((getMass _this) * _value)}";
+  expression = "if (!is3DEN) then {[_this, (getMass _this * _value)] remoteExec ['setMass', _this]}";
   condition = "objectVehicle";
   defaultValue = "1";
 };
