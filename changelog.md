@@ -1,3 +1,7 @@
+# v7.5.1
+## CHANGED
+- Disabled Set Object Scale attribute in multiplayer
+
 # v7.5
 ## CHANGED
 - Improved locality handling of several object attributes
