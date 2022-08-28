@@ -53,7 +53,9 @@ else
   {
     ENH_EH_DrawDist = addMissionEventHandler ["Draw3D",
     {
+
       drawLine3D [ASLToAGL ENH_Pos_Start, ASLToAGL ENH_Pos_End, [1, 0, 0, 1]];
+
     }];
     sleep 5;
     removeMissionEventHandler ["Draw3D", ENH_EH_DrawDist];

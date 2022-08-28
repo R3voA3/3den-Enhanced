@@ -3,6 +3,7 @@
 - Draw units and waypoints debug option was updated and merged into on option
 - Log active script does now open a dialog for direct copy for easier access
 - Object scaling should now work again in SP
+- Measure distance tool was updated
 
 # v7.5.1
 ## CHANGED
