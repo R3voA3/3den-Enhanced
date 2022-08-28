@@ -135,12 +135,12 @@ class ENH_DebugOptions
       displayName = "$STR_ENH_DEBUGOPTIONS_FPS_DISPLAYNAME";
       property = "ENH_DebugOptions_FPS";
     };
-    class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
+    /* class ENH_DebugOptions_DrawIcons: ENH_DebugOptions_Arsenal
     {
       displayName = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME";
       tooltip = "$STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP";
       property = "ENH_DebugOptions_DrawIcons";
-    };
+    }; */
     class ENH_DebugOptions_DrawViewDirection: ENH_DebugOptions_Arsenal
     {
       displayName = "$STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION";
@@ -159,17 +159,17 @@ class ENH_DebugOptions
       tooltip = "$STR_ENH_DEBUGOPTIONS_DYNSIMDEBUG_TOOLTIP";
       property = "ENH_DebugOptions_DynSimDebug";
     };
-    class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
+    /* class ENH_DebugOptions_ShowWaypoints: ENH_DebugOptions_Arsenal
     {
       displayName = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME";
       tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP";
       property = "ENH_DebugOptions_ShowWaypoints";
-    };
-    class ENH_DebugOptions_ShowUnits: ENH_DebugOptions_Arsenal
+    }; */
+    class ENH_DebugOptions_ShowGroups: ENH_DebugOptions_Arsenal
     {
-      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME";
-      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP";
-      property = "ENH_DebugOptions_ShowUnits";
+      displayName = "$STR_ENH_DEBUGOPTIONS_SHOWGROUPS_DISPLAYNAME";
+      tooltip = "$STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP";
+      property = "ENH_DebugOptions_ShowGroups";
     };
     class ENH_DebugOptions_DrawTriggers: ENH_DebugOptions_Arsenal
     {

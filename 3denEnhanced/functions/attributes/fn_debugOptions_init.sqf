@@ -16,53 +16,21 @@
 #define RADIUS 150
 #define DELAY 0.1
 
-private _states =
-[
-  GETVALUE("Arsenal"),
-  GETVALUE("Garage"),
-  GETVALUE("ShowUnits"),
-  GETVALUE("BulletTracking"),
-  GETVALUE("Zeus"),
-  GETVALUE("Invulnerability"),
-  GETVALUE("Captive"),
-  GETVALUE("Stamina"),
-  GETVALUE("FPS"),
-  GETVALUE("KillBLUFOR"),
-  GETVALUE("KillOPFOR"),
-  GETVALUE("KillINDFOR"),
-  GETVALUE("KillCIVFOR"),
-  GETVALUE("KillCursor"),
-  GETVALUE("DrawIcons"),
-  GETVALUE("DeleteCorpse"),
-  GETVALUE("ShowWaypoints"),
-  GETVALUE("NoRecoil"),
-  GETVALUE("NoSway"),
-  GETVALUE("NoReload"),
-  GETVALUE("DrawViewDirection"),
-  GETVALUE("Teleport"),
-  GETVALUE("SkipTime"),
-  GETVALUE("TimeMultiplier"),
-  GETVALUE("VariableViewer"),
-  GETVALUE("ActiveScripts"),
-  GETVALUE("DebugPath"),
-  GETVALUE("DrawTriggers"),
-  GETVALUE("DynSimDebug")
-];
-
 //To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
-if (!is3DENPreview || !(true in _states || 1 in _states || 2 in _states)) exitWith {};
+if (!is3DENPreview || is3DENMultiplayer) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 //Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
-systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
+/* systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
 sleep 1;
 systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 2];
 sleep 1;
 systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 1];
 sleep 1;
-systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT";
+systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT"; */
+waitUntil {sleep 1; time > 3};
 
-if (_states select 0) then
+if GETVALUE("Arsenal") then
 {
   [
     player,
@@ -83,7 +51,7 @@ if (_states select 0) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 1) then
+if GETVALUE("Garage") then
 {
   [
     player,
@@ -108,46 +76,12 @@ if (_states select 1) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 2) then
-{
-  [] spawn
-  {
-    #define TO_PERCENT_ROUND(VALUE) round ((VALUE) * 100)
-    private _markerUnitsArray = [];
-
-    {
-      private _sideColour = [side _x, true] call BIS_fnc_sideColor;
-      private _displayName = getText (configfile >> 'CfgVehicles' >> (typeOf _x) >> 'displayName');
-
-      _name = "ENH_debug_groupMarker_" + str _forEachIndex;
-      _name = createMarker [_name, position _x];
-      _name setMarkerType 'mil_box';
-      _name setMarkerText _displayName;
-      _name setMarkerColor _sideColour;
-
-      _markerUnitsArray pushBack [_name, _x, _displayName],;
-    } forEach entities [["AllVehicles"], [], false, true];//All vehicles without crew and dead entities
-
-    while {true} do
-    {
-      waitUntil{sleep DELAY; visibleMap};//Only update markers when visible
-      {
-        sleep DELAY;//A bit more performance friendly
-        _x params ["_marker", "_entity"];
-        _displayName = _x # 2 + " " + str TO_PERCENT_ROUND(1 - damage _entity) + "%";//Add health of unit to marker name in %
-        _marker setMarkerText _displayName;
-        _marker setMarkerPos getPosWorld _entity;
-      } forEach _markerUnitsArray;//[markerName, entity, displayName]
-    };
-  };
-};
-
-if (_states select 3) then
+if GETVALUE("BulletTracking") then
 {
   [player] spawn BIS_fnc_traceBullets;
 };
 
-if (_states select 4) then
+if GETVALUE("Zeus") then
 {
   [] spawn
   {
@@ -167,7 +101,7 @@ if (_states select 4) then
   };
 };
 
-if (_states select 5) then
+if GETVALUE("Invulnerability") then
 {
   {
     _x allowDamage false;
@@ -176,21 +110,21 @@ if (_states select 5) then
   (vehicle player) allowDamage false;
 };
 
-if (_states select 6) then
+if GETVALUE("Captive") then
 {
   {
     _x setCaptive true;
   } forEach units player;
 };
 
-if (_states select 7) then
+if GETVALUE("Stamina") then
 {
   {
     _x enableStamina false;
   } forEach units player;
 };
 
-if (_states select 8) then
+if GETVALUE("FPS") then
 {
   [] spawn
   {
@@ -225,7 +159,7 @@ if (_states select 8) then
   };
 };
 
-if (_states select 9) then
+if GETVALUE("KillBLUFOR") then
 {
   [
     player,
@@ -248,7 +182,7 @@ if (_states select 9) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 10) then
+if GETVALUE("KillOPFOR") then
 {
   [
     player,
@@ -271,7 +205,7 @@ if (_states select 10) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 11) then
+if GETVALUE("KillINDFOR") then
 {
   [
     player,
@@ -294,7 +228,7 @@ if (_states select 11) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 12) then
+if GETVALUE("KillCIVFOR") then
 {
   [
     player,
@@ -317,7 +251,7 @@ if (_states select 12) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 13) then
+if GETVALUE("KillCursor") then
 {
   [
     player,
@@ -338,39 +272,124 @@ if (_states select 13) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 14) then
+if GETVALUE("ShowGroups") then
 {
-  ENH_DebugOptions_CfgVehicles = configFile >> "CfgVehicles";
-  ["ENH_EH_DrawUnitInfo_ID", "onEachFrame",
+  setGroupIconsVisible [true, true];
+  setGroupIconsSelectable true;
+
+  allGroups apply
+  {
+    private _icon = ["o_inf", "b_inf", "n_inf", "c_unknown"] select (side _x call BIS_fnc_sideID);
+    private _color = [side _x, false] call BIS_fnc_sideColor;
+    _x addGroupIcon [_icon, [0, 0]];
+    _x setGroupIconParams [_color, groupID _x, linearConversion [1, 15, count units _x, 0.5, 3, false], true];
+  };
+
+  addMissionEventHandler ["GroupCreated",
+  {
+    params ["_group"];
+    _group spawn
     {
-      {
-        drawIcon3D
-        [
-          "",
-          (side _x call BIS_fnc_sideColor),
-          _x modelToWorldVisual [0, 0, 0 boundingBox _x select 1 select 2],
-          0.5,
-          0.5,
-          0,
-          format
-          [
-            "%1 (%2 %3 HP, %4, %5 m)",
-            getText (ENH_DebugOptions_CfgVehicles >> typeOf _x >> "DisplayName"),
-            (1 - damage _x) * 100,
-            "%",
-            behaviour _x,
-            round (player distance _x)
-          ],
-          true,
-          3 * (1 / (getResolution select 3)) * pixelGrid * 0.5
-        ];
-        true
-      } count ((ASLToAGL getPosASL player nearEntities [["AllVehicles"], RADIUS]) - [player]);
+      params ["_group"];
+      private _start = diag_tickTime;
+      waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};
+      if (units _group isEqualTo []) exitWith {};
+
+      private _icon = ["o_inf", "b_inf", "n_inf", "c_unknown"] select (side _group call BIS_fnc_sideID);
+      private _color = [side _group, false] call BIS_fnc_sideColor;
+
+      _group addGroupIcon [_icon, [0, 0]];
+      _group setGroupIconParams [_color, groupID _group, linearConversion [1, 15, count units _group, 0.5, 3, false], true];
     }
-  ] call BIS_fnc_addStackedEventHandler;
+  }];
+
+  addMissionEventHandler ["GroupIconOverEnter",
+  {
+    params
+    [
+      "_is3D", "_group", "_waypointId",
+      "_posX", "_posY",
+      "_shift", "_control", "_alt"
+    ];
+    hintSilent parseText format
+    [
+      "<t align='left' font='EtelkaMonospacePro'><br/><t size='1.2'>General Information:</t><br/>Callsign: %1<br/>Leader: %2<br/>No. of Units: %3<br/>Delete when Empty: %4<br/><br/><t size='1.2'>Group Status:</t><br/>Health: %5<br/>Fleeing: %6<br/>Attack Enabled: %7<br/>Combat Behaviour: %8<br/>Combat Mode: %9<br/>Formation: %10<br/>Speed: %11<br/><br/><t size='1.2'>Waypoints:</t><br/>No. of Waypoints: %12<br/>Current Waypoint: %13<br/>Speed: %14<br/><br/><t size='1.2'>Additional Options:</t><br/>Click on an icon to toggle group waypoints</t>",
+      format ["%1 (%2)",groupID _group, if (vehicle leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf vehicle leader _group ] call BIS_fnc_displayName} else {"-"}],
+      name leader _group,
+      count units _group,
+      isGroupDeletedWhenEmpty _group,
+      units _group apply {str round ((1 - damage _x)* 100) + " %"},
+      fleeing leader _x,
+      attackEnabled _group,
+      combatBehaviour _group,
+      combatMode _group,
+      formation _group,
+      speedMode _group,
+      count waypoints _group,
+      waypointType [_group, currentWaypoint _group],
+      units _group apply {str round speed _x + " km/h"}
+    ];
+  }];
+
+  addMissionEventHandler ["GroupIconOverLeave",
+  {
+  params
+  [
+    "_is3D", "_group", "_waypointId",
+    "_posX", "_posY",
+    "_shift", "_control", "_alt"
+  ];
+  hintSilent "";
+  }];
+
+  addMissionEventHandler ["GroupIconClick",
+  {
+    params
+    [
+      "_is3D", "_group", "_waypointId",
+      "_mouseButton", "_posX", "_posY",
+      "_shift", "_control", "_alt"
+    ];
+
+    if (!_shift && !_control && !_alt) then
+    {
+      allMapMarkers select {"ENH_debugWaypoints" in _x} apply {deleteMarker _x};
+      if (missionNamespace getVariable ["ENH_debugWaypoints_CurrentGroup", groupNull] isEqualTo _group) exitWith {ENH_debugWaypoints_CurrentGroup = groupNull};
+
+      private _path = [getPosATL leader _group select 0, getPosATL leader _group select 1];
+      private _markerText = "";
+      {
+        _x params ["_group", "_wpIndex"];
+        private _marker = createMarkerLocal
+        [
+          format ["ENH_debugWaypoints_%1_%2", _group, _wpIndex],
+          waypointPosition _x
+        ];
+        _marker setMarkerTextLocal waypointType [_group, _wpIndex];
+        _marker setMarkerShapeLocal "ICON";
+        _marker setMarkerTypeLocal "mil_dot";
+        _marker setMarkerShadowLocal true;
+
+        _path append [waypointPosition _x select 0, waypointPosition _x select 1];
+      } forEach waypoints _group;
+
+      //Create poly markers
+      if (count _path < 4) then {continue};
+      private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _group], leader _group];
+      _markerPoly setMarkerShapeLocal "polyline";
+      _markerPoly setMarkerColorLocal _color;
+      _markerPoly setMarkerPolylineLocal _path;
+      ENH_debugWaypoints_CurrentGroup = _group;
+    };
+    if (!_shift && _control && !_alt) then
+    {
+      units _group apply {deleteVehicle _x};
+      deleteGroup _group;
+    };
+  }];
 };
 
-if (_states select 15) then
+if GETVALUE("DeleteCorpse") then
 {
   [
   player,
@@ -391,57 +410,17 @@ if (_states select 15) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 16) then
-{
-  private _markerColors = "true" configClasses (configFile >> "CfgMarkerColors") apply {configName _x};
-  {
-    private _path = [];
-    private _markerText = "";
-    private _color = selectRandom _markerColors;
-    {
-      _x params ["_group", "_wpIndex"];
-      private _marker = createMarkerLocal
-      [
-        format ["ENH_debugWaypoints_%1_%2", _group, _wpIndex],
-        waypointPosition _x
-      ];
-      private _markerTextNew  = format ["%1/%2/%3/%4", _group, waypointSpeed _x, waypointType _x];
-      if (_markerText != _markerTextNew) then
-      {
-        _marker setMarkerTextLocal (_markerTextNew + str _wpIndex);
-        _markerText = _markerTextNew;
-      }
-      else
-      {
-        _marker setMarkerTextLocal str _wpIndex;
-      };
-      _marker setMarkerColorLocal _color;
-      _marker setMarkerShapeLocal "ICON";
-      _marker setMarkerTypeLocal "mil_dot";
-      //_marker setMarkerShadow false;
-      _path append [waypointPosition _x select 0, waypointPosition _x select 1];
-    } forEach waypoints _x;
-
-    //Create poly markers
-    if (count _path < 4) then {continue};
-    private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _x], leader _x];
-    _markerPoly setMarkerShapeLocal "polyline";
-    _markerPoly setMarkerColorLocal _color;
-    _markerPoly setMarkerPolylineLocal _path;
-  } forEach (allGroups select {count waypoints _x > 1});
-};
-
-if (_states select 17) then
+if GETVALUE("NoRecoil") then
 {
   player setUnitRecoilCoefficient 0;
 };
 
-if (_states select 18) then
+if GETVALUE("NoSway") then
 {
   player setCustomAimCoef 0;
 };
 
-if (_states select 19) then
+if GETVALUE("NoReload") then
 {
   player addEventHandler ["FiredMan",
   {
@@ -459,7 +438,7 @@ if (_states select 19) then
   }];
 };
 
-if (_states select 20) then
+if GETVALUE("DrawViewDirection") then
 {
   ["ENH_EH_DrawViewDirection_ID", "onEachFrame",
     {
@@ -473,7 +452,7 @@ if (_states select 20) then
   ] call BIS_fnc_addStackedEventHandler;
 };
 
-if (_states select 21) then
+if GETVALUE("Teleport") then
 {
   [
     player,
@@ -494,7 +473,7 @@ if (_states select 21) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 22) then
+if GETVALUE("SkipTime") then
 {
   [
     player,
@@ -518,7 +497,7 @@ if (_states select 22) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 23) then
+if GETVALUE("TimeMultiplier") then
 {
   [
     player,
@@ -543,7 +522,7 @@ if (_states select 23) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 24) then
+if GETVALUE("VariableViewer") then
 {
   [
     player,
@@ -564,7 +543,7 @@ if (_states select 24) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if (_states select 25) then
+if GETVALUE("ActiveScripts") then
 {
   [
     player,
@@ -585,7 +564,7 @@ if (_states select 25) then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if ((_states select 26) > 0) then
+if (GETVALUE("DebugPath") > 0) then
 {
   private _cfgMarkerColors = ("true" configClasses (configFile >> "CfgMarkerColors"));
   private _is3DEnabled = GETVALUE("DebugPath") > 1;
@@ -628,8 +607,10 @@ if ((_states select 26) > 0) then
   } forEach allGroups;
 };
 
-if (_states select 27) then
+if GETVALUE("DrawTriggers") then
 {
+  // Might want to also draw them in 2D/3D, but currently, getting all trigger objects in a scenario on each frame is super slow
+  //https://discord.com/channels/105462288051380224/108187245529268224/1013445559211794513
   {
     private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
     private _borderPos = [];
@@ -655,7 +636,7 @@ if (_states select 27) then
   } forEach (allMissionObjects "EmptyDetector");
 };
 
-if (_states select 28 && dynamicSimulationSystemEnabled) then
+if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
 {
   #define UNITS_ENABLED {simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits
   #define ALL_UNITS {dynamicSimulationEnabled group _x} count allUnits

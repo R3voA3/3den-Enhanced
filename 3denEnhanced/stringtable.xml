@@ -3657,29 +3657,13 @@
         <Polish>Włącza śledzenie pocisków dla postaci gracza w czasie testowania scenariusza.</Polish>
         <Russian>Активирует трассировку пули для игрока во время предварительного просмотра сценария.</Russian>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_DISPLAYNAME">
-        <English>Show Units</English>
-        <Italian>Mostra le Unità</Italian>
-        <German>Einheiten anzeigen</German>
-        <Chinesesimp>显示单位</Chinesesimp>
-        <Chinese>顯示單位</Chinese>
-        <Spanish>Mostrar unidades</Spanish>
-        <Czech>Zobrazit jednotky</Czech>
-        <French>Afficher les unités</French>
-        <Polish>Pokaż jednostki</Polish>
-        <Russian>Показать отделения</Russian>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_DISPLAYNAME">
+        <English>Show Groups</English>
+        <German>Gruppen anzeigen</German>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWUNITS_TOOLTIP">
-        <English>All units and their movement will be visible on the map during scenario preview.</English>
-        <Italian>Tutte le unità e il loro movimento saranno visibili sulla mappa durante l'anteprima dello scenario.</Italian>
-        <German>Alle Einheiten werden auf der Karte wären der Szenariovorschau angezeigt.</German>
-        <Chinesesimp>在场景预览期间，地图上将显示所有单位及其移动。</Chinesesimp>
-        <Chinese>在場景預覽期間，地圖上將顯示所有單位及其移動。</Chinese>
-        <Spanish>Todas las unidades y su movimiento serán visibles en el mapa durante la vista previa del escenario.</Spanish>
-        <Czech>Všechny jednotky a jejich pohyb budou zobrazeny na mapě během náhledu scénáře.</Czech>
-        <French>Toutes les unités et leurs mouvements seront visibles sur la carte lors de la prévisualisation du scénario.</French>
-        <Polish>Wszystkie jednostki i ich ruchy będą widoczne na mapie w trakcie testowania.</Polish>
-        <Russian>Все отделения и их движения будут видны на карте во время предварительного просмотра сценария.</Russian>
+    <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
+        <English>All groups and informationa about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
+        <German>Alle Gruppen und Informationen über diese werden in 3D und auf der Karte angezeigt. Außerdem können Gruppen gelöscht und ihre Wegpunkte angezeigt werden.</German>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
         <English>Kill Units (BLUFOR)</English>
@@ -5804,12 +5788,8 @@
         <Chinese>規模</Chinese>
     </Key>
     <Key ID="STR_ENH_OBJECTSCALING_TOOLTIP">
-        <English>Scales the size of the object. Only works for objects without simulation.</English>
-        <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben.</German>
-        <Chinesesimp>缩放物体的大小。仅适用于没有模拟的对象。</Chinesesimp>
-        <Chinese>縮放對象的大小。 僅適用於沒有模擬的對象。</Chinese>
-        <Polish>Skaluje rozmiar obiektu. Działa tylko dla obiektów z wyłączoną symulacją.</Polish>
-        <Spanish>Escala el tamaño del objeto. Solo funciona para objetos sin simulación.</Spanish>
+        <English>Scales the size of the object. Only works for objects without simulation. Disabled in multiplayer.</English>
+        <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben. Im Mehrspielermodus deaktiviert.</German>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_STAND">
         <English>Stand</English>

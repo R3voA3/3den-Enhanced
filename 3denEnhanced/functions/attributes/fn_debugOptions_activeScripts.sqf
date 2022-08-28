@@ -13,42 +13,38 @@
   -
 */
 
-diag_log "------------------------------------------------ACTIVE SQF SCRIPTS START------------------------------------------------";
+private _export = "------------------------------------------------ACTIVE SQF SCRIPTS------------------------------------------------" + endl;
 
 {
   _x params ["_scriptName", "_fileName", "_isRunning", "_currentLine"];
-  diag_log _scriptname;
-  diag_log _fileName;
-  diag_log _isRunning;
-  diag_log _currentLine;
+  _export = _export + _scriptname + " - ";
+  _export = _export + _fileName + " - ";
+  _export = _export + str _isRunning + " - ";
+  _export = _export + str _currentLine + endl;
 } foreach diag_activeSQFScripts;
 
-diag_log "-------------------------------------------------ACTIVE SQF SCRIPTS END-------------------------------------------------";
-diag_log "---------------------------------------------------ACTIVE FSMs START----------------------------------------------------";
+_export = _export + "---------------------------------------------------ACTIVE FSMs----------------------------------------------------" + endl;
 
 {
   _x params ["_scriptName", "_state", "_timeOut"];
-  diag_log _scriptname;
-  diag_log _state;
-  diag_log _timeOut;
+  _export = _export + _scriptname + " - ";
+  _export = _export + _state + " - ";
+  _export = _export + str _timeOut + endl;
 } foreach diag_activeMissionFSMs;
 
-diag_log "----------------------------------------------------ACTIVE FSMs END-----------------------------------------------------";
-diag_log "-----------------------------------------------ACTIVE MISSION EHs START-------------------------------------------------";
+_export = _export + "-----------------------------------------------ACTIVE MISSION EHs-------------------------------------------------" + endl;
 
 private _EHs = diag_allMissionEventHandlers;
 
-for "_i" from 0 to (count _EHs - 1) step 2 do
+private _counts = diag_allMissionEventHandlers select {_x isEqualType 0};
+private _types = diag_allMissionEventHandlers select {_x isEqualType ""};
+
 {
-  if (_i == (count _EHs -1)) exitWith {};
-  private _type = _EHs # _i;
-  private _count = _EHs # (_i + 1);
-  if (_count > 0) then
+  if (_x > 0) then
   {
-    diag_log format ["%1 / %2", _EHs # _i, _EHs # (_i +1)];
+    _export = _export + format ["%1x %2%3", _x, _types select _forEachIndex, endl];
   };
-};
+} forEach _counts;
 
-diag_log "------------------------------------------------ACTIVE MISSION EHs END--------------------------------------------------";
-
-systemChat "Debug information logged.";
+uiNamespace setVariable ["display3DENCopy_data", ["", _export]];
+(call BIS_fnc_displayMission) createDisplay "display3denCopy";
