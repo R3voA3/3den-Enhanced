@@ -274,9 +274,11 @@ if GETVALUE("KillCursor") then
 
 if GETVALUE("ShowGroups") then
 {
+  // Enable icons in 2D and 3D
   setGroupIconsVisible [true, true];
   setGroupIconsSelectable true;
 
+  // Add the icon for all existing groups
   allGroups apply
   {
     private _icon = ["o_inf", "b_inf", "n_inf", "c_unknown"] select (side _x call BIS_fnc_sideID);
@@ -285,6 +287,7 @@ if GETVALUE("ShowGroups") then
     _x setGroupIconParams [_color, groupID _x, linearConversion [1, 15, count units _x, 0.5, 3, false], true];
   };
 
+  // Add the icon whenever a group get's created
   addMissionEventHandler ["GroupCreated",
   {
     params ["_group"];
@@ -303,6 +306,7 @@ if GETVALUE("ShowGroups") then
     }
   }];
 
+  // Show group info when hovering over an icon (2D/3D)
   addMissionEventHandler ["GroupIconOverEnter",
   {
     params
@@ -331,17 +335,19 @@ if GETVALUE("ShowGroups") then
     ];
   }];
 
+  // Remove the hint whenever the mouse is leaving the icon area (2D/3D)
   addMissionEventHandler ["GroupIconOverLeave",
   {
-  params
-  [
-    "_is3D", "_group", "_waypointId",
-    "_posX", "_posY",
-    "_shift", "_control", "_alt"
-  ];
-  hintSilent "";
+    params
+    [
+      "_is3D", "_group", "_waypointId",
+      "_posX", "_posY",
+      "_shift", "_control", "_alt"
+    ];
+    hintSilent "";
   }];
 
+  // Toggle group's waypoints whenever clicking on an icon
   addMissionEventHandler ["GroupIconClick",
   {
     params
