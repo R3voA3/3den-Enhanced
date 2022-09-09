@@ -4,23 +4,21 @@ class ENH_Folder_Miscellaneous
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
+    "ENH_CreateTrigger",
     "ENH_DeleteEmptyLayers",
     "ENH_ExportMissionParameters",
     "ENH_GenerateSteamMissionDescription",
-    "ENH_SwitchTime",
     "Separator",
+    "ENH_SwitchTime",
     "ENH_ToggleGrass",
+    "Separator",
     "ENH_ToggleSimpleObject",
     "ENH_ToggleSimulation",
     "ENH_ToggleDynamicSimulation",
-    "ENH_ToggleDrawBuildingPositions",
-    "ENH_ToggleDrawDLCIcons",
-    "ENH_ToggleDrawHitpoints",
-    "ENH_ToggleAIFeatures",
     "ENH_TogglePlayable",
-    "ENH_ToggleMarkerAlpha",
-    "Separator",
-    "ENH_CreateTrigger"
+    "ENH_ToggleIsLocalOnly",
+    "ENH_ToggleAIFeatures",
+    "ENH_ToggleMarkerAlpha"
   };
 };
 class ENH_DeleteEmptyLayers
@@ -64,21 +62,12 @@ class ENH_ToggleDynamicSimulation
   action = "[['Object', 'Group'], ['dynamicSimulation']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_D};
 };
-class ENH_ToggleDrawBuildingPositions
+class ENH_ToggleIsLocalOnly
 {
-  text = "$STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS";
-  action = "call ENH_fnc_toggleDrawBuildingPositions";
-};
-class ENH_ToggleDrawDLCIcons
-{
-  text = "$STR_ENH_TOOLS_DRAWDLCICONS";
-  action = "call ENH_fnc_toggleDrawDLCIcons";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
-};
-class ENH_ToggleDrawHitpoints
-{
-  text = "$STR_ENH_TOOLS_DRAWHITPOINTS";
-  action = "call ENH_fnc_toggleDrawHitpoints";
+  text = "STR_ENH_TOOLS_TOGGLEISLOCALONLY";
+  picture = "";
+  action = "[['Object'], ['isLocalOnly']] call ENH_fnc_toggleAttributes";
+  shortcuts[] = {INPUT_ALT_OFFSET + DIK_L};
 };
 class ENH_ToggleAIFeatures
 {
