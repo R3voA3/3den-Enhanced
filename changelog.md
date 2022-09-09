@@ -1,3 +1,9 @@
+# v7.6.1
+## CHANGED
+- Added tool to quickly toggle local object attribute
+- Simplified menu strip
+- Removed vanilla UI tools because of scripting errors inside the GUIs
+
 # v7.6
 ## CHANGED
 - Draw units and waypoints debug option was updated and merged into on option
@@ -50,7 +56,6 @@
 # v6.8
 ## CHANGED
 - Fixed that terrain quality would reset itself
-
 
 # v6.7
 ## CHANGED
