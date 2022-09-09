@@ -64,7 +64,7 @@ class ENH_ToggleDynamicSimulation
 };
 class ENH_ToggleIsLocalOnly
 {
-  text = "STR_ENH_TOOLS_TOGGLEISLOCALONLY";
+  text = "$STR_ENH_TOOLS_TOGGLEISLOCALONLY";
   picture = "";
   action = "[['Object'], ['isLocalOnly']] call ENH_fnc_toggleAttributes";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_L};
