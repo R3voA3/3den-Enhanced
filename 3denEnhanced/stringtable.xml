@@ -4461,6 +4461,32 @@
         <English>Toggle Local Object</English>
         <German>Zwischen lokalem Objekt umschalten</German>
     </Key>
+    <Key ID="STR_ENH_SELECTIONFILTER_RESTORESELECTION">
+        <English>Restore original selection</English>
+        <German>Ursprüngliche Auswahl wiederherstellen</German>
+    </Key>
+    <Key ID="STR_ENH_SELECTIONFILTER">
+        <English>Selection Filter</English>
+        <German>Auswahlfilter</German>
+    </Key>
+    <Key ID="STR_ENH_SELECTIONFILTER_CONFIRMSELECTION">
+        <English>Confirm selection</English>
+        <German>Auswahlbestätigen</German>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
+        <English>Toggle Local Object</English>
+        <German>Zwischen lokalem Objekt umschalten</German>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
+        <English>Toggle Local Object</English>
+        <German>Zwischen lokalem Objekt umschalten</German>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
+        <English>Toggle Local Object</English>
+        <German>Zwischen lokalem Objekt umschalten</German>
+    </Key>
+
+
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
         <Russian>Вкл/выкл симуляцию</Russian>

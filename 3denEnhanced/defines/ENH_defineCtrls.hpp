@@ -15,6 +15,7 @@ class ctrlButtonOK;
 class ctrlButtonPictureKeepAspect;
 class ctrlButtonSearch;
 class ctrlCheckbox;
+class ctrlCheckboxToolbar;
 class ctrlCombo;
 class ctrlControlsGroup;
 class ctrlControlsGroupNoScrollbars;

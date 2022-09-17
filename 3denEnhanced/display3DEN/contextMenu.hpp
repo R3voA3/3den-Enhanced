@@ -39,6 +39,13 @@ class ConnectParent
     "ENH_TriggerOwnerPlayer",
   };
 };
+class Select
+{
+  items[] +=
+  {
+    "ENH_SelectionFilter",
+  };
+};
 class ENH_LogFactions
 {
   text = "$STR_ENH_CONTEXTMENU_LOGFACTION";
@@ -146,4 +153,11 @@ class ENH_MoveToLayer
   text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
   conditionShow = "selected";
   SHOW_IN_ROOT;
+};
+class ENH_SelectionFilter
+{
+  action = "findDisplay 313 createDisplay 'ENH_SelectionFilter'";
+  text = "$STR_ENH_SELECTIONFILTER";
+  conditionShow = "selected";
+  opensNewWindow = 1;
 };

@@ -31,6 +31,7 @@
 #include "GUI\placementTools.hpp"
 #include "GUI\RPTViewer.hpp"
 #include "GUI\SAM.hpp"
+#include "GUI\selectionFilter.hpp"
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\VIM.hpp"

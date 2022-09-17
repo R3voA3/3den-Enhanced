@@ -181,6 +181,11 @@ class CfgFunctions
       class CFGS_onLoad;
       class CFGS_playOrCopy;
     };
+    class SelectionFilter
+    {
+      file = "3denEnhanced\functions\GUI\selectionFilter";
+      class selectionFilter_init;
+    };
     class 3DENShortcuts
     {
       file = "3denEnhanced\functions\GUI\3DENShortcuts";
