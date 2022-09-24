@@ -1,6 +1,12 @@
+# v7.6.2
+## ADDED
+- Added Selection Manager. Accessible through the context menu -> select.
+
 # v7.6.1
-## CHANGED
+## Added
 - Added tool to quickly toggle local object attribute
+
+## Changed
 - Simplified menu strip
 - Removed vanilla UI tools because of scripting errors inside the GUIs
 

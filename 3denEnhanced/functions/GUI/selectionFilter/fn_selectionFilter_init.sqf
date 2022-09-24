@@ -13,6 +13,10 @@
   NOTHING
 */
 
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+
+//#define CB_INVERT_STATE(DISPLAY, IDC) if (ctrlEnabled (DISPLAY displayCtrl IDC)) then {(DISPLAY displayCtrl IDC) cbSetChecked !(cbChecked (DISPLAY displayCtrl IDC))}
+
 params ["_display"];
 
 // Focus cancel button
@@ -49,6 +53,55 @@ private _fnc_disableCheckbox =
 ["Marker", 15] call _fnc_disableCheckbox;
 ["Comment", 16] call _fnc_disableCheckbox;
 ["Layer", 17] call _fnc_disableCheckbox;
+
+// Add EH for quick actions
+/* _display displayAddEventHandler ["KeyDown",
+{
+  params ["_display", "_key"];
+  systemChat str _key;
+  systemChat str DIK_1;
+
+  switch (_key) do
+  {
+    case DIK_1:
+    {
+      systemChat str (ctrlEnabled (_display displayCtrl 10));
+      systemchat str !(cbChecked (_display displayCtrl 10));
+
+      CB_INVERT_STATE(_display, 10);
+    };
+    case DIK_2:
+    {
+      CB_INVERT_STATE(_display, 11);
+    };
+    case DIK_3:
+    {
+      CB_INVERT_STATE(_display, 12);
+    };
+    case DIK_4:
+    {
+      CB_INVERT_STATE(_display, 13);
+    };
+    case DIK_5:
+    {
+      CB_INVERT_STATE(_display, 14);
+    };
+    case DIK_6:
+    {
+      CB_INVERT_STATE(_display, 15);
+    };
+    case DIK_7:
+    {
+      CB_INVERT_STATE(_display, 16);
+    };
+    case DIK_8:
+    {
+      CB_INVERT_STATE(_display, 17);
+    };
+  };
+}]; */
+
+if (!isNil "ENH_fnc_selectionFilter_updateSelection") exitWith {};
 
 ENH_fnc_selectionFilter_updateSelection =
 {
