@@ -117,7 +117,7 @@ class ENH_SelectionFilter
     {
       idc = 1;
       x = CENTERED_X(DIALOG_W) + (1 + 6 + 6 + 6 + 6 + 6 + 6 + 6 + 6 + 6 + 1) * GRID_W;
-      text = "\a3\modules_f\data\iconsavegame_ca.paa"
+      text = "\a3\modules_f\data\iconsavegame_ca.paa";
       colorBackground[] = {0, 0.4, 0, 1};
       onButtonClick = "";
       tooltip = $STR_ENH_SELECTIONFILTER_CONFIRMSELECTION;
