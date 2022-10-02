@@ -1,12 +1,17 @@
+# v7.6.3
+## CHANGED
+- fixed missing semicolon (thanks to kju)
+- removed duplicated entries in stringtable (thanks to kju)
+
 # v7.6.2
 ## ADDED
 - Added Selection Manager. Accessible through the context menu -> select.
 
 # v7.6.1
-## Added
+## ADDED
 - Added tool to quickly toggle local object attribute
 
-## Changed
+## CHANGED
 - Simplified menu strip
 - Removed vanilla UI tools because of scripting errors inside the GUIs
 
