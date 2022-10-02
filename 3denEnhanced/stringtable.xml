@@ -4473,20 +4473,6 @@
         <English>Confirm selection</English>
         <German>Auswahlbestätigen</German>
     </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
-        <English>Toggle Local Object</English>
-        <German>Zwischen lokalem Objekt umschalten</German>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
-        <English>Toggle Local Object</English>
-        <German>Zwischen lokalem Objekt umschalten</German>
-    </Key>
-    <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
-        <English>Toggle Local Object</English>
-        <German>Zwischen lokalem Objekt umschalten</German>
-    </Key>
-
-
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
         <Russian>Вкл/выкл симуляцию</Russian>
