@@ -16,19 +16,18 @@
 #define RADIUS 150
 #define DELAY 0.1
 
-//To prevent issues in multiplayer games started from multiplayer editor. Also make sure at least one option is activated
-if (!is3DENPreview || is3DENMultiplayer) exitWith {};
+//To prevent issues in multiplayer games started from multiplayer editor
+if (!is3DENPreview /* || is3DENMultiplayer */) exitWith {};
 
 //Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
 //Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
-/* systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
+systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
 sleep 1;
 systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 2];
 sleep 1;
 systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 1];
 sleep 1;
-systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT"; */
-waitUntil {sleep 1; time > 3};
+systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT";
 
 if GETVALUE("Arsenal") then
 {
@@ -281,7 +280,15 @@ if GETVALUE("ShowGroups") then
   // Add the icon for all existing groups
   allGroups apply
   {
-    private _icon = ["o_inf", "b_inf", "n_inf", "c_unknown"] select (side _x call BIS_fnc_sideID);
+    private _icon = switch (side _x call BIS_fnc_sideID) do
+    {
+      case 0: {"o_inf"};
+      case 1: {"b_inf"};
+      case 2: {"n_inf"};
+      case 3: {"c_unknown"};
+      default {"badge"};
+    };
+
     private _color = [side _x, false] call BIS_fnc_sideColor;
     _x addGroupIcon [_icon, [0, 0]];
     _x setGroupIconParams [_color, groupID _x, linearConversion [1, 15, count units _x, 0.5, 3, false], true];
@@ -298,7 +305,15 @@ if GETVALUE("ShowGroups") then
       waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};
       if (units _group isEqualTo []) exitWith {};
 
-      private _icon = ["o_inf", "b_inf", "n_inf", "c_unknown"] select (side _group call BIS_fnc_sideID);
+      private _icon = switch (side _group call BIS_fnc_sideID) do
+      {
+        case 0: {"o_inf"};
+        case 1: {"b_inf"};
+        case 2: {"n_inf"};
+        case 3: {"c_unknown"};
+        default {"badge"};
+      };
+
       private _color = [side _group, false] call BIS_fnc_sideColor;
 
       _group addGroupIcon [_icon, [0, 0]];
@@ -317,7 +332,7 @@ if GETVALUE("ShowGroups") then
     ];
     hintSilent parseText format
     [
-      "<t align='left' font='EtelkaMonospacePro'><br/><t size='1.2'>General Information:</t><br/>Callsign: %1<br/>Leader: %2<br/>No. of Units: %3<br/>Delete when Empty: %4<br/><br/><t size='1.2'>Group Status:</t><br/>Health: %5<br/>Fleeing: %6<br/>Attack Enabled: %7<br/>Combat Behaviour: %8<br/>Combat Mode: %9<br/>Formation: %10<br/>Speed: %11<br/><br/><t size='1.2'>Waypoints:</t><br/>No. of Waypoints: %12<br/>Current Waypoint: %13<br/>Speed: %14<br/><br/><t size='1.2'>Additional Options:</t><br/>Click on an icon to toggle group waypoints</t>",
+      "<t align='left' font='EtelkaMonospacePro'><br/><t size='1.2'>General Information:</t><br/>Callsign: %1<br/>Leader: %2<br/>No. of Units: %3<br/>Delete when Empty: %4<br/><br/><t size='1.2'>Group Status:</t><br/>Health: %5<br/>Fleeing: %6<br/>Attack Enabled: %7<br/>Combat Behaviour: %8<br/>Combat Mode: %9<br/>Formation: %10<br/>Speed: %11<br/><br/><t size='1.2'>Waypoints:</t><br/>No. of Waypoints: %12<br/>Current Waypoint: %13<br/>Speed: %14<br/><br/><t size='1.2'>Additional Options:</t><br/>- Left click on an icon to toggle group waypoints<br/>- CTRL + Left Click to delete a group</t>",
       format ["%1 (%2)",groupID _group, if (vehicle leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf vehicle leader _group ] call BIS_fnc_displayName} else {"-"}],
       name leader _group,
       count units _group,
