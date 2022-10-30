@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Credits">Credits</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/changelog.md">Changelog</a> |
+  <a href="https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md">Changelog</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Translation">Translation</a> |
   <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Contribute">Contribute</a>
 </p>
