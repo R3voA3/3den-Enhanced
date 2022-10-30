@@ -28,7 +28,7 @@ function Addon-Build
 
 function Addon-Publish
 {
-  Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"Auto Update: Changelog will follow!`""
+  Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"[url=https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md] Changelog (GitHub) [/url]`""
 }
 
 function Addon-Compress
