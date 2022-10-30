@@ -3662,7 +3662,7 @@
         <German>Gruppen anzeigen</German>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
-        <English>All groups and informationa about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
+        <English>All groups and information about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
         <German>Alle Gruppen und Informationen über diese werden in 3D und auf der Karte angezeigt. Außerdem können Gruppen gelöscht und ihre Wegpunkte angezeigt werden.</German>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
