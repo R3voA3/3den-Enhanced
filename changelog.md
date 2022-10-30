@@ -1,3 +1,9 @@
+# v7.6.4
+## CHANGED
+- fixed typo in translation
+- Remove unused files
+- Fixed script error in Show Groups debug option script
+
 # v7.6.3
 ## CHANGED
 - fixed missing semicolon (thanks to kju)
