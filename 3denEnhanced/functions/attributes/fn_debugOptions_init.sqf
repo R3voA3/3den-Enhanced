@@ -2,7 +2,7 @@
   Author: R3vo
 
   Description:
-  Checks Eden preferences and enables features accordingly.
+  Activates 3den Enhanced debug options according to attribute settings.
 
   Parameter(s):
   -
@@ -16,18 +16,11 @@
 #define RADIUS 150
 #define DELAY 0.1
 
-//To prevent issues in multiplayer games started from multiplayer editor
-if (!is3DENPreview /* || is3DENMultiplayer */) exitWith {};
+// To prevent issues in multiplayer games started from multiplayer editor
+if (!is3DENPreview) exitWith {};
 
-//Start the script later. Sometimes player unit is changed when "Play the Character" is selected from the context menu a bit later
-//Additionally give scripts time to create units, waypoints and so on so they are picked up by the debug options script
-systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 3];
-sleep 1;
-systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 2];
-sleep 1;
-systemChat format [localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER", 1];
-sleep 1;
-systemChat localize "STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT";
+// Small delay to give scenario time to fully initialize
+sleep 3;
 
 if GETVALUE("Arsenal") then
 {
@@ -277,10 +270,15 @@ if GETVALUE("ShowGroups") then
   setGroupIconsVisible [true, true];
   setGroupIconsSelectable true;
 
-  // Add the icon for all existing groups
-  allGroups apply
+  ENH_debugOptions_showGroups_initGroup =
   {
-    private _icon = switch (side _x call BIS_fnc_sideID) do
+    params ["_group", grpNull, [grpNull]];
+
+    private _start = diag_tickTime;
+    waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};
+    if (units _group isEqualTo []) exitWith {};
+
+    private _icon = switch (side _group call BIS_fnc_sideID) do
     {
       case 0: {"o_inf"};
       case 1: {"b_inf"};
@@ -289,36 +287,22 @@ if GETVALUE("ShowGroups") then
       default {"badge"};
     };
 
-    private _color = [side _x, false] call BIS_fnc_sideColor;
-    _x addGroupIcon [_icon, [0, 0]];
-    _x setGroupIconParams [_color, groupID _x, linearConversion [1, 15, count units _x, 0.5, 3, false], true];
+    private _color = [side _group, false] call BIS_fnc_sideColor;
+    _group addGroupIcon [_icon, [0, 0]];
+    _group setGroupIconParams [_color, groupID _group, linearConversion [1, 15, count units _group, 0.5, 3, false], true];
+  };
+
+  // Add the icon for all existing groups
+  allGroups apply
+  {
+    _x spawn ENH_debugOptions_showGroups_initGroup;
   };
 
   // Add the icon whenever a group get's created
   addMissionEventHandler ["GroupCreated",
   {
     params ["_group"];
-    _group spawn
-    {
-      params ["_group"];
-      private _start = diag_tickTime;
-      waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};
-      if (units _group isEqualTo []) exitWith {};
-
-      private _icon = switch (side _group call BIS_fnc_sideID) do
-      {
-        case 0: {"o_inf"};
-        case 1: {"b_inf"};
-        case 2: {"n_inf"};
-        case 3: {"c_unknown"};
-        default {"badge"};
-      };
-
-      private _color = [side _group, false] call BIS_fnc_sideColor;
-
-      _group addGroupIcon [_icon, [0, 0]];
-      _group setGroupIconParams [_color, groupID _group, linearConversion [1, 15, count units _group, 0.5, 3, false], true];
-    }
+    _group spawn ENH_debugOptions_showGroups_initGroup;
   }];
 
   // Show group info when hovering over an icon (2D/3D)
@@ -353,12 +337,6 @@ if GETVALUE("ShowGroups") then
   // Remove the hint whenever the mouse is leaving the icon area (2D/3D)
   addMissionEventHandler ["GroupIconOverLeave",
   {
-    params
-    [
-      "_is3D", "_group", "_waypointId",
-      "_posX", "_posY",
-      "_shift", "_control", "_alt"
-    ];
     hintSilent "";
   }];
 
@@ -394,7 +372,7 @@ if GETVALUE("ShowGroups") then
         _path append [waypointPosition _x select 0, waypointPosition _x select 1];
       } forEach waypoints _group;
 
-      //Create poly markers
+      // Create poly markers
       if (count _path < 4) then {continue};
       private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _group], leader _group];
       _markerPoly setMarkerShapeLocal "polyline";

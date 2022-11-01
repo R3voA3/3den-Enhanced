@@ -8918,22 +8918,6 @@
         <Chinese>該對像沒有生命值！</Chinese>
         <Spanish>No hay puntos de vida disponibles para este objeto</Spanish>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_TIMER">
-        <English>Debug options initializing in %1 seconds.</English>
-        <Russian>Инициализация параметров отладки в течение %1 секунд.</Russian>
-        <German>Debug Optionen werden in %1 Sekunden initialisiert.</German>
-        <Chinesesimp>调试选项在%1秒内初始化。</Chinesesimp>
-        <Chinese>調試選項在%1秒內初始化。</Chinese>
-        <Spanish>Iniciando opciones de depurado en %1 segundos</Spanish>
-    </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_INIT_MSG_INIT">
-        <English>Debug options initialized.</English>
-        <Russian>Инициализированы параметры отладки.</Russian>
-        <German>Debug Optionen initialisiert.</German>
-        <Chinesesimp>调试选项已初始化。</Chinesesimp>
-        <Chinese>調試選項已初始化。</Chinese>
-        <Spanish>Opciones de depurado iniciadas</Spanish>
-    </Key>
     <Key ID="STR_ENH_ZEUSADDONS_HEADER">
         <English>Manage Zeus Addons</English>
         <German>Zeus Erweiterungen verwalten</German>
