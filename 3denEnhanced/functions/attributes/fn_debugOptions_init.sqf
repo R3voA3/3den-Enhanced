@@ -272,7 +272,13 @@ if GETVALUE("ShowGroups") then
 
   ENH_debugOptions_showGroups_initGroup =
   {
-    params ["_group", grpNull, [grpNull]];
+    scriptName "ENH_debugOptions_showGroups_initGroup";
+    params
+    [
+      ["_group", grpNull, [grpNull]]
+    ];
+
+    if (isNull _group) exitWith {};
 
     private _start = diag_tickTime;
     waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};

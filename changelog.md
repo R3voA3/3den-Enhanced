@@ -1,3 +1,8 @@
+# v7.6.5
+## CHANGED
+- removed init msg for Debug Options
+
+
 # v7.6.4
 ## CHANGED
 - fixed typo in translation
