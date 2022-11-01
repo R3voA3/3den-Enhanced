@@ -1,6 +1,7 @@
 # v7.6.5
 ## CHANGED
 - removed init msg for Debug Options
+- improved Debug Options code
 
 
 # v7.6.4
