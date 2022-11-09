@@ -59,7 +59,7 @@ class ENH_GroupMarker
           };\
         };\
       };";
-      defaultValue = "['', 'Default', groupID _this, true, true]";
+      defaultValue = "['', 'Default', '', true, true]";
     };
   };
 };

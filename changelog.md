@@ -1,8 +1,11 @@
+# v7.6.6
+## CHANGED
+- fixed Group Attribute code being exported sqf even though it was disabled (Thanks Expunged)
+
 # v7.6.5
 ## CHANGED
 - removed init msg for Debug Options
 - improved Debug Options code
-
 
 # v7.6.4
 ## CHANGED
