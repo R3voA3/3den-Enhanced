@@ -25,6 +25,10 @@
         <Chinesesimp>动态AI技能设置</Chinesesimp>
         <Chinese>動態AI技能設置</Chinese>
     </Key>
+    <Key ID="STR_ENH_SEARCHATTRIBUTES_HEADER">
+        <English>Search Attributes</English>
+        <German>Attribute durchsuchen</German>
+    </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
         <Russian>Скачайте модификацию ""Pythia"" из Steam Workshop!</Russian>

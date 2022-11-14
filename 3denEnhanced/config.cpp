@@ -17,6 +17,7 @@
 #include "GUI\3DENCameraPositions.hpp"
 #include "GUI\3DENRadio.hpp"
 #include "GUI\actionCreator.hpp"
+#include "GUI\attributeSearch.hpp"
 #include "GUI\batchReplace.hpp"
 #include "GUI\briefingEditor.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"

@@ -1,10 +1,10 @@
 param($DoPublish = "false")
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = "7.6.6" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
+$ModVersion = "7.6.7" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
-$WorkshopID = 2883840209
+$WorkshopID = 623475643
 
 function Addon-PrepareBuild
 {

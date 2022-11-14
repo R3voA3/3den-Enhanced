@@ -17,6 +17,7 @@ class ENH_Folder_Utilities
     "ENH_TextureFinder",
     "Separator",
     "ENH_BriefingEditor",
+    "ENH_AttributeSearch",
     "ENH_ActionCreator",
     "ENH_BatchReplace",
     "ENH_NameObjects",
@@ -121,5 +122,11 @@ class ENH_ZeusAddons
 {
   text = "$STR_ENH_ZEUSADDONS_HEADER";
   action = "call ENH_fnc_zeusAddons";
+  opensNewWindow = 1;
+};
+class ENH_AttributeSearch
+{
+  text = "$STR_ENH_SEARCHATTRIBUTES_HEADER";
+  action = "findDisplay 313 createDisplay 'ENH_AttributeSearch'";
   opensNewWindow = 1;
 };

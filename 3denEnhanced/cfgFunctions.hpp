@@ -73,6 +73,11 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\actionCreator";
       class actionCreator;
     };
+    class AttributeSearch
+    {
+      file = "3denEnhanced\functions\GUI\attributeSearch";
+      class attributeSearch_onLoad;
+    };
     class BriefingEditor
     {
       file = "3denEnhanced\functions\GUI\briefingEditor";
