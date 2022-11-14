@@ -1,21 +1,25 @@
+# v7.6.7
+## ADDED
+- Added a tool to find all entities with code attributes such as onActivation, waypoint condition (own attributes can be added, see function header ENH_fnc_attributeSearch_onLoad)
+
 # v7.6.6
 ## CHANGED
-- fixed Group Attribute code being exported sqf even though it was disabled (Thanks Expunged)
+- Fixed Group Attribute code being exported sqf even though it was disabled (Thanks Expunged)
 
 # v7.6.5
 ## CHANGED
-- removed init msg for Debug Options
-- improved Debug Options code
+- Removed init msg for Debug Options
+- Improved Debug Options code
 
 # v7.6.4
 ## CHANGED
-- fixed typo in translation
+- Fixed typo in translation
 - Remove unused files
 - Fixed script error in Show Groups debug option script
 
 # v7.6.3
 ## CHANGED
-- fixed missing semicolon (thanks to kju)
+- Fixed missing semicolon (thanks to kju)
 - removed duplicated entries in stringtable (thanks to kju)
 
 # v7.6.2
