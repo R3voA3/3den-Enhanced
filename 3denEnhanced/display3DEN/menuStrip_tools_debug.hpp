@@ -9,8 +9,6 @@ class ENH_Folder_Debug
     "ENH_CreateObject",
     "Separator",
     "ENH_ProductInfo",
-    "ENH_RecompileFunctions",
-    /* "ENH_ToggleMapIDs", */
     "ENH_ClearChat",
     "Separator",
     "ENH_ExportGUIBaseClasses",
@@ -18,9 +16,7 @@ class ENH_Folder_Debug
     "Separator",
     "ENH_ToggleDrawBuildingPositions",
     "ENH_ToggleDrawDLCIcons",
-    "ENH_ToggleDrawHitpoints"/* ,
-    "ENH_ControlStyles",
-    "ENH_ControlTypes" */
+    "ENH_ToggleDrawHitpoints"
   };
 };
 class ENH_VariableViewer
@@ -42,20 +38,10 @@ class ENH_CreateObject
   action = "findDisplay 313 createDisplay 'ENH_CreateObject'";
   opensNewWindow = 1;
 };
-class ENH_ToggleMapIDs
-{
-  text = "$STR_ENH_TOOLS_SHOWMAPIDS";
-  action = "call ENH_fnc_toggleMapIDs";
-};
 class ENH_ProductInfo
 {
   text = "$STR_ENH_TOOLS_PRODUCTINFO";
   action = "call ENH_fnc_productInfo";
-};
-class ENH_RecompileFunctions
-{
-  text = "$STR_ENH_TOOLS_RECOMPILEFUNCTIONS";
-  action = "1 call BIS_fnc_recompile; ['ENH_actionPerformed'] call BIS_fnc_3DENNotification";
 };
 class ENH_ClearChat
 {
@@ -72,18 +58,6 @@ class ENH_GUITestGrids
 {
   text = "$STR_ENH_TOOLS_GUITESTGRIDS";
   action = "findDisplay 313 createDisplay 'RscTestGrids'";
-  opensNewWindow = 1;
-};
-class ENH_ControlStyles
-{
-  text = "$STR_ENH_TOOLS_CONTROLSTYLES";
-  action = "findDisplay 313 createDisplay 'RscTestControlStyles'";
-  opensNewWindow = 1;
-};
-class ENH_ControlTypes
-{
-  text = "$STR_ENH_TOOLS_CONTROLTYPES";
-  action = "findDisplay 313 createDisplay 'RscTestControlTypes'";
   opensNewWindow = 1;
 };
 class ENH_ToggleDrawBuildingPositions
