@@ -2814,15 +2814,8 @@
         <Russian>Сохранить экипировку</Russian>
     </Key>
     <Key ID="STR_ENH_SAVELOADOUT_TOOLTIP">
-        <English>Restores the loadout on respawn.</English>
-        <Czech>Obnoví výstroj při respawnu.</Czech>
-        <French>Restaure l'équipement lors de la réapparition.</French>
-        <Spanish>Restaurar equipamiento en el respawn</Spanish>
-        <German>Ausrüstung wird beim Respawn wiederhergestellt.</German>
-        <Chinesesimp>在重生时加载之前的装备。</Chinesesimp>
-        <Chinese>在重生時加載之前的裝備。</Chinese>
-        <Polish>Przywraca wyposażenie podczas odrodzenia.</Polish>
-        <Russian>Восстанавливает экипировку при возрождении.</Russian>
+        <English>Restores the original loadout on respawn. Loadout can be changed by modifing ENH_SavedLoadout variable in player's namespace.</English>
+        <German>Stellt das ursprüngliche Loadout beim Respawn wieder her. Die Ausrüstung kann durch Ändern der Variable ENH_SavedLoadout im Namensraum des Spielers geändert werden.</German>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
         <English>View Distance</English>
