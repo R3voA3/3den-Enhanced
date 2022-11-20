@@ -3,7 +3,7 @@ class ENH_ObjectScaling
   displayName = "$STR_ENH_OBJECTSCALING_DISPLAYNAME";
   tooltip = "$STR_ENH_OBJECTSCALING_TOOLTIP";
   property = "ENH_objectScaling";
-  control = "ENH_ObjectScaling";
+  control = "EditCodeShort";
   expression = "\
   if (is3DEN) then\
   {\
