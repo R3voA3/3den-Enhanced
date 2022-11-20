@@ -121,9 +121,6 @@ class Cfg3DEN
     #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       #include "controls\timeMultiplier.hpp"
     #endif
-    #ifndef ENH_HIDE_OBJECTSCALING
-      #include "controls\objectScaling.hpp"
-    #endif
   };
   class Mission
   {

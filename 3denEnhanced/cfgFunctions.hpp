@@ -216,7 +216,6 @@ class CfgFunctions
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
-      //class 3denNotificationNoSound;
       class alignEntities;
       class all3DENSelected;
       class deleteCrew;

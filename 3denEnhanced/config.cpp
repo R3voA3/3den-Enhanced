@@ -40,5 +40,4 @@
 
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
-#include "GUI\RscDisplayConfigViewer.hpp"
-#include "GUI\RscTestControlXXX.hpp"
+//#include "GUI\RscDisplayConfigViewer.hpp"
