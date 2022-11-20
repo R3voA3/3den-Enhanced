@@ -1,3 +1,24 @@
+# v7.6.8
+## CHANGED
+- Edit Attributes button in Search Attributes UI (SAUI) was sometimes not initialised correctly
+- Entities in the SAUI are now better displayed
+- Fixed script error when selecting groups in the SAUI
+- Added support for markers to the SAUI
+- When selecting a marker in SAUI, the map will now open, camera will be moved and the map view will be adjusted as well
+- Added support for marker name to SAUI
+- Save Loadout attribute was updated: (backwards compatible)
+  - Added logging
+  - Updated tooltip
+  - Improved code
+- Object scaling attribute now uses an Edit box again to allow more values
+- Texture Finder UI can no longer be moved (dragged)
+- Image Preview in Texture Finder UI is not properly positioned
+
+## REMOVED
+- Removed Recompile Functions menu strip entry
+- Obsolete configs and functions
+- Config Viewer customisation due to incompatibility with other mods that modify it
+
 # v7.6.7
 ## ADDED
 - Added a tool to find all entities with code attributes such as onActivation, waypoint condition (own attributes can be added, see function header ENH_fnc_attributeSearch_onLoad)
