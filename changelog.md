@@ -1,3 +1,8 @@
+# v7.6.9
+## CHANGED
+- Muted incredible loud notification sounds until fixed by BI. This can be disabled via userconfig
+
+
 # v7.6.8
 ## CHANGED
 - Edit Attributes button in Search Attributes UI (SAUI) was sometimes not initialised correctly

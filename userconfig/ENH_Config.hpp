@@ -59,3 +59,4 @@
 
 //------------Other------------//
 //#define ENH_LARGER_EDITBOXES
+//#define ENH_MUTE_NOTIFICATIONS
