@@ -161,3 +161,13 @@ class ENH_SelectionFilter
   conditionShow = "selected";
   opensNewWindow = 1;
 };
+
+// Modify the original behaviour. Now the map will be moved as well
+class MoveCamera
+{
+  action = "[] spawn ENH_fnc_centerMapOnSelection";
+  //picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\moveCamera_ca.paa";
+  //text = "Center Map on Selection";
+  //conditionShow = "1";
+  //SHOW_IN_ROOT;
+};

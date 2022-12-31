@@ -246,6 +246,7 @@ class CfgFunctions
       class toggleMarkerAlpha;
       class twoDigitsStr;
       class VHCTools;
+      class centerMapOnSelection;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface
@@ -266,7 +267,6 @@ class CfgFunctions
       class exportGUIDefines;
       class exportLoadout;
       class exportWithLB;
-
     };
     class Debug
     {
