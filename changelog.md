@@ -1,3 +1,7 @@
+# v7.7.0
+## CHANGED
+- The Move Here context menu entry will now also center the map (if it's open) on the selected position
+
 # v7.6.9
 ## CHANGED
 - Muted incredible loud notification sounds until fixed by BI. This can be disabled via userconfig
