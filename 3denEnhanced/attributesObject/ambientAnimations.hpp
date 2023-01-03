@@ -44,10 +44,11 @@ class ENH_AmbientAnimations
           _unit setVariable ['ENH_ambientAnimations_exit', true];\
           detach _unit;\
           deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);\
-          [_unit, ''] remoteExec ['switchMove', 0];\
-          \
-          _unit enableAI 'ANIM';\
-          \
+          if (alive _unit) then\
+          {\
+            [_unit, ''] remoteExec ['switchMove', 0];\
+            _unit enableAI 'ANIM';\
+          };\
           _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];\
           _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];\
           _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];\

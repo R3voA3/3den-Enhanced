@@ -1,5 +1,10 @@
 param($DoPublish = "false")
 
+
+$processArma3 = Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
+
+Wait-Process processArma3
+
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
 $ModVersion = "7.7.1" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
@@ -41,7 +46,7 @@ Write-Host "Copying files."
 Start-Sleep 2
 Addon-Build
 Write-Host "Creating pbo."
-Start-Sleep 30
+Start-Sleep 5
 Write-Host "Packing done."
 
 if ($DoPublish -eq "true")
@@ -54,5 +59,3 @@ if ($DoPublish -eq "true")
   Write-Host "Publishing finished"
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
-
-Write-Host "All done!"

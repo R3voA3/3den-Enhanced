@@ -1,3 +1,8 @@
+# v7.7.1
+## CHANGED
+- Remove markerName attribute from Search Attributes GUI
+- Fixed twitching of units that get killed during Ambient Animation
+
 # v7.7.0
 ## CHANGED
 - The Move Here context menu entry will now also center the map (if it's open) on the selected position
