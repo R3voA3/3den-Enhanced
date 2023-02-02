@@ -6,7 +6,7 @@ $processArma3 = Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop
 Wait-Process processArma3
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = "7.7.2" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
+$ModVersion = "7.7.3" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $WorkshopID = 623475643
