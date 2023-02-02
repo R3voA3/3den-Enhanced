@@ -616,7 +616,7 @@ if GETVALUE("DrawTriggers") then
 {
   // Might want to also draw them in 2D/3D, but currently, getting all trigger objects in a scenario on each frame is super slow
   //https://discord.com/channels/105462288051380224/108187245529268224/1013445559211794513
-  {
+  /* {
     private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
     private _borderPos = [];
     triggerArea _x params ["_a", "_b"];
@@ -638,7 +638,108 @@ if GETVALUE("DrawTriggers") then
         _arrow setObjectTexture [0, _colour];
       };
     };
-  } forEach (allMissionObjects "EmptyDetector");
+  } forEach (allMissionObjects "EmptyDetector"); */
+  ENH_DebugOptions_DrawTriggers_CursorPosition = [0, 0, 0];
+  {
+    findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
+    {
+      params ["_ctrlMap"];
+      private _trigger = _x;
+      triggerArea _trigger params ["_a", "_b", "_angle", "_isRectangle"];
+
+      if (!_isRectangle) then
+      {
+        _ctrlMap drawEllipse [_trigger, _a, _b, _angle, [0, 0, 0, 1], "#(rgb,8,8,3)color(0.3,0.3,0.3,0.3)"];
+      }
+      else
+      {
+        _ctrlMap drawRectangle [_trigger, _a, _b, _angle, [0, 0, 0, 1], "#(rgb,8,8,3)color(0.3,0.3,0.3,0.3)"];
+      };
+
+      if (ENH_DebugOptions_DrawTriggers_CursorPosition inArea _trigger) then
+      {
+        if (vehicleVarName _trigger != "") then
+        {
+          ENH_DebugOptions_DrawTriggers_HintText = "<t size='1.3' align='center'>Trigger Information</t><br/>
+<t align='left'>Name:<t/><t align='right'>%1</t><br/>
+<t align='left'>Text:<t/><t align='right'>%2</t><br/>
+<t align='left'>Type:<t/><t align='right'>%3</t><br/>
+<t align='left'>Activated:<t/><t align='right'>%4</t><br/>
+<t align='left'>Interval:<t/><t align='right'>%5</t><br/>
+
+<t size='1.3' align='center'>Statements</t><br/>
+
+<t align='left'>Condition:<t/><t align='right'>%6</t><br/>
+<t align='left'>On Activation:<t/><t align='right'>%7</t><br/>
+<t align='left'>On Deactivation:<t/><t align='right'>%8</t><br/>
+
+<t size='1.3' align='center'>Activation</t><br/>
+
+<t align='left'>By:<t/><t align='right'>%9</t><br/>
+<t align='left'>Type:<t/><t align='right'>%10</t><br/>
+<t align='left'>Repeatable:<t/><t align='right'>%11</t><br/>
+
+<t size='1.3' align='center'>Transformation</t><br/>
+
+<t align='left'>Position:<t/><t align='right'>%12</t><br/>
+<t align='left'>A:<t/><t align='right'>%13</t><br/>
+<t align='left'>B:<t/><t align='right'>%14</t><br/>
+<t align='left'>Angle:<t/><t align='right'>%15</t><br/>
+<t align='left'>Is Rectangle:<t/><t align='right'>%16</t><br/>
+<t align='left'>C (Height):<t/><t align='right'>%17</t><br/>
+
+<t size='1.3' align='center'>Timer</t><br/>
+
+<t align='left'>Timer Values:<t/><t align='right'>%18</t><br/>
+<t align='left'>Is Countdown:<t/><t align='right'>%19</t><br/>
+<t align='left'>Current Timeout:<t/><t align='right'>%20</t><br/>
+
+<t size='1.3' align='center'>Special</t><br/>
+
+<t align='left'>Attached Vehicle/Object:<t/><t align='right'>%21</t><br/>
+<t align='left'>List:<t/><t align='right'>%22</t><br/>";
+
+          hintSilent parseText format
+          [
+            ENH_DebugOptions_DrawTriggers_HintText,
+            vehicleVarName _trigger,
+            triggerText _trigger,
+            triggerType _trigger,
+            triggerActivated _trigger,
+            triggerInterval _trigger,
+            triggerStatements _trigger select 0,
+            triggerStatements _trigger select 1,
+            triggerStatements _trigger select 2,
+            triggerActivation _trigger select 0,
+            triggerActivation _trigger select 1,
+            triggerActivation _trigger select 2,
+            getPosWorld _trigger,
+            triggerArea _trigger select 0,
+            triggerArea _trigger select 1,
+            triggerArea _trigger select 2,
+            triggerArea _trigger select 3,
+            triggerArea _trigger select 4,
+            [triggerTimeout _trigger select 0, triggerTimeout _trigger select 1, triggerTimeout _trigger select 2],
+            triggerTimeout _trigger select 3,
+            triggerTimeoutCurrent _trigger,
+            triggerAttachedVehicle _trigger,
+            list _trigger
+          ];
+        }
+        else
+        {
+          hintSilent "No variable name was given to this trigger. Detailed information are not available.";
+        };
+      };
+    }];
+  } forEach (8 allObjects 7); // All triggers
+
+  findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["mouseMoving",
+  {
+    params ["_ctrlMap", "_xPos", "_yPos"];
+
+    ENH_DebugOptions_DrawTriggers_CursorPosition = _ctrlMap posScreenToWorld [_xPos, _yPos];
+  }];
 };
 
 if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
@@ -647,7 +748,14 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define ALL_UNITS {dynamicSimulationEnabled group _x} count allUnits
   #define GROUPS_ENABLED {simulationEnabled leader _x && dynamicSimulationEnabled _x} count allGroups
   #define ALL_GROUPS {dynamicSimulationEnabled _x} count allGroups
+  #define CAN_TRIGGER_UNITS {canTriggerDynamicSimulation _x} count allUnits
+  #define CAN_TRIGGER_VEHICLES {canTriggerDynamicSimulation _x} count vehicles
 
+  #define DISTANCE_GROUPS_UNITS dynamicSimulationDistance "Group"
+  #define DISTANCE_VEHICLES dynamicSimulationDistance "Vehicle"
+  #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
+  #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
+  #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
   #define DISTANCE_GROUPS_UNITS dynamicSimulationDistance "Group"
   #define DISTANCE_VEHICLES dynamicSimulationDistance "Vehicle"
   #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
@@ -658,16 +766,21 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
 <t align='left'>Enabled Units:<t/>              <t align='right'>%1 / %2</t>        <br/>
 <t align='left'>Enabled Groups:<t/>             <t align='right'>%3 / %4</t>        <br/>
 
+<t size='1.3' align='center'>Can Trigger Dyn. Simulation</t><br/>
+
+<t align='left'>No. of units:<t/>             <t align='right'>%5</t>        <br/>
+<t align='left'>No. of vehicles:<t/>             <t align='right'>%6</t>        <br/>
+
 <t size='1.3' align='center'>Settings</t>                                           <br/>
 
-<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%5 m</t>           <br/>
-<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%6 m</t>           <br/>
-<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%7 m</t>           <br/>
-<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%8 m</t>           <br/>
-<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%9</t>           <br/>
-<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%10 m</t>          <br/>
-<t align='left'>View Distance too large:<t/>    <t align='right'>%11</t><br/>
-<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%12 m</t>";
+<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%7 m</t>           <br/>
+<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%8 m</t>           <br/>
+<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%9 m</t>           <br/>
+<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%10 m</t>           <br/>
+<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%11</t>           <br/>
+<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%12 m</t>          <br/>
+<t align='left'>View Distance too large:<t/>    <t align='right'>%13</t><br/>
+<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%14 m</t>";
 
   ENH_dynSimDebug_markerUnitsArray = [];
 
@@ -701,6 +814,8 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
       ALL_UNITS,
       GROUPS_ENABLED,
       ALL_GROUPS,
+      CAN_TRIGGER_UNITS,
+      CAN_TRIGGER_VEHICLES,
       DISTANCE_GROUPS_UNITS,
       DISTANCE_VEHICLES,
       DISTANCE_EMPTY_VEHICLES,
@@ -724,10 +839,12 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
   {
     params ["_ctrlMap"];
-    _ctrlMap drawEllipse [player, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
-    _ctrlMap drawEllipse [player, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
-    _ctrlMap drawEllipse [player, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
-    _ctrlMap drawEllipse [player, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
-    _ctrlMap drawEllipse [player, viewDistance, viewDistance, 0, [1, 0, 0, 1], ""];//Props
+    {
+      _ctrlMap drawEllipse [_x, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
+      _ctrlMap drawEllipse [_x, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
+      _ctrlMap drawEllipse [_x, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
+      _ctrlMap drawEllipse [_x, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
+      _ctrlMap drawEllipse [_x, viewDistance, viewDistance, 0, [1, 0, 0, 1], ""];//Props
+    } forEach (allUnits select {canTriggerDynamicSimulation _x});
   }];
 };
