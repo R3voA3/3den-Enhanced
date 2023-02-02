@@ -4,7 +4,7 @@
   Date: 2020-11-02
 
   Description:
-  Changes view distance and object view distance according to camera hight.
+  Changes view distance and object view distance according to camera altitude.
 
   Parameter(s):
   -
