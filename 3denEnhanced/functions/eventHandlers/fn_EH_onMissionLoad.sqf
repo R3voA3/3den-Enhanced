@@ -44,3 +44,6 @@ if ("Preferences" get3DENMissionAttribute "ENH_CollapseEntityList") then
   };
 };
 #endif
+
+//Add tooltips to entity browser so long names are not cut off
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_assetBrowser_addTooltips}];

@@ -56,3 +56,6 @@ call ENH_fnc_ambientAnimations_initInEditor;
 
 //Init favorites list
 ["onLoad", []] call ENH_fnc_favoritesList;
+
+//Add tooltips to entity browser so long names are not cut off
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_assetBrowser_addTooltips}];
