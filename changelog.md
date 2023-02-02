@@ -1,3 +1,12 @@
+# v7.7.2
+## ADDED
+- Names of entries in the Asset Browser are now also shown as tooltip top prevent them from being cut off (Variable Names wouldn't be visible in some cases)
+
+## CHANGED
+- Dynamic Simulation Debug mode now shows activation distance for all units that can trigger dynamic simulation
+- Dynamic Simulation Debug mode now also shows number of units and vehicles that can trigger dynamic simulation
+- Trigger areas and trigger statements are now drawn on the map
+
 # v7.7.1
 ## CHANGED
 - Remove markerName attribute from Search Attributes GUI
