@@ -747,6 +747,8 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define UNITS_ENABLED {simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits
   #define ALL_UNITS {dynamicSimulationEnabled group _x} count allUnits
   #define GROUPS_ENABLED {simulationEnabled leader _x && dynamicSimulationEnabled _x} count allGroups
+  #define OBJECTS_ENABLED {simulationEnabled _x} count vehicles
+  #define ALL_OBJECTS count vehicles
   #define ALL_GROUPS {dynamicSimulationEnabled _x} count allGroups
   #define CAN_TRIGGER_UNITS {canTriggerDynamicSimulation _x} count allUnits
   #define CAN_TRIGGER_VEHICLES {canTriggerDynamicSimulation _x} count vehicles
@@ -762,47 +764,42 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
   #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
 
-  ENH_dynSimDebug_Text = "<t size='1.3' align='center'>Dynamic Simulation Stats</t>   <br/>
+  ENH_dynSimDebug_Text = "<t size='1.5' align='left'>Dynamic Simulation Stats</t>   <br/><br/>
+
+<t size='1.3' align='left'>Enabled/Disabled Entities</t>   <br/>
+
 <t align='left'>Enabled Units:<t/>              <t align='right'>%1 / %2</t>        <br/>
 <t align='left'>Enabled Groups:<t/>             <t align='right'>%3 / %4</t>        <br/>
+<t align='left'>Enabled Objects/Vehicles:<t/>   <t align='right'>%5 / %6</t>        <br/><br/>
 
-<t size='1.3' align='center'>Can Trigger Dyn. Simulation</t><br/>
+<t size='1.3' align='left'>Can Trigger Dyn. Simulation</t><br/>
 
-<t align='left'>No. of units:<t/>             <t align='right'>%5</t>        <br/>
-<t align='left'>No. of vehicles:<t/>             <t align='right'>%6</t>        <br/>
+<t align='left'>No. of units:<t/>               <t align='right'>%7</t>             <br/>
+<t align='left'>No. of vehicles:<t/>            <t align='right'>%8</t>             <br/><br/>
 
-<t size='1.3' align='center'>Settings</t>                                           <br/>
+<t size='1.3' align='left'>Settings</t>                                           <br/>
 
-<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%7 m</t>           <br/>
-<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%8 m</t>           <br/>
-<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%9 m</t>           <br/>
-<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%10 m</t>           <br/>
-<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%11</t>           <br/>
-<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%12 m</t>          <br/>
-<t align='left'>View Distance too large:<t/>    <t align='right'>%13</t><br/>
-<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%14 m</t>";
+<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%9 m</t>           <br/>
+<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%10 m</t>           <br/>
+<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%11 m</t>           <br/>
+<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%12 m</t>           <br/>
+<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%13</t>           <br/>
+<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%14 m</t>          <br/>
+<t align='left'>View Distance too large:<t/>    <t align='right'>%15</t><br/>
+<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%16 m</t>";
 
   ENH_dynSimDebug_markerUnitsArray = [];
 
   {
-    private _leader = leader _x;
     _marker = "ENH_dynSimDebugMarker_" + str _forEachIndex;
-    _marker = createMarker [_marker, position _leader];
-    if (isPlayer _leader) then
-    {
-      _marker setMarkerType "mil_dot";
-      _marker setMarkerText name _leader;
-      _marker setMarkerColor "ColorRed";
-      _marker setMarkerSize [1.5, 1.5];
-    }
-    else
-    {
-      _marker setMarkerType "mil_box";
-      _marker setMarkerText (getText (configfile >> "CfgVehicles" >> typeOf vehicle _leader >> "displayName"));
-      _marker setMarkerColor ([side _leader, true] call BIS_fnc_sideColor);
-    };
-    ENH_dynSimDebug_markerUnitsArray pushBack [_marker, _leader];
-  } forEach allGroups;
+    _marker = createMarker [_marker, getPosWorld _x];
+
+    _marker setMarkerType "mil_box";
+    _marker setMarkerText configName configOf _x;
+    _marker setMarkerColor ([side _x, true] call BIS_fnc_sideColor);
+
+    ENH_dynSimDebug_markerUnitsArray pushBack [_marker, _x];
+  } forEach vehicles + allUnits;
 
   addMissionEventHandler ["EachFrame",
   {
@@ -814,6 +811,8 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
       ALL_UNITS,
       GROUPS_ENABLED,
       ALL_GROUPS,
+      OBJECTS_ENABLED,
+      ALL_OBJECTS,
       CAN_TRIGGER_UNITS,
       CAN_TRIGGER_VEHICLES,
       DISTANCE_GROUPS_UNITS,
