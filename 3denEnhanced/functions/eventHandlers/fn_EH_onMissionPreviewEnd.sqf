@@ -26,4 +26,4 @@ call ENH_fnc_3DENRadio_toggleRadio;
 #endif
 
 //Add tooltips to entity browser so long names are not cut off
-(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_assetBrowser_addTooltips}];
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_entityList_addTooltips}];
