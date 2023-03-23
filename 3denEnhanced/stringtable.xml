@@ -15,7 +15,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
         <English>Dynamic AI Skill Settings</English>
-        <Italian>Configurazione Dinamica delle abilità AI</Italian>
+        <Italian>Configurazione Dinamica delle abilità IA</Italian>
         <German>Dynamische KI-Fähigkeitseinstellungen</German>
         <Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
         <French>Paramètres de compétence dynamique de l'IA</French>
@@ -28,6 +28,7 @@
     <Key ID="STR_ENH_SEARCHATTRIBUTES_HEADER">
         <English>Search Attributes</English>
         <German>Attribute durchsuchen</German>
+        <Italian>Attributi di ricerca</Italian>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
@@ -37,6 +38,7 @@
         <Chinese>從Steam創意工坊獲得""Pythia""修改！</Chinese>
         <Polish>Pobierz modyfikację ""Pythia"" z Warszatu Steam!</Polish>
         <Spanish>Obtener la modificación ""Pythia"" de Steam Workshop.</Spanish>
+        <Italian>Scarica la mod "Pythia" dal workshop di Steam!</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
         <English>BLUFOR Skill Settings</English>
@@ -154,11 +156,12 @@
         <Chinesesimp>创建触发器(全地图覆盖)</Chinesesimp>
         <Chinese>創建觸發器(全地圖覆蓋)</Chinese>
         <Polish>Utwórz trigger (Zakrywający całą mapę)</Polish>
+        <Italian>Crea un trigger(Copertura totale della Mappa)</Italian>
     </Key>
     <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
         <English>Terrain Detail</English>
         <Russian>Детализация ландшафта</Russian>
-        <Italian>dettagli del terreno</Italian>
+        <Italian>Dettagli del terreno</Italian>
         <Czech>Detail krajiny</Czech>
         <Spanish>Detalle del terreno</Spanish>
         <German>Geländedetail</German>
@@ -199,6 +202,7 @@
         <Chinese>移除一切</Chinese>
         <Polish>Usuń wszystko</Polish>
         <Spanish>Quitar todo</Spanish>
+        <Italian>Rimuovi Tutto</Italian>
     </Key>
     <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
         <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
@@ -603,6 +607,7 @@
         <Chinese>所有功能</Chinese>
         <Polish>Wszystkie funkcje</Polish>
         <Spanish>Todas las funcionalidades</Spanish>
+        <Italian>Tutte le Funzionalità</Italian>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_ALL_TOOLTIP">
         <English>Disables all features uncluding the ones below.</English>
@@ -611,6 +616,7 @@
         <Chinese>禁用所有功能，但不包括以下功能。</Chinese>
         <Polish>Wyłącz wszystkie funkcje z wyłączeniem tych poniżej.</Polish>
         <Spanish>Desactive todas las funciones, incluidas las siguientes.</Spanish>
+        <Italian>Disabilita tutte le funzionalità comprese quelle di seguito</Italian>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
         <English>Lights</English>
@@ -814,6 +820,7 @@
         <Chinesesimp>在地图上隐藏友军单位.</Chinesesimp>
         <Chinese>在地圖上隱藏友軍單位.</Chinese>
         <Polish>Ukryj sojusznicze jednostki na mapie</Polish>
+        <Italian>Nascondi le unità Alleate Sulla Mappa</Italian>
     </Key>
     <Key ID="STR_ENH_MAPINDICATORS_ENEMY_TOOLTIP">
         <English>Hide Hostile Units on the Map.</English>
@@ -824,6 +831,7 @@
         <Chinesesimp>在地图上隐藏敌军单位.</Chinesesimp>
         <Chinese>在地圖上隱藏敵軍單位.</Chinese>
         <Polish>Ukryj wrogie jednostki na mapie</Polish>
+        <Italian>Nascondi le Unità Ostili sulla Mappa</Italian>
     </Key>
     <Key ID="STR_ENH_MAPINDICATORS_MINES_TOOLTIP">
         <English>Hide Mines on the Map.</English>
@@ -834,6 +842,7 @@
         <Chinesesimp>在地图上隐藏地雷.</Chinesesimp>
         <Chinese>在地圖上隱藏地雷.</Chinese>
         <Polish>Ukryj miny na mapie.</Polish>
+        <Italian>Nascondi le Mine sulla Mappa</Italian>
     </Key>
     <Key ID="STR_ENH_MAPINDICATORS_PING_TOOLTIP">
         <English>Hide Tactical Pings on the Map.</English>
@@ -844,6 +853,7 @@
         <Chinesesimp>在地图上隐藏战术Ping.</Chinesesimp>
         <Chinese>在地圖上隱藏戰術ping.</Chinese>
         <Polish>Ukryj taktyczne pingi na mapie.</Polish>
+        <Italian>Nascondi i Ping Tattici sulla Mappa</Italian>
     </Key>
     <Key ID="STR_ENH_FORCEFLAG_DISPLAYNAME">
         <English>Add Flag</English>
@@ -973,6 +983,7 @@
         <Chinese>該單位不會受到攻擊，並將加入平民陣營。但該單位仍然會攻擊敵人！</Chinese>
         <Polish>Jednostka nie będzie atakowana i dołączy do strony cywilów. Jednostka wciąż będzie atakowała wrogów!</Polish>
         <Spanish>La unidad no será atacada y se unirá al bando civil. ¡La unidad seguirá atacando a los enemigos!</Spanish>
+        <Italian>L'Unità non verrà attaccata e si unirà ai civili. L'Unità continuerà ad attaccare i nemici!</Italian>
     </Key>
     <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
         <English>Enable Headlights</English>
@@ -1006,6 +1017,7 @@
         <Chinesesimp>禁止下车</Chinesesimp>
         <Chinese>禁止下載具</Chinese>
         <Polish>Zakaż wysiadania z pojazdu</Polish>
+        <Italian>Impedisci lo sbarco</Italian>
     </Key>
     <Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
         <English>Crew stays in vehicle even though the vehicle is disabled.</English>
@@ -1513,7 +1525,7 @@
     </Key>
     <Key ID="STR_ENH_DISABLEAI_PATH_TOOLTIP">
         <English>Stops the AI’s movement but not the target alignment.</English>
-        <Italian>Impedisce all'AI di muoversi ma non di allinearsi al bersaglio</Italian>
+        <Italian>Impedisce all'IA di muoversi ma non di allinearsi al bersaglio</Italian>
         <Czech>Umělá inteligence se nebude hýbat, ale bude se otáčet za cílem.</Czech>
         <French>Désactive les mouvements de l'IA mais pas sa visée.</French>
         <Spanish>Detiene el movimiento de la IA pero no la alineación de objetivos.</Spanish>
@@ -1585,7 +1597,7 @@
     </Key>
     <Key ID="STR_ENH_MAKEHOSTAGE_TOOLTIP">
         <English>Makes the unit a hostage and adds a 'Free Hostage' action. Whether the unit is still hostage can be checked with _unitName getVariable 'ENH_isHostage';</English>
-        <Italian>trasforma l'unità in ostaggio e aggiumge un'azzione 'Libera Ostaggio'. Si puo verificare se l'unità è ancora ostaggio con _unitName getVariable 'ENH_isHostage';</Italian>
+        <Italian>Trasforma l'unità in ostaggio e aggiunge un'azione 'Libera Ostaggio'. Si puo verificare se l'unità è ancora ostaggio con _unitName getVariable 'ENH_isHostage';</Italian>
         <Czech>Udělá z jednotky rukojmí a přídá možnost "Osvobodit rukojmí". Jestli je jednotka stále rukojmím může být zkontrolováno pomocí _unitName getVariable 'ENH_isHostage';</Czech>
         <French>Définit l'unité comme étant otage, et ajoute une action "Libérer l'Otage". Il est possible de vérifier son statut d'otage avec la commande : _unitName getVariable "ENH_isHostage";</French>
         <Spanish>Hace que la unidad sea un rehén y añade una acción de "liberar rehén". Si la unidad sigue siendo rehén se puede comprobar con _unitName getVariable 'ENH_isHostage';</Spanish>
@@ -1633,7 +1645,7 @@
     </Key>
     <Key ID="STR_ENH_UNITTRAITS_ENGINEER_TOOLTIP">
         <English>Defines whether or not the unit can repair vehicles.</English>
-        <Italian>Stabilisce se l'unità è abilitata al riparo di mezzi</Italian>
+        <Italian>Stabilisce se l'unità può riparare i veicoli</Italian>
         <Czech>Určuje jestli může jednotka opravovat vozidla.</Czech>
         <French>Définit si l'unité peut réparer des véhicules.</French>
         <Spanish>Define si la unidad puede o no reparar vehículos.</Spanish>
@@ -1705,7 +1717,7 @@
     </Key>
     <Key ID="STR_ENH_CAMOUFLAGECOEF_TOOLTIP">
         <English>The camouflage coefficent determines how easy an unit can be spotted by AI. A lower value means it is more difficult to spot it.</English>
-        <Italian>Il coefficente di camuffamento determina la facilita con cui un'unità puo essere avvistata dall'AI. Un valore minore significa piu difficoltà ad essere avvistati</Italian>
+        <Italian>Il coefficente di camuffamento determina la facilita con cui un'unità puo essere avvistata dall'IA. Un valore minore significa piu difficoltà ad essere avvistati</Italian>
         <Czech>Tento koeficient určuje jak snadno může být jednotka zpozorována umělou inteligencí. Nižší hodnota znamená že je jednotku těžší odhalit.</Czech>
         <French>Détermine la facilité avec laquelle l'unité peut être repérée visuellement par l'IA (valeur faible = plus difficile à voir).</French>
         <Spanish>El coeficiente de camuflaje determina la facilidad con que una unidad puede ser detectada por la IA. Un valor menor significa que es más difícil detectarlo.</Spanish>
@@ -1729,7 +1741,7 @@
     </Key>
     <Key ID="STR_ENH_AUDIBLECOEF_TOOLTIP">
         <English>The audible coefficient determines how easy a unit can be heard by AI. A lower value means it is more difficult to hear it.</English>
-        <Italian>Il coefficiente audibile determina quanto facilmente l'AI possa sentire l'unità. Un valore basso significa che è piu difficile sentirla</Italian>
+        <Italian>Il coefficiente audibile determina quanto facilmente l'IA possa sentire l'unità. Un valore basso significa che è piu difficile sentirla</Italian>
         <Czech>Tento koeficient určuje jak snadno může být jednotka zaslechnuta umělou inteligencí. Nižší hodnota znamená že je jednotku hůře slyšet.</Czech>
         <French>Détermine la facilité avec laquelle l'unité peut être entendue par l'IA (valeur faible = plus difficile à entendre).</French>
         <Spanish>El coeficiente audible determina la facilidad con que una unidad puede ser escuchada por AI. Un valor menor significa que es más difícil escucharlo.</Spanish>
@@ -1842,6 +1854,7 @@
         <Chinesesimp>附加</Chinesesimp>
         <Chinese>附加</Chinese>
         <Spanish>Acoplar</Spanish>
+        <Italian>Fissa</Italian>
     </Key>
     <Key ID="STR_ENH_ATTACHTO_TOOLTIP">
         <English>Attaches this object to the closest object.</English>
@@ -1850,6 +1863,7 @@
         <Chinesesimp>将此对象附加到最近的对象上。</Chinesesimp>
         <Chinese>將此對象附加到最近的對像上。</Chinese>
         <Spanish>Acoplar este objeto al objeto más cercano.</Spanish>
+        <Italian>Fissa questo oggetto all' oggetto più vicino</Italian>
     </Key>
     <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
         <English>Unladen Weight</English>
@@ -1957,6 +1971,7 @@
         <Polish>Żaden obiekt nie został wybrany. Akcja anulowana!</Polish>
         <Chinesesimp>未选择实体。动作已取消！</Chinesesimp>
         <Chinese>未選擇實體。動作已取消！</Chinese>
+        <Italian>Nessuna entità selezionata.Azione annullata!</Italian>
     </Key>
     <Key ID="STR_ENH_ENABLE">
         <English>Enable</English>
@@ -1990,6 +2005,7 @@
         <Chinesesimp>您正在运行自定义版的3den增强。请确保您不会意外删除任务中的属性！</Chinesesimp>
         <Chinese>您正在運行自定義版的3den增強。請確保您不會意外刪除任務中的屬性！</Chinese>
         <Polish>Uruchomiono customową wersję 3den Enhanced. Upewnij się, że nie usuniesz przypadkowo atrybutów ze swojej misji!</Polish>
+        <Italian>Stai usando una versione personalizzata di 3den Enhanced. Assicurati di non rimuovere accdentalmente degli attributi dalla tua missione!</Italian>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
         <English>Center Position</English>
@@ -2329,7 +2345,7 @@
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
-        <Italian>Editoe del Briefing</Italian>
+        <Italian>Editor del Briefing</Italian>
         <Czech>Editor brífinku</Czech>
         <French>Éditeur de Briefing</French>
         <Spanish>Editor de briefing</Spanish>
@@ -2569,7 +2585,7 @@
     </Key>
     <Key ID="STR_ENH_PATROL_TOOLTIP">
         <English>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</English>
-        <Italian>Fa pattugliare un'area ad un gruppo dell'unità selezionata. Il valore definisce la distanza massima tra due waypoints della pattuglia. \n\n0 disattiva il pattugliamento.</Italian>
+        <Italian>Fa pattugliare un'area al gruppo di unità selezionate. Il valore definisce la distanza massima tra due waypoints della pattuglia. \n\n0 disattiva il pattugliamento.</Italian>
         <French>Fais patrouiller le groupe sélectionné. La valeur définit la distance max entre deux étapes de l'itinéraire.\n\n0 désactive la patrouille.</French>
         <Spanish>Hace que el grupo de la unidad seleccionada patrulle un área. El valor define la máx. distancia entre dos waypoints de patrulla. \n\n0 desactiva la patrulla.</Spanish>
         <German>Weist der Gruppe der ausgewählten Einheit ein Gebiet zum Patrouillieren zu. Der Wert definiert den maximalen Abstand zwischen den Wegpunkten.\n\n0 deaktiviert das Patrouillieren.</German>
@@ -2593,7 +2609,7 @@
     </Key>
     <Key ID="STR_ENH_MEASUREDISTANCE_DATA">
         <English>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</English>
-        <Italian>Distanza 2D / 3D:% 1 /% 2 m Tempo di viaggio (a piedi): ~% 3 min</Italian>
+        <Italian>Distanza 2D/3D: % 1 /%2 m Durata del viaggio (a piedi): ~ % 3 min</Italian>
         <Czech>Vzdálenost 2D/3D: %1 / %2 m Doba cesty (pěšky): ~ %3 min</Czech>
         <German>Distanz 2D/3D: %1 / %2 m Reisezeit (zu Fuß): ~ %3 min</German>
         <Chinesesimp>2D/3D距离: %1米/ %2米 旅行时间(步行):~ %3分钟</Chinesesimp>
@@ -2629,7 +2645,7 @@
     </Key>
     <Key ID="STR_ENH_HELP_SCRIPTINGBEGINNERS">
         <English>Scripting for Beginners</English>
-        <Italian>Scripting per principianti</Italian>
+        <Italian>Scripting per Principianti</Italian>
         <Czech>Skriptování pro začátečníky</Czech>
         <French>Débuter avec les Scripts</French>
         <Spanish>Scripting para novatos</Spanish>
@@ -2641,7 +2657,7 @@
     </Key>
     <Key ID="STR_ENH_HELP_AICOMPILATION">
         <English>AI Compilation List by Gunter Severloh</English>
-        <Italian>Compilation degli scripts per AI da Gunter Severloh</Italian>
+        <Italian>Compilation degli scripts per IA da Gunter Severloh</Italian>
         <French>Compilation de scripts pour l'IA par Gunter Severloh</French>
         <Spanish>Compilación de scripts por Gunter Severloh</Spanish>
         <German>KI Mod- und Skriptesammlung von Gunter Severloh</German>
@@ -2652,7 +2668,7 @@
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_GETMODULEINFORMATION">
         <English>Module Information</English>
-        <Italian>Informazione sul modulo</Italian>
+        <Italian>Informazioni sul modulo</Italian>
         <Czech>Informace o modulu</Czech>
         <French>Afficher la description du module</French>
         <Spanish>Mostrar descripción del módulo</Spanish>
@@ -2664,7 +2680,7 @@
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_SETTRIGGEROWNERPLAYER">
         <English>Set Player as Trigger Owner</English>
-        <Italian>Assegnare il giocatore a propietario del Trigger</Italian>
+        <Italian>Impostare il giocatore come propietario del Trigger</Italian>
         <Czech>Nastavit hráče jako vlastníka spínače</Czech>
         <French>Définir l'unité joueur en tant que propriétaire du déclencheur</French>
         <Spanish>Establecer jugador como propietario del trigger (activador)</Spanish>
@@ -2688,7 +2704,7 @@
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGFACTION">
         <English>Log Faction Names to Clipboard</English>
-        <Italian>Registra il nome della fazione sulla lavagnetta</Italian>
+        <Italian>Registra il nome della fazione negli Appunti</Italian>
         <Czech>Zaznamenat názvy frakcí do schránky</Czech>
         <French>Copier les noms des factions dans le presse-papiers</French>
         <Spanish>Registrar nombres de facción al portapepeles</Spanish>
@@ -2707,12 +2723,12 @@
         <Chinese>將變量名稱記錄到剪貼板</Chinese>
         <Czech>Kopírování názvů proměnných do schránky</Czech>
         <French>Copier les noms de variables dans le presse-papiers</French>
-        <Italian>Copiare i nomi delle variabili negli appunti</Italian>
+        <Italian>Copia i nomi delle variabili negli appunti</Italian>
         <Polish>Kopiowanie nazw zmiennych do schowka</Polish>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS3D">
         <English>Log Positions (3D) to Clipboard</English>
-        <Italian>Registra la posizione 3D sulla lavagnetta</Italian>
+        <Italian>Copia le posizioni (3D) negli Appunti</Italian>
         <German>Positionen (3D) in Zwischenablage kopieren</German>
         <Chinesesimp>记录位置（3D）到剪贴板</Chinesesimp>
         <Chinese>記錄位置（3D）到剪貼板</Chinese>
@@ -2748,7 +2764,7 @@
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGGRIDPOSITION">
         <English>Log Grid Position to Clipboard</English>
-        <Italian>Registra la posisione della griglia sulla lavagnetta.</Italian>
+        <Italian>Copia posisione della griglia negli Appunti.</Italian>
         <German>Rasterposition in Zwischenablage kopieren</German>
         <Chinesesimp>记录网格位置到剪贴板</Chinesesimp>
         <Chinese>記錄網格位置到剪貼板</Chinese>
@@ -2768,6 +2784,7 @@
         <Chinese>BLUFOR 重生票</Chinese>
         <Polish>Punkty odrodzenia BLUFOR</Polish>
         <Russian>Очки возрождения BLUFOR</Russian>
+        <Italian>Biglietti di Respawn BLUFOR</Italian>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_INDFOR_DISPLAYNAME">
         <English>Respawn Tickets INDFOR</English>
@@ -2779,6 +2796,7 @@
         <Chinese>獨立部隊重生票</Chinese>
         <Polish>Punkty odrodzenia INDFOR</Polish>
         <Russian>Очки возрождения INDFOR</Russian>
+        <Italian>Biglietti di Respawn INDFOR</Italian>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
         <English>Respawn Tickets OPFOR</English>
@@ -2790,6 +2808,7 @@
         <Chinese>OPFOR 重生票</Chinese>
         <Polish>Punkty odrodzenia OPFOR</Polish>
         <Russian>Очки возрождения OPFOR</Russian>
+        <Italian>Biglietti di Respawn OPFOR</Italian>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_CIVFOR_DISPLAYNAME">
         <English>Respawn Tickets CIVFOR</English>
@@ -2801,6 +2820,7 @@
         <Chinese>平民重生票</Chinese>
         <Polish>Punkty odrodzenia CYW</Polish>
         <Russian>Очки возрождения CIVFOR</Russian>
+        <Italian>Biglietti di Respawn CIVFOR</Italian>
     </Key>
     <Key ID="STR_ENH_SAVELOADOUT_DISPLAYNAME">
         <English>Save Loadout</English>
@@ -2812,10 +2832,12 @@
         <Chinese>保存裝備</Chinese>
         <Polish>Zapisz wyposażenie</Polish>
         <Russian>Сохранить экипировку</Russian>
+        <Italian>Salva l'Equipaggiamento</Italian>
     </Key>
     <Key ID="STR_ENH_SAVELOADOUT_TOOLTIP">
         <English>Restores the original loadout on respawn. Loadout can be changed by modifing ENH_SavedLoadout variable in player's namespace.</English>
         <German>Stellt das ursprüngliche Loadout beim Respawn wieder her. Die Ausrüstung kann durch Ändern der Variable ENH_SavedLoadout im Namensraum des Spielers geändert werden.</German>
+        <Italian>Ripristina l'equipaggiamento originale al respawn. L'equipaggiamento può essere cambiato modificando la variabile ENH_SavedLoadout nello spazio dei nomi del giocatore.</Italian>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
         <English>View Distance</English>
@@ -2827,6 +2849,7 @@
         <Chinese>視距</Chinese>
         <Polish>Zasięg widoku</Polish>
         <Russian>Дистанция обзора</Russian>
+        <Italian>Distanza di Visualizzazione</Italian>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_TOOLTIP">
         <English>Defines the view distance in meters. Keep in mind that this setting can be limited by either the server or the player's visual settings.</English>
@@ -2838,6 +2861,7 @@
         <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя.</Russian>
         <Chinesesimp>设置视距(米)。请记住，该设置可以被服务器或玩家的视频设置所限制。</Chinesesimp>
         <Chinese>設置視距(米)。請記住，該設置可以被服務器或玩家的視頻設置所限制。</Chinese>
+        <Italian>Definisce la distanza di visualizzazione in metri. Ricorda che questa impostazione può essere limitata dal server o dalle impostazioni visive del giocatore.</Italian>
     </Key>
     <Key ID="STR_ENH_OBJVIEWDISTANCE_TOOLTIP">
         <English>Defines the object view distance in meters. Keep in mind that this setting can be limited by either the server or the player's visual settings. Additionally, the object view distance cannot be higher than the view distance.</English>
@@ -2849,6 +2873,7 @@
         <Chinese>設置對象視距(米)。請記住，該設置可以被服務器或玩家的視頻設置所限制。此外，對象視距不能高於視距。</Chinese>
         <Polish>Pamiętaj że to ustawienie może być limitowane przez ustawienia serwera lub gracza. Dodatkowo, zasięg rysowania obiektów nie może być większy niż zasięg widzenia.</Polish>
         <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, дистанция видимости объектов не может быть больше дистанции обзора.</Russian>
+         <Italian>Definisce la distanza di visualizzazione degli oggetti in metri. Ricorda che questa impostazione può essere limitata dal server o dalle impostazioni visive del giocatore. Inoltre, la distanza di visualizzazione degli oggetti non può essere maggiore della distanza di visualizzazione.</Italian>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
         <English>Circular Pattern</English>
@@ -2860,6 +2885,7 @@
         <Polish>Wzór kołowy</Polish>
         <Spanish>En círculo</Spanish>
         <Russian>Круговой паттерн</Russian>
+        <Italian>Configurazione Circolare</Italian>
     </Key>
     <Key ID="STR_ENH_AIRDROP_CONDITION_TOOLTIP">
         <English>This condition has to be become true during the mission for the airdrop to start.</English>
@@ -2871,6 +2897,7 @@
         <Spanish>Esta condición tiene que ser verdad durante la misión para que la entre por paracaidas suceda al comienzo.</Spanish>
         <Chinesesimp>在任务执行之前，必须先实现此条件，才能开始空投。</Chinesesimp>
         <Chinese>在任務執行之前，必須先實現此條件，才能開始空投。</Chinese>
+        <Italian>Questa condizione deve diventare vera durante la missione per fare iniziare l'airdrop.</Italian>
     </Key>
     <Key ID="STR_ENH_AIRDROP_CLASSES_TOOLTIP">
         <English>Classes of the soldiers which should be dropped in format:\nClassname_1 Classname_2 Classname_n.</English>
@@ -2882,6 +2909,7 @@
         <Chinesesimp>空降的士兵类别格式应为:\nClassname_1、Classname_2、Classname_n.</Chinesesimp>
         <Chinese>空投的士兵類別格式應為:\nClassname_1、Classname_2、Classname_n.</Chinese>
         <Polish>Klasy żołnierzy, powinny zostać wprowadzone w formacie: \nClassname_1 Classname_2 </Polish>
+        <Italian>Classi dei soldati che devono essere lanciati nel formato:\nClassname_1 Classname_2 Classname_n.</Italian>
     </Key>
     <Key ID="STR_ENH_AMBIENTFLYBY_DESCRIPTION">
         <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
@@ -2892,6 +2920,7 @@
         <French>Fait apparaître une unité aérienne qui se déplace du point A au point B sans engager ni être engagée. Elle est définie comme captive et disparaît lorsqu'elle atteint sa destination. Les survols peuvent être stoppés en définissant 'ENH_AmbientFlyby_Enabled' en false sur le serveur.</French>
         <Chinesesimp>生成一个从A点移动到B点的空军单位，不与敌军交战。 它被设置为俘虏，并在到达目的地时自动消失。可以通过在服务器上将"ENH_AmbientFlyby_Enabled"设置为false来停止定点飞越。</Chinesesimp>
         <Chinese>生成一個從A點移動到B點的空軍單位，不與敵軍交戰。它被設置為俘虜，並在到達目的地時自動消失。可以通過在服務器上將"ENH_AmbientFlyby_Enabled"設置為false來停止定點飛越。</Chinese>
+        <Italian>Fa comparire un'unità aerea che si muove dal punto A al punto B senza ingaggiare ne essere ingaggiata.E' impostata come prigioniera e scomparirà appena raggiunta la sua destinazione.I sorvoli possono essere fermati impostando 'ENH_AmbientFlyby_Enabled' su falso nel server.</Italian>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_DESCRIPTION">
         <English>Plays a fake UAV observational sequence which serves as an establishing shot.</English>
@@ -2902,6 +2931,7 @@
         <French>Joue une fausse séquence d'observation drone pouvant servir à une introduction.</French>
         <Chinesesimp>临时创建无人机以创建初始图像</Chinesesimp>
         <Chinese>臨時創建無人機以創建初始圖像</Chinese>
+       
     </Key>
     <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
         <English>Shows an animated text. Can be used to display mission name.</English>
@@ -2912,6 +2942,7 @@
         <French>Affiche un texte animé. Peut être utilisé pour afficher le nom de la mission.</French>
         <Chinesesimp>显示动画文本。可用于显示任务名称。</Chinesesimp>
         <Chinese>顯示動畫文本。可用於顯示任務名稱。</Chinese>
+        <Italian>Mostra un testo animato.Può essere usato per mostrare il nome della missione</Italian>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_DESCRIPTION">
         <English>Shows the groups position on the map. The position is updated every second. If the group becomes empty, the marker gets deleted. The update process can be paused by setting the variable 'ENH_GroupMarker_Update' in the group's namespace to false.</English>
@@ -2923,6 +2954,7 @@
         <French>Affiche la position du groupe sur la carte. Cette position est mise à jour chaque seconde. Si le groupe devient vide, le marqueur sera supprimé. Le processus d'actualisation peut être mis en pause en définissant la variable 'ENH_GroupMarker_Update' dans le namespace du groupe à 'false'.</French>
         <Chinesesimp>在地图上显示小队位置。位置每秒更新一次。如果该小队为空，则标记将被删除。可以通过将小队名称空间中的变量"ENH_GroupMarker_Update"设置为false来暂停刷新。</Chinesesimp>
         <Chinese>在地圖上顯示小隊位置。位置每秒更新一次。如果該小隊為空，則標記將被刪除。可以通過將小隊名稱空間中的變量"ENH_GroupMarker_Update"設置為false來暫停刷新。</Chinese>
+        <Italian>Visualizza la posizione dei gruppi sulla mappa. La posizione è aggiornata ogni secondo. Se il gruppo diventa vuoto, l'indicatore viene eliminato.Il processo di aggiornamento può essere interrotto impostando la variabile 'ENH_GroupMarker_Update' nello spazio nomi del gruppo a falso</Italian>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DESCRIPTION">
         <English>Ends the mission with custom ending if a certain count of entities of given side was killed. Can be used to fail mission for civilian casualties. In Multiplayer, the mission will be ended for all clients. Custom briefing have to be define in mission config.</English>
@@ -2932,6 +2964,7 @@
         <French>Termine la mission avec une fin de mission personnalisée si un certain nombre d'unités d'un certain camp sont morts. Peut être employée pour l'échec d'une mission en cas de pertes civiles. En multijoueur, la mission sera terminée pour tous les clients. Le débriefing personnalisé doit être défini dans la configuration de la mission.</French>
         <Chinesesimp>如果给定一方的一定数量实体被杀死，则以自定义结局结束任务。可用于使平民伤亡的任务失败。在多人游戏中，所有玩家的任务都将结束。自定义简报必须在任务配置中定义。</Chinesesimp>
         <Chinese>如果給定一方的一定數量實體被殺死，則以自定義結局結束任務。可用於使平民傷亡的任務失敗。在多人遊戲中，所有玩家的任務都將結束。自定義簡報必須在任務配置中定義。</Chinese>
+        <Italian>Termina la missione con un finale personalizzato se un certo numero di entità di una fazione è stato ucciso.Può essere usato per far fallire la missione nel caso di vittime civili. Nel Multiplayer, la missione verra terminata per tutti i client.Un briefing personalizzato deve essere definito nella configurazione della missione.</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_HEADER">
         <English>Garrison Buildings</English>
@@ -2943,6 +2976,7 @@
         <Polish>Obsadź budynki</Polish>
         <Russian>Здания гарнизона</Russian>
         <Spanish>Guarnicionar edificios</Spanish>
+        <Italian>Occupa gli edifici</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_MODE">
         <English>Mode</English>
@@ -2954,6 +2988,7 @@
         <Polish>Tryb</Polish>
         <Russian>Режим</Russian>
         <Spanish>Modo</Spanish>
+        <Italian>Modalità</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_BLACKLIST">
         <English>Blacklist</English>
@@ -2965,6 +3000,7 @@
         <Polish>Czarna lista</Polish>
         <Russian>Черный список</Russian>
         <Spanish>Lista negra</Spanish>
+        <Italian>Lista nera</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_WHITELIST">
         <English>Whitelist</English>
@@ -2976,6 +3012,7 @@
         <Polish>Whitelista</Polish>
         <Russian>Белый список</Russian>
         <Spanish>Lista blanca</Spanish>
+        <Italian>Lista Bianca</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_UPDATESELECTION">
         <English>Update Selection</English>
@@ -2987,6 +3024,7 @@
         <Polish>Aktualizacja Wybór</Polish>
         <Russian>Выбор обновления</Russian>
         <Spanish>Actualizar la selección</Spanish>
+        <Italian>Aggiorna la selezione</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_DESCRIPTION">
         <English>Enables player and AI to respawn in single player scenarios. Only units with Single Player Respawn enabled in their attributes are affected. For multiplayer scenarios use the multiplayer respawn system.</English>
@@ -2997,6 +3035,7 @@
         <Chinesesimp>使玩家和AI在单人游戏场景中重生。仅在其属性中启用了“单人重生”的单位才会受到影响。对于多人游戏场景，请使用多人游戏重生系统。</Chinesesimp>
         <Chinese>使玩家和AI在單人遊戲場景中重生。僅在其屬性中啟用了“單人重生”的單位才會受到影響。對於多人遊戲場景，請使用多人遊戲重生系統。</Chinese>
         <Polish>Umożliwia graczowi i AI odradzanie się w scenariuszach dla jednego gracza. Dotyczy to tylko jednostek z włączonym odradzaniem dla pojedynczego gracza w ich atrybutach. W scenariuszach wieloosobowych użyj systemu odradzania się dla wielu graczy.</Polish>
+        <Italian>Permette a giocatore e IA di respawnare negli scenari Singleplayer.Solo le unità con "Respawn Giocatore Singolo" abilitato negli attributi sono interessate. Per scenari Multigiocatore usare il sistema di respawn multigiocatore.</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
         <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
@@ -3006,6 +3045,7 @@
         <French>Tous les marqueurs avec le préfix 'respawn_CAMP' comptent comme des points de réapparition. Par exemple, les unités OPFOR peuvent utiliser tous les marqueurs respawn_est_xxx comme points de réapparition.\n\n* respawn_east - réapparition OPFOR.\n* respawn_west - réapparition BLUFOR.\n* respawn_guerilla - réapparition INDFOR.\n* respawn_civilian - réapparition CIVFOR.</French>
         <Chinesesimp>所有带有"respawn_SIDE"前缀的标记都计为重生位置。例如，OPFOR单位可以将所有标记名为respawn_east_xxx作为重生位置。\n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 独立部队重生 \n* respawn_civilian - 平民重生</Chinesesimp>
         <Chinese>所有帶有"respawn_SIDE"前綴的標記都計為重生位置。例如，OPFOR單位可以將所有標記名為respawn_east_xxx作為重生位置。 \n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 獨立部隊重生 \n* respawn_civilian - 平民重生</Chinese>
+        <Italian>Tutti gli indicatori col prefisso 'respawn_SIDE' valgono come posizioni di respawn. Per esempio, le unità OPFOR possono usare tutti gli indicatori chiamati respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
         <English>Respawn at nearest Respawn Position</English>
@@ -3016,6 +3056,7 @@
         <Chinesesimp>在最近的重生位置重生</Chinesesimp>
         <Chinese>在最近的重生位置重生</Chinese>
         <Polish>Odrodzenie na najbliżej Pozycji Odrodzenia</Polish>
+        <Italian>Respawn alla poszione di respawn più vicina</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION">
         <English>Respawn at random Respawn Position</English>
@@ -3026,6 +3067,7 @@
         <Chinesesimp>随机重生位置重生</Chinesesimp>
         <Chinese>隨機重生位置重生</Chinese>
         <Polish>Odrodzenie na losowej Pozycji Odrodzenia</Polish>
+        <Italian>Respawn in una posizione di respawn casuale</Italian>
     </Key>
     <Key ID="STR_ENH_SPR">
         <English>Single Player Respawn</English>
@@ -3036,6 +3078,7 @@
         <Chinesesimp>单人玩家重生</Chinesesimp>
         <Chinese>單人玩家重生</Chinese>
         <Polish>Odrodzenie w trybie Single Player</Polish>
+        <Italian>Respawn Singolo Giocatore</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_ONRESPAWNCODE_DISPLAYNAME">
         <English>Respawn Code</English>
@@ -3044,6 +3087,7 @@
         <Chinese>重生代碼</Chinese>
         <Polish>Kod po odrodzeniu</Polish>
         <Spanish>Código de respawn</Spanish>
+        <Italian>Codice di Respawn</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP">
         <English>Code executed after respawn. _this refers to the respawned entity.</English>
@@ -3052,6 +3096,7 @@
         <Chinese>重生後執行的代碼。 _this指的是重生實體。</Chinese>
         <Polish>Kod wykonywany po odrodzeniu. _this odnosi się do odrodzonej jednostki.</Polish>
         <Spanish>Código ejecutado después del respawn. _this Se refiere a la entidad reaparecida.</Spanish>
+        <Italian>Codice eseguito dopo il respawn. _this si riferisce all'unità rinata</Italian>
     </Key>
     <Key ID="STR_ENH_GARRISON_NOTIFICATION">
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
@@ -3164,7 +3209,7 @@
     </Key>
     <Key ID="STR_ENH_MODULEINFORMATION_DUPLICATE">
         <English>Duplicate:</English>
-        <Italian>Duplicato:</Italian>
+        <Italian>Duplica:</Italian>
         <Czech>Duplikovat:</Czech>
         <German>Duplizieren:</German>
         <Chinesesimp>复制：</Chinesesimp>
@@ -3236,7 +3281,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_REPLACE">
         <English>Replace</English>
-        <Italian>Rimpiazza</Italian>
+        <Italian>Sostituisci</Italian>
         <Czech>Nahradit</Czech>
         <German>Ersetzen</German>
         <Chinesesimp>替换</Chinesesimp>
@@ -3248,7 +3293,7 @@
     </Key>
     <Key ID="STR_ENH_BATCHREPLACE_REPLACEWITH">
         <English>Replace with:</English>
-        <Italian>Rimpiazza con:</Italian>
+        <Italian>Sostituisci con:</Italian>
         <Czech>Nahradit za:</Czech>
         <German>Ersetzen durch:</German>
         <Chinesesimp>替换为：</Chinesesimp>
@@ -3357,7 +3402,7 @@
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP">
         <English>Path which leads to script file.</English>
-        <Italian>Percorso che conduce all'archivio dello script.</Italian>
+        <Italian>Percorso che conduce al file dello script.</Italian>
         <German>Pfad der Skriptdatei.</German>
         <Chinesesimp>指向脚本文件的路径。</Chinesesimp>
         <Chinese>指向腳本文件的路徑。</Chinese>
@@ -3441,7 +3486,7 @@
     </Key>
     <Key ID="STR_ENH_LOCATIONLIST_SHIPWRECKS">
         <English>Shipwrecks</English>
-        <Italian>Relitti navali</Italian>
+        <Italian>Relitti</Italian>
         <German>Schiffswracke</German>
         <Chinesesimp>沉船残骸</Chinesesimp>
         <Chinese>沉船殘骸</Chinese>
@@ -3519,6 +3564,7 @@
         <Chinese>繪製觸發區域</Chinese>
         <Polish>Rysuj obszary wyzwalaczy</Polish>
         <Spanish>Dibujar áreas de activación</Spanish>
+        <Italian>Disegna le aree Trigger</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
         <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
@@ -3528,6 +3574,7 @@
         <Chinese>觸發區域將在預覽期間繪製。小區域觸發器將不會繪製。</Chinese>
         <Polish>Obszary triggerów będą rysowane w czasie podglądu. Małe obszary wyzwalaczy nie będą rysowane.</Polish>
         <Spanish>Las áreas de activación se dibujarán durante la vista previa. No se dibujan las áreas de pequeños disparadores</Spanish>
+        <Italian>Le aree Trigger saranno disegnate durante l'anteprima. Aree Trigger di piccole dimensioni non sono disegnate.</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
         <English>Log active Scripts</English>
@@ -3537,6 +3584,7 @@
         <Chinesesimp>记录激活的脚本</Chinesesimp>
         <Chinese>記錄激活的腳本</Chinese>
         <Polish>Zarejestruj aktywne skrypty</Polish>
+        <Italian>Registra gli Script Attivi</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
         <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
@@ -3546,6 +3594,7 @@
         <Chinesesimp>所有激活的脚本和任务事件处理程序都将记录到.rpt日志文件中。</Chinesesimp>
         <Chinese>所有激活的腳本和任務事件處理程序都將記錄到.rpt日誌文件中。</Chinese>
         <Polish>Wszystkie aktywne skrypty i event handlery misji zostanązapisane to pliku .rpt</Polish>
+        <Italian>Tutti gli script attivi e i gestori d'eventi della missione saranno registrati nel file .rpt</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
         <English>Draws information of nearby units and vehicles.</English>
@@ -3657,10 +3706,12 @@
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_DISPLAYNAME">
         <English>Show Groups</English>
         <German>Gruppen anzeigen</German>
+        <Italian>Mostra Gruppi</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
         <English>All groups and information about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
         <German>Alle Gruppen und Informationen über diese werden in 3D und auf der Karte angezeigt. Außerdem können Gruppen gelöscht und ihre Wegpunkte angezeigt werden.</German>
+        <Italian>Tutti i gruppi e le relative informazioni saranno mostrate in 3D e sulla mappa. Inoltre, i gruppi possono essere cancellati e i waypoint possono essere mostrati.</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
         <English>Kill Units (BLUFOR)</English>
@@ -3748,7 +3799,7 @@
     </Key>
     <Key ID="STR_ENH_FOLDER_ABOUT">
         <English>About 3den Enhanced</English>
-        <Italian>Approposito di 3den Enhanced</Italian>
+        <Italian>A proposito di 3den Enhanced</Italian>
         <German>Über 3den Enhanced</German>
         <Spanish>Acerca de 3den Enhanced</Spanish>
         <Chinesesimp>关于3DEN增强版</Chinesesimp>
@@ -3761,6 +3812,7 @@
     <Key ID="STR_ENH_SELECTLAYER_MOVETOLAYER">
         <English>Move to layer...</English>
         <German>Nach Layer verschieben...</German>
+        <Italian>Sposta al Livello...</Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_PYLONS">
         <English>Pylon Tools</English>
@@ -3769,6 +3821,7 @@
         <Chinesesimp>挂架工具</Chinesesimp>
         <Chinese>掛架工具</Chinese>
         <Spanish>Herramientas de pilón</Spanish>
+        <Italian>Strumenti Piloni</Italian>
     </Key>
     <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
         <English>Place entity by double clicking.</English>
@@ -3777,6 +3830,7 @@
         <Chinesesimp>通过双击来放置实体。</Chinesesimp>
         <Chinese>通過雙擊來放置實體。</Chinese>
         <Spanish>Poner una entidad con doble clic</Spanish>
+        <Italian>Posiziona un'entità facendo doppio click.</Italian>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
         <English>Add to Favorites</English>
@@ -3785,6 +3839,7 @@
         <Chinesesimp>添加至收藏夹</Chinesesimp>
         <Chinese>添加到收藏夾</Chinese>
         <Spanish>Añadir a favoritos</Spanish>
+        <Italian>Aggiungi ai preferiti</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYPYLONS">
         <English>Copy Pylon Settings</English>
@@ -3793,6 +3848,7 @@
         <Chinesesimp>复制挂架设置</Chinesesimp>
         <Chinese>複製掛架設置</Chinese>
         <Spanish>Copiar configuración de pilones</Spanish>
+        <Italian>Copia impostazioni Piloni</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
         <English>Apply Pylon Settings</English>
@@ -3801,6 +3857,7 @@
         <Chinesesimp>应用挂架设置</Chinesesimp>
         <Chinese>應用掛架設置</Chinese>
         <Spanish>Aplicar configuración de pilones</Spanish>
+        <Italian>Applica impostazioni Piloni</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
         <English>Export Pylons to SQF</English>
@@ -3809,6 +3866,7 @@
         <Chinesesimp>将挂架导出为SQF</Chinesesimp>
         <Chinese>將掛架導出為SQF</Chinese>
         <Spanish>Exportar pilones a SQF</Spanish>
+        <Italian>Esporta Piloni in SQF </Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_VHC">
         <English>Vehicle Customization Tools</English>
@@ -3817,6 +3875,7 @@
         <Chinesesimp>车辆自定义工具</Chinesesimp>
         <Chinese>車輛自定義工具</Chinese>
         <Spanish>Herramientas de personalización de vehículos</Spanish>
+        <Italian>Strumenti di personalizzazione Veicoli</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYVHC">
         <English>Copy Vehicle Customization</English>
@@ -3825,6 +3884,7 @@
         <Chinesesimp>复制车辆自定义</Chinesesimp>
         <Chinese>複製車輛自定義</Chinese>
         <Spanish>Copiar personalización de vehículo</Spanish>
+        <Italian>Copia Personalizzazione Veicolo</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYVHC">
         <English>Apply Vehicle Customization</English>
@@ -3833,6 +3893,7 @@
         <Chinesesimp>应用车辆自定义</Chinesesimp>
         <Chinese>應用車輛自定義</Chinese>
         <Spanish>Aplicar personalización de vehículo</Spanish>
+        <Italian>Applica Personalizzazione Veicolo</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
         <English>Open Legacy Functions Viewer</English>
@@ -3840,6 +3901,7 @@
         <Chinesesimp>打开旧版Functions查看器</Chinesesimp>
         <Chinese>打開舊版Functions查看器</Chinese>
         <Spanish>Abrir visor de funciones heredado</Spanish>
+        <Italian>Apri Visualizzatore Funzioni Legacy</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_OTHERFILES">
         <English>Other Files</English>
@@ -3847,6 +3909,7 @@
         <Chinesesimp>其它文件</Chinesesimp>
         <Chinese>其它文件</Chinese>
         <Spanish>Otros archivos</Spanish>
+        <Italian>Altri File</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LOADFILE">
         <English>Load File</English>
@@ -3854,6 +3917,7 @@
         <Chinesesimp>加载文件</Chinesesimp>
         <Chinese>加載文件</Chinese>
         <Spanish>Cargar archivo</Spanish>
+        <Italian>Carica File</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE">
         <English>Preprocess File</English>
@@ -3861,6 +3925,7 @@
         <Chinesesimp>预处理文件</Chinesesimp>
         <Chinese>預處理文件</Chinese>
         <Spanish>Procesar archivo</Spanish>
+        <Italian>Preprocessa File</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES">
         <English>Preprocess File with Line Numbers</English>
@@ -3868,6 +3933,7 @@
         <Chinesesimp>带有行号的预处理文件</Chinesesimp>
         <Chinese>帶有行號的預處理文件</Chinese>
         <Spanish>Procesar archivo con número de líneas</Spanish>
+        <Italian>Preprocessa File con numeri di riga </Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG">
         <English>Addon Config</English>
@@ -3875,6 +3941,7 @@
         <Chinesesimp>Addon Config</Chinesesimp>
         <Chinese>Addon Config</Chinese>
         <Spanish>Añadir configuración</Spanish>
+        <Italian>Configurazione Addon</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
         <English>Scenario Config</English>
@@ -3882,6 +3949,7 @@
         <Chinesesimp>场景Config</Chinesesimp>
         <Chinese>場景Config</Chinese>
         <Spanish>Configuración de escenario</Spanish>
+        <Italian>Configurazione Scenario</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
         <English>Campaign Config</English>
@@ -3889,6 +3957,7 @@
         <Chinesesimp>战役Config</Chinesesimp>
         <Chinese>戰役Config</Chinese>
         <Spanish>Configuración de campaña</Spanish>
+        <Italian>configurazione Campagna</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
         <English>Randomize Vehicle Customization</English>
@@ -3897,6 +3966,7 @@
         <Chinesesimp>随机化车辆自定义</Chinesesimp>
         <Chinese>隨機化車輛自定義</Chinese>
         <Spanish>Aleatorizar personalización de vehículo</Spanish>
+        <Italian>Randomizza Personalizzazione Veicolo</Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_WIKI">
         <English>Community Wiki</English>
@@ -3937,7 +4007,7 @@
     </Key>
     <Key ID="STR_ENH_FOLDER_DEBUGTOOLS">
         <English>Debug Tools</English>
-        <Italian>Strumento di debug.</Italian>
+        <Italian>Strumenti di debug.</Italian>
         <Czech>Nástroje pro debug</Czech>
         <French>Outil de débugage</French>
         <Spanish>Herramientas de depuración</Spanish>
@@ -3949,7 +4019,7 @@
     </Key>
     <Key ID="STR_ENH_FOLDER_LOADOUTTOOLS">
         <English>Loadout Tools</English>
-        <Italian>Strumento di equipaggiamento.</Italian>
+        <Italian>Strumenti per l'equipaggiamento.</Italian>
         <Czech>Nástroje pro výstroj</Czech>
         <French>Outil d'équipement</French>
         <Spanish>Herramientas de equipamiento</Spanish>
@@ -3961,7 +4031,7 @@
     </Key>
     <Key ID="STR_ENH_FOLDER_GUI">
         <English>GUI Tools</English>
-        <Italian>Strumento per l'interfaccia GUI</Italian>
+        <Italian>Strumenti per l'interfaccia</Italian>
         <Czech>Nástroje pro rozhraní GUI</Czech>
         <German>GUI-Werkzeuge</German>
         <French>Outils d'interface graphique </French>
@@ -4012,7 +4082,7 @@
     </Key>
     <Key ID="STR_ENH_ABOUT_TRANSLATION">
         <English>Help Translating</English>
-        <Italian>Aiuto per la traduzione</Italian>
+        <Italian>Aiuta la traduzione</Italian>
         <German>Beim Übersetzen helfen</German>
         <Spanish>Ayuda para traducir</Spanish>
         <Chinesesimp>翻译帮助</Chinesesimp>
@@ -4053,7 +4123,7 @@
         <Chinese>切換Alpha標記</Chinese>
         <Czech>Přepínání značky Alpha</Czech>
         <French>Basculer le marqueur Alpha</French>
-        <Italian>Alterna l'alfa al marker</Italian>
+        <Italian>Attiva/Disattiva Indicatore Alfa</Italian>
         <Polish>Przełączanie znacznika Alfa</Polish>
         <Russian>Переключение маркера Альфа</Russian>
         <Spanish>Conmutar marcador alfa</Spanish>
@@ -4108,7 +4178,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
-        <Italian>Editore del briefing</Italian>
+        <Italian>Editor del briefing</Italian>
         <Czech>Editor brífinku</Czech>
         <French>Éditeur de briefing</French>
         <Spanish>Editor de briefing</Spanish>
@@ -4120,7 +4190,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMDIR">
         <English>Randomise Direction</English>
-        <Italian>Direzione casuale</Italian>
+        <Italian>Randomizza Direzione</Italian>
         <Czech>Náhodný směr</Czech>
         <French>Orientation aléatoire</French>
         <Spanish>Dirección aleatoria</Spanish>
@@ -4156,7 +4226,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_ORIENTATENORTH">
         <English>Orientate North</English>
-        <Italian>Orienta a Nord.</Italian>
+        <Italian>Orienta a Nord</Italian>
         <Czech>Orientovat severně</Czech>
         <French>Orienter vers le Nord</French>
         <Spanish>Orientar al norte</Spanish>
@@ -4216,7 +4286,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES">
         <English>Export GUI Base Classes</English>
-        <Italian>Esporta le classi di base GUI (TUTTE).</Italian>
+        <Italian>Esporta le classi di base GUI.</Italian>
         <French>Exporter les classes GUI</French>
         <Spanish>Exportar clases (classes) del GUI base</Spanish>
         <German>GUI Klassen exportieren</German>
@@ -4233,6 +4303,7 @@
         <Spanish>Exporta clases base de Eden Editor como ctrlStatic o ctrlStaticPicture.</Spanish>
         <Chinesesimp>导出Eden编辑器基本类别，如ctrlStatic或ctrlStaticPicture。</Chinesesimp>
         <Chinese>導出Eden編輯器基本類別，如ctrlStatic或ctrlStaticPicture。</Chinese>
+        <Italian>Esporta le classi di base dell' Eden Editor come ctrlStatic o ctrlStaticPicture.</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
         <English>Attribute %1 was set to %2.</English>
@@ -4242,6 +4313,7 @@
         <Chinesesimp>属性 %1 已设置为 %2.</Chinesesimp>
         <Chinese>屬性 %1 已設置為 %2.</Chinese>
         <Polish>Atrybut %1 został ustawiony na %2</Polish>
+        <Italian>L'attributo %1 era impostato a %2.</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFING_TOOLTIP">
         <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
@@ -4250,6 +4322,7 @@
         <Chinesesimp>为指定一方的所有玩家创建简报词条。你也可以插入用简报编辑器创建的格式化文本。更多信息请参见BI Wiki上的'createDiaryRecord'。\n\n如果提供了一个stringtable 词条，简报将以玩家的语言显示。</Chinesesimp>
         <Chinese>為指定一方的所有玩家創建簡報詞條。你也可以插入用簡報編輯器創建的格式化文本。更多信息請參見BI Wiki上的'createDiaryRecord'。 \n\n如果提供了一個stringtable詞條，簡報將以玩家的語言顯示。</Chinese>
         <Spanish>Crea Briefings para todos los jugadores de un bando determinado. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información.\n\n Si se proporciona una entrada de Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
+        <Italian>Crea entrate del briefing per tutti i giocatori di una data fazione. Puoi anche inserire testo formattato creato con l'editor Briefing. Vedi sulla Wiki per più informazioni.\n\nSe viene fornita una voce stringtable il briefing verrà mostrato nella lingua del giocatore.</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
         <English>Exports all GUI base classes.</English>
@@ -4258,6 +4331,7 @@
         <Spanish>Exporta todas las clases base de GUI.</Spanish>
         <Chinesesimp>导出所有 GUI 基本类别。</Chinesesimp>
         <Chinese>導出所有 GUI 基本類別。</Chinese>
+        <Italian>Esporta tutte le classi di base GUI.</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC">
         <English>Classic</English>
@@ -4266,6 +4340,7 @@
         <Spanish>Clásico</Spanish>
         <Chinesesimp>经典</Chinesesimp>
         <Chinese>經典</Chinese>
+        <Italian>Classico</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP">
         <English>Exports classic base classes like RscText or RscPicture.</English>
@@ -4274,6 +4349,7 @@
         <Spanish>Exporta clases base clásicas como RscText o RscPicture.</Spanish>
         <Chinesesimp>导出经典的基本类别，例如RscText或RscPicture。</Chinesesimp>
         <Chinese>導出經典的基本類別，例如RscText或RscPicture。</Chinese>
+        <Italian>Esporta le classi di base classiche come RscText o RscPicture.</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON">
         <English>Add-on</English>
@@ -4282,6 +4358,7 @@
         <Spanish>Añadido (Add-on)</Spanish>
         <Chinesesimp>附加</Chinesesimp>
         <Chinese>附加</Chinese>
+        <Italian>Add-on</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP">
         <English>Uses 'class' keyword for use in config.cpp.</English>
@@ -4290,6 +4367,7 @@
         <Spanish>Utiliza la palabra clave 'class' para usar en config.cpp.</Spanish>
         <Chinesesimp>在config.cpp中使用'class'关键字.</Chinesesimp>
         <Chinese>在config.cpp中使用'class'關鍵字.</Chinese>
+        <Italian>Usare la parola chiave'class' per usi nel file config.cpp</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP">
         <English>Uses 'import' keyword for use in description.ext.</English>
@@ -4298,10 +4376,11 @@
         <Spanish>Utiliza la palabra clave 'import' para usar en description.ext</Spanish>
         <Chinesesimp>在description.ext中使用'import'关键字.</Chinesesimp>
         <Chinese>在description.ext中使用'import'關鍵字.</Chinese>
+        <Italian>Usare la parola chiave 'import' per usi nel file description.ext</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
         <English>Open GUI Test Grids</English>
-        <Italian>Apre la grilglia di prova GUI</Italian>
+        <Italian>Apri le grilglie di prova GUI</Italian>
         <French>Afficher les grilles de test GUI</French>
         <Spanish>Abrir rejillas de pruebas del GUI</Spanish>
         <German>GUI Testraster öffnen</German>
@@ -4372,7 +4451,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_CLEARCHAT">
         <English>Clear Chat</English>
-        <Italian>Cancella la Conversazione</Italian>
+        <Italian>Cancella la Chat</Italian>
         <German>Chat leeren</German>
         <Chinesesimp>清除聊天</Chinesesimp>
         <Chinese>清除聊天</Chinese>
@@ -4384,7 +4463,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_BATCHREPLACE">
         <English>Batch Replace</English>
-        <Italian>Sostituzione batch</Italian>
+        <Italian>Sostituzione di gruppo</Italian>
         <German>Objekte ersetzen</German>
         <Chinesesimp>批量替换</Chinesesimp>
         <Chinese>批量替換</Chinese>
@@ -4396,7 +4475,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_DELETEEMPTYLAYERS">
         <English>Delete Empty Layers</English>
-        <Italian>Cancella strati vuoti</Italian>
+        <Italian>Cancella Livelli vuoti</Italian>
         <German>Leere Ebenen löschen</German>
         <Chinesesimp>删除空图层</Chinesesimp>
         <Chinese>刪除空圖層</Chinese>
@@ -4457,18 +4536,22 @@
     <Key ID="STR_ENH_TOOLS_TOGGLEISLOCALONLY">
         <English>Toggle Local Object</English>
         <German>Zwischen lokalem Objekt umschalten</German>
+        <Italian>Alterna Oggetto Locale</Italian>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_RESTORESELECTION">
         <English>Restore original selection</English>
         <German>Ursprüngliche Auswahl wiederherstellen</German>
+        <Italian>Ripristina selezione originale</Italian>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER">
         <English>Selection Filter</English>
         <German>Auswahlfilter</German>
+        <Italian>Filtro di selezione</Italian>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_CONFIRMSELECTION">
         <English>Confirm selection</English>
         <German>Auswahlbestätigen</German>
+        <Italian>Conferma Selezione</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
@@ -4502,6 +4585,7 @@
         <Chinesesimp>命令(功能排列)</Chinesesimp>
         <Chinese>命令(功能排列)</Chinese>
         <Polish>Komendy według funkcjonalności</Polish>
+        <Italian>Comandi ordinati per Funzionalità</Italian>
     </Key>
     <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
         <English>Description.ext</English>
@@ -4511,6 +4595,7 @@
         <Chinesesimp>Description.ext</Chinesesimp>
         <Chinese>Description.ext</Chinese>
         <Polish>Description.ext</Polish>
+        <Italian>Description.ext</Italian>
     </Key>
     <Key ID="STR_ENH_MENUSTRIPENTRIES">
         <English>Menu Strip Entries</English>
@@ -4519,6 +4604,7 @@
         <Spanish>Entradas de la tira de menú</Spanish>
         <Chinesesimp>菜单栏条目</Chinesesimp>
         <Chinese>菜單欄條目</Chinese>
+        <Italian>Rimuovi voci Menù</Italian>
     </Key>
     <Key ID="STR_ENH_MENUSTRIPENTRIES_TOOLTIP">
         <English>Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.\nChanges require a restart of Eden Editor to take effect!</English>
@@ -4527,10 +4613,11 @@
         <Spanish>Desmarque las entradas para ocultarlas. Al desmarcar las carpetas, se eliminarán todas las entradas de la carpeta. \n ¡Los cambios requieren reiniciar Eden Editor para que surtan efecto!</Spanish>
         <Chinesesimp>取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。\n更改需要重新启动Eden编辑器才能生效！</Chinesesimp>
         <Chinese>取消選中條目以隱藏它們。取消選中文件夾將導致該文件夾中的所有條目被刪除。\n更改需要重新啟動Eden編輯器才能生效！</Chinese>
+        <Italian>Deseleziona dalle entrate per nasconderle. Deselezionare le cartelle causerà la rimozione di tutte le entrate della cartella. \nCambiamenti necessitano di un riavvio dell Eden Editor per avere effetto! </Italian>
     </Key>
     <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
         <English>Guide: Mission &amp; Campaign making</English>
-        <Italian>Guida: Missioni e Campagna</Italian>
+        <Italian>Guida: Creazione Missioni e Campagne</Italian>
         <Czech>Návod: vytváření misí &amp; kampaní</Czech>
         <French>Guide : créer une Mission/Campagne</French>
         <Spanish>Guía: Misión y Campaña</Spanish>
@@ -4578,7 +4665,7 @@
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_LOGPOSITIONS2D">
         <English>Log Positions (2D) to Clipboard</English>
-        <Italian>Registra la posizione 2D sulla lavagnetta</Italian>
+        <Italian>Registra la posizione 2D negli appunti</Italian>
         <German>Positionen (2D) in Zwischenablage kopieren</German>
         <Chinesesimp>记录位置（2D）到剪贴板</Chinesesimp>
         <Chinese>記錄位置（2D）到剪貼板</Chinese>
@@ -4598,6 +4685,7 @@
         <Chinese>啟用動態小隊系統</Chinese>
         <Polish>Pozwala na system "Dynamicznych grup"</Polish>
         <Russian>Включает систему динамических групп.</Russian>
+        <Italian>Abilita il sistema Gruppi Dinamici</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICGROUPS_DISPLAYNAME">
         <English>Dynamic Groups</English>
@@ -4609,6 +4697,7 @@
         <Spanish>Dynamic Groups</Spanish>
         <Chinesesimp>动态小队</Chinesesimp>
         <Chinese>動態小隊</Chinese>
+        <Italian>Gruppi Dinamici</Italian>
     </Key>
     <Key ID="STR_ENH_OBJVIEWDISTANCE_DISPLAYNAME">
         <English>Object View Distance</English>
@@ -4620,6 +4709,7 @@
         <Chinese>對象視距</Chinese>
         <Polish>Zasięg rysowania obiektów</Polish>
         <Russian>Дистанция отображения объектов</Russian>
+        <Italian>Distanza di Visualizzazione Oggetti</Italian>
     </Key>
     <Key ID="STR_ENH_TIMEMULTIPLIER_DISPLAYNAME">
         <English>Time Multiplier</English>
@@ -4631,6 +4721,7 @@
         <Chinese>時間加速</Chinese>
         <Polish>Mnożnik czasu</Polish>
         <Russian>Множитель времени</Russian>
+        <Italian>Moltiplicatore del Tempo</Italian>
     </Key>
     <Key ID="STR_ENH_TIMEMULTIPLIER_TOOLTIP">
         <English>Sets how fast the time will pass.</English>
@@ -4664,6 +4755,7 @@
         <Polish>3DEN Radio</Polish>
         <Chinesesimp>3DEN无线电</Chinesesimp>
         <Chinese>3DEN無線電</Chinese>
+        <Italian>Radio 3DEN</Italian>
     </Key>
     <Key ID="STR_ENH_3DENRADIO_SONG">
         <English>Song:</English>
@@ -4675,6 +4767,7 @@
         <Polish>Piosenka:</Polish>
         <Chinesesimp>歌曲:</Chinesesimp>
         <Chinese>歌曲:</Chinese>
+        <Italian>Canzone:</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_SHOWTITLE">
         <English>Show Title</English>
@@ -4686,6 +4779,7 @@
         <Polish>Pokaż tytuł</Polish>
         <Chinesesimp>显示标题</Chinesesimp>
         <Chinese>顯示標題</Chinese>
+        <Italian>Mostra Titolo</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
         <English>Hide Title</English>
@@ -4697,6 +4791,7 @@
         <Polish>Ukryj tytuł</Polish>
         <Chinesesimp>隐藏标题</Chinesesimp>
         <Chinese>隱藏標題</Chinese>
+        <Italian>Nascondi Titolo</Italian>
     </Key>
     <Key ID="STR_ENH_SAM_APPLYATTRIBUTE">
         <English>Apply Attribute</English>
@@ -4708,6 +4803,7 @@
         <Polish>Zastosuj atrybut</Polish>
         <Chinesesimp>应用属性</Chinesesimp>
         <Chinese>應用屬性</Chinese>
+        <Italian>Applica Attributi</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_TEMPLATES">
         <English>Templates</English>
@@ -4796,6 +4892,7 @@
         <Polish>Szerokość</Polish>
         <Russian>Ширина</Russian>
         <Spanish>Anchura</Spanish>
+        <Italian>Larghezza</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_HEIGHT">
         <English>Height</English>
@@ -4807,6 +4904,7 @@
         <Polish>Wysokość</Polish>
         <Russian>Высота</Russian>
         <Spanish>Altura</Spanish>
+        <Italian>Altezza</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_EXPRESSION">
         <English>Expression</English>
@@ -4818,6 +4916,7 @@
         <Polish>Ekspresja</Polish>
         <Russian>Выражение</Russian>
         <Spanish>Expresión</Spanish>
+        <Italian>Espressione</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_SIZE">
         <English>Size</English>
@@ -4829,6 +4928,7 @@
         <Polish>Rozmiar</Polish>
         <Chinesesimp>大小</Chinesesimp>
         <Chinese>大小</Chinese>
+        <Italian>Dimensione</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_TAGS">
         <English>TAGs</English>
@@ -4862,6 +4962,7 @@
         <German>Exportieren</German>
         <Polish>Eksport</Polish>
         <Spanish>Exportar</Spanish>
+        <Italian>Esporta</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
         <English>Font</English>
@@ -4873,6 +4974,7 @@
         <Polish>Czcionka</Polish>
         <Chinesesimp>字体</Chinesesimp>
         <Chinese>字體</Chinese>
+        <Italian>Tipografia</Italian>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP">
         <English>This is the raw text used in 'createDiaryRecord'. It can also be used inside the 'Create Task' module to change the appearance of your tasks.</English>
@@ -4905,6 +5007,7 @@
         <Polish>Kierunek obrotu</Polish>
         <Chinesesimp>旋转方向</Chinesesimp>
         <Chinese>旋轉方向</Chinese>
+        <Italian>Senso di Rotazione</Italian>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_ANTICLOCKWISE">
         <English>Anti-Clockwise</English>
@@ -4916,6 +5019,7 @@
         <Polish>Przeciwnie do ruchu wskazówek zegara</Polish>
         <Chinesesimp>逆时针</Chinesesimp>
         <Chinese>逆時針</Chinese>
+        <Italian>Senso Anti-Orario</Italian>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CLOCKWISE">
         <English>Clockwise</English>
@@ -4927,6 +5031,7 @@
         <Polish>Zgodnie z ruchem wskazówek zegara</Polish>
         <Chinesesimp>顺时针</Chinesesimp>
         <Chinese>順時針</Chinese>
+        <Italian>Senso Orario</Italian>
     </Key>
     <Key ID="STR_ENH_RESETANDDISABLE">
         <English>Reset and Disable</English>
@@ -4947,7 +5052,7 @@
         <Chinese>AI功能</Chinese>
         <Czech>Funkce umělé inteligence</Czech>
         <French>Caractéristiques de l'IA</French>
-        <Italian>Caratteristiche AI</Italian>
+        <Italian>Caratteristiche IA</Italian>
         <Polish>Cechy AI</Polish>
         <Spanish>Características de la IA</Spanish>
     </Key>
@@ -6214,6 +6319,7 @@
         <Polish>Usuń</Polish>
         <Chinesesimp>删除</Chinesesimp>
         <Chinese>刪除</Chinese>
+        <Italian>Cancella</Italian>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_SET_NEW">
         <English>Set/New</English>
@@ -6224,6 +6330,7 @@
         <Polish>Wybierz/Nowy</Polish>
         <Chinesesimp>设置/新增</Chinesesimp>
         <Chinese>設置/新增</Chinese>
+        <Italian>Imposta/Nuovo</Italian>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG_HEADER">
         <English>Confirm</English>
@@ -6234,6 +6341,7 @@
         <Polish>Potwierdź</Polish>
         <Chinesesimp>确认</Chinesesimp>
         <Chinese>確認</Chinese>
+        <Italian>Conferma</Italian>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_CONFIRM_MSG">
         <English>Are you sure?</English>
@@ -6244,6 +6352,7 @@
         <Polish>Jesteś pewien?</Polish>
         <Chinesesimp>你确定吗？</Chinesesimp>
         <Chinese>你確定嗎？</Chinese>
+        <Italian>Sei Sicuro?</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
         <English>Show Waypoints</English>
@@ -6294,6 +6403,7 @@
         <Polish>Interfejs</Polish>
         <Chinesesimp>界面</Chinesesimp>
         <Chinese>界面</Chinese>
+        <Italian>Interfaccia</Italian>
     </Key>
     <Key ID="STR_ENH_SHOWRIGHTPANEL">
         <English>Show Right Panel on Start</English>
@@ -6324,6 +6434,7 @@
         <Polish>Zablokuj odrzut bronii</Polish>
         <Chinesesimp>禁用武器后坐力</Chinesesimp>
         <Chinese>禁用武器後坐力</Chinese>
+        <Italian>Disabilita Rinculo Arma</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NOSWAY">
         <English>Disable Weapon Sway</English>
@@ -6334,6 +6445,7 @@
         <Polish>Zablokuj kołysanie się broni</Polish>
         <Chinesesimp>禁用武器摇摆</Chinesesimp>
         <Chinese>禁用武器搖擺</Chinese>
+        <Italian>Disabilita ondeggio arma</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NORELOAD">
         <English>Disable Reload Time</English>
@@ -6344,6 +6456,7 @@
         <Polish>Zablokuj czas przeładowania</Polish>
         <Chinesesimp>禁用换弹时间</Chinesesimp>
         <Chinese>禁用換彈時間</Chinese>
+        <Italian>Disabilita tempo di Ricarica</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_UNLIMITEDAMMO">
         <English>Enable Unlimited Ammunition</English>
@@ -6354,6 +6467,7 @@
         <Polish>Aktywuj nieskończoną amunicję</Polish>
         <Chinesesimp>启用无限弹药</Chinesesimp>
         <Chinese>啟用無限彈藥</Chinese>
+        <Italian>Abilita munizioni infinite</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWVIEWDIRECTION">
         <English>Draw View Direction</English>
@@ -6383,6 +6497,7 @@
         <Polish>Teleport</Polish>
         <Chinesesimp>传送</Chinesesimp>
         <Chinese>傳送</Chinese>
+        <Italian>Teletrasporto</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_TELEPORT_TOOLTIP">
         <English>Allows for teleportation in 3D scene. Player is always teleported to the position at the center of the screen.</English>
@@ -6402,6 +6517,7 @@
         <Polish>Pomiń czas</Polish>
         <Chinesesimp>跳过时间</Chinesesimp>
         <Chinese>跳過時間</Chinese>
+        <Italian>Salta Tempo</Italian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_TIMEMULTIPLIER">
         <English>Time Multiplier</English>
@@ -6412,6 +6528,7 @@
         <Polish>Mnożnik czasu</Polish>
         <Chinesesimp>时间加速</Chinesesimp>
         <Chinese>時間加速</Chinese>
+        <Italian>Moltiplicatore del Tempo</Italian>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_DISPLAYNAME">
         <English>Respawn Tickets</English>
@@ -6449,6 +6566,7 @@
         <Polish>Może umrzeć?</Polish>
         <Chinesesimp>是否死亡？</Chinesesimp>
         <Chinese>是否死亡？</Chinese>
+        <Italian>Può Morire?</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_CANDIE_TOOLTIP">
         <English>Units can instantly die by getting shot in the head. They cannot respawn after a fatal hit.</English>
@@ -6469,6 +6587,7 @@
         <Chinesesimp>结束</Chinesesimp>
         <Chinese>結束</Chinese>
         <Polish>Zakończenie</Polish>
+        <Italian>Finale</Italian>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_WIN_DISPLAYNAME">
         <English>Win?</English>
@@ -6479,6 +6598,7 @@
         <Chinesesimp>胜利？</Chinesesimp>
         <Chinese>勝利？</Chinese>
         <Polish>Wygrana?</Polish>
+        <Italian>Vittoria?</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_VARIABLEVIEWER">
         <English>Variable Viewer</English>
@@ -6488,6 +6608,7 @@
         <Spanish>Visor de variables</Spanish>
         <Chinesesimp>变量查看器</Chinesesimp>
         <Chinese>變量查看器</Chinese>
+        <Italian>Visualizzatore Variabili</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_VIM">
         <English>Vehicle Inventory Manager</English>
@@ -6498,6 +6619,7 @@
         <Chinesesimp>载具库存管理</Chinesesimp>
         <Chinese>載具庫存管理</Chinese>
         <Polish>Zarządzanie Wyposażeniem Pojazdów</Polish>
+        <Italian>Gestore Inventario Veicolo</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_EXIT_TEXT">
         <English>You have unsaved changes. Close anyway?</English>
@@ -6506,6 +6628,7 @@
         <Chinese>您有未保存的更改。仍然關閉？</Chinese>
         <Polish>Masz niezapisane zmiany. Kontynuować mimo to?</Polish>
         <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
+        <Italian>Hai dei cambiamenti non salvati. Chiudere comunque?</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
@@ -6514,6 +6637,7 @@
         <Chinese>導出 (ACE)</Chinese>
         <Polish>Wyeksportuj (ACE)</Polish>
         <Spanish>Exportar (ACE)</Spanish>
+        <Italian>Esporta (ACE)</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTACE_TOOLTIP">
         <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
@@ -6531,6 +6655,7 @@
         <Spanish>Objetos disponibles</Spanish>
         <Chinesesimp>可用物品</Chinesesimp>
         <Chinese>可用物品</Chinese>
+        <Italian>Oggetti Disponibili</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_FULLARSENAL_TOOLTIP">
         <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
@@ -6549,6 +6674,7 @@
         <Spanish>Objetos en el inventario</Spanish>
         <Chinesesimp>库存物品</Chinesesimp>
         <Chinese>庫存物品</Chinese>
+        <Italian>Oggetti nell'Inventario</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SHOTGUNS">
         <English>Shotguns</English>
@@ -6559,6 +6685,7 @@
         <Polish>Strzelby</Polish>
         <Chinesesimp>霰弹枪</Chinesesimp>
         <Chinese>霰彈槍</Chinese>
+        <Italian>Fucili a pallettoni</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SHOWTEMPLATES">
         <English>Show Templates</English>
@@ -6569,6 +6696,7 @@
         <Spanish>Mostrar plantillas</Spanish>
         <Chinesesimp>显示模板</Chinesesimp>
         <Chinese>顯示模板</Chinese>
+        <Italian>Mostra Modello</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_CREATETEMPLATE">
         <English>Create Template</English>
@@ -6579,6 +6707,7 @@
         <Spanish>Crear plantilla</Spanish>
         <Chinesesimp>创建模板</Chinesesimp>
         <Chinese>創建模板</Chinese>
+        <Italian>Crea Modello</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_ISVIRTUAL">
         <English>Is Virtual?</English>
@@ -6589,6 +6718,7 @@
         <Spanish>¿Es virtual?</Spanish>
         <Chinesesimp>是否为虚拟军火库？</Chinesesimp>
         <Chinese>是否為虛擬軍火庫？</Chinese>
+        <Italian>E' virtuale?</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_REMOVESELECTED_TOOLTIP">
         <English>Clear Inventory</English>
@@ -6599,6 +6729,7 @@
         <Spanish>Vaciar inventario</Spanish>
         <Chinesesimp>清除库存</Chinesesimp>
         <Chinese>清除庫存</Chinese>
+        <Italian>Svuota Inventario</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_DELETETEMPLATE">
         <English>Delete selected Template.</English>
@@ -6609,6 +6740,7 @@
         <Spanish>Borrar la plantilla seleccionada</Spanish>
         <Chinesesimp>删除所选模板.</Chinesesimp>
         <Chinese>刪除所選模板.</Chinese>
+        <Italian>Elimina Modelli Selezionati</Italian>
     </Key>
     <Key ID="STR_ENH_HELP_GETEXTENSIONS">
         <English>Additional Eden Editor Extentions</English>
@@ -6618,6 +6750,7 @@
         <Spanish>Extensiones de Eden adicionales</Spanish>
         <Chinesesimp>其他Eden编辑器扩展</Chinesesimp>
         <Chinese>其他Eden編輯器擴展</Chinese>
+        <Italian>Estensioni aggiuntive dell'Eden Editor</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_HIDETEMPLATES">
         <English>Hide Templates</English>
@@ -6628,6 +6761,7 @@
         <Spanish>Ocultar plantillas</Spanish>
         <Chinesesimp>隐藏模板</Chinesesimp>
         <Chinese>隱藏模板</Chinese>
+        <Italian>Nascondi Modelli</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTTOSACEARSENAL">
         <English>Export to ACE Arsenal</English>
@@ -6636,6 +6770,7 @@
         <Chinese>導出到ACE武器庫</Chinese>
         <Polish>Wyeksportuj do Arsenału ACE</Polish>
         <Spanish>Exportar a ACE Arsenal</Spanish>
+        <Italian>Esporta all'Arsenale ACE</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_EXPORTTOARSENAL">
         <English>Export to Arsenal</English>
@@ -6644,6 +6779,7 @@
         <Chinese>導出到ACE武器庫</Chinese>
         <Polish>Wyeksportuj do Arsenału</Polish>
         <Spanish>Exportar a Arsenal</Spanish>
+        <Italian>Esporta all'Arsenale</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYNAME">
         <English>Sort by Name</English>
@@ -6652,6 +6788,7 @@
         <Chinese>按名稱排序</Chinese>
         <Polish>Sortuj według Nazw</Polish>
         <Spanish>Ordenar por nombre</Spanish>
+        <Italian>Ordina per Nome</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYCLASS">
         <English>Sort by Class Name</English>
@@ -6660,6 +6797,7 @@
         <Chinese>按類名排序</Chinese>
         <Polish>Sortuj według Klas</Polish>
         <Spanish>Ordenar por ClassName</Spanish>
+        <Italian>Ordina per NomeClasse</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYCOUNT">
         <English>Sort by Count</English>
@@ -6668,6 +6806,7 @@
         <Chinese>按數量排序</Chinese>
         <Polish>Sortuj według Ilości</Polish>
         <Spanish>Ordenar por cantidad</Spanish>
+        <Italian>Ordina per Quantità</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYTYPE">
         <English>Sort by Type</English>
@@ -6676,6 +6815,7 @@
         <Chinese>按類型排序</Chinese>
         <Polish>Sortuj według Typu</Polish>
         <Spanish>Ordenar por tipo</Spanish>
+        <Italian>Ordina per Tipo</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_SORTBYMOD">
         <English>Sort by Mod</English>
@@ -6684,6 +6824,7 @@
         <Chinese>按Mod排序</Chinese>
         <Polish>Sortuj według Modyfikacji</Polish>
         <Spanish>Ordenar por Mod</Spanish>
+        <Italian>Ordina per Mod</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_TEMPLATES">
         <English>Templates</English>
@@ -6694,6 +6835,7 @@
         <Spanish>Plantillas</Spanish>
         <Chinesesimp>模板</Chinesesimp>
         <Chinese>模板</Chinese>
+        <Italian>Modelli</Italian>
     </Key>
     <Key ID="STR_ENH_VIM_RESET_TOOLTIP">
         <English>Reset to default items defined in object's config.</English>
@@ -6713,6 +6855,7 @@
         <Spanish>Agregue una entrada a favoritos o elimínela de favoritos según la lista seleccionada.</Spanish>
         <Chinesesimp>根据所选列表的不同，将条目添加到收藏夹中或从收藏夹中删除。</Chinesesimp>
         <Chinese>根據所選列表的不同，將條目添加到收藏夾中或從收藏夾中刪除。</Chinese>
+        <Italian>Aggiungi l'entrata ai preferiti o rimuovila dai preferiti a seconda della lista selezionata</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_CFGSENTENCESBROWSER">
         <English>CfgSentences Browser</English>
@@ -6731,6 +6874,7 @@
         <Spanish>Volumen (Entorno)</Spanish>
         <Chinesesimp>体积（环境）</Chinesesimp>
         <Chinese>體積（環境）</Chinese>
+        <Italian>Volume (Ambiente)</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
         <English>Placement Tool</English>
@@ -6740,6 +6884,7 @@
         <Spanish>Herramienta de emplazamiento</Spanish>
         <Chinesesimp>布局工具</Chinesesimp>
         <Chinese>佈局工具</Chinese>
+        <Italian>Strumento di Posizionamento</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_DISPLAYNAME">
         <English>Enable Dynamic View Distance</English>
@@ -6748,6 +6893,7 @@
         <Spanish>Habilitar la distancia de visualización dinámica</Spanish>
         <Chinesesimp>启用动态视距</Chinesesimp>
         <Chinese>啟用動態視距</Chinese>
+        <Italian>Abilita Distanza di Visualizzazione Dinamica</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
         <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
@@ -6765,6 +6911,7 @@
         <Chinesesimp>脚本</Chinesesimp>
         <Chinese>腳本</Chinese>
         <Polish>Skrypty</Polish>
+        <Italian>Scripts</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE">
         <English>Engine</English>
@@ -7230,6 +7377,7 @@
         <Chinese>機尾</Chinese>
         <Polish>Ogon</Polish>
         <Spanish>Cola</Spanish>
+        <Italian>Coda</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITVROTOR">
         <English>Tail Rotor</English>
@@ -7317,7 +7465,7 @@
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGEARLIGHTS">
         <English>Gear Lights</English>
-        <Italian>Luce carrello</Italian>
+        <Italian>Luci carrello</Italian>
         <German>Fahrwerklichter</German>
         <Chinesesimp>起落架灯</Chinesesimp>
         <Chinese>起落架燈</Chinese>
@@ -7329,7 +7477,7 @@
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHEAD">
         <English>Head</English>
-        <Italian>testa</Italian>
+        <Italian>Testa</Italian>
         <Czech>Hlava</Czech>
         <French>Tête</French>
         <Spanish>Cabeza</Spanish>
@@ -7383,6 +7531,7 @@
         <Chinese>軀幹</Chinese>
         <Polish>Ciało</Polish>
         <Spanish>Cuerpo</Spanish>
+        <Italian>Corpo</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
         <English>Commander Turret</English>
@@ -7497,6 +7646,7 @@
         <Chinesesimp>窗口(右)</Chinesesimp>
         <Chinese>窗口(右)</Chinese>
         <Polish>Okno (Prawe)</Polish>
+        <Italian>Finestra(Destra)</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLGLASS">
         <English>Window (Left)</English>
@@ -7504,6 +7654,7 @@
         <Chinesesimp>窗口(左)</Chinesesimp>
         <Chinese>窗口(左)</Chinese>
         <Polish>Okno (Lewe)</Polish>
+        <Italian>Finestra(Sinistra)</Italian>        
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITWINCH">
         <English>Winch</English>
@@ -7511,6 +7662,7 @@
         <Chinesesimp>绞盘</Chinesesimp>
         <Chinese>絞盤</Chinese>
         <Polish>Dźwig</Polish>
+        <Italian>Verricello</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE3">
         <English>Engine #03</English>
@@ -7518,6 +7670,7 @@
         <Chinesesimp>引擎 #03</Chinesesimp>
         <Chinese>引擎 #03</Chinese>
         <Polish>Silnik #03</Polish>
+        <Italian>Motore #03</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGEAR">
         <English>Gear</English>
@@ -7525,6 +7678,7 @@
         <Chinesesimp>起落架</Chinesesimp>
         <Chinese>起落架</Chinese>
         <Polish>Przekładnia</Polish>
+        <Italian>Ingranaggio</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
         <English>Hydraulics</English>
@@ -7532,6 +7686,7 @@
         <Chinesesimp>液压系统</Chinesesimp>
         <Chinese>液壓系統</Chinese>
         <Polish>Hydraulika</Polish>
+        <Italian>Idraulica</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSR">
         <English>Glass (Right)</English>
@@ -7539,6 +7694,7 @@
         <Chinesesimp>玻璃（右）</Chinesesimp>
         <Chinese>玻璃（右）</Chinese>
         <Polish>Szyba (Prawa)</Polish>
+        <Italian>Vetro(Destra)</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSL">
         <English>Glass (Left)</English>
@@ -7546,6 +7702,7 @@
         <Chinesesimp>玻璃（左）</Chinesesimp>
         <Chinese>玻璃（左）</Chinese>
         <Polish>Szyba (Lewa)</Polish>
+        <Italian>Vetro(Sinistra)</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
         <English>Transmission</English>
@@ -7553,6 +7710,7 @@
         <Chinesesimp>变速器</Chinesesimp>
         <Chinese>變速器</Chinese>
         <Polish>Przekładnia</Polish>
+        <Italian>Trasmissione</Italian>  
     </Key>
     <Key ID="STR_ENH_AI_CATEGORY">
         <English>AI</English>
@@ -7561,6 +7719,7 @@
         <Chinese>AI</Chinese>
         <Polish>AI</Polish>
         <Spanish>IA</Spanish>
+        <Italian>IA</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITARMS">
         <English>Arms</English>
@@ -7649,6 +7808,7 @@
         <Chinesesimp>窗口 #11</Chinesesimp>
         <Chinese>窗口 #11</Chinese>
         <Polish>Okno #11</Polish>
+        <Italian>Finestra #11</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
         <English>Light #01</English>
@@ -7657,6 +7817,7 @@
         <Chinesesimp>灯光 #01</Chinesesimp>
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
+        <Italian>Luce #01</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
         <English>Light #02</English>
@@ -7665,6 +7826,7 @@
         <Chinesesimp>灯光 #02</Chinesesimp>
         <Chinese>燈光 #02</Chinese>
         <Polish>Światło #02</Polish>
+        <Italian>Luce #02</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
         <English>Light #03</English>
@@ -7673,6 +7835,7 @@
         <Chinesesimp>灯光 #03</Chinesesimp>
         <Chinese>燈光 #03</Chinese>
         <Polish>Światło #03</Polish>
+        <Italian>Luce #03</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
         <English>Spotlight</English>
@@ -7681,6 +7844,7 @@
         <Chinese>聚光燈</Chinese>
         <German>Suchscheinwerfer</German>
         <Polish>Szperacz</Polish>
+        <Italian>Riflettore</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
         <English>Wing Light (Left)</English>
@@ -7697,6 +7861,7 @@
         <Chinese>翼燈（右）</Chinese>
         <German>Flügellicht (Rechts)</German>
         <Polish>Światło Pozycyjne (Prawe)</Polish>
+        <Italian>Luce Ala (Destra)</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_L">
         <English>Hand (Left)</English>
@@ -7705,6 +7870,7 @@
         <Chinese>手（左）</Chinese>
         <German>Hand (Links)</German>
         <Polish>Dłoń (Lewa)</Polish>
+        <Italian>Mano (Sinistra)</Italian>  
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_R">
         <English>Hand (Right)</English>
@@ -7713,6 +7879,7 @@
         <Chinese>手（右）</Chinese>
         <German>Hand (Rechts)</German>
         <Polish>Dłoń (Prawa)</Polish>
+        <Italian>Mano (Destra)</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
         <English>Battery (Left)</English>
@@ -7721,6 +7888,7 @@
         <Chinese>電池（左）</Chinese>
         <German>Batterie (Links)</German>
         <Polish>Bateria (Lewa)</Polish>
+        <Italian>Batteria (Sinistra)</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
         <English>Battery (Right)</English>
@@ -7729,6 +7897,7 @@
         <Chinese>電池（右）</Chinese>
         <German>Batterie (Rechts)</German>
         <Polish>Bateria (Prawa)</Polish>
+        <Italian>Batteria (Destra)</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE4">
         <English>Engine #04</English>
@@ -7737,6 +7906,7 @@
         <Chinese>引擎 #04</Chinese>
         <German>Motor #04</German>
         <Polish>Silnik #04</Polish>
+        <Italian>Motore #04</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
         <English>Era (Back)</English>
@@ -7885,6 +8055,7 @@
         <Chinese>油箱（左）</Chinese>
         <German>Tank (Links)</German>
         <Polish>Zbiornik Paliwa (Lewy)</Polish>
+        <Italian>Serbatoio (Sinistra)</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
         <English>Fuel Tank (Right)</English>
@@ -7893,6 +8064,7 @@
         <Chinese>油缸(右)</Chinese>
         <German>Tank (Rechts)</German>
         <Polish>Zbiornik Paliwa (Prawy)</Polish>
+        <Italian>Serbatoio (Sinistra)</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
         <English>Fuel Tank</English>
@@ -7901,6 +8073,7 @@
         <Chinese>油缸</Chinese>
         <German>Tank</German>
         <Polish>Zbiornik Paliwa</Polish>
+        <Italian>Serbatoio</Italian> 
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS16">
         <English>Window #16</English>
@@ -8921,6 +9094,7 @@
         <Chinesesimp>管理Zeus插件</Chinesesimp>
         <Chinese>管理Zeus插件</Chinese>
         <Spanish>Manejar Addons de Zeus</Spanish>
+        <Italian>Gestisci i componenti aggiuntivi Zeus</Italian>
     </Key>
     <Key ID="STR_ENH_ZEUSADDONS_CFGPATCHES">
         <English>CfgPatches</English>
@@ -8949,7 +9123,7 @@
     <Key ID="STR_ENH_ZEUSADDONS_INVERT">
         <English>Invert</English>
         <German>Invertieren</German>
-        <Italian>Invertire</Italian>
+        <Italian>Inverti</Italian>
         <Czech>Invertovat</Czech>
         <Chinesesimp>翻转</Chinesesimp>
         <Chinese>翻轉</Chinese>
@@ -8964,6 +9138,7 @@
         <Chinesesimp>对齐X+</Chinesesimp>
         <Chinese>對齊 X+</Chinese>
         <Polish>Wyrównaj do X+</Polish>
+        <Italian>Allinea all'asse X+</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_X_MIN">
         <English>Align to X-</English>
@@ -8971,6 +9146,7 @@
         <Chinesesimp>对齐X-</Chinesesimp>
         <Chinese>對齊 X-</Chinese>
         <Polish>Wyrównaj do X-</Polish>
+        <Italian>Allinea all'asse X-</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MAX">
         <English>Align to Y+</English>
@@ -8978,6 +9154,7 @@
         <Chinesesimp>对齐Y+</Chinesesimp>
         <Chinese>對齊 Y+</Chinese>
         <Polish>Wyrównaj do Y+</Polish>
+        <Italian>Allinea all'asse Y+</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MIN">
         <English>Align to Y-</English>
@@ -8985,6 +9162,7 @@
         <Chinesesimp>对齐Y-</Chinesesimp>
         <Chinese>對齊 Y-</Chinese>
         <Polish>Wyrównaj do Y-</Polish>
+        <Italian>Allinea all'asse Y-</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MAX">
         <English>Align to Z+</English>
@@ -8992,6 +9170,7 @@
         <Chinesesimp>对齐Z+</Chinesesimp>
         <Chinese>對齊 Z+</Chinese>
         <Polish>Wyrównaj do Z+</Polish>
+        <Italian>Allinea all'asse Z+</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MIN">
         <English>Align to Z-</English>
@@ -8999,6 +9178,7 @@
         <Chinesesimp>对齐Z-</Chinesesimp>
         <Chinese>對齊 Z-</Chinese>
         <Polish>Wyrównaj do Z-</Polish>
+        <Italian>Allinea all'asse Z-</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_X">
         <English>Space along X-Axis</English>
@@ -9006,6 +9186,7 @@
         <Chinesesimp>沿X-轴的空间</Chinesesimp>
         <Chinese>沿X-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż Osi X</Polish>
+        <Italian>Spazio lungo asse-X</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Y">
         <English>Space along Y-Axis</English>
@@ -9013,6 +9194,7 @@
         <Chinesesimp>沿Y-轴的空间</Chinesesimp>
         <Chinese>沿Y-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż Osi Y</Polish>
+        <Italian>Spazio lungo asse-Y</Italian>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Z">
         <English>Space along Z-Axis</English>
@@ -9020,6 +9202,7 @@
         <Chinesesimp>沿Z-轴的空间</Chinesesimp>
         <Chinese>沿Z-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż Osi Z</Polish>
+        <Italian>Spazio lungo asse-Z</Italian> 
     </Key>
     <Key ID="STR_ENH_FOLDER_ORIENT">
         <English>Orient</English>
@@ -9027,6 +9210,7 @@
         <Chinesesimp>定向</Chinesesimp>
         <Chinese>定向</Chinese>
         <Polish>Orientacja</Polish>
+        <Italian>Orienta</Italian> 
     </Key>
     <Key ID="STR_ENH_FOLDER_ALIGN">
         <English>Align</English>
@@ -9034,6 +9218,7 @@
         <Chinesesimp>对齐</Chinesesimp>
         <Chinese>對齊</Chinese>
         <Polish>Wyrównaj</Polish>
+        <Italian>Allinea</Italian> 
     </Key>
     <Key ID="STR_ENH_FOLDER_SPACE">
         <English>Space</English>
@@ -9041,6 +9226,7 @@
         <Chinesesimp>隔开</Chinesesimp>
         <Chinese>分發</Chinese>
         <Polish>Odstęp</Polish>
+        <Italian>Spazio</Italian> 
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_LISTSTATUS">
         <English>Entries in List: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</English>
