@@ -5102,6 +5102,7 @@
         <Polish>Typ samolotu</Polish>
         <Russian>Тип самолета</Russian>
         <Spanish>Tipo de aeronave</Spanish>
+        <Italian>Tipo di aero</Italian>
     </Key>
     <Key ID="STR_ENH_SPEED_LIMITED">
         <English>Limited</English>
@@ -5113,6 +5114,7 @@
         <Polish>Limitowana</Polish>
         <Chinesesimp>限制</Chinesesimp>
         <Chinese>限制</Chinese>
+        <Italian>Limitata</Italian>
     </Key>
     <Key ID="STR_ENH_SPEED_NORMAL">
         <English>Normal</English>
@@ -5124,6 +5126,7 @@
         <Polish>Normalna</Polish>
         <Chinesesimp>常规</Chinesesimp>
         <Chinese>常規</Chinese>
+        <Italian>Normale</Italian>
     </Key>
     <Key ID="STR_ENH_SPEED_FULL">
         <English>Full</English>
@@ -5135,6 +5138,7 @@
         <Polish>Pełna</Polish>
         <Chinesesimp>全速</Chinesesimp>
         <Chinese>全速</Chinese>
+        <Italian>Piena</Italian>
     </Key>
     <Key ID="STR_ENH_ALTITUDE_DISPLAYNAME">
         <English>Altitude</English>
@@ -5146,6 +5150,7 @@
         <German>Flughöhe</German>
         <Polish>Wysokość</Polish>
         <Spanish>Altitud</Spanish>
+        <Italian>Altitudine</Italian>
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS_NAME">
         <English>Name</English>
@@ -5157,6 +5162,7 @@
         <Polish>Nazwa</Polish>
         <Chinesesimp>名称</Chinesesimp>
         <Chinese>名稱</Chinese>
+        <Italian>Nome</Italian>
     </Key>
     <Key ID="STR_ENH_AIRDROP_DESCRIPTION">
         <English>Creates an airdrop. Units with given classes and side are dropped once the condition returns true. The created units are stored in 'ENH_Airdrop_Units' variable which is available on the server machine.</English>
@@ -5167,6 +5173,7 @@
         <French>Crée un larguage. Les unités dont les classes sont spécifiées seront larguées lorsque la condition sera vérifiée. Les unités créées sont stockées dans la variable 'ENH_Airdrop_Units' accessible sur le serveur.</French>
         <Chinesesimp>创建一个空投。一旦条件返回true时，将删除具有给定类别和阵营的单位。创建的单位存储在服务器上可用的“ENH_Airdrop_Units”变量中。</Chinesesimp>
         <Chinese>創建一個空投。一旦條件返回true時，將刪除具有給定類別和陣營的單位。創建的單位存儲在服務器上可用的“ENH_Airdrop_Units”變量中。</Chinese>
+        <Italian>Crea un lancio aereo. Le unità con classi e lato dati vengono rilasciate una volta che la condizione restituisce vero. Le unità create sono archiviate nella variabile 'ENH_Airdrop_Units' disponibile sul server.</Italian>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_TYPE">
         <English>Type</English>
@@ -5178,6 +5185,7 @@
         <Polish>Typ</Polish>
         <Chinesesimp>类型</Chinesesimp>
         <Chinese>類型</Chinese>
+        <Italian>Tipo</Italian>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_SHOWGROUPSIZE">
         <English>Show Group Size</English>
@@ -5189,6 +5197,7 @@
         <Polish>Pokaż rozmiar grupy</Polish>
         <Chinesesimp>显示小队人数</Chinesesimp>
         <Chinese>顯示小隊人數</Chinese>
+        <Italian>Mostra dimensione gruppo</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP">
         <English>Number of Functions</English>
@@ -5200,6 +5209,7 @@
         <Polish>Numer funkcji</Polish>
         <Chinesesimp>功能编号</Chinesesimp>
         <Chinese>功能編號</Chinese>
+        <Italian>Numero di funzioni</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_FULL">
         <English>Full</English>
@@ -5211,6 +5221,7 @@
         <Polish>Pełne</Polish>
         <Chinesesimp>全部</Chinesesimp>
         <Chinese>全部</Chinese>
+        <Italian>Completo</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
         <English>Categories</English>
@@ -5222,6 +5233,7 @@
         <Polish>Kategorie</Polish>
         <Chinesesimp>类别</Chinesesimp>
         <Chinese>類別</Chinese>
+        <Italian>Categorie</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_FUNCTIONS">
         <English>Functions</English>
@@ -5233,6 +5245,7 @@
         <Polish>Funkcje</Polish>
         <Chinesesimp>功能</Chinesesimp>
         <Chinese>功能</Chinese>
+        <Italian>Funzioni</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_BIKI">
         <English>OPEN ON BIKI</English>
@@ -5243,6 +5256,7 @@
         <Polish>Otwórz na BIKI</Polish>
         <Chinesesimp>在BIKI 打开</Chinesesimp>
         <Chinese>打開 BIKI</Chinese>
+        <Italian>Apri su BIKI</Italian>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME">
         <English>Radio Protocol</English>
@@ -5253,6 +5267,7 @@
         <Polish>Protokół radiowy</Polish>
         <Chinesesimp>无线电协议</Chinesesimp>
         <Chinese>無線電協議</Chinese>
+        <Italian>Protocollo radio</Italian>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_RADIOPROTOCOL_TOOLTIP">
         <English>Stops AI from talking and texting while still being able to issue orders.</English>
@@ -5263,6 +5278,7 @@
         <Polish>Powstrzymuje AI przed mówieniem, pozostawiając możliwość wydawania rozkazów</Polish>
         <Chinesesimp>阻止AI在仍然发布命令的情况下说话和发信息。</Chinesesimp>
         <Chinese>阻止AI在仍然發布命令的情況下說話和發信息。</Chinese>
+        <Italian>Interrompe la capacità dell'IA di parlare e inviare messaggi radio ma consente comunque di impartire ordini.</Italian>
     </Key>
     <Key ID="STR_ENH_PARACHUTE_DISPLAYNAME">
         <English>Start in Parachute</English>
@@ -5273,6 +5289,7 @@
         <Polish>Start w spadochronie</Polish>
         <Chinesesimp>从伞降开始</Chinesesimp>
         <Chinese>從傘降開始</Chinese>
+        <Italian>Inizia sul paracadute</Italian>
     </Key>
     <Key ID="STR_ENH_PARACHUTE_TOOLTIP">
         <English>When activated the unit will start the mission in a parachute. Start height is always 150 m.</English>
@@ -5283,6 +5300,7 @@
         <Polish>Kiedy aktywne, jednostka zacznie misje w spadochronie na wysokości 150m</Polish>
         <Chinesesimp>激活后，该单位将以伞降的方式开始执行任务。起始高度始终为150米。</Chinesesimp>
         <Chinese>激活後，該單位將以傘降的方式開始執行任務。起始高度始終為150米。</Chinese>
+        <Italian>Quando attivata, l'unità inizierà la missione sul paracadute. L'altezza di inizio è sempre di 150 m.</Italian>
     </Key>
     <Key ID="STR_ENH_HELP_MULTIPLAYERSCRIPTING">
         <English>Multiplayer Scripting</English>
@@ -5293,6 +5311,7 @@
         <Chinesesimp>多人游戏脚本</Chinesesimp>
         <Chinese>多人遊戲腳本</Chinese>
         <Polish>Skrypty trybu dla wielugraczy</Polish>
+        <Italian>Scripting per Multigiocatore</Italian>
     </Key>
     <Key ID="STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
         <English>Show Entity Counter</English>
@@ -5303,6 +5322,7 @@
         <Polish>Pokaż licznik obiektów</Polish>
         <Chinesesimp>显示实体计数器</Chinesesimp>
         <Chinese>顯示實體計數器</Chinese>
+        <Italian>Mostra contatore entità</Italian>
     </Key>
     <Key ID="STR_ENH_MISSIONENDING_CASUALTIES_DISPLAYNAME">
         <English>Mission Ending (Casualties)</English>
@@ -5313,6 +5333,7 @@
         <Polish>Zakończenie misji (Straty)</Polish>
         <Chinesesimp>任务结束(死伤)</Chinesesimp>
         <Chinese>任務結束(死傷)</Chinese>
+        <Italian>Fine Missione (Vittime)</Italian>
     </Key>
     <Key ID="STR_ENH_HOLDACTION_DISPLAYNAME">
         <English>Hold Action</English>
@@ -5333,12 +5354,14 @@
         <Polish>Tekst</Polish>
         <Chinesesimp>文本</Chinesesimp>
         <Chinese>文本</Chinese>
+        <Italian>Testo</Italian>
     </Key>
     <Key ID="STR_ENH_GROUPMARKER_VEHICLENAME">
         <English>Vehicle Name</English>
         <German>Fahrzeugname</German>
         <Polish>Nazwa pojazdu</Polish>
         <Spanish>Nombre de vehículo</Spanish>
+        <Italian>Nome del Veicolo</Italian>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
         <English>Plays a selected animation set. The gear needs to be set up manually.</English>
