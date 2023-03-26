@@ -5,6 +5,7 @@ class Tools
     "ENH_Folder_Utilities",
     "ENH_Folder_Placement",
     "ENH_Folder_Loadout",
+    "ENH_Folder_Arsenal",
     //"ENH_Folder_Pylons",
     "ENH_Folder_VHC",
     "ENH_Folder_Debug",
@@ -21,6 +22,7 @@ class Tools
 #include "menuStrip_tools_debug.hpp"
 //#include "menuStrip_tools_GUI.hpp"
 #include "menuStrip_tools_miscellaneous.hpp"
+#include "menuStrip_tools_arsenal.hpp"
 
 class FunctionsViewer//Overwrites the default function viewer
 {
