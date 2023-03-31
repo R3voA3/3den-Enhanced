@@ -65,30 +65,16 @@ for "_i" from 0 to _rows - 1 do
   };
 };
 
-private _value = "";
-if (_display getVariable ["ENH_VIM_IsVirtual", false]) then {
-  _value = str
+private _value = str
+[
   [
-    [
-      [_weapons, []],
-      [_magazines, []],
-      [_items, []],
-      [_backpacks, []]
-    ],
-    true
-  ];
-} else {
-  _value = str
-  [
-    [
-      [_weapons, _weaponsAmount],
-      [_magazines, _magazinesAmount],
-      [_items, _itemsAmount],
-      [_backpacks, _backpacksAmount]
-    ],
-    false
-  ];
-};
+    [_weapons, _weaponsAmount],
+    [_magazines, _magazinesAmount],
+    [_items, _itemsAmount],
+    [_backpacks, _backpacksAmount]
+  ],
+  _display getVariable ["ENH_VIM_IsVirtual", false]
+];
 
 if (_return) exitWith {_value};
 ENH_VIM_target set3DENAttribute ["ammoBox", _value];
