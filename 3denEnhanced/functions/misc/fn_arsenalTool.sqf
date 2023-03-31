@@ -11,6 +11,9 @@
   BOOLEAN: true / false
 */
 
+// Just A PLACEHOLDER, THIS WILL INSTEAD BE REWRITTEN TO INSTEAD INTERACT WITH THE ATTRIBUTES WHEN i CAN BUILD THE MOD :(
+// WILL MOST LIKELY BE REMOVED
+
 private _input = param [0, "", [""]];
 private _object = get3DENSelected "object";
 
@@ -25,7 +28,7 @@ switch (_input) do {
     set3DENAttributes [_object, "Init", str(_object get3DENAttribute "Init") + "[\"AmmoboxInit\", [this, true]] spawn BIS_fnc_arsenal;"];
     // adds init line after exists Init
     if (isClass(configFile >> "CfgPatches" >> "ace_main")) then { // check if ACE is loaded, then add ace arsenal to init
-      set3DENAttributes [_object, "Init", str(_object get3DENAttribute "Init") + "[this, true] call ace_arsenal_fnc_initBox;"]; 
+      set3DENAttributes [_object, "Init", str(_object get3DENAttribute "Init") + "[this, true] call ace_arsenal_fnc_initBox;"];
       // adds ace arsenal init line after exists Init
     };
   };
@@ -34,7 +37,7 @@ switch (_input) do {
     set3DENAttributes [_object, "Init", ""];
   };
   default: {
-    
+
   };
 };
 
