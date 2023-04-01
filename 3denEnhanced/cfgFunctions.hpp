@@ -230,7 +230,6 @@ class CfgFunctions
       class getConfigSourceAddon;
       class hasStorage;
       class loadoutTool;
-      class arsenalTool;
       class measureDistance;
       class preloadAmmoAttribute;
       class pylonTools;
