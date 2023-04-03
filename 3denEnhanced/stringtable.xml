@@ -15,7 +15,7 @@
     </Key>
     <Key ID="STR_ENH_ATTRIBUTECATEGORY_DYNAMICSKILL">
         <English>Dynamic AI Skill Settings</English>
-        <Italian>Configurazione Dinamica delle abilità IA</Italian>
+        <Italian>Configurazione Dinamica delle abilità AI</Italian>
         <German>Dynamische KI-Fähigkeitseinstellungen</German>
         <Czech>Dynamické nastavení zkušenosti umělé inteligence</Czech>
         <French>Paramètres de compétence dynamique de l'IA</French>
@@ -28,7 +28,6 @@
     <Key ID="STR_ENH_SEARCHATTRIBUTES_HEADER">
         <English>Search Attributes</English>
         <German>Attribute durchsuchen</German>
-        <Italian>Attributi di ricerca</Italian>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
