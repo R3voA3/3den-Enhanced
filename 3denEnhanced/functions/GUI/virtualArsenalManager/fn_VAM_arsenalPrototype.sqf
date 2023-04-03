@@ -13,6 +13,26 @@
 
 _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
 
+// this would be a hashmap for what the user has selected,
+// I don't like the idea of having the UI store our data.
+// perhaps could be used to be saved into the profile and loaded
+_VAM_selectHashMap = createHashMap;
+/// examples:
+/// ["apex", true], all items from apex dlc would are selected
+/// ["apex", ["weapons", ["Weapon_arifle_AK12_F"]]], only the AK-12 7.62mm rifle from apex dlc would is selected
+///
+/// this could then be used to quickly check for items, for example:
+/// is "Weapon_arifle_AK12_F" selected?
+/// _VAM_selectHashMap = ["apex", true]
+/// _VAM_selectHashMap get "apex" == true 
+///   so "Weapon_arifle_AK12_F" must be selected
+/// 
+/// is "Weapon_arifle_AK12_F" selected?
+/// _VAM_selectHashMap = ["apex", ["weapons", true]]
+/// _VAM_selectHashMap get "apex" != true, so we move to the next step
+/// _VAM_selectHashMap get "apex" get "weapons" == true,
+///   so "Weapon_arifle_AK12_F" must be selected
+
 _edit = _display ctrlCreate ["RscEdit", 645];
 _edit ctrlSetPosition [0,0,1,0.04];
 _edit ctrlSetBackgroundColor [0,0,0,1];
@@ -35,9 +55,11 @@ private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [[""
 
 	private _indexAddon = _tv tvAdd [[], _addonName];
 	_tv tvSetPicture [[_indexAddon], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+  _tv tvSetData [[_indexAddon], _addonClass];
 	{
 		private _indexCategory = _tv tvAdd [[_indexAddon], _x];
 		_tv tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+    _tv tvSetData [[_indexAddon, _indexCategory], _x];
 	} foreach (uiNamespace getVariable ["ENH_VIM_types", []]);
 } foreach _allAddons;
 
@@ -68,7 +90,7 @@ _allAddons apply
     _tv tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 
 
-} foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", []]);
+} foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
 
 // Remove empty nodes
 private _fnc_removeEmptyNodes =
