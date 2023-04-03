@@ -1,3 +1,11 @@
+# v7.7.3
+## ADDED
+- Dynamic Simulation Debug Mode now also works for objects
+
+## CHANGED
+- Renamed recently added functions
+- Updated Italian translation thanks to Fil-ric
+
 # v7.7.2
 ## ADDED
 - Names of entries in the Asset Browser are now also shown as tooltip top prevent them from being cut off (Variable Names wouldn't be visible in some cases)
