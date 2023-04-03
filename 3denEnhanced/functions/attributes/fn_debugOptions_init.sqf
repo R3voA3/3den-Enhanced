@@ -758,11 +758,6 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
   #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
   #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
-  #define DISTANCE_GROUPS_UNITS dynamicSimulationDistance "Group"
-  #define DISTANCE_VEHICLES dynamicSimulationDistance "Vehicle"
-  #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
-  #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
-  #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
 
   ENH_dynSimDebug_Text = "<t size='1.5' align='left'>Dynamic Simulation Stats</t>   <br/><br/>
 
