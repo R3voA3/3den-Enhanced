@@ -108,11 +108,10 @@ _tv ctrlAddEventHandler ["TreeSelChanged",
   } 
   else 
   {
-    mouseX = getMousePosition select 0;
-    displayX = (ctrlPosition _ctrl) select 0;
+    private _mouseX = getMousePosition select 0;
 
     // if clicked on check box
-    if (mouseX < 0.05 + 0.025 * (count _path - 1)) then {
+    if (_mouseX < 0.05 + 0.025 * (count _path - 1)) then {
 
 			if ((_ctrl tvValue _path) == 0) then {
 				[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
