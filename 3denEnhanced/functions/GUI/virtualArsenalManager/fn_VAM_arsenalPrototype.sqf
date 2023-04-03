@@ -1,3 +1,16 @@
+/*
+  Author: linkion and R3vo
+
+  Description:
+  WIP
+
+  Parameter(s):
+  0: DISPLAY - WIP
+
+  Returns:
+ -
+*/
+
 _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
 
 _edit = _display ctrlCreate ["RscEdit", 645];
@@ -89,24 +102,24 @@ private _fnc_removeEmptyNodes =
 // Sort TV
 _tv tvSortAll [];
 
-_tv ctrlAddEventHandler ["TreeSelChanged", 
+_tv ctrlAddEventHandler ["TreeSelChanged",
 {
   params["_ctrl", "_path"];
 
   // check if it's a single entry or a folder
-  if ((_ctrl tvCount _path) == 0) then 
+  if ((_ctrl tvCount _path) == 0) then
   {
 
-    if ((_ctrl tvValue _path) == 0) then 
+    if ((_ctrl tvValue _path) == 0) then
     {
       [_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
-    } 
-    else 
+    }
+    else
     {
       [_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
     }
-  } 
-  else 
+  }
+  else
   {
     private _mouseX = getMousePosition select 0;
 
@@ -182,7 +195,7 @@ ENH_fnc_virtualArsenalManager_switchNodeState =
 
 			_ctrlTV tvSetPicture [_newPath, _partialCheckedPic];
 			_ctrlTV tvSetValue [_newPath, 2];
-			
+
 			// check if all children are checked
 			private _tempBool = true;
 			for "_i" from (_ctrlTV tvCount _newPath) to 0 step -1 do
