@@ -175,6 +175,11 @@ class CfgFunctions
       class VIM_sort;
       class VIM_toggleVirtual;
     };
+    class virtualArsenalManager
+    {
+      file = "3denEnhanced\functions\GUI\virtualArsenalManager";
+      class VAM_arsenalPrototype;
+    }
     class CfgSentencesBrowser
     {
       file = "3denEnhanced\functions\GUI\CFGS";
