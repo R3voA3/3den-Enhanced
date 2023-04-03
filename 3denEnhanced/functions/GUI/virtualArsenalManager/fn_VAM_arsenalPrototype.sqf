@@ -96,9 +96,8 @@ _tv ctrlAddEventHandler ["TreeSelChanged",
   // check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then 
   {
-    uncheckedPic = "a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa";
 
-    if ((_ctrl tvPicture _path) isEqualTo uncheckedPic) then 
+    if ((_ctrl tvValue _path) == 0) then 
     {
       [_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
     } 
@@ -114,9 +113,8 @@ _tv ctrlAddEventHandler ["TreeSelChanged",
 
     // if clicked on check box
     if (mouseX < 0.05 + 0.025 * (count _path - 1)) then {
-			uncheckedPic = "a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa";
 
-			if ((_ctrl tvPicture _path) isEqualTo uncheckedPic) then {
+			if ((_ctrl tvValue _path) == 0) then {
 				[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
 			} else {
 				[_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
@@ -176,16 +174,49 @@ ENH_fnc_virtualArsenalManager_switchNodeState =
 	{
 		params ["_path"];
 
-		partialCheckPic = "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa";
+		// traversing backwards from farthest child to first parent
+		// to make sure to check uncheck when all children are checked
+		for "_i" from 1 to (count _path - 1) step 1 do {
+			private _partialCheckedPic = "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa";
+			private _newPath = +_path;
+			_newPath deleteRange [count _path - _i, count _path];
 
-		for "_i" from 1 to (count _path) step 1 do {
-			private _newPath = _path;
-			_newPath deleteRange [_i, count _path];
-			
-			format["Path: %1 newPath: %2 _i: %3", _path, str(_newPath), _i] call BIS_fnc_3DENNotification;
-
-			_ctrlTV tvSetPicture [_newPath, partialCheckPic];
+			_ctrlTV tvSetPicture [_newPath, _partialCheckedPic];
 			_ctrlTV tvSetValue [_newPath, 2];
+			
+			// check if all children are checked
+			private _tempBool = true;
+			for "_i" from (_ctrlTV tvCount _newPath) to 0 step -1 do
+			{
+				private _newPath = _newPath + [_i];
+				if (_ctrlTV tvValue _newPath == 0 || _ctrlTV tvValue _newPath == 2) exitWith {
+					_tempBool = false;
+				};
+			};
+			// make parent checked
+			if (_tempBool) then {
+				private _checkedPic = "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa";
+
+				_ctrlTV tvSetPicture [_newPath, _checkedPic];
+				_ctrlTV tvSetValue [_newPath, 1];
+			};
+
+			// check if all children are unchecked
+			private _tempBool = true;
+			for "_i" from (_ctrlTV tvCount _newPath) to 0 step -1 do
+			{
+				private _newPath = _newPath + [_i];
+				if (_ctrlTV tvValue _newPath == 1 || _ctrlTV tvValue _newPath == 2) exitWith {
+					_tempBool = false;
+				};
+			};
+			// make parent unchecked
+			if (_tempBool) then {
+				private _uncheckedPic = "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa";
+
+				_ctrlTV tvSetPicture [_newPath, _uncheckedPic];
+				_ctrlTV tvSetValue [_newPath, 0];
+			};
 		};
 	};
 
