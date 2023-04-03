@@ -37,7 +37,6 @@
         <Chinese>從Steam創意工坊獲得""Pythia""修改！</Chinese>
         <Polish>Pobierz modyfikację ""Pythia"" z Warszatu Steam!</Polish>
         <Spanish>Obtener la modificación ""Pythia"" de Steam Workshop.</Spanish>
-        <Italian>Scarica la mod "Pythia" dal workshop di Steam!</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
         <English>BLUFOR Skill Settings</English>
@@ -154,7 +153,6 @@
         <Spanish>Crear activador (Covertura completa del mapa)</Spanish>
         <Chinesesimp>创建触发器(全地图覆盖)</Chinesesimp>
         <Chinese>創建觸發器(全地圖覆蓋)</Chinese>
-        <Polish>Utwórz trigger (Zakrywający całą mapę)</Polish>
         <Italian>Crea un trigger(Copertura totale della Mappa)</Italian>
     </Key>
     <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
