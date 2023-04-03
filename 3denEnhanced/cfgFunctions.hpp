@@ -175,7 +175,7 @@ class CfgFunctions
       class VIM_sort;
       class VIM_toggleVirtual;
     };
-    class virtualArsenalManager
+    class VirtualArsenalManager
     {
       file = "3denEnhanced\functions\GUI\virtualArsenalManager";
       class VAM_arsenalPrototype;
