@@ -15,7 +15,9 @@ class ENH_Folder_Loadout
     "ENH_RemoveGoggles",
     "ENH_RemoveHeadgear",
     "ENH_RemoveWeapons",
-    "ENH_RemoveGear"
+    "ENH_RemoveGear",
+    "Separator",
+    "ENH_Arsenal"
   };
 };
 class ENH_CopyLoadout
@@ -81,4 +83,10 @@ class ENH_VIM
   action = "call ENH_fnc_VIM_open";
   opensNewWindow = 1;
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_I};
+};
+class ENH_Arsenal
+{
+	text = "STR_ENH_TOOLS_LIMIT_ARSENAL";
+	action = "execVM ""t.sqf""";//"call ENH_fnc_VAM_arsenalPrototype";
+	opensNewWindow = 1;
 };
