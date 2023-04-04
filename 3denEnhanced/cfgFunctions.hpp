@@ -223,6 +223,7 @@ class CfgFunctions
       file = "3denEnhanced\functions\Misc";
       class alignEntities;
       class all3DENSelected;
+      class compatibleItems;
       class deleteCrew;
       class deleteEmptyLayers;
       #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
