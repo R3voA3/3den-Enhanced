@@ -1,4 +1,3 @@
-//#include "script_component.hpp"
 /* ----------------------------------------------------------------------------
 Function: CBA_fnc_compatibleItems
 
@@ -21,17 +20,13 @@ Examples:
 Author:
     Original by Karel Moricky, Enhanced by Robalo, jokoho, commy2
 ---------------------------------------------------------------------------- */
-//SCRIPT(compatibleItems);
 
 params [["_weapon", "", [""]], ["_typefilter", nil, ["", 0]]];
 
 if (_weapon == "") exitWith {[]};
 
-if (isNil #(ENH##_##namespace))) then {
-    ENH##_##namespace = call CBA_fnc_createNamespace;
-};
 
-private _compatibleItems = ENH##_##namespace getVariable _weapon;
+private _compatibleItems = nil;
 
 if (isNil "_compatibleItems") then {
     _compatibleItems = [];
@@ -59,8 +54,6 @@ if (isNil "_compatibleItems") then {
 
         // Ensure item class names are in config case
         _compatibleItems = _compatibleItems apply {configName (_cfgWeapons >> _x)};
-
-        ENH##_##namespace setVariable [_weapon, _compatibleItems]; // save entry in cache
     } else {
         ["'%1' not found in CfgWeapons", _weapon] call BIS_fnc_error;
     };
