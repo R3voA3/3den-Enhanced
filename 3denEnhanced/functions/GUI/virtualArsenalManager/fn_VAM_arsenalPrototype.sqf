@@ -11,6 +11,8 @@
  -
 */
 
+#include "\a3\3DEN\UI\macros.inc"
+
 _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
 
 // this would be a hashmap for what the user has selected,
@@ -24,42 +26,95 @@ _VAM_selectHashMap = createHashMap;
 /// this could then be used to quickly check for items, for example:
 /// is "Weapon_arifle_AK12_F" selected?
 /// _VAM_selectHashMap = ["apex", true]
-/// _VAM_selectHashMap get "apex" == true 
+/// _VAM_selectHashMap get "apex" == true
 ///   so "Weapon_arifle_AK12_F" must be selected
-/// 
+///
 /// is "Weapon_arifle_AK12_F" selected?
 /// _VAM_selectHashMap = ["apex", ["weapons", true]]
 /// _VAM_selectHashMap get "apex" != true, so we move to the next step
 /// _VAM_selectHashMap get "apex" get "weapons" == true,
 ///   so "Weapon_arifle_AK12_F" must be selected
 
-_edit = _display ctrlCreate ["RscEdit", 645];
-_edit ctrlSetPosition [0,0,1,0.04];
-_edit ctrlSetBackgroundColor [0,0,0,1];
-_edit ctrlCommit 0;
+private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
 
-_tv = _display ctrlCreate ["RscTreeSearch", -1];
-_tv ctrlSetFont "EtelkaMonospacePro";
-_tv ctrlSetFontHeight 0.03;
-_tv ctrlSetPosition [0,0.06,1,0.94];
-_tv ctrlSetBackgroundColor [0,0,0,1];
-_tv ctrlCommit 0;
+#define WINDOW_W 140 // Overwrite macro from Eden because they use a different width
+
+_ctrlBackground ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs + 10 * GRID_H,
+  WINDOW_W * GRID_W,
+  WINDOW_HAbs
+];
+
+_ctrlBackground ctrlSetBackgroundColor [COLOR_BACKGROUND_RGBA];
+_ctrlBackground ctrlCommit 0;
+
+private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", -1];
+
+_ctrlTitle ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+  WINDOW_W * GRID_W,
+  5 * GRID_H
+];
+
+_ctrlTitle ctrlSetText "STR_ENH_TOOLS_LIMIT_ARSENAL";
+_ctrlTitle ctrlCommit 0;
+
+_ctrlSearch = _display ctrlCreate ["ctrlEdit", 645];
+_ctrlSearch ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
+  WINDOW_W * GRID_W - 2 * GRID_W,
+  5 * GRID_H
+];
+
+_ctrlSearch ctrlCommit 0;
+
+_ctrlTV = _display ctrlCreate ["RscTreeSearch", -1];
+_ctrlTV ctrlSetFont FONT_NORMAL;
+_ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
+_ctrlTV ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
+  WINDOW_W * GRID_W - 2 * GRID_W,
+  WINDOW_HAbs / 2 - 17 * GRID_H
+];
+
+_ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
+_ctrlTV ctrlCommit 0;
+
+_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlPicture ctrlSetPosition
+[
+  CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 17 * GRID_H - GRID_H,
+  (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+  WINDOW_HAbs / 2 - 17 * GRID_H
+];
+
+//_ctrlPicture ctrlSetBackgroundColor [0, 1, 0, 1];
+_ctrlPicture ctrlCommit 0;
 
 if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then { call ENH_fnc_getAllItems};
 
-private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [["","Unchanged",""],["","",""]]) + [["", "Arma 3", ""]];
+private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
 
 // Prefill tree view with layout
 {
 	_x params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
 
-	private _indexAddon = _tv tvAdd [[], _addonName];
-	_tv tvSetPicture [[_indexAddon], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-  _tv tvSetData [[_indexAddon], _addonClass];
+	private _indexAddon = _ctrlTV tvAdd [[], _addonName];
+	_ctrlTV tvSetPicture [[_indexAddon], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+  _ctrlTV tvSetData [[_indexAddon], _addonClass];
 	{
-		private _indexCategory = _tv tvAdd [[_indexAddon], _x];
-		_tv tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-    _tv tvSetData [[_indexAddon, _indexCategory], _x];
+		private _indexCategory = _ctrlTV tvAdd [[_indexAddon], _x];
+		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+    _ctrlTV tvSetData [[_indexAddon, _indexCategory], _x];
 	} foreach (uiNamespace getVariable ["ENH_VIM_types", []]);
 } foreach _allAddons;
 
@@ -82,12 +137,12 @@ _allAddons apply
 			_indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _specificType;
 		};
 
-		private _indexEquipment = _tv tvAdd [[_indexAddon, _indexCategory], _displayName];
+		private _indexEquipment = _ctrlTV tvAdd [[_indexAddon, _indexCategory], _displayName];
 
-		_tv tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
-		_tv tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-		_tv tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
-    _tv tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
+		_ctrlTV tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
+		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+		_ctrlTV tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
+    _ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 
 
 } foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
@@ -104,13 +159,13 @@ private _fnc_removeEmptyNodes =
 	// Exit if path is deeper than wanted level
 	if (count _path == _maxLevel && _maxLevel > -1) exitWith {};
 
-	for "_i" from (_tv tvCount _path) to 0 step -1 do
+	for "_i" from (_ctrlTV tvCount _path) to 0 step -1 do
 	{
 		private _newPath = _path + [_i];
 
-		if (_tv tvCount _newPath == 0) then
+		if (_ctrlTV tvCount _newPath == 0) then
 		{
-			_tv tvDelete _newPath;
+			_ctrlTV tvDelete _newPath;
 		}
 		else
 		{
@@ -122,11 +177,15 @@ private _fnc_removeEmptyNodes =
 [[], 2] call _fnc_removeEmptyNodes;
 
 // Sort TV
-_tv tvSortAll [];
+_ctrlTV tvSortAll [];
 
-_tv ctrlAddEventHandler ["TreeSelChanged",
+_ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 {
   params["_ctrl", "_path"];
+
+  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+
+  ctrlParent _ctrl displayCtrl 10 ctrlSetText _picture;
 
   // check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then
@@ -146,7 +205,8 @@ _tv ctrlAddEventHandler ["TreeSelChanged",
     private _mouseX = getMousePosition select 0;
 
     // if clicked on check box
-    if (_mouseX < 0.05 + 0.025 * (count _path - 1)) then {
+    if (_mouseX < 0.05 + 0.025 * (count _path - 1)) then // This doesn't work reliably
+    {
 
 			if ((_ctrl tvValue _path) == 0) then {
 				[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
@@ -158,7 +218,7 @@ _tv ctrlAddEventHandler ["TreeSelChanged",
 }];
 
 // Check and uncheck nodes
-_tv ctrlAddEventHandler ["keyDown",
+_ctrlTV ctrlAddEventHandler ["keyDown",
 {
 	params ["_ctrlTV", "_key", "_shift", "_ctrl", "_alt"];
 
