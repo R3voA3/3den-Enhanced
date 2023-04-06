@@ -2,7 +2,7 @@
 	Author: linkion and R3vo
 
 	Description:
-	WIP
+	Apply the Virtual Arsenal Manager selection to an 3DEN object.
 
 	Parameter(s):
 	0: Object - 3DEN Object to apply attribute(s) to

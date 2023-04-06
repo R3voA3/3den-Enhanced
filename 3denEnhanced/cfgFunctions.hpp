@@ -180,6 +180,7 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\virtualArsenalManager";
       class VAM_arsenalPrototype;
       class VAM_applyAttribute;
+      class VAM_selectCompatibleItems;
     }
     class CfgSentencesBrowser
     {
