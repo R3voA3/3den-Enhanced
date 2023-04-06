@@ -179,6 +179,7 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\GUI\virtualArsenalManager";
       class VAM_arsenalPrototype;
+      class VAM_applyAttribute;
     }
     class CfgSentencesBrowser
     {

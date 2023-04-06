@@ -181,11 +181,11 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 
 		if ((_ctrl tvValue _path) == 0) then
 		{
-			[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
+			[_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
 		}
 		else
 		{
-			[_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
+			[_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
 		}
 	}
 	else
@@ -198,9 +198,9 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 		{
 
 			if ((_ctrl tvValue _path) == 0) then {
-				[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
+				[_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
 			} else {
-				[_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
+				[_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
 			};
 		};
 	};
@@ -213,19 +213,19 @@ _ctrlTV ctrlAddEventHandler ["keyDown",
 
 	if (_key == 14) then
 	{
-		[_ctrlTV, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
+		[_ctrlTV, 0] call ENH_fnc_VAM_switchNodeState;
 	};
 	if (_key in [28, 156]) then
 	{
-		[_ctrlTV, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
+		[_ctrlTV, 1] call ENH_fnc_VAM_switchNodeState;
 	};
 	if (_key == 59) then
 	{
-		call ENH_fnc_virtualArsenalManager_exportToSQF;
+		call ENH_fnc_VAM_exportToSQF;
 	};
 }];
 
-ENH_fnc_virtualArsenalManager_switchNodeState =
+ENH_fnc_VAM_switchNodeState =
 {
 	params ["_ctrlTV","_add"];
 
@@ -328,7 +328,7 @@ ENH_fnc_virtualArsenalManager_switchNodeState =
 	[_selectedPath] call _fnc_traverseParents;
 };
 
-ENH_fnc_virtualArsenalManager_exportToSQF =
+ENH_fnc_VAM_exportToSQF =
 {
 	private _data =  //[<items>, <weapons>, <magazines>, <backpacks>]
 	[
