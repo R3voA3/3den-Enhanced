@@ -181,6 +181,7 @@ class CfgFunctions
       class VAM_arsenalPrototype;
       class VAM_applyAttribute;
       class VAM_selectCompatibleItems;
+      class VAM_switchNodeState;
     }
     class CfgSentencesBrowser
     {
