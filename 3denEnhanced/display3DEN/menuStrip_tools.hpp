@@ -17,7 +17,6 @@ class Tools
 #include "menuStrip_tools_VHC.hpp"
 #include "menuStrip_tools_debug.hpp"
 #include "menuStrip_tools_miscellaneous.hpp"
-#include "menuStrip_tools_arsenal.hpp"
 
 class FunctionsViewer//Overwrites the default function viewer
 {

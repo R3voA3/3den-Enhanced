@@ -1,13 +1,13 @@
 /*
-  Author: linkion and R3vo
+	Author: linkion and R3vo
 
-  Description:
-  WIP
+	Description:
+	WIP
 
-  Parameter(s):
-  0: DISPLAY - WIP
+	Parameter(s):
+	0: DISPLAY - WIP
 
-  Returns:
+	Returns:
  -
 */
 
@@ -18,22 +18,10 @@ _display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMiss
 // this would be a hashmap for what the user has selected,
 // I don't like the idea of having the UI store our data.
 // perhaps could be used to be saved into the profile and loaded
-_VAM_selectHashMap = createHashMap;
-/// examples:
-/// ["apex", true], all items from apex dlc would are selected
-/// ["apex", ["weapons", ["Weapon_arifle_AK12_F"]]], only the AK-12 7.62mm rifle from apex dlc would is selected
-///
-/// this could then be used to quickly check for items, for example:
-/// is "Weapon_arifle_AK12_F" selected?
-/// _VAM_selectHashMap = ["apex", true]
-/// _VAM_selectHashMap get "apex" == true
-///   so "Weapon_arifle_AK12_F" must be selected
-///
-/// is "Weapon_arifle_AK12_F" selected?
-/// _VAM_selectHashMap = ["apex", ["weapons", true]]
-/// _VAM_selectHashMap get "apex" != true, so we move to the next step
-/// _VAM_selectHashMap get "apex" get "weapons" == true,
-///   so "Weapon_arifle_AK12_F" must be selected
+uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
+/// Gave up on nested hashmaps
+/// instead will be a hashmap of just item classes with
+/// ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"] array as value.
 
 private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
 
@@ -41,10 +29,10 @@ private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
 
 _ctrlBackground ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W,
-  CENTER_Y - 0.5 * WINDOW_HAbs + 10 * GRID_H,
-  WINDOW_W * GRID_W,
-  WINDOW_HAbs
+	CENTER_X - 0.5 * WINDOW_W * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 10 * GRID_H,
+	WINDOW_W * GRID_W,
+	WINDOW_HAbs
 ];
 
 _ctrlBackground ctrlSetBackgroundColor [COLOR_BACKGROUND_RGBA];
@@ -54,10 +42,10 @@ private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", -1];
 
 _ctrlTitle ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W,
-  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
-  WINDOW_W * GRID_W,
-  5 * GRID_H
+	CENTER_X - 0.5 * WINDOW_W * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+	WINDOW_W * GRID_W,
+	5 * GRID_H
 ];
 
 _ctrlTitle ctrlSetText "STR_ENH_TOOLS_LIMIT_ARSENAL";
@@ -66,10 +54,10 @@ _ctrlTitle ctrlCommit 0;
 _ctrlSearch = _display ctrlCreate ["ctrlEdit", 645];
 _ctrlSearch ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
-  CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
-  WINDOW_W * GRID_W - 2 * GRID_W,
-  5 * GRID_H
+	CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
+	WINDOW_W * GRID_W - 2 * GRID_W,
+	5 * GRID_H
 ];
 
 _ctrlSearch ctrlCommit 0;
@@ -79,10 +67,10 @@ _ctrlTV ctrlSetFont FONT_NORMAL;
 _ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
 _ctrlTV ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
-  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
-  WINDOW_W * GRID_W - 2 * GRID_W,
-  WINDOW_HAbs / 2 - 17 * GRID_H
+	CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
+	WINDOW_W * GRID_W - 2 * GRID_W,
+	WINDOW_HAbs / 2 - 17 * GRID_H
 ];
 
 _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
@@ -91,10 +79,10 @@ _ctrlTV ctrlCommit 0;
 _ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
 _ctrlPicture ctrlSetPosition
 [
-  CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
-  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 17 * GRID_H - GRID_H,
-  (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
-  WINDOW_HAbs / 2 - 17 * GRID_H
+	CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 17 * GRID_H - GRID_H,
+	(WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+	WINDOW_HAbs / 2 - 17 * GRID_H
 ];
 
 //_ctrlPicture ctrlSetBackgroundColor [0, 1, 0, 1];
@@ -110,11 +98,11 @@ private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [[""
 
 	private _indexAddon = _ctrlTV tvAdd [[], _addonName];
 	_ctrlTV tvSetPicture [[_indexAddon], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-  _ctrlTV tvSetData [[_indexAddon], _addonClass];
+	_ctrlTV tvSetData [[_indexAddon], _addonClass];
 	{
 		private _indexCategory = _ctrlTV tvAdd [[_indexAddon], _x];
 		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-    _ctrlTV tvSetData [[_indexAddon, _indexCategory], _x];
+		_ctrlTV tvSetData [[_indexAddon, _indexCategory], _x];
 	} foreach (uiNamespace getVariable ["ENH_VIM_types", []]);
 } foreach _allAddons;
 
@@ -142,7 +130,7 @@ _allAddons apply
 		_ctrlTV tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
 		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
 		_ctrlTV tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
-    _ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
+		_ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 
 
 } foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
@@ -181,40 +169,41 @@ _ctrlTV tvSortAll [];
 
 _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 {
-  params["_ctrl", "_path"];
+	params["_ctrl", "_path"];
 
-  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+	private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
-  ctrlParent _ctrl displayCtrl 10 ctrlSetText _picture;
+	ctrlParent _ctrl displayCtrl 10 ctrlSetText _picture;
 
-  // check if it's a single entry or a folder
-  if ((_ctrl tvCount _path) == 0) then
-  {
+	// check if it's a single entry or a folder
+	if ((_ctrl tvCount _path) == 0) then
+	{
 
-    if ((_ctrl tvValue _path) == 0) then
-    {
-      [_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
-    }
-    else
-    {
-      [_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
-    }
-  }
-  else
-  {
-    private _mouseX = getMousePosition select 0;
+		if ((_ctrl tvValue _path) == 0) then
+		{
+			[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
+		}
+		else
+		{
+			[_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
+		}
+	}
+	else
+	{
+		private _mouseX = getMousePosition select 0;
 
-    // if clicked on check box
-    if (_mouseX < 0.05 + 0.025 * (count _path - 1)) then // This doesn't work reliably
-    {
+		// if clicked on check box
+		// Don't know any other way to do this - linkion -------V
+		if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then // This doesn't work reliably
+		{
 
 			if ((_ctrl tvValue _path) == 0) then {
 				[_ctrl, 1] call ENH_fnc_virtualArsenalManager_switchNodeState;
 			} else {
 				[_ctrl, 0] call ENH_fnc_virtualArsenalManager_switchNodeState;
 			};
-    };
-  };
+		};
+	};
 }];
 
 // Check and uncheck nodes
@@ -238,13 +227,23 @@ _ctrlTV ctrlAddEventHandler ["keyDown",
 
 ENH_fnc_virtualArsenalManager_switchNodeState =
 {
-	params ["_ctrlTV", "_add"];
+	params ["_ctrlTV","_add"];
 
 	private _selectedPath = tvCurSel _ctrlTV;
 	private _picture = ["\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa", "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"] select _add;
 
 	_ctrlTV tvSetPicture [_selectedPath, _picture];
 	_ctrlTV tvSetValue [_selectedPath, _add];
+
+	private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
+	private _itemClass = toLower(_ctrlTV tvData _selectedPath);
+
+	if (_add == 1 && (_ctrlTV tvCount _selectedPath) == 0) then {
+		private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+		_selectHashMap insert [[_itemClass, _itemValues]];
+	} else {
+		_selectHashMap deleteAt _itemClass;
+	};
 
 	private _fnc_traverseChildren =
 	{
@@ -255,7 +254,18 @@ ENH_fnc_virtualArsenalManager_switchNodeState =
 			private _newPath = _path + [_i];
 
 			_ctrlTV tvSetPicture [_newPath, _picture];
-      _ctrlTV tvSetValue [_newPath, _add];
+			_ctrlTV tvSetValue [_newPath, _add];
+
+			private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
+			private _itemClass = toLower(_ctrlTV tvData _newPath);
+
+			if (_add == 1 && (_ctrlTV tvCount _newPath) == 0) then {
+				private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+				_selectHashMap insert [[_itemClass, _itemValues]];
+				format["added item: %3 count: %1 hashmap: %2", count _selectHashMap, keys _selectHashMap, _itemClass] call BIS_fnc_3DENNotification;
+			} else {
+				_selectHashMap deleteAt _itemClass;
+			};
 
 			if (_ctrlTV tvCount _newPath > 0) then
 			{
