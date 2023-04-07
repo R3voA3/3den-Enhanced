@@ -85,6 +85,15 @@ _ctrlPicture ctrlSetPosition
 	WINDOW_HAbs / 2 - 17 * GRID_H
 ];
 
+_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlPicture ctrlSetPosition
+[
+	CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 17 * GRID_H - GRID_H,
+	(WINDOW_W * GRID_W - 2 * GRID_W) / 2,
+	WINDOW_HAbs / 2 - 17 * GRID_H
+];
+
 //_ctrlPicture ctrlSetBackgroundColor [0, 1, 0, 1];
 _ctrlPicture ctrlCommit 0;
 
