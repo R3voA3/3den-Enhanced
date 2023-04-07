@@ -4,7 +4,7 @@
   Date: 2022-04-11
 
   Description:
-  Fills the listbox with existing layers, except system.
+  Fills the listbox with existing layers, except system layers.
 
   Parameter(s):
   0: CONTROL - Listbox control

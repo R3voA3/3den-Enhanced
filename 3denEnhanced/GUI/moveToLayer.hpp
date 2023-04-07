@@ -53,6 +53,7 @@ class ENH_MoveToLayer
       y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
       w = 44 * GRID_W;
       h = CTRL_DEFAULT_H;
+      onLoad = "ctrlSetFocus (_this select 0)";
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
     };
 	class SearchIcon: ctrlStaticPictureKeepAspect
