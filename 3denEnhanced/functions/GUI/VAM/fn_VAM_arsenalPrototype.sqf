@@ -12,20 +12,51 @@
 */
 
 #include "\a3\3DEN\UI\macros.inc"
+#define WINDOW_W 140 // Overwrite macro from Eden because they use a different width
 
-_display = (if (is3DEN) then {findDisplay 313} else {[] call BIS_fnc_displayMission}) createDisplay "RscDisplayEmpty";
+private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
+
+// Get check is mods var is existing. If not get it
+if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then
+{
+  call ENH_fnc_getAllItems;
+};
+
+// Create translation hashmap
+private _categoryTranslation = createHashMapFromArray
+[
+	["AssaultRifle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0"],
+	["MachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0"],
+	["SniperRifle", "STR_A3_SNIPER1"],
+	["Shotgun", "STR_ENH_VIM_SHOTGUNS"],
+	["SubmachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0"],
+	["RocketLauncher", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0"],
+	["Handgun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0"],
+	["Grenade", "STR_A3_GRENADES1"],
+	["Magazine", "STR_GEAR_MAGAZINES"],
+	["Mine", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_EXPLOSIVES0"],
+	["AccessoryBipod", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
+	["AccessoryMuzzle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
+	["AccessoryPointer", "STR_A3_POINTERS1"],
+	["AccessorySights", "STR_A3_SCOPES1"],
+	["Uniform", "STR_A3_CFGVEHICLECLASSES_UNIFORMS0"],
+	["Vest", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_VESTS0"],
+	["Backpack", "STR_A3_CFGVEHICLECLASSES_BACKPACKS0"],
+	["Headgear", "STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR"],
+	["Glasses", "STR_A3_RSCDISPLAYARSENAL_TAB_GOGGLES"],
+	["NVGoggles", "STR_A3_RSCDISPLAYARSENAL_TAB_NVGS"],
+	["Item", "STR_A3_CFGVEHICLECLASSES_ITEMS0"]
+];
 
 // this would be a hashmap for what the user has selected,
 // I don't like the idea of having the UI store our data.
 // perhaps could be used to be saved into the profile and loaded
-uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
+//uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
 /// Gave up on nested hashmaps
 /// instead will be a hashmap of just item classes with
 /// ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"] array as value.
 
 private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
-
-#define WINDOW_W 140 // Overwrite macro from Eden because they use a different width
 
 _ctrlBackground ctrlSetPosition
 [
@@ -61,7 +92,7 @@ _ctrlSearch ctrlSetPosition
 
 _ctrlTV = _display ctrlCreate ["RscTreeSearch", 10];
 _ctrlTV ctrlSetFont FONT_NORMAL;
-_ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
+_ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
 _ctrlTV ctrlSetPosition
 [
 	CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
@@ -72,7 +103,7 @@ _ctrlTV ctrlSetPosition
 
 _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
 
-_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];
 _ctrlPicture ctrlSetPosition
 [
 	CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
@@ -81,7 +112,7 @@ _ctrlPicture ctrlSetPosition
 	WINDOW_HAbs / 2 - 17 * GRID_H
 ];
 
-_ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", -1];
 _ctrlFooter ctrlSetPosition
 [
 	CENTER_X - 0.5 * WINDOW_W * GRID_W,
@@ -90,7 +121,7 @@ _ctrlFooter ctrlSetPosition
 	7 * GRID_H
 ];
 
-_ctrlButtonClose = _display ctrlCreate ["ctrlButtonClose", 1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonClose = _display ctrlCreate ["ctrlButtonClose", 1];
 _ctrlButtonClose ctrlSetPosition
 [
 	CENTER_X + 0.5 * WINDOW_W * GRID_W - 26 * GRID_W,
@@ -99,7 +130,7 @@ _ctrlButtonClose ctrlSetPosition
 	5 * GRID_H
 ];
 
-_ctrlButtonExport = _display ctrlCreate ["ctrlButton", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonExport = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonExport ctrlSetPosition
 [
 	CENTER_X + 0.5 * WINDOW_W * GRID_W - 52 * GRID_W,
@@ -110,7 +141,7 @@ _ctrlButtonExport ctrlSetPosition
 
 _ctrlButtonExport ctrlSetText "Export";
 
-_ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonApply ctrlSetPosition
 [
 	CENTER_X - 0.5 * WINDOW_W * GRID_W + 1 * GRID_W,
@@ -128,9 +159,6 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 	private _selectedObjects = get3DENSelected "Object";
 	private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl 20);
 
-	systemChat str _selectedObjects;
-	systemChat str _useACE;
-
 	_selectedObjects apply
 	{
 		[_x, _useACE] call ENH_fnc_VAM_applyAttribute;
@@ -139,7 +167,6 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 	["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 }];
 
-
 private _selectedObjects = get3DENSelected "Object";
 
 _ctrlButtonApply ctrlSetText format ["Apply (%1)", count _selectedObjects];
@@ -147,7 +174,7 @@ _ctrlButtonApply ctrlSetText format ["Apply (%1)", count _selectedObjects];
 // If no object was selected, we cannot apply the attribute
 _ctrlButtonApply ctrlEnable !(_selectedObjects isEqualTo []);
 
-_ctrlButtonCollapseAll = _display ctrlCreate ["ctrlButtonCollapseAll", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonCollapseAll = _display ctrlCreate ["ctrlButtonCollapseAll", -1];
 _ctrlButtonCollapseAll ctrlSetPosition
 [
 	CENTER_X + 0.5 * WINDOW_W * GRID_W - 6 * GRID_W,
@@ -156,7 +183,7 @@ _ctrlButtonCollapseAll ctrlSetPosition
 	5 * GRID_H
 ];
 
-_ctrlButtonExpandAll = _display ctrlCreate ["ctrlButtonExpandAll", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonExpandAll = _display ctrlCreate ["ctrlButtonExpandAll", -1];
 _ctrlButtonExpandAll ctrlSetPosition
 [
 	CENTER_X + 0.5 * WINDOW_W * GRID_W - 11 * GRID_W,
@@ -203,35 +230,7 @@ ctrlSetFocus _ctrlSearch;
 // Commit all changes
 allControls _display apply { _x ctrlCommit 0};
 
-if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then { call ENH_fnc_getAllItems};
-
-// Category Translation
-// Category Translation
-private _categoryTranslation = createHashMapFromArray
-[
-	["AssaultRifle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0"],
-	["MachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0"],
-	["SniperRifle", "STR_A3_SNIPER1"],
-	["Shotgun", "STR_ENH_VIM_SHOTGUNS"],
-	["SubmachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0"],
-	["RocketLauncher", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0"],
-	["Handgun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0"],
-	["Grenade", "STR_A3_GRENADES1"],
-	["Magazine", "STR_GEAR_MAGAZINES"],
-	["Mine", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_EXPLOSIVES0"],
-	["AccessoryBipod", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
-	["AccessoryMuzzle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
-	["AccessoryPointer", "STR_A3_POINTERS1"],
-	["AccessorySights", "STR_A3_SCOPES1"],
-	["Uniform", "STR_A3_CFGVEHICLECLASSES_UNIFORMS0"],
-	["Vest", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_VESTS0"],
-	["Backpack", "STR_A3_CFGVEHICLECLASSES_BACKPACKS0"],
-	["Headgear", "STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR"],
-	["Glasses", "STR_A3_RSCDISPLAYARSENAL_TAB_GOGGLES"],
-	["NVGoggles", "STR_A3_RSCDISPLAYARSENAL_TAB_NVGS"],
-	["Item", "STR_A3_CFGVEHICLECLASSES_ITEMS0"]
-];
-
+// Perhaps rewrite this
 private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
 
 // Prefill tree view with layout
@@ -272,13 +271,10 @@ _allAddons apply
 
 		_ctrlTV tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
 		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-		//_ctrlTV tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
 		_ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
-
-
 } foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
 
-// Remove empty nodes
+// Make this a separate function
 private _fnc_removeEmptyNodes =
 {
 	params
@@ -337,7 +333,8 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 
 		// if clicked on check box
 		// Don't know any other way to do this - linkion -------V
-		if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then // This doesn't work reliably
+    // I guess we should use UI macros
+		if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
 		{
 
 			if ((_ctrl tvValue _path) == 0) then {
@@ -349,27 +346,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 	};
 }];
 
-// Check and uncheck nodes
-_ctrlTV ctrlAddEventHandler ["keyDown",
-{
-	params ["_ctrlTV", "_key", "_shift", "_ctrl", "_alt"];
-
-	if (_key == 14) then
-	{
-		[_ctrlTV, 0] call ENH_fnc_VAM_switchNodeState;
-	};
-	if (_key in [28, 156]) then
-	{
-		[_ctrlTV, 1] call ENH_fnc_VAM_switchNodeState;
-	};
-	if (_key == 59) then
-	{
-		call ENH_fnc_VAM_exportToSQF;
-	};
-}];
-
-
-
+// Make separate function
 ENH_fnc_VAM_exportToSQF =
 {
 	private _data =  //[<items>, <weapons>, <magazines>, <backpacks>]
