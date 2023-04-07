@@ -51,7 +51,7 @@ private _categoryTranslation = createHashMapFromArray
 // this would be a hashmap for what the user has selected,
 // I don't like the idea of having the UI store our data.
 // perhaps could be used to be saved into the profile and loaded
-//uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
+uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
 /// Gave up on nested hashmaps
 /// instead will be a hashmap of just item classes with
 /// ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"] array as value.
@@ -158,10 +158,11 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 
 	private _selectedObjects = get3DENSelected "Object";
 	private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl 20);
+  private _useBI = true; // TODO: add second checkbox for using BI virt Arsenal, since some groups don't use BI at all.
 
 	_selectedObjects apply
 	{
-		[_x, _useACE] call ENH_fnc_VAM_applyAttribute;
+		[_x, _useACE, _useBI] call ENH_fnc_VAM_applyAttribute;
 	};
 
 	["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
