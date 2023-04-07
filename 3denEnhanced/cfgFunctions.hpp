@@ -177,7 +177,7 @@ class CfgFunctions
     };
     class VAM
     {
-      file = "3denEnhanced\functions\GUI\virtualArsenalManager";
+      file = "3denEnhanced\functions\GUI\VAM";
       class VAM_arsenalPrototype;
       class VAM_applyAttribute;
       class VAM_selectCompatibleItems;
