@@ -16,7 +16,7 @@ class ENH_AI
       displayName = "$STR_ENH_AIMINGSHAKE_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGSHAKE_TOOLTIP";
       property = "ENH_aimingShake";
-      expression = "[_this, ['aimingShake', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['aimingShake', _value]] remoteExec ['setSkill', _this]";
       control = "Slider";
       defaultValue = "0.5";
       condition = "objectBrain";
@@ -26,56 +26,56 @@ class ENH_AI
       displayName = "$STR_ENH_AIMINGSPEED_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGSPEED_TOOLTIP";
       property = "ENH_aimingSpeed";
-      expression = "[_this, ['aimingSpeed', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['aimingSpeed', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_AimingAccuracy: ENH_AimingShake
     {
       displayName = "$STR_ENH_AIMINGACCURACY_DISPLAYNAME";
       tooltip = "$STR_ENH_AIMINGACCURACY_TOOLTIP";
       property = "ENH_aimingAccuracy";
-      expression = "[_this, ['aimingAccuracy', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['aimingAccuracy', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_Commanding: ENH_AimingShake
     {
       displayName = "$STR_ENH_COMMANDING_DISPLAYNAME";
       tooltip = "$STR_ENH_COMMANDING_TOOLTIP";
       property = "ENH_commanding";
-      expression = "[_this, ['commanding', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['commanding', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_Courage: ENH_AimingShake
     {
       displayName = "$STR_ENH_COURAGE_DISPLAYNAME";
       tooltip = "$STR_ENH_COURAGE_TOOLTIP";
       property = "ENH_courage";
-      expression = "[_this, ['courage', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['courage', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_General: ENH_AimingShake
     {
       displayName = "$STR_ENH_GENERAL_DISPLAYNAME";
       tooltip = "$STR_ENH_GENERAL_TOOLTIP";
       property = "enh_general";
-      expression = "[_this, ['general', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['general', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_ReloadSpeed: ENH_AimingShake
     {
       displayName = "$STR_ENH_RELOADSPEED_DISPLAYNAME";
       tooltip = "$STR_ENH_RELOADSPEED_TOOLTIP";
       property = "ENH_reloadingSpeed";
-      expression = "[_this, ['reloadSpeed', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['reloadSpeed', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_SpotDistance: ENH_AimingShake
     {
       displayName = "$STR_ENH_SPOTDISTANCE_DISPLAYNAME";
       tooltip = "$STR_ENH_SPOTDISTANCE_TOOLTIP";
       property = "ENH_spotDistance";
-      expression = "[_this, ['spotDistance', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['spotDistance', _value]] remoteExec ['setSkill', _this]";
     };
     class ENH_SpotTime: ENH_AimingShake
     {
       displayName = "$STR_ENH_SPOTTIME_DISPLAYNAME";
       tooltip = "$STR_ENH_SPOTTIME_TOOLTIP";
       property = "ENH_spotTime";
-      expression = "[_this, ['spotTime', _value]] remoteExec ['setSkill', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, ['spotTime', _value]] remoteExec ['setSkill', _this]";
     };
     //----------------Not really skill, but still related to behaviour of AI
     class ENH_AllowFleeing: ENH_AimingShake
@@ -83,7 +83,7 @@ class ENH_AI
       displayName = "$STR_ENH_ALLOWFLEEING_DISPLAYNAME";
       tooltip = "$STR_ENH_ALLOWFLEEING_TOOLTIP";
       property = "ENH_allowFleeing";
-      expression = "[_this, _value] remoteExec ['allowFleeing', _this]";
+      expression = "if (_value == 0.5) exitWith {}; [_this, _value] remoteExec ['allowFleeing', _this]";
     };
     //----------------AI Features
     class ENH_AI_Features_Subcategory: ENH_AI_Skill_SubCategory
