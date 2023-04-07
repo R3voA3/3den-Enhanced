@@ -5,6 +5,7 @@
 ## CHANGED
 - Renamed recently added functions
 - Updated Italian translation thanks to Fil-ric
+- Search box is not automatically focused when Move To Layer UI is opened
 
 # v7.7.2
 ## ADDED
