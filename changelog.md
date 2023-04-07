@@ -6,6 +6,7 @@
 - Renamed recently added functions
 - Updated Italian translation thanks to Fil-ric
 - Search box is not automatically focused when Move To Layer UI is opened
+- If AI skill settings are set to 0.5 (via Edit box) they will no longer be executed
 
 # v7.7.2
 ## ADDED
