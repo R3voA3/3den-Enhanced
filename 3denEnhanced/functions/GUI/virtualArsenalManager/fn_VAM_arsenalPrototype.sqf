@@ -36,7 +36,6 @@ _ctrlBackground ctrlSetPosition
 ];
 
 _ctrlBackground ctrlSetBackgroundColor [COLOR_BACKGROUND_RGBA];
-_ctrlBackground ctrlCommit 0;
 
 private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", -1];
 
@@ -56,13 +55,11 @@ _ctrlSearch ctrlSetPosition
 [
 	CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
 	CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
-	WINDOW_W * GRID_W - 2 * GRID_W,
+	WINDOW_W * GRID_W - 13 * GRID_W,
 	5 * GRID_H
 ];
 
-_ctrlSearch ctrlCommit 0;
-
-_ctrlTV = _display ctrlCreate ["RscTreeSearch", -1];
+_ctrlTV = _display ctrlCreate ["RscTreeSearch", 10];
 _ctrlTV ctrlSetFont FONT_NORMAL;
 _ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
 _ctrlTV ctrlSetPosition
@@ -74,7 +71,6 @@ _ctrlTV ctrlSetPosition
 ];
 
 _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
-_ctrlTV ctrlCommit 0;
 
 _ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
 _ctrlPicture ctrlSetPosition
@@ -85,19 +81,156 @@ _ctrlPicture ctrlSetPosition
 	WINDOW_HAbs / 2 - 17 * GRID_H
 ];
 
-_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", 10];//["ctrlStaticPictureKeepAspect", 10];
-_ctrlPicture ctrlSetPosition
+_ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlFooter ctrlSetPosition
 [
-	CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
-	CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 17 * GRID_H - GRID_H,
-	(WINDOW_W * GRID_W - 2 * GRID_W) / 2,
-	WINDOW_HAbs / 2 - 17 * GRID_H
+	CENTER_X - 0.5 * WINDOW_W * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 3 * GRID_H + WINDOW_HAbs,
+	WINDOW_W * GRID_W,
+	7 * GRID_H
 ];
 
-//_ctrlPicture ctrlSetBackgroundColor [0, 1, 0, 1];
-_ctrlPicture ctrlCommit 0;
+_ctrlButtonClose = _display ctrlCreate ["ctrlButtonClose", 1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonClose ctrlSetPosition
+[
+	CENTER_X + 0.5 * WINDOW_W * GRID_W - 26 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
+	25 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlButtonExport = _display ctrlCreate ["ctrlButton", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonExport ctrlSetPosition
+[
+	CENTER_X + 0.5 * WINDOW_W * GRID_W - 52 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
+	25 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlButtonExport ctrlSetText "Export";
+
+_ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonApply ctrlSetPosition
+[
+	CENTER_X - 0.5 * WINDOW_W * GRID_W + 1 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
+	25 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlButtonApply ctrlSetTooltip "Sets the Equipment Storage attribute to current selection of all selected entities that support it.";
+
+_ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
+{
+	params["_ctrlButton"];
+
+	private _selectedObjects = get3DENSelected "Object";
+	private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl 20);
+
+	systemChat str _selectedObjects;
+	systemChat str _useACE;
+
+	_selectedObjects apply
+	{
+		[_x, _useACE] call ENH_fnc_VAM_applyAttribute;
+	};
+
+	["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+}];
+
+
+private _selectedObjects = get3DENSelected "Object";
+
+_ctrlButtonApply ctrlSetText format ["Apply (%1)", count _selectedObjects];
+
+// If no object was selected, we cannot apply the attribute
+_ctrlButtonApply ctrlEnable !(_selectedObjects isEqualTo []);
+
+_ctrlButtonCollapseAll = _display ctrlCreate ["ctrlButtonCollapseAll", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonCollapseAll ctrlSetPosition
+[
+	CENTER_X + 0.5 * WINDOW_W * GRID_W - 6 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
+	5 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlButtonExpandAll = _display ctrlCreate ["ctrlButtonExpandAll", -1];//["ctrlStaticPictureKeepAspect", 10];
+_ctrlButtonExpandAll ctrlSetPosition
+[
+	CENTER_X + 0.5 * WINDOW_W * GRID_W - 11 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
+	5 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlButtonCollapseAll ctrlAddEventHandler ["ButtonClick",
+{
+	params["_ctrlButton"];
+	tvCollapseAll (ctrlParent _ctrlButton displayCtrl 10);
+}];
+
+_ctrlButtonExpandAll ctrlAddEventHandler ["ButtonClick",
+{
+	params["_ctrlButton"];
+	tvExpandAll (ctrlParent _ctrlButton displayCtrl 10);
+}];
+
+_ctrlACECheckbox = _display ctrlCreate ["ctrlCheckbox", 20];
+_ctrlACECheckbox ctrlSetPosition
+[
+	CENTER_X - 0.5 * WINDOW_W * GRID_W + 27 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs - 3 * GRID_H + WINDOW_HAbs,
+	5 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlACEText = _display ctrlCreate ["ctrlStatic", -1];
+_ctrlACEText ctrlSetPosition
+[
+	CENTER_X - 0.5 * WINDOW_W * GRID_W + 1 * GRID_W,
+	CENTER_Y - 0.5 * WINDOW_HAbs - 3 * GRID_H + WINDOW_HAbs,
+	25 * GRID_W,
+	5 * GRID_H
+];
+
+_ctrlACEText ctrlSetText "ACE Arsenal";
+
+// Focus search box
+ctrlSetFocus _ctrlSearch;
+
+// Commit all changes
+allControls _display apply { _x ctrlCommit 0};
 
 if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then { call ENH_fnc_getAllItems};
+
+// Category Translation
+// Category Translation
+private _categoryTranslation = createHashMapFromArray
+[
+	["AssaultRifle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0"],
+	["MachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0"],
+	["SniperRifle", "STR_A3_SNIPER1"],
+	["Shotgun", "STR_ENH_VIM_SHOTGUNS"],
+	["SubmachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0"],
+	["RocketLauncher", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0"],
+	["Handgun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0"],
+	["Grenade", "STR_A3_GRENADES1"],
+	["Magazine", "STR_GEAR_MAGAZINES"],
+	["Mine", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_EXPLOSIVES0"],
+	["AccessoryBipod", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
+	["AccessoryMuzzle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
+	["AccessoryPointer", "STR_A3_POINTERS1"],
+	["AccessorySights", "STR_A3_SCOPES1"],
+	["Uniform", "STR_A3_CFGVEHICLECLASSES_UNIFORMS0"],
+	["Vest", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_VESTS0"],
+	["Backpack", "STR_A3_CFGVEHICLECLASSES_BACKPACKS0"],
+	["Headgear", "STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR"],
+	["Glasses", "STR_A3_RSCDISPLAYARSENAL_TAB_GOGGLES"],
+	["NVGoggles", "STR_A3_RSCDISPLAYARSENAL_TAB_NVGS"],
+	["Item", "STR_A3_CFGVEHICLECLASSES_ITEMS0"]
+];
 
 private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
 
@@ -107,9 +240,10 @@ private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [[""
 
 	private _indexAddon = _ctrlTV tvAdd [[], _addonName];
 	_ctrlTV tvSetPicture [[_indexAddon], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+	_ctrlTV tvSetPictureRight [[_indexAddon], _addonIcon];
 	_ctrlTV tvSetData [[_indexAddon], _addonClass];
 	{
-		private _indexCategory = _ctrlTV tvAdd [[_indexAddon], _x];
+		private _indexCategory = _ctrlTV tvAdd [[_indexAddon], localize (_categoryTranslation get _x)];
 		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
 		_ctrlTV tvSetData [[_indexAddon, _indexCategory], _x];
 	} foreach (uiNamespace getVariable ["ENH_VIM_types", []]);
@@ -138,7 +272,7 @@ _allAddons apply
 
 		_ctrlTV tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
 		_ctrlTV tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-		_ctrlTV tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
+		//_ctrlTV tvSetPictureRight [[_indexAddon, _indexCategory, _indexEquipment], _picture];
 		_ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 
 
