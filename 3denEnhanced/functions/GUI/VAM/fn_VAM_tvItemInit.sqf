@@ -19,6 +19,56 @@ params["_ctrlTV", "_itemClass"];
 
 tvClear _ctrlTV;
 
+// from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
+// Author: Alganthe
+
+// Retrieve compatible mags
+private _compatibleItems = [];
+private _compatibleMagazines = [[[], []], [[], []], [[], []]];
+{
+    if (_x != "") then {
+        private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
+        private _index = _forEachIndex;
+
+        {
+            private _subIndex = _forEachIndex min 1;
+            {
+                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
+            } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
+
+            // Magazine groups
+            {
+                private _magazineGroups = createHashMap;
+
+                private _cfgMagazines = configFile >> "CfgMagazines";
+
+                {
+                    private _magList = [];
+                    {
+                        private _magazines = (getArray _x) select {isClass (_cfgMagazines >> _x)}; //filter out non-existent magazines
+                        _magazines = _magazines apply {configName (_cfgMagazines >> _x)}; //Make sure classname case is correct
+                        _magList append _magazines;
+                    } foreach configProperties [_x, "isArray _x", true];
+
+                    _magazineGroups set [toLower configName _x, _magList arrayIntersect _magList];
+                } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
+
+                private _magArray = _magazineGroups get (toLower _x);
+                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
+            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
+
+
+        } foreach getArray (_weaponConfig >> "muzzles");
+    };
+} foreach [_itemClass];
+
+private _compatibleMagsPrimaryMuzzle = [];
+private _compatibleMagsSecondaryMuzzle = [];
+private _compatibleItems = [_itemClass] call ENH_fnc_compatibleItems;
+
+_compatibleMagsPrimaryMuzzle = _compatibleMagazines select 0 select 0;
+_compatibleMagsSecondaryMuzzle = _compatibleMagazines select 0 select 1;
+
 // Fill tree view with equipment
 {
   (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
@@ -44,7 +94,11 @@ tvClear _ctrlTV;
     _ctrlTV tvSetValue [[_indexCategory, _indexEquipment], 1];
   };
 
-} foreach ([_itemClass] call ENH_fnc_compatibleItems);
+} foreach (_compatibleItems);
+
+{
+  private _indexEquipment = _ctrlTV tvAdd [[], _x];
+} forEach (_compatibleMagsPrimaryMuzzle)
 
 // TODO: separate via attachment type (scope, pointer, muzzle, primary ammo, secondary ammo (GLs), etc.)
 // NOTE: check out switch case (line 165) in ace arsenal fn_fillRightPanel.sqf
@@ -56,35 +110,10 @@ tvClear _ctrlTV;
 // NOTE: (GVAR(virtualItems) select 1) select 2 is muzzles
 // NOTE: (GVAR(virtualItems) select 1) select 3 is bipods
 /*
-from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
-Author: Alganthe
 
-// Retrieve compatible mags
-private _compatibleItems = [];
-private _compatibleMagazines = [[[], []], [[], []], [[], []]];
-{
-    if (_x != "") then {
-        private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
-        private _index = _forEachIndex;
-
-        {
-            private _subIndex = _forEachIndex min 1;
-            {
-                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
-            } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
-
-            // Magazine groups
-            {
-                private _magazineGroups = uiNamespace getVariable [QGVAR(magazineGroups), createHashMap];
-                private _magArray = _magazineGroups get (toLower _x);
-                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
-            } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
-
-
-        } foreach getArray (_weaponConfig >> "muzzles");
-    };
-} foreach [primaryWeapon GVAR(center), handgunWeapon GVAR(center), secondaryWeapon GVAR(center)];
 */
+
+
 
 // TODO: implement traverse parents, need previous TODO completed first though.
 private _fnc_traverseParents =
