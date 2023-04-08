@@ -1,30 +1,39 @@
 /*
-	Author: linkion and R3vo
+  Author: linkion and R3vo
 
-	Description:
-	Initialize table view for selected item
+  Description:
+  Initialize table view for selected item
 
-	Parameter(s):
-	tvControl - table view control
+  Parameter(s):
+  tvControl - table view control
   String - item class name of which to display compatible items
 
-	Returns:
-	-
+  Returns:
+  -
 
-	Usage:
-	[_ctrlTV, "LMG_Mk200_F"] call ENH_fnc_VAM_tvItemInit;
+  Usage:
+  [_ctrlTV, "LMG_Mk200_F"] call ENH_fnc_VAM_tvItemInit;
 */
+#define TYPE_MUZZLE 101
+#define TYPE_OPTICS 201
+#define TYPE_FLASHLIGHT 301
+#define TYPE_BIPOD 302
 
 params["_ctrlTV", "_itemClass"];
 
 tvClear _ctrlTV;
 
+private _compatibleItems = [
+  [[], []], // magazines
+  [], // optic
+  [], // side
+  [], // muzzle
+  []  // bipod
+];
 // from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
 // Author: Alganthe
 
 // Retrieve compatible mags
-private _compatibleItems = [];
-private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 {
     if (_x != "") then {
         private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
@@ -33,7 +42,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
         {
             private _subIndex = _forEachIndex min 1;
             {
-                ((_compatibleMagazines select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
+                ((_compatibleItems select 0) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
 
             // Magazine groups
@@ -54,7 +63,7 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
                 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
                 private _magArray = _magazineGroups get (toLower _x);
-                {((_compatibleMagazines select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
+                {((_compatibleItems select 0) select _subIndex) pushBackUnique _x} forEach _magArray;
             } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
 
 
@@ -64,104 +73,86 @@ private _compatibleMagazines = [[[], []], [[], []], [[], []]];
 
 private _compatibleMagsPrimaryMuzzle = [];
 private _compatibleMagsSecondaryMuzzle = [];
-private _compatibleItems = [_itemClass] call ENH_fnc_compatibleItems;
+private _compatibleScopes = [];
+private _compatiblePointers = [];
+private _compatibleMuzzles = [];
+private _compatibleBipods = [];
 
-_compatibleMagsPrimaryMuzzle = _compatibleMagazines select 0 select 0;
-_compatibleMagsSecondaryMuzzle = _compatibleMagazines select 0 select 1;
+_compatibleMagsPrimaryMuzzle = _compatibleItems select 0 select 0;
+_compatibleMagsSecondaryMuzzle = _compatibleItems select 0 select 1;
+_compatibleScopes = _compatibleItems select 1;
+_compatiblePointers = _compatibleItems select 2;
+_compatibleMuzzles = _compatibleItems select 3;
+_compatibleBipods = _compatibleItems select 4;
 
-// Fill tree view with equipment
+private _AttachTypes = ["scopes", "pointers", "muzzles", "bipods", "primaryMags", "secondaryMags"];
+
+private _typeTranslation = createHashMapFromArray
+[
+  ["secondaryMags", "STR_A3_GRENADES1"],
+  ["primaryMags", "STR_GEAR_MAGAZINES"],
+  ["bipods", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
+  ["muzzles", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
+  ["pointers", "STR_A3_POINTERS1"],
+  ["scopes", "STR_A3_SCOPES1"]
+];
+
+
+private _configCfgWeapons = configFile >> "CfgWeapons";
+
 {
-  (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+  // Current result is saved in variable _x
+  private _weaponConfig = (configFile >> "CfgWeapons" >> _itemClass);
+  private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
 
-  private _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _category;
-
-  private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
-
-  if (_indexCategory < 0) then
-  {
-    _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _specificType;
+  switch (getNumber (_configItemInfo >> "type")) do {
+    case TYPE_OPTICS: {
+      (_compatibleItems select 1) pushBackUnique _x;
+    };
+    case TYPE_FLASHLIGHT: {
+      (_compatibleItems select 2) pushBackUnique _x;
+    };
+    case TYPE_MUZZLE: {
+      (_compatibleItems select 3) pushBackUnique _x;
+    };
+    case TYPE_BIPOD: {
+      (_compatibleItems select 4) pushBackUnique _x;
+    };
   };
 
-  private _indexEquipment = _ctrlTV tvAdd [[_indexCategory], _displayName];
-
-  _ctrlTV tvSetData [[_indexCategory, _indexEquipment], _class];
-  _ctrlTV tvSetPicture [[_indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-  _ctrlTV tvSetValue [[_indexCategory, _indexEquipment], 0];
-  _ctrlTV tvSetTooltip [[_indexCategory, _indexEquipment], _descriptionShort];
-
-  if (toLower(_class) in (keys _selectHashMap)) then {
-    _ctrlTV tvSetPicture [[_indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
-    _ctrlTV tvSetValue [[_indexCategory, _indexEquipment], 1];
-  };
-
-} foreach (_compatibleItems);
+} forEach ([_itemClass] call ENH_fnc_compatibleItems);
 
 {
-  private _indexEquipment = _ctrlTV tvAdd [[], _x];
-} forEach (_compatibleMagsPrimaryMuzzle)
-
-// TODO: separate via attachment type (scope, pointer, muzzle, primary ammo, secondary ammo (GLs), etc.)
-// NOTE: check out switch case (line 165) in ace arsenal fn_fillRightPanel.sqf
-// NOTE: GVAR(virtualItems) = [[[], [], []], [[], [], [], []], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
-// NOTE: My brain...splooosh
-// NOTE: GVAR(virtualItems) select 1 is weapon attachments
-// NOTE: (GVAR(virtualItems) select 1) select 0 is scopes
-// NOTE: (GVAR(virtualItems) select 1) select 1 is accessories
-// NOTE: (GVAR(virtualItems) select 1) select 2 is muzzles
-// NOTE: (GVAR(virtualItems) select 1) select 3 is bipods
-/*
-
-*/
+  _ctrlTV tvAdd [[], localize (_typeTranslation get _x)];
+} forEach _AttachTypes;
 
 
-
-// TODO: implement traverse parents, need previous TODO completed first though.
-private _fnc_traverseParents =
 {
-	params ["_path"];
+  private _typeIndex = _AttachTypes find "scopes";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatibleScopes;
 
-	// traversing backwards from farthest child to first parent
-	// to make sure to check uncheck when all children are checked
-	for "_i" from 1 to (count _path - 1) step 1 do {
-		private _partialCheckedPic = "\a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa";
-		private _newPath = +_path;
-		_newPath deleteRange [count _path - _i, count _path];
+{
+  private _typeIndex = _AttachTypes find "pointers";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatiblePointers;
 
-		_ctrlTV tvSetPicture [_newPath, _partialCheckedPic];
-		_ctrlTV tvSetValue [_newPath, 2];
+{
+  private _typeIndex = _AttachTypes find "muzzles";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatibleMuzzles;
 
-		// check if all children are checked
-		private _tempBool = true;
-		for "_i" from (_ctrlTV tvCount _newPath) to 0 step -1 do
-		{
-			private _newPath = _newPath + [_i];
-			if (_ctrlTV tvValue _newPath == 0 || _ctrlTV tvValue _newPath == 2) exitWith {
-				_tempBool = false;
-			};
-		};
-		// make parent checked
-		if (_tempBool) then {
-			private _checkedPic = "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa";
+{
+  private _typeIndex = _AttachTypes find "bipods";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatibleBipods;
 
-			_ctrlTV tvSetPicture [_newPath, _checkedPic];
-			_ctrlTV tvSetValue [_newPath, 1];
-		};
+{
+  private _typeIndex = _AttachTypes find "primaryMags";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatibleMagsPrimaryMuzzle;
 
-		// check if all children are unchecked
-		private _tempBool = true;
-		for "_i" from (_ctrlTV tvCount _newPath) to 0 step -1 do
-		{
-			private _newPath = _newPath + [_i];
-			if (_ctrlTV tvValue _newPath == 1 || _ctrlTV tvValue _newPath == 2) exitWith {
-				_tempBool = false;
-			};
-		};
-		// make parent unchecked
-		if (_tempBool) then {
-			private _uncheckedPic = "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa";
-
-			_ctrlTV tvSetPicture [_newPath, _uncheckedPic];
-			_ctrlTV tvSetValue [_newPath, 0];
-		};
-	};
-};
+{
+  private _typeIndex = _AttachTypes find "secondaryMags";
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+} forEach _compatibleMagsSecondaryMuzzle;

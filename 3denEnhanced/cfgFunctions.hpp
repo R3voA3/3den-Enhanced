@@ -182,6 +182,7 @@ class CfgFunctions
       class VAM_applyAttribute;
       class VAM_selectCompatibleItems;
       class VAM_switchNodeState;
+      class VAM_tvItemInit;
     }
     class CfgSentencesBrowser
     {

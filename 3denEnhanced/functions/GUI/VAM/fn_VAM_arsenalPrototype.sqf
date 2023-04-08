@@ -17,6 +17,7 @@
 #define IDC_TREEVIEW 10
 #define IDC_ACE_CHECKBOX 20
 #define IDC_PREVIEW_PICTURE 30
+#define IDC_ACCTREEVIEW 40
 #define IDC_SEARCH 645
 #define IDC_PROGRESS_1 40
 #define IDC_PROGRESS_2 50
@@ -112,6 +113,17 @@ _ctrlTV ctrlSetPosition
 [
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
+ WINDOW_W * GRID_W - 2 * GRID_W,
+ WINDOW_HAbs / 2 - 17 * GRID_H
+];
+
+_ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_ACCTREEVIEW];
+_ctrlAccTV ctrlSetFont FONT_NORMAL;
+_ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
+_ctrlAccTV ctrlSetPosition
+[
+ CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+ CENTER_Y - 0 * WINDOW_HAbs + 17 * GRID_H,
  WINDOW_W * GRID_W - 2 * GRID_W,
  WINDOW_HAbs / 2 - 17 * GRID_H
 ];
@@ -466,6 +478,8 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
  // check if it's a single entry or a folder
  if ((_ctrl tvCount _path) == 0) then
  {
+  private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
+  [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
 
   if ((_ctrl tvValue _path) == 0) then
   {
