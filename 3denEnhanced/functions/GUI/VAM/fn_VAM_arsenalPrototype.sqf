@@ -168,6 +168,41 @@ _ctrlButtonExport ctrlSetPosition
 
 _ctrlButtonExport ctrlSetText "Export";
 
+_ctrlButtonSave = _display ctrlCreate ["ctrlButton", -1];
+_ctrlButtonSave ctrlSetPosition
+[
+ CENTER_X + 0.5 * WINDOW_W * GRID_W - 78 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
+ 25 * GRID_W,
+ 5 * GRID_H
+];
+
+_ctrlButtonSave ctrlSetText "Save Preset";
+
+_ctrlButtonSave ctrlAddEventHandler ["ButtonClick",
+{
+  params["_ctrlButton"];
+
+  private _displayInput = ctrlParent _ctrlButton createDisplay "Display3DENRename";
+
+  _displayInput displayCtrl 1 ctrlAddEventHandler ["ButtonClick",
+  {
+    params ["_ctrlButton"];
+    systemChat str ctrlText (ctrlParent _ctrlButton displayCtrl 101);
+  }];
+}];
+
+_ctrlButtonLoad = _display ctrlCreate ["ctrlButton", -1];
+_ctrlButtonLoad ctrlSetPosition
+[
+ CENTER_X + 0.5 * WINDOW_W * GRID_W - 104 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
+ 25 * GRID_W,
+ 5 * GRID_H
+];
+
+_ctrlButtonLoad ctrlSetText "Load Preset";
+
 _ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonApply ctrlSetPosition
 [
