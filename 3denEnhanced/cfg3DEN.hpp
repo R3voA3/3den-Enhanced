@@ -347,4 +347,17 @@ class Cfg3DEN
       };
     };
   };
+  class Marker
+  {
+    class AttributeCategories
+    {
+      class Transformation
+      {
+        class Attributes
+        {
+          #include "attributesMarker\markerDrawPriority.hpp"
+        };
+      };
+    };
+  };
 };

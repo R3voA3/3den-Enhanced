@@ -64,6 +64,14 @@
         <Chinesesimp>最低技能</Chinesesimp>
         <Chinese>最低技能</Chinese>
     </Key>
+    <Key ID="STR_ENH_MARKERDRAWPRIORITY_DISPLAYNAME">
+        <English>Marker Draw Priority</English>
+        <German>Markierungs-Priorität</German>
+    </Key>
+    <Key ID="STR_ENH_MARKERDRAWPRIORITY_TOOLTIP">
+        <English>Sets marker draw priority. Higher priority markers are drawn on top. Default priority is 0.</English>
+        <German>Legt die Priorität für das Zeichnen von Markierungen fest. Markierungen mit höherer Priorität werden als erstes gezeichnet. Die Standardpriorität ist 0.</German>
+    </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
         <English>Min. Aiming Skill</English>
         <Italian>Min. Abilità di mira</Italian>
@@ -2931,7 +2939,7 @@
         <French>Joue une fausse séquence d'observation drone pouvant servir à une introduction.</French>
         <Chinesesimp>临时创建无人机以创建初始图像</Chinesesimp>
         <Chinese>臨時創建無人機以創建初始圖像</Chinese>
-       
+
     </Key>
     <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
         <English>Shows an animated text. Can be used to display mission name.</English>
@@ -7669,7 +7677,7 @@
         <Chinesesimp>窗口(右)</Chinesesimp>
         <Chinese>窗口(右)</Chinese>
         <Polish>Okno (Prawe)</Polish>
-        <Italian>Finestra(Destra)</Italian>  
+        <Italian>Finestra(Destra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLGLASS">
         <English>Window (Left)</English>
@@ -7677,7 +7685,7 @@
         <Chinesesimp>窗口(左)</Chinesesimp>
         <Chinese>窗口(左)</Chinese>
         <Polish>Okno (Lewe)</Polish>
-        <Italian>Finestra(Sinistra)</Italian>        
+        <Italian>Finestra(Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITWINCH">
         <English>Winch</English>
@@ -7685,7 +7693,7 @@
         <Chinesesimp>绞盘</Chinesesimp>
         <Chinese>絞盤</Chinese>
         <Polish>Dźwig</Polish>
-        <Italian>Verricello</Italian>  
+        <Italian>Verricello</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE3">
         <English>Engine #03</English>
@@ -7693,7 +7701,7 @@
         <Chinesesimp>引擎 #03</Chinesesimp>
         <Chinese>引擎 #03</Chinese>
         <Polish>Silnik #03</Polish>
-        <Italian>Motore #03</Italian>  
+        <Italian>Motore #03</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGEAR">
         <English>Gear</English>
@@ -7701,7 +7709,7 @@
         <Chinesesimp>起落架</Chinesesimp>
         <Chinese>起落架</Chinese>
         <Polish>Przekładnia</Polish>
-        <Italian>Ingranaggio</Italian>  
+        <Italian>Ingranaggio</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
         <English>Hydraulics</English>
@@ -7709,7 +7717,7 @@
         <Chinesesimp>液压系统</Chinesesimp>
         <Chinese>液壓系統</Chinese>
         <Polish>Hydraulika</Polish>
-        <Italian>Idraulica</Italian>  
+        <Italian>Idraulica</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSR">
         <English>Glass (Right)</English>
@@ -7717,7 +7725,7 @@
         <Chinesesimp>玻璃（右）</Chinesesimp>
         <Chinese>玻璃（右）</Chinese>
         <Polish>Szyba (Prawa)</Polish>
-        <Italian>Vetro(Destra)</Italian>  
+        <Italian>Vetro(Destra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSL">
         <English>Glass (Left)</English>
@@ -7725,7 +7733,7 @@
         <Chinesesimp>玻璃（左）</Chinesesimp>
         <Chinese>玻璃（左）</Chinese>
         <Polish>Szyba (Lewa)</Polish>
-        <Italian>Vetro(Sinistra)</Italian>  
+        <Italian>Vetro(Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
         <English>Transmission</English>
@@ -7733,7 +7741,7 @@
         <Chinesesimp>变速器</Chinesesimp>
         <Chinese>變速器</Chinese>
         <Polish>Przekładnia</Polish>
-        <Italian>Trasmissione</Italian>  
+        <Italian>Trasmissione</Italian>
     </Key>
     <Key ID="STR_ENH_AI_CATEGORY">
         <English>AI</English>
@@ -7742,7 +7750,7 @@
         <Chinese>AI</Chinese>
         <Polish>AI</Polish>
         <Spanish>IA</Spanish>
-        <Italian>IA</Italian>  
+        <Italian>IA</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITARMS">
         <English>Arms</English>
@@ -7831,7 +7839,7 @@
         <Chinesesimp>窗口 #11</Chinesesimp>
         <Chinese>窗口 #11</Chinese>
         <Polish>Okno #11</Polish>
-        <Italian>Finestra #11</Italian>  
+        <Italian>Finestra #11</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
         <English>Light #01</English>
@@ -7840,7 +7848,7 @@
         <Chinesesimp>灯光 #01</Chinesesimp>
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
-        <Italian>Luce #01</Italian>  
+        <Italian>Luce #01</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
         <English>Light #02</English>
@@ -7849,7 +7857,7 @@
         <Chinesesimp>灯光 #02</Chinesesimp>
         <Chinese>燈光 #02</Chinese>
         <Polish>Światło #02</Polish>
-        <Italian>Luce #02</Italian>  
+        <Italian>Luce #02</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
         <English>Light #03</English>
@@ -7858,7 +7866,7 @@
         <Chinesesimp>灯光 #03</Chinesesimp>
         <Chinese>燈光 #03</Chinese>
         <Polish>Światło #03</Polish>
-        <Italian>Luce #03</Italian>  
+        <Italian>Luce #03</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
         <English>Spotlight</English>
@@ -7867,7 +7875,7 @@
         <Chinese>聚光燈</Chinese>
         <German>Suchscheinwerfer</German>
         <Polish>Szperacz</Polish>
-        <Italian>Riflettore</Italian>  
+        <Italian>Riflettore</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
         <English>Wing Light (Left)</English>
@@ -7884,7 +7892,7 @@
         <Chinese>翼燈（右）</Chinese>
         <German>Flügellicht (Rechts)</German>
         <Polish>Światło Pozycyjne (Prawe)</Polish>
-        <Italian>Luce Ala (Destra)</Italian>  
+        <Italian>Luce Ala (Destra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_L">
         <English>Hand (Left)</English>
@@ -7893,7 +7901,7 @@
         <Chinese>手（左）</Chinese>
         <German>Hand (Links)</German>
         <Polish>Dłoń (Lewa)</Polish>
-        <Italian>Mano (Sinistra)</Italian>  
+        <Italian>Mano (Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_R">
         <English>Hand (Right)</English>
@@ -7902,7 +7910,7 @@
         <Chinese>手（右）</Chinese>
         <German>Hand (Rechts)</German>
         <Polish>Dłoń (Prawa)</Polish>
-        <Italian>Mano (Destra)</Italian> 
+        <Italian>Mano (Destra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
         <English>Battery (Left)</English>
@@ -7911,7 +7919,7 @@
         <Chinese>電池（左）</Chinese>
         <German>Batterie (Links)</German>
         <Polish>Bateria (Lewa)</Polish>
-        <Italian>Batteria (Sinistra)</Italian> 
+        <Italian>Batteria (Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
         <English>Battery (Right)</English>
@@ -7920,7 +7928,7 @@
         <Chinese>電池（右）</Chinese>
         <German>Batterie (Rechts)</German>
         <Polish>Bateria (Prawa)</Polish>
-        <Italian>Batteria (Destra)</Italian> 
+        <Italian>Batteria (Destra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE4">
         <English>Engine #04</English>
@@ -7929,7 +7937,7 @@
         <Chinese>引擎 #04</Chinese>
         <German>Motor #04</German>
         <Polish>Silnik #04</Polish>
-        <Italian>Motore #04</Italian> 
+        <Italian>Motore #04</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
         <English>Era (Back)</English>
@@ -8078,7 +8086,7 @@
         <Chinese>油箱（左）</Chinese>
         <German>Tank (Links)</German>
         <Polish>Zbiornik Paliwa (Lewy)</Polish>
-        <Italian>Serbatoio (Sinistra)</Italian> 
+        <Italian>Serbatoio (Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
         <English>Fuel Tank (Right)</English>
@@ -8087,7 +8095,7 @@
         <Chinese>油缸(右)</Chinese>
         <German>Tank (Rechts)</German>
         <Polish>Zbiornik Paliwa (Prawy)</Polish>
-        <Italian>Serbatoio (Sinistra)</Italian> 
+        <Italian>Serbatoio (Sinistra)</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
         <English>Fuel Tank</English>
@@ -8096,7 +8104,7 @@
         <Chinese>油缸</Chinese>
         <German>Tank</German>
         <Polish>Zbiornik Paliwa</Polish>
-        <Italian>Serbatoio</Italian> 
+        <Italian>Serbatoio</Italian>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS16">
         <English>Window #16</English>
@@ -9225,7 +9233,7 @@
         <Chinesesimp>沿Z-轴的空间</Chinesesimp>
         <Chinese>沿Z-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż Osi Z</Polish>
-        <Italian>Spazio lungo asse-Z</Italian> 
+        <Italian>Spazio lungo asse-Z</Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_ORIENT">
         <English>Orient</English>
@@ -9233,7 +9241,7 @@
         <Chinesesimp>定向</Chinesesimp>
         <Chinese>定向</Chinese>
         <Polish>Orientacja</Polish>
-        <Italian>Orienta</Italian> 
+        <Italian>Orienta</Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_ALIGN">
         <English>Align</English>
@@ -9241,7 +9249,7 @@
         <Chinesesimp>对齐</Chinesesimp>
         <Chinese>對齊</Chinese>
         <Polish>Wyrównaj</Polish>
-        <Italian>Allinea</Italian> 
+        <Italian>Allinea</Italian>
     </Key>
     <Key ID="STR_ENH_FOLDER_SPACE">
         <English>Space</English>
@@ -9249,7 +9257,7 @@
         <Chinesesimp>隔开</Chinesesimp>
         <Chinese>分發</Chinese>
         <Polish>Odstęp</Polish>
-        <Italian>Spazio</Italian> 
+        <Italian>Spazio</Italian>
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_LISTSTATUS">
         <English>Entries in List: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</English>
