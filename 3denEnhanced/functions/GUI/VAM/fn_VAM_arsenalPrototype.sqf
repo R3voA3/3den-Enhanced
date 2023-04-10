@@ -122,13 +122,36 @@ _ctrlAccTV ctrlSetPosition
 
 _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
 
+_ctrlPictureBackground = _display ctrlCreate ["ctrlStaticBackground", -1];
+_ctrlPictureBackground ctrlSetPosition
+[
+ CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 - GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+ (WINDOW_W * GRID_W) / 2,
+ (WINDOW_W * GRID_H) / 2
+];
+
+_ctrlHeaderPreview = _display ctrlCreate ["ctrlStaticTitle", -1];
+_ctrlHeaderPreview ctrlSetPosition
+[
+ CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 - GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+ (WINDOW_W * GRID_W) / 2,
+ 5 * GRID_H
+];
+
+_ctrlHeaderPreview ctrlSetText "Preview";
+
+//_ctrlPictureBackground ctrlSetBackgroundColor [(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]), (profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]), (profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]), COLOR_ACTIVE_RGB_A];
+//_ctrlPictureBackground ctrlSetText "PREVIEW";
+
 _ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_PREVIEW_PICTURE];
 _ctrlPicture ctrlSetPosition
 [
- CENTER_X - (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
- CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H + WINDOW_HAbs / 2 - 16 * GRID_H - GRID_H,
- (WINDOW_W * GRID_W - 2 * GRID_W) / 2,
- WINDOW_HAbs / 2 - 17 * GRID_H
+ CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 + 6 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
+ (WINDOW_W * GRID_W) / 2.5,
+ (WINDOW_W * GRID_H) / 2.5
 ];
 
 _ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", -1];
@@ -204,94 +227,114 @@ _ctrlButtonApply ctrlSetPosition
  5 * GRID_H
 ];
 
+_ctrlStatsBackground = _display ctrlCreate ["ctrlStaticBackground", -1];
+_ctrlStatsBackground ctrlSetPosition
+[
+ CENTER_X + WINDOW_W * GRID_W / 2 + GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+ (WINDOW_W * GRID_W) / 2,
+ (WINDOW_W * GRID_H) / 2
+];
+
+_ctrlHeaderStats = _display ctrlCreate ["ctrlStaticTitle", -1];
+_ctrlHeaderStats ctrlSetPosition
+[
+ CENTER_X + WINDOW_W * GRID_W / 2 + GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
+ (WINDOW_W * GRID_W) / 2,
+ 5 * GRID_H
+];
+
+_ctrlHeaderStats ctrlSetText "Statistics";
+
 _ctrlProgress_1 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_1];
 _ctrlProgress_1 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 18 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_1];
 _ctrlProgressText_1 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 18 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgress_2 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_2];
 _ctrlProgress_2 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 12 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 13 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgressText_2 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_2];
 _ctrlProgressText_2 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 12 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 13 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgress_3 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_3];
 _ctrlProgress_3 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 6 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 26 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgressText_3 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_3];
 _ctrlProgressText_3 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 - 6 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 26 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgress_4 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_4];
 _ctrlProgress_4 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 39 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgressText_4 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_4];
 _ctrlProgressText_4 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 39 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgress_5 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_5];
 _ctrlProgress_5 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 + 6 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 52 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgressText_5 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_5];
 _ctrlProgressText_5 ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 68 * GRID_W,
- CENTER_Y - 0.5 * WINDOW_HAbs + 18 * GRID_H + WINDOW_HAbs / 2 + 6 * GRID_H,
- 67 * GRID_W,
- 5 * GRID_H
+ CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 52 * GRID_H,
+ 68 * GRID_W,
+ 10 * GRID_H
 ];
 
 _ctrlProgress_1 progressSetPosition random 1;
@@ -301,27 +344,27 @@ _ctrlProgress_4 progressSetPosition random 1;
 _ctrlProgress_5 progressSetPosition random 1;
 
 _ctrlProgressText_1 ctrlSetShadow 0;
-_ctrlProgressText_1 ctrlSetFont "RobotoCondensedBold";
+_ctrlProgressText_1 ctrlSetFont "PuristaLight";
 _ctrlProgressText_1 ctrlSetTextColor [0,0,0,1];
 _ctrlProgressText_1 ctrlSetText toUpper "Ballistic Protection";
 
 _ctrlProgressText_2 ctrlSetShadow 0;
-_ctrlProgressText_2 ctrlSetFont "RobotoCondensedBold";
+_ctrlProgressText_2 ctrlSetFont "PuristaLight";
 _ctrlProgressText_2 ctrlSetTextColor [0,0,0,1];
 _ctrlProgressText_2 ctrlSetText toUpper "WEIGHT";
 
 _ctrlProgressText_3 ctrlSetShadow 0;
-_ctrlProgressText_3 ctrlSetFont "RobotoCondensedBold";
+_ctrlProgressText_3 ctrlSetFont "PuristaLight";
 _ctrlProgressText_3 ctrlSetTextColor [0,0,0,1];
 _ctrlProgressText_3 ctrlSetText toUpper "LOAD";
 
 _ctrlProgressText_4 ctrlSetShadow 0;
-_ctrlProgressText_4 ctrlSetFont "RobotoCondensedBold";
+_ctrlProgressText_4 ctrlSetFont "PuristaLight";
 _ctrlProgressText_4 ctrlSetTextColor [0,0,0,1];
 _ctrlProgressText_4 ctrlSetText toUpper "EXPOSIVE RESISTANCE";
 
 _ctrlProgressText_5 ctrlSetShadow 0;
-_ctrlProgressText_5 ctrlSetFont "RobotoCondensedBold";
+_ctrlProgressText_5 ctrlSetFont "PuristaLight";
 _ctrlProgressText_5 ctrlSetTextColor [0,0,0,1];
 _ctrlProgressText_5 ctrlSetText toUpper "RANGE";
 
