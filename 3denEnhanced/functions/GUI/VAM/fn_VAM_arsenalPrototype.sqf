@@ -12,8 +12,8 @@
 */
 
 #include "\a3\3DEN\UI\macros.inc"
-#define WINDOW_W 140 // Overwrite macro from Eden because they use a different width
 
+#define WINDOW_W 140
 #define IDC_TREEVIEW 10
 #define IDC_ACE_CHECKBOX 20
 #define IDC_PREVIEW_PICTURE 30
@@ -63,14 +63,6 @@ private _categoryTranslation = createHashMapFromArray
  ["NVGoggles", "STR_A3_RSCDISPLAYARSENAL_TAB_NVGS"],
  ["Item", "STR_A3_CFGVEHICLECLASSES_ITEMS0"]
 ];
-
-// this would be a hashmap for what the user has selected,
-// I don't like the idea of having the UI store our data.
-// perhaps could be used to be saved into the profile and loaded
-uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
-/// Gave up on nested hashmaps
-/// instead will be a hashmap of just item classes with
-/// ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"] array as value.
 
 private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
 
@@ -308,11 +300,6 @@ _ctrlProgress_3 progressSetPosition random 1;
 _ctrlProgress_4 progressSetPosition random 1;
 _ctrlProgress_5 progressSetPosition random 1;
 
-/* _ctrlProgress_1 ctrlSetTextColor [1, 1, 1, 0.5];
-_ctrlProgress_2 ctrlSetTextColor [1, 1, 1, 0.5];
-_ctrlProgress_3 ctrlSetTextColor [1, 1, 1, 0.5];
-_ctrlProgress_4 ctrlSetTextColor [1, 1, 1, 0.5]; */
-
 _ctrlProgressText_1 ctrlSetShadow 0;
 _ctrlProgressText_1 ctrlSetFont "RobotoCondensedBold";
 _ctrlProgressText_1 ctrlSetTextColor [0,0,0,1];
@@ -504,133 +491,42 @@ _ctrlTV tvSortAll [];
 
 _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 {
- params["_ctrl", "_path"];
+  params["_ctrl", "_path"];
 
- private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
- ctrlParent _ctrl displayCtrl IDC_PREVIEW_PICTURE ctrlSetText _picture;
+  ctrlParent _ctrl displayCtrl IDC_PREVIEW_PICTURE ctrlSetText _picture;
 
- // check if it's a single entry or a folder
- if ((_ctrl tvCount _path) == 0) then
- {
+  // check if it's a single entry or a folder
+  if ((_ctrl tvCount _path) == 0) then
+  {
   private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
   [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
 
   if ((_ctrl tvValue _path) == 0) then
   {
-   [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+    [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
   }
   else
   {
-   [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
-  }
- }
- else
- {
-  private _mouseX = getMousePosition select 0;
-
-  // if clicked on check box
-  // Don't know any other way to do this - linkion -------V
-    // I guess we should use UI macros
-  if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
-  {
-
-   if ((_ctrl tvValue _path) == 0) then {
-    [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
-   } else {
     [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
-   };
-  };
- };
-
- // Update Stats (To be moved into separate function)
-
- private _ctrlProgress_1  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_1;
- private _ctrlProgress_2  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_2;
- private _ctrlProgress_3  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_3;
- private _ctrlProgress_4  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_4;
- private _ctrlProgress_5  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_5;
-
- private _ctrlProgressText_1  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_TEXT_1;
- private _ctrlProgressText_2  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_TEXT_2;
- private _ctrlProgressText_3  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_TEXT_3;
- private _ctrlProgressText_4  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_TEXT_4;
- private _ctrlProgressText_5  = ctrlParent _ctrl displayCtrl IDC_PROGRESS_TEXT_5;
-
- // No item selected
- if (count _path != 3) then
- {
-	_ctrlProgress_1 ctrlShow false;
-	_ctrlProgress_2 ctrlShow false;
-	_ctrlProgress_3 ctrlShow false;
-	_ctrlProgress_4 ctrlShow false;
-	_ctrlProgress_5 ctrlShow false;
-
-	_ctrlProgressText_1 ctrlShow false;
-	_ctrlProgressText_2 ctrlShow false;
-	_ctrlProgressText_3 ctrlShow false;
-	_ctrlProgressText_4 ctrlShow false;
-	_ctrlProgressText_5 ctrlShow false;
- }
- else
- {
-	_ctrlProgress_1 ctrlShow true;
-	_ctrlProgress_2 ctrlShow true;
-	_ctrlProgress_3 ctrlShow true;
-	_ctrlProgress_4 ctrlShow true;
-	_ctrlProgress_5 ctrlShow true;
-
-	_ctrlProgressText_1 ctrlShow true;
-	_ctrlProgressText_2 ctrlShow true;
-	_ctrlProgressText_3 ctrlShow true;
-	_ctrlProgressText_4 ctrlShow true;
-	_ctrlProgressText_5 ctrlShow true;
-
-
-	_ctrlProgress_1 progressSetPosition random 1;
-	_ctrlProgress_2 progressSetPosition random 1;
-	_ctrlProgress_3 progressSetPosition random 1;
-	_ctrlProgress_4 progressSetPosition random 1;
-	_ctrlProgress_5 progressSetPosition random 1;
- };
-}];
-
-// Make separate function
-ENH_fnc_VAM_exportToSQF =
-{
- private _data =  //[<items>, <weapons>, <magazines>, <backpacks>]
- [
-  [],
-  [],
-  [],
-  []
- ];
-
- private _fnc_traverseChildren =
- {
-  params ["_path"];
-
-  for "_i" from 0 to (_ctrlTV tvCount _path) do
+  }
+  }
+  else
   {
-   private _newPath = _path + [_i];
-
-   if (count _newPath == 3) then
-   {
-    if (_ctrlTV tvValue _newPath > 0) then
+    private _mouseX = getMousePosition select 0;
+    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
     {
-     private _category = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get (_ctrlTV tvData _newPath) select 4;
-     diag_log _category;
+
+      if ((_ctrl tvValue _path) == 0) then {
+      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+      } else {
+      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+      };
     };
-   };
-
-   if (_ctrlTV tvCount _newPath > 0) then
-   {
-    [_newPath] call _fnc_traverseChildren;
-   };
   };
- };
 
- [[]] call _fnc_traverseChildren;
-};
+  _ctrlTV call ENH_fnc_VAM_handleItemStats;
+}];
 
 [[], 2] call _fnc_removeEmptyNodes;
