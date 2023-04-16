@@ -15,7 +15,9 @@
 
 disableSerialization;
 
-params ["_ctrlTV"];
+params ["_display"];
+
+private _ctrlTV = _display displayCtrl 100;
 
 {
   private _layerID = _x;
@@ -36,3 +38,6 @@ params ["_ctrlTV"];
 } forEach (all3DENEntities # 6);
 
 _ctrlTV tvSortAll [[], false];
+
+// Focus search box
+ctrlSetFocus (ctrlParent _ctrlTV displayCtrl 101);

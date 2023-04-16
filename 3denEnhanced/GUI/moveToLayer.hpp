@@ -5,6 +5,7 @@ class ENH_MoveToLayer
 {
   idd = -1;
   movingEnable = true;
+  onLoad = "_this call ENH_fnc_moveToLayer_onLoad";
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -41,7 +42,6 @@ class ENH_MoveToLayer
       y = 0.5 - WINDOW_HAbs * 0.5 + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 23 * GRID_H;
-      onLoad = "_this call ENH_fnc_moveToLayer_onLoad";
       borderSize = 0;
       colorBorder[] = {0,0,0,0};
       colorLines[] = {1,1,1,1};
@@ -53,7 +53,6 @@ class ENH_MoveToLayer
       y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
       w = 44 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onLoad = "ctrlSetFocus (_this select 0)";
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
     };
 	class SearchIcon: ctrlStaticPictureKeepAspect
@@ -61,8 +60,8 @@ class ENH_MoveToLayer
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       tooltip = "";
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W + 45 * GRID_W;
-	  y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
-	  w = 5 * GRID_W;
+      y = 0.5 + WINDOW_HAbs * 0.5 - 11 * GRID_H;
+      w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Move: ctrlButtonOK
