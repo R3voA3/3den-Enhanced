@@ -121,8 +121,6 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
 
 } forEach ([_itemClass] call ENH_fnc_compatibleItems);
 
-str(_compatibleItems) call BIS_fnc_3DENNotification;
-
 {
   private _indexEquipment = _ctrlTV tvAdd [[], localize (_typeTranslation get _x)];
   _ctrlTV tvSetPicture [[_indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
@@ -137,7 +135,6 @@ str(_compatibleItems) call BIS_fnc_3DENNotification;
     (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
     if (typeName _displayName != "STRING") then {
-      format["class: %1 displayName: %2", _x, str(_displayName)] call BIS_fnc_3DENNotification;
       continue;
     };
     _displayName = _displayName+"";
