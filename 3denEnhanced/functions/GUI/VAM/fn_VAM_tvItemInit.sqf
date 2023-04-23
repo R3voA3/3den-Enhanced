@@ -24,12 +24,14 @@ params["_ctrlTV", "_itemClass"];
 tvClear _ctrlTV;
 
 private _compatibleItems = [
-  [[], []], // magazines
   [], // optic
   [], // side
   [], // muzzle
-  []  // bipod
+  [],  // bipod
+  [[], []] // magazines
 ];
+
+private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
 // from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
 // Author: Alganthe
 
@@ -37,12 +39,12 @@ private _compatibleItems = [
 {
     if (_x != "") then {
         private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
-        private _index = _forEachIndex;
+        private _index = 4;
 
         {
             private _subIndex = _forEachIndex min 1;
             {
-                ((_compatibleItems select 0) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
+                ((_compatibleItems select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
 
             // Magazine groups
@@ -63,7 +65,7 @@ private _compatibleItems = [
                 } foreach configProperties [(configFile >> "CfgMagazineWells"), "isClass _x", true];
 
                 private _magArray = _magazineGroups get (toLower _x);
-                {((_compatibleItems select 0) select _subIndex) pushBackUnique _x} forEach _magArray;
+                {((_compatibleItems select _index) select _subIndex) pushBackUnique _x} forEach _magArray;
             } foreach ([getArray (_weaponConfig >> _x >> "magazineWell"), getArray (_weaponConfig >> "magazineWell")] select (_x == "this"));
 
 
@@ -78,12 +80,9 @@ private _compatiblePointers = [];
 private _compatibleMuzzles = [];
 private _compatibleBipods = [];
 
-_compatibleMagsPrimaryMuzzle = _compatibleItems select 0 select 0;
-_compatibleMagsSecondaryMuzzle = _compatibleItems select 0 select 1;
-_compatibleScopes = _compatibleItems select 1;
-_compatiblePointers = _compatibleItems select 2;
-_compatibleMuzzles = _compatibleItems select 3;
-_compatibleBipods = _compatibleItems select 4;
+_compatibleMagsPrimaryMuzzle = _compatibleItems select 4 select 0;
+_compatibleMagsSecondaryMuzzle = _compatibleItems select 4 select 1;
+
 
 private _AttachTypes = ["scopes", "pointers", "muzzles", "bipods", "primaryMags", "secondaryMags"];
 
@@ -107,52 +106,127 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
 
   switch (getNumber (_configItemInfo >> "type")) do {
     case TYPE_OPTICS: {
-      (_compatibleItems select 1) pushBackUnique _x;
+      (_compatibleItems select 0) pushBackUnique _x;
     };
     case TYPE_FLASHLIGHT: {
-      (_compatibleItems select 2) pushBackUnique _x;
+      (_compatibleItems select 1) pushBackUnique _x;
     };
     case TYPE_MUZZLE: {
-      (_compatibleItems select 3) pushBackUnique _x;
+      (_compatibleItems select 2) pushBackUnique _x;
     };
     case TYPE_BIPOD: {
-      (_compatibleItems select 4) pushBackUnique _x;
+      (_compatibleItems select 3) pushBackUnique _x;
     };
   };
 
 } forEach ([_itemClass] call ENH_fnc_compatibleItems);
 
+str(_compatibleItems) call BIS_fnc_3DENNotification;
+
 {
-  _ctrlTV tvAdd [[], localize (_typeTranslation get _x)];
+  private _indexEquipment = _ctrlTV tvAdd [[], localize (_typeTranslation get _x)];
+  _ctrlTV tvSetPicture [[_indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
 } forEach _AttachTypes;
 
-
 {
-  private _typeIndex = _AttachTypes find "scopes";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
-} forEach _compatibleScopes;
+  private _typeIndex = _forEachIndex;
+  if (_forEachIndex == 4) then {
+    continue;
+  };
+  {
+    (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-{
-  private _typeIndex = _AttachTypes find "pointers";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
-} forEach _compatiblePointers;
+    if (typeName _displayName != "STRING") then {
+      format["class: %1 displayName: %2", _x, str(_displayName)] call BIS_fnc_3DENNotification;
+      continue;
+    };
+    _displayName = _displayName+"";
+    _class = _class+"";
+    _descriptionShort = _descriptionShort+"";
 
-{
-  private _typeIndex = _AttachTypes find "muzzles";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
-} forEach _compatibleMuzzles;
+    private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
 
-{
-  private _typeIndex = _AttachTypes find "bipods";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
-} forEach _compatibleBipods;
+    _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
+    if (toLower(_x) in _selectHashMap) then {
+      _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
+      _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
+    } else {
+      _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+      _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
+    };
+    _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
+  } forEach _x;
+} forEach _compatibleItems;
 
 {
   private _typeIndex = _AttachTypes find "primaryMags";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+  (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
+
+  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
+  if (toLower(_x) in _selectHashMap) then {
+    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
+    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
+  } else {
+    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
+  };
+  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
 } forEach _compatibleMagsPrimaryMuzzle;
 
 {
   private _typeIndex = _AttachTypes find "secondaryMags";
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _x];
+  (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
+
+  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
+  if (toLower(_x) in _selectHashMap) then {
+    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
+    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
+  } else {
+    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
+  };
+  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
 } forEach _compatibleMagsSecondaryMuzzle;
+
+_ctrlTV ctrlAddEventHandler ["TreeSelChanged",
+{
+  params["_ctrl", "_path"];
+
+  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+
+
+  // check if it's a single entry or a folder
+  if ((_ctrl tvCount _path) == 0) then
+  {
+
+    if ((_ctrl tvValue _path) == 0) then
+    {
+      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+    }
+    else
+    {
+      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+    }
+  }
+  else
+  {
+  private _mouseX = getMousePosition select 0;
+
+    // if clicked on check box
+    // Don't know any other way to do this - linkion -------V
+      // I guess we should use UI macros
+    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
+    {
+
+      if ((_ctrl tvValue _path) == 0) then {
+      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+      } else {
+      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+      };
+    };
+  };
+}];
