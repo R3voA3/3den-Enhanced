@@ -106,7 +106,7 @@ _ctrlTV ctrlSetPosition
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
  WINDOW_W * GRID_W - 2 * GRID_W,
- WINDOW_HAbs / 2 - 17 * GRID_H
+ WINDOW_HAbs - 17 * GRID_H
 ];
 
 _ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_ACCTREEVIEW];
@@ -543,8 +543,35 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
   // check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then
   {
-  private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
-  [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
+    // check if item that can have attachments, then display attachment tree
+    private _itemTypesWAttach = ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun"];
+    private _tempPath = +_path;
+    _tempPath deleteAt ((count _tempPath) - 1);
+    format["accTree: %1",(_ctrl tvData _tempPath)] call BIS_fnc_3DENNotification;
+    if ((_ctrl tvData _tempPath) in _itemTypesWAttach) then {
+      private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
+      [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
+      _ctrl ctrlSetPosition [
+        CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+        CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
+        WINDOW_W * GRID_W - 2 * GRID_W,
+        WINDOW_HAbs / 2 - 17 * GRID_H
+      ];
+      _ctrl ctrlCommit 0.1;
+      _ctrlAccTV ctrlShow true;
+    } else {
+      // check if accesory tree even exists
+      if ((((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) tvCount []) != 0) then {
+        ((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) ctrlShow false;
+        _ctrl ctrlSetPosition [
+          CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+          CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
+          WINDOW_W * GRID_W - 2 * GRID_W,
+          WINDOW_HAbs - 17 * GRID_H
+        ];
+        _ctrl ctrlCommit 0.1;
+      };
+    };
 
   if ((_ctrl tvValue _path) == 0) then
   {
