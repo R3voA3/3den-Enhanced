@@ -500,6 +500,9 @@ _allAddons apply
   _ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 } foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
 
+// initialize ENH_VAM_selectHashMap
+uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
+
 // Make this a separate function
 private _fnc_removeEmptyNodes =
 {

@@ -144,7 +144,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
     private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
 
     _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-    if (toLower(_x) in _selectHashMap) then {
+    if (toLower(_x) in (keys _selectHashMap)) then {
       _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
       _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
     } else {
@@ -162,7 +162,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
 
   _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-  if (toLower(_x) in _selectHashMap) then {
+  if (toLower(_x) in (keys _selectHashMap)) then {
     _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
     _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
   } else {
@@ -179,7 +179,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
 
   _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-  if (toLower(_x) in _selectHashMap) then {
+  if (toLower(_x) in (keys _selectHashMap)) then {
     _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
     _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
   } else {

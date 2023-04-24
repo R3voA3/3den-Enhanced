@@ -11,12 +11,10 @@
 	-
 
 	Usage:
-	[_ctrl] call ENH_fnc_VAM_loadSelectHashMap;
+	[_ctrl, _selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
-params [_ctrl];
-
-private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
+params ["_ctrl", ["_selectHashMap", createHashMap]];
 
 {
   // Current key is saved in variable _x
