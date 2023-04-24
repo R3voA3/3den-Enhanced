@@ -12,7 +12,7 @@
 	-
 
 	Usage:
-	[_box, true] call ENH_fnc_VAM_applyAttribute;
+	[_box, true, true] call ENH_fnc_VAM_applyAttribute;
 */
 
 params["_object", "_aceBool", "_biBool"];

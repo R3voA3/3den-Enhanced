@@ -14,9 +14,11 @@
 */
 
 
-params ["_ctrlTV","_add"];
+params ["_ctrlTV","_add", ["_selectedPath", []]];
 
-private _selectedPath = tvCurSel _ctrlTV;
+if (count _selectedPath == 0) then {
+  _selectedPath = tvCurSel _ctrlTV;
+};
 private _picture = ["\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa", "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"] select _add;
 
 _ctrlTV tvSetPicture [_selectedPath, _picture];
