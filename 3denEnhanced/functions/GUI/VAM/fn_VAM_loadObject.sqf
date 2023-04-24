@@ -22,7 +22,13 @@ private _returnSelectHashMap = createHashMap;
 if (_aceBool && isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
   private _buttonOk = format ["Ace Arsenal (%1 Selected)", count (keys ([_object] call _fnc_getAceArsenalAttr))];
   private _buttonCancel = format ["BI Arsenal (%1 Selected)", count (keys ([_object] call _fnc_getBIArsenalAttr))];
-  ["Detected that ace is loaded, choose which arsenal to edit", "Which to Edit?", _buttonOK, _buttonCancel, _display] call BIS_fnc_3DENShowMessage;
+  private _returnAce = false;
+  ["Detected that ace is loaded, choose which arsenal to edit", "Which to Edit?", [_buttonOK, {_returnAce = true}], [_buttonCancel, {_returnAce = false}], _display] call BIS_fnc_3DENShowMessage;
+  if (_returnAce) then {
+    [_object] call _fnc_getAceArsenalAttr
+  } else {
+    [_object] call _fnc_getBIArsenalAttr
+  };
 } else {
   [_object] call _fnc_getBIArsenalAttr
 };
