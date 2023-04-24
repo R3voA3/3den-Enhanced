@@ -559,10 +559,12 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
       ];
       _ctrl ctrlCommit 0.1;
       _ctrlAccTV ctrlShow true;
+      _ctrlAccTV ctrlCommit 0.1;
     } else {
       // check if accesory tree even exists
       if ((((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) tvCount []) != 0) then {
         ((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) ctrlShow false;
+        ((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) ctrlCommit 0.1;
         _ctrl ctrlSetPosition [
           CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
           CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,

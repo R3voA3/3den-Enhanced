@@ -134,7 +134,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   {
     (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-    if (typeName _displayName != "STRING") then {
+    if (typeName _displayName != "STRING" || _displayName isEqualTo "") then {
       continue;
     };
     _displayName = _displayName+"";
