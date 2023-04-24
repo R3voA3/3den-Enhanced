@@ -220,9 +220,9 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     {
 
       if ((_ctrl tvValue _path) == 0) then {
-      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+        [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
       } else {
-      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+        [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
       };
     };
   };
