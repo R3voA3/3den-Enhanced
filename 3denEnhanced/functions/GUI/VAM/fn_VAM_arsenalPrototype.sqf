@@ -503,6 +503,10 @@ _allAddons apply
 // initialize ENH_VAM_selectHashMap
 uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
 
+// load arsenal from 3den selection
+[_ctrlTV, [_display, (_selectedObjects select 0)] call ENH_fnc_VAM_loadObject] call ENH_fnc_VAM_loadSelectHashMap;
+
+
 // Make this a separate function
 private _fnc_removeEmptyNodes =
 {

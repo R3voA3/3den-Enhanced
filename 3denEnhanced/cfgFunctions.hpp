@@ -185,6 +185,8 @@ class CfgFunctions
       class VAM_tvItemInit;
       class VAM_exportToSQF;
       class VAM_handleItemStats;
+      class VAM_loadObject;
+      class VAM_loadSelectHashMap;
     }
     class CfgSentencesBrowser
     {
