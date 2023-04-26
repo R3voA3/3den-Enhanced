@@ -216,7 +216,13 @@ _ctrlButtonLoad ctrlSetPosition
  5 * GRID_H
 ];
 
-_ctrlButtonLoad ctrlSetText "Load Preset";
+_ctrlButtonLoad ctrlSetText "Test Load Object";
+
+_ctrlButtonLoad ctrlAddEventHandler ["ButtonClick", {
+  // load arsenal from 3den selection
+  private _selectedItemHashMap = [_display, (get3DENSelected "Object" select 0)] call ENH_fnc_VAM_loadObject;
+  [_ctrlTV, _selectedItemHashMap] call ENH_fnc_VAM_loadSelectHashMap;
+}];
 
 _ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonApply ctrlSetPosition
@@ -503,8 +509,6 @@ _allAddons apply
 // initialize ENH_VAM_selectHashMap
 uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
 
-// load arsenal from 3den selection
-[_ctrlTV, [_display, (_selectedObjects select 0)] call ENH_fnc_VAM_loadObject] call ENH_fnc_VAM_loadSelectHashMap;
 
 
 // Make this a separate function
@@ -598,9 +602,9 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     {
 
       if ((_ctrl tvValue _path) == 0) then {
-      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+        [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
       } else {
-      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+        [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
       };
     };
   };

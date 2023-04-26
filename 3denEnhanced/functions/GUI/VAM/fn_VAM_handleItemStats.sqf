@@ -1,4 +1,4 @@
-params ["_ctrlTV", ctrlNull];_ctrlTV
+params ["_ctrlTV", ctrlNull];
 
 private _display = ctrlParent _ctrlTV;
 
