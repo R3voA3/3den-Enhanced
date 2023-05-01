@@ -126,6 +126,22 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   _ctrlTV tvSetPicture [[_indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
 } forEach _AttachTypes;
 
+private _fnc_initTVItem = {
+  params["_ctrlTV", "_typeIndex", "_displayName", "_class", "_descriptionShort", "_addonIcon", "_selectHashMap"];
+  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
+
+  _ctrlTV tvSetPictureRight [[_typeIndex, _indexEquipment], _addonIcon];
+  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
+  if (toLower(_x) in (keys _selectHashMap)) then {
+    [_ctrlTV, 1, [_typeIndex, _indexEquipment]] call ENH_fnc_VAM_switchNodeState;
+  } else {
+    [_ctrlTV, 0, [_typeIndex, _indexEquipment]] call ENH_fnc_VAM_switchNodeState;
+  };
+  _descriptionShort = _descriptionShort+" ";
+  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
+  true
+};
+
 {
   private _typeIndex = _forEachIndex;
   if (_forEachIndex == 4) then {
@@ -134,24 +150,12 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   {
     (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-    if (typeName _displayName != "STRING" || _displayName isEqualTo "") then {
+    if (isNil "_displayName" || isNil "_class") then {
+      format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
       continue;
     };
-    _displayName = _displayName+"";
-    _class = _class+"";
-    _descriptionShort = _descriptionShort+"";
 
-    private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
-
-    _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-    if (toLower(_x) in (keys _selectHashMap)) then {
-      _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
-      _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
-    } else {
-      _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-      _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
-    };
-    _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
+    [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
   } forEach _x;
 } forEach _compatibleItems;
 
@@ -159,34 +163,24 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
   private _typeIndex = _AttachTypes find "primaryMags";
   (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
-
-  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-  if (toLower(_x) in (keys _selectHashMap)) then {
-    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
-    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
-  } else {
-    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
+  if (isNil "_displayName" || isNil "_class") then {
+    format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
+    continue;
   };
-  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
+
+  [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
 } forEach _compatibleMagsPrimaryMuzzle;
 
 {
   private _typeIndex = _AttachTypes find "secondaryMags";
   (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
-
-  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-  if (toLower(_x) in (keys _selectHashMap)) then {
-    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
-    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 1];
-  } else {
-    _ctrlTV tvSetPicture [[_typeIndex, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
-    _ctrlTV tvSetValue [[_typeIndex, _indexEquipment], 0];
+  if (isNil "_displayName" || isNil "_class") then {
+    format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
+    continue;
   };
-  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
+
+  [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
 } forEach _compatibleMagsSecondaryMuzzle;
 
 _ctrlTV ctrlAddEventHandler ["TreeSelChanged",

@@ -598,7 +598,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
         CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
         CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
         WINDOW_W * GRID_W - 2 * GRID_W,
-        WINDOW_HAbs / 2 - 17 * GRID_H
+        (WINDOW_HAbs / 2)
       ];
       _ctrl ctrlCommit 0.1;
       _ctrlAccTV ctrlShow true;
