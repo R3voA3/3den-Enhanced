@@ -16,6 +16,7 @@
 #define WINDOW_W 140
 #define IDC_TREEVIEW 10
 #define IDC_ACE_CHECKBOX 20
+#define IDC_BI_CHECKBOX 25
 #define IDC_PREVIEW_PICTURE 30
 #define IDC_ACCTREEVIEW 40
 #define IDC_SEARCH 645
@@ -378,18 +379,23 @@ _ctrlButtonApply ctrlSetTooltip "Sets the Equipment Storage attribute to current
 
 _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 {
- params["_ctrlButton"];
+  params["_ctrlButton"];
 
- private _selectedObjects = get3DENSelected "Object";
- private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_ACE_CHECKBOX);
-  private _useBI = true; // TODO: add second checkbox for using BI virt Arsenal, since some groups don't use BI at all.
+  private _selectedObjects = get3DENSelected "Object";
 
- _selectedObjects apply
- {
-  [_x, _useACE, _useBI] call ENH_fnc_VAM_applyAttribute;
- };
+  private _useACE = false; // default false for without ace
+  private _useBI = true; // default true for without ace
+  if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
+    _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_ACE_CHECKBOX);
+    _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_BI_CHECKBOX);
+  };
 
- ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+  _selectedObjects apply
+  {
+    [_x, _useACE, _useBI] call ENH_fnc_VAM_applyAttribute;
+  };
+
+  ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 }];
 
 private _selectedObjects = get3DENSelected "Object";
@@ -455,6 +461,33 @@ private _isACELoaded = isClass(configFile >> "CfgPatches" >> "ace_arsenal");
 _ctrlACEText ctrlEnable _isACELoaded;
 _ctrlACECheckbox ctrlEnable _isACELoaded;
 _ctrlACEText ctrlSetTextColor [1, 1, 1, [0.5, 1 ] select _isACELoaded];
+
+_ctrlBICheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_BI_CHECKBOX];
+_ctrlBICheckbox ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W + 22 * GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs - 7 * GRID_H + WINDOW_HAbs,
+  5 * GRID_W,
+  5 * GRID_H
+];
+
+_ctrlBIText = _display ctrlCreate ["ctrlStatic", -1];
+_ctrlBIText ctrlSetPosition
+[
+  CENTER_X - 0.5 * WINDOW_W * GRID_W,
+  CENTER_Y - 0.5 * WINDOW_HAbs - 7 * GRID_H + WINDOW_HAbs,
+  25 * GRID_W,
+  5 * GRID_H
+];
+
+_ctrlBIText ctrlSetText "BI Arsenal";
+
+// Hide checkbox and text if no ACE is loaded
+private _isACELoaded = isClass(configFile >> "CfgPatches" >> "ace_arsenal");
+
+_ctrlBIText ctrlEnable _isACELoaded;
+_ctrlBICheckbox ctrlEnable _isACELoaded;
+_ctrlBIText ctrlSetTextColor [1, 1, 1, [0.5, 1 ] select _isACELoaded];
 
 // Focus search box
 ctrlSetFocus _ctrlSearch;
