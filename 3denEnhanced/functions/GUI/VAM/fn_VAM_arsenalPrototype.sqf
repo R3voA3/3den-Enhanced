@@ -591,7 +591,6 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     private _itemTypesWAttach = ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun"];
     private _tempPath = +_path;
     _tempPath deleteAt ((count _tempPath) - 1);
-    format["accTree: %1",(_ctrl tvData _tempPath)] call BIS_fnc_3DENNotification;
     if ((_ctrl tvData _tempPath) in _itemTypesWAttach) then {
       private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
       [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
