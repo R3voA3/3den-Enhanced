@@ -355,7 +355,9 @@ class Cfg3DEN
       {
         class Attributes
         {
-          #include "attributesMarker\markerDrawPriority.hpp"
+          #ifndef ENH_HIDE_MARKERDRAWPRIORITY
+            #include "attributesMarker\markerDrawPriority.hpp"
+          #endif
         };
       };
     };
