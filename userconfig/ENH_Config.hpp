@@ -56,6 +56,8 @@
 //#define ENH_HIDE_SETMASS
 //#define ENH_HIDE_UNITTRAITS
 //#define ENH_HIDE_VIRTUALARSENAL
+//#define ENH_HIDE_MARKERDRAWPRIORITY
+//#define ENH_HIDE_OBJECTSCALE
 
 //------------Other------------//
 //#define ENH_LARGER_EDITBOXES
