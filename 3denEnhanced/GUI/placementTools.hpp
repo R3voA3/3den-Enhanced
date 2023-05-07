@@ -37,48 +37,7 @@ class ENH_PlacementTools
       w = 64 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
-    class FineControlStep: ctrlToolbox
-    {
-      idc = IDC_PLACEMENTTOOLS_FINECONTROL;
-      x = ORIGIN_X + 1 * GRID_W;
-      y = ORIGIN_Y + 112 * GRID_H;
-      w = 62 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      rows = 1;
-      columns = 7;
-      strings[] =
-      {
-        ".0001",
-        ".001",
-        ".01",
-        ".1",
-        "1",
-        "10",
-        "100"
-      };
-      tooltips[] =
-      {
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP",
-        "$STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP"
-      };
-      values[] = {0.0001, 0.001, 0.01, 0.1, 1, 10, 100};
-      onToolBoxSelChanged = "_this call ENH_fnc_placementTools_onToolBoxSelChanged";
-    };
-    class CurrentValue: ctrlEdit
-    {
-      idc = IDC_PLACEMENTTOOLS_CURRENTVALUE;
-      x = ORIGIN_X + 1 * GRID_W;
-      y = ORIGIN_Y + 119 * GRID_H;
-      w = 30 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      canModify = false;
-    };
-     class SelectCenter: ctrlButtonPictureKeepAspect
+    class SelectCenter: ctrlButtonPictureKeepAspect
     {
       text = "\A3\ui_f\data\igui\cfg\weaponcursors\rocket_gs.paa";
       tooltip = "$STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP";
@@ -122,15 +81,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class RadiusValue: ctrlXSliderH
+        class RadiusValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_RADIUS;
           x = POS_X_VALUE;
           y = 7 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 200};
-          onSliderPosChanged = "_this call ENH_fnc_placementTools_radius";
         };
         class InitialAngle: ctrlStatic
         {
@@ -140,15 +97,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class InitialAngleValue: ctrlXSliderH
+        class InitialAngleValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_INITIALANGLE;
           x = POS_X_VALUE;
           y = 13 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 359};
-          onSliderPosChanged = "call ENH_fnc_placementTools_initialAngle";
         };
         class CentralAngle: ctrlStatic
         {
@@ -158,15 +113,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class CentralAngleValue: ctrlXSliderH
+        class CentralAngleValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_CENTRALANGLE;
           x = POS_X_VALUE;
           y = 19 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 360};
-          onSliderPosChanged = "call ENH_fnc_placementTools_centralAngle";
         };
         class LineHeader: ctrlStaticFooter
         {
@@ -184,15 +137,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class SpacingValue: ctrlXSliderH
+        class SpacingValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_SPACING;
           x = POS_X_VALUE;
           y = 31 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 50};
-          onSliderPosChanged = "call ENH_fnc_placementTools_spacing";
         };
         class GridHeader: ctrlStaticFooter
         {
@@ -210,15 +161,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class NumColumsValue: ctrlXSliderH
+        class NumColumsValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_NUMCOLUMNS;
           x = POS_X_VALUE;
           y = 43 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1, 50};
-          onSliderPosChanged = "ENH_PlacementTools_NumColumns = round (_this # 1); call ENH_fnc_placementTools_grid";
         };
         class SpaceX: ctrlStatic
         {
@@ -228,15 +177,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class SpaceXValue: ctrlXSliderH
+        class SpaceXValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_SPACEX;
           x = POS_X_VALUE;
           y = 49 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 50};
-          onSliderPosChanged = "ENH_PlacementTools_SpaceX = _this # 1; call ENH_fnc_placementTools_grid";
         };
         class SpaceY: ctrlStatic
         {
@@ -246,15 +193,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class SpaceYValue: ctrlXSliderH
+        class SpaceYValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_SPACEY;
           x = POS_X_VALUE;
           y = 55 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {0, 50};
-          onSliderPosChanged = "ENH_PlacementTools_SpaceY = _this # 1; call ENH_fnc_placementTools_grid";
         };
         class FillAreaHeader: ctrlStaticFooter
         {
@@ -272,16 +217,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class AValue: ctrlXSliderH
+        class AValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_A;
           x = POS_X_VALUE;
           y = 67 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1, 10000};
-          sliderStep = 1;
-          onSliderPosChanged = "ENH_PlacementTools_A = _this # 1; call ENH_fnc_placementTools_fillArea";
         };
         class B: ctrlStatic
         {
@@ -291,16 +233,13 @@ class ENH_PlacementTools
           w = WIDTH_TEXT;
           h = CTRL_DEFAULT_H;
         };
-        class BValue: ctrlXSliderH
+        class BValue: ctrlEdit
         {
           idc = IDC_PLACEMENTTOOLS_B;
           x = POS_X_VALUE;
           y = 73 * GRID_H;
           w = WIDTH_VALUE;
           h = CTRL_DEFAULT_H;
-          sliderRange[] = {1, 10000};
-          sliderStep = 1;
-          onSliderPosChanged = "ENH_PlacementTools_B = _this # 1; call ENH_fnc_placementTools_fillArea";
         };
         class OrientationHeader: ctrlStaticFooter
         {
@@ -310,44 +249,39 @@ class ENH_PlacementTools
           W = WIDTH_HEADER;
           h = CTRL_DEFAULT_H;
         };
-        class OrientNorth: ctrlButton
+        class OrientNorth: ctrlEdit
         {
-          text = "N";
+          idc = IDC_PLACEMENTTOOLS_ORIENTATION;
           x = POS_X_VALUE + 8 * GRID_W;
           y = 85 * GRID_H;
           w = CTRL_DEFAULT_H;
           h = CTRL_DEFAULT_H;
-          onButtonClick = "0 call ENH_fnc_setOrientation";
+          onSliderChange = "(_this sel) call ENH_fnc_setOrientation";
         };
-        class OrientEast: ctrlButton
+        /* class OrientEast: OrientNorth
         {
           text = "E";
           x = POS_X_VALUE + 16 * GRID_W;
           y = 91 * GRID_H;
-          w = CTRL_DEFAULT_H;
-          h = CTRL_DEFAULT_H;
           onButtonClick = "90 call ENH_fnc_setOrientation";
         };
-        class OrientSouth: ctrlButton
+        class OrientSouth: OrientNorth
         {
           text = "S";
           x = POS_X_VALUE + 8 * GRID_W;
           y = 97 * GRID_H;
-          w = CTRL_DEFAULT_H;
-          h = CTRL_DEFAULT_H;
           onButtonClick = "180 call ENH_fnc_setOrientation";
         };
-        class OrientWest: ctrlButton
+        class OrientWest: OrientNorth
         {
           text = "W";
           x = POS_X_VALUE;
           y = 91 * GRID_H;
-          w = CTRL_DEFAULT_H;
-          h = CTRL_DEFAULT_H;
           onButtonClick = "270 call ENH_fnc_setOrientation";
-        };
-         class OrientRandom: ctrlButtonPictureKeepAspect
+        }; */
+         class RandomOrientaton: ctrlButtonPictureKeepAspect
         {
+          idc = IDC_PLACEMENTTOOLS_RANDOMORIENTATION;
           text = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\widget_rotation_off_ca.paa";
           x = POS_X_VALUE + 24 * GRID_W;
           y = 85 * GRID_H;
@@ -355,13 +289,11 @@ class ENH_PlacementTools
           h = CTRL_DEFAULT_H;
           onButtonClick = "-1 call ENH_fnc_setOrientation";
         };
-        class ReverseOrientation: ctrlButtonPictureKeepAspect
+        class ReverseOrientation: RandomOrientaton
         {
+          idc = IDC_PLACEMENTTOOLS_REVERSEORIENTATION;
           text = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-          x = POS_X_VALUE + 24 * GRID_W;
           y = 97 * GRID_H;
-          w = CTRL_DEFAULT_H;
-          h = CTRL_DEFAULT_H;
           onButtonClick = "-2 call ENH_fnc_setOrientation";
         };
       };
