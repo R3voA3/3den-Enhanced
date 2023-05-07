@@ -1,12 +1,29 @@
+# v7.7.4
+## ADDED
+- Attribute to set marker draw priority (NEEDS TESTING)
+
+## CHANGED
+- Placement Tools
+  - Sliders were replaced with Edit controls to allow any numeric value
+  - Added the option to adjust center on the fly
+  - Line pattern now also supports direction
+  - Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
+  - Orientation around Z-axis can now be freely set
+  - Functions rewrite
+
 # v7.7.3
 ## ADDED
 - Dynamic Simulation Debug Mode now also works for objects
-
-## CHANGED
+- CTRL + SPACE added as shortcut to snap entities to surface
+- Added Select all Layers button to the left panel
 - Renamed recently added functions
 - Updated Italian translation thanks to Fil-ric
 - Search box is not automatically focused when Move To Layer UI is opened
 - If AI skill settings are set to 0.5 (via Edit box) they will no longer be executed
+- Moved Delete All Empty Layers to the left Panel
+- ENH_fnc_setOrientation
+  - Works now with 1 (trigger, markers) and 3 (object, system) dimensional attributes
+  - Preserves orientation around X and Y
 
 # v7.7.2
 ## ADDED
