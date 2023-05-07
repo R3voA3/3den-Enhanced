@@ -4493,6 +4493,10 @@
         <Polish>Usuń puste warstwy</Polish>
         <Russian>Удалить пустые слои</Russian>
     </Key>
+    <Key ID="STR_ENH_TOOLS_SELECTALLLAYERS">
+        <English>Select all Layers</English>
+        <German>Alle Ebenen auswählen</German>
+    </Key>
     <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
         <English>Log Game Info</English>
         <Italian>Registra informazioni di gioco</Italian>

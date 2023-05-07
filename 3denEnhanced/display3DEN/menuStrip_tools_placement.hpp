@@ -8,16 +8,23 @@ class ENH_Folder_Placement
     "Separator",
     "ENH_Folder_Orient",
     "ENH_Folder_Align",
-    "ENH_Folder_Space"
+    "ENH_Folder_Space",
+    "Separator",
+    "ENH_SnapToSurface"
   };
 };
-
 class ENH_PlacementTools
 {
   text = "$STR_ENH_TOOLS_PLACEMENTTOOL";
   action = "call ENH_fnc_placementTools_createDisplay";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
   opensNewWindow = 1;
+};
+class ENH_SnapToSurface
+{
+  text = "$STR_3DEN_DISPLAY3DEN_ENTITYMENU_MOVESURFACE_TEXT";
+  action = "do3DENAction 'SnapToSurface'";
+  shortcuts[] = {INPUT_CTRL_OFFSET + DIK_SPACE};
 };
 
 #include "menuStrip_tools_orient.hpp"

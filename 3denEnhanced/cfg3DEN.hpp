@@ -347,6 +347,7 @@ class Cfg3DEN
       };
     };
   };
+  #if __GAME_VER_MIN__ >= 13 //TODO: Remove when version 13 is stable
   class Marker
   {
     class AttributeCategories
@@ -362,4 +363,5 @@ class Cfg3DEN
       };
     };
   };
+  #endif
 };

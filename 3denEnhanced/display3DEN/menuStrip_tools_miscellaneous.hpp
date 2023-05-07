@@ -5,7 +5,6 @@ class ENH_Folder_Miscellaneous
   items[] +=
   {
     "ENH_CreateTrigger",
-    "ENH_DeleteEmptyLayers",
     "ENH_ExportMissionParameters",
     "ENH_GenerateSteamMissionDescription",
     "Separator",
@@ -20,13 +19,6 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleAIFeatures",
     "ENH_ToggleMarkerAlpha"
   };
-};
-class ENH_DeleteEmptyLayers
-{
-  text = "$STR_ENH_TOOLS_DELETEEMPTYLAYERS";
-  picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-  action = "call ENH_fnc_deleteEmptyLayers";
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_BACKSPACE};
 };
 class ENH_SwitchTime
 {

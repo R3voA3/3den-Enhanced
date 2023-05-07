@@ -83,5 +83,40 @@ class Display3DEN
         };
       };
     };
+    class PanelLeft: ctrlControlsGroupNoScrollbars
+    {
+      class Controls
+      {
+        class PanelLeftEdit: ctrlControlsGroupNoScrollbars
+        {
+          class Controls
+          {
+            class EditPanel: ctrlControlsGroupNoScrollbars
+            {
+              class Controls
+              {
+                class Delete;
+                class ENH_DeleteEmptyLayers: Delete
+                {
+                  idc = -1;
+                  text = "\3denEnhanced\data\entitylist_deleteEmpty_ca.paa";
+                  x = 7 * GRID_W;
+                  tooltip = "$STR_ENH_TOOLS_DELETEEMPTYLAYERS";
+                  onButtonClick = "call ENH_fnc_deleteEmptyLayers";
+                };
+                class ENH_SelectLayers: Delete
+                {
+                  idc = -1;
+                  text = "\3denEnhanced\data\selectAllLayers_ca.paa";
+                  x = 29 * GRID_W;
+                  tooltip = "$STR_ENH_TOOLS_SELECTALLLAYERS";
+                  onButtonClick = "set3DENSelected (all3DENEntities # 6)";
+                };
+              };
+            };
+          };
+        };
+      };
+    };
   };
 };
