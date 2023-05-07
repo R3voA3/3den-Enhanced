@@ -1,3 +1,16 @@
+# v7.7.4
+## ADDED
+- Attribute to set marker draw priority (NEEDS TESTING)
+
+## CHANGED
+- Placement Tools
+  - Sliders were replaced with Edit controls to allow any numeric value
+  - Added the option to adjust center on the fly
+  - Line pattern now also supports direction
+  - Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
+  - Orientation around Z-axis can now be freely set
+  - Functions rewrite
+
 # v7.7.3
 ## ADDED
 - Dynamic Simulation Debug Mode now also works for objects
