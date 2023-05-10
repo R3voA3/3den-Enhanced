@@ -1,3 +1,8 @@
+# v7.7.4
+## CHANGED
+- Shortcuts UI is now larger
+- Added missing footer control to Shortcuts UI
+
 # v7.7.3
 ## ADDED
 - Dynamic Simulation Debug Mode now also works for objects

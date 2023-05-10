@@ -18,7 +18,7 @@
 #define COL_POS_FILTER [0, 0.07, 0.53]
 
 #define DIALOG_W 100
-#define DIALOG_H 22
+#define DIALOG_H 50
 #define DIALOG_LEFT 0.5 - DIALOG_W / 2 * GRID_W
 #define DIALOG_RIGHT 0.5 + DIALOG_W / 2 * GRID_W
 
@@ -26,49 +26,48 @@ disableSerialization;
 
 private _display = findDisplay IDD_3DEN createDisplay "RscDisplayEmpty";
 
-_display ctrlCreate ["ctrlStaticBackgroundDisable", IDC_SHORTCUTS_DISABLEDBG];
+//_display ctrlCreate ["ctrlStaticBackgroundDisable", IDC_SHORTCUTS_DISABLEDBG];
 _display ctrlCreate ["ctrlStaticBackgroundDisableTiles", IDC_SHORTCUTS_DISABLEDTILESBG];
 
 private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", IDC_SHORTCUTS_TITLE];
 _ctrlTitle ctrlSetPosition [DIALOG_LEFT, safeZoneY + 17 * GRID_H, DIALOG_W * GRID_W, 5 * GRID_H];
 _ctrlTitle ctrlSetText localize "STR_ENH_3DENSHORTCUTS_DISPLAYNAME";
-_ctrlTitle ctrlCommit 0;
 
 private _ctrlContentBackground = _display ctrlCreate ["ctrlStatic", IDC_SHORTCUTS_CONTENTBG];
 _ctrlContentBackground ctrlSetPosition [DIALOG_LEFT, safeZoneY + 22 * GRID_H + 5 * GRID_H, DIALOG_W * GRID_W, (DIALOG_H + 7) * GRID_H];
 _ctrlContentBackground ctrlSetBackgroundColor [COLOR_BACKGROUND_RGBA];
-_ctrlContentBackground ctrlCommit 0;
+
+private _ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", IDC_SHORTCUTS_CONTENT];
+_ctrlFooter ctrlSetPosition [DIALOG_LEFT, safeZoneY + 22 * GRID_H + DIALOG_H * GRID_H + 5 * GRID_H, DIALOG_W * GRID_W, 7 * GRID_H];
 
 private _ctrlButtonClose = _display ctrlCreate ["ctrlButtonClose", IDC_SHORTCUTS_CLOSE];
 _ctrlButtonClose ctrlSetPosition [DIALOG_RIGHT - 26 * GRID_W, safeZoneY + 22 * GRID_H + DIALOG_H * GRID_H + 6 * GRID_H, 25 * GRID_W, 5 * GRID_H];
-_ctrlButtonClose ctrlCommit 0;
 
 private _ctrlSearch = _display ctrlCreate ["ctrlEdit", IDC_SHORTCUTS_SEARCH];
 _ctrlSearch ctrlSetPosition [DIALOG_LEFT + GRID_W, safeZoneY + 22 * GRID_H + DIALOG_H * GRID_H + 6 * GRID_H, 25 * GRID_W, 5 * GRID_H];
-_ctrlSearch ctrlCommit 0;
 
 private _ctrlSearchIcon = _display ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_SHORTCUTS_SEARCHICON];
 _ctrlSearchIcon ctrlSetPosition [DIALOG_LEFT + 26 * GRID_W, safeZoneY + 22 * GRID_H + DIALOG_H * GRID_H + 6 * GRID_H, 5 * GRID_W, 5 * GRID_H];
 _ctrlSearchIcon ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-_ctrlSearchIcon ctrlCommit 0;
 
 private _ctrlContent = _display ctrlCreate ["ctrlListNBox", IDC_SHORTCUTS_CONTENT];
-_ctrlContent ctrlSetPosition [DIALOG_LEFT, safeZoneY + 28 * GRID_H, DIALOG_W * GRID_W, DIALOG_H * GRID_H];
-_ctrlContent ctrlCommit 0;
+_ctrlContent ctrlSetPosition [DIALOG_LEFT, safeZoneY + 28 * GRID_H, DIALOG_W * GRID_W, (DIALOG_H - 1) * GRID_H];
 
+// Setup filter control for BIS_fnc_initListNBoxSorting
 private _ctrlFilterBackground = _display ctrlCreate ["ctrlStatic", IDC_SHORTCUTS_FILTERBG];
 _ctrlFilterBackground ctrlSetPosition [DIALOG_LEFT, safeZoneY + 22 * GRID_H, DIALOG_W * GRID_W,  5 * GRID_H];
-_ctrlFilterBackground ctrlCommit 0;
 _ctrlFilterBackground ctrlSetBackgroundColor [0, 0, 0, 1];
 
 private _ctrlFilter = _display ctrlCreate ["ctrlListNBox", IDC_SHORTCUTS_FILTER];
 _ctrlFilter ctrlSetPosition [DIALOG_LEFT, safeZoneY + 22 * GRID_H, DIALOG_W * GRID_W, 5 * GRID_H];
-_ctrlFilter ctrlCommit 0;
 
 _ctrlContent lnbSetColumnsPos COL_POS;
 _ctrlFilter lnbSetColumnsPos COL_POS_FILTER;
 
 _ctrlFilter lnbAddRow ["", "Action", "Shortcuts"];
+
+// Commit all changes
+allControls _display apply {_x ctrlCommit 0};
 
 [_ctrlFilter, _ctrlContent, [0, 1, 2]] call BIS_fnc_initListNBoxSorting;
 
