@@ -3444,6 +3444,13 @@
         <Chinesesimp>机场</Chinesesimp>
         <Chinese>機場</Chinese>
     </Key>
+    <Key ID="STR_ENH_LOCATIONLIST_CUSTOMLOCATONS">
+        <English>Custom Locations</English>
+        <German>Benutzerdefinierte Orte</German>
+        <Spanish>Ubicaciones personalizadas</Spanish>
+        <Polish>Lokalizacje indywidualne</Polish>
+        <French>Sites personnalisés</French>
+    </Key>
     <Key ID="STR_ENH_LOCATIONLIST_CHAPELS">
         <English>Chapels</English>
         <Italian>Cappelle</Italian>
