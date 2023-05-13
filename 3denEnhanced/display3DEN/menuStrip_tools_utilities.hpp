@@ -11,7 +11,6 @@ class ENH_Folder_Utilities
     "ENH_ScriptCommands",
     "Separator",
     "ENH_3DENRadio",
-    "ENH_3DENCamPositions",
     "ENH_SAM",
     "ENH_CfgSentencesBrowser",
     "ENH_TextureFinder",
@@ -102,14 +101,6 @@ class ENH_TextureFinder
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
   action = "findDisplay 313 createDisplay 'ENH_TextureFinder'";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
-  opensNewWindow = 1;
-};
-class ENH_3DENCamPositions
-{
-  text = "$STR_ENH_TOOLS_3DENCAM";
-  picture = "A3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\free.paa";
-  action = "findDisplay 313 createDisplay 'ENH_3DENCamPositions'";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_U};
   opensNewWindow = 1;
 };
 class ENH_CfgSentencesBrowser
