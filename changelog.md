@@ -1,7 +1,19 @@
 # v7.7.4
+## ADDED
+- Status bar now shows the camera direction
+
 ## CHANGED
 - Shortcuts UI is now larger
 - Added missing footer control to Shortcuts UI
+- Changed width of distance gauge in status bar
+- Location list update
+  - Improved location list code
+  - Custom location can now be saved to the location list
+  - Custom locations are stored per map
+  - Custom locations can be deleted
+
+## REMOVED
+- Removed 3DEN Cam Positions UI
 
 # v7.7.3
 ## ADDED
