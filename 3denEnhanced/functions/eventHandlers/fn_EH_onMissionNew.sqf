@@ -23,6 +23,12 @@ call ENH_fnc_3DENRadio_toggleRadio;
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
 [] spawn ENH_fnc_statusbar_sessionTimer;
+
+//Init direction display
+addMissionEventHandler ["EachFrame",
+{
+  findDisplay 313 displayCtrl 681 ctrlSetText format ["%1 °", round getDir get3DENCamera];
+}];
 #endif
 
 #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE

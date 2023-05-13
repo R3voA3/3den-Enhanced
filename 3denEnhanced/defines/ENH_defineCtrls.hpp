@@ -14,6 +14,7 @@ class ctrlButtonExpandAll;
 class ctrlButtonOK;
 class ctrlButtonPictureKeepAspect;
 class ctrlButtonSearch;
+class ctrlButtonToolbar;
 class ctrlCheckbox;
 class ctrlCheckboxToolbar;
 class ctrlCombo;

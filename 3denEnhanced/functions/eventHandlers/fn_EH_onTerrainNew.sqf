@@ -39,8 +39,21 @@ call ENH_fnc_assetBrowser_collapse;
 //Remove unwanted menu strip entries
 call ENH_fnc_menuStrip_removeItems;
 
+//Init favorites list
+["onLoad", []] call ENH_fnc_favoritesList;
+
+//Add tooltips to entity browser so long names are not cut off
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_entityList_addTooltips}];
+
 //Update location list
+['init'] call ENH_fnc_locationList_enhanced;
 call ENH_fnc_locationList;
+
+//Init direction display
+addMissionEventHandler ["EachFrame",
+{
+  findDisplay 313 displayCtrl 681 ctrlSetText format ["%1 °", round getDir get3DENCamera];
+}];
 #endif
 
 //Enable 3DEN Radio
@@ -53,9 +66,3 @@ call ENH_fnc_ambientAnimations_initInEditor;
 
 //Preload the ammo attribute to get rid of initial freeze and loading screen
 [] call ENH_fnc_preloadAmmoAttribute;
-
-//Init favorites list
-["onLoad", []] call ENH_fnc_favoritesList;
-
-//Add tooltips to entity browser so long names are not cut off
-(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_entityList_addTooltips}];
