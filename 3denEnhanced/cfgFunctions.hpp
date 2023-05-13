@@ -127,17 +127,6 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\moduleInformation";
       class moduleInformation_onLoad;
     };
-    class 3DENCam
-    {
-      file = "3denEnhanced\functions\GUI\3DENCam";
-      class 3DENCam_deleteEntry;
-      class 3DENCam_get3DENCameraParameters;
-      class 3DENCam_onKillFocus;
-      class 3DENCam_onSetFocus;
-      class 3DENCam_saveList;
-      class 3DENCam_set3DENCameraParameters;
-      class 3DENCam_updateList;
-    };
     class VariableViewer
     {
       file = "3denEnhanced\functions\GUI\variableViewer";
@@ -220,9 +209,7 @@ class CfgFunctions
       class all3DENSelected;
       class deleteCrew;
       class deleteEmptyLayers;
-      #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       class dynamicViewDistance;
-      #endif
       class exportMissionParams;
       class floatToTime;
       class generateSteamMissionDescription;
@@ -248,19 +235,17 @@ class CfgFunctions
       class VHCTools;
       class centerMapOnSelection;
     };
-    #ifndef ENH_HIDE_INTERFACE
     class Interface
     {
       file = "3denEnhanced\functions\interface";
       class assetBrowser_collapse;
       class entityList_addTooltips;
       class favoritesList;
-      class locationList;
+      class locationList_enhanced;
       class menuStrip_removeItems;
       class statusbar_entityCounter;
       class statusbar_sessionTimer;
     };
-    #endif
     class Log
     {
       file = "3denEnhanced\functions\log";
@@ -288,68 +273,39 @@ class CfgFunctions
     class Attributes
     {
       file = "3denEnhanced\functions\attributes";
-      #ifndef ENH_HIDE_ADVANCEDDAMAGE
       class advancedDamage_onAttributeLoad;
       class advancedDamage_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AIRDROP
       class airdrop_onAttributeLoad;
       class airdrop_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AMBIENTANIMATIONS
       class ambientAnimations_initInEditor;
       class ambientAnimations_onAttributeLoad;
       class ambientAnimations_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AMBIENTFLYBY
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_DEBUGOPTIONS
       class debugOptions_activeScripts;
       class debugOptions_init;
-      #endif
-      #ifndef ENH_HIDE_DYNAMICSKILL
       class dynamicSkill_onAttributeLoad;
       class dynamicSkill_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_ESTABLISHINGSHOT
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_GROUPMARKER
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
-      #endif
-      #ifndef ENH_HIDE_HOLDACTION
       class holdAction_onAttributeLoad;
       class holdAction_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_INTROTEXT
       class introText_onAttributeLoad;
       class introText_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_MAPINDICATORS
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_INTERFACE
       class menuStripBlacklist_onAttributeLoad;
-      #endif
-      #ifndef ENH_HIDE_MISSIONENDING
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_SPR
       class SPR_onAttributeLoad;
       class SPR_onAttributeSave;
-      #endif
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
     };
-    #ifdef __A3_DEBUG__
     class ENH_Internal
     {
       file = "3denEnhanced\functions\internal";
@@ -357,6 +313,5 @@ class CfgFunctions
       class exportAttributesToGitHub;
       class exportMenuStripToGitHub;
     };
-    #endif
   };
 };

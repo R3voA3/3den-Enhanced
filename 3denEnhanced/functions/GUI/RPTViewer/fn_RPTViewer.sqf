@@ -30,7 +30,7 @@ switch _mode do
 {
   case "open":
   {
-    _display = findDisplay IDD_3DEN createDisplay "ENH_RPTViewer";
+    _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_RPTViewer";
     uiNamespace setVariable ["ENH_RPTViewer_Display", _display];
   };
   case "update":

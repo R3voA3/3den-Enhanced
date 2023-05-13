@@ -16,7 +16,7 @@
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 disableSerialization;
 
-private _display = findDisplay IDD_3DEN;
+private _display = findDisplay IDD_DISPLAY3DEN;
 private _mode = lbCurSel CTRL(IDC_GARRISON_MODE);
 private _unitPos = lbCurSel CTRL(IDC_GARRISON_STANCE);
 private _enablePath = [true, false] select (lbCurSel CTRL(IDC_GARRISON_PATH));

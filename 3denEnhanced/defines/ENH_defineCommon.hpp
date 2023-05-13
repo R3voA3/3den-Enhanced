@@ -25,9 +25,6 @@
 //Macros for scripting
 #define CTRL(IDC) (_display displayCtrl IDC)
 
-//Eden Editor
-#define IDD_3DEN 313
-
 //3den Enhanced specific IDDs and IDCs
 #define IDD_3DENCAMPOS -1
 #define IDC_3DENCAMPOS_LIST 1000
@@ -255,6 +252,7 @@
 #define IDC_STATUSBAR_ICONGROUPS 678
 #define IDC_STATUSBAR_NUMOBJECTS 679
 #define IDC_STATUSBAR_ICONOBJECTS 680
+#define IDC_STATUSBAR_CAMDIR 681
 
 #define IDC_ZEUSADDONS_CFGPATCHES 10
 #define IDC_ZEUSADDONS_UNITS 20

@@ -24,7 +24,7 @@
 
 disableSerialization;
 
-private _display = findDisplay IDD_3DEN createDisplay "RscDisplayEmpty";
+private _display = findDisplay IDD_DISPLAY3DEN createDisplay "RscDisplayEmpty";
 
 //_display ctrlCreate ["ctrlStaticBackgroundDisable", IDC_SHORTCUTS_DISABLEDBG];
 _display ctrlCreate ["ctrlStaticBackgroundDisableTiles", IDC_SHORTCUTS_DISABLEDTILESBG];

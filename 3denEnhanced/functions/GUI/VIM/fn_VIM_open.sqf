@@ -24,7 +24,7 @@ if (isNil "ENH_VIM_target" || {ENH_VIM_target isKindOf "CAManBase" || !(ENH_VIM_
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 };
 
-private _display = findDisplay IDD_3DEN createDisplay "ENH_VIM";
+private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_VIM";
 uiNamespace setVariable ["ENH_Display_VIM", _display];
 
 [] call ENH_fnc_getAllItems;

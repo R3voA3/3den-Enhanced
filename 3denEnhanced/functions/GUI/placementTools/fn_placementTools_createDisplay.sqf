@@ -19,6 +19,6 @@ ENH_PlacementTools_Selected = [["Object", "Logic", "Trigger", "Marker"]] call EN
 
 if (ENH_PlacementTools_Selected isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; false};
 
-findDisplay IDD_3DEN createDisplay "ENH_PlacementTools";
+findDisplay IDD_DISPLAY3DEN createDisplay "ENH_PlacementTools";
 
 true

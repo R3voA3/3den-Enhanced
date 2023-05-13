@@ -15,11 +15,13 @@
 
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
+//TODO: This can be excuted multiple times. It resets itself on preview or exiting Eden Editor though
+
 disableSerialization;
-private _display3DEN = findDisplay IDD_3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER;
+private _ctrlTimer = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER;
 
 while {is3DEN} do
 {
-  _display3DEN ctrlSetText ([diag_tickTime / 3600] call BIS_fnc_timeToString);
+  _ctrlTimer ctrlSetText ([diag_tickTime / 3600] call BIS_fnc_timeToString);
   uiSleep 1;
 };

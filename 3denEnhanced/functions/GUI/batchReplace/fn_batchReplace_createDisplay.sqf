@@ -22,4 +22,4 @@ if ((get3DENSelected "Object") isEqualTo []) exitWith
   ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 };
 
-findDisplay IDD_3DEN createDisplay "ENH_BatchReplace";
+findDisplay IDD_DISPLAY3DEN createDisplay "ENH_BatchReplace";
