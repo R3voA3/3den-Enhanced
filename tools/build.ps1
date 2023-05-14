@@ -8,7 +8,7 @@ Wait-Process processArma3
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
 $ModVersion = "7.7.4.1" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
-$ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"w
+$ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $WorkshopID = 623475643
 
 function Addon-PrepareBuild
