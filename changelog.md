@@ -11,6 +11,8 @@
   - Custom location can now be saved to the location list
   - Custom locations are stored per map
   - Custom locations can be deleted
+- Updated Polish translation, thanks to genjonakasone
+- The scenario UI (Load/Save) is now using almost the full screen width to make sure folks with a complex folder structure can still navigate through it
 
 ## REMOVED
 - Removed 3DEN Cam Positions UI
