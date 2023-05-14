@@ -42,3 +42,4 @@
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
 //#include "GUI\RscDisplayConfigViewer.hpp"
+#include "GUI\display3DENSave.hpp"
