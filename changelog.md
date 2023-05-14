@@ -1,3 +1,9 @@
+# v7.7.4.1
+## CHANGED
+- Camera direction in statusbar now always has three digits
+- Removed obsolete Location list function call
+- Fixed incorrect version number
+
 # v7.7.4
 ## ADDED
 - Status bar now shows the camera direction
