@@ -306,7 +306,7 @@ class CfgFunctions
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
     };
-    class ENH_Internal
+    class Internal
     {
       file = "3denEnhanced\functions\internal";
       class checkShortCutsDuplicates;
