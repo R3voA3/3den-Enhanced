@@ -23,17 +23,26 @@ class Display3DEN
         class ENH_TextDir: TextZ
         {
           idc = -1;
-          x = 92 * GRID_W + 2 * SPACE_X;
+          x = 93 * GRID_W + 2 * SPACE_X;
           text = "\a3\3den\data\attributes\loiterdirection\ccw_ca.paa";
         };
         class ENH_ValueDir: ValueX
         {
           idc = IDC_STATUSBAR_CAMDIR;
-          x = 95 * GRID_W + 2 * SPACE_X;
+          x = 96 * GRID_W + 2 * SPACE_X;
           w = 12 * GRID_W;
           text = "0 °";
           onLoad = "(_this # 0) ctrlEnable false";
         };
+        #if __has_include("\userconfig\ENH_Config.hpp")
+        class ENH_UserconfigWarning: TextZ
+        {
+          idc = -1;
+          x = 109 * GRID_W + 2 * SPACE_X;
+          text = "\a3\ui_f\data\map\markers\military\warning_ca.paa";
+          tooltip = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
+        };
+        #endif
         #ifndef ENH_HIDE_INTERFACE
         class ENH_SessionTime: Version
         {
@@ -113,15 +122,6 @@ class Display3DEN
           idc = IDC_STATUSBAR_ICONOBJECTS;
           x = ORIGIN_X_STATUSBAR - 109 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeObjects_ca.paa";
-        };
-        #endif
-        #if __has_include("\userconfig\ENH_Config.hpp")
-        class ENH_UserconfigWarning: TextZ
-        {
-          idc = -1;
-          x = 108 * GRID_W + 2 * SPACE_X;
-          text = "\a3\ui_f\data\map\markers\military\warning_ca.paa";
-          tooltip = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
         };
         #endif
       };
