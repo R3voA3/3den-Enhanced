@@ -1,3 +1,7 @@
+# v7.7.5
+## CHANGED
+- Fixed ugly preview image for favorites list
+
 # v7.7.4.1
 ## CHANGED
 - Camera direction in statusbar now always has three digits

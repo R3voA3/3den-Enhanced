@@ -143,7 +143,7 @@ class Display3DEN
         class PanelRightHistory;
         class PanelRightFavorites: PanelRightHistory
         {
-          idc = 1337;
+          idc = IDC_DISPLAY3DEN_FAVORITES;
           class Controls
           {
             class Footer: ctrlStaticFooter
@@ -195,7 +195,7 @@ class Display3DEN
         {
           columns = 3;
           strings[] = {"$STR_3DEN_DISPLAY3DEN_ASSETS", "$STR_3DEN_DISPLAY3DEN_HISTORY", "$STR_3DEN_FAVORITE_TEXTPLURAL"};
-          values[] = {1039, 1040, 1337};
+          values[] = {1039, 1040, IDC_DISPLAY3DEN_FAVORITES};
         };
       };
     };
