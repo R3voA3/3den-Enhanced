@@ -15,7 +15,6 @@
 #include "display3DEN\display3DEN.hpp"
 
 //Custom GUIs
-#include "GUI\3DENCameraPositions.hpp"
 #include "GUI\3DENRadio.hpp"
 #include "GUI\actionCreator.hpp"
 #include "GUI\attributeSearch.hpp"
