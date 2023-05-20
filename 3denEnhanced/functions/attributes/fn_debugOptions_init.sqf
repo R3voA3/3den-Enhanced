@@ -15,7 +15,7 @@
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 #define DELAY 0.1
-#define HINT_REFRESH_INTERVAL = 30
+#define HINT_REFRESH_INTERVAL 30
 
 // To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview) exitWith {};
@@ -759,7 +759,6 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
   #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
   #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
-  #define HINT_REFRESH_INTERVAL = 30
 
   ENH_dynSimDebug_RefreshedLast = diag_tickTime;
   ENH_dynSimDebug_Text = "<t size='1.5' align='left'>Dynamic Simulation Stats</t>   <br/><br/>
