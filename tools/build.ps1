@@ -5,10 +5,14 @@ $processArma3 = Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop
 
 Wait-Process processArma3
 
+#Change here---------
+$ModVersion = "7.7.6"
+#--------------------
+
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
-$ModVersion = "7.7.5" #Get-Content -Path "$ProjectFolder\tools\`$VERSION`$"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
+$Changelog = "$ModVersion [url=https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md] Changelog (GitHub) [/url]"
 $WorkshopID = 623475643
 
 function Addon-PrepareBuild
@@ -33,7 +37,7 @@ function Addon-Build
 
 function Addon-Publish
 {
-  Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"[url=https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md] Changelog (GitHub) [/url]`""
+  Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"$Changelog`""
 }
 
 function Addon-Compress
