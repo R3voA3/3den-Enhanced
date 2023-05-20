@@ -141,18 +141,18 @@ class Display3DEN
       class Controls
       {
         class PanelRightHistory;
-        class PanelRightFavorites: PanelRightHistory
+        class ENH_PanelRightFavorites: PanelRightHistory
         {
           idc = IDC_DISPLAY3DEN_FAVORITES;
           class Controls
           {
-            class Footer: ctrlStaticFooter
+            class ENH_Footer: ctrlStaticFooter
             {
               y = safezoneH - (28 + 13) * GRID_H;
               w = 60 * GRID_W;
               h = 13 * GRID_H;
             };
-            class Text: ctrlStatic
+            class ENH_PanelRightFavorites_Text: ctrlStatic
             {
               text = "$STR_ENH_DISPLAY3DEN_PLACEENTITY";
               y = safezoneH - (28 + 12) * GRID_H;
@@ -160,7 +160,7 @@ class Display3DEN
               h = CTRL_DEFAULT_H;
               style = 2;
             };
-            class Search: ctrlEdit
+            class ENH_PanelRightFavorites_Search: ctrlEdit
             {
               idc = 1336;
               x = GRID_W;
@@ -168,7 +168,7 @@ class Display3DEN
               w = 58 * GRID_W;
               h = CTRL_DEFAULT_H;
             };
-            class Favorites: ctrlTree
+            class ENH_PanelRightFavorites_Tree: ctrlTree
             {
               idc = 1338;
               idcSearch = 1336;
@@ -180,7 +180,7 @@ class Display3DEN
               colorBorder[] = {0,0,0,0};
               multiselectEnabled = 1;
             };
-            class RemoveFromList: ctrlButton
+            class ENH_PanelRightFavorites_Delete: ctrlButton
             {
               idc = 1339;
               text = "$STR_DISP_DELETE";
