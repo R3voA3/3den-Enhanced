@@ -15,6 +15,7 @@
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 #define DELAY 0.1
+#define HINT_REFRESH_INTERVAL = 30
 
 // To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview) exitWith {};
@@ -575,7 +576,7 @@ if (GETVALUE("DebugPath") > 0) then
   private _is3DEnabled = GETVALUE("DebugPath") > 1;
   {
     private _leader = leader _x;
-    if (expectedDestination _leader # 1 != "DoNotPlan" && alive _leader) then
+    if ((expectedDestination _leader param [1, "DoNotPlan"]) != "DoNotPlan" && alive _leader) then
     {
       [_leader, _cfgMarkerColors, _is3DEnabled] spawn
       {
@@ -592,7 +593,7 @@ if (GETVALUE("DebugPath") > 0) then
 
         while {alive _leader} do
         {
-          if ((_leader distance _posOld) > 20) then
+          if ((_leader distance _posOld) > 50) then
           {
             if (_is3DEnabled) then
             {
@@ -758,7 +759,9 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
   #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
   #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
+  #define HINT_REFRESH_INTERVAL = 30
 
+  ENH_dynSimDebug_RefreshedLast = diag_tickTime;
   ENH_dynSimDebug_Text = "<t size='1.5' align='left'>Dynamic Simulation Stats</t>   <br/><br/>
 
 <t size='1.3' align='left'>Enabled/Disabled Entities</t>   <br/>
@@ -799,26 +802,31 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   addMissionEventHandler ["EachFrame",
   {
     private _recommendedViewDistance = selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8;
-    hintSilent parseText format
-    [
-      ENH_dynSimDebug_Text,
-      UNITS_ENABLED,
-      ALL_UNITS,
-      GROUPS_ENABLED,
-      ALL_GROUPS,
-      OBJECTS_ENABLED,
-      ALL_OBJECTS,
-      CAN_TRIGGER_UNITS,
-      CAN_TRIGGER_VEHICLES,
-      DISTANCE_GROUPS_UNITS,
-      DISTANCE_VEHICLES,
-      DISTANCE_EMPTY_VEHICLES,
-      DISTANCE_PROPS,
-      DISTANCE_COEF,
-      viewDistance,
-      viewDistance > _recommendedViewDistance,
-      _recommendedViewDistance
-    ];
+
+    if (diag_tickTime - ENH_dynSimDebug_RefreshedLast > HINT_REFRESH_INTERVAL) then
+    {
+      hintSilent parseText format
+      [
+        ENH_dynSimDebug_Text,
+        UNITS_ENABLED,
+        ALL_UNITS,
+        GROUPS_ENABLED,
+        ALL_GROUPS,
+        OBJECTS_ENABLED,
+        ALL_OBJECTS,
+        CAN_TRIGGER_UNITS,
+        CAN_TRIGGER_VEHICLES,
+        DISTANCE_GROUPS_UNITS,
+        DISTANCE_VEHICLES,
+        DISTANCE_EMPTY_VEHICLES,
+        DISTANCE_PROPS,
+        DISTANCE_COEF,
+        viewDistance,
+        viewDistance > _recommendedViewDistance,
+        _recommendedViewDistance
+      ];
+      ENH_dynSimDebug_RefreshedLast = diag_tickTime;
+    };
     if (visibleMap) then
     {
       ENH_dynSimDebug_markerUnitsArray apply
