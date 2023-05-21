@@ -1,3 +1,17 @@
+# v7.7.6
+## CHANGED
+- Vehicle Inventory Manager overhaul
+  - Renamed to Equipment Storage Editor (to give it a similar name as the vanilla attribute)
+  - Increased UI size
+  - Added a list that shows compatible magazines and items of the selected item
+  - Template list is now always visible
+  - Code optimisations
+
+- Fixed a bug which disabled "Recompile All" button in functions viewer even though it should be available
+- Fixed wrong help link in Functions Viewer menu strip
+- Save Loadout attribute: Removed debugging, code cleanup
+- added missing file to GUI Export
+
 # v7.7.5
 ## CHANGED
 - Fixed ugly preview image for favorites list
@@ -190,7 +204,7 @@
 
 # v6.4.1
 ## CHANGED
-- Fixed a script error with VIM if ACE was used
+- Fixed a script error with ESE if ACE was used
 
 # v6.4
 ## CHANGED
@@ -321,7 +335,7 @@
 # v6.0
 
 ## CHANGED
-- Vehicle Inventory Manager (VIM)
+- Vehicle Inventory Manager (ESE)
   - Is now able to create a full arsenal with selected addon items
   - Is using HashMaps where possible now to improve performance when many items are available
   - Fixed the issue where the amount would not properly be saved if inventory was set to be virtual
