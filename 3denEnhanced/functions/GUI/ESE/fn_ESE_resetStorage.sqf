@@ -17,22 +17,22 @@
 
 disableSerialization;
 
-private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
-private _itemsHashMap = uiNamespace getVariable "ENH_VIM_itemsHashMap";
+private _display = uiNamespace getVariable "ENH_Display_ESE";
+private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
+private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
 
-call ENH_fnc_VIM_clearInventory;
+call ENH_fnc_ESE_clearInventory;
 
 //Get all items defined in vehicle's config and add them to the listbox
 {
-  private _classes = "true" configClasses (configOf ENH_VIM_target >> _x);
+  private _classes = "true" configClasses (configOf ENH_ESE_target >> _x);
   {
     private _amount = getNumber (_x >> "count");
     private _configName = configName _x trim ["_xx_", 1];
     (_itemsHashMap get toLower _configName) params ["_displayName", "_image", "", "_addonIcon", "", "_specificType", "_descriptionShort", "_configNameCaseSens"];
 
-    [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_VIM_lnbAdd;
+    [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
   } forEach _classes;
 } forEach ["TransportWeapons", "TransportMagazines", "TransportItems", "TransportBackpacks"];
 
-[false] call ENH_fnc_VIM_toggleVirtual;
+[false] call ENH_fnc_ESE_toggleVirtual;

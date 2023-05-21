@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_VIM GUI. Clear the inventory list.
+  Used by the ENH_ESE GUI. Clear the inventory list.
 
   Parameter(s):
   -
@@ -15,4 +15,4 @@
 
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
-lnbClear ((uiNamespace getVariable "ENH_Display_VIM") displayCtrl IDC_VIM_INVENTORYLIST)
+lnbClear ((uiNamespace getVariable "ENH_Display_ESE") displayCtrl IDC_ESE_INVENTORYLIST)

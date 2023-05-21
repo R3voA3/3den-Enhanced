@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_VIM GUI. Used to remove items from inventory listbox.
+  Used by the ENH_ESE GUI. Used to remove items from inventory listbox.
 
   Parameter(s):
   0: NUMBER - The amount that should be removed
@@ -17,8 +17,8 @@
 
 disableSerialization;
 params ["_amount"];
-private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
+private _display = uiNamespace getVariable "ENH_Display_ESE";
+private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _row = lnbCurSelRow _ctrlInventory;
 
 if (_row == -1) exitWith {};

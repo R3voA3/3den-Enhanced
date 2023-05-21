@@ -23,13 +23,13 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    class Extraction
+    /* class Extraction
     {
       file = "3denEnhanced\functions\GUI\extraction";
       class extraction_onCheckedChanged;
       class extraction_onLoad;
       class extraction_setup;
-    };
+    }; */
     class CreateObject
     {
       file = "3denEnhanced\functions\GUI\createObject";
@@ -141,28 +141,28 @@ class CfgFunctions
       class variableViewer_onSearch;
       class variableViewer_setOrCreate;
     };
-    class VIM
+    class ESE
     {
-      file = "3denEnhanced\functions\GUI\VIM";
-      class VIM_addItem;
-      class VIM_applyAttribute;
-      class VIM_changeFilter;
-      class VIM_clearInventory;
-      class VIM_close;
-      class VIM_export;
-      class VIM_fullArsenal;
-      class VIM_handleTemplates;
-      class VIM_lbAdd;
-      class VIM_lnbAdd;
-      class VIM_loadAttributeValue;
-      class VIM_onModFilterChanged;
-      class VIM_open;
-      class VIM_removeItem;
-      class VIM_resetSearch;
-      class VIM_resetStorage;
-      class VIM_search;
-      class VIM_sort;
-      class VIM_toggleVirtual;
+      file = "3denEnhanced\functions\GUI\ESE";
+      class ESE_addItem;
+      class ESE_applyAttribute;
+      class ESE_changeFilter;
+      class ESE_clearInventory;
+      class ESE_close;
+      class ESE_export;
+      class ESE_fullArsenal;
+      class ESE_handleTemplates;
+      class ESE_lbAdd;
+      class ESE_lnbAdd;
+      class ESE_loadAttributeValue;
+      class ESE_onModFilterChanged;
+      class ESE_open;
+      class ESE_removeItem;
+      class ESE_resetSearch;
+      class ESE_resetStorage;
+      class ESE_search;
+      class ESE_sort;
+      class ESE_toggleVirtual;
     };
     class CfgSentencesBrowser
     {

@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_VIM GUI. Takes items from inventory list and applies the attribute. Can also only return the attribute value.
+  Used by the ENH_ESE GUI. Takes items from inventory list and applies the attribute. Can also only return the attribute value.
 
   Parameter(s):
   0: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
@@ -17,9 +17,9 @@
 
 disableSerialization;
 params [["_return", false]];
-private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _itemsHashMap = uiNamespace getVariable "ENH_VIM_itemsHashMap";
-private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
+private _display = uiNamespace getVariable "ENH_Display_ESE";
+private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
+private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _rows = lnbSize _ctrlInventory select 0;
 
 private _weapons = [];
@@ -73,10 +73,10 @@ private _value = str
     [_items, _itemsAmount],
     [_backpacks, _backpacksAmount]
   ],
-  _display getVariable ["ENH_VIM_IsVirtual", false]
+  _display getVariable ["ENH_ESE_IsVirtual", false]
 ];
 
 if (_return) exitWith {_value};
-ENH_VIM_target set3DENAttribute ["ammoBox", _value];
+ENH_ESE_target set3DENAttribute ["ammoBox", _value];
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

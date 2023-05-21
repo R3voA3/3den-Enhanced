@@ -20,8 +20,8 @@ params ["_ctrlButton"];
 
 private _display = ctrlParent _ctrlButton;
 
-CTRL(IDC_VIM_SEARCH) ctrlSetText "";
-CTRL(IDC_VIM_BUTTONSEARCH) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-CTRL(IDC_VIM_FILTERSEARCH) lbSetCurSel 0;
+CTRL(IDC_ESE_SEARCH) ctrlSetText "";
+CTRL(IDC_ESE_BUTTONSEARCH) ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+CTRL(IDC_ESE_FILTERSEARCH) lbSetCurSel 0;
 
-CTRL(IDC_VIM_SEARCH) call ENH_fnc_VIM_search;
+CTRL(IDC_ESE_SEARCH) call ENH_fnc_ESE_search;

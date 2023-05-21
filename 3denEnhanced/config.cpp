@@ -35,7 +35,7 @@
 #include "GUI\selectionFilter.hpp"
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
-#include "GUI\VIM.hpp"
+#include "GUI\ESE.hpp"
 #include "GUI\zeusAddons.hpp"
 
 //Improved vanilla GUIs

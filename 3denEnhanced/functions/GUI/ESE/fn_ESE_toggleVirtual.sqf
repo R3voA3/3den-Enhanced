@@ -4,7 +4,7 @@
   Date: 2021-06-22
 
   Description:
-  Used by the ENH_VIM GUI. Used to change virtual state
+  Used by the ENH_ESE GUI. Used to change virtual state
 
   Parameter(s):
   1: BOOLEAN or NUMBER - -1 to invert current state, true to set to virtual, false to set to normal
@@ -19,14 +19,14 @@ disableSerialization;
 //params ["", "_isVirtual"];
 params [["_isVirtual", [-1], [true, 0]]];
 
-private _display = uiNamespace getVariable "ENH_Display_VIM";
-private _ctrlInventory = CTRL(IDC_VIM_INVENTORYLIST);
+private _display = uiNamespace getVariable "ENH_Display_ESE";
+private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _rows = (lnbSize _ctrlInventory) # 0;
 
 //Reverse state
 if (_isVirtual isEqualTo -1) then
 {
-  _isVirtual = !(_display getVariable ["ENH_VIM_IsVirtual", false]);
+  _isVirtual = !(_display getVariable ["ENH_ESE_IsVirtual", false]);
 };
 
 if (_isVirtual) then
@@ -44,4 +44,4 @@ else
   };
 };
 
-_display setVariable ["ENH_VIM_IsVirtual", _isVirtual];
+_display setVariable ["ENH_ESE_IsVirtual", _isVirtual];

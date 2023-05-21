@@ -6715,18 +6715,11 @@
         <Chinese>變量查看器</Chinese>
         <Italian>Visualizzatore Variabili</Italian>
     </Key>
-    <Key ID="STR_ENH_TOOLS_VIM">
-        <English>Vehicle Inventory Manager</English>
-        <Russian>Менеджер инвентаря в технике</Russian>
-        <German>Vehicle-Inventar-Manager</German>
-        <French>Gestionnaire d'inventaire de véhicule</French>
-        <Spanish>Gestor de inventario de vehículos</Spanish>
-        <Chinesesimp>载具库存管理</Chinesesimp>
-        <Chinese>載具庫存管理</Chinese>
-        <Polish>Zarządzanie ekwipunkiem pojazdów</Polish>
-        <Italian>Gestore Inventario Veicolo</Italian>
+    <Key ID="STR_ENH_TOOLS_ESE">
+        <English>Equipment Storage Editor</English>
+        <German>Ausrüstungslagerraum-Editor</German>
     </Key>
-    <Key ID="STR_ENH_VIM_EXIT_TEXT">
+    <Key ID="STR_ENH_ESE_EXIT_TEXT">
         <English>You have unsaved changes. Close anyway?</English>
         <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
         <Chinesesimp>您有未保存的更改。仍然关闭？</Chinesesimp>
@@ -6735,7 +6728,7 @@
         <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
         <Italian>Hai dei cambiamenti non salvati. Chiudere comunque?</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_EXPORTACE_DISPLAYNAME">
+    <Key ID="STR_ENH_ESE_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
         <German>Export (ACE)</German>
         <Chinesesimp>导出 (ACE)</Chinesesimp>
@@ -6744,7 +6737,7 @@
         <Spanish>Exportar (ACE)</Spanish>
         <Italian>Esporta (ACE)</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_EXPORTACE_TOOLTIP">
+    <Key ID="STR_ENH_ESE_EXPORTACE_TOOLTIP">
         <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
         <German>Exportiere die derzeitige Ausrüstung in einem Format die im ACE 3 Arsenal Attribute verwendet werden kann.</German>
         <Chinesesimp>以可在 ACE 3 军械库属性中使用的格式导出当前装备。</Chinesesimp>
@@ -6752,7 +6745,7 @@
         <Spanish>Exporte la plantilla actual lista para ser importada en el atributo ACE 3 Arsenal.</Spanish>
         <Polish>Eksportuj obecne wyposażenie w formie przygotowanej do importu do atrybutu arsenału ACE 3.</Polish>
     </Key>
-    <Key ID="STR_ENH_VIM_AVAILABLEITEMS">
+    <Key ID="STR_ENH_ESE_AVAILABLEITEMS">
         <English>Available Items</English>
         <Russian>Доступные объекты</Russian>
         <German>Verfügbare Gegenstände</German>
@@ -6763,7 +6756,7 @@
         <Chinese>可用物品</Chinese>
         <Italian>Oggetti Disponibili</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_FULLARSENAL_TOOLTIP">
+    <Key ID="STR_ENH_ESE_FULLARSENAL_TOOLTIP">
         <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
         <Russian>Добавляет все предметы выбранного аддона в инвентарь и делает его виртуальным (Арсенал).</Russian>
         <German>Fügt alle Gegenstände des ausgewählten Addons dem Inventar hinzu und setzt das Inventar auf virtuell (Arsenal).</German>
@@ -6772,7 +6765,7 @@
         <Spanish>Agrega todos los elementos del addon seleccionado al inventario y lo configura para que sea virtual (Arsenal).</Spanish>
         <Polish>Dodaje wszystkie przedmiody z wybranej modyfikacji do ekwipunku i ustawia go jako wirtualny (arsenał).</Polish>
     </Key>
-    <Key ID="STR_ENH_VIM_ITEMSININVENTORY">
+    <Key ID="STR_ENH_ESE_ITEMSININVENTORY">
         <English>Items in Inventory</English>
         <Russian>Элементы в инвентаре</Russian>
         <German>Gegenstände im Inventar</German>
@@ -6783,7 +6776,7 @@
         <Chinese>庫存物品</Chinese>
         <Italian>Oggetti nell'Inventario</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SHOTGUNS">
+    <Key ID="STR_ENH_ESE_SHOTGUNS">
         <English>Shotguns</English>
         <Russian>Дробовики</Russian>
         <German>Schrotflinten</German>
@@ -6794,7 +6787,7 @@
         <Chinese>霰彈槍</Chinese>
         <Italian>Fucili a pallettoni</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SHOWTEMPLATES">
+    <Key ID="STR_ENH_ESE_SHOWTEMPLATES">
         <English>Show Templates</English>
         <Russian>Показать шаблоны</Russian>
         <German>Vorlagen anz.</German>
@@ -6805,7 +6798,7 @@
         <Chinese>顯示模板</Chinese>
         <Italian>Mostra Modello</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_CREATETEMPLATE">
+    <Key ID="STR_ENH_ESE_CREATETEMPLATE">
         <English>Create Template</English>
         <Russian>Создать шаблон</Russian>
         <German>Vorlage erstellen</German>
@@ -6816,7 +6809,7 @@
         <Chinese>創建模板</Chinese>
         <Italian>Crea Modello</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_ISVIRTUAL">
+    <Key ID="STR_ENH_ESE_ISVIRTUAL">
         <English>Is Virtual?</English>
         <Russian>Это виртуальный арсенал?</Russian>
         <German>Virtuell?</German>
@@ -6827,7 +6820,7 @@
         <Chinese>是否為虛擬軍火庫？</Chinese>
         <Italian>E' virtuale?</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_REMOVESELECTED_TOOLTIP">
+    <Key ID="STR_ENH_ESE_REMOVESELECTED_TOOLTIP">
         <English>Clear Inventory</English>
         <Russian>Очистить инвентарь</Russian>
         <German>Inventar leeren</German>
@@ -6838,7 +6831,7 @@
         <Chinese>清除庫存</Chinese>
         <Italian>Svuota Inventario</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_DELETETEMPLATE">
+    <Key ID="STR_ENH_ESE_DELETETEMPLATE">
         <English>Delete selected Template.</English>
         <Russian>Удалить выбранный шаблон</Russian>
         <German>Ausgewählte Vorlage löschen.</German>
@@ -6860,7 +6853,7 @@
         <Italian>Estensioni aggiuntive dell'Eden Editor</Italian>
         <Polish>Dodatkowe rozszerzenia Edytora</Polish>
     </Key>
-    <Key ID="STR_ENH_VIM_HIDETEMPLATES">
+    <Key ID="STR_ENH_ESE_HIDETEMPLATES">
         <English>Hide Templates</English>
         <Russian>Скрыть шаблоны</Russian>
         <German>Vorlagen versteck.</German>
@@ -6871,7 +6864,7 @@
         <Chinese>隱藏模板</Chinese>
         <Italian>Nascondi Modelli</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_EXPORTTOSACEARSENAL">
+    <Key ID="STR_ENH_ESE_EXPORTTOSACEARSENAL">
         <English>Export to ACE Arsenal</English>
         <German>Als ACE Arsenal exportieren</German>
         <Chinesesimp>导出到ACE武器库</Chinesesimp>
@@ -6880,7 +6873,7 @@
         <Spanish>Exportar a ACE Arsenal</Spanish>
         <Italian>Esporta all'Arsenale ACE</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_EXPORTTOARSENAL">
+    <Key ID="STR_ENH_ESE_EXPORTTOARSENAL">
         <English>Export to Arsenal</English>
         <German>Als Arsenal exportieren</German>
         <Chinesesimp>导出到ACE武器库</Chinesesimp>
@@ -6889,7 +6882,7 @@
         <Spanish>Exportar a Arsenal</Spanish>
         <Italian>Esporta all'Arsenale</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SORTBYNAME">
+    <Key ID="STR_ENH_ESE_SORTBYNAME">
         <English>Sort by Name</English>
         <German>Nach Namen sortieren</German>
         <Chinesesimp>按名称排序</Chinesesimp>
@@ -6898,7 +6891,7 @@
         <Spanish>Ordenar por nombre</Spanish>
         <Italian>Ordina per Nome</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SORTBYCLASS">
+    <Key ID="STR_ENH_ESE_SORTBYCLASS">
         <English>Sort by Class Name</English>
         <German>Nach Klassennamen sortieren</German>
         <Chinesesimp>按类名排序</Chinesesimp>
@@ -6907,7 +6900,7 @@
         <Spanish>Ordenar por ClassName</Spanish>
         <Italian>Ordina per NomeClasse</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SORTBYCOUNT">
+    <Key ID="STR_ENH_ESE_SORTBYCOUNT">
         <English>Sort by Count</English>
         <German>Nach Anzahl sortieren</German>
         <Chinesesimp>按数量排序</Chinesesimp>
@@ -6916,7 +6909,7 @@
         <Spanish>Ordenar por cantidad</Spanish>
         <Italian>Ordina per Quantità</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SORTBYTYPE">
+    <Key ID="STR_ENH_ESE_SORTBYTYPE">
         <English>Sort by Type</English>
         <German>Nach Typ sortieren</German>
         <Chinesesimp>按类型排序</Chinesesimp>
@@ -6925,7 +6918,7 @@
         <Spanish>Ordenar por tipo</Spanish>
         <Italian>Ordina per Tipo</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_SORTBYMOD">
+    <Key ID="STR_ENH_ESE_SORTBYMOD">
         <English>Sort by Mod</English>
         <German>Nach Modifikation sortieren</German>
         <Chinesesimp>按Mod排序</Chinesesimp>
@@ -6934,7 +6927,7 @@
         <Spanish>Ordenar por Mod</Spanish>
         <Italian>Ordina per Mod</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_TEMPLATES">
+    <Key ID="STR_ENH_ESE_TEMPLATES">
         <English>Templates</English>
         <Russian>Шаблоны</Russian>
         <German>Vorlagen</German>
@@ -6945,7 +6938,7 @@
         <Chinese>模板</Chinese>
         <Italian>Modelli</Italian>
     </Key>
-    <Key ID="STR_ENH_VIM_RESET_TOOLTIP">
+    <Key ID="STR_ENH_ESE_RESET_TOOLTIP">
         <English>Reset to default items defined in object's config.</English>
         <Russian>Восстановить элементы по умолчанию, определенные в конфигурации объекта.</Russian>
         <German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>

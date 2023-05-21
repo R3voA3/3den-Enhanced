@@ -4,7 +4,7 @@
   Date: 2020-06-14
 
   Description:
-  Used by the ENH_VIM GUI. Adds an item to a listNbox.
+  Used by the ENH_ESE GUI. Adds an item to a listNbox.
 
   Parameter(s):
   0: CONTROL - Control ListNbox

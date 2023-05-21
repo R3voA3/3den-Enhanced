@@ -15,7 +15,7 @@
 
 params [["_mode", "sqf"]];
 
-private _data = parseSimpleArray ([true] call ENH_fnc_VIM_applyAttribute);
+private _data = parseSimpleArray ([true] call ENH_fnc_ESE_applyAttribute);
 
 _data params ["_equipment"];
 _equipment params ["_weapons", "_magazines", "_items", "_backpacks"];
@@ -59,6 +59,6 @@ _export = _export regexReplace ["(,)([^ ])", "$1 $2"];
 _export = trim _export;
 
 uinamespace setVariable ["display3DENCopy_data", ["Export to Arsenal (LOCALIZE)", _export]];
-(uiNamespace getVariable ["ENH_Display_VIM", displayNull]) createDisplay "display3denCopy";
+(uiNamespace getVariable ["ENH_Display_ESE", displayNull]) createDisplay "display3denCopy";
 
 nil
