@@ -60,20 +60,20 @@ class Cfg3DEN
     };
     class EditCodeMulti5: EditCodeMulti3
     {
-      h = 61.5 * GRID_H;
+      h = (5 + 20 * 3.5) * GRID_H;
       class Controls: Controls
       {
         class Background: Background
         {
-          h = 53.5 * GRID_H;
+          h = (20 * 3.5 + 0.6 * 5) * GRID_H;
         };
         class Value: Value
         {
-          h = 55.5 * GRID_H;
+          h = 20 * 3.5 * GRID_H - 1 * GRID_H; // We make this one one grid smaller so text will never overlap the frame
         };
         class Title: Title
         {
-          h = 55.5 * GRID_H;
+          h = (20 * 3.5 + 1 * 5) * GRID_H;
         };
       };
     };
