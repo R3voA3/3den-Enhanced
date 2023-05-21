@@ -23,13 +23,6 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    /* class Extraction
-    {
-      file = "3denEnhanced\functions\GUI\extraction";
-      class extraction_onCheckedChanged;
-      class extraction_onLoad;
-      class extraction_setup;
-    }; */
     class CreateObject
     {
       file = "3denEnhanced\functions\GUI\createObject";
