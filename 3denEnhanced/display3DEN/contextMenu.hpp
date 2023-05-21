@@ -4,7 +4,7 @@ items[] +=
   "ENH_MeasureDistance",
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
-  "ENH_Extraction",
+  /* "ENH_Extraction", */
   "ENH_AddToFavorites",
   "ENH_MoveToLayer"
 };
@@ -118,7 +118,7 @@ class ENH_Garrison
   opensNewWindow = 1;
   SHOW_IN_ROOT;
 };
-class ENH_Extraction
+/* class ENH_Extraction
 {
   action = "findDisplay 313 createDisplay 'ENH_Extraction'";
   text = "$STR_ENH_CONTEXTMENU_CREATEEXTRACTION";
@@ -126,7 +126,7 @@ class ENH_Extraction
   conditionShow = "hoverObjectVehicle";
   opensNewWindow = 1;
   SHOW_IN_ROOT;
-};
+}; */
 class ENH_TriggerOwnerPlayer
 {
   action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
@@ -161,13 +161,8 @@ class ENH_SelectionFilter
   conditionShow = "selected";
   opensNewWindow = 1;
 };
-
 // Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
 {
   action = "[] spawn ENH_fnc_centerMapOnSelection";
-  //picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\moveCamera_ca.paa";
-  //text = "Center Map on Selection";
-  //conditionShow = "1";
-  //SHOW_IN_ROOT;
 };

@@ -84,9 +84,9 @@ class Cfg3DEN
     #ifndef ENH_HIDE_ADVANCEDDAMAGE
       #include "controls\advancedDamage.hpp"
     #endif
-    #ifndef ENH_HIDE_AIRDROP
+/*     #ifndef ENH_HIDE_AIRDROP
       #include "controls\airdrop.hpp"
-    #endif
+    #endif */
     #ifndef ENH_HIDE_AMBIENTANIMATIONS
       #include "controls\ambientAnimations.hpp"
     #endif
@@ -118,7 +118,7 @@ class Cfg3DEN
       #include "controls\missionEndingCasualties.hpp"
     #endif
     #include "controls\subCategoryNoHeader_Fixed.hpp"
-    #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
+    #ifndef ENH_HIDE_TIMEMULTIPLIER
       #include "controls\timeMultiplier.hpp"
     #endif
   };
@@ -161,9 +161,9 @@ class Cfg3DEN
     {
       class AttributeCategories
       {
-        #ifndef ENH_HIDE_AIRDROP
+        /* #ifndef ENH_HIDE_AIRDROP
           #include "attributesMission\airdrop.hpp"
-        #endif
+        #endif */
         #ifndef ENH_HIDE_AMBIENTFLYBY
           #include "attributesMission\ambientFlyby.hpp"
         #endif
@@ -298,7 +298,7 @@ class Cfg3DEN
           #ifndef ENH_HIDE_LIMITSPEED
             #include "attributesObject\limitSpeed.hpp"
           #endif
-          #ifndef ENH_HIDE_AIRDROP
+          #ifndef ENH_HIDE_DOSTOP
             #include "attributesObject\doStop.hpp"
           #endif
           #ifndef ENH_HIDE_REMOVEFROMREMAINSCOLLECTOR
