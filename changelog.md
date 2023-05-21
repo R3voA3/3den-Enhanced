@@ -6,6 +6,9 @@
   - Added a list that shows compatible magazines and items of the selected item
   - Template list is now always visible
   - Code optimisations
+- fixed text overlapping in large edit control
+- increase size of large edit control
+- removed excessive space underneath the large edit control
 
 - Fixed a bug which disabled "Recompile All" button in functions viewer even though it should be available
 - Fixed wrong help link in Functions Viewer menu strip
@@ -16,6 +19,7 @@
 - removed workaround to mute notification as
 the volume can now be changed in the options
 menu
+- Extraction UI as there are compositions which do exactly that
 
 # v7.7.5
 ## CHANGED
