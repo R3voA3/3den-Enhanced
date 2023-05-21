@@ -11,7 +11,6 @@
 #include "cfgFontFamilies.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
-#include "cfgSounds.hpp"
 #include "display3DEN\display3DEN.hpp"
 
 //Custom GUIs
