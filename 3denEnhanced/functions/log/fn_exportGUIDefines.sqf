@@ -68,6 +68,7 @@ private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arm
 _return = _return + "//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
 _return = _return + "//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles" + endl + endl;
 _return = _return + "//Eden Editor macros such as background colour and pixel grid" + endl + "#include ""\a3\3DEN\UI\macros.inc""" + endl;
+_return = _return + "//Eden Editor advanced macros" + endl + "#include ""\a3\3den\ui\macroexecs.inc""" + endl;
 _return = _return + "//GRIDs" + endl + "#include ""\a3\ui_f\hpp\definecommongrids.inc""" + endl;
 _return = _return + "//DIK Key Codes" + endl + "#include ""\a3\ui_f\hpp\definedikcodes.inc""" + endl;
 _return = _return + "//Eden Editor IDDs and IDCs as well as control types, styles and macros" + endl + "#include ""\a3\3den\ui\resincl.inc""" + endl + endl;
