@@ -12,6 +12,11 @@
 - Save Loadout attribute: Removed debugging, code cleanup
 - added missing file to GUI Export
 
+## REMOVED
+- removed workaround to mute notification as
+the volume can now be changed in the options
+menu
+
 # v7.7.5
 ## CHANGED
 - Fixed ugly preview image for favorites list
