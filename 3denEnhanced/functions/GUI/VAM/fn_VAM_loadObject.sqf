@@ -32,14 +32,14 @@ if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
   ] call BIS_fnc_3DENShowMessage;
 
   if (_retAce) then {
-    [_object] call _fnc_getAceArsenalAttr
+    //[_object] call _fnc_getAceArsenalAttr
   } else {
-    [_object] call _fnc_getBIArsenalAttr
+    //[_object] call _fnc_getBIArsenalAttr
   };
 } else {
-  [_object] call _fnc_getBIArsenalAttr
+  //[_object] call _fnc_getBIArsenalAttr
 };
-
+/*
 private _fnc_getAceArsenalAttr = {
   params ["_object"];
 
@@ -73,4 +73,4 @@ private _fnc_getBIArsenalAttr = {
   } forEach (_biAttribute select 0);
 
   _returnSelectHashMap
-};
+};*/

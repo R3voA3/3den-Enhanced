@@ -4,8 +4,7 @@
  * Text statement for the mass stat.
  *
  * Arguments:
- * 0: not used
- * 1: item config path (CONFIG)
+ * 0: item config path (CONFIG)
  *
  * Return Value:
  * String to display
@@ -13,7 +12,7 @@
  * Public: No
 */
 
-params ["", "_config"];
+params ["_config"];
 
 private _mass = getNumber (_config >> "mass");
 

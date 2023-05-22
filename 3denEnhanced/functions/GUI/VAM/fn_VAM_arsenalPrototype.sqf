@@ -262,6 +262,7 @@ _ctrlProgress_1 ctrlSetPosition
  68 * GRID_W,
  10 * GRID_H
 ];
+format["disp: %3 ctrlP1I: %1 ctrlClass: %2", _ctrlProgress_1, ctrlClassName _ctrlProgress_1, _display] call BIS_fnc_3DENNotification;
 
 _ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_1];
 _ctrlProgressText_1 ctrlSetPosition
@@ -641,7 +642,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     };
   };
 
-  [_display] call ENH_fnc_VAM_handleItemStats;
+  [_ctrl] call ENH_fnc_VAM_handleItemStats;
 }];
 
 [[], 2] call _fnc_removeEmptyNodes;

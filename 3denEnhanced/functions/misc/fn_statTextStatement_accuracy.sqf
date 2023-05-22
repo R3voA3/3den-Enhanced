@@ -4,11 +4,10 @@
  * Accuracy text statement.
  *
  * Arguments:
- * 0: stat (STRING)
- * 1: item config path (CONFIG)
- * 2: Args for configExtreme
- *  2.1: Stat limits (ARRAY of BOOL)
- *  2.2: Evaluate as a logarithmic number (BOOL)
+ * 0: item config path (CONFIG)
+ * 1: Args for configExtreme
+ *  1.1: Stat limits (ARRAY of BOOL)
+ *  1.2: Evaluate as a logarithmic number (BOOL)
  *
  * Return Value:
  * Number
@@ -16,7 +15,7 @@
  * Public: No
 */
 
-params ["_stat", "_config", "_args"];
+params ["_config", "_args"];
 _args params ["_statMinMax", "_configExtremeBool"];
 
 private _fireModes = getArray (_config >> "modes");
