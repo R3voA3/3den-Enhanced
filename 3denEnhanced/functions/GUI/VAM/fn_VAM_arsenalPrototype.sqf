@@ -220,9 +220,13 @@ _ctrlButtonLoad ctrlSetPosition
 _ctrlButtonLoad ctrlSetText "Test Load Object";
 
 _ctrlButtonLoad ctrlAddEventHandler ["ButtonClick", {
+  params["_ctrlButton"];
   // load arsenal from 3den selection
-  private _selectedItemHashMap = [_display, (get3DENSelected "Object" select 0)] call ENH_fnc_VAM_loadObject;
-  [_ctrlTV, _selectedItemHashMap] call ENH_fnc_VAM_loadSelectHashMap;
+  [ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject;
+  //format["loadMap: %1", keys ([ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject)] call BIS_fnc_3DENNotification;
+  //private _selectedItemHashMap = [ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject;
+  //format["%1", keys (uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap])] call BIS_fnc_3DENNotification;
+  //[_ctrlTV, _selectedItemHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 }];
 
 _ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];
@@ -262,7 +266,6 @@ _ctrlProgress_1 ctrlSetPosition
  68 * GRID_W,
  10 * GRID_H
 ];
-format["disp: %3 ctrlP1I: %1 ctrlClass: %2", _ctrlProgress_1, ctrlClassName _ctrlProgress_1, _display] call BIS_fnc_3DENNotification;
 
 _ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_1];
 _ctrlProgressText_1 ctrlSetPosition
