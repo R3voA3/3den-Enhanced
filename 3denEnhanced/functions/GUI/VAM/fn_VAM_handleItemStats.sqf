@@ -11,7 +11,7 @@ params ["_ctrl"];
 #define IDC_PROGRESS_TEXT_4 120
 #define IDC_PROGRESS_TEXT_5 130
 
-private _path = uiNamespace getVariable["ENH_VAM_selectedItemPath", []];
+private _path = uiNamespace getVariable["ENH_VAM_selectedItemTVPath", []];
 
 private _ctrlProgress_1 = _display displayCtrl IDC_PROGRESS_1;
 private _ctrlProgress_2 = _display displayCtrl IDC_PROGRESS_2;

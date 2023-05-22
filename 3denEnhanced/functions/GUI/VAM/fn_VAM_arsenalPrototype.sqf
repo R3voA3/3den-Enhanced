@@ -585,7 +585,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 
   ctrlParent _ctrl displayCtrl IDC_PREVIEW_PICTURE ctrlSetText _picture;
 
-  uiNamespace setVariable ["ENH_VAM_selectedItemPath", _path];
+  uiNamespace setVariable ["ENH_VAM_selectedItemTVPath", _path];
   uiNamespace setVariable ["ENH_VAM_selectedItem",
     (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]
   ];
