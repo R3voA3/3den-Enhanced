@@ -78,7 +78,6 @@ if ((_ctrl tvCount _path) == 0) then
       _ctrlProgressText_3 ctrlSetText localize "$STR_a3_rscdisplayarsenal_stat_armor";
       _ctrlProgressText_4 ctrlSetText localize "$STR_a3_rscdisplayarsenal_stat_load";
 
-      // TODO: Equipment stat bars
       _ctrlProgress_1 progressSetPosition 1;
       _ctrlProgress_2 progressSetPosition (["passthrough", _itemConfigPath, [[0, 0.63], [0.01, 1], false]] call ENH_fnc_statBarStatement_default);
       _ctrlProgress_3 progressSetPosition (["armor", _itemConfigPath, [[0, 0.8], [0.01, 1], false]] call ENH_fnc_statBarStatement_default);
