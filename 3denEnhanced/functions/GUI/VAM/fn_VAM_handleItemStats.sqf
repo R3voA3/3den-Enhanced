@@ -1,5 +1,5 @@
 params ["_ctrl"];
-format["WTF %1", _ctrl] call BIS_fnc_3DENNotification;
+
 #define IDC_PROGRESS_1 40
 #define IDC_PROGRESS_2 50
 #define IDC_PROGRESS_3 60
@@ -32,7 +32,7 @@ if ((_ctrl tvCount _path) == 0) then
   private _currentItemSelected = uiNamespace getVariable ["ENH_VAM_selectedItem", ["", "", "", "", "", "", "", ""]];
   private _itemConfigPath = configFile >> "CfgWeapons" >> (_currentItemSelected select 7);
   ((_currentItemSelected select 7) call BIS_fnc_itemType) params["_itemCategory", "_itemType"];
-  format["cat: %1 Type: %2", _itemCategory, _itemType] call BIS_fnc_3DENNotification;
+
 
   switch (_itemCategory) do {
     case "Weapon": {
