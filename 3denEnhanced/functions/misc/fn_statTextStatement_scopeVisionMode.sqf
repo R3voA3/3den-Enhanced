@@ -14,7 +14,6 @@
  */
 
 params ["", "_config"];
-TRACE_1("statTextStatement_scopeVisionMode",_config);
 
 private _opticsModes = ("true" configClasses (_config >> "ItemInfo" >> "OpticsModes")) apply {
     private _visionMode = getArray (_x >> "visionMode");
@@ -61,8 +60,8 @@ if (
     _primaryNVGSupported = _secondaryNVGSupported;
 };
 
-//if (_primaryNVGIntegrated) exitWith {LLSTRING(statVisionMode_IntPrim)};
-//if (_primaryNVGSupported) exitWith {LLSTRING(statVisionMode_supPrim)};
-//if (_secondaryNVGSupported) exitWith {LLSTRING(statVisionMode_supSec)};
+if (_primaryNVGIntegrated) exitWith {"Primary integrated"}; //LLSTRING(statVisionMode_IntPrim)
+if (_primaryNVGSupported) exitWith {"Primary supported"}; //LLSTRING(statVisionMode_supPrim)
+if (_secondaryNVGSupported) exitWith {"Secondary supported"}; //LLSTRING(statVisionMode_supSec)
 
-//LLSTRING(statVisionMode_NoSup)
+"Not Supported" //LLSTRING(statVisionMode_NoSup)

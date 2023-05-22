@@ -1,5 +1,5 @@
 params ["_ctrl"];
-
+format["WTF %1", _ctrl] call BIS_fnc_3DENNotification;
 #define IDC_PROGRESS_1 40
 #define IDC_PROGRESS_2 50
 #define IDC_PROGRESS_3 60
@@ -12,6 +12,7 @@ params ["_ctrl"];
 #define IDC_PROGRESS_TEXT_5 130
 
 private _path = uiNamespace getVariable["ENH_VAM_selectedItemTVPath", []];
+private _display = ctrlParent _ctrl;
 
 private _ctrlProgress_1 = _display displayCtrl IDC_PROGRESS_1;
 private _ctrlProgress_2 = _display displayCtrl IDC_PROGRESS_2;
@@ -28,11 +29,12 @@ private _ctrlProgressText_5 = _display displayCtrl IDC_PROGRESS_TEXT_5;
 // No item selected
 if ((_ctrl tvCount _path) == 0) then
 {
-  private _display = ctrlParent _ctrl;
   private _currentItemSelected = uiNamespace getVariable ["ENH_VAM_selectedItem", ["", "", "", "", "", "", "", ""]];
   private _itemConfigPath = configFile >> "CfgWeapons" >> (_currentItemSelected select 7);
+  ((_currentItemSelected select 7) call BIS_fnc_itemType) params["_itemCategory", "_itemType"];
+  format["cat: %1 Type: %2", _itemCategory, _itemType] call BIS_fnc_3DENNotification;
 
-  switch ((((uiNamespace getVariable "ENH_VAM_selectedItem") select 7) call BIS_fnc_itemType) select 0) do {
+  switch (_itemCategory) do {
     case "Weapon": {
       _ctrlProgress_1 ctrlShow true;
       _ctrlProgress_2 ctrlShow true;
@@ -78,11 +80,49 @@ if ((_ctrl tvCount _path) == 0) then
 
       // TODO: Equipment stat bars
       _ctrlProgress_1 progressSetPosition 1;
-      _ctrlProgress_2 progressSetPosition 1;
-      _ctrlProgress_3 progressSetPosition 1;
-      _ctrlProgress_4 progressSetPosition 1;
+      _ctrlProgress_2 progressSetPosition (["passthrough", _itemConfigPath, [[0, 0.63], [0.01, 1], false]] call ENH_fnc_statBarStatement_default);
+      _ctrlProgress_3 progressSetPosition (["armor", _itemConfigPath, [[0, 0.8], [0.01, 1], false]] call ENH_fnc_statBarStatement_default);
+      _ctrlProgress_4 progressSetPosition (["maximumLoad", _itemConfigPath, [[0, 500], [0.01, 1], false]] call ENH_fnc_statBarStatement_default);
     };
-    // TODO: Items >> Scopes & (Grenades??, probably not)
+    case "Item": {
+      switch (_itemType) do {
+        case "AccessorySights": {
+          _ctrlProgress_1 ctrlShow true;
+          _ctrlProgress_2 ctrlShow true;
+          _ctrlProgress_3 ctrlShow true;
+          _ctrlProgress_4 ctrlShow false;
+          _ctrlProgress_5 ctrlShow false;
+
+          _ctrlProgressText_1 ctrlShow true;
+          _ctrlProgressText_2 ctrlShow true;
+          _ctrlProgressText_3 ctrlShow true;
+          _ctrlProgressText_4 ctrlShow false;
+          _ctrlProgressText_5 ctrlShow false;
+
+          _ctrlProgressText_1 ctrlSetText format["%1: %2", localize "$STR_a3_rscdisplayarsenal_stat_weight", [_itemConfigPath] call ENH_fnc_statTextStatement_mass];
+          _ctrlProgressText_2 ctrlSetText format["Magnification: %1", ["", _itemConfigPath] call ENH_fnc_statTextStatement_scopeMag];
+          _ctrlProgressText_3 ctrlSetText format["Vision Mode: %1", ["", _itemConfigPath] call ENH_fnc_statTextStatement_scopeVisionMode];
+
+          _ctrlProgress_1 progressSetPosition 1;
+          _ctrlProgress_2 progressSetPosition 1;
+          _ctrlProgress_3 progressSetPosition 1;
+
+        };
+        default {
+          _ctrlProgress_1 ctrlShow false;
+          _ctrlProgress_2 ctrlShow false;
+          _ctrlProgress_3 ctrlShow false;
+          _ctrlProgress_4 ctrlShow false;
+          _ctrlProgress_5 ctrlShow false;
+
+          _ctrlProgressText_1 ctrlShow false;
+          _ctrlProgressText_2 ctrlShow false;
+          _ctrlProgressText_3 ctrlShow false;
+          _ctrlProgressText_4 ctrlShow false;
+          _ctrlProgressText_5 ctrlShow false;
+        };
+      };
+    };
     default {
       _ctrlProgress_1 ctrlShow false;
       _ctrlProgress_2 ctrlShow false;
