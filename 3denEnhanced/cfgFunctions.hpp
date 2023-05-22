@@ -261,6 +261,16 @@ class CfgFunctions
       class twoDigitsStr;
       class VHCTools;
       class centerMapOnSelection;
+      class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
     };
     #ifndef ENH_HIDE_INTERFACE
     class Interface

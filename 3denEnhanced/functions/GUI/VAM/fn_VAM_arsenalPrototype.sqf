@@ -584,6 +584,11 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 
   ctrlParent _ctrl displayCtrl IDC_PREVIEW_PICTURE ctrlSetText _picture;
 
+  uiNamespace setVariable ["ENH_VAM_selectedItemPath", _path];
+  uiNamespace setVariable ["ENH_VAM_selectedItem",
+    (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]
+  ];
+
   // check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then
   {
@@ -618,21 +623,16 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
       };
     };
 
-  if ((_ctrl tvValue _path) == 0) then
-  {
-    [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
-  }
-  else
-  {
-    [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
-  }
+    if ((_ctrl tvValue _path) == 0) then {
+      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
+    } else {
+      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
+    };
   }
   else
   {
     private _mouseX = getMousePosition select 0;
-    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
-    {
-
+    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then {
       if ((_ctrl tvValue _path) == 0) then {
         [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
       } else {
@@ -641,7 +641,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     };
   };
 
-  _ctrlTV call ENH_fnc_VAM_handleItemStats;
+  [_display] call ENH_fnc_VAM_handleItemStats;
 }];
 
 [[], 2] call _fnc_removeEmptyNodes;

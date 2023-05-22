@@ -151,7 +151,7 @@ private _fnc_initTVItem = {
     (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
     if (isNil "_displayName" || isNil "_class") then {
-      format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
+      //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
       continue;
     };
 
@@ -164,7 +164,7 @@ private _fnc_initTVItem = {
   (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
   if (isNil "_displayName" || isNil "_class") then {
-    format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
+    //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
     continue;
   };
 
@@ -176,7 +176,7 @@ private _fnc_initTVItem = {
   (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
   if (isNil "_displayName" || isNil "_class") then {
-    format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
+    //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
     continue;
   };
 
