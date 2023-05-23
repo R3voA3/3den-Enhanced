@@ -30,6 +30,7 @@
         <German>Attribute durchsuchen</German>
         <Italian>Attributi di ricerca</Italian>
         <Polish>Atrybuty wyszukiwania</Polish>
+        <Spanish>Buscar Atributos</Spanish>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
@@ -69,11 +70,13 @@
         <English>Marker Draw Priority</English>
         <German>Markierungs-Priorität</German>
         <Polish>Priorytet rysowania markerów</Polish>
+        <Spanish>Prioridad de Dibujado del Marcador</Spanish>
     </Key>
     <Key ID="STR_ENH_MARKERDRAWPRIORITY_TOOLTIP">
         <English>Sets marker draw priority. Higher priority markers are drawn on top. Default priority is 0.</English>
         <German>Legt die Priorität für das Zeichnen von Markierungen fest. Markierungen mit höherer Priorität werden als erstes gezeichnet. Die Standardpriorität ist 0.</German>
         <Polish>Ustawia priorytet wyświetlania znaczników. Markery o wyższym priorytecie są rysowane na wierzchu. Domyślny priorytet to 0.</Polish>
+        <Spanish>Establece la prioridad de dibujado del marcador. Los marcadores con mayor prioridad son dibujados encima de otros. La prioridad por defecto es 0.</Spanish>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
         <English>Min. Aiming Skill</English>
@@ -2853,6 +2856,7 @@
         <German>Stellt das ursprüngliche Loadout beim Respawn wieder her. Die Ausrüstung kann durch Ändern der Variable ENH_SavedLoadout im Namensraum des Spielers geändert werden.</German>
         <Italian>Ripristina l'equipaggiamento originale al respawn. L'equipaggiamento può essere cambiato modificando la variabile ENH_SavedLoadout nello spazio dei nomi del giocatore.</Italian>
         <Polish>Przywraca początkowe wyposażenie jednostki po odrodzeniu. Zapisane wyposażenie można zmienić poprzed modyfikację zmiennej ENH_SavedLoadout w Namespace gracza.</Polish>
+        <Spanish>Restaura el equipamiento original si se reaparece. El equipamiento puede ser cambiado modificando la variable ENH_SavedLoadout en el espacio de nombre del jugador.</Spanish>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
         <English>View Distance</English>
@@ -2888,7 +2892,7 @@
         <Chinese>設置對象視距(米)。請記住，該設置可以被服務器或玩家的視頻設置所限制。此外，對象視距不能高於視距。</Chinese>
         <Polish>Definiuje zasięg rysowania obiektów. Nie może być większy niż zasięg rysowania terenu. Ustawienie to może być nadpisywane przez ustawienia graficzne gracza lub serwera.</Polish>
         <Russian>Имейте в виду, что этот параметр может быть ограничен как сервером, так и визуальными настройками проигрывателя. Кроме того, дистанция видимости объектов не может быть больше дистанции обзора.</Russian>
-         <Italian>Definisce la distanza di visualizzazione degli oggetti in metri. Ricorda che questa impostazione può essere limitata dal server o dalle impostazioni visive del giocatore. Inoltre, la distanza di visualizzazione degli oggetti non può essere maggiore della distanza di visualizzazione.</Italian>
+        <Italian>Definisce la distanza di visualizzazione degli oggetti in metri. Ricorda che questa impostazione può essere limitata dal server o dalle impostazioni visive del giocatore. Inoltre, la distanza di visualizzazione degli oggetti non può essere maggiore della distanza di visualizzazione.</Italian>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_CIRCULAR_HEADER">
         <English>Circular Pattern</English>
@@ -2948,7 +2952,6 @@
         <Chinesesimp>临时创建无人机以创建初始图像</Chinesesimp>
         <Chinese>臨時創建無人機以創建初始圖像</Chinese>
         <Polish>Wyświetla sekwencję obserwacyjną z bezzałogowego drona, która służy za wstęp do misji.</Polish>
-
     </Key>
     <Key ID="STR_ENH_INTROTEXT_DESCRIPTION">
         <English>Shows an animated text. Can be used to display mission name.</English>
@@ -3735,12 +3738,14 @@
         <German>Gruppen anzeigen</German>
         <Italian>Mostra Gruppi</Italian>
         <Polish>Pokaż grupy</Polish>
+        <Spanish>Mostrar Grupos</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
         <English>All groups and information about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
         <German>Alle Gruppen und Informationen über diese werden in 3D und auf der Karte angezeigt. Außerdem können Gruppen gelöscht und ihre Wegpunkte angezeigt werden.</German>
         <Italian>Tutti i gruppi e le relative informazioni saranno mostrate in 3D e sulla mappa. Inoltre, i gruppi possono essere cancellati e i waypoint possono essere mostrati.</Italian>
         <Polish>Wszystkie grupy i informacje o nich będą wyświetlane na mapie oraz w widoku 3D. Dodatkowo grupy można usuwać, wyświetlane będą też ich punkty nawigacyjne.</Polish>
+        <Spanish>Todos los grupos y su información será mostrada en 3D y en el mapa. Adicionalmente, los grupos pueden ser borrados y sus waypoints pueden ser mostrados.</Spanish>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
         <English>Kill Units (BLUFOR)</English>
@@ -3843,6 +3848,7 @@
         <German>Nach Layer verschieben...</German>
         <Italian>Sposta al Livello...</Italian>
         <Polish>Przenieś do warstwy</Polish>
+        <Spanish>Mover a capa...</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_PYLONS">
         <English>Pylon Tools</English>
@@ -4536,6 +4542,7 @@
         <English>Select all Layers</English>
         <German>Alle Ebenen auswählen</German>
         <Polish>Zaznacz wszystkie warstwy</Polish>
+        <Spanish>Seleccionar todas las Capas</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
         <English>Log Game Info</English>
@@ -4590,24 +4597,28 @@
         <German>Zwischen lokalem Objekt umschalten</German>
         <Italian>Alterna Oggetto Locale</Italian>
         <Polish>Włącz lokalne obiekty</Polish>
+        <Spanish>Activar Objeto Local</Spanish>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_RESTORESELECTION">
         <English>Restore original selection</English>
         <German>Ursprüngliche Auswahl wiederherstellen</German>
         <Italian>Ripristina selezione originale</Italian>
         <Polish>Przywróć oryginalny wybór</Polish>
+        <Spanish>Restaurar selección original</Spanish>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER">
         <English>Selection Filter</English>
         <German>Auswahlfilter</German>
         <Italian>Filtro di selezione</Italian>
         <Polish>Filtr wyboru</Polish>
+        <Spanish>Filtro de selección</Spanish>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_CONFIRMSELECTION">
         <English>Confirm selection</English>
         <German>Auswahlbestätigen</German>
         <Italian>Conferma Selezione</Italian>
         <Polish>Potwierdź wybór</Polish>
+        <Spanish>Confirmar selección</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
@@ -4998,7 +5009,6 @@
         <Polish>Tagi</Polish>
         <Chinesesimp>标签</Chinesesimp>
         <Chinese>標籤</Chinese>
-        <Polish>Tagi</Polish>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_ADDTAG">
         <English>Add TAG</English>
@@ -6001,6 +6011,7 @@
         <English>Scales the size of the object. Only works for objects without simulation. Disabled in multiplayer.</English>
         <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben. Im Mehrspielermodus deaktiviert.</German>
         <Polish>Skaluje rozmiar obiektu. Działa tylko na objektach bez symulacji. Niedostępne dla trybu wieloosobowego.</Polish>
+        <Spanish>Escala el tamaño final del objeto. Solo funciona para objetos sin simulación. Deshabilitado en multiplayer.</Spanish>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_STAND">
         <English>Stand</English>
@@ -6718,6 +6729,7 @@
     <Key ID="STR_ENH_TOOLS_ESE">
         <English>Equipment Storage Editor</English>
         <German>Ausrüstungslagerraum-Editor</German>
+        <Spanish>Editor del Almacen de Equipamientos</Spanish>
     </Key>
     <Key ID="STR_ENH_ESE_EXIT_TEXT">
         <English>You have unsaved changes. Close anyway?</English>
@@ -7646,6 +7658,7 @@
         <Chinesesimp>指挥官炮塔</Chinesesimp>
         <Chinese>指揮官砲塔</Chinese>
         <Polish>Wieża dowódcy</Polish>
+        <Spanish>Torreta de Comandante</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITCOMGUN">
         <English>Commander Gun</English>
@@ -7654,6 +7667,7 @@
         <Chinesesimp>指挥官机枪</Chinesesimp>
         <Chinese>指揮官機槍</Chinese>
         <Polish>Działko dowódcy</Polish>
+        <Spanish>Arma de Comandante</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_1">
         <English>Slat Armour (Left, #01)</English>
@@ -7661,6 +7675,7 @@
         <Chinesesimp>防弹格栅 (左, #01)</Chinesesimp>
         <Chinese>防彈格柵 (左, #01)</Chinese>
         <Polish>Kratownica (Lewa, #01)</Polish>
+        <Spanish>Blindaje de Rejas (Izquierda, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_2">
         <English>Slat Armour (Left, #02)</English>
@@ -7668,6 +7683,7 @@
         <Chinesesimp>防弹格栅 (左, #02)</Chinesesimp>
         <Chinese>防彈格柵 (左, #02)</Chinese>
         <Polish>Kratownica (Lewa, #02)</Polish>
+        <Spanish>Blindaje de Rejas (Izquierda, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_3">
         <English>Slat Armour (Left, #03)</English>
@@ -7675,6 +7691,7 @@
         <Chinesesimp>防弹格栅 (左, #03)</Chinesesimp>
         <Chinese>防彈格柵 (左, #03)</Chinese>
         <Polish>Kratownica (Lewa, #03)</Polish>
+        <Spanish>Blindaje de Rejas (Izquierda, #03)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_1">
         <English>Slat Armour (Right, #01)</English>
@@ -7682,6 +7699,7 @@
         <Chinesesimp>防弹格栅 (右, #01)</Chinesesimp>
         <Chinese>防彈格柵 (右, #01)</Chinese>
         <Polish>Kratownica (Prawa, #01)</Polish>
+        <Spanish>Blindaje de Rejas (Derecha, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_2">
         <English>Slat Armour (Right, #02)</English>
@@ -7689,6 +7707,7 @@
         <Chinesesimp>防弹格栅 (右, #02)</Chinesesimp>
         <Chinese>防彈格柵 (右, #02)</Chinese>
         <Polish>Kratownica (Prawa, #02)</Polish>
+        <Spanish>Blindaje de Rejas (Derecha, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_3">
         <English>Slat Armour (Right, #03)</English>
@@ -7696,6 +7715,7 @@
         <Chinesesimp>防弹格栅 (右, #03)</Chinesesimp>
         <Chinese>防彈格柵 (右, #03)</Chinese>
         <Polish>Kratownica (Prawa, #03)</Polish>
+        <Spanish>Blindaje de Rejas (Derecha, #03)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_RIGHT">
         <English>Slat Armour (Top right)</English>
@@ -7703,6 +7723,7 @@
         <Chinesesimp>防弹格栅 (右前方)</Chinesesimp>
         <Chinese>防彈格柵 (右前方)</Chinese>
         <Polish>Kratownica (Prawa Górna)</Polish>
+        <Spanish>Blindaje de Rejas (Superior Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_LEFT">
         <English>Slat Armour (Top left)</English>
@@ -7710,6 +7731,7 @@
         <Chinesesimp>防弹格栅 (左前方)</Chinesesimp>
         <Chinese>防彈格柵 (左前方)</Chinese>
         <Polish>Kratownica (Lewa Górna)</Polish>
+        <Spanish>Blindaje de Rejas (Superior Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_BACK">
         <English>Slat Armour (Top back)</English>
@@ -7717,6 +7739,7 @@
         <Chinesesimp>防弹格栅 (上背部)</Chinesesimp>
         <Chinese>防彈格柵 (上背部)</Chinese>
         <Polish>Kratownica (Tylnia Górna)</Polish>
+        <Spanish>Blindaje de Rejas (Superior Trasera)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_FRONT">
         <English>Slat Armour (Front)</English>
@@ -7724,6 +7747,7 @@
         <Chinesesimp>防弹格栅 (正面)</Chinesesimp>
         <Chinese>防彈格柵 (正面)</Chinese>
         <Polish>Kratownica (Front)</Polish>
+        <Spanish>Blindaje de Rejas (Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_BACK">
         <English>Slat Armour (Back)</English>
@@ -7731,6 +7755,7 @@
         <Chinesesimp>防弹格栅 (背面)</Chinesesimp>
         <Chinese>防彈格柵 (背面)</Chinese>
         <Polish>Kratownica (Tył)</Polish>
+        <Spanish>Blindaje de Rejas (Trasera)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITMISSILES">
         <English>Missiles</English>
@@ -7738,6 +7763,7 @@
         <Chinesesimp>导弹</Chinesesimp>
         <Chinese>導彈</Chinese>
         <Polish>Rakiety</Polish>
+        <Spanish>Misiles</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITAMMO">
         <English>Ammunition</English>
@@ -7745,6 +7771,7 @@
         <Chinesesimp>弹药</Chinesesimp>
         <Chinese>彈藥</Chinese>
         <Polish>Amunicja</Polish>
+        <Spanish>Munición</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRGLASS">
         <English>Window (Right)</English>
@@ -7753,6 +7780,7 @@
         <Chinese>窗口(右)</Chinese>
         <Polish>Okno (Prawe)</Polish>
         <Italian>Finestra(Destra)</Italian>
+        <Spanish>Ventana (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLGLASS">
         <English>Window (Left)</English>
@@ -7761,6 +7789,7 @@
         <Chinese>窗口(左)</Chinese>
         <Polish>Okno (Lewe)</Polish>
         <Italian>Finestra(Sinistra)</Italian>
+        <Spanish>Ventana (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITWINCH">
         <English>Winch</English>
@@ -7769,6 +7798,7 @@
         <Chinese>絞盤</Chinese>
         <Polish>Dźwig</Polish>
         <Italian>Verricello</Italian>
+        <Spanish>Cabestrante</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE3">
         <English>Engine #03</English>
@@ -7777,6 +7807,7 @@
         <Chinese>引擎 #03</Chinese>
         <Polish>Silnik #03</Polish>
         <Italian>Motore #03</Italian>
+        <Spanish>Motor #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGEAR">
         <English>Gear</English>
@@ -7785,6 +7816,7 @@
         <Chinese>起落架</Chinese>
         <Polish>Przekładnia</Polish>
         <Italian>Ingranaggio</Italian>
+        <Spanish>Engranaje</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
         <English>Hydraulics</English>
@@ -7793,6 +7825,7 @@
         <Chinese>液壓系統</Chinese>
         <Polish>Hydraulika</Polish>
         <Italian>Idraulica</Italian>
+        <Spanish>Hidráulicos</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSR">
         <English>Glass (Right)</English>
@@ -7801,6 +7834,7 @@
         <Chinese>玻璃（右）</Chinese>
         <Polish>Szyba (Prawa)</Polish>
         <Italian>Vetro(Destra)</Italian>
+        <Spanish>Cristal (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSL">
         <English>Glass (Left)</English>
@@ -7809,6 +7843,7 @@
         <Chinese>玻璃（左）</Chinese>
         <Polish>Szyba (Lewa)</Polish>
         <Italian>Vetro(Sinistra)</Italian>
+        <Spanish>Cristal (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
         <English>Transmission</English>
@@ -7817,6 +7852,7 @@
         <Chinese>變速器</Chinese>
         <Polish>Przekładnia</Polish>
         <Italian>Trasmissione</Italian>
+        <Spanish>Transmisión</Spanish>
     </Key>
     <Key ID="STR_ENH_AI_CATEGORY">
         <English>AI</English>
@@ -7906,6 +7942,7 @@
         <Chinesesimp>摄影机炮手</Chinesesimp>
         <Chinese>攝影機砲手</Chinese>
         <Polish>Kamera strzelca</Polish>
+        <Spanish>Artillero de Cámara</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GLASS11">
         <English>Window #11</English>
@@ -7915,6 +7952,7 @@
         <Chinese>窗口 #11</Chinese>
         <Polish>Okno #11</Polish>
         <Italian>Finestra #11</Italian>
+        <Spanish>Ventana #11</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
         <English>Light #01</English>
@@ -7924,6 +7962,7 @@
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
         <Italian>Luce #01</Italian>
+        <Spanish>Luz #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
         <English>Light #02</English>
@@ -7933,6 +7972,7 @@
         <Chinese>燈光 #02</Chinese>
         <Polish>Światło #02</Polish>
         <Italian>Luce #02</Italian>
+        <Spanish>Luz #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
         <English>Light #03</English>
@@ -7942,6 +7982,7 @@
         <Chinese>燈光 #03</Chinese>
         <Polish>Światło #03</Polish>
         <Italian>Luce #03</Italian>
+        <Spanish>Luz #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
         <English>Spotlight</English>
@@ -7951,6 +7992,7 @@
         <German>Suchscheinwerfer</German>
         <Polish>Szperacz</Polish>
         <Italian>Riflettore</Italian>
+        <Spanish>Luz de búsqueda</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
         <English>Wing Light (Left)</English>
@@ -7959,6 +8001,7 @@
         <Chinese>翼燈（左）</Chinese>
         <German>Flügellicht (Links)</German>
         <Polish>Światło pozycyjne (Lewe)</Polish>
+        <Spanish>Luz de Cabestrante (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
         <English>Wing Light (Right)</English>
@@ -7968,6 +8011,7 @@
         <German>Flügellicht (Rechts)</German>
         <Polish>Światło pozycyjne (Prawe)</Polish>
         <Italian>Luce Ala (Destra)</Italian>
+        <Spanish>Luz de Cabestrante (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_L">
         <English>Hand (Left)</English>
@@ -7977,6 +8021,7 @@
         <German>Hand (Links)</German>
         <Polish>Dłoń (Lewa)</Polish>
         <Italian>Mano (Sinistra)</Italian>
+        <Spanish>Mano (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_R">
         <English>Hand (Right)</English>
@@ -7986,6 +8031,7 @@
         <German>Hand (Rechts)</German>
         <Polish>Dłoń (Prawa)</Polish>
         <Italian>Mano (Destra)</Italian>
+        <Spanish>Mano (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
         <English>Battery (Left)</English>
@@ -7995,6 +8041,7 @@
         <German>Batterie (Links)</German>
         <Polish>Bateria (Lewa)</Polish>
         <Italian>Batteria (Sinistra)</Italian>
+        <Spanish>Batería (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
         <English>Battery (Right)</English>
@@ -8004,6 +8051,7 @@
         <German>Batterie (Rechts)</German>
         <Polish>Bateria (Prawa)</Polish>
         <Italian>Batteria (Destra)</Italian>
+        <Spanish>Batería (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE4">
         <English>Engine #04</English>
@@ -8013,6 +8061,7 @@
         <German>Motor #04</German>
         <Polish>Silnik #04</Polish>
         <Italian>Motore #04</Italian>
+        <Spanish>Motor #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
         <English>Era (Back)</English>
@@ -8020,6 +8069,7 @@
         <Chinese>年代（後）</Chinese>
         <German>Era (Hinten)</German>
         <Polish>Era (Tył)</Polish>
+        <Spanish>Era (Trasero)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_FRONT">
         <English>Era (Front)</English>
@@ -8027,6 +8077,7 @@
         <Chinese>年代（前）</Chinese>
         <German>Era (Vorne)</German>
         <Polish>Era (Front)</Polish>
+        <Spanish>Era (Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT">
         <English>Era (left)</English>
@@ -8034,6 +8085,7 @@
         <Chinese>年代（左）</Chinese>
         <German>Era (Links)</German>
         <Polish>Era (Lewa)</Polish>
+        <Spanish>Era (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_1">
         <English>Era (Left, #01)</English>
@@ -8041,6 +8093,7 @@
         <Chinese>年代（左, #01）</Chinese>
         <German>Era (Links, #01)</German>
         <Polish>Era (Lewa, #01)</Polish>
+        <Spanish>Era (Izquierda, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_2">
         <English>Era (Left, #02)</English>
@@ -8048,6 +8101,7 @@
         <Chinese>年代（左, #02）</Chinese>
         <German>Era (Links, #02)</German>
         <Polish>Era (Lewa, #02)</Polish>
+        <Spanish>Era (Izquierda, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_3">
         <English>Era (Left, #03)</English>
@@ -8055,6 +8109,7 @@
         <Chinese>年代（左, #03）</Chinese>
         <German>Era (Links, #03)</German>
         <Polish>Era (Lewa, #03)</Polish>
+        <Spanish>Era (Izquierda, #03)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_4">
         <English>Era (Left, #04)</English>
@@ -8062,6 +8117,7 @@
         <Chinese>年代（左, #04）</Chinese>
         <German>Era (Links, #04)</German>
         <Polish>Era (Lewa, #04)</Polish>
+        <Spanish>Era (Izquierda, #04)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT">
         <English>Era (Right)</English>
@@ -8069,6 +8125,7 @@
         <Chinese>年代（右）</Chinese>
         <German>Era (Rechts)</German>
         <Polish>Era (Prawa)</Polish>
+        <Spanish>Era (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_1">
         <English>Era (Right, #01)</English>
@@ -8076,6 +8133,7 @@
         <Chinese>年代（右, #01）</Chinese>
         <German>Era (Rechts, #01)</German>
         <Polish>Era (Prawa, #01)</Polish>
+        <Spanish>Era (Derecha, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_2">
         <English>Era (Right, #02)</English>
@@ -8083,6 +8141,7 @@
         <Chinese>年代（右, #02）</Chinese>
         <German>Era (Rechts, #02)</German>
         <Polish>Era (Prawa, #02)</Polish>
+        <Spanish>Era (Derecha, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_3">
         <English>Era (Right, #03)</English>
@@ -8090,6 +8149,7 @@
         <Chinese>年代（右, #03）</Chinese>
         <German>Era (Rechts, #03)</German>
         <Polish>Era (Prawa, #03)</Polish>
+        <Spanish>Era (Derecha, #03)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_4">
         <English>Era (Right, #04)</English>
@@ -8097,6 +8157,7 @@
         <Chinese>年代（右, #04）</Chinese>
         <German>Era (Rechts, #04)</German>
         <Polish>Era (Prawa, #04)</Polish>
+        <Spanish>Era (Derecha, #04)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP">
         <English>Era (Top)</English>
@@ -8104,6 +8165,7 @@
         <Chinese>年代（上方）</Chinese>
         <German>Era (Oben)</German>
         <Polish>Era (Góra)</Polish>
+        <Spanish>Era (Superior)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_FRONT">
         <English>Era (Top, Front)</English>
@@ -8111,6 +8173,7 @@
         <Chinese>年代（上前方）</Chinese>
         <German>Era (Oben, Vorne)</German>
         <Polish>Era (Góra, Front)</Polish>
+        <Spanish>Era (Superior, Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT">
         <English>Era (Top, Left)</English>
@@ -8118,6 +8181,7 @@
         <Chinese>年代 (左上方)</Chinese>
         <German>Era (Oben, Links)</German>
         <Polish>Era (Góra, Lewa)</Polish>
+        <Spanish>Era (Superior, Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_1">
         <English>Era (Top, Left, #01)</English>
@@ -8125,6 +8189,7 @@
         <Chinese>年代 (左上方, #01)</Chinese>
         <German>Era (Oben, Links, #01)</German>
         <Polish>Era (Góra, Lewa, #01)</Polish>
+        <Spanish>Era (Superior, Izquierda, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_2">
         <English>Era (Top, Left, #02)</English>
@@ -8132,6 +8197,7 @@
         <Chinese>年代 (左上方, #02)</Chinese>
         <German>Era (Oben, Links, #02)</German>
         <Polish>Era (Góra, Lewa, #02</Polish>
+        <Spanish>Era (Superior, Izquierda, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT">
         <English>Era (Top, Right)</English>
@@ -8139,6 +8205,7 @@
         <Chinese>年代 (右上方)</Chinese>
         <German>Era (Oben, Rechts)</German>
         <Polish>Era (Góra, Prawa)</Polish>
+        <Spanish>Era (Superior, Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_1">
         <English>Era (Top, Right, #01)</English>
@@ -8146,6 +8213,7 @@
         <Chinese>年代 (右上方, #01)</Chinese>
         <German>Era (Oben, Rechts, #01)</German>
         <Polish>Era (Góra, Prawa, #01)</Polish>
+        <Spanish>Era (Superior, Derecha, #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_2">
         <English>Era (Top, Right, #02)</English>
@@ -8153,6 +8221,7 @@
         <Chinese>年代 (右上方, #02)</Chinese>
         <German>Era (Oben, Rechts #02)</German>
         <Polish>Era (Góra, Prawa, #02)</Polish>
+        <Spanish>Era (Superior, Derecha, #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
         <English>Fuel Tank (Left)</English>
@@ -8162,6 +8231,7 @@
         <German>Tank (Links)</German>
         <Polish>Zbiornik paliwa (Lewy)</Polish>
         <Italian>Serbatoio (Sinistra)</Italian>
+        <Spanish>Tanque de Combusttible (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
         <English>Fuel Tank (Right)</English>
@@ -8171,6 +8241,7 @@
         <German>Tank (Rechts)</German>
         <Polish>Zbiornik paliwa (Prawy)</Polish>
         <Italian>Serbatoio (Sinistra)</Italian>
+        <Spanish>Tanque de Combusttible (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
         <English>Fuel Tank</English>
@@ -8180,6 +8251,7 @@
         <German>Tank</German>
         <Polish>Zbiornik paliwa</Polish>
         <Italian>Serbatoio</Italian>
+        <Spanish>Tanque de Combustible</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS16">
         <English>Window #16</English>
@@ -8188,6 +8260,7 @@
         <Chinese>窗口 #16</Chinese>
         <German>Fenster #16</German>
         <Polish>Okno #16</Polish>
+        <Spanish>Ventana #16</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS17">
         <English>Window #17</English>
@@ -8196,6 +8269,7 @@
         <Chinese>窗口 #17</Chinese>
         <German>Fenster #17</German>
         <Polish>Okno #17</Polish>
+        <Spanish>Ventana #17</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS18">
         <English>Window #18</English>
@@ -8204,6 +8278,7 @@
         <Chinese>窗口 #19</Chinese>
         <German>Fenster #18</German>
         <Polish>Okno #18</Polish>
+        <Spanish>Ventana #18</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS19">
         <English>Window #19</English>
@@ -8212,6 +8287,7 @@
         <Chinese>窗口 #19</Chinese>
         <German>Fenster #19</German>
         <Polish>Okno #19</Polish>
+        <Spanish>Ventana #19</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
         <English>Window 1A</English>
@@ -8220,6 +8296,7 @@
         <Chinese>窗口 1A</Chinese>
         <German>Fenster 1A</German>
         <Polish>Okno 1A</Polish>
+        <Spanish>Ventana 1A</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
         <English>Window 1B</English>
@@ -8228,6 +8305,7 @@
         <Chinese>窗口 1B</Chinese>
         <German>Fenster 1B</German>
         <Polish>Okno 1B</Polish>
+        <Spanish>Ventana 1B</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS20">
         <English>Window #20</English>
@@ -8236,6 +8314,7 @@
         <Chinese>窗口 #20</Chinese>
         <German>Fenster #20</German>
         <Polish>Okno #20</Polish>
+        <Spanish>Ventana #20</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
         <English>Horizontal Stabilizer (Left)</English>
@@ -8244,6 +8323,7 @@
         <Chinese>水平安定面(左)</Chinese>
         <German>Horizontaler Stabilisator (Links)</German>
         <Polish>Stabilizator poziomy (Lewy)</Polish>
+        <Spanish>Estabilizador Horizontal (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
         <English>Horizontal Stabilizer (Right)</English>
@@ -8252,6 +8332,7 @@
         <Chinese>水平安定面(右)</Chinese>
         <German>Horizontaler Stabilisator (Rechts)</German>
         <Polish>Stabilizator poziomy (Prawy)</Polish>
+        <Spanish>Estabilizador Horizontal (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHT">
         <English>Light</English>
@@ -8260,6 +8341,7 @@
         <Chinese>燈光</Chinese>
         <German>Licht</German>
         <Polish>Światła</Polish>
+        <Spanish>Luz</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
         <English>Light (Back)</English>
@@ -8268,6 +8350,7 @@
         <Chinese>燈光 (背面)</Chinese>
         <German>Licht (Hinten)</German>
         <Polish>Światła (Tył)</Polish>
+        <Spanish>Luz (Trasera)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
         <English>Light (Front)</English>
@@ -8276,6 +8359,7 @@
         <Chinese>燈光 (前面)</Chinese>
         <German>Licht (Vorne)</German>
         <Polish>Światła (Front)</Polish>
+        <Spanish>Luz (Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
         <English>Light (Left)</English>
@@ -8284,6 +8368,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Links)</German>
         <Polish>Światła (Lewo)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
         <English>Light (Right)</English>
@@ -8292,6 +8377,7 @@
         <Chinese>燈光 (右)</Chinese>
         <German>Light (Rechts)</German>
         <Polish>Światła (Prawo)</Polish>
+        <Spanish>Luz (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITOPTIC">
         <English>Optic</English>
@@ -8300,6 +8386,7 @@
         <Chinese>光學瞄具</Chinese>
         <German>Optik</German>
         <Polish>Optyka</Polish>
+        <Spanish>Óptica</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITOPTICS">
         <English>Optics</English>
@@ -8308,6 +8395,7 @@
         <Chinese>光學瞄具</Chinese>
         <German>Optiken</German>
         <Polish>Optyka</Polish>
+        <Spanish>Ópticas</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
         <English>Reserve Wheel</English>
@@ -8316,6 +8404,7 @@
         <Chinesesimp>备用车轮</Chinesesimp>
         <Chinese>備用車輪</Chinese>
         <Polish>Zapasowe koło</Polish>
+        <Spanish>Rueda de Repuesto</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITROTOR">
         <English>Rotor</English>
@@ -8324,6 +8413,7 @@
         <Chinese>水平旋翼</Chinese>
         <German>Rotor</German>
         <Polish>Wirnik</Polish>
+        <Spanish>Rotor</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
         <English>Rotor (Virtual)</English>
@@ -8332,6 +8422,7 @@
         <Chinese>水平旋翼(虛擬)</Chinese>
         <German>Rotor (Virtuell)</German>
         <Polish>Wirnik (Wirtualny)</Polish>
+        <Spanish>Rotor (Virtual)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT">
         <English>Slat (Left)</English>
@@ -8339,6 +8430,7 @@
         <Chinese>縫翼(左)</Chinese>
         <German>Käfig (Links)</German>
         <Polish>Klatka (lewa)</Polish>
+        <Spanish>Rejas (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT">
         <English>Slat (Right)</English>
@@ -8346,6 +8438,7 @@
         <Chinese>縫翼(右)</Chinese>
         <German>Käfig (Rechts)</German>
         <Polish>Klatka (prawa)</Polish>
+        <Spanish>Rejas (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER1">
         <English>Starter #01</English>
@@ -8354,6 +8447,7 @@
         <Chinese>起動機 #01</Chinese>
         <German>Starter #01</German>
         <Polish>Starter #01</Polish>
+        <Spanish>Motor de Arranque #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER2">
         <English>Starter #02</English>
@@ -8362,6 +8456,7 @@
         <Chinese>起動機 #02</Chinese>
         <German>Starter #02</German>
         <Polish>Starter #02</Polish>
+        <Spanish>Motor de Arranque #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER3">
         <English>Starter #03</English>
@@ -8370,6 +8465,7 @@
         <Chinese>起動機 #03</Chinese>
         <German>Starter #03</German>
         <Polish>Starter #03</Polish>
+        <Spanish>Motor de Arranque #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTATICPORT">
         <English>Static Port</English>
@@ -8378,6 +8474,7 @@
         <Chinese>靜壓孔</Chinese>
         <German>Statikanschluss</German>
         <Polish>Port statyczny</Polish>
+        <Spanish>Puerto Estático</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITVSTABILIZER1">
         <English>Vertical Stabilizer #01</English>
@@ -8386,6 +8483,7 @@
         <Chinese>垂直安定面 #01</Chinese>
         <German>Vertikaler Stabilisator #01</German>
         <Polish>Stabilizator pionowy #01</Polish>
+        <Spanish>Estabilizador Vertical #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_1_HITPOINT">
         <English>Hitzone #01</English>
@@ -8394,6 +8492,7 @@
         <Chinese>Hitzone #01</Chinese>
         <German>Hitzone #01</German>
         <Polish>Hitzone #01</Polish>
+        <Spanish>Zona de impacto #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_2_HITPOINT">
         <English>Hitzone #02</English>
@@ -8402,6 +8501,7 @@
         <Chinese>Hitzone #02</Chinese>
         <German>Hitzone #02</German>
         <Polish>Hitzone #02</Polish>
+        <Spanish>Zona de impacto #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_3_HITPOINT">
         <English>Hitzone #03</English>
@@ -8410,6 +8510,7 @@
         <Chinese>Hitzone #03</Chinese>
         <German>Hitzone #03</German>
         <Polish>Hitzone #03</Polish>
+        <Spanish>Zona de impacto #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_4_HITPOINT">
         <English>Hitzone #04</English>
@@ -8418,6 +8519,7 @@
         <Chinese>Hitzone #04</Chinese>
         <German>Hitzone #04</German>
         <Polish>Hitzone #04</Polish>
+        <Spanish>Zona de impacto #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_INCAPACITATED">
         <English>Incapacitated</English>
@@ -8426,6 +8528,7 @@
         <Chinese>喪失行動能力</Chinese>
         <German>Bewusstlos</German>
         <Polish>Unieruchomiony</Polish>
+        <Spanish>Incapacitado</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LEG_L">
         <English>Leg (Left)</English>
@@ -8434,6 +8537,7 @@
         <Chinese>腿（左）</Chinese>
         <German>Bein (Links)</German>
         <Polish>Noga (lewa)</Polish>
+        <Spanish>Pierna (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LEG_R">
         <English>Leg (Right)</English>
@@ -8442,6 +8546,7 @@
         <Chinese>腿（右）</Chinese>
         <German>Bein (Rechts)</German>
         <Polish>Noga (prawa)</Polish>
+        <Spanish>Pierna (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_1_HITPOINT">
         <English>Light #01</English>
@@ -8450,6 +8555,7 @@
         <Chinese>燈光 #01</Chinese>
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
+        <Spanish>Ligero #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_2_HITPOINT">
         <English>Light #02</English>
@@ -8458,6 +8564,7 @@
         <Chinese>燈光 #02</Chinese>
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
+        <Spanish>Ligero #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_3_HITPOINT">
         <English>Light #03</English>
@@ -8466,6 +8573,7 @@
         <Chinese>燈光 #03</Chinese>
         <German>Light #03</German>
         <Polish>Światło #03</Polish>
+        <Spanish>Ligero #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
         <English>Light #04</English>
@@ -8474,6 +8582,7 @@
         <Chinese>燈光 #04</Chinese>
         <German>Light #04</German>
         <Polish>Światło #04</Polish>
+        <Spanish>Ligero #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT">
         <English>Gear #01 (Light #01)</English>
@@ -8482,6 +8591,7 @@
         <Chinese>起落架 #01 (燈光 #01)</Chinese>
         <German>Fahrwerk #01 (Licht #01)</German>
         <Polish>Podwozie #01 (Światło #01)</Polish>
+        <Spanish>Engranaje #01 (Ligera #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT">
         <English>Gear #01 (Light #02)</English>
@@ -8490,6 +8600,7 @@
         <Chinese>起落架 #01 (燈光 #02)</Chinese>
         <German>Fahrwerk #01 (Licht #02)</German>
         <Polish>Podwozie #01 (Światło #02)</Polish>
+        <Spanish>Engranaje #01 (Ligera #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT">
         <English>Gear #02 (Light #01)</English>
@@ -8498,6 +8609,7 @@
         <Chinese>起落架 #02 (燈光 #01)</Chinese>
         <German>Fahrwerk #02 (Licht #01)</German>
         <Polish>Podwozie #02 (Światło #01)</Polish>
+        <Spanish>Engranaje #02 (Ligera #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT">
         <English>Gear #02 (Light #02)</English>
@@ -8506,6 +8618,7 @@
         <Chinese>起落架 #02 (燈光 #02)</Chinese>
         <German>Fahrwerk #02 (Licht #02)</German>
         <Polish>Podwozie #02 (Światło #02)</Polish>
+        <Spanish>Engranaje #02 (Ligera #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT">
         <English>Gear #03 (Light #01)</English>
@@ -8514,6 +8627,7 @@
         <Chinese>起落架 #03 (燈光 #01)</Chinese>
         <German>Fahrwerk #03 (Licht #01)</German>
         <Polish>Podwozie #03 (Światło #01)</Polish>
+        <Spanish>Engranaje #03 (Ligera #01)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT">
         <English>Gear #03 (Light #02)</English>
@@ -8522,6 +8636,7 @@
         <Chinese>起落架 #03 (燈光 #02)</Chinese>
         <German>Fahrwerk #03 (Licht #02)</German>
         <Polish>Podwozie #03 (Światło #02)</Polish>
+        <Spanish>Engranaje #03 (Ligera #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS">
         <English>Gear Light (Front)</English>
@@ -8530,6 +8645,7 @@
         <Chinese>起落架燈 (前部)</Chinese>
         <German>Fahrwerkslicht (Vorne)</German>
         <Polish>Światło podwozia (Przód)</Polish>
+        <Spanish>Luz de Marcha (Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#L SVETLO">
         <English>Light (Left)</English>
@@ -8538,6 +8654,7 @@
         <Chinesesimp>灯光 (左)</Chinesesimp>
         <Chinese>燈光 (左)</Chinese>
         <Polish>Światło (Lewe)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1">
         <English>Light #01</English>
@@ -8546,6 +8663,7 @@
         <Chinesesimp>灯光 #01</Chinesesimp>
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
+        <Spanish>Luz #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT">
         <English>Light #01</English>
@@ -8554,6 +8672,7 @@
         <Chinesesimp>灯光 #01</Chinesesimp>
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
+        <Spanish>Luz #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT">
         <English>Light #01</English>
@@ -8562,6 +8681,7 @@
         <Chinese>燈光 #01</Chinese>
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
+        <Spanish>Luz #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2">
         <English>Light #02</English>
@@ -8570,6 +8690,7 @@
         <Chinese>燈光 #02</Chinese>
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
+        <Spanish>Luz #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT">
         <English>Light #02</English>
@@ -8578,6 +8699,7 @@
         <Chinese>燈光 #02</Chinese>
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
+        <Spanish>Luz #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT">
         <English>Light #03</English>
@@ -8586,6 +8708,7 @@
         <Chinese>燈光 #03</Chinese>
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
+        <Spanish>Luz #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT">
         <English>Light #03</English>
@@ -8594,6 +8717,7 @@
         <Chinese>燈光 #03</Chinese>
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
+        <Spanish>Luz #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT">
         <English>Light #03</English>
@@ -8602,6 +8726,7 @@
         <Chinese>燈光 #03</Chinese>
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
+        <Spanish>Luz #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT">
         <English>Light #04</English>
@@ -8610,6 +8735,7 @@
         <Chinese>燈光 #04</Chinese>
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
+        <Spanish>Luz #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT">
         <English>Light #04</English>
@@ -8618,6 +8744,7 @@
         <Chinese>燈光 #04</Chinese>
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
+        <Spanish>Luz #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT">
         <English>Light</English>
@@ -8626,6 +8753,7 @@
         <Chinese>燈光</Chinese>
         <German>Licht</German>
         <Polish>Światło</Polish>
+        <Spanish>Luz</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L">
         <English>Light (Left)</English>
@@ -8634,6 +8762,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L2">
         <English>Light (Left #02)</English>
@@ -8642,6 +8771,7 @@
         <Chinese>燈光 (左 #02)</Chinese>
         <German>Licht (Links #02)</German>
         <Polish>Światło (Lewe #02)</Polish>
+        <Spanish>Luz (Izquierda #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE">
         <English>Light (Left #02)</English>
@@ -8650,6 +8780,7 @@
         <Chinese>燈光 (左 #02)</Chinese>
         <German>Licht (Links #02)</German>
         <Polish>Światło (Lewe #02)</Polish>
+        <Spanish>Luz (Izquierda #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE">
         <English>Light (Left)</English>
@@ -8658,6 +8789,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT">
         <English>Light (Left)</English>
@@ -8666,6 +8798,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R">
         <English>Light (Right)</English>
@@ -8674,6 +8807,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
+        <Spanish>Luz (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R2">
         <English>Light (Right #02)</English>
@@ -8682,6 +8816,7 @@
         <Chinese>燈光 (左 #02)</Chinese>
         <German>Licht (Rechts #02)</German>
         <Polish>Światło (Prawe #02)</Polish>
+        <Spanish>Luz (Derecha #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE">
         <English>Light (Right #02)</English>
@@ -8690,6 +8825,7 @@
         <Chinese>燈光 (左 #02)</Chinese>
         <German>Licht (Rechts #02)</German>
         <Polish>Światło (Prawe #02)</Polish>
+        <Spanish>Luz (Derecha #02)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE">
         <English>Light (Right)</English>
@@ -8698,6 +8834,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
+        <Spanish>Luz (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT">
         <English>Light (Right)</English>
@@ -8706,6 +8843,7 @@
         <Chinese>燈光 (左)</Chinese>
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
+        <Spanish>Luz (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#P SVETLO">
         <English>Light (Left)</English>
@@ -8714,6 +8852,7 @@
         <Chinese>燈（左）</Chinese>
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
+        <Spanish>Luz (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
         <English>Gear Light (Front)</English>
@@ -8722,6 +8861,7 @@
         <Chinese>起落架燈（前）</Chinese>
         <German>Fahrwerkslicht (Vorne)</German>
         <Polish>Światło podwozia (Przód)</Polish>
+        <Spanish>Luz de Marcha (Frontal)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_10_HITPOINT">
         <English>Window #10</English>
@@ -8730,6 +8870,7 @@
         <Chinese>窗口 #10</Chinese>
         <German>Fenster #10</German>
         <Polish>Okno #10</Polish>
+        <Spanish>Ventana #10</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_11_HITPOINT">
         <English>Window #11</English>
@@ -8738,6 +8879,7 @@
         <Chinese>窗口 #11</Chinese>
         <German>Fenster #11</German>
         <Polish>Okno #11</Polish>
+        <Spanish>Ventana #11</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_12_HITPOINT">
         <English>Window #12</English>
@@ -8746,6 +8888,7 @@
         <Chinese>窗口 #12</Chinese>
         <German>Fenster #12</German>
         <Polish>Okno #12</Polish>
+        <Spanish>Ventana #12</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_13_HITPOINT">
         <English>Window #13</English>
@@ -8754,6 +8897,7 @@
         <Chinese>窗口 #13</Chinese>
         <German>Fenster #13</German>
         <Polish>Okno #13</Polish>
+        <Spanish>Ventana #13</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_14_HITPOINT">
         <English>Window #14</English>
@@ -8762,6 +8906,7 @@
         <Chinese>窗口 #14</Chinese>
         <German>Fenster #14</German>
         <Polish>Okno #14</Polish>
+        <Spanish>Ventana #14</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_15_HITPOINT">
         <English>Window #15</English>
@@ -8770,6 +8915,7 @@
         <Chinese>窗口 #15</Chinese>
         <German>Fenster #15</German>
         <Polish>Okno #15</Polish>
+        <Spanish>Ventana #15</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_16_HITPOINT">
         <English>Window #16</English>
@@ -8778,6 +8924,7 @@
         <Chinese>窗口 #16</Chinese>
         <German>Fenster #16</German>
         <Polish>Okno #16</Polish>
+        <Spanish>Ventana #16</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_17_HITPOINT">
         <English>Window #17</English>
@@ -8786,6 +8933,7 @@
         <Chinese>窗口 #17</Chinese>
         <German>Fenster #17</German>
         <Polish>Okno #17</Polish>
+        <Spanish>Ventana #17</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_18_HITPOINT">
         <English>Window #18</English>
@@ -8794,6 +8942,7 @@
         <Chinese>窗口 #18</Chinese>
         <German>Fenster #18</German>
         <Polish>Okno #18</Polish>
+        <Spanish>Ventana #18</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_19_HITPOINT">
         <English>Window #19</English>
@@ -8802,6 +8951,7 @@
         <Chinese>窗口 #19</Chinese>
         <German>Fenster #19</German>
         <Polish>Okno #19</Polish>
+        <Spanish>Ventana #19</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_1_HITPOINT">
         <English>Window #01</English>
@@ -8810,6 +8960,7 @@
         <Chinese>窗口 #01</Chinese>
         <German>Fenster #01</German>
         <Polish>Okno #01</Polish>
+        <Spanish>Ventana #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_20_HITPOINT">
         <English>Window #20</English>
@@ -8818,6 +8969,7 @@
         <Chinese>窗口 #20</Chinese>
         <German>Fenster #20</German>
         <Polish>Okno #20</Polish>
+        <Spanish>Ventana #20</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_21_HITPOINT">
         <English>Window #21</English>
@@ -8826,6 +8978,7 @@
         <Chinese>窗口 #21</Chinese>
         <German>Fenster #21</German>
         <Polish>Okno #21</Polish>
+        <Spanish>Ventana #21</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_22_HITPOINT">
         <English>Window #22</English>
@@ -8834,6 +8987,7 @@
         <Chinese>窗口 #22</Chinese>
         <German>Fenster #22</German>
         <Polish>Okno #22</Polish>
+        <Spanish>Ventana #22</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_23_HITPOINT">
         <English>Window #23</English>
@@ -8842,6 +8996,7 @@
         <Chinese>窗口 #23</Chinese>
         <German>Fenster #23</German>
         <Polish>Okno #23</Polish>
+        <Spanish>Ventana #23</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_24_HITPOINT">
         <English>Window #24</English>
@@ -8850,6 +9005,7 @@
         <Chinese>窗口 #24</Chinese>
         <German>Fenster #24</German>
         <Polish>Okno #24</Polish>
+        <Spanish>Ventana #24</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_25_HITPOINT">
         <English>Window #25</English>
@@ -8858,6 +9014,7 @@
         <Chinese>窗口 #25</Chinese>
         <German>Fenster #25</German>
         <Polish>Okno #25</Polish>
+        <Spanish>Ventana #25</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_26_HITPOINT">
         <English>Window #26</English>
@@ -8866,6 +9023,7 @@
         <Chinese>窗口 #26</Chinese>
         <German>Fenster #26</German>
         <Polish>Okno #26</Polish>
+        <Spanish>Ventana #26</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_27_HITPOINT">
         <English>Window #27</English>
@@ -8874,6 +9032,7 @@
         <Chinese>窗口 #27</Chinese>
         <German>Fenster #27</German>
         <Polish>Okno #27</Polish>
+        <Spanish>Ventana #27</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_28_HITPOINT">
         <English>Window #28</English>
@@ -8882,6 +9041,7 @@
         <Chinese>窗口 #28</Chinese>
         <German>Fenster #28</German>
         <Polish>Okno #28</Polish>
+        <Spanish>Ventana #28</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_29_HITPOINT">
         <English>Window #29</English>
@@ -8890,6 +9050,7 @@
         <Chinese>窗口 #29</Chinese>
         <German>Fenster #29</German>
         <Polish>Okno #29</Polish>
+        <Spanish>Ventana #29</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_2_HITPOINT">
         <English>Window #02</English>
@@ -8898,6 +9059,7 @@
         <Chinese>窗口 #02</Chinese>
         <German>Fenster #02</German>
         <Polish>Okno #02</Polish>
+        <Spanish>Ventana #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_30_HITPOINT">
         <English>Window #30</English>
@@ -8906,6 +9068,7 @@
         <Chinese>窗口 #30</Chinese>
         <German>Fenster #30</German>
         <Polish>Okno #30</Polish>
+        <Spanish>Ventana #30</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_31_HITPOINT">
         <English>Window #31</English>
@@ -8914,6 +9077,7 @@
         <Chinese>窗口 #31</Chinese>
         <German>Fenster #31</German>
         <Polish>Okno #31</Polish>
+        <Spanish>Ventana #31</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_32_HITPOINT">
         <English>Window #32</English>
@@ -8922,6 +9086,7 @@
         <Chinese>窗口 #32</Chinese>
         <German>Fenster #32</German>
         <Polish>Okno #32</Polish>
+        <Spanish>Ventana #32</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_33_HITPOINT">
         <English>Window #33</English>
@@ -8930,6 +9095,7 @@
         <Chinese>窗口 #33</Chinese>
         <German>Fenster #33</German>
         <Polish>Okno #33</Polish>
+        <Spanish>Ventana #33</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_34_HITPOINT">
         <English>Window #34</English>
@@ -8938,6 +9104,7 @@
         <Chinese>窗口 #34</Chinese>
         <German>Fenster #34</German>
         <Polish>Okno #34</Polish>
+        <Spanish>Ventana #34</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_35_HITPOINT">
         <English>Window #35</English>
@@ -8946,6 +9113,7 @@
         <Chinese>窗口 #35</Chinese>
         <German>Fenster #35</German>
         <Polish>Okno #35</Polish>
+        <Spanish>Ventana #35</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_36_HITPOINT">
         <English>Window #36</English>
@@ -8954,6 +9122,7 @@
         <Chinese>窗口 #36</Chinese>
         <German>Fenster #36</German>
         <Polish>Okno #36</Polish>
+        <Spanish>Ventana #36</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_37_HITPOINT">
         <English>Window #37</English>
@@ -8962,6 +9131,7 @@
         <Chinese>窗口 #37</Chinese>
         <German>Fenster #37</German>
         <Polish>Okno #37</Polish>
+        <Spanish>Ventana #37</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_38_HITPOINT">
         <English>Window #38</English>
@@ -8970,6 +9140,7 @@
         <Chinese>窗口 #38</Chinese>
         <German>Fenster #38</German>
         <Polish>Okno #38</Polish>
+        <Spanish>Ventana #38</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
         <English>Window #39</English>
@@ -8978,6 +9149,7 @@
         <Chinese>窗口 #39</Chinese>
         <German>Fenster #39</German>
         <Polish>Okno #39</Polish>
+        <Spanish>Ventana #39</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
         <English>Window #03</English>
@@ -8986,6 +9158,7 @@
         <Chinese>窗口 #03</Chinese>
         <German>Fenster #03</German>
         <Polish>Okno #03</Polish>
+        <Spanish>Ventana #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_40_HITPOINT">
         <English>Window #40</English>
@@ -8994,6 +9167,7 @@
         <Chinese>窗口 #40</Chinese>
         <German>Fenster #40</German>
         <Polish>Okno #40</Polish>
+        <Spanish>Ventana #40</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_41_HITPOINT">
         <English>Window #41</English>
@@ -9002,6 +9176,7 @@
         <Chinese>窗口 #41</Chinese>
         <German>Fenster #41</German>
         <Polish>Okno #41</Polish>
+        <Spanish>Ventana #41</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_42_HITPOINT">
         <English>Window #42</English>
@@ -9010,6 +9185,7 @@
         <Chinese>窗口 #42</Chinese>
         <German>Fenster #42</German>
         <Polish>Okno #42</Polish>
+        <Spanish>Ventana #42</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_43_HITPOINT">
         <English>Window #43</English>
@@ -9018,6 +9194,7 @@
         <Chinese>窗口 #43</Chinese>
         <German>Fenster #43</German>
         <Polish>Okno #43</Polish>
+        <Spanish>Ventana #43</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_44_HITPOINT">
         <English>Window #44</English>
@@ -9026,6 +9203,7 @@
         <Chinese>窗口 #44</Chinese>
         <German>Fenster #44</German>
         <Polish>Okno #44</Polish>
+        <Spanish>Ventana #44</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_45_HITPOINT">
         <English>Window #45</English>
@@ -9034,6 +9212,7 @@
         <Chinese>窗口 #45</Chinese>
         <German>Fenster #45</German>
         <Polish>Okno #45</Polish>
+        <Spanish>Ventana #45</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_46_HITPOINT">
         <English>Window #46</English>
@@ -9042,6 +9221,7 @@
         <Chinese>窗口 #46</Chinese>
         <German>Fenster #46</German>
         <Polish>Okno #46</Polish>
+        <Spanish>Ventana #46</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_47_HITPOINT">
         <English>Window #47</English>
@@ -9050,6 +9230,7 @@
         <Chinese>窗口 #47</Chinese>
         <German>Fenster #47</German>
         <Polish>Okno #47</Polish>
+        <Spanish>Ventana #47</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_48_HITPOINT">
         <English>Window #48</English>
@@ -9058,6 +9239,7 @@
         <Chinese>窗口 #48</Chinese>
         <German>Fenster #48</German>
         <Polish>Okno #48</Polish>
+        <Spanish>Ventana #48</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_49_HITPOINT">
         <English>Window #49</English>
@@ -9066,6 +9248,7 @@
         <Chinese>窗口 #49</Chinese>
         <German>Fenster #49</German>
         <Polish>Okno #49</Polish>
+        <Spanish>Ventana #49</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_4_HITPOINT">
         <English>Window #04</English>
@@ -9074,6 +9257,7 @@
         <Chinese>窗口 #04</Chinese>
         <German>Fenster #04</German>
         <Polish>Okno #04</Polish>
+        <Spanish>Ventana #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_50_HITPOINT">
         <English>Window #50</English>
@@ -9082,6 +9266,7 @@
         <Chinese>窗口 #50</Chinese>
         <German>Fenster #50</German>
         <Polish>Okno #50</Polish>
+        <Spanish>Ventana #50</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_51_HITPOINT">
         <English>Windoe #51</English>
@@ -9090,6 +9275,7 @@
         <Chinese>窗口 #51</Chinese>
         <German>Fenster #51</German>
         <Polish>Okno #51</Polish>
+        <Spanish>Ventana #51</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_52_HITPOINT">
         <English>Window #52</English>
@@ -9098,6 +9284,7 @@
         <Chinese>窗口 #52</Chinese>
         <German>Fenster #52</German>
         <Polish>Okno #52</Polish>
+        <Spanish>Ventana #52</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_53_HITPOINT">
         <English>Window #53</English>
@@ -9106,6 +9293,7 @@
         <Chinese>窗口 #53</Chinese>
         <German>Fenster #53</German>
         <Polish>Okno #53</Polish>
+        <Spanish>Ventana #53</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_54_HITPOINT">
         <English>Window #54</English>
@@ -9114,6 +9302,7 @@
         <Chinese>窗口 #54</Chinese>
         <German>Fenster #54</German>
         <Polish>Okno #54</Polish>
+        <Spanish>Ventana #54</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_55_HITPOINT">
         <English>Window #55</English>
@@ -9122,6 +9311,7 @@
         <Chinese>窗口 #55</Chinese>
         <German>Fenster #55</German>
         <Polish>Okno #55</Polish>
+        <Spanish>Ventana #55</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_56_HITPOINT">
         <English>Windoe #56</English>
@@ -9130,6 +9320,7 @@
         <Chinese>窗口 #56</Chinese>
         <German>Fenster #56</German>
         <Polish>Okno #56</Polish>
+        <Spanish>Ventana #56</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_57_HITPOINT">
         <English>Window #57</English>
@@ -9138,6 +9329,7 @@
         <Chinese>窗口 #57</Chinese>
         <German>Fenster #57</German>
         <Polish>Okno #57</Polish>
+        <Spanish>Ventana #57</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_58_HITPOINT">
         <English>Window #58</English>
@@ -9146,6 +9338,7 @@
         <Chinese>窗口 #58</Chinese>
         <German>Fenster #58</German>
         <Polish>Okno #58</Polish>
+        <Spanish>Ventana #58</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_59_HITPOINT">
         <English>Window #59</English>
@@ -9154,6 +9347,7 @@
         <Chinese>窗口 #59</Chinese>
         <German>Fenster #59</German>
         <Polish>Okno #59</Polish>
+        <Spanish>Ventana #59</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_5_HITPOINT">
         <English>Window #05</English>
@@ -9162,6 +9356,7 @@
         <Chinese>窗口 #05</Chinese>
         <German>Fenster #05</German>
         <Polish>Okno #05</Polish>
+        <Spanish>Ventana #05</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_60_HITPOINT">
         <English>Window #60</English>
@@ -9170,6 +9365,7 @@
         <Chinese>窗口 #60</Chinese>
         <German>Fenster #60</German>
         <Polish>Okno #60</Polish>
+        <Spanish>Ventana #60</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_61_HITPOINT">
         <English>Window #61</English>
@@ -9178,6 +9374,7 @@
         <Chinese>窗口 #61</Chinese>
         <German>Fenster #61</German>
         <Polish>Okno #61</Polish>
+        <Spanish>Ventana #61</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_62_HITPOINT">
         <English>Window #62</English>
@@ -9186,6 +9383,7 @@
         <Chinese>窗口 #62</Chinese>
         <German>Fenster #62</German>
         <Polish>Okno #62</Polish>
+        <Spanish>Ventana #62</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_6_HITPOINT">
         <English>Window #06</English>
@@ -9194,6 +9392,7 @@
         <Chinese>窗口 #06</Chinese>
         <German>Fenster #06</German>
         <Polish>Okno #06</Polish>
+        <Spanish>Ventana #06</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_7_HITPOINT">
         <English>Window #07</English>
@@ -9202,6 +9401,7 @@
         <Chinese>窗口 #07</Chinese>
         <German>Fenster #07</German>
         <Polish>Okno #07</Polish>
+        <Spanish>Ventana #07</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_8_HITPOINT">
         <English>Window #08</English>
@@ -9210,6 +9410,7 @@
         <Chinese>窗口 #08</Chinese>
         <German>Fenster #08</German>
         <Polish>Okno #08</Polish>
+        <Spanish>Ventana #08</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
         <English>Window #09</English>
@@ -9218,6 +9419,7 @@
         <Chinese>窗口 #09</Chinese>
         <German>Fenster #09</German>
         <Polish>Okno #09</Polish>
+        <Spanish>Ventana #09</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
         <English>Light #01</English>
@@ -9226,6 +9428,7 @@
         <Chinese>燈光 #01</Chinese>
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
+        <Spanish>Luz #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1_FLARE">
         <English>Light Flare #01</English>
@@ -9234,6 +9437,7 @@
         <Chinese>閃光燈 #01</Chinese>
         <German>Licht #01</German>
         <Polish>Flara światła #01</Polish>
+        <Spanish>Luz de Destello #01</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_2">
         <English>Light #02</English>
@@ -9242,6 +9446,7 @@
         <Chinese>燈光 #02</Chinese>
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
+        <Spanish>Luz #02</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_3">
         <English>Light #03</English>
@@ -9250,6 +9455,7 @@
         <Chinese>燈光 #03</Chinese>
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
+        <Spanish>Luz #03</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
         <English>Light #04</English>
@@ -9258,6 +9464,7 @@
         <Chinese>燈光 #04</Chinese>
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
+        <Spanish>Luz #04</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT">
         <English>Fuel Lead (Left)</English>
@@ -9266,6 +9473,7 @@
         <Chinesesimp>输油管（左）</Chinesesimp>
         <Chinese>輸油管（左）</Chinese>
         <Polish>Przewód paliwowy (lewy)</Polish>
+        <Spanish>Toma de Combustible (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT">
         <English>Fuel Lead (Right)</English>
@@ -9274,6 +9482,7 @@
         <Chinesesimp>输油管（右）</Chinesesimp>
         <Chinese>輸油管（右）</Chinese>
         <Polish>Przewód paliwowy (prawy))</Polish>
+        <Spanish>Toma de Combustible (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLAILERON_LINK">
         <English>Aileron Link (Left)</English>
@@ -9282,6 +9491,7 @@
         <Chinesesimp>副翼链接（左）</Chinesesimp>
         <Chinese>副翼鏈接（左）</Chinese>
         <Polish>Łączenie lotki (lewe)</Polish>
+        <Spanish>Enlace con Alerón (Izquierda)</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE">
         <English>Pitot Tube</English>
@@ -9290,6 +9500,7 @@
         <Chinesesimp>皮托管/空速管</Chinesesimp>
         <Chinese>皮託管/空速管</Chinese>
         <Polish>Rurka Pitota</Polish>
+        <Spanish>Tubo de Pitot</Spanish>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRAILERON_LINK">
         <English>Aileron Link (Right)</English>
@@ -9298,6 +9509,7 @@
         <Chinesesimp>副翼链接（右）</Chinesesimp>
         <Chinese>副翼鏈接（右）</Chinese>
         <Polish>Łączenie lotki (prawe)</Polish>
+        <Spanish>Enlace con Alerón (Derecha)</Spanish>
     </Key>
     <Key ID="STR_ENH_ADVANCEDDAMAGE_DESCRIPTION">
         <English>Allows to add damage to all available hit points of this entity. Some hitpoints might not have an effect!</English>
@@ -9369,6 +9581,7 @@
         <Chinese>對齊 X+</Chinese>
         <Polish>Wyrównaj do X+</Polish>
         <Italian>Allinea all'asse X+</Italian>
+        <Spanish>Alinear con X+</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_X_MIN">
         <English>Align to X-</English>
@@ -9377,6 +9590,7 @@
         <Chinese>對齊 X-</Chinese>
         <Polish>Wyrównaj do X-</Polish>
         <Italian>Allinea all'asse X-</Italian>
+        <Spanish>Alinear con X-</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MAX">
         <English>Align to Y+</English>
@@ -9385,6 +9599,7 @@
         <Chinese>對齊 Y+</Chinese>
         <Polish>Wyrównaj do Y+</Polish>
         <Italian>Allinea all'asse Y+</Italian>
+        <Spanish>Alinear con Y+</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MIN">
         <English>Align to Y-</English>
@@ -9393,6 +9608,7 @@
         <Chinese>對齊 Y-</Chinese>
         <Polish>Wyrównaj do Y-</Polish>
         <Italian>Allinea all'asse Y-</Italian>
+        <Spanish>Alinear con Y-</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MAX">
         <English>Align to Z+</English>
@@ -9401,6 +9617,7 @@
         <Chinese>對齊 Z+</Chinese>
         <Polish>Wyrównaj do Z+</Polish>
         <Italian>Allinea all'asse Z+</Italian>
+        <Spanish>Alinear con Z+</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MIN">
         <English>Align to Z-</English>
@@ -9409,6 +9626,7 @@
         <Chinese>對齊 Z-</Chinese>
         <Polish>Wyrównaj do Z-</Polish>
         <Italian>Allinea all'asse Z-</Italian>
+        <Spanish>Alinear con Z-</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_X">
         <English>Space along X-Axis</English>
@@ -9417,6 +9635,7 @@
         <Chinese>沿X-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż osi X</Polish>
         <Italian>Spazio lungo asse-X</Italian>
+        <Spanish>Espacio a lo largo del eje X</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Y">
         <English>Space along Y-Axis</English>
@@ -9425,6 +9644,7 @@
         <Chinese>沿Y-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż osi Y</Polish>
         <Italian>Spazio lungo asse-Y</Italian>
+        <Spanish>Espacio a lo largo del eje Y</Spanish>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Z">
         <English>Space along Z-Axis</English>
@@ -9433,6 +9653,7 @@
         <Chinese>沿Z-軸的空間</Chinese>
         <Polish>Odstęp wzdłuż osi Z</Polish>
         <Italian>Spazio lungo asse-Z</Italian>
+        <Spanish>Espacio a lo largo del eje Z</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_ORIENT">
         <English>Orient</English>
@@ -9441,6 +9662,7 @@
         <Chinese>定向</Chinese>
         <Polish>Orientuj</Polish>
         <Italian>Orienta</Italian>
+        <Spanish>Orientar</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_ALIGN">
         <English>Align</English>
@@ -9449,6 +9671,7 @@
         <Chinese>對齊</Chinese>
         <Polish>Wyrównaj</Polish>
         <Italian>Allinea</Italian>
+        <Spanish>Alinear</Spanish>
     </Key>
     <Key ID="STR_ENH_FOLDER_SPACE">
         <English>Space</English>
@@ -9457,6 +9680,7 @@
         <Chinese>分發</Chinese>
         <Polish>Odstęp</Polish>
         <Italian>Spazio</Italian>
+        <Spanish>Espaciar</Spanish>
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_LISTSTATUS">
         <English>Entries in List: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</English>
@@ -9464,5 +9688,6 @@
         <Chinesesimp>列表条目数: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinesesimp>
         <Chinese>列表條目數: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinese>
         <Polish>Wpisy w liście: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Polish>
+        <Spanish>Entradas en Lista: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Spanish>
     </Key>
 </Project>
