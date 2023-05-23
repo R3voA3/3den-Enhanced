@@ -56,7 +56,7 @@ if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
 
   uiNamespace setVariable ["ENH_VAM_loadAceHashMap", _aceHashMap];
   uiNamespace setVariable ["ENH_VAM_loadBIHashMap", _biHashMap];
-  format["%1", keys (_aceHashMap)] call BIS_fnc_3DENNotification;
+
   private _messageCtrl = [
     "Detected that ace is loaded, choose which arsenal to edit",
     "Which to Load?",
@@ -64,14 +64,14 @@ if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
       _buttonOK,
       {
         uiNamespace setVariable ["ENH_VAM_selectHashMap", (uiNamespace getVariable ["ENH_VAM_loadAceHashMap", createHashMap])];
-        //[(findDisplay "RscDisplayEmpty") displayCtrl 10, uiNamespace getVariable "ENH_VAM_selectHashMap"] call ENH_fnc_VAM_loadSelectHashMap;
+        [uiNamespace getVariable "ENH_VAM_selectHashMap"] call ENH_fnc_VAM_loadSelectHashMap;
       }
     ],
     [
       _buttonCancel,
       {
         uiNamespace setVariable ["ENH_VAM_selectHashMap", (uiNamespace getVariable ["ENH_VAM_loadBIHashMap", createHashMap])];
-        //[(findDisplay "RscDisplayEmpty") displayCtrl 10, uiNamespace getVariable "ENH_VAM_selectHashMap"] call ENH_fnc_VAM_loadSelectHashMap;
+        [uiNamespace getVariable "ENH_VAM_selectHashMap"] call ENH_fnc_VAM_loadSelectHashMap;
       }
     ],
     "\A3\ui_f\data\map\markers\handdrawn\warning_CA.paa",

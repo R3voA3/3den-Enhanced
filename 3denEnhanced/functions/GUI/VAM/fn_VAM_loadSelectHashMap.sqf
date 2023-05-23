@@ -11,30 +11,48 @@
 	-
 
 	Usage:
-	[_ctrl, _selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
+	[_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
-params ["_ctrl", ["_selectHashMap", createHashMap]];
+params [["_selectHashMap", createHashMap]];
+#define IDC_TREEVIEW 10
+
+private _ctrlTV = uiNamespace getVariable "ENH_VAM_display" displayCtrl IDC_TREEVIEW;
 
 {
   // Current key is saved in variable _x
   // Current value is saved in variable _y
   _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-  private _indexAddon = _allAddonClasses find _addonClass;
-  private _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _category;
+  private _indexAddon = -1;
+  private _indexCategory = -1;
   private _indexEquipment = -1;
 
-  if (_indexCategory < 0) then
-  {
-   _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _specificType;
+  //format["tvCount: %1 inAdd: %2 inCat: %3 values: %4", (_ctrlTV tvCount [_indexAddon, _indexCategory]), _indexAddon, _indexCategory, _y] call BIS_fnc_3DENNotification;
+  for "_i" from 0 to (_ctrlTV tvCount []) do {
+    if ((toLower(_ctrlTV tvData [_i])) isEqualTo (toLower(_addonClass))) then {
+      _indexAddon = _i;
+      break;
+    };
   };
+  //format["ctrlTV: %4 tvCount[]: %1 tvCount[0]: %2", _ctrlTV tvCount [], _ctrlTV tvCount [0], _ctrlTV] call BIS_fnc_3DENNotification;
 
-  for [0, _ctrl tvCount [_indexAddon, _indexCategory], 1] do {
-    if ((_ctrl tvData [_indexAddon, _indexCategory, _i]) isEqualTo (toLower _class)) then {
-      _indexEquipment = _i;
+  for "_i" from 0 to (_ctrlTV tvCount [_indexAddon]) do {
+    if (
+      (toLower(_ctrlTV tvData [_indexAddon, _i])) isEqualTo (toLower(_category)) ||
+      (toLower(_ctrlTV tvData [_indexAddon, _i])) isEqualTo (toLower(_specificType))
+      ) then {
+      _indexCategory = _i;
+      break;
     };
   };
 
-  [_ctrl, 1, [_indexAddon, _indexCategory, _indexEquipment]] call ENH_fnc_switchNodeState;
+  for "_i" from 0 to (_ctrlTV tvCount [_indexAddon, _indexCategory]) do {
+    if ((toLower(_ctrlTV tvData [_indexAddon, _indexCategory, _i])) isEqualTo (toLower(_class))) then {
+      _indexEquipment = _i;
+      break;
+    };
+  };
+
+  [_ctrlTV, 1, [_indexAddon, _indexCategory, _indexEquipment]] call ENH_fnc_VAM_switchNodeState;
 } forEach _selectHashMap;

@@ -32,6 +32,7 @@
 #define IDC_PROGRESS_TEXT_5 130
 
 private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
+uiNamespace setVariable ["ENH_VAM_display", _display];
 
 // Get check is mods var is existing. If not get it
 if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then

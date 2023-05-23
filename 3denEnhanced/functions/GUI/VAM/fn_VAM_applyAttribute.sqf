@@ -25,5 +25,13 @@ if (_aceBool && isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
 };
 
 if (_biBool) then {
+  _object set3DENAttribute ["ammoBox", toString[
+    [],
+    [],
+    [],
+    [],
+    1
+  ]];
+  [_object, true] call BIS_fnc_removeVirtualWeaponCargo;
   [_object, keys(_selectHashMap)] call BIS_fnc_addVirtualWeaponCargo;
 };
