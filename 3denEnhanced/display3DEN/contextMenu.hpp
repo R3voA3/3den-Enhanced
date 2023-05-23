@@ -4,7 +4,6 @@ items[] +=
   "ENH_MeasureDistance",
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
-  /* "ENH_Extraction", */
   "ENH_AddToFavorites",
   "ENH_MoveToLayer"
 };
@@ -36,7 +35,7 @@ class ConnectParent
 {
   items[] +=
   {
-    "ENH_TriggerOwnerPlayer",
+    "ENH_TriggerOwnerPlayer"
   };
 };
 class Select
@@ -118,15 +117,6 @@ class ENH_Garrison
   opensNewWindow = 1;
   SHOW_IN_ROOT;
 };
-/* class ENH_Extraction
-{
-  action = "findDisplay 313 createDisplay 'ENH_Extraction'";
-  text = "$STR_ENH_CONTEXTMENU_CREATEEXTRACTION";
-  picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
-  conditionShow = "hoverObjectVehicle";
-  opensNewWindow = 1;
-  SHOW_IN_ROOT;
-}; */
 class ENH_TriggerOwnerPlayer
 {
   action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
