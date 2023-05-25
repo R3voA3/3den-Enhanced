@@ -119,7 +119,7 @@ _ctrlAccTV ctrlSetPosition
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
  CENTER_Y - 0 * WINDOW_HAbs + 17 * GRID_H,
  WINDOW_W * GRID_W - 2 * GRID_W,
- WINDOW_HAbs / 2 - 17 * GRID_H
+ WINDOW_HAbs / 2 - 24 * GRID_H
 ];
 
 _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
@@ -602,30 +602,9 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     private _tempPath = +_path;
     _tempPath deleteAt ((count _tempPath) - 1);
     if ((_ctrl tvData _tempPath) in _itemTypesWAttach) then {
-      private _ctrlAccTV = (ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW;
-      [_ctrlAccTV, _ctrl tvData _path] call ENH_fnc_VAM_tvItemInit;
-      _ctrl ctrlSetPosition [
-        CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
-        CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
-        WINDOW_W * GRID_W - 2 * GRID_W,
-        (WINDOW_HAbs / 2)
-      ];
-      _ctrl ctrlCommit 0.1;
-      _ctrlAccTV ctrlShow true;
-      _ctrlAccTV ctrlCommit 0.1;
+      [true] call ENH_fnc_VAM_openCloseACCTV;
     } else {
-      // check if accesory tree even exists
-      if ((((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) tvCount []) != 0) then {
-        ((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) ctrlShow false;
-        ((ctrlParent _ctrl) displayCtrl IDC_ACCTREEVIEW) ctrlCommit 0.1;
-        _ctrl ctrlSetPosition [
-          CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
-          CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
-          WINDOW_W * GRID_W - 2 * GRID_W,
-          WINDOW_HAbs - 17 * GRID_H
-        ];
-        _ctrl ctrlCommit 0.1;
-      };
+      [false] call ENH_fnc_VAM_openCloseACCTV;
     };
 
     if ((_ctrl tvValue _path) == 0) then {
