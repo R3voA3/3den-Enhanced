@@ -2,7 +2,7 @@
   Author: linkion and R3vo
 
   Description:
-  Initialize table view for selected item
+  Initialize accessory table view for selected item
 
   Parameter(s):
   tvControl - table view control
@@ -182,42 +182,3 @@ private _fnc_initTVItem = {
 
   [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
 } forEach _compatibleMagsSecondaryMuzzle;
-
-_ctrlTV ctrlAddEventHandler ["TreeSelChanged",
-{
-  params["_ctrl", "_path"];
-
-  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
-
-
-  // check if it's a single entry or a folder
-  if ((_ctrl tvCount _path) == 0) then
-  {
-
-    if ((_ctrl tvValue _path) == 0) then
-    {
-      [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
-    }
-    else
-    {
-      [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
-    }
-  }
-  else
-  {
-  private _mouseX = getMousePosition select 0;
-
-    // if clicked on check box
-    // Don't know any other way to do this - linkion -------V
-      // I guess we should use UI macros
-    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
-    {
-
-      if ((_ctrl tvValue _path) == 0) then {
-        [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
-      } else {
-        [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
-      };
-    };
-  };
-}];
