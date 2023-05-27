@@ -22,7 +22,6 @@
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\createObject.hpp"
 #include "GUI\exportGUIDefines.hpp"
-#include "GUI\extraction.hpp"
 #include "GUI\functionsViewer.hpp"
 #include "GUI\garrison.hpp"
 #include "GUI\moduleInformation.hpp"
