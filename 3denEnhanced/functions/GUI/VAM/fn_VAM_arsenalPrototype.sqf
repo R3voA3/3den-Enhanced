@@ -12,24 +12,29 @@
 */
 
 #include "\a3\3DEN\UI\macros.inc"
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+
+/*
+#define IDD_VAM -1
+#define IDC_VAM_TREEVIEW 10
+#define IDC_VAM_ACCTREEVIEW 15
+#define IDC_VAM_ACE_CHECKBOX 20
+#define IDC_VAM_BI_CHECKBOX 25
+#define IDC_VAM_PREVIEW_PICTURE 30
+#define IDC_VAM_SEARCH 645
+#define IDC_VAM_PROGRESS_1 40
+#define IDC_VAM_PROGRESS_2 50
+#define IDC_VAM_PROGRESS_3 60
+#define IDC_VAM_PROGRESS_4 70
+#define IDC_VAM_PROGRESS_5 80
+#define IDC_VAM_PROGRESS_TEXT_1 90
+#define IDC_VAM_PROGRESS_TEXT_2 100
+#define IDC_VAM_PROGRESS_TEXT_3 110
+#define IDC_VAM_PROGRESS_TEXT_4 120
+#define IDC_VAM_PROGRESS_TEXT_5 130
+*/
 
 #define WINDOW_W 140
-#define IDC_TREEVIEW 10
-#define IDC_ACCTREEVIEW 15
-#define IDC_ACE_CHECKBOX 20
-#define IDC_BI_CHECKBOX 25
-#define IDC_PREVIEW_PICTURE 30
-#define IDC_SEARCH 645
-#define IDC_PROGRESS_1 40
-#define IDC_PROGRESS_2 50
-#define IDC_PROGRESS_3 60
-#define IDC_PROGRESS_4 70
-#define IDC_PROGRESS_5 80
-#define IDC_PROGRESS_TEXT_1 90
-#define IDC_PROGRESS_TEXT_2 100
-#define IDC_PROGRESS_TEXT_3 110
-#define IDC_PROGRESS_TEXT_4 120
-#define IDC_PROGRESS_TEXT_5 130
 
 private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
 uiNamespace setVariable ["ENH_VAM_display", _display];
@@ -91,7 +96,7 @@ _ctrlTitle ctrlSetPosition
 _ctrlTitle ctrlSetText "STR_ENH_TOOLS_LIMIT_ARSENAL";
 _ctrlTitle ctrlCommit 0;
 
-_ctrlSearch = _display ctrlCreate ["ctrlEdit", IDC_SEARCH];
+_ctrlSearch = _display ctrlCreate ["ctrlEdit", IDC_VAM_SEARCH];
 _ctrlSearch ctrlSetPosition
 [
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
@@ -100,7 +105,7 @@ _ctrlSearch ctrlSetPosition
  5 * GRID_H
 ];
 
-_ctrlTV = _display ctrlCreate ["RscTreeSearch", IDC_TREEVIEW];
+_ctrlTV = _display ctrlCreate ["RscTreeSearch", IDC_VAM_TREEVIEW];
 _ctrlTV ctrlSetFont FONT_NORMAL;
 _ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
 _ctrlTV ctrlSetPosition
@@ -111,7 +116,7 @@ _ctrlTV ctrlSetPosition
  WINDOW_HAbs - 24 * GRID_H
 ];
 
-_ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_ACCTREEVIEW];
+_ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_VAM_ACCTREEVIEW];
 _ctrlAccTV ctrlSetFont FONT_NORMAL;
 _ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
 _ctrlAccTV ctrlSetPosition
@@ -181,7 +186,7 @@ _ctrlHeaderPreview ctrlSetText "Preview";
 //_ctrlPictureBackground ctrlSetBackgroundColor [(profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]), (profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]), (profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]), COLOR_ACTIVE_RGB_A];
 //_ctrlPictureBackground ctrlSetText "PREVIEW";
 
-_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_PREVIEW_PICTURE];
+_ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_VAM_PREVIEW_PICTURE];
 _ctrlPicture ctrlSetPosition
 [
  CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 + 6 * GRID_W,
@@ -293,7 +298,7 @@ _ctrlHeaderStats ctrlSetPosition
 
 _ctrlHeaderStats ctrlSetText "Statistics";
 
-_ctrlProgress_1 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_1];
+_ctrlProgress_1 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_1];
 _ctrlProgress_1 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -302,7 +307,7 @@ _ctrlProgress_1 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_1];
+_ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_1];
 _ctrlProgressText_1 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -311,7 +316,7 @@ _ctrlProgressText_1 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgress_2 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_2];
+_ctrlProgress_2 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_2];
 _ctrlProgress_2 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -320,7 +325,7 @@ _ctrlProgress_2 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgressText_2 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_2];
+_ctrlProgressText_2 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_2];
 _ctrlProgressText_2 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -329,7 +334,7 @@ _ctrlProgressText_2 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgress_3 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_3];
+_ctrlProgress_3 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_3];
 _ctrlProgress_3 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -338,7 +343,7 @@ _ctrlProgress_3 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgressText_3 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_3];
+_ctrlProgressText_3 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_3];
 _ctrlProgressText_3 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -347,7 +352,7 @@ _ctrlProgressText_3 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgress_4 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_4];
+_ctrlProgress_4 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_4];
 _ctrlProgress_4 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -356,7 +361,7 @@ _ctrlProgress_4 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgressText_4 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_4];
+_ctrlProgressText_4 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_4];
 _ctrlProgressText_4 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -365,7 +370,7 @@ _ctrlProgressText_4 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgress_5 = _display ctrlCreate ["ctrlProgress", IDC_PROGRESS_5];
+_ctrlProgress_5 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_5];
 _ctrlProgress_5 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -374,7 +379,7 @@ _ctrlProgress_5 ctrlSetPosition
  10 * GRID_H
 ];
 
-_ctrlProgressText_5 = _display ctrlCreate ["ctrlStatic", IDC_PROGRESS_TEXT_5];
+_ctrlProgressText_5 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_5];
 _ctrlProgressText_5 ctrlSetPosition
 [
  CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
@@ -425,8 +430,8 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
   private _useACE = false; // default false for without ace
   private _useBI = true; // default true for without ace
   if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
-    _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_ACE_CHECKBOX);
-    _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_BI_CHECKBOX);
+    _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_ACE_CHECKBOX);
+    _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_BI_CHECKBOX);
   };
 
   _selectedObjects apply
@@ -474,7 +479,7 @@ _ctrlButtonExpandAll ctrlAddEventHandler ["ButtonClick",
  tvExpandAll (ctrlParent _ctrlButton displayCtrl 10);
 }];
 
-_ctrlACECheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_ACE_CHECKBOX];
+_ctrlACECheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_VAM_ACE_CHECKBOX];
 _ctrlACECheckbox ctrlSetPosition
 [
  CENTER_X - 0.5 * WINDOW_W * GRID_W + 22 * GRID_W,
@@ -501,7 +506,7 @@ _ctrlACEText ctrlEnable _isACELoaded;
 _ctrlACECheckbox ctrlEnable _isACELoaded;
 _ctrlACEText ctrlSetTextColor [1, 1, 1, [0.5, 1 ] select _isACELoaded];
 
-_ctrlBICheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_BI_CHECKBOX];
+_ctrlBICheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_VAM_BI_CHECKBOX];
 _ctrlBICheckbox ctrlSetPosition
 [
   CENTER_X - 0.5 * WINDOW_W * GRID_W + 22 * GRID_W,
@@ -621,7 +626,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 
   private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
-  ctrlParent _ctrl displayCtrl IDC_PREVIEW_PICTURE ctrlSetText _picture;
+  ctrlParent _ctrl displayCtrl IDC_VAM_PREVIEW_PICTURE ctrlSetText _picture;
 
   uiNamespace setVariable ["ENH_VAM_selectedItemTVPath", _path];
   uiNamespace setVariable ["ENH_VAM_selectedItem",

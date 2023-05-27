@@ -14,12 +14,13 @@
 	[_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+
 params [["_selectHashMap", uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap]]];
-#define IDC_TREEVIEW 10
 
 _selectHashMap = +_selectHashMap;
 
-private _ctrlTV = uiNamespace getVariable "ENH_VAM_display" displayCtrl IDC_TREEVIEW;
+private _ctrlTV = uiNamespace getVariable "ENH_VAM_display" displayCtrl IDC_VAM_TREEVIEW;
 
 for "_i" from 0 to (_ctrlTV tvCount []) do {
   // clear current selection

@@ -1,29 +1,12 @@
 #include "\a3\3DEN\UI\macros.inc"
-
-#define WINDOW_W 140
-#define IDC_TREEVIEW 10
-#define IDC_ACCTREEVIEW 15
-#define IDC_ACE_CHECKBOX 20
-#define IDC_BI_CHECKBOX 25
-#define IDC_PREVIEW_PICTURE 30
-#define IDC_SEARCH 645
-#define IDC_PROGRESS_1 40
-#define IDC_PROGRESS_2 50
-#define IDC_PROGRESS_3 60
-#define IDC_PROGRESS_4 70
-#define IDC_PROGRESS_5 80
-#define IDC_PROGRESS_TEXT_1 90
-#define IDC_PROGRESS_TEXT_2 100
-#define IDC_PROGRESS_TEXT_3 110
-#define IDC_PROGRESS_TEXT_4 120
-#define IDC_PROGRESS_TEXT_5 130
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
 params ["_openBool"];
 
 private _display = uiNamespace getVariable "ENH_VAM_display";
 
-private _mainTV = _display displayCtrl IDC_TREEVIEW;
-private _accTV = _display displayCtrl IDC_ACCTREEVIEW;
+private _mainTV = _display displayCtrl IDC_VAM_TREEVIEW;
+private _accTV = _display displayCtrl IDC_VAM_ACCTREEVIEW;
 
 private _selectedItemClass = toLower((uiNamespace getVariable "ENH_VAM_selectedItem") select 7);
 

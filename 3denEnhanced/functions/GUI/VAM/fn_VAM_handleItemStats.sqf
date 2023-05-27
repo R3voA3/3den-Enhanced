@@ -1,30 +1,21 @@
-params ["_ctrl"];
+#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
-#define IDC_PROGRESS_1 40
-#define IDC_PROGRESS_2 50
-#define IDC_PROGRESS_3 60
-#define IDC_PROGRESS_4 70
-#define IDC_PROGRESS_5 80
-#define IDC_PROGRESS_TEXT_1 90
-#define IDC_PROGRESS_TEXT_2 100
-#define IDC_PROGRESS_TEXT_3 110
-#define IDC_PROGRESS_TEXT_4 120
-#define IDC_PROGRESS_TEXT_5 130
+params ["_ctrl"];
 
 private _path = uiNamespace getVariable["ENH_VAM_selectedItemTVPath", []];
 private _display = ctrlParent _ctrl;
 
-private _ctrlProgress_1 = _display displayCtrl IDC_PROGRESS_1;
-private _ctrlProgress_2 = _display displayCtrl IDC_PROGRESS_2;
-private _ctrlProgress_3 = _display displayCtrl IDC_PROGRESS_3;
-private _ctrlProgress_4 = _display displayCtrl IDC_PROGRESS_4;
-private _ctrlProgress_5 = _display displayCtrl IDC_PROGRESS_5;
+private _ctrlProgress_1 = _display displayCtrl IDC_VAM_PROGRESS_1;
+private _ctrlProgress_2 = _display displayCtrl IDC_VAM_PROGRESS_2;
+private _ctrlProgress_3 = _display displayCtrl IDC_VAM_PROGRESS_3;
+private _ctrlProgress_4 = _display displayCtrl IDC_VAM_PROGRESS_4;
+private _ctrlProgress_5 = _display displayCtrl IDC_VAM_PROGRESS_5;
 
-private _ctrlProgressText_1 = _display displayCtrl IDC_PROGRESS_TEXT_1;
-private _ctrlProgressText_2 = _display displayCtrl IDC_PROGRESS_TEXT_2;
-private _ctrlProgressText_3 = _display displayCtrl IDC_PROGRESS_TEXT_3;
-private _ctrlProgressText_4 = _display displayCtrl IDC_PROGRESS_TEXT_4;
-private _ctrlProgressText_5 = _display displayCtrl IDC_PROGRESS_TEXT_5;
+private _ctrlProgressText_1 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_1;
+private _ctrlProgressText_2 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_2;
+private _ctrlProgressText_3 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_3;
+private _ctrlProgressText_4 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_4;
+private _ctrlProgressText_5 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_5;
 
 // No item selected
 if ((_ctrl tvCount _path) == 0) then
