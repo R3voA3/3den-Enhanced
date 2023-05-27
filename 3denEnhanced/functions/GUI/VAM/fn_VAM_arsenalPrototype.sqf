@@ -108,7 +108,7 @@ _ctrlTV ctrlSetPosition
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
  WINDOW_W * GRID_W - 2 * GRID_W,
- WINDOW_HAbs - 17 * GRID_H
+ WINDOW_HAbs - 24 * GRID_H
 ];
 
 _ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_ACCTREEVIEW];
@@ -130,9 +130,7 @@ _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",
 
 
   // check if it's a single entry or a folder
-  if ((_ctrl tvCount _path) == 0) then
-  {
-
+  if ((_ctrl tvCount _path) == 0) then {
     if ((_ctrl tvValue _path) == 0) then
     {
       [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
@@ -141,23 +139,20 @@ _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",
     {
       [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
     }
-  }
-  else
-  {
-  private _mouseX = getMousePosition select 0;
+  } else {
+    private _mouseX = getMousePosition select 0;
 
     // if clicked on check box
     // Don't know any other way to do this - linkion -------V
       // I guess we should use UI macros
-    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then
-    {
-
+    if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then {
       if ((_ctrl tvValue _path) == 0) then {
         [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
       } else {
         [_ctrl, 0] call ENH_fnc_VAM_switchNodeState;
       };
     };
+    [] call ENH_fnc_VAM_loadSelectHashMap;
   };
 }];
 

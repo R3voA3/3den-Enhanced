@@ -49,7 +49,7 @@ if (_openBool) then {
     CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
     CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
     WINDOW_W * GRID_W - 2 * GRID_W,
-    WINDOW_HAbs - 17 * GRID_H
+    WINDOW_HAbs - 24 * GRID_H
   ];
   _accTV ctrlCommit 0.1;
   _mainTV ctrlCommit 0.1;

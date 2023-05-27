@@ -14,10 +14,17 @@
 	[_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
-params [["_selectHashMap", createHashMap]];
+params [["_selectHashMap", uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap]]];
 #define IDC_TREEVIEW 10
 
+_selectHashMap = +_selectHashMap;
+
 private _ctrlTV = uiNamespace getVariable "ENH_VAM_display" displayCtrl IDC_TREEVIEW;
+
+for "_i" from 0 to (_ctrlTV tvCount []) do {
+  // clear current selection
+  [_ctrlTV, 0, [_i]] call ENH_fnc_VAM_switchNodeState;
+};
 
 {
   // Current key is saved in variable _x
