@@ -14,31 +14,59 @@ class Display3DEN
       class Controls
       {
         class Version;//EditBox
-        class TextZ;//Icon
-        class ValueX;
+        class TextX: ctrlStaticPicture
+        {
+          colorText[] = {COLOR_POSX_RGBA};
+        };
+        class ValueX: ctrlEdit
+        {
+          w = 19 * GRID_W;
+        };
+        class TextY: TextX
+        {
+          x = 22 * GRID_W;
+          colorText[] = {COLOR_POSY_RGBA};
+        };
+        class ValueY: ValueX
+        {
+          x = 25 * GRID_W;
+        };
+        class TextZ: TextX
+        {
+          x = 44 * GRID_W;
+          colorText[] = {COLOR_POSZ_RGBA};
+        };
+        class ValueZ: ValueX
+        {
+          x = 47 * GRID_W;
+        };
+        class TextDis: TextX
+        {
+          x = 66 * GRID_W;
+          colorText[] = {1, 1, 1, 1};
+        };
         class ValueDis: ValueX
         {
-          w = 18 * GRID_W;
+          x = 69 * GRID_W;
         };
-        class ENH_TextDir: TextZ
+        class ENH_TextDir: TextX
         {
           idc = -1;
-          x = 93 * GRID_W + 2 * SPACE_X;
+          x = 99 * GRID_W;
           text = "\a3\3den\data\attributes\loiterdirection\ccw_ca.paa";
+          colorText[] = {1, 1, 1, 1};
         };
         class ENH_ValueDir: ValueX
         {
           idc = IDC_STATUSBAR_CAMDIR;
-          x = 96 * GRID_W + 2 * SPACE_X;
+          x = 102 * GRID_W;
           w = 12 * GRID_W;
-          text = "0 °";
           onLoad = "(_this # 0) ctrlEnable false";
         };
         #if __has_include("\userconfig\ENH_Config.hpp")
-        class ENH_UserconfigWarning: TextZ
+        class ENH_UserconfigWarning: ENH_TextDir
         {
-          idc = -1;
-          x = 109 * GRID_W + 2 * SPACE_X;
+          x = 114 * GRID_W;
           text = "\a3\ui_f\data\map\markers\military\warning_ca.paa";
           tooltip = "$STR_ENH_STATUSBAR_USERCONFIG_WARNING_TOOLTIP";
         };
@@ -61,7 +89,7 @@ class Display3DEN
           onLoad = "(_this # 0) ctrlShow false; (_this # 0) ctrlEnable false";
           style = ST_CENTER + ST_NO_RECT;
         };
-        class ENH_IconMarkers: TextZ
+        class ENH_IconMarkers: ENH_TextDir
         {
           idc = IDC_STATUSBAR_ICONMARKERS;
           x = ORIGIN_X_STATUSBAR - 59 * GRID_W - 2 * SPACE_X;
