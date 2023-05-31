@@ -20,7 +20,7 @@ params["_object", "_aceBool", "_biBool"];
 private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
 
 
-if (_aceBool && isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
+if (_aceBool) then {
   _object set3DENAttribute ["ace_arsenal_attribute", [keys _selectHashMap, 0]];
 };
 

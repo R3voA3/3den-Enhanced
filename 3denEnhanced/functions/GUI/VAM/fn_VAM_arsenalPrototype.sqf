@@ -427,12 +427,8 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 
   private _selectedObjects = get3DENSelected "Object";
 
-  private _useACE = false; // default false for without ace
-  private _useBI = true; // default true for without ace
-  if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
-    _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_ACE_CHECKBOX);
-    _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_BI_CHECKBOX);
-  };
+  private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_ACE_CHECKBOX);
+  private _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_BI_CHECKBOX);
 
   _selectedObjects apply
   {
@@ -499,12 +495,7 @@ _ctrlACEText ctrlSetPosition
 
 _ctrlACEText ctrlSetText "ACE Arsenal";
 
-// Hide checkbox and text if no ACE is loaded
-private _isACELoaded = isClass(configFile >> "CfgPatches" >> "ace_arsenal");
-
-_ctrlACEText ctrlEnable _isACELoaded;
-_ctrlACECheckbox ctrlEnable _isACELoaded;
-_ctrlACEText ctrlSetTextColor [1, 1, 1, [0.5, 1 ] select _isACELoaded];
+_ctrlACEText ctrlSetTextColor [1, 1, 1, 1];
 
 _ctrlBICheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_VAM_BI_CHECKBOX];
 _ctrlBICheckbox ctrlSetPosition
@@ -526,12 +517,7 @@ _ctrlBIText ctrlSetPosition
 
 _ctrlBIText ctrlSetText "BI Arsenal";
 
-// Hide checkbox and text if no ACE is loaded
-private _isACELoaded = isClass(configFile >> "CfgPatches" >> "ace_arsenal");
-
-_ctrlBIText ctrlEnable _isACELoaded;
-_ctrlBICheckbox ctrlEnable _isACELoaded;
-_ctrlBIText ctrlSetTextColor [1, 1, 1, [0.5, 1 ] select _isACELoaded];
+_ctrlBIText ctrlSetTextColor [1, 1, 1, 1];
 
 // Focus search box
 ctrlSetFocus _ctrlSearch;
