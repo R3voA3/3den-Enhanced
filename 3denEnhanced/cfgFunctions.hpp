@@ -188,6 +188,7 @@ class CfgFunctions
       class VAM_loadObject;
       class VAM_loadSelectHashMap;
       class VAM_openCloseACCTV;
+      class VAM_accTVItemInsert;
     }
     class CfgSentencesBrowser
     {

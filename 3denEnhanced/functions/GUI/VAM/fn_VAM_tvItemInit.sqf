@@ -21,7 +21,15 @@
 
 params["_ctrlTV", "_itemClass"];
 
+{
+  // Current result is saved in variable _x
+  // kill all spawns before starting
+  terminate _x;
+} forEach (uiNamespace getVariable "ENH_VAM_spawnedAccInits");
+
 tvClear _ctrlTV;
+
+///////////////////////////    Getting Items    //////////////////////////////////////
 
 private _compatibleItems = [
   [], // optic
@@ -32,6 +40,7 @@ private _compatibleItems = [
 ];
 
 private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
+private _itemHashMap = uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap];
 // from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
 // Author: Alganthe
 
@@ -75,33 +84,16 @@ private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", creat
 
 private _compatibleMagsPrimaryMuzzle = [];
 private _compatibleMagsSecondaryMuzzle = [];
-private _compatibleScopes = [];
-private _compatiblePointers = [];
-private _compatibleMuzzles = [];
-private _compatibleBipods = [];
 
 _compatibleMagsPrimaryMuzzle = _compatibleItems select 4 select 0;
 _compatibleMagsSecondaryMuzzle = _compatibleItems select 4 select 1;
 
 
-private _AttachTypes = ["scopes", "pointers", "muzzles", "bipods", "primaryMags", "secondaryMags"];
-
-private _typeTranslation = createHashMapFromArray
-[
-  ["secondaryMags", "STR_A3_GRENADES1"],
-  ["primaryMags", "STR_GEAR_MAGAZINES"],
-  ["bipods", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
-  ["muzzles", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
-  ["pointers", "STR_A3_POINTERS1"],
-  ["scopes", "STR_A3_SCOPES1"]
-];
-
-
 private _configCfgWeapons = configFile >> "CfgWeapons";
 
+// sort compatible items into item types
 {
   // Current result is saved in variable _x
-  private _weaponConfig = (configFile >> "CfgWeapons" >> _itemClass);
   private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
 
   switch (getNumber (_configItemInfo >> "type")) do {
@@ -121,26 +113,26 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
 
 } forEach ([_itemClass] call ENH_fnc_compatibleItems);
 
+//////////////////////////    Filling TV    //////////////////////////////////
+
+private _AttachTypes = ["scopes", "pointers", "muzzles", "bipods", "primaryMags", "secondaryMags"];
+
+private _typeTranslation = createHashMapFromArray
+[
+  ["secondaryMags", "STR_A3_GRENADES1"],
+  ["primaryMags", "STR_GEAR_MAGAZINES"],
+  ["bipods", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_BOTTOMSLOT0"],
+  ["muzzles", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_FRONTSLOT0"],
+  ["pointers", "STR_A3_POINTERS1"],
+  ["scopes", "STR_A3_SCOPES1"]
+];
+
 {
   private _indexEquipment = _ctrlTV tvAdd [[], localize (_typeTranslation get _x)];
   _ctrlTV tvSetPicture [[_indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
 } forEach _AttachTypes;
 
-private _fnc_initTVItem = {
-  params["_ctrlTV", "_typeIndex", "_displayName", "_class", "_descriptionShort", "_addonIcon", "_selectHashMap"];
-  private _indexEquipment = _ctrlTV tvAdd [[_typeIndex], _displayName];
-
-  _ctrlTV tvSetPictureRight [[_typeIndex, _indexEquipment], _addonIcon];
-  _ctrlTV tvSetData [[_typeIndex, _indexEquipment], _class];
-  if (toLower(_x) in (keys _selectHashMap)) then {
-    [_ctrlTV, 1, [_typeIndex, _indexEquipment]] call ENH_fnc_VAM_switchNodeState;
-  } else {
-    [_ctrlTV, 0, [_typeIndex, _indexEquipment]] call ENH_fnc_VAM_switchNodeState;
-  };
-  _descriptionShort = _descriptionShort+" ";
-  _ctrlTV tvSetTooltip [[_typeIndex, _indexEquipment], _descriptionShort];
-  true
-};
+private _spawns = [];
 
 {
   private _typeIndex = _forEachIndex;
@@ -148,37 +140,49 @@ private _fnc_initTVItem = {
     continue;
   };
   {
-    (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+    _spawns pushBack ([_x, _ctrlTV, _typeIndex, _itemHashMap, _selectHashMap, _spawns] spawn {
+      params["_x", "_ctrlTV", "_typeIndex", "_itemHashMap", "_selectHashMap", "_spawns"];
+      (_itemHashMap get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-    if (isNil "_displayName" || isNil "_class") then {
-      //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
-      continue;
-    };
+      if (!(isNil "_displayName" || isNil "_class")) then {
+        [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
+      };
 
-    [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
+      // remove itself from spawns array when complete
+      _spawns deleteAt (_spawns find _thisScript);
+    });
   } forEach _x;
 } forEach _compatibleItems;
 
 {
-  private _typeIndex = _AttachTypes find "primaryMags";
-  (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+  _spawns pushBack ([_x, _ctrlTV, _itemHashMap, _selectHashMap, _AttachTypes, _spawns] spawn {
+    params["_x", "_ctrlTV", "_itemHashMap", "_selectHashMap", "_AttachTypes", "_spawns"];
+    private _typeIndex = _AttachTypes find "primaryMags";
+    (_itemHashMap get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-  if (isNil "_displayName" || isNil "_class") then {
-    //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
-    continue;
-  };
+    if (!(isNil "_displayName" || isNil "_class")) then {
+      [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
+    };
 
-  [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
+    // remove itself from spawns array when complete
+    _spawns deleteAt (_spawns find _thisScript);
+  });
 } forEach _compatibleMagsPrimaryMuzzle;
 
 {
-  private _typeIndex = _AttachTypes find "secondaryMags";
-  (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap] get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
+  _spawns pushBack ([_x, _ctrlTV, _itemHashMap, _selectHashMap, _AttachTypes, _spawns] spawn {
+    params["_x", "_ctrlTV", "_itemHashMap", "_selectHashMap", "_AttachTypes", "_spawns"];
+    private _typeIndex = _AttachTypes find "secondaryMags";
+    (_itemHashMap get toLower(_x)) params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
-  if (isNil "_displayName" || isNil "_class") then {
-    //format["name: %1 class: %2", _displayName, _class] call BIS_fnc_3DENNotification;
-    continue;
-  };
+    if (!(isNil "_displayName" || isNil "_class")) then {
+      [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
+    };
 
-  [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call _fnc_initTVItem;
+    // remove itself from spawns array when complete
+    _spawns deleteAt (_spawns find _thisScript);
+  });
 } forEach _compatibleMagsSecondaryMuzzle;
+
+// save _spawns to uiNamespace to be terminated
+uiNamespace setVariable ["ENH_VAM_spawnedAccInits", _spawns];
