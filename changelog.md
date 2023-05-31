@@ -1,3 +1,8 @@
+# v7.7.7
+## CHANGED
+- updated Spanish translation thanks to regiregi22
+- tweaked statusbar
+
 # v7.7.6
 ## CHANGED
 - Vehicle Inventory Manager overhaul
