@@ -20,7 +20,7 @@ class ENH_ESE
     {
       x = CENTERED_X(DIALOG_W) + (DIALOG_W * 2/4) * GRID_W + 2 * GRID_W;
       y = DIALOG_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
-      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W
+      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W;
       h = DIALOG_H * GRID_H - 4 * CTRL_DEFAULT_H + GRID_H;
       colorBackground[] = {0,0,0,0.3};
     };
@@ -61,7 +61,7 @@ class ENH_ESE
     {
       text = "$STR_ENH_ESE_ITEMSININVENTORY";
       x = CENTERED_X(DIALOG_W) + (DIALOG_W * 2/4) * GRID_W + 2 * GRID_W;
-      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W
+      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W;
     };
     class Templates: AvailableItems
     {
@@ -426,7 +426,7 @@ class ENH_ESE
       idc = IDC_ESE_INVENTORYLIST;
       x = CENTERED_X(DIALOG_W) + (DIALOG_W * 2/4) * GRID_W + 2 * GRID_W;
       y = DIALOG_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
-      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W
+      w = (DIALOG_W * 1/4) * GRID_W - 2 * GRID_W;
       h = DIALOG_H * GRID_H - 4 * CTRL_DEFAULT_H + GRID_H;
       columns[] = {0, 0.08, 0.8, 0.88};
     };
