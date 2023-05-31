@@ -5,7 +5,7 @@ class ENH_About
   {
     "ENH_About_Changelog",
     "ENH_About_Steam",
-    "ENH_About_Translation",
+    "ENH_About_Contributing",
     "ENH_About_Documentation",
     "ENH_About_Credits",
     "ENH_About_BugReport"
