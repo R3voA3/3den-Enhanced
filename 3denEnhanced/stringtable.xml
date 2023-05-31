@@ -4124,17 +4124,9 @@
         <Spanish>Steam</Spanish>
         <Russian>Steam</Russian>
     </Key>
-    <Key ID="STR_ENH_ABOUT_TRANSLATION">
-        <English>Help Translating</English>
-        <Italian>Aiuta la traduzione</Italian>
-        <German>Beim Übersetzen helfen</German>
-        <Spanish>Ayuda para traducir</Spanish>
-        <Chinesesimp>翻译帮助</Chinesesimp>
-        <Chinese>翻譯幫助</Chinese>
-        <Czech>Pomoc s překladem</Czech>
-        <French>Aidez à traduire</French>
-        <Polish>Pomóż tłumaczyć</Polish>
-        <Russian>Помощь в переводе</Russian>
+    <Key ID="STR_ENH_ABOUT_CONTRIBUTE">
+        <English>Contribute</English>
+        <German>Zum Projekt beitragen</German>
     </Key>
     <Key ID="STR_ENH_ABOUT_CREDITS">
         <English>Credits</English>
