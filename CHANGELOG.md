@@ -4,6 +4,7 @@
 - tweaked statusbar
 - added support for "ENH_init3DENMissionPreview.sqf" event script. Place this script in your folder and it will automatically be executed on mission preview
 - fixed some missing ;
+- Update fn_exportLoadout.sqf (PR #267) by hypoxia125
 
 # v7.7.6
 ## CHANGED
