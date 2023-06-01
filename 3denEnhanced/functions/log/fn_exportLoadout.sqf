@@ -53,7 +53,6 @@ private _magsInWeapons = flatten (weaponsItems _object apply {
 
   [_mag, _tube]
 });
-private _magazines = magazines _object;
 private _assignedItems = assigneditems _object;
 private _gear = [vest _object, headgear _object, goggles _object];
 private _export = "";
