@@ -2,6 +2,9 @@
 ## CHANGED
 - Fixed link to changelog
 - Fixed missing translation in menu strip
+- Texture Finder is now creating a loading
+  screen which drastically reduces fill time of the
+  tree view
 
 # v7.7.7
 ## CHANGED
