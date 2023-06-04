@@ -5,6 +5,12 @@
 - added support for "ENH_init3DENMissionPreview.sqf" event script. Place this script in your folder and it will automatically be executed on mission preview
 - fixed some missing ;
 - Update fn_exportLoadout.sqf (PR #267) by hypoxia125
+- Texture Finder
+  - Improved performance
+  - Added collapse/expand all buttons
+  - Alpha of textures is now shown via tiled background
+  - Increased UI size
+  - Increase texture count from ~10k to around ~47k in vanilla
 
 # v7.7.6
 ## CHANGED

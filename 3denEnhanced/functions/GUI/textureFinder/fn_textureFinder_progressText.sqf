@@ -13,7 +13,7 @@
 */
 
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
-#define CHECK (uiNamespace getVariable ["ENH_TextureFinder_TexturesFound", []] isNotEqualTo [])
+#define CHECK (uiNamespace getVariable ["ENH_TextureFinder_Textures", []] isNotEqualTo [])
 
 disableSerialization;
 private _display = findDisplay IDD_TEXTUREFINDER;
@@ -28,7 +28,7 @@ if CHECK exitWith
     localize "STR_ENH_TEXTUREFINDER_PROGRESSTEXT",
     uiNamespace getVariable "ENH_TextureFinder_ClassesSearched",
     uiNamespace getVariable "ENH_TextureFinder_ClassesFound",
-    count (uiNamespace getVariable "ENH_TextureFinder_TexturesFound")
+    count (uiNamespace getVariable "ENH_TextureFinder_Textures")
   ];
 };
 
@@ -41,7 +41,7 @@ while {!isNull _display} do
     _text,
     ENH_TextureFinder_ClassesSearched,
     ENH_TextureFinder_ClassesFound,
-    count ENH_TextureFinder_TexturesFound
+    count ENH_TextureFinder_Textures
   ];
   sleep 0.02;
 };
