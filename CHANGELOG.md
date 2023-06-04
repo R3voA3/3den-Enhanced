@@ -1,3 +1,8 @@
+# v7.7.8
+## CHANGED
+- Fixed link to changelog
+- Fixed missing translation in menu strip
+
 # v7.7.7
 ## CHANGED
 - updated Spanish translation thanks to regiregi22
