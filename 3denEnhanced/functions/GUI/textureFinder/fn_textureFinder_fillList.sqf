@@ -45,7 +45,7 @@ _ctrlTV tvAdd [[], "PAA"];
 };
 
 {
-  if (isNull _display) exitWith {};
+  if (isNull _display) exitWith {endLoadingScreen};
 
   getTextureInfo _x params ["_w", "_h", "_rgb"];
   _pixelCount = _w * _h;
@@ -55,29 +55,19 @@ _ctrlTV tvAdd [[], "PAA"];
   _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], _x];
   _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
   _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\nR: %4\nG: %5\nB: %6\nA: %7\n\n%8", _x, _w, _h, _rgb#0, _rgb#1, _rgb#2, _rgb#3, _shortcutText]];
-  _ctrlProgText ctrlSetStructuredText parseText format [_listStatusText, _forEachIndex + 1, _textureCountTotal];
+
+  progressLoadingScreen ((_forEachIndex + 1) / _textureCountTotal);
+
 } forEach (uiNamespace getVariable ["ENH_TextureFinder_Textures", []]);
 
-//Sort only the groups which contain images, if group is empty delete it
-{
-  if (isNull _display) exitWith {};
-  private _indexType = _forEachIndex;
+// Always show final result
+_ctrlProgText ctrlSetStructuredText parseText format [_listStatusText, _textureCountTotal, _textureCountTotal];
 
-  //Loop in reverse order to prevent index shift when deleting
-  for "_indexSize" from (count SIZES - 1) to 0 step -1 do
-  {
-    if ((_ctrlTV tvCount [_indexType, _forEachIndex]) == 0) then
-    {
-      _ctrlTV tvDelete [_indexType, _forEachIndex];
-    }
-    else
-    {
-      _ctrlTV tvSortAll [[_indexType, _forEachIndex], false];
-    };
-  };
-} forEach [0, 1];
+_ctrlTV tvSortAll [[], false];
 
 CTRL(IDC_TEXTUREFINDER_SEARCH) ctrlEnable true;
 CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlEnable true;
 CTRL(IDC_TEXTUREFINDER_COLLAPSEALL) ctrlEnable true;
 CTRL(IDC_TEXTUREFINDER_EXPANDALL) ctrlEnable true;
+
+endLoadingScreen;

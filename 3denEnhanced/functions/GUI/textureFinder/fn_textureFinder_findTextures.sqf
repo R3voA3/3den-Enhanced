@@ -13,6 +13,8 @@
 
 #include "\3denEnhanced\defines\ENH_defineCommon.hpp"
 
+startLoadingScreen [""];
+
 //Only add things which end with either .jpg or .paa
 // #define IS_JPG (".jpg" in (_string select [count _string - 4]))
 // #define IS_PAA (".paa" in (_string select [count _string - 4]))
