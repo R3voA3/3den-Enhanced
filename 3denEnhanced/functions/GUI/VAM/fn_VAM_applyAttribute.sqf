@@ -19,19 +19,13 @@ params["_object", "_aceBool", "_biBool"];
 
 private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
 
-
+// Ace Arsenal apply
 if (_aceBool) then {
   _object set3DENAttribute ["ace_arsenal_attribute", [keys _selectHashMap, 0]];
 };
 
+// Bohemia Interactive Arsenal apply
 if (_biBool) then {
-  _object set3DENAttribute ["ammoBox", toString[
-    [],
-    [],
-    [],
-    [],
-    1
-  ]];
   [_object, true] call BIS_fnc_removeVirtualWeaponCargo;
-  [_object, keys(_selectHashMap)] call BIS_fnc_addVirtualWeaponCargo;
+  [_object, keys(_selectHashMap), true, true] call BIS_fnc_addVirtualWeaponCargo;
 };
