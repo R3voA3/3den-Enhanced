@@ -6,6 +6,7 @@
   screen which drastically reduces fill time of the
   tree view
 - Changed define files
+- Added sqfc support where possible
 
 # v7.7.7
 ## CHANGED
