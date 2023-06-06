@@ -16,7 +16,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["_ctrlGroup", "_value"];
 parseSimpleArray _value params ["_hitpoints", "_damage"];

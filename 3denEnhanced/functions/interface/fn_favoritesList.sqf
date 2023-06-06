@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 #define FAVORITES (profileNamespace getVariable ["ENH_FavoritesList", []])
 #define PANEL_RIGHT (findDisplay IDD_DISPLAY3DEN displayCtrl 1021)
 

@@ -18,7 +18,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params [["_mode", 0], ["_classes", 0]];
 _mode = ["class", "import"] select _mode;

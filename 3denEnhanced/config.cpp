@@ -3,8 +3,8 @@
 #endif
 
 //Defines
-#include "defines\ENH_defineCommon.hpp"
-#include "defines\ENH_defineCtrls.hpp"
+#include "defines\defineCommon.inc"
+#include "defines\defineCtrls.inc"
 
 //Configs
 #include "cfgPatches.hpp"

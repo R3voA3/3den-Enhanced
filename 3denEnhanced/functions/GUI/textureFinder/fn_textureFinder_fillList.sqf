@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 #define TINY [0, 512]
 #define SMALL [513, 1024]

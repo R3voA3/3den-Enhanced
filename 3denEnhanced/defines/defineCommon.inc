@@ -1,15 +1,14 @@
-
 //GUI and script related macros
-#include "\a3\3DEN\UI\macros.inc"
+#include "..\defines\macros.inc"
 
 //DIK Key Codes
-#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "..\defines\definedikcodes.inc"
 
 //Common GRIDs
-#include "\a3\ui_f\hpp\definecommongrids.inc"
+#include "..\defines\definecommongrids.inc"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
-#include "\a3\3den\ui\resincl.inc"
+#include "..\defines\resincl.inc"
 
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10

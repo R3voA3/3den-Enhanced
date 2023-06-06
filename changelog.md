@@ -5,6 +5,7 @@
 - Texture Finder is now creating a loading
   screen which drastically reduces fill time of the
   tree view
+- Changed define files
 
 # v7.7.7
 ## CHANGED

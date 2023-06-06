@@ -1,5 +1,5 @@
 #define DEFAULT_SIZE 50
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 
 private _display = findDisplay IDD_DISPLAY3DEN;
