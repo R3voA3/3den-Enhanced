@@ -303,6 +303,7 @@ class CfgFunctions
       class checkShortCutsDuplicates;
       class exportAttributesToGitHub;
       class exportMenuStripToGitHub;
+      class testDisplays;
     };
   };
 };
