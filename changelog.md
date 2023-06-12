@@ -1,4 +1,7 @@
 # v7.7.8
+## ADDED
+- Shortcut ALT+O now opens the scenario folder
+
 ## CHANGED
 - Fixed link to changelog
 - Fixed missing translation in menu strip
