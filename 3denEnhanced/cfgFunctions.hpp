@@ -155,6 +155,21 @@ class CfgFunctions
       class ESE_sort;
       class ESE_toggleVirtual;
     };
+    class VAM
+    {
+      file = "3denEnhanced\functions\GUI\VAM";
+      class VAM_arsenalPrototype;
+      class VAM_applyAttribute;
+      class VAM_selectCompatibleItems;
+      class VAM_switchNodeState;
+      class VAM_tvItemInit;
+      class VAM_exportToSQF;
+      class VAM_handleItemStats;
+      class VAM_loadObject;
+      class VAM_loadSelectHashMap;
+      class VAM_openCloseACCTV;
+      class VAM_accTVItemInsert;
+    }
     class CfgSentencesBrowser
     {
       file = "3denEnhanced\functions\GUI\CFGS";
@@ -198,6 +213,7 @@ class CfgFunctions
       file = "3denEnhanced\functions\Misc";
       class alignEntities;
       class all3DENSelected;
+      class compatibleItems;
       class deleteCrew;
       class deleteEmptyLayers;
       class dynamicViewDistance;
@@ -225,6 +241,16 @@ class CfgFunctions
       class twoDigitsStr;
       class VHCTools;
       class centerMapOnSelection;
+      class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
     };
     class Interface
     {
