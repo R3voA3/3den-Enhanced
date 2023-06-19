@@ -21,7 +21,7 @@ params [["_mode", ""]];
 
 if (_mode == "fill") then // Fill list
 {
-  private _tvFavorites = CTRL(IDC_SENTENCES_FAVORITES);
+  private _tvFavorites = CTRL(IDC_SENTENCESBROWSER_FAVORITES);
   tvClear _tvFavorites;
   {
     _x params ["_text", "_configStr"];

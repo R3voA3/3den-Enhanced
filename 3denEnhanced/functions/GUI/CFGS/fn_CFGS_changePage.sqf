@@ -17,8 +17,8 @@
 #include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["_control", "_selectedIndex"];
-_tv = (ctrlParent _control displayCtrl IDC_SENTENCES_LIST);
-_tvFavorites = (ctrlParent _control displayCtrl IDC_SENTENCES_FAVORITES);
+_tv = (ctrlParent _control displayCtrl IDC_SENTENCESBROWSER_LIST);
+_tvFavorites = (ctrlParent _control displayCtrl IDC_SENTENCESBROWSER_FAVORITES);
 
 _tv ctrlEnable ([true, false] select _selectedIndex);
 _tv ctrlSetFade _selectedIndex;
