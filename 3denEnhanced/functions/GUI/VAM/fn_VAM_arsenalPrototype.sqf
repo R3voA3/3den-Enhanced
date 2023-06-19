@@ -11,7 +11,7 @@
  -
 */
 
-#include "\3denEnhanced\defineCommon.inc"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 #define WINDOW_W 140
 
@@ -19,7 +19,7 @@ private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
 uiNamespace setVariable ["ENH_VAM_display", _display];
 
 // Get check is mods var is existing. If not get it
-if (uiNamespace getVariable ["ENH_VIM_allAddons", []] isEqualTo []) then
+if (uiNamespace getVariable ["ENH_ESE_allAddons", []] isEqualTo []) then
 {
   call ENH_fnc_getAllItems;
 };
@@ -30,7 +30,7 @@ private _categoryTranslation = createHashMapFromArray
  ["AssaultRifle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0"],
  ["MachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0"],
  ["SniperRifle", "STR_A3_SNIPER1"],
- ["Shotgun", "STR_ENH_VIM_SHOTGUNS"],
+ ["Shotgun", "STR_ENH_ESE_SHOTGUNS"],
  ["SubmachineGun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0"],
  ["RocketLauncher", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_LAUNCHERS0"],
  ["Handgun", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_PISTOLS0"],
@@ -110,7 +110,7 @@ _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",
 {
   params["_ctrl", "_path"];
 
-  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+  private _picture = ((uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
 
   // check if it's a single entry or a folder
@@ -505,7 +505,7 @@ ctrlSetFocus _ctrlSearch;
 allControls _display apply { _x ctrlCommit 0};
 
 // Perhaps rewrite this
-private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
+private _allAddons = ((uiNamespace getVariable ["ENH_ESE_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
 
 // Prefill tree view with layout
 {
@@ -519,7 +519,7 @@ private _allAddons = ((uiNamespace getVariable ["ENH_VIM_allAddons", []]) - [[""
   private _indexCategory = _ctrlTV tvAdd [[_indexAddon], localize (_categoryTranslation get _x)];
   _ctrlTV tvSetPicture [[_indexAddon, _indexCategory], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
   _ctrlTV tvSetData [[_indexAddon, _indexCategory], _x];
- } foreach (uiNamespace getVariable ["ENH_VIM_types", []]);
+ } foreach (uiNamespace getVariable ["ENH_ESE_types", []]);
 } foreach _allAddons;
 
 private _allAddonClasses = [];
@@ -534,11 +534,11 @@ _allAddons apply
   _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
   private _indexAddon = _allAddonClasses find _addonClass;
-  private _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _category;
+  private _indexCategory = (uiNamespace getVariable ["ENH_ESE_types", []]) find _category;
 
   if (_indexCategory < 0) then
   {
-   _indexCategory = (uiNamespace getVariable ["ENH_VIM_types", []]) find _specificType;
+   _indexCategory = (uiNamespace getVariable ["ENH_ESE_types", []]) find _specificType;
   };
 
   private _indexEquipment = _ctrlTV tvAdd [[_indexAddon, _indexCategory], _displayName];
@@ -546,7 +546,7 @@ _allAddons apply
   _ctrlTV tvSetData [[_indexAddon, _indexCategory, _indexEquipment], _class];
   _ctrlTV tvSetPicture [[_indexAddon, _indexCategory, _indexEquipment], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
   _ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
-} foreach (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]);
+} foreach (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]);
 
 // initialize ENH_VAM_selectHashMap
 uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
@@ -589,13 +589,13 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 {
   params["_ctrl", "_path"];
 
-  private _picture = ((uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
+  private _picture = ((uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
   ctrlParent _ctrl displayCtrl IDC_VAM_PREVIEW_PICTURE ctrlSetText _picture;
 
   uiNamespace setVariable ["ENH_VAM_selectedItemTVPath", _path];
   uiNamespace setVariable ["ENH_VAM_selectedItem",
-    (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]
+    (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]
   ];
 
   // check if it's a single entry or a folder
