@@ -14,7 +14,7 @@
 	[_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params [["_selectHashMap", uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap]]];
 
