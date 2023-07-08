@@ -236,7 +236,7 @@ _ctrlButtonLoad ctrlSetPosition
  5 * GRID_H
 ];
 
-_ctrlButtonLoad ctrlSetText "Test Load Object";
+_ctrlButtonLoad ctrlSetText "Load Object";
 
 _ctrlButtonLoad ctrlAddEventHandler ["ButtonClick", {
   params["_ctrlButton"];
