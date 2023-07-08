@@ -40,7 +40,7 @@ private _compatibleItems = [
 ];
 
 private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
-private _itemHashMap = uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap];
+private _itemHashMap = uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap];
 // from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
 // Author: Alganthe
 

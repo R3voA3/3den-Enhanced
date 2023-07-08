@@ -24,6 +24,6 @@ private _newItems = [];
 
 {
 	// Current result is saved in variable _x
-	private _itemVal = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get toLower _x;
+	private _itemVal = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get toLower _x;
 	_selectHashMap set [toLower _x, _itemVal];
 } forEach _newItems;

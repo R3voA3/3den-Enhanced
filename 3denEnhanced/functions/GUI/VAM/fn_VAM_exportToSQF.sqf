@@ -18,7 +18,7 @@ private _fnc_traverseChildren =
     {
     if (_ctrlTV tvValue _newPath > 0) then
     {
-      private _category = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get (_ctrlTV tvData _newPath) select 4;
+      private _category = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get (_ctrlTV tvData _newPath) select 4;
       diag_log _category;
     };
     };
