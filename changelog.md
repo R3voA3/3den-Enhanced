@@ -10,6 +10,7 @@
   tree view
 - Changed define files
 - Added sqfc support where possible
+- Entity counter is no longer shown on very small screen with large UI size
 
 # v7.7.7
 ## CHANGED

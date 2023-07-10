@@ -18,7 +18,19 @@ params [["_mode", "run"]];
 disableSerialization;
 
 private _display = findDisplay 313;
-private _enabled = "Preferences" get3DENMissionAttribute "ENH_Statusbar_EntityCounter";
+private _conditionHide = (102 * (pixelW * pixelGrid * 0.50) >= (safezoneW - 60 * (pixelW * pixelGrid * 0.50)) - 109 * (pixelW * pixelGrid * 0.50) - 2 * (2 * pixelW));
+
+// Hide control if screen is too small or gui scale too big. We wait 20 seconds because this command can crash Arma
+if (_conditionHide) then
+{
+  [] spawn
+  {
+    waitUntil {sleep 1; is3DEN};
+    "Preferences" set3DENMissionAttribute ["ENH_Statusbar_EntityCounter", false];
+  };
+};
+
+private _enabled = ("Preferences" get3DENMissionAttribute "ENH_Statusbar_EntityCounter") && !_conditionHide;
 
 switch (_mode) do
 {
@@ -31,7 +43,7 @@ switch (_mode) do
   };
   case "run":
   {
-    if !(_enabled) exitWith {false};
+    if !(_enabled) exitWith {};
     {
       _x params ["_idc", "_type"];
       (_display displayCtrl _idc) ctrlSetText (str count get3DENSelected _type);
