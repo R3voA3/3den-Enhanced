@@ -9682,4 +9682,9 @@
         <Polish>Wpisy w liście: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Polish>
         <Spanish>Entradas en Lista: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Spanish>
     </Key>
+    <Key ID="STR_ENH_TOOLS_LIMIT_ARSENAL">
+        <English>Virtual Arsenal Manager</English>
+        <Polish>Wirtualny menedżer Arsenalu</Polish>
+        <Spanish>Gerente de Arsenal Virtual</Spanish>
+    </Key>
 </Project>

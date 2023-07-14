@@ -72,7 +72,7 @@ _ctrlTitle ctrlSetPosition
  5 * GRID_H
 ];
 
-_ctrlTitle ctrlSetText "STR_ENH_TOOLS_LIMIT_ARSENAL";
+_ctrlTitle ctrlSetText localize "STR_ENH_TOOLS_LIMIT_ARSENAL";
 _ctrlTitle ctrlCommit 0;
 
 _ctrlSearch = _display ctrlCreate ["ctrlEdit", IDC_VAM_SEARCH];
