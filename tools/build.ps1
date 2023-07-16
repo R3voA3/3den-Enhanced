@@ -66,7 +66,7 @@ if ($DoPublish -eq "true")
   Write-Host "Zip file created."
   Write-Host "Publishing to Steam"
 
-  Update-Publish
+  Update-Workshop
 
   Write-Host "Publishing finished"
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
