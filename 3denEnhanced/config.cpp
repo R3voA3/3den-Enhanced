@@ -35,6 +35,7 @@
 #include "GUI\variableViewer.hpp"
 #include "GUI\ESE.hpp"
 #include "GUI\zeusAddons.hpp"
+#include "GUI\VAMPresetsMenu.hpp"
 
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
