@@ -1,12 +1,12 @@
 param($DoPublish = "false")
 
 
-$processArma3 = Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
+Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 
 Wait-Process processArma3
 
 #Change here---------
-$ModVersion = "7.7.8"
+$ModVersion = "7.7.9"
 #--------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
@@ -72,4 +72,4 @@ if ($DoPublish -eq "true")
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
 
-Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
+#Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
