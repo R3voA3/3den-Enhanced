@@ -290,6 +290,8 @@ class CfgFunctions
     class Attributes
     {
       file = "3denEnhanced\functions\attributes";
+      class SPR_onAttributeLoad;
+      class SPR_onAttributeSave;
       class advancedDamage_onAttributeLoad;
       class advancedDamage_onAttributeSave;
       class airdrop_onAttributeLoad;
@@ -305,6 +307,7 @@ class CfgFunctions
       class dynamicSkill_onAttributeSave;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
+      class face;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
@@ -318,10 +321,9 @@ class CfgFunctions
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
-      class SPR_onAttributeLoad;
-      class SPR_onAttributeSave;
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
+      class unitInsignia;
     };
     class Internal
     {
