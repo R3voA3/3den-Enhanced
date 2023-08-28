@@ -86,7 +86,7 @@ class ENH_ESE
 };
 class ENH_Arsenal
 {
-	text = "STR_ENH_TOOLS_LIMIT_ARSENAL";
+	text = "$STR_ENH_TOOLS_LIMIT_ARSENAL";
 	action = "call ENH_fnc_VAM_arsenalPrototype"; //"execVM ""t.sqf""";
 	opensNewWindow = 1;
 };

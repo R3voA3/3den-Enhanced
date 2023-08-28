@@ -26,6 +26,53 @@ if (_aceBool) then {
 
 // Bohemia Interactive Arsenal apply
 if (_biBool) then {
-  [_object, true] call BIS_fnc_removeVirtualWeaponCargo;
-  [_object, keys(_selectHashMap), true, true] call BIS_fnc_addVirtualWeaponCargo;
+  private _weapons = [];
+  private _magazines = [];
+  private _items = [];
+  private _backpacks = [];
+
+  {
+    // Current key is saved in variable _x
+    private _configName = toLower(_x);
+    _y params ["", "", "", "", ["_category", ""], ["_specificType", ""]];
+
+    switch (true) do
+    {
+      case (_category isEqualTo "Weapon"):
+      {
+        _weapons pushBack _configName;
+        //_weaponsAmount pushBack _amount;
+      };
+      case (_category in ["Mine", "Magazine"]):
+      {
+        _magazines pushBack _configName;
+        //_magazinesAmount pushBack _amount;
+      };
+      case (_category in ["Item", "Equipment"]):
+      {
+        if (_specificType isEqualTo "Backpack") then
+        {
+          _backpacks pushBack _configName;
+          //_backpacksAmount pushBack _amount;
+        }
+        else
+        {
+          _items pushBack _configName;
+          //_itemsAmount pushBack _amount;
+        };
+      };
+    };
+  } forEach _selectHashMap;
+
+  private _value = str
+  [
+    [
+      [_weapons, []],
+      [_magazines, []],
+      [_items, []],
+      [_backpacks, []]
+    ],
+    true
+  ];
+  _object set3DENAttribute ["ammobox", _value];
 };
