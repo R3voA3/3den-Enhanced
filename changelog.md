@@ -1,3 +1,19 @@
+# v7.7.9
+## ADDED
+- Variable to freed hostage that holds the player object of who freed it _hostage getVariable ["ENH_WasFreedBy", objNull]; #263
+
+## CHANGED
+- Improved: Code for allowSprint attribute
+- Updated: Stay on Position attribute is now again enabled for MP
+- Improved: Code for marker draw priority
+- Unit Insignia and Face attribute controls were enhanced
+- Updated loadorder to latest in 2.14
+- Updated Virtual Arsenal Manager code thanks to linkion
+
+## REMOVED
+- Menu strip entry of WIP feature
+- Unused file
+
 # v7.7.8
 ## ADDED
 - Shortcut ALT+O now opens the scenario folder
