@@ -136,24 +136,26 @@ class ENH_SPR
           }\
           else\
           {\
+            private _respawnEH = -1;\
             if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then\
             {\
+              _respawnEH = addMissionEventHandler\
               [\
-                str _unit, 'onEachFrame',\
+                'draw3D',\
                 {\
-                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];\
+                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_thisArgs # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_thisArgs # 1) - time), 2];\
                 },\
                 [_unit, _respawnTime]\
-              ] call BIS_fnc_addStackedEventHandler;\
+              ];\
             };\
             sleep ENH_SPR_Delay;\
+            removeMissionEventHandler ['draw3D', _respawnEH];\
+            [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;\
           };\
-          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;\
           _unit call ENH_fnc_SPR_respawn;\
         };\
       }";
       defaultValue = "[0, 20, false, false]";
     };
-
   };
 };
