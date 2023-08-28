@@ -26,7 +26,7 @@ private _fnc_getAceArsenalAttr =
     private _aceAttribute = _object get3DENAttribute "ace_arsenal_attribute";
     {
       private _itemClass = toLower(_x);
-      private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+      private _itemValues = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get _itemClass;
       _returnSelectHashMap insert [[_itemClass, _itemValues]];
     } forEach (_aceAttribute select 0 select 0);
   };
@@ -41,7 +41,7 @@ private _fnc_getBIArsenalAttr = {
   private _biAttribute = [_object] call BIS_fnc_getVirtualWeaponCargo;
   {
     private _itemClass = toLower(_x);
-    private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+    private _itemValues = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get _itemClass;
     _returnSelectHashMap insert [[_itemClass, _itemValues]];
   } forEach _biAttribute;
 

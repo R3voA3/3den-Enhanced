@@ -28,7 +28,7 @@ private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", creat
 private _itemClass = toLower(_ctrlTV tvData _selectedPath);
 
 if (_add == 1 && (_ctrlTV tvCount _selectedPath) == 0) then {
-	private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+	private _itemValues = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get _itemClass;
 	_selectHashMap insert [[_itemClass, _itemValues]];
 } else {
 	_selectHashMap deleteAt _itemClass;
@@ -49,7 +49,7 @@ private _fnc_traverseChildren =
 		private _itemClass = toLower(_ctrlTV tvData _newPath);
 
 		if (_add == 1 && (_ctrlTV tvCount _newPath) == 0) then {
-			private _itemValues = (uiNamespace getVariable ["ENH_VIM_itemsHashMap", createHashMap]) get _itemClass;
+			private _itemValues = (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) get _itemClass;
 			_selectHashMap insert [[_itemClass, _itemValues]];
 		} else {
 			_selectHashMap deleteAt _itemClass;
