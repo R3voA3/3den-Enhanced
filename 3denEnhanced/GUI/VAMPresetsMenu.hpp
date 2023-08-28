@@ -2,51 +2,70 @@
 #define DIALOG_W 120
 #define DIALOG_H 100
 
+class RscButton;
+
 class ENH_VAM_PresetMenu {
 	idd = 12345;
 	
 	class ControlsBackground {
 		class Background: ctrlStaticBackground
 		{
-			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
-			h = DIALOG_H * GRID_H + 7 * GRID_H;
+			x = GUI_GRID_CENTER_X + 0 * GUI_GRID_CENTER_W;
+			y = GUI_GRID_CENTER_Y + 0 * GUI_GRID_CENTER_H;
+			w = 40 * GUI_GRID_CENTER_W;
+			h = 25 * GUI_GRID_CENTER_H;
 		};
 		class Header: ctrlStaticTitle
 		{
-			text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
-			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP;
-			w = DIALOG_W * GRID_W;
-			h = CTRL_DEFAULT_H;
-		};
-		class Footer: ctrlStaticFooter
-		{
-			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
-			w = DIALOG_W * GRID_W;
-			h = CTRL_DEFAULT_H + 2 * GRID_H;
+			text = "Virtual Arsenal Manager Presets";
+			x = GUI_GRID_CENTER_X + 0 * GUI_GRID_CENTER_W;
+			y = GUI_GRID_CENTER_Y + 0 * GUI_GRID_CENTER_H;
+			w = 40 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
 		};
 	};
 
 	class Controls {
-		class Filter: ctrlListNBox {
-			idc = IDC_VAM_PRESET_ListNBoxFilter;
-			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
-			h = 0.04 * GRID_H;
+		class Filter: ctrlListNBox
+		{
+			idc = IDC_VAM_PRESET_LISTNBOXFILTER;
+			x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 38 * GUI_GRID_CENTER_W;
+			h = 1 * GUI_GRID_CENTER_H;
 		};
-
-		class Content: ctrlListNBox {
-			idc = IDC_VAM_PRESET_ListNBoxContent;
-			disableOverflow = 1;
-			tooltipPerColumn = 1;
-			x = CENTERED_X(DIALOG_W);
-			y = DIALOG_TOP + CTRL_DEFAULT_H;
-			w = DIALOG_W * GRID_W;
-			h = DIALOG_H * GRID_H + 7 * GRID_H;
+		class Content: ctrlListNBox
+		{
+			idc = IDC_VAM_PRESET_LISTNBOXCONTENT;
+			x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 38 * GUI_GRID_CENTER_W;
+			h = 20 * GUI_GRID_CENTER_H;
+		};
+		class LoadButton: RscButton
+		{
+			idc = IDC_VAM_PRESET_LOADBUTTON;
+			text = "Load Preset";
+			x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+		};
+		class SaveButton: RscButton
+		{
+			idc = IDC_VAM_PRESET_SAVEBUTTON;
+			text = "Save Preset";
+			x = 7 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
+		};
+		class Close: ctrlButtonClose
+		{
+			x = 34 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
+			y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
+			w = 5 * GUI_GRID_CENTER_W;
+			h = 1.5 * GUI_GRID_CENTER_H;
 		};
 
 		//...
