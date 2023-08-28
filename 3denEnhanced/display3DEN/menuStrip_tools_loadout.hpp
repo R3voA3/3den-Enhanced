@@ -15,9 +15,9 @@ class ENH_Folder_Loadout
     "ENH_RemoveGoggles",
     "ENH_RemoveHeadgear",
     "ENH_RemoveWeapons",
-    "ENH_RemoveGear",
+    "ENH_RemoveGear"/* ,
     "Separator",
-    "ENH_Arsenal"
+    "ENH_Arsenal" */
   };
 };
 class ENH_CopyLoadout
