@@ -60,7 +60,7 @@ class ENH_AttributeSearch
     class TreeView: ctrlTree
     {
       idc = 11;
-      idcSearch = 10
+      idcSearch = 10;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 12 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;

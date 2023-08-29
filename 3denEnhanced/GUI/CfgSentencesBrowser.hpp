@@ -3,7 +3,7 @@
 
 class ENH_CfgSentencesBrowser
 {
-  idd = IDD_SENTENCES;
+  idd = IDD_SENTENCESBROWSER;
   movingEnable = true;
   onLoad = "_this call ENH_fnc_CFGS_onLoad";
   onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites', ENH_CFGS_Favorites];";
@@ -33,7 +33,7 @@ class ENH_CfgSentencesBrowser
     };
     class Count: ctrlStatic
     {
-      idc = IDC_SENTENCES_COUNT;
+      idc = IDC_SENTENCESBROWSER_COUNT;
       x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 11 * GRID_W;
       y = DIALOG_TOP;
       w = 11 * GRID_W;
@@ -44,7 +44,7 @@ class ENH_CfgSentencesBrowser
   {
     class Pages: ctrlToolbox
     {
-      idc = IDC_SENTENCES_PAGES;
+      idc = IDC_SENTENCESBROWSER_PAGES;
       columns = 2;
       rows = 1;
       x = CENTERED_X(DIALOG_W) + GRID_W;
@@ -57,7 +57,7 @@ class ENH_CfgSentencesBrowser
     };
     class List: ctrlTree
     {
-      idc = IDC_SENTENCES_LIST;
+      idc = IDC_SENTENCESBROWSER_LIST;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -68,7 +68,7 @@ class ENH_CfgSentencesBrowser
     };
     class ListFavorites: ctrlTree
     {
-      idc = IDC_SENTENCES_FAVORITES;
+      idc = IDC_SENTENCESBROWSER_FAVORITES;
       x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
       y = DIALOG_TOP + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -79,7 +79,7 @@ class ENH_CfgSentencesBrowser
     };
     class Search: ctrlEdit
     {
-      idc = IDC_SENTENCES_SEARCH;
+      idc = IDC_SENTENCESBROWSER_SEARCH;
       x = CENTERED_X(DIALOG_W) + 55 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 20 * GRID_W;
@@ -87,7 +87,7 @@ class ENH_CfgSentencesBrowser
     };
     class Filter: ctrlCombo
     {
-      idc = IDC_SENTENCES_FILTER;
+      idc = IDC_SENTENCESBROWSER_FILTER;
       x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
       y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
       w = 22 * GRID_W;

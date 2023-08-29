@@ -251,9 +251,9 @@ class ENH_BriefingEditor
     };
     class DeleteTemplate: ctrlButtonPictureKeepAspect
     {
-      idc = IDC_VIM_DELETETEMPLATE;
+      idc = IDC_ESE_DELETETEMPLATE;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
-      tooltip = "$STR_ENH_VIM_DELETETEMPLATE";
+      tooltip = "$STR_ENH_ESE_DELETETEMPLATE";
       x = CENTERED_X(160) + 35 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 5 * GRID_W;

@@ -13,11 +13,11 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 disableSerialization;
 
-private _display = findDisplay IDD_3DEN createDisplay "ENH_ZeusAddons";
+private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_ZeusAddons";
 private _ctrlTVPatches = CTRL(10);
 private _validCfgPatches = [];
 

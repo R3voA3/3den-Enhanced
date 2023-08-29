@@ -60,67 +60,41 @@ class Cfg3DEN
     };
     class EditCodeMulti5: EditCodeMulti3
     {
-      h = 61.5 * GRID_H;
+      h = (5 + 20 * 3.5) * GRID_H;
       class Controls: Controls
       {
         class Background: Background
         {
-          h = 53.5 * GRID_H;
+          h = (20 * 3.5 + 0.6 * 5) * GRID_H;
         };
         class Value: Value
         {
-          h = 55.5 * GRID_H;
+          h = 20 * 3.5 * GRID_H - 1 * GRID_H; // We make this one one grid smaller so text will never overlap the frame
         };
         class Title: Title
         {
-          h = 55.5 * GRID_H;
+          h = (20 * 3.5 + 1 * 5) * GRID_H;
         };
       };
     };
     #endif
-    #ifndef ENH_HIDE_SPR
-      #include "controls\SPR.hpp"
-    #endif
-    #ifndef ENH_HIDE_ADVANCEDDAMAGE
-      #include "controls\advancedDamage.hpp"
-    #endif
-    #ifndef ENH_HIDE_AIRDROP
-      #include "controls\airdrop.hpp"
-    #endif
-    #ifndef ENH_HIDE_AMBIENTANIMATIONS
-      #include "controls\ambientAnimations.hpp"
-    #endif
-    #ifndef ENH_HIDE_AMBIENTFLYBY
-      #include "controls\ambientFlyby.hpp"
-    #endif
-    #ifndef ENH_HIDE_DYNAMICSKILL
-      #include "controls\dynamicSkill.hpp"
-    #endif
-    #ifndef ENH_HIDE_ESTABLISHINGSHOT
-      #include "controls\establishingShot.hpp"
-    #endif
-    #ifndef ENH_HIDE_GROUPMARKER
-      #include "controls\groupMarker.hpp"
-    #endif
-    #ifndef ENH_HIDE_HOLDACTION
-      #include "controls\holdAction.hpp"
-    #endif
-    #ifndef ENH_HIDE_INTROTEXT
-      #include "controls\introText.hpp"
-    #endif
-    #ifndef ENH_HIDE_MAPINDICATORS
-      #include "controls\mapIndicators.hpp"
-    #endif
-    #ifndef ENH_HIDE_INTERFACE
-      #include "controls\menuStripBlacklist.hpp"
-    #endif
-    #ifndef ENH_HIDE_MISSIONENDING
-      #include "controls\missionEndingCasualties.hpp"
-    #endif
+    #include "controls\SPR.hpp"
+    #include "controls\advancedDamage.hpp"
+    #include "controls\airdrop.hpp"
+    #include "controls\ambientAnimations.hpp"
+    #include "controls\ambientFlyby.hpp"
+    #include "controls\dynamicSkill.hpp"
+    #include "controls\establishingShot.hpp"
+    #include "controls\face.hpp"
+    #include "controls\groupMarker.hpp"
+    #include "controls\holdAction.hpp"
+    #include "controls\introText.hpp"
+    #include "controls\mapIndicators.hpp"
+    #include "controls\menuStripBlacklist.hpp"
+    #include "controls\missionEndingCasualties.hpp"
     #include "controls\subCategoryNoHeader_Fixed.hpp"
-    #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
-      #include "controls\timeMultiplier.hpp"
-    #endif
+    #include "controls\timeMultiplier.hpp"
+    #include "controls\unitInsignia.hpp"
   };
   class Mission
   {
@@ -298,7 +272,7 @@ class Cfg3DEN
           #ifndef ENH_HIDE_LIMITSPEED
             #include "attributesObject\limitSpeed.hpp"
           #endif
-          #ifndef ENH_HIDE_AIRDROP
+          #ifndef ENH_HIDE_DOSTOP
             #include "attributesObject\doStop.hpp"
           #endif
           #ifndef ENH_HIDE_REMOVEFROMREMAINSCOLLECTOR
@@ -347,7 +321,6 @@ class Cfg3DEN
       };
     };
   };
-  #if __GAME_VER_MIN__ >= 13 //TODO: Remove when version 13 is stable
   class Marker
   {
     class AttributeCategories
@@ -363,5 +336,4 @@ class Cfg3DEN
       };
     };
   };
-  #endif
 };

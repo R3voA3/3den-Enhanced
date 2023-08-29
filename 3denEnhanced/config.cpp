@@ -3,19 +3,17 @@
 #endif
 
 //Defines
-#include "defines\ENH_defineCommon.hpp"
-#include "defines\ENH_defineCtrls.hpp"
+#include "defines\defineCommon.inc"
+#include "defines\defineCtrls.inc"
 
 //Configs
 #include "cfgPatches.hpp"
 #include "cfgFontFamilies.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
-#include "cfgSounds.hpp"
 #include "display3DEN\display3DEN.hpp"
 
 //Custom GUIs
-#include "GUI\3DENCameraPositions.hpp"
 #include "GUI\3DENRadio.hpp"
 #include "GUI\actionCreator.hpp"
 #include "GUI\attributeSearch.hpp"
@@ -24,7 +22,6 @@
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\createObject.hpp"
 #include "GUI\exportGUIDefines.hpp"
-#include "GUI\extraction.hpp"
 #include "GUI\functionsViewer.hpp"
 #include "GUI\garrison.hpp"
 #include "GUI\moduleInformation.hpp"
@@ -36,9 +33,9 @@
 #include "GUI\selectionFilter.hpp"
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
-#include "GUI\VIM.hpp"
+#include "GUI\ESE.hpp"
 #include "GUI\zeusAddons.hpp"
 
 //Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
-//#include "GUI\RscDisplayConfigViewer.hpp"
+#include "GUI\display3DENSave.hpp"

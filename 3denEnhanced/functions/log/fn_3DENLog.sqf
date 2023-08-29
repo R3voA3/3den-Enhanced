@@ -21,7 +21,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params [["_mode", ""]];
 
@@ -200,7 +200,7 @@ switch (_mode) do
     {
       //Set variable used by Display3denCopy and create the display
       uiNamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_CONTEXTMENU_LOGOBJECTINFO", _text]];
-      findDisplay IDD_3DEN createDisplay "Display3denCopy";
+      findDisplay IDD_DISPLAY3DEN createDisplay "Display3denCopy";
       nil
     };
   };

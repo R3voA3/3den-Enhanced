@@ -187,7 +187,7 @@ class ENH_FunctionsViewer
         {
           text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";
           picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
-          weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#vehicle-inventory-manager-vim";
+          weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#functions-viewer";
           opensNewWindow = 1;
         };
         class ShowOnBiki

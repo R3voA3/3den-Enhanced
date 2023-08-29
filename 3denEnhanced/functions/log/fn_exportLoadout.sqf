@@ -32,6 +32,7 @@ private _fnc_addArray =
   params ["_name", "_array"];
   _export = _export + format [IND + "%1[] = {", _name];
   {
+    if (_x == "") then {continue};
     if (_foreachindex > 0) then {_export = _export + ", "};
     _export = _export + format ["""%1""", _x];
   } foreach _array;
@@ -41,16 +42,25 @@ private _fnc_addArray =
 private _class = typeOf _object;
 private _uniformClass = format ["uniformClass = ""%1"";", uniform _object];
 private _backpack = format ["backpack = ""%1"";", backpack _object];
+
 private _weapons = weapons _object;
 private _primWeaponItems = primaryWeaponItems _object;
 private _secWeaponItems = secondaryWeaponItems _object;
+private _handgunItems = handgunItems _object;
+private _magsInWeapons = flatten (weaponsItems _object apply {
+  private _mag = (_x param [4, [], []]) param [0, ""];
+  private _tube = (_x param [5, [], []]) param [0, ""];
+
+  [_mag, _tube]
+});
 private _assignedItems = assigneditems _object;
+private _gear = [vest _object, headgear _object, goggles _object];
 private _export = "";
 
 ["weapons", _weapons + ["Throw", "Put"]] call _fnc_addArray;
-["magazines", magazines _object] call _fnc_addArray;
+["magazines", magazines _object + _magsInWeapons] call _fnc_addArray;
 ["items", items _object] call _fnc_addArray;
-["linkedItems", [vest _object, headgear _object, goggles _object] + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems] call _fnc_addArray;
+["linkedItems", _gear + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems + _handgunItems] call _fnc_addArray;
 
 if (_mode) then
 {//Respawn Loadout for config

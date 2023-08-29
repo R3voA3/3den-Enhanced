@@ -23,13 +23,6 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    class Extraction
-    {
-      file = "3denEnhanced\functions\GUI\extraction";
-      class extraction_onCheckedChanged;
-      class extraction_onLoad;
-      class extraction_setup;
-    };
     class CreateObject
     {
       file = "3denEnhanced\functions\GUI\createObject";
@@ -39,10 +32,8 @@ class CfgFunctions
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
-      class textureFinder_copyPath;
       class textureFinder_fillList;
       class textureFinder_findTextures;
-      class textureFinder_progressText;
       class textureFinder_updatePreview;
     };
     class BatchReplace
@@ -127,17 +118,6 @@ class CfgFunctions
       file = "3denEnhanced\functions\GUI\moduleInformation";
       class moduleInformation_onLoad;
     };
-    class 3DENCam
-    {
-      file = "3denEnhanced\functions\GUI\3DENCam";
-      class 3DENCam_deleteEntry;
-      class 3DENCam_get3DENCameraParameters;
-      class 3DENCam_onKillFocus;
-      class 3DENCam_onSetFocus;
-      class 3DENCam_saveList;
-      class 3DENCam_set3DENCameraParameters;
-      class 3DENCam_updateList;
-    };
     class VariableViewer
     {
       file = "3denEnhanced\functions\GUI\variableViewer";
@@ -152,29 +132,44 @@ class CfgFunctions
       class variableViewer_onSearch;
       class variableViewer_setOrCreate;
     };
-    class VIM
+    class ESE
     {
-      file = "3denEnhanced\functions\GUI\VIM";
-      class VIM_addItem;
-      class VIM_applyAttribute;
-      class VIM_changeFilter;
-      class VIM_clearInventory;
-      class VIM_close;
-      class VIM_export;
-      class VIM_fullArsenal;
-      class VIM_handleTemplates;
-      class VIM_lbAdd;
-      class VIM_lnbAdd;
-      class VIM_loadAttributeValue;
-      class VIM_onModFilterChanged;
-      class VIM_open;
-      class VIM_removeItem;
-      class VIM_resetSearch;
-      class VIM_resetStorage;
-      class VIM_search;
-      class VIM_sort;
-      class VIM_toggleVirtual;
+      file = "3denEnhanced\functions\GUI\ESE";
+      class ESE_addItem;
+      class ESE_applyAttribute;
+      class ESE_changeFilter;
+      class ESE_clearInventory;
+      class ESE_close;
+      class ESE_export;
+      class ESE_fullArsenal;
+      class ESE_handleTemplates;
+      class ESE_lbAdd;
+      class ESE_lnbAdd;
+      class ESE_loadAttributeValue;
+      class ESE_onModFilterChanged;
+      class ESE_open;
+      class ESE_removeItem;
+      class ESE_resetSearch;
+      class ESE_resetStorage;
+      class ESE_search;
+      class ESE_sort;
+      class ESE_toggleVirtual;
     };
+    class VAM
+    {
+      file = "3denEnhanced\functions\GUI\VAM";
+      class VAM_arsenalPrototype;
+      class VAM_applyAttribute;
+      class VAM_selectCompatibleItems;
+      class VAM_switchNodeState;
+      class VAM_tvItemInit;
+      class VAM_exportToSQF;
+      class VAM_handleItemStats;
+      class VAM_loadObject;
+      class VAM_loadSelectHashMap;
+      class VAM_openCloseACCTV;
+      class VAM_accTVItemInsert;
+    }
     class CfgSentencesBrowser
     {
       file = "3denEnhanced\functions\GUI\CFGS";
@@ -218,11 +213,10 @@ class CfgFunctions
       file = "3denEnhanced\functions\Misc";
       class alignEntities;
       class all3DENSelected;
+      class compatibleItems;
       class deleteCrew;
       class deleteEmptyLayers;
-      #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
       class dynamicViewDistance;
-      #endif
       class exportMissionParams;
       class floatToTime;
       class generateSteamMissionDescription;
@@ -247,20 +241,28 @@ class CfgFunctions
       class twoDigitsStr;
       class VHCTools;
       class centerMapOnSelection;
+      class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
     };
-    #ifndef ENH_HIDE_INTERFACE
     class Interface
     {
       file = "3denEnhanced\functions\interface";
       class assetBrowser_collapse;
       class entityList_addTooltips;
       class favoritesList;
-      class locationList;
+      class locationList_enhanced;
       class menuStrip_removeItems;
       class statusbar_entityCounter;
       class statusbar_sessionTimer;
     };
-    #endif
     class Log
     {
       file = "3denEnhanced\functions\log";
@@ -288,75 +290,48 @@ class CfgFunctions
     class Attributes
     {
       file = "3denEnhanced\functions\attributes";
-      #ifndef ENH_HIDE_ADVANCEDDAMAGE
+      class SPR_onAttributeLoad;
+      class SPR_onAttributeSave;
       class advancedDamage_onAttributeLoad;
       class advancedDamage_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AIRDROP
       class airdrop_onAttributeLoad;
       class airdrop_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AMBIENTANIMATIONS
       class ambientAnimations_initInEditor;
       class ambientAnimations_onAttributeLoad;
       class ambientAnimations_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_AMBIENTFLYBY
       class ambientFlyby_onAttributeLoad;
       class ambientFlyby_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_DEBUGOPTIONS
       class debugOptions_activeScripts;
       class debugOptions_init;
-      #endif
-      #ifndef ENH_HIDE_DYNAMICSKILL
       class dynamicSkill_onAttributeLoad;
       class dynamicSkill_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_ESTABLISHINGSHOT
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_GROUPMARKER
+      class face;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
-      #endif
-      #ifndef ENH_HIDE_HOLDACTION
       class holdAction_onAttributeLoad;
       class holdAction_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_INTROTEXT
       class introText_onAttributeLoad;
       class introText_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_MAPINDICATORS
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_INTERFACE
       class menuStripBlacklist_onAttributeLoad;
-      #endif
-      #ifndef ENH_HIDE_MISSIONENDING
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
-      #endif
-      #ifndef ENH_HIDE_SPR
-      class SPR_onAttributeLoad;
-      class SPR_onAttributeSave;
-      #endif
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
+      class unitInsignia;
     };
-    #ifdef __A3_DEBUG__
-    class ENH_Internal
+    class Internal
     {
       file = "3denEnhanced\functions\internal";
       class checkShortCutsDuplicates;
       class exportAttributesToGitHub;
       class exportMenuStripToGitHub;
+      class testDisplays;
     };
-    #endif
   };
 };

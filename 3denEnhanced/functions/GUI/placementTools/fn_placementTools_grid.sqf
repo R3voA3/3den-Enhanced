@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 private _startPos = ENH_PlacementTools_Center;
 private _offset = [0, 0, 0];

@@ -13,11 +13,11 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 disableSerialization;
 
-private _ctrlMenuStrip = findDisplay IDD_3DEN displayCtrl 120;
+private _ctrlMenuStrip = findDisplay IDD_DISPLAY3DEN displayCtrl 120;
 private _toDelete = profileNamespace getVariable ["ENH_MenuStrip_Blacklist", []];
 if (_toDelete isEqualTo []) exitWith {};
 

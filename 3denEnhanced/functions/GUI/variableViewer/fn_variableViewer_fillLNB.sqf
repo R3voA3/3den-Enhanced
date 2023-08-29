@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 #define SHOW_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false])
 
 disableSerialization;

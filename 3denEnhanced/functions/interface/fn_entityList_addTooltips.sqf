@@ -21,5 +21,5 @@ for "_i" from 0 to (_ctrlTV tvCount _path) - 1 do
 {
   private _currentPath = _path + [_i];
   _ctrlTV tvSetTooltip [_currentPath, _ctrlTV tvText _currentPath];
-  [_currentPath] call ENH_fnc_assetBrowser_addTooltips;
+  [_currentPath] call ENH_fnc_entityList_addTooltips;
 };

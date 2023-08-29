@@ -1,9 +1,9 @@
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 
 params ["_object"];
 
-private _display = findDisplay IDD_3DEN;
+private _display = findDisplay IDD_DISPLAY3DEN;
 private _positionCount = 0;
 private _classes = toLower (ctrlText CTRL(IDC_GARRISON_BLACKLIST_VALUE));
 private _isBlackList = lbCurSel CTRL(IDC_GARRISON_BLACKLIST_TOGGLE);

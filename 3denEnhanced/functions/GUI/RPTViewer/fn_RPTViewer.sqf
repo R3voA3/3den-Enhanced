@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 #define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 100])
 
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
@@ -30,7 +30,7 @@ switch _mode do
 {
   case "open":
   {
-    _display = findDisplay IDD_3DEN createDisplay "ENH_RPTViewer";
+    _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_RPTViewer";
     uiNamespace setVariable ["ENH_RPTViewer_Display", _display];
   };
   case "update":

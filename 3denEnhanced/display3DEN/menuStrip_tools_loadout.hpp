@@ -4,7 +4,7 @@ class ENH_Folder_Loadout
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
-    "ENH_VIM",
+    "ENH_ESE",
     "ENH_CopyLoadout",
     "ENH_ApplyLoadout",
     "ENH_ExportLoadoutConfig",
@@ -15,7 +15,9 @@ class ENH_Folder_Loadout
     "ENH_RemoveGoggles",
     "ENH_RemoveHeadgear",
     "ENH_RemoveWeapons",
-    "ENH_RemoveGear"
+    "ENH_RemoveGear"/* ,
+    "Separator",
+    "ENH_Arsenal" */
   };
 };
 class ENH_CopyLoadout
@@ -75,10 +77,16 @@ class ENH_RemoveGear
   action = "7 call ENH_fnc_removeGear";
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_F};
 };
-class ENH_VIM
+class ENH_ESE
 {
-  text = "$STR_ENH_TOOLS_VIM";
-  action = "call ENH_fnc_VIM_open";
+  text = "$STR_ENH_TOOLS_ESE";
+  action = "call ENH_fnc_ESE_open";
   opensNewWindow = 1;
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_I};
+};
+class ENH_Arsenal
+{
+	text = "$STR_ENH_TOOLS_LIMIT_ARSENAL";
+	action = "call ENH_fnc_VAM_arsenalPrototype"; //"execVM ""t.sqf""";
+	opensNewWindow = 1;
 };

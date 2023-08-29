@@ -4,9 +4,9 @@
   Date: 2021-01-24
 
   Description:
-  Gets all items available for unit and vehicle loadouts and saves them in the uiNamespace variables ENH_VIM_allItems.
+  Gets all items available for unit and vehicle loadouts and saves them in the uiNamespace variables ENH_ESE_allItems.
   See _items array for the format.
-  Furthermore, it stores all addons in the uiNamespace variable ENH_VIM_allAddons.
+  Furthermore, it stores all addons in the uiNamespace variable ENH_ESE_allAddons.
 
   Parameter(s):
   -
@@ -52,7 +52,7 @@
 
 #define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
 
-if (uiNamespace getVariable ["ENH_VIM_allItems", []] isNotEqualTo []) exitWith {};
+if (uiNamespace getVariable ["ENH_ESE_allItems", []] isNotEqualTo []) exitWith {};
 
 private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _itemsHashMap = createHashMap;
@@ -94,6 +94,6 @@ _allItemConfigs apply
   };
 };
 
-uiNamespace setVariable ["ENH_VIM_types", TYPES_WHITELIST];
-uiNamespace setVariable ["ENH_VIM_itemsHashMap", _itemsHashMap];
-uiNamespace setVariable ["ENH_VIM_allAddons", _addons];
+uiNamespace setVariable ["ENH_ESE_types", TYPES_WHITELIST];
+uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsHashMap];
+uiNamespace setVariable ["ENH_ESE_allAddons", _addons - [["","",""]]]; // Remove empty mod

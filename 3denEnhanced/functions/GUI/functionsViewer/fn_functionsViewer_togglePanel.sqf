@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safezoneX + GRID_W)
 #define Y (safezoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H)

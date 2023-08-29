@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 disableSerialization;
 params ["_display"];
@@ -29,7 +29,7 @@ if (isNil "ENH_PlacementTools_Center") then
 {
   ENH_PlacementTools_Center = if (get3DENActionState "ToggleMap" == 1) then
   {
-    (findDisplay IDD_3DEN displayCtrl 51 ctrlMapScreenToWorld [0.5, 0.5]) + [0]; //ctrlMapScreenToWorld only returns [x, y], add another 0 to have [x, y, z]
+    (findDisplay IDD_DISPLAY3DEN displayCtrl 51 ctrlMapScreenToWorld [0.5, 0.5]) + [0]; //ctrlMapScreenToWorld only returns [x, y], add another 0 to have [x, y, z]
   }
   else
   {

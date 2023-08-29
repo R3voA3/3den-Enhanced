@@ -1,8 +1,8 @@
 #define DEFAULT_SIZE 50
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 
-private _display = findDisplay IDD_3DEN;
+private _display = findDisplay IDD_DISPLAY3DEN;
 ENH_Garrison_SelectedEntities = [["Object", "Logic", "Trigger"]] call ENH_fnc_all3DENSelected;
 
 //Check if module was places previously and if not, create it

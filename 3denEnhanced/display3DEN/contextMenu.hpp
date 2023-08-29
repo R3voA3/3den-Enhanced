@@ -4,7 +4,6 @@ items[] +=
   "ENH_MeasureDistance",
   "ENH_ShowModuleInformation",
   "ENH_Garrison",
-  "ENH_Extraction",
   "ENH_AddToFavorites",
   "ENH_MoveToLayer"
 };
@@ -36,7 +35,7 @@ class ConnectParent
 {
   items[] +=
   {
-    "ENH_TriggerOwnerPlayer",
+    "ENH_TriggerOwnerPlayer"
   };
 };
 class Select
@@ -111,19 +110,10 @@ class ENH_ShowModuleInformation
 };
 class ENH_Garrison
 {
-  action = "findDisplay 313 ctrlCreate ['ENH_Garrison_New', 20100]"; //"findDisplay 313 createDisplay 'ENH_Garrison_New'";
+  action = "findDisplay 313 ctrlCreate ['ENH_Garrison_New', 20100]";
   text = "$STR_ENH_CONTEXTMENU_GARRISON";
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
   conditionShow = "selected";
-  opensNewWindow = 1;
-  SHOW_IN_ROOT;
-};
-class ENH_Extraction
-{
-  action = "findDisplay 313 createDisplay 'ENH_Extraction'";
-  text = "$STR_ENH_CONTEXTMENU_CREATEEXTRACTION";
-  picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa";
-  conditionShow = "hoverObjectVehicle";
   opensNewWindow = 1;
   SHOW_IN_ROOT;
 };
@@ -161,13 +151,8 @@ class ENH_SelectionFilter
   conditionShow = "selected";
   opensNewWindow = 1;
 };
-
 // Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
 {
   action = "[] spawn ENH_fnc_centerMapOnSelection";
-  //picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\moveCamera_ca.paa";
-  //text = "Center Map on Selection";
-  //conditionShow = "1";
-  //SHOW_IN_ROOT;
 };

@@ -1,8 +1,14 @@
-# v7.7.4
+# v7.7.9
 ## ADDED
-- Attribute to set marker draw priority (NEEDS TESTING)
+- Variable to freed hostage that holds the player object of who freed it _hostage getVariable ["ENH_WasFreedBy", objNull]; #263
 
 ## CHANGED
+- Improved: Code for allowSprint attribute
+- Updated: Stay on Position attribute is now again enabled for MP
+- Improved: Code for marker draw priority
+- Unit Insignia and Face attribute controls were enhanced
+- Updated loadorder to latest in 2.14
+- Updated Virtual Arsenal Manager code thanks to linkion
 - Placement Tools
   - Sliders were replaced with Edit controls to allow any numeric value
   - Added the option to adjust center on the fly
@@ -11,15 +17,104 @@
   - Orientation around Z-axis can now be freely set
   - Functions rewrite
 
+## REMOVED
+- Menu strip entry of WIP feature
+- Unused file
+
+# v7.7.8
+## ADDED
+- Shortcut ALT+O now opens the scenario folder
+
+## CHANGED
+- Fixed link to changelog
+- Fixed missing translation in menu strip
+- Texture Finder is now creating a loading
+  screen which drastically reduces fill time of the
+  tree view
+- Changed define files
+- Added sqfc support where possible
+- Entity counter is no longer shown on very small screen with large UI size
+
+# v7.7.7
+## CHANGED
+- updated Spanish translation thanks to regiregi22
+- tweaked statusbar
+- added support for "ENH_init3DENMissionPreview.sqf" event script. Place this script in your folder and it will automatically be executed on mission preview
+- fixed some missing ;
+- Update fn_exportLoadout.sqf (PR #267) by hypoxia125
+- Texture Finder
+  - Improved performance
+  - Added collapse/expand all buttons
+  - Alpha of textures is now shown via tiled background
+  - Increased UI size
+  - Increase texture count from ~10k to around ~47k in vanilla
+
+# v7.7.6
+## CHANGED
+- Vehicle Inventory Manager overhaul
+  - Renamed to Equipment Storage Editor (to give it a similar name as the vanilla attribute)
+  - Increased UI size
+  - Added a list that shows compatible magazines and items of the selected item
+  - Template list is now always visible
+  - Code optimisations
+- fixed text overlapping in large edit control
+- increase size of large edit control
+- removed excessive space underneath the large edit control
+
+- Fixed a bug which disabled "Recompile All" button in functions viewer even though it should be available
+- Fixed wrong help link in Functions Viewer menu strip
+- Save Loadout attribute: Removed debugging, code cleanup
+- added missing file to GUI Export
+
+## REMOVED
+- removed workaround to mute notification as
+the volume can now be changed in the options
+menu
+- Extraction UI as there are compositions which do exactly that
+
+# v7.7.5
+## CHANGED
+- Fixed ugly preview image for favorites list
+
+# v7.7.4.1
+## CHANGED
+- Camera direction in statusbar now always has three digits
+- Removed obsolete Location list function call
+- Fixed incorrect version number
+
+# v7.7.4
+## ADDED
+- Status bar now shows the camera direction
+
+## CHANGED
+- Shortcuts UI is now larger
+- Added missing footer control to Shortcuts UI
+- Changed width of distance gauge in status bar
+- Location list update
+  - Improved location list code
+  - Custom location can now be saved to the location list
+  - Custom locations are stored per map
+  - Custom locations can be deleted
+- Updated Polish translation, thanks to genjonakasone
+- The scenario UI (Load/Save) is now using almost the full screen width to make sure folks with a complex folder structure can still navigate through it
+
+## REMOVED
+- Removed 3DEN Cam Positions UI
+>>>>>>> master
+
 # v7.7.3
 ## ADDED
 - Dynamic Simulation Debug Mode now also works for objects
-
-## CHANGED
+- CTRL + SPACE added as shortcut to snap entities to surface
+- Added Select all Layers button to the left panel
 - Renamed recently added functions
 - Updated Italian translation thanks to Fil-ric
 - Search box is not automatically focused when Move To Layer UI is opened
 - If AI skill settings are set to 0.5 (via Edit box) they will no longer be executed
+- Moved Delete All Empty Layers to the left Panel
+- ENH_fnc_setOrientation
+  - Works now with 1 (trigger, markers) and 3 (object, system) dimensional attributes
+  - Preserves orientation around X and Y
 
 # v7.7.2
 ## ADDED
@@ -170,7 +265,7 @@
 
 # v6.4.1
 ## CHANGED
-- Fixed a script error with VIM if ACE was used
+- Fixed a script error with ESE if ACE was used
 
 # v6.4
 ## CHANGED
@@ -301,7 +396,7 @@
 # v6.0
 
 ## CHANGED
-- Vehicle Inventory Manager (VIM)
+- Vehicle Inventory Manager (ESE)
   - Is now able to create a full arsenal with selected addon items
   - Is using HashMaps where possible now to improve performance when many items are available
   - Fixed the issue where the amount would not properly be saved if inventory was set to be virtual

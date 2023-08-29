@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 
 private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
@@ -27,5 +27,5 @@ CTRL(IDC_FUNCTIONSVIEWER_MENU) menuSetCheck [[0, profileNamespace getVariable ["
 CTRL(IDC_FUNCTIONSVIEWER_MENU) menuSetCheck [[0, (profileNamespace getVariable ["ENH_FunctionsViewer_ModeIndex", 0]) + 4], true];
 CTRL(IDC_FUNCTIONSVIEWER_MENU) menuSetCheck [[0, (profileNamespace getVariable ["ENH_FunctionsViewer_LoadFileIndex", 0]) + 9], true];
 
-CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[1, 3], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0];
-CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[1, 5], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0];
+CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[1, 4], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
+CTRL(IDC_FUNCTIONSVIEWER_MENU) menuEnable [[1, 5], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
