@@ -9,6 +9,13 @@
 - Unit Insignia and Face attribute controls were enhanced
 - Updated loadorder to latest in 2.14
 - Updated Virtual Arsenal Manager code thanks to linkion
+- Placement Tools
+  - Sliders were replaced with Edit controls to allow any numeric value
+  - Added the option to adjust center on the fly
+  - Line pattern now also supports direction
+  - Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
+  - Orientation around Z-axis can now be freely set
+  - Functions rewrite
 
 ## REMOVED
 - Menu strip entry of WIP feature
@@ -93,6 +100,7 @@ menu
 
 ## REMOVED
 - Removed 3DEN Cam Positions UI
+>>>>>>> master
 
 # v7.7.3
 ## ADDED

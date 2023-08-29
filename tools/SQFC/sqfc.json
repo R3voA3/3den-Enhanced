@@ -1,0 +1,12 @@
+{
+	"inputDirs": [
+		"C:/Users/rober/OneDrive/Games/Arma 3/Arma 3 Mods/3den-Enhanced/3denEnhanced/functions"
+	],
+	"includePaths": [
+		"C:/"
+	],
+	"excludeList": [
+	],
+	"outputDir": "C:/",
+	"workerThreads": 1
+}

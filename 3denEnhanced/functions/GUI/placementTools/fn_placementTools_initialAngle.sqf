@@ -15,6 +15,8 @@
 
 params ["", "_newValue"];
 
+_newValue = _newValue call ENH_fnc_placementTools_stringToNumeric;
+
 ENH_PlacementTools_InitialAngle = _newValue;
 private _angle = _newValue;
 private _angleStep = ENH_PlacementTools_CentralAngle / count ENH_PlacementTools_Selected;
@@ -28,5 +30,3 @@ collect3DENHistory
     _angle = _angle + _angleStep;
   } forEach ENH_PlacementTools_Selected;
 };
-
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText (str _newValue + " °");
