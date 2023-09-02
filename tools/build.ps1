@@ -29,6 +29,16 @@ function Update-Files
   Copy-Item -Force -Path "$ProjectFolder\mod.cpp" -Destination "$TargetFolder" -Verbose
 };
 
+function Update-SQFC
+{
+	Remove-Item -Force -Path "$ProjectFolder\*" -Recurse -Include *.sqfc
+
+	# ArmaScriptCompiler searches in working directory for .json file
+	Set-Location "$ProjectFolder\tools\SQFC"
+
+	Start-Process -FilePath "$ProjectFolder\tools\SQFC\ArmaScriptCompiler.exe"
+};
+
 function Update-Build
 {
   #Build, using ´" to turn arguments into strings
@@ -44,6 +54,11 @@ function Update-Archive
 {
   Compress-Archive -Path "$TargetFolder" -DestinationPath ($ProjectFolder + "\versions\@3den Enhanced v" + $ModVersion + ".zip") -Force
 }
+
+Update-SQFC
+Write-Host "Removing old SQFC files."
+
+Start-Sleep 1
 
 Update-Files
 Write-Host "Copying files."
