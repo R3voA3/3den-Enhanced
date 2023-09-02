@@ -25,7 +25,7 @@ if (profileNamespace getVariable ['ENH_EditorPreferences_DynamicViewDistance', f
 }
 else
 {
-  removeMissionEventHandler ["onEachFrame", missionNamespace getVariable ["ENH_DynamicViewDistance_EH_ID", -1]];
+  removeMissionEventHandler ["EachFrame", missionNamespace getVariable ["ENH_DynamicViewDistance_EH_ID", -1]];
 };
 
 // Return settings value
