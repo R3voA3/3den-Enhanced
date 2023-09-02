@@ -52,7 +52,9 @@ _ctrlTV tvAdd [[], "PAA"];
   _indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
 
   _indexType = parseNumber (".paa" in _x);
-  _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], _x];
+  _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], format ["%1 [%2x%3]", _x, _w, _h]];
+  _ctrlTV tvSetData [[_indexType, _indexSize, _indexItem], _x];
+
   _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
   _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\nR: %4\nG: %5\nB: %6\nA: %7\n\n%8", _x, _w, _h, _rgb#0, _rgb#1, _rgb#2, _rgb#3, _shortcutText]];
 

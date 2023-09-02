@@ -27,7 +27,7 @@ private _ctrlTexturePreviewBG = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER
 _ctrlTexturePreview ctrlShow false;
 _ctrlTexturePreviewBG ctrlShow false;
 
-private _texture = _ctrlTV tvText _path;
+private _texture = _ctrlTV tvData _path;
 
 // Get original size and limit it to what we have available in the UI
 getTextureInfo _texture params ["_w", "_h"];
