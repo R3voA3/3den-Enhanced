@@ -17,7 +17,7 @@ private _export = "------------------------------------------------ACTIVE SQF SC
 
 {
   _x params ["_scriptName", "_fileName", "_isRunning", "_currentLine"];
-  _export = _export + _scriptname + " - ";
+  _export = _export + _scriptName + " - ";
   _export = _export + _fileName + " - ";
   _export = _export + str _isRunning + " - ";
   _export = _export + str _currentLine + endl;
@@ -27,14 +27,12 @@ _export = _export + "---------------------------------------------------ACTIVE F
 
 {
   _x params ["_scriptName", "_state", "_timeOut"];
-  _export = _export + _scriptname + " - ";
+  _export = _export + _scriptName + " - ";
   _export = _export + _state + " - ";
   _export = _export + str _timeOut + endl;
 } foreach diag_activeMissionFSMs;
 
 _export = _export + "-----------------------------------------------ACTIVE MISSION EHs-------------------------------------------------" + endl;
-
-private _EHs = diag_allMissionEventHandlers;
 
 private _counts = diag_allMissionEventHandlers select {_x isEqualType 0};
 private _types = diag_allMissionEventHandlers select {_x isEqualType ""};

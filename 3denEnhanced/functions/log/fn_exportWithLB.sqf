@@ -22,7 +22,7 @@ private _addBrackets = param [1, true, [true]];
 
 private _export = "";
 {
-  if (_forEachindex < count _array - 1) then
+  if (_forEachIndex < count _array - 1) then
   {
     _export = _export + str _x + ", " + endl;
   }

@@ -20,7 +20,7 @@ _configClasses = ("true" configClasses (configFile >> "CfgMods")) + ("true" conf
   _name = getText (_x >> "name");
   if ((_name find "Arma 3" == -1) && !(_name isEqualTo "")) then
   {
-    _modList = _modlist + _name + endl;
+    _modList = _modList + _name + endl;
   };
   true
 } count _configClasses;
@@ -39,8 +39,7 @@ copyToClipboard format
   getResolution # 1,
   getResolution # 5,
   productVersion # 7,
-  _modlist
-
+  _modList
 ];
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;

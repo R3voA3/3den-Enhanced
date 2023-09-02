@@ -16,7 +16,7 @@
 params ["_mode"];
 
 private _tv = uiNamespace getVariable ["ENH_CFGS_ActiveList", controlNull];
-private _selectionpath = tvCurSel _tv;
+private _selectionPath = tvCurSel _tv;
 
 if (_selectionPath isEqualTo [] || {_tv tvData _selectionPath == ""}) exitWith {false}; // Make sure something is selected and if so, make sure data is available
 

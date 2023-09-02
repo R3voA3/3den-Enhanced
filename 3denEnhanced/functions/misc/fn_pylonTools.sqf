@@ -60,7 +60,7 @@ switch (_mode) do
     };
 
     {
-      _export = _export + format ["this setPylonLoadout [%1, ""%2""];", _foreachindex + 1, _x] + endl
+      _export = _export + format ["this setPylonLoadout [%1, ""%2""];", _forEachIndex + 1, _x] + endl
     } foreach _pylons;
 
     uinamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_TOOLS_EXPORTPYLONSTOSQF", _export]];

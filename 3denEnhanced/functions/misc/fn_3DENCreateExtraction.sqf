@@ -16,8 +16,8 @@
 
 (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_center", "_veh"];
 
-_showSmoke = true;
-_center set [2, 0];//Set z to zero
+private _showSmoke = true;
+private _center set [2, 0];//Set z to zero
 
 [localize "STR_ENH_CONTEXTMENU_CREATEEXTRACTION"] collect3DENHistory
 {

@@ -51,7 +51,7 @@ private _fnc_getBIArsenalAttr = {
 if (isClass(configFile >> "CfgPatches" >> "ace_arsenal")) then {
   private _aceHashMap = [_object] call _fnc_getAceArsenalAttr;
   private _biHashMap = [_object] call _fnc_getBIArsenalAttr;
-  private _buttonOk = format ["Ace (%1)", count (keys (_aceHashMap))];
+  private _buttonOK = format ["Ace (%1)", count (keys (_aceHashMap))];
   private _buttonCancel = format ["BI (%1)", count (keys (_biHashMap))];
 
   uiNamespace setVariable ["ENH_VAM_loadAceHashMap", _aceHashMap];
