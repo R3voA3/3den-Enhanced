@@ -11,7 +11,7 @@
   -
 */
 
-#define GETVALUE(ATTRIBUTE) ("Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE))
+#define GETVALUE(ATTRIBUTE) (profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_' + ATTRIBUTE, "Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE)])
 #define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 #define DELAY 0.1
@@ -21,7 +21,9 @@
 if (!is3DENPreview) exitWith {};
 
 // Small delay to give scenario time to fully initialize
-sleep 3;
+waitUntil {sleep 1; !isNull player};
+
+diag_log "3den Enhanced: Debug Options initialized.";
 
 if GETVALUE("Arsenal") then
 {
@@ -198,11 +200,11 @@ if GETVALUE("KillOPFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KillINDFOR") then
+if GETVALUE("KillIndependent") then
 {
   [
     player,
-    localize "STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME",
+    localize "STR_ENH_DEBUGOPTIONS_KILLINDEPENDENT_DISPLAYNAME",
     "\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
     "\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
     "true",
@@ -221,11 +223,11 @@ if GETVALUE("KillINDFOR") then
   ] call BIS_fnc_holdActionAdd;
 };
 
-if GETVALUE("KillCIVFOR") then
+if GETVALUE("KillCivilian") then
 {
   [
     player,
-    localize "STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME",
+    localize "STR_ENH_DEBUGOPTIONS_KILLCIVILIAN_DISPLAYNAME",
     "\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
     "\A3\ui_f\data\igui\cfg\mptable\killed_ca.paa",
     "true",
@@ -558,7 +560,41 @@ if GETVALUE("ActiveScripts") then
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
     "true",
     "true",
-    {call ENH_fnc_debugOptions_activeScripts},
+    {
+      private _export = "------------------------------------------------ACTIVE SQF SCRIPTS------------------------------------------------" + endl;
+
+      {
+        _x params ["_scriptName", "_fileName", "_isRunning", "_currentLine"];
+        _export = _export + _scriptName + " - ";
+        _export = _export + _fileName + " - ";
+        _export = _export + str _isRunning + " - ";
+        _export = _export + str _currentLine + endl;
+      } foreach diag_activeSQFScripts;
+
+      _export = _export + "---------------------------------------------------ACTIVE FSMs----------------------------------------------------" + endl;
+
+      {
+        _x params ["_scriptName", "_state", "_timeOut"];
+        _export = _export + _scriptName + " - ";
+        _export = _export + _state + " - ";
+        _export = _export + str _timeOut + endl;
+      } foreach diag_activeMissionFSMs;
+
+      _export = _export + "-----------------------------------------------ACTIVE MISSION EHs-------------------------------------------------" + endl;
+
+      private _counts = diag_allMissionEventHandlers select {_x isEqualType 0};
+      private _types = diag_allMissionEventHandlers select {_x isEqualType ""};
+
+      {
+        if (_x > 0) then
+        {
+          _export = _export + format ["%1x %2%3", _x, _types select _forEachIndex, endl];
+        };
+      } forEach _counts;
+
+      uiNamespace setVariable ["display3DENCopy_data", ["", _export]];
+      (call BIS_fnc_displayMission) createDisplay "display3denCopy";
+    },
     {},
     {},
     {},
