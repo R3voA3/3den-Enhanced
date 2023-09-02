@@ -126,15 +126,15 @@
         <Chinesesimp>OPFOR技能设置</Chinesesimp>
         <Chinese>OPFOR技能設置</Chinese>
     </Key>
-    <Key ID="STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME">
-        <English>INDFOR Skill Settings</English>
-        <Italian>Parametri delle abilità INDFOR</Italian>
-        <German>INDFOR Fähigkeitseinstellungen</German>
-        <Czech>Nastavení zkušenosti INDFOR</Czech>
-        <French>Paramètres de compétences INDFOR</French>
-        <Polish>INDFOR - Ustawienia umiejętności</Polish>
+    <Key ID="STR_ENH_DYNAMICSKILL_INDEPENDENTSKILL_DISPLAYNAME">
+        <English>Independent Skill Settings</English>
+        <Italian>Parametri delle abilità Independent</Italian>
+        <German>Independent Fähigkeitseinstellungen</German>
+        <Czech>Nastavení zkušenosti Independent</Czech>
+        <French>Paramètres de compétences Independent</French>
+        <Polish>Independent - Ustawienia umiejętności</Polish>
         <Spanish>Habilidad de INDEPENDIENTE</Spanish>
-        <Russian>Настройки навыков INDFOR</Russian>
+        <Russian>Настройки навыков Independent</Russian>
         <Chinesesimp>独立部队技能设置</Chinesesimp>
         <Chinese>獨立部隊技能設置</Chinese>
     </Key>
@@ -2803,17 +2803,17 @@
         <Russian>Очки возрождения BLUFOR</Russian>
         <Italian>Biglietti di Respawn BLUFOR</Italian>
     </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_INDFOR_DISPLAYNAME">
-        <English>Respawn Tickets INDFOR</English>
-        <Czech>Počet respawn tiketů INDFOR</Czech>
-        <French>Tickets de Réapparition INDFOR</French>
-        <Spanish>Tickets de respawn INDFOR</Spanish>
-        <German>Respawntickets INDFOR</German>
+    <Key ID="STR_ENH_RESPAWNTICKETS_INDEPENDENT_DISPLAYNAME">
+        <English>Respawn Tickets Independent</English>
+        <Czech>Počet respawn tiketů Independent</Czech>
+        <French>Tickets de Réapparition Independent</French>
+        <Spanish>Tickets de respawn Independent</Spanish>
+        <German>Respawntickets Independent</German>
         <Chinesesimp>独立部队重生票</Chinesesimp>
         <Chinese>獨立部隊重生票</Chinese>
-        <Polish>Punkty odrodzenia INDFOR</Polish>
-        <Russian>Очки возрождения INDFOR</Russian>
-        <Italian>Biglietti di Respawn INDFOR</Italian>
+        <Polish>Punkty odrodzenia Independent</Polish>
+        <Russian>Очки возрождения Independent</Russian>
+        <Italian>Biglietti di Respawn Independent</Italian>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
         <English>Respawn Tickets OPFOR</English>
@@ -2827,17 +2827,17 @@
         <Russian>Очки возрождения OPFOR</Russian>
         <Italian>Biglietti di Respawn OPFOR</Italian>
     </Key>
-    <Key ID="STR_ENH_RESPAWNTICKETS_CIVFOR_DISPLAYNAME">
-        <English>Respawn Tickets CIVFOR</English>
-        <Czech>Počet respawn tiketů CIVFOR</Czech>
-        <French>Tickets de Réapparition CIVFOR</French>
-        <Spanish>Tickets de respawn CIVFOR</Spanish>
-        <German>Respawntickets CIVFOR</German>
+    <Key ID="STR_ENH_RESPAWNTICKETS_CIVILIAN_DISPLAYNAME">
+        <English>Respawn Tickets Civilian</English>
+        <Czech>Počet respawn tiketů Civilian</Czech>
+        <French>Tickets de Réapparition Civilian</French>
+        <Spanish>Tickets de respawn Civilian</Spanish>
+        <German>Respawntickets Civilian</German>
         <Chinesesimp>平民重生票</Chinesesimp>
         <Chinese>平民重生票</Chinese>
         <Polish>Punkty odrodzenia CYWILI</Polish>
-        <Russian>Очки возрождения CIVFOR</Russian>
-        <Italian>Biglietti di Respawn CIVFOR</Italian>
+        <Russian>Очки возрождения Civilian</Russian>
+        <Italian>Biglietti di Respawn Civilian</Italian>
     </Key>
     <Key ID="STR_ENH_SAVELOADOUT_DISPLAYNAME">
         <English>Save Loadout</English>
@@ -3060,15 +3060,15 @@
         <Italian>Permette a giocatore e IA di respawnare negli scenari Singleplayer.Solo le unità con "Respawn Giocatore Singolo" abilitato negli attributi sono interessate. Per scenari Multigiocatore usare il sistema di respawn multigiocatore.</Italian>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_RANDOMPOSITION_TOOLTIP">
-        <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</English>
-        <Russian>Все маркера с префиксом 'respawn_SIDE' считаются точками возрождения. Например OPFOR могут использовать все маркера с именем respawn_east_xxx.\n\n* respawn_east - точка возрождения OPFOR\n* respawn_west - точка возрождения BLUFOR\n* respawn_guerilla - точка возрождения INDFOR\n* respawn_civilian - точка возрождения CIVFOR</Russian>
-        <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für INDFOR\n* respawn_civilian - Respawn für CIVFOR</German>
-        <Spanish>Todos los marcadores con el prefijo 'respawn_SIDE' cuentan como posición de reaparición. Por ejemplo: unidades OPFOR pueden usar todos los marcadores llamados respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Spanish>
-        <French>Tous les marqueurs avec le préfix 'respawn_CAMP' comptent comme des points de réapparition. Par exemple, les unités OPFOR peuvent utiliser tous les marqueurs respawn_est_xxx comme points de réapparition.\n\n* respawn_east - réapparition OPFOR.\n* respawn_west - réapparition BLUFOR.\n* respawn_guerilla - réapparition INDFOR.\n* respawn_civilian - réapparition CIVFOR.</French>
+        <English>All markers with the prefix 'respawn_SIDE' count as respawn positions. For example, OPFOR units can use all markers as respawn positions named respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - Independent respawn\n* respawn_civilian - Civilian respawn</English>
+        <Russian>Все маркера с префиксом 'respawn_SIDE' считаются точками возрождения. Например OPFOR могут использовать все маркера с именем respawn_east_xxx.\n\n* respawn_east - точка возрождения OPFOR\n* respawn_west - точка возрождения BLUFOR\n* respawn_guerilla - точка возрождения Independent\n* respawn_civilian - точка возрождения Civilian</Russian>
+        <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für Independent\n* respawn_civilian - Respawn für Civilian</German>
+        <Spanish>Todos los marcadores con el prefijo 'respawn_SIDE' cuentan como posición de reaparición. Por ejemplo: unidades OPFOR pueden usar todos los marcadores llamados respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - Independent respawn\n* respawn_civilian - Civilian respawn</Spanish>
+        <French>Tous les marqueurs avec le préfix 'respawn_CAMP' comptent comme des points de réapparition. Par exemple, les unités OPFOR peuvent utiliser tous les marqueurs respawn_est_xxx comme points de réapparition.\n\n* respawn_east - réapparition OPFOR.\n* respawn_west - réapparition BLUFOR.\n* respawn_guerilla - réapparition Independent.\n* respawn_civilian - réapparition Civilian.</French>
         <Chinesesimp>所有带有"respawn_SIDE"前缀的标记都计为重生位置。例如，OPFOR单位可以将所有标记名为respawn_east_xxx作为重生位置。\n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 独立部队重生 \n* respawn_civilian - 平民重生</Chinesesimp>
         <Chinese>所有帶有"respawn_SIDE"前綴的標記都計為重生位置。例如，OPFOR單位可以將所有標記名為respawn_east_xxx作為重生位置。 \n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 獨立部隊重生 \n* respawn_civilian - 平民重生</Chinese>
-        <Italian>Tutti gli indicatori col prefisso 'respawn_SIDE' valgono come posizioni di respawn. Per esempio, le unità OPFOR possono usare tutti gli indicatori chiamati respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - INDFOR respawn\n* respawn_civilian - CIVFOR respawn</Italian>
-        <Polish>Wszystkie znacnziki z prefiksem "respawn_STRONA" liczą się jako pozycje odrodzenia. Dla przykładu, jednostki OPFOR mogą korzystać ze wszystkich znaczników, które nazywają się "respawn_east_XXX" jako miejsc odrodzenia.\n\n* respawn_east - punkt odrodzenia OPFORu\n* respawn_west - punkt odrodzenia BLUFORu\n* respawn_guerilla - punkt odrodzenia INDFORu\n* respawn_civilian - punkt odrodzenia CYWILI</Polish>
+        <Italian>Tutti gli indicatori col prefisso 'respawn_SIDE' valgono come posizioni di respawn. Per esempio, le unità OPFOR possono usare tutti gli indicatori chiamati respawn_east_xxx.\n\n* respawn_east - OPFOR respawn\n* respawn_west - BLUFOR respawn\n* respawn_guerilla - Independent respawn\n* respawn_civilian - Civilian respawn</Italian>
+        <Polish>Wszystkie znacnziki z prefiksem "respawn_STRONA" liczą się jako pozycje odrodzenia. Dla przykładu, jednostki OPFOR mogą korzystać ze wszystkich znaczników, które nazywają się "respawn_east_XXX" jako miejsc odrodzenia.\n\n* respawn_east - punkt odrodzenia OPFORu\n* respawn_west - punkt odrodzenia BLUFORu\n* respawn_guerilla - punkt odrodzenia Independentu\n* respawn_civilian - punkt odrodzenia CYWILI</Polish>
     </Key>
     <Key ID="STR_ENH_SPR_RULESET_NEARESTPOSITION">
         <English>Respawn at nearest Respawn Position</English>
@@ -3771,17 +3771,17 @@
         <Polish>Dodaje pozycję do menu akcji w czasie testowania scenariusza, która natychmiastowo zabija wszystkie jednostki danej strony.</Polish>
         <Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает все юниты данной стороны.</Russian>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCIVFOR_DISPLAYNAME">
-        <English>Kill Units (CIVFOR)</English>
-        <Italian>Uccidi Unità (CIVFOR)</Italian>
-        <German>Einheiten töten (CIVFOR)</German>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLCIVILIAN_DISPLAYNAME">
+        <English>Kill Units (Civilian)</English>
+        <Italian>Uccidi Unità (Civilian)</Italian>
+        <German>Einheiten töten (Civilian)</German>
         <Chinesesimp>杀死单位（平民）</Chinesesimp>
         <Chinese>殺死單位（平民）</Chinese>
-        <Spanish>Matar Unidades (CIVFORl)</Spanish>
+        <Spanish>Matar Unidades (Civilianl)</Spanish>
         <Czech>Zabíjet jednotky (Civilisté)</Czech>
         <French>Tuer des unités (civils)</French>
-        <Polish>Zabij jednostki (CIVFOR)</Polish>
-        <Russian>Убить отряды (CIVFOR)</Russian>
+        <Polish>Zabij jednostki (Civilian)</Polish>
+        <Russian>Убить отряды (Civilian)</Russian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLCURSOR_DISPLAYNAME">
         <English>Kill Cursor Target</English>
@@ -3807,17 +3807,17 @@
         <Polish>Dodaje pozycję menu akcji w czasie testowania scenariusza, która natychmiastowo zabija jednostkę, na którą patrzy gracz (funkcja cursorTarget).</Polish>
         <Russian>Добавляет запись в меню действий во время предварительного просмотра сценария, которая мгновенно убивает юнит, на которого смотрит игрок.</Russian>
     </Key>
-    <Key ID="STR_ENH_DEBUGOPTIONS_KILLINDFOR_DISPLAYNAME">
-        <English>Kill Units (INDFOR)</English>
-        <Italian>Uccidi Unità (INDFOR)</Italian>
-        <German>Einheiten töten (INDFOR)</German>
+    <Key ID="STR_ENH_DEBUGOPTIONS_KILLINDEPENDENT_DISPLAYNAME">
+        <English>Kill Units (Independent)</English>
+        <Italian>Uccidi Unità (Independent)</Italian>
+        <German>Einheiten töten (Independent)</German>
         <Chinesesimp>杀死单位（独立部队）</Chinesesimp>
         <Chinese>殺死單位（獨立部隊）</Chinese>
-        <Spanish>Unidades de Matanza (INDFOR)</Spanish>
-        <Czech>Kill Units (INDFOR)</Czech>
-        <French>Tuer des unités (INDFOR)</French>
-        <Polish>Zabij jednostki (INDFOR)</Polish>
-        <Russian>Убить отряды (INDFOR)</Russian>
+        <Spanish>Unidades de Matanza (Independent)</Spanish>
+        <Czech>Kill Units (Independent)</Czech>
+        <French>Tuer des unités (Independent)</French>
+        <Polish>Zabij jednostki (Independent)</Polish>
+        <Russian>Убить отряды (Independent)</Russian>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLOPFOR_DISPLAYNAME">
         <English>Kill Units (OPFOR)</English>

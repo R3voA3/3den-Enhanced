@@ -173,73 +173,73 @@ class ENH_DynamicSkill: Title
       idc = 116;
       y = 10 * CTRL_DEFAULT_H + 55 * pixelH;
     };
-    //INDFOR
-    class INDFORDescriptionDeco: BLUFORDescriptionDeco
+    //Independent
+    class IndependentDescriptionDeco: BLUFORDescriptionDeco
     {
       y = 11 * CTRL_DEFAULT_H + 60 * pixelH;
     };
-    class INDFORDescriptionHeader: BLUFORDescriptionHeader
+    class IndependentDescriptionHeader: BLUFORDescriptionHeader
     {
-      text = $STR_ENH_DYNAMICSKILL_INDFORSKILL_DISPLAYNAME;
+      text = $STR_ENH_DYNAMICSKILL_IndependentSKILL_DISPLAYNAME;
       y = 11 * CTRL_DEFAULT_H + 60 * pixelH;
     };
-    class SkillMinINDFORTitle: Title
+    class SkillMinIndependentTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMIN_DISPLAYNAME;
       y = 12 * CTRL_DEFAULT_H + 65 * pixelH;
     };
-    class SkillMinINDFORValue: SkillMinBLUFORValue
+    class SkillMinIndependentValue: SkillMinBLUFORValue
     {
       idc = 117;
       y = 12 * CTRL_DEFAULT_H + 65 * pixelH;
     };
-    class SkillMinINDFOREdit: SkillMinBLUFOREdit
+    class SkillMinIndependentEdit: SkillMinBLUFOREdit
     {
       idc = 118;
       y = 12 * CTRL_DEFAULT_H + 65 * pixelH;
     };
-    class SkillAimMinINDFORTitle: Title
+    class SkillAimMinIndependentTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME;
       y = 13 * CTRL_DEFAULT_H + 70 * pixelH;
     };
-    class SkillAimMinINDFORValue: SkillMinBLUFORValue
+    class SkillAimMinIndependentValue: SkillMinBLUFORValue
     {
       idc = 119;
       y = 13 * CTRL_DEFAULT_H + 70 * pixelH;
     };
-    class SkillAimMinINDFOREdit: SkillMinBLUFOREdit
+    class SkillAimMinIndependentEdit: SkillMinBLUFOREdit
     {
       idc = 120;
       y = 13 * CTRL_DEFAULT_H + 70 * pixelH;
     };
-    class SkillMaxINDFORTitle: Title
+    class SkillMaxIndependentTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLMAX_DISPLAYNAME;
       y = 14 * CTRL_DEFAULT_H + 75 * pixelH;
     };
-    class SkillMaxINDFORValue: SkillMinBLUFORValue
+    class SkillMaxIndependentValue: SkillMinBLUFORValue
     {
       idc = 121;
       y = 14 * CTRL_DEFAULT_H + 75 * pixelH;
     };
-    class SkillMaxINDFOREdit: SkillMinBLUFOREdit
+    class SkillMaxIndependentEdit: SkillMinBLUFOREdit
     {
       idc = 122;
       y = 14 * CTRL_DEFAULT_H + 75 * pixelH;
     };
 
-    class SkillAimMaxINDFORTitle: Title
+    class SkillAimMaxIndependentTitle: Title
     {
       text = $STR_ENH_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME;
       y = 15 * CTRL_DEFAULT_H + 80 * pixelH;
     };
-    class SkillAimMaxINDFORValue: SkillMinBLUFORValue
+    class SkillAimMaxIndependentValue: SkillMinBLUFORValue
     {
       idc = 123;
       y = 15 * CTRL_DEFAULT_H + 80 * pixelH;
     };
-    class SkillAimMaxINDFOREdit: SkillMinBLUFOREdit
+    class SkillAimMaxIndependentEdit: SkillMinBLUFOREdit
     {
       idc = 124;
       y = 15 * CTRL_DEFAULT_H + 80 * pixelH;

@@ -66,59 +66,59 @@ class ENH_Briefing
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == east) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
     };
     //----------------INDEPENDENT
-    class ENH_Briefing_INDFOR_Subcategory: ENH_Briefing_BLUFOR_Subcategory
+    class ENH_Briefing_Independent_Subcategory: ENH_Briefing_BLUFOR_Subcategory
     {
       description = "$STR_GUERRILA";
     };
-    class ENH_Briefing_INDFOR_Situation: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Independent_Situation: ENH_Briefing_BLUFOR_Situation
     {
-      property = "ENH_Briefing_INDFOR_Situation";
+      property = "ENH_Briefing_Independent_Situation";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == independent) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_INDFOR_Mission: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Independent_Mission: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_MISSION_TITLE";
-      property = "ENH_Briefing_INDFOR_Mission";
+      property = "ENH_Briefing_Independent_Mission";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == independent) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_INDFOR_Execution: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Independent_Execution: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_EXECUTION_TITLE";
-      property = "ENH_Briefing_INDFOR_Execution";
+      property = "ENH_Briefing_Independent_Execution";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == independent) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_INDFOR_Signal: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Independent_Signal: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_SIGNAL_TITLE";
-      property = "ENH_Briefing_INDFOR_Signal";
+      property = "ENH_Briefing_Independent_Signal";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == independent) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
     };
     //-----------------CIVILIAN
-    class ENH_Briefing_CIVFOR_Subcategory: ENH_Briefing_BLUFOR_Subcategory
+    class ENH_Briefing_Civilian_Subcategory: ENH_Briefing_BLUFOR_Subcategory
     {
       description = "$STR_CIVILIAN";
     };
-    class ENH_Briefing_CIVFOR_Situation: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Civilian_Situation: ENH_Briefing_BLUFOR_Situation
     {
-      property = "ENH_Briefing_CIVFOR_Situation";
+      property = "ENH_Briefing_Civilian_Situation";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == civilian) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_CIVFOR_Mission: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Civilian_Mission: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_MISSION_TITLE";
-      property = "ENH_Briefing_CIVFOR_Mission";
+      property = "ENH_Briefing_Civilian_Mission";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == civilian) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_CIVFOR_Execution: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Civilian_Execution: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_EXECUTION_TITLE";
-      property = "ENH_Briefing_CIVFOR_Execution";
+      property = "ENH_Briefing_Civilian_Execution";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == civilian) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
     };
-    class ENH_Briefing_CIVFOR_Signal: ENH_Briefing_BLUFOR_Situation
+    class ENH_Briefing_Civilian_Signal: ENH_Briefing_BLUFOR_Situation
     {
       displayName = "$STR_A3_DIARY_SIGNAL_TITLE";
-      property = "ENH_Briefing_CIVFOR_Signal";
+      property = "ENH_Briefing_Civilian_Signal";
       expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName '%s'; waitUntil {!isNull player}; if (side player == civilian) then {player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
     };
   };

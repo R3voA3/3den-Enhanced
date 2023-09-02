@@ -26,10 +26,10 @@ _value params
   "_skillAimMinOPFOR",
   "_skillMaxOPFOR",
   "_skillAimMaxOPFOR",
-  "_skillMinINDFOR",
-  "_skillAimMinINDFOR",
-  "_skillMaxINDFOR",
-  "_skillAimMaxINDFOR"
+  "_skillMinIndependent",
+  "_skillAimMinIndependent",
+  "_skillMaxIndependent",
+  "_skillAimMaxIndependent"
 ];
 
 (_ctrlGroup controlsGroupCtrl 100) cbSetChecked _enable;
@@ -59,17 +59,17 @@ _value params
 [_ctrlGroup controlsGroupCtrl 115, _ctrlGroup controlsGroupCtrl 116, "%", _skillAimMaxOPFOR] call BIS_fnc_initSliderValue;
 
 [_ctrlGroup controlsGroupCtrl 117, _ctrlGroup controlsGroupCtrl 118, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 117, _ctrlGroup controlsGroupCtrl 118, "%", _skillMinINDFOR] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 117, _ctrlGroup controlsGroupCtrl 118, "%", _skillMinIndependent] call BIS_fnc_initSliderValue;
 
 [_ctrlGroup controlsGroupCtrl 119, _ctrlGroup controlsGroupCtrl 120, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 119, _ctrlGroup controlsGroupCtrl 120, "%", _skillAimMinINDFOR] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 119, _ctrlGroup controlsGroupCtrl 120, "%", _skillAimMinIndependent] call BIS_fnc_initSliderValue;
 
 
 [_ctrlGroup controlsGroupCtrl 121, _ctrlGroup controlsGroupCtrl 122, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 121, _ctrlGroup controlsGroupCtrl 122, "%", _skillMaxINDFOR] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 121, _ctrlGroup controlsGroupCtrl 122, "%", _skillMaxIndependent] call BIS_fnc_initSliderValue;
 
 [_ctrlGroup controlsGroupCtrl 123, _ctrlGroup controlsGroupCtrl 124, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 123, _ctrlGroup controlsGroupCtrl 124, "%", _skillAimMaxINDFOR] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 123, _ctrlGroup controlsGroupCtrl 124, "%", _skillAimMaxIndependent] call BIS_fnc_initSliderValue;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
@@ -87,7 +87,7 @@ _value params
   [_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "%", 0.3] call BIS_fnc_initSliderValue;
   [_ctrlGroup controlsGroupCtrl 113, _ctrlGroup controlsGroupCtrl 114, "%", 0.8] call BIS_fnc_initSliderValue;
   [_ctrlGroup controlsGroupCtrl 115, _ctrlGroup controlsGroupCtrl 116, "%", 0.5] call BIS_fnc_initSliderValue;
-  //INDFOR
+  //Independent
   [_ctrlGroup controlsGroupCtrl 117, _ctrlGroup controlsGroupCtrl 118, "%", 0.5] call BIS_fnc_initSliderValue;
   [_ctrlGroup controlsGroupCtrl 119, _ctrlGroup controlsGroupCtrl 120, "%", 0.3] call BIS_fnc_initSliderValue;
   [_ctrlGroup controlsGroupCtrl 121, _ctrlGroup controlsGroupCtrl 122, "%", 0.8] call BIS_fnc_initSliderValue;
