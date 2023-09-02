@@ -23,8 +23,8 @@
 ['init'] call BIS_fnc_3DENInterface;
 
 //Show or hide panels
-["ShowPanelRight", "Preferences" get3DENMissionAttribute "ENH_ShowPanelRight"] call BIS_fnc_3DENInterface;
-["ShowPanelLeft", "Preferences" get3DENMissionAttribute "ENH_ShowPanelLeft"] call BIS_fnc_3DENInterface;
+["ShowPanelRight", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', true]] call BIS_fnc_3DENInterface;
+["ShowPanelLeft", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelLeft', true]] call BIS_fnc_3DENInterface;
 
 //Collapse asset browser
 call ENH_fnc_assetBrowser_collapse;
