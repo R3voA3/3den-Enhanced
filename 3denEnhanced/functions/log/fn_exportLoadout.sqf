@@ -33,7 +33,7 @@ private _fnc_addArray =
   _export = _export + format [IND + "%1[] = {", _name];
   {
     if (_x == "") then {continue};
-    if (_foreachindex > 0) then {_export = _export + ", "};
+    if (_forEachIndex > 0) then {_export = _export + ", "};
     _export = _export + format ["""%1""", _x];
   } foreach _array;
   _export = _export + "};" + LB;

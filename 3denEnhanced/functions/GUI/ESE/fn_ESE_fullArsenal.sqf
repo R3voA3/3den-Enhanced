@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 disableSerialization;
 private _display = uiNamespace getVariable "ENH_Display_ESE";

@@ -15,7 +15,6 @@
 
 params ["_ctrlGroup"];
 
-//private _countControls = count (allControls _ctrlGroup) / 3;
 private _countControls = _ctrlGroup getVariable ["ENH_controlsCount", 0];
 private _hitPoints = [];
 private _hitPointsDamage = [];

@@ -26,5 +26,3 @@
 
 ["collapseEntityList"] call BIS_fnc_3DENInterface;
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
-
-nil

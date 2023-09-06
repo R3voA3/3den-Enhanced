@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 //TODO: This can be excuted multiple times. It resets itself on preview or exiting Eden Editor though
 

@@ -13,12 +13,12 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 private _display = uiNamespace getVariable ["ENH_CFGS_Display", displayNull];
-private _tv = CTRL(IDC_SENTENCES_LIST);
-private _ctrlFilter = CTRL(IDC_SENTENCES_PAGES);
-private _ctrlCount = CTRL(IDC_SENTENCES_COUNT);
+private _tv = CTRL(IDC_SENTENCESBROWSER_LIST);
+private _ctrlFilter = CTRL(IDC_SENTENCESBROWSER_PAGES);
+private _ctrlCount = CTRL(IDC_SENTENCESBROWSER_COUNT);
 private _counter = 0;
 
 params [["_filter", "ALL"]];

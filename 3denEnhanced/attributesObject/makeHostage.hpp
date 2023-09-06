@@ -19,13 +19,15 @@ class ENH_MakeHostage: ENH_SetCaptive
         'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
         'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',\
         '_target getVariable [''ENH_IsHostage'', true] && {_this distance _target < 2 && {alive _target && {_target != _this}}}',\
-        'true',\
+        'alive _target',\
         {},\
         {},\
         {\
-          [_this # 0, 'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow', 0];\
-          [_this # 0, _this # 2] remoteExec ['BIS_fnc_holdActionRemove', 0];\
-          _this # 0 setVariable ['ENH_IsHostage', false, true];\
+          params ['_target', '_caller', '_actionId'];\
+          [_target, 'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow', 0];\
+          [_target, _actionId] remoteExec ['BIS_fnc_holdActionRemove', 0];\
+          _target setVariable ['ENH_IsHostage', false, true];\
+          _target setVariable ['ENH_WasFreedBy', _caller, true];\
         }\
         ] call BIS_fnc_holdActionAdd;\
       };\

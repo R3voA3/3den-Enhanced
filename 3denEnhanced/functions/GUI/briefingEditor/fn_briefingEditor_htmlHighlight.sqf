@@ -13,7 +13,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 private _display = uiNamespace getVariable ["ENH_BriefingEditor_Display", displayNull];
 private _text = ctrlText CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) splitString "";

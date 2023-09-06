@@ -16,7 +16,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["_ctrlGroup", "_value"];
 parseSimpleArray _value params ["_hitpoints", "_damage"];
@@ -28,7 +28,7 @@ _ctrlGroup ctrlSetPositionY (2 * CTRL_DEFAULT_H); //For description
 _ctrlGroup ctrlSetPositionH ((count _hitpoints max 1) * (CTRL_DEFAULT_H + 5 * pixelH));
 _ctrlGroup ctrlCommit 0;
 
-if (_hitPoints isEqualTo []) exitWith
+if (_hitpoints isEqualTo []) exitWith
 {
   private _ctrlHintNoHitPoints = _display ctrlCreate ["ctrlStructuredText", -1, _ctrlGroup];
   _ctrlHintNoHitPoints ctrlSetPosition [5 * GRID_W, 0, (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W, CTRL_DEFAULT_H];
@@ -49,7 +49,7 @@ private _counter = 0;
   _ctrlLabel ctrlSetText (if (isLocalized _name) then {localize _name} else {_x});
   _ctrlLabel ctrlSetTooltip _x;
   _ctrlLabel ctrlSetPosition [0, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H];
-  _ctrllabel ctrlCommit 0;
+  _ctrlLabel ctrlCommit 0;
 
   private _ctrlSlider = _display ctrlCreate ["ctrlXSliderH", 30000 + _forEachIndex, _ctrlGroup];
   _ctrlSlider ctrlSetPosition [ATTRIBUTE_TITLE_W * GRID_W, CTRL_DEFAULT_H * _forEachIndex + 5 * pixelH * _forEachIndex, (ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W, CTRL_DEFAULT_H];

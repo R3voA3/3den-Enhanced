@@ -11,9 +11,11 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["", "_newValue"];
+
+_newValue = _newValue call ENH_fnc_placementTools_stringToNumeric;
 
 ENH_PlacementTools_InitialAngle = _newValue;
 private _angle = _newValue;
@@ -28,5 +30,3 @@ collect3DENHistory
     _angle = _angle + _angleStep;
   } forEach ENH_PlacementTools_Selected;
 };
-
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText (str _newValue + " °");

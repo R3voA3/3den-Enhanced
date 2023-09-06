@@ -13,17 +13,17 @@
   BOOLEAN: True
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["_display"];
 
 uiNamespace setVariable ["ENH_CFGS_Display", _display];
-uiNamespace setVariable ["ENH_CFGS_ActiveList", CTRL(IDC_SENTENCES_LIST)];
+uiNamespace setVariable ["ENH_CFGS_ActiveList", CTRL(IDC_SENTENCESBROWSER_LIST)];
 ENH_CFGS_Favorites = profileNamespace getVariable ["ENH_CFGS_Favorites", []];
 
-CTRL(IDC_SENTENCES_FAVORITES) ctrlSetFade 1;
-CTRL(IDC_SENTENCES_FAVORITES) ctrlEnable false;
-CTRL(IDC_SENTENCES_FAVORITES) ctrlCommit 0;
+CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlSetFade 1;
+CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlEnable false;
+CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlCommit 0;
 
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;

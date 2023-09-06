@@ -8,15 +8,15 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
 
 delete3DENEntities [ENH_PlacementTools_AreaTrigger, ENH_PlacementTools_GarrisonTrigger];
+
+removeMissionEventHandler ["draw3D", ENH_PlacementTools_CenterIcon_EH];
+
+ENH_PlacementTools_CenterIcon_EH = nil;
 ENH_PlacementTools_AreaTrigger = nil;
 ENH_PlacementTools_GarrisonTrigger = nil;
 
-["ENH_PlacementTools_CenterIcon", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-
 ["ShowPanelLeft", true] call BIS_fnc_3DENInterface;
-
-true

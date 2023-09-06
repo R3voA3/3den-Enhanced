@@ -14,7 +14,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params ["_ctrlTV", "_path"];
 
@@ -22,22 +22,34 @@ params ["_ctrlTV", "_path"];
 if (count _path < 3) exitWith {};
 
 private _ctrlTexturePreview = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW;
-private _texture = _ctrlTV tvText _path;
+private _ctrlTexturePreviewBG = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEWBACKGROUND;
+
+_ctrlTexturePreview ctrlShow false;
+_ctrlTexturePreviewBG ctrlShow false;
+
+private _texture = _ctrlTV tvData _path;
 
 // Get original size and limit it to what we have available in the UI
 getTextureInfo _texture params ["_w", "_h"];
 
-_w = _w * pixelW min (160 * GRID_W);
-_h = _h * pixelH min (65 * GRID_W);
+_w = _w * pixelW min (158 * GRID_W);
+_h = _h * pixelH min (61 * GRID_H);
 
 // Now lets position the UI in respect to width and height of the image
 _ctrlTexturePreview ctrlSetPosition
 [
   (CENTERED_X(160) + 80 * GRID_W - (ctrlPosition _ctrlTexturePreview select 2) / 2),
-  (DIALOG_TOP + 82.5 * GRID_H - (ctrlPosition _ctrlTexturePreview select 3) / 2),
+  safezoneY + safezoneH - (77 * GRID_H + CTRL_DEFAULT_H),
   _w,
   _h
 ];
 
+// Set final position for image
 _ctrlTexturePreview ctrlSetText _texture;
 _ctrlTexturePreview ctrlCommit 0;
+_ctrlTexturePreview ctrlShow true;
+
+// Adjust background according to image
+_ctrlTexturePreviewBG ctrlSetPosition (ctrlPosition _ctrlTexturePreview);
+_ctrlTexturePreviewBG ctrlCommit 0;
+_ctrlTexturePreviewBG ctrlShow true;

@@ -13,7 +13,7 @@
   NOTHING
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 //#define CB_INVERT_STATE(DISPLAY, IDC) if (ctrlEnabled (DISPLAY displayCtrl IDC)) then {(DISPLAY displayCtrl IDC) cbSetChecked !(cbChecked (DISPLAY displayCtrl IDC))}
 

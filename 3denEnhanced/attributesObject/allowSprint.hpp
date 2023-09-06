@@ -4,7 +4,7 @@ class ENH_AllowSprint
   tooltip = "$STR_ENH_ALLOWSPRINTING_TOOLTIP";
   control = "Checkbox";
   property = "ENH_allowSprint";
-  expression = "_this allowSprint _value";
+  expression = "[_this, _value] remoteExec ['allowSprint', _this]";
   defaultValue = "true";
   condition = "objectBrain";
 };

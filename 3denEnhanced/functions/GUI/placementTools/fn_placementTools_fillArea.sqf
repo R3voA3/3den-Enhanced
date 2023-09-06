@@ -11,7 +11,7 @@
   -
 */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 if (isNil "ENH_PlacementTools_AreaTrigger") then
 {
@@ -33,5 +33,3 @@ collect3DENHistory
     _x set3DENAttribute ["Position", _randomPos];
   } forEach ENH_PlacementTools_Selected;
 };
-
-(uiNamespace getVariable "ENH_PlacementTools_Display") displayCtrl IDC_PLACEMENTTOOLS_CURRENTVALUE ctrlSetText format ["%1 m / %2 m", ENH_PlacementTools_A, ENH_PlacementTools_B];

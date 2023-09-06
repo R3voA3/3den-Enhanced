@@ -32,10 +32,8 @@ class CfgFunctions
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
-      class textureFinder_copyPath;
       class textureFinder_fillList;
       class textureFinder_findTextures;
-      class textureFinder_progressText;
       class textureFinder_updatePreview;
     };
     class BatchReplace
@@ -157,6 +155,21 @@ class CfgFunctions
       class ESE_sort;
       class ESE_toggleVirtual;
     };
+    class VAM
+    {
+      file = "3denEnhanced\functions\GUI\VAM";
+      class VAM_arsenalPrototype;
+      class VAM_applyAttribute;
+      class VAM_selectCompatibleItems;
+      class VAM_switchNodeState;
+      class VAM_tvItemInit;
+      class VAM_exportToSQF;
+      class VAM_handleItemStats;
+      class VAM_loadObject;
+      class VAM_loadSelectHashMap;
+      class VAM_openCloseACCTV;
+      class VAM_accTVItemInsert;
+    }
     class CfgSentencesBrowser
     {
       file = "3denEnhanced\functions\GUI\CFGS";
@@ -200,6 +213,7 @@ class CfgFunctions
       file = "3denEnhanced\functions\Misc";
       class alignEntities;
       class all3DENSelected;
+      class compatibleItems;
       class deleteCrew;
       class deleteEmptyLayers;
       class dynamicViewDistance;
@@ -227,6 +241,16 @@ class CfgFunctions
       class twoDigitsStr;
       class VHCTools;
       class centerMapOnSelection;
+      class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
     };
     class Interface
     {
@@ -266,6 +290,8 @@ class CfgFunctions
     class Attributes
     {
       file = "3denEnhanced\functions\attributes";
+      class SPR_onAttributeLoad;
+      class SPR_onAttributeSave;
       class advancedDamage_onAttributeLoad;
       class advancedDamage_onAttributeSave;
       class airdrop_onAttributeLoad;
@@ -281,6 +307,7 @@ class CfgFunctions
       class dynamicSkill_onAttributeSave;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
+      class face;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
@@ -294,10 +321,9 @@ class CfgFunctions
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
-      class SPR_onAttributeLoad;
-      class SPR_onAttributeSave;
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
+      class unitInsignia;
     };
     class Internal
     {
@@ -305,6 +331,7 @@ class CfgFunctions
       class checkShortCutsDuplicates;
       class exportAttributesToGitHub;
       class exportMenuStripToGitHub;
+      class testDisplays;
     };
   };
 };

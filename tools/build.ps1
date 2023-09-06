@@ -1,12 +1,12 @@
 param($DoPublish = "false")
 
 
-$processArma3 = Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
+Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 
 Wait-Process processArma3
 
 #Change here---------
-$ModVersion = "7.7.7"
+$ModVersion = "7.7.9"
 #--------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
@@ -15,7 +15,7 @@ $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
 $Changelog = "$ModVersion [url=https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md] Changelog (GitHub) [/url]"
 $WorkshopID = 623475643
 
-function Addon-PrepareBuild
+function Update-Files
 {
   #Clear target folder
   Remove-Item -Force -Path "$TargetFolder" -Recurse -Verbose -errorAction SilentlyContinue
@@ -29,37 +29,47 @@ function Addon-PrepareBuild
   Copy-Item -Force -Path "$ProjectFolder\mod.cpp" -Destination "$TargetFolder" -Verbose
 };
 
-function Addon-Build
+function Update-Build
 {
   #Build, using ´" to turn arguments into strings
-  Start-Process -FilePath ("$ToolsFolder\AddonBuilder\AddonBuilder.exe") -argumentList "`"$ProjectFolder\3denEnhanced`" `"$TargetFolder\addons`" `"-sign=$ProjectFolder\3denEnhanced.biprivatekey`" -packonly"
+  Start-Process -FilePath ("$ToolsFolder\AddonBuilder\AddonBuilder.exe") -argumentList "`"$ProjectFolder\3denEnhanced`" `"$TargetFolder\addons`" `"-sign=$ProjectFolder\3denEnhanced.biprivatekey`" -packonly -prefix=`"3denEnhanced`""
 }
 
-function Addon-Publish
+function Update-Workshop
 {
   Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"$Changelog`""
 }
 
-function Addon-Compress
+function Update-Archive
 {
   Compress-Archive -Path "$TargetFolder" -DestinationPath ($ProjectFolder + "\versions\@3den Enhanced v" + $ModVersion + ".zip") -Force
 }
 
-Addon-PrepareBuild
+Update-Files
 Write-Host "Copying files."
+
 Start-Sleep 2
-Addon-Build
+
+Update-Build
 Write-Host "Creating pbo."
+
 Start-Sleep 5
+
 Write-Host "Packing done."
 
 if ($DoPublish -eq "true")
 {
   Write-Host "Creating zip file."
-  Addon-Compress
+
+  Update-Compress
+
   Write-Host "Zip file created."
   Write-Host "Publishing to Steam"
-  Addon-Publish
+
+  Update-Workshop
+
   Write-Host "Publishing finished"
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
+
+#Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"

@@ -906,15 +906,15 @@
         <Russian>Оставайтесь на позиции</Russian>
     </Key>
     <Key ID="STR_ENH_DOSTOP_TOOLTIP">
-        <English>Prevents AI from moving into formation at mission start. Deactivated in multiplayer!</English>
-        <Russian>Не позволяет ИИ вставать в тактическое построение. Отключено в мультиплеере</Russian>
-        <Italian>Impedisce all'AI di muoversi in formazione all'inizio della missione. Disattivato in multiplayer!</Italian>
-        <German>Verhindert, dass die KI beim Missionsstart in Formation tritt. In Mehrspielermissionen deaktiviert!</German>
-        <Spanish>Evita que la IA entre en formación al inicio de la misión. Desactivado en MP!</Spanish>
-        <French>Empêche les IA de se mettre en formation lors du démarrage de la mission. Ce paramètre est désactivé en multijoueur!</French>
-        <Polish>Powstrzymuje SI przed uformowaniem szyku na starcie misji. Nieaktywne w grze wieloosobowej!</Polish>
-        <Chinesesimp>防止AI在任务开始时编队。在多人游戏中已禁用！</Chinesesimp>
-        <Chinese>防止AI在任務開始時進入編隊。在多人遊戲中已禁用！</Chinese>
+        <English>Prevents AI from moving into formation at mission start.</English>
+        <Russian>Не позволяет ИИ вставать в тактическое построение.</Russian>
+        <Italian>Impedisce all'AI di muoversi in formazione all'inizio della missione.</Italian>
+        <German>Verhindert, dass die KI beim Missionsstart in Formation tritt.</German>
+        <Spanish>Evita que la IA entre en formación al inicio de la misión.</Spanish>
+        <French>Empêche les IA de se mettre en formation lors du démarrage de la mission.</French>
+        <Polish>Powstrzymuje SI przed uformowaniem szyku na starcie misji.</Polish>
+        <Chinesesimp>防止AI在任务开始时编队。</Chinesesimp>
+        <Chinese>防止AI在任務開始時進入編隊。</Chinese>
     </Key>
     <Key ID="STR_ENH_ADDGUNLIGHT_DISPLAYNAME">
         <English>Add Gun Light</English>
@@ -9681,6 +9681,11 @@
         <Chinese>列表條目數: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinese>
         <Polish>Wpisy w liście: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Polish>
         <Spanish>Entradas en Lista: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Spanish>
+    </Key>
+    <Key ID="STR_ENH_TOOLS_LIMIT_ARSENAL">
+        <English>Virtual Arsenal Manager</English>
+        <Polish>Wirtualny menedżer Arsenalu</Polish>
+        <Spanish>Gerente de Arsenal Virtual</Spanish>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
         <English>Hide On Start</English>

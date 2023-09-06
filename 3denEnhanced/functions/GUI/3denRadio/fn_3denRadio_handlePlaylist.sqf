@@ -12,7 +12,7 @@
   -
  */
 
-#include "\3denEnhanced\defines\ENH_defineCommon.hpp"
+#include "\3denEnhanced\defines\defineCommon.inc"
 #define IN_PLAYLIST [_songName, _songClass, _songDuration] in _playlist
 
 disableSerialization;

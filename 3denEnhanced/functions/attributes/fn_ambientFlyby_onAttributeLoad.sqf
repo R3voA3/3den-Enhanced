@@ -27,7 +27,7 @@ else
   private _valueClasses = "";
 
   {
-    private _add = if (_foreachindex == 0) then {_x} else {format [", %1", _x]};
+    private _add = if (_forEachIndex == 0) then {_x} else {format [", %1", _x]};
     _valueClasses= _valueClasses + _add;
   } foreach _classes;
 
