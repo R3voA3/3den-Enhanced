@@ -26,8 +26,10 @@ class ENH_MarkerHideOnStart
       expression = "\
         if (!isServer) exitWith {};\
         if (is3DEN) exitWith {};\
+        if (_value == 'false' || _value == '') exitWith {};\
         [_this, _value] spawn {\
           params ['_marker', '_value'];\
+          scriptName 'ENH_MarkerShowOnCondition';\
           waitUntil {\
             sleep 0.5;\
             call compile _value;\
