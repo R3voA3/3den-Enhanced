@@ -9682,4 +9682,16 @@
         <Polish>Wpisy w liście: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Polish>
         <Spanish>Entradas en Lista: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Spanish>
     </Key>
+    <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
+        <English>Hide On Start</English>
+    </Key>
+    <Key ID="STR_ENH_MARKERHIDEONSTART_TOOLTIP">
+        <English>Hides the marker at the start of the mission.</English>
+    </Key>
+    <Key ID="STR_ENH_MARKERSHOWONCONDITION_DISPLAYNAME">
+        <English>Condition</English>
+    </Key>
+    <Key ID="STR_ENH_MARKERSHOWONCONDITION_TOOLTIP">
+        <English>Repeatedly calculated condition, must return boolean expression. When true, marker will be shown.</English>
+    </Key>
 </Project>
