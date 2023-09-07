@@ -18,10 +18,6 @@
 #endif
 
 #ifndef ENH_HIDE_INTERFACE
-//Reinitialize Eden interface to prevent issues when game directly starts inside the editor via startup parameter
-['init'] call BIS_fnc_3DENStatusBar;
-['init'] call BIS_fnc_3DENInterface;
-
 //Show or hide panels
 ["ShowPanelRight", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', true]] call BIS_fnc_3DENInterface;
 ["ShowPanelLeft", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelLeft', true]] call BIS_fnc_3DENInterface;
