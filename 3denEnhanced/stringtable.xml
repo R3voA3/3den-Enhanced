@@ -67,16 +67,28 @@
         <Chinese>最低技能</Chinese>
     </Key>
     <Key ID="STR_ENH_MARKERDRAWPRIORITY_DISPLAYNAME">
-        <English>Marker Draw Priority</English>
-        <German>Markierungs-Priorität</German>
-        <Polish>Priorytet rysowania markerów</Polish>
-        <Spanish>Prioridad de Dibujado del Marcador</Spanish>
+        <English>Priority</English>
+        <Italian>Priorità</Italian>
+        <German>Priorität</German>
+        <Czech>Priorita</Czech>
+        <French>Priorité</French>
+        <Polish>Priorytet</Polish>
+        <Spanish>Prioridad</Spanish>
+        <Russian>Приоритет</Russian>
+        <Chinesesimp>优先权</Chinesesimp>
+        <Chinese>优先权</Chinese>
     </Key>
     <Key ID="STR_ENH_MARKERDRAWPRIORITY_TOOLTIP">
         <English>Sets marker draw priority. Higher priority markers are drawn on top. Default priority is 0.</English>
         <German>Legt die Priorität für das Zeichnen von Markierungen fest. Markierungen mit höherer Priorität werden als erstes gezeichnet. Die Standardpriorität ist 0.</German>
         <Polish>Ustawia priorytet wyświetlania znaczników. Markery o wyższym priorytecie są rysowane na wierzchu. Domyślny priorytet to 0.</Polish>
         <Spanish>Establece la prioridad de dibujado del marcador. Los marcadores con mayor prioridad son dibujados encima de otros. La prioridad por defecto es 0.</Spanish>
+				<Italian>Imposta la priorità di disegno dei marcatori. I marcatori con priorità più alta vengono disegnati in cima. La priorità predefinita è 0.</Italian>
+        <Czech>Nastaví prioritu kreslení značek. Značky s vyšší prioritou se vykreslují nahoře. Výchozí priorita je 0.</Czech>
+        <French>Définit la priorité de dessin des marqueurs. Les marqueurs ayant une priorité plus élevée sont dessinés en premier. La priorité par défaut est 0.</French>
+        <Russian>Устанавливает приоритет отрисовки маркеров. Маркеры с более высоким приоритетом рисуются сверху. По умолчанию приоритет равен 0.</Russian>
+        <Chinesesimp>设置标记绘制优先级。优先级较高的标记绘制在顶部。默认优先级为 0。</Chinesesimp>
+        <Chinese>设置标记绘制优先级。优先级较高的标记绘制在顶部。默认优先级为 0。</Chinese>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_SKILLAIMMIN_DISPLAYNAME">
         <English>Min. Aiming Skill</English>
@@ -9688,15 +9700,39 @@
         <Spanish>Gerente de Arsenal Virtual</Spanish>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
-        <English>Hide On Start</English>
+        <English>Hide on Start</English>
+				<German>Beim Start ausblenden</German>
+        <Chinesesimp>启动时隐藏</Chinesesimp>
+        <Chinese>启动时隐藏</Chinese>
+        <Polish>Ukryj przy uruchomieniu</Polish>
+        <Spanish>Ocultar al inicio</Spanish>
+				<French>Masquer au démarrage</French>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_TOOLTIP">
         <English>Hides the marker at the start of the mission.</English>
+				<German>Blendet die Markierung zu Beginn der Mission aus.</German>
+        <Chinesesimp>隐藏任务开始时的标记。</Chinesesimp>
+        <Chinese>隐藏任务开始时的标记。</Chinese>
+        <Polish>Ukrywa znacznik na początku misji.</Polish>
+        <Spanish>Oculta el marcador al inicio de la misión.</Spanish>
+				<French>Cache le marqueur au début de la mission.</French>
     </Key>
     <Key ID="STR_ENH_MARKERSHOWONCONDITION_DISPLAYNAME">
         <English>Condition</English>
+				<German>Bedingung</German>
+        <Chinesesimp>条件</Chinesesimp>
+        <Chinese>条件</Chinese>
+        <Polish>Stan</Polish>
+        <Spanish>Condición</Spanish>
+				<French>Condition</French>
     </Key>
     <Key ID="STR_ENH_MARKERSHOWONCONDITION_TOOLTIP">
         <English>Repeatedly calculated condition, must return boolean expression. When true, marker will be shown.</English>
+				<German>Bedingung</German>
+        <Chinesesimp>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinesesimp>
+        <Chinese>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinese>
+        <Polish>Wielokrotnie obliczany warunek, musi zwracać wyrażenie logiczne. Jeśli jest prawdziwe, znacznik zostanie wyświetlony.</Polish>
+        <Spanish>Condición calculada repetidamente, debe devolver una expresión booleana. Si es verdadera, se mostrará el marcador.</Spanish>
+				<French>Condition calculée de manière répétée, doit renvoyer une expression booléenne. Si elle est vraie, le marqueur sera affiché.</French>
     </Key>
 </Project>
