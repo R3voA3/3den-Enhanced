@@ -55,6 +55,9 @@ function Update-Archive
   Compress-Archive -Path "$TargetFolder" -DestinationPath ($ProjectFolder + "\versions\@3den Enhanced v" + $ModVersion + ".zip") -Force
 }
 
+Start-Job -FilePath "$ProjectFolder\tools\getStringtableStats.ps1" -Verbose
+Write-Host "Creating stringtable statistics file."
+
 Update-SQFC
 Write-Host "Removing old SQFC files."
 
