@@ -1,14 +1,18 @@
 # v7.7.9
 ## ADDED
 - Variable to freed hostage that holds the player object of who freed it _hostage getVariable ["ENH_WasFreedBy", objNull]; #263
+- New marker attributes Hide on Start and Conditional Show (thanks to hypoxia125)
 
 ## CHANGED
-- Improved: Code for allowSprint attribute
-- Updated: Stay on Position attribute is now again enabled for MP
-- Improved: Code for marker draw priority
+- Code for allowSprint attribute
+- Stay on Position attribute is now again enabled for MP
+- Code for marker draw priority
 - Unit Insignia and Face attribute controls were enhanced
 - Updated loadorder to latest in 2.14
 - Updated Virtual Arsenal Manager code thanks to linkion
+- It's now possible to search by texture size in Texture Finder
+- Multiple code optimisations
+- Preference values are no longer reset if game is started without mods
 - Placement Tools
   - Sliders were replaced with Edit controls to allow any numeric value
   - Added the option to adjust center on the fly
@@ -16,6 +20,10 @@
   - Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
   - Orientation around Z-axis can now be freely set
   - Functions rewrite
+- 3DEN Radio is now displayed properly on all aspect ratios, resolutions and UI sizes
+- Equipment Storage Editor is now displayed properly on all aspect ratios, resolutions and UI sizes
+- Module Information is now displayed properly on all aspect ratios, resolutions and UI sizes
+- Scenario Attributes Manager is now displayed properly on all aspect ratios, resolutions and UI sizes
 
 ## REMOVED
 - Menu strip entry of WIP feature
