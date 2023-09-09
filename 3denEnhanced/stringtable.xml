@@ -5794,18 +5794,18 @@
         <Polish>Eksportuj</Polish>
         <Spanish>Exportar</Spanish>
     </Key>
-    <Key ID="STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION">
-        <English>Template Description</English>
-        <Russian>Шаблон описания</Russian>
-        <Czech>Popis šablony</Czech>
-        <German>Vorlagenbeschreibung</German>
-        <Spanish>Descripción de la plantilla</Spanish>
-        <French>Description du modèle</French>
-        <Polish>Opis szablonu</Polish>
-        <Chinesesimp>模板说明</Chinesesimp>
-        <Chinese>模闆說明</Chinese>
+    <Key ID="STR_ENH_TEMPLATE_DATA_DESCRIPTION">
+        <English>Description</English>
+        <Russian>Описание</Russian>
+        <Czech>Popis</Czech>
+        <German>Beschreibung</German>
+        <Spanish>Descripción</Spanish>
+        <French>Description</French>
+        <Polish>Opis</Polish>
+        <Chinesesimp>说明</Chinesesimp>
+        <Chinese>说明</Chinese>
     </Key>
-    <Key ID="STR_ENH_SAM_TEMPLATE_DATA_TITLE">
+    <Key ID="STR_ENH_TEMPLATE_DATA_TITLE">
         <English>Title</English>
         <Russian>Заголовок</Russian>
         <Czech>Název</Czech>

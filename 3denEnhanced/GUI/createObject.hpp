@@ -1,4 +1,4 @@
-#define DIALOG_W 140
+#define DIALOG_W WINDOW_WAbs
 
 class ENH_CreateObject
 {

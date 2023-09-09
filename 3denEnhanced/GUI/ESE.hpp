@@ -7,40 +7,40 @@ class ENH_ESE
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TOOLS_ESE";
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
       y = WINDOW_TOP;
-      w = WINDOW_W * GRID_W;
+      w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
       y = WINDOW_TOP + 2 * CTRL_DEFAULT_H;
-      w = WINDOW_W * GRID_W;
+      w = WINDOW_WAbs * GRID_W;
       h = WINDOW_HAbs - 6 * CTRL_DEFAULT_H;
     };
     class InventoryItemsListBackground: ctrlStaticBackground
     {
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 2/4) * GRID_W + 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 2/4) * GRID_W + 2 * GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
-      w = (WINDOW_W * 1/4) * GRID_W - 2 * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 4 * GRID_H;
       colorBackground[] = {0,0,0,0.3};
     };
     class Footer: ctrlStaticFooter
     {
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 27 * GRID_H;
-      w = WINDOW_W * GRID_W;
+      w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
     class AvailableItems: ctrlStatic
     {
       idc = -1;
       text = "$STR_ENH_ESE_AVAILABLEITEMS";
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
       y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + GRID_H;
-      w = (WINDOW_W * 1/4) * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W;
       h = CTRL_DEFAULT_H;
       font = FONT_BOLD;
       sizeEx = SIZEEX_PURISTA(SIZEEX_L);
@@ -49,20 +49,20 @@ class ENH_ESE
     class CompatibleItems: AvailableItems
     {
       text = "Compatible Items";
-       x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 1/4) * GRID_W + 2 * GRID_W;
-       w = (WINDOW_W * 1/4) * GRID_W - GRID_W;
+       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 1/4) * GRID_W + 2 * GRID_W;
+       w = (WINDOW_WAbs * 1/4) * GRID_W - GRID_W;
     };
     class InventoryItems: AvailableItems
     {
       text = "$STR_ENH_ESE_ITEMSININVENTORY";
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 2/4) * GRID_W + 2 * GRID_W;
-      w = (WINDOW_W * 1/4) * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 2/4) * GRID_W + 2 * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
     };
     class Templates: AvailableItems
     {
       text = "Templates";
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 3/4) * GRID_W + GRID_W;
-      w = (WINDOW_W * 1/4) * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 3/4) * GRID_W + GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
     };
   };
   class Controls
@@ -70,9 +70,9 @@ class ENH_ESE
     class MenuStrip: ctrlMenuStrip
     {
       idc = IDC_ESE_MENU;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
       y = WINDOW_TOP + CTRL_DEFAULT_H;
-      w = WINDOW_W * GRID_W;
+      w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H;
       class Items
       {
@@ -403,24 +403,24 @@ class ENH_ESE
     class AvailableItemsList: ctrlListbox
     {
       idc = IDC_ESE_AVAILABLEITEMSLIST;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
-      w = (WINDOW_W * 1/4) * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W;
       h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 5 * GRID_H;
       colorBackground[] = {0,0,0,0.3};
     };
     class CompatibleItemsList: AvailableItemsList
     {
       idc = IDC_ESE_COMPATIBLEITEMSLIST;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 1/4) * GRID_W + 2 * GRID_W;
-      w = (WINDOW_W * 1/4) * GRID_W - GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 1/4) * GRID_W + 2 * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - GRID_W;
     };
     class InventoryItemsList: ctrlListNBox
     {
       idc = IDC_ESE_INVENTORYLIST;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 2/4) * GRID_W + 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 2/4) * GRID_W + 2 * GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
-      w = (WINDOW_W * 1/4) * GRID_W - 2 * GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 5 * GRID_H;
       columns[] = {0, 0.12, 0.8, 0.88};
       disableOverflow = 1;
@@ -428,13 +428,13 @@ class ENH_ESE
     class TemplatesList: AvailableItemsList
     {
       idc = IDC_ESE_TEMPLATESLIST;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + (WINDOW_W * 3/4) * GRID_W + GRID_W;
-      w = (WINDOW_W * 1/4) * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 3/4) * GRID_W + GRID_W;
+      w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
     };
     class FilterSearch: ctrlCombo
     {
       idc = IDC_ESE_FILTERSEARCH;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -443,7 +443,7 @@ class ENH_ESE
     class Search: ctrlEdit
     {
       idc = IDC_ESE_SEARCH;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + 6 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 6 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -452,7 +452,7 @@ class ENH_ESE
     class ButtonSearch: ctrlButtonSearch
     {
       idc = IDC_ESE_BUTTONSEARCH;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + 46 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 46 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -462,7 +462,7 @@ class ENH_ESE
     {
       idc = IDC_ESE_SAVE;
       text = "$STR_DISP_INT_SAVE";
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W + WINDOW_W * GRID_W - 47 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W + WINDOW_WAbs * GRID_W - 47 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -471,92 +471,11 @@ class ENH_ESE
     class Close: ctrlButtonClose
     {
       idc = -1;
-      x = CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W + WINDOW_W * GRID_W - 24 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W + WINDOW_WAbs * GRID_W - 24 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "[] spawn ENH_fnc_ESE_close";
-    };
-  };
-};
-
-class ENH_ESE_TemplateData
-{
-  idd = IDD_ESE_TEMPLATEDATA;
-  class ControlsBackground
-  {
-    DISABLE_BACKGROUND
-	  class Header: ctrlStaticTitle
-    {
-      x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP;
-      w = 60 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-	  class Background: ctrlStaticBackground
-    {
-      x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
-      w = 60 * GRID_W;
-      h = 51 * GRID_H;
-    };
-	  class Title: ctrlStatic
-    {
-      text = "$STR_ENH_SAM_TEMPLATE_DATA_TITLE";
-      x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
-      w = 58 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-	  class Description: ctrlStatic
-    {
-      text = "$STR_ENH_SAM_TEMPLATE_DATA_DESCRIPTION";
-      x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H
-      w = 58 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class Footer: ctrlStaticFooter
-    {
-      x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + 49 * GRID_H;
-      w = 60 * GRID_W;
-      h = CTRL_DEFAULT_H + 2 * GRID_H;
-    };
-  };
-  class Controls
-  {
-    class TitleValue: ctrlEdit
-    {
-      idc = IDC_ESE_TEMPLATEDATA_TITLE;
-      x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + GRID_H;
-      w = 58 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class DescriptionValue: ctrlEditMulti
-    {
-      idc = IDC_ESE_TEMPLATEDATA_DESCRIPTION;
-      x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 4 * CTRL_DEFAULT_H + GRID_H
-      w = 58 * GRID_W;
-      h = 25 * GRID_H;
-    };
-    class Cancel: ctrlButtonCancel
-    {
-      x = CENTER_X - 0.5 * 60 * GRID_W + 34 * GRID_W;
-      y = WINDOW_TOP + 50 * GRID_H;
-      w = 25 * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
-    class OK: ctrlButtonOk
-    {
-      idc = -1;
-      x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 50 * GRID_H;
-      w = 25 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "'create' call ENH_fnc_ESE_handleTemplates";
     };
   };
 };

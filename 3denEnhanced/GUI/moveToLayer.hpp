@@ -1,4 +1,4 @@
-#define DIALOG_W 140
+#define DIALOG_W WINDOW_WAbs
 #define DIALOG_H 120
 
 class ENH_MoveToLayer

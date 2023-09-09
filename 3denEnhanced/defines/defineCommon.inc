@@ -23,7 +23,10 @@
 // Either uses full width and leaves only 5 grids left and right,
 // or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
 // the UI will not become too wide
-#define WINDOW_W ((safezoneW / GRID_W - 10) min 400)
+#define WINDOW_WAbs ((safezoneW / GRID_W - 10) min 400)
+
+// Width of edit attributes window
+#define WINDOW_W_ATTRIBUTES 140
 
 //Statusbar
 #define SPACE_X (2 * pixelW)
@@ -91,7 +94,7 @@
 #define IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG 15001
 
 #define IDD_ESE -1
-#define IDD_ESE_TEMPLATEDATA 500
+#define IDD_TEMPLATEDATA 500
 #define IDC_ESE_AVAILABLEITEMSLIST 2200
 #define IDC_ESE_BUTTONSEARCH 3500
 #define IDC_ESE_COMPATIBLEITEMSLIST 4100

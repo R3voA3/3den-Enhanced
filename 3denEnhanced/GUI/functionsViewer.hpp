@@ -237,7 +237,7 @@ class ENH_FunctionsViewer
       canModify = false;
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 2 * CTRL_DEFAULT_H + GRID_H;
-      w = 140 * GRID_W;
+      w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Path: Name

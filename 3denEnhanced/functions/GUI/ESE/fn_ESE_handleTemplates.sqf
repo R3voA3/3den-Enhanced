@@ -14,7 +14,7 @@ switch (_mode) do
   case "create":
   {
     private _templates = profileNamespace getVariable ["ENH_VIM_Templates", []];
-    private _displayTemplateData = findDisplay IDD_ESE_TEMPLATEDATA;
+    private _displayTemplateData = findDisplay IDD_TEMPLATEDATA;
 
     //Return inventory data
     private _value = [true] call ENH_fnc_ESE_applyAttribute;
