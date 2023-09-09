@@ -1,6 +1,6 @@
 class ENH_MarkerDrawPriority
 {
-  displayName = "STR_ENH_MARKERDRAWPRIORITY_DISPLAYNAME";
+  displayName = "$STR_ENH_MARKERDRAWPRIORITY_DISPLAYNAME";
   tooltip = "$STR_ENH_MARKERDRAWPRIORITY_TOOLTIP";
   property = "ENH_markerDrawPriority";
   control = "EditShort";
