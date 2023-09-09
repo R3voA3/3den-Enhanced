@@ -325,7 +325,6 @@ class Cfg3DEN
   {
     class AttributeCategories
     {
-      #if __GAME_VER_MIN__ >= 13 //TODO: Remove when version 13 is stable
       class Transformation
       {
         class Attributes
@@ -335,7 +334,6 @@ class Cfg3DEN
           #endif
         };
       };
-      #endif
       #ifndef ENH_HIDE_MARKERHIDEONSTART
         #include "attributesMarker\markerHideOnStart.hpp"
       #endif
