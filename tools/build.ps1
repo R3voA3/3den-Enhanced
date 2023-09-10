@@ -1,13 +1,12 @@
 param($DoPublish = "false")
 
-
 Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 
 Wait-Process processArma3
 
-#Change here---------
+# -----Change here-----
 $ModVersion = "7.7.9"
-#--------------------
+# ---------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
@@ -75,13 +74,14 @@ Start-Sleep 5
 
 Write-Host "Packing done."
 
+Write-Host "Creating archive."
+
+Update-Archive
+
+Write-Host "Zip file created."
+
 if ($DoPublish -eq "true")
 {
-  Write-Host "Creating zip file."
-
-  Update-Compress
-
-  Write-Host "Zip file created."
   Write-Host "Publishing to Steam"
 
   Update-Workshop

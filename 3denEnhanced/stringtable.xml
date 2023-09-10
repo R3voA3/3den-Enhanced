@@ -83,7 +83,7 @@
         <German>Legt die Priorität für das Zeichnen von Markierungen fest. Markierungen mit höherer Priorität werden als erstes gezeichnet. Die Standardpriorität ist 0.</German>
         <Polish>Ustawia priorytet wyświetlania znaczników. Markery o wyższym priorytecie są rysowane na wierzchu. Domyślny priorytet to 0.</Polish>
         <Spanish>Establece la prioridad de dibujado del marcador. Los marcadores con mayor prioridad son dibujados encima de otros. La prioridad por defecto es 0.</Spanish>
-				<Italian>Imposta la priorità di disegno dei marcatori. I marcatori con priorità più alta vengono disegnati in cima. La priorità predefinita è 0.</Italian>
+        <Italian>Imposta la priorità di disegno dei marcatori. I marcatori con priorità più alta vengono disegnati in cima. La priorità predefinita è 0.</Italian>
         <Czech>Nastaví prioritu kreslení značek. Značky s vyšší prioritou se vykreslují nahoře. Výchozí priorita je 0.</Czech>
         <French>Définit la priorité de dessin des marqueurs. Les marqueurs ayant une priorité plus élevée sont dessinés en premier. La priorité par défaut est 0.</French>
         <Russian>Устанавливает приоритет отрисовки маркеров. Маркеры с более высоким приоритетом рисуются сверху. По умолчанию приоритет равен 0.</Russian>
@@ -1989,7 +1989,7 @@
         <Polish>Akcja wykonana!</Polish>
         <Russian>Действие выполнено!</Russian>
     </Key>
-		<Key ID="STR_ENH_NOTIFICATIONS_BACKUP_FAILED">
+    <Key ID="STR_ENH_NOTIFICATIONS_BACKUP_FAILED">
         <English>Backup option is enabled but no &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification was loaded. Backup failed!</English>
         <Italian>L'opzione di backup è attivata ma non è stata caricata alcuna modifica di &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Il backup è fallito!</Italian>
         <Czech>Možnost zálohování je povolena, ale nebyla načtena žádná modifikace &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Zálohování se nezdařilo!</Czech>
@@ -7028,31 +7028,28 @@
         <Italian>Abilita Distanza di Visualizzazione Dinamica</Italian>
         <Polish>Włącz dynamiczne renderowanie terenu</Polish>
     </Key>
-
-		<Key ID="STR_ENH_BACKUPMISSIONSQM_DISPLAYNAME">
+    <Key ID="STR_ENH_BACKUPMISSIONSQM_DISPLAYNAME">
         <English>Backup mission.sqm</English>
         <Russian>Резервная копия mission.sqm</Russian>
         <German>Backup der mission.sqm</German>
-				<French>Sauvegarde mission.sqm</French>
+        <French>Sauvegarde mission.sqm</French>
         <Spanish>Copia de seguridad de la misión.m</Spanish>
         <Chinesesimp>备份任务.sqm</Chinesesimp>
         <Chinese>备份任务.sqm</Chinese>
         <Italian>Backup mission.sqm</Italian>
         <Polish>Kopia zapasowa mission.sqm</Polish>
     </Key>
-
-		<Key ID="STR_ENH_BACKUPMISSIONSQM_TOOLTIP">
+    <Key ID="STR_ENH_BACKUPMISSIONSQM_TOOLTIP">
         <English>If enabled, a backup of the mission.sqm will be created when the scenario is saved or autosaved.\nThe backups are saved within the scenario folder.\n\nFor this backup mechanism to work the Pythia modification is required.\n\nMake sure to make a backup of your scenario before enabling this option for the first time!</English>
         <Russian>Если эта опция включена, то при сохранении или автосохранении сценария будет создаваться резервная копия mission.sqm.\nРезервные копии сохраняются в папке сценария.\n\nДля работы этого механизма резервного копирования требуется модификация Pythia.\n\nУбедитесь, что вы сделали резервную копию сценария, прежде чем включать эту опцию в первый раз!</Russian>
         <German>Wenn diese Option aktiviert ist, wird ein Backup der mission.sqm erstellt, wenn das Szenario gespeichert oder automatisch gespeichert wird.\n Die Backups werden im Szenario-Ordner gespeichert.\n\n Damit dieser Backup-Mechanismus funktioniert, ist die Pythia-Modifikation erforderlich.\n\nStellen Sie sicher, dass Sie ein Backup von Ihrem Szenario erstellen, bevor Sie diese Option zum ersten Mal aktivieren!</German>
-				<French>Si cette option est activée, une sauvegarde du fichier mission.sqm sera créée lorsque le scénario est sauvegardé ou sauvegardé automatiquement.\NLes sauvegardes sont enregistrées dans le dossier du scénario.\NPour que ce mécanisme de sauvegarde fonctionne, la modification de Pythia est nécessaire.\NAssurez-vous de faire une sauvegarde de votre scénario avant d'activer cette option pour la première fois !</French>
+        <French>Si cette option est activée, une sauvegarde du fichier mission.sqm sera créée lorsque le scénario est sauvegardé ou sauvegardé automatiquement.\NLes sauvegardes sont enregistrées dans le dossier du scénario.\NPour que ce mécanisme de sauvegarde fonctionne, la modification de Pythia est nécessaire.\NAssurez-vous de faire une sauvegarde de votre scénario avant d'activer cette option pour la première fois !</French>
         <Spanish>Si se activa, se creará una copia de seguridad del archivo mission.sqm cuando se guarde o autoguarde el escenario.\NLas copias de seguridad se guardan dentro de la carpeta del escenario.\NPara que este mecanismo de copia de seguridad funcione se requiere la modificación de Pythia.\N¡Asegúrate de hacer una copia de seguridad de tu escenario antes de activar esta opción por primera vez!</Spanish>
         <Chinesesimp>如果启用，在保存或自动保存场景时，将创建 mission.sqm 的备份。备份保存在场景文件夹中！</Chinesesimp>
         <Chinese>如果启用，在保存或自动保存场景时，将创建 mission.sqm 的备份。备份保存在场景文件夹中！</Chinese>
         <Italian>Se abilitato, un backup della missione.sqm verrà creato quando lo scenario viene salvato o autosalvato.\nIl backup viene salvato all'interno della cartella dello scenario.\nPer far funzionare questo meccanismo di backup è necessaria la modifica di Pythia.\nMa assicuratevi di fare un backup del vostro scenario prima di abilitare questa opzione per la prima volta!</Italian>
         <Polish>Jeśli opcja ta jest włączona, kopia zapasowa pliku mission.sqm zostanie utworzona podczas zapisywania lub automatycznego zapisywania scenariusza. Kopie zapasowe są zapisywane w folderze scenariusza. Aby ten mechanizm tworzenia kopii zapasowych działał, wymagana jest modyfikacja Pythia. Upewnij się, że utworzyłeś kopię zapasową scenariusza przed włączeniem tej opcji po raz pierwszy!</Polish>
     </Key>
-
     <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
         <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
         <Russian>Дальность прорисовки и дальность прорисовки объектов будут изменены в зависимости от высоты камеры. Этот параметр может вызвать проблемы с производительностью на слабых системах.</Russian>
@@ -9735,41 +9732,42 @@
         <English>Virtual Arsenal Manager</English>
         <Polish>Wirtualny menedżer Arsenalu</Polish>
         <Spanish>Gerente de Arsenal Virtual</Spanish>
+        <German>Arsenal Manager</German>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
         <English>Hide on Start</English>
-				<German>Beim Start ausblenden</German>
+        <German>Beim Start ausblenden</German>
         <Chinesesimp>启动时隐藏</Chinesesimp>
         <Chinese>启动时隐藏</Chinese>
         <Polish>Ukryj przy uruchomieniu</Polish>
         <Spanish>Ocultar al inicio</Spanish>
-				<French>Masquer au démarrage</French>
+        <French>Masquer au démarrage</French>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_TOOLTIP">
         <English>Hides the marker at the start of the mission.</English>
-				<German>Blendet die Markierung zu Beginn der Mission aus.</German>
+        <German>Blendet die Markierung zu Beginn der Mission aus.</German>
         <Chinesesimp>隐藏任务开始时的标记。</Chinesesimp>
         <Chinese>隐藏任务开始时的标记。</Chinese>
         <Polish>Ukrywa znacznik na początku misji.</Polish>
         <Spanish>Oculta el marcador al inicio de la misión.</Spanish>
-				<French>Cache le marqueur au début de la mission.</French>
+        <French>Cache le marqueur au début de la mission.</French>
     </Key>
     <Key ID="STR_ENH_MARKERSHOWONCONDITION_DISPLAYNAME">
         <English>Condition</English>
-				<German>Bedingung</German>
+        <German>Bedingung</German>
         <Chinesesimp>条件</Chinesesimp>
         <Chinese>条件</Chinese>
         <Polish>Stan</Polish>
         <Spanish>Condición</Spanish>
-				<French>Condition</French>
+        <French>Condition</French>
     </Key>
     <Key ID="STR_ENH_MARKERSHOWONCONDITION_TOOLTIP">
         <English>Repeatedly calculated condition, must return boolean expression. When true, marker will be shown.</English>
-				<German>Bedingung</German>
+        <German>Bedingung</German>
         <Chinesesimp>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinesesimp>
         <Chinese>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinese>
         <Polish>Wielokrotnie obliczany warunek, musi zwracać wyrażenie logiczne. Jeśli jest prawdziwe, znacznik zostanie wyświetlony.</Polish>
         <Spanish>Condición calculada repetidamente, debe devolver una expresión booleana. Si es verdadera, se mostrará el marcador.</Spanish>
-				<French>Condition calculée de manière répétée, doit renvoyer une expression booléenne. Si elle est vraie, le marqueur sera affiché.</French>
+        <French>Condition calculée de manière répétée, doit renvoyer une expression booléenne. Si elle est vraie, le marqueur sera affiché.</French>
     </Key>
 </Project>
