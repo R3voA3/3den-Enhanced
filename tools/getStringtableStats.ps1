@@ -40,7 +40,7 @@ $TotalTranslationProgress = $TotalTranslationCount / ($TotalKeys * $LanguageCoun
 $TotalTranslationProgress
 
 # Create file
-$OutPutFilePath = $env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\translationStats.md"
+$OutPutFilePath = $env:OneDrive + "\Games\Arma 3\Arma 3 Mods\3den-Enhanced\TRANSLATIONSTATS.md"
 New-Item -Path $OutPutFilePath -Force
 
 # Create file content
