@@ -27,6 +27,7 @@
 - Scenario Attributes Manager is now displayed properly on all aspect ratios, resolutions and UI sizes
 - Search Attributes UI is now displayed properly on all aspect ratios, resolutions and UI sizes
 - Some notifications now have a clickable link
+- Mod is now 100% translated in Chinese and Chinese Simplefied
 
 ## REMOVED
 - Menu strip entry of WIP feature
