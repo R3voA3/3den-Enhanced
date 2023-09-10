@@ -13,114 +13,59 @@
   -
 */
 
-if (!is3DEN) exitWith {false};
+if (!is3DEN) exitWith {};
 
-private _input = param [0, 0, [0]];
+params [["_mode", 0, [0]]];
 
-private _entities1DimRotation = get3DENSelected "Marker" + get3DENSelected "Trigger";
-private _entities3DimRotation = get3DENSelected "Object" + get3DENSelected "Logic";
-
-if (_entities1DimRotation isEqualTo [] && _entities3DimRotation isEqualTo []) exitWith
-{
-  ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
-};
+private _entities = flatten (get3DENSelected "Marker" + get3DENSelected "Trigger" + get3DENSelected "Object" + get3DENSelected "Logic");
 
 [localize "STR_ENH_FOLDER_ORIENT", nil, "a3\ui_f\data\gui\rsc\rscdisplayarsenal\compass_ca.paa"] collect3DENHistory
 {
-  switch _input do
+  switch _mode do
   {
-    case -2://reverse
+    case -2:
     {
       {
-        private _dir = (_x get3DENAttribute "rotation") # 0;
-        _x set3DENAttribute ["rotation", _dir + 180];
-      } forEach _entities1DimRotation;
-
-      {
-        private _dir = (_x get3DENAttribute "rotation") # 0;
-        _dir set [2, (_dir # 2) + 180];
-        _x set3DENAttribute ["rotation", _dir];
-      } forEach _entities3DimRotation;
-    };
-    case -1://randomise
-    {
-      {
-        private _dir = random 360;
-        _x set3DENAttribute ["rotation", _dir];
-      } forEach _entities1DimRotation;
-
-      {
-        private _dir = (_x get3DENAttribute "rotation") # 0;
-        _dir set [2, random 360];
-        _x set3DENAttribute ["rotation", _dir];
-      } forEach _entities3DimRotation;
-    };
-    default
-    {
-      {
-        _x set3DENAttribute ["rotation", _input];
-      } forEach _entities1DimRotation;
-
-      {
-        private _dir = (_x get3DENAttribute "rotation") # 0;
-        _dir set [2, _input];
-        _x set3DENAttribute ["rotation", _dir];
-      } forEach _entities3DimRotation;
-    };
-  };
-};
-
-
-
-
-
-//Triggers and markers have one dimensional rotation. All other entities have three dimensions or no rotation attribute
-_fnc_setOrientation =
-{
-  params [["_entity", objNull], ["_degrees", 0]];
-
-  private _currentRotation = _entity get3DENAttribute "rotation" select 0;
-
-  if (_currentRotation isEqualType []) then
-  {
-    _entity set3DENAttribute ["rotation", [_currentRotation # 0, _currentRotation # 1, _degrees]];
-  }
-  else
-  {
-    _entity set3DENAttribute ["rotation", _degrees];
-  };
-};
-
-[localize "STR_ENH_FOLDER_ORIENT", nil, "a3\ui_f\data\gui\rsc\rscdisplayarsenal\compass_ca.paa"] collect3DENHistory
-{
-  switch _input do
-  {
-    case -2://reverse
-    {
-      {
-        private _dir = (_x get3DENAttribute "rotation") # 0;
-        if (_dir isEqualType []) then
+        private _rotation = (_x get3DENAttribute "rotation") # 0;
+        if (_rotation isEqualType []) then
         {
-          _dir set [2, (_dir # 2) + 180];
-          _x set3DENAttribute ["rotation", _dir];
+          _rotation set [2, (_rotation # 2) + 180];
+          _x set3DENAttribute ["rotation", _rotation];
         }
         else
         {
-          _x set3DENAttribute ["rotation", _dir + 180];
+          _x set3DENAttribute ["rotation", _rotation + 180];
         };
       } forEach _entities;
     };
-    case -1://randomise
+    case -1:
     {
       {
-        private _dir = random 360;
-        [_x, _dir] call _fnc_setOrientation;
+        private _rotation = (_x get3DENAttribute "rotation") # 0;
+        if (_rotation isEqualType []) then
+        {
+          _rotation set [2, random 360];
+          _x set3DENAttribute ["rotation", _rotation];
+        }
+        else
+        {
+          _x set3DENAttribute ["rotation", random 360];
+        };
       } forEach _entities;
     };
     default
     {
       {
-        [_x, _dir] call _fnc_setOrientation;
+        private _rotation = (_x get3DENAttribute "rotation") # 0;
+        if (_rotation isEqualType []) then
+        {
+          _rotation set [2, _mode];
+          _x set3DENAttribute ["rotation", _rotation];
+        }
+        else
+        {
+          _x set3DENAttribute ["rotation", _mode];
+        };
       } forEach _entities;
     };
   };
