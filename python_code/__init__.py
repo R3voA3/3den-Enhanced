@@ -1,5 +1,6 @@
 import glob
 import os
+import shutil
 
 def RPT_latest():
   path = os.getenv('LOCALAPPDATA') + r"\Arma 3"
@@ -42,3 +43,6 @@ def RPT_read(line_count):
    counter += 1
   RPT_file.close()
   return RPT_content
+
+def BackupMissionSQM(fileToCopy, newFile):
+	shutil.copyfile(fileToCopy, newFile)

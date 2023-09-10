@@ -33,14 +33,14 @@
         <Spanish>Buscar Atributos</Spanish>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
-        <English>Get the ""Pythia"" modification from the Steam Workshop!</English>
-        <Russian>Скачайте модификацию ""Pythia"" из Steam Workshop!</Russian>
-        <German>Hol dir die ""Pythia"" Modifikation aus dem Steam Workshop!</German>
-        <Chinesesimp>从Steam创意工坊获得""Pythia""修改！</Chinesesimp>
-        <Chinese>從Steam創意工坊獲得""Pythia""修改！</Chinese>
-        <Polish>Pobierz modyfikację ""Pythia"" z Warszatu Steam!</Polish>
-        <Spanish>Obtener la modificación ""Pythia"" de Steam Workshop.</Spanish>
-        <Italian>Scarica la mod "Pythia" dal workshop di Steam!</Italian>
+        <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
+        <Russian>Скачайте модификацию &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; из Steam Workshop!</Russian>
+        <German>Hol dir die &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; Modifikation aus dem Steam Workshop!</German>
+        <Chinesesimp>从Steam创意工坊获得&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改！</Chinesesimp>
+        <Chinese>從Steam創意工坊獲得&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改！</Chinese>
+        <Polish>Pobierz modyfikację &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; z Warszatu Steam!</Polish>
+        <Spanish>Obtener la modificación &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; de Steam Workshop.</Spanish>
+        <Italian>Scarica la mod &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; dal workshop di Steam!</Italian>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
         <English>BLUFOR Skill Settings</English>
@@ -1981,13 +1981,25 @@
         <English>Action performed!</English>
         <Italian>Azione eseguita!</Italian>
         <Czech>Akce provedena!</Czech>
-        <French>Action effectuée !</French>
+        <French>Action effectuée!</French>
         <Spanish>¡Acción efectuada!</Spanish>
         <German>Aktion ausgeführt!</German>
         <Chinesesimp>执行操作！</Chinesesimp>
         <Chinese>執行操作！</Chinese>
         <Polish>Akcja wykonana!</Polish>
         <Russian>Действие выполнено!</Russian>
+    </Key>
+		<Key ID="STR_ENH_NOTIFICATIONS_BACKUP_FAILED">
+        <English>Backup option is enabled but no &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification was loaded. Backup failed!</English>
+        <Italian>L'opzione di backup è attivata ma non è stata caricata alcuna modifica di &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Il backup è fallito!</Italian>
+        <Czech>Možnost zálohování je povolena, ale nebyla načtena žádná modifikace &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Zálohování se nezdařilo!</Czech>
+        <French>L'option de sauvegarde est activée mais aucune modification de &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; n'a été chargée. La sauvegarde a échoué !</French>
+        <Spanish>La opción de copia de seguridad está activada pero no se ha cargado ninguna modificación de &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Error en la copia de seguridad.</Spanish>
+        <German>Die Backup-Option ist aktiviert, aber es wurde keine &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;-Modifikation geladen. Backup fehlgeschlagen!</German>
+        <Chinesesimp>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinesesimp>
+        <Chinese>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinese>
+        <Polish>Opcja kopii zapasowej jest włączona, ale nie załadowano żadnej modyfikacji &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Kopia zapasowa nie powiodła się!</Polish>
+        <Russian>Опция резервного копирования включена, но ни одна модификация &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; не была загружена. Резервное копирование не удалось!</Russian>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED">
         <English>No entities selected. Action cancelled!</English>
@@ -7016,6 +7028,31 @@
         <Italian>Abilita Distanza di Visualizzazione Dinamica</Italian>
         <Polish>Włącz dynamiczne renderowanie terenu</Polish>
     </Key>
+
+		<Key ID="STR_ENH_BACKUPMISSIONSQM_DISPLAYNAME">
+        <English>Backup mission.sqm</English>
+        <Russian>Резервная копия mission.sqm</Russian>
+        <German>Backup der mission.sqm</German>
+				<French>Sauvegarde mission.sqm</French>
+        <Spanish>Copia de seguridad de la misión.m</Spanish>
+        <Chinesesimp>备份任务.sqm</Chinesesimp>
+        <Chinese>备份任务.sqm</Chinese>
+        <Italian>Backup mission.sqm</Italian>
+        <Polish>Kopia zapasowa mission.sqm</Polish>
+    </Key>
+
+		<Key ID="STR_ENH_BACKUPMISSIONSQM_TOOLTIP">
+        <English>If enabled, a backup of the mission.sqm will be created when the scenario is saved or autosaved.\nThe backups are saved within the scenario folder.\n\nFor this backup mechanism to work the Pythia modification is required.\n\nMake sure to make a backup of your scenario before enabling this option for the first time!</English>
+        <Russian>Если эта опция включена, то при сохранении или автосохранении сценария будет создаваться резервная копия mission.sqm.\nРезервные копии сохраняются в папке сценария.\n\nДля работы этого механизма резервного копирования требуется модификация Pythia.\n\nУбедитесь, что вы сделали резервную копию сценария, прежде чем включать эту опцию в первый раз!</Russian>
+        <German>Wenn diese Option aktiviert ist, wird ein Backup der mission.sqm erstellt, wenn das Szenario gespeichert oder automatisch gespeichert wird.\n Die Backups werden im Szenario-Ordner gespeichert.\n\n Damit dieser Backup-Mechanismus funktioniert, ist die Pythia-Modifikation erforderlich.\n\nStellen Sie sicher, dass Sie ein Backup von Ihrem Szenario erstellen, bevor Sie diese Option zum ersten Mal aktivieren!</German>
+				<French>Si cette option est activée, une sauvegarde du fichier mission.sqm sera créée lorsque le scénario est sauvegardé ou sauvegardé automatiquement.\NLes sauvegardes sont enregistrées dans le dossier du scénario.\NPour que ce mécanisme de sauvegarde fonctionne, la modification de Pythia est nécessaire.\NAssurez-vous de faire une sauvegarde de votre scénario avant d'activer cette option pour la première fois !</French>
+        <Spanish>Si se activa, se creará una copia de seguridad del archivo mission.sqm cuando se guarde o autoguarde el escenario.\NLas copias de seguridad se guardan dentro de la carpeta del escenario.\NPara que este mecanismo de copia de seguridad funcione se requiere la modificación de Pythia.\N¡Asegúrate de hacer una copia de seguridad de tu escenario antes de activar esta opción por primera vez!</Spanish>
+        <Chinesesimp>如果启用，在保存或自动保存场景时，将创建 mission.sqm 的备份。备份保存在场景文件夹中！</Chinesesimp>
+        <Chinese>如果启用，在保存或自动保存场景时，将创建 mission.sqm 的备份。备份保存在场景文件夹中！</Chinese>
+        <Italian>Se abilitato, un backup della missione.sqm verrà creato quando lo scenario viene salvato o autosalvato.\nIl backup viene salvato all'interno della cartella dello scenario.\nPer far funzionare questo meccanismo di backup è necessaria la modifica di Pythia.\nMa assicuratevi di fare un backup del vostro scenario prima di abilitare questa opzione per la prima volta!</Italian>
+        <Polish>Jeśli opcja ta jest włączona, kopia zapasowa pliku mission.sqm zostanie utworzona podczas zapisywania lub automatycznego zapisywania scenariusza. Kopie zapasowe są zapisywane w folderze scenariusza. Aby ten mechanizm tworzenia kopii zapasowych działał, wymagana jest modyfikacja Pythia. Upewnij się, że utworzyłeś kopię zapasową scenariusza przed włączeniem tej opcji po raz pierwszy!</Polish>
+    </Key>
+
     <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
         <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
         <Russian>Дальность прорисовки и дальность прорисовки объектов будут изменены в зависимости от высоты камеры. Этот параметр может вызвать проблемы с производительностью на слабых системах.</Russian>

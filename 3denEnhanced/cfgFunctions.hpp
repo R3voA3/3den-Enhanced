@@ -211,8 +211,11 @@ class CfgFunctions
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
+      class createBackupMissionSQM;
+      class VHCTools;
       class alignEntities;
       class all3DENSelected;
+      class centerMapOnSelection;
       class compatibleItems;
       class deleteCrew;
       class deleteEmptyLayers;
@@ -230,17 +233,6 @@ class CfgFunctions
       class removeGear;
       class setOrientation;
       class spaceEqually;
-      class switchTime;
-      class systemTimeFormatted;
-      class toggleAttributes;
-      class toggleDrawBuildingPositions;
-      class toggleDrawDLCIcons;
-      class toggleDrawHitpoints;
-      class toggleGrass;
-      class toggleMarkerAlpha;
-      class twoDigitsStr;
-      class VHCTools;
-      class centerMapOnSelection;
       class statBarStatement_accuracy;
       class statBarStatement_default;
       class statBarStatement_impact;
@@ -251,6 +243,15 @@ class CfgFunctions
       class statTextStatement_rateOfFire;
       class statTextStatement_scopeMag;
       class statTextStatement_scopeVisionMode;
+      class switchTime;
+      class systemTimeFormatted;
+      class toggleAttributes;
+      class toggleDrawBuildingPositions;
+      class toggleDrawDLCIcons;
+      class toggleDrawHitpoints;
+      class toggleGrass;
+      class toggleMarkerAlpha;
+      class twoDigitsStr;
     };
     class Interface
     {

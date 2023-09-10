@@ -22,6 +22,11 @@ class Cfg3DEN
       isWarning = 1;
       text = "$STR_ENH_NOTIFICATIONS_GETPYTHIA";
     };
+    class ENH_PythiaMissingForBackup
+    {
+      isWarning = 1;
+      text = "$STR_ENH_NOTIFICATIONS_BACKUP_FAILED";
+    };
   };
   class EventHandlers
   {
@@ -33,6 +38,8 @@ class Cfg3DEN
       onMissionNew = "call ENH_fnc_EH_onMissionNew";
       onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
       onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
+      onMissionSave = "call ENH_fnc_createBackupMissionSQM";
+      onMissionAutoSave = "call ENH_fnc_createBackupMissionSQM";
     };
   };
   class Attributes
@@ -109,6 +116,13 @@ class Cfg3DEN
             #ifndef ENH_HIDE_DYNAMICVIEWDISTANCE
               #include "attributesEditor\dynamicViewDistance.hpp"
             #endif
+          };
+        };
+        class Saving
+        {
+          class Attributes
+          {
+            #include "attributesEditor\backupMissionSQM.hpp"
           };
         };
         #ifndef ENH_HIDE_INTERFACE
