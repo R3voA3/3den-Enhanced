@@ -73,7 +73,7 @@ class ENH_AttributeSearch
     class EditAttributes: ctrlButton
     {
       idc = 13;
-      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - (36 + 1 + 27) * GRID_W;
+      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - (36 + 27) * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 35 * GRID_W;
       h = CTRL_DEFAULT_H;

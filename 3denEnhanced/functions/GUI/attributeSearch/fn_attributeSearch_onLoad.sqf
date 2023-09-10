@@ -21,12 +21,17 @@ private _attributes = profileNamespace getVariable
 	[
 		["init", [""]],
 		["presenceCondition", ["true"]],
+    ["placementRadius", ["0"]]
 		["condition", ["this", "true"]],
 		["onActivation", [""]],
 		["onDeactivation", [""]],
 		["name", [""]],
-		["effectCondition", ["true"]]/* ,
-		["markerName", [""]] */
+		["effectCondition", ["true"]],
+		["markerName", [""]],
+    ["groupID", [""]]
+    ["description", [""]],
+    ["effectCondition", [""]],
+    ["script", [""]]
 	]
 ];
 
