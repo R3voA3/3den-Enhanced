@@ -91,7 +91,7 @@ ENH_fnc_placementTools_stringToNumeric =
   parseNumber _input;
 };
 
-// Add EHs to controls
+//Add EHs to controls
 (_display displayCtrl IDC_PLACEMENTTOOLS_CENTERX) ctrlAddEventHandler ["editChanged",
 {
   params ["_ctrlEdit", "_input"];
@@ -159,7 +159,7 @@ ENH_fnc_placementTools_stringToNumeric =
   private _numericValue = _input call ENH_fnc_placementTools_stringToNumeric;
   systemChat str _numericValue;
 
-  _numericValue call ENH_fnc_setOrientation; // Doesn't work for triggers
+  _numericValue call ENH_fnc_setOrientation; //Doesn't work for triggers
 }];
 
 (_display displayCtrl IDC_PLACEMENTTOOLS_A) ctrlAddEventHandler ["editChanged",
@@ -168,7 +168,7 @@ ENH_fnc_placementTools_stringToNumeric =
   private _numericValue = _input call ENH_fnc_placementTools_stringToNumeric;
   ENH_PlacementTools_Settings set ["A", _numericValue];
 
-  call ENH_fnc_fillArea_new; // Doesn't work for triggers
+  call ENH_fnc_fillArea_new; //Doesn't work for triggers
 }];
 
 (_display displayCtrl IDC_PLACEMENTTOOLS_B) ctrlAddEventHandler ["editChanged",
@@ -177,7 +177,7 @@ ENH_fnc_placementTools_stringToNumeric =
   private _numericValue = _input call ENH_fnc_placementTools_stringToNumeric;
   ENH_PlacementTools_Settings set ["B", _numericValue];
 
-  call ENH_fnc_fillArea_new; // Doesn't work for triggers
+  call ENH_fnc_fillArea_new; //Doesn't work for triggers
 }];
 
 (_display displayCtrl IDC_PLACEMENTTOOLS_NUMCOLUMNS) ctrlAddEventHandler ["editChanged",
@@ -209,21 +209,21 @@ ENH_fnc_placementTools_stringToNumeric =
 
 (_display displayCtrl IDC_PLACEMENTTOOLS_RANDOMORIENTATION) ctrlAddEventHandler ["buttonClick",
 {
-  -1 call ENH_fnc_setOrientation; // Doesn't work for triggers
+  -1 call ENH_fnc_setOrientation; //Doesn't work for triggers
 }];
 
 (_display displayCtrl IDC_PLACEMENTTOOLS_REVERSEORIENTATION) ctrlAddEventHandler ["buttonClick",
 {
-  -2 call ENH_fnc_setOrientation; // Doesn't work for triggers
+  -2 call ENH_fnc_setOrientation; //Doesn't work for triggers
 }];
 
-// Add EHs to all edit controls for input modifiers
+//Add EHs to all edit controls for input modifiers
 {
   _x ctrlAddEventHandler ["keyDown",
   {
     params ["_ctrlEdit", "_key", "_shift", "_ctrl", "_alt"];
 
-    // PageUp, PageDown
+    //PageUp, PageDown
     if !(_key in [201, 209]) exitWith {};
 
     private _modifier = call

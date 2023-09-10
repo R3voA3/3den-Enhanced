@@ -5,7 +5,7 @@ Description:
     Return all compatible weapon attachments.
 
 Parameters:
-    _weapon     - A weapons class name <STRING>
+    _weapon - A weapons class name <STRING>
     _typefilter - Optional filter. Can be "muzzle", "optic", "pointer" or "bipod". <STRING, NUMBER>
 
 Returns:
@@ -52,7 +52,7 @@ if (isNil "_compatibleItems") then {
             };
         } forEach configProperties [_weaponConfig >> "WeaponSlotsInfo", "isClass _x"];
 
-        // Ensure item class names are in config case
+        //Ensure item class names are in config case
         _compatibleItems = _compatibleItems apply {configName (_cfgWeapons >> _x)};
     } else {
         ["'%1' not found in CfgWeapons", _weapon] call BIS_fnc_error;

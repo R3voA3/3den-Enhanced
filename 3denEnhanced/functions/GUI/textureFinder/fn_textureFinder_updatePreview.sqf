@@ -29,13 +29,13 @@ _ctrlTexturePreviewBG ctrlShow false;
 
 private _texture = _ctrlTV tvData _path;
 
-// Get original size and limit it to what we have available in the UI
+//Get original size and limit it to what we have available in the UI
 getTextureInfo _texture params ["_w", "_h"];
 
 _w = _w * pixelW min (158 * GRID_W);
 _h = _h * pixelH min (61 * GRID_H);
 
-// Now lets position the UI in respect to width and height of the image
+//Now lets position the UI in respect to width and height of the image
 _ctrlTexturePreview ctrlSetPosition
 [
   (CENTERED_X(160) + 80 * GRID_W - (ctrlPosition _ctrlTexturePreview select 2) / 2),
@@ -44,12 +44,12 @@ _ctrlTexturePreview ctrlSetPosition
   _h
 ];
 
-// Set final position for image
+//Set final position for image
 _ctrlTexturePreview ctrlSetText _texture;
 _ctrlTexturePreview ctrlCommit 0;
 _ctrlTexturePreview ctrlShow true;
 
-// Adjust background according to image
+//Adjust background according to image
 _ctrlTexturePreviewBG ctrlSetPosition (ctrlPosition _ctrlTexturePreview);
 _ctrlTexturePreviewBG ctrlCommit 0;
 _ctrlTexturePreviewBG ctrlShow true;

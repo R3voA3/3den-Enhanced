@@ -158,7 +158,7 @@ class Display3DEN
     {
       class Items
       {
-        items[] += {"ENH_About"};//new main category
+        items[] += {"ENH_About"};
         #include "menuStrip_about.hpp"
         #include "menuStrip_tools.hpp"
         #include "menuStrip_help.hpp"
@@ -265,17 +265,17 @@ class Display3DEN
           class Controls
           {
             class Locations: ctrlTree
-						{
-							idc = IDC_DISPLAY3DEN_SEARCH_TREE;
-							x = 0;
-							y = 7 * GRID_H;
-							w = 60 * GRID_W;
-							h = safezoneH - 35 * GRID_H;
-							onTreeDblClick = "['select',_this] call bis_fnc_3DENListLocations; ['view'] call ENH_fnc_locationList_enhanced";
-							disableKeyboardSearch = 1;
-							expandOnDoubleclick = 0;
-							idcSearch = 800;
-						};
+            {
+              idc = IDC_DISPLAY3DEN_SEARCH_TREE;
+              x = 0;
+              y = 7 * GRID_H;
+              w = 60 * GRID_W;
+              h = safezoneH - 35 * GRID_H;
+              onTreeDblClick = "['select',_this] call bis_fnc_3DENListLocations; ['view'] call ENH_fnc_locationList_enhanced";
+              disableKeyboardSearch = 1;
+              expandOnDoubleclick = 0;
+              idcSearch = 800;
+            };
             class EditPanel: ctrlControlsGroupNoScrollbars
             {
               y = safezoneH - 29 * GRID_H;

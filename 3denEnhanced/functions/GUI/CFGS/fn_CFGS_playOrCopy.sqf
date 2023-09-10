@@ -18,7 +18,7 @@ params ["_mode"];
 private _tv = uiNamespace getVariable ["ENH_CFGS_ActiveList", controlNull];
 private _selectionPath = tvCurSel _tv;
 
-if (_selectionPath isEqualTo [] || {_tv tvData _selectionPath == ""}) exitWith {false}; // Make sure something is selected and if so, make sure data is available
+if (_selectionPath isEqualTo [] || {_tv tvData _selectionPath == ""}) exitWith {false}; //Make sure something is selected and if so, make sure data is available
 
 private _data = (_tv tvData _selectionPath) call ENH_fnc_CFGS_getSentenceDataFromConfig;
 private _soundPath = _data param [4];

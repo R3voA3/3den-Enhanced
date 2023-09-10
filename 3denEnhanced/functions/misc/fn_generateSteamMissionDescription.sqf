@@ -14,11 +14,11 @@
 //Steam formatting has been removed due to incompatibility issues. Code stays for now.
 /*_fnc_addLine =
 {
-	params [["_text", ""], ["_value", ""], ["_bold", true], ["_headline", false]];
-	if !(_value isEqualType "") then {_value = str _value};
-	if (_bold) then {_text = "[b]" + _text + "[/b]"};
-	if (_headline) then {_text = "[h1]" + _text + "[/h1]"};
-	_export = _export + _text + " " + _value + endl;
+  params [["_text", ""], ["_value", ""], ["_bold", true], ["_headline", false]];
+  if !(_value isEqualType "") then {_value = str _value};
+  if (_bold) then {_text = "[b]" + _text + "[/b]"};
+  if (_headline) then {_text = "[h1]" + _text + "[/h1]"};
+  _export = _export + _text + " " + _value + endl;
 };*/
 
 private _export = "";

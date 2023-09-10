@@ -75,7 +75,7 @@ private _vehiclesArray = "true" configClasses (configFile >> "CfgVehicles");
             private _muzzle = if (_x == "this") then { _weaponCfg } else { _weaponCfg >> _x };
             private _magazinesList = getArray (_muzzle >> "magazines");
 
-            // Add magazines from magazine wells
+            //Add magazines from magazine wells
             { { _magazinesList append (getArray _x) } forEach configproperties [configFile >> "CfgMagazineWells" >> _x, "isArray _x"] } forEach getArray (_muzzle >> "magazineWell");
 
             {

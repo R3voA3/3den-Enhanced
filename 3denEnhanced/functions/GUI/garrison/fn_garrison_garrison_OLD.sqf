@@ -26,9 +26,9 @@ private _center = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
 _center set [2, 0];
 
 private _radius = ctrlText CTRL(IDC_GARRISON_RADIUS);
-private _index  = lbCurSel CTRL(IDC_GARRISON_COVERAGE);
+private _index = lbCurSel CTRL(IDC_GARRISON_COVERAGE);
 private _step = CTRL(IDC_GARRISON_COVERAGE) lbValue _index;
-private _stance  = lbCurSel CTRL(IDC_GARRISON_STANCE);
+private _stance = lbCurSel CTRL(IDC_GARRISON_STANCE);
 
 //Save settings
 profileNamespace setVariable ['ENH_garrison_lastRadius', _radius];

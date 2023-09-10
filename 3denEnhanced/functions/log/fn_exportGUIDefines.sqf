@@ -113,7 +113,7 @@ if (_classes == 0) then
   _return = _return + endl + "//Excotic Base Controls" + endl;
 
   {
-    _return = _return + _mode + " " + _x  + ";" + endl;
+    _return = _return + _mode + " " + _x + ";" + endl;
   } forEach (_exoticClassed - _baseControls);
 };
 

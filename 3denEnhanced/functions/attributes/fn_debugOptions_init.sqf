@@ -17,10 +17,10 @@
 #define DELAY 0.1
 #define HINT_REFRESH_INTERVAL 30
 
-// To prevent issues in multiplayer games started from multiplayer editor
+//To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview) exitWith {};
 
-// Small delay to give scenario time to fully initialize
+//Small delay to give scenario time to fully initialize
 waitUntil {sleep 1; !isNull player};
 
 diag_log "3den Enhanced: Debug Options initialized.";
@@ -269,7 +269,7 @@ if GETVALUE("KillCursor") then
 
 if GETVALUE("ShowGroups") then
 {
-  // Enable icons in 2D and 3D
+  //Enable icons in 2D and 3D
   setGroupIconsVisible [true, true];
   setGroupIconsSelectable true;
 
@@ -301,20 +301,20 @@ if GETVALUE("ShowGroups") then
     _group setGroupIconParams [_color, groupID _group, linearConversion [1, 15, count units _group, 0.5, 3, false], true];
   };
 
-  // Add the icon for all existing groups
+  //Add the icon for all existing groups
   allGroups apply
   {
     _x spawn ENH_debugOptions_showGroups_initGroup;
   };
 
-  // Add the icon whenever a group get's created
+  //Add the icon whenever a group get's created
   addMissionEventHandler ["GroupCreated",
   {
     params ["_group"];
     _group spawn ENH_debugOptions_showGroups_initGroup;
   }];
 
-  // Show group info when hovering over an icon (2D/3D)
+  //Show group info when hovering over an icon (2D/3D)
   addMissionEventHandler ["GroupIconOverEnter",
   {
     params
@@ -343,13 +343,13 @@ if GETVALUE("ShowGroups") then
     ];
   }];
 
-  // Remove the hint whenever the mouse is leaving the icon area (2D/3D)
+  //Remove the hint whenever the mouse is leaving the icon area (2D/3D)
   addMissionEventHandler ["GroupIconOverLeave",
   {
     hintSilent "";
   }];
 
-  // Toggle group's waypoints whenever clicking on an icon
+  //Toggle group's waypoints whenever clicking on an icon
   addMissionEventHandler ["GroupIconClick",
   {
     params
@@ -381,7 +381,7 @@ if GETVALUE("ShowGroups") then
         _path append [waypointPosition _x select 0, waypointPosition _x select 1];
       } forEach waypoints _group;
 
-      // Create poly markers
+      //Create poly markers
       if (count _path < 4) then {continue};
       private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _group], leader _group];
       _markerPoly setMarkerShapeLocal "polyline";
@@ -651,7 +651,7 @@ if (GETVALUE("DebugPath") > 0) then
 
 if GETVALUE("DrawTriggers") then
 {
-  // Might want to also draw them in 2D/3D, but currently, getting all trigger objects in a scenario on each frame is super slow
+  //Might want to also draw them in 2D/3D, but currently, getting all trigger objects in a scenario on each frame is super slow
   //https://discord.com/channels/105462288051380224/108187245529268224/1013445559211794513
   /* {
     private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
@@ -769,7 +769,7 @@ if GETVALUE("DrawTriggers") then
         };
       };
     }];
-  } forEach (8 allObjects 7); // All triggers
+  } forEach (8 allObjects 7); //All triggers
 
   findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["mouseMoving",
   {

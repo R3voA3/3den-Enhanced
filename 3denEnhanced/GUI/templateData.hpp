@@ -4,21 +4,21 @@ class ENH_ESE_TemplateData
   class ControlsBackground
   {
     DISABLE_BACKGROUND
-	class Header: ctrlStaticTitle
+  class Header: ctrlStaticTitle
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
       y = WINDOW_TOP;
       w = 60 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-	  class Background: ctrlStaticBackground
+    class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
       y = WINDOW_TOP + CTRL_DEFAULT_H;
       w = 60 * GRID_W;
       h = 51 * GRID_H;
     };
-	  class Title: ctrlStatic
+    class Title: ctrlStatic
     {
       text = "$STR_ENH_TEMPLATE_DATA_TITLE";
       x = CENTER_X - 0.5 * 60 * GRID_W;
@@ -26,7 +26,7 @@ class ENH_ESE_TemplateData
       w = 58 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-	  class Description: ctrlStatic
+    class Description: ctrlStatic
     {
       text = "$STR_ENH_TEMPLATE_DATA_DESCRIPTION";
       x = CENTER_X - 0.5 * 60 * GRID_W;
@@ -81,7 +81,6 @@ class ENH_ESE_TemplateData
 
 class ENH_SAM_TemplateData: ENH_ESE_TemplateData
 {
-  //onLoad = "ENH_SAM_TemplateTitle = ''; ENH_SAM_TemplateDescription = ''";
   class Controls: Controls
   {
     class OK: ctrlButtonOK

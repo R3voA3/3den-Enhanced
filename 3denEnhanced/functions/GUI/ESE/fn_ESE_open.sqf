@@ -48,7 +48,7 @@ _display displayAddEventHandler ["KeyDown",
   if (_key == DIK_ESCAPE) then {call ENH_fnc_ESE_close; true};
 }];
 
-// Fille compatible items list if selection changed
+//Fille compatible items list if selection changed
 CTRL(IDC_ESE_AVAILABLEITEMSLIST) ctrlAddEventHandler ["LBSelChanged",
 {
   params ["_lbAvailableItems", "_lbCurSel"];

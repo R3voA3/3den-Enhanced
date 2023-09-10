@@ -4,7 +4,7 @@ class ENH_FunctionsViewer
 {
   idd = IDD_FUNCTIONSVIEWER;
   movingEnable = false;
-  onLoad = "_this call  ENH_fnc_functionsViewer_onLoad";
+  onLoad = "_this call ENH_fnc_functionsViewer_onLoad";
   class ControlsBackground
   {
     class Header: ctrlStaticTitle

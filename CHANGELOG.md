@@ -1462,7 +1462,7 @@ v2
 - Reduced size of insignia attribute (Please report any issues, controls might overlap)
 - Moved most of the code from control configs to global functions
 - Preferences are now applied when a preview ends, or a new scenario is created- Ambient animation attribute is now easier to use:
-  - 	To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied    In older versions, one had to deactivate the animation first- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
+- To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied    In older versions, one had to deactivate the animation first- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
 NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function- Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
 - Respawn tickets are now not always set to 0 when untouched
 - Corrected some localisations

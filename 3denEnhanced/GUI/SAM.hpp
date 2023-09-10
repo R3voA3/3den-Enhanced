@@ -89,7 +89,7 @@ class ENH_SAM
       y = WINDOW_TOP + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick  = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
+      onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class Expand: ctrlButtonExpandAll
     {
@@ -97,7 +97,7 @@ class ENH_SAM
       y = WINDOW_TOP + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick  = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+      onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
     };
     class CreateTemplate: ctrlButton
     {

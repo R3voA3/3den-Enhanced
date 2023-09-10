@@ -18,13 +18,13 @@
 private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
 uiNamespace setVariable ["ENH_VAM_display", _display];
 
-// Get check is mods var is existing. If not get it
+//Get check is mods var is existing. If not get it
 if (uiNamespace getVariable ["ENH_ESE_allAddons", []] isEqualTo []) then
 {
   call ENH_fnc_getAllItems;
 };
 
-// Create translation hashmap
+//Create translation hashmap
 private _categoryTranslation = createHashMapFromArray
 [
  ["AssaultRifle", "STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0"],
@@ -86,7 +86,7 @@ _ctrlSearch ctrlSetPosition
 
 _ctrlTV = _display ctrlCreate ["RscTreeSearch", IDC_VAM_TREEVIEW];
 _ctrlTV ctrlSetFont FONT_NORMAL;
-_ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
+_ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); //Replace with macro
 _ctrlTV ctrlSetPosition
 [
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
@@ -97,7 +97,7 @@ _ctrlTV ctrlSetPosition
 
 _ctrlAccTV = _display ctrlCreate ["RscTreeSearch", IDC_VAM_ACCTREEVIEW];
 _ctrlAccTV ctrlSetFont FONT_NORMAL;
-_ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); // Replace with macro
+_ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); //Replace with macro
 _ctrlAccTV ctrlSetPosition
 [
  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
@@ -113,7 +113,7 @@ _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",
   private _picture = ((uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]) select 1; //What am I doing here :D Revisit later
 
 
-  // check if it's a single entry or a folder
+  //check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then {
     if ((_ctrl tvValue _path) == 0) then
     {
@@ -126,9 +126,9 @@ _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",
   } else {
     private _mouseX = getMousePosition select 0;
 
-    // if clicked on check box
-    // Don't know any other way to do this - linkion -------V
-      // I guess we should use UI macros
+    //if clicked on check box
+    //Don't know any other way to do this - linkion -------V
+      //I guess we should use UI macros
     if (_mouseX < 0.2 + 0.02 * (count _path - 1)) then {
       if ((_ctrl tvValue _path) == 0) then {
         [_ctrl, 1] call ENH_fnc_VAM_switchNodeState;
@@ -240,7 +240,7 @@ _ctrlButtonLoad ctrlSetText "Load Object";
 
 _ctrlButtonLoad ctrlAddEventHandler ["ButtonClick", {
   params["_ctrlButton"];
-  // load arsenal from 3den selection
+  //load arsenal from 3den selection
   [ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject;
   //format["loadMap: %1", keys ([ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject)] call BIS_fnc_3DENNotification;
   //private _selectedItemHashMap = [ctrlParent _ctrlButton, (get3DENSelected "Object") select 0] call ENH_fnc_VAM_loadObject;
@@ -421,7 +421,7 @@ private _selectedObjects = get3DENSelected "Object";
 
 _ctrlButtonApply ctrlSetText format ["Apply (%1)", count _selectedObjects];
 
-// If no object was selected, we cannot apply the attribute
+//If no object was selected, we cannot apply the attribute
 _ctrlButtonApply ctrlEnable !(_selectedObjects isEqualTo []);
 
 _ctrlButtonCollapseAll = _display ctrlCreate ["ctrlButtonCollapseAll", -1];
@@ -498,16 +498,16 @@ _ctrlBIText ctrlSetText "BI Arsenal";
 
 _ctrlBIText ctrlSetTextColor [1, 1, 1, 1];
 
-// Focus search box
+//Focus search box
 ctrlSetFocus _ctrlSearch;
 
-// Commit all changes
+//Commit all changes
 allControls _display apply { _x ctrlCommit 0};
 
-// Perhaps rewrite this
+//Perhaps rewrite this
 private _allAddons = ((uiNamespace getVariable ["ENH_ESE_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
 
-// Prefill tree view with layout
+//Prefill tree view with layout
 {
  _x params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
 
@@ -529,7 +529,7 @@ _allAddons apply
  _allAddonClasses pushBack (_x # 0);
 };
 
-// Fill tree view with equipment
+//Fill tree view with equipment
 {
   _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
@@ -548,12 +548,12 @@ _allAddons apply
   _ctrlTV tvSetTooltip [[_indexAddon, _indexCategory, _indexEquipment], _descriptionShort];
 } foreach (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]);
 
-// initialize ENH_VAM_selectHashMap
+//initialize ENH_VAM_selectHashMap
 uiNamespace setVariable ["ENH_VAM_selectHashMap", createHashMap];
 
 
 
-// Make this a separate function
+//Make this a separate function
 private _fnc_removeEmptyNodes =
 {
  params
@@ -562,7 +562,7 @@ private _fnc_removeEmptyNodes =
   ["_maxLevel", -1]
  ];
 
- // Exit if path is deeper than wanted level
+ //Exit if path is deeper than wanted level
  if (count _path == _maxLevel && _maxLevel > -1) exitWith {};
 
  for "_i" from (_ctrlTV tvCount _path) to 0 step -1 do
@@ -582,7 +582,7 @@ private _fnc_removeEmptyNodes =
 
 [[], 2] call _fnc_removeEmptyNodes;
 
-// Sort TV
+//Sort TV
 _ctrlTV tvSortAll [];
 
 _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
@@ -598,10 +598,10 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
     (uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap]) getOrDefault [toLower (_ctrl tvData _path), [""]]
   ];
 
-  // check if it's a single entry or a folder
+  //check if it's a single entry or a folder
   if ((_ctrl tvCount _path) == 0) then
   {
-    // check if item that can have attachments, then display attachment tree
+    //check if item that can have attachments, then display attachment tree
     private _itemTypesWAttach = ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun"];
     private _tempPath = +_path;
     _tempPath deleteAt ((count _tempPath) - 1);

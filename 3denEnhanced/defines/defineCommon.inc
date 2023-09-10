@@ -17,15 +17,15 @@
 #define DIALOG_TOP (safezoneY + 17 * GRID_H)
 #define CTRL_DEFAULT_H (SIZE_M * GRID_H)
 
-// Top of all UIs
+//Top of all UIs
 #define WINDOW_TOP (0.5 - WINDOW_HAbs * 0.5 + 5 * GRID_H)
 
-// Either uses full width and leaves only 5 grids left and right,
-// or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
-// the UI will not become too wide
+//Either uses full width and leaves only 5 grids left and right,
+//or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
+//the UI will not become too wide
 #define WINDOW_WAbs ((safezoneW / GRID_W - 10) min 400)
 
-// Width of edit attributes window
+//Width of edit attributes window
 #define WINDOW_W_ATTRIBUTES 140
 
 //Statusbar

@@ -52,13 +52,13 @@ switch _mode do
       };
     } forEach ("true" configClasses (configfile >> "CfgUnitInsignia"));
 
-    // Sort by name first
+    //Sort by name first
     _ctrlTV tvSort [[], false];
 
-    // Sort by value so next time list is opened, selected value is at the top
+    //Sort by value so next time list is opened, selected value is at the top
     _ctrlTV tvSortByValue [[], false];
 
-    // Scroll to the top
+    //Scroll to the top
     _ctrlTV ctrlSetScrollValues [0, 0];
   };
   case "attributeSave":
@@ -70,7 +70,7 @@ switch _mode do
   {
     _params params [["_ctrlEdit", controlNull]];
 
-    // Change search button icon
+    //Change search button icon
     private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
     (ctrlParentControlsGroup _ctrlEdit controlsGroupCtrl 301) ctrlSetText _image;
   };
@@ -78,7 +78,7 @@ switch _mode do
   {
     _params params [["_ctrlButton", controlNull]];
 
-    // Change search button icon and clear edit control to reset tree view filter
+    //Change search button icon and clear edit control to reset tree view filter
     ctrlParentControlsGroup _ctrlButton controlsGroupCtrl 300 ctrlSetText "";
     _ctrlButton ctrlSetText IMG_SEARCH_START;
   };

@@ -1,17 +1,17 @@
 /*
-	Author: linkion and R3vo
+  Author: linkion and R3vo
 
-	Description:
-	select items for main treeview from selectHashMap
+  Description:
+  select items for main treeview from selectHashMap
 
-	Parameter(s):
-	-
+  Parameter(s):
+  -
 
-	Returns:
-	-
+  Returns:
+  -
 
-	Usage:
-	[_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
+  Usage:
+  [_selectHashMap] call ENH_fnc_VAM_loadSelectHashMap;
 */
 
 #include "\3denEnhanced\defines\defineCommon.inc"
@@ -23,13 +23,13 @@ _selectHashMap = +_selectHashMap;
 private _ctrlTV = uiNamespace getVariable "ENH_VAM_display" displayCtrl IDC_VAM_TREEVIEW;
 
 for "_i" from 0 to (_ctrlTV tvCount []) do {
-  // clear current selection
+  //clear current selection
   [_ctrlTV, 0, [_i]] call ENH_fnc_VAM_switchNodeState;
 };
 
 {
-  // Current key is saved in variable _x
-  // Current value is saved in variable _y
+  //Current key is saved in variable _x
+  //Current value is saved in variable _y
   _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort", "_class"];
 
   private _indexAddon = -1;

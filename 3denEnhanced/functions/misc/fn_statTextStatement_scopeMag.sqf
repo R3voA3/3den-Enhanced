@@ -16,7 +16,7 @@
 params ["", "_config"];
 //TRACE_1("statTextStatement_scopeMag",_config);
 
-private _minZoom = 999; // FOV, so smaller is more zoomed in
+private _minZoom = 999; //FOV, so smaller is more zoomed in
 {
     _minZoom = _minZoom min (getNumber (_x >> "opticsZoomMin"));
 } forEach configProperties [_config >> "ItemInfo" >> "OpticsModes"];

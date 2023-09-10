@@ -44,14 +44,14 @@ _display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMou
   _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
-// Collapse
+//Collapse
 _display displayCtrl IDC_TEXTUREFINDER_COLLAPSEALL ctrlAddEventHandler ["buttonClick",
 {
   params ["_ctrlButton"];
   tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_TEXTURELIST)
 }];
 
-// Expand
+//Expand
 _display displayCtrl IDC_TEXTUREFINDER_EXPANDALL ctrlAddEventHandler ["buttonClick",
 {
   params ["_ctrlButton"];

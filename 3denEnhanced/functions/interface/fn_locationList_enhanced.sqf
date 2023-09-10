@@ -15,7 +15,7 @@ switch (_mode) do
 {
   case "add":
   {
-    // Let the user define a name
+    //Let the user define a name
     private _displayInputName = findDisplay 313 createDisplay "Display3DENRename";
 
     _displayInputName displayAddEventHandler ["unload",
@@ -31,7 +31,7 @@ switch (_mode) do
 
     if (ENH_LocationsList_AddNew_Name == "") exitWith {};
 
-    // Check if locations folder already exists. Entry with value 42
+    //Check if locations folder already exists. Entry with value 42
     for "_i" from 0 to (_tvLocations tvCount [0]) - 1 do
     {
       if (_tvLocations tvValue [0, _i] == -42) exitWith
@@ -40,7 +40,7 @@ switch (_mode) do
       };
     };
 
-    // If not, create it
+    //If not, create it
     if (_customLocationsRoot == -1) then
     {
       _customLocationsRoot = _tvLocations tvAdd [[0], localize "STR_ENH_LOCATIONLIST_CUSTOMLOCATONS"];
@@ -50,7 +50,7 @@ switch (_mode) do
     private _newEntryIndex = _tvLocations tvAdd [[0, _customLocationsRoot], ENH_LocationsList_AddNew_Name];
     _tvLocations tvSetPicture [[0, _customLocationsRoot, _newEntryIndex], _icon];
 
-    // Get a unique index by finding the largest index + 1
+    //Get a unique index by finding the largest index + 1
     private _key = 0;
     {
       if (_x > _key) then {_key = _x};
@@ -60,7 +60,7 @@ switch (_mode) do
 
     _tvLocations tvSetValue [[0, _customLocationsRoot, _newEntryIndex], _key];
 
-    // Save date to profileNamespace
+    //Save date to profileNamespace
     _savedLocationsWorld set [_key, [getPosWorld get3DENCamera, vectorDir get3DENCamera, vectorUp get3DENCamera, ENH_LocationsList_AddNew_Name]];
     _savedLocations set [toUpper worldName, _savedLocationsWorld];
     profileNamespace setVariable ["ENH_LocationList_CustomLocation", _savedLocations];
@@ -70,10 +70,10 @@ switch (_mode) do
   };
   case "delete":
   {
-    // Custom locations have a value > 0
+    //Custom locations have a value > 0
     if (_tvLocations tvValue _selectedPath < 1) exitWith {};
 
-    // Update data in profileNamespace
+    //Update data in profileNamespace
     private _key = _tvLocations tvValue _selectedPath;
     _savedLocationsWorld deleteAt _key;
     _savedLocations set [toUpper worldName, _savedLocationsWorld];
@@ -95,7 +95,7 @@ switch (_mode) do
   };
   case "init":
   {
-    // Fill list
+    //Fill list
     if (_savedLocationsWorld isEqualTo []) exitWith {};
 
     _customLocationsRoot = _tvLocations tvAdd [[0], localize "STR_ENH_LOCATIONLIST_CUSTOMLOCATONS"];
@@ -122,7 +122,7 @@ switch (_mode) do
 
       private _parentIndex = _tvLocations tvAdd [[0], localize _parentName];
       {
-        // Different name handling for locations vs objects
+        //Different name handling for locations vs objects
         private _name = "";
         if (_x isEqualType objNull) then
         {

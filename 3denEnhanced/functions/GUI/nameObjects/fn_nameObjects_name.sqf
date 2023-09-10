@@ -15,7 +15,7 @@
 
 disableSerialization;
 private _display = findDisplay IDD_NAMEOBJECTS;
-private _input   = param [0, "UNNAME", [""]];
+private _input = param [0, "UNNAME", [""]];
 private _toName = [["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DENSelected;
 
 if (_input == "UNNAME") then
@@ -29,7 +29,7 @@ if (_input == "UNNAME") then
 }
 else
 {
-  private _varName  = ctrlText CTRL(IDC_NAMEOBJECTS_VARIABLENAME);
+  private _varName = ctrlText CTRL(IDC_NAMEOBJECTS_VARIABLENAME);
   private _index = parseNumber ctrlText CTRL(IDC_NAMEOBJECTS_INDEXSTART);
   profileNamespace setVariable ["ENH_NameObjects_LastVarName", _varName];
   _varName = _varName + "_";

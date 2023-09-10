@@ -74,7 +74,7 @@ if (_entities1DimRotation isEqualTo [] && _entities3DimRotation isEqualTo []) ex
 
 
 
-// Triggers and markers have one dimensional rotation. All other entities have three dimensions or no rotation attribute
+//Triggers and markers have one dimensional rotation. All other entities have three dimensions or no rotation attribute
 _fnc_setOrientation =
 {
   params [["_entity", objNull], ["_degrees", 0]];

@@ -44,8 +44,8 @@ class Cfg3DEN
   };
   class Attributes
   {
-    // Base class templates
-    class Default; // Empty template with pre-defined width and single line height
+    //Base class templates
+    class Default; //Empty template with pre-defined width and single line height
     class Title: Default
     {
       class Controls
@@ -53,7 +53,7 @@ class Cfg3DEN
         class Title;
       };
     };
-    // Increase height of EditCodeMulti5
+    //Increase height of EditCodeMulti5
     #ifndef ENH_LARGER_EDITBOXES
     class EditMulti3;
     class EditCodeMulti3: EditMulti3
@@ -76,7 +76,7 @@ class Cfg3DEN
         };
         class Value: Value
         {
-          h = 20 * 3.5 * GRID_H - 1 * GRID_H; // We make this one one grid smaller so text will never overlap the frame
+          h = 20 * 3.5 * GRID_H - 1 * GRID_H; //We make this one one grid smaller so text will never overlap the frame
         };
         class Title: Title
         {

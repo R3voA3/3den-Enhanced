@@ -9,7 +9,7 @@ class ENH_MoveToLayer
   class ControlsBackground
   {
     DISABLE_BACKGROUND
-	  class Header: ctrlStaticTitle
+    class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W;
@@ -37,7 +37,7 @@ class ENH_MoveToLayer
     class LayerList: ctrlTree
     {
       idc = 100;
-	    idcSearch = 101;
+      idcSearch = 101;
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
       y = 0.5 - WINDOW_HAbs * 0.5 + 11 * GRID_H;
       w = DIALOG_W * GRID_W - 2 * GRID_W;
@@ -46,7 +46,7 @@ class ENH_MoveToLayer
       colorBorder[] = {0,0,0,0};
       colorLines[] = {1,1,1,1};
     };
-	class Search: ctrlEdit
+  class Search: ctrlEdit
     {
       idc = 101;
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W + GRID_W;
@@ -55,7 +55,7 @@ class ENH_MoveToLayer
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
     };
-	class SearchIcon: ctrlStaticPictureKeepAspect
+  class SearchIcon: ctrlStaticPictureKeepAspect
     {
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       tooltip = "";

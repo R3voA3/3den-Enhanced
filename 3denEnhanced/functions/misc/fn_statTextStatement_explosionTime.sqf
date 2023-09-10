@@ -23,7 +23,7 @@ private _timeToLive = getNumber (_ammoConfig >> "timeToLive");
 private _explosionTime = getNumber (_ammoConfig >> "explosionTime");
 
 if (_explosionTime > _timeToLive) exitWith {
-    "-" // Handle IR grenades
+    "-" //Handle IR grenades
 };
 
 if (_explosionTime == -1) exitWith {

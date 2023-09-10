@@ -4,7 +4,7 @@
   Date: 2020-02-20
 
   Description:
-  Called  onTerrainNew. Collapes all tree views of the asset browser
+  Called onTerrainNew. Collapes all tree views of the asset browser
 
   Parameter(s):
   -

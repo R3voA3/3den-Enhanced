@@ -19,7 +19,7 @@ private _display = uiNamespace getVariable ["ENH_CFGS_Display", displayNull];
 
 params [["_mode", ""]];
 
-if (_mode == "fill") then // Fill list
+if (_mode == "fill") then //Fill list
 {
   private _tvFavorites = CTRL(IDC_SENTENCESBROWSER_FAVORITES);
   tvClear _tvFavorites;
@@ -37,7 +37,7 @@ else
   private _configStr = _tv tvData _selectedPath;
   if (_configStr == "") exitWith {false};
 
-  if (ctrlClassName _tv == "List") then // Add to favorites
+  if (ctrlClassName _tv == "List") then //Add to favorites
   {
     private _tvFavorites = (ctrlParent _tv displayCtrl 4000);
     if ((ENH_CFGS_Favorites find [_text, _configStr]) > -1) exitWith {false};
@@ -53,7 +53,7 @@ else
   }
   else
   {
-    _tv tvDelete _selectedPath; // Remove from favorits
+    _tv tvDelete _selectedPath; //Remove from favorits
     ENH_CFGS_Favorites = ENH_CFGS_Favorites - [[_text, _configStr]];
     ["ENH_ActionPerformed"] call BIS_fnc_3DENNotification;
   };

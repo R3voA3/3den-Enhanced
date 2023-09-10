@@ -151,7 +151,7 @@ class ENH_SelectionFilter
   conditionShow = "selected";
   opensNewWindow = 1;
 };
-// Modify the original behaviour. Now the map will be moved as well
+//Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
 {
   action = "[] spawn ENH_fnc_centerMapOnSelection";

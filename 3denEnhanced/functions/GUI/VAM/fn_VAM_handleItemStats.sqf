@@ -17,7 +17,7 @@ private _ctrlProgressText_3 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_3;
 private _ctrlProgressText_4 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_4;
 private _ctrlProgressText_5 = _display displayCtrl IDC_VAM_PROGRESS_TEXT_5;
 
-// No item selected
+//No item selected
 if ((_ctrl tvCount _path) == 0) then
 {
   private _currentItemSelected = uiNamespace getVariable ["ENH_VAM_selectedItem", ["", "", "", "", "", "", "", ""]];

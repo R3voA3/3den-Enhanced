@@ -24,7 +24,7 @@ private _ctrlTV = _display displayCtrl 100;
   private _index = _ctrlTV tvAdd [[], _layerID get3DENAttribute "name" select 0];
   _ctrlTV tvSetValue [[_index], _layerID]; //3DEN ID
 
-  // Define icon
+  //Define icon
   private _visible = (_layerID get3DENAttribute "Visibility" select 0);
   private _canTransform = (_layerID get3DENAttribute "Transformation" select 0);
 
@@ -39,5 +39,5 @@ private _ctrlTV = _display displayCtrl 100;
 
 _ctrlTV tvSortAll [[], false];
 
-// Focus search box
+//Focus search box
 ctrlSetFocus (ctrlParent _ctrlTV displayCtrl 101);

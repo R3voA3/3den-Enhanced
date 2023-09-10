@@ -22,10 +22,10 @@ private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _lbSource = focusedCtrl _display;
 private _row = lbCurSel _lbSource;
 
-// Check if the focused control is actually one of the two lists
+//Check if the focused control is actually one of the two lists
 if !(ctrlIDC _lbSource in [IDC_ESE_AVAILABLEITEMSLIST, IDC_ESE_COMPATIBLEITEMSLIST]) exitWith {};
 
-// Check if something is selected
+//Check if something is selected
 if (_row isEqualTo -1) exitWith {};
 
 private _rows = lnbSize _ctrlInventory select 0;

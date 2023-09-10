@@ -7,7 +7,7 @@ class ENH_CreateObject
   class ControlsBackground
   {
     DISABLE_BACKGROUND
-	  class Header: ctrlStaticTitle
+    class Header: ctrlStaticTitle
     {
        text = "$STR_3DEN_HISTORY_CREATEOBJECT_DISPLAYNAME";
       x = CENTER_X - DIALOG_W * 0.5 * GRID_W;

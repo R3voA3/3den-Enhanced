@@ -20,7 +20,7 @@ disableSerialization;
 private _display = findDisplay 313;
 private _conditionHide = (102 * (pixelW * pixelGrid * 0.50) >= (safezoneW - 60 * (pixelW * pixelGrid * 0.50)) - 109 * (pixelW * pixelGrid * 0.50) - 2 * (2 * pixelW));
 
-// Hide control if screen is too small or gui scale too big. We wait 20 seconds because this command can crash Arma
+//Hide control if screen is too small or gui scale too big. We wait 20 seconds because this command can crash Arma
 if (_conditionHide) then
 {
   [] spawn

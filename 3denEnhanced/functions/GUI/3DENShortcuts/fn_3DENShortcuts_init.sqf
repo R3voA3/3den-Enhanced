@@ -53,7 +53,7 @@ _ctrlSearchIcon ctrlSetText "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.
 private _ctrlContent = _display ctrlCreate ["ctrlListNBox", IDC_SHORTCUTS_CONTENT];
 _ctrlContent ctrlSetPosition [DIALOG_LEFT, safeZoneY + 28 * GRID_H, DIALOG_W * GRID_W, (DIALOG_H - 1) * GRID_H];
 
-// Setup filter control for BIS_fnc_initListNBoxSorting
+//Setup filter control for BIS_fnc_initListNBoxSorting
 private _ctrlFilterBackground = _display ctrlCreate ["ctrlStatic", IDC_SHORTCUTS_FILTERBG];
 _ctrlFilterBackground ctrlSetPosition [DIALOG_LEFT, safeZoneY + 22 * GRID_H, DIALOG_W * GRID_W,  5 * GRID_H];
 _ctrlFilterBackground ctrlSetBackgroundColor [0, 0, 0, 1];
@@ -66,7 +66,7 @@ _ctrlFilter lnbSetColumnsPos COL_POS_FILTER;
 
 _ctrlFilter lnbAddRow ["", "Action", "Shortcuts"];
 
-// Commit all changes
+//Commit all changes
 allControls _display apply {_x ctrlCommit 0};
 
 [_ctrlFilter, _ctrlContent, [0, 1, 2]] call BIS_fnc_initListNBoxSorting;

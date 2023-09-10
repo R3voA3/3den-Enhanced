@@ -32,12 +32,12 @@ class Display3DENSave
     };
     class Search: ctrlEdit
     {
-      x = CENTER_X + (WINDOW_WAbs * 1/4 - 	5 - 1) * GRID_W;
+      x = CENTER_X + (WINDOW_WAbs * 1/4 - 5 - 1) * GRID_W;
       w = (WINDOW_WAbs / 4) * GRID_W;
     };
     class SearchButton: ctrlButtonSearch
     {
-      x = CENTER_X + (WINDOW_WAbs * 1/2 - 	5 - 1) * GRID_W;
+      x = CENTER_X + (WINDOW_WAbs * 1/2 - 5 - 1) * GRID_W;
     };
     class Folders: ctrlTree
     {
@@ -72,7 +72,7 @@ class Display3DENSave
     class Binarize: ctrlCheckbox
     {
       x = CENTER_X - (WINDOW_WAbs * 1/4) * GRID_W;
-      y = 0.5 + WINDOW_HAbs * 0.5 - (3 * 	5 + 3) * GRID_H;
+      y = 0.5 + WINDOW_HAbs * 0.5 - (3 * 5 + 3) * GRID_H;
     };
     class ButtonOK: ctrlButtonOK
     {

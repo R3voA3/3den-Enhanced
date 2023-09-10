@@ -6,7 +6,7 @@
 #define CENTER_X ((getResolution select 2) * 0.5 * pixelW)
 #define CENTER_Y ((getResolution select 3) * 0.5 * pixelH)
 
-// 720px
+//720px
 #define WINDOW_W 120
 #define WINDOW_H 180
 #define WINDOW_HAbs (safezoneH min (WINDOW_H * GRID_H))
@@ -20,7 +20,7 @@
 #define ATTRIBUTE_CONTENT_H 5
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Fonts
+//Fonts
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define FONT_NORMAL "RobotoCondensedLight"
 #define FONT_SEMIBOLD "RobotoCondensed"
@@ -53,7 +53,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Color
+//Color
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define COLOR_TEXT_RGB 1, 1, 1
@@ -145,7 +145,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Macros
+//Macros
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define CHECKBOX_TEXTURE(UNCHECKED,CHECKED)\
@@ -161,13 +161,13 @@
  textureDisabledUnchecked = UNCHECKED;
 
 ///////////////////////////////////////////////////////////////
-// Convert RGB or RGBA color to hexadecimal
-// Examples:
-// RGBATOHEX(1,0,1,1)
-// returns "#ffff00ff"
+//Convert RGB or RGBA color to hexadecimal
+//Examples:
+//RGBATOHEX(1,0,1,1)
+//returns "#ffff00ff"
 //
-// RGBTOHEX(1,0,1)
-// returns "#ff00ff"
+//RGBTOHEX(1,0,1)
+//returns "#ff00ff"
 ///////////////////////////////////////////////////////////////
 #define RGBATOHEX(COLOR_R,COLOR_G,COLOR_B,COLOR_A) __EVAL([COLOR_R,COLOR_G,COLOR_B,COLOR_A] call _fnc_colorRGBAtoHEX)
 #define RGBTOHEX(COLOR_R,COLOR_G,COLOR_B) __EVAL([COLOR_R,COLOR_G,COLOR_B] call _fnc_colorRGBAtoHEX)
@@ -175,13 +175,13 @@
 
 
 ///////////////////////////////////////////////////////////////
-// Convert hexadecimal color to RGB or RGBA
-// Example:
-// HEXTORGBA("#ffff00ff")
-// returns 1,0,1,1
+//Convert hexadecimal color to RGB or RGBA
+//Example:
+//HEXTORGBA("#ffff00ff")
+//returns 1,0,1,1
 //
-// HEXTORGB("#ff00ff")
-// returns 1,0,1
+//HEXTORGB("#ff00ff")
+//returns 1,0,1
 ///////////////////////////////////////////////////////////////
 #define HEXTORGBA(COLOR_RGBA)\
  __EVAL(COLOR_RGBA call _fnc_colorHEXtoRGBA_2),\
@@ -196,10 +196,10 @@
 
 
 ///////////////////////////////////////////////////////////////
-// Convert RGBA in range [0-255] to [0-1] used by the game config
-// Example:
-// RGBA255to1(255,0,255,255)
-// returns 1,0,1,1
+//Convert RGBA in range [0-255] to [0-1] used by the game config
+//Example:
+//RGBA255to1(255,0,255,255)
+//returns 1,0,1,1
 ///////////////////////////////////////////////////////////////
 #define RGBA255to1(COLOR_R,COLOR_G,COLOR_B,COLOR_A)\
  __EVAL(COLOR_R * 0.00392157),\
@@ -209,7 +209,7 @@
 
 
 ///////////////////////////////////////////////////////////////
-/// Scripts
+///Scripts
 ///////////////////////////////////////////////////////////////
 
 #define INIT_DISPLAY_FUNCTION (uinamespace getvariable 'BIS_fnc_initDisplay')

@@ -63,7 +63,7 @@ switch (_TAGIndex) do
   };
 };
 
-// Handle the case when selection was made from right to left
+//Handle the case when selection was made from right to left
 if (_length < 0) then
 {
   _start = _start - abs (_length);

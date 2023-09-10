@@ -55,7 +55,7 @@ private _secondaryNVGSupported = false;
 
 if (
     count _opticsModes == 1 || //If we only have a single mode. And it's a secondary, then consider it primary.
-    {{_x select 1} count _opticsModes  == count _opticsModes} //If every mode supports it. Then then the primary also supports it
+    {{_x select 1} count _opticsModes == count _opticsModes} //If every mode supports it. Then then the primary also supports it
 ) then {
     _primaryNVGSupported = _secondaryNVGSupported;
 };

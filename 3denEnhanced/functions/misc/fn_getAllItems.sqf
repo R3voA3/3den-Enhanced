@@ -96,4 +96,4 @@ _allItemConfigs apply
 
 uiNamespace setVariable ["ENH_ESE_types", TYPES_WHITELIST];
 uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsHashMap];
-uiNamespace setVariable ["ENH_ESE_allAddons", _addons - [["","",""]]]; // Remove empty mod
+uiNamespace setVariable ["ENH_ESE_allAddons", _addons - [["","",""]]]; //Remove empty mod

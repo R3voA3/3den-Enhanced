@@ -154,7 +154,7 @@ switch (_mode) do
 
     _previewPicture ctrlSetText _picture;
 
-    (getTextureInfo  _picture) params ["_width", "_height"];
+    (getTextureInfo _picture) params ["_width", "_height"];
     private _imageHeight = 27;
     private _imageWidthCalculated = ((_imageHeight * GRID_W) * _width / _height);
     private _xPos = safeZoneX + safeZoneW - 62 * GRID_W - _imageWidthCalculated;

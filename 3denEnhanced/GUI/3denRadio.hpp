@@ -7,7 +7,7 @@ class ENH_3DENRadio
   class ControlsBackground
   {
   DISABLE_BACKGROUND
-	class Header: ctrlStaticTitle
+  class Header: ctrlStaticTitle
     {
       text = "3DEN Radio";
       x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
@@ -22,7 +22,7 @@ class ENH_3DENRadio
       w = WINDOW_WAbs * GRID_W;
       h = WINDOW_HAbs - 30 * GRID_H;
     };
-	class Footer: ctrlStaticFooter
+  class Footer: ctrlStaticFooter
     {
       x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 27 * GRID_H;

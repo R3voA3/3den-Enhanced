@@ -22,29 +22,29 @@
 params["_ctrlTV", "_itemClass"];
 
 {
-  // Current result is saved in variable _x
-  // kill all spawns before starting
+  //Current result is saved in variable _x
+  //kill all spawns before starting
   terminate _x;
 } forEach (uiNamespace getVariable "ENH_VAM_spawnedAccInits");
 
 tvClear _ctrlTV;
 
-///////////////////////////    Getting Items    //////////////////////////////////////
+///////////////////////////Getting Items//////////////////////////////////////
 
 private _compatibleItems = [
-  [], // optic
-  [], // side
-  [], // muzzle
-  [],  // bipod
-  [[], []] // magazines
+  [], //optic
+  [], //side
+  [], //muzzle
+  [],  //bipod
+  [[], []] //magazines
 ];
 
 private _selectHashMap = uiNamespace getVariable ["ENH_VAM_selectHashMap", createHashMap];
 private _itemHashMap = uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap];
-// from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
-// Author: Alganthe
+//from ace_arsenal fnc_fillRightPanel.sqf lines 76-100
+//Author: Alganthe
 
-// Retrieve compatible mags
+//Retrieve compatible mags
 {
     if (_x != "") then {
         private _weaponConfig = (configFile >> "CfgWeapons" >> _x);
@@ -56,7 +56,7 @@ private _itemHashMap = uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHa
                 ((_compatibleItems select _index) select _subIndex) pushBackUnique (configName (configFile >> "CfgMagazines" >> _x))
             } foreach ([getArray (_weaponConfig >> _x >> "magazines"), getArray (_weaponConfig >> "magazines")] select (_x == "this"));
 
-            // Magazine groups
+            //Magazine groups
             {
                 private _magazineGroups = createHashMap;
 
@@ -91,9 +91,9 @@ _compatibleMagsSecondaryMuzzle = _compatibleItems select 4 select 1;
 
 private _configCfgWeapons = configFile >> "CfgWeapons";
 
-// sort compatible items into item types
+//sort compatible items into item types
 {
-  // Current result is saved in variable _x
+  //Current result is saved in variable _x
   private _configItemInfo = _configCfgWeapons >> _x >> "ItemInfo";
 
   switch (getNumber (_configItemInfo >> "type")) do {
@@ -113,7 +113,7 @@ private _configCfgWeapons = configFile >> "CfgWeapons";
 
 } forEach ([_itemClass] call ENH_fnc_compatibleItems);
 
-//////////////////////////    Filling TV    //////////////////////////////////
+//////////////////////////Filling TV//////////////////////////////////
 
 private _AttachTypes = ["scopes", "pointers", "muzzles", "bipods", "primaryMags", "secondaryMags"];
 
@@ -148,7 +148,7 @@ private _spawns = [];
         [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
       };
 
-      // remove itself from spawns array when complete
+      //remove itself from spawns array when complete
       _spawns deleteAt (_spawns find _thisScript);
     });
   } forEach _x;
@@ -164,7 +164,7 @@ private _spawns = [];
       [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
     };
 
-    // remove itself from spawns array when complete
+    //remove itself from spawns array when complete
     _spawns deleteAt (_spawns find _thisScript);
   });
 } forEach _compatibleMagsPrimaryMuzzle;
@@ -179,10 +179,10 @@ private _spawns = [];
       [_ctrlTV, _typeIndex, _displayName, _class, _descriptionShort, _addonIcon, _selectHashMap] call ENH_fnc_VAM_accTVItemInsert;
     };
 
-    // remove itself from spawns array when complete
+    //remove itself from spawns array when complete
     _spawns deleteAt (_spawns find _thisScript);
   });
 } forEach _compatibleMagsSecondaryMuzzle;
 
-// save _spawns to uiNamespace to be terminated
+//save _spawns to uiNamespace to be terminated
 uiNamespace setVariable ["ENH_VAM_spawnedAccInits", _spawns];

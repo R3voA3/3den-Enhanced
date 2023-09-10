@@ -62,7 +62,7 @@ _ctrlTV tvAdd [[], "PAA"];
 
 } forEach (uiNamespace getVariable ["ENH_TextureFinder_Textures", []]);
 
-// Always show final result
+//Always show final result
 _ctrlProgText ctrlSetStructuredText parseText format [_listStatusText, _textureCountTotal, _textureCountTotal];
 
 _ctrlTV tvSortAll [[], false];
