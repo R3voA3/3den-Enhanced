@@ -31,6 +31,9 @@
         <Italian>Attributi di ricerca</Italian>
         <Polish>Atrybuty wyszukiwania</Polish>
         <Spanish>Buscar Atributos</Spanish>
+				<Russian>Атрибуты поиска</Russian>
+        <Chinesesimp>搜索属性</Chinesesimp>
+        <Chinese>搜索属性</Chinese>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
@@ -2881,6 +2884,9 @@
         <Italian>Ripristina l'equipaggiamento originale al respawn. L'equipaggiamento può essere cambiato modificando la variabile ENH_SavedLoadout nello spazio dei nomi del giocatore.</Italian>
         <Polish>Przywraca początkowe wyposażenie jednostki po odrodzeniu. Zapisane wyposażenie można zmienić poprzed modyfikację zmiennej ENH_SavedLoadout w Namespace gracza.</Polish>
         <Spanish>Restaura el equipamiento original si se reaparece. El equipamiento puede ser cambiado modificando la variable ENH_SavedLoadout en el espacio de nombre del jugador.</Spanish>
+				<Chinesesimp>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinesesimp>
+        <Chinese>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinese>
+        <Russian>Восстанавливает исходную загрузку при респауне. Загрузку можно изменить, модифицировав переменную ENH_SavedLoadout в пространстве имен игрока.</Russian>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
         <English>View Distance</English>
@@ -3489,6 +3495,9 @@
         <Spanish>Ubicaciones personalizadas</Spanish>
         <Polish>Lokalizacje indywidualne</Polish>
         <French>Sites personnalisés</French>
+				<Russian>Пользовательские места</Russian>
+        <Chinesesimp>自定义地点</Chinesesimp>
+        <Chinese>自定义地点</Chinese>
     </Key>
     <Key ID="STR_ENH_LOCATIONLIST_CHAPELS">
         <English>Chapels</English>
@@ -3763,6 +3772,8 @@
         <Italian>Mostra Gruppi</Italian>
         <Polish>Pokaż grupy</Polish>
         <Spanish>Mostrar Grupos</Spanish>
+				<Chinesesimp>显示组别</Chinesesimp>
+        <Chinese>显示组别</Chinese>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
         <English>All groups and information about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
@@ -3770,6 +3781,8 @@
         <Italian>Tutti i gruppi e le relative informazioni saranno mostrate in 3D e sulla mappa. Inoltre, i gruppi possono essere cancellati e i waypoint possono essere mostrati.</Italian>
         <Polish>Wszystkie grupy i informacje o nich będą wyświetlane na mapie oraz w widoku 3D. Dodatkowo grupy można usuwać, wyświetlane będą też ich punkty nawigacyjne.</Polish>
         <Spanish>Todos los grupos y su información será mostrada en 3D y en el mapa. Adicionalmente, los grupos pueden ser borrados y sus waypoints pueden ser mostrados.</Spanish>
+				<Chinesesimp>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinesesimp>
+        <Chinese>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinese>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
         <English>Kill Units (BLUFOR)</English>
@@ -3873,6 +3886,8 @@
         <Italian>Sposta al Livello...</Italian>
         <Polish>Przenieś do warstwy</Polish>
         <Spanish>Mover a capa...</Spanish>
+				<Chinesesimp>移动到层...</Chinesesimp>
+        <Chinese>移动到层...</Chinese>
     </Key>
     <Key ID="STR_ENH_FOLDER_PYLONS">
         <English>Pylon Tools</English>
@@ -4151,6 +4166,14 @@
     <Key ID="STR_ENH_ABOUT_CONTRIBUTE">
         <English>Contribute</English>
         <German>Zum Projekt beitragen</German>
+				<Chinesesimp>投稿</Chinesesimp>
+        <Chinese>投稿</Chinese>
+        <Czech>Přispějte na</Czech>
+        <French>Contribuer</French>
+        <Italian>Contribuire</Italian>
+        <Polish>Wkład</Polish>
+        <Spanish>Contribuir</Spanish>
+        <Russian>Внести вклад</Russian>
     </Key>
     <Key ID="STR_ENH_ABOUT_CREDITS">
         <English>Credits</English>
@@ -4559,6 +4582,8 @@
         <German>Alle Ebenen auswählen</German>
         <Polish>Zaznacz wszystkie warstwy</Polish>
         <Spanish>Seleccionar todas las Capas</Spanish>
+				<Chinesesimp>选择所有图层</Chinesesimp>
+        <Chinese>选择所有图层</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
         <English>Log Game Info</English>
@@ -4614,6 +4639,8 @@
         <Italian>Alterna Oggetto Locale</Italian>
         <Polish>Włącz lokalne obiekty</Polish>
         <Spanish>Activar Objeto Local</Spanish>
+				<Chinesesimp>切换本地对象</Chinesesimp>
+        <Chinese>切换本地对象</Chinese>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_RESTORESELECTION">
         <English>Restore original selection</English>
@@ -4621,6 +4648,8 @@
         <Italian>Ripristina selezione originale</Italian>
         <Polish>Przywróć oryginalny wybór</Polish>
         <Spanish>Restaurar selección original</Spanish>
+				<Chinesesimp>恢复原始选择</Chinesesimp>
+        <Chinese>恢复原始选择</Chinese>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER">
         <English>Selection Filter</English>
@@ -4628,13 +4657,17 @@
         <Italian>Filtro di selezione</Italian>
         <Polish>Filtr wyboru</Polish>
         <Spanish>Filtro de selección</Spanish>
+				<Chinesesimp>选择过滤器</Chinesesimp>
+        <Chinese>选择过滤器</Chinese>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_CONFIRMSELECTION">
         <English>Confirm selection</English>
-        <German>Auswahlbestätigen</German>
+        <German>Auswahl bestätigen</German>
         <Italian>Conferma Selezione</Italian>
         <Polish>Potwierdź wybór</Polish>
         <Spanish>Confirmar selección</Spanish>
+				<Chinesesimp>确认选择</Chinesesimp>
+        <Chinese>确认选择</Chinese>
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
@@ -5449,6 +5482,8 @@
         <Polish>Nazwa pojazdu</Polish>
         <Spanish>Nombre de vehículo</Spanish>
         <Italian>Nome del Veicolo</Italian>
+				<Chinesesimp>车辆名称</Chinesesimp>
+        <Chinese>车辆名称</Chinese>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
         <English>Plays a selected animation set. The gear needs to be set up manually.</English>
@@ -6028,6 +6063,8 @@
         <German>Skaliert die Größe des Objektes. Funktioniert nur mit Objekten die keine Simulation haben. Im Mehrspielermodus deaktiviert.</German>
         <Polish>Skaluje rozmiar obiektu. Działa tylko na objektach bez symulacji. Niedostępne dla trybu wieloosobowego.</Polish>
         <Spanish>Escala el tamaño final del objeto. Solo funciona para objetos sin simulación. Deshabilitado en multiplayer.</Spanish>
+				<Chinesesimp>缩放对象的大小。仅适用于无模拟的物体。在多人游戏中禁用。</Chinesesimp>
+        <Chinese>缩放对象的大小。仅适用于无模拟的物体。在多人游戏中禁用。</Chinese>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_STAND">
         <English>Stand</English>
@@ -6678,6 +6715,8 @@
         <German>Einzelspieler-Respawntickets</German>
         <Polish>Punkty odrodzenia jednego gracza</Polish>
         <Spanish>Tickets de respawn modo un jugador</Spanish>
+				<Chinesesimp>单人游戏重生门票</Chinesesimp>
+        <Chinese>单人游戏重生门票</Chinese>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
         <English>Every unit can respawn as long as it has not run out of tickets.</English>
@@ -6746,6 +6785,11 @@
         <English>Equipment Storage Editor</English>
         <German>Ausrüstungslagerraum-Editor</German>
         <Spanish>Editor del Almacen de Equipamientos</Spanish>
+				<Russian>Редактор хранения оборудования</Russian>
+        <Polish>Edytor przechowywania sprzętu</Polish>
+        <Chinesesimp>设备存储编辑器</Chinesesimp>
+        <Chinese>设备存储编辑器</Chinese>
+        <Italian>Editor di stoccaggio delle apparecchiature</Italian>
     </Key>
     <Key ID="STR_ENH_ESE_EXIT_TEXT">
         <English>You have unsaved changes. Close anyway?</English>
@@ -9733,6 +9777,8 @@
         <Polish>Wirtualny menedżer Arsenalu</Polish>
         <Spanish>Gerente de Arsenal Virtual</Spanish>
         <German>Arsenal Manager</German>
+				<Chinesesimp>虚拟兵工厂经理</Chinesesimp>
+        <Chinese>虚拟兵工厂经理</Chinese>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
         <English>Hide on Start</English>
