@@ -3,5 +3,5 @@
 *.paa binary
 
 # Change GitHub language categorization
-addons/**/*.cpp linguist-language=SQF
-addons/**/*.hpp linguist-language=SQF
+3denEnhanced/**/*.inc linguist-language=SQF
+3denEnhanced/**/*.hpp linguist-language=SQF
