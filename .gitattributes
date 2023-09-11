@@ -5,3 +5,6 @@
 # Change GitHub language categorization
 3denEnhanced/**/*.inc linguist-language=SQF
 3denEnhanced/**/*.hpp linguist-language=SQF
+
+*.ps1 linguist-language=POWERSHELL
+*.py linguist-language=PYTHON
