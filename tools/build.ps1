@@ -11,7 +11,7 @@ $ModVersion = "7.7.9"
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
 $TargetFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced v$ModVersion"
 $ToolsFolder = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools"
-$Changelog = "$ModVersion [url=https://github.com/R3voA3/3den-Enhanced/blob/master/changelog.md] Changelog (GitHub) [/url]"
+$Changelog = "$ModVersion [url=https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md] Changelog (GitHub) [/url]"
 $WorkshopID = 623475643
 
 function Update-Files
