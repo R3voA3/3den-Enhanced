@@ -90,4 +90,7 @@ if ($DoPublish -eq "true")
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
 
-#Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
+if (Test-Path -Path "${env:OneDrive}\Desktop\ENH.lnk")
+{
+  Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
+}

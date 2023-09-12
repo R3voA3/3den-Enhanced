@@ -2,6 +2,7 @@
 ## ADDED
 - Variable to freed hostage that holds the player object of who freed it _hostage getVariable ["ENH_WasFreedBy", objNull]; #263
 - New marker attributes Hide on Start and Conditional Show (thanks to hypoxia125)
+- Variable Viewer now also lists logics/modules
 - **Added an editor setting to enable auto backup of mission.sqm every time the scenario is saved/autosaved. Please report any issues with it ASAP**
 
 ## CHANGED
@@ -28,6 +29,7 @@
 - Search Attributes UI is now displayed properly on all aspect ratios, resolutions and UI sizes
 - Some notifications now have a clickable link
 - Mod is now 100% translated in Chinese and Chinese Simplefied
+- Variable Viewer has been rewritten
 
 ## REMOVED
 - Menu strip entry of WIP feature
