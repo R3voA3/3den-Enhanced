@@ -10,21 +10,21 @@ class ENH_3DENRadio
   class Header: ctrlStaticTitle
     {
       text = "3DEN Radio";
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
       y = WINDOW_TOP;
       w = WINDOW_WAbs * GRID_W;
       h = 5 * GRID_H;
     };
     class Background: ctrlStaticBackground
     {
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
       y = WINDOW_TOP + 2 * 5 * GRID_H;
       w = WINDOW_WAbs * GRID_W;
       h = WINDOW_HAbs - 30 * GRID_H;
     };
   class Footer: ctrlStaticFooter
     {
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 27 * GRID_H;
       w = WINDOW_WAbs * GRID_W;
       h = 7 * GRID_H;
@@ -38,7 +38,7 @@ class ENH_3DENRadio
     class CurrentSongText: ctrlStaticFooter
     {
       text = "$STR_ENH_3DENRADIO_SONG";
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 33 * GRID_H;
       w = 10 * GRID_W;
       h = 5 * GRID_H;
@@ -46,7 +46,7 @@ class ENH_3DENRadio
     class CurrentSong: CurrentSongText
     {
       idc = IDC_3DENRADIO_CURRENTSONG;
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 10 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 10 * GRID_W;
       w = (WINDOW_WAbs - 10) * GRID_W;
     };
   };
@@ -57,7 +57,7 @@ class ENH_3DENRadio
       idc = IDC_3DENRADIO_FILTER;
       idcLeft = -1;
       idcRight = -1;
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
       y = WINDOW_TOP + 5 * GRID_H;
       w = WINDOW_WAbs * GRID_W;
       h = 5 * GRID_H;
@@ -74,7 +74,7 @@ class ENH_3DENRadio
     class ToggleRadio: ctrlButtonPictureKeepAspect
     {
       idc = IDC_3DENRADIO_TOGGLERADIO;
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 26 * GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
@@ -83,7 +83,7 @@ class ENH_3DENRadio
     class VolumeIcon: ctrlStaticPictureKeepAspect
     {
       text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 7 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 7 * GRID_W;
     y = WINDOW_TOP + WINDOW_HAbs - 26 * GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
@@ -91,7 +91,7 @@ class ENH_3DENRadio
     class Volume: ctrlXSliderH
     {
       idc = IDC_3DENRADIO_VOLUME;
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 13 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 13 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 26 * GRID_H;
       w = 30 * GRID_W;
       h = 5 * GRID_H;
@@ -102,14 +102,14 @@ class ENH_3DENRadio
     {
       text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
       tooltip = "$STR_ENH_3DENRADIO_HELP_DESCRIPTION";
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 44 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 44 * GRID_W;
       tooltipMaxWidth = 1;
     };
     class SearchEdit: ctrlEdit
     {
       idc = IDC_3DENRADIO_SEARCH;
       tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 50 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 50 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 26 * GRID_H;
       w = 30 * GRID_W;
       h = 5 * GRID_H;
@@ -119,11 +119,11 @@ class ENH_3DENRadio
     {
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       tooltip = "";
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 80 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 80 * GRID_W;
     };
     class Group: ctrlControlsGroup
     {
-      x = CENTER_X - (WINDOW_WAbs * 0.5) * GRID_W + 86 * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W + 86 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 26 * GRID_H;
       w = 80 * GRID_W;
       h = 5 * GRID_H;

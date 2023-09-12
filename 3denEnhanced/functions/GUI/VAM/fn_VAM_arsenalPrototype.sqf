@@ -100,10 +100,10 @@ _ctrlAccTV ctrlSetFont FONT_NORMAL;
 _ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); //Replace with macro
 _ctrlAccTV ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
- CENTER_Y - 0 * WINDOW_HAbs + 17 * GRID_H,
- WINDOW_W * GRID_W - 2 * GRID_W,
- WINDOW_HAbs / 2 - 24 * GRID_H
+  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+  CENTER_Y - 0 * WINDOW_HAbs + 17 * GRID_H,
+  WINDOW_W * GRID_W - 2 * GRID_W,
+  WINDOW_HAbs / 2 - 24 * GRID_H
 ];
 
 _ctrlAccTV ctrlAddEventHandler ["TreeSelChanged",

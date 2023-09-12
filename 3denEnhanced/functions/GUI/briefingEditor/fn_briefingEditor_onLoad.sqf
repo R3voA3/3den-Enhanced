@@ -166,7 +166,7 @@ private _getColorFromHex =
    //Author: k0ss (github.com/k0ss)
    private _nums = toArray "0123456789ABCDEF";
    private _hex = toArray (_this # 0);
-   private _hex = _hex - [(_hex # 0)];
+   _hex = _hex - [(_hex # 0)];
    private _r = (_nums find (_hex # 0)) * 16 + (_nums find (_hex # 1));
    private _g = (_nums find (_hex # 2)) * 16 + (_nums find (_hex # 3));
    private _b = (_nums find (_hex # 4)) * 16 + (_nums find (_hex # 5));
