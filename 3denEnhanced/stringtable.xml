@@ -6438,34 +6438,34 @@
         <Chinese>查看變量</Chinese>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLEVALUE">
-        <English>Variable Value</English>
-        <Russian>Значение переменной</Russian>
-        <German>Variablenwert</German>
-        <Spanish>Valor variable</Spanish>
-        <French>Valeur de la variable</French>
-        <Polish>Wartość zmiennej</Polish>
-        <Chinesesimp>变量值</Chinesesimp>
-        <Chinese>變量值</Chinese>
+        <English>Value</English>
+        <Russian>Значение</Russian>
+        <German>Wert</German>
+        <Spanish>Valor</Spanish>
+        <French>Valeur</French>
+        <Polish>Wartość</Polish>
+        <Chinesesimp>价值</Chinesesimp>
+        <Chinese>价值</Chinese>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLENAME">
-        <English>Variable Name</English>
-        <Russian>Имя переменной</Russian>
-        <German>Variablenname</German>
-        <Spanish>Nombre variable</Spanish>
-        <French>Nom de la variable</French>
-        <Polish>Nazwa zmiennej</Polish>
-        <Chinesesimp>变量名</Chinesesimp>
-        <Chinese>變量名</Chinese>
+        <English>Name</English>
+        <Russian>Имя</Russian>
+        <German>Name</German>
+        <Spanish>Nombre</Spanish>
+        <French>Nom</French>
+        <Polish>Nazwa</Polish>
+        <Chinesesimp>名称</Chinesesimp>
+        <Chinese>名称</Chinese>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_VARIABLETYPE">
-        <English>Variable Type</English>
-        <Russian>Тип переменной</Russian>
-        <German>Variablentyp</German>
-        <Spanish>Tipo variable</Spanish>
-        <French>Type de la variable</French>
-        <Polish>Typ zmiennej</Polish>
-        <Chinesesimp>变量类型</Chinesesimp>
-        <Chinese>變量類型</Chinese>
+        <English>Type</English>
+        <Russian>Тип</Russian>
+        <German>Typ</German>
+        <Spanish>Tipo</Spanish>
+        <French>Type</French>
+        <Polish>Typ</Polish>
+        <Chinesesimp>类型</Chinesesimp>
+        <Chinese>类型</Chinese>
     </Key>
     <Key ID="STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS">
         <English>Hide Functions</English>
