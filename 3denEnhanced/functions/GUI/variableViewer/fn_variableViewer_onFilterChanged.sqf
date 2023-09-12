@@ -14,7 +14,7 @@
   -
 */
 
-params ["_ctrlNamespace", "_index"];
+params ["", "_index"];
 
 uiNamespace setVariable
 [
@@ -26,4 +26,4 @@ uiNamespace setVariable
   ]) param [_index, "missionNamespace", ["", objNull, locationNull, grpNull]]
 ];
 
-ctrlParent _ctrlNamespace call ENH_fnc_variableViewer_fillLNB;
+[] call ENH_fnc_variableViewer_fillLNB;

@@ -20,6 +20,20 @@ disableSerialization;
 params ["_ctrlLNB", "_selectedRow"];
 
 private _display = ctrlParent _ctrlLNB;
+private _conditionDisable = !(_ctrlLNB lnbText [_selectedRow, 2] in ["STRING", "SCALAR", "CODE", "BOOL"]);
 
-CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 0]);
-CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 1]);
+if (_conditionDisable) then
+{
+  CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText "";
+  CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText "";
+}
+else
+{
+  CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 0]);
+  CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText (_ctrlLNB lnbText [_selectedRow, 1]);
+};
+
+CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlEnable !_conditionDisable;
+CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlEnable !_conditionDisable;
+CTRL(IDC_VARIABLEVIEWER_SET) ctrlEnable !_conditionDisable;
+CTRL(IDC_VARIABLEVIEWER_DELETE) ctrlEnable !_conditionDisable;

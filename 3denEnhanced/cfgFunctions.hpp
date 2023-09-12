@@ -124,12 +124,10 @@ class CfgFunctions
       class variableViewer_delete;
       class variableViewer_fillLNB;
       class variableViewer_getNamespace;
-      class variableViewer_hideFunctions;
       class variableViewer_messageConfirm;
       class variableViewer_onFilterChanged;
       class variableViewer_onLNBSelChanged;
       class variableViewer_onLoad;
-      class variableViewer_onSearch;
       class variableViewer_setOrCreate;
     };
     class ESE

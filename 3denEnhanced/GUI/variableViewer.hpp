@@ -1,6 +1,3 @@
-#define DIALOG_W 170
-#define DIALOG_H 120
-
 class ENH_VariableViewer
 {
   idd = IDD_VARIABLEVIEWER;
@@ -8,33 +5,68 @@ class ENH_VariableViewer
   onLoad = "_this call ENH_fnc_variableViewer_onLoad";
   class ControlsBackground
   {
-    DISABLE_BACKGROUND
+    //DISABLE_BACKGROUND
+    class Header: ctrlStaticTitle
+    {
+      text = "$STR_ENH_VARIABLEVIEWER_HEADER";
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
+      y = WINDOW_TOP;
+      w = WINDOW_WAbs * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
-      w = DIALOG_W * GRID_W;
-      h = DIALOG_H * GRID_H + 7 * GRID_H;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
+      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      w = WINDOW_WAbs * GRID_W;
+      h = WINDOW_HAbs - 5 * CTRL_DEFAULT_H;
     };
     class BackgroundFilter: Background//Background used for filter buttons
     {
       h = CTRL_DEFAULT_H;
       colorBackground[] = {0, 0, 0, 1};
     };
-    class Header: ctrlStaticTitle
-    {
-      text = "$STR_ENH_VARIABLEVIEWER_HEADER";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H;
-    };
     class Footer: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 2 * GRID_H;
+      w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
+    };
+    class FooterInputFields: Footer
+    {
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 4  * GRID_H;
+      w = 127 * GRID_W;
+    };
+    class HideFunctionsText: ctrlStatic
+    {
+      text = "$STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS";
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 35 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      w = 28 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class VariableNameText: ctrlStatic
+    {
+      text = "$STR_ENH_VARIABLEVIEWER_VARIABLENAME";
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
+      w = 10 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class VariableValueText: VariableNameText
+    {
+      text = "$STR_ENH_VARIABLEVIEWER_VARIABLEVALUE";
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 57 * GRID_W;
+    };
+    class VariableCount: ctrlStatic
+    {
+      idc = IDC_VARIABLEVIEWER_VARIABLECOUNT;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 100 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      w = 20 * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
   };
   class Controls
@@ -43,113 +75,86 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_LIST;
       style = LB_MULTI + LB_TEXTURES;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 12 * GRID_H;
-      w = (DIALOG_W - 2) * GRID_W;
-      h = (DIALOG_H - 15) * GRID_H;
+      x = CENTER_X - WINDOW_WAbs * 0.5 * GRID_W;
+      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H;
+      w = WINDOW_WAbs * GRID_W;
+      h = WINDOW_HAbs - 9 * CTRL_DEFAULT_H;
       disableOverflow = true;
-      columns[] = {-0.008, 0.4, 0.85};//Create columns and move first column a tat to the left
-      onLBSelChanged = "_this call ENH_fnc_variableViewer_onLNBSelChanged";
+      columns[] = {0, 0.4, 0.85};
     };
     class Filter: List
     {
       idc = IDC_VARIABLEVIEWER_FILTER;
-      y = DIALOG_TOP + 5 * GRID_H;
+      y = WINDOW_TOP + CTRL_DEFAULT_H;
       h = CTRL_DEFAULT_H;
     };
     class Namespace: ctrlCombo
     {
       idc = IDC_VARIABLEVIEWER_NAMESPACE;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 35 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onLBSelChanged = "_this call ENH_fnc_variableViewer_onFilterChanged";
-    };
-    class VariableCount: ctrlStatic
-    {
-      idc = IDC_VARIABLEVIEWER_VARIABLECOUNT;
-      x = CENTERED_X(DIALOG_W) + 37 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 55 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class SearchEdit: ctrlEdit
     {
       idc = IDC_VARIABLEVIEWER_SEARCH;
-      x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class SearchButton: ctrlButtonSearch
     {
       idc = IDC_VARIABLEVIEWER_SEARCHBUTTON;
-      x = CENTERED_X(DIALOG_W) + 67 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 26 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
       w = 5 * GRID_W;
-      h = CTRL_DEFAULT_H;
-      onButtonClick = "_this call ENH_fnc_variableViewer_onSearch";
-    };
-    class HideFunctionsText: ctrlStatic
-    {
-      text = "$STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS";
-      x = CENTERED_X(DIALOG_W) + 73 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 28 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class HideFunctions: ctrlCheckbox
     {
       idc = IDC_VARIABLEVIEWER_HIDEFUNCTIONS;
-      x = CENTERED_X(DIALOG_W) + 100 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 31 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
-      onCheckedChanged = "_this call ENH_fnc_variableViewer_hideFunctions";
     };
     class VariableName: ctrlEdit
     {
       idc = IDC_VARIABLEVIEWER_VARIABLENAME;
-      text = "$STR_ENH_VARIABLEVIEWER_VARIABLENAME";
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 12 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class VariableValue: ctrlEdit
+    class VariableValue: VariableName
     {
       idc = IDC_VARIABLEVIEWER_VARIABLEVALUE;
-      text = "$STR_ENH_VARIABLEVIEWER_VARIABLEVALUE";
-      x = CENTERED_X(DIALOG_W) + 47 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H) * GRID_H;
-      w = 122 * GRID_W;
-      h = CTRL_DEFAULT_H;
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 69 * GRID_W;
     };
-    class Delete: ctrlButton
+    class Delete: ctrlButtonPictureKeepAspect
     {
-      text = "$STR_ENH_VARIABLEVIEWER_DELETE";
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 63) * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      idc = IDC_VARIABLEVIEWER_DELETE;
+      text = "a3\3den\data\displays\display3den\panelright\customcomposition_edit_ca.paa";
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 115 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
+      w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this spawn ENH_fnc_variableViewer_delete";
     };
-    class Set: ctrlButton
+    class Set: Delete
     {
       idc = IDC_VARIABLEVIEWER_SET;
-      text = "$STR_ENH_VARIABLEVIEWER_SET_NEW";
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 42) * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
-      h = CTRL_DEFAULT_H;
+      text = "a3\3den\data\displays\display3den\toolbar\save_ca.paa";
+      x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 121 * GRID_W;
       onButtonClick = "_this spawn ENH_fnc_variableViewer_setOrCreate";
     };
     class Close: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 21) * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X + 0.5 * WINDOW_WAbs * GRID_W - 26 * GRID_W;
+      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };
