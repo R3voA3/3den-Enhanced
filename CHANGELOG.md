@@ -31,12 +31,12 @@
 - Mod is now 100% translated in Chinese and Chinese Simplefied
 - Variable Viewer has been rewritten
 
-## SPECIAL
-** HAPPY 10TH ANNIVERSARY ARMA 3 **
-
 ## REMOVED
 - Menu strip entry of WIP feature
 - Unused file
+---
+# HAPPY 10TH ANNIVERSARY ARMA 3
+---
 
 # v7.7.8
 ## ADDED
