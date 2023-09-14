@@ -1,6 +1,7 @@
 #Excluded file extentions
 *.biprivatekey
 *.code-workspace
+*.txt
 
 #Folders
 versions/
