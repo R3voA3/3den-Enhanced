@@ -32,12 +32,12 @@ call ENH_fnc_dynamicViewDistance;
 
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
-[] spawn ENH_fnc_statusbar_sessionTimer;
+0 spawn ENH_fnc_statusbar_sessionTimer;
 
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if (profileNamespace getVariable ['ENH_EditorPreferences_Interface_CollapseEntityList', false]) then
 {
-  [] spawn
+  0 spawn
   {
     sleep 0.1;
     ["collapseEntityList"] call BIS_fnc_3DENInterface;

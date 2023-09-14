@@ -6,7 +6,7 @@ class ENH_SaveLoadout
   control = "Checkbox";
   expression =
   "if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};\
-    [] spawn\
+    0 spawn\
     {\
       waitUntil {sleep 1; !isNull player};\
       player setVariable ['ENH_savedLoadout', getUnitloadout player];\

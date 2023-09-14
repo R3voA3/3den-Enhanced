@@ -185,7 +185,7 @@ ENH_fnc_attributeSearch_editAttributes =
   private _id = (_ctrlTV tvValue _selectionPath);
   set3DENSelected [_id];
 
-  [] spawn
+  0 spawn
   {
     (uiNamespace getVariable ["ENH_AttributeSearch_Display", displayNull]) closeDisplay 1;
     waitUntil {isNull (uiNamespace getVariable ["ENH_AttributeSearch_Display", displayNull])};

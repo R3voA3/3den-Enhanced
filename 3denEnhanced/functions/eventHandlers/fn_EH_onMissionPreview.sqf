@@ -18,7 +18,7 @@
 #endif
 
 #ifndef ENH_HIDE_DEBUGOPTIONS
-[] spawn ENH_fnc_debugOptions_init;
+0 spawn ENH_fnc_debugOptions_init;
 #endif
 
 if (fileExists "ENH_init3DENMissionPreview.sqf") then {execVM "ENH_init3DENMissionPreview.sqf"};

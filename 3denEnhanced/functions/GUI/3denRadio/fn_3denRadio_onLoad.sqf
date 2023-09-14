@@ -26,7 +26,7 @@ CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (uiNamespace getVariable ["ENH_3DENR
 CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
   ["\3denEnhanced\data\icon_play_ca.paa", "\3denEnhanced\data\icon_Pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
 
-[] spawn ENH_fnc_3DENRadio_timelineControl;
+0 spawn ENH_fnc_3DENRadio_timelineControl;
 
 //Setup list and filter
 {

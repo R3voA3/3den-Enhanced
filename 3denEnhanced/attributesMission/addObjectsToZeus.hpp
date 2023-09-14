@@ -8,7 +8,7 @@ class ENH_AddObjectsToZeus
   "\
     if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then\
     {\
-      [] spawn\
+      0 spawn\
       {\
         scriptName 'ENH_Attribute_AddObjectsToZeus';\
         while {true} do\

@@ -30,7 +30,7 @@ class ENH_SwitchTime
 class ENH_ToggleGrass
 {
   text = "$STR_ENH_TOOLS_TOGGLEGRASS";
-  action = "[] spawn ENH_fnc_toggleGrass";
+  action = "0 spawn ENH_fnc_toggleGrass";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
 };
 class ENH_ToggleSimpleObject
@@ -83,7 +83,7 @@ class ENH_ToggleMarkerAlpha
 class ENH_GenerateSteamMissionDescription
 {
   text = "$STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION";
-  action = "[] spawn ENH_fnc_generateSteamMissionDescription";
+  action = "0 spawn ENH_fnc_generateSteamMissionDescription";
   opensNewWindow = 1;
 };
 class ENH_ExportMissionParameters

@@ -22,7 +22,7 @@ call ENH_fnc_3DENRadio_toggleRadio;
 
 #ifndef ENH_HIDE_INTERFACE
 //Enable session timer
-[] spawn ENH_fnc_statusbar_sessionTimer;
+0 spawn ENH_fnc_statusbar_sessionTimer;
 
 //Init direction display
 addMissionEventHandler ["EachFrame",

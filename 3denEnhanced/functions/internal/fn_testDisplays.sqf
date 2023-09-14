@@ -15,7 +15,7 @@
 
 if (!is3DEN) exitWith {};
 
-[] spawn
+0 spawn
 {
   private _ENHClasses = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
 

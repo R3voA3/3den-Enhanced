@@ -27,7 +27,7 @@ if (_currentValue isNotEqualTo _setValue) then
     [
       nil,
       {
-        [] spawn
+        0 spawn
         {
           waitUntil {!isNull DISPLAY_ESE};
           DISPLAY_ESE closeDisplay 1

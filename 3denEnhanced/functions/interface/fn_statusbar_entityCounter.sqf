@@ -23,7 +23,7 @@ private _conditionHide = (102 * (pixelW * pixelGrid * 0.50) >= (safezoneW - 60 *
 //Hide control if screen is too small or gui scale too big. We wait 20 seconds because this command can crash Arma
 if (_conditionHide) then
 {
-  [] spawn
+  0 spawn
   {
     waitUntil {sleep 1; is3DEN};
     "Preferences" set3DENMissionAttribute ["ENH_Statusbar_EntityCounter", false];

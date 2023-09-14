@@ -30,7 +30,7 @@ call ENH_fnc_assetBrowser_collapse;
 "run" call ENH_fnc_statusbar_entityCounter;
 
 //Enable session timer
-[] spawn ENH_fnc_statusbar_sessionTimer;
+0 spawn ENH_fnc_statusbar_sessionTimer;
 
 //Remove unwanted menu strip entries
 call ENH_fnc_menuStrip_removeItems;

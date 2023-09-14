@@ -27,7 +27,7 @@ ENH_SAM_TemplateDescription = ctrlText CTRL(IDC_SAM_TEMPLATEDATA_DESCRIPTION);
 //Close display ENH_ENH_SAM_TemplateData and wait for the parent display to be available again
 _display closeDisplay 1;
 
-[] spawn
+0 spawn
 {
   waitUntil {!(isNull findDisplay IDD_SAM)};
 

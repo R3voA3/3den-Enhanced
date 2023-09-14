@@ -78,7 +78,7 @@ if GETVALUE("BulletTracking") then
 
 if GETVALUE("Zeus") then
 {
-  [] spawn
+  0 spawn
   {
     private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
     player assignCurator _zeusModule;
@@ -121,7 +121,7 @@ if GETVALUE("Stamina") then
 
 if GETVALUE("FPS") then
 {
-  [] spawn
+  0 spawn
   {
     waitUntil {!isNull MISSIONDISPLAY};
     disableSerialization;
