@@ -5,7 +5,7 @@ class ENH_VariableViewer
   onLoad = "_this call ENH_fnc_variableViewer_onLoad";
   class ControlsBackground
   {
-    //DISABLE_BACKGROUND
+    DISABLE_BACKGROUND
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_VARIABLEVIEWER_HEADER";
