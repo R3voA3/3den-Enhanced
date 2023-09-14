@@ -53,9 +53,18 @@ class Cfg3DEN
         class Title;
       };
     };
-    //Increase height of EditCodeMulti5
+    //Increase height of edit attribute controls
     #ifndef ENH_LARGER_EDITBOXES
-    class EditMulti3;
+    class Edit;
+    class EditMulti3: Edit
+    {
+      class Controls
+      {
+        class Value;
+        class Background;
+        class Title;
+      };
+    };
     class EditCodeMulti3: EditMulti3
     {
       class Controls
@@ -63,6 +72,25 @@ class Cfg3DEN
         class Value;
         class Background;
         class Title;
+      };
+    };
+    class EditMulti5: EditMulti3
+    {
+      h = (5 + 20 * 3.5) * GRID_H;
+      class Controls: Controls
+      {
+        class Background: Background
+        {
+          h = (20 * 3.5 + 0.6 * 5) * GRID_H;
+        };
+        class Value: Value
+        {
+          h = 20 * 3.5 * GRID_H - 1 * GRID_H;
+        };
+        class Title: Title
+        {
+          h = (20 * 3.5 + 1 * 5) * GRID_H;
+        };
       };
     };
     class EditCodeMulti5: EditCodeMulti3
@@ -76,7 +104,7 @@ class Cfg3DEN
         };
         class Value: Value
         {
-          h = 20 * 3.5 * GRID_H - 1 * GRID_H; //We make this one one grid smaller so text will never overlap the frame
+          h = 20 * 3.5 * GRID_H - 1 * GRID_H;
         };
         class Title: Title
         {
