@@ -45,4 +45,4 @@ def RPT_read(line_count):
   return RPT_content
 
 def BackupMissionSQM(fileToCopy, newFile):
-	shutil.copyfile(fileToCopy, newFile)
+  shutil.copyfile(fileToCopy, newFile)
