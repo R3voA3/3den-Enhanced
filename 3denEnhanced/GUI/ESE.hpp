@@ -475,7 +475,7 @@ class ENH_ESE
       y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "[] spawn ENH_fnc_ESE_close";
+      onButtonClick = "0 spawn ENH_fnc_ESE_close";
     };
   };
 };
