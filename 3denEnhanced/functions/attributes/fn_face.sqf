@@ -85,8 +85,13 @@ switch _mode do
     ctrlParentControlsGroup _ctrlButton controlsGroupCtrl 300 ctrlSetText "";
     _ctrlButton ctrlSetText IMG_SEARCH_START;
   };
-  case "onLoad":
+  case "onTreeSelChanged":
   {
-    ['onAttributeLoad', ctrlParentControlsGroup (_this#0)] call ENH_fnc_face;
+    _params params ["_ctrlTree", "_path"];
+    private _picture = _ctrlTree tvPicture _path;
+
+    _ctrlGroup controlsGroupCtrl 303 ctrlSetText _picture;
+    _ctrlGroup controlsGroupCtrl 303 ctrlShow (_picture != "");
+    _ctrlGroup controlsGroupCtrl 304 ctrlShow (_picture != "");
   };
 };

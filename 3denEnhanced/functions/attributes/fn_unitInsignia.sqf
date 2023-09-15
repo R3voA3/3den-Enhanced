@@ -28,11 +28,19 @@ switch _mode do
   case "attributeLoad":
   {
     private _value = _params;
-    private _ctrlTV = _ctrlGroup controlsGroupCtrl 302;
+    private _ctrlTV = _ctrlGroup controlsGroupCtrl 402;
 
     tvClear _ctrlTV;
 
     {
+      if (_forEachIndex == 0) then
+      {
+        private _index = _ctrlTV tvAdd [[], localize "STR_3DEN_ATTRIBUTES_UNITINISGNIA_NONE_TEXT"];
+        _ctrlTV tvSetData [[_index], ""];
+        _ctrlTV tvSetValue [[_index], 2];//Set value to 2 so this value is always on top
+        _ctrlTV tvSetCurSel [_index];
+      };
+
       private _displayName = getText (_x >> "displayName");
       private _configName = configName _x;
       private _texture = getText (_x >> "texture");
@@ -63,7 +71,7 @@ switch _mode do
   };
   case "attributeSave":
   {
-    private _ctrlTV = _ctrlGroup controlsGroupCtrl 302;
+    private _ctrlTV = _ctrlGroup controlsGroupCtrl 402;
     _ctrlTV tvData (tvCurSel _ctrlTV);
   };
   case "onEditChanged":
@@ -72,18 +80,23 @@ switch _mode do
 
     //Change search button icon
     private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
-    (ctrlParentControlsGroup _ctrlEdit controlsGroupCtrl 301) ctrlSetText _image;
+    (ctrlParentControlsGroup _ctrlEdit controlsGroupCtrl 401) ctrlSetText _image;
   };
   case "onButtonClick":
   {
     _params params [["_ctrlButton", controlNull]];
 
     //Change search button icon and clear edit control to reset tree view filter
-    ctrlParentControlsGroup _ctrlButton controlsGroupCtrl 300 ctrlSetText "";
+    ctrlParentControlsGroup _ctrlButton controlsGroupCtrl 400 ctrlSetText "";
     _ctrlButton ctrlSetText IMG_SEARCH_START;
   };
-  case "onLoad":
+  case "onTreeSelChanged":
   {
-    ['onAttributeLoad', ctrlParentControlsGroup (_this#0)] call ENH_fnc_face;
+    _params params ["_ctrlTree", "_path"];
+    private _picture = _ctrlTree tvPicture _path;
+
+    _ctrlGroup controlsGroupCtrl 403 ctrlSetText _picture;
+    _ctrlGroup controlsGroupCtrl 403 ctrlShow (_picture != "");
+    _ctrlGroup controlsGroupCtrl 404 ctrlShow (_picture != "");
   };
 };
