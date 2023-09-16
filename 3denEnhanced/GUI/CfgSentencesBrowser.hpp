@@ -1,6 +1,3 @@
-#define DIALOG_W 120
-#define DIALOG_H 100
-
 class ENH_CfgSentencesBrowser
 {
   idd = IDD_SENTENCESBROWSER;
@@ -9,33 +6,34 @@ class ENH_CfgSentencesBrowser
   onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites', ENH_CFGS_Favorites];";
   class ControlsBackground
   {
+    DISABLE_BACKGROUND
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
-      w = DIALOG_W * GRID_W;
-      h = DIALOG_H * GRID_H + 7 * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H;
     };
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOP;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + (DIALOG_H + 5) * GRID_H;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
     class Count: ctrlStatic
     {
       idc = IDC_SENTENCESBROWSER_COUNT;
-      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 11 * GRID_W;
-      y = DIALOG_TOP;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + WINDOW_W_ATTRIBUTES * GRID_W - 11 * GRID_W;
+      y = WINDOW_TOP;
       w = 11 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -47,9 +45,9 @@ class ENH_CfgSentencesBrowser
       idc = IDC_SENTENCESBROWSER_PAGES;
       columns = 2;
       rows = 1;
-      x = CENTERED_X(DIALOG_W) + GRID_W;
-      y = DIALOG_TOP + CTRL_DEFAULT_H + GRID_H;
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
+      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
       strings[] = {"$STR_A3_WL_PARAM19_TITLE", "$STR_3DEN_FAVORITE_TEXTPLURAL"};
       colorSelectedBg[] = {0.2, 0.2, 0.2, 1};
@@ -58,38 +56,40 @@ class ENH_CfgSentencesBrowser
     class List: ctrlTree
     {
       idc = IDC_SENTENCESBROWSER_LIST;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 11 * GRID_H;
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
-      h = DIALOG_H * GRID_H - 7 * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
+      y = WINDOW_TOP + 11 * GRID_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
+      h = WINDOW_PREVIEW_HAbs - 6 * CTRL_DEFAULT_H + GRID_H;
       colorBorder[] = {0, 0, 0, 0};
-      idcSearch = 10000;
+      idcSearch = IDC_SENTENCESBROWSER_SEARCH;
       onTreeDblClick = "'play' call ENH_fnc_CFGS_playOrCopy";
     };
-    class ListFavorites: ctrlTree
+    class ListFavorites: List
     {
       idc = IDC_SENTENCESBROWSER_FAVORITES;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 11 * GRID_H;
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
-      h = DIALOG_H * GRID_H - 7 * GRID_H;
-      colorBorder[] = {0, 0, 0, 0};
-      idcSearch = 10000;
       onTreeDblClick = "'play' call ENH_fnc_CFGS_playOrCopy";
     };
     class Search: ctrlEdit
     {
       idc = IDC_SENTENCESBROWSER_SEARCH;
-      x = CENTERED_X(DIALOG_W) + 55 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 45 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class ButtonSearch: ctrlButtonSearch
+    {
+      idc = IDC_SENTENCESBROWSER_BUTTONSEARCH;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 70 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Filter: ctrlCombo
     {
       idc = IDC_SENTENCESBROWSER_FILTER;
-      x = CENTERED_X(DIALOG_W) + 76 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 76 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onLBselChanged = "_this call ENH_fnc_CFGS_changeFilter";
@@ -153,21 +153,21 @@ class ENH_CfgSentencesBrowser
         };
       };
     };
-    class Play: ctrlButton
+    class Play: ctrlButtonPictureKeepAspect
     {
-      text = "$STR_A3_RSCDISPLAYWELCOME_PARD_LIST4_TITLE";
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      text = "\a3\3DEN\Data\Attributes\ComboPreview\play_ca.paa";
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'play' call ENH_fnc_CFGS_playOrCopy";
     };
     class Copy: ctrlButton
     {
       text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT";
-      x = CENTERED_X(DIALOG_W) + 22 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 7 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'copy' call ENH_fnc_CFGS_playOrCopy";
     };
@@ -175,8 +175,8 @@ class ENH_CfgSentencesBrowser
     {
       text = "\a3\3den\data\displays\display3den\panelright\modefavorites_ca.paa";
       tooltip = "$STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP";
-      x = CENTERED_X(DIALOG_W) + 43 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 33 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'' call ENH_fnc_CFGS_handleFavorites";
@@ -185,16 +185,16 @@ class ENH_CfgSentencesBrowser
     {
       text = "?";
       url = "https://community.bistudio.com/wiki/Conversations";
-      x = CENTERED_X(DIALOG_W) + 49 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 39 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Close: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + DIALOG_W * GRID_W - 21 * GRID_W;
-      y = DIALOG_TOP + (DIALOG_H + 6) * GRID_H;
-      w = 20 * GRID_W;
+      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 26 * GRID_W;
+      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };

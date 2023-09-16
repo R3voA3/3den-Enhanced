@@ -28,4 +28,26 @@ CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlCommit 0;
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;
 
+//Handle search button
+CTRL(IDC_SENTENCESBROWSER_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_SENTENCESBROWSER_BUTTONSEARCH ctrlSetText _image;
+}];
+
+//Handle search button
+CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_SENTENCESBROWSER_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];
+
 true
