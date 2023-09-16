@@ -13,8 +13,7 @@
   Internal use only.
 */
 
-#define IMG_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
-#define IMG_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 params
 [
