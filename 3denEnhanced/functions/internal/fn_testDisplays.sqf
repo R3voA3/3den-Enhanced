@@ -18,7 +18,7 @@ if (!is3DEN) exitWith {};
 
 _this spawn
 {
-  params [["_blacklist", ["ENH_TextureFinder"], [""]], [["_delay", 0.5, [0]]]];
+  params [["_blacklist", ["ENH_TextureFinder"], [[]]], [["_delay", 0.5, [0]]]];
 
   private _ENHClasses = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
 
