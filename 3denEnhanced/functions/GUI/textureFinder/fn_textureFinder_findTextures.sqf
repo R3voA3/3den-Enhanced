@@ -29,37 +29,37 @@ _display displayAddEventHandler ["keyDown",
   params ["_display", "_key", "_shift", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl && !_shift) then
   {
-    ctrlSetFocus (_display displayCtrl IDC_TEXTUREFINDER_SEARCH);
+    ctrlSetFocus CTRL(IDC_TEXTUREFINDER_SEARCH);
   };
 }];
 
 //Update preview
-_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseMove",
+CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["treeMouseMove",
 {
   _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
-_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["treeMouseHold",
+CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["treeMouseHold",
 {
   _this call ENH_fnc_textureFinder_updatePreview;
 }];
 
 //Collapse
-_display displayCtrl IDC_TEXTUREFINDER_COLLAPSEALL ctrlAddEventHandler ["buttonClick",
+CTRL(IDC_TEXTUREFINDER_COLLAPSEALL) ctrlAddEventHandler ["buttonClick",
 {
   params ["_ctrlButton"];
   tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_TEXTURELIST)
 }];
 
 //Expand
-_display displayCtrl IDC_TEXTUREFINDER_EXPANDALL ctrlAddEventHandler ["buttonClick",
+CTRL(IDC_TEXTUREFINDER_EXPANDALL) ctrlAddEventHandler ["buttonClick",
 {
   params ["_ctrlButton"];
   tvExpandAll (ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_TEXTURELIST)
 }];
 
 //Copy path
-_display displayCtrl IDC_TEXTUREFINDER_TEXTURELIST ctrlAddEventHandler ["keyDown",
+CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["keyDown",
 {
   params ["_ctrlTV", "_key", "", "_ctrl"];
 
