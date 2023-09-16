@@ -1,3 +1,34 @@
+#v7.8.0
+## ADDED
+
+## CHANGED
+- Increased the size of EditMulti5 to be as big as EditCodeMulti5
+- Variable Viewer has its background disabled again
+- Added preview to Face and Unit Insignia attributes
+- Fixed Unit Insignia would not accept empty insignia
+- Many code improvements
+- Fixed typo in Draw Marker Priority attribute (Thanks to anthonybartczak)
+- Fixed searching in Face attribute would also filter Insignia attribute
+- Fixed function path in Functions Viewer would clip on smaller screens
+- Improved UI of Zeus Addons Manager
+- Added tooltips to entiry of Zeus Addon Manager
+- Search Attributes UI now supports more attributes
+- Search Attributes tree view colors adjusted for better contrast
+- Search Attributes improved search
+- Improved search of Move to Layer UI
+- Tweaked UI of Move to Layer UI
+- Tweaked ESE UI
+- Tweaked Selection Filter UI
+- Tweaked Export GUI Defines UI
+- Fixed "Remove Name" translation clipping in differnt languages
+- Tweaked Name Objects UI
+- Tweaked RPT Viewer UI
+- Tweaked CFGS UI
+- Improved Texture Finder UI
+- Removed flickering when texture preview is updated
+
+## REMOVED
+
 # v7.7.9
 ## ADDED
 - Variable to freed hostage that holds the player object of who freed it _hostage getVariable ["ENH_WasFreedBy", objNull]; #263
