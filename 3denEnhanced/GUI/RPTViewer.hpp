@@ -1,6 +1,6 @@
 class ENH_RPTViewer
 {
-  idc = -1;
+  idd = -1;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
