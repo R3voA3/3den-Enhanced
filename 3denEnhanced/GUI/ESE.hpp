@@ -17,20 +17,20 @@ class ENH_ESE
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
       y = WINDOW_TOP + 2 * CTRL_DEFAULT_H;
       w = WINDOW_WAbs * GRID_W;
-      h = WINDOW_HAbs - 6 * CTRL_DEFAULT_H;
+      h = WINDOW_HAbs - 4 * CTRL_DEFAULT_H;
     };
-    class InventoryItemsListBackground: ctrlStaticBackground
+    class BackgroundInventoryItemsList: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 2/4) * GRID_W + 2 * GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
       w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
-      h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 4 * GRID_H;
+      h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H + GRID_H;
       colorBackground[] = {0,0,0,0.3};
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 27 * GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_WAbs * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -406,7 +406,7 @@ class ENH_ESE
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
       w = (WINDOW_WAbs * 1/4) * GRID_W;
-      h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 5 * GRID_H;
+      h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H + GRID_H;
       colorBackground[] = {0,0,0,0.3};
     };
     class CompatibleItemsList: AvailableItemsList
@@ -421,7 +421,7 @@ class ENH_ESE
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + (WINDOW_WAbs * 2/4) * GRID_W + 2 * GRID_W;
       y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
       w = (WINDOW_WAbs * 1/4) * GRID_W - 2 * GRID_W;
-      h = WINDOW_HAbs - 8 * CTRL_DEFAULT_H - 5 * GRID_H;
+      h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H + GRID_H;
       columns[] = {0, 0.12, 0.8, 0.88};
       disableOverflow = 1;
     };
@@ -435,7 +435,7 @@ class ENH_ESE
     {
       idc = IDC_ESE_FILTERSEARCH;
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onLBSelChanged = "_this call ENH_fnc_ESE_onModFilterChanged";
@@ -444,7 +444,7 @@ class ENH_ESE
     {
       idc = IDC_ESE_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 6 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 40 * GRID_W;
       h = CTRL_DEFAULT_H;
       onKeyUp = "_this call ENH_fnc_ESE_search";
@@ -453,7 +453,7 @@ class ENH_ESE
     {
       idc = IDC_ESE_BUTTONSEARCH;
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + 46 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_ESE_resetSearch";
@@ -463,7 +463,7 @@ class ENH_ESE
       idc = IDC_ESE_SAVE;
       text = "$STR_DISP_INT_SAVE";
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W + WINDOW_WAbs * GRID_W - 47 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "[] call ENH_fnc_ESE_applyAttribute";
@@ -472,7 +472,7 @@ class ENH_ESE
     {
       idc = -1;
       x = CENTER_X - 0.5 * WINDOW_WAbs * GRID_W + GRID_W + WINDOW_WAbs * GRID_W - 24 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "0 spawn ENH_fnc_ESE_close";
