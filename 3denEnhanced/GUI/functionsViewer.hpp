@@ -45,7 +45,7 @@ class ENH_FunctionsViewer
   {
     class MenuStrip: ctrlMenuStrip
     {
-      idc = 2200; //IDC_FUNCTIONSVIEWER_MENU
+      idc = IDC_FUNCTIONSVIEWER_MENU;
       x = safezoneX;
       y = safezoneY + CTRL_DEFAULT_H;
       w = safezoneW;
@@ -237,15 +237,15 @@ class ENH_FunctionsViewer
       canModify = false;
       x = safezoneX + 72 * GRID_W;
       y = safezoneY + 2 * CTRL_DEFAULT_H + GRID_H;
-      w = WINDOW_WAbs * GRID_W;
+      w = 70 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Path: Name
     {
       idc = IDC_FUNCTIONSVIEWER_PATH;
       tooltip = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP";
-      x = safezoneX + 213 * GRID_W;
-      w = safezoneW - 214 * GRID_W;
+      x = safezoneX + 143 * GRID_W;
+      w = safezoneW - (143 + 1) * GRID_W;
     };
     class SearchCode: ctrlEdit
     {
@@ -316,9 +316,9 @@ class ENH_FunctionsViewer
     };
     class Close: ctrlButtonClose
     {
-      x = safezoneX + safezoneW - 31 * GRID_W;
+      x = safezoneX + safezoneW - 26 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
-      w = 30 * GRID_W;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };
