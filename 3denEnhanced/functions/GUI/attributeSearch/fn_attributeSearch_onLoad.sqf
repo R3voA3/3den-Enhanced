@@ -1,4 +1,25 @@
-#define COLOR_ATTRIBUTE [7/255, 113/255, 135/255, 1]
+/*
+  Author: R3vo
+
+  Date: 2023-09-16
+  File: 3denEnhanced\functions\GUI\attributeSearch\fn_attributeSearch_onLoad.sqf
+
+  Description:
+  Initializes the Search Attributes GUI.
+
+  Parameter(s):
+  0: DISPLAY - The Search Attributes GUI
+
+  Return Value:
+  -
+
+  Examples(s):
+  -
+*/
+
+#include "\3denEnhanced\defines\defineCommon.inc"
+
+#define COLOR_ATTRIBUTE [7/255, 11/255, 135/255, 1]
 #define COLOR_ENTITY [228/255, 197/255, 175/255, 1]
 #define COLOR_VALUE [158/255, 206/255, 154/255, 1]
 #define ATT(ENTITY, ATTNAME) (ENTITY get3DENAttribute ATTNAME select 0)
@@ -9,7 +30,7 @@ disableSerialization;
 
 params ["_display"];
 
-private _ctrlTV = _display displayCtrl 11;
+private _ctrlTV = CTRL(IDC_ATTRIBUTESEARCH_TREE);
 uiNamespace setVariable ["ENH_AttributeSearch_Display", _display];
 
 all3DENEntities params ["_objects", "_groups", "_triggers", "_systems", "_waypoints", "_markers"];
@@ -106,14 +127,14 @@ for "_index" from ((count _attributes) - 1) to 0 step -1 do
 };
 
 //Update counter
-_display displayCtrl 12 ctrlSetText format ["%1/%2", ENH_AttributeSearch_AttributesCounter_Valid, ENH_AttributeSearch_AttributesCounter_Total];
+_display displayCtrl IDC_ATTRIBUTESEARCH_COUNTER ctrlSetText format ["%1/%2", ENH_AttributeSearch_AttributesCounter_Valid, ENH_AttributeSearch_AttributesCounter_Total];
 
-//Wait till button was initialised and set its text and state
+//Wait until button was initialised and set its text and state
 _display spawn
 {
-  waitUntil {!isNull (_this displayCtrl 13)};
-  _this displayCtrl 13 ctrlEnable false;
-  _this displayCtrl 13 ctrlSetText format ["%1...", localize "STR_3DEN_Display3DEN_MenuBar_Attributes_text"];
+  waitUntil {!isNull (_this displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES)};
+  _this displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlEnable false;
+  _this displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlSetText format ["%1...", localize "STR_3DEN_Display3DEN_MenuBar_Attributes_text"];
 };
 
 _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
@@ -123,7 +144,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
   //Disable Edit Attributes button
   if (count _selectionPath < 3) exitWith
   {
-    ctrlParent _ctrlTV displayCtrl 13 ctrlEnable false;
+    ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlEnable false;
 
     //Move camera
     if (count _selectionPath == 2) exitWith
@@ -170,7 +191,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
   //Enable Edit Attributes button
   if (count _selectionPath == 3) exitWith
   {
-    ctrlParent _ctrlTV displayCtrl 13 ctrlEnable true;
+    ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlEnable true;
   };
 }];
 
@@ -207,8 +228,30 @@ _ctrlTV ctrlAddEventHandler ["TreeDblClick",
   _this call ENH_fnc_attributeSearch_editAttributes;
 }];
 
-(ctrlParent _ctrlTV displayCtrl 13) ctrlAddEventHandler ["ButtonClick",
+(ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES) ctrlAddEventHandler ["ButtonClick",
 {
-  private _ctrlTV = ctrlParent (_this#0) displayCtrl 11;
+  private _ctrlTV = ctrlParent (_this#0) displayCtrl IDC_ATTRIBUTESEARCH_TREE;
   [_ctrlTV, tvCurSel _ctrlTV] call ENH_fnc_attributeSearch_editAttributes;
+}];
+
+//Handle search button
+CTRL(IDC_ATTRIBUTESEARCH_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_ATTRIBUTESEARCH_BUTTONSEARCH ctrlSetText _image;
+}];
+
+//Handle search button
+CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_ATTRIBUTESEARCH_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
 }];
