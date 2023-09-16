@@ -67,6 +67,7 @@ private _addons = [];
     if (_addonName isEqualTo "") then {_addonName = "Arma 3"};
     private _index = _ctrlTVPatches tvAdd [[], _addonName];
     _ctrlTVPatches tvSetPictureRight [[_index], _addonIcon];
+    _ctrlTVPatches tvSetTooltip [[_index], _addonClass];
     _addons pushBack _addonClass;
   };
   private _indexAddon = _addons find _addonClass;
@@ -75,6 +76,7 @@ private _addons = [];
 
   _ctrlTVPatches tvSetData [[_indexAddon, _indexPatch], _addonClass];
   _ctrlTVPatches tvSetPicture [[_indexAddon, _indexPatch], "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"];
+  _ctrlTVPatches tvSetTooltip [[_indexAddon, _indexPatch], configName _x];
   _ctrlTVPatches tvSetValue [[_indexAddon, _indexPatch], [1, 0] select (configName _x in _previouslyEnabled)];
   [_ctrlTVPatches, [_indexAddon, _indexPatch]] call ENH_fnc_manageZeusAddons_invertSelection;
 };
@@ -122,6 +124,7 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
       private _displayName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
 
       private _row = _ctrlLBUnits lbAdd _displayName;
+      _ctrlLBUnits lbSetTooltip [_row, _displayName + endl + _x];
 
       //Try to get a proper image
       private _picture = getText (configFile >> "CfgVehicles" >> _x >> "editorPreview");
@@ -193,4 +196,26 @@ CTRL(IDC_ZEUSADDONS_EXPAND) ctrlAddEventHandler ["ButtonClick",
 {
   params ["_ctrlButton"];
   tvExpandAll (ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_CFGPATCHES);
+}];
+
+//Handle search button
+CTRL(IDC_ZEUSADDONS_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_ZEUSADDONS_BUTTONSEARCH ctrlSetText _image;
+}];
+
+//Handle search button
+CTRL(IDC_ZEUSADDONS_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
 }];
