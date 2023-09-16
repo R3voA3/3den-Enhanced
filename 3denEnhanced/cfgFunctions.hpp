@@ -59,11 +59,11 @@ class CfgFunctions
       class functionsViewer_setUpMenuStrip;
       class functionsViewer_togglePanel;
     };
-    class ActionCreator
+    /* class ActionCreator
     {
       file = "3denEnhanced\functions\GUI\actionCreator";
       class actionCreator;
-    };
+    }; */
     class AttributeSearch
     {
       file = "3denEnhanced\functions\GUI\attributeSearch";

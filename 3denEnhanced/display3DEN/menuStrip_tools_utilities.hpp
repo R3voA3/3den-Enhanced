@@ -17,7 +17,7 @@ class ENH_Folder_Utilities
     "Separator",
     "ENH_BriefingEditor",
     "ENH_AttributeSearch",
-    "ENH_ActionCreator",
+    //"ENH_ActionCreator",
     "ENH_BatchReplace",
     "ENH_NameObjects",
     "ENH_ZeusAddons"
@@ -69,12 +69,12 @@ class ENH_3DENRadio
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
   opensNewWindow = 1;
 };
-class ENH_ActionCreator
+/* class ENH_ActionCreator
 {
   text = "$STR_ENH_TOOLS_ACTIONCREATOR";
   action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
   opensNewWindow = 1;
-};
+}; */
 class ENH_SAM
 {
   text = "$STR_ENH_TOOLS_SAM";
