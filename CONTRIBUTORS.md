@@ -1,6 +1,6 @@
 |Name | Field of Action|
 --- | --- |
-| ConnorAU, shukari, linkion, Hypoxic | Scripting |
+| ConnorAU, shukari, linkion, Hypoxic, anthonybartczak | Scripting |
 | mihuan-0 | Chinese Translation |
 | XerXesCZ | Czech Translation |
 | Poslovitch | French Translation |
@@ -21,7 +21,7 @@
 | KiritoKun223 |
 | dardothemaster |
 | dixon13 |
-| 11RDP | 
+| 11RDP |
 | LoupVert |
 | 2RIMa |
 | PapaBear |
