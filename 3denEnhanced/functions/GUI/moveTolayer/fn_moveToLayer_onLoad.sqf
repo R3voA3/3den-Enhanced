@@ -13,11 +13,13 @@
   -
 */
 
+#include "\3denEnhanced\defines\defineCommon.inc"
+
 disableSerialization;
 
 params ["_display"];
 
-private _ctrlTV = _display displayCtrl 100;
+private _ctrlTV = CTRL(IDC_MOVETOLAYER_TREE);
 
 {
   private _layerID = _x;
@@ -40,4 +42,26 @@ private _ctrlTV = _display displayCtrl 100;
 _ctrlTV tvSortAll [[], false];
 
 //Focus search box
-ctrlSetFocus (ctrlParent _ctrlTV displayCtrl 101);
+ctrlSetFocus (ctrlParent _ctrlTV displayCtrl IDC_MOVETOLAYER_SEARCH);
+
+//Handle search button
+CTRL(IDC_MOVETOLAYER_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_MOVETOLAYER_BUTTONSEARCH ctrlSetText _image;
+}];
+
+//Handle search button
+CTRL(IDC_MOVETOLAYER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_MOVETOLAYER_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];

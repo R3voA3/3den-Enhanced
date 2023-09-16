@@ -15,7 +15,7 @@
 
 params ["_ctrlButton"];
 
-private _ctrlTV = ctrlParent _ctrlButton displayCtrl 100;
+private _ctrlTV = ctrlParent _ctrlButton displayCtrl IDC_MOVETOLAYER_TREE;
 
 if (tvCurSel _ctrlTV isEqualTo []) exitWith {false};
 
