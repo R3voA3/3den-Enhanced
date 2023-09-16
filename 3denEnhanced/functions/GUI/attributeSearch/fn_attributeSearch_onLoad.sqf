@@ -19,9 +19,9 @@
 
 #include "\3denEnhanced\defines\defineCommon.inc"
 
-#define COLOR_ATTRIBUTE [7/255, 11/255, 135/255, 1]
-#define COLOR_ENTITY [228/255, 197/255, 175/255, 1]
-#define COLOR_VALUE [158/255, 206/255, 154/255, 1]
+#define COLOR_ATTRIBUTE [0.86, 0.73, 0.38, 1]
+#define COLOR_ENTITY [0.81, 0.51, 0.29, 1]
+#define COLOR_VALUE [0.42, 0.6, 0.24, 1]
 #define ATT(ENTITY, ATTNAME) (ENTITY get3DENAttribute ATTNAME select 0)
 
 if (!is3DEN) exitWith {};
@@ -42,16 +42,15 @@ private _attributes = profileNamespace getVariable
   [
     ["init", [""]],
     ["presenceCondition", ["true"]],
-    ["placementRadius", ["0"]]
     ["condition", ["this", "true"]],
     ["onActivation", [""]],
     ["onDeactivation", [""]],
     ["name", [""]],
     ["effectCondition", ["true"]],
     ["markerName", [""]],
-    ["groupID", [""]]
+    ["groupID", [""]],
     ["description", [""]],
-    ["effectCondition", [""]],
+    ["effectCondition", ["true"]],
     ["script", [""]]
   ]
 ];
