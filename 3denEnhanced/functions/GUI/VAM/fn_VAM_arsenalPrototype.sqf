@@ -13,8 +13,6 @@
 
 #include "\3denEnhanced\defines\defineCommon.inc"
 
-#define WINDOW_W 140
-
 private _display = findDisplay 313 createDisplay "RscDisplayEmpty";
 uiNamespace setVariable ["ENH_VAM_display", _display];
 
@@ -54,9 +52,9 @@ private _ctrlBackground = _display ctrlCreate ["ctrlStatic", -1];
 
 _ctrlBackground ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 10 * GRID_H,
- WINDOW_W * GRID_W,
+ WINDOW_W_ATTRIBUTES * GRID_W,
  WINDOW_HAbs
 ];
 
@@ -66,9 +64,9 @@ private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", -1];
 
 _ctrlTitle ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
- WINDOW_W * GRID_W,
+ WINDOW_W_ATTRIBUTES * GRID_W,
  5 * GRID_H
 ];
 
@@ -78,9 +76,9 @@ _ctrlTitle ctrlCommit 0;
 _ctrlSearch = _display ctrlCreate ["ctrlEdit", IDC_VAM_SEARCH];
 _ctrlSearch ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
- WINDOW_W * GRID_W - 13 * GRID_W,
+ WINDOW_W_ATTRIBUTES * GRID_W - 13 * GRID_W,
  5 * GRID_H
 ];
 
@@ -89,9 +87,9 @@ _ctrlTV ctrlSetFont FONT_NORMAL;
 _ctrlTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); //Replace with macro
 _ctrlTV ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 17 * GRID_H,
- WINDOW_W * GRID_W - 2 * GRID_W,
+ WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W,
  WINDOW_HAbs - 24 * GRID_H
 ];
 
@@ -100,9 +98,9 @@ _ctrlAccTV ctrlSetFont FONT_NORMAL;
 _ctrlAccTV ctrlSetFontHeight (4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5); //Replace with macro
 _ctrlAccTV ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W + GRID_W,
+  CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W,
   CENTER_Y - 0 * WINDOW_HAbs + 17 * GRID_H,
-  WINDOW_W * GRID_W - 2 * GRID_W,
+  WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W,
   WINDOW_HAbs / 2 - 24 * GRID_H
 ];
 
@@ -145,18 +143,18 @@ _ctrlTV ctrlSetBackgroundColor [0, 0, 0, 0];
 _ctrlPictureBackground = _display ctrlCreate ["ctrlStaticBackground", -1];
 _ctrlPictureBackground ctrlSetPosition
 [
- CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 - GRID_W,
+ CENTER_X - WINDOW_W_ATTRIBUTES * GRID_W / 2 - (WINDOW_W_ATTRIBUTES * GRID_W) / 2 - GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
- (WINDOW_W * GRID_W) / 2,
- (WINDOW_W * GRID_H) / 2
+ (WINDOW_W_ATTRIBUTES * GRID_W) / 2,
+ (WINDOW_W_ATTRIBUTES * GRID_H) / 2
 ];
 
 _ctrlHeaderPreview = _display ctrlCreate ["ctrlStaticTitle", -1];
 _ctrlHeaderPreview ctrlSetPosition
 [
- CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 - GRID_W,
+ CENTER_X - WINDOW_W_ATTRIBUTES * GRID_W / 2 - (WINDOW_W_ATTRIBUTES * GRID_W) / 2 - GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
- (WINDOW_W * GRID_W) / 2,
+ (WINDOW_W_ATTRIBUTES * GRID_W) / 2,
  5 * GRID_H
 ];
 
@@ -168,25 +166,25 @@ _ctrlHeaderPreview ctrlSetText "Preview";
 _ctrlPicture = _display ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_VAM_PREVIEW_PICTURE];
 _ctrlPicture ctrlSetPosition
 [
- CENTER_X - WINDOW_W * GRID_W / 2 - (WINDOW_W * GRID_W) / 2 + 6 * GRID_W,
+ CENTER_X - WINDOW_W_ATTRIBUTES * GRID_W / 2 - (WINDOW_W_ATTRIBUTES * GRID_W) / 2 + 6 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
- (WINDOW_W * GRID_W) / 2.5,
- (WINDOW_W * GRID_H) / 2.5
+ (WINDOW_W_ATTRIBUTES * GRID_W) / 2.5,
+ (WINDOW_W_ATTRIBUTES * GRID_H) / 2.5
 ];
 
 _ctrlFooter = _display ctrlCreate ["ctrlStaticFooter", -1];
 _ctrlFooter ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 3 * GRID_H + WINDOW_HAbs,
- WINDOW_W * GRID_W,
+ WINDOW_W_ATTRIBUTES * GRID_W,
  7 * GRID_H
 ];
 
 _ctrlButtonClose = _display ctrlCreate ["ctrlButtonClose", 1];
 _ctrlButtonClose ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 26 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 26 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -195,7 +193,7 @@ _ctrlButtonClose ctrlSetPosition
 _ctrlButtonExport = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonExport ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 52 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 52 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -206,7 +204,7 @@ _ctrlButtonExport ctrlSetText "Export";
 _ctrlButtonSave = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonSave ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 78 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 78 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -230,7 +228,7 @@ _ctrlButtonSave ctrlAddEventHandler ["ButtonClick",
 _ctrlButtonLoad = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonLoad ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 104 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 104 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -251,7 +249,7 @@ _ctrlButtonLoad ctrlAddEventHandler ["ButtonClick", {
 _ctrlButtonApply = _display ctrlCreate ["ctrlButton", -1];
 _ctrlButtonApply ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W + 1 * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 4 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -260,18 +258,18 @@ _ctrlButtonApply ctrlSetPosition
 _ctrlStatsBackground = _display ctrlCreate ["ctrlStaticBackground", -1];
 _ctrlStatsBackground ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
- (WINDOW_W * GRID_W) / 2,
- (WINDOW_W * GRID_H) / 2
+ (WINDOW_W_ATTRIBUTES * GRID_W) / 2,
+ (WINDOW_W_ATTRIBUTES * GRID_H) / 2
 ];
 
 _ctrlHeaderStats = _display ctrlCreate ["ctrlStaticTitle", -1];
 _ctrlHeaderStats ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 5 * GRID_H,
- (WINDOW_W * GRID_W) / 2,
+ (WINDOW_W_ATTRIBUTES * GRID_W) / 2,
  5 * GRID_H
 ];
 
@@ -280,7 +278,7 @@ _ctrlHeaderStats ctrlSetText "Statistics";
 _ctrlProgress_1 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_1];
 _ctrlProgress_1 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -289,7 +287,7 @@ _ctrlProgress_1 ctrlSetPosition
 _ctrlProgressText_1 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_1];
 _ctrlProgressText_1 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -298,7 +296,7 @@ _ctrlProgressText_1 ctrlSetPosition
 _ctrlProgress_2 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_2];
 _ctrlProgress_2 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 13 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -307,7 +305,7 @@ _ctrlProgress_2 ctrlSetPosition
 _ctrlProgressText_2 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_2];
 _ctrlProgressText_2 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 13 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -316,7 +314,7 @@ _ctrlProgressText_2 ctrlSetPosition
 _ctrlProgress_3 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_3];
 _ctrlProgress_3 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 26 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -325,7 +323,7 @@ _ctrlProgress_3 ctrlSetPosition
 _ctrlProgressText_3 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_3];
 _ctrlProgressText_3 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 26 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -334,7 +332,7 @@ _ctrlProgressText_3 ctrlSetPosition
 _ctrlProgress_4 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_4];
 _ctrlProgress_4 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 39 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -343,7 +341,7 @@ _ctrlProgress_4 ctrlSetPosition
 _ctrlProgressText_4 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_4];
 _ctrlProgressText_4 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 39 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -352,7 +350,7 @@ _ctrlProgressText_4 ctrlSetPosition
 _ctrlProgress_5 = _display ctrlCreate ["ctrlProgress", IDC_VAM_PROGRESS_5];
 _ctrlProgress_5 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 52 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -361,7 +359,7 @@ _ctrlProgress_5 ctrlSetPosition
 _ctrlProgressText_5 = _display ctrlCreate ["ctrlStatic", IDC_VAM_PROGRESS_TEXT_5];
 _ctrlProgressText_5 ctrlSetPosition
 [
- CENTER_X + WINDOW_W * GRID_W / 2 + 2 * GRID_W,
+ CENTER_X + WINDOW_W_ATTRIBUTES * GRID_W / 2 + 2 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 12 * GRID_H + 52 * GRID_H,
  68 * GRID_W,
  10 * GRID_H
@@ -427,7 +425,7 @@ _ctrlButtonApply ctrlEnable !(_selectedObjects isEqualTo []);
 _ctrlButtonCollapseAll = _display ctrlCreate ["ctrlButtonCollapseAll", -1];
 _ctrlButtonCollapseAll ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 6 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 6 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
  5 * GRID_W,
  5 * GRID_H
@@ -436,7 +434,7 @@ _ctrlButtonCollapseAll ctrlSetPosition
 _ctrlButtonExpandAll = _display ctrlCreate ["ctrlButtonExpandAll", -1];
 _ctrlButtonExpandAll ctrlSetPosition
 [
- CENTER_X + 0.5 * WINDOW_W * GRID_W - 11 * GRID_W,
+ CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 11 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs + 11 * GRID_H,
  5 * GRID_W,
  5 * GRID_H
@@ -457,7 +455,7 @@ _ctrlButtonExpandAll ctrlAddEventHandler ["ButtonClick",
 _ctrlACECheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_VAM_ACE_CHECKBOX];
 _ctrlACECheckbox ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W + 22 * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 22 * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs - 3 * GRID_H + WINDOW_HAbs,
  5 * GRID_W,
  5 * GRID_H
@@ -466,7 +464,7 @@ _ctrlACECheckbox ctrlSetPosition
 _ctrlACEText = _display ctrlCreate ["ctrlStatic", -1];
 _ctrlACEText ctrlSetPosition
 [
- CENTER_X - 0.5 * WINDOW_W * GRID_W,
+ CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W,
  CENTER_Y - 0.5 * WINDOW_HAbs - 3 * GRID_H + WINDOW_HAbs,
  25 * GRID_W,
  5 * GRID_H
@@ -479,7 +477,7 @@ _ctrlACEText ctrlSetTextColor [1, 1, 1, 1];
 _ctrlBICheckbox = _display ctrlCreate ["ctrlCheckbox", IDC_VAM_BI_CHECKBOX];
 _ctrlBICheckbox ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W + 22 * GRID_W,
+  CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 22 * GRID_W,
   CENTER_Y - 0.5 * WINDOW_HAbs - 7 * GRID_H + WINDOW_HAbs,
   5 * GRID_W,
   5 * GRID_H
@@ -488,7 +486,7 @@ _ctrlBICheckbox ctrlSetPosition
 _ctrlBIText = _display ctrlCreate ["ctrlStatic", -1];
 _ctrlBIText ctrlSetPosition
 [
-  CENTER_X - 0.5 * WINDOW_W * GRID_W,
+  CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W,
   CENTER_Y - 0.5 * WINDOW_HAbs - 7 * GRID_H + WINDOW_HAbs,
   25 * GRID_W,
   5 * GRID_H
