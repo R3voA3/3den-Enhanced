@@ -10,13 +10,13 @@
 - Fixed typo in Draw Marker Priority attribute (Thanks to anthonybartczak)
 - Fixed searching in Face attribute would also filter Insignia attribute
 - Fixed function path in Functions Viewer would clip on smaller screens
-- Improved UI of Zeus Addons Manager
+- Improved Zeus Addons Manager UI
 - Added tooltips to entries of Zeus Addon Manager
 - Search Attributes UI now supports more attributes
 - Search Attributes tree view colors adjusted for better contrast
-- Search Attributes improved search
+- Improved search of Search Attributes
 - Improved search of Move to Layer UI
-- Tweaked UI of Move to Layer UI
+- Tweaked Move to Layer UI
 - Tweaked ESE UI
 - Tweaked Selection Filter UI
 - Tweaked Export GUI Defines UI
@@ -26,7 +26,6 @@
 - Tweaked CFGS UI
 - Improved Texture Finder UI
 - Removed flickering when texture preview is updated
-- Fixed control in Functions Viewer would overlap on small screens
 
 ## REMOVED
 
