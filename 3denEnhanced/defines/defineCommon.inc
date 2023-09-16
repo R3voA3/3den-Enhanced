@@ -17,7 +17,7 @@
 #define CTRL_DEFAULT_H (SIZE_M * GRID_H)
 
 //Top of all UIs
-#define WINDOW_TOP (0.5 - WINDOW_HAbs * 0.5 + 5 * GRID_H)
+#define WINDOW_TOP (0.5 - WINDOW_HAbs * 0.5 + CTRL_DEFAULT_H)
 
 //Either uses full width and leave only 5 grids left and right,
 //or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
@@ -36,6 +36,9 @@
 
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
+
+#define IMG_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
+#define IMG_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 
 //3den Enhanced specific IDDs and IDCs
 #define IDD_3DENRADIO 60000
@@ -259,3 +262,16 @@
 #define IDC_ZEUSADDONS_INVERT 40
 #define IDC_ZEUSADDONS_SEARCH 50
 #define IDC_ZEUSADDONS_UNITS 20
+#define IDC_ZEUSADDONS_BUTTONSEARCH 80
+
+#define IDD_ATTRIBUTESEARCH 800
+#define IDC_ATTRIBUTESEARCH_COUNTER 610
+#define IDC_ATTRIBUTESEARCH_SEARCH 620
+#define IDC_ATTRIBUTESEARCH_BUTTONSEARCH 630
+#define IDC_ATTRIBUTESEARCH_TREE 640
+#define IDC_ATTRIBUTESEARCH_EDITATTRIBUTES 650
+
+#define IDD_MOVETOLAYER 900
+#define IDC_MOVETOLAYER_SEARCH 910
+#define IDC_MOVETOLAYER_BUTTONSEARCH 920
+#define IDC_MOVETOLAYER_TREE 930
