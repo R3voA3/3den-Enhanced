@@ -16,6 +16,9 @@ $WorkshopID = 623475643
 
 function Update-Files
 {
+	#Clear addon builder temp files as it doesn't seem to be able to remove .sqfc files there
+	Remove-Item -Force -Path "$env:TEMP\3denEnhanced" -Recurse -Verbose -errorAction SilentlyContinue
+
   #Clear target folder
   Remove-Item -Force -Path "$TargetFolder" -Recurse -Verbose -errorAction SilentlyContinue
 
