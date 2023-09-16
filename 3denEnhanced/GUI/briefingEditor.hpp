@@ -10,28 +10,28 @@ class ENH_BriefingEditor
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_BRIEFINGEDITOR";
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP;
       w = 160 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H;
       w = 160 * GRID_W;
       h = 110 * GRID_H;
     };
     class Separator: ctrlStaticFrame
     {
-      x = CENTERED_X(158);
+      x = CENTER_X * 0.5 * 158 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 95 * GRID_H;
       w = 158 * GRID_W;
       h = 0;
     };
     class BackgroundButtons: ctrlStaticFooter
     {
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 103 * GRID_H;
       w = 160 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
@@ -42,7 +42,7 @@ class ENH_BriefingEditor
     class Subject: ctrlStatic
     {
       text = "$STR_ENH_BRIEFINGEDITOR_SUBJECT";
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 1 * GRID_H;
       w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -50,7 +50,7 @@ class ENH_BriefingEditor
     class SubjectValue: ctrlEdit
     {
       idc = IDC_BRIEFINGEDITOR_SUBJECT;
-      x = CENTERED_X(160) + GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 6 * GRID_H;
       w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -58,22 +58,22 @@ class ENH_BriefingEditor
     class Title: Subject
     {
       text = "$STR_ENH_BRIEFINGEDITOR_BRIEFINGTITLE";
-      x = CENTERED_X(160) + 47 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 47 * GRID_W;
     };
     class TitleValue: SubjectValue
     {
       idc = IDC_BRIEFINGEDITOR_TITLE;
-      x = CENTERED_X(160) + 48 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 48 * GRID_W;
     };
     class ShowTitle: Subject
     {
       text = "$STR_ENH_BRIEFINGEDITOR_SHOWTITLE";
-      x = CENTERED_X(160) + 94 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 94 * GRID_W;
     };
     class ShowTitleValue: ctrlToolbox
     {
       idc = IDC_BRIEFINGEDITOR_SHOWTITLE;
-      x = CENTERED_X(160) + 95 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 95 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 6 * GRID_H;
       w = 32 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -90,14 +90,14 @@ class ENH_BriefingEditor
     {
       text = "$STR_ENH_BRIEFINGEDITOR_TEXT";
       tooltip = "$STR_ENH_BRIEFINGEDITOR_TEXT_TOOLTIP";
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 13 * GRID_H;
       w = 90 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Group: ctrlControlsGroup
     {
-      x = CENTERED_X(158);
+      x = CENTER_X * 0.5 * 158 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 19 * GRID_H;
       w = 158 * GRID_W;
       h = 60 * GRID_H;
@@ -140,7 +140,7 @@ class ENH_BriefingEditor
     class TAGs: ctrlStatic
     {
       text = "$STR_ENH_BRIEFINGEDITOR_TAGS";
-      x = CENTERED_X(160);
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 80 * GRID_H;
       w = 8 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -148,7 +148,7 @@ class ENH_BriefingEditor
     class TAGsValue: ctrlCombo
     {
       idc = IDC_BRIEFINGEDITOR_TAGS;
-      x = CENTERED_X(160) + GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 86 * GRID_H;
       w = 27 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -158,7 +158,7 @@ class ENH_BriefingEditor
     {
       text = "?";
       url = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#briefing-editor";
-      x = CENTERED_X(160) + 29 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 29 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 86 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -234,7 +234,7 @@ class ENH_BriefingEditor
     class TemplateList: ctrlCombo
     {
       idc = IDC_BRIEFINGEDITOR_TEMPLATES;
-      x = CENTERED_X(158);
+      x = CENTER_X * 0.5 * 158 * GRID_W * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 97 * GRID_H;
       w = 158 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -243,7 +243,7 @@ class ENH_BriefingEditor
     class CreateTemplate: ctrlButton
     {
       text = "$STR_ENH_BRIEFINGEDITOR_CREATETEMPLATE";
-      x = CENTERED_X(160) + 1 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 1 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 33 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -254,7 +254,7 @@ class ENH_BriefingEditor
       idc = IDC_ESE_DELETETEMPLATE;
       text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
       tooltip = "$STR_ENH_ESE_DELETETEMPLATE";
-      x = CENTERED_X(160) + 35 * GRID_W;
+      x = CENTER_X * 0.5 * 160 * GRID_W * GRID_W + 35 * GRID_W;
       y = DIALOG_TOP + CTRL_DEFAULT_H + 104 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
@@ -271,13 +271,6 @@ class ENH_BriefingEditor
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_briefingEditor_export";
     };
-    /* class Preview: Export
-    {
-      text = "Preview (LOCAL)";
-      x = CENTER_X - 22 * GRID_W;
-      onLoad = "_this # 0 ctrlEnable !is3DEN";
-      onButtonClick = "_this execVM 'briefingPreview.sqf'";
-    }; */
     class Close: ctrlButtonClose
     {
       x = CENTER_X + 46 * GRID_W;
