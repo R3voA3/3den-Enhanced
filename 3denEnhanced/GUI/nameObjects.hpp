@@ -1,6 +1,3 @@
-#define DIALOG_W 70
-#define DIALOG_H 30
-
 class ENH_NameObjects
 {
   idd = IDD_NAMEOBJECTS;
@@ -9,27 +6,27 @@ class ENH_NameObjects
   class ControlsBackground
   {
     DISABLE_BACKGROUND
-    class Background: ctrlStaticBackground
-    {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
-      w = DIALOG_W * GRID_W;
-      h = DIALOG_H * GRID_H;
-    };
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_NAMEOBJECTS";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP;
+      w = 53 * GRID_W;
       h = CTRL_DEFAULT_H;
+    };
+    class Background: ctrlStaticBackground
+    {
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      w = 53 * GRID_W;
+      h = 37 * GRID_H;
     };
     class Footer: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 28 * GRID_H;
-      w = DIALOG_W * GRID_W;
-      h = CTRL_DEFAULT_H + 2 * GRID_H;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + 29 * GRID_H;
+      w = 53 * GRID_W;
+      h = 2 * CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };
   class Controls
@@ -37,59 +34,59 @@ class ENH_NameObjects
     class VariableName: ctrlStatic
     {
       text = "$STR_ENH_NAMEOBJECTS_NAME";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 6 * GRID_H;
-      w = DIALOG_W * GRID_W - 4 * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + 6 * GRID_H;
+      w = 53 * GRID_W - 4 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class VariableNameValue: ctrlEdit
     {
       idc = IDC_NAMEOBJECTS_VARIABLENAME;
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 12 * GRID_H;
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W + 1 * GRID_W;
+      y = WINDOW_TOP + 12 * GRID_H;
+      w = 53 * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class IndexStart: ctrlStatic
     {
       text = "$STR_ENH_NAMEOBJECTS_STARTINDEX";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 17 * GRID_H;
-      w = DIALOG_W * GRID_W - 4 * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + 17 * GRID_H;
+      w = 53 * GRID_W - 4 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class IndexStartValue: ctrlEdit
     {
       idc = IDC_NAMEOBJECTS_INDEXSTART;
       text = "0";
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 23 * GRID_H;
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W + 1 * GRID_W;
+      y = WINDOW_TOP + 23 * GRID_H;
+      w = 53 * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class RemoveNames: ctrlButton
     {
-      text = "$STR_ENH_NAMEOBJECTS_REMOVENAME";
-      x = CENTERED_X(DIALOG_W) + 42 * GRID_W;
-      y = DIALOG_TOP + 6 * GRID_H;
-      w = 27 * GRID_W;
+      text = "$STR_ENH_NAMEOBJECTS_REMOVENAMES";
+      x = CENTER_X - 0.5 * 53 * GRID_W + GRID_W;
+      y = WINDOW_TOP + 30 * GRID_H;
+      w = (53 - 2) * GRID_W;
       h = CTRL_DEFAULT_H;
       action = "'UNNAME' call ENH_fnc_nameObjects_name";
     };
     class OK: ctrlButtonOK
     {
       idc = IDC_NAMEOBJECTS_OK;//We don't want it to close the dialog
-      x = CENTERED_X(DIALOG_W) + 1 * GRID_W;
-      y = DIALOG_TOP + 29 * GRID_H;
-      w = 27 * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W + 1 * GRID_W;
+      y = WINDOW_TOP + 36 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       action = "call ENH_fnc_nameObjects_name";
     };
     class Cancel: ctrlButtonClose
     {
-      x = CENTERED_X(DIALOG_W) + 42 * GRID_W;
-      y = DIALOG_TOP + 29 * GRID_H;
-      w = 27 * GRID_W;
+      x = CENTER_X + 0.5 * 53 * GRID_W - 26 * GRID_W;
+      y = WINDOW_TOP + 36 * GRID_H;
+      w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
   };

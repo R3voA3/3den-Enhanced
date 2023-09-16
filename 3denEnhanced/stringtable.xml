@@ -2506,17 +2506,17 @@
         <Polish>Nazwij obiekty</Polish>
         <Russian>Имя объекта</Russian>
     </Key>
-    <Key ID="STR_ENH_NAMEOBJECTS_REMOVENAME">
-        <English>Remove Name</English>
-        <Italian>Rimuovi il nome</Italian>
-        <Czech>Odstranit jméno</Czech>
-        <German>Namen entf.</German>
-        <Chinesesimp>删除名称</Chinesesimp>
-        <Chinese>刪除名稱</Chinese>
-        <Spanish>Quitar nombre</Spanish>
-        <French>Supprimer le nom</French>
-        <Polish>Usuń nazwę</Polish>
-        <Russian>Удалить имя</Russian>
+    <Key ID="STR_ENH_NAMEOBJECTS_REMOVENAMES">
+        <English>Remove Name(s)</English>
+        <Italian>Rimuovere il nome (i)</Italian>
+        <Czech>Odstranit jméno (jména)</Czech>
+        <German>Name(n) entfernen</German>
+        <Chinesesimp>删除姓名</Chinesesimp>
+        <Chinese>删除姓名</Chinese>
+        <Spanish>Eliminar Nombre(s)</Spanish>
+        <French>Supprimer le(s) nom(as)</French>
+        <Polish>Usuń nazwę(y)</Polish>
+        <Russian>Удалить имя (имена)</Russian>
     </Key>
     <Key ID="STR_ENH_NAMEOBJECTS_STARTINDEX">
         <English>Start Index</English>
