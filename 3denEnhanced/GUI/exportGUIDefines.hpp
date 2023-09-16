@@ -1,7 +1,3 @@
-#include "\3denEnhanced\defines\defineCommon.inc"
-
-#define DIALOG_W 53
-
 class ENH_ExportGUIDefines
 {
   idd = IDD_EXPORTGUIDEFINES;
@@ -12,24 +8,24 @@ class ENH_ExportGUIDefines
     DISABLE_BACKGROUND
     class Background: ctrlStaticBackground
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + CTRL_DEFAULT_H;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      w = 53 * GRID_W;
       h = 21 * GRID_H;
     };
     class Header: ctrlStaticTitle
     {
       text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP;
+      w = 53 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 19 * GRID_H;
-      w = DIALOG_W * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + 19 * GRID_H;
+      w = 53 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };
@@ -38,17 +34,17 @@ class ENH_ExportGUIDefines
     class Target: ctrlStatic
     {
       text = "$STR_WATCH_TARGET";
-      x = CENTERED_X(DIALOG_W);
-      y = DIALOG_TOP + 6 * GRID_H;
+      x = CENTER_X - 0.5 * 53 * GRID_W;
+      y = WINDOW_TOP + 6 * GRID_H;
       w = 15 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class TargetValue: ctrlCombo
     {
       idc = 10;
-      x = CENTERED_X(DIALOG_W) + 12 * GRID_W;
-      y = DIALOG_TOP + 6 * GRID_H;
-      w = (DIALOG_W - 13) * GRID_W;
+      x = CENTER_X - 0.5 * 53 * GRID_W + 12 * GRID_W;
+      y = WINDOW_TOP + 6 * GRID_H;
+      w = (53 - 13) * GRID_W;
       h = CTRL_DEFAULT_H;
       class Items
       {
@@ -68,12 +64,12 @@ class ENH_ExportGUIDefines
     class Types: Target
     {
       text = "$STR_A3_TO_BASICCIVILIANPRESENCE12";
-      y = DIALOG_TOP + 13 * GRID_H;
+      y = WINDOW_TOP + 13 * GRID_H;
     };
     class TypesValue: TargetValue
     {
       idc = 20;
-      y = DIALOG_TOP + 13 * GRID_H;
+      y = WINDOW_TOP + 13 * GRID_H;
       class Items
       {
         class Classic
@@ -99,16 +95,16 @@ class ENH_ExportGUIDefines
     };
     class Cancel: ctrlButtonCancel
     {
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 26) * GRID_W;
-      y = DIALOG_TOP + 20 * GRID_H;
+      x = CENTER_X - 0.5 * 53 * GRID_W + (53 - 26) * GRID_W;
+      y = WINDOW_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Ok: ctrlButtonOK
     {
       idc = -1;//We don't want it to close the GUI. The function does that.
-      x = CENTERED_X(DIALOG_W) + (DIALOG_W - 52) * GRID_W;
-      y = DIALOG_TOP + 20 * GRID_H;
+      x = CENTER_X - 0.5 * 53 * GRID_W + (53 - 52) * GRID_W;
+      y = WINDOW_TOP + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";
