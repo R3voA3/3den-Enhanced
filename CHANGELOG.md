@@ -11,7 +11,7 @@
 - Fixed searching in Face attribute would also filter Insignia attribute
 - Fixed function path in Functions Viewer would clip on smaller screens
 - Improved UI of Zeus Addons Manager
-- Added tooltips to entiry of Zeus Addon Manager
+- Added tooltips to entries of Zeus Addon Manager
 - Search Attributes UI now supports more attributes
 - Search Attributes tree view colors adjusted for better contrast
 - Search Attributes improved search
