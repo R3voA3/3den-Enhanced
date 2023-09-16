@@ -24,22 +24,29 @@ if (count _path < 3) exitWith {};
 private _ctrlTexturePreview = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW;
 private _ctrlTexturePreviewBG = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEWBACKGROUND;
 
+private _texture = _ctrlTV tvData _path;
+
+// Prevent function from constantly running, even if image hasn't changed
+if (_ctrlTV getVariable ["LastImagePath", ""] == _texture) exitWith {};
+_ctrlTV setVariable ["LastImagePath", _texture];
+
 _ctrlTexturePreview ctrlShow false;
 _ctrlTexturePreviewBG ctrlShow false;
-
-private _texture = _ctrlTV tvData _path;
 
 //Get original size and limit it to what we have available in the UI
 getTextureInfo _texture params ["_w", "_h"];
 
-_w = _w * pixelW min (158 * GRID_W);
-_h = _h * pixelH min (61 * GRID_H);
+// Calculate available vertical space dynamically
+private _verticalSpace = ctrlPosition (ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_SEARCH) # 1 - (ctrlPosition _ctrlTV # 1 + ctrlPosition _ctrlTV # 3) - 4 * GRID_H;
+
+_w = _w * pixelW min ((WINDOW_W_ATTRIBUTES - 2) * GRID_W);
+_h = _h * pixelH min _verticalSpace;
 
 //Now lets position the UI in respect to width and height of the image
 _ctrlTexturePreview ctrlSetPosition
 [
-  (CENTERED_X(160) + 80 * GRID_W - (ctrlPosition _ctrlTexturePreview select 2) / 2),
-  safezoneY + safezoneH - (77 * GRID_H + CTRL_DEFAULT_H),
+  CENTER_X - _w / 2,
+  WINDOW_TOP + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
   _w,
   _h
 ];
