@@ -4,8 +4,7 @@ class ENH_MarkerDrawPriority
   tooltip = "$STR_ENH_MARKERDRAWPRIORITY_TOOLTIP";
   property = "ENH_markerDrawPriority";
   control = "EditShort";
-  expression = "if (_value != 0 && isServer) then {[_this, _value] remoteExec ['setMarkerDrawPriority', 0, true]";
-  condition = "1";
+  expression = "if (_value != 0 && isServer) then {[_this, _value] remoteExec ['setMarkerDrawPriority', 0, true]}";
   defaultValue = "0";
   typeName = "NUMBER";
   validate = "NUMBER";
