@@ -26,6 +26,7 @@
 - Tweaked CFGS UI
 - Improved Texture Finder UI
 - Removed flickering when texture preview is updated
+- Fixed control in Functions Viewer would overlap on small screens
 
 ## REMOVED
 
