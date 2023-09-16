@@ -71,9 +71,9 @@ class ENH_RPTViewer
       h = CTRL_DEFAULT_H;
       maxChars = 4;
     };
-    class ButtonHelp: ctrlButtonPictureKeepAspect
+    class ButtonHelp: ctrlButton
     {
-      text = "\A3\ui_f\data\igui\cfg\simpleTasks\types\unknown_ca.paa";
+      text = "?";
       x = CENTER_X + 0.5 * WINDOW_WAbs * GRID_W - 58 * GRID_W;
       y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
