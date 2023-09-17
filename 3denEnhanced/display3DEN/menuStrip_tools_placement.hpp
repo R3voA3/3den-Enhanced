@@ -16,7 +16,7 @@ class ENH_Folder_Placement
 class ENH_PlacementTools
 {
   text = "$STR_ENH_TOOLS_PLACEMENTTOOL";
-  action = "call ENH_fnc_placementTools_createDisplay";
+  action = "[nil, 'createDisplay'] call ENH_fnc_placementTools";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
   opensNewWindow = 1;
 };
