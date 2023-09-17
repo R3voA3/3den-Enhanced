@@ -2602,6 +2602,18 @@
         <Chinesesimp>中心角</Chinesesimp>
         <Chinese>中心角</Chinese>
     </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_DIRECTION">
+        <English>Direction</English>
+        <Italian>Direzione</Italian>
+        <Czech>Směr</Czech>
+        <German>Richtung</German>
+        <Spanish>Dirección</Spanish>
+        <Polish>Kierunek</Polish>
+        <Russian>Направление</Russian>
+        <French>Direction</French>
+        <Chinesesimp>方向</Chinesesimp>
+        <Chinese>方向</Chinese>
+    </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
         <English>Initial Angle</English>
         <Italian>Angolo Iniziale</Italian>
