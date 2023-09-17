@@ -1,5 +1,3 @@
-#define DIALOG_W WINDOW_WAbs
-
 class ENH_CreateObject
 {
   idd = IDD_CREATEOBJECT;

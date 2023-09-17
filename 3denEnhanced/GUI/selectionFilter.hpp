@@ -20,21 +20,21 @@ class ENH_SelectionFilter
     {
       text = $STR_ENH_SELECTIONFILTER;
       x = CENTER_X - 0.5 * 68 * GRID_W;
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H;
       w = 68 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * 68 * GRID_W;
-      y = WINDOW_TOP + 3 * CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + 3 * CTRL_DEFAULT_H;
       w = 68 * GRID_W;
       h = 7 * GRID_H;
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * 68 * GRID_W + 49 * GRID_W;
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + 5 * GRID_H;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 5 * GRID_H;
       w = 19 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -45,7 +45,7 @@ class ENH_SelectionFilter
     {
       idc = 10;
       x = CENTER_X - 0.5 * 68 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + 6 * GRID_H;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       TEXTURES("\a3\3den\data\displays\display3den\panelright\modeobjects_ca.paa")
@@ -106,7 +106,7 @@ class ENH_SelectionFilter
     {
       x = CENTER_X - 0.5 * 68 * GRID_W + 50 * GRID_W;
       text = "\a3\3den\data\displays\display3den\panelright\customcomposition_edit_ca.paa";
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + 6 * GRID_H;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 6 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this spawn ENH_fnc_selectionFilter_editAttributes";

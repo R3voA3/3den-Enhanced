@@ -7,14 +7,14 @@ class ENH_ESE_TemplateData
   class Header: ctrlStaticTitle
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = 60 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = 60 * GRID_W;
       h = 51 * GRID_H;
     };
@@ -22,7 +22,7 @@ class ENH_ESE_TemplateData
     {
       text = "$STR_ENH_TEMPLATE_DATA_TITLE";
       x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -37,7 +37,7 @@ class ENH_ESE_TemplateData
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + 49 * GRID_H;
+      y = WINDOW_TOPAbs + 49 * GRID_H;
       w = 60 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -48,7 +48,7 @@ class ENH_ESE_TemplateData
     {
       idc = IDC_ESE_TEMPLATEDATA_TITLE;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 2 * CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -63,7 +63,7 @@ class ENH_ESE_TemplateData
     class Cancel: ctrlButtonCancel
     {
       x = CENTER_X - 0.5 * 60 * GRID_W + 34 * GRID_W;
-      y = WINDOW_TOP + 50 * GRID_H;
+      y = WINDOW_TOPAbs + 50 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -71,7 +71,7 @@ class ENH_ESE_TemplateData
     {
       idc = -1;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 50 * GRID_H;
+      y = WINDOW_TOPAbs + 50 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'create' call ENH_fnc_ESE_handleTemplates";

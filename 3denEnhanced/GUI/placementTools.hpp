@@ -7,16 +7,9 @@
 #define ORIGIN_X safeZoneX + 6 * GRID_W
 #define ORIGIN_Y safezoneY + 18 * GRID_H
 
-#define IDC_PLACEMENTTOOLS_ORIENTATION 100
-#define IDC_PLACEMENTTOOLS_REVERSEORIENTATION 110
-#define IDC_PLACEMENTTOOLS_RANDOMORIENTATION 120
-#define IDC_PLACEMENTTOOLS_SPACINGDIRECTION 130
-#define IDC_PLACEMENTTOOLS_CENTERX WINDOW_WAbs
-#define IDC_PLACEMENTTOOLS_CENTERY 150
-
 class ENH_PlacementTools
 {
-  idd = -1;//IDD_PLACEMENTTOOLS;
+  idd = IDD_PLACEMENTTOOLS;
   onLoad = "_this call ENH_fnc_placementTools_onLoad";
   onUnload = "_this call ENH_fnc_placementTools_onUnload";
   movingEnable = true;
@@ -123,7 +116,7 @@ class ENH_PlacementTools
         };
         class SpacingDirection: Radius
         {
-          text = "STR_ENH_PLACEMENTTOOLS_DIRECTION";
+          text = "$STR_ENH_PLACEMENTTOOLS_DIRECTION";
           y = 37 * GRID_H;
         };
         class SpacingDirectionValue: RadiusValue
@@ -198,7 +191,7 @@ class ENH_PlacementTools
         };
         class Direction: Radius
         {
-          text = "STR_ENH_PLACEMENTTOOLS_DIRECTION";
+          text = "$STR_ENH_PLACEMENTTOOLS_DIRECTION";
           y = 91 * GRID_H;
         };
         class DirectionValue: RadiusValue
@@ -209,7 +202,7 @@ class ENH_PlacementTools
          class RandomOrientaton: ctrlButton
         {
           idc = IDC_PLACEMENTTOOLS_RANDOMORIENTATION;
-          text = "RANDOM";
+          text = "$STR_ENH_TOOLS_PLACEMENTTOOLS_RANDOM";
           x = POS_X_VALUE;
           y = 97 * GRID_H;
           w = WIDTH_VALUE;
@@ -218,12 +211,12 @@ class ENH_PlacementTools
         class ReverseOrientation: RandomOrientaton
         {
           idc = IDC_PLACEMENTTOOLS_REVERSEORIENTATION;
-          text = "REVERSE";
+          text = "$STR_ENH_TOOLS_PLACEMENTTOOLS_REVERSE";
           y = 103 * GRID_H;
         };
         class CenterHeader: CircularHeader
         {
-          text = "STR_ENH_PLACEMENTTOOLS_CENTER";
+          text = "$STR_ENH_PLACEMENTTOOLS_ORIGIN";
           y = 109 * GRID_H;
         };
         class EditXY: ctrlControlsGroupNoScrollbars
