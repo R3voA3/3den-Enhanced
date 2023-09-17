@@ -4271,6 +4271,30 @@
         <Polish>Odwróć kierunek</Polish>
         <Russian>Обратное направление</Russian>
     </Key>
+		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_REVERSE">
+        <English>Reverse</English>
+        <Italian>Inverso</Italian>
+        <Czech>Reverzní</Czech>
+        <French>Inverser</French>
+        <Spanish>Invertir</Spanish>
+        <German>Umkehren</German>
+        <Chinesesimp>反向</Chinesesimp>
+        <Chinese>反向</Chinese>
+        <Polish>Odwrócony</Polish>
+        <Russian>Обратный</Russian>
+    </Key>
+		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_RANDOM">
+        <English>Random</English>
+        <Italian>Casuale</Italian>
+        <Czech>Náhodné</Czech>
+        <French>Au hasard</French>
+        <Spanish>Al azar</Spanish>
+        <German>Zufällig</German>
+        <Chinesesimp>随机</Chinesesimp>
+        <Chinese>随机</Chinese>
+        <Polish>Losowo</Polish>
+        <Russian>Случайный</Russian>
+    </Key>
     <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
         <Italian>Editor del briefing</Italian>
@@ -6348,15 +6372,16 @@
         <Chinese>查看控件樣式</Chinese>
         <Polish>Wyświetl style kontrolerów</Polish>
     </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
-        <English>Reset Center.</English>
-        <Russian>Центр сброса</Russian>
-        <German>Mittelpunkt zurücksetzen.</German>
-        <Spanish>Resetear centro</Spanish>
-        <French>Réinitialiser le centre</French>
-        <Polish>Zresetuj środek</Polish>
-        <Chinesesimp>重置中心</Chinesesimp>
-        <Chinese>重置中心</Chinese>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_ORIGIN">
+        <English>Origin</English>
+				<Italian>Origine</Italian>
+        <Russian>Происхождение</Russian>
+        <German>Ursprung</German>
+        <Spanish>Origen</Spanish>
+        <French>Origine</French>
+        <Polish>Pochodzenie</Polish>
+        <Chinesesimp>起源</Chinesesimp>
+        <Chinese>起源</Chinese>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
         <English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
