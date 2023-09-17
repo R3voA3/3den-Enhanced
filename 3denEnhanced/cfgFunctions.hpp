@@ -23,12 +23,12 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    class CreateObject
+    /* class CreateObject
     {
       file = "3denEnhanced\functions\GUI\createObject";
       class createObject_create;
       class createObject_changeFilter;
-    };
+    }; */
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -36,7 +36,7 @@ class CfgFunctions
       class textureFinder_findTextures;
       class textureFinder_updatePreview;
     };
-    class BatchReplace
+/*     class BatchReplace
     {
       file = "3denEnhanced\functions\GUI\batchReplace";
       class batchReplace;
@@ -44,7 +44,7 @@ class CfgFunctions
       class batchReplace_createDisplay;
       class batchReplace_onTreeSelChanged;
       class batchReplace_initTreeView;
-    };
+    }; */
     class FunctionsViewer
     {
       file = "3denEnhanced\functions\GUI\functionsViewer";
@@ -83,16 +83,7 @@ class CfgFunctions
     class PlacementTools
     {
       file = "3denEnhanced\functions\GUI\placementTools";
-      class placementTools_centralAngle;
-      class placementTools_createDisplay;
-      class placementTools_fillArea;
-      class placementTools_grid;
-      class placementTools_initialAngle;
-      class placementTools_onLoad;
-      class placementTools_onToolBoxSelChanged;
-      class placementTools_onUnload;
-      class placementTools_radius;
-      class placementTools_spacing;
+      class placementTools;
     };
     class SAM
     {
