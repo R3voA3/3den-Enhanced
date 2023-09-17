@@ -46,7 +46,7 @@ _h = _h * pixelH min _verticalSpace;
 _ctrlTexturePreview ctrlSetPosition
 [
   CENTER_X - _w / 2,
-  WINDOW_TOP + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
+  WINDOW_TOPAbs + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
   _w,
   _h
 ];
