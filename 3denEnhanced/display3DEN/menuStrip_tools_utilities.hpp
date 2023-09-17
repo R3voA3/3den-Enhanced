@@ -17,8 +17,7 @@ class ENH_Folder_Utilities
     "Separator",
     "ENH_BriefingEditor",
     "ENH_AttributeSearch",
-    //"ENH_ActionCreator",
-    "ENH_BatchReplace",
+    //"ENH_BatchReplace",
     "ENH_NameObjects",
     "ENH_ZeusAddons"
   };
@@ -69,25 +68,19 @@ class ENH_3DENRadio
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
   opensNewWindow = 1;
 };
-/* class ENH_ActionCreator
-{
-  text = "$STR_ENH_TOOLS_ACTIONCREATOR";
-  action = "findDisplay 313 createDisplay 'ENH_ActionCreator'";
-  opensNewWindow = 1;
-}; */
 class ENH_SAM
 {
   text = "$STR_ENH_TOOLS_SAM";
   action = "findDisplay 313 createDisplay 'ENH_SAM'";
   opensNewWindow = 1;
 };
-class ENH_BatchReplace
+/* class ENH_BatchReplace
 {
   text = "$STR_ENH_TOOLS_BATCHREPLACE";
   action = "call ENH_fnc_batchReplace_createDisplay";
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
   opensNewWindow = 1;
-};
+}; */
 class ENH_NameObjects
 {
   text = "$STR_ENH_TOOLS_BATCHNAMING";
