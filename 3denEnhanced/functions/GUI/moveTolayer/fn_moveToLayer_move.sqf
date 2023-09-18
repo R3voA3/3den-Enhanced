@@ -13,6 +13,8 @@
   BOOLEAN
 */
 
+#include "\3denEnhanced\defines\defineCommon.inc"
+
 params ["_ctrlButton"];
 
 private _ctrlTV = ctrlParent _ctrlButton displayCtrl IDC_MOVETOLAYER_TREE;
