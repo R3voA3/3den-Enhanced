@@ -23,12 +23,6 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    /* class CreateObject
-    {
-      file = "3denEnhanced\functions\GUI\createObject";
-      class createObject_create;
-      class createObject_changeFilter;
-    }; */
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -36,15 +30,6 @@ class CfgFunctions
       class textureFinder_findTextures;
       class textureFinder_updatePreview;
     };
-/*     class BatchReplace
-    {
-      file = "3denEnhanced\functions\GUI\batchReplace";
-      class batchReplace;
-      class batchReplace_onLoad;
-      class batchReplace_createDisplay;
-      class batchReplace_onTreeSelChanged;
-      class batchReplace_initTreeView;
-    }; */
     class FunctionsViewer
     {
       file = "3denEnhanced\functions\GUI\functionsViewer";
@@ -59,11 +44,6 @@ class CfgFunctions
       class functionsViewer_setUpMenuStrip;
       class functionsViewer_togglePanel;
     };
-    /* class ActionCreator
-    {
-      file = "3denEnhanced\functions\GUI\actionCreator";
-      class actionCreator;
-    }; */
     class AttributeSearch
     {
       file = "3denEnhanced\functions\GUI\attributeSearch";
@@ -203,6 +183,8 @@ class CfgFunctions
       class createBackupMissionSQM;
       class VHCTools;
       class alignEntities;
+      class setOrientation;
+      class spaceEqually;
       class all3DENSelected;
       class centerMapOnSelection;
       class compatibleItems;
@@ -217,11 +199,8 @@ class CfgFunctions
       class hasStorage;
       class loadoutTool;
       class measureDistance;
-      class preloadAmmoAttribute;
       class pylonTools;
       class removeGear;
-      class setOrientation;
-      class spaceEqually;
       class statBarStatement_accuracy;
       class statBarStatement_default;
       class statBarStatement_impact;
@@ -240,7 +219,6 @@ class CfgFunctions
       class toggleDrawHitpoints;
       class toggleGrass;
       class toggleMarkerAlpha;
-      class twoDigitsStr;
     };
     class Interface
     {
@@ -265,7 +243,6 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\debug";
       class productInfo;
-      class toggleMapIDs;
     };
     class EventHandlers
     {
