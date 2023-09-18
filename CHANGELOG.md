@@ -1,3 +1,12 @@
+#7.8.1
+# ADDED
+
+# CHANGED
+- Reverted identity attributes changes
+- Fixed rpt errors
+- Fixed Move to Layer UI not working
+
+
 #v7.8.0
 ## ADDED
 
