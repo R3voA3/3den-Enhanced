@@ -1,3 +1,12 @@
+#v7.8.2
+## ADDED
+
+## CHANGED
+- Fixed missing translation in Placement Tools UI
+- Fixed description of Advanced Damage attribute would be cut off
+- Updated Placement Tools functions
+
+
 # 7.8.1
 # ADDED
 
