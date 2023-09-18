@@ -3,28 +3,29 @@
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
-918 | 8017 | 79,39 % |
+921 | 8045 | 79,41 % |
 
 | Language | Translated Entries | Missing Entries | Progress |
 |----------|:-----------------:|--------:|--------:|
 | | | |
-| English | 918 | 0 | 100,00 %
+| English | 921 | 0 | 100,00 %
 | | | |
-| German | 918 | 0 | 100,00 %
+| German | 921 | 0 | 100,00 %
 | | | |
-| Italian | 600 | 318 | 65,36 %
+| Italian | 603 | 318 | 65,47 %
 | | | |
-| Czech | 470 | 448 | 51,20 %
+| Czech | 472 | 449 | 51,25 %
 | | | |
-| Chinesesimp | 918 | 0 | 100,00 %
+| Chinesesimp | 921 | 0 | 100,00 %
 | | | |
-| Spanish | 918 | 0 | 100,00 %
+| Spanish | 921 | 0 | 100,00 %
 | | | |
-| French | 618 | 300 | 67,32 %
+| French | 620 | 301 | 67,32 %
 | | | |
-| Polish | 918 | 0 | 100,00 %
+| Polish | 921 | 0 | 100,00 %
 | | | |
-| Russian | 810 | 108 | 88,24 %
-| Portuguese | 11 | 907 | 1,20 %
+| Russian | 813 | 108 | 88,27 %
 | | | |
-| Chinese | 918 | 0 | 100,00 %
+| Portuguese | 11 | 910 | 1,19 %
+| | | |
+| Chinese | 921 | 0 | 100,00 %

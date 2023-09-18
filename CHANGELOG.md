@@ -5,7 +5,8 @@
 - Fixed missing translation in Placement Tools UI
 - Fixed description of Advanced Damage attribute would be cut off
 - Updated Placement Tools functions
-
+- Overhauled 3DEN Shortcuts UI
+- Added missing translation in ESE
 
 # 7.8.1
 # ADDED
@@ -14,7 +15,6 @@
 - Reverted identity attributes changes
 - Fixed rpt errors
 - Fixed Move to Layer UI not working
-
 
 # v7.8.0
 ## ADDED
