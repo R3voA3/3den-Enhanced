@@ -15,6 +15,7 @@
 
 //Custom GUIs
 #include "GUI\3DENRadio.hpp"
+#include "GUI\3DENShortcuts.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\ESE.hpp"
 #include "GUI\RPTViewer.hpp"

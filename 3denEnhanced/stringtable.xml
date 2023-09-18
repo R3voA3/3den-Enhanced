@@ -4295,6 +4295,30 @@
         <Polish>Losowo</Polish>
         <Russian>Случайный</Russian>
     </Key>
+		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_SHORTCUTS">
+        <English>Keyboard Shortcuts</English>
+        <Italian>Scorciatoie da tastiera</Italian>
+        <Czech>Klávesové zkratky</Czech>
+        <French>Raccourcis clavier</French>
+        <Spanish>Atajos de teclado</Spanish>
+        <German>Tastaturkurzbefehle</German>
+        <Chinesesimp>键盘快捷键</Chinesesimp>
+        <Chinese>键盘快捷键</Chinese>
+        <Polish>Skróty klawiaturowe</Polish>
+        <Russian>Клавиатурные сокращения</Russian>
+    </Key>
+		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_ACTION">
+        <English>Action</English>
+        <Italian>Azione</Italian>
+        <Czech>Akce</Czech>
+        <French>Action</French>
+        <Spanish>Acción</Spanish>
+        <German>Befehl</German>
+        <Chinesesimp>行动</Chinesesimp>
+        <Chinese>行动</Chinese>
+        <Polish>Działanie</Polish>
+        <Russian>Действие</Russian>
+    </Key>
     <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
         <Italian>Editor del briefing</Italian>
