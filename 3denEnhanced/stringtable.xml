@@ -6861,6 +6861,16 @@
         <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
         <Italian>Hai dei cambiamenti non salvati. Chiudere comunque?</Italian>
     </Key>
+    <Key ID="STR_ENH_ESE_COMPATIBLE_ITEMS">
+        <English>Compatible Items</English>
+        <German>Kompatible Gegenstände</German>
+        <Chinesesimp>兼容项目</Chinesesimp>
+        <Chinese>兼容项目</Chinese>
+        <Polish>Kompatybilne przedmioty</Polish>
+        <Spanish>Artículos compatibles</Spanish>
+        <Italian>Articoli compatibili</Italian>
+				<Russian>Совместимые предметы</Russian>
+    </Key>
     <Key ID="STR_ENH_ESE_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
         <German>Export (ACE)</German>

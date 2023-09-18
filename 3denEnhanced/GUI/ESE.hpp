@@ -48,7 +48,7 @@ class ENH_ESE
     };
     class CompatibleItems: AvailableItems
     {
-      text = "Compatible Items";
+      text = "$STR_ENH_ESE_COMPATIBLE_ITEMS";
        x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + (WINDOW_W_WIDE * 1/4) * GRID_W + 2 * GRID_W;
        w = (WINDOW_W_WIDE * 1/4) * GRID_W - GRID_W;
     };
@@ -60,7 +60,7 @@ class ENH_ESE
     };
     class Templates: AvailableItems
     {
-      text = "Templates";
+      text = "$STR_ENH_ESE_TEMPLATES";
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + (WINDOW_W_WIDE * 3/4) * GRID_W + GRID_W;
       w = (WINDOW_W_WIDE * 1/4) * GRID_W - 2 * GRID_W;
     };
