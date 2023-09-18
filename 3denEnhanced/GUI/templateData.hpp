@@ -30,7 +30,7 @@ class ENH_ESE_TemplateData
     {
       text = "$STR_ENH_TEMPLATE_DATA_DESCRIPTION";
       x = CENTER_X - 0.5 * 60 * GRID_W;
-      y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H
+      y = WINDOW_TOP + 3 * CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -56,7 +56,7 @@ class ENH_ESE_TemplateData
     {
       idc = IDC_ESE_TEMPLATEDATA_DESCRIPTION;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 4 * CTRL_DEFAULT_H + GRID_H
+      y = WINDOW_TOP + 4 * CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
       h = 25 * GRID_H;
     };

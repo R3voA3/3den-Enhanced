@@ -19,7 +19,7 @@ class Face: Title
       idc = 303;
       text = "\A3\Characters_F\Heads\Data\m_Miller_co.paa";
       x = 2 * GRID_W;
-      y = CTRL_DEFAULT_H + GRID_H
+      y = CTRL_DEFAULT_H + GRID_H;
       w = (ATTRIBUTE_TITLE_W - 4) * GRID_W;
       h = (ATTRIBUTE_TITLE_W - 4) * GRID_H;
     };

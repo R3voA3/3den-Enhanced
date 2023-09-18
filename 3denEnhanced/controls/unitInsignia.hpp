@@ -18,7 +18,7 @@ class UnitInsignia: Title
     {
       idc = 403;
       x = 2 * GRID_W;
-      y = CTRL_DEFAULT_H + GRID_H
+      y = CTRL_DEFAULT_H + GRID_H;
       w = (ATTRIBUTE_TITLE_W - 4) * GRID_W;
       h = (ATTRIBUTE_TITLE_W - 4) * GRID_H;
     };
