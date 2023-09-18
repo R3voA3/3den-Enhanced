@@ -305,7 +305,7 @@ class CfgFunctions
       class dynamicSkill_onAttributeSave;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
-      class face;
+      //class face;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
@@ -321,7 +321,7 @@ class CfgFunctions
       class missionEndingCasualties_onAttributeSave;
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
-      class unitInsignia;
+      //class unitInsignia;
     };
     class Internal
     {
