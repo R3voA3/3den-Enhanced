@@ -23,6 +23,12 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
+    /* class CreateObject
+    {
+      file = "3denEnhanced\functions\GUI\createObject";
+      class createObject_create;
+      class createObject_changeFilter;
+    }; */
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -30,6 +36,15 @@ class CfgFunctions
       class textureFinder_findTextures;
       class textureFinder_updatePreview;
     };
+/*     class BatchReplace
+    {
+      file = "3denEnhanced\functions\GUI\batchReplace";
+      class batchReplace;
+      class batchReplace_onLoad;
+      class batchReplace_createDisplay;
+      class batchReplace_onTreeSelChanged;
+      class batchReplace_initTreeView;
+    }; */
     class FunctionsViewer
     {
       file = "3denEnhanced\functions\GUI\functionsViewer";

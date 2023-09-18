@@ -6,6 +6,7 @@ class ENH_Folder_Debug
   {
     "ENH_VariableViewer",
     "ENH_RPTViewer",
+    //"ENH_CreateObject",
     "Separator",
     "ENH_ProductInfo",
     "ENH_ClearChat",
@@ -31,6 +32,12 @@ class ENH_RPTViewer
   opensNewWindow = 1;
   shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_V};
 };
+/* class ENH_CreateObject
+{
+  text = "$STR_3DEN_HISTORY_CREATEOBJECT_DISPLAYNAME";
+  action = "findDisplay 313 createDisplay 'ENH_CreateObject'";
+  opensNewWindow = 1;
+}; */
 class ENH_ProductInfo
 {
   text = "$STR_ENH_TOOLS_PRODUCTINFO";
