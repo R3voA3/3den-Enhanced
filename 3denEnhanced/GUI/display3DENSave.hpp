@@ -72,7 +72,6 @@ class Display3DENSave
     class Binarize: ctrlCheckbox
     {
       x = CENTER_X - (WINDOW_W_WIDE * 1/4) * GRID_W;
-      y = 0.5 + WINDOW_HAbs * 0.5 - (3 * 5 + 3) * GRID_H;
     };
     class ButtonOK: ctrlButtonOK
     {
