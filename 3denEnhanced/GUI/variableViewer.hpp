@@ -19,7 +19,7 @@ class ENH_VariableViewer
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
       y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = WINDOW_W_WIDE * GRID_W;
-      h = WINDOW_HAbs - 5 * CTRL_DEFAULT_H;
+      h = WINDOW_HAbs - 3 * CTRL_DEFAULT_H;
     };
     class BackgroundFilter: Background//Background used for filter buttons
     {
@@ -29,21 +29,21 @@ class ENH_VariableViewer
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 2 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_WIDE * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
     class FooterInputFields: Footer
     {
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 4  * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 4 * GRID_H;
       w = 127 * GRID_W;
     };
     class HideFunctionsText: ctrlStatic
     {
       text = "$STR_ENH_VARIABLEVIEWER_HIDEFUNCTIONS";
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 35 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 28 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -51,7 +51,7 @@ class ENH_VariableViewer
     {
       text = "$STR_ENH_VARIABLEVIEWER_VARIABLENAME";
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 10 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -64,7 +64,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_VARIABLECOUNT;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 100 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 20 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -92,7 +92,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_NAMESPACE;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 55 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -100,7 +100,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -108,7 +108,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_SEARCHBUTTON;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 26 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -116,7 +116,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_HIDEFUNCTIONS;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 31 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
     };
@@ -124,7 +124,7 @@ class ENH_VariableViewer
     {
       idc = IDC_VARIABLEVIEWER_VARIABLENAME;
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 12 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 45 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -138,7 +138,7 @@ class ENH_VariableViewer
       idc = IDC_VARIABLEVIEWER_DELETE;
       text = "a3\3den\data\displays\display3den\panelright\customcomposition_edit_ca.paa";
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 115 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 6 * CTRL_DEFAULT_H - 3 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this spawn ENH_fnc_variableViewer_delete";
@@ -153,7 +153,7 @@ class ENH_VariableViewer
     class Close: ctrlButtonClose
     {
       x = CENTER_X + 0.5 * WINDOW_W_WIDE * GRID_W - 26 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 5 * CTRL_DEFAULT_H - 1 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
