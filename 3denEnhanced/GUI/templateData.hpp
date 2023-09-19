@@ -4,7 +4,7 @@ class ENH_ESE_TemplateData
   class ControlsBackground
   {
     DISABLE_BACKGROUND
-  class Header: ctrlStaticTitle
+    class Header: ctrlStaticTitle
     {
       x = CENTER_X - 0.5 * 60 * GRID_W;
       y = WINDOW_TOPAbs;
@@ -60,14 +60,14 @@ class ENH_ESE_TemplateData
       w = 58 * GRID_W;
       h = 25 * GRID_H;
     };
-    class Cancel: ctrlButtonCancel
+    class ButtonCancel: ctrlButtonCancel
     {
       x = CENTER_X - 0.5 * 60 * GRID_W + 34 * GRID_W;
       y = WINDOW_TOPAbs + 50 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class OK: ctrlButtonOk
+    class ButtonOK: ctrlButtonOk
     {
       idc = -1;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
@@ -81,9 +81,21 @@ class ENH_ESE_TemplateData
 
 class ENH_SAM_TemplateData: ENH_ESE_TemplateData
 {
+  class ControlsBackground: ControlsBackground
+  {
+    DISABLE_BACKGROUND
+    class Header: Header {};
+    class Background: Background {};
+    class Title: Title {};
+    class Description: Description {};
+    class Footer: Footer {};
+  };
   class Controls: Controls
   {
-    class OK: ctrlButtonOK
+    class TitleValue: TitleValue {};
+    class DescriptionValue: DescriptionValue {};
+    class ButtonCancel: ButtonCancel {};
+    class ButtonOK: ButtonOK
     {
       onButtonClick = "_this call ENH_fnc_SAM_createTemplate";
     };
