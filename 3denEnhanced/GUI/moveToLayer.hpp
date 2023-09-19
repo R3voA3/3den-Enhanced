@@ -24,7 +24,7 @@ class ENH_MoveToLayer
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W;
-      y = WINDOW_HAbs - 2 * CTRL_DEFAULT_H - 2 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -47,7 +47,7 @@ class ENH_MoveToLayer
     {
       idc = IDC_MOVETOLAYER_SEARCH;
       x = CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W + GRID_W;
-      y = WINDOW_HAbs - 2 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 35 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
@@ -58,7 +58,7 @@ class ENH_MoveToLayer
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       tooltip = "";
       x = CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W + 36 * GRID_W;
-      y = WINDOW_HAbs - 2 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -67,7 +67,7 @@ class ENH_MoveToLayer
       idc = -1;
       text = "$STR_A3_BOOT_M02_BIS_SIGN_MARKER";
       x = CENTER_X + WINDOW_W_ATTRIBUTES * 0.5 * GRID_W - 52 * GRID_W;
-      y = WINDOW_HAbs - 2 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "_this call ENH_fnc_moveToLayer_move";
@@ -75,7 +75,7 @@ class ENH_MoveToLayer
     class ButtonClose: ctrlButtonClose
     {
       x = CENTER_X + WINDOW_W_ATTRIBUTES * 0.5 * GRID_W - 26 * GRID_W;
-      y = WINDOW_HAbs - 2 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
