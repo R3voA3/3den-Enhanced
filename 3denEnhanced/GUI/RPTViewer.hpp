@@ -19,11 +19,6 @@ class ENH_RPTViewer
       w = WINDOW_W_WIDE * GRID_W;
       h = WINDOW_HAbs - 3 * CTRL_DEFAULT_H;
     };
-    class BackgroundButtons: Background
-    {
-      y = WINDOW_TOPAbs + DIALOG_H * GRID_H + CTRL_DEFAULT_H;
-      h = CTRL_DEFAULT_H + 2 * GRID_H;
-    };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W;
