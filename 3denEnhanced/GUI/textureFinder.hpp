@@ -49,7 +49,9 @@ class ENH_TextureFinder
       y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
       w = (WINDOW_W_ATTRIBUTES - 2) * GRID_W;
       h = WINDOW_HAbs - 80 * GRID_H + CTRL_DEFAULT_H;
-      colorLines[] = {1, 1, 1, 1};
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class Preview: ctrlStaticPictureKeepAspect
     {

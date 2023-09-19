@@ -47,7 +47,9 @@ class ENH_ZeusAddons
       y = WINDOW_TOPAbs + 2 * (CTRL_DEFAULT_H + GRID_H);
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 6 * CTRL_DEFAULT_H;
-      rowHeight = 4 * GRID_H;
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class UnitsLabel: CfgPatchesLabel
     {

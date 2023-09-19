@@ -65,6 +65,9 @@ class ENH_SAM
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 2 * GRID_H;
       w = (WINDOW_W_ATTRIBUTES - 53) * GRID_W;
       h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H - GRID_H;
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class Search: ctrlEdit
     {

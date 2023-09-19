@@ -21,14 +21,6 @@ class ENH_MoveToLayer
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = WINDOW_HAbs - 3 * CTRL_DEFAULT_H;
     };
-	class BackgroundList: ctrlStaticBackground
-    {
-      x = CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W + GRID_W;
-      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
-      w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
-      h = WINDOW_HAbs - 24 * GRID_H;
-	  colorbackground[] = {0.1, 0.1, 0.1, 1};
-    };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W;
@@ -48,8 +40,8 @@ class ENH_MoveToLayer
       w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 24 * GRID_H;
       borderSize = 0;
-      colorBorder[] = {0,0,0,0};
-      colorLines[] = {1,1,1,1};
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class Search: ctrlEdit
     {
