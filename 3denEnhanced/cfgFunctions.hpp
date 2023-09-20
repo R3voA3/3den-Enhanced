@@ -67,13 +67,7 @@ class CfgFunctions
     class BriefingEditor
     {
       file = "3denEnhanced\functions\GUI\briefingEditor";
-      class briefingEditor_addTAG;
-      class briefingEditor_handleTemplates;
-      class briefingEditor_export;
-      class briefingEditor_onLBSelChanged;
-      class briefingEditor_onLoad;
-      class briefingEditor_onUnload;
-      class briefingEditor_htmlHighlight;
+      class briefingEditor;
     };
     class PlacementTools
     {

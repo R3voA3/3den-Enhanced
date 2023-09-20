@@ -4959,18 +4959,6 @@
         <Chinese>顯示標題</Chinese>
         <Italian>Mostra Titolo</Italian>
     </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
-        <English>Hide Title</English>
-        <Russian>Скрыть заголовок</Russian>
-        <German>Titel verstecken</German>
-        <Czech>Skrýt název</Czech>
-        <Spanish>Ocultar título</Spanish>
-        <French>Cacher le titre</French>
-        <Polish>Ukryj tytuł</Polish>
-        <Chinesesimp>隐藏标题</Chinesesimp>
-        <Chinese>隱藏標題</Chinese>
-        <Italian>Nascondi Titolo</Italian>
-    </Key>
     <Key ID="STR_ENH_SAM_APPLYATTRIBUTE">
         <English>Apply Attribute</English>
         <Russian>Применить атрибуты</Russian>
@@ -5131,16 +5119,21 @@
         <Chinese>添加標籤</Chinese>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
-        <English>Export</English>
-        <Russian>Экспорт</Russian>
-        <Chinesesimp>导出</Chinesesimp>
-        <Chinese>導出</Chinese>
-        <Czech>Export</Czech>
-        <French>Exporter</French>
-        <German>Exportieren</German>
-        <Polish>Eksport</Polish>
-        <Spanish>Exportar</Spanish>
-        <Italian>Esporta</Italian>
+        <Original>Export</Original>
+				<English>Export</English>
+				<Czech>Exportovat</Czech>
+				<German>Exportieren</German>
+				<Russian>Экспортировать</Russian>
+				<Polish>Eksportuj</Polish>
+				<Italian>Esporta</Italian>
+				<Spanish>Exportar</Spanish>
+				<French>Exporter</French>
+				<Chinese>輸出</Chinese>
+				<Japanese>エクスポート</Japanese>
+				<Korean>내보내기</Korean>
+				<Portuguese>Exportar</Portuguese>
+				<Chinesesimp>导出</Chinesesimp>
+				<Turkish>Dışa Aktar</Turkish>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
         <English>Font</English>
@@ -5880,6 +5873,17 @@
         <Chinesesimp>删除模板</Chinesesimp>
         <Chinese>刪除模板</Chinese>
     </Key>
+		<Key ID="STR_ENH_BRIEFINGEDITOR_DELETETEMPLATE">
+        <English>Delete Template</English>
+        <Russian>Удалить шаблон</Russian>
+        <Czech>Smazat šablonu</Czech>
+        <German>Vorlage löschen</German>
+        <Spanish>Borrar plantilla</Spanish>
+        <French>Supprimer un modèle</French>
+        <Polish>Skasuj szablon</Polish>
+        <Chinesesimp>删除模板</Chinesesimp>
+        <Chinese>刪除模板</Chinese>
+    </Key>
     <Key ID="STR_ENH_SAM_CREATETEMPLATE">
         <English>Create Template from Scenario</English>
         <Russian>Создать шаблон из сценария</Russian>
@@ -5892,6 +5896,17 @@
         <Chinese>從場景創建模板</Chinese>
     </Key>
     <Key ID="STR_ENH_SAM_APPLYTEMPLATE">
+        <English>Apply Template</English>
+        <Russian>Добавить шаблон</Russian>
+        <Czech>Použít šablonu</Czech>
+        <German>Vorlage anwenden</German>
+        <Spanish>Aplicar plantilla</Spanish>
+        <French>Appliquer un modèle</French>
+        <Polish>Zastosuj szablon</Polish>
+        <Chinesesimp>应用模板</Chinesesimp>
+        <Chinese>應用模板</Chinese>
+    </Key>
+		<Key ID="STR_ENH_BRIEFINGEDITOR_APPLYTEMPLATE">
         <English>Apply Template</English>
         <Russian>Добавить шаблон</Russian>
         <Czech>Použít šablonu</Czech>
