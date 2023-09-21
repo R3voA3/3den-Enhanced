@@ -87,8 +87,6 @@ CTRL(IDC_TEXTUREFINDER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
 {
   params ["_ctrlButton"];
 
-  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (ctrlText _ctrlEdit == "");
-
   //Change search button icon and clear edit control to reset tree view filter
   ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_SEARCH ctrlSetText "";
   _ctrlButton ctrlSetText IMG_SEARCH_START;
