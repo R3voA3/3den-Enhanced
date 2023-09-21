@@ -113,13 +113,14 @@ class ENH_3DENRadio
       y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onKeyUp = "call ENH_fnc_3DENRadio_searchList;";//onKeyUp to give the control time to update
     };
-    class SearchIcon: VolumeIcon
+    class ButtonSearch: ctrlButtonSearch
     {
-      text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
-      tooltip = "";
+      idc = IDC_3DENRADIO_BUTTONSEARCH;
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 80 * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      w = 5 * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
     class Group: ctrlControlsGroup
     {

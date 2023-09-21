@@ -61,3 +61,23 @@ _display displayAddEventHandler ["keyDown",
     ctrlSetFocus CTRL(IDC_3DENRADIO_SEARCH);
   }
 }];
+
+//Handle search button
+CTRL(IDC_3DENRADIO_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_3DENRADIO_BUTTONSEARCH ctrlSetText _image;
+  call ENH_fnc_3DENRadio_searchList;
+}];
+
+//Handle search button
+CTRL(IDC_3DENRADIO_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_3DENRADIO_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];
