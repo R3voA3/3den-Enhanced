@@ -222,9 +222,9 @@ class ENH_FunctionsViewer
       w = 53 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
-    class SearchIcon: ctrlStaticPictureKeepAspect
+    class ButtonSearch: ctrlButtonSearch
     {
-      text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+      idc = IDC_FUNCTIONSVIEWER_BUTTONSEARCH;
       x = safezoneX + 65 * GRID_W;
       y = safezoneY + safezoneH - 6 * GRID_H;
       w = 5 * GRID_W;
