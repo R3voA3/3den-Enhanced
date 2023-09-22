@@ -75,7 +75,7 @@ class ENH_RemoveGear
 {
   text = "$STR_ENH_TOOLS_REMOVEGEAR";
   action = "7 call ENH_fnc_removeGear";
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_F};
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_SHIFT_OFFSET + DIK_D};
 };
 class ENH_ESE
 {
