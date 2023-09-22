@@ -77,6 +77,7 @@ CTRL(IDC_3DENRADIO_SEARCH) ctrlAddEventHandler ["EditChanged",
 CTRL(IDC_3DENRADIO_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
 {
   params ["_ctrlButton"];
+
   //Change search button icon and clear edit control to reset tree view filter
   ctrlParent _ctrlButton displayCtrl IDC_3DENRADIO_SEARCH ctrlSetText "";
   _ctrlButton ctrlSetText IMG_SEARCH_START;
