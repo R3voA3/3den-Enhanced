@@ -81,7 +81,6 @@ class CfgFunctions
       class SAM_applyTemplate;
       class SAM_createTemplate;
       class SAM_deleteTemplate;
-      class SAM_exportToClipboard;
       class SAM_getScenarioAttributes;
       class SAM_loadTemplate;
       class SAM_onLoad;
