@@ -77,14 +77,7 @@ class CfgFunctions
     class SAM
     {
       file = "3denEnhanced\functions\GUI\SAM";
-      class SAM_applyAttribute;
-      class SAM_applyTemplate;
-      class SAM_createTemplate;
-      class SAM_deleteTemplate;
-      class SAM_getScenarioAttributes;
-      class SAM_loadTemplate;
-      class SAM_onLoad;
-      class SAM_onUnload;
+      class SAM;
     };
     class NameObjects
     {

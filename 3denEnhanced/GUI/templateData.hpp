@@ -1,6 +1,7 @@
-class ENH_ESE_TemplateData
+class ENH_TemplateData
 {
   idd = IDD_TEMPLATEDATA;
+  onLoad = "uiNamespace setVariable ['ENH_TitleValue', nil]; uiNamespace setVariable ['ENH_DescriptionValue', nil];";
   class ControlsBackground
   {
     DISABLE_BACKGROUND
@@ -46,7 +47,7 @@ class ENH_ESE_TemplateData
   {
     class TitleValue: ctrlEdit
     {
-      idc = IDC_ESE_TEMPLATEDATA_TITLE;
+      idc = IDC_TEMPLATEDATA_TITLE;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
@@ -54,7 +55,7 @@ class ENH_ESE_TemplateData
     };
     class DescriptionValue: ctrlEditMulti
     {
-      idc = IDC_ESE_TEMPLATEDATA_DESCRIPTION;
+      idc = IDC_TEMPLATEDATA_DESCRIPTION;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
       y = WINDOW_TOPAbs + 4 * CTRL_DEFAULT_H + GRID_H;
       w = 58 * GRID_W;
@@ -69,35 +70,11 @@ class ENH_ESE_TemplateData
     };
     class ButtonOK: ctrlButtonOk
     {
-      idc = -1;
       x = CENTER_X - 0.5 * 60 * GRID_W + 1 * GRID_W;
       y = WINDOW_TOPAbs + 50 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
-      onButtonClick = "'create' call ENH_fnc_ESE_handleTemplates";
-    };
-  };
-};
-
-class ENH_SAM_TemplateData: ENH_ESE_TemplateData
-{
-  class ControlsBackground: ControlsBackground
-  {
-    DISABLE_BACKGROUND
-    class Header: Header {};
-    class Background: Background {};
-    class Title: Title {};
-    class Description: Description {};
-    class Footer: Footer {};
-  };
-  class Controls: Controls
-  {
-    class TitleValue: TitleValue {};
-    class DescriptionValue: DescriptionValue {};
-    class ButtonCancel: ButtonCancel {};
-    class ButtonOK: ButtonOK
-    {
-      onButtonClick = "_this call ENH_fnc_SAM_createTemplate";
+      onButtonClick = "uiNamespace setVariable ['ENH_TitleValue', ctrlText (ctrlParent (_this#0) displayCtrl 30700)]; uiNamespace setVariable ['ENH_DescriptionValue', ctrlText (ctrlParent (_this#0) displayCtrl 30800)];";
     };
   };
 };
