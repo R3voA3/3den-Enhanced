@@ -7,24 +7,26 @@ private _display = uiNamespace getVariable "ENH_Display_ESE";
 
 switch (_mode) do
 {
-  case "openCreateGUI":
-  {
-    _display createDisplay "ENH_ESE_TemplateData";
-  };
   case "create":
   {
-    private _templates = profileNamespace getVariable ["ENH_VIM_Templates", []];
-    private _displayTemplateData = findDisplay IDD_TEMPLATEDATA;
-
-    //Return inventory data
-    private _value = [true] call ENH_fnc_ESE_applyAttribute;
-    private _templateTitle = ctrlText (_displayTemplateData displayCtrl IDC_ESE_TEMPLATEDATA_TITLE);
-    private _templateDescription = ctrlText (_displayTemplateData displayCtrl IDC_ESE_TEMPLATEDATA_DESCRIPTION);
-    if !(_templateTitle isEqualTo "") then
+    0 spawn
     {
-      _templates pushBack [_templateTitle, _templateDescription, _value];
+      private _displayTemplateData = (uiNamespace getVariable "ENH_Display_ESE") createDisplay "ENH_TemplateData";
+
+      waitUntil {isNull _displayTemplateData};
+
+      private _title = uiNamespace getVariable ["ENH_TitleValue", ""];
+      private _description = uiNamespace getVariable ["ENH_DescriptionValue", ""];
+
+      if (_title == "") exitWith {};
+
+      private _templates = profileNamespace getVariable ["ENH_VIM_Templates", []];
+
+      //Return inventory data
+      private _value = [true] call ENH_fnc_ESE_applyAttribute;
+
+      _templates pushBack [_title, _description, _value];
       profileNamespace setVariable ["ENH_VIM_Templates", _templates];
-      _displayTemplateData closeDisplay 1;
       "update" call ENH_fnc_ESE_handleTemplates;
     };
   };

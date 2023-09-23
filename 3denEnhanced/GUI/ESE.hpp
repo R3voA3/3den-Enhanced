@@ -173,7 +173,7 @@ class ENH_ESE
         class CreateTemplate
         {
           text = "$STR_ENH_ESE_CREATETEMPLATE";
-          action = "'openCreateGUI' call ENH_fnc_ESE_handleTemplates";
+          action = "'create' call ENH_fnc_ESE_handleTemplates";
           opensNewWindow = 1;
         };
         class DeleteTemplate
