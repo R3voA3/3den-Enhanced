@@ -7,6 +7,12 @@
 - Updated Placement Tools functions
 - Overhauled 3DEN Shortcuts UI
 - Added missing translation in ESE
+- Improved Move To Layer UI
+- Fixed wrong inheritance of Template Data UIs
+- Briefing Editor was redesigned #279
+- Fixed shortcut for removing all gear was conflicting with engine shortcut
+- Entire rewrite of Scenario Attribute Manager
+- Entire rewrite of Placement Tools
 
 # 7.8.1
 # ADDED
