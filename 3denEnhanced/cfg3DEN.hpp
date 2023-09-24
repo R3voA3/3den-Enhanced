@@ -17,6 +17,11 @@ class Cfg3DEN
       isWarning = 1;
       text = "$STR_ENH_NOTIFICATIONS_NOENTITIESSELECTED";
     };
+    class ENH_NoEntitiesWithInventorySelected
+    {
+      isWarning = 1;
+      text = "$STR_ENH_NOTIFICATIONS_NOENTITIESWITHINVENTORYSELECTED";
+    };
     class ENH_GetPythiaMod_Warning
     {
       isWarning = 1;
