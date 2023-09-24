@@ -1,3 +1,10 @@
+#v7.8.3
+## ADDED
+
+## CHANGED
+- Increased 3den Radio UI height
+- Fixed Entity Counter positioning
+
 #v7.8.2
 ## ADDED
 
