@@ -2016,6 +2016,18 @@
         <Chinese>未選擇實體。動作已取消！</Chinese>
         <Italian>Nessuna entità selezionata.Azione annullata!</Italian>
     </Key>
+    <Key ID="STR_ENH_NOTIFICATIONS_NOENTITIESWITHINVENTORYSELECTED">
+        <English>No entities with inventory selected. Action cancelled!</English>
+        <Czech>Nebyly vybrány žádné subjekty s inventářem. Akce zrušena!</Czech>
+        <German>Keine Einheiten mit Inventar ausgewählt. Aktion abgebrochen!</German>
+        <Russian>Не выбрано ни одной организации с инвентарем. Действие отменено!</Russian>
+        <Spanish>No hay entidades con inventario seleccionadas. Acción cancelada.</Spanish>
+        <French>Aucune entité avec inventaire n'a été sélectionnée. Action annulée!</French>
+        <Polish>Nie wybrano żadnych podmiotów z zapasami. Działanie anulowane!</Polish>
+        <Chinesesimp>未选择有库存的实体。取消行动！</Chinesesimp>
+        <Chinese>未选择有库存的实体。取消行动！</Chinese>
+        <Italian>Nessuna entità con inventario selezionata. Azione annullata!</Italian>
+    </Key>
     <Key ID="STR_ENH_ENABLE">
         <English>Enable</English>
         <Italian>Attiva</Italian>

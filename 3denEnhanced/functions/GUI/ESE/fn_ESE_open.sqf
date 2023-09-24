@@ -19,6 +19,11 @@ disableSerialization;
 
 ENH_ESE_target = get3DENSelected "Object" select 0;
 
+if (isNil "ENH_ESE_target" || {ENH_ESE_target isKindOf "CAManBase" || !(ENH_ESE_target call ENH_fnc_hasStorage)}) exitWith
+{
+  ["ENH_NoEntitiesWithInventorySelected"] call BIS_fnc_3DENNotification;
+};
+
 private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_ESE";
 uiNamespace setVariable ["ENH_Display_ESE", _display];
 
