@@ -98,4 +98,4 @@ if ($DoPublish -eq "true")
   Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
 } #>
 
-Start-Process "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-par=`"C:\Users\rober\OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder`";`"C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@Pythia`";`"C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`";`"C:\Users\rober\OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
+Start-Process "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-par=`"C:\Users\rober\OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"C:\Users\rober\OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""

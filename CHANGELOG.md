@@ -13,6 +13,7 @@
 - Fixed shortcut for removing all gear was conflicting with engine shortcut
 - Entire rewrite of Scenario Attribute Manager
 - Entire rewrite of Placement Tools
+- Tweaked Inventory Manager Error messaged on opening
 
 # 7.8.1
 # ADDED
