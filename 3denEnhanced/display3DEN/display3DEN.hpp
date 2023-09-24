@@ -51,7 +51,7 @@ class Display3DEN
         };
         class ENH_TextDir: TextX
         {
-          idc = -1;
+          idc = IDC_STATUSBAR_CAMDIR_ICON;
           x = 99 * GRID_W;
           text = "\a3\3den\data\attributes\loiterdirection\ccw_ca.paa";
           colorText[] = {1, 1, 1, 1};
@@ -60,8 +60,9 @@ class Display3DEN
         {
           idc = IDC_STATUSBAR_CAMDIR;
           x = 102 * GRID_W;
-          w = 12 * GRID_W;
+          w = 9 * GRID_W;
           onLoad = "(_this # 0) ctrlEnable false";
+          style = ST_CENTER + ST_NO_RECT;
         };
         #if __has_include("\userconfig\ENH_Config.hpp")
         class ENH_UserconfigWarning: ENH_TextDir
@@ -72,13 +73,11 @@ class Display3DEN
         };
         #endif
         #ifndef ENH_HIDE_INTERFACE
-        class ENH_SessionTime: Version
+        class ENH_SessionTime: ENH_TextDir
         {
           idc = IDC_STATUSBAR_SESSIONTIMER;
-          tooltip = "$STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP";
-          x = ORIGIN_X_STATUSBAR - 49 * GRID_W - SPACE_X;
-          onLoad = "(_this # 0) ctrlEnable false";
-          style = ST_CENTER + ST_NO_RECT;
+          text = "a3\modules_f_curator\data\portraitskiptime_ca.paa";
+          x = ORIGIN_X_STATUSBAR - 32 * GRID_W - SPACE_X;
         };
         //Selected entities counter, controls are hidden by default and managed by ENH_fnc_statusbar_entityCounter
         class ENH_NumberMarkers: Version
