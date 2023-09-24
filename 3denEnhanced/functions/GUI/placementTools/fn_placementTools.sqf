@@ -24,6 +24,10 @@ params
 
 switch _mode do
 {
+  case "createUI":
+  {
+    findDisplay IDD_DISPLAY3DEN ctrlCreate ["ENH_PlacementToolsGroup", IDC_PLACEMENTTOOLS];
+  };
   case "getCenter":
   {
     if (get3DENActionState "ToggleMap" == 1) then
