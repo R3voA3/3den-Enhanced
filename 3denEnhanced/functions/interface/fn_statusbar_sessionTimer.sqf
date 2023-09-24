@@ -22,6 +22,6 @@ private _ctrlTimer = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_STATUSBAR_SESSI
 
 while {is3DEN} do
 {
-  _ctrlTimer ctrlSetText ([diag_tickTime / 3600] call BIS_fnc_timeToString);
+  _ctrlTimer ctrlSetTooltip format ["%1: %2",localize "STR_ENH_STATUSBAR_SESSIONTIMER_TOOLTIP", [diag_tickTime / 3600] call BIS_fnc_timeToString];
   uiSleep 1;
 };

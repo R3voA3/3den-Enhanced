@@ -15,15 +15,15 @@
 
 //Custom GUIs
 #include "GUI\3DENRadio.hpp"
+#include "GUI\3DENShortcuts.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
 #include "GUI\ESE.hpp"
 #include "GUI\RPTViewer.hpp"
 #include "GUI\SAM.hpp"
-//#include "GUI\actionCreator.hpp"
 #include "GUI\attributeSearch.hpp"
-#include "GUI\batchReplace.hpp"
+//#include "GUI\batchReplace.hpp"
 #include "GUI\briefingEditor.hpp"
-#include "GUI\createObject.hpp"
+//#include "GUI\createObject.hpp"
 #include "GUI\exportGUIDefines.hpp"
 #include "GUI\functionsViewer.hpp"
 #include "GUI\garrison.hpp"

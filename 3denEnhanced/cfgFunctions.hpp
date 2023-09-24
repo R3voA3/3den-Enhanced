@@ -23,12 +23,12 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    class CreateObject
+    /* class CreateObject
     {
       file = "3denEnhanced\functions\GUI\createObject";
       class createObject_create;
       class createObject_changeFilter;
-    };
+    }; */
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -36,7 +36,7 @@ class CfgFunctions
       class textureFinder_findTextures;
       class textureFinder_updatePreview;
     };
-    class BatchReplace
+/*     class BatchReplace
     {
       file = "3denEnhanced\functions\GUI\batchReplace";
       class batchReplace;
@@ -44,7 +44,7 @@ class CfgFunctions
       class batchReplace_createDisplay;
       class batchReplace_onTreeSelChanged;
       class batchReplace_initTreeView;
-    };
+    }; */
     class FunctionsViewer
     {
       file = "3denEnhanced\functions\GUI\functionsViewer";
@@ -59,11 +59,6 @@ class CfgFunctions
       class functionsViewer_setUpMenuStrip;
       class functionsViewer_togglePanel;
     };
-    /* class ActionCreator
-    {
-      file = "3denEnhanced\functions\GUI\actionCreator";
-      class actionCreator;
-    }; */
     class AttributeSearch
     {
       file = "3denEnhanced\functions\GUI\attributeSearch";
@@ -72,40 +67,17 @@ class CfgFunctions
     class BriefingEditor
     {
       file = "3denEnhanced\functions\GUI\briefingEditor";
-      class briefingEditor_addTAG;
-      class briefingEditor_handleTemplates;
-      class briefingEditor_export;
-      class briefingEditor_onLBSelChanged;
-      class briefingEditor_onLoad;
-      class briefingEditor_onUnload;
-      class briefingEditor_htmlHighlight;
+      class briefingEditor;
     };
     class PlacementTools
     {
       file = "3denEnhanced\functions\GUI\placementTools";
-      class placementTools_centralAngle;
-      class placementTools_createDisplay;
-      class placementTools_fillArea;
-      class placementTools_grid;
-      class placementTools_initialAngle;
-      class placementTools_onLoad;
-      class placementTools_onToolBoxSelChanged;
-      class placementTools_onUnload;
-      class placementTools_radius;
-      class placementTools_spacing;
+      class placementTools;
     };
     class SAM
     {
       file = "3denEnhanced\functions\GUI\SAM";
-      class SAM_applyAttribute;
-      class SAM_applyTemplate;
-      class SAM_createTemplate;
-      class SAM_deleteTemplate;
-      class SAM_exportToClipboard;
-      class SAM_getScenarioAttributes;
-      class SAM_loadTemplate;
-      class SAM_onLoad;
-      class SAM_onUnload;
+      class SAM;
     };
     class NameObjects
     {
@@ -212,6 +184,8 @@ class CfgFunctions
       class createBackupMissionSQM;
       class VHCTools;
       class alignEntities;
+      class setOrientation;
+      class spaceEqually;
       class all3DENSelected;
       class centerMapOnSelection;
       class compatibleItems;
@@ -226,11 +200,8 @@ class CfgFunctions
       class hasStorage;
       class loadoutTool;
       class measureDistance;
-      class preloadAmmoAttribute;
       class pylonTools;
       class removeGear;
-      class setOrientation;
-      class spaceEqually;
       class statBarStatement_accuracy;
       class statBarStatement_default;
       class statBarStatement_impact;
@@ -249,7 +220,6 @@ class CfgFunctions
       class toggleDrawHitpoints;
       class toggleGrass;
       class toggleMarkerAlpha;
-      class twoDigitsStr;
     };
     class Interface
     {
@@ -274,7 +244,6 @@ class CfgFunctions
     {
       file = "3denEnhanced\functions\debug";
       class productInfo;
-      class toggleMapIDs;
     };
     class EventHandlers
     {

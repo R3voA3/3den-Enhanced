@@ -9,7 +9,7 @@ class ENH_ExportGUIDefines
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * 53 * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = 53 * GRID_W;
       h = 21 * GRID_H;
     };
@@ -17,14 +17,14 @@ class ENH_ExportGUIDefines
     {
       text = "$STR_ENH_TOOLS_EXPORTGUIBASECLASSES";
       x = CENTER_X - 0.5 * 53 * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = 53 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * 53 * GRID_W;
-      y = WINDOW_TOP + 19 * GRID_H;
+      y = WINDOW_TOPAbs + 19 * GRID_H;
       w = 53 * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -35,7 +35,7 @@ class ENH_ExportGUIDefines
     {
       text = "$STR_WATCH_TARGET";
       x = CENTER_X - 0.5 * 53 * GRID_W;
-      y = WINDOW_TOP + 6 * GRID_H;
+      y = WINDOW_TOPAbs + 6 * GRID_H;
       w = 15 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -43,7 +43,7 @@ class ENH_ExportGUIDefines
     {
       idc = 10;
       x = CENTER_X - 0.5 * 53 * GRID_W + 12 * GRID_W;
-      y = WINDOW_TOP + 6 * GRID_H;
+      y = WINDOW_TOPAbs + 6 * GRID_H;
       w = (53 - 13) * GRID_W;
       h = CTRL_DEFAULT_H;
       class Items
@@ -64,12 +64,12 @@ class ENH_ExportGUIDefines
     class Types: Target
     {
       text = "$STR_A3_TO_BASICCIVILIANPRESENCE12";
-      y = WINDOW_TOP + 13 * GRID_H;
+      y = WINDOW_TOPAbs + 13 * GRID_H;
     };
     class TypesValue: TargetValue
     {
       idc = 20;
-      y = WINDOW_TOP + 13 * GRID_H;
+      y = WINDOW_TOPAbs + 13 * GRID_H;
       class Items
       {
         class Classic
@@ -96,7 +96,7 @@ class ENH_ExportGUIDefines
     class Cancel: ctrlButtonCancel
     {
       x = CENTER_X - 0.5 * 53 * GRID_W + (53 - 26) * GRID_W;
-      y = WINDOW_TOP + 20 * GRID_H;
+      y = WINDOW_TOPAbs + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -104,7 +104,7 @@ class ENH_ExportGUIDefines
     {
       idc = -1;//We don't want it to close the GUI. The function does that.
       x = CENTER_X - 0.5 * 53 * GRID_W + (53 - 52) * GRID_W;
-      y = WINDOW_TOP + 20 * GRID_H;
+      y = WINDOW_TOPAbs + 20 * GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";

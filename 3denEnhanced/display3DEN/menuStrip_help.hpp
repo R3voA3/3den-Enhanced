@@ -86,7 +86,7 @@ class ENH_Help_MultiplayerScripting: ENH_Help_GetExtensions
 class ENH_Help_3DENShortcuts
 {
   text = "$STR_ENH_3DENSHORTCUTS_DISPLAYNAME";
-  action = "call ENH_fnc_3DENShortcuts_init";
+  action = "findDisplay 313 createDisplay 'ENH_3DENShortcuts'";
   opensNewWindow = 1;
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_F1};
 };

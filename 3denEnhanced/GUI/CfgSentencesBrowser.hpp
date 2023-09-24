@@ -10,7 +10,7 @@ class ENH_CfgSentencesBrowser
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H;
     };
@@ -18,14 +18,14 @@ class ENH_CfgSentencesBrowser
     {
       text = "$STR_ENH_TOOLS_CFGSENTENCESBROWSER";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -33,7 +33,7 @@ class ENH_CfgSentencesBrowser
     {
       idc = IDC_SENTENCESBROWSER_COUNT;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + WINDOW_W_ATTRIBUTES * GRID_W - 11 * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = 11 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -46,7 +46,7 @@ class ENH_CfgSentencesBrowser
       columns = 2;
       rows = 1;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
       h = CTRL_DEFAULT_H;
       strings[] = {"$STR_A3_WL_PARAM19_TITLE", "$STR_3DEN_FAVORITE_TEXTPLURAL"};
@@ -57,7 +57,7 @@ class ENH_CfgSentencesBrowser
     {
       idc = IDC_SENTENCESBROWSER_LIST;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + 11 * GRID_H;
+      y = WINDOW_TOPAbs + 11 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
       h = WINDOW_PREVIEW_HAbs - 6 * CTRL_DEFAULT_H + GRID_H;
       colorBorder[] = {0, 0, 0, 0};
@@ -73,7 +73,7 @@ class ENH_CfgSentencesBrowser
     {
       idc = IDC_SENTENCESBROWSER_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 45 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -81,7 +81,7 @@ class ENH_CfgSentencesBrowser
     {
       idc = IDC_SENTENCESBROWSER_BUTTONSEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 70 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -89,7 +89,7 @@ class ENH_CfgSentencesBrowser
     {
       idc = IDC_SENTENCESBROWSER_FILTER;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 76 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 22 * GRID_W;
       h = CTRL_DEFAULT_H;
       onLBselChanged = "_this call ENH_fnc_CFGS_changeFilter";
@@ -157,7 +157,7 @@ class ENH_CfgSentencesBrowser
     {
       text = "\a3\3DEN\Data\Attributes\ComboPreview\play_ca.paa";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'play' call ENH_fnc_CFGS_playOrCopy";
@@ -166,7 +166,7 @@ class ENH_CfgSentencesBrowser
     {
       text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_ENTITYCOPY_TEXT";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 7 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'copy' call ENH_fnc_CFGS_playOrCopy";
@@ -176,7 +176,7 @@ class ENH_CfgSentencesBrowser
       text = "\a3\3den\data\displays\display3den\panelright\modefavorites_ca.paa";
       tooltip = "$STR_ENH_CFGS_HANDLEFAVORITES_TOOLTIP";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 33 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "'' call ENH_fnc_CFGS_handleFavorites";
@@ -186,14 +186,14 @@ class ENH_CfgSentencesBrowser
       text = "?";
       url = "https://community.bistudio.com/wiki/Conversations";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 39 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Close: ctrlButtonClose
     {
       x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 26 * GRID_W;
-      y = WINDOW_TOP + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

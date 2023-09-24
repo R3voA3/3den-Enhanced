@@ -37,7 +37,7 @@ _ctrlTexturePreviewBG ctrlShow false;
 getTextureInfo _texture params ["_w", "_h"];
 
 // Calculate available vertical space dynamically
-private _verticalSpace = ctrlPosition (ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_SEARCH) # 1 - (ctrlPosition _ctrlTV # 1 + ctrlPosition _ctrlTV # 3) - 4 * GRID_H;
+private _verticalSpace = ctrlPosition (ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_SEARCH) # 1 - (ctrlPosition _ctrlTV # 1 + ctrlPosition _ctrlTV # 3) - 3 * GRID_H;
 
 _w = _w * pixelW min ((WINDOW_W_ATTRIBUTES - 2) * GRID_W);
 _h = _h * pixelH min _verticalSpace;
@@ -46,7 +46,7 @@ _h = _h * pixelH min _verticalSpace;
 _ctrlTexturePreview ctrlSetPosition
 [
   CENTER_X - _w / 2,
-  WINDOW_TOP + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
+  WINDOW_TOPAbs + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
   _w,
   _h
 ];

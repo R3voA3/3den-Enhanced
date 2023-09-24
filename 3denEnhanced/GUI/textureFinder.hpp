@@ -10,14 +10,14 @@ class ENH_TextureFinder
     {
       text = "$STR_ENH_TEXTUREFINDER";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = WINDOW_HAbs - 3 * CTRL_DEFAULT_H;
     };
@@ -34,7 +34,7 @@ class ENH_TextureFinder
     class Footer: ctrlStaticFooter
     {
 	  x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-	  y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+	  y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -46,10 +46,12 @@ class ENH_TextureFinder
       idc = IDC_TEXTUREFINDER_TEXTURELIST;
       idcSearch = IDC_TEXTUREFINDER_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
       w = (WINDOW_W_ATTRIBUTES - 2) * GRID_W;
       h = WINDOW_HAbs - 80 * GRID_H + CTRL_DEFAULT_H;
-      colorLines[] = {1, 1, 1, 1};
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class Preview: ctrlStaticPictureKeepAspect
     {
@@ -64,7 +66,7 @@ class ENH_TextureFinder
     {
       idc = IDC_TEXTUREFINDER_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
       tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
@@ -73,7 +75,7 @@ class ENH_TextureFinder
     {
 	  idc = IDC_TEXTUREFINDER_BUTTONSEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 31 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
     };
@@ -81,7 +83,7 @@ class ENH_TextureFinder
     {
       idc = IDC_TEXTUREFINDER_COLLAPSEALL;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 36 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
     };
@@ -89,7 +91,7 @@ class ENH_TextureFinder
     {
       idc = IDC_TEXTUREFINDER_EXPANDALL;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 41 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = 5 * GRID_H;
     };
@@ -98,14 +100,14 @@ class ENH_TextureFinder
       idc = IDC_TEXTUREFINDER_PROGRESSTEXT;
       style = ST_LEFT;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 46 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 80 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Close: ctrlButtonClose
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES - 25 - 1) * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

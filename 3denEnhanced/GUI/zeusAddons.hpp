@@ -8,21 +8,21 @@ class ENH_ZeusAddons
     {
       text = "$STR_ENH_ZEUSADDONS_HEADER";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP;
+      y = WINDOW_TOPAbs;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Background: ctrlStaticBackground
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = WINDOW_HAbs - 3 * CTRL_DEFAULT_H;
     };
     class Footer: ctrlStaticFooter
     {
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -33,7 +33,7 @@ class ENH_ZeusAddons
     {
       text = "$STR_ENH_ZEUSADDONS_CFGPATCHES";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOP + CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
       w = 80 * GRID_W;
       h = CTRL_DEFAULT_H;
       font = FONT_BOLD;
@@ -44,10 +44,12 @@ class ENH_ZeusAddons
       idc = IDC_ZEUSADDONS_CFGPATCHES;
       idcSearch = 50;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
-      y = WINDOW_TOP + 2 * (CTRL_DEFAULT_H + GRID_H);
+      y = WINDOW_TOPAbs + 2 * (CTRL_DEFAULT_H + GRID_H);
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W - 2 * GRID_W;
       h = WINDOW_HAbs - 6 * CTRL_DEFAULT_H;
-      rowHeight = 4 * GRID_H;
+      borderSize = 0;
+      colorBorder[] = {0, 0, 0, 0};
+      colorBackground[] = {COLOR_TAB_RGBA};
     };
     class UnitsLabel: CfgPatchesLabel
     {
@@ -58,7 +60,7 @@ class ENH_ZeusAddons
     {
       idc = IDC_ZEUSADDONS_UNITS;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + WINDOW_W_ATTRIBUTES / 2 * GRID_W;
-      y = WINDOW_TOP + 2 * (CTRL_DEFAULT_H + GRID_H);
+      y = WINDOW_TOPAbs + 2 * (CTRL_DEFAULT_H + GRID_H);
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W - GRID_W;
       h = WINDOW_HAbs - 6 * CTRL_DEFAULT_H;
       rowHeight = 10 * GRID_H;
@@ -68,7 +70,7 @@ class ENH_ZeusAddons
       idc = IDC_ZEUSADDONS_EXPORT;
       text = "$STR_CA_COPY";
       x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 52 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -83,7 +85,7 @@ class ENH_ZeusAddons
     class Close: ctrlButtonClose
     {
       x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 26 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -98,7 +100,7 @@ class ENH_ZeusAddons
     {
       idc = IDC_ZEUSADDONS_SEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 27 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -107,7 +109,7 @@ class ENH_ZeusAddons
       idc = IDC_ZEUSADDONS_BUTTONSEARCH;
       text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 57 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -115,7 +117,7 @@ class ENH_ZeusAddons
     {
       idc = IDC_ZEUSADDONS_COLLAPSE;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 62 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -123,7 +125,7 @@ class ENH_ZeusAddons
     {
       idc = IDC_ZEUSADDONS_EXPAND;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 67 * GRID_W;
-      y = WINDOW_TOP + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

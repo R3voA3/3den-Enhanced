@@ -2016,6 +2016,18 @@
         <Chinese>未選擇實體。動作已取消！</Chinese>
         <Italian>Nessuna entità selezionata.Azione annullata!</Italian>
     </Key>
+    <Key ID="STR_ENH_NOTIFICATIONS_NOENTITIESWITHINVENTORYSELECTED">
+        <English>No entities with inventory selected. Action cancelled!</English>
+        <Czech>Nebyly vybrány žádné subjekty s inventářem. Akce zrušena!</Czech>
+        <German>Keine Einheiten mit Inventar ausgewählt. Aktion abgebrochen!</German>
+        <Russian>Не выбрано ни одной организации с инвентарем. Действие отменено!</Russian>
+        <Spanish>No hay entidades con inventario seleccionadas. Acción cancelada.</Spanish>
+        <French>Aucune entité avec inventaire n'a été sélectionnée. Action annulée!</French>
+        <Polish>Nie wybrano żadnych podmiotów z zapasami. Działanie anulowane!</Polish>
+        <Chinesesimp>未选择有库存的实体。取消行动！</Chinesesimp>
+        <Chinese>未选择有库存的实体。取消行动！</Chinese>
+        <Italian>Nessuna entità con inventario selezionata. Azione annullata!</Italian>
+    </Key>
     <Key ID="STR_ENH_ENABLE">
         <English>Enable</English>
         <Italian>Attiva</Italian>
@@ -2601,6 +2613,18 @@
         <French>Angle central</French>
         <Chinesesimp>中心角</Chinesesimp>
         <Chinese>中心角</Chinese>
+    </Key>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_DIRECTION">
+        <English>Direction</English>
+        <Italian>Direzione</Italian>
+        <Czech>Směr</Czech>
+        <German>Richtung</German>
+        <Spanish>Dirección</Spanish>
+        <Polish>Kierunek</Polish>
+        <Russian>Направление</Russian>
+        <French>Direction</French>
+        <Chinesesimp>方向</Chinesesimp>
+        <Chinese>方向</Chinese>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_INITIALANGLE">
         <English>Initial Angle</English>
@@ -4259,6 +4283,54 @@
         <Polish>Odwróć kierunek</Polish>
         <Russian>Обратное направление</Russian>
     </Key>
+		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_REVERSE">
+        <English>Reverse</English>
+        <Italian>Inverso</Italian>
+        <Czech>Reverzní</Czech>
+        <French>Inverser</French>
+        <Spanish>Invertir</Spanish>
+        <German>Umkehren</German>
+        <Chinesesimp>反向</Chinesesimp>
+        <Chinese>反向</Chinese>
+        <Polish>Odwrócony</Polish>
+        <Russian>Обратный</Russian>
+    </Key>
+		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_RANDOM">
+        <English>Random</English>
+        <Italian>Casuale</Italian>
+        <Czech>Náhodné</Czech>
+        <French>Au hasard</French>
+        <Spanish>Al azar</Spanish>
+        <German>Zufällig</German>
+        <Chinesesimp>随机</Chinesesimp>
+        <Chinese>随机</Chinese>
+        <Polish>Losowo</Polish>
+        <Russian>Случайный</Russian>
+    </Key>
+		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_SHORTCUTS">
+        <English>Keyboard Shortcuts</English>
+        <Italian>Scorciatoie da tastiera</Italian>
+        <Czech>Klávesové zkratky</Czech>
+        <French>Raccourcis clavier</French>
+        <Spanish>Atajos de teclado</Spanish>
+        <German>Tastaturkurzbefehle</German>
+        <Chinesesimp>键盘快捷键</Chinesesimp>
+        <Chinese>键盘快捷键</Chinese>
+        <Polish>Skróty klawiaturowe</Polish>
+        <Russian>Клавиатурные сокращения</Russian>
+    </Key>
+		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_ACTION">
+        <English>Action</English>
+        <Italian>Azione</Italian>
+        <Czech>Akce</Czech>
+        <French>Action</French>
+        <Spanish>Acción</Spanish>
+        <German>Befehl</German>
+        <Chinesesimp>行动</Chinesesimp>
+        <Chinese>行动</Chinese>
+        <Polish>Działanie</Polish>
+        <Russian>Действие</Russian>
+    </Key>
     <Key ID="STR_ENH_TOOLS_BRIEFINGEDITOR">
         <English>Briefing Editor</English>
         <Italian>Editor del briefing</Italian>
@@ -4899,18 +4971,6 @@
         <Chinese>顯示標題</Chinese>
         <Italian>Mostra Titolo</Italian>
     </Key>
-    <Key ID="STR_ENH_BRIEFINGEDITOR_HIDETITLE">
-        <English>Hide Title</English>
-        <Russian>Скрыть заголовок</Russian>
-        <German>Titel verstecken</German>
-        <Czech>Skrýt název</Czech>
-        <Spanish>Ocultar título</Spanish>
-        <French>Cacher le titre</French>
-        <Polish>Ukryj tytuł</Polish>
-        <Chinesesimp>隐藏标题</Chinesesimp>
-        <Chinese>隱藏標題</Chinese>
-        <Italian>Nascondi Titolo</Italian>
-    </Key>
     <Key ID="STR_ENH_SAM_APPLYATTRIBUTE">
         <English>Apply Attribute</English>
         <Russian>Применить атрибуты</Russian>
@@ -5071,16 +5131,21 @@
         <Chinese>添加標籤</Chinese>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
-        <English>Export</English>
-        <Russian>Экспорт</Russian>
-        <Chinesesimp>导出</Chinesesimp>
-        <Chinese>導出</Chinese>
-        <Czech>Export</Czech>
-        <French>Exporter</French>
-        <German>Exportieren</German>
-        <Polish>Eksport</Polish>
-        <Spanish>Exportar</Spanish>
-        <Italian>Esporta</Italian>
+        <Original>Export</Original>
+				<English>Export</English>
+				<Czech>Exportovat</Czech>
+				<German>Exportieren</German>
+				<Russian>Экспортировать</Russian>
+				<Polish>Eksportuj</Polish>
+				<Italian>Esporta</Italian>
+				<Spanish>Exportar</Spanish>
+				<French>Exporter</French>
+				<Chinese>輸出</Chinese>
+				<Japanese>エクスポート</Japanese>
+				<Korean>내보내기</Korean>
+				<Portuguese>Exportar</Portuguese>
+				<Chinesesimp>导出</Chinesesimp>
+				<Turkish>Dışa Aktar</Turkish>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
         <English>Font</English>
@@ -5820,6 +5885,17 @@
         <Chinesesimp>删除模板</Chinesesimp>
         <Chinese>刪除模板</Chinese>
     </Key>
+		<Key ID="STR_ENH_BRIEFINGEDITOR_DELETETEMPLATE">
+        <English>Delete Template</English>
+        <Russian>Удалить шаблон</Russian>
+        <Czech>Smazat šablonu</Czech>
+        <German>Vorlage löschen</German>
+        <Spanish>Borrar plantilla</Spanish>
+        <French>Supprimer un modèle</French>
+        <Polish>Skasuj szablon</Polish>
+        <Chinesesimp>删除模板</Chinesesimp>
+        <Chinese>刪除模板</Chinese>
+    </Key>
     <Key ID="STR_ENH_SAM_CREATETEMPLATE">
         <English>Create Template from Scenario</English>
         <Russian>Создать шаблон из сценария</Russian>
@@ -5832,6 +5908,17 @@
         <Chinese>從場景創建模板</Chinese>
     </Key>
     <Key ID="STR_ENH_SAM_APPLYTEMPLATE">
+        <English>Apply Template</English>
+        <Russian>Добавить шаблон</Russian>
+        <Czech>Použít šablonu</Czech>
+        <German>Vorlage anwenden</German>
+        <Spanish>Aplicar plantilla</Spanish>
+        <French>Appliquer un modèle</French>
+        <Polish>Zastosuj szablon</Polish>
+        <Chinesesimp>应用模板</Chinesesimp>
+        <Chinese>應用模板</Chinese>
+    </Key>
+		<Key ID="STR_ENH_BRIEFINGEDITOR_APPLYTEMPLATE">
         <English>Apply Template</English>
         <Russian>Добавить шаблон</Russian>
         <Czech>Použít šablonu</Czech>
@@ -6336,15 +6423,16 @@
         <Chinese>查看控件樣式</Chinese>
         <Polish>Wyświetl style kontrolerów</Polish>
     </Key>
-    <Key ID="STR_ENH_PLACEMENTTOOLS_RESETCENTER_TOOLTIP">
-        <English>Reset Center.</English>
-        <Russian>Центр сброса</Russian>
-        <German>Mittelpunkt zurücksetzen.</German>
-        <Spanish>Resetear centro</Spanish>
-        <French>Réinitialiser le centre</French>
-        <Polish>Zresetuj środek</Polish>
-        <Chinesesimp>重置中心</Chinesesimp>
-        <Chinese>重置中心</Chinese>
+    <Key ID="STR_ENH_PLACEMENTTOOLS_ORIGIN">
+        <English>Origin</English>
+				<Italian>Origine</Italian>
+        <Russian>Происхождение</Russian>
+        <German>Ursprung</German>
+        <Spanish>Origen</Spanish>
+        <French>Origine</French>
+        <Polish>Pochodzenie</Polish>
+        <Chinesesimp>起源</Chinesesimp>
+        <Chinese>起源</Chinese>
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
         <English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
@@ -6799,6 +6887,16 @@
         <Polish>Masz niezapisane zmiany. Kontynuować?</Polish>
         <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
         <Italian>Hai dei cambiamenti non salvati. Chiudere comunque?</Italian>
+    </Key>
+    <Key ID="STR_ENH_ESE_COMPATIBLE_ITEMS">
+        <English>Compatible Items</English>
+        <German>Kompatible Gegenstände</German>
+        <Chinesesimp>兼容项目</Chinesesimp>
+        <Chinese>兼容项目</Chinese>
+        <Polish>Kompatybilne przedmioty</Polish>
+        <Spanish>Artículos compatibles</Spanish>
+        <Italian>Articoli compatibili</Italian>
+				<Russian>Совместимые предметы</Russian>
     </Key>
     <Key ID="STR_ENH_ESE_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>

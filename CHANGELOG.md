@@ -1,3 +1,21 @@
+#v7.8.2
+## ADDED
+
+## CHANGED
+- Fixed missing translation in Placement Tools UI
+- Fixed description of Advanced Damage attribute would be cut off
+- Updated Placement Tools functions
+- Overhauled 3DEN Shortcuts UI
+- Added missing translation in ESE
+- Improved Move To Layer UI
+- Fixed wrong inheritance of Template Data UIs
+- Briefing Editor was redesigned #279
+- Fixed shortcut for removing all gear was conflicting with engine shortcut
+- Entire rewrite of Scenario Attribute Manager
+- Entire rewrite of Placement Tools
+- Tweaked Inventory Manager Error messaged on opening
+- Session Timer control was changed to an icon. Tooltip shows session time
+
 # 7.8.1
 # ADDED
 
@@ -5,7 +23,6 @@
 - Reverted identity attributes changes
 - Fixed rpt errors
 - Fixed Move to Layer UI not working
-
 
 # v7.8.0
 ## ADDED

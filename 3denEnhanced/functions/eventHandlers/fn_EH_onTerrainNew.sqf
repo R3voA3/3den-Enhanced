@@ -65,6 +65,3 @@ call ENH_fnc_3DENRadio_toggleRadio;
 //Initialize ambient animations
 call ENH_fnc_ambientAnimations_initInEditor;
 #endif
-
-//Preload the ammo attribute to get rid of initial freeze and loading screen
-[] call ENH_fnc_preloadAmmoAttribute;

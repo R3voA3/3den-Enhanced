@@ -21,7 +21,7 @@ ENH_ESE_target = get3DENSelected "Object" select 0;
 
 if (isNil "ENH_ESE_target" || {ENH_ESE_target isKindOf "CAManBase" || !(ENH_ESE_target call ENH_fnc_hasStorage)}) exitWith
 {
-  ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+  ["ENH_NoEntitiesWithInventorySelected"] call BIS_fnc_3DENNotification;
 };
 
 private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_ESE";

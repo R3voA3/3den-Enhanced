@@ -39,3 +39,24 @@ _display displayAddEventHandler ["keyDown", //Focus Search Key
 }];
 
 call ENH_fnc_functionsViewer_fillCtrlTV;
+
+//Handle search button
+CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_FUNCTIONSVIEWER_BUTTONSEARCH ctrlSetText _image;
+  call ENH_fnc_3DENRadio_searchList;
+}];
+
+//Handle search button
+CTRL(IDC_FUNCTIONSVIEWER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_FUNCTIONSVIEWER_SEARCH ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];

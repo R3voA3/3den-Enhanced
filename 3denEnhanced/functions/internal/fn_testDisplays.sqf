@@ -7,29 +7,37 @@
   Opens all ENH displays to check for missing ;, translations or UI sizes.
 
   Parameter(s):
-  0: ARRAY - Blacklisted display classnames, optional, default ["ENH_TextureFinder"] as it takes long to load
-  1: NUMBER - Time each display is shown, optional, default 0.5
+  -
 
   Returns:
   -
 */
 
+#include "\3denEnhanced\defines\defineCommon.inc"
+
 if (!is3DEN) exitWith {};
 
-_this spawn
+ENH_Displays = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
+ENH_Displays_Index = 0;
+
+findDisplay IDD_DISPLAY3DEN displayAddEventHandler ["KeyDown",
 {
-  params [["_blacklist", ["ENH_TextureFinder"], [[]]], [["_delay", 0.5, [0]]]];
+  params ["", "_key"];
 
-  private _ENHClasses = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
-
+  if (_key in [DIK_LEFT, DIK_RIGHT]) then
   {
-    if (_x in _blacklist) then {continue};
-    private _display = findDisplay 313 createDisplay _x;
-    waitUntil {!isNull _display};
+    ENH_Displays_Index = ENH_Displays_Index + ([1, -1] select (_key == DIK_LEFT));
+    ENH_Displays_Index = ENH_Displays_Index max 0 min (count ENH_Displays - 1);
 
-    sleep 0.5;
+    if !(isNull (uiNamespace getVariable ["ENH_Displays_Current", displayNull])) then
+    {
+      ENH_Displays_Current closeDisplay 1;
+      uiNamespace setVariable ["ENH_Displays_Current", displayNull];
+    };
 
-    _display closeDisplay 0;
+    private _nextDisplay = ENH_Displays#ENH_Displays_Index;
 
-  } forEach _ENHClasses;
-};
+    uiNamespace setVariable ["ENH_Displays_Current", findDisplay IDD_DISPLAY3DEN createDisplay _nextDisplay];
+    systemChat format ["Display: %1 (%2/%3)", _nextDisplay, ENH_Displays_Index + 1, count ENH_Displays];
+  };
+}];
