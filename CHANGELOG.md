@@ -14,6 +14,7 @@
 - Entire rewrite of Scenario Attribute Manager
 - Entire rewrite of Placement Tools
 - Tweaked Inventory Manager Error messaged on opening
+- Session Timer control was changed to an icon. Tooltip shows session time
 
 # 7.8.1
 # ADDED
