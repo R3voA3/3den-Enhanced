@@ -210,19 +210,15 @@ _ctrlButtonSave ctrlSetPosition
  5 * GRID_H
 ];
 
-_ctrlButtonSave ctrlSetText "Save Preset";
+_ctrlButtonSave ctrlSetText "Presets";
 
 _ctrlButtonSave ctrlAddEventHandler ["ButtonClick",
 {
   params["_ctrlButton"];
 
-  private _displayInput = ctrlParent _ctrlButton createDisplay "Display3DENRename";
+  private _display = ctrlParent _ctrlButton;
 
-  _displayInput displayCtrl 1 ctrlAddEventHandler ["ButtonClick",
-  {
-    params ["_ctrlButton"];
-    systemChat str ctrlText (ctrlParent _ctrlButton displayCtrl 101);
-  }];
+  [_display] call ENH_fnc_VAM_openPresetsMenu;
 }];
 
 _ctrlButtonLoad = _display ctrlCreate ["ctrlButton", -1];
