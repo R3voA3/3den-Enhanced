@@ -1,82 +1,89 @@
-#include "\3denEnhanced\defines\defineCommon.inc"
-#define DIALOG_W 120
-#define DIALOG_H 100
-
-class RscButton;
-
-class ENH_VAM_PresetMenu {
+class ENH_VAM_PresetMenu
+{
   idd = 12345;
-  
-  class ControlsBackground {
-    class Background: ctrlStaticBackground
-    {
-      x = GUI_GRID_CENTER_X + 0 * GUI_GRID_CENTER_W;
-      y = GUI_GRID_CENTER_Y + 0 * GUI_GRID_CENTER_H;
-      w = 40 * GUI_GRID_CENTER_W;
-      h = 25 * GUI_GRID_CENTER_H;
-    };
+  class ControlsBackground
+  {
+    DISABLE_BACKGROUND;
     class Header: ctrlStaticTitle
     {
       text = "Virtual Arsenal Manager Presets";
-      x = GUI_GRID_CENTER_X + 0 * GUI_GRID_CENTER_W;
-      y = GUI_GRID_CENTER_Y + 0 * GUI_GRID_CENTER_H;
-      w = 40 * GUI_GRID_CENTER_W;
-      h = 1 * GUI_GRID_CENTER_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class Background: ctrlStaticBackground
+    {
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H;
+    };
+    class BackgroundFilter: ctrlStaticBackground
+    {
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = CTRL_DEFAULT_H;
+      colorBackground[] = {0, 0, 0, 1};
+    };
+    class Footer: ctrlStaticFooter
+    {
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
   };
-
-  class Controls {
+  class Controls
+  {
     class Filter: ctrlListNBox
     {
       idc = IDC_VAM_PRESET_LISTNBOXFILTER;
-      x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 1 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 38 * GUI_GRID_CENTER_W;
-      h = 1 * GUI_GRID_CENTER_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + CTRL_DEFAULT_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
     class Content: ctrlListNBox
     {
       idc = IDC_VAM_PRESET_LISTNBOXCONTENT;
-      x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 2 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 38 * GUI_GRID_CENTER_W;
-      h = 20 * GUI_GRID_CENTER_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H;
+      w = WINDOW_W_ATTRIBUTES * GRID_W;
+      h = WINDOW_PREVIEW_HAbs - 5 * CTRL_DEFAULT_H;
+      disableOverflow = 1;
     };
-    class LoadButton: RscButton
-    {
-      idc = IDC_VAM_PRESET_LOADBUTTON;
-      text = "Load Preset";
-      x = 1 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 5 * GUI_GRID_CENTER_W;
-      h = 1.5 * GUI_GRID_CENTER_H;
-    };
-    class SaveButton: RscButton
-    {
-      idc = IDC_VAM_PRESET_SAVEBUTTON;
-      text = "Save Preset";
-      x = 7 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 5 * GUI_GRID_CENTER_W;
-      h = 1.5 * GUI_GRID_CENTER_H;
-    };
-    class DeleteButton: RscButton
+    class DeleteButton: ctrlButton
     {
       idc = IDC_VAM_PRESET_DELETEBUTTON;
-      text = "Delete Preset";
-      x = 13 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 5 * GUI_GRID_CENTER_W;
-      h = 1.5 * GUI_GRID_CENTER_H;
+      text = "Delete";
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class LoadButton: DeleteButton
+    {
+      idc = IDC_VAM_PRESET_LOADBUTTON;
+      text = "Load";
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 27 * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
+      h = CTRL_DEFAULT_H;
+    };
+    class SaveButton: DeleteButton
+    {
+      idc = IDC_VAM_PRESET_SAVEBUTTON;
+      text = "Save";
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 53 * GRID_W;
     };
     class Close: ctrlButtonClose
     {
-      x = 34 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
-      y = 22.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
-      w = 5 * GUI_GRID_CENTER_W;
-      h = 1.5 * GUI_GRID_CENTER_H;
+      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 26 * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
+      w = 25 * GRID_W;
+      h = CTRL_DEFAULT_H;
     };
-
-    //...
   };
 };
