@@ -13,7 +13,6 @@
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11
-#define DIALOG_TOP (safezoneY + 17 * GRID_H)
 #define CTRL_DEFAULT_H (SIZE_M * GRID_H)
 
 //Top of all UIs
@@ -31,7 +30,6 @@
 #define SPACE_X (2 * pixelW)
 #define ORIGIN_X_STATUSBAR (safezoneW - 60 * GRID_W)
 
-//Macros for scripting
 #define CTRL(IDC) (_display displayCtrl IDC)
 
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
