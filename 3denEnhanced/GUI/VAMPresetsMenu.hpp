@@ -1,6 +1,6 @@
 class ENH_VAM_PresetMenu
 {
-  idd = 12345;
+  idd = IDD_VAM_Presets;
   class ControlsBackground
   {
     DISABLE_BACKGROUND;
