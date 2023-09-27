@@ -13,7 +13,7 @@
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11
-#define DIALOG_TOP (safezoneY + 17 * GRID_H)
+#define DIALOG_TOP (safezoneY + 17 * GRID_H) //TODO: REMOVE 2023-09-26 R3vo
 #define CTRL_DEFAULT_H (SIZE_M * GRID_H)
 
 //Top of all UIs
@@ -230,7 +230,8 @@
 #define IDC_TEXTUREFINDER_BUTTONSEARCH 108
 #define IDC_TEXTUREFINDER_TEXTURELIST 100
 
-#define IDD_VAM -1
+#define IDD_VAM 6000
+#define IDD_VAM_PRESETS 7000
 #define IDC_VAM_ACCTREEVIEW 15
 #define IDC_VAM_ACE_CHECKBOX 20
 #define IDC_VAM_BI_CHECKBOX 25
