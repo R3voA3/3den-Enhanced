@@ -36,6 +36,7 @@
 #include "GUI\textureFinder.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\zeusAddons.hpp"
+#include "GUI\VAM.hpp"
 #include "GUI\VAMPresetsMenu.hpp"
 
 //Improved vanilla GUIs
