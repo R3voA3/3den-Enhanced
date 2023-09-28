@@ -7,7 +7,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
   idc = IDC_GARRISON_GROUP;
   onLoad = "call ENH_fnc_garrison_onLoad";
   x = safezoneX + 61 * GRID_W;
-  y = DIALOG_TOP;
+  y = WINDOW_TOPAbs;
   w = DIALOG_W * GRID_W;
   h = DIALOG_H * GRID_H;
   class Controls
