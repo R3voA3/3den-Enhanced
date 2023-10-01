@@ -122,22 +122,69 @@ _ctrlButtonApply ctrlSetText format ["Apply (%1)", count _selectedObjects];
 //If no object was selected, we cannot apply the attribute
 _ctrlButtonApply ctrlEnable !(_selectedObjects isEqualTo []);
 
-CTRL(IDC_VAM_BUTTON_COLLAPSE) ctrlAddEventHandler ["ButtonClick",
+CTRL(IDC_VAM_BUTTON_COLLAPSE_ITEMS) ctrlAddEventHandler ["ButtonClick",
 {
  params["_ctrlButton"];
  tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_VAM_TREEVIEW);
- tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_VAM_TREEVIEW_COMP_ITEMS);
 }];
 
-CTRL(IDC_VAM_BUTTON_EXPAND) ctrlAddEventHandler ["ButtonClick",
+CTRL(IDC_VAM_BUTTON_EXPAND_ITEMS) ctrlAddEventHandler ["ButtonClick",
 {
  params["_ctrlButton"];
  tvExpandAll (ctrlParent _ctrlButton displayCtrl IDC_VAM_TREEVIEW);
+}];
+
+CTRL(IDC_VAM_BUTTON_COLLAPSE_COMPATIBLE_ITEMS) ctrlAddEventHandler ["ButtonClick",
+{
+ params["_ctrlButton"];
+ tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_VAM_TREEVIEW_COMP_ITEMS);
+}];
+
+CTRL(IDC_VAM_BUTTON_EXPAND_COMPATIBLE_ITEMS) ctrlAddEventHandler ["ButtonClick",
+{
+ params["_ctrlButton"];
  tvExpandAll (ctrlParent _ctrlButton displayCtrl IDC_VAM_TREEVIEW_COMP_ITEMS);
 }];
 
+//Handle search button
+CTRL(IDC_VAM_SEARCH_ITEMS) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_VAM_BUTTON_SEARCH_ITEMS ctrlSetText _image;
+}];
+
+CTRL(IDC_VAM_BUTTON_SEARCH_ITEMS) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_VAM_SEARCH_ITEMS ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];
+
+CTRL(IDC_VAM_SEARCH_COMPATIBLE_ITEMS) ctrlAddEventHandler ["EditChanged",
+{
+  params ["_ctrlEdit", "_newText"];
+
+  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+
+  ctrlParent _ctrlEdit displayCtrl IDC_VAM_BUTTON_SEARCH_COMPATIBLE_ITEMS ctrlSetText _image;
+}];
+
+CTRL(IDC_VAM_BUTTON_SEARCH_COMPATIBLE_ITEMS) ctrlAddEventHandler ["ButtonClick",
+{
+  params ["_ctrlButton"];
+
+  //Change search button icon and clear edit control to reset tree view filter
+  ctrlParent _ctrlButton displayCtrl IDC_VAM_SEARCH_COMPATIBLE_ITEMS ctrlSetText "";
+  _ctrlButton ctrlSetText IMG_SEARCH_START;
+}];
+
 //Focus search box
-ctrlSetFocus CTRL(IDC_VAM_SEARCH);
+ctrlSetFocus CTRL(IDC_VAM_SEARCH_ITEMS);
 
 //Perhaps rewrite this
 private _allAddons = ((uiNamespace getVariable ["ENH_ESE_allAddons", []]) - [["", "Unchanged", ""], ["", "", ""]]) + [["", "Arma 3", ""]];
