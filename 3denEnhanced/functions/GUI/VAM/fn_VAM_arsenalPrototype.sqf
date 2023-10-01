@@ -17,7 +17,6 @@ private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_VAM";
 uiNamespace setVariable ["ENH_VAM_display", _display];
 
 private _ctrlTVItems = CTRL(IDC_VAM_TREEVIEW);
-private _selectedObjects = get3DENSelected "Object";
 
 //Get check is mods var is existing. If not get it
 if (uiNamespace getVariable ["ENH_ESE_allAddons", []] isEqualTo []) then
@@ -88,10 +87,7 @@ _ctrlTVItems ctrlAddEventHandler ["TreeSelChanged",
 CTRL(IDC_VAM_BUTTON_PRESETS) ctrlAddEventHandler ["ButtonClick",
 {
   params["_ctrlButton"];
-
-  private _display = ctrlParent _ctrlButton;
-
-  [_display] call ENH_fnc_VAM_openPresetsMenu;
+  [ctrlParent _ctrlButton] call ENH_fnc_VAM_openPresetsMenu;
 }];
 
 CTRL(IDC_VAM_BUTTON_LOAD) ctrlAddEventHandler ["ButtonClick",
@@ -101,6 +97,7 @@ CTRL(IDC_VAM_BUTTON_LOAD) ctrlAddEventHandler ["ButtonClick",
 }];
 
 private _ctrlButtonApply = CTRL(IDC_VAM_BUTTON_APPLY);
+private _selectedObjects = get3DENSelected "Object" select {_x call ENH_fnc_hasIventory};
 
 _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 {
@@ -108,8 +105,8 @@ _ctrlButtonApply ctrlAddEventHandler ["ButtonClick",
 
   private _selectedObjects = get3DENSelected "Object";
 
-  private _useACE = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_ACE_CHECKBOX);
-  private _useBI = cbChecked ((ctrlParent _ctrlButton) displayCtrl IDC_VAM_BI_CHECKBOX);
+  private _useACE = cbChecked (ctrlParent _ctrlButton displayCtrl IDC_VAM_ACE_CHECKBOX);
+  private _useBI = cbChecked (ctrlParent _ctrlButton displayCtrl IDC_VAM_BI_CHECKBOX);
 
   _selectedObjects apply
   {
@@ -279,7 +276,7 @@ _ctrlTVItems ctrlAddEventHandler ["TreeSelChanged",
   ];
 
   //check if it's a single entry or a folder
-  if ((_ctrlTVItems tvCount _path) == 0) then
+  /* if ((_ctrlTVItems tvCount _path) == 0) then
   {
     //check if item that can have attachments, then display attachment tree
     private _itemTypesWAttach = ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun"];
@@ -307,8 +304,14 @@ _ctrlTVItems ctrlAddEventHandler ["TreeSelChanged",
         [_ctrlTVItems, 0] call ENH_fnc_VAM_switchNodeState;
       };
     };
-  };
+  }; */
 
   [ctrlParent _ctrlTVItems displayCtrl IDC_VAM_TREEVIEW_COMP_ITEMS, _ctrlTVItems tvData _path] call ENH_fnc_VAM_tvItemInit;
   [_ctrlTVItems] call ENH_fnc_VAM_handleItemStats;
+}];
+
+_ctrlTVItems ctrlAddEventHandler ["TreeDblClick",
+{
+  params ["_ctrlTVItems", "_path"];
+  [_ctrlTVItems, (_ctrlTVItems tvValue _path) min 1, _path] call ENH_fnc_VAM_switchNodeState;
 }];
