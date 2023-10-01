@@ -1,5 +1,5 @@
 # Translation Progress
-**Last update:** 24.09.2023
+**Last update:** 28.09.2023
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
