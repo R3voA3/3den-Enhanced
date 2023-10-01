@@ -4,6 +4,7 @@
 ## CHANGED
 - Increased 3den Radio UI height
 - Fixed Entity Counter positioning
+- Header and Close button in Placement Tools UI is now static
 
 #v7.8.2
 ## ADDED
