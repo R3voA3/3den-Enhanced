@@ -34,7 +34,7 @@ class ENH_VAM
     class LabelCompatibleItems: LabelItems
     {
       text = "Compatible Items";
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 3 * GRID_H + WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W;
     };
     class Footer: ctrlStaticFooter
     {
@@ -46,61 +46,81 @@ class ENH_VAM
   };
   class Controls
   {
+			class ButtonExpandAllItems: ctrlButtonExpandAll
+			{
+					idc = IDC_VAM_BUTTON_EXPAND_ITEMS;
+					x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 46 * GRID_W;
+					y = WINDOW_TOPAbs + WINDOW_HAbs - 11 * CTRL_DEFAULT_H - 2 * GRID_H;
+					w = 5 * GRID_W;
+					h = CTRL_DEFAULT_H;
+			};
+			class ButtonCollapseAllItems: ctrlButtonCollapseAll
+			{
+					idc = IDC_VAM_BUTTON_COLLAPSE_ITEMS;
+					x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 41 * GRID_W;
+					y = WINDOW_TOPAbs + WINDOW_HAbs - 11 * CTRL_DEFAULT_H - 2 * GRID_H;
+					w = 5 * GRID_W;
+					h = CTRL_DEFAULT_H;
+			};
     class SearchItems: ctrlEdit
     {
-      idc = IDC_ATTRIBUTESEARCH_SEARCH;
-      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 41 * GRID_W;
-      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
-      w = 35* GRID_W;
+      idc = IDC_VAM_SEARCH_ITEMS;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 11 * CTRL_DEFAULT_H - 2 * GRID_H;
+      w = 35 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class ButtonSearchItems: ctrlButtonSearch
     {
-      idc = IDC_ATTRIBUTESEARCH_BUTTONSEARCH;
-      x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 6 * GRID_W;
-      y = WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H;
+      idc = IDC_VAM_BUTTON_SEARCH_ITEMS;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 36 * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 11 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Items: ctrlTree
     {
       idc = IDC_VAM_TREEVIEW;
-      idcSearch = IDC_ATTRIBUTESEARCH_SEARCH;
-      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
+      idcSearch = IDC_VAM_SEARCH_ITEMS;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 2 * GRID_H;
-      w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
-      h = WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      w = WINDOW_W_ATTRIBUTES / 2 * GRID_W - 1.5 * GRID_W;
+      h = WINDOW_HAbs - 14 * CTRL_DEFAULT_H;
       borderSize = 0;
       colorBorder[] = {0, 0, 0, 0};
       colorBackground[] = {COLOR_TAB_RGBA};
     };
+				class ButtonExpandAllCompatibleItems: ButtonExpandAllItems
+				{
+						idc = IDC_VAM_BUTTON_EXPAND_COMPATIBLE_ITEMS;
+						x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W + 0.5 * GRID_W + 45 * GRID_W;
+				};
+				class ButtonCollapseAllCompatibleItems: ButtonCollapseAllItems
+				{
+						idc = IDC_VAM_BUTTON_COLLAPSE_COMPATIBLE_ITEMS;
+					 x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W + 0.5 * GRID_W + 40 * GRID_W;
+				};
     class SearchCompatibleItems: SearchItems
     {
-      idc = -1;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 3 * GRID_H + WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      idc = IDC_VAM_SEARCH_COMPATIBLE_ITEMS;
+						x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W + 0.5 * GRID_W;
     };
     class ButtonSearchCompatibleItems: ButtonSearchItems
     {
-      idc = -1;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 3 * GRID_H + WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      idc = IDC_VAM_BUTTON_SEARCH_COMPATIBLE_ITEMS;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W + 0.5 * GRID_W + 35 * GRID_W;
     };
-    class CompatibleItems: ctrlTree
+    class CompatibleItems: Items
     {
       idc = IDC_VAM_TREEVIEW_COMP_ITEMS;
-      idcSearch = IDC_ATTRIBUTESEARCH_SEARCH;
-      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 1 * GRID_W;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 4 * GRID_H + WINDOW_HAbs - 24 * CTRL_DEFAULT_H + GRID_H;
-      w = WINDOW_W_ATTRIBUTES * GRID_W - 2 * GRID_W;
-      h = WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
-      borderSize = 0;
-      colorBorder[] = {0, 0, 0, 0};
-      colorBackground[] = {COLOR_TAB_RGBA};
+      idcSearch = IDC_VAM_SEARCH_COMPATIBLE_ITEMS;
+						x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + (WINDOW_W_ATTRIBUTES / 2) * GRID_W + 0.5 * GRID_W;
     };
     class GroupStatistics: ctrlControlsGroup
     {
       idc = -1;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 5 * GRID_H + WINDOW_HAbs - 24 * CTRL_DEFAULT_H + GRID_H + WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 9 * CTRL_DEFAULT_H - 4 * GRID_H;
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W;
       h = 6 * CTRL_DEFAULT_H;
       class Controls
@@ -174,7 +194,7 @@ class ENH_VAM
       idc = IDC_VAM_PREVIEW_PICTURE;
 						text = "a3\data_f_warlords\data\preview_empty.jpg";
       x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - WINDOW_W_ATTRIBUTES / 2 * GRID_W - GRID_W;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 5 * GRID_H + WINDOW_HAbs - 24 * CTRL_DEFAULT_H + GRID_H + WINDOW_HAbs - 25 * CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 10 * CTRL_DEFAULT_H;
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W;
       h = 5 * CTRL_DEFAULT_H - GRID_H;
     };
@@ -182,7 +202,7 @@ class ENH_VAM
     {
       idc = IDC_VAM_TYPETOOLBOX;
       x = CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - WINDOW_W_ATTRIBUTES / 2 * GRID_W - GRID_W;
-      y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 5 * GRID_H + WINDOW_HAbs - 24 * CTRL_DEFAULT_H + GRID_H + WINDOW_HAbs - 20 * CTRL_DEFAULT_H + GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = WINDOW_W_ATTRIBUTES / 2 * GRID_W;
       h = CTRL_DEFAULT_H;
 						columns = 2;
@@ -190,6 +210,7 @@ class ENH_VAM
     };
 				class ButtonApply: ctrlButton
     {
+					idc = IDC_VAM_BUTTON_APPLY;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + GRID_W;
       y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
