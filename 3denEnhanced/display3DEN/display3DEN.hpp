@@ -80,7 +80,7 @@ class Display3DEN
         {
           idc = IDC_STATUSBAR_SESSIONTIMER;
           text = "a3\modules_f_curator\data\portraitskiptime_ca.paa";
-          x = ORIGIN_X_STATUSBAR - 11 * GRID_W - SPACE_X - 2 * pixelW;
+          x = ORIGIN_X_STATUSBAR - 11 * GRID_W - 2 * SPACE_X;
           y = 4 * pixelH;
         };
         class ENH_NumberMarkers: Version
