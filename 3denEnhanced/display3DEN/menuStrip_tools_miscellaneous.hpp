@@ -5,8 +5,6 @@ class ENH_Folder_Miscellaneous
   items[] +=
   {
     "ENH_CreateTrigger",
-    "ENH_ExportMissionParameters",
-    "ENH_GenerateSteamMissionDescription",
     "Separator",
     "ENH_SwitchTime",
     "ENH_ToggleGrass",
@@ -79,17 +77,6 @@ class ENH_ToggleMarkerAlpha
   action = "call ENH_fnc_toggleMarkerAlpha";
   picture = "\a3\3den\data\displays\display3den\panelright\modemarkers_ca.paa";
   shortcuts[] = {DIK_V};
-};
-class ENH_GenerateSteamMissionDescription
-{
-  text = "$STR_ENH_TOOLS_GENERATESTEAMMISSIONDESCRIPTION";
-  action = "0 spawn ENH_fnc_generateSteamMissionDescription";
-  opensNewWindow = 1;
-};
-class ENH_ExportMissionParameters
-{
-  text = "$STR_ENH_TOOLS_EXPORTMISSIONPARAMETERS";
-  action = "call ENH_fnc_exportMissionParams";
 };
 class ENH_CreateTrigger
 {
