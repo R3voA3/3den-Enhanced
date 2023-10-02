@@ -25,7 +25,7 @@ call ENH_fnc_3DENRadio_toggleRadio;
 0 spawn ENH_fnc_statusbar_sessionTimer;
 
 //Add tooltips to entity browser so long names are not cut off
-(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_entityList_addTooltips}];
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", ENH_fnc_entityList_addTooltips];
 
 //Init direction display
 addMissionEventHandler ["EachFrame",

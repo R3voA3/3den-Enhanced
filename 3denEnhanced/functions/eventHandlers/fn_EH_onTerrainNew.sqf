@@ -39,7 +39,7 @@ call ENH_fnc_menuStrip_removeItems;
 ["onLoad", []] call ENH_fnc_favoritesList;
 
 //Add tooltips to entity browser so long names are not cut off
-(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", {[[]] call ENH_fnc_entityList_addTooltips}];
+(findDisplay 313 displayCtrl 55) ctrlAddEventHandler ["MouseEnter", ENH_fnc_entityList_addTooltips];
 
 //Update location list
 ['init'] call ENH_fnc_locationList_enhanced;
