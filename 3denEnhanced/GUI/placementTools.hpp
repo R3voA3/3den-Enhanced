@@ -4,7 +4,7 @@
 #define WIDTH_VALUE 25 * GRID_W
 #define WIDTH_HEADER 56 * GRID_W
 
-class ENH_PlacementToolsGroupTest: ctrlControlsGroup
+class ENH_PlacementToolsGroup: ctrlControlsGroup
 {
   idc = IDC_PLACEMENTTOOLS;
   onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementTools";
