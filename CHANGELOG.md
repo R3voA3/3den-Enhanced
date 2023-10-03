@@ -2,9 +2,15 @@
 ## ADDED
 
 ## CHANGED
-- Increased 3den Radio UI height
+- Increased 3DEN Radio UI height
 - Fixed Entity Counter positioning
-- Header and Close button in Placement Tools UI is now static
+- Header and Close button in Placement Tools UI are now static
+
+## REMOVED
+- Batch Replace
+- Action Creator
+- Steam Description Generator
+- Create Object Tool
 
 #v7.8.2
 ## ADDED
