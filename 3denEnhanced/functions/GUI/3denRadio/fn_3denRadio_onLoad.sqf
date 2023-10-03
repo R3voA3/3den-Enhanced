@@ -33,7 +33,7 @@ CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
   _x lnbAddColumn 0.45; //Duration
   _x lnbAddColumn 0.55; //Theme
   _x lnbAddColumn 0.67; //Mod + Icon
-  _x lnbAddColumn 0.92; //In Listbox
+  _x lnbAddColumn 0.92; //In playlist
 } forEach [CTRL(IDC_3DENRADIO_SONGLIST), CTRL(IDC_3DENRADIO_FILTER)];
 
 CTRL(IDC_3DENRADIO_FILTER) lnbAddRow [localize "STR_ENH_3DENRADIO_TITLE", localize "STR_ENH_3DENRADIO_DURATION", localize "STR_ENH_3DENRADIO_THEME", localize "STR_ENH_3DENRADIO_MOD", "PL"];//Used for sorting
