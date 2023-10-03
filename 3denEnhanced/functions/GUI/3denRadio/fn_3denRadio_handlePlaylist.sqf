@@ -40,4 +40,5 @@ if (_key in [DIK_SPACE, DIK_DELETE]) then
     _playlist append [[_songName, _songClass, _songDuration]];
   };
   profileNamespace setVariable ["ENH_3DENRadio_playlist", _playlist];
+  saveProfileNamespace;
 };
