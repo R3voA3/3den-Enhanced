@@ -30,15 +30,11 @@ if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
   false
 };
 
-//If mission.sqm does not exist, then the mission has not yet been saved
 if !(fileExists "mission.sqm") exitWith {false};
 
-private _fileToCopy = getMissionPath "mission.sqm";
+private _root = getMissionPath "";
 private _sysTimeFormatted = systemTime apply {str _x} joinString "_";
 
-//Add ENH_Backup to path
-private _copyTo = _fileToCopy + "_" + _sysTimeFormatted;
-
-["ENH_Pythia.BackupMissionSQM", [_fileToCopy, _copyTo]] call (uiNamespace getVariable "py3_fnc_callExtension");
+["ENH_Pythia.BackupMissionSQM", [_root, _sysTimeFormatted]] call (uiNamespace getVariable "py3_fnc_callExtension");
 
 true

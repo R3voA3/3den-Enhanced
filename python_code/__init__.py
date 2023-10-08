@@ -44,5 +44,11 @@ def RPT_read(line_count):
   RPT_file.close()
   return RPT_content
 
-def BackupMissionSQM(fileToCopy, newFile):
-  shutil.copyfile(fileToCopy, newFile)
+def BackupMissionSQM(root, timestamp):
+
+  backupFolderPath = root + ".enh_mission_sqm_backups\\"
+
+  if (not os.path.exists(backupFolderPath)):
+    os.makedirs (backupFolderPath)
+
+  shutil.copyfile(root + "mission.sqm", backupFolderPath + "mission.sqm" + "_" + timestamp)
