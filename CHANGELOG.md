@@ -1,3 +1,16 @@
+#v7.8.3
+## CHANGED
+- Mission Backup attribute will now create backup files in mission root in a folder called ".enh_mission_sqm_backups". Existing backups will not be moved!
+- Increased 3DEN Radio UI height
+- Fixed Entity Counter positioning
+- Header and Close button in Placement Tools UI are now static
+
+## REMOVED
+- Batch Replace
+- Action Creator
+- Steam Description Generator
+- Create Object Tool
+
 #v7.8.2
 ## ADDED
 

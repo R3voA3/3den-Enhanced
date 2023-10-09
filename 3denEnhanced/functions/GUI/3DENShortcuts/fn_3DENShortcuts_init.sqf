@@ -18,13 +18,13 @@ _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick",
 {
   params ["_ctrlButton"];
   ctrlparent _ctrlButton displayCtrl IDC_SHORTCUTS_SEARCH ctrlSetText "";
-  _ctrlButton ctrlSetText IMG_SEARCH_START;
+  _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
 }];
 
 _ctrlSearch ctrlAddEventHandler ["EditChanged",
 {
   params ["_ctrlSearch", "_newText"];
-  ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_BUTTONSEARCH ctrlSetText IMG_SEARCH_END;
+  ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_BUTTONSEARCH ctrlSetText TEXTURE_SEARCH_END;
   [ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_CONTENT, _newText] call ENH_fnc_3DENShortcuts_fillList;
 }];
 
@@ -188,12 +188,12 @@ private _fnc_ArrayToShortcut =
   _sc joinString "+";
 };
 
-private _fnc_cacheData =
+//Cache data
+if ((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) isEqualTo []) then
 {
-  if !((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) isEqualTo []) exitWith {};
   private _temp = [];
   private _classes = ("true" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items")) +
-           ("true" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items"));
+            ("true" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items"));
 
   {
     private _sc = [getArray (_x >> "shortcuts")] call _fnc_ArrayToShortcut;
@@ -206,7 +206,5 @@ private _fnc_cacheData =
   } forEach _classes;
   uiNamespace setVariable ["ENH_3DENShortcuts_Cache", _temp];
 };
-
-call _fnc_cacheData;
 
 [_ctrlContent, ""] call ENH_fnc_3DENShortcuts_fillList;

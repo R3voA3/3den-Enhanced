@@ -10,8 +10,10 @@
   -
 
   Returns:
-  BOOLEAN: true
+  -
 */
+
+#include "\3denEnhanced\defines\defineCommon.inc"
 
 private _modList = "";
 
@@ -26,7 +28,7 @@ _configClasses = ("true" configClasses (configFile >> "CfgMods")) + ("true" conf
 } count _configClasses;
 
 
-copyToClipboard format
+private _text = format
 [
   "Game: %1" + endl + "Version: %2" + endl + "Build: %3" + endl + "Branch: %4" + endl + "Mods enabled: %5" + endl + "Operating System: %6" + endl + "Architecture: %10" + endl + endl + "Resolution:" + endl + "Width: %7" + endl + "Height: %8" + endl + "UI Scale: %9" + endl + endl + "Mod List:" + endl + "%11", //Do not localize, the devs speak English
   productVersion # 0,
@@ -42,6 +44,5 @@ copyToClipboard format
   _modList
 ];
 
-["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-
-true
+uiNamespace setVariable ["display3DENCopy_data", ["", _text]];
+findDisplay IDD_DISPLAY3DEN createDisplay "display3denCopy";

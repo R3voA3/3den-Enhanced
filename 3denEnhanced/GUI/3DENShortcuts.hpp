@@ -1,7 +1,6 @@
 class ENH_3denShortcuts
 {
   idd = -1;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_3DENShortcuts_init";
   class ControlsBackground
   {

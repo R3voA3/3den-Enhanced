@@ -33,12 +33,6 @@ switch (_mode) do
       ["createEntity", [_ctrlFavorites, _selectionPath]] call ENH_fnc_favoritesList;
     }];
 
-    /* _ctrlFavorites ctrlAddEventHandler ["treeMouseHold",
-    {
-      params ["_ctrlFavorites", "_path"];
-      ["showPreview", [_ctrlFavorites, _path]] call ENH_fnc_favoritesList;
-    }]; */
-
     _ctrlFavorites ctrlAddEventHandler ["treeMouseMove",
     {
       params ["_ctrlFavorites", "_path"];

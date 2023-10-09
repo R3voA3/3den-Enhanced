@@ -23,12 +23,6 @@ class CfgFunctions
       class garrison_onUnload;
       class garrison_updateValues;
     };
-    /* class CreateObject
-    {
-      file = "3denEnhanced\functions\GUI\createObject";
-      class createObject_create;
-      class createObject_changeFilter;
-    }; */
     class TextureFinder
     {
       file = "3denEnhanced\functions\GUI\TextureFinder";
@@ -36,15 +30,6 @@ class CfgFunctions
       class textureFinder_findTextures;
       class textureFinder_updatePreview;
     };
-/*     class BatchReplace
-    {
-      file = "3denEnhanced\functions\GUI\batchReplace";
-      class batchReplace;
-      class batchReplace_onLoad;
-      class batchReplace_createDisplay;
-      class batchReplace_onTreeSelChanged;
-      class batchReplace_initTreeView;
-    }; */
     class FunctionsViewer
     {
       file = "3denEnhanced\functions\GUI\functionsViewer";
@@ -182,20 +167,15 @@ class CfgFunctions
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
-      class createBackupMissionSQM;
-      class VHCTools;
       class alignEntities;
-      class setOrientation;
-      class spaceEqually;
       class all3DENSelected;
       class centerMapOnSelection;
       class compatibleItems;
+      class createBackupMissionSQM;
       class deleteCrew;
       class deleteEmptyLayers;
       class dynamicViewDistance;
-      class exportMissionParams;
       class floatToTime;
-      class generateSteamMissionDescription;
       class getAllItems;
       class getConfigSourceAddon;
       class hasStorage;
@@ -203,6 +183,8 @@ class CfgFunctions
       class measureDistance;
       class pylonTools;
       class removeGear;
+      class setOrientation;
+      class spaceEqually;
       class statBarStatement_accuracy;
       class statBarStatement_default;
       class statBarStatement_impact;
@@ -221,6 +203,7 @@ class CfgFunctions
       class toggleDrawHitpoints;
       class toggleGrass;
       class toggleMarkerAlpha;
+      class VHCTools;
     };
     class Interface
     {
@@ -275,7 +258,6 @@ class CfgFunctions
       class dynamicSkill_onAttributeSave;
       class establishingShot_onAttributeLoad;
       class establishingShot_onAttributeSave;
-      //class face;
       class groupMarker_onAttributeLoad;
       class groupMarker_onAttributeSave;
       class groupMarker_onLoad;
@@ -291,7 +273,6 @@ class CfgFunctions
       class missionEndingCasualties_onAttributeSave;
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
-      //class unitInsignia;
     };
     class Internal
     {

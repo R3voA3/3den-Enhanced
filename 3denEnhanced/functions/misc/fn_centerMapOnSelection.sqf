@@ -27,4 +27,4 @@ if (get3DENActionState "toggleMap" > 0) then
   ctrlMapAnimCommit _ctrlmap;
 };
 
-move3DENCamera [_position3D, true]
+move3DENCamera [_position3D, true];

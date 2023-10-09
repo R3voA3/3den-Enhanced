@@ -14,8 +14,13 @@
   -
 */
 
-params ["_path"];
-private _ctrlTV = findDisplay 313 displayCtrl 55;
+#include "\3denEnhanced\defines\defineCommon.inc"
+
+params [["_path", []]];
+
+if !(_path isEqualType []) then {_path = []};
+
+private _ctrlTV = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_EDIT;
 
 for "_i" from 0 to (_ctrlTV tvCount _path) - 1 do
 {

@@ -1,7 +1,6 @@
 class ENH_3DENRadio
 {
   idd = IDD_3DENRADIO;
-  movingEnable = true;
   onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
   onUnload = "";
   class ControlsBackground
@@ -20,12 +19,12 @@ class ENH_3DENRadio
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H;
       w = WINDOW_W_WIDE * GRID_W;
-      h = WINDOW_HAbs - 30 * GRID_H;
+      h = WINDOW_HAbs - 4 * CTRL_DEFAULT_H;
     };
-  class Footer: ctrlStaticFooter
+    class Footer: ctrlStaticFooter
     {
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 27 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_WIDE * GRID_W;
       h = 7 * GRID_H;
     };
@@ -39,7 +38,7 @@ class ENH_3DENRadio
     {
       text = "$STR_ENH_3DENRADIO_SONG";
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 33 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 10 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -66,7 +65,7 @@ class ENH_3DENRadio
     {
       idc = IDC_3DENRADIO_SONGLIST;
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H;
-      h = WINDOW_HAbs - 45 * GRID_H;
+      h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H;
       disableOverflow = 1;
       onLBDblClick = "params ['_ctrl', '_row']; [[_ctrl lnbText [_row, 0], _ctrl lnbData [_row, 0], _ctrl lnbData [_row, 1]]] call ENH_fnc_3DENRadio_playNewSong";
       onKeyDown = "_this call ENH_fnc_3DENRadio_handlePlaylist; _this call ENH_fnc_3DENRadio_exportClassname";
@@ -75,7 +74,7 @@ class ENH_3DENRadio
     {
       idc = IDC_3DENRADIO_TOGGLERADIO;
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
       onButtonClick = "false call ENH_fnc_3DENRadio_toggleRadio";
@@ -84,7 +83,7 @@ class ENH_3DENRadio
     {
       text = "\a3\Modules_F_Curator\Data\portraitSound_ca.paa";
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 7 * GRID_W;
-    y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -92,7 +91,7 @@ class ENH_3DENRadio
     {
       idc = IDC_3DENRADIO_VOLUME;
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 13 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
       sliderRange[] = {0, 1.5};
@@ -110,7 +109,7 @@ class ENH_3DENRadio
       idc = IDC_3DENRADIO_SEARCH;
       tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 50 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 30 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -118,14 +117,14 @@ class ENH_3DENRadio
     {
       idc = IDC_3DENRADIO_BUTTONSEARCH;
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 80 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
     class Group: ctrlControlsGroup
     {
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 86 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 80 * GRID_W;
       h = CTRL_DEFAULT_H;
       class Controls
@@ -155,7 +154,7 @@ class ENH_3DENRadio
     class Close: ctrlButtonClose
     {
       x = CENTER_X + 0.5 * WINDOW_W_WIDE * GRID_W - 26 * GRID_W;
-      y = WINDOW_TOPAbs + WINDOW_HAbs - 26 * GRID_H;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 25 * GRID_W;
       h = CTRL_DEFAULT_H;
     };

@@ -17,7 +17,6 @@ class ENH_Folder_Utilities
     "Separator",
     "ENH_BriefingEditor",
     "ENH_AttributeSearch",
-    //"ENH_BatchReplace",
     "ENH_NameObjects",
     "ENH_ZeusAddons"
   };
@@ -74,13 +73,6 @@ class ENH_SAM
   action = "findDisplay 313 createDisplay 'ENH_SAM'";
   opensNewWindow = 1;
 };
-/* class ENH_BatchReplace
-{
-  text = "$STR_ENH_TOOLS_BATCHREPLACE";
-  action = "call ENH_fnc_batchReplace_createDisplay";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
-  opensNewWindow = 1;
-}; */
 class ENH_NameObjects
 {
   text = "$STR_ENH_TOOLS_BATCHNAMING";

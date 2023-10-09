@@ -1,7 +1,6 @@
 class ENH_ModuleInformation
 {
   idd = IDD_MODULEINFORMATION;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_moduleInformation_onLoad";
   class ControlsBackground
   {

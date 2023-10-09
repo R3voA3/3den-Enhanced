@@ -33,7 +33,7 @@ CTRL(IDC_SENTENCESBROWSER_SEARCH) ctrlAddEventHandler ["EditChanged",
 {
   params ["_ctrlEdit", "_newText"];
 
-  private _image = [IMG_SEARCH_END, IMG_SEARCH_START] select (_newText == "");
+  private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
 
   ctrlParent _ctrlEdit displayCtrl IDC_SENTENCESBROWSER_BUTTONSEARCH ctrlSetText _image;
 }];
@@ -45,7 +45,7 @@ CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
 
   //Change search button icon and clear edit control to reset tree view filter
   ctrlParent _ctrlButton displayCtrl IDC_SENTENCESBROWSER_SEARCH ctrlSetText "";
-  _ctrlButton ctrlSetText IMG_SEARCH_START;
+  _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
 }];
 
 true

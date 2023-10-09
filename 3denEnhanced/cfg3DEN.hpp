@@ -125,7 +125,6 @@ class Cfg3DEN
     #include "controls\ambientFlyby.hpp"
     #include "controls\dynamicSkill.hpp"
     #include "controls\establishingShot.hpp"
-    //#include "controls\face.hpp"
     #include "controls\groupMarker.hpp"
     #include "controls\holdAction.hpp"
     #include "controls\introText.hpp"
@@ -134,7 +133,6 @@ class Cfg3DEN
     #include "controls\missionEndingCasualties.hpp"
     #include "controls\subCategoryNoHeader_Fixed.hpp"
     #include "controls\timeMultiplier.hpp"
-    //#include "controls\unitInsignia.hpp"
   };
   class Mission
   {

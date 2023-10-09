@@ -1,7 +1,6 @@
 class ENH_VariableViewer
 {
   idd = IDD_VARIABLEVIEWER;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_variableViewer_onLoad";
   class ControlsBackground
   {
@@ -74,13 +73,13 @@ class ENH_VariableViewer
     class List: ctrlListNBox
     {
       idc = IDC_VARIABLEVIEWER_LIST;
-      style = LB_MULTI + LB_TEXTURES;
       x = CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W;
       y = WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H;
       w = WINDOW_W_WIDE * GRID_W;
-      h = WINDOW_HAbs - 9 * CTRL_DEFAULT_H;
+      h = WINDOW_HAbs - 7 * CTRL_DEFAULT_H - 2 * GRID_H;
       disableOverflow = true;
       columns[] = {0, 0.4, 0.85};
+
     };
     class Filter: List
     {
@@ -136,7 +135,7 @@ class ENH_VariableViewer
     class Delete: ctrlButtonPictureKeepAspect
     {
       idc = IDC_VARIABLEVIEWER_DELETE;
-      text = "a3\3den\data\displays\display3den\panelright\customcomposition_edit_ca.paa";
+      text = "a3\3den\data\displays\display3den\panelleft\entitylist_delete_ca.paa";
       x = CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + 115 * GRID_W;
       y = WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H;
       w = 5 * GRID_W;
