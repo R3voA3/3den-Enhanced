@@ -18,13 +18,13 @@ _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick",
 {
   params ["_ctrlButton"];
   ctrlparent _ctrlButton displayCtrl IDC_SHORTCUTS_SEARCH ctrlSetText "";
-  _ctrlButton ctrlSetText IMG_SEARCH_START;
+  _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
 }];
 
 _ctrlSearch ctrlAddEventHandler ["EditChanged",
 {
   params ["_ctrlSearch", "_newText"];
-  ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_BUTTONSEARCH ctrlSetText IMG_SEARCH_END;
+  ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_BUTTONSEARCH ctrlSetText TEXTURE_SEARCH_END;
   [ctrlparent _ctrlSearch displayCtrl IDC_SHORTCUTS_CONTENT, _newText] call ENH_fnc_3DENShortcuts_fillList;
 }];
 
