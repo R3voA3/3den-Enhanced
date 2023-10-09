@@ -1,7 +1,6 @@
 class ENH_MoveToLayer
 {
   idd = IDD_MOVETOLAYER;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_moveToLayer_onLoad";
   class ControlsBackground
   {

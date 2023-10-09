@@ -1,7 +1,6 @@
 class ENH_BriefingEditor
 {
   idd = IDD_BRIEFINGEDITOR;
-  movingEnable = true;
   onLoad = "[_this#0, 'onLoad'] call ENH_fnc_BriefingEditor";
   onUnload = "[_this#0, 'onUnload'] call ENH_fnc_BriefingEditor";
   class ControlsBackground

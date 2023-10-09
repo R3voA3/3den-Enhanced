@@ -3,7 +3,6 @@
 class ENH_BatchReplace
 {
   idd = IDD_BATCHREPLACE;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_batchReplace_onLoad";
   class ControlsBackground
   {

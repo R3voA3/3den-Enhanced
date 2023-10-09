@@ -1,7 +1,6 @@
 class ENH_ExportGUIDefines
 {
   idd = IDD_EXPORTGUIDEFINES;
-  movingEnable = true;
   onLoad = "";
   class ControlsBackground
   {

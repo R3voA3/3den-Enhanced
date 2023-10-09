@@ -1,7 +1,6 @@
 class ENH_VariableViewer
 {
   idd = IDD_VARIABLEVIEWER;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_variableViewer_onLoad";
   class ControlsBackground
   {

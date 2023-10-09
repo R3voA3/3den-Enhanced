@@ -1,7 +1,6 @@
 class ENH_SAM
 {
   idd = IDD_SAM;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_SAM";
   class ControlsBackground
   {

@@ -1,7 +1,6 @@
 class ENH_3DENRadio
 {
   idd = IDD_3DENRADIO;
-  movingEnable = true;
   onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
   onUnload = "";
   class ControlsBackground

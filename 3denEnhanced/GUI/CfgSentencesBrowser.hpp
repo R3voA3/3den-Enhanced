@@ -1,7 +1,6 @@
 class ENH_CfgSentencesBrowser
 {
   idd = IDD_SENTENCESBROWSER;
-  movingEnable = true;
   onLoad = "_this call ENH_fnc_CFGS_onLoad";
   onUnload = "profileNamespace setVariable ['ENH_CFGS_Favorites', ENH_CFGS_Favorites];";
   class ControlsBackground

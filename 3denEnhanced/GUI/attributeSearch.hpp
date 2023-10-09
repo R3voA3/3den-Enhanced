@@ -2,7 +2,6 @@ class ENH_AttributeSearch
 {
   idd = IDD_ATTRIBUTESEARCH;
   onLoad = "_this call ENH_fnc_attributeSearch_onLoad";
-  movingEnable = true;
   class ControlsBackground
   {
     DISABLE_BACKGROUND
