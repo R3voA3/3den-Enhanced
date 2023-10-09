@@ -1,7 +1,6 @@
 class ENH_TextureFinder
 {
   idd = IDD_TEXTUREFINDER;
-  movingEnable = true;
   onLoad = "0 spawn ENH_fnc_textureFinder_findTextures";
   class ControlsBackground
   {
@@ -13,6 +12,7 @@ class ENH_TextureFinder
       y = WINDOW_TOPAbs;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H;
+      moving = 0;
     };
     class Background: ctrlStaticBackground
     {
@@ -33,8 +33,8 @@ class ENH_TextureFinder
     };
     class Footer: ctrlStaticFooter
     {
-	  x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
-	  y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
+      x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W;
+      y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H;
       w = WINDOW_W_ATTRIBUTES * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
     };
@@ -73,7 +73,7 @@ class ENH_TextureFinder
     };
     class ButtonSearch: ctrlButtonSearch
     {
-	  idc = IDC_TEXTUREFINDER_BUTTONSEARCH;
+      idc = IDC_TEXTUREFINDER_BUTTONSEARCH;
       x = CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 31 * GRID_W;
       y = WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H;
       w = 5 * GRID_W;
