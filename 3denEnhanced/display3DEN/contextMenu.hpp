@@ -1,11 +1,7 @@
 items[] +=
 {
   "Separator",
-  "ENH_MeasureDistance",
-  "ENH_ShowModuleInformation",
-  "ENH_Garrison",
-  "ENH_AddToFavorites",
-  "ENH_MoveToLayer"
+  "ENH_OtherTools"
 };
 class Log
 {
@@ -44,6 +40,21 @@ class Select
   {
     "ENH_SelectionFilter",
   };
+};
+class ENH_OtherTools
+{
+  text = "$STR_ENH_CONTEXTMENU_OTHERTOOLS";
+  items[] +=
+  {
+    "ENH_MoveToLayer",
+    "Separator",
+    "ENH_MeasureDistance",
+    "ENH_ShowModuleInformation",
+    "ENH_Garrison",
+    "ENH_AddToFavorites",
+    "ENH_MoveToLayer"
+  };
+  SHOW_IN_ROOT;
 };
 class ENH_LogFactions
 {
@@ -98,7 +109,6 @@ class ENH_MeasureDistance
   text = "$STR_ENH_CONTEXTMENU_MEASUREDISTANCE";
   picture = "\3denEnhanced\data\icon_ruler_ca.paa";
   conditionShow = "1";
-  SHOW_IN_ROOT;
 };
 class ENH_ShowModuleInformation
 {
@@ -106,7 +116,6 @@ class ENH_ShowModuleInformation
   text = "$STR_ENH_CONTEXTMENU_GETMODULEINFORMATION";
   conditionShow = "hoverLogic";
   opensNewWindow = 1;
-  SHOW_IN_ROOT;
 };
 class ENH_Garrison
 {
@@ -115,7 +124,6 @@ class ENH_Garrison
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
   conditionShow = "selected";
   opensNewWindow = 1;
-  SHOW_IN_ROOT;
 };
 class ENH_TriggerOwnerPlayer
 {
@@ -135,14 +143,12 @@ class ENH_AddToFavorites
   text = "$STR_ENH_CONTEXTMENU_FAVORITES";
   picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
   conditionShow = "hoverObject + hoverLogic";
-  SHOW_IN_ROOT;
 };
 class ENH_MoveToLayer
 {
   action = "findDisplay 313 createDisplay 'ENH_MoveToLayer'";
   text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
   conditionShow = "selected";
-  SHOW_IN_ROOT;
 };
 class ENH_SelectionFilter
 {

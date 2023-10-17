@@ -21,14 +21,21 @@ class Display3DEN
         {
           w = 19 * GRID_W;
         };
-        class Version: ValueX
+        class Version: ctrlButton
         {
-          x = ORIGIN_X_STATUSBAR - 32 * GRID_W - SPACE_X;
+          idc = -1;
+          text = "V";
+          x = ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X;
+          y = 2 * pixelH;
+          w = 4 * GRID_W - 4 * pixelW;
+          h = 4 * GRID_H - 4 * pixelH;
+          colorBackground[] = {0, 0, 0, 0.5};
+          onLoad = "_this # 0 ctrlSetToolTip format ['%1.%2', (productVersion select 2) * 0.01 toFixed 2, productVersion select 3]";
+          onButtonClick = "call ENH_fnc_productInfo";
         };
         class TextY: TextX
         {
           x = 22 * GRID_W;
-          colorText[] = {COLOR_POSY_RGBA};
         };
         class ValueY: ValueX
         {
@@ -83,7 +90,7 @@ class Display3DEN
           x = ORIGIN_X_STATUSBAR - 11 * GRID_W - 2 * SPACE_X;
           y = 4 * pixelH;
         };
-        class ENH_NumberMarkers: Version
+        class ENH_NumberMarkers: ctrlEdit
         {
           idc = IDC_STATUSBAR_NUMMARKERS;
           x = ORIGIN_X_STATUSBAR - 39 * GRID_W - 2 * SPACE_X;
