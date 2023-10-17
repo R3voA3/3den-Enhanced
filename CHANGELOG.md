@@ -1,3 +1,10 @@
+#v7.8.4
+## CHANGED
+- Move tools from root of context menu into a subfolder so that the context menu is even on very small screen fully accessable
+- Improved display3DENPublishMissionSelectImage
+- Turned version info into a button so it won't overlap on small screens. Clicking the button will show more information about
+current session
+
 #v7.8.3
 ## CHANGED
 - Mission Backup attribute will now create backup files in mission root in a folder called ".enh_mission_sqm_backups". Existing backups will not be moved!
