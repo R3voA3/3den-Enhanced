@@ -36,6 +36,7 @@ class Display3DEN
         class TextY: TextX
         {
           x = 22 * GRID_W;
+          colorText[] = {COLOR_POSY_RGBA};
         };
         class ValueY: ValueX
         {
