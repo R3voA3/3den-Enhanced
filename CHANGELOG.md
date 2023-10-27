@@ -1,3 +1,7 @@
+#v7.8.5
+## CHANGED
+- Fixed entity counter
+
 #v7.8.4
 ## CHANGED
 - Move tools from root of context menu into a subfolder so that the context menu is even on very small screen fully accessable

@@ -17,11 +17,14 @@ params [["_mode", "run"]];
 
 disableSerialization;
 
-private _display = findDisplay 313;
-private _conditionHide = (102 * (pixelW * pixelGrid * 0.50) >= (safezoneW - 60 * (pixelW * pixelGrid * 0.50)) - 109 * (pixelW * pixelGrid * 0.50) - 2 * (2 * pixelW));
+private _display = findDisplay IDD_DISPLAY3DEN;
+private _ctrlCamDir = _display displayCtrl IDC_DISPLAY3DEN_STATUSBAR controlsGroupCtrl IDC_STATUSBAR_CAMDIR;
+private _ctrlIconObjects = _display displayCtrl IDC_DISPLAY3DEN_STATUSBAR controlsGroupCtrl IDC_STATUSBAR_ICONOBJECTS;
 
-//Hide control if screen is too small or gui scale too big. We wait 20 seconds because this command can crash Arma
-if (_conditionHide) then
+private _conditionHide = ctrlPosition _ctrlIconObjects # 0 < ctrlPosition _ctrlCamDir # 0 + ctrlPosition _ctrlCamDir # 2;
+
+//Hide control if screen is too small or gui scale too big. We wait a second because this command can crash Arma
+if _conditionHide then
 {
   0 spawn
   {
@@ -30,9 +33,9 @@ if (_conditionHide) then
   };
 };
 
-private _enabled = ("Preferences" get3DENMissionAttribute "ENH_Statusbar_EntityCounter") && !_conditionHide;
+private _enabled = "Preferences" get3DENMissionAttribute "ENH_Statusbar_EntityCounter" && !_conditionHide;
 
-switch (_mode) do
+switch _mode do
 {
   case "init":
   {
@@ -46,7 +49,7 @@ switch (_mode) do
     if !(_enabled) exitWith {};
     {
       _x params ["_idc", "_type"];
-      (_display displayCtrl _idc) ctrlSetText (str count get3DENSelected _type);
+      (_display displayCtrl _idc) ctrlSetText str count get3DENSelected _type;
     } forEach [
       [IDC_STATUSBAR_NUMMARKERS, "Marker"],
       [IDC_STATUSBAR_NUMSYSTEMS, "Logic"],

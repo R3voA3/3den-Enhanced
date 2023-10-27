@@ -89,76 +89,78 @@ class Display3DEN
           idc = IDC_STATUSBAR_SESSIONTIMER;
           text = "a3\modules_f_curator\data\portraitskiptime_ca.paa";
           x = ORIGIN_X_STATUSBAR - 11 * GRID_W - 2 * SPACE_X;
-          y = 4 * pixelH;
+          y = 2 * pixelH;
         };
-        class ENH_NumberMarkers: ctrlEdit
+        class ENH_NumberMarkers: ValueY
         {
           idc = IDC_STATUSBAR_NUMMARKERS;
-          x = ORIGIN_X_STATUSBAR - 39 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 22 * GRID_W - 2 * SPACE_X;
+          //y = 2 * pixelH;
           w = 7 * GRID_W;
+          //h = 4 * GRID_H - 4 * pixelH;
           onLoad = "(_this # 0) ctrlShow false; (_this # 0) ctrlEnable false";
           style = ST_CENTER + ST_NO_RECT;
         };
         class ENH_IconMarkers: ENH_TextDir
         {
           idc = IDC_STATUSBAR_ICONMARKERS;
-          x = ORIGIN_X_STATUSBAR - 42 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 25 * GRID_W - 2 * SPACE_X;
           onLoad = "(_this # 0) ctrlShow false";
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeMarkers_ca.paa";
         };
         class ENH_NumberSystems: ENH_NumberMarkers
         {
           idc = IDC_STATUSBAR_NUMSYSTEMS;
-          x = ORIGIN_X_STATUSBAR - 49 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 32 * GRID_W - 2 * SPACE_X;
         };
         class ENH_IconSystems: ENH_IconMarkers
         {
           idc = IDC_STATUSBAR_ICONSYSTEMS;
-          x = ORIGIN_X_STATUSBAR - 52 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 35 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeModules_ca.paa";
         };
         class ENH_NumberWaypoints: ENH_NumberMarkers
         {
           idc = IDC_STATUSBAR_NUMWAYPOINTS;
-          x = ORIGIN_X_STATUSBAR - 59 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 42 * GRID_W - 2 * SPACE_X;
         };
         class ENH_IconWaypoints: ENH_IconMarkers
         {
           idc = IDC_STATUSBAR_ICONWAYPOINTS;
-          x = ORIGIN_X_STATUSBAR - 62 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 45 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeWaypoints_ca.paa";
         };
         class ENH_NumberTriggers: ENH_NumberMarkers
         {
           idc = IDC_STATUSBAR_NUMTRIGGERS;
-          x = ORIGIN_X_STATUSBAR - 69 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 52 * GRID_W - 2 * SPACE_X;
         };
         class ENH_IconTriggers: ENH_IconMarkers
         {
           idc = IDC_STATUSBAR_ICONTRIGGERS;
-          x = ORIGIN_X_STATUSBAR - 72 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 55 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeTriggers_ca.paa";
         };
         class ENH_NumberGroups: ENH_NumberMarkers
         {
           idc = IDC_STATUSBAR_NUMGROUPS;
-          x = ORIGIN_X_STATUSBAR - 79 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 62 * GRID_W - 2 * SPACE_X;
         };
         class ENH_IconGroups: ENH_IconMarkers
         {
           idc = IDC_STATUSBAR_ICONGROUPS;
-          x = ORIGIN_X_STATUSBAR - 82 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 65 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeGroups_ca.paa";
         };
         class ENH_NumberObjects: ENH_NumberMarkers
         {
           idc = IDC_STATUSBAR_NUMOBJECTS;
-          x = ORIGIN_X_STATUSBAR - 89 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 72 * GRID_W - 2 * SPACE_X;
         };
         class ENH_IconObjects: ENH_IconMarkers
         {
           idc = IDC_STATUSBAR_ICONOBJECTS;
-          x = ORIGIN_X_STATUSBAR - 92 * GRID_W - 2 * SPACE_X;
+          x = ORIGIN_X_STATUSBAR - 75 * GRID_W - 2 * SPACE_X;
           text = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeObjects_ca.paa";
         };
         #endif
