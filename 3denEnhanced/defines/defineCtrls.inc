@@ -34,6 +34,7 @@ class ctrlStaticBackgroundDisable;
 class ctrlStaticBackgroundDisableTiles;
 class ctrlStaticFooter;
 class ctrlStaticFrame;
+class ctrlStaticMulti;
 class ctrlStaticOverlay;
 class ctrlStaticPicture;
 class ctrlStaticPictureKeepAspect;

@@ -292,6 +292,18 @@
         <Spanish>Registrar IDs de la entidad al portapapeles.</Spanish>
         <Russian>Скопировать ID объектов 3DEN в буфер обмена</Russian>
     </Key>
+		<Key ID="STR_ENH_CONTEXTMENU_OTHERTOOLS">
+        <English>Other Tools</English>
+        <Italian>Altri strumenti</Italian>
+        <Chinesesimp>其他工具</Chinesesimp>
+        <Chinese>其他工具</Chinese>
+        <German>Weitere Werkzeuge</German>
+        <Czech>Další nástroje</Czech>
+        <French>Autres outils</French>
+        <Polish>Inne narzędzia</Polish>
+        <Spanish>Otras herramientas</Spanish>
+        <Russian>Другие инструменты</Russian>
+    </Key>
     <Key ID="STR_ENH_FUNCTIONS_BATCHREPLACE_ERROR">
         <English>No valid Classname!</English>
         <Italian>Classname non valido!</Italian>

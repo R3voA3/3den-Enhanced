@@ -5,7 +5,7 @@ Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 Wait-Process processArma3
 
 # -----Change here-----
-$ModVersion = "7.8.3"
+$ModVersion = "7.8.5"
 # ---------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
