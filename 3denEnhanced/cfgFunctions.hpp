@@ -215,6 +215,7 @@ class CfgFunctions
       class menuStrip_removeItems;
       class statusbar_entityCounter;
       class statusbar_sessionTimer;
+      class 3DENMinimap;
     };
     class Log
     {

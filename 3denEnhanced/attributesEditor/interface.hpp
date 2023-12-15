@@ -33,6 +33,48 @@ class ENH_Interface
       expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', _value]";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', true]";
     };
+    class ENH_MinimapEnabled: ENH_ShowPanelLeft
+    {
+      displayName = "$STR_ENH_MINIMAPENABLED";
+      property = "ENH_MinimapEnabled";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', _value]; call ENH_fnc_3DENMinimap";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', true]";
+    };
+    class ENH_MinimapSize: ENH_MinimapEnabled
+    {
+      displayName = "$STR_ENH_MINIMAPSIZE";
+      property = "ENH_MinimapSize";
+      control = "Combo";
+      class Values
+      {
+        class Small
+        {
+          name = "Small";
+          value = 1;
+        };
+        class Medium
+        {
+          name = "Medium";
+          value = 2;
+        };
+        class Large
+        {
+          name = "Large";
+          value = 3;
+        };
+      };
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapSize', _value]";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapSize', 2]";
+      typeName = "NUMBER";
+    };
+    class ENH_MinimapScaleMultiplier: ENH_MinimapEnabled
+    {
+      displayName = "$STR_ENH_MINIMAPSCALEMULTIPLIER";
+      property = "ENH_MinimapScaleMultiplier";
+      control = "SliderCameraSpeedMult";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', _value]";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', 1]";
+    };
     class ENH_EntityCounter: ENH_ShowPanelLeft
     {
       displayName = "$STR_ENH_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME";

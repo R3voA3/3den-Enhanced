@@ -6684,6 +6684,36 @@
     </Key>
     <Key ID="STR_ENH_SHOWLEFTPANEL">
         <English>Show Left Panel on Start</English>
+        <Russian>Размер миниатюры</Russian>
+        <German>Minimap Größe</German>
+        <Spanish>Tamaño del minimapa</Spanish>
+        <French>Taille de la mini-carte</French>
+        <Polish>Rozmiar minimapy</Polish>
+        <Chinesesimp>最小地图尺寸</Chinesesimp>
+        <Chinese>最小地图尺寸</Chinese>
+    </Key>
+    <Key ID="STR_ENH_MINIMAPSCALEMULTIPLIER">
+        <English>Minimap Scale Multiplier</English>
+        <Russian>Включить мини-картинку</Russian>
+        <German>Minimap einschalten</German>
+        <Spanish>Activar minimapa</Spanish>
+        <French>Activer la Minimap</French>
+        <Polish>Włącz minimapę</Polish>
+        <Chinesesimp>启用小地图</Chinesesimp>
+        <Chinese>启用小地图</Chinese>
+    </Key>
+		<Key ID="STR_ENH_MINIMAPENABLED">
+        <English>Enable Minimap</English>
+        <Russian>Показывать левую панель при запуске</Russian>
+        <German>Linkes Panel beim Start anzeigen</German>
+        <Spanish>Mostrar panel izquierdo al inicio</Spanish>
+        <French>Afficher le panel de gauche au lancement</French>
+        <Polish>Pokaż lewy panel przy starcie</Polish>
+        <Chinesesimp>启动时显示左面板</Chinesesimp>
+        <Chinese>啟動時顯示左面板</Chinese>
+    </Key>
+    <Key ID="STR_ENH_MINIMAPSIZE">
+        <English>Minimap Size</English>
         <Russian>Показывать левую панель при запуске</Russian>
         <German>Linkes Panel beim Start anzeigen</German>
         <Spanish>Mostrar panel izquierdo al inicio</Spanish>

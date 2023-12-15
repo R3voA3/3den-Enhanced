@@ -1,3 +1,7 @@
+#v7.8.6
+## ADDED
+- Added a Minimap to Eden Editor. Can be disabled in the Editor preferences
+
 #v7.8.5
 ## CHANGED
 - Fixed entity counter
