@@ -1,7 +1,9 @@
-# v7.8.5
+# wv7.8.6
 ## ADDED
+- Added a Minimap to Eden Editor. Can be disabled in the Editor preferences
 - Backup of mission.sqm now supports custom path outside of mission folder (Thanks to klausman)
 
+# v7.8.5
 ## CHANGED
 - Fixed entity counter
 
