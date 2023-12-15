@@ -17,16 +17,12 @@
   -
 */
 
+params [["_doCleanUp", false]];
+
 #include "\3denEnhanced\defines\defineCommon.inc"
 #define PREF(B) ("Preferences" get3DENMissionAttribute B)
 
-private _index = diag_allMissionEventHandlers find "EachFrame";
-diag_log format ["No. of EachFrame EHs: %1", diag_allMissionEventHandlers select (_index + 1)];
-systemChat format ["No. of EachFrame EHs: %1", diag_allMissionEventHandlers select (_index + 1)];
-
-if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {call ENH_fnc_3DENMinimap_cleanUp};
-
-ENH_fnc_3DENMinimap_cleanUp =
+if (_doCleanUp) exitWith
 {
   ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_MAP);
   ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND);
@@ -40,8 +36,10 @@ ENH_fnc_3DENMinimap_cleanUp =
   };
 };
 
+if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {true call ENH_fnc_3DENMinimap};
+
 //Make sure to clean up first
-call ENH_fnc_3DENMinimap_cleanUp;
+true call ENH_fnc_3DENMinimap;
 
 findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
 
@@ -50,7 +48,7 @@ _ctrlMap ctrlEnable false;
 
 private _ehID = addMissionEventHandler ["EachFrame",
 {
-  if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {call ENH_fnc_3DENMinimap_cleanUp};
+  if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {true call ENH_fnc_3DENMinimap};
 
   private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
