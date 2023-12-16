@@ -71,7 +71,7 @@ class ENH_Interface
     {
       displayName = "$STR_ENH_MINIMAPSCALEMULTIPLIER";
       property = "ENH_MinimapScaleMultiplier";
-      control = "SliderCameraSpeedMult";
+      control = "ENH_SliderMulti120";
       expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', _value]";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', 1]";
     };

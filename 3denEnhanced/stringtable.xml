@@ -6722,6 +6722,16 @@
         <Chinesesimp>启动时显示左面板</Chinesesimp>
         <Chinese>啟動時顯示左面板</Chinese>
     </Key>
+		<Key ID="STR_ENH_ADJUSTMINIMAPSIZE">
+        <English>Adjust Minimap Size</English>
+        <Russian>Настройка размера миниатюры</Russian>
+        <German>Minimapgröße ändern</German>
+        <Spanish>Ajustar el tamaño del minimapa</Spanish>
+        <French>Ajuster la taille de la mini-map</French>
+        <Polish>Dostosuj rozmiar minimapy</Polish>
+        <Chinesesimp>调整最小地图尺寸</Chinesesimp>
+        <Chinese>调整最小地图尺寸</Chinese>
+    </Key>
     <Key ID="STR_ENH_MINIMAPSIZE">
         <English>Minimap Size</English>
 				<Russian>Размер миниатюры</Russian>
