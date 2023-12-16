@@ -44,4 +44,4 @@ call ENH_fnc_dynamicViewDistance;
 #endif
 
 //Enable Minimap
-call ENH_fnc_3DENMinimap;
+"init" call ENH_fnc_3DENMinimap;
