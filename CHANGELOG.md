@@ -1,6 +1,10 @@
 #v7.8.6
 ## ADDED
-- Added a Minimap to Eden Editor. Can be disabled in the Editor preferences
+- Added a Minimap to Eden Editor. Can be disabled in the Editor preferences and toggled via SHIFT + M
+
+## CHANGED
+- Fixed SPR attribute would be saved to mission.sqm even though it was not enabled to begin with
+- Fixed Dynamic Skill attribute would be saved to mission.sqm even though it was not enabled to begin with
 
 #v7.8.5
 ## CHANGED
