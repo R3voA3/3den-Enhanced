@@ -1,7 +1,11 @@
-# wv7.8.6
+# v7.8.6
 ## ADDED
 - Added a Minimap to Eden Editor. Can be disabled in the Editor preferences
 - Backup of mission.sqm now supports custom path outside of mission folder (Thanks to klausman)
+
+## CHANGED
+- Fixed SPR attribute would be saved to mission.sqm even though it was not enabled to begin with
+- Fixed Dynamic Skill attribute would be saved to mission.sqm even though it was not enabled to begin with
 
 # v7.8.5
 ## CHANGED
