@@ -20,7 +20,6 @@
 params [["_mode", "init"]];
 
 #include "\3denEnhanced\defines\defineCommon.inc"
-#define PREF(B) ("Preferences" get3DENMissionAttribute B)
 
 switch _mode do
 {
@@ -39,7 +38,7 @@ switch _mode do
   };
   case "init":
   {
-    if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
+    if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
 
     //Make sure to clean up first
     "exit" call ENH_fnc_3DENMinimap;
@@ -51,21 +50,21 @@ switch _mode do
 
     private _ehID = addMissionEventHandler ["EachFrame",
     {
-      if (!is3DEN || !PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
+      if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
 
       private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
       _ctrlMap = _display3DEN displayCtrl IDC_3DEN_MINIMAP_MAP;
       _ctrlBackground = _display3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND;
 
-      private _show = get3DENActionState "ToggleMap" != 1;
+      private _hide = get3DENActionState "ToggleMap" == 1 || round ctrlFade (_display3DEN displayCtrl IDC_DISPLAY3DEN_PLAY) > 0;
 
-      _ctrlMap ctrlShow _show;
-      _ctrlBackground ctrlShow _show;
+      _ctrlMap ctrlShow !_hide;
+      _ctrlBackground ctrlShow !_hide;
 
-      private _scale = linearConversion [0, 1000, getPosATL get3DENCamera # 2, 0.05, 1, true] * PREF("ENH_MinimapScaleMultiplier");
+      private _scale = linearConversion [0, 1000, getPosATL get3DENCamera # 2, 0.05, 1, true] * G_PREF("ENH_MinimapScaleMultiplier");
 
-      private _position = switch PREF("ENH_MinimapSize") do
+      private _position = switch G_PREF("ENH_MinimapSize") do
       {
         case 1: //Small
         {
@@ -120,7 +119,23 @@ switch _mode do
   };
   case "toggleFromMenu":
   {
-    //Switching the state of the attribute also executes the code set in the preferences
-    "Preferences" set3DENMissionAttribute ["ENH_MinimapEnabled", !PREF("ENH_MinimapEnabled")];
+    //Switching the state of the attribute also executes the code set in the G_PREFerences
+    S_PREF("ENH_MinimapEnabled", !G_PREF("ENH_MinimapEnabled"));
+  };
+  case "AdjustSizeFromMenu":
+  {
+    private _currSize = G_PREF("ENH_MinimapSize");
+
+    if (_currSize == 3) then
+    {
+      _currSize = 1;
+    }
+    else
+    {
+      _currSize = _currSize + 1;
+    };
+
+    //Switching the state of the attribute also executes the code set in the G_PREFerences
+    S_PREF("ENH_MinimapSize", _currSize);
   };
 };
