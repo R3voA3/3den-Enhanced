@@ -37,7 +37,7 @@ class ENH_Interface
     {
       displayName = "$STR_ENH_MINIMAPENABLED";
       property = "ENH_MinimapEnabled";
-      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', _value]; call ENH_fnc_3DENMinimap";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', _value]; 'init' call ENH_fnc_3DENMinimap";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', true]";
     };
     class ENH_MinimapSize: ENH_MinimapEnabled

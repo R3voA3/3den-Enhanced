@@ -171,6 +171,18 @@ class Display3DEN
       class Items
       {
         items[] += {"ENH_About"};
+
+        class Interface
+        {
+          items[] += {"ENH_ToggleMinimap"};
+        };
+        class ENH_ToggleMinimap
+        {
+          text = "$STR_ENH_TOGGLEMINIMAP";
+          action = "'toggleFromMenu' call ENH_fnc_3DENMinimap";
+          shortcuts[] = {INPUT_SHIFT_OFFSET + DIK_M};
+        };
+
         #include "menuStrip_about.hpp"
         #include "menuStrip_tools.hpp"
         #include "menuStrip_help.hpp"

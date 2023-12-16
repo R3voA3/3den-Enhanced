@@ -6684,13 +6684,23 @@
     </Key>
     <Key ID="STR_ENH_SHOWLEFTPANEL">
         <English>Show Left Panel on Start</English>
-        <Russian>Размер миниатюры</Russian>
-        <German>Minimap Größe</German>
-        <Spanish>Tamaño del minimapa</Spanish>
-        <French>Taille de la mini-carte</French>
-        <Polish>Rozmiar minimapy</Polish>
-        <Chinesesimp>最小地图尺寸</Chinesesimp>
-        <Chinese>最小地图尺寸</Chinese>
+        <Russian>Показывать левую панель при запуске</Russian>
+        <German>Linkes Panel beim Start anzeigen</German>
+        <Spanish>Mostrar panel izquierdo al inicio</Spanish>
+        <French>Afficher le panel de gauche au lancement</French>
+        <Polish>Pokaż lewy panel przy starcie</Polish>
+        <Chinesesimp>启动时显示左面板</Chinesesimp>
+        <Chinese>啟動時顯示左面板</Chinese>
+    </Key>
+		<Key ID="STR_ENH_TOGGLEMINIMAP">
+        <English>Toggle Minimap</English>
+        <Russian>Переключение миниатюрной карты</Russian>
+        <German>Minimap umschalten</German>
+        <Spanish>Activar minimapa</Spanish>
+        <French>Basculer la Minimap</French>
+        <Polish>Przełącz minimapę</Polish>
+        <Chinesesimp>切换最小地图</Chinesesimp>
+        <Chinese>切换最小地图</Chinese>
     </Key>
     <Key ID="STR_ENH_MINIMAPSCALEMULTIPLIER">
         <English>Minimap Scale Multiplier</English>
@@ -6714,13 +6724,13 @@
     </Key>
     <Key ID="STR_ENH_MINIMAPSIZE">
         <English>Minimap Size</English>
-        <Russian>Показывать левую панель при запуске</Russian>
-        <German>Linkes Panel beim Start anzeigen</German>
-        <Spanish>Mostrar panel izquierdo al inicio</Spanish>
-        <French>Afficher le panel de gauche au lancement</French>
-        <Polish>Pokaż lewy panel przy starcie</Polish>
-        <Chinesesimp>启动时显示左面板</Chinesesimp>
-        <Chinese>啟動時顯示左面板</Chinese>
+				<Russian>Размер миниатюры</Russian>
+        <German>Minimap Größe</German>
+        <Spanish>Tamaño del minimapa</Spanish>
+        <French>Taille de la mini-carte</French>
+        <Polish>Rozmiar minimapy</Polish>
+        <Chinesesimp>最小地图尺寸</Chinesesimp>
+        <Chinese>最小地图尺寸</Chinese>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_NORECOIL">
         <English>Disable Weapon Recoil</English>

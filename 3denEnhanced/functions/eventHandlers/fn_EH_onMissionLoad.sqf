@@ -62,4 +62,4 @@ addMissionEventHandler ["EachFrame",
 #endif
 
 //Enable Minimap
-call ENH_fnc_3DENMinimap;
+"init" call ENH_fnc_3DENMinimap;
