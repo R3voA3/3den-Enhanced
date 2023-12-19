@@ -49,17 +49,17 @@ class ENH_Interface
       {
         class Small
         {
-          name = "Small";
+          name = "$STR_SMALL";
           value = 1;
         };
         class Medium
         {
-          name = "Medium";
+          name = "$STR_MEDIUM";
           value = 2;
         };
         class Large
         {
-          name = "Large";
+          name = "$STR_LARGE";
           value = 3;
         };
       };
@@ -71,7 +71,7 @@ class ENH_Interface
     {
       displayName = "$STR_ENH_MINIMAPSCALEMULTIPLIER";
       property = "ENH_MinimapScaleMultiplier";
-      control = "ENH_SliderMulti120";
+      control = "SliderCameraSpeedMult";
       expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', _value]";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapScaleMultiplier', 1]";
     };
