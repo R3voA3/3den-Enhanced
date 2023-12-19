@@ -69,7 +69,7 @@ switch _mode do
         case 1: //Small
         {
           [
-            safezoneX + safeZoneW - 94 * GRID_W,
+            safezoneX + 62 * GRID_W,
             safezoneY + 14 * GRID_H,
             32 * GRID_W,
             32 * GRID_H
@@ -78,7 +78,7 @@ switch _mode do
         case 3: //Large
         {
           [
-            safezoneX + safeZoneW - 154 * GRID_W,
+            safezoneX + 62 * GRID_W,
             safezoneY + 14 * GRID_H,
             92 * GRID_W,
             92 * GRID_H
@@ -87,7 +87,7 @@ switch _mode do
         default //Medium
         {
           [
-            safezoneX + safeZoneW - 124 * GRID_W,
+            safezoneX + 62 * GRID_W,
             safezoneY + 14 * GRID_H,
             62 * GRID_W,
             62 * GRID_H
@@ -95,13 +95,13 @@ switch _mode do
         };
       };
 
-      if !(profileNamespace getVariable ["display3DEN_panelRight", true]) then
+      if !(profileNamespace getVariable ["display3DEN_panelLeft", true]) then
       {
-        _position set [0, _position # 0 + 54 * GRID_W];
+        _position set [0, _position # 0 - 54 * GRID_W];
       };
 
       _ctrlMap ctrlMapSetPosition _position;
-      _ctrlMap ctrlMapAnimAdd [0, _scale, getPosASL get3DENCamera];
+      _ctrlMap ctrlMapAnimAdd [0, _scale, getPosWorld get3DENCamera];
       ctrlMapAnimCommit _ctrlMap;
 
       _ctrlBackground ctrlSetPosition
