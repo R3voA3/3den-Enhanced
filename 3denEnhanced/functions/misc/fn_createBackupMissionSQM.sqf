@@ -32,9 +32,19 @@ if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 
 if !(fileExists "mission.sqm") exitWith {false};
 
-private _root = getMissionPath "";
+private _missionRoot = getMissionPath "";
+private _backupRoot = profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMPath', ""];
+private _prefix = "";
+
+if (_backupRoot == "") then
+{
+  _backupRoot = _missionRoot + ".enh_mission_sqm_backups";
+} else {
+  // If we dump all backups into one dir, we should add some prefix for convenience
+  _prefix = missionName + "_";
+};
 private _sysTimeFormatted = systemTime apply {str _x} joinString "_";
 
-["ENH_Pythia.BackupMissionSQM", [_root, _sysTimeFormatted]] call (uiNamespace getVariable "py3_fnc_callExtension");
+["ENH_Pythia.BackupMissionSQM", [_missionRoot, _backupRoot, _prefix, _sysTimeFormatted]] call (uiNamespace getVariable "py3_fnc_callExtension");
 
 true
