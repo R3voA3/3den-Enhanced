@@ -24,6 +24,7 @@ class ctrlEdit;
 class ctrlEditMulti;
 class ctrlListbox;
 class ctrlListNBox;
+class ctrlMap;
 class ctrlMenu;
 class ctrlMenuStrip;
 class ctrlProgress;
