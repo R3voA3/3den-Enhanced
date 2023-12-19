@@ -27,6 +27,7 @@ switch _mode do
   {
     ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_MAP);
     ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND);
+    ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER);
 
     private _ehID = uiNamespace getVariable ["ENH_3DENMiniMap_EH", -1];
 
@@ -45,8 +46,16 @@ switch _mode do
 
     findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
 
-    private _ctrlMap = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlMap", IDC_3DEN_MINIMAP_MAP];
+    private _ctrlMap = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ENH_3DENMinimap"/* "ctrlMap" */, IDC_3DEN_MINIMAP_MAP];
     _ctrlMap ctrlEnable false;
+
+    //After previewing, the player position indicator is conde (engine bug?). So we create our own
+    private _ctrlImage = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
+    _ctrlImage ctrlSetText "a3\ui_f\data\gui\rsc\rscdisplaymissioneditor\iconcamera_ca.paa";
+    _ctrlImage ctrlSetTextColor [0.7, 0.09, 0, 1];
+
+    //This hides the cirle that indicates player position.
+    disableMapIndicators [true, true, true, true];
 
     private _ehID = addMissionEventHandler ["EachFrame",
     {
@@ -56,13 +65,17 @@ switch _mode do
 
       _ctrlMap = _display3DEN displayCtrl IDC_3DEN_MINIMAP_MAP;
       _ctrlBackground = _display3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND;
+      _ctrlImage = _display3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER;
 
       private _hide = get3DENActionState "ToggleMap" == 1 || round ctrlFade (_display3DEN displayCtrl IDC_DISPLAY3DEN_PLAY) > 0;
 
       _ctrlMap ctrlShow !_hide;
       _ctrlBackground ctrlShow !_hide;
+      _ctrlImage ctrlShow !_hide;
 
-      private _scale = linearConversion [0, 1000, getPosATL get3DENCamera # 2, 0.05, 1, true] * G_PREF("ENH_MinimapScaleMultiplier");
+      if _hide then {continue};
+
+      private _scale = linearConversion [0, 1000 * G_PREF("ENH_MinimapScaleMultiplier"), getPosASL get3DENCamera # 2, 0.001, 3, true];
 
       private _position = switch G_PREF("ENH_MinimapSize") do
       {
@@ -113,6 +126,18 @@ switch _mode do
       ];
 
       _ctrlBackground ctrlCommit 0;
+
+      _ctrlImage ctrlSetPosition
+      [
+        ctrlPosition _ctrlBackground # 0 + ctrlPosition _ctrlBackground # 2 / 2 - 2.5 * GRID_W,
+        ctrlPosition _ctrlBackground # 1 + ctrlPosition _ctrlBackground # 3 / 2 - 2.5 * GRID_H,
+        5 * GRID_W,
+        5 * GRID_H
+      ];
+
+      _ctrlImage ctrlSetAngle [getDir get3DENCamera, 0.5, 0.5, true];
+
+      _ctrlImage ctrlCommit 0;
     }];
 
     uiNamespace setVariable ["ENH_3DENMiniMap_EH", _ehID];
