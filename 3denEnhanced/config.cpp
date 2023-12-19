@@ -40,3 +40,8 @@
 #include "GUI\RscDebugConsole.hpp"
 #include "GUI\display3DENSave.hpp"
 #include "GUI\display3DENPublishMissionSelectImage.hpp"
+
+class ENH_3DENMinimap: ctrlMap
+{
+  scaleMax = 3;
+};
