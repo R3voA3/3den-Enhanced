@@ -43,8 +43,14 @@ function Update-SQFC
 
 function Update-Build
 {
-  #Build, using ´" to turn arguments into strings
-  Start-Process -FilePath ("$ToolsFolder\AddonBuilder\AddonBuilder.exe") -argumentList "`"$ProjectFolder\3denEnhanced`" `"$TargetFolder\addons`" `"-sign=$ProjectFolder\3denEnhanced.biprivatekey`" -packonly -prefix=`"3denEnhanced`""
+	if ($DoPublish -eq "true")
+	{
+		Start-Process -FilePath ("$ToolsFolder\AddonBuilder\AddonBuilder.exe") -argumentList "`"$ProjectFolder\3denEnhanced`" `"$TargetFolder\addons`" `"-sign=$ProjectFolder\3denEnhanced.biprivatekey`" -packonly -prefix=`"3denEnhanced`""
+	}
+	else
+	{
+		Start-Process -FilePath ("$ToolsFolder\AddonBuilder\AddonBuilder.exe") -argumentList "`"$ProjectFolder\3denEnhanced`" `"$TargetFolder\addons`" -packonly -prefix=`"3denEnhanced`""
+	}
 }
 
 function Update-Workshop
@@ -93,9 +99,4 @@ if ($DoPublish -eq "true")
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
 
-<# if (Test-Path -Path "${env:OneDrive}\Desktop\ENH.lnk")
-{
-  Start-Process -FilePath "${env:OneDrive}\Desktop\ENH.lnk"
-} #>
-
-Start-Process "C:\Program Files (x86)\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-debug -par=`"C:\Users\rober\OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;C:\Program Files (x86)\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"C:\Users\rober\OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
+Start-Process "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-debug -par=`"$env:OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"$env:OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
