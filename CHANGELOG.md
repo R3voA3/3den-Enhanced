@@ -1,4 +1,7 @@
 # v7.8.5
+## ADDED
+- Backup of mission.sqm now supports custom path outside of mission folder (Thanks to klausman)
+
 ## CHANGED
 - Fixed entity counter
 
