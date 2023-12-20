@@ -7204,6 +7204,28 @@
         <Italian>Se abilitato, un backup della missione.sqm verrà creato quando lo scenario viene salvato o autosalvato.\nIl backup viene salvato all'interno della cartella dello scenario.\nPer far funzionare questo meccanismo di backup è necessaria la modifica di Pythia.\nMa assicuratevi di fare un backup del vostro scenario prima di abilitare questa opzione per la prima volta!</Italian>
         <Polish>Jeśli opcja ta jest włączona, kopia zapasowa pliku mission.sqm zostanie utworzona podczas zapisywania lub automatycznego zapisywania scenariusza. Kopie zapasowe są zapisywane w folderze scenariusza. Aby ten mechanizm tworzenia kopii zapasowych działał, wymagana jest modyfikacja Pythia. Upewnij się, że utworzyłeś kopię zapasową scenariusza przed włączeniem tej opcji po raz pierwszy!</Polish>
     </Key>
+		<Key ID="STR_ENH_BACKUPMISSIONSQMPATH_DISPLAYNAME">
+        <English>Path for mission backups</English>
+        <Russian>Путь для резервных копий миссий</Russian>
+        <German>Pfad für Mission-Backups</German>
+        <French>Chemin pour les sauvegardes de missions</French>
+        <Spanish>Ruta de las copias de seguridad de la misión</Spanish>
+        <Chinesesimp>任务备份路径</Chinesesimp>
+        <Chinese>任务备份路径</Chinese>
+        <Italian>Percorso per i backup delle missioni</Italian>
+        <Polish>Ścieżka dla kopii zapasowych misji</Polish>
+    </Key>
+		<Key ID="STR_ENH_BACKUPMISSIONSQMPATH_TOOLTIP">
+        <English>If empty, save to .enh_mission_sqm_backups in the mission directory.\n\nTo save outside, use a full path, e.g. C:\\Arma 3 Mission Backups\n\nMake sure you have write permission in that directory!</English>
+        <Russian>Если пусто, сохраните в .enh_mission_sqm_backups в каталоге миссии.\n\nДля сохранения вне каталога используйте полный путь, например, C:\\Arma 3 Mission Backups\n\nУбедитесь, что у вас есть права на запись в этом каталоге!</Russian>
+        <German>Falls leer, werden die Backups im Missionsverzeichnis im Ordner .enh_mission_sqm_backups erstellt.\n\nUm außerhalb zu speichern, verwenden Sie einen absoluten Pfad, z.B. C:\\Arma 3 Mission Backups\n\nStellen Sie sicher, dass Sie Schreibrechte in diesem Verzeichnis haben!</German>
+        <French>S'il est vide, enregistrez-le dans .enh_mission_sqm_backups dans le répertoire de la mission.\n\nPour l'enregistrer à l'extérieur, utilisez un chemin complet, par exemple C:\\Arma 3 Mission Backups.\n\nAssurez-vous d'avoir les droits d'écriture dans ce répertoire !</French>
+        <Spanish>Si está vacío, guárdelo en .enh_mission_sqm_backups en el directorio de la misión.\n\nPara guardarlo fuera, utilice una ruta completa, por ejemplo, C:\Arma 3 Mission Backups\n\n¡Asegúrese de tener permiso de escritura en ese directorio!</Spanish>
+        <Chinesesimp>如果为空，请保存到任务目录下的 .enh_mission_sqm_backups 中。如果要保存到外部，请使用完整路径，例如 C:\Arma 3 Mission Backups\n\n确保您拥有该目录的写入权限！ 确保您拥有该目录的写入权限。</Chinesesimp>
+        <Chinese>如果为空，请保存到任务目录下的 .enh_mission_sqm_backups 中。如果要保存到外部，请使用完整路径，例如 C:\Arma 3 Mission Backups\n\n确保您拥有该目录的写入权限！ 确保您拥有该目录的写入权限。</Chinese>
+        <Italian>Se è vuoto, salvare in .enh_mission_sqm_backups nella directory della missione.\n\nPer salvare all'esterno, utilizzare un percorso completo, ad esempio C:\\Arma 3 Mission Backups\n\nAssicurarsi di avere i permessi di scrittura in quella directory!</Italian>
+        <Polish>Jeśli jest pusty, zapisz go w .enh_mission_sqm_backups w katalogu misji. Aby zapisać go poza nim, użyj pełnej ścieżki, np. C:\\Arma 3 Mission Backups\n\nUpewnij się, że masz uprawnienia do zapisu w tym katalogu!</Polish>
+    </Key>
     <Key ID="STR_ENH_DYNAMICVIEWDISTANCE_TOOLTIP">
         <English>View distance and object view distance will be changed according to camera height. This option might cause performance issues on weak systems.</English>
         <Russian>Дальность прорисовки и дальность прорисовки объектов будут изменены в зависимости от высоты камеры. Этот параметр может вызвать проблемы с производительностью на слабых системах.</Russian>
