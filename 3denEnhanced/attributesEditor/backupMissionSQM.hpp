@@ -9,10 +9,10 @@ class ENH_BackupMissionSQM
 };
 class ENH_BackupMissionSQMPath
 {
-  displayName = "Path for mission backups"; // TODO: i18n
-  tooltip = "If empty, save to .enh_mission_sqm_backups in the mission directory. To save outside, use a full path, e.g. C:\\temp"; // TODO: i18n
+  displayName = "$STR_ENH_BACKUPMISSIONSQMPATH_DISPLAYNAME";
+  tooltip = "$STR_ENH_BACKUPMISSIONSQMPATH_TOOLTIP";
   property = "ENH_BackupMissionSQMPath";
-  control = "EditShort";
+  control = "Edit";
   expression = "profileNamespace setVariable ['ENH_EditorPreferences_BackupMissionSQMPath', _value]";
   defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMPath', '']";
 };

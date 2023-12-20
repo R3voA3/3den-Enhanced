@@ -18,12 +18,12 @@
 if (!is3DEN) exitWith {false};
 
 //Opt-in via preferences
-if !(profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQM', false]) exitWith {};
+if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) exitWith {};
 
 //Pythia is needed
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-  if (profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQM', false]) then
+  if (profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) then
   {
     ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
   };
@@ -33,16 +33,19 @@ if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 if !(fileExists "mission.sqm") exitWith {false};
 
 private _missionRoot = getMissionPath "";
-private _backupRoot = profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMPath', ""];
+private _backupRoot = profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQMPath", ""];
 private _prefix = "";
 
 if (_backupRoot == "") then
 {
   _backupRoot = _missionRoot + ".enh_mission_sqm_backups";
-} else {
-  // If we dump all backups into one dir, we should add some prefix for convenience
-  _prefix = missionName + "_";
+}
+else
+{
+  //If we dump all backups into one dir, we should add some prefix for convenience
+  _prefix = format ["%1.%2_", missionName, worldName]; //"scriptLibrary.VR_"
 };
+
 private _sysTimeFormatted = systemTime apply {str _x} joinString "_";
 
 ["ENH_Pythia.BackupMissionSQM", [_missionRoot, _backupRoot, _prefix, _sysTimeFormatted]] call (uiNamespace getVariable "py3_fnc_callExtension");
