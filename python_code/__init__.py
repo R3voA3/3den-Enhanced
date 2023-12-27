@@ -51,4 +51,4 @@ def BackupMissionSQM(missionroot, backuproot, prefix, timestamp):
   if (not os.path.exists(backupFolderPath)):
     os.makedirs (backupFolderPath)
 
-  shutil.copyfile(missionroot + "\\mission.sqm", backuproot + "\\"+ prefix+"mission.sqm" + "_" + timestamp)
+  shutil.copyfile(missionroot + "\\mission.sqm", backuproot + "\\"+ prefix + "mission.sqm" + "_" + timestamp)
