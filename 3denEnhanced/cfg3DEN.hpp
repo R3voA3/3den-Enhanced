@@ -132,7 +132,7 @@ class Cfg3DEN
     #include "controls\menuStripBlacklist.hpp"
     #include "controls\missionEndingCasualties.hpp"
     #include "controls\subCategoryNoHeader_Fixed.hpp"
-    #include "controls\timeMultiplier.hpp"
+    #include "controls\sliderMulti120.hpp"
   };
   class Mission
   {

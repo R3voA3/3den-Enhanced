@@ -167,6 +167,7 @@ class CfgFunctions
     class Misc
     {
       file = "3denEnhanced\functions\Misc";
+      class VHCTools;
       class alignEntities;
       class all3DENSelected;
       class centerMapOnSelection;
@@ -179,6 +180,7 @@ class CfgFunctions
       class getAllItems;
       class getConfigSourceAddon;
       class hasStorage;
+      class highlightAreaMarkers;
       class loadoutTool;
       class measureDistance;
       class pylonTools;
@@ -203,7 +205,6 @@ class CfgFunctions
       class toggleDrawHitpoints;
       class toggleGrass;
       class toggleMarkerAlpha;
-      class VHCTools;
     };
     class Interface
     {
@@ -215,6 +216,7 @@ class CfgFunctions
       class menuStrip_removeItems;
       class statusbar_entityCounter;
       class statusbar_sessionTimer;
+      class 3DENMinimap;
     };
     class Log
     {

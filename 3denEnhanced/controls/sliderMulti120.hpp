@@ -1,4 +1,4 @@
-class ENH_TimeMultiplier: Title
+class ENH_SliderMulti120: Title
 {
   attributeLoad = "[_this, _value] call ENH_fnc_slider_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_slider_onAttributeSave";

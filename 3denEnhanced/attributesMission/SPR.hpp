@@ -155,7 +155,7 @@ class ENH_SPR
           _unit call ENH_fnc_SPR_respawn;\
         };\
       }";
-      defaultValue = "[0, 20, false, false]";
+      defaultValue = "[0, 20, false, false, '']";
     };
   };
 };

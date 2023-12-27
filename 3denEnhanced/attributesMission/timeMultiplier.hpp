@@ -2,12 +2,12 @@ class Date
 {
   class Attributes
   {
-    class ENH_TimeMultiplier
+    class ENH_SliderMulti120
     {
       displayName = "$STR_ENH_TIMEMULTIPLIER_DISPLAYNAME";
       tooltip = "$STR_ENH_TIMEMULTIPLIER_TOOLTIP";
       property = "ENH_timeMultiplier";
-      control = "ENH_TimeMultiplier";
+      control = "ENH_SliderMulti120";
       expression = "if (!is3DEN && isServer && _value != 1) then {setTimeMultiplier _value}";
       defaultValue = "1";
     };

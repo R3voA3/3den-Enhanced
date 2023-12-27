@@ -31,6 +31,15 @@
 #define ORIGIN_X_STATUSBAR (safezoneW - 60 * GRID_W)
 
 #define CTRL(IDC) (_display displayCtrl IDC)
+#define G_PREF(A) ("Preferences" get3DENMissionAttribute A)
+
+#if __GAME_VER_MAJ__ >= 16
+  #define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B]; save3DENPreferences)
+#else
+  #define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B]; save3DENPreferences)
+#endif
+
+#define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B])
 
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
@@ -41,6 +50,10 @@
 #define SOUND_FEEDBACK "FD_Finish_F"
 
 //3den Enhanced specific IDDs and IDCs
+#define IDC_3DEN_MINIMAP_MAP 71500
+#define IDC_3DEN_MINIMAP_BACKGROUND 71501
+#define IDC_3DEN_MINIMAP_CENTER 71502
+
 #define IDD_3DENRADIO 60000
 #define IDC_3DENRADIO_CURRENTSONG 700
 #define IDC_3DENRADIO_FILTER 200

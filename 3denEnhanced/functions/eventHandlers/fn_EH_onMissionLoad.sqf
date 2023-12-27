@@ -60,3 +60,6 @@ addMissionEventHandler ["EachFrame",
   findDisplay 313 displayCtrl 681 ctrlSetText _dir;
 }];
 #endif
+
+//Enable Minimap
+"init" call ENH_fnc_3DENMinimap;
