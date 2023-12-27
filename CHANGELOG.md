@@ -2,6 +2,7 @@
 ## ADDED
 - Added a Minimap to Eden Editor. Can be disabled in the Editor preferences
 - Backup of mission.sqm now supports custom path outside of mission folder (Thanks to klausman)
+- Added tool to show area markers in 3D space via triggers to the menu strip
 
 ## CHANGED
 - Fixed SPR attribute would be saved to mission.sqm even though it was not enabled to begin with

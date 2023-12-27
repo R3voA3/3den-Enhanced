@@ -6722,6 +6722,9 @@
         <Chinesesimp>启动时显示左面板</Chinesesimp>
         <Chinese>啟動時顯示左面板</Chinese>
     </Key>
+		<Key ID="STR_ENH_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS">
+        <English>Toggle Highlight Area Markers</English>
+    </Key>
 		<Key ID="STR_ENH_ADJUSTMINIMAPSIZE">
         <English>Adjust Minimap Size</English>
         <Russian>Настройка размера миниатюры</Russian>
