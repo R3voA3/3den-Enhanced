@@ -23,8 +23,6 @@ if (!is3DENPreview) exitWith {};
 //Small delay to give scenario time to fully initialize
 waitUntil {sleep 1; !isNull player};
 
-diag_log "3den Enhanced: Debug Options initialized.";
-
 if GETVALUE("Arsenal") then
 {
   [
@@ -651,31 +649,6 @@ if (GETVALUE("DebugPath") > 0) then
 
 if GETVALUE("DrawTriggers") then
 {
-  //Might want to also draw them in 2D/3D, but currently, getting all trigger objects in a scenario on each frame is super slow
-  //https://discord.com/channels/105462288051380224/108187245529268224/1013445559211794513
-  /* {
-    private _colour = format ["#(rgb,8,8,3)color(%1,%2,%3,0.3)", random(1), random(1), random(1)];
-    private _borderPos = [];
-    triggerArea _x params ["_a", "_b"];
-    if (_a <= 1 || _b <= 1) then {continue};
-    for "_i" from 0 to 360 step 5 do
-    {
-      private _distance = _a min _b;
-      private _initialPos = position _x;
-      while {_initialPos inArea _x} do
-      {
-        _initialPos = _x getPos [_distance, _i];
-        _borderPos = +_initialPos;
-        _distance = _distance + 0.05;
-      };
-      for "_hOffset" from 0 to 15 step 5 do
-      {
-        ATLToASL _borderPos params ["_x", "_y", "_z"];
-        private _arrow = createSimpleObject ["Sign_Sphere25cm_F", [_x, _y, _z + _hOffset + 0.1], true];
-        _arrow setObjectTexture [0, _colour];
-      };
-    };
-  } forEach (allMissionObjects "EmptyDetector"); */
   ENH_DebugOptions_DrawTriggers_CursorPosition = [0, 0, 0];
   {
     findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
@@ -795,93 +768,96 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
   #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
   #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
   #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
+  #define OBJ_VIEW_DISTANCE round (getObjectViewDistance select 0)
 
-  ENH_dynSimDebug_RefreshedLast = diag_tickTime;
-  ENH_dynSimDebug_Text = "<t size='1.5' align='left'>Dynamic Simulation Stats</t>   <br/><br/>
-
-<t size='1.3' align='left'>Enabled/Disabled Entities</t>   <br/>
-
-<t align='left'>Enabled Units:<t/>              <t align='right'>%1 / %2</t>        <br/>
-<t align='left'>Enabled Groups:<t/>             <t align='right'>%3 / %4</t>        <br/>
-<t align='left'>Enabled Objects/Vehicles:<t/>   <t align='right'>%5 / %6</t>        <br/><br/>
-
-<t size='1.3' align='left'>Can Trigger Dyn. Simulation</t><br/>
-
-<t align='left'>No. of units:<t/>               <t align='right'>%7</t>             <br/>
-<t align='left'>No. of vehicles:<t/>            <t align='right'>%8</t>             <br/><br/>
-
-<t size='1.3' align='left'>Settings</t>                                           <br/>
-
-<t align='left'>Distance (Units/Groups):<t/>    <t align='right' color='#FFFF00'>%9 m</t>           <br/>
-<t align='left'>Distance (Vehicles):<t/>        <t align='right' color='#00FF00'>%10 m</t>           <br/>
-<t align='left'>Distance (Empty Vehicles):<t/>  <t align='right' color='#00FFFF'>%11 m</t>           <br/>
-<t align='left'>Distance (Props):<t/>           <t align='right' color='#FF00FF'>%12 m</t>           <br/>
-<t align='left'>Distance Coef. (isMoving):<t/>  <t align='right'>x%13</t>           <br/>
-<t align='left'>View Distance:<t/>              <t align='right' color='#FF0000'>%14 m</t>          <br/>
-<t align='left'>View Distance too large:<t/>    <t align='right'>%15</t><br/>
-<t align='left'>Recommended View Distance:<t/>  <t align='right'>~%16 m</t>";
-
-  ENH_dynSimDebug_markerUnitsArray = [];
-
-  {
-    _marker = "ENH_dynSimDebugMarker_" + str _forEachIndex;
-    _marker = createMarker [_marker, getPosWorld _x];
-
-    _marker setMarkerType "mil_box";
-    _marker setMarkerText configName configOf _x;
-    _marker setMarkerColor ([side _x, true] call BIS_fnc_sideColor);
-
-    ENH_dynSimDebug_markerUnitsArray pushBack [_marker, _x];
-  } forEach vehicles + allUnits;
-
-  addMissionEventHandler ["EachFrame",
-  {
-    private _recommendedViewDistance = selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8;
-
-    if (diag_tickTime - ENH_dynSimDebug_RefreshedLast > HINT_REFRESH_INTERVAL) then
-    {
-      hintSilent parseText format
-      [
-        ENH_dynSimDebug_Text,
-        UNITS_ENABLED,
-        ALL_UNITS,
-        GROUPS_ENABLED,
-        ALL_GROUPS,
-        OBJECTS_ENABLED,
-        ALL_OBJECTS,
-        CAN_TRIGGER_UNITS,
-        CAN_TRIGGER_VEHICLES,
-        DISTANCE_GROUPS_UNITS,
-        DISTANCE_VEHICLES,
-        DISTANCE_EMPTY_VEHICLES,
-        DISTANCE_PROPS,
-        DISTANCE_COEF,
-        viewDistance,
-        viewDistance > _recommendedViewDistance,
-        _recommendedViewDistance
-      ];
-      ENH_dynSimDebug_RefreshedLast = diag_tickTime;
-    };
-    if (visibleMap) then
-    {
-      ENH_dynSimDebug_markerUnitsArray apply
-      {
-        _x params ["_marker", "_leader"];
-        _marker setMarkerPos getPosWorld _leader;
-        _marker setMarkerAlpha ([0.2, 1] select simulationEnabled _leader);
-      };
-    };
-  }];
+  ENH_dynSimDebug_infoTexts =
+  [
+    [{format ["ENABLED UNITS: %1 / %2", UNITS_ENABLED, ALL_UNITS]}],
+    [{format ["ENABLED GROUPS: %1 / %2", GROUPS_ENABLED, ALL_GROUPS]}],
+    [{format ["UNITS THAT CAN TRIGGER SIMULATION: %1", CAN_TRIGGER_UNITS]}],
+    [{format ["VEHICLES THAT CAN TRIGGER SIMULATION: %1", CAN_TRIGGER_VEHICLES]}],
+    [{format ["TRIGGER DISTANCE UNITS AND GROUPS: %1 m", DISTANCE_GROUPS_UNITS]}, [1, 1, 0, 1]],
+    [{format ["TRIGGER DISTANCE VEHICLES: %1 m", DISTANCE_VEHICLES]}, [0, 1, 0, 1]],
+    [{format ["TRIGGER DISTANCE EMPTY VEHICLES: %1 m", DISTANCE_EMPTY_VEHICLES]}, [0, 1, 1, 1]],
+    [{format ["TRIGGER DISTANCE PROPS: %1 m", DISTANCE_PROPS]}, [1, 0, 1, 1]],
+    [{format ["DISTANCE COEFICIENT: x%1", DISTANCE_COEF]}],
+    [{format ["OBJECT VIEW DISTANCE: %1 m", OBJ_VIEW_DISTANCE], [1, 0, 0, 1]}],
+    [{format ["RECOMMENDED OBJECT VIEW DISTANCE: %1 m", selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8]}],
+    [{"VISIT ""https://community.bistudio.com/wiki/Arma_3:_Dynamic_Simulation"" FOR MORE INFORMATION."}]
+  ];
 
   findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
   {
     params ["_ctrlMap"];
+
     {
-      _ctrlMap drawEllipse [_x, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
-      _ctrlMap drawEllipse [_x, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
-      _ctrlMap drawEllipse [_x, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
-      _ctrlMap drawEllipse [_x, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
-      _ctrlMap drawEllipse [_x, viewDistance, viewDistance, 0, [1, 0, 0, 1], ""];//Props
-    } forEach (allUnits select {canTriggerDynamicSimulation _x});
+      if (_x isKindOf "CAManBase" && {canTriggerDynamicSimulation _x}) then
+      {
+        _ctrlMap drawEllipse [_x, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
+        _ctrlMap drawEllipse [_x, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
+        _ctrlMap drawEllipse [_x, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
+        _ctrlMap drawEllipse [_x, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
+        _ctrlMap drawEllipse [_x, OBJ_VIEW_DISTANCE, OBJ_VIEW_DISTANCE, 0, [1, 0, 0, 1], ""];//Props
+      };
+
+      //Crew members inherit simulation from vehicle
+      if !(isNull objectParent _x) then {continue};
+
+      if !(_x getVariable ["ENH_DynSim_Registered", false]) then
+      {
+        private _icon = getText (configOf _x >> "icon");
+
+        if !(fileExists _icon) then
+        {
+          _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+        };
+
+        if !(fileExists _icon) then
+        {
+          _icon = "a3\ui_f\data\map\vehicleicons\iconvehicle_ca.paa";
+        };
+
+        _x setVariable ["ENH_DynSim_Registered", true];
+        _x setVariable ["ENH_DynSim_ConfigName", configName configOf _x];
+        _x setVariable ["ENH_DynSim_Icon", _icon];
+        _x setVariable ["ENH_DynSim_Color", [side _x] call BIS_fnc_sideColor];
+      };
+
+      private _color = _x getVariable "ENH_DynSim_Color";
+      _color set [3, [0.5, 1] select (simulationEnabled _x)];
+
+      _ctrlMap drawIcon
+      [
+        _x getVariable "ENH_DynSim_Icon",
+        _x getVariable "ENH_DynSim_Color",
+        getPosWorldVisual _x,
+        25,
+        25,
+        getDir _x,
+        _x getVariable "ENH_DynSim_ConfigName",
+        2
+      ];
+    } forEach (vehicles + allUnits);
+
+    //Update stats markers
+    private _startY = worldSize;
+
+    {
+      _x params [["_textCode", {}], ["_textColor", [1, 1, 1, 1]]];
+      _ctrlMap drawIcon
+      [
+        "\A3\ui_f\data\map\markers\military\box_CA.paa",
+        _textColor,
+        [worldSize + 100, _startY, 0],
+        15,
+        15,
+        0,
+        format ["%1. %2", (_forEachIndex + 1), call _textCode],
+        2
+      ];
+      _startY = _startY - 100;
+    } forEach ENH_dynSimDebug_infoTexts;
   }];
 };
+
+diag_log "3den Enhanced: Debug Options initialized.";

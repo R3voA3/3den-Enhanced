@@ -6,6 +6,7 @@
 ## CHANGED
 - Fixed SPR attribute would be saved to mission.sqm even though it was not enabled to begin with
 - Fixed Dynamic Skill attribute would be saved to mission.sqm even though it was not enabled to begin with
+- Dynamic Simulation debug option has been improved in various ways
 
 # v7.8.5
 ## CHANGED
