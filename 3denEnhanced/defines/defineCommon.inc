@@ -32,6 +32,13 @@
 
 #define CTRL(IDC) (_display displayCtrl IDC)
 #define G_PREF(A) ("Preferences" get3DENMissionAttribute A)
+
+#if __GAME_VER_MAJ__ >= 16
+  #define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B]; save3DENPreferences)
+#else
+  #define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B]; save3DENPreferences)
+#endif
+
 #define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B])
 
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
