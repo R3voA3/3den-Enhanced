@@ -10,12 +10,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Scenario-Attributes">Scenario Attributes</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Entity-Attributes">Entity Attributes</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Menu-Strip">Menu Strip</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Context-Menu">Context Menu</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs">Custom GUIs</a> |
-  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/Customisation">Customisation</a>
+  <a href="https://github.com/R3voA3/3den-Enhanced/wiki/">Documentation</a>
 </p>
 
 <p align="center">
