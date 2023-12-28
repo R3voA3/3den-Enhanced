@@ -23,7 +23,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Build 3den Enhanced",
+      "label": "Build 3den Enhanced & Start Arma 3",
       "type": "shell",
       "command": "tools/build.ps1",
       "problemMatcher": [],
@@ -38,6 +38,16 @@
       "command": "tools/build.ps1",
       "args": [
         "true"
+      ],
+      "problemMatcher": []
+    },
+		{
+      "label": "Build 3den Enhanced",
+      "type": "shell",
+      "command": "tools/build.ps1",
+      "args": [
+				"false",
+				"false"
       ],
       "problemMatcher": []
     },

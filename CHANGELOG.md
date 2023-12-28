@@ -1,3 +1,8 @@
+# v7.8.7
+## CHANGED
+- Tweaked Dynamic Simulation debug mode
+- Minimap is disabled by default. Enable it via the Preferences (CTRL + K)
+
 # v7.8.6
 ## ADDED
 - Added a Minimap to Eden Editor. Can be disabled in the Editor preferences

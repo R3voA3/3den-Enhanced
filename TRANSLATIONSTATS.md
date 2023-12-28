@@ -1,5 +1,5 @@
 # Translation Progress
-**Last update:** 27.12.2023
+**Last update:** 28.12.2023
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
@@ -21,7 +21,6 @@
 | Spanish | 931 | 1 | 99,89 %
 | | | |
 | French | 630 | 302 | 67,60 %
-| | | |
 | Polish | 931 | 1 | 99,89 %
 | | | |
 | Russian | 823 | 109 | 88,30 %

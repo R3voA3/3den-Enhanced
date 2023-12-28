@@ -352,8 +352,8 @@ if GETVALUE("ShowGroups") then
   {
     params
     [
-      "_is3D", "_group", "_waypointId",
-      "_mouseButton", "_posX", "_posY",
+      "", "_group", "",
+      "", "", "",
       "_shift", "_control", "_alt"
     ];
 
@@ -363,7 +363,6 @@ if GETVALUE("ShowGroups") then
       if (missionNamespace getVariable ["ENH_debugWaypoints_CurrentGroup", groupNull] isEqualTo _group) exitWith {ENH_debugWaypoints_CurrentGroup = groupNull};
 
       private _path = [getPosATL leader _group select 0, getPosATL leader _group select 1];
-      private _markerText = "";
       {
         _x params ["_group", "_wpIndex"];
         private _marker = createMarkerLocal
@@ -754,34 +753,33 @@ if GETVALUE("DrawTriggers") then
 
 if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
 {
-  #define UNITS_ENABLED {simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits
-  #define ALL_UNITS {dynamicSimulationEnabled group _x} count allUnits
-  #define GROUPS_ENABLED {simulationEnabled leader _x && dynamicSimulationEnabled _x} count allGroups
-  #define OBJECTS_ENABLED {simulationEnabled _x} count vehicles
-  #define ALL_OBJECTS count vehicles
-  #define ALL_GROUPS {dynamicSimulationEnabled _x} count allGroups
-  #define CAN_TRIGGER_UNITS {canTriggerDynamicSimulation _x} count allUnits
-  #define CAN_TRIGGER_VEHICLES {canTriggerDynamicSimulation _x} count vehicles
+  #define UNITS_ENABLED ({simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits)
+  #define ALL_UNITS ({dynamicSimulationEnabled group _x} count allUnits)
+  #define GROUPS_ENABLED ({simulationEnabled leader _x && dynamicSimulationEnabled _x} count allGroups)
+  #define VEHICLES_ENABLED ({simulationEnabled _x && dynamicSimulationEnabled _x} count vehicles)
+  #define ALL_VEHICLES ({dynamicSimulationEnabled _x} count vehicles)
+  #define ALL_GROUPS ({dynamicSimulationEnabled _x} count allGroups)
+  #define CAN_TRIGGER_UNITS ({canTriggerDynamicSimulation _x} count allUnits)
 
-  #define DISTANCE_GROUPS_UNITS dynamicSimulationDistance "Group"
-  #define DISTANCE_VEHICLES dynamicSimulationDistance "Vehicle"
-  #define DISTANCE_EMPTY_VEHICLES dynamicSimulationDistance "EmptyVehicle"
-  #define DISTANCE_PROPS dynamicSimulationDistance "Prop"
-  #define DISTANCE_COEF dynamicSimulationDistanceCoef "IsMoving"
-  #define OBJ_VIEW_DISTANCE round (getObjectViewDistance select 0)
+  #define DISTANCE_GROUPS_UNITS (dynamicSimulationDistance "Group")
+  #define DISTANCE_VEHICLES (dynamicSimulationDistance "Vehicle")
+  #define DISTANCE_EMPTY_VEHICLES (dynamicSimulationDistance "EmptyVehicle")
+  #define DISTANCE_PROPS (dynamicSimulationDistance "Prop")
+  #define DISTANCE_COEF (dynamicSimulationDistanceCoef "IsMoving")
+  #define OBJ_VIEW_DISTANCE (round (getObjectViewDistance select 0))
 
   ENH_dynSimDebug_infoTexts =
   [
-    [{format ["ENABLED UNITS: %1 / %2", UNITS_ENABLED, ALL_UNITS]}],
-    [{format ["ENABLED GROUPS: %1 / %2", GROUPS_ENABLED, ALL_GROUPS]}],
+    [{format ["ENABLED UNITS (DYNAMIC SIMULATION ONLY): %1 / %2", UNITS_ENABLED, ALL_UNITS]}],
+    [{format ["ENABLED GROUPS (DYNAMIC SIMULATION ONLY): %1 / %2", GROUPS_ENABLED, ALL_GROUPS]}],
+    [{format ["ENABLED VEHICLES (DYNAMIC SIMULATION ONLY): %1 / %2", VEHICLES_ENABLED, ALL_VEHICLES]}],
     [{format ["UNITS THAT CAN TRIGGER SIMULATION: %1", CAN_TRIGGER_UNITS]}],
-    [{format ["VEHICLES THAT CAN TRIGGER SIMULATION: %1", CAN_TRIGGER_VEHICLES]}],
     [{format ["TRIGGER DISTANCE UNITS AND GROUPS: %1 m", DISTANCE_GROUPS_UNITS]}, [1, 1, 0, 1]],
     [{format ["TRIGGER DISTANCE VEHICLES: %1 m", DISTANCE_VEHICLES]}, [0, 1, 0, 1]],
     [{format ["TRIGGER DISTANCE EMPTY VEHICLES: %1 m", DISTANCE_EMPTY_VEHICLES]}, [0, 1, 1, 1]],
     [{format ["TRIGGER DISTANCE PROPS: %1 m", DISTANCE_PROPS]}, [1, 0, 1, 1]],
     [{format ["DISTANCE COEFICIENT: x%1", DISTANCE_COEF]}],
-    [{format ["OBJECT VIEW DISTANCE: %1 m", OBJ_VIEW_DISTANCE], [1, 0, 0, 1]}],
+    [{format ["OBJECT VIEW DISTANCE: %1 m", OBJ_VIEW_DISTANCE]}, [1, 0, 0, 1]],
     [{format ["RECOMMENDED OBJECT VIEW DISTANCE: %1 m", selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8]}],
     [{"VISIT ""https://community.bistudio.com/wiki/Arma_3:_Dynamic_Simulation"" FOR MORE INFORMATION."}]
   ];
@@ -837,7 +835,7 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         _x getVariable "ENH_DynSim_ConfigName",
         2
       ];
-    } forEach (vehicles + allUnits);
+    } forEach ((vehicles select {dynamicSimulationEnabled _x}) + (allUnits select {dynamicSimulationEnabled group _x}));
 
     //Update stats markers
     private _startY = worldSize;
@@ -852,7 +850,7 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         15,
         15,
         0,
-        format ["%1. %2", (_forEachIndex + 1), call _textCode],
+        call _textCode,
         2
       ];
       _startY = _startY - 100;
