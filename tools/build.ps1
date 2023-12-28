@@ -1,11 +1,11 @@
-param($DoPublish = "false")
+param($DoPublish = "false", $StartGameAfterBuild = "true")
 
 Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 
 Wait-Process processArma3
 
 # -----Change here-----
-$ModVersion = "7.8.6"
+$ModVersion = "7.8.7"
 # ---------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
@@ -99,4 +99,7 @@ if ($DoPublish -eq "true")
   Write-Host "View 3den Enhanced on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 }
 
+if ($StartGameAfterBuild -eq "true")
+{
 Start-Process "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-debug -par=`"$env:OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"$env:OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
+}
