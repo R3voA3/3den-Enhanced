@@ -798,44 +798,47 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         _ctrlMap drawEllipse [_x, OBJ_VIEW_DISTANCE, OBJ_VIEW_DISTANCE, 0, [1, 0, 0, 1], ""];//Props
       };
 
-      //Crew members inherit simulation from vehicle
-      if !(isNull objectParent _x) then {continue};
-
-      if !(_x getVariable ["ENH_DynSim_Registered", false]) then
+      if (dynamicSimulationEnabled _x || {dynamicSimulationEnabled group _x}) then
       {
-        private _icon = getText (configOf _x >> "icon");
+        //Crew members inherit simulation from vehicle
+        if !(isNull objectParent _x) then {continue};
 
-        if !(fileExists _icon) then
+        if !(_x getVariable ["ENH_DynSim_Registered", false]) then
         {
-          _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+          private _icon = getText (configOf _x >> "icon");
+
+          if !(fileExists _icon) then
+          {
+            _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+          };
+
+          if !(fileExists _icon) then
+          {
+            _icon = "a3\ui_f\data\map\vehicleicons\iconvehicle_ca.paa";
+          };
+
+          _x setVariable ["ENH_DynSim_Registered", true];
+          _x setVariable ["ENH_DynSim_ConfigName", configName configOf _x];
+          _x setVariable ["ENH_DynSim_Icon", _icon];
+          _x setVariable ["ENH_DynSim_Color", [side _x] call BIS_fnc_sideColor];
         };
 
-        if !(fileExists _icon) then
-        {
-          _icon = "a3\ui_f\data\map\vehicleicons\iconvehicle_ca.paa";
-        };
+        private _color = _x getVariable "ENH_DynSim_Color";
+        _color set [3, [0.5, 1] select (simulationEnabled _x)];
 
-        _x setVariable ["ENH_DynSim_Registered", true];
-        _x setVariable ["ENH_DynSim_ConfigName", configName configOf _x];
-        _x setVariable ["ENH_DynSim_Icon", _icon];
-        _x setVariable ["ENH_DynSim_Color", [side _x] call BIS_fnc_sideColor];
+        _ctrlMap drawIcon
+        [
+          _x getVariable "ENH_DynSim_Icon",
+          _x getVariable "ENH_DynSim_Color",
+          getPosWorldVisual _x,
+          25,
+          25,
+          getDir _x,
+          _x getVariable "ENH_DynSim_ConfigName",
+          2
+        ];
       };
-
-      private _color = _x getVariable "ENH_DynSim_Color";
-      _color set [3, [0.5, 1] select (simulationEnabled _x)];
-
-      _ctrlMap drawIcon
-      [
-        _x getVariable "ENH_DynSim_Icon",
-        _x getVariable "ENH_DynSim_Color",
-        getPosWorldVisual _x,
-        25,
-        25,
-        getDir _x,
-        _x getVariable "ENH_DynSim_ConfigName",
-        2
-      ];
-    } forEach ((vehicles select {dynamicSimulationEnabled _x}) + (allUnits select {dynamicSimulationEnabled group _x}));
+    } forEach vehicles + allUnits;
 
     //Update stats markers
     private _startY = worldSize;
