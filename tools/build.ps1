@@ -5,7 +5,7 @@ Get-Process -Name arma3_x64 -ErrorAction SilentlyContinue | Stop-Process
 Wait-Process processArma3
 
 # -----Change here-----
-$ModVersion = "7.8.7"
+$ModVersion = "7.8.8"
 # ---------------------
 
 $ProjectFolder = "$env:OneDrive\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
@@ -58,6 +58,14 @@ function Update-Workshop
   Start-Process "$ToolsFolder\Publisher\PublisherCmd.exe" -ArgumentList "update /id:$WorkshopID /path:`"$TargetFolder`" /changeNote:`"$Changelog`""
 }
 
+#Create a dev version with static name using in param files
+function Add-DEVVersion
+{
+	Remove-Item -Force -Path "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced DEV" -Verbose -Recurse
+
+	Copy-Item -Force -Path $TargetFolder -Destination "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\Mods\@3den Enhanced DEV" -Verbose -Recurse
+}
+
 function Update-Archive
 {
   Compress-Archive -Path "$TargetFolder" -DestinationPath ($ProjectFolder + "\versions\@3den Enhanced v" + $ModVersion + ".zip") -Force
@@ -82,6 +90,11 @@ Write-Host "Creating pbo."
 Start-Sleep 6
 
 Write-Host "Packing done."
+Write-Host "Creating DEV Version."
+
+Add-DEVVersion
+
+Start-Sleep 1
 
 Write-Host "Creating archive."
 
@@ -101,5 +114,5 @@ if ($DoPublish -eq "true")
 
 if ($StartGameAfterBuild -eq "true")
 {
-Start-Process "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-debug -par=`"$env:OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"$env:OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
+Start-Process "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\arma3_x64.exe" -ArgumentList "-par=`"$env:OneDrive\Games\Arma 3\Arma 3 Parameter Files\par_common.txt`" `-mod=`"$TargetFolder;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@Pythia;${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3\!Workshop\@7erra's Editing Extensions`" `"$env:OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\missions\TESTING\scriptLibrary.VR\mission.sqm`""
 }
