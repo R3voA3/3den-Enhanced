@@ -17,9 +17,14 @@
 disableSerialization;
 forceunicode 0;
 
-params ["_ctrlTV", "_path"];
-
 private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
+
+params
+[
+  ["_ctrlTV", _display displayCtrl IDC_FUNCTIONSVIEWER_LIST],
+  ["_path", tvCurSel (_display displayCtrl IDC_FUNCTIONSVIEWER_LIST)]
+];
+
 private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
 private _ctrlLines = CTRL(IDC_FUNCTIONSVIEWER_LINES);
 private _data = _ctrlTV tvData _path;
@@ -68,3 +73,4 @@ _ctrlLines ctrlCommit 0;
 _ctrlLines ctrlSetStructuredText parseText _linesText;
 
 profileNamespace setVariable ["ENH_FunctionsViewer_LastViewed", _filePath];
+saveProfileNamespace;

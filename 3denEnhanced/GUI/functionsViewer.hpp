@@ -166,19 +166,19 @@ class ENH_FunctionsViewer
         class LoadFile
         {
           text = "$STR_ENH_FUNCTIONSVIEWER_LOADFILE";
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 0]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 0]; call ENH_fnc_functionsViewer_setUpMenuStrip; [] call ENH_fnc_functionsViewer_onTreeSelChanged";
           shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_1};
         };
         class PreprocessFile
         {
           text = "$STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE";
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 1]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 1]; call ENH_fnc_functionsViewer_setUpMenuStrip; [] call ENH_fnc_functionsViewer_onTreeSelChanged";
           shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_2};
         };
         class PreprocessFileLineNumbers
         {
           text = "$STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES";
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 2]; call ENH_fnc_functionsViewer_setUpMenuStrip;";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 2]; call ENH_fnc_functionsViewer_setUpMenuStrip; [] call ENH_fnc_functionsViewer_onTreeSelChanged";
           shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_3};
         };
         //Help

@@ -48,7 +48,6 @@ CTRL(IDC_FUNCTIONSVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
   private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
 
   ctrlParent _ctrlEdit displayCtrl IDC_FUNCTIONSVIEWER_BUTTONSEARCH ctrlSetText _image;
-  call ENH_fnc_3DENRadio_searchList;
 }];
 
 //Handle search button

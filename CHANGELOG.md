@@ -1,3 +1,9 @@
+# v7.8.9
+## CHANGED
+- Functions Viewer now updates list with last searched keyword when chaning tree view layout
+- Functions Viewer now reloads currently selected file if loading type was changed (loadFile, preprocessFile...)
+- Functions Viewer recompiling single function will no longer throw an error when script file is selected
+
 # v7.8.8
 ## CHANGED
 - Tweaked Dynamic Simulation debug mode

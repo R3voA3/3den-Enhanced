@@ -166,6 +166,22 @@ switch (_modeIndex) do
 
 _ctrlTV tvSortAll [[], false];
 
+//Clear search ones and reapply previous value to trigger tree view update
+private _ctrlSearch = CTRL(IDC_FUNCTIONSVIEWER_SEARCH);
+private _previousSearchText = ctrlText _ctrlSearch;
+
+if (_previousSearchText != "") then
+{
+  _ctrlSearch ctrlSetText "";
+
+  //Small delay, otherwise tree view is not updated properly
+  [_ctrlSearch, _previousSearchText] spawn
+  {
+    sleep 0.01;
+    _this#0 ctrlSetText _this#1;
+  };
+};
+
 call ENH_fnc_functionsViewer_setUpMenuStrip;
 
 CTRL(IDC_FUNCTIONSVIEWER_NUMFUNCTIONS) ctrlSetText str _counter;

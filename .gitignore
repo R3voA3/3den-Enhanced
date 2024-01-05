@@ -2,6 +2,7 @@
 *.biprivatekey
 *.code-workspace
 *.txt
+*3den Enhanced Workshop
 
 #Folders
 versions/
