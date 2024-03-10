@@ -5,59 +5,48 @@ disableSerialization;
 private _display = findDisplay IDD_DISPLAY3DEN;
 ENH_Garrison_SelectedEntities = [["Object", "Logic", "Trigger"]] call ENH_fnc_all3DENSelected;
 
-//Check if module was places previously and if not, create it
-ENH_Garrison_AreaHelper = get3DENEntity (uiNamespace getVariable ["ENH_Garrison_AreaHelper_3DENID", -1]);
+//Create area helper
+ENH_Garrison_AreaHelper = create3DENEntity ["Trigger", "EmptyDetector", screenToWorld [0.5, 0.5]];
 
-if (ENH_Garrison_AreaHelper isEqualTo -1) then
+//Set up default size
+ENH_Garrison_AreaHelper set3DENAttribute ["text", "ENH_Garrison_AreaHelper"];
+ENH_Garrison_AreaHelper set3DENAttribute ["size3", [DEFAULT_SIZE, DEFAULT_SIZE, -1]];
+
+ENH_Garrison_OnSelectionChange_EH = add3DENEventHandler ["OnSelectionChange",
 {
-  ENH_Garrison_AreaHelper = create3DENEntity ["Logic", "ModuleCoverMap_F", screenToWorld [0.5, 0.5]];
-  uiNamespace setVariable ["ENH_Garrison_AreaHelper_3DENID", get3DENEntityID ENH_Garrison_AreaHelper];
-};
+  private _newSelection = [["Object", "Logic", "Trigger"]] call ENH_fnc_all3DENSelected;
 
-//Set up default module attributes
-ENH_Garrison_AreaHelper set3DENAttribute ["Name", "ENH_Garrison_AreaHelper"];
-ENH_Garrison_AreaHelper set3DENAttribute ["Size2", [DEFAULT_SIZE, DEFAULT_SIZE]];
+  //Only update selection if it makes sense
+  if (_newSelection isEqualTo [] || _newSelection isEqualTo [ENH_Garrison_AreaHelper]) exitWith {};
 
-//Workaround to make sure the cover map module is not present in scenario. Super hacky, but there is no reliable way to deleted it otherwise
-ENH_Garrison_AreaHelper set3DENAttribute ["Init", "this spawn {sleep 0.1; deleteVehicle _this; [objNull, [], false] call BIS_fnc_moduleCoverMap;};"];
-
-//Init default values and update UI
-ENH_Garrison_AreaHelper call ENH_fnc_garrison_updateValues;
-
-ENH_Garrison_AreaHelper addEventHandler ["AttributesChanged3DEN",
-{
-  params ["_object"];
-  _object call ENH_fnc_garrison_updateValues;
+  ENH_Garrison_SelectedEntities = _newSelection - [ENH_Garrison_AreaHelper] - ENH_Garrison_ValidBuildings;
 }];
 
+
+//Add event handlers that should remove the UI
 ENH_Garrison_AreaHelper addEventHandler ["UnregisteredFromWorld3DEN",
 {
-  ctrlDelete CTRL(IDC_GARRISON_GROUP);
-  ENH_Garrison_AreaHelper = nil;
-  //Remove icons
-  false call ENH_fnc_garrison_drawBuildingInfo;
+  call ENH_fnc_garrison_onUnload;
 }];
 
-CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlAddEventHandler ["KeyUp",
+ENH_Garrison_OnBeforeMissionPreview_EH = add3DENEventHandler ["OnBeforeMissionPreview",
 {
-  ENH_Garrison_AreaHelper call ENH_fnc_garrison_updateValues;
+  call ENH_fnc_garrison_onUnload;
 }];
 
-CTRL(IDC_GARRISON_COVERAGE) ctrlAddEventHandler ["ToolBoxSelChanged",
+ENH_Garrison_OnMissionNew_EH = add3DENEventHandler ["OnMissionNew",
 {
-  ENH_Garrison_AreaHelper call ENH_fnc_garrison_updateValues;
+	call ENH_fnc_garrison_onUnload;
 }];
 
-CTRL(IDC_GARRISON_BLACKLIST_TOGGLE) ctrlAddEventHandler ["ToolBoxSelChanged",
+ENH_Garrison_OnMissionLoad_EH = add3DENEventHandler ["OnMissionLoad",
 {
-  ENH_Garrison_AreaHelper call ENH_fnc_garrison_updateValues;
+	call ENH_fnc_garrison_onUnload;
 }];
 
-CTRL(IDC_GARRISON_UPDATE_SELECTION) ctrlAddEventHandler ["ButtonClick",
+ENH_Garrison_OnTerrainNew_EH = add3DENEventHandler ["OnTerrainNew",
 {
-  ENH_Garrison_SelectedEntities = [["Object", "Logic", "Trigger"]] call ENH_fnc_all3DENSelected;
-  ENH_Garrison_SelectedEntities = ENH_Garrison_SelectedEntities - [ENH_Garrison_AreaHelper] - ENH_Garrison_ValidBuildings;
-  ENH_Garrison_AreaHelper call ENH_fnc_garrison_updateValues;
+	call ENH_fnc_garrison_onUnload;
 }];
 
 CTRL(IDC_GARRISON_CANCEL) ctrlAddEventHandler ["ButtonClick",
@@ -72,16 +61,15 @@ CTRL(IDC_GARRISON_OK) ctrlAddEventHandler ["ButtonClick",
 
 CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlSetText (profileNamespace getVariable ["ENH_Garrison_Classes", ""]);
 
-do3DENAction "WidgetArea";
+do3DENAction "WidgetScale";
 
 private _ctrlMode = CTRL(IDC_GARRISON_MODE);
 _ctrlMode lbAdd "Closest Building only";
-_ctrlMode lbSetTooltip [0, "Only the closest building to the center (ENH_Garrison_AreaHelper) will be garrisoned."];
+_ctrlMode lbSetTooltip [0, "Only the closest building to the center will be garrisoned."];
 _ctrlMode lbAdd "From Center";
 _ctrlMode lbSetTooltip [1, "Positions closer to the center will be filled first."];
 _ctrlMode lbAdd "Random Positions";
-_ctrlMode lbSetTooltip [2, "A random position inside the area (ENH_Garrison_AreaHelper) will be picked for each entity."];
-
+_ctrlMode lbSetTooltip [2, "A random position inside the area will be picked for each entity."];
 
 //Set default selection
 CTRL(IDC_GARRISON_PATH) lbSetCurSel 1;

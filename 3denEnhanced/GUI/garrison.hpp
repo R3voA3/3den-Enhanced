@@ -1,12 +1,11 @@
-#include "\3denEnhanced\defines\defineCommon.inc"
 #define DIALOG_W 60
-#define DIALOG_H 80
+#define DIALOG_H 68
 
-class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
+class ENH_Garrison: ctrlControlsGroupNoScrollbars
 {
   idc = IDC_GARRISON_GROUP;
   onLoad = "call ENH_fnc_garrison_onLoad";
-  x = safezoneX + 61 * GRID_W;
+  x = 0.5 - 0.5 * DIALOG_W * GRID_W;
   y = WINDOW_TOPAbs;
   w = DIALOG_W * GRID_W;
   h = DIALOG_H * GRID_H;
@@ -50,21 +49,21 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     class BlacklistValue: ctrlEditMulti
     {
       idc = IDC_GARRISON_BLACKLIST_VALUE;
-      x = GRID_W;
-      y = 3 * (CTRL_DEFAULT_H + GRID_H);
-      w = DIALOG_W * GRID_W - 2 * GRID_W;
+      x = 16 * GRID_W;
+      y = 2 * (CTRL_DEFAULT_H + GRID_H);
+      w = 43 * GRID_W;
       h = 14 * GRID_H;
     };
     class Coverage: Blacklist
     {
       text = "$STR_ENH_GARRISON_COVERAGE";
-      y = 6 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 5 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
     };
     class CoverageValue: ctrlToolbox
     {
       idc = IDC_GARRISON_COVERAGE;
       x = 16 * GRID_W;
-      y = 6 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 5 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = 43 * GRID_W;
       h = CTRL_DEFAULT_H;
       rows = 1;
@@ -80,13 +79,13 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     class Stance: Blacklist
     {
       text = "$STR_ENH_GARRISON_STANCE";
-      y = 7 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 6 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
     };
     class StanceValue: ctrlToolbox
     {
       idc = IDC_GARRISON_STANCE;
       x = 16 * GRID_W;
-      y = 7 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 6 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = 43 * GRID_W;
       h = CTRL_DEFAULT_H;
       rows = 1;
@@ -112,13 +111,13 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     class Mode: Blacklist
     {
       text = "$STR_ENH_GARRISON_MODE";
-      y = 8 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 7 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
     };
     class ModeValue: ctrlCombo
     {
       idc = IDC_GARRISON_MODE;
       x = 16 * GRID_W;
-      y = 8 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 7 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = 43 * GRID_W;
       h = CTRL_DEFAULT_H;
     };
@@ -126,14 +125,14 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     {
       text = "$STR_ENH_DISABLEAI_PATH_DISPLAYNAME";
       tooltip = "$STR_ENH_DISABLEAI_PATH_TOOLTIP";
-      y = 9 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 8 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = 25 * GRID_W;
     };
     class PathFindingValue: ctrlToolbox
     {
       idc = IDC_GARRISON_PATH;
       x = 16 * GRID_W;
-      y = 9 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 8 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = 43 * GRID_W;
       h = CTRL_DEFAULT_H;
       rows = 1;
@@ -147,7 +146,7 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
     class Info: ctrlStructuredText
     {
       idc = IDC_GARRISON_INFO;
-      y = 10 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
+      y = 9 * (CTRL_DEFAULT_H + GRID_H) - 3 * GRID_H;
       w = DIALOG_W * GRID_W - GRID_W;
       h = 2 * CTRL_DEFAULT_H;
     };
@@ -156,22 +155,6 @@ class ENH_Garrison_New: ctrlControlsGroupNoScrollbars
       y = DIALOG_H * GRID_H - CTRL_DEFAULT_H - 2 * GRID_H;
       w = DIALOG_W * GRID_W;
       h = CTRL_DEFAULT_H + 2 * GRID_H;
-    };
-    class BackgroundButtonCenter: ctrlStaticFooter
-    {
-      x = DIALOG_W / 2 * GRID_W - 21 * GRID_W;
-      y = 12 * (CTRL_DEFAULT_H + GRID_H) - 6 * GRID_H;
-      w = 42 * GRID_W;
-      h = CTRL_DEFAULT_H + 2 * GRID_H;
-    };
-    class UpdateSelection: ctrlButton
-    {
-      idc = IDC_GARRISON_UPDATE_SELECTION;
-      text = "$STR_ENH_GARRISON_UPDATESELECTION";
-      x = DIALOG_W / 2 * GRID_W - 20 * GRID_W;
-      y = 12 * (CTRL_DEFAULT_H + GRID_H) - 5 * GRID_H;
-      w = 40 * GRID_W;
-      h = CTRL_DEFAULT_H;
     };
     class Cancel: ctrlButtonCancel
     {
