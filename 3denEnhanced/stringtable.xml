@@ -4051,14 +4051,14 @@
         <Italian>Preprocessa File con numeri di riga </Italian>
         <Polish>Preprocesuj plik z numerami linii</Polish>
     </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG">
-        <English>Addon Config</English>
-        <German>Erweiterungs-Konfig</German>
-        <Chinesesimp>Addon Config</Chinesesimp>
-        <Chinese>Addon Config</Chinese>
-        <Spanish>Añadir configuración</Spanish>
-        <Italian>Configurazione Addon</Italian>
-        <Polish>Konfiguracja addona</Polish>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_GLOBALCONFIG">
+        <English>Global Config</English>
+        <German>Globale-Konfig</German>
+        <Chinesesimp>Global Config</Chinesesimp>
+        <Chinese>全局配置</Chinese>
+        <Spanish>Configuración global</Spanish>
+        <Italian>Configurazione globale</Italian>
+        <Polish>Konfiguracja globalna</Polish>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
         <English>Scenario Config</English>
@@ -5408,17 +5408,17 @@
         <Chinese>功能編號</Chinese>
         <Italian>Numero di funzioni</Italian>
     </Key>
-    <Key ID="STR_ENH_FUNCTIONSVIEWER_FULL">
-        <English>Full</English>
-        <Russian>Полное</Russian>
-        <German>Komplett</German>
-        <Czech>Plné</Czech>
-        <Spanish>Completo</Spanish>
-        <French>Complet</French>
-        <Polish>Pełne</Polish>
-        <Chinesesimp>全部</Chinesesimp>
-        <Chinese>全部</Chinese>
-        <Italian>Completo</Italian>
+    <Key ID="STR_ENH_FUNCTIONSVIEWER_ADDONS">
+        <English>Addons</English>
+        <Russian>Аддоны</Russian>
+        <German>Erweiterungen</German>
+        <Czech>Doplňky</Czech>
+        <Spanish>Complementos</Spanish>
+        <French>Addons</French>
+        <Polish>Dodatki</Polish>
+        <Chinesesimp>附加组件</Chinesesimp>
+        <Chinese>附加组件</Chinese>
+        <Italian>Addons</Italian>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CATEGORIES">
         <English>Categories</English>
