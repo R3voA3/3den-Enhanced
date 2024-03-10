@@ -20,6 +20,8 @@ uiNamespace setVariable ["ENH_Display_FunctionsViewer", _display];
 
 ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
+_display displayCtrl IDC_FUNCTIONSVIEWER_LIST ctrlAddEventHandler ["TreeSelChanged", ENH_fnc_functionsViewer_onTreeSelChanged];
+
 _display displayAddEventHandler ["keyDown", //Focus Search
 {
   params ["_display", "_key", "_shift", "_ctrl"];

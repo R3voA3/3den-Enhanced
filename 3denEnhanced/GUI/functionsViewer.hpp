@@ -60,7 +60,7 @@ class ENH_FunctionsViewer
         class FolderFilter
         {
           text = "Filter";
-          items[] = {"ConfigFile", "MissionConfigFile", "CampaignConfigFile", "Separator", "Full", "Categories", "Functions", "OtherFiles", "Separator", "LoadFile", "PreprocessFile", "PreprocessFileLineNumbers"};
+          items[] = {"ConfigFile", "MissionConfigFile", "CampaignConfigFile", "OtherFiles", "Separator", "Full", "Categories", "Functions", "Separator", "LoadFile", "PreprocessFile", "PreprocessFileLineNumbers"};
         };
         class FolderEdit
         {
@@ -121,26 +121,32 @@ class ENH_FunctionsViewer
         //Config
         class ConfigFile
         {
-          text = "$STR_ENH_FUNCTIONSVIEWER_ADDONCONFIG";
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 0]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          text = "$STR_ENH_FUNCTIONSVIEWER_GLOBALCONFIG";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 0]; profileNamespace setVariable ['ENH_FunctionsViewer_ShowOtherFiles', false]; call ENH_fnc_functionsViewer_fillCtrlTV";
           shortcuts[] = {DIK_1};
         };
         class MissionConfigFile: ConfigFile
         {
           text = "$STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG";
           shortcuts[] = {DIK_2};
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 1]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 1]; profileNamespace setVariable ['ENH_FunctionsViewer_ShowOtherFiles', false]; call ENH_fnc_functionsViewer_fillCtrlTV";
         };
         class CampaignConfigFile: ConfigFile
         {
           text = "$STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG";
           shortcuts[] = {DIK_3};
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 2]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ConfigIndex', 2]; profileNamespace setVariable ['ENH_FunctionsViewer_ShowOtherFiles', false]; call ENH_fnc_functionsViewer_fillCtrlTV";
+        };
+        class OtherFiles
+        {
+          text = "$STR_ENH_FUNCTIONSVIEWER_OTHERFILES";
+          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ShowOtherFiles', true]; call ENH_fnc_functionsViewer_fillCtrlTV";
+          shortcuts[] = {DIK_4};
         };
         //Filter
         class Full
         {
-          text = "$STR_ENH_FUNCTIONSVIEWER_FULL";
+          text = "$STR_ENH_FUNCTIONSVIEWER_ADDONS";
           action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 0]; call ENH_fnc_functionsViewer_fillCtrlTV";
           shortcuts[] = {INPUT_ALT_OFFSET + DIK_1};
         };
@@ -155,12 +161,6 @@ class ENH_FunctionsViewer
           text = "$STR_ENH_FUNCTIONSVIEWER_FUNCTIONS";
           action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 2]; call ENH_fnc_functionsViewer_fillCtrlTV";
           shortcuts[] = {INPUT_ALT_OFFSET + DIK_3};
-        };
-        class OtherFiles
-        {
-          text = "$STR_ENH_FUNCTIONSVIEWER_OTHERFILES";
-          action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 3]; call ENH_fnc_functionsViewer_fillCtrlTV";
-          shortcuts[] = {INPUT_ALT_OFFSET + DIK_4};
         };
         //Loading Method
         class LoadFile
@@ -207,7 +207,6 @@ class ENH_FunctionsViewer
       y = safezoneY + 2 * CTRL_DEFAULT_H + GRID_H;
       w = SIDEBAR_W;
       h = safezoneH - 3 * CTRL_DEFAULT_H - 3 * GRID_H;
-      onTreeSelChanged = "_this call ENH_fnc_functionsViewer_onTreeSelChanged";
       colorLines[] = {1, 1, 1, 1};
       borderSize = 0;
       colorBorder[] = {0, 0, 0, 0};
