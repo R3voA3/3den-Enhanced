@@ -46,8 +46,6 @@ class ENH_OtherTools
   text = "$STR_ENH_CONTEXTMENU_OTHERTOOLS";
   items[] +=
   {
-    "ENH_MoveToLayer",
-    "Separator",
     "ENH_MeasureDistance",
     "ENH_ShowModuleInformation",
     "ENH_Garrison",
@@ -119,7 +117,7 @@ class ENH_ShowModuleInformation
 };
 class ENH_Garrison
 {
-  action = "findDisplay 313 ctrlCreate ['ENH_Garrison_New', 20100]";
+  action = "findDisplay 313 ctrlCreate ['ENH_Garrison', 20100]";
   text = "$STR_ENH_CONTEXTMENU_GARRISON";
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
   conditionShow = "selected";
@@ -148,6 +146,7 @@ class ENH_MoveToLayer
 {
   action = "findDisplay 313 createDisplay 'ENH_MoveToLayer'";
   text = "$STR_ENH_SELECTLAYER_MOVETOLAYER";
+  picture = "a3\3den\data\displays\display3den\panelleft\entitylist_layer_ca.paa";
   conditionShow = "selected";
 };
 class ENH_SelectionFilter
