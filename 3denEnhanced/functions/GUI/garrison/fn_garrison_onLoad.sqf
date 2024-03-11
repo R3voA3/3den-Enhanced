@@ -22,11 +22,14 @@ ENH_Garrison_OnSelectionChange_EH = add3DENEventHandler ["OnSelectionChange",
   ENH_Garrison_SelectedEntities = _newSelection - [ENH_Garrison_AreaHelper] - ENH_Garrison_ValidBuildings;
 }];
 
-
-//Add event handlers that should remove the UI
-ENH_Garrison_AreaHelper addEventHandler ["UnregisteredFromWorld3DEN",
+ENH_Garrison_OnDeleteUnits_EH = add3DENEventHandler ["OnDeleteUnits",
 {
-  call ENH_fnc_garrison_onUnload;
+  //Check if area helper trigger is still present
+  if (all3DENEntities # 2 findIf {_x == ENH_Garrison_AreaHelper} == -1) then
+  {
+    ENH_Garrison_AreaHelper = objNull;
+    call ENH_fnc_garrison_onUnload;
+  };
 }];
 
 ENH_Garrison_OnBeforeMissionPreview_EH = add3DENEventHandler ["OnBeforeMissionPreview",
@@ -63,7 +66,7 @@ CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlSetText (profileNamespace getVariable ["E
 
 do3DENAction "WidgetScale";
 
-private _ctrlMode = CTRL(IDC_GARRISON_MODE);
+private _ctrlMode = CTRL(IDC_GARRISON_MODE);//TODO: Translate 2024-03-10 R3vo
 _ctrlMode lbAdd "Closest Building only";
 _ctrlMode lbSetTooltip [0, "Only the closest building to the center will be garrisoned."];
 _ctrlMode lbAdd "From Center";
@@ -77,4 +80,4 @@ CTRL(IDC_GARRISON_COVERAGE) lbSetCurSel 3;
 _ctrlMode lbSetCurSel 0;
 
 //Draw building positions and buildings
-true call ENH_fnc_garrison_drawBuildingInfo;
+true call ENH_fnc_garrison_draw;

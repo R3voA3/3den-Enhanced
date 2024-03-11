@@ -20,8 +20,12 @@ if _enable then
 {
   ENH_Garrison_OnEachFrame_EH = addMissionEventHandler ["EachFrame",
   {
-    //Work around: Attribute changed EH doesn't work for triggers so we just update values on each frame
-    call ENH_fnc_garrison_updatevalues;
+    //Fetch updated values every 5 frames
+    if ((missionNamespace getVariable ["ENH_Garrison_LastFrame", 0]) + 10 <= diag_frameNo) then
+    {
+      call ENH_fnc_garrison_updatevalues;
+      ENH_Garrison_LastFrame = diag_frameNo;
+    };
 
     ENH_Garrison_ValidBuildings apply
     {

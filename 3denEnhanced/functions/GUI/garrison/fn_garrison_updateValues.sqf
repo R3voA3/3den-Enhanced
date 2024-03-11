@@ -1,6 +1,8 @@
 #include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 
+if isNull ENH_Garrison_AreaHelper exitWith {};
+
 private _display = findDisplay IDD_DISPLAY3DEN;
 private _classes = toLower (ctrlText CTRL(IDC_GARRISON_BLACKLIST_VALUE));
 
