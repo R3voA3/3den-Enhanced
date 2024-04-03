@@ -292,7 +292,7 @@
         <Spanish>Registrar IDs de la entidad al portapapeles.</Spanish>
         <Russian>Скопировать ID объектов 3DEN в буфер обмена</Russian>
     </Key>
-		<Key ID="STR_ENH_CONTEXTMENU_OTHERTOOLS">
+    <Key ID="STR_ENH_CONTEXTMENU_OTHERTOOLS">
         <English>Other Tools</English>
         <Italian>Altri strumenti</Italian>
         <Chinesesimp>其他工具</Chinesesimp>
@@ -4295,7 +4295,7 @@
         <Polish>Odwróć kierunek</Polish>
         <Russian>Обратное направление</Russian>
     </Key>
-		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_REVERSE">
+    <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_REVERSE">
         <English>Reverse</English>
         <Italian>Inverso</Italian>
         <Czech>Reverzní</Czech>
@@ -4307,7 +4307,7 @@
         <Polish>Odwrócony</Polish>
         <Russian>Обратный</Russian>
     </Key>
-		<Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_RANDOM">
+    <Key ID="STR_ENH_TOOLS_PLACEMENTTOOLS_RANDOM">
         <English>Random</English>
         <Italian>Casuale</Italian>
         <Czech>Náhodné</Czech>
@@ -4319,7 +4319,7 @@
         <Polish>Losowo</Polish>
         <Russian>Случайный</Russian>
     </Key>
-		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_SHORTCUTS">
+    <Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_SHORTCUTS">
         <English>Keyboard Shortcuts</English>
         <Italian>Scorciatoie da tastiera</Italian>
         <Czech>Klávesové zkratky</Czech>
@@ -4331,7 +4331,7 @@
         <Polish>Skróty klawiaturowe</Polish>
         <Russian>Клавиатурные сокращения</Russian>
     </Key>
-		<Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_ACTION">
+    <Key ID="STR_ENH_TOOLS_3DENSHORTCUTS_ACTION">
         <English>Action</English>
         <Italian>Azione</Italian>
         <Czech>Akce</Czech>
@@ -5144,20 +5144,20 @@
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_EXPORT">
         <Original>Export</Original>
-				<English>Export</English>
-				<Czech>Exportovat</Czech>
-				<German>Exportieren</German>
-				<Russian>Экспортировать</Russian>
-				<Polish>Eksportuj</Polish>
-				<Italian>Esporta</Italian>
-				<Spanish>Exportar</Spanish>
-				<French>Exporter</French>
-				<Chinese>輸出</Chinese>
-				<Japanese>エクスポート</Japanese>
-				<Korean>내보내기</Korean>
-				<Portuguese>Exportar</Portuguese>
-				<Chinesesimp>导出</Chinesesimp>
-				<Turkish>Dışa Aktar</Turkish>
+        <English>Export</English>
+        <Czech>Exportovat</Czech>
+        <German>Exportieren</German>
+        <Russian>Экспортировать</Russian>
+        <Polish>Eksportuj</Polish>
+        <Italian>Esporta</Italian>
+        <Spanish>Exportar</Spanish>
+        <French>Exporter</French>
+        <Chinese>輸出</Chinese>
+        <Japanese>エクスポート</Japanese>
+        <Korean>내보내기</Korean>
+        <Portuguese>Exportar</Portuguese>
+        <Chinesesimp>导出</Chinesesimp>
+        <Turkish>Dışa Aktar</Turkish>
     </Key>
     <Key ID="STR_ENH_BRIEFINGEDITOR_FONT">
         <English>Font</English>
@@ -5897,7 +5897,7 @@
         <Chinesesimp>删除模板</Chinesesimp>
         <Chinese>刪除模板</Chinese>
     </Key>
-		<Key ID="STR_ENH_BRIEFINGEDITOR_DELETETEMPLATE">
+    <Key ID="STR_ENH_BRIEFINGEDITOR_DELETETEMPLATE">
         <English>Delete Template</English>
         <Russian>Удалить шаблон</Russian>
         <Czech>Smazat šablonu</Czech>
@@ -5930,7 +5930,7 @@
         <Chinesesimp>应用模板</Chinesesimp>
         <Chinese>應用模板</Chinese>
     </Key>
-		<Key ID="STR_ENH_BRIEFINGEDITOR_APPLYTEMPLATE">
+    <Key ID="STR_ENH_BRIEFINGEDITOR_APPLYTEMPLATE">
         <English>Apply Template</English>
         <Russian>Добавить шаблон</Russian>
         <Czech>Použít šablonu</Czech>
@@ -6437,7 +6437,7 @@
     </Key>
     <Key ID="STR_ENH_PLACEMENTTOOLS_ORIGIN">
         <English>Origin</English>
-				<Italian>Origine</Italian>
+        <Italian>Origine</Italian>
         <Russian>Происхождение</Russian>
         <German>Ursprung</German>
         <Spanish>Origen</Spanish>
@@ -6692,7 +6692,7 @@
         <Chinesesimp>启动时显示左面板</Chinesesimp>
         <Chinese>啟動時顯示左面板</Chinese>
     </Key>
-		<Key ID="STR_ENH_TOGGLEMINIMAP">
+    <Key ID="STR_ENH_TOGGLEMINIMAP">
         <English>Toggle Minimap</English>
         <Russian>Переключение миниатюрной карты</Russian>
         <German>Minimap umschalten</German>
@@ -6712,7 +6712,7 @@
         <Chinesesimp>启用小地图</Chinesesimp>
         <Chinese>启用小地图</Chinese>
     </Key>
-		<Key ID="STR_ENH_MINIMAPENABLED">
+    <Key ID="STR_ENH_MINIMAPENABLED">
         <English>Enable Minimap</English>
         <Russian>Показывать левую панель при запуске</Russian>
         <German>Linkes Panel beim Start anzeigen</German>
@@ -6722,10 +6722,10 @@
         <Chinesesimp>启动时显示左面板</Chinesesimp>
         <Chinese>啟動時顯示左面板</Chinese>
     </Key>
-		<Key ID="STR_ENH_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS">
+    <Key ID="STR_ENH_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS">
         <English>Toggle Highlight Area Markers</English>
     </Key>
-		<Key ID="STR_ENH_ADJUSTMINIMAPSIZE">
+    <Key ID="STR_ENH_ADJUSTMINIMAPSIZE">
         <English>Adjust Minimap Size</English>
         <Russian>Настройка размера миниатюры</Russian>
         <German>Minimapgröße ändern</German>
@@ -6737,7 +6737,7 @@
     </Key>
     <Key ID="STR_ENH_MINIMAPSIZE">
         <English>Minimap Size</English>
-				<Russian>Размер миниатюры</Russian>
+        <Russian>Размер миниатюры</Russian>
         <German>Minimap Größe</German>
         <Spanish>Tamaño del minimapa</Spanish>
         <French>Taille de la mini-carte</French>
@@ -6961,7 +6961,7 @@
         <Polish>Kompatybilne przedmioty</Polish>
         <Spanish>Artículos compatibles</Spanish>
         <Italian>Articoli compatibili</Italian>
-				<Russian>Совместимые предметы</Russian>
+        <Russian>Совместимые предметы</Russian>
     </Key>
     <Key ID="STR_ENH_ESE_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
@@ -7257,7 +7257,7 @@
         <Italian>Se abilitato, un backup della missione.sqm verrà creato quando lo scenario viene salvato o autosalvato.\nIl backup viene salvato all'interno della cartella dello scenario.\nPer far funzionare questo meccanismo di backup è necessaria la modifica di Pythia.\nMa assicuratevi di fare un backup del vostro scenario prima di abilitare questa opzione per la prima volta!</Italian>
         <Polish>Jeśli opcja ta jest włączona, kopia zapasowa pliku mission.sqm zostanie utworzona podczas zapisywania lub automatycznego zapisywania scenariusza. Kopie zapasowe są zapisywane w folderze scenariusza. Aby ten mechanizm tworzenia kopii zapasowych działał, wymagana jest modyfikacja Pythia. Upewnij się, że utworzyłeś kopię zapasową scenariusza przed włączeniem tej opcji po raz pierwszy!</Polish>
     </Key>
-		<Key ID="STR_ENH_BACKUPMISSIONSQMPATH_DISPLAYNAME">
+    <Key ID="STR_ENH_BACKUPMISSIONSQMPATH_DISPLAYNAME">
         <English>Path for mission backups</English>
         <Russian>Путь для резервных копий миссий</Russian>
         <German>Pfad für Mission-Backups</German>
@@ -7268,7 +7268,7 @@
         <Italian>Percorso per i backup delle missioni</Italian>
         <Polish>Ścieżka dla kopii zapasowych misji</Polish>
     </Key>
-		<Key ID="STR_ENH_BACKUPMISSIONSQMPATH_TOOLTIP">
+    <Key ID="STR_ENH_BACKUPMISSIONSQMPATH_TOOLTIP">
         <English>If empty, save to .enh_mission_sqm_backups in the mission directory.\n\nTo save outside, use a full path, e.g. C:\\Arma 3 Mission Backups\n\nMake sure you have write permission in that directory!</English>
         <Russian>Если пусто, сохраните в .enh_mission_sqm_backups в каталоге миссии.\n\nДля сохранения вне каталога используйте полный путь, например, C:\\Arma 3 Mission Backups\n\nУбедитесь, что у вас есть права на запись в этом каталоге!</Russian>
         <German>Falls leer, werden die Backups im Missionsverzeichnis im Ordner .enh_mission_sqm_backups erstellt.\n\nUm außerhalb zu speichern, verwenden Sie einen absoluten Pfad, z.B. C:\\Arma 3 Mission Backups\n\nStellen Sie sicher, dass Sie Schreibrechte in diesem Verzeichnis haben!</German>
@@ -7297,6 +7297,7 @@
         <Chinese>腳本</Chinese>
         <Polish>Skrypty</Polish>
         <Italian>Scripts</Italian>
+        <French>Scripts</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE">
         <English>Engine</English>
@@ -7763,6 +7764,7 @@
         <Polish>Ogon</Polish>
         <Spanish>Cola</Spanish>
         <Italian>Coda</Italian>
+        <French>Queue</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITVROTOR">
         <English>Tail Rotor</English>
@@ -7917,6 +7919,7 @@
         <Polish>Ciało</Polish>
         <Spanish>Cuerpo</Spanish>
         <Italian>Corpo</Italian>
+        <French>Corps</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITCOMTURRET">
         <English>Commander Turret</English>
@@ -8031,6 +8034,7 @@
         <Chinese>導彈</Chinese>
         <Polish>Rakiety</Polish>
         <Spanish>Misiles</Spanish>
+        <French>Missiles</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITAMMO">
         <English>Ammunition</English>
@@ -8048,6 +8052,7 @@
         <Polish>Okno (Prawe)</Polish>
         <Italian>Finestra(Destra)</Italian>
         <Spanish>Ventana (Derecha)</Spanish>
+        <French>Fenêtre (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLGLASS">
         <English>Window (Left)</English>
@@ -8057,6 +8062,7 @@
         <Polish>Okno (Lewe)</Polish>
         <Italian>Finestra(Sinistra)</Italian>
         <Spanish>Ventana (Izquierda)</Spanish>
+        <French>Fenêtre (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITWINCH">
         <English>Winch</English>
@@ -8120,6 +8126,7 @@
         <Polish>Przekładnia</Polish>
         <Italian>Trasmissione</Italian>
         <Spanish>Transmisión</Spanish>
+        <French>Transmission</French>
     </Key>
     <Key ID="STR_ENH_AI_CATEGORY">
         <English>AI</English>
@@ -8129,6 +8136,7 @@
         <Polish>SI</Polish>
         <Spanish>IA</Spanish>
         <Italian>IA</Italian>
+        <French>IA</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITARMS">
         <English>Arms</English>
@@ -8220,6 +8228,7 @@
         <Polish>Okno #11</Polish>
         <Italian>Finestra #11</Italian>
         <Spanish>Ventana #11</Spanish>
+        <French>Fenêtre #11</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT1">
         <English>Light #01</English>
@@ -8528,6 +8537,7 @@
         <German>Fenster #16</German>
         <Polish>Okno #16</Polish>
         <Spanish>Ventana #16</Spanish>
+        <French>Fenêtre #16</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS17">
         <English>Window #17</English>
@@ -8537,6 +8547,7 @@
         <German>Fenster #17</German>
         <Polish>Okno #17</Polish>
         <Spanish>Ventana #17</Spanish>
+        <French>Fenêtre #17</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS18">
         <English>Window #18</English>
@@ -8546,6 +8557,7 @@
         <German>Fenster #18</German>
         <Polish>Okno #18</Polish>
         <Spanish>Ventana #18</Spanish>
+        <French>Fenêtre #18</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS19">
         <English>Window #19</English>
@@ -8555,6 +8567,7 @@
         <German>Fenster #19</German>
         <Polish>Okno #19</Polish>
         <Spanish>Ventana #19</Spanish>
+        <French>Fenêtre #19</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS1A">
         <English>Window 1A</English>
@@ -8564,6 +8577,7 @@
         <German>Fenster 1A</German>
         <Polish>Okno 1A</Polish>
         <Spanish>Ventana 1A</Spanish>
+        <French>Fenêtre 1A</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS1B">
         <English>Window 1B</English>
@@ -8573,6 +8587,7 @@
         <German>Fenster 1B</German>
         <Polish>Okno 1B</Polish>
         <Spanish>Ventana 1B</Spanish>
+        <French>Fenêtre 1B</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS20">
         <English>Window #20</English>
@@ -8582,6 +8597,7 @@
         <German>Fenster #20</German>
         <Polish>Okno #20</Polish>
         <Spanish>Ventana #20</Spanish>
+        <French>Fenêtre #20</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERL1">
         <English>Horizontal Stabilizer (Left)</English>
@@ -9138,6 +9154,7 @@
         <German>Fenster #10</German>
         <Polish>Okno #10</Polish>
         <Spanish>Ventana #10</Spanish>
+        <French>Fenêtre #10</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_11_HITPOINT">
         <English>Window #11</English>
@@ -9147,6 +9164,7 @@
         <German>Fenster #11</German>
         <Polish>Okno #11</Polish>
         <Spanish>Ventana #11</Spanish>
+        <French>Fenêtre #11</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_12_HITPOINT">
         <English>Window #12</English>
@@ -9156,6 +9174,7 @@
         <German>Fenster #12</German>
         <Polish>Okno #12</Polish>
         <Spanish>Ventana #12</Spanish>
+        <French>Fenêtre #12</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_13_HITPOINT">
         <English>Window #13</English>
@@ -9165,6 +9184,7 @@
         <German>Fenster #13</German>
         <Polish>Okno #13</Polish>
         <Spanish>Ventana #13</Spanish>
+        <French>Fenêtre #13</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_14_HITPOINT">
         <English>Window #14</English>
@@ -9174,6 +9194,7 @@
         <German>Fenster #14</German>
         <Polish>Okno #14</Polish>
         <Spanish>Ventana #14</Spanish>
+        <French>Fenêtre #14</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_15_HITPOINT">
         <English>Window #15</English>
@@ -9183,6 +9204,7 @@
         <German>Fenster #15</German>
         <Polish>Okno #15</Polish>
         <Spanish>Ventana #15</Spanish>
+        <French>Fenêtre #15</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_16_HITPOINT">
         <English>Window #16</English>
@@ -9192,6 +9214,7 @@
         <German>Fenster #16</German>
         <Polish>Okno #16</Polish>
         <Spanish>Ventana #16</Spanish>
+        <French>Fenêtre #16</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_17_HITPOINT">
         <English>Window #17</English>
@@ -9201,6 +9224,7 @@
         <German>Fenster #17</German>
         <Polish>Okno #17</Polish>
         <Spanish>Ventana #17</Spanish>
+        <French>Fenêtre #17</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_18_HITPOINT">
         <English>Window #18</English>
@@ -9210,6 +9234,7 @@
         <German>Fenster #18</German>
         <Polish>Okno #18</Polish>
         <Spanish>Ventana #18</Spanish>
+        <French>Fenêtre #18</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_19_HITPOINT">
         <English>Window #19</English>
@@ -9219,6 +9244,7 @@
         <German>Fenster #19</German>
         <Polish>Okno #19</Polish>
         <Spanish>Ventana #19</Spanish>
+        <French>Fenêtre #19</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_1_HITPOINT">
         <English>Window #01</English>
@@ -9228,6 +9254,7 @@
         <German>Fenster #01</German>
         <Polish>Okno #01</Polish>
         <Spanish>Ventana #01</Spanish>
+        <French>Fenêtre #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_20_HITPOINT">
         <English>Window #20</English>
@@ -9237,6 +9264,7 @@
         <German>Fenster #20</German>
         <Polish>Okno #20</Polish>
         <Spanish>Ventana #20</Spanish>
+        <French>Fenêtre #20</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_21_HITPOINT">
         <English>Window #21</English>
@@ -9246,6 +9274,7 @@
         <German>Fenster #21</German>
         <Polish>Okno #21</Polish>
         <Spanish>Ventana #21</Spanish>
+        <French>Fenêtre #21</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_22_HITPOINT">
         <English>Window #22</English>
@@ -9255,6 +9284,7 @@
         <German>Fenster #22</German>
         <Polish>Okno #22</Polish>
         <Spanish>Ventana #22</Spanish>
+        <French>Fenêtre #22</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_23_HITPOINT">
         <English>Window #23</English>
@@ -9264,6 +9294,7 @@
         <German>Fenster #23</German>
         <Polish>Okno #23</Polish>
         <Spanish>Ventana #23</Spanish>
+        <French>Fenêtre #23</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_24_HITPOINT">
         <English>Window #24</English>
@@ -9273,6 +9304,7 @@
         <German>Fenster #24</German>
         <Polish>Okno #24</Polish>
         <Spanish>Ventana #24</Spanish>
+        <French>Fenêtre #24</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_25_HITPOINT">
         <English>Window #25</English>
@@ -9282,6 +9314,7 @@
         <German>Fenster #25</German>
         <Polish>Okno #25</Polish>
         <Spanish>Ventana #25</Spanish>
+        <French>Fenêtre #25</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_26_HITPOINT">
         <English>Window #26</English>
@@ -9291,6 +9324,7 @@
         <German>Fenster #26</German>
         <Polish>Okno #26</Polish>
         <Spanish>Ventana #26</Spanish>
+        <French>Fenêtre #26</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_27_HITPOINT">
         <English>Window #27</English>
@@ -9300,6 +9334,7 @@
         <German>Fenster #27</German>
         <Polish>Okno #27</Polish>
         <Spanish>Ventana #27</Spanish>
+        <French>Fenêtre #27</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_28_HITPOINT">
         <English>Window #28</English>
@@ -9309,6 +9344,7 @@
         <German>Fenster #28</German>
         <Polish>Okno #28</Polish>
         <Spanish>Ventana #28</Spanish>
+        <French>Fenêtre #28</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_29_HITPOINT">
         <English>Window #29</English>
@@ -9318,6 +9354,7 @@
         <German>Fenster #29</German>
         <Polish>Okno #29</Polish>
         <Spanish>Ventana #29</Spanish>
+        <French>Fenêtre #29</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_2_HITPOINT">
         <English>Window #02</English>
@@ -9327,6 +9364,7 @@
         <German>Fenster #02</German>
         <Polish>Okno #02</Polish>
         <Spanish>Ventana #02</Spanish>
+        <French>Fenêtre #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_30_HITPOINT">
         <English>Window #30</English>
@@ -9336,6 +9374,7 @@
         <German>Fenster #30</German>
         <Polish>Okno #30</Polish>
         <Spanish>Ventana #30</Spanish>
+        <French>Fenêtre #30</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_31_HITPOINT">
         <English>Window #31</English>
@@ -9345,6 +9384,7 @@
         <German>Fenster #31</German>
         <Polish>Okno #31</Polish>
         <Spanish>Ventana #31</Spanish>
+        <French>Fenêtre #31</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_32_HITPOINT">
         <English>Window #32</English>
@@ -9354,6 +9394,7 @@
         <German>Fenster #32</German>
         <Polish>Okno #32</Polish>
         <Spanish>Ventana #32</Spanish>
+        <French>Fenêtre #32</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_33_HITPOINT">
         <English>Window #33</English>
@@ -9363,6 +9404,7 @@
         <German>Fenster #33</German>
         <Polish>Okno #33</Polish>
         <Spanish>Ventana #33</Spanish>
+        <French>Fenêtre #33</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_34_HITPOINT">
         <English>Window #34</English>
@@ -9372,6 +9414,7 @@
         <German>Fenster #34</German>
         <Polish>Okno #34</Polish>
         <Spanish>Ventana #34</Spanish>
+        <French>Fenêtre #34</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_35_HITPOINT">
         <English>Window #35</English>
@@ -9381,6 +9424,7 @@
         <German>Fenster #35</German>
         <Polish>Okno #35</Polish>
         <Spanish>Ventana #35</Spanish>
+        <French>Fenêtre #35</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_36_HITPOINT">
         <English>Window #36</English>
@@ -9390,6 +9434,7 @@
         <German>Fenster #36</German>
         <Polish>Okno #36</Polish>
         <Spanish>Ventana #36</Spanish>
+        <French>Fenêtre #36</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_37_HITPOINT">
         <English>Window #37</English>
@@ -9399,6 +9444,7 @@
         <German>Fenster #37</German>
         <Polish>Okno #37</Polish>
         <Spanish>Ventana #37</Spanish>
+        <French>Fenêtre #37</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_38_HITPOINT">
         <English>Window #38</English>
@@ -9408,6 +9454,7 @@
         <German>Fenster #38</German>
         <Polish>Okno #38</Polish>
         <Spanish>Ventana #38</Spanish>
+        <French>Fenêtre #38</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_39_HITPOINT">
         <English>Window #39</English>
@@ -9417,6 +9464,7 @@
         <German>Fenster #39</German>
         <Polish>Okno #39</Polish>
         <Spanish>Ventana #39</Spanish>
+        <French>Fenêtre #39</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_3_HITPOINT">
         <English>Window #03</English>
@@ -9426,6 +9474,7 @@
         <German>Fenster #03</German>
         <Polish>Okno #03</Polish>
         <Spanish>Ventana #03</Spanish>
+        <French>Fenêtre #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_40_HITPOINT">
         <English>Window #40</English>
@@ -9435,6 +9484,7 @@
         <German>Fenster #40</German>
         <Polish>Okno #40</Polish>
         <Spanish>Ventana #40</Spanish>
+        <French>Fenêtre #40</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_41_HITPOINT">
         <English>Window #41</English>
@@ -9444,6 +9494,7 @@
         <German>Fenster #41</German>
         <Polish>Okno #41</Polish>
         <Spanish>Ventana #41</Spanish>
+        <French>Fenêtre #41</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_42_HITPOINT">
         <English>Window #42</English>
@@ -9453,6 +9504,7 @@
         <German>Fenster #42</German>
         <Polish>Okno #42</Polish>
         <Spanish>Ventana #42</Spanish>
+        <French>Fenêtre #42</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_43_HITPOINT">
         <English>Window #43</English>
@@ -9462,6 +9514,7 @@
         <German>Fenster #43</German>
         <Polish>Okno #43</Polish>
         <Spanish>Ventana #43</Spanish>
+        <French>Fenêtre #43</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_44_HITPOINT">
         <English>Window #44</English>
@@ -9471,6 +9524,7 @@
         <German>Fenster #44</German>
         <Polish>Okno #44</Polish>
         <Spanish>Ventana #44</Spanish>
+        <French>Fenêtre #44</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_45_HITPOINT">
         <English>Window #45</English>
@@ -9480,6 +9534,7 @@
         <German>Fenster #45</German>
         <Polish>Okno #45</Polish>
         <Spanish>Ventana #45</Spanish>
+        <French>Fenêtre #45</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_46_HITPOINT">
         <English>Window #46</English>
@@ -9489,6 +9544,7 @@
         <German>Fenster #46</German>
         <Polish>Okno #46</Polish>
         <Spanish>Ventana #46</Spanish>
+        <French>Fenêtre #46</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_47_HITPOINT">
         <English>Window #47</English>
@@ -9498,6 +9554,7 @@
         <German>Fenster #47</German>
         <Polish>Okno #47</Polish>
         <Spanish>Ventana #47</Spanish>
+        <French>Fenêtre #47</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_48_HITPOINT">
         <English>Window #48</English>
@@ -9507,6 +9564,7 @@
         <German>Fenster #48</German>
         <Polish>Okno #48</Polish>
         <Spanish>Ventana #48</Spanish>
+        <French>Fenêtre #48</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_49_HITPOINT">
         <English>Window #49</English>
@@ -9516,6 +9574,7 @@
         <German>Fenster #49</German>
         <Polish>Okno #49</Polish>
         <Spanish>Ventana #49</Spanish>
+        <French>Fenêtre #49</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_4_HITPOINT">
         <English>Window #04</English>
@@ -9525,6 +9584,7 @@
         <German>Fenster #04</German>
         <Polish>Okno #04</Polish>
         <Spanish>Ventana #04</Spanish>
+        <French>Fenêtre #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_50_HITPOINT">
         <English>Window #50</English>
@@ -9534,6 +9594,7 @@
         <German>Fenster #50</German>
         <Polish>Okno #50</Polish>
         <Spanish>Ventana #50</Spanish>
+        <French>Fenêtre #50</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_51_HITPOINT">
         <English>Windoe #51</English>
@@ -9543,6 +9604,7 @@
         <German>Fenster #51</German>
         <Polish>Okno #51</Polish>
         <Spanish>Ventana #51</Spanish>
+        <French>Fenêtre #51</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_52_HITPOINT">
         <English>Window #52</English>
@@ -9552,6 +9614,7 @@
         <German>Fenster #52</German>
         <Polish>Okno #52</Polish>
         <Spanish>Ventana #52</Spanish>
+        <French>Fenêtre #52</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_53_HITPOINT">
         <English>Window #53</English>
@@ -9561,6 +9624,7 @@
         <German>Fenster #53</German>
         <Polish>Okno #53</Polish>
         <Spanish>Ventana #53</Spanish>
+        <French>Fenêtre #53</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_54_HITPOINT">
         <English>Window #54</English>
@@ -9570,6 +9634,7 @@
         <German>Fenster #54</German>
         <Polish>Okno #54</Polish>
         <Spanish>Ventana #54</Spanish>
+        <French>Fenêtre #54</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_55_HITPOINT">
         <English>Window #55</English>
@@ -9579,6 +9644,7 @@
         <German>Fenster #55</German>
         <Polish>Okno #55</Polish>
         <Spanish>Ventana #55</Spanish>
+        <French>Fenêtre #55</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_56_HITPOINT">
         <English>Windoe #56</English>
@@ -9588,6 +9654,7 @@
         <German>Fenster #56</German>
         <Polish>Okno #56</Polish>
         <Spanish>Ventana #56</Spanish>
+        <French>Fenêtre #56</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_57_HITPOINT">
         <English>Window #57</English>
@@ -9597,6 +9664,7 @@
         <German>Fenster #57</German>
         <Polish>Okno #57</Polish>
         <Spanish>Ventana #57</Spanish>
+        <French>Fenêtre #50</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_58_HITPOINT">
         <English>Window #58</English>
@@ -9606,6 +9674,7 @@
         <German>Fenster #58</German>
         <Polish>Okno #58</Polish>
         <Spanish>Ventana #58</Spanish>
+        <French>Fenêtre #50</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_59_HITPOINT">
         <English>Window #59</English>
@@ -9615,6 +9684,7 @@
         <German>Fenster #59</German>
         <Polish>Okno #59</Polish>
         <Spanish>Ventana #59</Spanish>
+        <French>Fenêtre #50</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_5_HITPOINT">
         <English>Window #05</English>
@@ -9624,6 +9694,7 @@
         <German>Fenster #05</German>
         <Polish>Okno #05</Polish>
         <Spanish>Ventana #05</Spanish>
+        <French>Fenêtre #05</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_60_HITPOINT">
         <English>Window #60</English>
@@ -9633,6 +9704,7 @@
         <German>Fenster #60</German>
         <Polish>Okno #60</Polish>
         <Spanish>Ventana #60</Spanish>
+        <French>Fenêtre #60</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_61_HITPOINT">
         <English>Window #61</English>
@@ -9642,6 +9714,7 @@
         <German>Fenster #61</German>
         <Polish>Okno #61</Polish>
         <Spanish>Ventana #61</Spanish>
+        <French>Fenêtre #61</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_62_HITPOINT">
         <English>Window #62</English>
@@ -9651,6 +9724,7 @@
         <German>Fenster #62</German>
         <Polish>Okno #62</Polish>
         <Spanish>Ventana #62</Spanish>
+        <French>Fenêtre #62</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_6_HITPOINT">
         <English>Window #06</English>
@@ -9660,6 +9734,7 @@
         <German>Fenster #06</German>
         <Polish>Okno #06</Polish>
         <Spanish>Ventana #06</Spanish>
+        <French>Fenêtre #06</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_7_HITPOINT">
         <English>Window #07</English>
@@ -9669,6 +9744,7 @@
         <German>Fenster #07</German>
         <Polish>Okno #07</Polish>
         <Spanish>Ventana #07</Spanish>
+        <French>Fenêtre #07</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_8_HITPOINT">
         <English>Window #08</English>
@@ -9678,6 +9754,7 @@
         <German>Fenster #08</German>
         <Polish>Okno #08</Polish>
         <Spanish>Ventana #08</Spanish>
+        <French>Fenêtre #08</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_9_HITPOINT">
         <English>Window #09</English>
@@ -9687,6 +9764,7 @@
         <German>Fenster #09</German>
         <Polish>Okno #09</Polish>
         <Spanish>Ventana #09</Spanish>
+        <French>Fenêtre #09</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1">
         <English>Light #01</English>
@@ -9930,6 +10008,7 @@
         <Polish>Orientuj</Polish>
         <Italian>Orienta</Italian>
         <Spanish>Orientar</Spanish>
+        <French>Orientation</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_ALIGN">
         <English>Align</English>
@@ -9939,6 +10018,7 @@
         <Polish>Wyrównaj</Polish>
         <Italian>Allinea</Italian>
         <Spanish>Alinear</Spanish>
+        <French>Aligner</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_SPACE">
         <English>Space</English>
@@ -9948,6 +10028,7 @@
         <Polish>Odstęp</Polish>
         <Italian>Spazio</Italian>
         <Spanish>Espaciar</Spanish>
+        <French>Espace</French>
     </Key>
     <Key ID="STR_ENH_TEXTUREFINDER_LISTSTATUS">
         <English>Entries in List: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</English>
