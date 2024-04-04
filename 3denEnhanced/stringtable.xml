@@ -34,6 +34,7 @@
         <Russian>Атрибуты поиска</Russian>
         <Chinesesimp>搜索属性</Chinesesimp>
         <Chinese>搜索属性</Chinese>
+        <French>Recherche d'attributs</French>
     </Key>
     <Key ID="STR_ENH_NOTIFICATIONS_GETPYTHIA">
         <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
@@ -44,6 +45,7 @@
         <Polish>Pobierz modyfikację &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; z Warszatu Steam!</Polish>
         <Spanish>Obtener la modificación &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; de Steam Workshop.</Spanish>
         <Italian>Scarica la mod &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; dal workshop di Steam!</Italian>
+        <French>Téléchargez le mod &lt;t colourLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; depuis le Steam workshop !</French>
     </Key>
     <Key ID="STR_ENH_DYNAMICSKILL_BLUFORSKILL_DISPLAYNAME">
         <English>BLUFOR Skill Settings</English>
@@ -186,6 +188,7 @@
         <Chinese>創建觸發器(全地圖覆蓋)</Chinese>
         <Polish>Utwórz wyzwalacz (na całą mapę)</Polish>
         <Italian>Crea un trigger(Copertura totale della Mappa)</Italian>
+        <French>Créer un déclencheur (Couverture totale de la carte)</French>
     </Key>
     <Key ID="STR_ENH_TERRAINDETAIL_DISPLAYNAME">
         <English>Terrain Detail</English>
@@ -232,6 +235,7 @@
         <Polish>Usuń wszystko</Polish>
         <Spanish>Quitar todo</Spanish>
         <Italian>Rimuovi Tutto</Italian>
+        <French>Supprimer tout</French>
     </Key>
     <Key ID="STR_ENH_RANDOMMUSIC_TOOLTIP">
         <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
@@ -649,6 +653,7 @@
         <Polish>Wszystkie funkcje</Polish>
         <Spanish>Todas las funcionalidades</Spanish>
         <Italian>Tutte le Funzionalità</Italian>
+        <French>Toutes les fonctionnalités</French>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_ALL_TOOLTIP">
         <English>Disables all features including the ones below.</English>
@@ -658,6 +663,7 @@
         <Polish>Wyłącza wszystkie funkcje SI, w tym te poniżej.</Polish>
         <Spanish>Desactive todas las funciones, incluidas las siguientes.</Spanish>
         <Italian>Disabilita tutte le funzionalità comprese quelle di seguito</Italian>
+        <French>Désactive toutes les fonctionnalités, y compris celles qui suivent.</French>
     </Key>
     <Key ID="STR_ENH_DISABLEAI_LIGHTS_DISPLAYNAME">
         <English>Lights</English>
@@ -1025,6 +1031,7 @@
         <Polish>Jednostka nie będzie atakowana i dołączy do strony cywilów, ale wciąż będzie atakowała wrogów!</Polish>
         <Spanish>La unidad no será atacada y se unirá al bando civil. ¡La unidad seguirá atacando a los enemigos!</Spanish>
         <Italian>L'Unità non verrà attaccata e si unirà ai civili. L'Unità continuerà ad attaccare i nemici!</Italian>
+        <French>L'unité ne sera pas attaquée et rejoindra les civils. L'Unité continuera d'attaquer l'ennemi !</French>
     </Key>
     <Key ID="STR_ENH_ENABLEHEADLIGHTS_DISPLAYNAME">
         <English>Enable Headlights</English>
@@ -1059,6 +1066,7 @@
         <Chinese>禁止下載具</Chinese>
         <Polish>Zakaż wysiadania</Polish>
         <Italian>Impedisci lo sbarco</Italian>
+        <French>Interdire le débarquement</French>
     </Key>
     <Key ID="STR_ENH_ALLOWCREWIMMOBILE_TOOLTIP">
         <English>Crew stays in vehicle even though the vehicle is disabled.</English>
@@ -1897,6 +1905,7 @@
         <Spanish>Acoplar</Spanish>
         <Italian>Fissa</Italian>
         <Polish>Przyczep</Polish>
+        <French>Fixer</French>
     </Key>
     <Key ID="STR_ENH_ATTACHTO_TOOLTIP">
         <English>Attaches this object to the closest object.</English>
@@ -1907,6 +1916,7 @@
         <Spanish>Acoplar este objeto al objeto más cercano.</Spanish>
         <Italian>Fissa questo oggetto all' oggetto più vicino</Italian>
         <Polish>Przyczepia wybrany obiekt do innego, najbliższego.</Polish>
+        <French>Fixer cet objet à l'objet le plus proche.</French>
     </Key>
     <Key ID="STR_ENH_SETMASS_DISPLAYNAME">
         <English>Unladen Weight</English>
@@ -2073,6 +2083,7 @@
         <Chinese>您正在運行自定義版的3den增強。請確保您不會意外刪除任務中的屬性！</Chinese>
         <Polish>Masz włączoną personalizowaną wersję 3den Enhanced. Upewnij się, by nie usunąć przypadkowo atrybutów ze swojej misji!</Polish>
         <Italian>Stai usando una versione personalizzata di 3den Enhanced. Assicurati di non rimuovere accdentalmente degli attributi dalla tua missione!</Italian>
+        <French>Vous utilisez une version personnalisée de 3den Enhanced. Veuillez vous assurer que vous ne supprimez pas accidentellement des attributs de votre mission !</French>
     </Key>
     <Key ID="STR_ENH_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
         <English>Center Position</English>
@@ -2923,6 +2934,7 @@
         <Chinesesimp>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinesesimp>
         <Chinese>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinese>
         <Russian>Восстанавливает исходную загрузку при респауне. Загрузку можно изменить, модифицировав переменную ENH_SavedLoadout в пространстве имен игрока.</Russian>
+        <French>Restaure l'équipement d'origine lors du respawn. L'équipement peut être modifié en éditant la variable ENH_SavedLoadout dans l'espace de noms du joueur.</French>
     </Key>
     <Key ID="STR_ENH_VIEWDISTANCE_DISPLAYNAME">
         <English>View Distance</English>
@@ -3177,6 +3189,7 @@
         <Polish>Kod po odrodzeniu</Polish>
         <Spanish>Código de respawn</Spanish>
         <Italian>Codice di Respawn</Italian>
+        <French>Code de Réapparition</French>
     </Key>
     <Key ID="STR_ENH_SPR_ONRESPAWNCODE_TOOLTIP">
         <English>Code executed after respawn. _this refers to the respawned entity.</English>
@@ -3186,6 +3199,7 @@
         <Polish>Kod wykonywany po odrodzeniu. _this odnosi się do odrodzonej jednostki.</Polish>
         <Spanish>Código ejecutado después del respawn. _this Se refiere a la entidad reaparecida.</Spanish>
         <Italian>Codice eseguito dopo il respawn. _this si riferisce all'unità rinata</Italian>
+        <French>Code exécuté après la réapparition. _this fait référence à l'entité réapparue.</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_NOTIFICATION">
         <English>Not enough empty building positions, increase the radius or the coverage.</English>
@@ -3664,6 +3678,7 @@
         <Polish>Rysuj obszary wyzwalaczy</Polish>
         <Spanish>Dibujar áreas de activación</Spanish>
         <Italian>Disegna le aree Trigger</Italian>
+        <French>Montre les zones de déclenchement</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWTRIGGERS_TOOLTIP">
         <English>Trigger areas will be drawn during preview. Small triggers areas are not drawn.</English>
@@ -3674,6 +3689,7 @@
         <Polish>Obszary wyzwalacze będą rysowane podczas podglądu. Małe obszary wyzwalaczy nie będą rysowane.</Polish>
         <Spanish>Las áreas de activación se dibujarán durante la vista previa. No se dibujan las áreas de pequeños disparadores</Spanish>
         <Italian>Le aree Trigger saranno disegnate durante l'anteprima. Aree Trigger di piccole dimensioni non sono disegnate.</Italian>
+        <French>Les zones de déclenchement seront dessinées pendant la prévisualisation. Les petites zones de déclenchement ne sont pas dessinées.</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_DISPLAYNAME">
         <English>Log active Scripts</English>
@@ -3684,6 +3700,7 @@
         <Chinese>記錄激活的腳本</Chinese>
         <Polish>Zarejestruj aktywne skrypty</Polish>
         <Italian>Registra gli Script Attivi</Italian>
+        <French>Scripts actifs du journal</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_LOGSCRIPTS_TOOLTIP">
         <English>All active scripts and mission event handlers will be logged into the .rpt file.</English>
@@ -3694,6 +3711,7 @@
         <Chinese>所有激活的腳本和任務事件處理程序都將記錄到.rpt日誌文件中。</Chinese>
         <Polish>Wszystkie aktywne skrypty i event handlery misji zostaną zapisane to pliku .rpt.</Polish>
         <Italian>Tutti gli script attivi e i gestori d'eventi della missione saranno registrati nel file .rpt</Italian>
+        <French>Tous les scripts actifs et les gestionnaires d'événements de la mission seront enregistrés dans le fichier .rpt.</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
         <English>Draws information of nearby units and vehicles.</English>
@@ -3810,6 +3828,7 @@
         <Spanish>Mostrar Grupos</Spanish>
         <Chinesesimp>显示组别</Chinesesimp>
         <Chinese>显示组别</Chinese>
+        <French>Afficher les groupes</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_SHOWGROUPS_TOOLTIP">
         <English>All groups and information about them will be display in 3D and on the map. Additionally, groups can be deleted and their waypoints can be displayed.</English>
@@ -3819,6 +3838,7 @@
         <Spanish>Todos los grupos y su información será mostrada en 3D y en el mapa. Adicionalmente, los grupos pueden ser borrados y sus waypoints pueden ser mostrados.</Spanish>
         <Chinesesimp>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinesesimp>
         <Chinese>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinese>
+        <French>Tous les groupes et les informations les concernant seront affichés en 3D et sur la carte. En outre, il est possible de supprimer des groupes et d'afficher des points de passage.</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_KILLBLUFOR_DISPLAYNAME">
         <English>Kill Units (BLUFOR)</English>
@@ -3924,6 +3944,7 @@
         <Spanish>Mover a capa...</Spanish>
         <Chinesesimp>移动到层...</Chinesesimp>
         <Chinese>移动到层...</Chinese>
+        <French>Déplacer vers le calque...</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_PYLONS">
         <English>Pylon Tools</English>
@@ -3933,6 +3954,7 @@
         <Chinese>掛架工具</Chinese>
         <Spanish>Herramientas de pilón</Spanish>
         <Italian>Strumenti Piloni</Italian>
+        <French>Outils pour pylône</French>
     </Key>
     <Key ID="STR_ENH_DISPLAY3DEN_PLACEENTITY">
         <English>Place entity by double clicking.</English>
@@ -3942,6 +3964,7 @@
         <Chinese>通過雙擊來放置實體。</Chinese>
         <Spanish>Poner una entidad con doble clic</Spanish>
         <Italian>Posiziona un'entità facendo doppio click.</Italian>
+        <French>Placez l'entité en double-cliquant.</French>
     </Key>
     <Key ID="STR_ENH_CONTEXTMENU_FAVORITES">
         <English>Add to Favorites</English>
@@ -3951,6 +3974,7 @@
         <Chinese>添加到收藏夾</Chinese>
         <Spanish>Añadir a favoritos</Spanish>
         <Italian>Aggiungi ai preferiti</Italian>
+        <French>Ajouter aux favoris</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYPYLONS">
         <English>Copy Pylon Settings</English>
@@ -3960,6 +3984,7 @@
         <Chinese>複製掛架設置</Chinese>
         <Spanish>Copiar configuración de pilones</Spanish>
         <Italian>Copia impostazioni Piloni</Italian>
+        <French>Copier les réglages du pylône</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYPYLONS">
         <English>Apply Pylon Settings</English>
@@ -3969,6 +3994,7 @@
         <Chinese>應用掛架設置</Chinese>
         <Spanish>Aplicar configuración de pilones</Spanish>
         <Italian>Applica impostazioni Piloni</Italian>
+        <French>Appliquer les réglages du pylône</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTPYLONSTOSQF">
         <English>Export Pylons to SQF</English>
@@ -3978,6 +4004,7 @@
         <Chinese>將掛架導出為SQF</Chinese>
         <Spanish>Exportar pilones a SQF</Spanish>
         <Italian>Esporta Piloni in SQF </Italian>
+        <French>Exporter les paramètres des pylônes au format SQF</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_VHC">
         <English>Vehicle Customization Tools</English>
@@ -3987,6 +4014,7 @@
         <Chinese>車輛自定義工具</Chinese>
         <Spanish>Herramientas de personalización de vehículos</Spanish>
         <Italian>Strumenti di personalizzazione Veicoli</Italian>
+        <French>Outils de personnalisation des véhicules</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_COPYVHC">
         <English>Copy Vehicle Customization</English>
@@ -3996,6 +4024,7 @@
         <Chinese>複製車輛自定義</Chinese>
         <Spanish>Copiar personalización de vehículo</Spanish>
         <Italian>Copia Personalizzazione Veicolo</Italian>
+        <French>Copier la personnalisation du véhicule</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_APPLYVHC">
         <English>Apply Vehicle Customization</English>
@@ -4005,6 +4034,7 @@
         <Chinese>應用車輛自定義</Chinese>
         <Spanish>Aplicar personalización de vehículo</Spanish>
         <Italian>Applica Personalizzazione Veicolo</Italian>
+        <French>Appliquer la personnalisation du véhicule</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LEGACY">
         <English>Open Legacy Functions Viewer</English>
@@ -4014,6 +4044,7 @@
         <Spanish>Abrir visor de funciones heredado</Spanish>
         <Italian>Apri Visualizzatore Funzioni Legacy</Italian>
         <Polish>Otwórz klasyczny widok funkcji</Polish>
+        <French>Ouvrir le visualiseur de fonctions héritées</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_OTHERFILES">
         <English>Other Files</English>
@@ -4023,6 +4054,7 @@
         <Spanish>Otros archivos</Spanish>
         <Italian>Altri File</Italian>
         <Polish>Inne pliki</Polish>
+        <French>Autres fichiers</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_LOADFILE">
         <English>Load File</English>
@@ -4032,6 +4064,7 @@
         <Spanish>Cargar archivo</Spanish>
         <Italian>Carica File</Italian>
         <Polish>Wczytaj plik</Polish>
+        <French>Charger un fichier</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILE">
         <English>Preprocess File</English>
@@ -4041,6 +4074,7 @@
         <Spanish>Procesar archivo</Spanish>
         <Italian>Preprocessa File</Italian>
         <Polish>Preprocesuj plik</Polish>
+        <French>Prétraitement du fichier</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_PREPROCESSFILEWITHLINES">
         <English>Preprocess File with Line Numbers</English>
@@ -4050,6 +4084,7 @@
         <Spanish>Procesar archivo con número de líneas</Spanish>
         <Italian>Preprocessa File con numeri di riga </Italian>
         <Polish>Preprocesuj plik z numerami linii</Polish>
+        <French>Prétraitement du fichier avec des numéros de ligne</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_GLOBALCONFIG">
         <English>Global Config</English>
@@ -4059,6 +4094,7 @@
         <Spanish>Configuración global</Spanish>
         <Italian>Configurazione globale</Italian>
         <Polish>Konfiguracja globalna</Polish>
+        <French>Configuration globale</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_MISSIONCONFIG">
         <English>Scenario Config</English>
@@ -4068,6 +4104,7 @@
         <Spanish>Configuración de escenario</Spanish>
         <Italian>Configurazione Scenario</Italian>
         <Polish>Konfiguracja scenariusza</Polish>
+        <French>Configuration du scénario</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
         <English>Campaign Config</English>
@@ -4077,6 +4114,7 @@
         <Spanish>Configuración de campaña</Spanish>
         <Italian>configurazione Campagna</Italian>
         <Polish>Konfiguracja kampanii</Polish>
+        <French>Configuration de la campagne</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_RANDOMIZEVHC">
         <English>Randomize Vehicle Customization</English>
@@ -4086,6 +4124,7 @@
         <Chinese>隨機化車輛自定義</Chinese>
         <Spanish>Aleatorizar personalización de vehículo</Spanish>
         <Italian>Randomizza Personalizzazione Veicolo</Italian>
+        <French>Personnalisation aléatoire des véhicules</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_WIKI">
         <English>Community Wiki</English>
@@ -4472,6 +4511,7 @@
         <Chinese>導出Eden編輯器基本類別，如ctrlStatic或ctrlStaticPicture。</Chinese>
         <Italian>Esporta le classi di base dell' Eden Editor come ctrlStatic o ctrlStaticPicture.</Italian>
         <Polish>Eksportuje bazowe klasy edytora Eden, takie jak ctrlStatic lub ctrlStaticPicture.</Polish>
+        <French>Exporte les classes de base de l'éditeur Eden telles que ctrlStatic ou ctrlStaticPicture.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
         <English>Attribute %1 was set to %2.</English>
@@ -4482,6 +4522,7 @@
         <Chinese>屬性 %1 已設置為 %2.</Chinese>
         <Polish>Atrybut %1 został ustawiony na %2.</Polish>
         <Italian>L'attributo %1 era impostato a %2.</Italian>
+        <French>L'attribut %1 a été défini à %2.</French>
     </Key>
     <Key ID="STR_ENH_BRIEFING_TOOLTIP">
         <English>Creates briefing entries for all players of given side. You can also insert formatted text created with the Briefing Editor. See 'createDiaryRecord' on the BI Wiki for more information.\n\nIf a stringtable entry is provided, the briefing will be displayed in player's language.</English>
@@ -4492,6 +4533,7 @@
         <Spanish>Crea Briefings para todos los jugadores de un bando determinado. También puede insertar texto formateado creado con Briefing Editor. Consulte 'createDiaryRecord' en BI Wiki para obtener más información.\n\n Si se proporciona una entrada de Stringtable, el resumen se mostrará en el idioma del jugador.</Spanish>
         <Italian>Crea entrate del briefing per tutti i giocatori di una data fazione. Puoi anche inserire testo formattato creato con l'editor Briefing. Vedi sulla Wiki per più informazioni.\n\nSe viene fornita una voce stringtable il briefing verrà mostrato nella lingua del giocatore.</Italian>
         <Polish>Tworzy wpisy w odprawie dla każdego gracza danej strony. Możesz też wprowadzać sformatowany tekst, stworzony z pomocą edytora odpraw. Zobacz funkcję "createDiaryRecord" w BI Wiki, by dowiedzieć się więcej.\n\nJeśli dołączony jest odpowiedni wpis w pliku Stringtable, odprawa wyświetli się w języku gracza.</Polish>
+        <French>Crée des entrées de briefing pour tous les joueurs d'un camp donné. Vous pouvez également insérer du texte formaté créé avec l'éditeur de briefing. Voir 'createDiaryRecord' sur le BI Wiki pour plus d'informations.\n\nSi une entrée de table de chaîne est fournie, le briefing sera affiché dans la langue du joueur.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ALL_TOOLTIP">
         <English>Exports all GUI base classes.</English>
@@ -4502,6 +4544,7 @@
         <Chinese>導出所有 GUI 基本類別。</Chinese>
         <Italian>Esporta tutte le classi di base GUI.</Italian>
         <Polish>Eksportuje wszystkie podstawowe klasy interfejsu.</Polish>
+        <French>Exporte toutes les classes de base GUI.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC">
         <English>Classic</English>
@@ -4512,6 +4555,7 @@
         <Chinese>經典</Chinese>
         <Italian>Classico</Italian>
         <Polish>Klasyczne</Polish>
+        <French>Classique</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_CLASSIC_TOOLTIP">
         <English>Exports classic base classes like RscText or RscPicture.</English>
@@ -4522,6 +4566,7 @@
         <Chinese>導出經典的基本類別，例如RscText或RscPicture。</Chinese>
         <Italian>Esporta le classi di base classiche come RscText o RscPicture.</Italian>
         <Polish>Eksportuje klasyczne funkcje bazowa, takie jak RscText lub RscPicture.</Polish>
+        <French>Exporte des classes de base classiques comme RscText ou RscPicture.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON">
         <English>Add-on</English>
@@ -4532,6 +4577,7 @@
         <Chinese>附加</Chinese>
         <Italian>Add-on</Italian>
         <Polish>Addony</Polish>
+        <French>Add-on</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_ADDON_TOOLTIP">
         <English>Uses 'class' keyword for use in config.cpp.</English>
@@ -4542,6 +4588,7 @@
         <Chinese>在config.cpp中使用'class'關鍵字.</Chinese>
         <Italian>Usare la parola chiave'class' per usi nel file config.cpp</Italian>
         <Polish>Wykorzystuje słowo kluczowe "class" dla pliku config.cpp.</Polish>
+        <French>Utiliser le mot clé 'class' pour une utilisation dans config.cpp.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_EXPORTGUIBASECLASSES_SCENARIO_TOOLTIP">
         <English>Uses 'import' keyword for use in description.ext.</English>
@@ -4552,6 +4599,7 @@
         <Chinese>在description.ext中使用'import'關鍵字.</Chinese>
         <Italian>Usare la parola chiave 'import' per usi nel file description.ext</Italian>
         <Polish>Wykorzystuje słowo kluczowe "import" do wykorzystania w pliku description.ext.</Polish>
+        <French>Utilise le mot-clé 'import' pour une utilisation dans description.ext.</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_GUITESTGRIDS">
         <English>Open GUI Test Grids</English>
@@ -4668,6 +4716,7 @@
         <Spanish>Seleccionar todas las Capas</Spanish>
         <Chinesesimp>选择所有图层</Chinesesimp>
         <Chinese>选择所有图层</Chinese>
+        <French>Sélectionner tous les calques</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_PRODUCTINFO">
         <English>Log Game Info</English>
@@ -4725,6 +4774,7 @@
         <Spanish>Activar Objeto Local</Spanish>
         <Chinesesimp>切换本地对象</Chinesesimp>
         <Chinese>切换本地对象</Chinese>
+        <French>Basculer l'objet local</French>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_RESTORESELECTION">
         <English>Restore original selection</English>
@@ -4734,6 +4784,7 @@
         <Spanish>Restaurar selección original</Spanish>
         <Chinesesimp>恢复原始选择</Chinesesimp>
         <Chinese>恢复原始选择</Chinese>
+        <French>Restaurer la sélection d'origine</French>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER">
         <English>Selection Filter</English>
@@ -4743,6 +4794,7 @@
         <Spanish>Filtro de selección</Spanish>
         <Chinesesimp>选择过滤器</Chinesesimp>
         <Chinese>选择过滤器</Chinese>
+        <French>Filtre de sélection</French>
     </Key>
     <Key ID="STR_ENH_SELECTIONFILTER_CONFIRMSELECTION">
         <English>Confirm selection</English>
@@ -4752,6 +4804,7 @@
         <Spanish>Confirmar selección</Spanish>
         <Chinesesimp>确认选择</Chinesesimp>
         <Chinese>确认选择</Chinese>
+        <French>Confirmer la sélection</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_TOGGLESIMULATION">
         <English>Toggle Simulation</English>
@@ -4786,6 +4839,7 @@
         <Chinese>命令(功能排列)</Chinese>
         <Polish>Komendy według funkcjonalności</Polish>
         <Italian>Comandi ordinati per Funzionalità</Italian>
+        <French>Commandes par fonctionnalités</French>
     </Key>
     <Key ID="STR_ENH_HELP_DESCRIPTIONEXT">
         <English>Description.ext</English>
@@ -4796,6 +4850,7 @@
         <Chinese>Description.ext</Chinese>
         <Polish>Description.ext</Polish>
         <Italian>Description.ext</Italian>
+        <French>Description.ext</French>
     </Key>
     <Key ID="STR_ENH_MENUSTRIPENTRIES">
         <English>Menu Strip Entries</English>
@@ -4806,6 +4861,7 @@
         <Chinese>菜單欄條目</Chinese>
         <Italian>Rimuovi voci Menù</Italian>
         <Polish>Zarządzaj menu</Polish>
+        <French>Entrées dans la bande de menu</French>
     </Key>
     <Key ID="STR_ENH_MENUSTRIPENTRIES_TOOLTIP">
         <English>Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.\nChanges require a restart of Eden Editor to take effect!</English>
@@ -4816,6 +4872,7 @@
         <Chinese>取消選中條目以隱藏它們。取消選中文件夾將導致該文件夾中的所有條目被刪除。\n更改需要重新啟動Eden編輯器才能生效！</Chinese>
         <Italian>Deseleziona dalle entrate per nasconderle. Deselezionare le cartelle causerà la rimozione di tutte le entrate della cartella. \nCambiamenti necessitano di un riavvio dell Eden Editor per avere effetto! </Italian>
         <Polish>Odznaczaj pozycje menu, by je ukryć. Odznaczenie całej zakładki spowoduje zniknięcie wszystkich pozycji wewnątrz.\nZmian wymagają zrestartowania edytora, by je zobaczyć!</Polish>
+        <French>Décochez les entrées pour les masquer. Le fait de décocher les dossiers entraîne la suppression de toutes les entrées qui s'y trouvent.\nLes modifications nécessitent un redémarrage d'Eden Editor pour être prises en compte !</French>
     </Key>
     <Key ID="STR_ENH_HELP_MISSIONCAMPAIGNGUIDE">
         <English>Guide: Mission &amp; Campaign making</English>
@@ -5561,6 +5618,7 @@
         <Italian>Nome del Veicolo</Italian>
         <Chinesesimp>车辆名称</Chinesesimp>
         <Chinese>车辆名称</Chinese>
+        <French>Nom du véhicule</French>
     </Key>
     <Key ID="STR_ENH_AMBIENTANIMATIONS_DESCRIPTION">
         <English>Plays a selected animation set. The gear needs to be set up manually.</English>
@@ -6011,6 +6069,7 @@
         <Chinese>RPT查看器</Chinese>
         <Polish>Przeglądarka RPT</Polish>
         <Spanish>RPT Viewer</Spanish>
+        <French>RPT Viewer</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_DRAWBUILDINGPOSITIONS">
         <English>Toggle Drawing of Building Positions</English>
@@ -6030,6 +6089,7 @@
         <Chinese>切換車輛血量視圖</Chinese>
         <Polish>Przełącz rysowanie hitpointów pojazdów</Polish>
         <Spanish>Conmutador de Dibujo de puntos de vida de vehículos</Spanish>
+        <French>Afficher les points d'impact des véhicules on/off</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SAM">
         <English>Scenario Attributes Manager</English>
@@ -6164,6 +6224,7 @@
         <Spanish>Escala el tamaño final del objeto. Solo funciona para objetos sin simulación. Deshabilitado en multiplayer.</Spanish>
         <Chinesesimp>缩放对象的大小。仅适用于无模拟的物体。在多人游戏中禁用。</Chinesesimp>
         <Chinese>缩放对象的大小。仅适用于无模拟的物体。在多人游戏中禁用。</Chinese>
+        <French>Réduit la taille de l'objet. Ne fonctionne que pour les objets sans simulation. Désactivé en multijoueur.</French>
     </Key>
     <Key ID="STR_ENH_GARRISON_STANCE_STAND">
         <English>Stand</English>
@@ -6516,6 +6577,7 @@
         <Chinese>切換遊戲狀態</Chinese>
         <Polish>Przełącz grywalną jednostkę</Polish>
         <Spanish>Alternar estado jugable</Spanish>
+        <French>Basculer l'état jouable</French>
     </Key>
     <Key ID="STR_ENH_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
         <English>Delete Corpses</English>
@@ -6724,6 +6786,7 @@
     </Key>
     <Key ID="STR_ENH_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS">
         <English>Toggle Highlight Area Markers</English>
+        <French>Basculer les marqueurs de zone en surbrillance</French>
     </Key>
     <Key ID="STR_ENH_ADJUSTMINIMAPSIZE">
         <English>Adjust Minimap Size</English>
@@ -6870,6 +6933,7 @@
         <Spanish>Tickets de respawn modo un jugador</Spanish>
         <Chinesesimp>单人游戏重生门票</Chinesesimp>
         <Chinese>单人游戏重生门票</Chinese>
+        <French>Tickets de réapparition en solo</French>
     </Key>
     <Key ID="STR_ENH_RESPAWNTICKETS_TOOLTIP">
         <English>Every unit can respawn as long as it has not run out of tickets.</English>
@@ -6933,6 +6997,7 @@
         <Chinesesimp>变量查看器</Chinesesimp>
         <Chinese>變量查看器</Chinese>
         <Italian>Visualizzatore Variabili</Italian>
+        <French>Visualisation des variables</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ESE">
         <English>Equipment Storage Editor</English>
@@ -6943,6 +7008,7 @@
         <Chinesesimp>设备存储编辑器</Chinesesimp>
         <Chinese>设备存储编辑器</Chinese>
         <Italian>Editor di stoccaggio delle apparecchiature</Italian>
+        <French>Éditeur de stockage d'équipements</French>
     </Key>
     <Key ID="STR_ENH_ESE_EXIT_TEXT">
         <English>You have unsaved changes. Close anyway?</English>
@@ -6952,6 +7018,7 @@
         <Polish>Masz niezapisane zmiany. Kontynuować?</Polish>
         <Spanish>No has guardado los cambios, ¿cerrar igualmente?</Spanish>
         <Italian>Hai dei cambiamenti non salvati. Chiudere comunque?</Italian>
+        <French>Vous avez des modifications non sauvegardées. Fermer quand même ?</French>
     </Key>
     <Key ID="STR_ENH_ESE_COMPATIBLE_ITEMS">
         <English>Compatible Items</English>
@@ -6962,6 +7029,7 @@
         <Spanish>Artículos compatibles</Spanish>
         <Italian>Articoli compatibili</Italian>
         <Russian>Совместимые предметы</Russian>
+        <French>Objets compatibles</French>
     </Key>
     <Key ID="STR_ENH_ESE_EXPORTACE_DISPLAYNAME">
         <English>Export (ACE)</English>
@@ -6971,6 +7039,7 @@
         <Polish>Eksportuj (ACE)</Polish>
         <Spanish>Exportar (ACE)</Spanish>
         <Italian>Esporta (ACE)</Italian>
+        <French>Export (ACE)</French>
     </Key>
     <Key ID="STR_ENH_ESE_EXPORTACE_TOOLTIP">
         <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
@@ -6979,6 +7048,7 @@
         <Chinese>以可在 ACE 3 軍械庫屬性中使用的格式導出當前裝備。</Chinese>
         <Spanish>Exporte la plantilla actual lista para ser importada en el atributo ACE 3 Arsenal.</Spanish>
         <Polish>Eksportuj obecne wyposażenie w formie przygotowanej do importu do atrybutu arsenału ACE 3.</Polish>
+        <French>Exportation de l'équipement actuel prêt pour être importé dans l'Arsenal ACE 3 .</French>
     </Key>
     <Key ID="STR_ENH_ESE_AVAILABLEITEMS">
         <English>Available Items</English>
@@ -6999,6 +7069,7 @@
         <Chinese>將所選附加插件的所有物品添加到庫存中，並將其設置為虛擬(武器庫)。</Chinese>
         <Spanish>Agrega todos los elementos del addon seleccionado al inventario y lo configura para que sea virtual (Arsenal).</Spanish>
         <Polish>Dodaje wszystkie przedmiody z wybranej modyfikacji do ekwipunku i ustawia go jako wirtualny (arsenał).</Polish>
+        <French>Ajoute tous les objets de l'addon sélectionné à l'inventaire et le rend virtuel (Arsenal).</French>
     </Key>
     <Key ID="STR_ENH_ESE_ITEMSININVENTORY">
         <English>Items in Inventory</English>
@@ -7107,6 +7178,7 @@
         <Polish>Eksportuj do Arsenału ACE</Polish>
         <Spanish>Exportar a ACE Arsenal</Spanish>
         <Italian>Esporta all'Arsenale ACE</Italian>
+        <French>Exporter vers l'Arsenal ACE</French>
     </Key>
     <Key ID="STR_ENH_ESE_EXPORTTOARSENAL">
         <English>Export to Arsenal</English>
@@ -7116,6 +7188,7 @@
         <Polish>Eksportuj do Arsenału</Polish>
         <Spanish>Exportar a Arsenal</Spanish>
         <Italian>Esporta all'Arsenale</Italian>
+        <French>Exporter vers l'Arsenal</French>
     </Key>
     <Key ID="STR_ENH_ESE_SORTBYNAME">
         <English>Sort by Name</English>
@@ -7125,6 +7198,7 @@
         <Polish>Sortuj według Nazwy</Polish>
         <Spanish>Ordenar por nombre</Spanish>
         <Italian>Ordina per Nome</Italian>
+        <French>Trier par nom</French>
     </Key>
     <Key ID="STR_ENH_ESE_SORTBYCLASS">
         <English>Sort by Class Name</English>
@@ -7134,6 +7208,7 @@
         <Polish>Sortuj według Klasy</Polish>
         <Spanish>Ordenar por ClassName</Spanish>
         <Italian>Ordina per NomeClasse</Italian>
+        <French>Trier par nom de classe</French>
     </Key>
     <Key ID="STR_ENH_ESE_SORTBYCOUNT">
         <English>Sort by Count</English>
@@ -7143,6 +7218,7 @@
         <Polish>Sortuj według Liczby</Polish>
         <Spanish>Ordenar por cantidad</Spanish>
         <Italian>Ordina per Quantità</Italian>
+        <French>Trier par quantité</French>
     </Key>
     <Key ID="STR_ENH_ESE_SORTBYTYPE">
         <English>Sort by Type</English>
@@ -7152,6 +7228,7 @@
         <Polish>Sortuj według Typu</Polish>
         <Spanish>Ordenar por tipo</Spanish>
         <Italian>Ordina per Tipo</Italian>
+        <French>Trier par type</French>
     </Key>
     <Key ID="STR_ENH_ESE_SORTBYMOD">
         <English>Sort by Mod</English>
@@ -7161,6 +7238,7 @@
         <Polish>Sortuj według Modów</Polish>
         <Spanish>Ordenar por Mod</Spanish>
         <Italian>Ordina per Mod</Italian>
+        <French>Trier par Mod</French>
     </Key>
     <Key ID="STR_ENH_ESE_TEMPLATES">
         <English>Templates</English>
@@ -7213,6 +7291,7 @@
         <Chinese>體積（環境）</Chinese>
         <Italian>Volume (Ambiente)</Italian>
         <Polish>Głośność otoczenia</Polish>
+        <French>Volume (Environnement)</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_PLACEMENTTOOL">
         <English>Placement Tool</English>
@@ -7234,6 +7313,7 @@
         <Chinese>啟用動態視距</Chinese>
         <Italian>Abilita Distanza di Visualizzazione Dinamica</Italian>
         <Polish>Włącz dynamiczne renderowanie terenu</Polish>
+        <French>Activer la distance de vue dynamique</French>
     </Key>
     <Key ID="STR_ENH_BACKUPMISSIONSQM_DISPLAYNAME">
         <English>Backup mission.sqm</English>
@@ -7287,6 +7367,7 @@
         <Chinesesimp>视距和物体视距将根据相机高度而改变。此选项可能会在差电脑上引起性能问题。</Chinesesimp>
         <Chinese>視距和物體視距將根據相機高度而改變。此選項可能會在差電腦上引起性能問題。</Chinese>
         <Polish>Odległość renderowania terenu i obiektów będzie się zmieniać wraz z wysokością kamery. Ta opcja może powodować problemy z wydajnością na słabych systemach.</Polish>
+        <French>La distance de visibilité et la distance de visibilité des objets sont adaptées en fonction de la hauteur de la caméra. Sur les systèmes plus faibles, cela peut entraîner une perte de performance.</French>
     </Key>
     <Key ID="STR_ENH_FUNCTIONSVIEWER_SCRIPTS">
         <English>Scripts</English>
@@ -7929,6 +8010,7 @@
         <Chinese>指揮官砲塔</Chinese>
         <Polish>Wieża dowódcy</Polish>
         <Spanish>Torreta de Comandante</Spanish>
+        <French>Tourelle (Commandant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITCOMGUN">
         <English>Commander Gun</English>
@@ -7938,6 +8020,7 @@
         <Chinese>指揮官機槍</Chinese>
         <Polish>Działko dowódcy</Polish>
         <Spanish>Arma de Comandante</Spanish>
+        <French>Canon (Commandant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_1">
         <English>Slat Armour (Left, #01)</English>
@@ -7946,6 +8029,7 @@
         <Chinese>防彈格柵 (左, #01)</Chinese>
         <Polish>Kratownica (Lewa, #01)</Polish>
         <Spanish>Blindaje de Rejas (Izquierda, #01)</Spanish>
+        <French>Cage de blindage (Gauche, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_2">
         <English>Slat Armour (Left, #02)</English>
@@ -7954,6 +8038,7 @@
         <Chinese>防彈格柵 (左, #02)</Chinese>
         <Polish>Kratownica (Lewa, #02)</Polish>
         <Spanish>Blindaje de Rejas (Izquierda, #02)</Spanish>
+        <French>Cage de blindage (Gauche, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT_3">
         <English>Slat Armour (Left, #03)</English>
@@ -7962,6 +8047,7 @@
         <Chinese>防彈格柵 (左, #03)</Chinese>
         <Polish>Kratownica (Lewa, #03)</Polish>
         <Spanish>Blindaje de Rejas (Izquierda, #03)</Spanish>
+        <French>Cage de blindage (Gauche, #03)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_1">
         <English>Slat Armour (Right, #01)</English>
@@ -7970,6 +8056,7 @@
         <Chinese>防彈格柵 (右, #01)</Chinese>
         <Polish>Kratownica (Prawa, #01)</Polish>
         <Spanish>Blindaje de Rejas (Derecha, #01)</Spanish>
+        <French>Cage de blindage (Droite, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_2">
         <English>Slat Armour (Right, #02)</English>
@@ -7978,6 +8065,7 @@
         <Chinese>防彈格柵 (右, #02)</Chinese>
         <Polish>Kratownica (Prawa, #02)</Polish>
         <Spanish>Blindaje de Rejas (Derecha, #02)</Spanish>
+        <French>Cage de blindage (Droite, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT_3">
         <English>Slat Armour (Right, #03)</English>
@@ -7986,6 +8074,7 @@
         <Chinese>防彈格柵 (右, #03)</Chinese>
         <Polish>Kratownica (Prawa, #03)</Polish>
         <Spanish>Blindaje de Rejas (Derecha, #03)</Spanish>
+        <French>Cage de blindage (Droite, #03)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_RIGHT">
         <English>Slat Armour (Top right)</English>
@@ -7994,6 +8083,7 @@
         <Chinese>防彈格柵 (右前方)</Chinese>
         <Polish>Kratownica (Prawa Górna)</Polish>
         <Spanish>Blindaje de Rejas (Superior Derecha)</Spanish>
+        <French>Cage de blindage (Haut droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_LEFT">
         <English>Slat Armour (Top left)</English>
@@ -8002,6 +8092,7 @@
         <Chinese>防彈格柵 (左前方)</Chinese>
         <Polish>Kratownica (Lewa Górna)</Polish>
         <Spanish>Blindaje de Rejas (Superior Izquierda)</Spanish>
+        <French>Cage de blindage (Haut gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_TOP_BACK">
         <English>Slat Armour (Top back)</English>
@@ -8010,6 +8101,7 @@
         <Chinese>防彈格柵 (上背部)</Chinese>
         <Polish>Kratownica (Tylnia Górna)</Polish>
         <Spanish>Blindaje de Rejas (Superior Trasera)</Spanish>
+        <French>Cage de blindage (Haut arrière)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_FRONT">
         <English>Slat Armour (Front)</English>
@@ -8018,6 +8110,7 @@
         <Chinese>防彈格柵 (正面)</Chinese>
         <Polish>Kratownica (Front)</Polish>
         <Spanish>Blindaje de Rejas (Frontal)</Spanish>
+        <French>Cage de blindage (Avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_BACK">
         <English>Slat Armour (Back)</English>
@@ -8026,6 +8119,7 @@
         <Chinese>防彈格柵 (背面)</Chinese>
         <Polish>Kratownica (Tył)</Polish>
         <Spanish>Blindaje de Rejas (Trasera)</Spanish>
+        <French>Cage de blindage (Arrière)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITMISSILES">
         <English>Missiles</English>
@@ -8043,6 +8137,7 @@
         <Chinese>彈藥</Chinese>
         <Polish>Amunicja</Polish>
         <Spanish>Munición</Spanish>
+        <French>Munition</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRGLASS">
         <English>Window (Right)</English>
@@ -8072,6 +8167,7 @@
         <Polish>Dźwig</Polish>
         <Italian>Verricello</Italian>
         <Spanish>Cabestrante</Spanish>
+        <French>Treuil</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE3">
         <English>Engine #03</English>
@@ -8081,6 +8177,7 @@
         <Polish>Silnik #03</Polish>
         <Italian>Motore #03</Italian>
         <Spanish>Motor #03</Spanish>
+        <French>Moteur #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGEAR">
         <English>Gear</English>
@@ -8090,6 +8187,7 @@
         <Polish>Przekładnia</Polish>
         <Italian>Ingranaggio</Italian>
         <Spanish>Engranaje</Spanish>
+        <French>Engrenage</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHYDRAULICS">
         <English>Hydraulics</English>
@@ -8099,6 +8197,7 @@
         <Polish>Hydraulika</Polish>
         <Italian>Idraulica</Italian>
         <Spanish>Hidráulicos</Spanish>
+        <French>Hydrauliques</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSR">
         <English>Glass (Right)</English>
@@ -8108,6 +8207,7 @@
         <Polish>Szyba (Prawa)</Polish>
         <Italian>Vetro(Destra)</Italian>
         <Spanish>Cristal (Derecha)</Spanish>
+        <French>Vitre (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASSL">
         <English>Glass (Left)</English>
@@ -8117,6 +8217,7 @@
         <Polish>Szyba (Lewa)</Polish>
         <Italian>Vetro(Sinistra)</Italian>
         <Spanish>Cristal (Izquierda)</Spanish>
+        <French>Verre (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITTRANSMISSION">
         <English>Transmission</English>
@@ -8218,6 +8319,7 @@
         <Chinese>攝影機砲手</Chinese>
         <Polish>Kamera strzelca</Polish>
         <Spanish>Artillero de Cámara</Spanish>
+        <French>Caméra Tireur</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GLASS11">
         <English>Window #11</English>
@@ -8239,6 +8341,7 @@
         <Polish>Światło #01</Polish>
         <Italian>Luce #01</Italian>
         <Spanish>Luz #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT2">
         <English>Light #02</English>
@@ -8249,6 +8352,7 @@
         <Polish>Światło #02</Polish>
         <Italian>Luce #02</Italian>
         <Spanish>Luz #02</Spanish>
+        <French>Lumière #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#HITLIGHT3">
         <English>Light #03</English>
@@ -8259,6 +8363,7 @@
         <Polish>Światło #03</Polish>
         <Italian>Luce #03</Italian>
         <Spanish>Luz #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_SPOTLIGHT_HIT">
         <English>Spotlight</English>
@@ -8269,6 +8374,7 @@
         <Polish>Szperacz</Polish>
         <Italian>Riflettore</Italian>
         <Spanish>Luz de búsqueda</Spanish>
+        <French>Pleins phares</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_LEFT_LIGHT">
         <English>Wing Light (Left)</English>
@@ -8278,6 +8384,7 @@
         <German>Flügellicht (Links)</German>
         <Polish>Światło pozycyjne (Lewe)</Polish>
         <Spanish>Luz de Cabestrante (Izquierda)</Spanish>
+        <French>Feux de position (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#WING_RIGHT_LIGHT">
         <English>Wing Light (Right)</English>
@@ -8288,6 +8395,7 @@
         <Polish>Światło pozycyjne (Prawe)</Polish>
         <Italian>Luce Ala (Destra)</Italian>
         <Spanish>Luz de Cabestrante (Derecha)</Spanish>
+        <French>Feux de position (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_L">
         <English>Hand (Left)</English>
@@ -8298,6 +8406,7 @@
         <Polish>Dłoń (Lewa)</Polish>
         <Italian>Mano (Sinistra)</Italian>
         <Spanish>Mano (Izquierda)</Spanish>
+        <French>Main (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HAND_R">
         <English>Hand (Right)</English>
@@ -8308,6 +8417,7 @@
         <Polish>Dłoń (Prawa)</Polish>
         <Italian>Mano (Destra)</Italian>
         <Spanish>Mano (Derecha)</Spanish>
+        <French>Main (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_L">
         <English>Battery (Left)</English>
@@ -8318,6 +8428,7 @@
         <Polish>Bateria (Lewa)</Polish>
         <Italian>Batteria (Sinistra)</Italian>
         <Spanish>Batería (Izquierda)</Spanish>
+        <French>Batterie (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITBATTERY_R">
         <English>Battery (Right)</English>
@@ -8328,6 +8439,7 @@
         <Polish>Bateria (Prawa)</Polish>
         <Italian>Batteria (Destra)</Italian>
         <Spanish>Batería (Derecha)</Spanish>
+        <French>Batterie (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITENGINE4">
         <English>Engine #04</English>
@@ -8338,6 +8450,7 @@
         <Polish>Silnik #04</Polish>
         <Italian>Motore #04</Italian>
         <Spanish>Motor #04</Spanish>
+        <French>Moteur #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_BACK">
         <English>Era (Back)</English>
@@ -8346,6 +8459,7 @@
         <German>Era (Hinten)</German>
         <Polish>Era (Tył)</Polish>
         <Spanish>Era (Trasero)</Spanish>
+        <French>Era (Arrière)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_FRONT">
         <English>Era (Front)</English>
@@ -8354,6 +8468,7 @@
         <German>Era (Vorne)</German>
         <Polish>Era (Front)</Polish>
         <Spanish>Era (Frontal)</Spanish>
+        <French>Era (Avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT">
         <English>Era (left)</English>
@@ -8362,6 +8477,7 @@
         <German>Era (Links)</German>
         <Polish>Era (Lewa)</Polish>
         <Spanish>Era (Izquierda)</Spanish>
+        <French>Era (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_1">
         <English>Era (Left, #01)</English>
@@ -8370,6 +8486,7 @@
         <German>Era (Links, #01)</German>
         <Polish>Era (Lewa, #01)</Polish>
         <Spanish>Era (Izquierda, #01)</Spanish>
+        <French>Era (Gauche, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_2">
         <English>Era (Left, #02)</English>
@@ -8378,6 +8495,7 @@
         <German>Era (Links, #02)</German>
         <Polish>Era (Lewa, #02)</Polish>
         <Spanish>Era (Izquierda, #02)</Spanish>
+        <French>Era (Gauche, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_3">
         <English>Era (Left, #03)</English>
@@ -8386,6 +8504,7 @@
         <German>Era (Links, #03)</German>
         <Polish>Era (Lewa, #03)</Polish>
         <Spanish>Era (Izquierda, #03)</Spanish>
+        <French>Era (Gauche, #03)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_LEFT_4">
         <English>Era (Left, #04)</English>
@@ -8394,6 +8513,7 @@
         <German>Era (Links, #04)</German>
         <Polish>Era (Lewa, #04)</Polish>
         <Spanish>Era (Izquierda, #04)</Spanish>
+        <French>Era (Gauche, #04)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT">
         <English>Era (Right)</English>
@@ -8402,6 +8522,7 @@
         <German>Era (Rechts)</German>
         <Polish>Era (Prawa)</Polish>
         <Spanish>Era (Derecha)</Spanish>
+        <French>Era (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_1">
         <English>Era (Right, #01)</English>
@@ -8410,6 +8531,7 @@
         <German>Era (Rechts, #01)</German>
         <Polish>Era (Prawa, #01)</Polish>
         <Spanish>Era (Derecha, #01)</Spanish>
+        <French>Era (Droite, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_2">
         <English>Era (Right, #02)</English>
@@ -8418,6 +8540,7 @@
         <German>Era (Rechts, #02)</German>
         <Polish>Era (Prawa, #02)</Polish>
         <Spanish>Era (Derecha, #02)</Spanish>
+        <French>Era (Droite, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_3">
         <English>Era (Right, #03)</English>
@@ -8426,6 +8549,7 @@
         <German>Era (Rechts, #03)</German>
         <Polish>Era (Prawa, #03)</Polish>
         <Spanish>Era (Derecha, #03)</Spanish>
+        <French>Era (Droite, #03)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_RIGHT_4">
         <English>Era (Right, #04)</English>
@@ -8434,6 +8558,7 @@
         <German>Era (Rechts, #04)</German>
         <Polish>Era (Prawa, #04)</Polish>
         <Spanish>Era (Derecha, #04)</Spanish>
+        <French>Era (Droite, #04)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP">
         <English>Era (Top)</English>
@@ -8442,6 +8567,7 @@
         <German>Era (Oben)</German>
         <Polish>Era (Góra)</Polish>
         <Spanish>Era (Superior)</Spanish>
+        <French>Era (Haut)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_FRONT">
         <English>Era (Top, Front)</English>
@@ -8450,6 +8576,7 @@
         <German>Era (Oben, Vorne)</German>
         <Polish>Era (Góra, Front)</Polish>
         <Spanish>Era (Superior, Frontal)</Spanish>
+        <French>Era (Haut, Avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT">
         <English>Era (Top, Left)</English>
@@ -8458,6 +8585,7 @@
         <German>Era (Oben, Links)</German>
         <Polish>Era (Góra, Lewa)</Polish>
         <Spanish>Era (Superior, Izquierda)</Spanish>
+        <French>Era (Haut, Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_1">
         <English>Era (Top, Left, #01)</English>
@@ -8466,6 +8594,7 @@
         <German>Era (Oben, Links, #01)</German>
         <Polish>Era (Góra, Lewa, #01)</Polish>
         <Spanish>Era (Superior, Izquierda, #01)</Spanish>
+        <French>Era (Haut, Gauche, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_LEFT_2">
         <English>Era (Top, Left, #02)</English>
@@ -8474,6 +8603,7 @@
         <German>Era (Oben, Links, #02)</German>
         <Polish>Era (Góra, Lewa, #02</Polish>
         <Spanish>Era (Superior, Izquierda, #02)</Spanish>
+        <French>Era (Haut, Gauche, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT">
         <English>Era (Top, Right)</English>
@@ -8482,6 +8612,7 @@
         <German>Era (Oben, Rechts)</German>
         <Polish>Era (Góra, Prawa)</Polish>
         <Spanish>Era (Superior, Derecha)</Spanish>
+        <French>Era (Haut, Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_1">
         <English>Era (Top, Right, #01)</English>
@@ -8490,6 +8621,7 @@
         <German>Era (Oben, Rechts, #01)</German>
         <Polish>Era (Góra, Prawa, #01)</Polish>
         <Spanish>Era (Superior, Derecha, #01)</Spanish>
+        <French>Era (Haut, Droite, #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITERA_TOP_RIGHT_2">
         <English>Era (Top, Right, #02)</English>
@@ -8498,6 +8630,7 @@
         <German>Era (Oben, Rechts #02)</German>
         <Polish>Era (Góra, Prawa, #02)</Polish>
         <Spanish>Era (Superior, Derecha, #02)</Spanish>
+        <French>Era (Haut, Droite, #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEFT">
         <English>Fuel Tank (Left)</English>
@@ -8508,6 +8641,7 @@
         <Polish>Zbiornik paliwa (Lewy)</Polish>
         <Italian>Serbatoio (Sinistra)</Italian>
         <Spanish>Tanque de Combusttible (Izquierda)</Spanish>
+        <French>Réservoir (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_RIGHT">
         <English>Fuel Tank (Right)</English>
@@ -8518,6 +8652,7 @@
         <Polish>Zbiornik paliwa (Prawy)</Polish>
         <Italian>Serbatoio (Sinistra)</Italian>
         <Spanish>Tanque de Combusttible (Derecha)</Spanish>
+        <French>Réservoir (Droit)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUELTANK">
         <English>Fuel Tank</English>
@@ -8528,6 +8663,7 @@
         <Polish>Zbiornik paliwa</Polish>
         <Italian>Serbatoio</Italian>
         <Spanish>Tanque de Combustible</Spanish>
+        <French>Réservoir</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITGLASS16">
         <English>Window #16</English>
@@ -8607,6 +8743,7 @@
         <German>Horizontaler Stabilisator (Links)</German>
         <Polish>Stabilizator poziomy (Lewy)</Polish>
         <Spanish>Estabilizador Horizontal (Izquierda)</Spanish>
+        <French>Stabilisateur horizontal (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITHSTABILIZERR1">
         <English>Horizontal Stabilizer (Right)</English>
@@ -8616,6 +8753,7 @@
         <German>Horizontaler Stabilisator (Rechts)</German>
         <Polish>Stabilizator poziomy (Prawy)</Polish>
         <Spanish>Estabilizador Horizontal (Derecha)</Spanish>
+        <French>Stabilisateur horizontal (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHT">
         <English>Light</English>
@@ -8625,6 +8763,7 @@
         <German>Licht</German>
         <Polish>Światła</Polish>
         <Spanish>Luz</Spanish>
+        <French>Lumière</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTBACK">
         <English>Light (Back)</English>
@@ -8634,6 +8773,7 @@
         <German>Licht (Hinten)</German>
         <Polish>Światła (Tył)</Polish>
         <Spanish>Luz (Trasera)</Spanish>
+        <French>Lumière (Arrière)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTFRONT">
         <English>Light (Front)</English>
@@ -8643,6 +8783,7 @@
         <German>Licht (Vorne)</German>
         <Polish>Światła (Front)</Polish>
         <Spanish>Luz (Frontal)</Spanish>
+        <French>Lumière (Avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTL">
         <English>Light (Left)</English>
@@ -8652,6 +8793,7 @@
         <German>Licht (Links)</German>
         <Polish>Światła (Lewo)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLIGHTR">
         <English>Light (Right)</English>
@@ -8661,6 +8803,7 @@
         <German>Light (Rechts)</German>
         <Polish>Światła (Prawo)</Polish>
         <Spanish>Luz (Derecha)</Spanish>
+        <French>Lumière (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITOPTIC">
         <English>Optic</English>
@@ -8670,6 +8813,7 @@
         <German>Optik</German>
         <Polish>Optyka</Polish>
         <Spanish>Óptica</Spanish>
+        <French>Optique</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITOPTICS">
         <English>Optics</English>
@@ -8679,6 +8823,7 @@
         <German>Optiken</German>
         <Polish>Optyka</Polish>
         <Spanish>Ópticas</Spanish>
+        <French>Optiques</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRESERVEWHEEL">
         <English>Reserve Wheel</English>
@@ -8688,6 +8833,7 @@
         <Chinese>備用車輪</Chinese>
         <Polish>Zapasowe koło</Polish>
         <Spanish>Rueda de Repuesto</Spanish>
+        <French>Roue de secours</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITROTOR">
         <English>Rotor</English>
@@ -8697,6 +8843,7 @@
         <German>Rotor</German>
         <Polish>Wirnik</Polish>
         <Spanish>Rotor</Spanish>
+        <French>Rotor</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITROTORVIRTUAL">
         <English>Rotor (Virtual)</English>
@@ -8706,6 +8853,7 @@
         <German>Rotor (Virtuell)</German>
         <Polish>Wirnik (Wirtualny)</Polish>
         <Spanish>Rotor (Virtual)</Spanish>
+        <French>Rotor (Virtuell)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_LEFT">
         <English>Slat (Left)</English>
@@ -8714,6 +8862,7 @@
         <German>Käfig (Links)</German>
         <Polish>Klatka (lewa)</Polish>
         <Spanish>Rejas (Izquierda)</Spanish>
+        <French>Cage (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSLAT_RIGHT">
         <English>Slat (Right)</English>
@@ -8722,6 +8871,7 @@
         <German>Käfig (Rechts)</German>
         <Polish>Klatka (prawa)</Polish>
         <Spanish>Rejas (Derecha)</Spanish>
+        <French>Cage (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER1">
         <English>Starter #01</English>
@@ -8731,6 +8881,7 @@
         <German>Starter #01</German>
         <Polish>Starter #01</Polish>
         <Spanish>Motor de Arranque #01</Spanish>
+        <French>Starter #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER2">
         <English>Starter #02</English>
@@ -8740,6 +8891,7 @@
         <German>Starter #02</German>
         <Polish>Starter #02</Polish>
         <Spanish>Motor de Arranque #02</Spanish>
+        <French>Starter #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTARTER3">
         <English>Starter #03</English>
@@ -8749,6 +8901,7 @@
         <German>Starter #03</German>
         <Polish>Starter #03</Polish>
         <Spanish>Motor de Arranque #03</Spanish>
+        <French>Starter #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITSTATICPORT">
         <English>Static Port</English>
@@ -8758,6 +8911,7 @@
         <German>Statikanschluss</German>
         <Polish>Port statyczny</Polish>
         <Spanish>Puerto Estático</Spanish>
+        <French>Port statique</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITVSTABILIZER1">
         <English>Vertical Stabilizer #01</English>
@@ -8767,6 +8921,7 @@
         <German>Vertikaler Stabilisator #01</German>
         <Polish>Stabilizator pionowy #01</Polish>
         <Spanish>Estabilizador Vertical #01</Spanish>
+        <French>Stabilisateur vertical #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_1_HITPOINT">
         <English>Hitzone #01</English>
@@ -8776,6 +8931,7 @@
         <German>Hitzone #01</German>
         <Polish>Hitzone #01</Polish>
         <Spanish>Zona de impacto #01</Spanish>
+        <French>Hitzone #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_2_HITPOINT">
         <English>Hitzone #02</English>
@@ -8785,6 +8941,7 @@
         <German>Hitzone #02</German>
         <Polish>Hitzone #02</Polish>
         <Spanish>Zona de impacto #02</Spanish>
+        <French>Hitzone #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_3_HITPOINT">
         <English>Hitzone #03</English>
@@ -8794,6 +8951,7 @@
         <German>Hitzone #03</German>
         <Polish>Hitzone #03</Polish>
         <Spanish>Zona de impacto #03</Spanish>
+        <French>Hitzone #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITZONE_4_HITPOINT">
         <English>Hitzone #04</English>
@@ -8803,6 +8961,7 @@
         <German>Hitzone #04</German>
         <Polish>Hitzone #04</Polish>
         <Spanish>Zona de impacto #04</Spanish>
+        <French>Hitzone #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_INCAPACITATED">
         <English>Incapacitated</English>
@@ -8812,6 +8971,7 @@
         <German>Bewusstlos</German>
         <Polish>Unieruchomiony</Polish>
         <Spanish>Incapacitado</Spanish>
+        <French>Inconscient.</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LEG_L">
         <English>Leg (Left)</English>
@@ -8821,6 +8981,7 @@
         <German>Bein (Links)</German>
         <Polish>Noga (lewa)</Polish>
         <Spanish>Pierna (Izquierda)</Spanish>
+        <French>Jambe (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LEG_R">
         <English>Leg (Right)</English>
@@ -8830,6 +8991,7 @@
         <German>Bein (Rechts)</German>
         <Polish>Noga (prawa)</Polish>
         <Spanish>Pierna (Derecha)</Spanish>
+        <French>Jambe (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_1_HITPOINT">
         <English>Light #01</English>
@@ -8839,6 +9001,7 @@
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
         <Spanish>Ligero #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_2_HITPOINT">
         <English>Light #02</English>
@@ -8848,6 +9011,7 @@
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
         <Spanish>Ligero #02</Spanish>
+        <French>Lumière #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_3_HITPOINT">
         <English>Light #03</English>
@@ -8857,6 +9021,7 @@
         <German>Light #03</German>
         <Polish>Światło #03</Polish>
         <Spanish>Ligero #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_LIGHT_4_HITPOINT">
         <English>Light #04</English>
@@ -8866,6 +9031,7 @@
         <German>Light #04</German>
         <Polish>Światło #04</Polish>
         <Spanish>Ligero #04</Spanish>
+        <French>Lumière #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_1_HIT">
         <English>Gear #01 (Light #01)</English>
@@ -8875,6 +9041,7 @@
         <German>Fahrwerk #01 (Licht #01)</German>
         <Polish>Podwozie #01 (Światło #01)</Polish>
         <Spanish>Engranaje #01 (Ligera #01)</Spanish>
+        <French>Train d'atterrissage #01 (Lumière #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_1_LIGHT_2_HIT">
         <English>Gear #01 (Light #02)</English>
@@ -8884,6 +9051,7 @@
         <German>Fahrwerk #01 (Licht #02)</German>
         <Polish>Podwozie #01 (Światło #02)</Polish>
         <Spanish>Engranaje #01 (Ligera #02)</Spanish>
+        <French>Train d'atterrissage #01 (Lumière #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_1_HIT">
         <English>Gear #02 (Light #01)</English>
@@ -8893,6 +9061,7 @@
         <German>Fahrwerk #02 (Licht #01)</German>
         <Polish>Podwozie #02 (Światło #01)</Polish>
         <Spanish>Engranaje #02 (Ligera #01)</Spanish>
+        <French>Train d'atterrissage #02 (Lumière #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_2_LIGHT_2_HIT">
         <English>Gear #02 (Light #02)</English>
@@ -8902,6 +9071,7 @@
         <German>Fahrwerk #02 (Licht #02)</German>
         <Polish>Podwozie #02 (Światło #02)</Polish>
         <Spanish>Engranaje #02 (Ligera #02)</Spanish>
+        <French>Train d'atterrissage #02 (Lumière #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_1_HIT">
         <English>Gear #03 (Light #01)</English>
@@ -8911,6 +9081,7 @@
         <German>Fahrwerk #03 (Licht #01)</German>
         <Polish>Podwozie #03 (Światło #01)</Polish>
         <Spanish>Engranaje #03 (Ligera #01)</Spanish>
+        <French>Train d'atterrissage #03 (Lumière #01)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_3_LIGHT_2_HIT">
         <English>Gear #03 (Light #02)</English>
@@ -8920,6 +9091,7 @@
         <German>Fahrwerk #03 (Licht #02)</German>
         <Polish>Podwozie #03 (Światło #02)</Polish>
         <Spanish>Engranaje #03 (Ligera #02)</Spanish>
+        <French>Train d'atterrissage #03 (Lumière #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#GEAR_F_LIGHTS">
         <English>Gear Light (Front)</English>
@@ -8929,6 +9101,7 @@
         <German>Fahrwerkslicht (Vorne)</German>
         <Polish>Światło podwozia (Przód)</Polish>
         <Spanish>Luz de Marcha (Frontal)</Spanish>
+        <French>Éclairage du train d'atterrissage (avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#L SVETLO">
         <English>Light (Left)</English>
@@ -8938,6 +9111,7 @@
         <Chinese>燈光 (左)</Chinese>
         <Polish>Światło (Lewe)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1">
         <English>Light #01</English>
@@ -8947,6 +9121,7 @@
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
         <Spanish>Luz #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HIT">
         <English>Light #01</English>
@@ -8956,6 +9131,7 @@
         <Chinese>燈光 #01</Chinese>
         <Polish>Światło #01</Polish>
         <Spanish>Luz #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_1_HITPOINT">
         <English>Light #01</English>
@@ -8965,6 +9141,7 @@
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
         <Spanish>Luz #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2">
         <English>Light #02</English>
@@ -8974,6 +9151,7 @@
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
         <Spanish>Luz #02</Spanish>
+        <French>Lumière #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HIT">
         <English>Light #02</English>
@@ -8983,6 +9161,7 @@
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
         <Spanish>Luz #02</Spanish>
+        <French>Lumière #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_2_HITPOINT">
         <English>Light #03</English>
@@ -8992,6 +9171,7 @@
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
         <Spanish>Luz #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HIT">
         <English>Light #03</English>
@@ -9001,6 +9181,7 @@
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
         <Spanish>Luz #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_3_HITPOINT">
         <English>Light #03</English>
@@ -9010,6 +9191,7 @@
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
         <Spanish>Luz #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HIT">
         <English>Light #04</English>
@@ -9019,6 +9201,7 @@
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
         <Spanish>Luz #04</Spanish>
+        <French>Lumière #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_4_HITPOINT">
         <English>Light #04</English>
@@ -9028,6 +9211,7 @@
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
         <Spanish>Luz #04</Spanish>
+        <French>Lumière #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_HITPOINT">
         <English>Light</English>
@@ -9037,6 +9221,7 @@
         <German>Licht</German>
         <Polish>Światło</Polish>
         <Spanish>Luz</Spanish>
+        <French>Lumière</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L">
         <English>Light (Left)</English>
@@ -9046,6 +9231,7 @@
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L2">
         <English>Light (Left #02)</English>
@@ -9055,6 +9241,7 @@
         <German>Licht (Links #02)</German>
         <Polish>Światło (Lewe #02)</Polish>
         <Spanish>Luz (Izquierda #02)</Spanish>
+        <French>Lumière (Gauche #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L2_FLARE">
         <English>Light (Left #02)</English>
@@ -9064,6 +9251,7 @@
         <German>Licht (Links #02)</German>
         <Polish>Światło (Lewe #02)</Polish>
         <Spanish>Luz (Izquierda #02)</Spanish>
+        <French>Lumière (Gauche #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L_FLARE">
         <English>Light (Left)</English>
@@ -9073,6 +9261,7 @@
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_L_HITPOINT">
         <English>Light (Left)</English>
@@ -9082,6 +9271,7 @@
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R">
         <English>Light (Right)</English>
@@ -9091,6 +9281,7 @@
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
         <Spanish>Luz (Derecha)</Spanish>
+        <French>Lumière (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R2">
         <English>Light (Right #02)</English>
@@ -9100,6 +9291,7 @@
         <German>Licht (Rechts #02)</German>
         <Polish>Światło (Prawe #02)</Polish>
         <Spanish>Luz (Derecha #02)</Spanish>
+        <French>Lumière (Droite #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R2_FLARE">
         <English>Light (Right #02)</English>
@@ -9109,6 +9301,7 @@
         <German>Licht (Rechts #02)</German>
         <Polish>Światło (Prawe #02)</Polish>
         <Spanish>Luz (Derecha #02)</Spanish>
+        <French>Lumière (Droite #02)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R_FLARE">
         <English>Light (Right)</English>
@@ -9118,6 +9311,7 @@
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
         <Spanish>Luz (Derecha)</Spanish>
+        <French>Lumière (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#LIGHT_R_HITPOINT">
         <English>Light (Right)</English>
@@ -9127,6 +9321,7 @@
         <German>Licht (Rechts)</German>
         <Polish>Światło (Prawe)</Polish>
         <Spanish>Luz (Derecha)</Spanish>
+        <French>Lumière (Droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#P SVETLO">
         <English>Light (Left)</English>
@@ -9136,6 +9331,7 @@
         <German>Licht (Links)</German>
         <Polish>Światło (Lewe)</Polish>
         <Spanish>Luz (Izquierda)</Spanish>
+        <French>Lumière (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_#POS_GEAR_FRONT_LIGHT">
         <English>Gear Light (Front)</English>
@@ -9145,6 +9341,7 @@
         <German>Fahrwerkslicht (Vorne)</German>
         <Polish>Światło podwozia (Przód)</Polish>
         <Spanish>Luz de Marcha (Frontal)</Spanish>
+        <French>Éclairage du train d'atterrissage (avant)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_GLASS_10_HITPOINT">
         <English>Window #10</English>
@@ -9774,6 +9971,7 @@
         <German>Licht #01</German>
         <Polish>Światło #01</Polish>
         <Spanish>Luz #01</Spanish>
+        <French>Lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_1_FLARE">
         <English>Light Flare #01</English>
@@ -9783,6 +9981,7 @@
         <German>Licht #01</German>
         <Polish>Flara światła #01</Polish>
         <Spanish>Luz de Destello #01</Spanish>
+        <French>Eclat de lumière #01</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_2">
         <English>Light #02</English>
@@ -9792,6 +9991,7 @@
         <German>Licht #02</German>
         <Polish>Światło #02</Polish>
         <Spanish>Luz #02</Spanish>
+        <French>Lumière #02</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_3">
         <English>Light #03</English>
@@ -9801,6 +10001,7 @@
         <German>Licht #03</German>
         <Polish>Światło #03</Polish>
         <Spanish>Luz #03</Spanish>
+        <French>Lumière #03</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HIT_LIGHT_4">
         <English>Light #04</English>
@@ -9810,6 +10011,7 @@
         <German>Licht #04</German>
         <Polish>Światło #04</Polish>
         <Spanish>Luz #04</Spanish>
+        <French>Lumière #04</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_LEFT">
         <English>Fuel Lead (Left)</English>
@@ -9819,6 +10021,7 @@
         <Chinese>輸油管（左）</Chinese>
         <Polish>Przewód paliwowy (lewy)</Polish>
         <Spanish>Toma de Combustible (Izquierda)</Spanish>
+        <French>Conduite de carburant (gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITFUEL_LEAD_RIGHT">
         <English>Fuel Lead (Right)</English>
@@ -9828,6 +10031,7 @@
         <Chinese>輸油管（右）</Chinese>
         <Polish>Przewód paliwowy (prawy))</Polish>
         <Spanish>Toma de Combustible (Derecha)</Spanish>
+        <French>Conduite de carburant (droite)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITLAILERON_LINK">
         <English>Aileron Link (Left)</English>
@@ -9837,6 +10041,7 @@
         <Chinese>副翼鏈接（左）</Chinese>
         <Polish>Łączenie lotki (lewe)</Polish>
         <Spanish>Enlace con Alerón (Izquierda)</Spanish>
+        <French>Aileron (Gauche)</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITPITOTTUBE">
         <English>Pitot Tube</English>
@@ -9846,6 +10051,7 @@
         <Chinese>皮託管/空速管</Chinese>
         <Polish>Rurka Pitota</Polish>
         <Spanish>Tubo de Pitot</Spanish>
+        <French>Sonde pitot</French>
     </Key>
     <Key ID="STR_ENH_DAMAGE_HITRAILERON_LINK">
         <English>Aileron Link (Right)</English>
@@ -9855,6 +10061,7 @@
         <Chinese>副翼鏈接（右）</Chinese>
         <Polish>Łączenie lotki (prawe)</Polish>
         <Spanish>Enlace con Alerón (Derecha)</Spanish>
+        <French>Aileron (Droit)</French>
     </Key>
     <Key ID="STR_ENH_ADVANCEDDAMAGE_DESCRIPTION">
         <English>Allows to add damage to all available hit points of this entity. Some hitpoints might not have an effect!</English>
@@ -9864,6 +10071,7 @@
         <Chinese>允許添加傷害到這個實體的所有可用血量上。某些血量可能沒有效果！</Chinese>
         <Spanish>Permite agregar daño a todos los puntos de vida disponibles de esta entidad. ¡Es posible que algunos puntos de vida no surtan efecto!</Spanish>
         <Polish>Pozwala na dodawanie obrażeń do wszystkich dostępnych hitpointów tego obiektu. Niektóre z wypisanych hitpointów mogą nie mieć żadnych efektów.</Polish>
+        <French>Permet d'ajouter des dégâts à tous les 'HitPoints' disponibles de cette entité. Il se peut que certains HitPoints n'aient aucun effet !</French>
     </Key>
     <Key ID="STR_ENH_ADVANCEDDAMAGE_NOHITPOINTS">
         <English>No hitpoints available for this object!</English>
@@ -9873,6 +10081,7 @@
         <Chinese>該對像沒有生命值！</Chinese>
         <Spanish>No hay puntos de vida disponibles para este objeto</Spanish>
         <Polish>Brak hitpointów dostępnych dla tego obiektu!</Polish>
+        <French>Pas de 'hitpoints' disponibles !</French>
     </Key>
     <Key ID="STR_ENH_ZEUSADDONS_HEADER">
         <English>Manage Zeus Addons</English>
@@ -9882,6 +10091,7 @@
         <Spanish>Manejar Addons de Zeus</Spanish>
         <Italian>Gestisci i componenti aggiuntivi Zeus</Italian>
         <Polish>Zarządzaj addonami Zeusa</Polish>
+        <French>Gérer les modules complémentaires de Zeus</French>
     </Key>
     <Key ID="STR_ENH_ZEUSADDONS_CFGPATCHES">
         <English>CfgPatches</English>
@@ -9927,6 +10137,7 @@
         <Polish>Wyrównaj do X+</Polish>
         <Italian>Allinea all'asse X+</Italian>
         <Spanish>Alinear con X+</Spanish>
+        <French>Aligner sur X+</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_X_MIN">
         <English>Align to X-</English>
@@ -9936,6 +10147,7 @@
         <Polish>Wyrównaj do X-</Polish>
         <Italian>Allinea all'asse X-</Italian>
         <Spanish>Alinear con X-</Spanish>
+        <French>Aligner sur X-</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MAX">
         <English>Align to Y+</English>
@@ -9945,6 +10157,7 @@
         <Polish>Wyrównaj do Y+</Polish>
         <Italian>Allinea all'asse Y+</Italian>
         <Spanish>Alinear con Y+</Spanish>
+        <French>Aligner sur Y+</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Y_MIN">
         <English>Align to Y-</English>
@@ -9954,6 +10167,7 @@
         <Polish>Wyrównaj do Y-</Polish>
         <Italian>Allinea all'asse Y-</Italian>
         <Spanish>Alinear con Y-</Spanish>
+        <French>Aligner sur Y-</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MAX">
         <English>Align to Z+</English>
@@ -9963,6 +10177,7 @@
         <Polish>Wyrównaj do Z+</Polish>
         <Italian>Allinea all'asse Z+</Italian>
         <Spanish>Alinear con Z+</Spanish>
+        <French>Aligner sur Z+</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_ALIGN_Z_MIN">
         <English>Align to Z-</English>
@@ -9972,6 +10187,7 @@
         <Polish>Wyrównaj do Z-</Polish>
         <Italian>Allinea all'asse Z-</Italian>
         <Spanish>Alinear con Z-</Spanish>
+        <French>Aligner sur Z-</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_X">
         <English>Space along X-Axis</English>
@@ -9981,6 +10197,7 @@
         <Polish>Odstęp wzdłuż osi X</Polish>
         <Italian>Spazio lungo asse-X</Italian>
         <Spanish>Espacio a lo largo del eje X</Spanish>
+        <French>Espacer le long de l'axe des X</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Y">
         <English>Space along Y-Axis</English>
@@ -9990,6 +10207,7 @@
         <Polish>Odstęp wzdłuż osi Y</Polish>
         <Italian>Spazio lungo asse-Y</Italian>
         <Spanish>Espacio a lo largo del eje Y</Spanish>
+        <French>Espacer le long de l'axe des Y</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_SPACEEQUALLY_Z">
         <English>Space along Z-Axis</English>
@@ -9999,6 +10217,7 @@
         <Polish>Odstęp wzdłuż osi Z</Polish>
         <Italian>Spazio lungo asse-Z</Italian>
         <Spanish>Espacio a lo largo del eje Z</Spanish>
+        <French>Espacer le long de l'axe des Z</French>
     </Key>
     <Key ID="STR_ENH_FOLDER_ORIENT">
         <English>Orient</English>
@@ -10037,6 +10256,7 @@
         <Chinese>列表條目數: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinese>
         <Polish>Wpisy w liście: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Polish>
         <Spanish>Entradas en Lista: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Spanish>
+        <French>Entrées dans la liste: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</French>
     </Key>
     <Key ID="STR_ENH_TOOLS_LIMIT_ARSENAL">
         <English>Virtual Arsenal Manager</English>
@@ -10045,6 +10265,7 @@
         <German>Arsenal Manager</German>
         <Chinesesimp>虚拟兵工厂经理</Chinesesimp>
         <Chinese>虚拟兵工厂经理</Chinese>
+        <French>Gestionnaire d'Arsenal virtuel</French>
     </Key>
     <Key ID="STR_ENH_MARKERHIDEONSTART_DISPLAYNAME">
         <English>Hide on Start</English>
