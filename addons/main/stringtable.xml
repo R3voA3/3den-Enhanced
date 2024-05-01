@@ -308,18 +308,6 @@
             <Spanish>Otras herramientas</Spanish>
             <Russian>Другие инструменты</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_FUNCTIONS_BATCHREPLACE_ERROR">
-            <English>No valid Classname!</English>
-            <Italian>Classname non valido!</Italian>
-            <German>Kein gültiger Klassenname!</German>
-            <Czech>Žádné validní Classname!</Czech>
-            <French>Pas de Classname valide!</French>
-            <Polish>Brak poprawnych nazw klas!</Polish>
-            <Russian>Недействительное имя класса!</Russian>
-            <Spanish>¡Classname no valido!</Spanish>
-            <Chinesesimp>无效的Classname！</Chinesesimp>
-            <Chinese>無效的Classname！</Chinese>
-        </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
             <English>Copy path with 'CTRL + C'.</English>
             <Italian>Copia il percorso con "CTRL + C".</Italian>
@@ -1896,28 +1884,6 @@
             <Polish>Oznacza szacunkową szansę jednostki na zerwanie kontaktu i wycofanie się z walki. Im wyższa wartość, tym większa szansa na ucieczkę. 0% oznacza wyłączenie ucieczki, a 100% spowoduje wycofywanie się przy każdej możliwej okazji.</Polish>
             <Russian>Устанавливает уровень трусости (отсутствие смелости или храбрости) отряда. Чем больше трусости имеет подразделение, тем скорее оно начнет убегать. 0 означает максимальную смелость, а при выборе 1 ИИ будет всегда убегать.</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_ATTACHTO_DISPLAYNAME">
-            <English>Attach</English>
-            <Russian>Прикрепление</Russian>
-            <German>Befestigen</German>
-            <Chinesesimp>附加</Chinesesimp>
-            <Chinese>附加</Chinese>
-            <Spanish>Acoplar</Spanish>
-            <Italian>Fissa</Italian>
-            <Polish>Przyczep</Polish>
-            <French>Fixer</French>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ATTACHTO_TOOLTIP">
-            <English>Attaches this object to the closest object.</English>
-            <Russian>Присоединяет этот объект к ближайшему объекту</Russian>
-            <German>Befestigt dieses Objekt an dem nächstgelegensten Objekt.</German>
-            <Chinesesimp>将此对象附加到最近的对象上。</Chinesesimp>
-            <Chinese>將此對象附加到最近的對像上。</Chinese>
-            <Spanish>Acoplar este objeto al objeto más cercano.</Spanish>
-            <Italian>Fissa questo oggetto all' oggetto più vicino</Italian>
-            <Polish>Przyczepia wybrany obiekt do innego, najbliższego.</Polish>
-            <French>Fixer cet objet à l'objet le plus proche.</French>
-        </Key>
         <Key ID="STR_ENH_MAIN_SETMASS_DISPLAYNAME">
             <English>Unladen Weight</English>
             <Italian>peso a Vuoto</Italian>
@@ -2661,18 +2627,6 @@
             <Chinesesimp>初始角度</Chinesesimp>
             <Chinese>初始角度</Chinese>
         </Key>
-        <Key ID="STR_ENH_MAIN_BATCHREPLACE_REPLACEWITH_TOOLTIP">
-            <English>Example: Classname_1 Classname_2 Classname_n</English>
-            <Italian>Esempio: Classname_1 Classname_2 Classname_n</Italian>
-            <Czech>Příklad: Classname_1 Classname_2 Classname_n</Czech>
-            <German>Beispiel: Klassenname_1 Klassenname_2 Klassenname_n</German>
-            <Chinesesimp>例如：Classname_1、Classname_2、Classname_n以此类推</Chinesesimp>
-            <Chinese>例如：Classname_1、Classname_2、Classname_n以此類推</Chinese>
-            <Spanish>Ejemplo: Classname_1 Classname_2 Classname_n</Spanish>
-            <French>Exemple : Classname_1 Classname_2 Classname_n</French>
-            <Polish>Przykład: nazwaKlasy_1 nazwaKlasy_2 nazwaKlasy_n</Polish>
-            <Russian>Пример: имя_класса_1 имя_класса_2 имя_класса_n</Russian>
-        </Key>
         <Key ID="STR_ENH_MAIN_PATROL_TOOLTIP">
             <English>Makes the group of the selected unit patrol an area. The value defines the max. distance between two patrol waypoints.\n\n0 deactivates the patrol.</English>
             <Italian>Fa pattugliare un'area al gruppo di unità selezionate. Il valore definisce la distanza massima tra due waypoints della pattuglia. \n\n0 disattiva il pattugliamento.</Italian>
@@ -3369,54 +3323,6 @@
             <French>Texture Finder</French>
             <Polish>Wyszukiwarka tekstur</Polish>
             <Russian>Поиск текстуры</Russian>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BATCHREPLACE">
-            <English>Batch Replace</English>
-            <Italian>Rimpiazza in gruppo</Italian>
-            <Czech>Dávkově nahradit</Czech>
-            <German>Objekte ersetzen</German>
-            <Chinesesimp>批量替换</Chinesesimp>
-            <Chinese>批量替換</Chinese>
-            <Spanish>Reemplazar por lotes</Spanish>
-            <French>Remplacer les objets</French>
-            <Russian>Заменить группой</Russian>
-            <Polish>Zastąp obiekty</Polish>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BATCHREPLACE_REPLACE">
-            <English>Replace</English>
-            <Italian>Sostituisci</Italian>
-            <Czech>Nahradit</Czech>
-            <German>Ersetzen</German>
-            <Chinesesimp>替换</Chinesesimp>
-            <Chinese>替換</Chinese>
-            <Spanish>Reemplazar</Spanish>
-            <French>Remplacer</French>
-            <Polish>Zamień</Polish>
-            <Russian>Заменить</Russian>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BATCHREPLACE_REPLACEWITH">
-            <English>Replace with:</English>
-            <Italian>Sostituisci con:</Italian>
-            <Czech>Nahradit za:</Czech>
-            <German>Ersetzen durch:</German>
-            <Chinesesimp>替换为：</Chinesesimp>
-            <Chinese>替換為：</Chinese>
-            <Spanish>Reemplazar con:</Spanish>
-            <French>Remplacer par :</French>
-            <Polish>Zamień z:</Polish>
-            <Russian>Заменить на:</Russian>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BATCHREPLACE_DESCRIPTION">
-            <English>All selected objects will be replaced by the object types you enter in the edit box below randomly.</English>
-            <Italian>Tutti gli oggetti selezionati verranno sostituiti in modo casuale dai tipi di oggetto immessi nella casella di modifica in basso.</Italian>
-            <Czech>Všechny vybrané objekty budou náhodně nahrazeny typy objektu který vložíte do pole níže.</Czech>
-            <German>Alle ausgewählten Objekte werden durch die hier angegebenen Objekttypen willkürlich ausgetauscht.</German>
-            <Chinesesimp>所有选定的对象将随机替换为您在下面的编辑框中输入的对象类型。</Chinesesimp>
-            <Chinese>所有選定的對象將隨機替換為您在下面的編輯框中輸入的對像類型。</Chinese>
-            <Spanish>Todos los objetos seleccionados serán reemplazados por los tipos de objeto que ingrese en el cuadro de edición debajo de forma aleatoria.</Spanish>
-            <French>Tous les objets sélectionnés seront remplacés par les types d'objets que vous avez entrés dans la zone d'édition ci-dessous de manière aléatoire.</French>
-            <Polish>Wszystkie zaznaczone obiekty bedą losowo zamienione przez klasy obiektów, które wpiszesz poniżej.</Polish>
-            <Russian>Все выбранные объекты будут заменены типами объектов, которые вы вводите в поле редактирования ниже случайным образом.</Russian>
         </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_HEADER">
             <English>3den Enhanced Functions Viewer</English>
@@ -4684,18 +4590,6 @@
             <French>Effacer le chat</French>
             <Polish>Wyczyść czat</Polish>
             <Russian>Очистить чат</Russian>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_BATCHREPLACE">
-            <English>Batch Replace</English>
-            <Italian>Sostituzione di gruppo</Italian>
-            <German>Objekte ersetzen</German>
-            <Chinesesimp>批量替换</Chinesesimp>
-            <Chinese>批量替換</Chinese>
-            <Spanish>Lote Reemplazar </Spanish>
-            <Czech>Dávkově nahradit</Czech>
-            <French>Remplacer des objets</French>
-            <Russian>Пакетная замена</Russian>
-            <Polish>Zamień obiekty</Polish>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_DELETEEMPTYLAYERS">
             <English>Delete Empty Layers</English>
@@ -6255,136 +6149,6 @@
             <Chinesesimp>创建撤离点</Chinesesimp>
             <Chinese>創建撤離點</Chinese>
         </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_LAYER">
-            <English>Extraction</English>
-            <Russian>Извлечение</Russian>
-            <German>Extraktion</German>
-            <Spanish>Extracción</Spanish>
-            <French>Extraction</French>
-            <Polish>Ekstrakcja</Polish>
-            <Chinesesimp>撤离</Chinesesimp>
-            <Chinese>撤離</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_TRIGGERSMOKETEXT">
-            <English>Mark LZ</English>
-            <Russian>Зона приземления</Russian>
-            <German>LZ markieren</German>
-            <Spanish>Marcar LZ</Spanish>
-            <French>Marquer la zone d'atterissage</French>
-            <Polish>Oznacz LZ</Polish>
-            <Chinesesimp>LZ标记</Chinesesimp>
-            <Chinese>LZ標記</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_TRIGGERSTARTEXTRACTIONTEXT">
-            <English>Start Extraction</English>
-            <Russian>Начало эв</Russian>
-            <German>Extraktion ausführen</German>
-            <Spanish>Iniciar extracción</Spanish>
-            <French>Démarrer l'extraction</French>
-            <Polish>Zacznij ekstrakcje</Polish>
-            <Chinesesimp>开始撤离</Chinesesimp>
-            <Chinese>開始撤離</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CALLEXTRACTIONMSG">
-            <English>%2, this is %1. Requesting immediate extraction at grid position %3, over.</English>
-            <Russian>%2, это %1. Требуется немедленная эвакуация. Координаты %3, приём.</Russian>
-            <German>%2 von %1. Sofortige Extraktion benötigt. Koordinaten sind %3, kommen.</German>
-            <Spanish>%2, aquí %1. Solicita extracción inmediata en la posición de cuadrícula %3, terminado.</Spanish>
-            <French>%2 de %1. Demandons extraction immédiate à la position %3. Terminé.</French>
-            <Chinesesimp>%2，这里是 %1，请求立即撤离，坐标位置 %3，完毕。</Chinesesimp>
-            <Chinese>%2，這裡是 %1，請求立即撤離，坐標位置 %3，完畢。</Chinese>
-            <Polish>%2, tutaj %1. Proszę o natychhmiastową ekstrakcję z pozycji %3, odbiór.</Polish>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_EXTRACTIONCONFIRMEDMSG">
-            <English>%1 this is %2, coordinates received. Standby, over.</English>
-            <Russian>%1, это %2. Координаты получены. Ждите, приём.</Russian>
-            <German>%1 von %2, Koordinaten erhalten. Bereithalten, Ende.</German>
-            <Spanish>1% aquí %2, Coordenadas recibidas. A la espera, corto.</Spanish>
-            <French>%1 de %2, coordonnées reçues. On arrive. Terminé.</French>
-            <Chinesesimp>%1 这里是 %2,已收到坐标，待命，完毕。</Chinesesimp>
-            <Chinese>%1 這裡是 %2,已收到坐標，待命，完畢。</Chinese>
-            <Polish>%1, tutaj %2, koordynaty przyjęte. Oczekuj, odbiór.</Polish>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_HEADER">
-            <English>Extraction Creator</English>
-            <Russian>Эвакуатор</Russian>
-            <German>Extraktions-Konfigurator</German>
-            <Spanish>Creador de Extracción</Spanish>
-            <French>Créateur d'extraction</French>
-            <Polish>Kreator ekstrakcji</Polish>
-            <Chinesesimp>撤离创建者</Chinesesimp>
-            <Chinese>撤離創建者</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_SHOWRADIOCHAT">
-            <English>Show Radio Chat?</English>
-            <Russian>Показывать радиочат</Russian>
-            <Spanish>Mostrar radio chat</Spanish>
-            <German>Radiochat anzeigen?</German>
-            <French>Afficher la discussion radio ?</French>
-            <Polish>Pokazać czat radiowy?</Polish>
-            <Chinesesimp>是否显示无线电聊天？</Chinesesimp>
-            <Chinese>是否顯示無線電聊天？</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CALLSIGNREQUESTER">
-            <English>Call Sign Requester</English>
-            <Russian>Запрос позывного</Russian>
-            <German>Rufzeichen Anforderer</German>
-            <Spanish>Call sign del solicitante</Spanish>
-            <French>Indicatif du requérant</French>
-            <Polish>Znak wywoławczy wzywającego</Polish>
-            <Chinesesimp>请求者呼号</Chinesesimp>
-            <Chinese>請求者呼號</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CALLSIGNTRANSPORT">
-            <English>Call Sign Transport</English>
-            <Russian>Позывной транспорта</Russian>
-            <German>Rufzeichen Transport</German>
-            <Spanish>Call sign del transporte</Spanish>
-            <French>Indicatif du transport</French>
-            <Polish>Znak wywoławczy transportu</Polish>
-            <Chinesesimp>运输机呼号</Chinesesimp>
-            <Chinese>運輸呼號</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CONDITIONSTART">
-            <English>Condition Start</English>
-            <Russian>Условие запуска</Russian>
-            <German>Startbedingung</German>
-            <Spanish>Condición de inicio</Spanish>
-            <French>Condition de démarrage</French>
-            <Polish>Warunek rozpoczęcia</Polish>
-            <Chinesesimp>开始条件</Chinesesimp>
-            <Chinese>開始條件</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CONDITIONSTART_TOOLTIP">
-            <English>Condition for the extraction to start. By default the variable ENH_Extraction_Start has to be set to true. Leave empty if you want to start it by a trigger.</English>
-            <Russian>Условие для начала эвакуации. По умолчанию переменная "ENH_Extraction_Start" должна иметь значение "true". Оставьте поле пустым, если хотите запустить его по триггеру.</Russian>
-            <German>Bedingung für den Start der Extraktion. Standardmäßig muss die Variable 'ENH_Extraction_Start' auf true gesetzt werden. Lassen Sie das Feld leer, wenn Sie es durch einen Trigger starten möchten.</German>
-            <Spanish>Condición para que comience la extracción. Por defecto, la variable ENH_Extraction_Start debe establecerse en true. Deje en blanco si desea iniciarlo con un disparador.</Spanish>
-            <French>Condition pour que l'extraction démarre. Par défaut, la variable ENH_Extraction_Start doit être définie en true. Laissez vide si vous souhaitez démarrer l'extraction avec un trigger.</French>
-            <Chinesesimp>开始撤离的条件。默认情况下，变量 ENH_Extraction_Start 必须设置为 true。如果你想用一个触发器启动它，那就留空。</Chinesesimp>
-            <Chinese>開始撤離的條件。默認情況下，變量 ENH_Extraction_Start 必須設置為 true。如果你想用一個觸發器啟動它，那就留空。</Chinese>
-            <Polish>Warunek wymagany do rozpoczęcia ekstrakcji. Domyślnie zmienna ENH_Extraction_Start musi być ustawiona jako "true". Zostaw puste, jeśli chcesz ją rozpocząć wyzwalaczem.</Polish>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_GRENADETYPE">
-            <English>Grenade Type</English>
-            <Russian>Тип гранаты</Russian>
-            <Spanish>Tipo de granada</Spanish>
-            <German>Granatentyp</German>
-            <French>Type de grenade</French>
-            <Polish>Typ granatu</Polish>
-            <Chinesesimp>手榴弹类型</Chinesesimp>
-            <Chinese>手榴彈類型</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_GRENADETYPE_TOOLTIP">
-            <English>The landing zone is marked by this grenade type.</English>
-            <Russian>Зона приземления обозначена этим типом гранаты.</Russian>
-            <Spanish>La landing zone está marcada por el tipo de granada</Spanish>
-            <German>Die Landezone wird durch diese Granate markiert.</German>
-            <French>La zone d'atterissage est indiquée par ce type de grenade.</French>
-            <Chinesesimp>着陆区域用这种烟雾弹标记。</Chinesesimp>
-            <Chinese>著陸區域用這種煙霧彈標記。</Chinese>
-            <Polish>Strefa lądowania będzie oznaczona granatem podanego typu.</Polish>
-        </Key>
         <Key ID="STR_ENH_MAIN_CONDITION">
             <English>Condition</English>
             <Russian>Условие</Russian>
@@ -6424,56 +6188,6 @@
             <Polish>Przełącz rysowanie ikon DLC</Polish>
             <Chinesesimp>DLC 图标的开/关显示</Chinesesimp>
             <Chinese>DLC 圖標的開/關顯示</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_3DENCAM_DESCRIPTION">
-            <English>Description...</English>
-            <Russian>Описание...</Russian>
-            <German>Beschreibung...</German>
-            <Spanish>Descripción...</Spanish>
-            <French>Description...</French>
-            <Polish>Opis...</Polish>
-            <Chinesesimp>描述...</Chinesesimp>
-            <Chinese>描述...</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_3DENCAM_SAVE">
-            <English>Save</English>
-            <Russian>Сохранить</Russian>
-            <German>Speichern</German>
-            <Spanish>Guardar</Spanish>
-            <French>Sauvegarder</French>
-            <Polish>Zapisz</Polish>
-            <Chinesesimp>保存</Chinesesimp>
-            <Chinese>保存</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_3DENCAM_HEADER">
-            <English>3DEN Camera Positions</English>
-            <Russian>Позиции камеры 3den</Russian>
-            <German>3DEN Kamerapositionen</German>
-            <Spanish>3DEN posición de la cámara</Spanish>
-            <French>Positions de la caméra 3DEN</French>
-            <Polish>Pozycje kamery 3DEN</Polish>
-            <Chinesesimp>3DEN 摄像机位置</Chinesesimp>
-            <Chinese>3DEN 攝像機位置</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_3DENCAM_HELPDELETE">
-            <English>- To delete an entry press the DELETE key</English>
-            <Russian>- Чтобы удалить запись, нажмите клавишу DELETE</Russian>
-            <German>- Um einen Eintrag zu löschen drücke die ENTFERNEN Taste</German>
-            <Spanish>- Para borrar una entrada pulsa la tecla DELETE</Spanish>
-            <French>- Pour supprimer une position, appuyez sur 'SUPPR'.</French>
-            <Polish>- By usunąć wpis, wciśnij DELETE</Polish>
-            <Chinesesimp>- 若要删除一个条目，请按 DELETE 键</Chinesesimp>
-            <Chinese>- 若要刪除一個條目，請按 DELETE 鍵</Chinese>
-        </Key>
-        <Key ID="STR_ENH_MAIN_3DENCAM_HELPMOVETO">
-            <English>- To move to a selected position, double click on the entry</English>
-            <Russian>- Чтобы перейти в выбранное место, дважды щелкните на запись</Russian>
-            <German>- Durch Doppelklicken auf einen Listeneintrag kann zu der Position gesprungen werden</German>
-            <Spanish>- Para mover a una posición seleccionada, doble clic en la entrada</Spanish>
-            <French>- Pour déplacer la caméra vers une position, double-cliquez sur cette dernière.</French>
-            <Chinesesimp>- 若要移动到选定位置，请双击该条目</Chinesesimp>
-            <Chinese>- 若要移動到選定位置，請雙擊該條目</Chinese>
-            <Polish>- By przesunąć się do wybranej pozycji, kliknij dwukrotnie na wpis</Polish>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_CONTROLTYPES">
             <English>View Control Types</English>
