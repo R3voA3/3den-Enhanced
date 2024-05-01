@@ -125,6 +125,17 @@ class CfgFunctions
       class VAM_openCloseACCTV;
       class VAM_accTVItemInsert;
       class VAM_openPresetsMenu;
+			class compatibleItems;
+			class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
     }
     class CfgSentencesBrowser
     {
@@ -171,7 +182,6 @@ class CfgFunctions
       class alignEntities;
       class all3DENSelected;
       class centerMapOnSelection;
-      class compatibleItems;
       class createBackupMissionSQM;
       class deleteCrew;
       class deleteEmptyLayers;
@@ -187,16 +197,6 @@ class CfgFunctions
       class removeGear;
       class setOrientation;
       class spaceEqually;
-      class statBarStatement_accuracy;
-      class statBarStatement_default;
-      class statBarStatement_impact;
-      class statBarStatement_rateOfFIre;
-      class statTextStatement_accuracy;
-      class statTextStatement_explosionTime;
-      class statTextStatement_mass;
-      class statTextStatement_rateOfFire;
-      class statTextStatement_scopeMag;
-      class statTextStatement_scopeVisionMode;
       class switchTime;
       class systemTimeFormatted;
       class toggleAttributes;
