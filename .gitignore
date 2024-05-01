@@ -7,8 +7,6 @@
 
 #Folders
 releases
-tools
-.hemtt
 .hemttout
-.github
 .vscode
+.hemtt/missions

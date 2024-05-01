@@ -44,7 +44,7 @@ private _counter = 0;
 {
   _counter = _counter + 1;
   private _ctrlLabel = _display ctrlCreate ["ENH_AttributeTitle", 20000 + _forEachIndex, _ctrlGroup];
-  private _name = "STR_ENH_MAIN_DAMAGE_" + toUpper _x;
+  private _name = format ["%1_%2_%3_%4_%5", "STR", "ENH", "MAIN", "DAMAGE", toUpper _x]; //String is build like this to prevent error when checking for missing strings
 
   _ctrlLabel ctrlSetText (if (isLocalized _name) then {localize _name} else {_x});
   _ctrlLabel ctrlSetTooltip _x;
