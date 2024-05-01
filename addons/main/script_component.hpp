@@ -1,5 +1,3 @@
-#define SCRIPT_COMPONENT_LOADED
-
 #include "\a3\3den\ui\macros.inc"
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 #include "\a3\ui_f\hpp\definecommongrids.inc"
