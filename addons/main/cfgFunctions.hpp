@@ -179,6 +179,33 @@ class CfgFunctions
       class toggleGrass;
       class toggleMarkerAlpha;
     };
+		class VAM
+    {
+      file = "x\enh\addons\main\functions\GUI\VAM";
+      class VAM_arsenalPrototype;
+      class VAM_applyAttribute;
+      class VAM_selectCompatibleItems;
+      class VAM_switchNodeState;
+      class VAM_tvItemInit;
+      class VAM_exportToSQF;
+      class VAM_handleItemStats;
+      class VAM_loadObject;
+      class VAM_loadSelectHashMap;
+      class VAM_openCloseACCTV;
+      class VAM_accTVItemInsert;
+      class VAM_openPresetsMenu;
+			class compatibleItems;
+			class statBarStatement_accuracy;
+      class statBarStatement_default;
+      class statBarStatement_impact;
+      class statBarStatement_rateOfFIre;
+      class statTextStatement_accuracy;
+      class statTextStatement_explosionTime;
+      class statTextStatement_mass;
+      class statTextStatement_rateOfFire;
+      class statTextStatement_scopeMag;
+      class statTextStatement_scopeVisionMode;
+    }
     class Interface
     {
       file = "x\enh\addons\main\functions\interface";
