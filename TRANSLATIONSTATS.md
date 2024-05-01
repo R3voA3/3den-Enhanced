@@ -1,16 +1,16 @@
 # Translation Progress
-**Last update:** 05.01.2024
+**Last update:** 05.01.2024 14:25
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
-932 | 8133 | 79,33 % |
+932 | 8432 | 82,25 % |
 
 | Language | Translated Entries | Missing Entries | Progress |
 |----------|:-----------------:|--------:|--------:|
 | | | |
 | English | 932 | 0 | 100,00 %
 | | | |
-| German | 931 | 1 | 99,89 %
+| German | 932 | 0 | 100,00 %
 | | | |
 | Italian | 606 | 326 | 65,02 %
 | | | |
@@ -20,7 +20,7 @@
 | | | |
 | Spanish | 931 | 1 | 99,89 %
 | | | |
-| French | 630 | 302 | 67,60 %
+| French | 928 | 4 | 99,57 %
 | | | |
 | Polish | 931 | 1 | 99,89 %
 | | | |

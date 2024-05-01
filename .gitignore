@@ -2,9 +2,13 @@
 *.biprivatekey
 *.code-workspace
 *.txt
-*3den Enhanced Workshop
+*.sqfc
+*.url
 
 #Folders
-versions/
-SQFC/
-old files/
+releases
+tools
+.hemtt
+.hemttout
+.github
+.vscode

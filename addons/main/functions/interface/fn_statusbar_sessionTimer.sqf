@@ -1,0 +1,27 @@
+/*
+  Author: R3vo
+
+  Date: 2019-08-20
+
+  Description:
+  Initialises the 3den Enhanced session timer. Needs to be spawned!
+
+  Parameter(s):
+  -
+
+  Returns:
+  -
+*/
+
+#include "\x\enh\addons\main\script_component.hpp"
+
+//TODO: This can be excuted multiple times. It resets itself on preview or exiting Eden Editor though
+
+disableSerialization;
+private _ctrlTimer = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER;
+
+while {is3DEN} do
+{
+  _ctrlTimer ctrlSetTooltip format ["%1: %2",localize "STR_ENH_MAIN_STATUSBAR_SESSIONTIMER_TOOLTIP", [diag_tickTime / 3600] call BIS_fnc_timeToString];
+  uiSleep 1;
+};
