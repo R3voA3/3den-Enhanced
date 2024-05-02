@@ -5,7 +5,7 @@
 	- Improved config definitions
 	- Added various script improvements
 	- Mod is now binarized
-	- Compiled alle .sqf files to .sqfc
+	- Compiled all .sqf files to .sqfc
 - Functions Viewer
 	- Functions Viewer now updates list with last searched keyword when changing tree view layout
 	- Functions Viewer now reloads currently selected file if loading type was changed (loadFile, preprocessFile...)
