@@ -34,24 +34,30 @@ class ENH_GroupMarker
           while {true} do\
           {\
             sleep 1;\
-            if (units _group isEqualTo []) exitWith {deleteMarker _marker};\
-            if (_group getVariable ['ENH_GroupMarker_Update', true]) then {\
+            if (isNull _group) exitWith {deleteMarker _marker};\
+            if (_group getVariable ['ENH_GroupMarker_Update', true]) then\
+						{\
               _marker setMarkerPos _leader;\
               private _groupString = (_text call BIS_fnc_localize);\
               private _sizeString = (' (' + str count units _group + ')');\
-              if (vehicle _leader != _leader) then {\
+              if (vehicle _leader != _leader) then\
+							{\
                 private _vehicleName = getText (configFile >> 'CfgVehicles' >> typeOf vehicle _leader >> 'displayName');\
                 private _vehicleString = (' [' + _vehicleName + ']');\
-                if (_showVehicle) then {\
-                  if (_showGroupSize) then {\
+                if (_showVehicle) then\
+								{\
+                  if (_showGroupSize) then\
+									{\
                     _marker setMarkerTextLocal (_groupString + _vehicleString + _sizeString);\
-                  } else {\
+                  } else\
+									{\
                     _marker setMarkerTextLocal (_groupString + _vehicleString);\
                   };\
                 };\
               } else\
               {\
-                if (_showGroupSize) then {\
+                if (_showGroupSize) then\
+								{\
                   _marker setMarkerTextLocal (_groupString + _sizeString);\
                 };\
               };\
