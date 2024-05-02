@@ -19,6 +19,8 @@
 	- The UI is now properly deinitialized before preview, when switching terrain or mission
 - Updated French translation (thanks to Alfred-Neuman)
 - Fixed duplicated "Move to layer..." context menu entry (thanks to honger)
+- Group marker is now only deleted when group becomes null #300
+- Briefing attributes should now created diary entries in same order every time #297
 
 ## REMOVED
 - Customization via userconfig
