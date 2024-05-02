@@ -9,7 +9,7 @@
   Parameter(s):
   -
 
-  Returns:€
+  Returns:
   -
 */
 
@@ -34,6 +34,9 @@ addMissionEventHandler ["EachFrame",
   };
   findDisplay 313 displayCtrl 681 ctrlSetText _dir;
 }];
+
+//Enable dynamic view distance
+call ENH_fnc_dynamicViewDistance;
 
 //Enable Minimap
 "init" call ENH_fnc_3DENMinimap;
