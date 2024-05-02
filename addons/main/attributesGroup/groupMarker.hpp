@@ -23,41 +23,40 @@ class ENH_GroupMarker
           scriptName 'ENH_Attribute_GroupMarker';\
           params ['_group', '_parameters'];\
           _parameters params [['_type', ''], ['_color', 'Default'], ['_text', groupID _group], ['_showGroupSize', true], ['_showVehicle', true]];\
-          private _leader = leader _group;\
           private _marker = createMarkerLocal [\
             'ENH_GroupMarker_' + str _group,\
-            _leader\
+            [0, 0]\
           ];\
           _marker setMarkerTypeLocal _type;\
           _marker setMarkerColorLocal _color;\
           _marker setMarkerTextLocal (_text call BIS_fnc_localize);\
+          private _groupString = _text call BIS_fnc_localize;\
           while {true} do\
           {\
             sleep 1;\
             if (isNull _group) exitWith {deleteMarker _marker};\
             if (_group getVariable ['ENH_GroupMarker_Update', true]) then\
-						{\
+            {\
+              private _leader = leader _group;\
               _marker setMarkerPos _leader;\
-              private _groupString = (_text call BIS_fnc_localize);\
               private _sizeString = (' (' + str count units _group + ')');\
-              if (vehicle _leader != _leader) then\
-							{\
-                private _vehicleName = getText (configFile >> 'CfgVehicles' >> typeOf vehicle _leader >> 'displayName');\
+              if (_showGroupSize && {vehicle _leader != _leader}) then\
+              {\
+                private _vehicleName = getText (configOf vehicle _leader >> 'displayName');\
                 private _vehicleString = (' [' + _vehicleName + ']');\
-                if (_showVehicle) then\
-								{\
-                  if (_showGroupSize) then\
-									{\
-                    _marker setMarkerTextLocal (_groupString + _vehicleString + _sizeString);\
-                  } else\
-									{\
-                    _marker setMarkerTextLocal (_groupString + _vehicleString);\
-                  };\
+                if (_showGroupSize) then\
+                {\
+                  _marker setMarkerTextLocal (_groupString + _vehicleString + _sizeString);\
+                }\
+                else\
+                {\
+                  _marker setMarkerTextLocal (_groupString + _vehicleString);\
                 };\
-              } else\
+              }\
+              else\
               {\
                 if (_showGroupSize) then\
-								{\
+                {\
                   _marker setMarkerTextLocal (_groupString + _sizeString);\
                 };\
               };\
