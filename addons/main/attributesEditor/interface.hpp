@@ -79,7 +79,8 @@ class ENH_Interface
     {
       displayName = "$STR_ENH_MAIN_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME";
       property = "ENH_Statusbar_EntityCounter";
-      expression = "'init' call ENH_fnc_statusbar_entityCounter";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_EntityCounter', _value]";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_EntityCounter', true]";
     };
     class ENH_Blacklist: ENH_ShowPanelLeft
     {

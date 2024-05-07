@@ -37,12 +37,12 @@ class Cfg3DEN
   {
     class ENH
     {
+      init = "call ENH_fnc_EH_init";
       onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
       onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
       onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
       onMissionNew = "call ENH_fnc_EH_onMissionNew";
       onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
-      onSelectionChange = "call ENH_fnc_EH_onSelectionChange";
       onMissionSave = "call ENH_fnc_createBackupMissionSQM";
       onMissionAutoSave = "call ENH_fnc_createBackupMissionSQM";
     };

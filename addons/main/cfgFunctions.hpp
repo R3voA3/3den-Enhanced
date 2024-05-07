@@ -158,7 +158,6 @@ class CfgFunctions
       class createBackupMissionSQM;
       class deleteCrew;
       class deleteEmptyLayers;
-      class dynamicViewDistance;
       class floatToTime;
       class getAllItems;
       class getConfigSourceAddon;
@@ -183,12 +182,9 @@ class CfgFunctions
     {
       file = "x\enh\addons\main\functions\interface";
       class assetBrowser_collapse;
-      class entityList_addTooltips;
       class favoritesList;
       class locationList_enhanced;
       class menuStrip_removeItems;
-      class statusbar_entityCounter;
-      class statusbar_sessionTimer;
       class 3DENMinimap;
     };
     class Log
@@ -207,11 +203,11 @@ class CfgFunctions
     class EventHandlers
     {
       file = "x\enh\addons\main\functions\eventHandlers";
+      class EH_init;
       class EH_onMissionLoad;
       class EH_onMissionNew;
       class EH_onMissionPreview;
       class EH_onMissionPreviewEnd;
-      class EH_onSelectionChange;
       class EH_onTerrainNew;
     };
     class Attributes
