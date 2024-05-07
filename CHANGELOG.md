@@ -24,6 +24,8 @@
 	- Marker is no longer attached to first group leader
 	- Marker is only deleted once group becomes null
 - Briefing attributes should now created diary entries in same order every time #297
+- Dynamic view distance was no longer working after preview ended
+- Major code overhaul of things running from various event handlers
 
 ## REMOVED
 - Customization via userconfig
