@@ -37,10 +37,6 @@ workshop = [
 mission = "scriptLibrary.VR" # Mission to launch directly into the editor with
 
 parameters = [
-	"-skipIntro",					# These parameters are passed to the Arma 3 executable
-	"-noSplash", 					# They do not need to be added to your list
-	"-showScriptErrors",	# You can add additional parameters here
-	"-debug"
 ]
 
 executable = "arma3_x64"
