@@ -162,7 +162,6 @@ class CfgFunctions
       class getAllItems;
       class getConfigSourceAddon;
       class hasStorage;
-      class highlightAreaMarkers;
       class loadoutTool;
       class measureDistance;
       class pylonTools;
@@ -181,11 +180,12 @@ class CfgFunctions
     class Interface
     {
       file = "x\enh\addons\main\functions\interface";
+      class 3DENMinimap;
       class assetBrowser_collapse;
+      class entityList_addTooltips;
       class favoritesList;
       class locationList_enhanced;
       class menuStrip_removeItems;
-      class 3DENMinimap;
     };
     class Log
     {

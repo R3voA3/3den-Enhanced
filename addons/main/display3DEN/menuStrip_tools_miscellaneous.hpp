@@ -4,7 +4,6 @@ class ENH_Folder_Miscellaneous
   picture = "\a3\3DEN\Data\Displays\Display3DEN\ToolBar\open_ca.paa";
   items[] +=
   {
-    "ENH_ToggleHighLightAreaMarkers",
     "ENH_CreateTrigger",
     "Separator",
     "ENH_SwitchTime",
@@ -18,12 +17,6 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleAIFeatures",
     "ENH_ToggleMarkerAlpha"
   };
-};
-class ENH_ToggleHighLightAreaMarkers
-{
-  text = "$STR_ENH_MAIN_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS";
-  action = "'toggle' call ENH_fnc_highlightAreaMarkers";
-  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_H};
 };
 class ENH_SwitchTime
 {
