@@ -26,10 +26,15 @@
 - Briefing attributes should now created diary entries in same order every time #297
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
+- Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
+- Internal function are now excluded from public build
 
 ## REMOVED
 - Customization via userconfig
 - WIP scripts and UIs
+- Unused function
+- Highlight area marker function as it's now implemented in the engine
+- Menustrip customization
 
 # 7.8.8
 ## CHANGED
