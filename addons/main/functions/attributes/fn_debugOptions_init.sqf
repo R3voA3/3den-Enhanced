@@ -445,16 +445,16 @@ if GETVALUE("NoReload") then
 
 if GETVALUE("DrawViewDirection") then
 {
-  ["ENH_EH_DrawViewDirection_ID", "onEachFrame",
+  addMissionEventHandler ["EachFrame",
+  {
+    ((player nearEntities [["CAManBase"], RADIUS]) - [player]) apply
     {
-      {
-        private _beg = ASLToAGL eyePos _x;
-        drawLine3D [_beg, (_beg vectorAdd (eyeDirection _x vectorMultiply 1)), [0, 1, 0, 1]];
-        drawLine3D [_beg, (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 1)), [1, 0, 0, 1]];
-        false;
-      } count ((player nearEntities [["CAManBase"], RADIUS]) - [player]);
-    }
-  ] call BIS_fnc_addStackedEventHandler;
+      private _beg = ASLToAGL eyePos _x;
+      drawLine3D [_beg, (_beg vectorAdd (eyeDirection _x vectorMultiply 1)), [0, 1, 0, 1]];
+      drawLine3D [_beg, (_beg vectorAdd (_x weaponDirection currentWeapon _x vectorMultiply 1)), [1, 0, 0, 1]];
+      false;
+    };
+  }];
 };
 
 if GETVALUE("Teleport") then
