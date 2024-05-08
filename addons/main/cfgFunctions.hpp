@@ -171,9 +171,6 @@ class CfgFunctions
       class switchTime;
       class systemTimeFormatted;
       class toggleAttributes;
-      class toggleDrawBuildingPositions;
-      class toggleDrawDLCIcons;
-      class toggleDrawHitpoints;
       class toggleGrass;
       class toggleMarkerAlpha;
     };
@@ -185,7 +182,6 @@ class CfgFunctions
       class entityList_addTooltips;
       class favoritesList;
       class locationList_enhanced;
-      class menuStrip_removeItems;
     };
     class Log
     {
@@ -238,13 +234,13 @@ class CfgFunctions
       class introText_onAttributeSave;
       class mapIndicators_onAttributeLoad;
       class mapIndicators_onAttributeSave;
-      class menuStripBlacklist_onAttributeLoad;
       class missionEndingCasualties_initDebriefingCombo;
       class missionEndingCasualties_onAttributeLoad;
       class missionEndingCasualties_onAttributeSave;
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
     };
+    #ifdef __A3_DEBUG__
     class Internal
     {
       file = "x\enh\addons\main\functions\internal";
@@ -253,5 +249,6 @@ class CfgFunctions
       class exportMenuStripToGitHub;
       class testDisplays;
     };
+    #endif
   };
 };

@@ -11,11 +11,7 @@ class ENH_Folder_Debug
     "ENH_ClearChat",
     "Separator",
     "ENH_ExportGUIBaseClasses",
-    "ENH_GUITestGrids",
-    "Separator",
-    "ENH_ToggleDrawBuildingPositions",
-    "ENH_ToggleDrawDLCIcons",
-    "ENH_ToggleDrawHitpoints"
+    "ENH_GUITestGrids"
   };
 };
 class ENH_VariableViewer
@@ -52,20 +48,4 @@ class ENH_GUITestGrids
   text = "$STR_ENH_MAIN_TOOLS_GUITESTGRIDS";
   action = "findDisplay 313 createDisplay 'RscTestGrids'";
   opensNewWindow = 1;
-};
-class ENH_ToggleDrawBuildingPositions
-{
-  text = "$STR_ENH_MAIN_TOOLS_DRAWBUILDINGPOSITIONS";
-  action = "call ENH_fnc_toggleDrawBuildingPositions";
-};
-class ENH_ToggleDrawDLCIcons
-{
-  text = "$STR_ENH_MAIN_TOOLS_DRAWDLCICONS";
-  action = "call ENH_fnc_toggleDrawDLCIcons";
-  shortcuts[] = {INPUT_ALT_OFFSET + DIK_I};
-};
-class ENH_ToggleDrawHitpoints
-{
-  text = "$STR_ENH_MAIN_TOOLS_DRAWHITPOINTS";
-  action = "call ENH_fnc_toggleDrawHitpoints";
 };

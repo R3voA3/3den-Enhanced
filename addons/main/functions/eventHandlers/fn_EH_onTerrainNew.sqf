@@ -4,7 +4,7 @@
   Date: 2019-06-05
 
   Description:
-  Is called by Eden event handler onTerrainNew. Content of this function may be altered by ENH_Config.hpp.
+  Is called by Eden event handler onTerrainNew.
 
   Parameter(s):
   -
@@ -14,14 +14,11 @@
 */
 
 //Show or hide panels
-["ShowPanelRight", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', true]] call BIS_fnc_3DENInterface;
-["ShowPanelLeft", profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelLeft', true]] call BIS_fnc_3DENInterface;
+["ShowPanelRight", profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowPanelRight", true]] call BIS_fnc_3DENInterface;
+["ShowPanelLeft", profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowPanelLeft", true]] call BIS_fnc_3DENInterface;
 
 //Collapse asset browser
 call ENH_fnc_assetBrowser_collapse;
-
-//Remove unwanted menu strip entries
-call ENH_fnc_menuStrip_removeItems;
 
 //Init favorites list
 ["onLoad", []] call ENH_fnc_favoritesList;

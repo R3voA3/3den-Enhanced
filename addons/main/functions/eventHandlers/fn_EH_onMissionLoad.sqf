@@ -4,7 +4,7 @@
   Date: 2019-06-05
 
   Description:
-  Is called by Eden event handler onMissionLoad. Content of this function may be altered by ENH_Config.hpp.
+  Is called by Eden event handler onMissionLoad.
 
   Parameter(s):
   -

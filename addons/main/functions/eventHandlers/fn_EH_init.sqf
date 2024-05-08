@@ -47,7 +47,7 @@ private _code =
   {
     private _vd = linearConversion [0, 2000, getPosASL get3DENCamera # 2, 200, 12000, true];
     setViewDistance _vd;
-    setObjectViewDistance 0.5 * _vd;
+    setObjectViewDistance (0.5 * _vd);
   };
 
   //Entity counter
@@ -79,8 +79,55 @@ private _code =
       _display3DEN displayCtrl _idc ctrlSetText str count get3DENSelected _type;
     };
   };
+
+  //Draw dlc icons
+  if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_DrawDLCIcons", false]) then
+  {
+    (entities [[], [], true, false] select {get3DENCamera distance _x <= 100}) apply
+    {
+      //Stupid workaround because modParams spams .rpt file otherwise
+      private _mod = configSourceMod configOf _x;
+      if (_mod != "") then
+      {
+        drawIcon3D
+        [
+          (modParams [_mod, ["logoSmall"]]) # 0,
+          [1, 1, 1, 0.8],
+          _x modelToWorldVisual [0, 0, 0.5],
+          0.5,
+          0.5,
+          0
+        ];
+      }
+    };
+  };
+
+  //Draw building positions
+  if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_DrawBuildingPositions", false]) then
+  {
+    (get3DENCamera nearObjects ["House", 100]) apply
+    {
+      {
+        for "_i" from 0 to (count (_x buildingPos -1) - 1) do
+        {
+          drawIcon3D
+          [
+            "\A3\modules_f\data\iconStrategicMapMission_ca.paa",
+            [1, 0.1, 1, 1],
+            _x buildingPos _i,
+            0.5,
+            0.5,
+            0,
+            str _i
+          ];
+        };
+      };
+    };
+  };
 };
 
 _display3DEN displayAddEventHandler ["MouseHolding", _code];
 _display3DEN displayAddEventHandler ["MouseMoving", _code];
+
+//Add tooltips to entity list
 _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter", ENH_fnc_entityList_addTooltips];
