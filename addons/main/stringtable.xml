@@ -5965,14 +5965,14 @@
             <French>RPT Viewer</French>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_DRAWBUILDINGPOSITIONS">
-            <English>Toggle Drawing of Building Positions</English>
-            <Russian>Переключить отображение позиций зданий</Russian>
-            <Spanish>Conmutar dibujos la posición de los edificios</Spanish>
-            <German>Gebäudepositionen anzeigen an/aus</German>
-            <French>Activer/désactiver l'affichage des positions de bâtiments</French>
-            <Polish>Przełącz rysowanie pozycji w budynkach</Polish>
-            <Chinesesimp>切换建筑物位置视图</Chinesesimp>
-            <Chinese>切換建築物位置視圖</Chinese>
+            <English>Show Building Positions</English>
+            <Russian>Позиции в выставочных зданиях</Russian>
+            <Spanish>Mostrar puestos de construcción</Spanish>
+            <German>Gebäudepositionen anzeigen</German>
+            <French>Positions du bâtiment d'exposition</French>
+            <Polish>Pokaż pozycje budynku</Polish>
+            <Chinesesimp>展示建筑位置</Chinesesimp>
+            <Chinese>展示建筑位置</Chinese>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_DRAWHITPOINTS">
             <English>Toggle Drawing of Vehicle Hitpoints</English>
@@ -6180,14 +6180,14 @@
             <Chinese>網格位置</Chinese>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_DRAWDLCICONS">
-            <English>Toggle Drawing of DLC Icons</English>
-            <Russian>Вкл/выкл отображение значков DLC</Russian>
-            <Spanish>Alternar dibujo de iconos DLC</Spanish>
-            <German>Anzeige der DLC Icons an/aus</German>
-            <French>Activer/désactiver l'affichage des DLCs</French>
-            <Polish>Przełącz rysowanie ikon DLC</Polish>
-            <Chinesesimp>DLC 图标的开/关显示</Chinesesimp>
-            <Chinese>DLC 圖標的開/關顯示</Chinese>
+            <English>Show DLC Icons</English>
+            <Russian>Показать значки DLC</Russian>
+            <Spanish>Mostrar iconos DLC</Spanish>
+            <German>DLC Symbole anzeigen</German>
+            <French>Afficher les icônes DLC</French>
+            <Polish>Pokaż ikony DLC</Polish>
+            <Chinesesimp>显示 DLC 图标</Chinesesimp>
+            <Chinese>显示 DLC 图标</Chinese>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_CONTROLTYPES">
             <English>View Control Types</English>
