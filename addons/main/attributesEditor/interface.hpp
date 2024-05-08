@@ -82,12 +82,19 @@ class ENH_Interface
       expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_EntityCounter', _value]";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_EntityCounter', true]";
     };
-    class ENH_Blacklist: ENH_ShowPanelLeft
+    class ENH_ToggleDrawBuildingPositions: ENH_ShowPanelLeft
     {
-      displayName = "$STR_ENH_MAIN_MENUSTRIPENTRIES";
-      tooltip = "$STR_ENH_MAIN_MENUSTRIPENTRIES_TOOLTIP";
-      property = "ENH_MenuStrip_Blacklist";
-      control = "ENH_MenuStripBlacklist";
+      displayName = "$STR_ENH_MAIN_TOOLS_DRAWBUILDINGPOSITIONS";
+      property = "ENH_DrawBuildingPositions";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_DrawBuildingPositions', _value]";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_DrawBuildingPositions', false]";
+    };
+    class ENH_DrawDLCIcons: ENH_ShowPanelLeft
+    {
+      displayName = "$STR_ENH_MAIN_TOOLS_DRAWDLCICONS";
+      property = "ENH_DrawDLCIcons";
+      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_DrawDLCIcons', _value]";
+      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_DrawDLCIcons', false]";
     };
   };
 };
