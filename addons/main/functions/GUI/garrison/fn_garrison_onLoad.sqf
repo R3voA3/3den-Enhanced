@@ -1,5 +1,5 @@
-#define DEFAULT_SIZE 50
 #include "\x\enh\addons\main\script_component.hpp"
+
 disableSerialization;
 
 private _display = findDisplay IDD_DISPLAY3DEN;
@@ -10,7 +10,7 @@ ENH_Garrison_AreaHelper = create3DENEntity ["Trigger", "EmptyDetector", screenTo
 
 //Set up default size
 ENH_Garrison_AreaHelper set3DENAttribute ["text", "ENH_Garrison_AreaHelper"];
-ENH_Garrison_AreaHelper set3DENAttribute ["size3", [DEFAULT_SIZE, DEFAULT_SIZE, -1]];
+ENH_Garrison_AreaHelper set3DENAttribute ["size3", [50, 50, -1]];
 
 ENH_Garrison_OnSelectionChange_EH = add3DENEventHandler ["OnSelectionChange",
 {
@@ -39,17 +39,17 @@ ENH_Garrison_OnBeforeMissionPreview_EH = add3DENEventHandler ["OnBeforeMissionPr
 
 ENH_Garrison_OnMissionNew_EH = add3DENEventHandler ["OnMissionNew",
 {
-	call ENH_fnc_garrison_onUnload;
+  call ENH_fnc_garrison_onUnload;
 }];
 
 ENH_Garrison_OnMissionLoad_EH = add3DENEventHandler ["OnMissionLoad",
 {
-	call ENH_fnc_garrison_onUnload;
+  call ENH_fnc_garrison_onUnload;
 }];
 
 ENH_Garrison_OnTerrainNew_EH = add3DENEventHandler ["OnTerrainNew",
 {
-	call ENH_fnc_garrison_onUnload;
+  call ENH_fnc_garrison_onUnload;
 }];
 
 CTRL(IDC_GARRISON_CANCEL) ctrlAddEventHandler ["ButtonClick",
