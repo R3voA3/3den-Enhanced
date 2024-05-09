@@ -240,15 +240,14 @@ class CfgFunctions
       class slider_onAttributeLoad;
       class slider_onAttributeSave;
     };
-    #ifdef __A3_DEBUG__
     class Internal
     {
       file = "x\enh\addons\main\functions\internal";
       class checkShortCutsDuplicates;
       class exportAttributesToGitHub;
+      class exportContextMenuToGitHub;
       class exportMenuStripToGitHub;
       class testDisplays;
     };
-    #endif
   };
 };
