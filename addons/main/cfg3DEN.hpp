@@ -279,6 +279,11 @@ class Cfg3DEN
       {
         class Attributes
         {
+          class Position
+          {
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
+            control = "EditXYZ";
+          };
           #include "attributesMarker\markerDrawPriority.hpp"
         };
       };
