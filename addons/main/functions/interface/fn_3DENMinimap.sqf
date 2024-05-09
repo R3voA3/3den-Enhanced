@@ -17,7 +17,7 @@
   -
 */
 
-params [["_mode", "init"]];
+params [["_mode", "init"], ["_display3DEN", findDisplay 313]];
 
 #include "\x\enh\addons\main\script_component.hpp"
 
@@ -28,36 +28,25 @@ switch _mode do
     ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_MAP);
     ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND);
     ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER);
-
-    private _ehID = uiNamespace getVariable ["ENH_3DENMiniMap_EH", -1];
-
-    if (_ehID > -1) then
-    {
-      removeMissionEventHandler ["EachFrame", _ehID];
-      uiNamespace setVariable ["ENH_3DENMiniMap_EH", -1];
-    };
   };
   case "init":
   {
     if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
 
-    //Make sure to clean up first
-    "exit" call ENH_fnc_3DENMinimap;
+    _display3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
 
-    findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
-
-    private _ctrlMap = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ENH_3DENMinimap"/* "ctrlMap" */, IDC_3DEN_MINIMAP_MAP];
+    private _ctrlMap = _display3DEN ctrlCreate ["ENH_3DENMinimap"/* "ctrlMap" */, IDC_3DEN_MINIMAP_MAP];
     _ctrlMap ctrlEnable false;
 
     //After previewing, the player position indicator is conde (engine bug?). So we create our own
-    private _ctrlImage = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
+    private _ctrlImage = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
     _ctrlImage ctrlSetText "a3\ui_f\data\gui\rsc\rscdisplaymissioneditor\iconcamera_ca.paa";
     _ctrlImage ctrlSetTextColor [0.7, 0.09, 0, 1];
 
     //This hides the cirle that indicates player position.
     disableMapIndicators [true, true, true, true];
 
-    private _ehID = addMissionEventHandler ["EachFrame",
+    private _code =
     {
       if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
 
@@ -138,9 +127,10 @@ switch _mode do
       _ctrlImage ctrlSetAngle [getDir get3DENCamera, 0.5, 0.5, true];
 
       _ctrlImage ctrlCommit 0;
-    }];
+    };
 
-    uiNamespace setVariable ["ENH_3DENMiniMap_EH", _ehID];
+    _display3DEN displayAddEventHandler ["MouseHolding", _code];
+    _display3DEN displayAddEventHandler ["MouseMoving", _code];
   };
   case "toggleFromMenu":
   {

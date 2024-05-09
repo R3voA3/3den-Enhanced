@@ -28,6 +28,3 @@ if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseEntit
     ["collapseEntityList"] call BIS_fnc_3DENInterface;
   };
 };
-
-//Enable Minimap
-"init" call ENH_fnc_3DENMinimap;

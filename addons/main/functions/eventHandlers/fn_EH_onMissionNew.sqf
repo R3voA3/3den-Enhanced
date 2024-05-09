@@ -15,6 +15,3 @@
 
 //Enable 3DEN Radio
 call ENH_fnc_3DENRadio_toggleRadio;
-
-//Enable Minimap
-"init" call ENH_fnc_3DENMinimap;

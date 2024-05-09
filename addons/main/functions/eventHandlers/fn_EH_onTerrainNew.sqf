@@ -31,6 +31,3 @@ call ENH_fnc_3DENRadio_toggleRadio;
 
 //Initialize ambient animations
 call ENH_fnc_ambientAnimations_initInEditor;
-
-//Enable Minimap
-"init" call ENH_fnc_3DENMinimap;
