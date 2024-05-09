@@ -20,6 +20,7 @@ class ENH_SetRandomDir
   action = "-1 call ENH_fnc_setOrientation";
   conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD3};
+  wikiDescription = "Randomises direction of all selected entities.";
 };
 class ENH_ReverseDirection
 {
@@ -27,6 +28,7 @@ class ENH_ReverseDirection
   picture = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
   action = "-2 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD7};
+  wikiDescription = "Reverses direction of all selected entities.";
 };
 class ENH_OrientateNorth
 {
@@ -34,6 +36,7 @@ class ENH_OrientateNorth
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\N_ca.paa";
   action = "0 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD8};
+  wikiDescription = "Orients all selected entities to north.";
 };
 class ENH_OrientateEast: ENH_OrientateNorth
 {
@@ -41,6 +44,7 @@ class ENH_OrientateEast: ENH_OrientateNorth
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\E_ca.paa";
   action = "90 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD6};
+  wikiDescription = "Orients all selected entities to east.";
 };
 class ENH_OrientateSouth: ENH_OrientateNorth
 {
@@ -48,6 +52,7 @@ class ENH_OrientateSouth: ENH_OrientateNorth
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\S_ca.paa";
   action = "180 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD2};
+  wikiDescription = "Orients all selected entities to south.";
 };
 class ENH_OrientateWest: ENH_OrientateNorth
 {
@@ -55,4 +60,5 @@ class ENH_OrientateWest: ENH_OrientateNorth
   picture = "\A3\ui_f\data\igui\cfg\simpleTasks\letters\W_ca.paa";
   action = "270 call ENH_fnc_setOrientation";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_NUMPAD4};
+  wikiDescription = "Orients all selected entities to west.";
 };

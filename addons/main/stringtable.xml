@@ -2687,7 +2687,7 @@
             <Polish>Tryb jeńca</Polish>
             <Russian>Включить нейтральное поведение</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_SCRIPTINGBEGINNERS">
+        <Key ID="STR_ENH_MAIN_SCRIPTINGBEGINNERS">
             <English>Scripting for Beginners</English>
             <Italian>Scripting per Principianti</Italian>
             <Czech>Skriptování pro začátečníky</Czech>
@@ -2699,7 +2699,7 @@
             <Polish>Skryptowanie dla początkujących</Polish>
             <Russian>Написание сценариев для начинающих</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_AICOMPILATION">
+        <Key ID="STR_ENH_MAIN_AICOMPILATION">
             <English>AI Compilation List by Gunter Severloh</English>
             <Italian>Compilation degli scripts per IA da Gunter Severloh</Italian>
             <French>Compilation de scripts pour l'IA par Gunter Severloh</French>
@@ -4105,7 +4105,7 @@
             <Chinesesimp>GUI(图形用户界面)工具</Chinesesimp>
             <Chinese>GUI(圖形用戶界面)工具</Chinese>
         </Key>
-        <Key ID="STR_ENH_MAIN_ABOUT_CHANGELOG">
+        <Key ID="STR_ENH_MAIN_CHANGELOG">
             <English>Changelog</English>
             <German>Changelog</German>
             <Czech>Changelog</Czech>
@@ -4118,7 +4118,7 @@
             <Chinesesimp>变更日志</Chinesesimp>
             <Chinese>變更日誌</Chinese>
         </Key>
-        <Key ID="STR_ENH_MAIN_ABOUT_REPORT">
+        <Key ID="STR_ENH_MAIN_REPORT">
             <English>Report an Issue</English>
             <German>Ein Problem melden</German>
             <Czech>Nahlášení problému</Czech>
@@ -4131,7 +4131,7 @@
             <Chinesesimp>报告问题</Chinesesimp>
             <Chinese>報告問題</Chinese>
         </Key>
-        <Key ID="STR_ENH_MAIN_ABOUT_STEAM">
+        <Key ID="STR_ENH_MAIN_STEAM">
             <English>Steam</English>
             <German>Steam</German>
             <Chinesesimp>Steam</Chinesesimp>
@@ -4144,7 +4144,7 @@
             <Spanish>Steam</Spanish>
             <Russian>Steam</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_ABOUT_CONTRIBUTE">
+        <Key ID="STR_ENH_MAIN_CONTRIBUTE">
             <English>Contribute</English>
             <German>Zum Projekt beitragen</German>
             <Chinesesimp>投稿</Chinesesimp>
@@ -4156,7 +4156,7 @@
             <Spanish>Contribuir</Spanish>
             <Russian>Внести вклад</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_ABOUT_CREDITS">
+        <Key ID="STR_ENH_MAIN_CREDITS">
             <English>Credits</English>
             <Italian>Ringraziamenti</Italian>
             <German>Credits</German>
@@ -4712,7 +4712,7 @@
             <Chinese>切換模擬</Chinese>
             <Czech>切换模拟</Czech>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_FUNCTIONSOVERVIEW">
+        <Key ID="STR_ENH_MAIN_FUNCTIONSOVERVIEW">
             <English>Functions by Functionality</English>
             <Italian>Panoramica delle Funzioni</Italian>
             <Czech>Přehled funkcí</Czech>
@@ -4724,7 +4724,7 @@
             <Polish>Przegląd funkcji</Polish>
             <Russian>Обзор функций</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_COMMANDSOVERVIEW">
+        <Key ID="STR_ENH_MAIN_COMMANDSOVERVIEW">
             <English>Commands by Functionality</English>
             <Russian>Команды по функциям</Russian>
             <German>Kommandos nach Funktionalität</German>
@@ -4735,7 +4735,7 @@
             <Italian>Comandi ordinati per Funzionalità</Italian>
             <French>Commandes par fonctionnalités</French>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_DESCRIPTIONEXT">
+        <Key ID="STR_ENH_MAIN_DESCRIPTIONEXT">
             <English>Description.ext</English>
             <Russian>Description.ext</Russian>
             <German>Description.ext</German>
@@ -4768,19 +4768,7 @@
             <Polish>Odznaczaj pozycje menu, by je ukryć. Odznaczenie całej zakładki spowoduje zniknięcie wszystkich pozycji wewnątrz.\nZmian wymagają zrestartowania edytora, by je zobaczyć!</Polish>
             <French>Décochez les entrées pour les masquer. Le fait de décocher les dossiers entraîne la suppression de toutes les entrées qui s'y trouvent.\nLes modifications nécessitent un redémarrage d'Eden Editor pour être prises en compte !</French>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_MISSIONCAMPAIGNGUIDE">
-            <English>Guide: Mission &amp; Campaign making</English>
-            <Italian>Guida: Creazione Missioni e Campagne</Italian>
-            <Czech>Návod: vytváření misí &amp; kampaní</Czech>
-            <French>Guide : créer une Mission/Campagne</French>
-            <Spanish>Guía: Misión y Campaña</Spanish>
-            <German>Leitfaden: Missions- und Kampagnenerstellung</German>
-            <Chinesesimp>指南：任务与战役制作</Chinesesimp>
-            <Chinese>指南：任務與戰役製作</Chinese>
-            <Polish>Poradnik: Tworzenie misji i kampanii</Polish>
-            <Russian>Руководство: создание миссии и кампании</Russian>
-        </Key>
-        <Key ID="STR_ENH_MAIN_HELP_MISSIONPRESENTATION">
+        <Key ID="STR_ENH_MAIN_MISSIONPRESENTATION">
             <English>Mission Presentation</English>
             <Italian>Presentazione Missione</Italian>
             <Czech>Prezentace mise</Czech>
@@ -4792,7 +4780,7 @@
             <Polish>Prezentacja misji</Polish>
             <Russian>Презентация миссим</Russian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_CODEOPTIMISATION">
+        <Key ID="STR_ENH_MAIN_CODEOPTIMISATION">
             <English>Code Optimisation</English>
             <Italian>Ottimizazzione del codice</Italian>
             <German>Code-Optimierung</German>
@@ -5132,7 +5120,7 @@
             <Chinese>這是在“createDiaryRecord”中使用的原始文本。也可以在“創建任務”模塊中使用，以更改任務的外觀。</Chinese>
             <Polish>To jest surowy tekst wykorzystywany w funkcji "createDiaryRecord". Może być też użyty wewnątrz modułu "Stwórz zadanie", by zmienić wygląd twoich zadań.</Polish>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_MISSIONOPTIMISATION">
+        <Key ID="STR_ENH_MAIN_MISSIONOPTIMISATION">
             <English>Mission Optimisation</English>
             <Russian>Оптимизация миссии</Russian>
             <German>Missions-Optimierung</German>
@@ -5449,7 +5437,7 @@
             <Chinese>激活後，該單位將以傘降的方式開始執行任務。起始高度始終為150米。</Chinese>
             <Italian>Quando attivata, l'unità inizierà la missione sul paracadute. L'altezza di inizio è sempre di 150 m.</Italian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_MULTIPLAYERSCRIPTING">
+        <Key ID="STR_ENH_MAIN_MULTIPLAYERSCRIPTING">
             <English>Multiplayer Scripting</English>
             <Russian>Многопользовательские скрипты</Russian>
             <Spanish>Scripting multiplayer</Spanish>
@@ -6859,7 +6847,7 @@
             <Chinese>刪除所選模板.</Chinese>
             <Italian>Elimina Modelli Selezionati</Italian>
         </Key>
-        <Key ID="STR_ENH_MAIN_HELP_GETEXTENSIONS">
+        <Key ID="STR_ENH_MAIN_GETEXTENSIONS">
             <English>Additional Eden Editor Extentions</English>
             <Russian>Дополнительные расширения редактора Eden</Russian>
             <German>Zusätzliche Eden Editor Erweiterungen</German>

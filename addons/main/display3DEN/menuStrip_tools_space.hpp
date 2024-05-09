@@ -13,14 +13,17 @@ class ENH_SpaceEquallyX
 {
   text = "$STR_ENH_MAIN_TOOLS_SPACEEQUALLY_X";
   action = "0 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+  wikiDescription = "Spaces all selected entities equally along the X-axis.";
 };
 class ENH_SpaceEquallyY
 {
   text = "$STR_ENH_MAIN_TOOLS_SPACEEQUALLY_Y";
   action = "1 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+  wikiDescription = "Spaces all selected entities equally along the y-axis.";
 };
 class ENH_SpaceEquallyZ
 {
   text = "$STR_ENH_MAIN_TOOLS_SPACEEQUALLY_Z";
   action = "2 call (uiNamespace getVariable 'ENH_fnc_spaceEqually')";
+  wikiDescription = "Spaces all selected entities equally along the z-axis.";
 };

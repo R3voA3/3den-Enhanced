@@ -19,12 +19,14 @@ class ENH_PlacementTools
   action = "[nil, 'createUI'] call ENH_fnc_placementTools";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
   opensNewWindow = 1;
+  wikiDescription = "Opens Placement Tool GUI. See GUI documentation for detailed information.";
 };
 class ENH_SnapToSurface
 {
   text = "$STR_3DEN_DISPLAY3DEN_ENTITYMENU_MOVESURFACE_TEXT";
   action = "do3DENAction 'SnapToSurface'";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_SPACE};
+  wikiDescription = "Snaps all selected entities to the surface.";
 };
 
 #include "menuStrip_tools_orient.hpp"
