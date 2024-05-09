@@ -1,9 +1,13 @@
 {
   "folders": [
-    {
-      "path": "."
-    }
-  ],
+		{
+			"path": "."
+		},
+		{
+			"name": "3den-Enhanced.wiki",
+			"path": "../3den-Enhanced.wiki"
+		}
+	],
   "settings": {
     "files.associations": {
       "*.bikb": "cpp"

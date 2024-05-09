@@ -1,4 +1,4 @@
-# 7.8.9
+# 8.0.0
 ## CHANGED
 - 3den Enhanced is now build with HEMTT
 	- Fixed various config and macro issues
@@ -27,7 +27,9 @@
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
 - Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
-- Internal function are now excluded from public build
+- ENH_init3DENMissionPreview.sqf is now called instead of spawned (execVM)
+- Minimap code was optimized
+- Added description to menu strip items for easier documenation
 
 ## REMOVED
 - Customization via userconfig
