@@ -14,9 +14,16 @@ class ENH_Folder_Miscellaneous
     "ENH_ToggleDynamicSimulation",
     "ENH_TogglePlayable",
     "ENH_ToggleIsLocalOnly",
-    "ENH_ToggleAIFeatures",
-    "ENH_ToggleMarkerAlpha"
+    "ENH_ToggleAIFeatures"/* ,
+    "ENH_ToggleMarkerAlpha" */
   };
+};
+class ENH_CreateTrigger
+{
+  text = "$STR_ENH_MAIN_TOOLS_CREATETRIGGER";
+  picture = "\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa";
+  action = "private _trigger = create3DENEntity ['Trigger', 'EmptyDetectorArea10x10', [worldSize / 2, worldSize / 2, 0]]; _trigger set3DENAttribute ['size3', [worldSize / 2, worldSize / 2, 0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
+  wikiDescription = "Creates a trigger which covers exactly the whole map.";
 };
 class ENH_SwitchTime
 {
@@ -79,18 +86,11 @@ class ENH_TogglePlayable
   shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
   wikiDescription = "Toggles playable state of all selected entities.";
 };
-class ENH_ToggleMarkerAlpha
-{
-  text = "$STR_ENH_MAIN_TOOLS_TOGGLEMARKERALPHA";
-  action = "call ENH_fnc_toggleMarkerAlpha";
-  picture = "\a3\3den\data\displays\display3den\panelright\modemarkers_ca.paa";
-  wikiDescription = "Changes the marker alpha of markers to 1. That way they can be selected if marker alpha was 0 before. This change is applied to the scenario so make sure to undo the effect by using the tool again.";
-  shortcuts[] = {DIK_V};
-};
-class ENH_CreateTrigger
-{
-  text = "$STR_ENH_MAIN_TOOLS_CREATETRIGGER";
-  picture = "\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa";
-  action = "private _trigger = create3DENEntity ['Trigger', 'EmptyDetectorArea10x10', [worldSize / 2, worldSize / 2, 0]]; _trigger set3DENAttribute ['size3', [worldSize / 2, worldSize / 2, 0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
-  wikiDescription = "Creates a trigger which covers exactly the whole map.";
-};
+// class ENH_ToggleMarkerAlpha
+// {
+//   text = "$STR_ENH_MAIN_TOOLS_TOGGLEMARKERALPHA";
+//   action = "call ENH_fnc_toggleMarkerAlpha";
+//   picture = "\a3\3den\data\displays\display3den\panelright\modemarkers_ca.paa";
+//   wikiDescription = "Changes the marker alpha of markers to 1. That way they can be selected if marker alpha was 0 before. This change is applied to the scenario so make sure to undo the effect by using the tool again.";
+//   shortcuts[] = {DIK_V};
+// };
