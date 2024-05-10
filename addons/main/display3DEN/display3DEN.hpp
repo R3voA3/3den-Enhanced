@@ -88,9 +88,7 @@ class Display3DEN
         {
           idc = IDC_STATUSBAR_NUMMARKERS;
           x = QUOTE(ORIGIN_X_STATUSBAR - 22 * GRID_W - 2 * SPACE_X);
-          //y = 2 * pixelH;
           w = QUOTE(7 * GRID_W);
-          //h = 4 * GRID_H - 4 * pixelH;
           onLoad = "(_this # 0) ctrlShow false; (_this # 0) ctrlEnable false";
           style = ST_CENTER + ST_NO_RECT;
         };
@@ -265,7 +263,6 @@ class Display3DEN
                 class ENH_DeleteEmptyLayers: Delete
                 {
                   idc = -1;
-                  //text = "x\enh\addons\main\data\entitylist_deleteEmpty_ca.paa";
                   text = "x\enh\addons\main\data\entitylist_deleteEmpty_ca.paa";
                   x = QUOTE(7 * GRID_W);
                   tooltip = "$STR_ENH_MAIN_TOOLS_DELETEEMPTYLAYERS";
