@@ -162,30 +162,54 @@ private _DIKKeyCodes =
   "NUMPADEQUALS", 0x8D
 ];
 
-private _fnc_ArrayToShortcut =
+private _fnc_shortcutToString =
 {
-  params ["_scArray"];
-  if (_scArray isEqualTo []) exitWith {""};
+  params [["_shortcut", 0, [0]]];
 
-  private _sc = _scArray # 0; //Ignore alternative shortcuts
-  if (_sc isEqualType 0) then {_sc = str _sc};
-  if (_sc isEqualType "") then {_sc = _sc splitString "+, "};
+  private _shortcutTranslatedArray = [];
+  private _bitflags = _shortcut call BIS_fnc_bitflagsToArray;
+
+  if (512 in _bitflags) then {_shortcutTranslatedArray pushBack localize "STR_DIK_CONTROL"; _bitflags = _bitflags - [512]};
+  if (1024 in _bitflags) then {_shortcutTranslatedArray pushBack localize "STR_DIK_SHIFT"; _bitflags = _bitflags - [1024]};
+  if (2048 in _bitflags) then {_shortcutTranslatedArray pushBack localize "STR_DIK_ALT"; _bitflags = _bitflags - [2048]};
+
+  //Sum up remaining bitflags to get the key
+  private _keyNumber = 0;
+
+  _bitflags apply
+  {
+    _keyNumber = _keyNumber + _x;
+  };
+
+  private _index = _DIKKeyCodes find _keyNumber;
+  if (_index < 1) then {continue};
+
+  _shortcutTranslatedArray pushBack localize format ["STR_DIK_%1", _DIKKeyCodes select (_index - 1)];
+
+  _shortcutTranslatedArray joinString "+"
+};
+
+private _fnc_translateShortcutConfig =
+{
+  params [["_shortcutsArray", ["", []]]];
+
+  if (_shortcutsArray isEqualTo []) then {continue};
+
+  private _shortcutsTranslated = [];
 
   {
-    private _key = trim _x;
-    if ("2048" == _key) then {_sc set [_forEachIndex, toUpper localize "STR_DIK_ALT"]};
-    if ("1024" == _key) then {_sc set [_forEachIndex, toUpper localize "STR_DIK_SHIFT"]};
-    if ("512" == _key) then {_sc set [_forEachIndex, toUpper localize "STR_DIK_CONTROL"]};
-
-    if !(_key in ["512", "1024", "2048"]) then
+    private _shortcut = _x;
+    if (_x isEqualType 0) then
     {
-      //Actual key, not a modifier
-      private _index = _DIKKeyCodes find call compile _key;
-      if (_index < 1) then {continue};
-      _sc set [_forEachIndex, _DIKKeyCodes select (_index - 1)];
+      _shortcutsTranslated pushBack (_x call _fnc_shortcutToString);
     };
-  } forEach _sc;
-  _sc joinString "+";
+    if (_x isEqualType "") then
+    {
+      _shortcutsTranslated pushBack ((_x call BIS_fnc_parseNumber) call _fnc_shortcutToString);
+    };
+  } forEach _shortcutsArray;
+
+  toUpper (_shortcutsTranslated joinString ", ");
 };
 
 //Cache data
@@ -196,11 +220,12 @@ if ((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) isEqualTo []) then
             ("true" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items"));
 
   {
-    private _sc = [getArray (_x >> "shortcuts")] call _fnc_ArrayToShortcut;
+    private _sc = [getArray (_x >> "shortcuts")] call _fnc_translateShortcutConfig;
     private _text = getText (_x >> "text");
-    private _picture = getText (_x >> "picture");
 
     if (_sc isEqualTo "" || _text isEqualTo "") then {continue};
+
+    private _picture = getText (_x >> "picture");
 
     _temp append [[_text, _sc, _picture]];
   } forEach _classes;

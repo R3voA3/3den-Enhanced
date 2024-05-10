@@ -18,7 +18,10 @@ params ["_ctrlContent", "_filter"];
 
 lnbClear _ctrlContent;
 {
-  _x params ["_text", "_sc", "_picture"];
-  private _index = _ctrlContent lnbAddRow ["", _text, _sc];
+  _x params ["_text", "_shortcuts", "_picture"];
+
+  private _index = _ctrlContent lnbAddRow ["", _text, _shortcuts];
+
   _ctrlContent lnbSetPicture [[_index, 0], _picture];
+  _ctrlContent lnbSetTooltip [[_index, 0], _text + "\n" + _shortcuts];
 } forEach ((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) select {toLower _filter in toLower (_x select 0)});

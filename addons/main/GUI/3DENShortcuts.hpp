@@ -45,7 +45,7 @@ class ENH_3denShortcuts
       y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
       w = QUOTE(WINDOW_W_ATTRIBUTES * GRID_W);
       h = QUOTE(CTRL_DEFAULT_H);
-      columns[] = {"0", "10 * GRID_W", "80 * GRID_W"};
+      columns[] = {QUOTE(0), QUOTE(10 * GRID_W), QUOTE(80 * GRID_W)};
     };
     class Content: ctrlListNBox
     {
@@ -55,7 +55,7 @@ class ENH_3denShortcuts
       w = QUOTE((WINDOW_W_ATTRIBUTES - 2) * GRID_W);
       h = QUOTE(WINDOW_PREVIEW_HAbs - 2 * CTRL_DEFAULT_H - 3 * GRID_H);
       colorBackground[] = {COLOR_OVERLAY_RGBA};
-      columns[] = {"0", "10 * GRID_W", "80 * GRID_W"};
+      columns[] = {QUOTE(0), QUOTE(10 * GRID_W), QUOTE(80 * GRID_W)};
       disableOverflow = 1;
     };
     class Search: ctrlEdit
