@@ -1,5 +1,5 @@
 {
-  "folders": [
+	"folders": [
 		{
 			"path": "."
 		},
@@ -8,12 +8,12 @@
 			"path": "../3den-Enhanced.wiki"
 		}
 	],
-  "settings": {
-    "files.associations": {
-      "*.bikb": "cpp"
-        },
-        "files.trimTrailingWhitespace": true,
-        "editor.tabSize": 1,
-        "workbench.startupEditor": "none"
-  }
+	"settings": {
+		"files.associations": {
+			"*.bikb": "cpp"
+				},
+				"files.trimTrailingWhitespace": true,
+				"editor.tabSize": 1,
+				"workbench.startupEditor": "none"
+	}
 }

@@ -6,7 +6,7 @@
 | Poslovitch Alfred-Neuman | French Translation |
 | GhostJumper, Mr-Melker | German Translation |
 | zagor64bz | Italian Translation |
-| Kofeina101, Krzyciu, genjonakasone  | Polish Translation |
+| Kofeina101, Krzyciu, genjonakasone | Polish Translation |
 | Counserf | Russian Translation |
 | arv187, regiregi22 | Spanish Translation |
 | Leopard20 | Providing his blank font |

@@ -1,61 +1,61 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "version": "2.0.0",
-  "tasks":
-  [
-    {
-      "label": "Start Arma 3",
-      "type": "shell",
-      "command": "tools/startArma3.ps1",
-      "problemMatcher": []
-    },
-    {
-      "label": "Stop Arma 3",
-      "type": "shell",
-      "command": "tools/forceExitArma3.ps1",
-      "problemMatcher": []
-    },
-    {
-      "label": "RPT Watcher",
-      "type": "shell",
-      "command": "tools/readRPT.ps1",
-      "problemMatcher": []
-    },
-    {
-      "label": "Build 3den Enhanced & Start Arma 3",
-      "type": "shell",
-      "command": "tools/build.ps1",
-      "problemMatcher": [],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "Build & Publish 3den Enhanced",
-      "type": "shell",
-      "command": "tools/build.ps1",
-      "args": [
-        "true"
-      ],
-      "problemMatcher": []
-    },
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks":
+	[
 		{
-      "label": "Build 3den Enhanced",
-      "type": "shell",
-      "command": "tools/build.ps1",
-      "args": [
+			"label": "Start Arma 3",
+			"type": "shell",
+			"command": "tools/startArma3.ps1",
+			"problemMatcher": []
+		},
+		{
+			"label": "Stop Arma 3",
+			"type": "shell",
+			"command": "tools/forceExitArma3.ps1",
+			"problemMatcher": []
+		},
+		{
+			"label": "RPT Watcher",
+			"type": "shell",
+			"command": "tools/readRPT.ps1",
+			"problemMatcher": []
+		},
+		{
+			"label": "Build 3den Enhanced & Start Arma 3",
+			"type": "shell",
+			"command": "tools/build.ps1",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build & Publish 3den Enhanced",
+			"type": "shell",
+			"command": "tools/build.ps1",
+			"args": [
+				"true"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Build 3den Enhanced",
+			"type": "shell",
+			"command": "tools/build.ps1",
+			"args": [
 				"false",
 				"false"
-      ],
-      "problemMatcher": []
-    },
-    {
-      "label": "Clear Log Files",
-      "type": "shell",
-      "command": "tools/clearLogs.ps1",
-      "problemMatcher": []
-    }
-  ]
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Clear Log Files",
+			"type": "shell",
+			"command": "tools/clearLogs.ps1",
+			"problemMatcher": []
+		}
+	]
 }
