@@ -17,7 +17,7 @@ class ENH_PlacementTools
 {
   text = "$STR_ENH_MAIN_TOOLS_PLACEMENTTOOL";
   action = "[nil, 'createUI'] call ENH_fnc_placementTools";
-  shortcuts[] = {INPUT_CTRL_OFFSET + DIK_L};
+  shortcuts[] = {INPUT_CTRL_OFFSET + INPUT_ALT_OFFSET + DIK_L};
   opensNewWindow = 1;
   wikiDescription = "Opens Placement Tool GUI. See GUI documentation for detailed information.";
 };
