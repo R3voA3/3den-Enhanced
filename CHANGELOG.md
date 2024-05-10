@@ -23,13 +23,17 @@
 	- Optimized code
 	- Marker is no longer attached to first group leader
 	- Marker is only deleted once group becomes null
-- Briefing attributes should now created diary entries in same order every time #297
+- Briefing attributes should now create diary entries in same order every time #297
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
 - Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
 - ENH_init3DENMissionPreview.sqf is now called instead of spawned (execVM)
 - Minimap code was optimized
 - Added description to menu strip items for easier documenation
+- Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
+- Shortcuts in the shortcuts UI is now properly translated
+- Shortcuts UI now shows all shortcuts per action
+- Added tooltip to shortcuts UI in case translations are too long
 
 ## REMOVED
 - Customization via userconfig
