@@ -13,24 +13,27 @@
   -
 */
 
-if !("Preferences" get3DENMissionAttribute "ENH_CollapseAssetBrowser") exitWith {};
+#include "\x\enh\addons\main\script_component.hpp"
 
-disableSerialization;
-
-private _fnc_collapse =
+if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseAssetBrowser", false]) then
 {
-  private _path = _this;
-  if (count _path > 0) then
+  disableSerialization;
+
+  private _fnc_collapse =
   {
-    _ctrlTree tvCollapse _path;
+    private _path = _this;
+    if (count _path > 0) then
+    {
+      _ctrlTree tvCollapse _path;
+    };
+    for "_i" from 0 to (_ctrlTree tvCount _path) do
+    {
+      (_path + [_i]) call _fnc_collapse;
+    };
   };
-  for "_i" from 0 to (_ctrlTree tvCount _path) do
+
   {
-    (_path + [_i]) call _fnc_collapse;
-  };
+    private _ctrlTree = findDisplay IDD_DISPLAY3DEN displayCtrl _x;
+    [] call _fnc_collapse;
+  } foreach [IDC_DISPLAY3DEN_CREATE_ALL];
 };
-
-{
-  private _ctrlTree = findDisplay 313 displayCtrl _x;
-  [] call _fnc_collapse;
-} foreach [61, 62, 63, 64, 56, 57, 58, 59];
