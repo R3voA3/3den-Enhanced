@@ -33,20 +33,18 @@ class ENH_Interface
       expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', _value]";
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowPanelRight', true]";
     };
-    class ENH_MinimapEnabled: ENH_ShowPanelLeft
-    {
-      displayName = "$STR_ENH_MAIN_MINIMAPENABLED";
-      property = "ENH_MinimapEnabled";
-      expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', _value]; 'init' call ENH_fnc_3DENMinimap";
-      defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapEnabled', false]";
-    };
-    class ENH_MinimapSize: ENH_MinimapEnabled
+    class ENH_MinimapSize
     {
       displayName = "$STR_ENH_MAIN_MINIMAPSIZE";
       property = "ENH_MinimapSize";
       control = "Combo";
       class Values
       {
+        class Disabled
+        {
+          name = "$STR_DISABLED";
+          value = 0;
+        };
         class Small
         {
           name = "$STR_SMALL";
@@ -67,7 +65,7 @@ class ENH_Interface
       defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapSize', 2]";
       typeName = "NUMBER";
     };
-    class ENH_MinimapScaleMultiplier: ENH_MinimapEnabled
+    class ENH_MinimapScaleMultiplier
     {
       displayName = "$STR_ENH_MAIN_MINIMAPSCALEMULTIPLIER";
       property = "ENH_MinimapScaleMultiplier";
