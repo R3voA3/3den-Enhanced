@@ -6,23 +6,13 @@ class ENH_AddObjectsToZeus
   control = "Checkbox";
   expression =
   "\
-    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then\
+    if (!is3DEN && isServer && _value) then\
     {\
-      0 spawn\
+      addMissionEventHandler ['EntityCreated',\
       {\
-        scriptName 'ENH_Attribute_AddObjectsToZeus';\
-        while {true} do\
-        {\
-          {\
-          _x addCuratorEditableObjects\
-            [\
-              entities [[], ['Logic'], true],\
-              true\
-            ];\
-          } count allCurators;\
-          sleep 60;\
-        };\
-      };\
+        params ['_entity'];\
+        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};\
+      }];\
     }";
   defaultValue = "false";
 };
