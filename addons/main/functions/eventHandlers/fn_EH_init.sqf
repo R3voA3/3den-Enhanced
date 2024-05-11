@@ -132,4 +132,5 @@ _display3DEN displayAddEventHandler ["MouseMoving", _code];
 //Add tooltips to entity list
 _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter", ENH_fnc_entityList_addTooltips];
 
-["init", _display3DEN] call ENH_fnc_3DENMinimap;
+//Init minimap
+_display3DEN call ENH_fnc_3DENMinimap;

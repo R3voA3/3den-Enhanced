@@ -17,140 +17,121 @@
   -
 */
 
-params [["_mode", "init"], ["_display3DEN", findDisplay 313]];
-
 #include "\x\enh\addons\main\script_component.hpp"
 
-switch _mode do
+disableSerialization;
+
+params [["_display3DEN", findDisplay IDD_DISPLAY3DEN]];
+
+_display3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
+
+private _ctrlMap = _display3DEN ctrlCreate ["ENH_3DENMinimap", IDC_3DEN_MINIMAP_MAP];
+_ctrlMap ctrlEnable false;
+
+//After previewing, the player position indicator is gone (engine bug?). So we create our own
+private _ctrlImage = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
+_ctrlImage ctrlSetText "a3\ui_f\data\gui\rsc\rscdisplaymissioneditor\iconcamera_ca.paa";
+_ctrlImage ctrlSetTextColor [0.7, 0.09, 0, 1];
+
+private _code =
 {
-  case "exit":
+  private _display3DEN = findDisplay IDD_DISPLAY3DEN;
+
+  private _ctrlMap = _display3DEN displayCtrl IDC_3DEN_MINIMAP_MAP;
+  private _ctrlBackground = _display3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND;
+  private _ctrlImage = _display3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER;
+
+  private _attributeValue = profileNamespace getVariable ["ENH_EditorPreferences_Interface_MinimapSize", 0];
+
+  private _hide = (get3DENActionState "ToggleMap" == 1) ||
+  (round ctrlFade (_display3DEN displayCtrl IDC_DISPLAY3DEN_PLAY) > 0) ||
+  (_attributeValue == 0);
+
+  _ctrlMap ctrlShow !_hide;
+  _ctrlBackground ctrlShow !_hide;
+  _ctrlImage ctrlShow !_hide;
+
+  if !_hide then
   {
-    ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_MAP);
-    ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND);
-    ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER);
-  };
-  case "init":
-  {
-    if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
-
-    _display3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
-
-    private _ctrlMap = _display3DEN ctrlCreate ["ENH_3DENMinimap"/* "ctrlMap" */, IDC_3DEN_MINIMAP_MAP];
-    _ctrlMap ctrlEnable false;
-
-    //After previewing, the player position indicator is conde (engine bug?). So we create our own
-    private _ctrlImage = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
-    _ctrlImage ctrlSetText "a3\ui_f\data\gui\rsc\rscdisplaymissioneditor\iconcamera_ca.paa";
-    _ctrlImage ctrlSetTextColor [0.7, 0.09, 0, 1];
-
-    //This hides the cirle that indicates player position.
+    //This hides the circle that indicates player position.
     disableMapIndicators [true, true, true, true];
 
-    private _code =
+    private _scale = linearConversion
+    [
+      0,
+      1000 * (profileNamespace getVariable ["ENH_EditorPreferences_Interface_MinimapScaleMultiplier", 0]),
+      getPosASL get3DENCamera # 2,
+      0.001,
+      3,
+      true
+    ];
+
+    private _position = switch _attributeValue do
     {
-      if (!is3DEN || !G_PREF("ENH_MinimapEnabled")) exitWith {"exit" call ENH_fnc_3DENMinimap};
-
-      private _display3DEN = findDisplay IDD_DISPLAY3DEN;
-
-      _ctrlMap = _display3DEN displayCtrl IDC_3DEN_MINIMAP_MAP;
-      _ctrlBackground = _display3DEN displayCtrl IDC_3DEN_MINIMAP_BACKGROUND;
-      _ctrlImage = _display3DEN displayCtrl IDC_3DEN_MINIMAP_CENTER;
-
-      private _hide = get3DENActionState "ToggleMap" == 1 || round ctrlFade (_display3DEN displayCtrl IDC_DISPLAY3DEN_PLAY) > 0;
-
-      _ctrlMap ctrlShow !_hide;
-      _ctrlBackground ctrlShow !_hide;
-      _ctrlImage ctrlShow !_hide;
-
-      if _hide then {continue};
-
-      private _scale = linearConversion [0, 1000 * G_PREF("ENH_MinimapScaleMultiplier"), getPosASL get3DENCamera # 2, 0.001, 3, true];
-
-      private _position = switch G_PREF("ENH_MinimapSize") do
+      case 1: //Small
       {
-        case 1: //Small
-        {
-          [
-            safezoneX + 62 * GRID_W,
-            safezoneY + 14 * GRID_H,
-            32 * GRID_W,
-            32 * GRID_H
-          ];
-        };
-        case 3: //Large
-        {
-          [
-            safezoneX + 62 * GRID_W,
-            safezoneY + 14 * GRID_H,
-            92 * GRID_W,
-            92 * GRID_H
-          ];
-        };
-        default //Medium
-        {
-          [
-            safezoneX + 62 * GRID_W,
-            safezoneY + 14 * GRID_H,
-            62 * GRID_W,
-            62 * GRID_H
-          ];
-        };
+        [
+          safezoneX + 62 * GRID_W,
+          safezoneY + 14 * GRID_H,
+          32 * GRID_W,
+          32 * GRID_H
+        ];
       };
-
-      if !(profileNamespace getVariable ["display3DEN_panelLeft", true]) then
+      case 2: //Medium
       {
-        _position set [0, _position # 0 - 54 * GRID_W];
+        [
+          safezoneX + 62 * GRID_W,
+          safezoneY + 14 * GRID_H,
+          62 * GRID_W,
+          62 * GRID_H
+        ];
       };
-
-      _ctrlMap ctrlMapSetPosition _position;
-      _ctrlMap ctrlMapAnimAdd [0, _scale, getPosWorld get3DENCamera];
-      ctrlMapAnimCommit _ctrlMap;
-
-      _ctrlBackground ctrlSetPosition
-      [
-        _position # 0 - 1 * GRID_W,
-        _position # 1 - 1 * GRID_H,
-        _position # 2 + 2 * GRID_W,
-        _position # 3 + 2 * GRID_H
-      ];
-
-      _ctrlBackground ctrlCommit 0;
-
-      _ctrlImage ctrlSetPosition
-      [
-        ctrlPosition _ctrlBackground # 0 + ctrlPosition _ctrlBackground # 2 / 2 - 2.5 * GRID_W,
-        ctrlPosition _ctrlBackground # 1 + ctrlPosition _ctrlBackground # 3 / 2 - 2.5 * GRID_H,
-        5 * GRID_W,
-        5 * GRID_H
-      ];
-
-      _ctrlImage ctrlSetAngle [getDir get3DENCamera, 0.5, 0.5, true];
-
-      _ctrlImage ctrlCommit 0;
+      case 3: //Large
+      {
+        [
+          safezoneX + 62 * GRID_W,
+          safezoneY + 14 * GRID_H,
+          92 * GRID_W,
+          92 * GRID_H
+        ];
+      };
+      default //Disabled, 0
+      {
+        [0, 0, 0, 0];
+      };
     };
 
-    _display3DEN displayAddEventHandler ["MouseHolding", _code];
-    _display3DEN displayAddEventHandler ["MouseMoving", _code];
-  };
-  case "toggleFromMenu":
-  {
-    //Switching the state of the attribute also executes the code set in the G_PREFerences
-    S_PREF("ENH_MinimapEnabled",!G_PREF("ENH_MinimapEnabled"));
-  };
-  case "AdjustSizeFromMenu":
-  {
-    private _currSize = G_PREF("ENH_MinimapSize");
-
-    if (_currSize == 3) then
+    if !(profileNamespace getVariable ["display3DEN_panelLeft", true]) then
     {
-      _currSize = 1;
-    }
-    else
-    {
-      _currSize = _currSize + 1;
+      _position set [0, _position # 0 - 54 * GRID_W];
     };
 
-    //Switching the state of the attribute also executes the code set in the G_PREFerences
-    S_PREF("ENH_MinimapSize",_currSize);
+    _ctrlMap ctrlMapSetPosition _position;
+    _ctrlMap ctrlMapAnimAdd [0, _scale, getPosWorld get3DENCamera];
+    ctrlMapAnimCommit _ctrlMap;
+
+    _ctrlBackground ctrlSetPosition
+    [
+      _position # 0 - 1 * GRID_W,
+      _position # 1 - 1 * GRID_H,
+      _position # 2 + 2 * GRID_W,
+      _position # 3 + 2 * GRID_H
+    ];
+
+    _ctrlBackground ctrlCommit 0;
+
+    _ctrlImage ctrlSetPosition
+    [
+      ctrlPosition _ctrlBackground # 0 + ctrlPosition _ctrlBackground # 2 / 2 - 2.5 * GRID_W,
+      ctrlPosition _ctrlBackground # 1 + ctrlPosition _ctrlBackground # 3 / 2 - 2.5 * GRID_H,
+      5 * GRID_W,
+      5 * GRID_H
+    ];
+
+    _ctrlImage ctrlSetAngle [getDir get3DENCamera, 0.5, 0.5, true];
+    _ctrlImage ctrlCommit 0;
   };
 };
+
+_display3DEN displayAddEventHandler ["MouseHolding", _code];
+_display3DEN displayAddEventHandler ["MouseMoving", _code];
