@@ -1,4 +1,10 @@
 # 8.0.0
+## ADDED
+- Added support for script files for all 3DEN event handlers. See [the documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Event-Scripts)
+	- **ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!**
+- Added object event handler attributes
+- Added group event handler attributes
+
 ## CHANGED
 - 3den Enhanced is now build with HEMTT
 	- Fixed various config and macro issues
@@ -34,6 +40,9 @@
 - Shortcuts in the shortcuts UI is now properly translated
 - Shortcuts UI now shows all shortcuts per action
 - Added tooltip to shortcuts UI in case translations are too long
+- Optimized code of Add Objects to Zeus attribute
+- Simplified Minimap code logic
+- Removed Enable Minimap Attribute, it was merged with the size attribute
 
 ## REMOVED
 - Customization via userconfig

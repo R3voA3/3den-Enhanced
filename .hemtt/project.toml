@@ -37,6 +37,7 @@ workshop = [
 mission = "scriptLibrary.VR" # Mission to launch directly into the editor with
 
 parameters = [
+	"-preprocDefine=CMD__ENH_ISDEV",
 ]
 
 executable = "arma3_x64"
