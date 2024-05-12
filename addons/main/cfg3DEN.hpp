@@ -207,6 +207,7 @@ class Cfg3DEN
     class AttributeCategories
     {
       #include "attributesGroup\groupMarker.hpp"
+      #include "attributesGroup\eventHandlers.hpp"
       class State
       {
         class Attributes
@@ -225,6 +226,7 @@ class Cfg3DEN
       #include "attributesObject\AI.hpp"
       #include "attributesObject\unitTraits.hpp"
       #include "attributesObject\holdAction.hpp"
+      #include "attributesObject\eventHandlers.hpp"
       class StateSpecial
       {
         class Attributes

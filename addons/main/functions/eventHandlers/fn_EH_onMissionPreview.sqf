@@ -14,9 +14,3 @@
 */
 
 0 spawn ENH_fnc_debugOptions_init;
-
-if (fileExists "ENH_init3DENMissionPreview.sqf") then
-{
-  diag_log "3den Enhanced: Calling ENH_init3DENMissionPreview.sqf";
-  call compile preprocessFileLineNumbers "ENH_init3DENMissionPreview.sqf"
-};

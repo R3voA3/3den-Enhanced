@@ -18,7 +18,7 @@ class SubCategoryNoHeader1: Default
 
 class ENH_SubCategoryNoHeader1_Fixed: SubCategoryNoHeader1
 {
-  attributeLoad = "";
+  attributeLoad = "((_this controlsGroupCtrl 101) controlsGroupCtrl 102) ctrlSetStructuredText parseText gettext (_config >> 'description')";
   attributeSave = "";
   h = QUOTE((2.5 * GRID_H) + CTRL_H(1));
   class Controls: Controls

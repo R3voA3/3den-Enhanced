@@ -6,6 +6,23 @@
 #include "\a3\3den\ui\resincl.inc"
 
 #define QUOTE(var1) #var1
+#define DOUBLES(var1,var2) var1##_##var2
+#define TRIPLES(var1,var2,var3) var1##_##var2##_##var3
+#define TRIPLES_NO_SCORE(var1,var2,var3) var1####var2####var3
+
+#define EH_ARRAY(A) [QUOTE(QUOTE(A)), compile _value]
+#define EH_CONFIG(A,B) class DOUBLES(ENH_EventHandlers,A)\
+{\
+  displayName = QUOTE(A);\
+  property = QUOTE(DOUBLES(ENH_EventHandlers,A));\
+  control = "EditCodeMulti5";\
+  expression = QUOTE((if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler EH_ARRAY(A)}));\
+  condition = QUOTE(B);\
+  defaultValue = "''";\
+  validate = "expression";\
+}\
+
+#define EH_DEF(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))) then {diag_log ( QUOTE(QUOTE(TRIPLES_NO_SCORE(3den Enhanced: Calling ENH_,A,.sqf)))); call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))]})
 
 #define LB "<br/>"
 
@@ -32,9 +49,6 @@
 
 #define CTRL(IDC) (_display displayCtrl IDC)
 #define G_PREF(A) ("Preferences" get3DENMissionAttribute A)
-
-//#define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B]; save3DENPreferences) Enable in 2.18
-#define S_PREF(A,B) ("Preferences" set3DENMissionAttribute [A, B])
 
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
