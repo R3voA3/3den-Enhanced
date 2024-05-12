@@ -1,3 +1,4 @@
+<!--
 # 8.0.0
 ## ADDED
 - Added support for script files for all 3DEN event handlers. See [the documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Event-Scripts)
@@ -50,7 +51,7 @@
 - Unused function
 - Highlight area marker function as it's now implemented in the engine
 - Menustrip customization
-
+-->
 # 7.8.8
 ## CHANGED
 - Tweaked Dynamic Simulation debug mode
