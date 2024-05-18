@@ -34,7 +34,6 @@
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
 - Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
-- ENH_init3DENMissionPreview.sqf is now called instead of spawned (execVM)
 - Minimap code was optimized
 - Added description to menu strip items for easier documenation
 - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
@@ -43,7 +42,7 @@
 - Added tooltip to shortcuts UI in case translations are too long
 - Optimized code of Add Objects to Zeus attribute
 - Simplified Minimap code logic
-- Removed Enable Minimap Attribute, it was merged with the size attribute
+- Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
 
 ## REMOVED
 - Customization via userconfig
