@@ -26,6 +26,7 @@ class ENH_SnapToSurface
   text = "$STR_3DEN_DISPLAY3DEN_ENTITYMENU_MOVESURFACE_TEXT";
   action = "do3DENAction 'SnapToSurface'";
   shortcuts[] = {INPUT_CTRL_OFFSET + DIK_SPACE};
+  picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\moveSurface_ca.paa";
   wikiDescription = "Snaps all selected entities to the surface.";
 };
 
