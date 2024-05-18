@@ -2,7 +2,7 @@ class ENH_Airdrop: Title
 {
   attributeLoad = "[_this, _value] call ENH_fnc_airdrop_onAttributeLoad";
   attributeSave = "_this call ENH_fnc_airdrop_onAttributeSave";
-  h = "11 * CTRL_DEFAULT_H + 35 * pixelH";//We make it 5 * pixelH larger to prevent scrolling issues
+  h = QUOTE(11 * CTRL_DEFAULT_H + 35 * pixelH);//We make it 5 * pixelH larger to prevent scrolling issues
   class Controls: Controls
   {
     class ClassesTitle: Title
