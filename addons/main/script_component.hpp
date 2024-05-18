@@ -22,7 +22,7 @@
   validate = "expression";\
 }\
 
-#define EH_DEF(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))) then {diag_log ( QUOTE(QUOTE(TRIPLES_NO_SCORE(3den Enhanced: Calling ENH_,A,.sqf)))); call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))]})
+#define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))]})
 
 #define LB "<br/>"
 

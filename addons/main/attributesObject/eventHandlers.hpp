@@ -6,18 +6,15 @@ class ENH_EventHandlers
   {
     class ENH_EventHandlers_Subcategory
     {
-      description = "Event Handlers are triggered upon certain events. The code is only executed where the entity is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> for more information.";
+      description = "Event Handlers are triggered upon certain events. The code is only executed where the entity is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> and <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/addEventHandler'>addEventHandler</a> for more information.";
       property = "ENH_EventHandlers_Subcategory";
-      control = "ENH_SubCategoryNoHeader3_Fixed";
-      expression = "";
-      condition = 1;
-      defaultValue = "";
+      control = "ENH_SubCategoryNoHeader1_Fixed";
     };
     EH_CONFIG(AnimChanged,objectControllable);
     EH_CONFIG(AnimDone,objectControllable);
     EH_CONFIG(AnimStateChanged,objectControllable);
-    EH_CONFIG(CargoLoaded,objectVehicle);
     EH_CONFIG(Assembled,objectControllable);
+    EH_CONFIG(CargoLoaded,objectVehicle);
     EH_CONFIG(CargoUnloaded,objectVehicle);
     EH_CONFIG(ContainerClosed,objectHasInventoryCargo);
     EH_CONFIG(ContainerOpened,objectHasInventoryCargo);
@@ -52,12 +49,13 @@ class ENH_EventHandlers
     EH_CONFIG(InventoryClosed,objectControllable);
     EH_CONFIG(InventoryOpened,objectControllable);
     EH_CONFIG(Killed,objectControllable + objectVehicle);
-    EH_CONFIG(LandedTouchDown,objectVehicle);
     EH_CONFIG(LandedStopped,objectVehicle);
+    EH_CONFIG(LandedTouchDown,objectVehicle);
     EH_CONFIG(Landing,objectVehicle);
     EH_CONFIG(LandingCanceled,objectControllable);
     EH_CONFIG(LeaningChanged,objectControllable);
     EH_CONFIG(Local,1);
+    EH_CONFIG(MagazineUnloaded,objectControllable);
     EH_CONFIG(OpticsModeChanged,objectControllable + objectVehicle);
     EH_CONFIG(OpticsSwitch,objectControllable + objectVehicle);
     EH_CONFIG(PeriscopeElevationChanged,objectVehicle);
@@ -77,8 +75,9 @@ class ENH_EventHandlers
     EH_CONFIG(TurnOut,objectVehicle);
     EH_CONFIG(VisionModeChanged,objectControllable + objectVehicle);
     EH_CONFIG(WeaponAssembled,objectControllable);
-    EH_CONFIG(WeaponDisassembled,objectControllable);
+    EH_CONFIG(WeaponChanged,objectControllable);
     EH_CONFIG(WeaponDeployed,objectControllable);
+    EH_CONFIG(WeaponDisassembled,objectControllable);
     EH_CONFIG(WeaponRested,objectControllable);
   };
 };
