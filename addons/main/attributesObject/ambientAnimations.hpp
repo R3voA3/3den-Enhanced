@@ -17,7 +17,7 @@ class ENH_AmbientAnimations
       property = "ENH_AmbientAnimations";
       expression =
       "\
-      if !(_value # 0 isEqualTo '') then\
+      if (_value # 0 != '') then\
       {\
         _value params ['_animSet', '_anims', '_canExit', '_attach'];\
         \
