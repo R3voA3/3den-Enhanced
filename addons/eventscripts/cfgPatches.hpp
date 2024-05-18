@@ -3,7 +3,6 @@ class CfgPatches
   class 3denEnhanced_EventScripts
   {
     author = "R3vo";
-    is3DENMod = 1;
     name = "3den Enhanced - Event Scripts";
     requiredAddons[] = {"3denEnhanced"};
     requiredVersion = 2.18;
