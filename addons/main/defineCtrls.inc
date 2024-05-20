@@ -1,8 +1,6 @@
-//#include "\x\enh\addons\main\script_component.hpp"
-
 //Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
-                           class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
+													 class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
 
 //Eden base controls
 class ctrlButton;
@@ -49,34 +47,34 @@ class scrollbar;
 //Attribute controls
 class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
 {
-  idc = -1;
-  x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-  w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-  h = QUOTE(2 * CTRL_DEFAULT_H);
-  rows = 1;
-  columns = 4;
-  strings[] =
-  {
-    "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_west_ca.paa",
-    "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_east_ca.paa",
-    "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa",
-    "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_civ_ca.paa"
-  };
-  tooltips[] = {"$STR_WEST", "$STR_EAST", "$STR_GUERRILA", "$STR_CIVILIAN"};
-  values[] = {0, 1, 2, 3};
+	idc = -1;
+	x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+	w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
+	h = QUOTE(2 * CTRL_DEFAULT_H);
+	rows = 1;
+	columns = 4;
+	strings[] =
+	{
+		"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_west_ca.paa",
+		"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_east_ca.paa",
+		"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_guer_ca.paa",
+		"\a3\3DEN\Data\Displays\Display3DEN\PanelRight\side_civ_ca.paa"
+	};
+	tooltips[] = {"$STR_WEST", "$STR_EAST", "$STR_GUERRILA", "$STR_CIVILIAN"};
+	values[] = {0, 1, 2, 3};
 };
 
 class ENH_ResetButton_Base: ctrlButton
 {
-  idc = 5;
-  x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-  w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-  h = QUOTE(CTRL_DEFAULT_H);
-  text = "$STR_ENH_MAIN_RESETANDDISABLE";
+	idc = 5;
+	x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+	w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
+	h = QUOTE(CTRL_DEFAULT_H);
+	text = "$STR_ENH_MAIN_RESETANDDISABLE";
 };
 
 //Used for Advanced Damage attribute
 class ENH_AttributeTitle: ctrlStatic
 {
-  style = ST_RIGHT;
+	style = ST_RIGHT;
 };

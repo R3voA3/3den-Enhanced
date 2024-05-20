@@ -28,7 +28,6 @@
 #include "GUI\selectionFilter.hpp"
 #include "GUI\templateData.hpp"
 #include "GUI\textureFinder.hpp"
-#include "GUI\VAMPresetsMenu.hpp"
 #include "GUI\variableViewer.hpp"
 #include "GUI\zeusAddons.hpp"
 
@@ -39,5 +38,5 @@
 
 class ENH_3DENMinimap: ctrlMap
 {
-  scaleMax = 3;
+	scaleMax = 3;
 };
