@@ -8,8 +8,8 @@ class ENH_AddObjectsToZeus
 	"\
 		if (!is3DEN && isServer && _value) then\
 		{\
-			private _objects = allMissionObjects "";\
-			allCurators apply { _x addCuratorEditableObjects [_objects, true]};\
+			private _objects = allMissionObjects '';\
+			allCurators apply {_x addCuratorEditableObjects [_objects, true]};\
 			addMissionEventHandler ['EntityCreated',\
 			{\
 				params ['_entity'];\
