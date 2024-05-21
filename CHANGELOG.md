@@ -43,6 +43,7 @@
 - Optimized code of Add Objects to Zeus attribute
 - Simplified Minimap code logic
 - Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
+- Add Editable Objects (Zeus) attribute now also adds all editor placed objects
 
 ## REMOVED
 - Customization via userconfig
