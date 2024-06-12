@@ -5,7 +5,7 @@
 | XerXesCZ | Czech Translation |
 | Poslovitch Alfred-Neuman | French Translation |
 | GhostJumper, Mr-Melker | German Translation |
-| zagor64bz | Italian Translation |
+| zagor64bz, Fil-ric | Italian Translation |
 | Kofeina101, Krzyciu, genjonakasone | Polish Translation |
 | Counserf | Russian Translation |
 | arv187, regiregi22 | Spanish Translation |
