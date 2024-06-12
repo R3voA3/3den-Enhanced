@@ -108,7 +108,7 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 (_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

@@ -42,7 +42,7 @@ switch _mode do
     lbSort [_ctrlLB, "DESC"];
 
     //Focus Search
-    _display displayAddEventHandler ["keyDown",
+    _display displayAddEventHandler ["KeyDown",
     {
       params ["_display", "_key", "", "_ctrl"];
       if (_key isEqualTo 33 && _ctrl) then

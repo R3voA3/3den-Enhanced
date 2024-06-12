@@ -53,7 +53,7 @@ if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic", []]) isEqualTo []) then
 call ENH_fnc_3DENRadio_searchList;
 
 //Focus Search EH
-_display displayAddEventHandler ["keyDown",
+_display displayAddEventHandler ["KeyDown",
 {
   params ["_display", "_key", "", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then

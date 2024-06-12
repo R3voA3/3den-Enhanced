@@ -49,7 +49,7 @@ else
 [_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "s", _delay] call BIS_fnc_initSliderValue;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

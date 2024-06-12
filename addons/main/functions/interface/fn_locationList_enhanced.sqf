@@ -18,7 +18,7 @@ switch (_mode) do
     //Let the user define a name
     private _displayInputName = findDisplay 313 createDisplay "Display3DENRename";
 
-    _displayInputName displayAddEventHandler ["unload",
+    _displayInputName displayAddEventHandler ["Unload",
     {
       isNil
       {

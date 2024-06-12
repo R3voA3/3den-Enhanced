@@ -68,7 +68,7 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
 } foreach configproperties [configfile >> "CfgMarkerColors", "isClass _x && getNumber (_x >> 'scope') > 0"];
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

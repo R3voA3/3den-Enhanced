@@ -91,7 +91,7 @@ CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
 }];
 
 //CTRL + F to focus search
-_display displayAddEventHandler ["keyDown", //Focus Search
+_display displayAddEventHandler ["KeyDown", //Focus Search
 {
   params ["_display", "_key", "", "_ctrl"];
   if (_key isEqualTo 33 && _ctrl) then

@@ -32,7 +32,7 @@ _value params ["_center", "_text", "_alt", "_r", "_angle", "_dir"];
 (_ctrlGroup controlsGroupCtrl 108) lbSetCurSel _dir;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

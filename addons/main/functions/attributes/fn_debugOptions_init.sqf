@@ -743,7 +743,7 @@ if GETVALUE("DrawTriggers") then
     }];
   } forEach (8 allObjects 7); //All triggers
 
-  findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["mouseMoving",
+  findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["MouseMoving",
   {
     params ["_ctrlMap", "_xPos", "_yPos"];
 

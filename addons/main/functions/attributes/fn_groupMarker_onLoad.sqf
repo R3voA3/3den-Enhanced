@@ -58,7 +58,7 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
 } foreach ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkerColors"));
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
   (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;

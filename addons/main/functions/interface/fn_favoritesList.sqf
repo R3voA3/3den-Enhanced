@@ -27,13 +27,13 @@ switch (_mode) do
     private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
     private _ctrlButton = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1339;
 
-    _ctrlFavorites ctrlAddEventHandler ["treeDblClick",
+    _ctrlFavorites ctrlAddEventHandler ["TreeDblClick",
     {
       params ["_ctrlFavorites", "_selectionPath"];
       ["createEntity", [_ctrlFavorites, _selectionPath]] call ENH_fnc_favoritesList;
     }];
 
-    _ctrlFavorites ctrlAddEventHandler ["treeMouseMove",
+    _ctrlFavorites ctrlAddEventHandler ["TreeMouseMove",
     {
       params ["_ctrlFavorites", "_path"];
       ["showPreview", [_ctrlFavorites, _path]] call ENH_fnc_favoritesList;
@@ -44,7 +44,7 @@ switch (_mode) do
       ["hidePreview", []] call ENH_fnc_favoritesList;
     }];
 
-    _ctrlButton ctrlAddEventHandler ["buttonClick",
+    _ctrlButton ctrlAddEventHandler ["ButtonClick",
     {
       private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
       private _selection = tvSelection _ctrlFavorites;

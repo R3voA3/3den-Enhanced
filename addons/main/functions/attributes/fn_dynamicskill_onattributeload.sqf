@@ -72,7 +72,7 @@ _value params
 [_ctrlGroup controlsGroupCtrl 123, _ctrlGroup controlsGroupCtrl 124, "%", _skillAimMaxIndependent] call BIS_fnc_initSliderValue;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

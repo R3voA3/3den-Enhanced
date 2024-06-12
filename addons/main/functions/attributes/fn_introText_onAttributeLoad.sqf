@@ -27,7 +27,7 @@ _value params ["_delay", "_line1", "_line2", "_line3", "_introType"];
 (_ctrlGroup controlsGroupCtrl 105) lbSetCurSel _introType;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

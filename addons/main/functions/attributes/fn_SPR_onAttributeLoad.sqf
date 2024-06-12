@@ -39,7 +39,7 @@ _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_MAIN_SPR_RUL
 (_ctrlGroup controlsGroupCtrl 105) ctrlSetText _onRespawnCode;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["buttonClick",
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
   private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

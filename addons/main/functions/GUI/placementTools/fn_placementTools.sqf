@@ -214,19 +214,19 @@ switch _mode do
       [nil, "grid"] call ENH_fnc_placementTools;
     }];
 
-    CTRL(IDC_PLACEMENTTOOLS_RANDOMORIENTATION) ctrlAddEventHandler ["buttonClick",
+    CTRL(IDC_PLACEMENTTOOLS_RANDOMORIENTATION) ctrlAddEventHandler ["ButtonClick",
     {
       -1 call ENH_fnc_setOrientation;
     }];
 
-    CTRL(IDC_PLACEMENTTOOLS_REVERSEORIENTATION) ctrlAddEventHandler ["buttonClick",
+    CTRL(IDC_PLACEMENTTOOLS_REVERSEORIENTATION) ctrlAddEventHandler ["ButtonClick",
     {
       -2 call ENH_fnc_setOrientation;
     }];
 
     //Add EHs to all edit controls for input modifiers
     {
-      _x ctrlAddEventHandler ["keyDown",
+      _x ctrlAddEventHandler ["KeyDown",
       {
         params ["_ctrlEdit", "_key", "_shift", "_ctrl", "_alt"];
 
