@@ -44,6 +44,7 @@
 - Simplified Minimap code logic
 - Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
 - Add Editable Objects (Zeus) attribute now also adds all editor placed objects
+- Updated Italian translation thanks to Fil-ric
 
 ## REMOVED
 - Customization via userconfig
