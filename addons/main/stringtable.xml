@@ -10302,7 +10302,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_MARKERSHOWONCONDITION_TOOLTIP">
             <English>Repeatedly calculated condition, must return boolean expression. When true, marker will be shown.</English>
-            <German>Wiederholt berechnete Bedingung, muss booleschen Ausdruck zurückgeben. Wenn true, wird die Markierung angezeigt.</German>
+            <German>Wiederholt berechnete Bedingung, muss booleschen Ausdruck zurückgeben. Wenn wahr, wird die Markierung angezeigt.</German>
             <Chinesesimp>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinesesimp>
             <Chinese>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinese>
             <Polish>Wielokrotnie obliczany warunek, musi zwracać wyrażenie logiczne. Jeśli jest prawdziwe, znacznik zostanie wyświetlony.</Polish>
