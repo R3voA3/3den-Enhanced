@@ -1,16 +1,16 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2019-05-30
+	Date: 2019-05-30
 
-  Description:
-  Used by ENH_3DENRadio GUI. Selects and plays a new song from playlist.
+	Description:
+	Used by ENH_3DENRadio GUI. Selects and plays a new song from playlist.
 
-  Parameter(s):
-  0: ARRAY OR BOOLEAN - Boolean -> Random song is selected, ARRAY -> [_songName, _songClass, _songDuration]
+	Parameter(s):
+	0: ARRAY OR BOOLEAN - Boolean -> Random song is selected, ARRAY -> [_songName, _songClass, _songDuration]
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -20,7 +20,7 @@ params [["_songData", ["", "", ""], [true, []], 3]];
 //If param is bool, a random song is wanted otherwise it's a songclass selected from the listNBox
 if (_songData isEqualType true) then
 {
-  _songData = selectRandom ((profileNamespace getVariable ["ENH_3DENRadio_playlist", []]) select {isClass (configFile >> "CfgMusic" >> (_x select 1))});
+	_songData = selectRandom ((profileNamespace getVariable ["ENH_3DENRadio_playlist", []]) select {isClass (configFile >> "CfgMusic" >> (_x select 1))});
 };
 
 _songData params [["_songName", ""], ["_songClass", ""], ["_songDuration", ""]];

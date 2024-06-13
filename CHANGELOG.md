@@ -625,7 +625,7 @@ menu
 - Fixed .rpt spam caused by missing translations
 - DLC icons are not limited to 100m
 - Draw functions optimized
-- Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window".     Additionally, it now supports all DLCs (Was fixed by a hotfix)
+- Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window". Additionally, it now supports all DLCs (Was fixed by a hotfix)
 
 # 5.7
 
@@ -649,12 +649,12 @@ menu
 - It's now possible to search in the CfgSentences Browser if filter is set to "ALL"
 - Documentation on GitHub has been updated
 - Some internal functions have been hidden
-- Fixed rpt spam caused by RscTestControlTypes and RscTestControlStyles (BI fix please? ;)  )
+- Fixed rpt spam caused by RscTestControlTypes and RscTestControlStyles (BI fix please? ;))
 - Toggle DLC Icons runs now much faster and will not cause lag anymore
 - Improved the way of exporting GUI base classes
 - New logoSmall, logo and logoOver
 - All log functions were merged into one function
-- Fixed that Display3DENCopy would not have the correct height when using Log Object's Info function (BI fix please? ;)  )
+- Fixed that Display3DENCopy would not have the correct height when using Log Object's Info function (BI fix please? ;))
 
 - Attributes
 	- Debug Path attribute is now part of debug options in Editor preferences
@@ -955,7 +955,7 @@ menu
 - Added various new internal macros
 - All substantial attributes now have a proper description of what they do, and links to further information if available- Rearanged some scenario attributes
 - Intro text attribute now supports BIS_fnc_infoText
-- Intro text attribute has a new control with images to select the  intro type
+- Intro text attribute has a new control with images to select the intro type
 - Values of Dynamic skill attributes are now handled by attribute control and not writting into mission namespace variables
 - FunctionsViewer
 	- Functions Viewer features now several different modes for sorting functions
@@ -1198,7 +1198,7 @@ menu
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
 		- Briefing editor shortcut was changed from CTRL + B to ALT + B
 		- Texture Finder can now be opened by pretting ALT + T
-		- Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut    - Clear chat can now be performed by pressing ALT + CTRL + C
+		- Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut - Clear chat can now be performed by pressing ALT + CTRL + C
 		- All debug tools have got a shortcut now
 		- Loadout tools can now be accessed by CTRL + SHIFT shortcuts
 		- Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
@@ -1455,7 +1455,7 @@ v2
 - Added tool to view default GUI Grids (debug tool)
 - Added tool to delete vehicle crews quickly
 - Added link to Gunter Severloh's Ai Compilation List
-- Added Czech translation  thanks to XerXesCZ
+- Added Czech translation thanks to XerXesCZ
 - Added French translation thanks to Artenis
 - New tool to create "debug triggers" to make testing missions easier for beginners
 
@@ -1527,7 +1527,7 @@ v2
 # 1.6
 ## CHANGED
 - Fixed position of song name display
-- Display for name of currently played song is now integrated into the EDEN statusbar, should  now properly scale with different resolutions and display sizes
+- Display for name of currently played song is now integrated into the EDEN statusbar, should now properly scale with different resolutions and display sizes
 - Improved delay attribute for intro text
 - Some config clean-up
 - Improved behaviour and speed mode control of random patrol
@@ -1590,7 +1590,7 @@ v2
 - Added version attribute to CfgPatches for internal use
 - Improve the way the dev branch warning is displayed
 - Added tool to display FPS while in Eden
-- Added a tool to export and import eden camera params, like position, direction and pitch/bank. Mainly for debug purpose, but be creative  The output can also be pasted into BIS' Splendid Camera
+- Added a tool to export and import eden camera params, like position, direction and pitch/bank. Mainly for debug purpose, but be creative. The output can also be pasted into BIS' Splendid Camera
 - Added tool to quickly toggle Grass on/off (This will not effect the mission in any way)
 
 ## REMOVED
@@ -1624,7 +1624,7 @@ v2
 - Reduced size of insignia attribute (Please report any issues, controls might overlap)
 - Moved most of the code from control configs to global functions
 - Preferences are now applied when a preview ends, or a new scenario is created- Ambient animation attribute is now easier to use:
-- To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied    In older versions, one had to deactivate the animation first- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
+- To change the type of animation, simply select the new one and press Ok. The new animation is instantly applied In older versions, one had to deactivate the animation first- Activate checkbox from ambient animation att. removed, is now handled by the animation type checkbox (Above changes also apply to ambient combat animation att.)
 NOTE: There are still quite a few bugs with the ambient anims. However, those I most likely will never be able to solve. We simply need a better BIS function- Improved code execution for multiplayer missions (Thanks to KK for his note on the remoteExec wiki page)
 - Respawn tickets are now not always set to 0 when untouched
 - Corrected some localisations
@@ -1686,7 +1686,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Attribute for unit traits
 
 - Added hostage attribute:
-	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage  Mission designers can check whether the unit is hostage or not by retrieving the following variable:
+	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage Mission designers can check whether the unit is hostage or not by retrieving the following variable:
 	_unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
 
 ## CHANGED

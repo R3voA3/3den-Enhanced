@@ -1,20 +1,20 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2021-05-15
+	Date: 2021-05-15
 
-  Description:
-  Returns addon name and image of given config.
+	Description:
+	Returns addon name and image of given config.
 
-  Parameter(s):
-  0: CONFIG - Config to be checked
+	Parameter(s):
+	0: CONFIG - Config to be checked
 
-  Returns:
-  ARRAY: Array in format:
-    0: STRING - Addon class
-    1: STRING - Addon name
-    2: STRING - Addon image/icon
-  In case of not addon (vanilla) an empty array is returned
+	Returns:
+	ARRAY: Array in format:
+		0: STRING - Addon class
+		1: STRING - Addon name
+		2: STRING - Addon image/icon
+	In case of not addon (vanilla) an empty array is returned
 */
 
 params [["_config", configNull]];

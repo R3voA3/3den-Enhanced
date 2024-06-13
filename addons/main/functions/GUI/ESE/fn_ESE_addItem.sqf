@@ -1,16 +1,16 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2020-06-14
+	Date: 2020-06-14
 
-  Description:
-  Used by the ENH_ESE GUI. Adds an item to the inventory list.
+	Description:
+	Used by the ENH_ESE GUI. Adds an item to the inventory list.
 
-  Parameter(s):
-  0: NUMBER - Amount of items to be added
+	Parameter(s):
+	0: NUMBER - Amount of items to be added
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -38,21 +38,21 @@ private _itemAdded = false;
 
 for "_i" from 0 to ( _rows - 1) do
 {
-  if (_configNameCaseSens == _ctrlInventory lnbData [_i, 0]) exitWith
-  {
-    private _currentAmount = _ctrlInventory lnbValue [_i, 1];
-    private _newAmount = _currentAmount + _amount;
-    _ctrlInventory lnbSetText [[_i, 2], str _newAmount];
-    _ctrlInventory lnbSetValue [[_i, 1], _newAmount];
-    _itemAdded = true;
-  };
+	if (_configNameCaseSens == _ctrlInventory lnbData [_i, 0]) exitWith
+	{
+		private _currentAmount = _ctrlInventory lnbValue [_i, 1];
+		private _newAmount = _currentAmount + _amount;
+		_ctrlInventory lnbSetText [[_i, 2], str _newAmount];
+		_ctrlInventory lnbSetValue [[_i, 1], _newAmount];
+		_itemAdded = true;
+	};
 };
 if !(_itemAdded) then//If item was not found in the list, add it
 {
-  [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
+	[_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
 };
 
 //Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
 [
-  _display getVariable ["ENH_ESE_IsVirtual", false]
+	_display getVariable ["ENH_ESE_IsVirtual", false]
 ] call ENH_fnc_ESE_toggleVirtual;

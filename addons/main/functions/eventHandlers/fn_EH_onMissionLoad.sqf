@@ -1,16 +1,16 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2019-06-05
+	Date: 2019-06-05
 
-  Description:
-  Is called by Eden event handler onMissionLoad.
+	Description:
+	Is called by Eden event handler onMissionLoad.
 
-  Parameter(s):
-  -
+	Parameter(s):
+	-
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 //Initialize ambient animations
@@ -22,9 +22,9 @@ call ENH_fnc_3DENRadio_toggleRadio;
 //Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseEntityList", false]) then
 {
-  0 spawn
-  {
-    sleep 0.1;
-    ["collapseEntityList"] call BIS_fnc_3DENInterface;
-  };
+	0 spawn
+	{
+		sleep 0.1;
+		["collapseEntityList"] call BIS_fnc_3DENInterface;
+	};
 };

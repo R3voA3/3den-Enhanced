@@ -1,17 +1,17 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2021-04-26
+	Date: 2021-04-26
 
-  Description:
-  Updates the preview image.
+	Description:
+	Updates the preview image.
 
-  Parameter(s):
-  0: CONTROL - Tree View
-  1: ARRAY - Path to item
+	Parameter(s):
+	0: CONTROL - Tree View
+	1: ARRAY - Path to item
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -45,10 +45,10 @@ _h = _h * pixelH min _verticalSpace;
 //Now lets position the UI in respect to width and height of the image
 _ctrlTexturePreview ctrlSetPosition
 [
-  CENTER_X - _w / 2,
-  WINDOW_TOPAbs + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
-  _w,
-  _h
+	CENTER_X - _w / 2,
+	WINDOW_TOPAbs + WINDOW_HAbs - 78 * GRID_H + 2 * CTRL_DEFAULT_H,
+	_w,
+	_h
 ];
 
 //Set final position for image

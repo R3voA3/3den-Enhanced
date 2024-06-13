@@ -1,17 +1,17 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2020-06-14
+	Date: 2020-06-14
 
-  Description:
-  Used by the ENH_ESE GUI. Filters the item list.
+	Description:
+	Used by the ENH_ESE GUI. Filters the item list.
 
-  Parameter(s):
-  0: CONTROL - Menu Strip
-  1: ARRAY - Selected path
+	Parameter(s):
+	0: CONTROL - Menu Strip
+	1: ARRAY - Selected path
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -28,11 +28,11 @@ private _filteredItems = [];
 
 //Collect all items which fit the filter
 {
-  _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort"];
-  if (((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) && _x != "Zasleh2") then
-  {
-    _filteredItems pushBack [_x, _displayName, _picture, _addonClass, _addonIcon, _descriptionShort];
-  };
+	_y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort"];
+	if (((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) && _x != "Zasleh2") then
+	{
+		_filteredItems pushBack [_x, _displayName, _picture, _addonClass, _addonIcon, _descriptionShort];
+	};
 } forEach (uiNamespace getVariable "ENH_ESE_itemsHashMap");
 
 //Store items to improve search later

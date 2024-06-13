@@ -1,14 +1,14 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Description:
-  Used by the ENH_FunctionViewer GUI. Called when the Copy button is pressed.
+	Description:
+	Used by the ENH_FunctionViewer GUI. Called when the Copy button is pressed.
 
-  Parameter(s):
-  -
+	Parameter(s):
+	-
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"

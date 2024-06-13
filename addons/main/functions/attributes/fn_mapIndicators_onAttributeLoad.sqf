@@ -1,17 +1,17 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2019-07-15
+	Date: 2019-07-15
 
-  Description:
-  Used by the map indicators attribute. Called when attribute is loaded.
+	Description:
+	Used by the map indicators attribute. Called when attribute is loaded.
 
-  Parameter(s):
-  0: CONTROL - Controls group
-  1: ARRAY - Array with booleans, attribute value
+	Parameter(s):
+	0: CONTROL - Controls group
+	1: ARRAY - Array with booleans, attribute value
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 params ["_ctrlGroup", "_value"];

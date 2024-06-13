@@ -1,15 +1,15 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Description:
-  Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
+	Description:
+	Used by the ENH_FunctionViewer GUI. Called when selection of tv tree control has changed.
 
-  Parameter(s):
-  0: CONTROL - Tree Control
-  1: ARRAY - Path
+	Parameter(s):
+	0: CONTROL - Tree Control
+	1: ARRAY - Path
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -21,8 +21,8 @@ private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displ
 
 params
 [
-  ["_ctrlTV", _display displayCtrl IDC_FUNCTIONSVIEWER_LIST],
-  ["_path", tvCurSel (_display displayCtrl IDC_FUNCTIONSVIEWER_LIST)]
+	["_ctrlTV", _display displayCtrl IDC_FUNCTIONSVIEWER_LIST],
+	["_path", tvCurSel (_display displayCtrl IDC_FUNCTIONSVIEWER_LIST)]
 ];
 
 private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);
@@ -45,9 +45,9 @@ private _loadFileIndex = profileNamespace getVariable ["ENH_FunctionsViewer_Load
 
 private _text = call
 {
-  if (_loadFileIndex == 0) exitWith {loadFile _filePath};
-  if (_loadFileIndex == 1) exitWith {preprocessFile _filePath};
-  if (_loadFileIndex == 2) exitWith {preprocessFileLineNumbers _filePath};
+	if (_loadFileIndex == 0) exitWith {loadFile _filePath};
+	if (_loadFileIndex == 1) exitWith {preprocessFile _filePath};
+	if (_loadFileIndex == 2) exitWith {preprocessFileLineNumbers _filePath};
 };
 
 _ctrlCode ctrlSetText _text;
@@ -61,7 +61,7 @@ private _numLines = count (_text regexFind ["\r\n", 0]) + 5;
 //Get the number of lines that should be displayed
 for "_i" from 1 to _numLines do
 {
-  _linesText = _linesText + format ["%1<br/>", _i];
+	_linesText = _linesText + format ["%1<br/>", _i];
 };
 
 //When a new function is selected, change scroll width and height dynamically

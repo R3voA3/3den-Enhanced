@@ -1,16 +1,16 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2021-04-28
+	Date: 2021-04-28
 
-  Description:
-  Fills the inventory list with all items of selected addon.
+	Description:
+	Fills the inventory list with all items of selected addon.
 
-  Parameter(s):
-  -
+	Parameter(s):
+	-
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -26,12 +26,12 @@ _addonClassWanted = (uiNamespace getVariable ["ENH_ESE_allAddons", []]) select _
 call ENH_fnc_ESE_clearInventory;
 
 {
-  _y params ["_displayName", "_image", "_addonClass", "_addonIcon", "", "_specificType", "_descriptionShort"];
+	_y params ["_displayName", "_image", "_addonClass", "_addonIcon", "", "_specificType", "_descriptionShort"];
 
-  if (_addonClass == _addonClassWanted || _addonClassWanted == "") then
-  {
-    [CTRL(IDC_ESE_INVENTORYLIST), _x, _displayName, _image, _addonIcon, 10, _x + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
-  };
+	if (_addonClass == _addonClassWanted || _addonClassWanted == "") then
+	{
+		[CTRL(IDC_ESE_INVENTORYLIST), _x, _displayName, _image, _addonIcon, 10, _x + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
+	};
 } forEach (uiNamespace getVariable ["ENH_ESE_itemsHashmap", []]);
 
 [true] call ENH_fnc_ESE_toggleVirtual;

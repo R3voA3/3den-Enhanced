@@ -1,16 +1,16 @@
 /*
-  Author: R3vo
+	Author: R3vo
 
-  Date: 2020-10-20
+	Date: 2020-10-20
 
-  Description:
-  Used by the CfgSentences Browser GUI. Used to either play the selected sentece or copy it to clipboard
+	Description:
+	Used by the CfgSentences Browser GUI. Used to either play the selected sentece or copy it to clipboard
 
-  Parameter(s):
-  0: STRING - Mode, "play" to play the sentence, anything else to copy it
+	Parameter(s):
+	0: STRING - Mode, "play" to play the sentence, anything else to copy it
 
-  Returns:
-  -
+	Returns:
+	-
 */
 
 params ["_mode"];
@@ -28,16 +28,16 @@ if (_soundPath == "") exitWith {false};
 
 if (_mode == "play") then
 {
-  playSound3D [_soundPath, get3DENCamera];
-  [
-    ["SPEAKER", _text, 0]
-  ] spawn BIS_fnc_EXP_camp_playSubtitles;
+	playSound3D [_soundPath, get3DENCamera];
+	[
+		["SPEAKER", _text, 0]
+	] spawn BIS_fnc_EXP_camp_playSubtitles;
 }
 else
 {
-  _data = (str _data) + endl + endl + "Example:" + endl + endl + format ["playSound3D ['%1', player];", _data select 4] + endl + endl +
-  "[['SPEAKER', " + str _text + ", 0]] "  + "spawn BIS_fnc_EXP_camp_playSubtitles;";
+	_data = (str _data) + endl + endl + "Example:" + endl + endl + format ["playSound3D ['%1', player];", _data select 4] + endl + endl +
+	"[['SPEAKER', " + str _text + ", 0]] "  + "spawn BIS_fnc_EXP_camp_playSubtitles;";
 
-  uinamespace setVariable ["Display3DENCopy_data", ["", _data]];
-  (uiNamespace getVariable "ENH_CFGS_Display") createdisplay "Display3DENCopy";
+	uinamespace setVariable ["Display3DENCopy_data", ["", _data]];
+	(uiNamespace getVariable "ENH_CFGS_Display") createdisplay "Display3DENCopy";
 };

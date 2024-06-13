@@ -66,7 +66,7 @@ class ENH_BriefingEditor
 		{
 			text = "$STR_ENH_MAIN_BRIEFINGEDITOR_TEXT";
 			tooltip = "$STR_ENH_MAIN_BRIEFINGEDITOR_TEXT_TOOLTIP";
-			y = QUOTE(WINDOW_TOPAbs + 5 *  CTRL_DEFAULT_H + 4 * GRID_H);
+			y = QUOTE(WINDOW_TOPAbs + 5 * CTRL_DEFAULT_H + 4 * GRID_H);
 		};
 		class Footer: ctrlStaticFooter
 		{
@@ -241,7 +241,7 @@ class ENH_BriefingEditor
 		class Group: ctrlControlsGroup
 		{
 			x = QUOTE(CENTER_X - 0.5 * (WINDOW_W_ATTRIBUTES - 2) * GRID_W);
-			y = QUOTE(WINDOW_TOPAbs + 6 *  CTRL_DEFAULT_H + 5 * GRID_H);
+			y = QUOTE(WINDOW_TOPAbs + 6 * CTRL_DEFAULT_H + 5 * GRID_H);
 			w = QUOTE((WINDOW_W_ATTRIBUTES - 2) * GRID_W);
 			h = QUOTE(WINDOW_HAbs - 10 * CTRL_DEFAULT_H - 3 * GRID_H);
 			class Controls

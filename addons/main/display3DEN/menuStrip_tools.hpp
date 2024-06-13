@@ -1,14 +1,14 @@
 class Tools
 {
-  items[] +=
-  {
-    "ENH_Folder_Utilities",
-    "ENH_Folder_Placement",
-    "ENH_Folder_Loadout",
-    "ENH_Folder_VHC",
-    "ENH_Folder_Debug",
-    "ENH_Folder_Miscellaneous"
-  };
+	items[] +=
+	{
+		"ENH_Folder_Utilities",
+		"ENH_Folder_Placement",
+		"ENH_Folder_Loadout",
+		"ENH_Folder_VHC",
+		"ENH_Folder_Debug",
+		"ENH_Folder_Miscellaneous"
+	};
 };
 
 #include "menuStrip_tools_utilities.hpp"
@@ -20,18 +20,18 @@ class Tools
 
 class FunctionsViewer
 {
-  action = "findDisplay 313 createDisplay 'ENH_FunctionsViewer'";
-  shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
+	action = "findDisplay 313 createDisplay 'ENH_FunctionsViewer'";
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
 };
 class ConfigViewer
 {
-  shortCuts[] = {INPUT_ALT_OFFSET + DIK_C};
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_C};
 };
 class DebugConsole
 {
-  shortCuts[] = {INPUT_CTRL_OFFSET + DIK_D};
+	shortCuts[] = {INPUT_CTRL_OFFSET + DIK_D};
 };
 class MissionFolder
 {
-  shortCuts[] = {INPUT_ALT_OFFSET + DIK_O};
+	shortCuts[] = {INPUT_ALT_OFFSET + DIK_O};
 };

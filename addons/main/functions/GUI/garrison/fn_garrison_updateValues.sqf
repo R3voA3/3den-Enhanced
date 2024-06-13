@@ -15,9 +15,9 @@ private _r = selectMax [_a, _b] * 3;
 
 ENH_Garrison_ValidBuildings = (ENH_Garrison_AreaHelper nearObjects ["Building", _r]) + all3DENEntities # 0 select
 {
-  _x buildingPos -1 isNotEqualTo [] &&
-  _isBlacklist != (toLower typeOf _x in _classes) &&
-  _x inArea ENH_Garrison_AreaHelper
+	_x buildingPos -1 isNotEqualTo [] &&
+	_isBlacklist != (toLower typeOf _x in _classes) &&
+	_x inArea ENH_Garrison_AreaHelper
 };
 
 private _positionCount = 0;
@@ -27,10 +27,10 @@ private _coverage = [10, 4, 2, 1] select lbCurSel CTRL(IDC_GARRISON_COVERAGE);
 
 private _text = parseText format
 [
-  "<t color='#1F8AD2'>%1</t> buildings with <t color='#517923'>%2</t> positions.<br/><t color='#C38114'>%3</t> entities selected.",
-  count ENH_Garrison_ValidBuildings,
-  round (_positionCount / _coverage),
-  count ENH_Garrison_SelectedEntities
+	"<t color='#1F8AD2'>%1</t> buildings with <t color='#517923'>%2</t> positions.<br/><t color='#C38114'>%3</t> entities selected.",
+	count ENH_Garrison_ValidBuildings,
+	round (_positionCount / _coverage),
+	count ENH_Garrison_SelectedEntities
 ];
 
 CTRL(IDC_GARRISON_INFO) ctrlSetStructuredText _text;
