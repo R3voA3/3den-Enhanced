@@ -8,13 +8,13 @@
 
 	Parameter(s):
 	0: STRING - Action to be taken. Can be:
-		"IDS":        Logs Eden Editor IDs of selected objects to clipboard
-		"CLASSES":    Logs classes of selected objects to clipboard
-		"FACTIONS":   Logs factions of selected objects to clipboard
-		"GRIDPOS":    Logs grid positions of selected objects to clipboard
-		"2D":         Logs positions in 2D format of selected objects to clipboard
-		"3D":         Logs positions in 3D format of selected objects to clipboard
-		"VARNAMES":   Logs variable neames of selected objects to clipboard
+		"IDS":				Logs Eden Editor IDs of selected objects to clipboard
+		"CLASSES":		Logs classes of selected objects to clipboard
+		"FACTIONS":		Logs factions of selected objects to clipboard
+		"GRIDPOS":		Logs grid positions of selected objects to clipboard
+		"2D": 				Logs positions in 2D format of selected objects to clipboard
+		"3D": 				Logs positions in 3D format of selected objects to clipboard
+		"VARNAMES":		Logs variable neames of selected objects to clipboard
 		"OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
 	Returns:
