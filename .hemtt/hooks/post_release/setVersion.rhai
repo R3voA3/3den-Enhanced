@@ -1,5 +1,4 @@
-//Creates version.txt file inside the release folder which is then read by the powershell script
-//That updates the mod on Steam Workshop
+//Updates mod version in mod.cpp
 
 let strVersion = HEMTT.project().version().to_string();
 let destination = HEMTT_OUT.join("version.txt");
