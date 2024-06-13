@@ -16,7 +16,7 @@
 */
 
 #define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
-"Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item"]
+"Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 
 #define SPECIAL_ITEMS [["Antibiotic","Antibiotics","\a3\Missions_F_Oldman\Props\data\Antibiotic_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
 ["Antimalaricum","Antimalarial Pills","\a3\Missions_F_Oldman\Props\data\Antimalaricum_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
@@ -52,7 +52,7 @@
 
 #define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
 
-if (uiNamespace getVariable ["ENH_ESE_allItems", []] isNotEqualTo []) exitWith {};
+if (uiNamespace getVariable ["ENH_ESE_itemsHashMap", []] isNotEqualTo []) exitWith {};
 
 private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _itemsHashMap = createHashMap;

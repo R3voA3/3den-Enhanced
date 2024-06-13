@@ -45,6 +45,9 @@
 - Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
 - Add Editable Objects (Zeus) attribute now also adds all editor placed objects
 - Full Italian translation thanks to Fil-ric
+- Equipemnt Storage Editor
+	- HashMap with all items would get rebuild each time resulting in slow loading of the UI
+	- Fixed weapons of type "MissileLauncher" (Titan) would be missing
 
 ## REMOVED
 - Customization via userconfig
