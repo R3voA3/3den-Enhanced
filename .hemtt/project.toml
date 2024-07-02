@@ -19,7 +19,7 @@ patch = 0
 git_hash = 0
 
 [hemtt.release]
-sign = false
+sign = true
 
 [properties]
 author = "R3vo"
@@ -36,8 +36,7 @@ workshop = [
 
 mission = "scriptLibrary.VR" # Mission to launch directly into the editor with
 
-parameters = [
-	"-preprocDefine=CMD__ENH_ISDEV",
-]
+# parameters = [
+# ]
 
 executable = "arma3_x64"
