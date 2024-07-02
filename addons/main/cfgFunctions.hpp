@@ -239,14 +239,14 @@ class CfgFunctions
 			class slider_onAttributeLoad;
 			class slider_onAttributeSave;
 		};
-		class Internal
-		{
-			file = "x\enh\addons\main\functions\internal";
-			class checkShortCutsDuplicates;
-			class exportAttributesToGitHub;
-			class exportContextMenuToGitHub;
-			class exportMenuStripToGitHub;
-			class testDisplays;
-		};
+		// class Internal
+		// {
+		// 	file = "x\enh\addons\main\functions\internal";
+		// 	class checkShortCutsDuplicates;
+		// 	class exportAttributesToGitHub;
+		// 	class exportContextMenuToGitHub;
+		// 	class exportMenuStripToGitHub;
+		// 	class testDisplays;
+		// };
 	};
 };
