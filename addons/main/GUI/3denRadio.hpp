@@ -2,7 +2,6 @@ class ENH_3DENRadio
 {
 	idd = IDD_3DENRADIO;
 	onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
-	onUnload = "";
 	class ControlsBackground
 	{
 	DISABLE_BACKGROUND
@@ -67,8 +66,6 @@ class ENH_3DENRadio
 			y = QUOTE(WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H);
 			h = QUOTE(WINDOW_HAbs - 7 * CTRL_DEFAULT_H);
 			disableOverflow = 1;
-			onLBDblClick = "params ['_ctrl', '_row']; [[_ctrl lnbText [_row, 0], _ctrl lnbData [_row, 0], _ctrl lnbData [_row, 1]]] call ENH_fnc_3DENRadio_playNewSong";
-			onKeyDown = "_this call ENH_fnc_3DENRadio_handlePlaylist; _this call ENH_fnc_3DENRadio_exportClassname";
 		};
 		class ToggleRadio: ctrlButtonPictureKeepAspect
 		{
@@ -77,7 +74,6 @@ class ENH_3DENRadio
 			y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
 			w = QUOTE(5 * GRID_W);
 			h = QUOTE(CTRL_DEFAULT_H);
-			onButtonClick = "false call ENH_fnc_3DENRadio_toggleRadio";
 		};
 		class VolumeIcon: ctrlStaticPictureKeepAspect
 		{
@@ -95,7 +91,6 @@ class ENH_3DENRadio
 			w = QUOTE(30 * GRID_W);
 			h = QUOTE(CTRL_DEFAULT_H);
 			sliderRange[] = {0, 1.5};
-			onSliderPosChanged = "0 fadeMusic (sliderPosition (_this # 0)); profileNamespace setVariable ['ENH_3DENRadio_MusicVolume', musicVolume]";
 		};
 		class Help: VolumeIcon
 		{
@@ -147,7 +142,6 @@ class ENH_3DENRadio
 					h = QUOTE(CTRL_DEFAULT_H);
 					sliderRange[] = {0, 1.5};
 					colorActive[] = {1, 1, 1, 0.6};
-					onSliderPosChanged = "playMusic [uiNamespace getVariable ['ENH_3DENRadio_CurrentSongClass', ''], sliderPosition (_this # 0)]";
 				};
 			};
 		};

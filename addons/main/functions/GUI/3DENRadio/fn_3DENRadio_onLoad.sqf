@@ -82,3 +82,44 @@ CTRL(IDC_3DENRADIO_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
 	ctrlParent _ctrlButton displayCtrl IDC_3DENRADIO_SEARCH ctrlSetText "";
 	_ctrlButton ctrlSetText TEXTURE_SEARCH_START;
 }];
+
+//Play selected song
+CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["LBDblClick",
+{
+	params ["_ctrlLnB", "_selectedIndex"];
+	[
+		[
+			_ctrlLnB lnbText [_selectedIndex, 0],
+			_ctrlLnB lnbData [_selectedIndex, 0],
+			_ctrlLnB lnbData [_selectedIndex, 1]
+		]
+	] call ENH_fnc_3DENRadio_playNewSong;
+}];
+
+//Key down event
+CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["KeyDown",
+{
+	_this call ENH_fnc_3DENRadio_handlePlaylist;
+	_this call ENH_fnc_3DENRadio_exportClassname;
+}];
+
+//Toggle radio
+CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlAddEventHandler ["ButtonClick",
+{
+	false call ENH_fnc_3DENRadio_toggleRadio;
+}];
+
+//Volume change
+CTRL(IDC_3DENRADIO_VOLUME) ctrlAddEventHandler ["SliderPosChanged",
+{
+	params ["_ctrlSlider", "_value"];
+	0 fadeMusic _value;
+	profileNamespace setVariable ["ENH_3DENRadio_MusicVolume", _value];
+}];
+
+//Music position
+CTRL(IDC_3DENRADIO_POSITION) ctrlAddEventHandler ["SliderPosChanged",
+{
+	params ["_ctrlSlider", "_value"];
+	playMusic [uiNamespace getVariable ["ENH_3DENRadio_CurrentSongClass", ""], _value];
+}];

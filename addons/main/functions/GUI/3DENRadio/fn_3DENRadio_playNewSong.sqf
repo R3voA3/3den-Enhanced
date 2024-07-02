@@ -15,7 +15,9 @@
 
 #include "\x\enh\addons\main\script_component.hpp"
 #define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration", 0]
+
 params [["_songData", ["", "", ""], [true, []], 3]];
+
 
 //If param is bool, a random song is wanted otherwise it's a songclass selected from the listNBox
 if (_songData isEqualType true) then
