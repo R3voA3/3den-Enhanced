@@ -48,6 +48,7 @@
 - Equipemnt Storage Editor
 	- HashMap with all items would get rebuild each time resulting in slow loading of the UI
 	- Fixed weapons of type "MissileLauncher" (Titan) would be missing
+- Fixed removing unit from remains collector had not effect (typo in code)
 
 ## REMOVED
 - Customization via userconfig
