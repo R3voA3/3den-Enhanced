@@ -25,7 +25,7 @@ class ENH_ESE
 			y = QUOTE(WINDOW_TOPAbs + 3 * CTRL_DEFAULT_H + GRID_H);
 			w = QUOTE((WINDOW_W_WIDE * 1/4) * GRID_W - 2 * GRID_W);
 			h = QUOTE(WINDOW_HAbs - 7 * CTRL_DEFAULT_H + GRID_H);
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0, 0, 0, 0.3};
 		};
 		class Footer: ctrlStaticFooter
 		{
@@ -408,7 +408,7 @@ class ENH_ESE
 			y = QUOTE(WINDOW_TOPAbs + 3 * CTRL_DEFAULT_H + GRID_H);
 			w = QUOTE((WINDOW_W_WIDE * 1/4) * GRID_W);
 			h = QUOTE(WINDOW_HAbs - 7 * CTRL_DEFAULT_H + GRID_H);
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0, 0, 0, 0.3};
 		};
 		class CompatibleItemsList: AvailableItemsList
 		{
