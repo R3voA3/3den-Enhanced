@@ -82,15 +82,15 @@ if GETVALUE("Zeus") then
 		player assignCurator _zeusModule;
 		//Add Interface EHs (Workaround)
 		_zeusModule addCuratorEditableObjects [entities "", true];
-		_zeusModule addeventhandler ["curatorFeedbackMessage",{_this call BIS_fnc_showCuratorFeedbackMessage;}];
-		_zeusModule addeventhandler ["curatorPinged",{_this call BIS_fnc_curatorPinged;}];
-		_zeusModule addeventhandler ["curatorObjectPlaced",{_this call BIS_fnc_curatorObjectPlaced;}];
-		_zeusModule addeventhandler ["curatorObjectEdited",{_this call BIS_fnc_curatorObjectEdited;}];
-		_zeusModule addeventhandler ["curatorWaypointPlaced",{_this call BIS_fnc_curatorWaypointPlaced;}];
-		_zeusModule addeventhandler ["curatorObjectDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorGroupDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorWaypointDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-		_zeusModule addeventhandler ["curatorMarkerDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorFeedbackMessage", {_this call BIS_fnc_showCuratorFeedbackMessage;}];
+		_zeusModule addeventhandler ["curatorPinged", {_this call BIS_fnc_curatorPinged;}];
+		_zeusModule addeventhandler ["curatorObjectPlaced", {_this call BIS_fnc_curatorObjectPlaced;}];
+		_zeusModule addeventhandler ["curatorObjectEdited", {_this call BIS_fnc_curatorObjectEdited;}];
+		_zeusModule addeventhandler ["curatorWaypointPlaced", {_this call BIS_fnc_curatorWaypointPlaced;}];
+		_zeusModule addeventhandler ["curatorObjectDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorGroupDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorWaypointDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+		_zeusModule addeventhandler ["curatorMarkerDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
 	};
 };
 
@@ -324,7 +324,7 @@ if GETVALUE("ShowGroups") then
 		hintSilent parseText format
 		[
 			"<t align='left' font='EtelkaMonospacePro'><br/><t size='1.2'>General Information:</t><br/>Callsign: %1<br/>Leader: %2<br/>No. of Units: %3<br/>Delete when Empty: %4<br/><br/><t size='1.2'>Group Status:</t><br/>Health: %5<br/>Fleeing: %6<br/>Attack Enabled: %7<br/>Combat Behaviour: %8<br/>Combat Mode: %9<br/>Formation: %10<br/>Speed: %11<br/><br/><t size='1.2'>Waypoints:</t><br/>No. of Waypoints: %12<br/>Current Waypoint: %13<br/>Speed: %14<br/><br/><t size='1.2'>Additional Options:</t><br/>- Left click on an icon to toggle group waypoints<br/>- CTRL + Left Click to delete a group</t>",
-			format ["%1 (%2)",groupID _group, if (vehicle leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf vehicle leader _group ] call BIS_fnc_displayName} else {"-"}],
+			format ["%1 (%2)", groupID _group, if (vehicle leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf vehicle leader _group ] call BIS_fnc_displayName} else {"-"}],
 			name leader _group,
 			count units _group,
 			isGroupDeletedWhenEmpty _group,
