@@ -6,14 +6,16 @@ class ENH_EventHandlers
 	{
 		class ENH_EventHandlers_Subcategory
 		{
-			description = "Event Handlers are triggered upon certain events. The code is only executed where the entity is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> and <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/addEventHandler'>addEventHandler</a> for more information.";
-			property = "ENH_EventHandlers_Subcategory";
+			description = "Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> and <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/addEventHandler'>addEventHandler</a> for more information.";
+			// property = "ENH_Objects_EventHandlers_Subcategory";
+			data = "AttributeSystemSubcategory";
 			control = "ENH_SubCategoryNoHeader1_Fixed";
 		};
 		EH_CONFIG(AnimChanged,objectControllable);
 		EH_CONFIG(AnimDone,objectControllable);
 		EH_CONFIG(AnimStateChanged,objectControllable);
 		EH_CONFIG(Assembled,objectControllable);
+		EH_CONFIG(Attached,objectControllable + objectVehicle);
 		EH_CONFIG(CargoLoaded,objectVehicle);
 		EH_CONFIG(CargoUnloaded,objectVehicle);
 		EH_CONFIG(ContainerClosed,objectHasInventoryCargo);
@@ -21,6 +23,7 @@ class ENH_EventHandlers
 		EH_CONFIG(ControlsShifted,objectVehicle);
 		EH_CONFIG(Dammaged,1);
 		EH_CONFIG(Deleted,1);
+		EH_CONFIG(Detached,objectControllable + objectVehicle);
 		EH_CONFIG(Disassembled,objectControllable);
 		EH_CONFIG(Engine,objectVehicle);
 		EH_CONFIG(EpeContact,1);

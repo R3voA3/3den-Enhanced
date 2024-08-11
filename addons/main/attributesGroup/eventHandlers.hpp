@@ -7,11 +7,8 @@ class ENH_EventHandlers
 		class ENH_EventHandlers_Subcategory
 		{
 			description = "Event Handlers are triggered upon certain events. The code is only executed where the group is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> for more information.";
-			property = "ENH_EventHandlers_Subcategory";
+			data = "AttributeSystemSubcategory";
 			control = "ENH_SubCategoryNoHeader3_Fixed";
-			expression = "";
-			condition = 1;
-			defaultValue = "";
 		};
 		EH_CONFIG(CombatModeChanged,1);
 		EH_CONFIG(CommandChanged,1);
@@ -27,6 +24,7 @@ class ENH_EventHandlers
 		EH_CONFIG(Local,1);
 		EH_CONFIG(SpeedModeChanged,1);
 		EH_CONFIG(UnitJoined,1);
+		EH_CONFIG(UnitKilled,1);
 		EH_CONFIG(UnitLeft,1);
 		EH_CONFIG(VehicleAdded,1);
 		EH_CONFIG(VehicleRemoved,1);
