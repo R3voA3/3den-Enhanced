@@ -3864,16 +3864,6 @@
 						<Italian>Strumenti Piloni</Italian>
 						<French>Outils pour pylône</French>
 				</Key>
-				<Key ID="STR_ENH_MAIN_DISPLAY3DEN_PLACEENTITY">
-						<English>Place entity by double clicking.</English>
-						<German>Entität mit Doppelklick platzieren.</German>
-						<Polish>Postaw obiekt za pomocą podwójnego kliknięcia.</Polish>
-						<Chinesesimp>通过双击来放置实体。</Chinesesimp>
-						<Chinese>通過雙擊來放置實體。</Chinese>
-						<Spanish>Poner una entidad con doble clic</Spanish>
-						<Italian>Posiziona un'entità facendo doppio click.</Italian>
-						<French>Placez l'entité en double-cliquant.</French>
-				</Key>
 				<Key ID="STR_ENH_MAIN_CONTEXTMENU_FAVORITES">
 						<English>Add to Favorites</English>
 						<German>Zu Favoriten hinzufügen</German>

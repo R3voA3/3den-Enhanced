@@ -1,7 +1,8 @@
 items[] +=
 {
 	"Separator",
-	"ENH_OtherTools"
+	"ENH_OtherTools",
+	"ENH_AddToFavorites"
 };
 class Log
 {
@@ -49,7 +50,6 @@ class ENH_OtherTools
 		"ENH_MeasureDistance",
 		"ENH_ShowModuleInformation",
 		"ENH_Garrison",
-		"ENH_AddToFavorites",
 		"ENH_MoveToLayer"
 	};
 	SHOW_IN_ROOT;
@@ -153,8 +153,9 @@ class ENH_AddToFavorites
 	action = "['contextMenu'] call ENH_fnc_favoritesList";
 	text = "$STR_ENH_MAIN_CONTEXTMENU_FAVORITES";
 	picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
-	conditionShow = "hoverObject + hoverLogic";
+	conditionShow = "hoverObject + hoverLogic + hoverMarker";
 	wikiDescription = "Adds all selected entities to the favorites tab.";
+	SHOW_IN_ROOT;
 };
 class ENH_MoveToLayer
 {

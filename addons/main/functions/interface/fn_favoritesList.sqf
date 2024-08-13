@@ -4,146 +4,147 @@
 	Date: 2021-09-30
 
 	Description:
-	Used to initialize the favorites list.
+	Used to initialize the FAVORITES_DATA list.
 
 	Parameter(s):
 	0: STRING - Action to be taken
 
 	Returns:
-	-
+	BOOLEAN - True
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
-#define FAVORITES (profileNamespace getVariable ["ENH_FavoritesList", []])
-#define PANEL_RIGHT (findDisplay IDD_DISPLAY3DEN displayCtrl 1021)
+#define FAVORITES_DATA (profileNamespace getVariable ["ENH_HashMap_Favorites", createHashMap])
 
 disableSerialization;
 params [["_mode", "onLoad"], ["_arguments", []]];
 
-switch (_mode) do
+private _display3DEN = findDisplay IDD_DISPLAY3DEN;
+
+switch _mode do
 {
 	case "onLoad":
 	{
-		private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
-		private _ctrlButton = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1339;
+		private _ctrlTV =  _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE;
 
-		_ctrlFavorites ctrlAddEventHandler ["TreeDblClick",
+		_ctrlTV ctrlAddEventHandler ["TreeMouseMove",
 		{
-			params ["_ctrlFavorites", "_selectionPath"];
-			["createEntity", [_ctrlFavorites, _selectionPath]] call ENH_fnc_favoritesList;
+			params ["_ctrlTV", "_path"];
+			["showPreview", [_ctrlTV, _path]] call ENH_fnc_favoritesList;
 		}];
 
-		_ctrlFavorites ctrlAddEventHandler ["TreeMouseMove",
-		{
-			params ["_ctrlFavorites", "_path"];
-			["showPreview", [_ctrlFavorites, _path]] call ENH_fnc_favoritesList;
-		}];
-
-		_ctrlFavorites ctrlAddEventHandler ["MouseExit",
+		_ctrlTV ctrlAddEventHandler ["MouseExit",
 		{
 			["hidePreview", []] call ENH_fnc_favoritesList;
 		}];
 
-		_ctrlButton ctrlAddEventHandler ["ButtonClick",
+		_ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 		{
-			private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
-			private _selection = tvSelection _ctrlFavorites;
-			if (_selection isEqualTo []) exitWith {};
-			_selection sort false; //Sort the selection from highest to lowest to not mess with the paths
-			{
-				private _class = _ctrlFavorites tvData _x;
-				_ctrlFavorites tvDelete _x;
-				profileNamespace setVariable ["ENH_FavoritesList", FAVORITES - [_class]];
-			} forEach _selection;
-			saveprofileNamespace;
+			["treeSelChanged", []] call ENH_fnc_favoritesList;
 		}];
 
-		if (_ctrlFavorites tvCount [] > 0) exitWith {};
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_DELETE ctrlAddEventHandler ["ButtonClick",
+		{
+			["delete", []] call ENH_fnc_favoritesList;
+		}];
 
-		["add", FAVORITES] call ENH_fnc_favoritesList;
+		//Handle search button
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH ctrlAddEventHandler ["EditChanged",
+		{
+			params ["_ctrlEdit", "_newText"];
+			private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
+			ctrlParent _ctrlEdit displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH ctrlSetText _image;
+		}];
+
+		//Handle search button
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH ctrlAddEventHandler ["ButtonClick",
+		{
+			params ["_ctrlButton"];
+
+			//Change search button icon and clear edit control to reset tree view filter
+			ctrlParent _ctrlButton displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH ctrlSetText "";
+			_ctrlButton ctrlSetText TEXTURE_SEARCH_START;
+		}];
+
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_EXPAND ctrlAddEventHandler ["ButtonClick",
+		{
+			["expand"] call ENH_fnc_favoritesList;
+		}];
+
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_COLLAPSE ctrlAddEventHandler ["ButtonClick",
+		{
+			["collapse"] call ENH_fnc_favoritesList;
+		}];
+
+		["updateTreeView"] call ENH_fnc_favoritesList;
 	};
 	case "contextMenu":
 	{
-		private _entitiesToAdd = flatten (get3DENSelected "Object" + get3DENSelected "Logic");
-		_entitiesToAdd = _entitiesToAdd apply {typeOf _x};
-		_entitiesToAdd= _entitiesToAdd arrayIntersect _entitiesToAdd;
-		_entitiesToAdd = _entitiesToAdd select {!(_x in FAVORITES)};
-		["add", _entitiesToAdd] call ENH_fnc_favoritesList;
-	};
-	case "add":
-	{
-		private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
+		private _savedData = FAVORITES_DATA;
+
+		// Get all unique selected entities that are not already in the favorites list
+		[["Object", "Marker", "Logic"]] call ENH_fnc_all3DENSelected apply
 		{
-			private _config = configFile >> "CfgVehicles";
-			private _class = _x;
+			private _entity = _x;
+			private _data = [];
+			private _class = "";
 
-			if !(isClass (_config >> _class)) then {continue};
-
-			private _displayName = getText (_config >> _class >> "displayName");
-			private _side = getNumber (_config >> _class >> "side");
-			if (_class isKindOf "Static" || _class isKindOf "Thing") then {_side = 8};
-			private _color = _side call BIS_fnc_sideColor;
-			if (_class isKindOf "Logic") then {_color = [1, 1, 1, 1]};
-			private _icon = getText (_config >> _class >> "icon");
-			((_config >> _class) call ENH_fnc_getConfigSourceAddon) params ["", "", ["_addonIcon", ""]];
-
-			if (!fileExists _icon) then
+			if (_entity isEqualType "") then
 			{
-				_icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
-			};
-
-			private _index = _ctrlFavorites tvAdd [[], _displayName];
-			_ctrlFavorites tvSetData [[_index], _class];
-			_ctrlFavorites tvSetTooltip [[_index], _displayName + "\n" + _class];
-			_ctrlFavorites tvSetPictureRight [[_index], _addonIcon];
-
-			if (_icon isNotEqualTo "" && fileExists _icon) then
-			{
-				_ctrlFavorites tvSetPicture [[_index], _icon];
-				_ctrlFavorites tvSetPictureColor [[_index], _color];
+				_class = _entity get3DENAttribute "itemClass" select 0;
+				_data =
+				[
+					"marker",
+					["rectangle", "ellipse", "icon"] select ((get3DENSelected "marker"#0) get3DENAttribute "markerType" select 0)
+				];
 			}
 			else
 			{
-				_ctrlFavorites tvSetPicture [[_index], "\a3\modules_f\data\portraitmodule_ca.paa"];
+				_class = typeOf _entity;
+
+				if (_class isKindOf "Logic") then
+				{
+					_data = ["module"];
+				}
+				else
+				{
+					_data = ["object"];
+				};
 			};
-			_ctrlFavorites tvSort [[]];
-			if (_class in FAVORITES) then {continue};
-			profileNamespace setVariable ["ENH_FavoritesList", FAVORITES + [_class]];
-		} forEach _arguments;
+
+			// Add entry to list (insertOnly)
+			_savedData set [_class, _data, true];
+		};
+
+		profileNamespace setVariable ["ENH_HashMap_Favorites", _savedData];
 		saveprofileNamespace;
-	};
-	case "createEntity":
-	{
-		private _ctrlFavorites = (PANEL_RIGHT controlsGroupCtrl IDC_DISPLAY3DEN_FAVORITES) controlsGroupCtrl 1338;
-		_arguments params ["_ctrlFavorites", "_selectionPath"];
-		private _class = _ctrlFavorites tvData _selectionPath;
-		private _type = ["Object", "Logic"] select (_class isKindOf "Logic");
-		set3DENSelected [create3DENEntity [_type, _class, screenToWorld [0.5, 0.5], [false, true] select (get3DENActionState "TogglePlaceEmptyVehicle")]];
+
+		["updateTreeView"] call ENH_fnc_favoritesList;
 	};
 	case "showPreview":
 	{
-		_arguments params ["_ctrlFavorites", "_path"];
+		_arguments params ["_ctrlTV", "_path"];
 
 		private _previewPictureBG = controlNull;
 		private _previewPicture = controlNull;
-		private _class = _ctrlFavorites tvData _path;
-		private _picture = (getText (configFile >> "CfgVehicles" >> _class >> "editorPreview"));
+		private _class = _ctrlTV tvData _path;
+		private _picture = getText (configFile >> "CfgVehicles" >> _class >> "editorPreview");
 
-		if (_picture isEqualTo "") exitWith
+		if (_picture == "") exitWith
 		{
 			_previewPictureBG ctrlShow false;
 			_previewPicture ctrlShow false;
 		};
 
-		if (isNull (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE)) then
+		if (isNull (_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE)) then
 		{
-			_previewPictureBG = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStatic", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG];
-			_previewPicture = findDisplay IDD_DISPLAY3DEN ctrlCreate ["ctrlStaticPicture", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE];
+			_previewPictureBG = _display3DEN ctrlCreate ["ctrlStatic", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG];
+			_previewPicture = _display3DEN ctrlCreate ["ctrlStaticPicture", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE];
 		}
 		else
 		{
-			_previewPictureBG = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG;
-			_previewPicture = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE;
+			_previewPictureBG = _display3DENN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG;
+			_previewPicture = _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE;
 		};
 
 		_previewPicture ctrlSetText _picture;
@@ -177,7 +178,140 @@ switch (_mode) do
 	};
 	case "hidePreview":
 	{
-		(findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG) ctrlShow false;
-		(findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE) ctrlShow false;
+		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG) ctrlShow false;
+		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE) ctrlShow false;
+	};
+	case "treeSelChanged":
+	{
+		private _ctrlTV = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE;
+		private _selectedPath = tvCurSel _ctrlTV;
+
+		// Category selected, not an item
+		if (count _selectedPath < 2) exitWith {};
+
+		private _savedData = FAVORITES_DATA;
+
+		private _class = _ctrlTV tvData _selectedPath;
+		private _type = _savedData get _class select 0;
+		private _shape = _savedData get _class select 1;
+
+		systemChat format ["%1", _class];
+		systemChat format ["%1", _type];
+		systemChat format ["%1", _shape];
+
+		set3DENAttachedCursorEntity createHashMapFromArray [["type", _type], ["classname", _class], ["markershape", _shape]];
+	};
+	case "delete":
+	{
+		private _ctrlTV = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE;
+		private _selection = tvSelection _ctrlTV;
+		private _savedData = FAVORITES_DATA;
+
+		if (_selection isEqualTo []) exitWith {};
+
+		{
+			private _class = parseSimpleArray (_ctrlTV tvData _x) select 0;
+			_savedData deleteAt _class;
+		} forEach _selection;
+
+		profileNamespace setVariable ["ENH_HashMap_Favorites", _savedData];
+		saveprofileNamespace;
+
+		["updateTreeView"] call ENH_fnc_favoritesList;
+	};
+	case "updateTreeView":
+	{
+		private _ctrlTV = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE;
+
+		// Reset search otherwise we might end up with duplicates
+		findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH ctrlSetText "";
+
+		tvClear _ctrlTV;
+
+		_ctrlTV tvAdd [[], localize "$STR_3DEN_MARKER_TEXTPLURAL"];
+		_ctrlTV tvAdd [[], localize "$STR_3DEN_LOGIC_TEXTPLURAL"];
+		_ctrlTV tvAdd [[], localize "$STR_3DEN_OBJECT_TEXTPLURAL"];
+
+		{
+			private _key = _x;
+			_y params [["_entityType", ""], ["_markerType", ""]];
+
+			private _indexFolder = 0;
+			private _displayName = "";
+			private _colour = [1, 1, 1, 1];
+			private _icon = "";
+			private _addonIcon = "";
+
+			switch _entityType do
+			{
+				case "object";
+				case "module":
+				{
+					private _config = configFile >> "CfgVehicles" >> _key;
+
+					if !(isClass _config) then {continue};
+
+					_displayName = getText (_config >> "displayName");
+					_addonIcon = (_config call ENH_fnc_getConfigSourceAddon) param [2, ""];
+
+					_colour = switch true do
+					{
+						case (_key isKindOf "Static");
+						case (_key isKindOf "Thing"): {[8] call BIS_fnc_sideColor};
+						case (_entityType == "module"): {[1, 1, 1, 1]};
+						default {[getNumber (_config >> "side")] call BIS_fnc_sideColor};
+					};
+
+					_icon = getText (_config >> "icon");
+
+					if (!fileExists _icon) then
+					{
+						_icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
+					};
+
+					_indexFolder = if (_entityType == "object") then {2} else {1};
+				};
+				case "marker":
+				{
+					private _config = configFile >> "CfgMarkers" >> _key;
+
+					if (!isClass _config) then {continue};
+
+					_displayName = getText (_config >> "name");
+					_addonIcon = (_config call ENH_fnc_getConfigSourceAddon) param [2, ""];
+					_colour = (getArray (_config >> "color")) call BIS_fnc_parseNumberSafe;
+					_icon = getText (_config >> "icon");
+					_indexFolder = 0;
+				};
+			};
+
+			private _indexItem = _ctrlTV tvAdd [[_indexFolder], _displayName];
+
+			_ctrlTV tvSetData [[_indexFolder, _indexItem], _key];
+			_ctrlTV tvSetTooltip [[_indexFolder, _indexItem], _displayName + "\n" + _key];
+			_ctrlTV tvSetPictureRight [[_indexFolder, _indexItem], _addonIcon];
+
+			if (fileExists _icon) then
+			{
+				_ctrlTV tvSetPicture [[_indexFolder, _indexItem], _icon];
+				_ctrlTV tvSetPictureColor [[_indexFolder, _indexItem], _colour];
+			}
+			else
+			{
+				_ctrlTV tvSetPicture [[_indexFolder, _indexItem], "\a3\modules_f\data\portraitmodule_ca.paa"];
+			};
+		} forEach FAVORITES_DATA;
+
+		_ctrlTV tvSortAll [[], false];
+	};
+	case "collapse":
+	{
+		tvCollapseAll (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE);
+	};
+	case "expand":
+	{
+		tvExpandAll (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE);
 	};
 };
+
+true
