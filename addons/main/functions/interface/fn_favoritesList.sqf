@@ -4,10 +4,11 @@
 	Date: 2021-09-30
 
 	Description:
-	Used to initialize the FAVORITES_DATA list.
+	Handles the favorites panel in Eden Editor.
 
 	Parameter(s):
 	0: STRING - Action to be taken
+	1: ARRAY - Arguments
 
 	Returns:
 	BOOLEAN - True
@@ -28,6 +29,12 @@ switch _mode do
 		private _ctrlTV =  _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE;
 
 		_ctrlTV ctrlAddEventHandler ["TreeMouseMove",
+		{
+			params ["_ctrlTV", "_path"];
+			["showPreview", [_ctrlTV, _path]] call ENH_fnc_favoritesList;
+		}];
+
+		_ctrlTV ctrlAddEventHandler ["TreeMouseHold",
 		{
 			params ["_ctrlTV", "_path"];
 			["showPreview", [_ctrlTV, _path]] call ENH_fnc_favoritesList;
@@ -125,29 +132,23 @@ switch _mode do
 	{
 		_arguments params ["_ctrlTV", "_path"];
 
-		private _previewPictureBG = controlNull;
-		private _previewPicture = controlNull;
+		private _ctrlStaticPreviewBackground = _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_BG;
+		private _ctrlStaticPreview = _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_PICTURE;
 		private _class = _ctrlTV tvData _path;
+
+		if (_class == "") exitWith
+		{
+			["hidePreview", []] call ENH_fnc_favoritesList;
+		};
+
 		private _picture = getText (configFile >> "CfgVehicles" >> _class >> "editorPreview");
 
 		if (_picture == "") exitWith
 		{
-			_previewPictureBG ctrlShow false;
-			_previewPicture ctrlShow false;
+			["hidePreview", []] call ENH_fnc_favoritesList;
 		};
 
-		if (isNull (_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE)) then
-		{
-			_previewPictureBG = _display3DEN ctrlCreate ["ctrlStatic", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG];
-			_previewPicture = _display3DEN ctrlCreate ["ctrlStaticPicture", IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE];
-		}
-		else
-		{
-			_previewPictureBG = _display3DENN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG;
-			_previewPicture = _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE;
-		};
-
-		_previewPicture ctrlSetText _picture;
+		_ctrlStaticPreview ctrlSetText _picture;
 
 		(getTextureInfo _picture) params ["_width", "_height"];
 		private _imageHeight = 27;
@@ -155,31 +156,33 @@ switch _mode do
 		private _xPos = safeZoneX + safeZoneW - 62 * GRID_W - _imageWidthCalculated;
 		private _yPos = (getMousePosition select 1) min (safeZoneY + safeZoneH * 0.80);
 
-		_previewPicture ctrlSetPositionH (_imageHeight * GRID_H);
-		_previewPicture ctrlSetPositionW _imageWidthCalculated;
-		_previewPicture ctrlSetPositionX _xPos;
-		_previewPicture ctrlSetPositionY _yPos;
-		_previewPicture ctrlSetText _image;
-		_previewPicture ctrlCommit 0;
+		_ctrlStaticPreview ctrlSetPositionX _xPos;
+		_ctrlStaticPreview ctrlSetPositionY _yPos;
+		_ctrlStaticPreview ctrlSetPositionW _imageWidthCalculated;
+		_ctrlStaticPreview ctrlSetPositionH (_imageHeight * GRID_H);
+		_ctrlStaticPreview ctrlSetText _image;
 
-		_previewPictureBG ctrlSetPosition
+		_ctrlStaticPreview ctrlCommit 0;
+
+		_ctrlStaticPreviewBackground ctrlSetPosition
 		[
-			(ctrlPosition _previewPicture select 0) - GRID_W,
-			(ctrlPosition _previewPicture select 1) - GRID_H,
-			(ctrlPosition _previewPicture select 2) + 2 * GRID_W,
-			(ctrlPosition _previewPicture select 3) + 2 * GRID_H
+			(ctrlPosition _ctrlStaticPreview select 0) - GRID_W,
+			(ctrlPosition _ctrlStaticPreview select 1) - GRID_H,
+			(ctrlPosition _ctrlStaticPreview select 2) + 2 * GRID_W,
+			(ctrlPosition _ctrlStaticPreview select 3) + 2 * GRID_H
 		];
 
-		_previewPictureBG ctrlSetBackgroundColor [0.2, 0.2, 0.2, 0.87];
-		_previewPictureBG ctrlCommit 0;
+		_ctrlStaticPreviewBackground ctrlCommit 0;
 
-		_previewPictureBG ctrlShow true;
-		_previewPicture ctrlShow true;
+		_ctrlStaticPreviewBackground ctrlShow true;
+		_ctrlStaticPreview ctrlShow true;
+
+		systemChat format ["%1, %2", ctrlShown  _ctrlStaticPreview, ctrlShown  _ctrlStaticPreviewBackground];
 	};
 	case "hidePreview":
 	{
-		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGEBG) ctrlShow false;
-		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEWIMAGE) ctrlShow false;
+		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_PICTURE) ctrlShow false;
+		(_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_BG) ctrlShow false;
 	};
 	case "treeSelChanged":
 	{
@@ -187,17 +190,18 @@ switch _mode do
 		private _selectedPath = tvCurSel _ctrlTV;
 
 		// Category selected, not an item
-		if (count _selectedPath < 2) exitWith {};
+		if (count _selectedPath < 2) exitWith
+		{
+			_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_DELETE ctrlEnable false;
+		};
+
+		_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_DELETE ctrlEnable true;
 
 		private _savedData = FAVORITES_DATA;
 
 		private _class = _ctrlTV tvData _selectedPath;
 		private _type = _savedData get _class select 0;
 		private _shape = _savedData get _class select 1;
-
-		systemChat format ["%1", _class];
-		systemChat format ["%1", _type];
-		systemChat format ["%1", _shape];
 
 		set3DENAttachedCursorEntity createHashMapFromArray [["type", _type], ["classname", _class], ["markershape", _shape]];
 	};
@@ -210,7 +214,7 @@ switch _mode do
 		if (_selection isEqualTo []) exitWith {};
 
 		{
-			private _class = parseSimpleArray (_ctrlTV tvData _x) select 0;
+			private _class = _ctrlTV tvData _x;
 			_savedData deleteAt _class;
 		} forEach _selection;
 

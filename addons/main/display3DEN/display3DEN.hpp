@@ -9,6 +9,16 @@ class Display3DEN
 	};
 	class Controls
 	{
+		// Preview controls. BI ones are bugged and it's easier to create new ones than fixing
+		class ENH_FavoritesPreviewBackground: ctrlStatic
+		{
+			idc = IDC_DISPLAY3DEN_FAVORITES_PREVIEW_BG;
+			colorBackground[] = {0.2, 0.2, 0.2, 0.87};
+		};
+		class ENH_FavoritesPreviewPicture: ctrlStaticPictureKeepAspect
+		{
+			idc = IDC_DISPLAY3DEN_FAVORITES_PREVIEW_PICTURE;
+		};
 		class StatusBar: ctrlControlsGroupNoScrollbars
 		{
 			class Controls
