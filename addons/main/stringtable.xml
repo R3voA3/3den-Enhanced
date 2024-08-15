@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> <!--test-->
 <Project name="ENH">
 		<Package name="Main">
 				<Key ID="STR_ENH_MAIN_SOUNDVOLUME_DISPLAYNAME">
