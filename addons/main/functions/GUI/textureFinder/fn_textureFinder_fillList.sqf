@@ -1,14 +1,14 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Description:
-	Used by the ENH_TexturFinder GUI. Fills the GUI with all found textures. Spawned onLoad of the GUI.
+    Description:
+    Used by the ENH_TexturFinder GUI. Fills the GUI with all found textures. Spawned onLoad of the GUI.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -37,28 +37,28 @@ _ctrlTV tvAdd [[], "PAA"];
 
 [0, 1] apply
 {
-	_ctrlTV tvAdd [[_x], "XS"];
-	_ctrlTV tvAdd [[_x], "S"];
-	_ctrlTV tvAdd [[_x], "M"];
-	_ctrlTV tvAdd [[_x], "L"];
-	_ctrlTV tvAdd [[_x], "XL"];
+    _ctrlTV tvAdd [[_x], "XS"];
+    _ctrlTV tvAdd [[_x], "S"];
+    _ctrlTV tvAdd [[_x], "M"];
+    _ctrlTV tvAdd [[_x], "L"];
+    _ctrlTV tvAdd [[_x], "XL"];
 };
 
 {
-	if (isNull _display) exitWith {endLoadingScreen};
+    if (isNull _display) exitWith {endLoadingScreen};
 
-	getTextureInfo _x params ["_w", "_h", "_rgb"];
-	_pixelCount = _w * _h;
-	_indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
+    getTextureInfo _x params ["_w", "_h", "_rgb"];
+    _pixelCount = _w * _h;
+    _indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
 
-	_indexType = parseNumber (".paa" in _x);
-	_indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], format ["%1 [%2x%3]", _x, _w, _h]];
-	_ctrlTV tvSetData [[_indexType, _indexSize, _indexItem], _x];
+    _indexType = parseNumber (".paa" in _x);
+    _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], format ["%1 [%2x%3]", _x, _w, _h]];
+    _ctrlTV tvSetData [[_indexType, _indexSize, _indexItem], _x];
 
-	_ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
-	_ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\nR: %4\nG: %5\nB: %6\nA: %7\n\n%8", _x, _w, _h, _rgb#0, _rgb#1, _rgb#2, _rgb#3, _shortcutText]];
+    _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
+    _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\nR: %4\nG: %5\nB: %6\nA: %7\n\n%8", _x, _w, _h, _rgb#0, _rgb#1, _rgb#2, _rgb#3, _shortcutText]];
 
-	progressLoadingScreen ((_forEachIndex + 1) / _textureCountTotal);
+    progressLoadingScreen ((_forEachIndex + 1) / _textureCountTotal);
 
 } forEach (uiNamespace getVariable ["ENH_TextureFinder_Textures", []]);
 
@@ -75,21 +75,21 @@ CTRL(IDC_TEXTUREFINDER_EXPANDALL) ctrlEnable true;
 //Handle search button
 CTRL(IDC_TEXTUREFINDER_SEARCH) ctrlAddEventHandler ["EditChanged",
 {
-	params ["_ctrlEdit", "_newText"];
+    params ["_ctrlEdit", "_newText"];
 
-	private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
+    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
 
-	ctrlParent _ctrlEdit displayCtrl IDC_TEXTUREFINDER_BUTTONSEARCH ctrlSetText _image;
+    ctrlParent _ctrlEdit displayCtrl IDC_TEXTUREFINDER_BUTTONSEARCH ctrlSetText _image;
 }];
 
 //Handle search button
 CTRL(IDC_TEXTUREFINDER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
 {
-	params ["_ctrlButton"];
+    params ["_ctrlButton"];
 
-	//Change search button icon and clear edit control to reset tree view filter
-	ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_SEARCH ctrlSetText "";
-	_ctrlButton ctrlSetText TEXTURE_SEARCH_START;
+    //Change search button icon and clear edit control to reset tree view filter
+    ctrlParent _ctrlButton displayCtrl IDC_TEXTUREFINDER_SEARCH ctrlSetText "";
+    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
 }];
 
 endLoadingScreen;

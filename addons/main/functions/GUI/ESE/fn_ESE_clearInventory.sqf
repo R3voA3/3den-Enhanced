@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-06-14
+    Date: 2020-06-14
 
-	Description:
-	Used by the ENH_ESE GUI. Clear the inventory list.
+    Description:
+    Used by the ENH_ESE GUI. Clear the inventory list.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"

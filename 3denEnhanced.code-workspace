@@ -1,17 +1,17 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"name": "3den-Enhanced.wiki",
-			"path": "../3den-Enhanced.wiki"
-		}
-	],
-	"settings": {
-		"[sqf]": {
-			"editor.insertSpaces": false,
-			"editor.detectIndentation": false
-		}
-	}
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "3den-Enhanced.wiki",
+            "path": "../3den-Enhanced.wiki"
+        }
+    ],
+    "settings": {
+        "[sqf]": {
+            "editor.insertSpaces": true,
+            "editor.detectIndentation": false
+        }
+    }
 }

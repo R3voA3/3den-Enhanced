@@ -13,13 +13,13 @@
 #define EH_ARRAY(A) [QUOTE(QUOTE(A)), compile _value]
 #define EH_CONFIG(A,B) class DOUBLES(ENH_EventHandlers,A)\
 {\
-	displayName = QUOTE(A);\
-	property = QUOTE(DOUBLES(ENH_EventHandlers,A));\
-	control = "EditCodeMulti5";\
-	expression = QUOTE((if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler EH_ARRAY(A)}));\
-	condition = QUOTE(B);\
-	defaultValue = "''";\
-	validate = "expression";\
+    displayName = QUOTE(A);\
+    property = QUOTE(DOUBLES(ENH_EventHandlers,A));\
+    control = "EditCodeMulti5";\
+    expression = QUOTE((if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler EH_ARRAY(A)}));\
+    condition = QUOTE(B);\
+    defaultValue = "''";\
+    validate = "expression";\
 }\
 
 #define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))]})

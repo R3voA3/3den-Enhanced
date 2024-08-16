@@ -7,11 +7,11 @@ destination.create_file().write(strVersion);
 
 if (destination.isFile())
 {
-	print("File created: " + destination);
+    print("File created: " + destination);
 }
 else
 {
-	fatal("version.txt could not be created!");
+    fatal("version.txt could not be created!");
 }
 
 //Update version in mod.cpp

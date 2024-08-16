@@ -1,16 +1,16 @@
 ﻿$Patterns = @(
-	"<Key ID=",
-	"<English>",
-	"<German>",
-	"<Italian>",
-	"<Czech>",
-	"<Chinesesimp>",
-	"<Spanish>",
-	"<French>",
-	"<Polish>",
-	"<Russian>",
-	"<Portuguese>",
-	"<Chinese>"
+    "<Key ID=",
+    "<English>",
+    "<German>",
+    "<Italian>",
+    "<Czech>",
+    "<Chinesesimp>",
+    "<Spanish>",
+    "<French>",
+    "<Polish>",
+    "<Russian>",
+    "<Portuguese>",
+    "<Chinese>"
 )
 
 # "<Korean>"
@@ -22,8 +22,8 @@ $Content = Get-Content ("..\3den-Enhanced\addons\main\stringtable.xml")
 
 # Add the number of translations per language in an array
 $Counts = $Patterns | forEach-Object {
-	$AllMatches = Select-String -InputObject $Content -Pattern $_ -AllMatches
-	$AllMatches.Matches.Count
+    $AllMatches = Select-String -InputObject $Content -Pattern $_ -AllMatches
+    $AllMatches.Matches.Count
 }
 
 $TotalKeys = $Counts[0]
@@ -60,10 +60,10 @@ New-Item -Path $OutPutFilePath -Force
 # Add translation data
 for ($i = 1 ; $i -le $Patterns.Length - 1 ; $i++)
 {
-	# Remove "<" and ">"
-	$Language = $Patterns[$i]
-	$Language = $Language.ToString().Trim('<', '>')
+    # Remove "<" and ">"
+    $Language = $Patterns[$i]
+    $Language = $Language.ToString().Trim('<', '>')
 
-	"| | | |" | Add-Content -Path $OutPutFilePath
-	"| {0} | {1} | {2} | {3:p}" -f $Language, $Counts[$i], ($TotalKeys - $Counts[$i]), ($Counts[$i] / $TotalKeys) | Add-Content -Path $OutPutFilePath
+    "| | | |" | Add-Content -Path $OutPutFilePath
+    "| {0} | {1} | {2} | {3:p}" -f $Language, $Counts[$i], ($TotalKeys - $Counts[$i]), ($Counts[$i] / $TotalKeys) | Add-Content -Path $OutPutFilePath
 }

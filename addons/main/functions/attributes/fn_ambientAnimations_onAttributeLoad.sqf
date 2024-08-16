@@ -1,17 +1,17 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2019-07-15
+    Date: 2019-07-15
 
-	Description:
-	Used by the ambient animations attribute. Called when attribute is loaded.
+    Description:
+    Used by the ambient animations attribute. Called when attribute is loaded.
 
-	Parameter(s):
-	0: CONTROL - Controls group
-	1: ARRAY - Attribute value
+    Parameter(s):
+    0: CONTROL - Controls group
+    1: ARRAY - Attribute value
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #define ANIMSETS [["", 0],\
@@ -92,23 +92,23 @@ params ["_ctrlGroup", "_value"];
 _value params ["_animSet", "_anims", "_canExit", "_attach"];
 private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
 {
-	_x params ["_animSetPreset", "_armed"];
-	if (_forEachIndex == 0) then
-	{
-		_ctrlLB lbAdd localize "STR_DISABLED";
-		_ctrlLB lbSetData [0, ""];
-	}
-	else
-	{
-		private _index = _ctrlLB lbAdd _animSetPreset;
-		_ctrlLB lbSetData [_index, _animSetPreset];
-		_ctrlLB lbSetPictureRight [_index, ["", "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\spacearsenal_ca.paa"] select _armed];
-	};
+    _x params ["_animSetPreset", "_armed"];
+    if (_forEachIndex == 0) then
+    {
+        _ctrlLB lbAdd localize "STR_DISABLED";
+        _ctrlLB lbSetData [0, ""];
+    }
+    else
+    {
+        private _index = _ctrlLB lbAdd _animSetPreset;
+        _ctrlLB lbSetData [_index, _animSetPreset];
+        _ctrlLB lbSetPictureRight [_index, ["", "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\spacearsenal_ca.paa"] select _armed];
+    };
 
-	if (_animSet isEqualTo _animSetPreset) then
-	{
-		_ctrlLB lbSetCurSel _forEachIndex;
-	};
+    if (_animSet isEqualTo _animSetPreset) then
+    {
+        _ctrlLB lbSetCurSel _forEachIndex;
+    };
 } forEach ANIMSETS;
 
 (_ctrlGroup controlsGroupCtrl 101) cbSetChecked _canExit;
@@ -117,9 +117,9 @@ private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
-	private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+    private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-	(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
-	(_ctrlGroup controlsGroupCtrl 101) cbSetChecked false;
-	(_ctrlGroup controlsGroupCtrl 102) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl 101) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl 102) cbSetChecked false;
 }];

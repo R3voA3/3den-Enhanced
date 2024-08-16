@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2019-06-05
+    Date: 2019-06-05
 
-	Description:
-	Is called by Eden event handler onMissionPreviewEnd.
+    Description:
+    Is called by Eden event handler onMissionPreviewEnd.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 //Enable 3DEN Radio

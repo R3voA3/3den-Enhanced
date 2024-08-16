@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-11-10
+    Date: 2020-11-10
 
-	Description:
-	Used to reset search in the ENH_IM GUI.
+    Description:
+    Used to reset search in the ENH_IM GUI.
 
-	Parameter(s):
-	0: CONTROL - Search Button
+    Parameter(s):
+    0: CONTROL - Search Button
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"

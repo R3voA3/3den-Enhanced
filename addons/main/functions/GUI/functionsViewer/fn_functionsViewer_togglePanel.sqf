@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-11-15
+    Date: 2020-11-15
 
-	Description:
-	Toggles the side panel of the ENH_FunctionsViewer GUI.
+    Description:
+    Toggles the side panel of the ENH_FunctionsViewer GUI.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -25,11 +25,11 @@ private _state = _display getVariable ["SideBarCollapsed", false];
 
 if !(_state) then
 {
-	CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT, Y, safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W, H];
+    CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT, Y, safezoneW - 73 * GRID_W + SIDEBAR_W + GRID_W, H];
 }
 else
 {
-	CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W, Y, safezoneW - 73 * GRID_W, H];
+    CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT + SIDEBAR_W + GRID_W, Y, safezoneW - 73 * GRID_W, H];
 };
 
 CTRL(IDC_FUNCTIONSVIEWER_LIST) ctrlShow _state;

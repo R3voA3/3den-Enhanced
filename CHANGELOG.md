@@ -2,39 +2,39 @@
 # 8.0.0
 ## ADDED
 - Added support for script files for all 3DEN event handlers. See [the documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Event-Scripts)
-	- **ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!**
+    - **ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!**
 - Added object event handler attributes
 - Added group event handler attributes
 
 ## CHANGED
 - 3den Enhanced is now build with HEMTT
-	- Fixed various config and macro issues
-	- Improved config definitions
-	- Added various script improvements
-	- Mod is now binarized
-	- Compiled all .sqf files to .sqfc
+    - Fixed various config and macro issues
+    - Improved config definitions
+    - Added various script improvements
+    - Mod is now binarized
+    - Compiled all .sqf files to .sqfc
 - Functions Viewer
-	- Functions Viewer now updates list with last searched keyword when changing tree view layout
-	- Functions Viewer now reloads currently selected file if loading type was changed (loadFile, preprocessFile...)
-	- Functions Viewer recompiling single function will no longer throw an error when script file is selected
-	- Visualization of menu strip item state has been improved
-	- Added support for more file extensions when selecting "Other Files" option
+    - Functions Viewer now updates list with last searched keyword when changing tree view layout
+    - Functions Viewer now reloads currently selected file if loading type was changed (loadFile, preprocessFile...)
+    - Functions Viewer recompiling single function will no longer throw an error when script file is selected
+    - Visualization of menu strip item state has been improved
+    - Added support for more file extensions when selecting "Other Files" option
 - Garrison UI
-	- Tweaked UI position and layout
-	- Entities can now be selected on the fly
-	- Editor placed buildings are not detected as well
-	- The UI is now properly deinitialized before preview, when switching terrain or mission
+    - Tweaked UI position and layout
+    - Entities can now be selected on the fly
+    - Editor placed buildings are not detected as well
+    - The UI is now properly deinitialized before preview, when switching terrain or mission
 - Updated French translation (thanks to Alfred-Neuman)
 - Fixed duplicated "Move to layer..." context menu entry (thanks to honger)
 - Group Marker Attribute
-	- Optimized code
-	- Marker is no longer attached to first group leader
-	- Marker is only deleted once group becomes null
+    - Optimized code
+    - Marker is no longer attached to first group leader
+    - Marker is only deleted once group becomes null
 - Briefing attributes should now create diary entries in same order every time #297
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
 - Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
-- Minimap code was optimized
+- Minimap code was optimizedw
 - Added description to menu strip items for easier documenation
 - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
 - Shortcuts in the shortcuts UI is now properly translated
@@ -46,14 +46,19 @@
 - Add Editable Objects (Zeus) attribute now also adds all editor placed objects
 - Full Italian translation thanks to Fil-ric
 - Equipemnt Storage Editor
-	- HashMap with all items would get rebuild each time resulting in slow loading of the UI
-	- Fixed weapons of type "MissileLauncher" (Titan) would be missing
+    - HashMap with all items would get rebuild each time resulting in slow loading of the UI
+    - Fixed weapons of type "MissileLauncher" (Titan) would be missing
 - Fixed removing unit from remains collector had not effect (typo in code)
+- Favorites list was overhauled
+    - Place entities by dragging and dropping
+    - Added support for markers, modules and objects
+    - Added categories
+    - Improved UI layout
 
 ## REMOVED
 - Customization via userconfig
 - WIP scripts and UIs
-- Unused function
+- Unused functions
 - Highlight area marker function as it's now implemented in the engine
 - Menustrip customization
 -->
@@ -177,12 +182,12 @@ current session
 - Multiple code optimisations
 - Preference values are no longer reset if game is started without mods
 - Placement Tools
-	- Sliders were replaced with Edit controls to allow any numeric value
-	- Added the option to adjust center on the fly
-	- Line pattern now also supports direction
-	- Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
-	- Orientation around Z-axis can now be freely set
-	- Functions rewrite
+    - Sliders were replaced with Edit controls to allow any numeric value
+    - Added the option to adjust center on the fly
+    - Line pattern now also supports direction
+    - Edit controls allow for fine adjustment via PAGE UP/DOWN and modifier keys such as CTRL, ALT and SHIFT
+    - Orientation around Z-axis can now be freely set
+    - Functions rewrite
 - 3DEN Radio is now displayed properly on all aspect ratios, resolutions and UI sizes
 - Equipment Storage Editor is now displayed properly on all aspect ratios, resolutions and UI sizes
 - Module Information is now displayed properly on all aspect ratios, resolutions and UI sizes
@@ -207,8 +212,8 @@ current session
 - Fixed link to changelog
 - Fixed missing translation in menu strip
 - Texture Finder is now creating a loading
-	screen which drastically reduces fill time of the
-	tree view
+    screen which drastically reduces fill time of the
+    tree view
 - Changed define files
 - Added sqfc support where possible
 - Entity counter is no longer shown on very small screen with large UI size
@@ -221,20 +226,20 @@ current session
 - fixed some missing ;
 - Update fn_exportLoadout.sqf (PR #267) by hypoxia125
 - Texture Finder
-	- Improved performance
-	- Added collapse/expand all buttons
-	- Alpha of textures is now shown via tiled background
-	- Increased UI size
-	- Increase texture count from ~10k to around ~47k in vanilla
+    - Improved performance
+    - Added collapse/expand all buttons
+    - Alpha of textures is now shown via tiled background
+    - Increased UI size
+    - Increase texture count from ~10k to around ~47k in vanilla
 
 # 7.7.6
 ## CHANGED
 - Vehicle Inventory Manager overhaul
-	- Renamed to Equipment Storage Editor (to give it a similar name as the vanilla attribute)
-	- Increased UI size
-	- Added a list that shows compatible magazines and items of the selected item
-	- Template list is now always visible
-	- Code optimisations
+    - Renamed to Equipment Storage Editor (to give it a similar name as the vanilla attribute)
+    - Increased UI size
+    - Added a list that shows compatible magazines and items of the selected item
+    - Template list is now always visible
+    - Code optimisations
 - fixed text overlapping in large edit control
 - increase size of large edit control
 - removed excessive space underneath the large edit control
@@ -269,10 +274,10 @@ menu
 - Added missing footer control to Shortcuts UI
 - Changed width of distance gauge in status bar
 - Location list update
-	- Improved location list code
-	- Custom location can now be saved to the location list
-	- Custom locations are stored per map
-	- Custom locations can be deleted
+    - Improved location list code
+    - Custom location can now be saved to the location list
+    - Custom locations are stored per map
+    - Custom locations can be deleted
 - Updated Polish translation, thanks to genjonakasone
 - The scenario UI (Load/Save) is now using almost the full screen width to make sure folks with a complex folder structure can still navigate through it
 
@@ -291,8 +296,8 @@ menu
 - If AI skill settings are set to 0.5 (via Edit box) they will no longer be executed
 - Moved Delete All Empty Layers to the left Panel
 - ENH_fnc_setOrientation
-	- Works now with 1 (trigger, markers) and 3 (object, system) dimensional attributes
-	- Preserves orientation around X and Y
+    - Works now with 1 (trigger, markers) and 3 (object, system) dimensional attributes
+    - Preserves orientation around X and Y
 
 # 7.7.2
 ## ADDED
@@ -326,9 +331,9 @@ menu
 - When selecting a marker in SAUI, the map will now open, camera will be moved and the map view will be adjusted as well
 - Added support for marker name to SAUI
 - Save Loadout attribute was updated: (backwards compatible)
-	- Added logging
-	- Updated tooltip
-	- Improved code
+    - Added logging
+    - Updated tooltip
+    - Improved code
 - Object scaling attribute now uses an Edit box again to allow more values
 - Texture Finder UI can no longer be moved (dragged)
 - Image Preview in Texture Finder UI is not properly positioned
@@ -480,13 +485,13 @@ menu
 - Fixed an issue that would prevent 'Export Mission to SQF' to work properly with some attributes
 
 - Group Marker Attribute
-	- Fixed an issue that would cause a script error popping up
-	- Attribute is now also properly loaded if multiple entites are edited at once
-	- Minor network optimisations to the Group Marker attribute
-	- Added tooltips to the controls
-	- Tweaked default value
-	- Changed the color of the combo box controls to increase the contrast when selecting the texture type
-	- Thanks to Hypoxic, vehicle names can now also be displayed
+    - Fixed an issue that would cause a script error popping up
+    - Attribute is now also properly loaded if multiple entites are edited at once
+    - Minor network optimisations to the Group Marker attribute
+    - Added tooltips to the controls
+    - Tweaked default value
+    - Changed the color of the combo box controls to increase the contrast when selecting the texture type
+    - Thanks to Hypoxic, vehicle names can now also be displayed
 
 - Fixed a missing name in Preferences Menu
 - Garrison GUI will now save and restore the blacklist value
@@ -496,10 +501,10 @@ menu
 - Added some missing ;
 
 - Briefing Editor
-	- Changed the way templates are stored (backwards compatible)
-	- Added basic syntax highlighting for easier editing
-	- Redesigned parts of the UI
-	- Changed how briefing text is exported
+    - Changed the way templates are stored (backwards compatible)
+    - Added basic syntax highlighting for easier editing
+    - Redesigned parts of the UI
+    - Changed how briefing text is exported
 - Export Mission Parameters tool is now using display3denCopy
 - Images in Texture Finder are now categorised by their size
 - Image preview in Texture Finder GUI will now display images in original size if possible
@@ -518,18 +523,18 @@ menu
 - Fixed an issue that causes the Functions Viewer to not properly generate the path to the function file
 
 - Vehicle Inventory Manager
-	- Completely redesigned the GUI
-	- Fully using HashMap now
-	- Added warning about unsaved changes when closing the GUI
-	- New icons
-	- Added function to export to sqf
-	- Added function to export to scripted arsenal
-	- Added direct link to online documention
-	- Added shortcuts for most actions
-	- Loadout is now properly reset even if config name in vehicle config has not got the proper casing
-	- DescriptionShort is now shown in the tooltip as well
-	- Fixed a rare "undefined variable" error when using the Vehicle Inventory Manager
-	- Fixed empty value when exporting vehicle inventory in ACE format
+    - Completely redesigned the GUI
+    - Fully using HashMap now
+    - Added warning about unsaved changes when closing the GUI
+    - New icons
+    - Added function to export to sqf
+    - Added function to export to scripted arsenal
+    - Added direct link to online documention
+    - Added shortcuts for most actions
+    - Loadout is now properly reset even if config name in vehicle config has not got the proper casing
+    - DescriptionShort is now shown in the tooltip as well
+    - Fixed a rare "undefined variable" error when using the Vehicle Inventory Manager
+    - Fixed empty value when exporting vehicle inventory in ACE format
 - Chinese simplefied and Chinese traditional updated by mihuan-0
 - Fixed an issue that would cause Export GUI Defines UI to export wrong values
 - Export GUI Defines now uses display3denCopy
@@ -575,12 +580,12 @@ menu
 
 ## CHANGED
 - Vehicle Inventory Manager (ESE)
-	- Is now able to create a full arsenal with selected addon items
-	- Is using HashMaps where possible now to improve performance when many items are available
-	- Fixed the issue where the amount would not properly be saved if inventory was set to be virtual
-	- Ok button was renamed to Save. Pressing this button is the only way to save the currently set up inventory
-	- Removed the dialog when resetting the inventory to default
-	- Various visual tweaks
+    - Is now able to create a full arsenal with selected addon items
+    - Is using HashMaps where possible now to improve performance when many items are available
+    - Fixed the issue where the amount would not properly be saved if inventory was set to be virtual
+    - Ok button was renamed to Save. Pressing this button is the only way to save the currently set up inventory
+    - Removed the dialog when resetting the inventory to default
+    - Various visual tweaks
 - Timeline in 3DEN Radio is now working correctly
 - Fixed an issue with Feature Type attribute sometimes not working on DS
 - Fixed an issue with the briefing attribute
@@ -596,9 +601,9 @@ menu
 - ChineseImp translation was updated
 - Unit icons are now drawn above the unit
 - Debug waypoints improvements
-	- Marker text will only show the waypoint ID if nothing else changed compared to the previous marker
-	- Markers are now connected by poly lines
-	- Groups with only one waypoint e.g., units placed in the editor are now ignored (These changes should reduce the clutter on the map)
+    - Marker text will only show the waypoint ID if nothing else changed compared to the previous marker
+    - Markers are now connected by poly lines
+    - Groups with only one waypoint e.g., units placed in the editor are now ignored (These changes should reduce the clutter on the map)
 - Fixed rpt spam caused by 3den Radio if a song was in playlist but not available in-game anymore
 - Batch Replace GUI has now a list with all vehicles to choose from. Pasting class names is still possible
 - Batch Replace values are no longer saved persistently. They will be reset when the game is closed
@@ -608,8 +613,8 @@ menu
 - Removed warning about custom userconfig
 - Fixed left and right panel would be hidden by default
 - Vanilla Config Viewer
-	- Updated the design
-	- Properties list can now be scrolled horizontally to view long values
+    - Updated the design
+    - Properties list can now be scrolled horizontally to view long values
 - Texture Finder has an updated preview
 - Slight performance improvement of the Inventory Manager
 - Inventory Manager now also lists Oldman specific objects
@@ -661,76 +666,76 @@ menu
 - Fixed that Display3DENCopy would not have the correct height when using Log Object's Info function (BI fix please? ;))
 
 - Attributes
-	- Debug Path attribute is now part of debug options in Editor preferences
-	- Merged onButtonDown code of attribute controls into onAttributeLoad functions
-	- Added support to most attributes for localized text
-	- Added missing tooltips for side toolbox controls
-	- Feature Type and Terrain detail attribute controls were simplyfied
-	- Task Patrol attribute uses an edit box now again to give the scenario editor more freedom
-	- AI Features and AI Skill as well as Allow Fleeing attributes were merged into category AI
-	- Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
-	- Editable Objects (Zeus) would have an incorrect property name which would conflict with Dynamic Group attribute
-	- Implementation for Debug Options in Eden Editor was changed
-	- Fixed a bug which would cause the "Disable and Reset" button for the group marker attribute not to work
-	- Size of Hold Action description has been slightly reduced
-	- Map Indicator settings are now in the Misc category
-	- All attributes now have "scriptName" defined for debugging
-	- Added a Debug Tool to log all active scripts and mission EHs to .rpt
-	- Text for Map Indicator attribute was improved
-	- Visual appearance of many attributes were improved
-	- Fixed Dynamic AI Skill attribute default value
+    - Debug Path attribute is now part of debug options in Editor preferences
+    - Merged onButtonDown code of attribute controls into onAttributeLoad functions
+    - Added support to most attributes for localized text
+    - Added missing tooltips for side toolbox controls
+    - Feature Type and Terrain detail attribute controls were simplyfied
+    - Task Patrol attribute uses an edit box now again to give the scenario editor more freedom
+    - AI Features and AI Skill as well as Allow Fleeing attributes were merged into category AI
+    - Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
+    - Editable Objects (Zeus) would have an incorrect property name which would conflict with Dynamic Group attribute
+    - Implementation for Debug Options in Eden Editor was changed
+    - Fixed a bug which would cause the "Disable and Reset" button for the group marker attribute not to work
+    - Size of Hold Action description has been slightly reduced
+    - Map Indicator settings are now in the Misc category
+    - All attributes now have "scriptName" defined for debugging
+    - Added a Debug Tool to log all active scripts and mission EHs to .rpt
+    - Text for Map Indicator attribute was improved
+    - Visual appearance of many attributes were improved
+    - Fixed Dynamic AI Skill attribute default value
 
 - Inventory Manager
-	- Fixed .rpt spam caused by the Inventory Manager
-	- Fixed ACE items would not be properly sorted (Thanks to [KP] veteran29)
-	- Fixed DLC icons would be incorrect if certain mods are loaded
-	- Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
-	- Mines category was renamed to Explosives
-	- Added localisation
+    - Fixed .rpt spam caused by the Inventory Manager
+    - Fixed ACE items would not be properly sorted (Thanks to [KP] veteran29)
+    - Fixed DLC icons would be incorrect if certain mods are loaded
+    - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
+    - Mines category was renamed to Explosives
+    - Added localisation
 
 - Texture Finder
-	- Texture Finder is now faster. From 137 s down to 85 s to load all textures (Thanks to ConnorAU)
-	- Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
-	- Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
-	- Texture Finder will now store textures in uiNamespace. That way it only has to search once
-	- Progress text is now better formatted
-	- Texture Finder now uses a CT_TREE with engine search
-	- CTRL + F now focuses the search edit
+    - Texture Finder is now faster. From 137 s down to 85 s to load all textures (Thanks to ConnorAU)
+    - Another attempt to remove duplicated entries from Texture Finder (Thanks again to ConnorAU)
+    - Texture Finder will now also scan arrays, thus find more textures (Thanks ConnorAU)
+    - Texture Finder will now store textures in uiNamespace. That way it only has to search once
+    - Progress text is now better formatted
+    - Texture Finder now uses a CT_TREE with engine search
+    - CTRL + F now focuses the search edit
 
 - Functions Viewer
-	- Functions Viewer is now the default functions viewer in the Debug Console (Will not overwrite button if Connor's Functions Viewer is loaded)
-	- Functions Viewer can now view .inc and .hpp files as well as scripts used in missions and GUIs
-	- Function list in Functions Viewer can now also be searched if functions are displayed as list
-	- Behaviour of the "View on Biki" button in the Functions Viewer was improved
-	- Functions counter in Functions Viewer works properly now also for campaign config and mission config
-	- Open on Biki button in Functions Viewer is now actually a button instead of active text
-	- Fixed a bug which would cause tree view control to be updated twice
-	- It is now possible to toggle the left panel to increase space for code
-	- Updated and added shortcuts
-	- Last viewed file is now stored in profileNamespace. Restoring last viewed file is now reliable
-	- Removed root entry (configFile, missionConfigFile and campaignConfigFile) from tree view
-	- Mod icons are back due to recent optimisations
-	- Fixed an issue with functions not being displayed if path definition was defined a bit differently (╯°□°）╯︵ ┻━┻)
-	- Functions TAG is now always upper case
+    - Functions Viewer is now the default functions viewer in the Debug Console (Will not overwrite button if Connor's Functions Viewer is loaded)
+    - Functions Viewer can now view .inc and .hpp files as well as scripts used in missions and GUIs
+    - Function list in Functions Viewer can now also be searched if functions are displayed as list
+    - Behaviour of the "View on Biki" button in the Functions Viewer was improved
+    - Functions counter in Functions Viewer works properly now also for campaign config and mission config
+    - Open on Biki button in Functions Viewer is now actually a button instead of active text
+    - Fixed a bug which would cause tree view control to be updated twice
+    - It is now possible to toggle the left panel to increase space for code
+    - Updated and added shortcuts
+    - Last viewed file is now stored in profileNamespace. Restoring last viewed file is now reliable
+    - Removed root entry (configFile, missionConfigFile and campaignConfigFile) from tree view
+    - Mod icons are back due to recent optimisations
+    - Fixed an issue with functions not being displayed if path definition was defined a bit differently (╯°□°）╯︵ ┻━┻)
+    - Functions TAG is now always upper case
 
 - 3DEN Radio
-	- GUI was reworked
-	- Search is now much faster
-	- It is now possible to sort list by mods
-	- List now also shows mod names
-	- Added a timeline to the GUI
-	- Some variables were moved from profileNamespace to uiNamespace
-	- Help tooltip is now properly displayed
-	- Music will now fade in slowly
+    - GUI was reworked
+    - Search is now much faster
+    - It is now possible to sort list by mods
+    - List now also shows mod names
+    - Added a timeline to the GUI
+    - Some variables were moved from profileNamespace to uiNamespace
+    - Help tooltip is now properly displayed
+    - Music will now fade in slowly
 
 - Variable Viewer
-	- Columns of Variable Viewer can now be sorted
-	- Loading the list is now ~four times faster
-	- Fixed rpt 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
-	- Fixed Variable Viewer not deselecting row on variable delete (Thanks to ConnorAU)
+    - Columns of Variable Viewer can now be sorted
+    - Loading the list is now ~four times faster
+    - Fixed rpt 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
+    - Fixed Variable Viewer not deselecting row on variable delete (Thanks to ConnorAU)
 
 - Briefing Editor
-	- Fixed missing localisation key
+    - Fixed missing localisation key
 
 ## REMOVED
 - Credits GUI and all related functions
@@ -850,13 +855,13 @@ menu
 - 3DEN Camera Positions UI now properly checks for incorrect description
 - Icons updated
 - Texture Finder
-	- Will now search ~200.000 classes instead of ~30.000 for textures and images
-	- Added search to Texture Finder tool
-	- Optimized Texture Finder functions to be more performant (Thanks to shukari)
-	- Search is now automatically started when UI is opened
-	- Improved filter, now all none textures/images should be removed
-	- Added progress bar to show listbox status
-	- Update list button is now disable while list is updating
+    - Will now search ~200.000 classes instead of ~30.000 for textures and images
+    - Added search to Texture Finder tool
+    - Optimized Texture Finder functions to be more performant (Thanks to shukari)
+    - Search is now automatically started when UI is opened
+    - Improved filter, now all none textures/images should be removed
+    - Added progress bar to show listbox status
+    - Update list button is now disable while list is updating
 - Small improvements of the 3den Radio GUI
 - Some general cleanup
 - Fixed some typos in translation
@@ -962,18 +967,18 @@ menu
 - Intro text attribute has a new control with images to select the intro type
 - Values of Dynamic skill attributes are now handled by attribute control and not writting into mission namespace variables
 - FunctionsViewer
-	- Functions Viewer features now several different modes for sorting functions
-	- Functions were rewritten
-	- Shows number of available functions
-	- Added button which leads to corresponding Biki page of the function (Keep in mind that not all functions might be documented there)
-	- Functions viewer is now available in the debug console, together with the vanilla one. See the "fx" icon in the top right corner
-		This also solves the issue where 3den Enhanced was incompatible with Extended Debug Console by Connor
-	- Every function now shows the logo of the mod it was introduced with
-	- Functions Viewer now uses pixel grid system
-	- Fixed an issue where recompiling selected function wasn't possible
-	- Removed X button and replaced it with the close button in the lower right corner to be consitent with all other UIs in Eden Editor
-	- Functions Viewer shows mod icons again
-	- Functions Viewer now displays line numbers
+    - Functions Viewer features now several different modes for sorting functions
+    - Functions were rewritten
+    - Shows number of available functions
+    - Added button which leads to corresponding Biki page of the function (Keep in mind that not all functions might be documented there)
+    - Functions viewer is now available in the debug console, together with the vanilla one. See the "fx" icon in the top right corner
+        This also solves the issue where 3den Enhanced was incompatible with Extended Debug Console by Connor
+    - Every function now shows the logo of the mod it was introduced with
+    - Functions Viewer now uses pixel grid system
+    - Fixed an issue where recompiling selected function wasn't possible
+    - Removed X button and replaced it with the close button in the lower right corner to be consitent with all other UIs in Eden Editor
+    - Functions Viewer shows mod icons again
+    - Functions Viewer now displays line numbers
 
 - Updated and revised Czech translation thanks to XerXesCZ
 - Most functions which interact with eden entities will now exit and show a notification if no entities are selected
@@ -1200,12 +1205,12 @@ menu
 - Select Image GUI when publishing a mission to steam has been widened to allow the ctrlTree to expand further
 - Some general GUI overhauls
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
-		- Briefing editor shortcut was changed from CTRL + B to ALT + B
-		- Texture Finder can now be opened by pretting ALT + T
-		- Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut - Clear chat can now be performed by pressing ALT + CTRL + C
-		- All debug tools have got a shortcut now
-		- Loadout tools can now be accessed by CTRL + SHIFT shortcuts
-		- Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
+        - Briefing editor shortcut was changed from CTRL + B to ALT + B
+        - Texture Finder can now be opened by pretting ALT + T
+        - Grid, Line, Grid & Circular Pattern tools can now be opened by a shortcut - Clear chat can now be performed by pressing ALT + CTRL + C
+        - All debug tools have got a shortcut now
+        - Loadout tools can now be accessed by CTRL + SHIFT shortcuts
+        - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
 - Added search icon next to search edit control in 3den Radio
 - 3den Radio will now loop through playlist again one enabled
 
@@ -1287,16 +1292,16 @@ menu
 - Added grid pattern tool
 - Added tool to export all Arsenal loadout templates for backup
 - On preview debug (Those settings will only work during mission preview and won't influence the published scenario)
-	- Show all units on map
-	- Disable damage
-	- Toggle captive mode
-	- Enable bullet tracing
-	- Enable Virtual Garage
-	- Enable Virtual Arsenal
-	- Disable stamina
-	- Enable Zeus
-	- Show awareness of all sides
-	- Options to quickly kill all units of given side during scenario preview
+    - Show all units on map
+    - Disable damage
+    - Toggle captive mode
+    - Enable bullet tracing
+    - Enable Virtual Garage
+    - Enable Virtual Arsenal
+    - Disable stamina
+    - Enable Zeus
+    - Show awareness of all sides
+    - Options to quickly kill all units of given side during scenario preview
 
 ## CHANGED
 - Removed obsolete function call from ENH_Changelog GUI
@@ -1333,8 +1338,8 @@ menu
 - Improved appearance of combo box control types
 - Some config cleanup
 - Measure distance functionality was rewritten and improved:
-	If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
-	If map is opened, then markers are drawn from point A to B showing the direct path
+    If distance is measured in 3D view, then a line is drawn from point A to B showing the direct path
+    If map is opened, then markers are drawn from point A to B showing the direct path
 - Several menu entriess were missing "..." to indicate they are opening a new window
 
 # 2.5
@@ -1690,8 +1695,8 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Attribute for unit traits
 
 - Added hostage attribute:
-	A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage Mission designers can check whether the unit is hostage or not by retrieving the following variable:
-	_unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
+    A unit can now be taken hostage. Every player including JIP will have an action to free the Hostage Mission designers can check whether the unit is hostage or not by retrieving the following variable:
+    _unit getVariable "ENH_isHostage"; (true, is hostage/false, isn't hostage)
 
 ## CHANGED
 - UAV intro center position attribute tooltip was using a wrong string
@@ -1763,9 +1768,9 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - View distance and disable grass option to environment mission attribute (Will be executed globally and for JIP playes)
 - Attribute to create a small mission intro containing three lines (See scenario attribute -> general)
 - Quick links for:(Can be found in the menu strip -> help)
-	- Arma 3 Assets
-	- Arma 3 Function Overview
-	- 3den Enhanced Forum thread
+    - Arma 3 Assets
+    - Arma 3 Function Overview
+    - 3den Enhanced Forum thread
 - Ability to quickly copy class name of selected unit to clipboard
 - Ability to quickly set random rotation for all selected entities
 - Attribute to force walk

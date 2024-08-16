@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-11-04
+    Date: 2020-11-04
 
-	Description:
-	Searches code in Functions Viewer for specific key word.
+    Description:
+    Searches code in Functions Viewer for specific key word.
 
-	Parameter(s):
-	0: CONTROL - Search
+    Parameter(s):
+    0: CONTROL - Search
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -25,19 +25,19 @@ private _text = toLower ctrlText CTRL(IDC_FUNCTIONSVIEWER_CODE);
 
 private _fnc_findStringsInString =
 {
-	params ["_text", "_key"];
-	if (_text == "" || {_key == ""}) exitWith {[]};
-	private _searchLength = count _key;
-	private _return = [];
-	private _i = 0;
-	private _index = 0;
-	while {_index = _text find _key; _index != -1} do
-	{
-		_text = _text select [_index + _searchLength];
-		_i = _i + _index + _searchLength;
-		_return pushBackUnique _i - _searchLength;
-	};
-	_return
+    params ["_text", "_key"];
+    if (_text == "" || {_key == ""}) exitWith {[]};
+    private _searchLength = count _key;
+    private _return = [];
+    private _i = 0;
+    private _index = 0;
+    while {_index = _text find _key; _index != -1} do
+    {
+        _text = _text select [_index + _searchLength];
+        _i = _i + _index + _searchLength;
+        _return pushBackUnique _i - _searchLength;
+    };
+    _return
 };
 
 private _indices = [_text, _key] call _fnc_findStringsInString;

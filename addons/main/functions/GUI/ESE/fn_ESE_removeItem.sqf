@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-06-14
+    Date: 2020-06-14
 
-	Description:
-	Used by the ENH_ESE GUI. Used to remove items from inventory listbox.
+    Description:
+    Used by the ENH_ESE GUI. Used to remove items from inventory listbox.
 
-	Parameter(s):
-	0: NUMBER - The amount that should be removed
+    Parameter(s):
+    0: NUMBER - The amount that should be removed
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -28,7 +28,7 @@ private _newAmount = _currentAmount - _amount;
 
 if (_newAmount <= 0) exitWith
 {
-	_ctrlInventory lnbDeleteRow _row;
+    _ctrlInventory lnbDeleteRow _row;
 };
 
 _ctrlInventory lnbSetText [[_row, 2], str _newAmount];

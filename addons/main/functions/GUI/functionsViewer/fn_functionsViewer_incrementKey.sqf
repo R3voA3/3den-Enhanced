@@ -1,17 +1,17 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-11-04
+    Date: 2020-11-04
 
-	Description:
-	Updates Functions Viewer key controls according to found keys.
+    Description:
+    Updates Functions Viewer key controls according to found keys.
 
-	Parameter(s):
-	0: CONTROL - Button
-	1: NUMBER - Increment
+    Parameter(s):
+    0: CONTROL - Button
+    1: NUMBER - Increment
 
-	Returns:
-	BOOLEAN: true
+    Returns:
+    BOOLEAN: true
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -26,25 +26,25 @@ private _indicesCount = count _indices;
 
 if (_indices isEqualTo []) exitWith
 {
-	CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT) ctrlSetText "";
-	false
+    CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT) ctrlSetText "";
+    false
 };
 
 private _newIndex = if (_increment < 0) then
 {
-	(_currentIndex + _increment) max 0;
+    (_currentIndex + _increment) max 0;
 }
 else
 {
-	(_currentIndex + _increment) min (_indicesCount -1);
+    (_currentIndex + _increment) min (_indicesCount -1);
 };
 
 (CTRL(IDC_FUNCTIONSVIEWER_SEARCHTEXT)) ctrlSetText format ["%1 / %2", _newIndex + 1, _indicesCount];
 
 CTRL(IDC_FUNCTIONSVIEWER_CODE) ctrlSetTextSelection
 [
-	_indices select _newIndex,
-	count (uiNamespace getVariable ["ENH_FunctionsViewer_Key", ""])
+    _indices select _newIndex,
+    count (uiNamespace getVariable ["ENH_FunctionsViewer_Key", ""])
 ];
 
 uiNamespace setVariable ["ENH_FunctionsViewer_CurIndex", _newIndex];

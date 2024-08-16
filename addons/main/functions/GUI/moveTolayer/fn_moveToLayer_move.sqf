@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2022-04-11
+    Date: 2022-04-11
 
-	Description:
-	Moves selected entities into selected layer.
+    Description:
+    Moves selected entities into selected layer.
 
-	Parameter(s):
-	0: CONTROL - Button control
+    Parameter(s):
+    0: CONTROL - Button control
 
-	Returns:
-	BOOLEAN
+    Returns:
+    BOOLEAN
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -25,9 +25,9 @@ private _layerID = _ctrlTV tvValue (tvCurSel _ctrlTV);
 
 collect3DENHistory
 {
-	{
-		_x set3DENLayer _layerID;
-	} forEach ([] call ENH_fnc_all3DENSelected);
+    {
+        _x set3DENLayer _layerID;
+    } forEach ([] call ENH_fnc_all3DENSelected);
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

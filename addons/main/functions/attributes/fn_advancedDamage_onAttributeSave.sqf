@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-02-22
+    Date: 2020-02-22
 
-	Description:
-	Used by the advanced damage attribute. Called when attribute is saved.
+    Description:
+    Used by the advanced damage attribute. Called when attribute is saved.
 
-	Parameter(s):
-	0: CONTROL - Controls group
+    Parameter(s):
+    0: CONTROL - Controls group
 
-	Returns:
-	STRING: Attribute value
+    Returns:
+    STRING: Attribute value
 */
 
 params ["_ctrlGroup"];
@@ -21,8 +21,8 @@ private _hitPointsDamage = [];
 
 for "_idc" from 20000 to (20000 + _countControls - 1) do
 {
-	_hitPoints append [ctrlTooltip (_ctrlGroup controlsGroupCtrl _idc)];
-	_hitPointsDamage append [sliderPosition (_ctrlGroup controlsGroupCtrl _idc + 10000)];
+    _hitPoints append [ctrlTooltip (_ctrlGroup controlsGroupCtrl _idc)];
+    _hitPointsDamage append [sliderPosition (_ctrlGroup controlsGroupCtrl _idc + 10000)];
 };
 
 str [_hitPoints, _hitPointsDamage];

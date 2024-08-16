@@ -1,17 +1,17 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-10-20
+    Date: 2020-10-20
 
-	Description:
-	Used by the CfgSentences Browser GUI. Called when the page was changed.
+    Description:
+    Used by the CfgSentences Browser GUI. Called when the page was changed.
 
-	Parameter(s):
-	0: CONTROL - Toolbox
-	1: NUMBER - Index
+    Parameter(s):
+    0: CONTROL - Toolbox
+    1: NUMBER - Index
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"

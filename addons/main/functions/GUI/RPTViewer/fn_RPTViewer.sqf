@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2021-05-03
+    Date: 2021-05-03
 
-	Description:
-	Handles the RPTViewer GUI.
+    Description:
+    Handles the RPTViewer GUI.
 
-	Parameter(s):
-	0: STRING - Mode, can be "open" or "update"
+    Parameter(s):
+    0: STRING - Mode, can be "open" or "update"
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -18,7 +18,7 @@
 
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-	["ENH_GetPythiaMod_Warning", 1, 10] call BIS_fnc_3DENNotification;
+    ["ENH_GetPythiaMod_Warning", 1, 10] call BIS_fnc_3DENNotification;
 };
 
 disableSerialization;
@@ -28,16 +28,16 @@ private _display = displayNull;
 
 switch _mode do
 {
-	case "open":
-	{
-		_display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_RPTViewer";
-		uiNamespace setVariable ["ENH_RPTViewer_Display", _display];
-	};
-	case "update":
-	{
-		_display = uiNamespace getVariable ["ENH_RPTViewer_Display", displayNull];
-		uiNamespace setVariable ["ENH_RPTViewer_Lines", parseNumber (ctrlText CTRL(IDC_RPTVIEWER_LINES))];
-	};
+    case "open":
+    {
+        _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_RPTViewer";
+        uiNamespace setVariable ["ENH_RPTViewer_Display", _display];
+    };
+    case "update":
+    {
+        _display = uiNamespace getVariable ["ENH_RPTViewer_Display", displayNull];
+        uiNamespace setVariable ["ENH_RPTViewer_Lines", parseNumber (ctrlText CTRL(IDC_RPTVIEWER_LINES))];
+    };
 };
 
 private _text = ["ENH_Pythia.RPT_read", [LINES]] call (uiNamespace getVariable "py3_fnc_callExtension");

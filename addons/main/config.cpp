@@ -38,5 +38,5 @@
 
 class ENH_3DENMinimap: ctrlMap
 {
-	scaleMax = 3;
+    scaleMax = 3;
 };

@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2021-06-27
+    Date: 2021-06-27
 
-	Description:
-	Returns systemTime or systemTimeUTC into a formatted string.
+    Description:
+    Returns systemTime or systemTimeUTC into a formatted string.
 
-	Parameter(s):
-	0: ARRAY - systemTime or systemTimeUTC, default systemTime
+    Parameter(s):
+    0: ARRAY - systemTime or systemTimeUTC, default systemTime
 
-	Returns:
-	STRING: Formatted time
+    Returns:
+    STRING: Formatted time
 */
 
 params [["_tArr", systemTime]];

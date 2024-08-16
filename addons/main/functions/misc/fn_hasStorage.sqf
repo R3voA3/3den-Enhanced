@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-09-07
+    Date: 2020-09-07
 
-	Description:
-	Checks if given object has an inventory (ammobox, vehicle).
+    Description:
+    Checks if given object has an inventory (ammobox, vehicle).
 
-	Parameter(s):
-	0: OBJECT - Object
+    Parameter(s):
+    0: OBJECT - Object
 
-	Returns:
-	BOOLEAN: true if it has storage, false if not
+    Returns:
+    BOOLEAN: true if it has storage, false if not
 */
 
 params ["_object"];

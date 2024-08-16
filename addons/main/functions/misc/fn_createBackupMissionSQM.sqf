@@ -1,17 +1,17 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2023-09-10
-	File: 3denEnhanced\functions\misc\fn_createBackupMissionSQM.sqf
+    Date: 2023-09-10
+    File: 3denEnhanced\functions\misc\fn_createBackupMissionSQM.sqf
 
-	Description:
-	Invokes Pythia function that creates a backup of current mission.sqm fillWeaponsFromPool.
+    Description:
+    Invokes Pythia function that creates a backup of current mission.sqm fillWeaponsFromPool.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Return Value:
-	BOOLEAN - True on success, false if failed
+    Return Value:
+    BOOLEAN - True on success, false if failed
 */
 
 //Just to be sure
@@ -23,11 +23,11 @@ if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", fal
 //Pythia is needed
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-	if (profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) then
-	{
-		["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
-	};
-	false
+    if (profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) then
+    {
+        ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
+    };
+    false
 };
 
 if !(fileExists "mission.sqm") exitWith {false};
@@ -38,12 +38,12 @@ private _prefix = "";
 
 if (_backupRoot == "") then
 {
-	_backupRoot = _missionRoot + ".enh_mission_sqm_backups";
+    _backupRoot = _missionRoot + ".enh_mission_sqm_backups";
 }
 else
 {
-	//If we dump all backups into one dir, we should add some prefix for convenience
-	_prefix = format ["%1.%2_", missionName, worldName]; //"scriptLibrary.VR_"
+    //If we dump all backups into one dir, we should add some prefix for convenience
+    _prefix = format ["%1.%2_", missionName, worldName]; //"scriptLibrary.VR_"
 };
 
 private _sysTimeFormatted = systemTime apply {str _x} joinString "_";

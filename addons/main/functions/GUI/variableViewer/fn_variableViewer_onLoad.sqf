@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2020-02-11
+    Date: 2020-02-11
 
-	Description:
-	Used by the ENH_VariableViewer GUI. Called on load.
+    Description:
+    Used by the ENH_VariableViewer GUI. Called on load.
 
-	Parameter(s):
-	0: Display - ENH_VariableViewer GUI
+    Parameter(s):
+    0: Display - ENH_VariableViewer GUI
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -36,38 +36,38 @@ uiNamespace setVariable ["ENH_VariableViewer_Namespaces", _namespaces];
 private _lastNamespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];
 private _icon = "";
 {
-	if (_x isEqualType "") then
-	{
-		_ctrlNamespace lbAdd _x;
-	}
-	else
-	{
-		_ctrlNamespace lbAdd str _x;
-	};
-	if (_x isEqualTo _lastNamespace) then
-	{
-		_ctrlNamespace lbSetCurSel _forEachIndex;
-	};
-	switch (typeName _x) do
-	{
-		case "OBJECT":
-		{
-			_icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeObjects_ca.paa";
-		};
-		case "GROUP":
-		{
-			_icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeGroups_ca.paa";
-		};
-		case "LOCATION":
-		{
-			_icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\locationList_ca.paa";
-		};
-		case "STRING":
-		{
-			_icon = "\a3\Modules_F_Curator\Data\portraitLightning_ca.paa";
-		};
-	};
-	_ctrlNamespace lbSetPicture [_forEachIndex, _icon];
+    if (_x isEqualType "") then
+    {
+        _ctrlNamespace lbAdd _x;
+    }
+    else
+    {
+        _ctrlNamespace lbAdd str _x;
+    };
+    if (_x isEqualTo _lastNamespace) then
+    {
+        _ctrlNamespace lbSetCurSel _forEachIndex;
+    };
+    switch (typeName _x) do
+    {
+        case "OBJECT":
+        {
+            _icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeObjects_ca.paa";
+        };
+        case "GROUP":
+        {
+            _icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelRight\modeGroups_ca.paa";
+        };
+        case "LOCATION":
+        {
+            _icon = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\locationList_ca.paa";
+        };
+        case "STRING":
+        {
+            _icon = "\a3\Modules_F_Curator\Data\portraitLightning_ca.paa";
+        };
+    };
+    _ctrlNamespace lbSetPicture [_forEachIndex, _icon];
 } forEach _namespaces;
 
 CTRL(IDC_VARIABLEVIEWER_NAMESPACE) ctrlAddEventHandler ["LBSelChanged", {_this call ENH_fnc_variableViewer_onFilterChanged}];
@@ -75,39 +75,39 @@ CTRL(IDC_VARIABLEVIEWER_NAMESPACE) ctrlAddEventHandler ["LBSelChanged", {_this c
 //Handle searching
 CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
 {
-	params ["_ctrlEdit", "_newText"];
-	private _display = ctrlParent _ctrlEdit;
+    params ["_ctrlEdit", "_newText"];
+    private _display = ctrlParent _ctrlEdit;
 
-	[] call ENH_fnc_variableViewer_fillLNB;
+    [] call ENH_fnc_variableViewer_fillLNB;
 
-	if (_newText == "") then
-	{
-		CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlSetText TEXTURE_SEARCH_START;
-	}
-	else
-	{
-		CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlSetText TEXTURE_SEARCH_END;
-	};
+    if (_newText == "") then
+    {
+        CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlSetText TEXTURE_SEARCH_START;
+    }
+    else
+    {
+        CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlSetText TEXTURE_SEARCH_END;
+    };
 }];
 
 //CTRL + F to focus search
 _display displayAddEventHandler ["KeyDown", //Focus Search
 {
-	params ["_display", "_key", "", "_ctrl"];
-	if (_key isEqualTo 33 && _ctrl) then
-	{
-		ctrlSetFocus CTRL(IDC_VARIABLEVIEWER_SEARCH);
-	}
+    params ["_display", "_key", "", "_ctrl"];
+    if (_key isEqualTo 33 && _ctrl) then
+    {
+        ctrlSetFocus CTRL(IDC_VARIABLEVIEWER_SEARCH);
+    }
 }];
 
 //Reset search
 CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlAddEventHandler ["ButtonClick",
 {
-	params ["_ctrlButton"];
-	private _display = ctrlParent _ctrlButton;
+    params ["_ctrlButton"];
+    private _display = ctrlParent _ctrlButton;
 
-	CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlSetText "";
-	_ctrlButton ctrlSetText TEXTURE_SEARCH_START
+    CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlSetText "";
+    _ctrlButton ctrlSetText TEXTURE_SEARCH_START
 }];
 
 CTRL(IDC_VARIABLEVIEWER_LIST) ctrlAddEventHandler ["LBSelChanged", {_this call ENH_fnc_variableViewer_onLNBSelChanged}];
@@ -115,8 +115,8 @@ CTRL(IDC_VARIABLEVIEWER_LIST) ctrlAddEventHandler ["LBSelChanged", {_this call E
 //Update list if show functions state changes
 CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) ctrlAddEventHandler ["CheckedChanged",
 {
-	profileNamespace setVariable ["ENH_VariableViewer_HideFunctions", [false, true] select _this#1];
-	[] call ENH_fnc_variableViewer_fillLNB;
+    profileNamespace setVariable ["ENH_VariableViewer_HideFunctions", [false, true] select _this#1];
+    [] call ENH_fnc_variableViewer_fillLNB;
 }];
 
 //Fill ListNbox

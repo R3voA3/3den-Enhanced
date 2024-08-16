@@ -1,20 +1,20 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Description:
-	Replaces all selected Eden entities with empty ones.
+    Description:
+    Replaces all selected Eden entities with empty ones.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 private _toReplace = get3DENSelected "Object";
 
 {
-	delete3DENEntities crew _x;
+    delete3DENEntities crew _x;
 } forEach _toReplace;
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

@@ -5,12 +5,12 @@ let dst = releases.join("@" + HEMTT.project().name() + " v" + HEMTT.project().ve
 
 if src.is_file()
 { // support --no-archive
-	if !src.move(dst)
-	{
-		fatal("Failed to move " + src + " to " + dst);
-	}
-	else
-	{
-		print("Zip file created: " + dst)
-	}
+    if !src.move(dst)
+    {
+        fatal("Failed to move " + src + " to " + dst);
+    }
+    else
+    {
+        print("Zip file created: " + dst)
+    }
 }

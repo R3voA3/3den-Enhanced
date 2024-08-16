@@ -1,16 +1,16 @@
 /*
-	Author: R3vo
+    Author: R3vo
 
-	Date: 2021-10-11
+    Date: 2021-10-11
 
-	Description:
-	Makes sure menu strip entries are properly checked.
+    Description:
+    Makes sure menu strip entries are properly checked.
 
-	Parameter(s):
-	-
+    Parameter(s):
+    -
 
-	Returns:
-	-
+    Returns:
+    -
 */
 
 #include "\x\enh\addons\main\script_component.hpp"
@@ -25,8 +25,8 @@ private _showOtherFiles = profileNamespace getVariable ["ENH_FunctionsViewer_Sho
 
 for "_i" from 0 to 13 do
 {
-	_ctrlMenu menuSetCheck [[0, _i], false];
-	_ctrlMenu menuEnable [[0, _i], true];
+    _ctrlMenu menuSetCheck [[0, _i], false];
+    _ctrlMenu menuEnable [[0, _i], true];
 };
 
 //Config mode or other file mode
@@ -57,9 +57,9 @@ _ctrlMenu menuEnable [[0, 7], !_showOtherFiles];
 
 if (_modeIndex == 3) then
 {
-	_ctrlMenu menuSetCheck [[0, 5], false];
-	_ctrlMenu menuSetCheck [[0, 6], false];
-	_ctrlMenu menuSetCheck [[0, 7], false];
+    _ctrlMenu menuSetCheck [[0, 5], false];
+    _ctrlMenu menuSetCheck [[0, 6], false];
+    _ctrlMenu menuSetCheck [[0, 7], false];
 };
 
 //As this function is called everytime a setting is changed we save the namespace here
