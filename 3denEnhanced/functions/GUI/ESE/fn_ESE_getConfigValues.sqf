@@ -24,6 +24,7 @@ private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", 
 private _itemsHashMap = createHashMap;
 
 if (count _input > 0) then {
+    diag_log format["_input: (%1)", _input];
     _input apply
     {
         private _class = configName _x;
