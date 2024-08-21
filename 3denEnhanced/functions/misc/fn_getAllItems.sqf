@@ -1,22 +1,19 @@
 /*
-  Author: R3vo
+    Author: R3vo
 
-  Date: 2021-01-24
+    Date: 2021-01-24
 
-  Description:
-  Gets all items available for unit and vehicle loadouts and saves them in the uiNamespace variables ENH_ESE_allItems.
-  See _items array for the format.
-  Furthermore, it stores all addons in the uiNamespace variable ENH_ESE_allAddons.
+    Description:
+    Gets all items available for unit and vehicle loadouts and saves them in the uiNamespace variables ENH_ESE_allItems.
+    See _items array for the format.
+    Furthermore, it stores all addons in the uiNamespace variable ENH_ESE_allAddons.
 
-  Parameter(s):
-  -
+    Parameter(s):
+    -
 
-  Returns:
-  -
+    Returns:
+    -
 */
-
-#define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
-"Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item"]
 
 #define SPECIAL_ITEMS [["Antibiotic","Antibiotics","\a3\Missions_F_Oldman\Props\data\Antibiotic_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
 ["Antimalaricum","Antimalarial Pills","\a3\Missions_F_Oldman\Props\data\Antimalaricum_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
@@ -52,48 +49,13 @@
 
 #define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
 
-if (uiNamespace getVariable ["ENH_ESE_allItems", []] isNotEqualTo []) exitWith {};
-
-private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
-private _itemsHashMap = createHashMap;
+if (uiNamespace getVariable ["ENH_ESE_itemsHashMap", []] isNotEqualTo []) exitWith {};
 
 private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
-                          (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
+                                                    (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
 
-_allItemConfigs apply
-{
-  private _class = configName _x;
-  (_class call BIS_fnc_itemType) params ["_category", "_specificType"];
-  if ((_category in TYPES_WHITELIST || _specificType in TYPES_WHITELIST && _specificType != "UnknownEquipment") && {if (isArray (_x >> "muzzles")) then {_class call BIS_fnc_baseWeapon == _class} else {true}}) then
-  {
-    //Modify some _specificTypes
-    if (_specificType == "MissileLauncher") then {_specificType = "RocketLauncher"};//Same type for all launchers
-    if (_specificType in ["Throw", "SmokeShell", "Flare"]) then {_specificType = "Grenade"};//Same type for all grenades, flares, chemlights, smoke
-    if (_specificType == "AccessoryBipod" && {_class isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"]}) then {_specificType = "Item"};
+private _itemsConfigVaules = _allItemConfigs call ENH_fnc_ESE_getConfigValues;
 
-    //Get the DLC, make sure it's a DLC and was not modified by a mod (CBA, ACE)
-    (_x call ENH_fnc_getConfigSourceAddon) params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
-    _addons pushBackUnique [_addonClass, _addonName, _addonIcon];
-
-    _itemsHashMap insert
-    [
-      [
-        toLower _class, //Make the key lowercase. Some configs don't use the proper casing (Thanks BI ;P)
-        [
-          getText (_x >> "DisplayName"),
-          getText (_x >> "Picture"),
-          _addonClass,
-          _addonIcon,
-          _category,
-          _specificType,
-          getText (_x >> "descriptionShort") regexReplace ["<br[\W ]*\/>", "\n"],
-          _class //Properly cased configname for displaying
-        ]
-      ]
-    ];
-  };
-};
-
-uiNamespace setVariable ["ENH_ESE_types", TYPES_WHITELIST];
-uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsHashMap];
-uiNamespace setVariable ["ENH_ESE_allAddons", _addons - [["","",""]]]; //Remove empty mod
+uiNamespace setVariable ["ENH_ESE_types", _itemsConfigVaules#0];
+uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsConfigVaules#1];
+uiNamespace setVariable ["ENH_ESE_allAddons", (_itemsConfigVaules#2) - [["","",""]]]; //Remove empty mod

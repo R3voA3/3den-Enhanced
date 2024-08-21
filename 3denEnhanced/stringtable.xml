@@ -7162,6 +7162,16 @@
         <Spanish>Ordenar por Mod</Spanish>
         <Italian>Ordina per Mod</Italian>
     </Key>
+    <Key ID="STR_ENH_ESE_IMPORTFROMARRAY">
+        <English>Import from Clipboard</English>
+        <German>Aus der Zwischenablage importieren</German>
+        <Chinesesimp>從剪貼簿匯入</Chinesesimp>
+        <Chinese>从剪贴板导入</Chinese>
+        <Polish>Importuj ze schowka</Polish>
+        <Spanish>Importar desde el portapapeles</Spanish>
+        <Italian>Importa dagli appunti</Italian>
+        <French>Importer depuis le Presse-papiers</French>
+    </Key>
     <Key ID="STR_ENH_ESE_TEMPLATES">
         <English>Templates</English>
         <Russian>Шаблоны</Russian>

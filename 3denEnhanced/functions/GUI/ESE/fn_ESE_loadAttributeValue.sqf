@@ -1,29 +1,37 @@
 /*
-  Author: R3vo
+    Author: R3vo
 
-  Date: 2020-06-14
+    Date: 2020-06-14
 
-  Description:
-  Used by the ENH_ESE GUI. Used to fill the inventory listbox with set attribute value.
+    Description:
+    Used by the ENH_ESE GUI. Used to fill the inventory listbox with set attribute value.
 
-  Parameter(s):
-  0: BOOLEAN - Mode. False to load attribute value, true to insert external value
+    Parameter(s):
+    0: BOOLEAN - Mode. False to load attribute value, true to insert external value
+    1: ARRAY - Attribute data to be applied
+    2: BOOLEAN - True to get attribute vales from clipboard
 
-  Returns:
-  -
+    Returns:
+    -
 */
 
-#include "\3denEnhanced\defines\defineCommon.inc"
+#include "\x\enh\addons\main\script_component.hpp"
 disableSerialization;
 
-params [["_loadAttribute", true], ["_attributeValue", []]];
+params [
+    ["_loadAttribute", true],
+    ["_attributeValue", []],
+    ["_fromClipboard", false, [false]]
+];
 
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 
 if (_loadAttribute) then
 {
-  _attributeValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0;
+    _attributeValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0
+} else {
+    if (_fromClipboard) then {_attributeValue = call ENH_fnc_ESE_parseClipboardValues}
 };
 
 _attributeValue = parseSimpleArray _attributeValue;//Eden saves attributes as string
@@ -34,12 +42,12 @@ private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
 
 private _fnc_addItems =
 {
-  params ["_configNamesArray", "_amountsArray"];
-  {
-    private _amount = _amountsArray param [_forEachIndex, 1];//If virtual inventory, then default to amount 1
-    (_itemsHashMap get toLower _x) params ["_displayName", "_image", "", "_addonIcon", "", "_specificType", "_descriptionShort", "_configNameCaseSens"];
-    [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
-  } forEach _configNamesArray;
+    params ["_configNamesArray", "_amountsArray"];
+    {
+        private _amount = _amountsArray param [_forEachIndex, 1];//If virtual inventory, then default to amount 1
+        (_itemsHashMap get toLower _x) params ["_displayName", "_image", "", "_addonIcon", "", "_specificType", "_descriptionShort", "_configNameCaseSens"];
+        [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
+    } forEach _configNamesArray;
 };
 
 call ENH_fnc_ESE_clearInventory;
