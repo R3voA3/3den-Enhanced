@@ -14,8 +14,7 @@
     ARRAY, NOTHING: See Parameters
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
-
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
 params [["_return", false], ["_itemsDetails", []]];
 private _display = uiNamespace getVariable "ENH_Display_ESE";
@@ -42,9 +41,14 @@ if (_rowCount > 0) then {
 
 for "_i" from 0 to _rows - 1 do
 {
-    private _configName = _ctrlInventory lnbData [_i, 0];
+    private "_configName";
     private _amount = 1;
-    if (_rowCount == 0) then {_amount = _ctrlInventory lnbValue [_i, 1]};
+    if (_rowCount == 0) then {
+        _configName = _ctrlInventory lnbData [_i, 0];
+        _amount = _ctrlInventory lnbValue [_i, 1]
+    } else {
+        _configName = (keys _itemsHashMap) select _i
+    };
     (_itemsHashMap getOrDefault [toLower _configName, []]) params ["", "", "", "", ["_category", ""], ["_specificType", ""]];
     switch (true) do
     {

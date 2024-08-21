@@ -14,6 +14,7 @@
 */
 
 
+#include "\3denEnhanced\defines\defineCommon.inc"
 private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
@@ -22,6 +23,23 @@ if (isNil "_importList" || {!(_importList isEqualType [])} || {!(_importList isE
     (ENH_ESE_target get3DENAttribute "ammoBox") # 0
 };
 
-private _attributeValue = (_importList call ENH_fnc_ESE_getConfigValues) select 1;
+private _configs = _importList apply {
+    if (isClass(configFile >> "CfgWeapons" >> _x)) then {
+        configFile >> "CfgWeapons" >> _x
+    } else {
+        if (isClass(configFile >> "CfgMagazines" >> _x)) then {
+            configFile >> "CfgMagazines" >> _x
+        } else {
+            if (isClass(configFile >> "CfgGlasses" >> _x)) then {
+                configFile >> "CfgGlasses" >> _x
+            } else {
+                if (isClass(configFile >> "CfgVehicles" >> _x)) then {
+                    configFile >> "CfgVehicles" >> _x
+                }
+            }
+        }
+    }
+};
 
+private _attributeValue = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
 [true, _attributeValue] call ENH_fnc_ESE_applyAttribute
