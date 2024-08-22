@@ -15,9 +15,12 @@
     -
 */
 
+<<<<<<< HEAD:3denEnhanced/functions/misc/fn_getAllItems.sqf
+=======
 #define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
 "Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 
+>>>>>>> origin/master:addons/main/functions/misc/fn_getAllItems.sqf
 #define SPECIAL_ITEMS [["Antibiotic","Antibiotics","\a3\Missions_F_Oldman\Props\data\Antibiotic_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
 ["Antimalaricum","Antimalarial Pills","\a3\Missions_F_Oldman\Props\data\Antimalaricum_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
 ["AntimalaricumVaccine","Atrox Counteragent","\a3\Missions_F_Oldman\Props\data\AntimalaricumVaccine_ca.paa","expansion","a3\data_f_exp\logos\arma3_exp_logo_small_ca.paa","Item","Map",""],\
@@ -53,13 +56,23 @@
 #define CONDITION "getNumber (_x >> 'scope') == 2 && getText (_x >> 'picture') != '' && getText (_x >> 'model') != ''"
 
 if (uiNamespace getVariable ["ENH_ESE_itemsHashMap", []] isNotEqualTo []) exitWith {};
+<<<<<<< HEAD:3denEnhanced/functions/misc/fn_getAllItems.sqf
+=======
 
 private _addons = [["", localize "$STR_3DEN_ATTRIBUTES_DEFAULT_UNCHANGED_TEXT", ""]];//Everything
 private _itemsHashMap = createHashMap;
+>>>>>>> origin/master:addons/main/functions/misc/fn_getAllItems.sqf
 
 private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
                                                     (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
 
+<<<<<<< HEAD:3denEnhanced/functions/misc/fn_getAllItems.sqf
+private _itemsConfigVaules = [_allItemConfigs] call ENH_fnc_ESE_getConfigValues;
+
+uiNamespace setVariable ["ENH_ESE_types", _itemsConfigVaules#0];
+uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsConfigVaules#1];
+uiNamespace setVariable ["ENH_ESE_allAddons", (_itemsConfigVaules#2) - [["","",""]]]; //Remove empty mod
+=======
 _allItemConfigs apply
 {
     private _class = configName _x;
@@ -97,3 +110,4 @@ _allItemConfigs apply
 uiNamespace setVariable ["ENH_ESE_types", TYPES_WHITELIST];
 uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsHashMap];
 uiNamespace setVariable ["ENH_ESE_allAddons", _addons - [["","",""]]]; //Remove empty mod
+>>>>>>> origin/master:addons/main/functions/misc/fn_getAllItems.sqf
