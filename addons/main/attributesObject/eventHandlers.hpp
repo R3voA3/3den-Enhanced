@@ -6,8 +6,7 @@ class ENH_EventHandlers
     {
         class ENH_EventHandlers_Subcategory
         {
-            description = "Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> and <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/addEventHandler'>addEventHandler</a> for more information.";
-            // property = "ENH_Objects_EventHandlers_Subcategory";
+            description = "$STR_ENH_OBJECT_ATTRIBUTES_EVENT_HANDLERS";
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
