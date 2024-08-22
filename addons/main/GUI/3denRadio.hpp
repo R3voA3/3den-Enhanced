@@ -4,8 +4,8 @@ class ENH_3DENRadio
     onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
     class ControlsBackground
     {
-    DISABLE_BACKGROUND
-    class Header: ctrlStaticTitle
+        DISABLE_BACKGROUND
+        class Header: ctrlStaticTitle
         {
             text = "3DEN Radio";
             x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
