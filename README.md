@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-    <img src="https://github.com/R3voA3/3den-Enhanced/blob/master/image/wikiLogo.png">
+    <img src="https://github.com/R3voA3/3den-Enhanced/blob/master/images/wikiLogo.png">
 </p>
 
 <p align="center">
