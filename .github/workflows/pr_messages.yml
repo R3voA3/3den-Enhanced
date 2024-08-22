@@ -2,7 +2,8 @@ name: Update Contributors
 
 on:
   # Trigger the workflow on push or pull request
-  pull_request:
+  pull_request_target:
+    types: [opened]
     branches:
       - master
 jobs:
@@ -16,5 +17,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Make sure to also update https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTORS.md'
+              body: 'Do not forget to also update the following files:\n- [CONTRIBUTORS.md](https://github.com/R3voA3/3den-Enhanced/blob/master/]|(https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTORS.md))\n- [CHANGELOG.md](https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md)'
             })
