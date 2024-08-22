@@ -9,4 +9,4 @@
 releases
 .hemttout
 .vscode
-.hemtt/missions
+.hemtt/missions/**/*.enh_mission_sqm_backups

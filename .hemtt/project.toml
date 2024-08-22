@@ -34,7 +34,7 @@ workshop = [
     "2073243184",  # 3Den Stringtable Viewer
 ]
 
-mission = "scriptLibrary.VR" # Mission to launch directly into the editor with
+mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
 
 # parameters = [
 # ]
