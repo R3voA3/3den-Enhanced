@@ -3,7 +3,7 @@
 | ConnorAU, shukari, linkion, Hypoxic, anthonybartczak, klausman | Scripting |
 | mihuan-0 | Chinese Translation |
 | XerXesCZ | Czech Translation |
-| Poslovitch Alfred-Neuman | French Translation |
+| Poslovitch, Alfred-Neuman | French Translation |
 | GhostJumper, Mr-Melker | German Translation |
 | zagor64bz, Fil-ric | Italian Translation |
 | Kofeina101, Krzyciu, genjonakasone | Polish Translation |
