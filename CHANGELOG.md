@@ -54,6 +54,7 @@
     - Added support for markers, modules and objects
     - Added categories
     - Improved UI layout
+- Updated French translation thanks to Alfred-Neuman
 
 ## REMOVED
 - Customization via userconfig
