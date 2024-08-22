@@ -5,6 +5,7 @@
     - **ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!**
 - Added object event handler attributes
 - Added group event handler attributes
+- Added import from clipboard function to ESE #306 (Thanks to Pixelated-Grunt)
 
 ## CHANGED
 - 3den Enhanced is now build with HEMTT
