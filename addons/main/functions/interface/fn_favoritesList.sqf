@@ -273,7 +273,7 @@ switch _mode do
                         _icon = getText (configFile >> "CfgVehicleIcons" >> _icon);
                     };
 
-                    _indexFolder = if (_entityType == "object") then {2} else {1};
+                    _indexFolder = [1, 2] select (_entityType == "object");
                 };
                 case "marker":
                 {
