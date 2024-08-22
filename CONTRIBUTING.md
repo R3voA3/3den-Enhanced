@@ -16,9 +16,9 @@ You can help us by adding more translations for this modification. Read below to
 
 ## How to?
 * [Open the stringtable.xml](https://github.com/R3voA3/3den-Enhanced/blob/master/3denEnhanced/stringtable.xml)
-  * As alternative you can also make your changes directly in the browser on GitHub. 
+    * As alternative you can also make your changes directly in the browser on GitHub.
 * [Download Tabler](https://github.com/bux/tabler/releases)
-  * Tabler is optional, you can also edit the stringtable.xml in your text editor of choice
+    * Tabler is optional, you can also edit the stringtable.xml in your text editor of choice
 * Open the stringtable.xml with Tabler or your text editor of choice
 * Fill in missing translations
 * Save the stringtable.xml

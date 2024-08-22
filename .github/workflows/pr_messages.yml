@@ -1,0 +1,21 @@
+name: Update Contributors
+
+on:
+  # Trigger the workflow on push or pull request
+  pull_request_target:
+    types: [opened]
+    branches:
+      - master
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Do not forget to also update the following files:\n- [CONTRIBUTORS.md](https://github.com/R3voA3/3den-Enhanced/blob/master/]|(https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTORS.md))\n- [CHANGELOG.md](https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md)'
+            })

@@ -1,0 +1,42 @@
+name = "3den Enhanced"
+mainprefix = "x"
+prefix = "enh"
+author = "R3vo"
+
+[files]
+include = [
+    "LICENSE.md",
+    "CONTRIBUTORS.md",
+    "userconfig",
+    "python_code/**",
+    "keys/**",
+]
+
+[version]
+major = 8
+minor = 0
+patch = 0
+git_hash = 0
+
+[hemtt.release]
+sign = true
+
+[properties]
+author = "R3vo"
+url = "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
+
+# Launched with `hemtt launch`
+[hemtt.launch.default]
+workshop = [
+    "450814997",   # CBA_A3
+    "1751569185",  # Pythia
+    "1387934106",  # 7erra's Editing Extensions
+    "2073243184",  # 3Den Stringtable Viewer
+]
+
+mission = "scriptLibrary.VR" # Mission to launch directly into the editor with
+
+# parameters = [
+# ]
+
+executable = "arma3_x64"

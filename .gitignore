@@ -2,8 +2,11 @@
 *.biprivatekey
 *.code-workspace
 *.txt
+*.sqfc
+*.url
 
 #Folders
-versions/
-SQFC/
-old files/
+releases
+.hemttout
+.vscode
+.hemtt/missions

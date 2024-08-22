@@ -1,15 +1,17 @@
 {
-  "folders": [
-    {
-      "path": "."
-    }
-  ],
-  "settings": {
-    "files.associations": {
-      "*.bikb": "cpp"
+    "folders": [
+        {
+            "path": "."
         },
-        "files.trimTrailingWhitespace": true,
-        "editor.tabSize": 1,
-        "workbench.startupEditor": "none"
-  }
+        {
+            "name": "3den-Enhanced.wiki",
+            "path": "../3den-Enhanced.wiki"
+        }
+    ],
+    "settings": {
+        "[sqf]": {
+            "editor.insertSpaces": true,
+            "editor.detectIndentation": false
+        }
+    }
 }

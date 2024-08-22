@@ -1,31 +1,31 @@
 # Translation Progress
-**Last update:** 29.12.2023
+**Last update:** 05.10.2024 15:49
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
-932 | 8133 | 79,33 % |
+904 | 8190 | 82,36 % |
 
 | Language | Translated Entries | Missing Entries | Progress |
 |----------|:-----------------:|--------:|--------:|
 | | | |
-| English | 932 | 0 | 100,00 %
+| English | 904 | 0 | 100,00 %
 | | | |
-| German | 931 | 1 | 99,89 %
+| German | 904 | 0 | 100,00 %
 | | | |
-| Italian | 606 | 326 | 65,02 %
+| Italian | 596 | 308 | 65,93 %
 | | | |
-| Czech | 475 | 457 | 50,97 %
+| Czech | 467 | 437 | 51,66 %
 | | | |
-| Chinesesimp | 931 | 1 | 99,89 %
+| Chinesesimp | 903 | 1 | 99,89 %
 | | | |
-| Spanish | 931 | 1 | 99,89 %
+| Spanish | 903 | 1 | 99,89 %
 | | | |
-| French | 630 | 302 | 67,60 %
+| French | 900 | 4 | 99,56 %
 | | | |
-| Polish | 931 | 1 | 99,89 %
+| Polish | 903 | 1 | 99,89 %
 | | | |
-| Russian | 823 | 109 | 88,30 %
+| Russian | 795 | 109 | 87,94 %
 | | | |
-| Portuguese | 12 | 920 | 1,29 %
+| Portuguese | 12 | 892 | 1,33 %
 | | | |
-| Chinese | 931 | 1 | 99,89 %
+| Chinese | 903 | 1 | 99,89 %
