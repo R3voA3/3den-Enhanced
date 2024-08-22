@@ -16,5 +16,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Please also update the following files if you haven not yet:\n- [CONTRIBUTORS.md](https://github.com/R3voA3/3den-Enhanced/blob/master/]|(https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTORS.md))\n- [CHANGELOG.md](https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md)'
+              body: 'If you haven't done so, please update the following files as well:\n- [CONTRIBUTORS.md](https://github.com/R3voA3/3den-Enhanced/blob/master/]|(https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTORS.md))\n- [CHANGELOG.md](https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md)'
             })
