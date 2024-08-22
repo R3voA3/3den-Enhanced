@@ -14,8 +14,8 @@
 */
 
 
-#include "\3denEnhanced\defines\defineCommon.inc"
-private _importList = call compile copyFromClipboard;
+#include "\x\enh\addons\main\script_component.hpp"
+private _importList = call compile copyFromClipboard; // Is this safe?
 
 // Verify import list is in correct format
 if (isNil "_importList" || {!(_importList isEqualType [])} || {!(_importList isEqualTypeAll "")}) exitWith {
