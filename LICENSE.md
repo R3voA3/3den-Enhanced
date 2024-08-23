@@ -1,5 +1,5 @@
 # End User License Agreement
-[<img src="https://raw.githubusercontent.com/R3voA3/3den-Enhanced/master/wiki/apl-sa.png">](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
+[<img src="https://raw.githubusercontent.com/R3voA3/3den-Enhanced/master/images/apl-sa.png">](https://www.bohemia.net/community/licenses/arma-public-license-share-alike)
 
 Visit [Bohemia.net](https://www.bohemia.net/community/licenses/arma-public-license-share-alike) for more details.
 
