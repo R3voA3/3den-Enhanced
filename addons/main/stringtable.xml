@@ -7043,6 +7043,16 @@
             <Italian>Ordina per Tipo</Italian>
             <French>Trier par type</French>
         </Key>
+        <Key ID="STR_ENH_ESE_IMPORTFROMCLIPBOARD">
+            <English>Import from Clipboard</English>
+            <German>Aus der Zwischenablage importieren</German>
+            <Chinesesimp>從剪貼簿匯入</Chinesesimp>
+            <Chinese>从剪贴板导入</Chinese>
+            <Polish>Importuj ze schowka</Polish>
+            <Spanish>Importar desde el portapapeles</Spanish>
+            <Italian>Importa dagli appunti</Italian>
+            <French>Importer depuis le Presse-papiers</French>
+        </Key>
         <Key ID="STR_ENH_MAIN_ESE_SORTBYMOD">
             <English>Sort by Mod</English>
             <German>Nach Modifikation sortieren</German>

@@ -8,17 +8,16 @@
 
     Parameter(s):
     0: BOOLEAN - True to not set the attribute and only return the attribute value. Default: false
+    1: ARRAY - Items details. Same data structure as _itemsHashMap.
 
     Returns:
     ARRAY, NOTHING: See Parameters
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
-
+#include "\3denEnhanced\defines\defineCommon.inc"
 disableSerialization;
-params [["_return", false]];
+params [["_return", false], ["_itemsDetails", []]];
 private _display = uiNamespace getVariable "ENH_Display_ESE";
-private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _rows = lnbSize _ctrlInventory select 0;
 
@@ -32,10 +31,24 @@ private _magazinesAmount = [];
 private _itemsAmount = [];
 private _backpacksAmount = [];
 
+private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
+
+private _rowCount = count _itemsDetails;
+if (_rowCount > 0) then {
+    _itemsHashMap = _itemsDetails;
+    _rows = _rowCount
+};
+
 for "_i" from 0 to _rows - 1 do
 {
-    private _configName = _ctrlInventory lnbData [_i, 0];
-    private _amount = _ctrlInventory lnbValue [_i, 1];
+    private "_configName";
+    private _amount = 1;
+    if (_rowCount == 0) then {
+        _configName = _ctrlInventory lnbData [_i, 0];
+        _amount = _ctrlInventory lnbValue [_i, 1]
+    } else {
+        _configName = (keys _itemsHashMap) select _i
+    };
     (_itemsHashMap getOrDefault [toLower _configName, []]) params ["", "", "", "", ["_category", ""], ["_specificType", ""]];
     switch (true) do
     {

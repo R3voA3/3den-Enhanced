@@ -14,8 +14,8 @@
 */
 
 
-#include "\x\enh\addons\main\script_component.hpp"
-private _importList = call compile copyFromClipboard; // Is this safe?
+#include "\3denEnhanced\defines\defineCommon.inc"
+private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
 if (isNil "_importList" || {!(_importList isEqualType [])} || {!(_importList isEqualTypeAll "")}) exitWith {
@@ -41,5 +41,9 @@ private _configs = _importList apply {
     }
 };
 
+//private _configValues = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
+//private _attributeValue = [true, _configValues] call ENH_fnc_ESE_applyAttribute;
+//
+//_attributeValue
 private _attributeValue = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
 [true, _attributeValue] call ENH_fnc_ESE_applyAttribute
