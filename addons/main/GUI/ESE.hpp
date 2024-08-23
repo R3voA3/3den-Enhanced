@@ -110,6 +110,7 @@ class ENH_ESE
                         "SortbyCount",
                         "SortbyMod",
                         "SortbyType",
+                        "Separator",
                         "ImportFromClipboard"
                     };
                 };
