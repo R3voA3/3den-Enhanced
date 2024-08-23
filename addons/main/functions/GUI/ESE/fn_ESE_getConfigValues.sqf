@@ -14,7 +14,7 @@
 */
 
 
-#include "\3denEnhanced\defines\defineCommon.inc"
+#include "\x\enh\addons\main\script_component.hpp"
 #define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
 "Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 

@@ -15,7 +15,7 @@
     -
 */
 
-#include "\3denEnhanced\defines\defineCommon.inc"
+#include "\x\enh\addons\main\script_component.hpp"
 disableSerialization;
 
 params [

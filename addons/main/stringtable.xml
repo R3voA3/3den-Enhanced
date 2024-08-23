@@ -7043,7 +7043,7 @@
             <Italian>Ordina per Tipo</Italian>
             <French>Trier par type</French>
         </Key>
-        <Key ID="STR_ENH_ESE_IMPORTFROMCLIPBOARD">
+        <Key ID="STR_ENH_MAIN_ESE_IMPORTFROMCLIPBOARD">
             <English>Import from Clipboard</English>
             <German>Aus der Zwischenablage importieren</German>
             <Chinesesimp>從剪貼簿匯入</Chinesesimp>

@@ -14,7 +14,7 @@
     ARRAY, NOTHING: See Parameters
 */
 
-#include "\3denEnhanced\defines\defineCommon.inc"
+#include "\x\enh\addons\main\script_component.hpp"
 disableSerialization;
 params [["_return", false], ["_itemsDetails", []]];
 private _display = uiNamespace getVariable "ENH_Display_ESE";

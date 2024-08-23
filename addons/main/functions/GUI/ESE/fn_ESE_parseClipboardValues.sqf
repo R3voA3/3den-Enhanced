@@ -14,7 +14,7 @@
 */
 
 
-#include "\3denEnhanced\defines\defineCommon.inc"
+#include "\x\enh\addons\main\script_component.hpp"
 private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
