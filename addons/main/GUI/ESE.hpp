@@ -109,7 +109,9 @@ class ENH_ESE
                         "SortbyClass",
                         "SortbyCount",
                         "SortbyMod",
-                        "SortbyType"
+                        "SortbyType",
+                        "Separator",
+                        "ImportFromClipboard"
                     };
                 };
                 class FolderFilter
@@ -268,6 +270,12 @@ class ENH_ESE
                     text = "$STR_ENH_MAIN_ESE_SORTBYTYPE";
                     action = "'type' call ENH_fnc_ESE_sort";
                     shortcuts[] = {DIK_5};
+                };
+                class ImportFromClipboard
+                {
+                    text = "$STR_ENH_MAIN_ESE_IMPORTFROMCLIPBOARD";
+                    action = "[false, [], true] call ENH_fnc_ESE_loadAttributeValue";
+                    shortcuts[] = {DIK_6};
                 };
                 //Filter
                 class ARs

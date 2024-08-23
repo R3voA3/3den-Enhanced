@@ -97,12 +97,14 @@ class CfgFunctions
             class ESE_close;
             class ESE_export;
             class ESE_fullArsenal;
+            class ESE_getConfigValues;
             class ESE_handleTemplates;
             class ESE_lbAdd;
             class ESE_lnbAdd;
             class ESE_loadAttributeValue;
             class ESE_onModFilterChanged;
             class ESE_open;
+            class ESE_parseClipboardValues;
             class ESE_removeItem;
             class ESE_resetSearch;
             class ESE_resetStorage;

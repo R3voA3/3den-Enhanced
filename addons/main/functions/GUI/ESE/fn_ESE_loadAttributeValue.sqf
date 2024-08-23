@@ -8,6 +8,8 @@
 
     Parameter(s):
     0: BOOLEAN - Mode. False to load attribute value, true to insert external value
+    1: ARRAY - Attribute data to be applied
+    2: BOOLEAN - True to get attribute vales from clipboard
 
     Returns:
     -
@@ -16,14 +18,20 @@
 #include "\x\enh\addons\main\script_component.hpp"
 disableSerialization;
 
-params [["_loadAttribute", true], ["_attributeValue", []]];
+params [
+    ["_loadAttribute", true],
+    ["_attributeValue", []],
+    ["_fromClipboard", false, [false]]
+];
 
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 
 if (_loadAttribute) then
 {
-    _attributeValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0;
+    _attributeValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0
+} else {
+    if (_fromClipboard) then {_attributeValue = call ENH_fnc_ESE_parseClipboardValues}
 };
 
 _attributeValue = parseSimpleArray _attributeValue;//Eden saves attributes as string
