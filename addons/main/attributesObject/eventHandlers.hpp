@@ -6,7 +6,7 @@ class ENH_EventHandlers
     {
         class ENH_EventHandlers_Subcategory
         {
-            description = "$STR_ENH_OBJECT_ATTRIBUTES_EVENT_HANDLERS";
+            description = "$STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS";
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
