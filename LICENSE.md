@@ -1,4 +1,4 @@
-Copyright (c) {YEAR} {AUTHOR}
+Copyright (c) 2024
 
 Brief summary of this Licence
 
