@@ -20,6 +20,10 @@ if (!is3DEN) exitWith {false};
 //Opt-in via preferences
 if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) exitWith {};
 
+//Check if missionName is in presets
+private _blacklist = profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQMBlacklist", ""];
+if (toLower missionName in tolower _blacklist) exitWith {};
+
 //Pythia is needed
 if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {

@@ -6,6 +6,7 @@
 - Added object event handler attributes
 - Added group event handler attributes
 - Added import from clipboard function to ESE #306 (Thanks to Pixelated-Grunt)
+- Added blacklist for mission.sqm backup.
 
 ## CHANGED
 - 3den Enhanced is now build with HEMTT
@@ -35,7 +36,7 @@
 - Dynamic view distance was no longer working after preview ended
 - Major code overhaul of things running from various event handlers
 - Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
-- Minimap code was optimizedw
+- Minimap code was optimized
 - Added description to menu strip items for easier documenation
 - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
 - Shortcuts in the shortcuts UI is now properly translated
