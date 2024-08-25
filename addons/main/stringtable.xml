@@ -7162,6 +7162,28 @@
             <Italian>Se abilitato, un backup della missione.sqm verrà creato quando lo scenario viene salvato o autosalvato.\nIl backup viene salvato all'interno della cartella dello scenario.\nPer far funzionare questo meccanismo di backup è necessaria la modifica di Pythia.\nMa assicuratevi di fare un backup del vostro scenario prima di abilitare questa opzione per la prima volta!</Italian>
             <Polish>Jeśli opcja ta jest włączona, kopia zapasowa pliku mission.sqm zostanie utworzona podczas zapisywania lub automatycznego zapisywania scenariusza. Kopie zapasowe są zapisywane w folderze scenariusza. Aby ten mechanizm tworzenia kopii zapasowych działał, wymagana jest modyfikacja Pythia. Upewnij się, że utworzyłeś kopię zapasową scenariusza przed włączeniem tej opcji po raz pierwszy!</Polish>
         </Key>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_DISPLAYNAME">
+            <English>Blacklist</English>
+            <Russian>Черный список</Russian>
+            <German>Blacklist</German>
+            <French>Liste noire</French>
+            <Spanish>Lista negra</Spanish>
+            <Chinesesimp>黑名单</Chinesesimp>
+            <Chinese>黑名單</Chinese>
+            <Italian>Lista nera</Italian>
+            <Polish>Czarna lista</Polish>
+        </Key>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP">
+            <English>If the 'missionName' is found in this list no backups will be created.</English>
+            <Russian>Если имя 'missionName' найдено в этом списке, резервные копии создаваться не будут.</Russian>
+            <German>Wenn der 'missionName' in dieser Liste gefunden wird, werden keine Sicherungen erstellt.</German>
+            <French>Si le 'missionName' se trouve dans cette liste, aucune sauvegarde ne sera créée.</French>
+            <Spanish>Si el 'missionName' se encuentra en esta lista no se creará ninguna copia de seguridad.</Spanish>
+            <Chinesesimp>如果在此列表中找到 “任务名称”，则不会创建备份。</Chinesesimp>
+            <Chinese>如果在此清單中找到「missionName」，則不會建立備份。</Chinese>
+            <Italian>Se 'missionName' viene trovato in questo elenco, non verranno creati backup.</Italian>
+            <Polish>Jeśli „missionName” znajduje się na tej liście, żadne kopie zapasowe nie zostaną utworzone.</Polish>
+        </Key>
         <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMPATH_DISPLAYNAME">
             <English>Path for mission backups</English>
             <Russian>Путь для резервных копий миссий</Russian>

@@ -16,3 +16,12 @@ class ENH_BackupMissionSQMPath
     expression = "profileNamespace setVariable ['ENH_EditorPreferences_BackupMissionSQMPath', _value]";
     defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMPath', '']";
 };
+class ENH_BackupMissionSQMBlacklist
+{
+    displayName = "$STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_DISPLAYNAME";
+    tooltip = "$STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP";
+    property = "ENH_BackupMissionSQMBlacklist";
+    control = "Edit";
+    expression = "profileNamespace setVariable ['ENH_EditorPreferences_BackupMissionSQMBlacklist', _value]";
+    defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMBlacklist', '']";
+};
