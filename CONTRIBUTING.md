@@ -24,7 +24,6 @@ You can help us by adding more translations for this modification. Read below to
 * Save the stringtable.xml
 * Create a pull request
 
-
-# [Translation Stats](https://github.com/RevoArma3/3den-Enhanced/blob/master/TRANSLATIONSTATS.md)
-
-# [Submit a request to change a specific translation](https://github.com/R3voA3/3den-Enhanced/issues/new?assignees=&labels=translation&template=translation_correction.yml)
+# See Also
+1. [Translation Stats](https://github.com/RevoArma3/3den-Enhanced/blob/master/TRANSLATIONSTATS.md)
+2. [Submit a request to change a specific translation](https://github.com/R3voA3/3den-Enhanced/issues/new?assignees=&labels=translation&template=translation_correction.yml)
