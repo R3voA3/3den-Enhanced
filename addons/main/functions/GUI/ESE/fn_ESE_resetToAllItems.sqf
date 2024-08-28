@@ -15,6 +15,7 @@
 
 
 #include "\x\enh\addons\main\script_component.hpp"
+private _display = uiNamespace getVariable ["ENH_Display_ESE", displayNull];
 
 // Restore the ENH_ESE_itemsHashMap variable
 uiNamespace setVariable ["ENH_ESE_itemsHashMap", uiNamespace getVariable "ENH_ESE_itemsHashMapClone"];
