@@ -7,14 +7,15 @@
     Used by the ENH_ESE GUI. Read and convert array from clipboard to inventory attributes.
 
     Parameter(s):
-    -
+    BOOL - true to return variable only. Default is false.
 
     Returns:
-    ARRAY - Result attributes that can be loaded into the inventory screen. Return all if failed.
+    ARRAY - Result attributes that can be loaded into the filter and inventory screens. Return all items if failed.
 */
 
 
 #include "\x\enh\addons\main\script_component.hpp"
+params [["_return", false, [false]]];
 private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
@@ -41,9 +42,6 @@ private _configs = _importList apply {
     }
 };
 
-//private _configValues = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
-//private _attributeValue = [true, _configValues] call ENH_fnc_ESE_applyAttribute;
-//
-//_attributeValue
 private _attributeValue = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
+if _return exitWith {_attributeValue};
 [true, _attributeValue] call ENH_fnc_ESE_applyAttribute

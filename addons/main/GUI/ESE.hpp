@@ -142,7 +142,11 @@ class ENH_ESE
                         "Backpacks",
                         "Headgear",
                         "Goggles",
-                        "NVGs"
+                        "NVGs",
+                        "Separator",
+                        "ImportToFilter",
+                        "Separator",
+                        "ResetToAllItems"
                     };
                 };
                 class FolderHelp
@@ -398,6 +402,16 @@ class ENH_ESE
                     text = "$STR_A3_RSCDISPLAYARSENAL_TAB_NVGS";
                     picture = "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\nvgs_ca.paa";
                     data = "NVGoggles";
+                };
+                class ImportToFilter
+                {
+                    text = "$STR_ENH_MAIN_ESE_IMPORTFROMCLIPBOARD";
+                    action = "[] call ENH_fnc_ESE_importToFilter";
+                };
+                class ResetToAllItems
+                {
+                    text = "$STR_A3_RSCDISPLAYARSENAL_RESET";
+                    action = "[] call ENH_fnc_ESE_resetToAllItems";
                 };
                 class InventoryItems: ARs
                 {
