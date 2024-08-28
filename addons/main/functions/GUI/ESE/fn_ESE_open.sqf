@@ -57,6 +57,10 @@ CTRL(IDC_ESE_AVAILABLEITEMSLIST) ctrlAddEventHandler ["LBSelChanged",
     private _itemsHashMap = uiNamespace getVariable ["ENH_ESE_itemsHashMap", createHashMap];
     private _lbCompItems = ctrlParent _lbAvailableItems displayCtrl IDC_ESE_COMPATIBLEITEMSLIST;
 
+    // Use the clone if exist
+    private _clone = uiNamespace getVariable ["ENH_ESE_itemsHashMapClone", nil];
+    if (!isNil("_clone")) then {_itemsHashMap = _clone};
+
     lbClear _lbCompItems;
 
     {
