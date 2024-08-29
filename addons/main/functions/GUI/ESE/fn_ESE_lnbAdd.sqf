@@ -22,7 +22,8 @@
 disableSerialization;
 params ["_ctrlLnb", "_data", "_text", "_image", "_addonIcon", "_value", "_tooltip", "_specificType"];
 
-if (_text != "") then {
+if (_text != "") then 
+{
     private _row = _ctrlLnb lnbAddRow ["", _text, str _value, ""];
 
     //Column #0
@@ -40,4 +41,4 @@ if (_text != "") then {
     //Column #3 - Addon Icon
     _ctrlLnb lnbSetPicture [[_row, 3], _addonIcon];
     _ctrlLnb lnbSetData [[_row, 3], _addonIcon]
-}
+};
