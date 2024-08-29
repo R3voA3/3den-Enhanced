@@ -99,6 +99,7 @@ class CfgFunctions
             class ESE_fullArsenal;
             class ESE_getConfigValues;
             class ESE_handleTemplates;
+            class ESE_importToFilter;
             class ESE_lbAdd;
             class ESE_lnbAdd;
             class ESE_loadAttributeValue;
@@ -108,6 +109,7 @@ class CfgFunctions
             class ESE_removeItem;
             class ESE_resetSearch;
             class ESE_resetStorage;
+            class ESE_resetToAllItems;
             class ESE_search;
             class ESE_sort;
             class ESE_toggleVirtual;

@@ -31,9 +31,12 @@ params
     ["_textRight", ""]
 ];
 
-private _index = _ctrlLb lbAdd _lbText;
-_ctrlLb lbSetData [_index, _lbData];
-_ctrlLb lbSetPicture [_index, _pictureLeft];
-_ctrlLb lbSetPictureRight [_index, _pictureRight];
-_ctrlLb lbSetTooltip [_index, _tooltip];
-_ctrlLb lbSetTextRight [_index, _textRight];
+if (_lbText != "") then 
+{
+    private _index = _ctrlLb lbAdd _lbText;
+    _ctrlLb lbSetData [_index, _lbData];
+    _ctrlLb lbSetPicture [_index, _pictureLeft];
+    _ctrlLb lbSetPictureRight [_index, _pictureRight];
+    _ctrlLb lbSetTooltip [_index, _tooltip];
+    _ctrlLb lbSetTextRight [_index, _textRight]
+};

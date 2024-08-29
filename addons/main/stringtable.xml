@@ -6873,6 +6873,17 @@
             <Chinese>可用物品</Chinese>
             <Italian>Oggetti Disponibili</Italian>
         </Key>
+        <Key ID="STR_A3_RSCDISPLAYARSENAL_RESET">
+            <English>Reset</English>
+            <Russian>Перезагрузить</Russian>
+            <German>Zurücksetzen</German>
+            <Polish>Nastawić</Polish>
+            <French>Réinitialiser</French>
+            <Spanish>Reiniciar</Spanish>
+            <Chinesesimp>重置</Chinesesimp>
+            <Chinese>重置</Chinese>
+            <Italian>Reset</Italian>
+        </Key>
         <Key ID="STR_ENH_MAIN_ESE_FULLARSENAL_TOOLTIP">
             <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
             <Russian>Добавляет все предметы выбранного аддона в инвентарь и делает его виртуальным (Арсенал).</Russian>
