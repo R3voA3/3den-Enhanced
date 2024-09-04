@@ -1,10 +1,9 @@
-*.png binary
+# Change GitHub language categorization
+*.cpp linguist-language=SQF
+*.hpp linguist-language=SQF
+*.inc linguist-language=SQF
 *.jpg binary
 *.paa binary
-
-# Change GitHub language categorization
-3denEnhanced/**/*.inc linguist-language=SQF
-3denEnhanced/**/*.hpp linguist-language=SQF
-
+*.png binary
 *.ps1 linguist-language=POWERSHELL
 *.py linguist-language=PYTHON
