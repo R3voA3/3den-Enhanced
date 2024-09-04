@@ -71,8 +71,8 @@ private _code =
             case 1: //Small
             {
                 [
-                    safezoneX + 62 * GRID_W,
-                    safezoneY + 14 * GRID_H,
+                    safeZoneX + 62 * GRID_W,
+                    safeZoneY + 14 * GRID_H,
                     32 * GRID_W,
                     32 * GRID_H
                 ];
@@ -80,8 +80,8 @@ private _code =
             case 2: //Medium
             {
                 [
-                    safezoneX + 62 * GRID_W,
-                    safezoneY + 14 * GRID_H,
+                    safeZoneX + 62 * GRID_W,
+                    safeZoneY + 14 * GRID_H,
                     62 * GRID_W,
                     62 * GRID_H
                 ];
@@ -89,8 +89,8 @@ private _code =
             case 3: //Large
             {
                 [
-                    safezoneX + 62 * GRID_W,
-                    safezoneY + 14 * GRID_H,
+                    safeZoneX + 62 * GRID_W,
+                    safeZoneY + 14 * GRID_H,
                     92 * GRID_W,
                     92 * GRID_H
                 ];

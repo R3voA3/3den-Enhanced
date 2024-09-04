@@ -60,6 +60,6 @@ switch (_mode) do
         {
             _x params ["_name", "_description", "_data", ["_date", systemTime]];
             [_lbTemplates, _name, _data, "", "", _description, [_date] call ENH_fnc_systemTimeFormatted] call ENH_fnc_ESE_lbAdd;
-        } foreach (profileNamespace getVariable ["ENH_VIM_Templates", []]);
+        } forEach (profileNamespace getVariable ["ENH_VIM_Templates", []]);
     };
 };

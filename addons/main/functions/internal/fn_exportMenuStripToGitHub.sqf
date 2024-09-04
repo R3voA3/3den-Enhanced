@@ -49,5 +49,5 @@ private _export = format ["_**Number of added entries: %1**_", count _menuStipEn
     };
 } forEach _items;
 
-uinamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", trim _export]];
+uiNamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", trim _export]];
 findDisplay IDD_DISPLAY3DEN createDisplay "display3denCopy";

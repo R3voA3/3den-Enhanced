@@ -65,7 +65,7 @@ CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["KeyDown",
 
     if (_key isEqualTo 46 && _ctrl) then
     {
-        private _path = _ctrlTV tvdata (tvCurSel _ctrlTV);
+        private _path = _ctrlTV tvData (tvCurSel _ctrlTV);
         if (_path isEqualTo "") exitWith {};
         copyToClipboard str _path;
         ["ENH_DataCopied"] call BIS_fnc_3DENNotification;

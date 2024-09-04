@@ -78,7 +78,7 @@ _description = "<t font='RobotoCondensedBold'>" + localize "STR_ENH_MAIN_MODULEI
     localize "STR_ENH_MAIN_MODULEINFORMATION_DIRECTION", _direction
 ];
 
-if (_sync isNotEqualto []) then
+if (_sync isNotEqualTo []) then
 {
     _description = _description + format ["%1<t font='RobotoCondensedBold'>%2</t>%1", LB, localize "STR_ENH_MAIN_MODULEINFORMATION_SYNC"];
     {

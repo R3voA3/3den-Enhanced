@@ -84,7 +84,7 @@ ENH_fnc_selectionFilter_onCheckedChanged =
     _cb ctrlSetFade ([0.5, 0] select (cbChecked _cb));
     _cb ctrlCommit 0;
 
-    (ctrlparent _cb) call ENH_fnc_selectionFilter_updateSelection;
+    (ctrlParent _cb) call ENH_fnc_selectionFilter_updateSelection;
 };
 
 ENH_fnc_selectionFilter_editAttributes =

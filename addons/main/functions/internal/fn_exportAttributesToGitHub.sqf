@@ -97,5 +97,5 @@ _export = format ["'''Total number of Attributes: %1'''", _counter] + endl + end
 
 _export = _export regexReplace ["\\n", endl];
 
-uinamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", _export]];
+uiNamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", _export]];
 findDisplay 313 createDisplay "display3denCopy";

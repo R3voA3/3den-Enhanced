@@ -187,7 +187,7 @@ class Display3DEN
                     {
                         class ENH_Footer: ctrlStaticFooter
                         {
-                            y = QUOTE(safezoneH - (28 + 7) * GRID_H);
+                            y = QUOTE(safeZoneH - (28 + 7) * GRID_H);
                             w = QUOTE(60 * GRID_W);
                             h = QUOTE(7 * GRID_H);
                         };
@@ -230,7 +230,7 @@ class Display3DEN
                             x = QUOTE(0);
                             y = QUOTE(7 * GRID_H);
                             w = QUOTE(60 * GRID_W);
-                            h = QUOTE(safezoneH - (28 + 21) * GRID_H);
+                            h = QUOTE(safeZoneH - (28 + 21) * GRID_H);
                             borderSize = 0;
                             colorBorder[] = {0, 0, 0, 0};
                             multiselectEnabled = 1;
@@ -240,7 +240,7 @@ class Display3DEN
                             idc = IDC_DISPLAY3DEN_FAVORITES_BUTTON_DELETE;
                             text = "$STR_DISP_DELETE";
                             x = QUOTE(GRID_W);
-                            y = QUOTE(safezoneH - (28 + 6) * GRID_H);
+                            y = QUOTE(safeZoneH - (28 + 6) * GRID_H);
                             w = QUOTE(58 * GRID_W);
                             h = QUOTE(CTRL_DEFAULT_H);
                         };
@@ -297,7 +297,7 @@ class Display3DEN
                             x = QUOTE(0);
                             y = QUOTE(7 * GRID_H);
                             w = QUOTE(60 * GRID_W);
-                            h = QUOTE(safezoneH - 35 * GRID_H);
+                            h = QUOTE(safeZoneH - 35 * GRID_H);
                             onTreeDblClick = "['select', _this] call bis_fnc_3DENListLocations; ['view'] call ENH_fnc_locationList_enhanced";
                             disableKeyboardSearch = 1;
                             expandOnDoubleclick = 0;
@@ -305,7 +305,7 @@ class Display3DEN
                         };
                         class EditPanel: ctrlControlsGroupNoScrollbars
                         {
-                            y = QUOTE(safezoneH - 29 * GRID_H);
+                            y = QUOTE(safeZoneH - 29 * GRID_H);
                             w = QUOTE(60 * GRID_W);
                             h = QUOTE(7 * GRID_H);
                             class Controls

@@ -51,7 +51,7 @@
 
 if (uiNamespace getVariable ["ENH_ESE_itemsHashMap", []] isNotEqualTo []) exitWith {};
 
-private _allItemConfigs = (CONDITION configClasses (configfile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
+private _allItemConfigs = (CONDITION configClasses (configFile >> "CfgWeapons")) + (CONDITION configClasses (configFile >> "CfgMagazines")) +
                                                     (CONDITION configClasses (configFile >> "CfgGlasses")) + (CONDITION configClasses (configFile >> "CfgVehicles"));
 
 private _itemsConfigVaules = [_allItemConfigs] call ENH_fnc_ESE_getConfigValues;

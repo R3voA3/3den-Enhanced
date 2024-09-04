@@ -63,6 +63,6 @@ private _functionsData = [];
             } forEach ("true" configClasses (_config >> "CfgFunctions" >> _addon >> _category));
         } forEach ("true" configClasses (_config >> "CfgFunctions" >> _addon));
     } forEach ("true" configClasses (_config >> "CfgFunctions"));
-} forEach [[configFile, "configFile"], [missionConfigFile, "missionConfigFile"], [campaignConfigfile, "campaignConfigFile"]];
+} forEach [[configFile, "configFile"], [missionConfigFile, "missionConfigFile"], [campaignConfigFile, "campaignConfigFile"]];
 
 _functionsData

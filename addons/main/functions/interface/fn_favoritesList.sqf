@@ -124,7 +124,7 @@ switch _mode do
         };
 
         profileNamespace setVariable ["ENH_HashMap_Favorites", _savedData];
-        saveprofileNamespace;
+        saveProfileNamespace;
 
         ["updateTreeView"] call ENH_fnc_favoritesList;
     };
@@ -219,7 +219,7 @@ switch _mode do
         } forEach _selection;
 
         profileNamespace setVariable ["ENH_HashMap_Favorites", _savedData];
-        saveprofileNamespace;
+        saveProfileNamespace;
 
         ["updateTreeView"] call ENH_fnc_favoritesList;
     };

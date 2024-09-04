@@ -16,11 +16,11 @@
 
 */
 
-private _contextMenuEntries = "true" configClasses (configfile >> "Display3DEN" >> "ContextMenu" >> "Items");
+private _contextMenuEntries = "true" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items");
 private _contextMenuShortCuts = [];
 private _contextMenuShortCutsUnique = [];
 
-private _menuStripEntries = "true" configClasses (configfile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");
+private _menuStripEntries = "true" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");
 private _menuStripShortCuts = [];
 private _menuStripShortCutsUnique = [];
 
