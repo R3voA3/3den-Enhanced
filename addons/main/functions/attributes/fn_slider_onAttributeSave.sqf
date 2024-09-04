@@ -15,4 +15,4 @@
 
 params ["_ctrlGroup"];
 
-sliderposition (_ctrlGroup controlsGroupCtrl 100)
+sliderPosition (_ctrlGroup controlsGroupCtrl 100)

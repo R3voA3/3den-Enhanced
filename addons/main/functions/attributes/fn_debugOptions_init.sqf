@@ -78,19 +78,19 @@ if GETVALUE("Zeus") then
 {
     0 spawn
     {
-        private _zeusModule = (creategroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
+        private _zeusModule = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
         player assignCurator _zeusModule;
         //Add Interface EHs (Workaround)
         _zeusModule addCuratorEditableObjects [entities "", true];
-        _zeusModule addeventhandler ["curatorFeedbackMessage", {_this call BIS_fnc_showCuratorFeedbackMessage;}];
-        _zeusModule addeventhandler ["curatorPinged", {_this call BIS_fnc_curatorPinged;}];
-        _zeusModule addeventhandler ["curatorObjectPlaced", {_this call BIS_fnc_curatorObjectPlaced;}];
-        _zeusModule addeventhandler ["curatorObjectEdited", {_this call BIS_fnc_curatorObjectEdited;}];
-        _zeusModule addeventhandler ["curatorWaypointPlaced", {_this call BIS_fnc_curatorWaypointPlaced;}];
-        _zeusModule addeventhandler ["curatorObjectDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _zeusModule addeventhandler ["curatorGroupDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _zeusModule addeventhandler ["curatorWaypointDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _zeusModule addeventhandler ["curatorMarkerDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+        _zeusModule addEventHandler ["CuratorFeedbackMessage", {_this call BIS_fnc_showCuratorFeedbackMessage;}];
+        _zeusModule addEventHandler ["CuratorPinged", {_this call BIS_fnc_curatorPinged;}];
+        _zeusModule addEventHandler ["CuratorObjectPlaced", {_this call BIS_fnc_curatorObjectPlaced;}];
+        _zeusModule addEventHandler ["CuratorObjectEdited", {_this call BIS_fnc_curatorObjectEdited;}];
+        _zeusModule addEventHandler ["CuratorWaypointPlaced", {_this call BIS_fnc_curatorWaypointPlaced;}];
+        _zeusModule addEventHandler ["CuratorObjectDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+        _zeusModule addEventHandler ["CuratorGroupDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+        _zeusModule addEventHandler ["CuratorWaypointDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+        _zeusModule addEventHandler ["CuratorMarkerDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
     };
 };
 
@@ -130,10 +130,10 @@ if GETVALUE("FPS") then
             private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText", 992];
             _ctrlFPS ctrlSetPosition
             [
-                0.94625 * safezoneW + safezoneX,
-                0.962 * safezoneH + safezoneY,
-                0.0525 * safezoneW,
-                0.056 * safezoneH
+                0.94625 * safeZoneW + safeZoneX,
+                0.962 * safeZoneH + safeZoneY,
+                0.0525 * safeZoneW,
+                0.056 * safeZoneH
             ];
             _ctrlFPS ctrlCommit 0;
         };
@@ -141,11 +141,11 @@ if GETVALUE("FPS") then
 
         while {true} do
         {
-            _ctrlFPS ctrlSetStructuredText parsetext format
+            _ctrlFPS ctrlSetStructuredText parseText format
             [
                 "<t size='0.6'>FPS(avg.): %1<br/>FPS(min.): %2</t>",
                 round diag_fps,
-                round diag_fpsmin
+                round diag_fpsMin
             ];
             sleep DELAY;
         };
@@ -566,7 +566,7 @@ if GETVALUE("ActiveScripts") then
                 _export = _export + _fileName + " - ";
                 _export = _export + str _isRunning + " - ";
                 _export = _export + str _currentLine + endl;
-            } foreach diag_activeSQFScripts;
+            } forEach diag_activeSQFScripts;
 
             _export = _export + "---------------------------------------------------ACTIVE FSMs----------------------------------------------------" + endl;
 
@@ -575,7 +575,7 @@ if GETVALUE("ActiveScripts") then
                 _export = _export + _scriptName + " - ";
                 _export = _export + _state + " - ";
                 _export = _export + str _timeOut + endl;
-            } foreach diag_activeMissionFSMs;
+            } forEach diag_activeMissionFSMs;
 
             _export = _export + "-----------------------------------------------ACTIVE MISSION EHs-------------------------------------------------" + endl;
 

@@ -22,10 +22,10 @@ if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", fal
 
 //Check if missionName is in presets
 private _blacklist = profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQMBlacklist", ""];
-if (toLower missionName in tolower _blacklist) exitWith {};
+if (toLower missionName in toLower _blacklist) exitWith {};
 
 //Pythia is needed
-if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
+if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
     if (profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) then
     {

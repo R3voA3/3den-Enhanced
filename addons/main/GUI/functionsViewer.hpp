@@ -9,34 +9,34 @@ class ENH_FunctionsViewer
         class Header: ctrlStaticTitle
         {
             text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_HEADER";
-            x = QUOTE(safezoneX);
-            y = QUOTE(safezoneY);
-            w = QUOTE(safezoneW);
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY);
+            w = QUOTE(safeZoneW);
             h = QUOTE(CTRL_DEFAULT_H);
             colorBackground[] = {COLOR_ACTIVE_RGBA};
             moving = 0;
         };
         class Background: ctrlStaticBackground
         {
-            x = QUOTE(safezoneX);
-            y = QUOTE(safezoneY + CTRL_DEFAULT_H);
-            w = QUOTE(safezoneW);
-            h = QUOTE(safezoneH - CTRL_DEFAULT_H);
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY + CTRL_DEFAULT_H);
+            w = QUOTE(safeZoneW);
+            h = QUOTE(safeZoneH - CTRL_DEFAULT_H);
         };
         class NumFunctions: ctrlStatic
         {
             idc = IDC_FUNCTIONSVIEWER_NUMFUNCTIONS;
             tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_NUMFUNCTIONS_TOOLTIP";
-            x = QUOTE(safezoneX + GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(10 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
         class Footer: ctrlStaticFooter
         {
-            x = QUOTE(safezoneX);
-            y = QUOTE(safezoneY + safezoneH - 7 * GRID_H);
-            w = QUOTE(safezoneW);
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY + safeZoneH - 7 * GRID_H);
+            w = QUOTE(safeZoneW);
             h = QUOTE(CTRL_DEFAULT_H + 2 * GRID_H);
         };
     };
@@ -45,9 +45,9 @@ class ENH_FunctionsViewer
         class MenuStrip: ctrlMenuStrip
         {
             idc = IDC_FUNCTIONSVIEWER_MENU;
-            x = QUOTE(safezoneX);
-            y = QUOTE(safezoneY + CTRL_DEFAULT_H);
-            w = QUOTE(safezoneW);
+            x = QUOTE(safeZoneX);
+            y = QUOTE(safeZoneY + CTRL_DEFAULT_H);
+            w = QUOTE(safeZoneW);
             h = QUOTE(CTRL_DEFAULT_H);
             class Items
             {
@@ -203,10 +203,10 @@ class ENH_FunctionsViewer
         {
             idc = IDC_FUNCTIONSVIEWER_LIST;
             idcSearch = 1400;
-            x = QUOTE(safezoneX + GRID_W);
-            y = QUOTE(safezoneY + 2 * CTRL_DEFAULT_H + GRID_H);
+            x = QUOTE(safeZoneX + GRID_W);
+            y = QUOTE(safeZoneY + 2 * CTRL_DEFAULT_H + GRID_H);
             w = QUOTE(SIDEBAR_W);
-            h = QUOTE(safezoneH - 3 * CTRL_DEFAULT_H - 3 * GRID_H);
+            h = QUOTE(safeZoneH - 3 * CTRL_DEFAULT_H - 3 * GRID_H);
             colorLines[] = {1, 1, 1, 1};
             borderSize = 0;
             colorBorder[] = {0, 0, 0, 0};
@@ -215,16 +215,16 @@ class ENH_FunctionsViewer
         {
             idc = IDC_FUNCTIONSVIEWER_SEARCH;
             tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
-            x = QUOTE(safezoneX + 12 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + 12 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(53 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
         class ButtonSearch: ctrlButtonSearch
         {
             idc = IDC_FUNCTIONSVIEWER_BUTTONSEARCH;
-            x = QUOTE(safezoneX + 65 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + 65 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
@@ -233,8 +233,8 @@ class ENH_FunctionsViewer
             idc = IDC_FUNCTIONSVIEWER_NAME;
             tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_FUNCTIONNAME_TOOLTIP";
             canModify = 0;
-            x = QUOTE(safezoneX + 72 * GRID_W);
-            y = QUOTE(safezoneY + 2 * CTRL_DEFAULT_H + GRID_H);
+            x = QUOTE(safeZoneX + 72 * GRID_W);
+            y = QUOTE(safeZoneY + 2 * CTRL_DEFAULT_H + GRID_H);
             w = QUOTE(70 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
@@ -242,15 +242,15 @@ class ENH_FunctionsViewer
         {
             idc = IDC_FUNCTIONSVIEWER_PATH;
             tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_FUNCTIONPATH_TOOLTIP";
-            x = QUOTE(safezoneX + 143 * GRID_W);
-            w = QUOTE(safezoneW - (143 + 1) * GRID_W);
+            x = QUOTE(safeZoneX + 143 * GRID_W);
+            w = QUOTE(safeZoneW - (143 + 1) * GRID_W);
         };
         class SearchCode: ctrlEdit
         {
             idc = IDC_FUNCTIONSVIEWER_SEARCHCODE;
             tooltip = __EVAL(toUpper format ["%1+%2+%3", localize "STR_DIK_CONTROL", localize "STR_VK_SHIFT", "F"]);
-            x = QUOTE(safezoneX + 72 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + 72 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(40 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             onKeyUp = "_this call ENH_fnc_functionsViewer_searchKey";
@@ -258,16 +258,16 @@ class ENH_FunctionsViewer
         class SearchText: ctrlStatic
         {
             idc = IDC_FUNCTIONSVIEWER_SEARCHTEXT;
-            x = QUOTE(safezoneX + 113 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + 113 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(30 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
         class SearchButtonUp: ctrlButtonPictureKeepAspect
         {
             text = "\a3\ui_f\data\gui\rsc\rscdisplaymultiplayer\arrow_up_ca.paa";
-            x = QUOTE(safezoneX + 135 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + 135 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             onButtonClick = "[_this # 0, -1] call ENH_fnc_FunctionsViewer_IncrementKey";
@@ -275,15 +275,15 @@ class ENH_FunctionsViewer
         class SearchButtonDown: SearchButtonUp
         {
             text = "\a3\ui_f\data\gui\rsc\rscdisplaymultiplayer\arrow_down_ca.paa";
-            x = QUOTE(safezoneX + 129 * GRID_W);
+            x = QUOTE(safeZoneX + 129 * GRID_W);
             onButtonClick = "[_this # 0, 1] call ENH_fnc_functionsViewer_incrementKey";
         };
         class Preview: ctrlControlsGroup
         {
             idc = IDC_FUNCTIONSVIEWER_GROUP;
-            x = QUOTE(safezoneX + 72 * GRID_W);
-            y = QUOTE(safezoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H);
-            w = QUOTE(safezoneW - 73 * GRID_W);
+            x = QUOTE(safeZoneX + 72 * GRID_W);
+            y = QUOTE(safeZoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H);
+            w = QUOTE(safeZoneW - 73 * GRID_W);
             h = QUOTE(safeZoneH - 4 * CTRL_DEFAULT_H - 4 * GRID_H);
             class Controls
             {
@@ -314,8 +314,8 @@ class ENH_FunctionsViewer
         };
         class Close: ctrlButtonClose
         {
-            x = QUOTE(safezoneX + safezoneW - 26 * GRID_W);
-            y = QUOTE(safezoneY + safezoneH - 6 * GRID_H);
+            x = QUOTE(safeZoneX + safeZoneW - 26 * GRID_W);
+            y = QUOTE(safeZoneY + safeZoneH - 6 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };

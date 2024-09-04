@@ -165,7 +165,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
                 case (_entity in _markers):
                 {
                     if (get3DENActionState "toggleMap" != 1) then {do3DENAction "toggleMap"};
-                    private _ctrlmap = findDisplay 313 displayctrl 51;
+                    private _ctrlmap = findDisplay 313 displayCtrl 51;
 
                     _pos = ATT(_entity,"position");
                     _ctrlmap ctrlMapAnimAdd [0, ctrlMapScale _ctrlmap, _pos];

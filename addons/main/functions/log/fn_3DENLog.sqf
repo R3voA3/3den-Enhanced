@@ -124,7 +124,7 @@ switch (_mode) do
             private _maxHeight = abs ((_p2 # 2) - (_p1 # 2));
             _size = str [_maxWidth, _maxLength, _maxHeight];
 
-            private _parents = str ([configfile >> "CfgVehicles" >> _class, true] call BIS_fnc_returnParents);
+            private _parents = str ([configFile >> "CfgVehicles" >> _class, true] call BIS_fnc_returnParents);
             private _modelInfo = str getModelInfo _x;
 
             private _kind = "N/A";

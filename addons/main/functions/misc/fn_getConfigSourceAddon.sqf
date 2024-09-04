@@ -26,7 +26,7 @@ private _sourceConfigs = configSourceAddonList _config;
 //Exit if there are no source addons
 if (_sourceConfigs isEqualTo []) exitWith {[]};
 
-private _mods = configsourcemodlist (configfile >> "CfgPatches" >> _sourceConfigs # 0);
+private _mods = configSourceModList (configFile >> "CfgPatches" >> _sourceConfigs # 0);
 
 //Exit if there are no mods
 if (_mods isEqualTo []) exitWith {[]};

@@ -52,7 +52,7 @@ if (count _input > 0) then {
                         _category,
                         _specificType,
                         getText (_x >> "descriptionShort") regexReplace ["<br[\W ]*\/>", "\n"],
-                        _class //Properly cased configname for displaying
+                        _class //Properly cased configName for displaying
                     ]
                 ]
             ]

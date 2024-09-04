@@ -47,8 +47,8 @@ _ctrlMenu menuSetCheck [[0, 11], _loadFileIndex == 2];
 
 //Disable entries that are not available
 _ctrlMenu menuEnable [[0, 2], isClass (campaignConfigFile >> "CfgFunction")];
-_ctrlMenu menuEnable [[1, 4], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
-_ctrlMenu menuEnable [[1, 5], getNumber (missionConfigfile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
+_ctrlMenu menuEnable [[1, 4], getNumber (missionConfigFile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
+_ctrlMenu menuEnable [[1, 5], getNumber (missionConfigFile >> "allowFunctionsRecompile") > 0 || is3DEN || is3DENPreview];
 
 //If we load other files then sorting has no effect
 _ctrlMenu menuEnable [[0, 5], !_showOtherFiles];

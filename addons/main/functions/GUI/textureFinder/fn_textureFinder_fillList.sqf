@@ -49,7 +49,7 @@ _ctrlTV tvAdd [[], "PAA"];
 
     getTextureInfo _x params ["_w", "_h", "_rgb"];
     _pixelCount = _w * _h;
-    _indexSize = SIZES findif {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
+    _indexSize = SIZES findIf {_pixelCount >= _x # 0 && _pixelCount <= _x # 1};
 
     _indexType = parseNumber (".paa" in _x);
     _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], format ["%1 [%2x%3]", _x, _w, _h]];

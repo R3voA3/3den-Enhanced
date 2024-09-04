@@ -35,5 +35,5 @@ if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseAsset
     {
         private _ctrlTree = findDisplay IDD_DISPLAY3DEN displayCtrl _x;
         [] call _fnc_collapse;
-    } foreach [IDC_DISPLAY3DEN_CREATE_ALL];
+    } forEach [IDC_DISPLAY3DEN_CREATE_ALL];
 };

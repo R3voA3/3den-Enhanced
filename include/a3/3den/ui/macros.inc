@@ -9,11 +9,11 @@
 //720px
 #define WINDOW_W 120
 #define WINDOW_H 180
-#define WINDOW_HAbs (safezoneH min (WINDOW_H * GRID_H))
+#define WINDOW_HAbs (safeZoneH min (WINDOW_H * GRID_H))
 
 #define WINDOW_PREVIEW_W WINDOW_W
 #define WINDOW_PREVIEW_H 65
-#define WINDOW_PREVIEW_HAbs (safezoneH min (WINDOW_PREVIEW_H * GRID_H))
+#define WINDOW_PREVIEW_HAbs (safeZoneH min (WINDOW_PREVIEW_H * GRID_H))
 
 #define ATTRIBUTE_TITLE_W 48
 #define ATTRIBUTE_CONTENT_W 82

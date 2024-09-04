@@ -201,16 +201,16 @@ switch _mode do
 
         //Store templates in profilenamespace and save it.
         profileNamespace setVariable ["ENH_SAM_Templates", _templates];
-        saveprofileNamespace;
+        saveProfileNamespace;
     };
     case "getScenarioAttributes":
     {
         private _attributeValues = [];
-        private _sections = [configfile >> "Cfg3DEN" >> "Mission", 0, false] call BIS_fnc_returnChildren;
+        private _sections = [configFile >> "Cfg3DEN" >> "Mission", 0, false] call BIS_fnc_returnChildren;
 
         {
             private _section = configName _x;
-            private _children = [configfile >> "Cfg3DEN" >> "Mission" >> _section >> "AttributeCategories", 2, false] call BIS_fnc_returnChildren;
+            private _children = [configFile >> "Cfg3DEN" >> "Mission" >> _section >> "AttributeCategories", 2, false] call BIS_fnc_returnChildren;
             {
                 private _attributeDisplayName = getText (_x >> "displayName");
                 private _attributeName = getText (_x >> "property");//By default get _attributeValue by propertyName
