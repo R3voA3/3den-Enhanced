@@ -219,7 +219,7 @@ switch _mode do
 
             //Get icon
             private _markerType = (_x get3DENAttribute "itemClass") # 0;
-            private _icon = getText (configfile >> "CfgMarkers" >> _markerType >> "icon");
+            private _icon = getText (configFile >> "CfgMarkers" >> _markerType >> "icon");
 
             //Get colour
             private _markerColor = (_x get3DENAttribute "baseColor") # 0;
@@ -228,7 +228,7 @@ switch _mode do
 
             if (_markerColor isEqualTo "Default") then
             {
-                _color = getArray (configfile >> "CfgMarkers" >> _markerType >> "color");
+                _color = getArray (configFile >> "CfgMarkers" >> _markerType >> "color");
                 if (count _color == 4) then {_color = _color call BIS_fnc_colorConfigToRGBA} else {_color = [1, 1, 1, 1]};
                 if (_color isEqualTo [0, 0, 0, 1]) then {_color = [1, 1, 1, 1]};
             };

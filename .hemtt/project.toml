@@ -35,8 +35,27 @@ workshop = [
 ]
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
+executable = "arma3_x64"
 
 # parameters = [
 # ]
 
 executable = "arma3_x64"
+[lints.sqf.command_case]
+severity = "Error"
+options.ignore = [
+    "AGLtoASL",
+    "ASLtoAGL",
+    "groupID"
+]
+
+[lints.sqf.banned_commands]
+options.banned = [
+    "execVM",
+    "opfor",
+    "blufor",
+    "resistance",
+    "and",
+    "or",
+    "not"
+]

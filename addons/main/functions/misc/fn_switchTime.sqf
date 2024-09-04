@@ -15,21 +15,21 @@ if !(is3DEN) exitWith {false};
 
 if (isNil "ENH_savedEnvironment") then
 {
-    ENH_savedEnvironment = [daytime, fog, overcast, rain];
+    ENH_savedEnvironment = [dayTime, fog, overcast, rain];
     0 setFog 0;
     0 setOvercast 0;
     0 setRain 0;
     forceWeatherChange;
-    skipTime (12 - daytime);
+    skipTime (12 - dayTime);
 }
 else
 {
-    ENH_savedEnvironment params ["_daytime", "_fog", "_overcast", "_rain"];
+    ENH_savedEnvironment params ["_dayTime", "_fog", "_overcast", "_rain"];
     0 setFog _fog;
     0 setOvercast _overcast;
     0 setRain _rain;
     forceWeatherChange;
-    skipTime (_daytime - daytime);
+    skipTime (_dayTime - dayTime);
     ENH_savedEnvironment = nil;
 };
 

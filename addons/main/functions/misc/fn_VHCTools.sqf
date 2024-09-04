@@ -58,9 +58,9 @@ switch (_mode) do
                         _items pushBack configName _x;
                         _items pushBack selectRandom [0, 1];
                     };
-                } foreach (configProperties [_x, "isClass _x", true]);
+                } forEach (configProperties [_x, "isClass _x", true]);
                 _data pushBack _items;
-            } foreach [configFile >> "CfgVehicles" >> _type >> "textureSources", configFile >> "CfgVehicles" >> _type >> "animationSources"];
+            } forEach [configFile >> "CfgVehicles" >> _type >> "textureSources", configFile >> "CfgVehicles" >> _type >> "animationSources"];
             _data params ["_textures", "_animations"];
             _textures = _textures select {_x isEqualType ""}; //Only select the textures and ignore the state
             _x set3DENAttribute ["VehicleCustomization", [[], _animations]]; //Only animations are set via this attribute. Textures are handled differently

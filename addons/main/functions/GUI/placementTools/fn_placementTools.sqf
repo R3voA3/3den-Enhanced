@@ -73,7 +73,7 @@ switch _mode do
 
         if (isNil "ENH_PlacementTools_Settings") then
         {
-            ENH_PlacementTools_Settings = createHashmapFromArray
+            ENH_PlacementTools_Settings = createHashMapFromArray
             [
                 ["Radius", 50],
                 ["InitialAngle", 0],
@@ -248,7 +248,7 @@ switch _mode do
                 _ctrlEdit ctrlSetText str (_numericValue + _modifier);
             }];
 
-            _x ctrlSetToolTip "PAGE UP/DOWN: +-1\nPAGE UP/DOWN + CTRL: +-0.1\nPAGE UP/DOWN + CTRL + ALT: +-0.01\nPAGE UP/DOWN + CTRL + ALT + SHIFT: +-0.001";
+            _x ctrlSetTooltip "PAGE UP/DOWN: +-1\nPAGE UP/DOWN + CTRL: +-0.1\nPAGE UP/DOWN + CTRL + ALT: +-0.01\nPAGE UP/DOWN + CTRL + ALT + SHIFT: +-0.001";
         } forEach (allControls _display select {ctrlType _x == 2});
     };
     case "onUnload":

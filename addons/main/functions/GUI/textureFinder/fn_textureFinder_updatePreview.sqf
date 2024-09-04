@@ -21,8 +21,8 @@ params ["_ctrlTV", "_path"];
 //Exit if category or nothing is selected
 if (count _path < 3) exitWith {};
 
-private _ctrlTexturePreview = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW;
-private _ctrlTexturePreviewBG = ctrlparent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEWBACKGROUND;
+private _ctrlTexturePreview = ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW;
+private _ctrlTexturePreviewBG = ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEWBACKGROUND;
 
 private _texture = _ctrlTV tvData _path;
 

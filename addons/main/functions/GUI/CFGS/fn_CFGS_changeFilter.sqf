@@ -19,4 +19,4 @@
 params ["_ctrlFilter", "_selectedIndex"];
 [_ctrlFilter lbData _selectedIndex] call ENH_fnc_CFGS_getCfgSentences;
 
-(ctrlparent _ctrlFilter) displayCtrl IDC_SENTENCESBROWSER_SEARCH ctrlSetText "";
+(ctrlParent _ctrlFilter) displayCtrl IDC_SENTENCESBROWSER_SEARCH ctrlSetText "";

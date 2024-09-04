@@ -9,7 +9,7 @@ class ENH_PlacementToolsGroup: ctrlControlsGroup
     idc = IDC_PLACEMENTTOOLS;
     onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementTools";
     onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementTools";
-    x = QUOTE(safezoneX + 2 * GRID_W);
+    x = QUOTE(safeZoneX + 2 * GRID_W);
     y = QUOTE(WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 3 * GRID_H);
     w = QUOTE(58 * GRID_W);
     h = QUOTE(WINDOW_HAbs - 5 * CTRL_DEFAULT_H);

@@ -38,14 +38,14 @@
 //Either uses full width and leave only 5 grids left and right,
 //or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
 //the UI will not become too wide
-#define WINDOW_W_WIDE ((safezoneW / GRID_W - 10) min 400)
+#define WINDOW_W_WIDE ((safeZoneW / GRID_W - 10) min 400)
 
 //Width of edit attributes window
 #define WINDOW_W_ATTRIBUTES 140
 
 //Statusbar
 #define SPACE_X (2 * pixelW)
-#define ORIGIN_X_STATUSBAR (safezoneW - 60 * GRID_W)
+#define ORIGIN_X_STATUSBAR (safeZoneW - 60 * GRID_W)
 
 #define CTRL(IDC) (_display displayCtrl IDC)
 #define G_PREF(A) ("Preferences" get3DENMissionAttribute A)

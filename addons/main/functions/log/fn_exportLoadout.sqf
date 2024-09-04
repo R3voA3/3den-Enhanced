@@ -35,7 +35,7 @@ private _fnc_addArray =
         if (_x == "") then {continue};
         if (_forEachIndex > 0) then {_export = _export + ", "};
         _export = _export + format ["""%1""", _x];
-    } foreach _array;
+    } forEach _array;
     _export = _export + "};" + LB;
 };
 
@@ -53,7 +53,7 @@ private _magsInWeapons = flatten (weaponsItems _object apply {
 
     [_mag, _tube]
 });
-private _assignedItems = assigneditems _object;
+private _assignedItems = assignedItems _object;
 private _gear = [vest _object, headgear _object, goggles _object];
 private _export = "";
 

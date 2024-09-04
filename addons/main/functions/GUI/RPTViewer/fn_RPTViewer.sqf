@@ -16,7 +16,7 @@
 #include "\x\enh\addons\main\script_component.hpp"
 #define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 100])
 
-if !(isClass (configfile >> "CfgPatches" >> "PY3_Pythia")) exitWith
+if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
     ["ENH_GetPythiaMod_Warning", 1, 10] call BIS_fnc_3DENNotification;
 };

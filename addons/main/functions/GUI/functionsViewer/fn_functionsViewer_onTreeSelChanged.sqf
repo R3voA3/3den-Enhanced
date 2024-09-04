@@ -15,7 +15,7 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
-forceunicode 0;
+forceUnicode 0;
 
 private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
 

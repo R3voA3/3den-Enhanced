@@ -118,7 +118,7 @@ if (_classes == 0) then
 };
 
 //Set variable used by display3denCopy and create the display
-uinamespace setVariable ["display3DENCopy_data", ["", _return]];
+uiNamespace setVariable ["display3DENCopy_data", ["", _return]];
 
 findDisplay IDD_EXPORTGUIDEFINES createDisplay "display3denCopy";
 

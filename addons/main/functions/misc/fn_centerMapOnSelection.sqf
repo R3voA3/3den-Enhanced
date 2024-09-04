@@ -20,7 +20,7 @@
 if (get3DENActionState "toggleMap" > 0) then
 {
     //Get the map in Eden Editor
-    private _ctrlmap = findDisplay 313 displayctrl 51;
+    private _ctrlmap = findDisplay 313 displayCtrl 51;
 
     //Animate the map
     _ctrlmap ctrlMapAnimAdd [0.1, ctrlMapScale _ctrlmap, _position3D];

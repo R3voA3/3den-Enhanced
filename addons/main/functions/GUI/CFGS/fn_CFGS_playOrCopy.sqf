@@ -38,6 +38,6 @@ else
     _data = (str _data) + endl + endl + "Example:" + endl + endl + format ["playSound3D ['%1', player];", _data select 4] + endl + endl +
     "[['SPEAKER', " + str _text + ", 0]] "  + "spawn BIS_fnc_EXP_camp_playSubtitles;";
 
-    uinamespace setVariable ["Display3DENCopy_data", ["", _data]];
-    (uiNamespace getVariable "ENH_CFGS_Display") createdisplay "Display3DENCopy";
+    uiNamespace setVariable ["Display3DENCopy_data", ["", _data]];
+    (uiNamespace getVariable "ENH_CFGS_Display") createDisplay "Display3DENCopy";
 };

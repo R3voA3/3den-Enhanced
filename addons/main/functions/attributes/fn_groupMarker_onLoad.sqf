@@ -48,14 +48,14 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
 //Fill marker color combo
 {
     private _color = (_x >> "color") call bis_fnc_colorConfigToRGBA;
-    private _class = configname _x;
+    private _class = configName _x;
     private _i = _ctrlComboColor lbAdd getText (_x >> "name");
     _ctrlComboColor lbSetData [_i, _class];
     _ctrlComboColor lbSetPicture [_i, "#(argb,8,8,3)color(1,1,1,1)"];
     _ctrlComboColor lbSetPictureColor [_i, _color];
     _ctrlComboColor lbSetPictureColorSelected [_i, _color];
     _ctrlComboColor lbSetTooltip [_i, _ctrlComboColor lbData _i];
-} foreach ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkerColors"));
+} forEach ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkerColors"));
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",

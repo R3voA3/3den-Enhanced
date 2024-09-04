@@ -55,15 +55,15 @@ switch (_mode) do
             {
                 _pylon = _pylon select [0, _turretIndex];
             };
-            _pylons pushback _pylon;
+            _pylons pushBack _pylon;
             _value = _value select [_index + 1, count _value - 1];
         };
 
         {
             _export = _export + format ["this setPylonLoadout [%1, ""%2""];", _forEachIndex + 1, _x] + endl
-        } foreach _pylons;
+        } forEach _pylons;
 
-        uinamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_MAIN_TOOLS_EXPORTPYLONSTOSQF", _export]];
+        uiNamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_MAIN_TOOLS_EXPORTPYLONSTOSQF", _export]];
         findDisplay 313 createDisplay "display3denCopy";
     };
 };

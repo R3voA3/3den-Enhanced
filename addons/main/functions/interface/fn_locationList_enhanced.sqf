@@ -126,7 +126,7 @@ switch (_mode) do
                 private _name = "";
                 if (_x isEqualType objNull) then
                 {
-                    _name = getText (configfile >> "CfgVehicles" >> typeOf _x >> "displayName");
+                    _name = getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
                     if (_name isEqualTo "") then
                     {
                         _name = getModelInfo _x # 0;

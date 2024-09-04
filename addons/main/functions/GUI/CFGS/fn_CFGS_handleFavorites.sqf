@@ -48,7 +48,7 @@ else
         {
             private _ctrlHighlight = [((_this select 0) displayCtrl 1000), 5] call BIS_fnc_highlightControl;
             sleep 2;
-            ctrldelete _ctrlHighlight;
+            ctrlDelete _ctrlHighlight;
         };
     }
     else
