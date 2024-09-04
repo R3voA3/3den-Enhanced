@@ -1,3 +1,3 @@
-::Builds mod
+:: Builds mod
 @echo off
 hemtt build
