@@ -2,7 +2,6 @@
 # 8.0.0
 ## ADDED
 - Added support for script files for all 3DEN event handlers. See [the documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Event-Scripts)
-    - **ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!**
 - Added object event handler attributes
 - Added group event handler attributes
 - Added import from clipboard function to ESE #306 (Thanks to Pixelated-Grunt)
@@ -64,6 +63,7 @@
 - Unused functions
 - Highlight area marker function as it's now implemented in the engine
 - Menustrip customization
+- ENH_init3DENMissionPreview.sqf is no longer supported. Use ENH_onMissionPreview.sqf instead!
 -->
 # 7.8.8
 ## CHANGED
