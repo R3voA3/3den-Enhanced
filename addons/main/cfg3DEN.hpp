@@ -32,6 +32,16 @@ class Cfg3DEN
             isWarning = 1;
             text = "$STR_ENH_MAIN_NOTIFICATIONS_BACKUP_FAILED";
         };
+        class ENH_SelectSecondPoint
+        {
+            isWarning = 0;
+            text = "$STR_ENH_MAIN_MEASUREDISTANCE_SELECT2NDPOINT";
+        };
+        class ENH_NotEnoughBuildingPositions
+        {
+            isWarning = 1;
+            text = "$STR_ENH_MAIN_GARRISON_NOTIFICATION";
+        };
     };
     class EventHandlers
     {

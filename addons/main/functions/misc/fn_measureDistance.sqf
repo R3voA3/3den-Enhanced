@@ -19,7 +19,7 @@ waitUntil {isNil "ENH_EH_DrawDist" && {isNil "ENH_MeasureDist_Markers"}};
 if (isNil "ENH_Pos_Start") then
 {
     ENH_Pos_Start = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
-    [localize "STR_ENH_MAIN_MEASUREDISTANCE_SELECT2NDPOINT"] call BIS_fnc_3DENNotification;
+    ["ENH_SelectSecondPoint"] call BIS_fnc_3DENNotification;
 }
 else
 {

@@ -65,7 +65,7 @@ private _fnc_getBuildingsPositions =
         {
             private _positions = true call _fnc_getBuildingsPositions;
             {
-                if (_positions isEqualTo []) exitWith {[localize "STR_ENH_MAIN_GARRISON_NOTIFICATION", 1] call BIS_fnc_3DENNotification};
+                if (_positions isEqualTo []) exitWith {["ENH_NotEnoughBuildingPositions"] call BIS_fnc_3DENNotification};
 
                 private _pos = selectRandom _positions;
                 _positions = _positions - [_pos];
@@ -76,7 +76,7 @@ private _fnc_getBuildingsPositions =
         {
             private _positions = false call _fnc_getBuildingsPositions;
             {
-                if (_positions isEqualTo []) exitWith {[localize "STR_ENH_MAIN_GARRISON_NOTIFICATION", 1] call BIS_fnc_3DENNotification};
+                if (_positions isEqualTo []) exitWith {["ENH_NotEnoughBuildingPositions"] call BIS_fnc_3DENNotification};
 
                 private _pos = _positions select 0;
                 _positions deleteAt 0;
@@ -87,7 +87,7 @@ private _fnc_getBuildingsPositions =
         {
             private _positions = false call _fnc_getBuildingsPositions;
             {
-                if (_positions isEqualTo []) exitWith {[localize "STR_ENH_MAIN_GARRISON_NOTIFICATION", 1] call BIS_fnc_3DENNotification};
+                if (_positions isEqualTo []) exitWith {["ENH_NotEnoughBuildingPositions"] call BIS_fnc_3DENNotification};
 
                 private _pos = selectRandom _positions;
                 _positions = _positions - [_pos];
