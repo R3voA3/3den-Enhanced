@@ -1,4 +1,3 @@
-# from pathlib import Path
 import glob
 
 def findFilesSpecific():
@@ -31,8 +30,11 @@ def checkForEmptyLastLine(path):
             # Check if we were able to split it. If not, we need to add a final line
             # However, if list is > 2 and 2nd entry is "" then we have an empty line already
             if (len(lines) < 2 or (lines[1] != "")):
-                    f.write("\n")
+                f.write("\n")
+                print("Final new line added to file", path)
     except:
         file.close
 
 findFilesSpecific()
+
+print("All files processed.")
