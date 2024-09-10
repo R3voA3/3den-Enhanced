@@ -11,7 +11,7 @@ class ENH_VisualSettings
             property = "ENH_viewDistance";
             control = "Edit";
             expression = "if (!is3DEN && _value > 0 && hasInterface) then {setViewDistance _value}";
-            defaultValue = "-1";
+            defaultValue = -1;
             typeName = "NUMBER";
         };
         class ENH_ObjViewDistance: ENH_ViewDistance
@@ -27,7 +27,7 @@ class ENH_VisualSettings
             property = "ENH_terrainDetail";
             displayName = "$STR_ENH_MAIN_TERRAINDETAIL_DISPLAYNAME";
             expression = "if (!is3DEN && _value > 0 && hasInterface) then {setTerrainGrid _value}";
-            defaultValue = "-1";
+            defaultValue = -1;
             typeName = "NUMBER";
             class Values
             {

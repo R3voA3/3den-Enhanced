@@ -45,7 +45,7 @@ class ENH_UnitTraits
             property = "ENH_unitTraits_camouflage";
             control = "SliderCameraSpeedMult";
             expression = "[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
-            defaultValue = "1";
+            defaultValue = 1;
         };
         class ENH_AudibleCoef: ENH_Camouflage
         {

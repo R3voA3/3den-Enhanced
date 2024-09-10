@@ -20,7 +20,7 @@ class ENH_ObjectScaling
     };\
     if (!isMultiplayer && _value != 1) then {[_this, _value] spawn {sleep 0.5; (_this select 0) setObjectScale (_this select 1)}};";
     condition = "1 - objectSimulated";
-    defaultValue = "1";
+    defaultValue = 1;
     typeName = "NUMBER";
     validate = "NUMBER";
 };

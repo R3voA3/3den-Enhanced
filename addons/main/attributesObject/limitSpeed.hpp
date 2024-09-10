@@ -7,5 +7,5 @@ class ENH_LimitSpeed
     expression = "_this limitSpeed _value";
     condition = "objectVehicle";
     typeName = "NUMBER";
-    defaultValue = "-1";
+    defaultValue = -1;
 };

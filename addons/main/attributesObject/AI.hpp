@@ -18,7 +18,7 @@ class ENH_AI
             property = "ENH_aimingShake";
             expression = "if (_value == 0.5) exitWith {}; [_this, ['aimingShake', _value]] remoteExec ['setSkill', _this]";
             control = "Slider";
-            defaultValue = "0.5";
+            defaultValue = 0.5;
             condition = "objectBrain";
         };
         class ENH_AimingSpeed: ENH_AimingShake

@@ -9,7 +9,7 @@ class Date
             property = "ENH_timeMultiplier";
             control = "ENH_SliderMulti120";
             expression = "if (!is3DEN && isServer && _value != 1) then {setTimeMultiplier _value}";
-            defaultValue = "1";
+            defaultValue = 1;
         };
     };
 };

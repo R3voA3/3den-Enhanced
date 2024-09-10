@@ -5,7 +5,7 @@ class ENH_MarkerDrawPriority
     property = "ENH_markerDrawPriority";
     control = "EditShort";
     expression = "if (_value != 0 && isServer) then {[_this, _value] remoteExec ['setMarkerDrawPriority', 0, true]}";
-    defaultValue = "0";
+    defaultValue = 0;
     typeName = "NUMBER";
     validate = "NUMBER";
 };

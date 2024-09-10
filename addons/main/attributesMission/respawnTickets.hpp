@@ -5,7 +5,7 @@ class ENH_TicketsBLUFOR
     property = "ENH_respawnTickets_west";
     control = "Edit";
     expression = "if (!is3DEN && isMultiplayer && isServer) then {[west, _value] call BIS_fnc_respawnTickets}";
-    defaultValue = "0";
+    defaultValue = 0;
     typeName = "NUMBER";
 };
 class ENH_TicketsOPFOR: ENH_TicketsBLUFOR
