@@ -25,19 +25,6 @@ archive = false
 author = "R3vo"
 url = "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 
-# Launched with `hemtt launch`
-[hemtt.launch.default]
-workshop = [
-    "450814997",   # CBA_A3
-    "1751569185",  # Pythia
-    "1387934106",  # 7erra's Editing Extensions
-    "2073243184",  # 3Den Stringtable Viewer
-]
-
-mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
-
-executable = "arma3_x64"
-
 [lints.sqf.command_case]
 severity = "Error"
 options.ignore = [
@@ -55,4 +42,25 @@ options.banned = [
     "and",
     "or",
     "not"
+]
+
+# Launched with `hemtt launch`
+[hemtt.launch.default]
+workshop = [
+    "450814997",   # CBA_A3
+    "1751569185",  # Pythia
+    "1387934106",  # 7erra's Editing Extensions
+    "2073243184",  # 3Den Stringtable Viewer
+]
+
+mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
+executable = "arma3_x64"
+
+[hemtt.launch.spe]
+extends = "default"
+workshop = [
+    "3117898674"   # SPEX
+]
+dlc = [
+    "spe",
 ]
