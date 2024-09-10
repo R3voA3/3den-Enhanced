@@ -113,7 +113,7 @@ class ENH_MeasureDistance
 {
     action = "0 spawn ENH_fnc_measureDistance";
     text = "$STR_ENH_MAIN_CONTEXTMENU_MEASUREDISTANCE";
-    picture = "x\enh\addons\main\data\icon_ruler_ca.paa";
+    picture = "x\enh\addons\main\data\ruler_ca.paa";
     conditionShow = "1";
     wikiDescription = "Allows the measuring between two points, both in 2D and 3D.";
 };

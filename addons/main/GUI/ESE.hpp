@@ -286,32 +286,32 @@ class ENH_ESE
                 class ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0";
-                    picture = "x\enh\addons\main\data\arifle_SPAR_01_blk_F_X_CA.paa";
+                    picture = "x\enh\addons\main\data\weapons\assaultRifle_ca.paa";
                     action = "_this call ENH_fnc_ESE_changeFilter";
                     data = "AssaultRifle";
                 };
                 class MGs: ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0";
-                    picture = "x\enh\addons\main\data\gear_m200_ca.paa";
+                    picture = "x\enh\addons\main\data\weapons\machineGun_ca.paa";
                     data = "MachineGun";
                 };
                 class Snipers: ARs
                 {
                     text = "$STR_A3_SNIPER1";
-                    picture = "x\enh\addons\main\data\gear_dmr_01_x_ca.paa";
+                    picture = "x\enh\addons\main\data\weapons\marksmanRifle_ca.paa";
                     data = "SniperRifle";
                 };
                 class Shotguns: ARs
                 {
                     text = "$STR_ENH_MAIN_ESE_SHOTGUNS";
-                    picture = "x\enh\addons\main\data\gear_m4_ssas_ca.paa";
+                    picture = "x\enh\addons\main\data\weapons\shotgun_ca.paa";
                     data = "Shotgun";
                 };
                 class SMGs: ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0";
-                    picture = "x\enh\addons\main\data\gear_smg_01_x_ca.paa";
+                    picture = "x\enh\addons\main\data\weapons\subMachineGun_ca.paa";
                     data = "SubmachineGun";
                 };
                 class Launchers: ARs

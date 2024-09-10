@@ -35,7 +35,7 @@ private _fnc_enableRadio =
     //Only change controls if GUI is visible
     if !(isNull findDisplay IDD_3DENRADIO) then
     {
-        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\icon_pause_ca.paa";
+        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\pause_ca.paa";
     };
 };
 
@@ -51,7 +51,7 @@ private _fnc_disableRadio =
     if !(isNull findDisplay IDD_3DENRADIO) then
     {
         (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_CURRENTSONG) ctrlSetText "";
-        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\icon_play_ca.paa";
+        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\play_ca.paa";
     };
 };
 
