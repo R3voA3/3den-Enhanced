@@ -4,7 +4,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by the intro text attribute. Call when attribute is loaded.
+    Used by the intro text attribute. Called when attribute is loaded.
 
     Parameter(s):
     0: CONTROL - Controls group
