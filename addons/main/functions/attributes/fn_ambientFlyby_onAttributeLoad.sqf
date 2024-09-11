@@ -28,7 +28,7 @@ else
 
     {
         private _add = if (_forEachIndex == 0) then {_x} else {format [", %1", _x]};
-        _valueClasses= _valueClasses + _add;
+        _valueClasses = _valueClasses + _add;
     } forEach _classes;
 
     (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
