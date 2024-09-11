@@ -140,6 +140,7 @@ class Cfg3DEN
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\subCategoryNoHeader_Fixed.hpp"
         #include "controls\sliderMulti120.hpp"
+        #include "controls\inputList.hpp"
     };
     class Mission
     {

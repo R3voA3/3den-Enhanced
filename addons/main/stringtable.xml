@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ENH">
     <Package name="Main">
+        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
+            <English>Multiple entries can be added at once by separating them with a space, a comma or a semicolon.</English>
+            <Czech>Více záznamů najednou lze přidat tak, že je oddělíte mezerou, čárkou nebo středníkem.</Czech>
+            <French>Il est possible d'ajouter plusieurs entrées à la fois en les séparant par un espace, une virgule ou un point-virgule.</French>
+            <Spanish>Se pueden añadir varias entradas a la vez separándolas con un espacio, una coma o un punto y coma.</Spanish>
+            <German>Mehrere Einträge können auf einmal hinzugefügt werden, indem sie durch ein Leerzeichen, ein Komma oder ein Semikolon getrennt werden.</German>
+            <Chinesesimp>用空格、逗号或分号分隔可同时添加多个条目。</Chinesesimp>
+            <Chinese>可以用空格、逗號或分號分隔，一次加入多個項目。</Chinese>
+            <Polish>Można dodać wiele wpisów jednocześnie, oddzielając je spacją, przecinkiem lub średnikiem.</Polish>
+            <Italian>È possibile aggiungere più voci contemporaneamente separandole con uno spazio, una virgola o un punto e virgola.</Italian>
+            <Portuguese>Podem ser adicionadas várias entradas de uma só vez, separando-as com um espaço, uma vírgula ou um ponto e vírgula.</Portuguese>
+            <Russian>Можно добавить сразу несколько записей, разделив их пробелом, запятой или точкой с запятой.</Russian>
+        </Key>
+        <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
+            <English>Removes selected entry from the list.</English>
+            <Czech>Odebere vybranou položku ze seznamu.</French>
+            <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
+            <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
+            <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
+            <Chinese>從清單中移除選取的項目。</Chinese>
+            <Polish>Usuwa wybraną pozycję z listy.</Polish>
+            <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
+            <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
+            <Russian>Удаляет выбранную запись из списка.</Russian>
+        </Key>
         <Key ID="STR_ENH_MAIN_SOUNDVOLUME_DISPLAYNAME">
             <English>Volume (Sound)</English>
             <Czech>Hlasitost zvuku</Czech>

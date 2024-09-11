@@ -21,7 +21,7 @@ class ENH_BackupMissionSQMBlacklist
     displayName = "$STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_DISPLAYNAME";
     tooltip = "$STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP";
     property = "ENH_BackupMissionSQMBlacklist";
-    control = "Edit";
+    control = "ENH_InputList";
     expression = "profileNamespace setVariable ['ENH_EditorPreferences_BackupMissionSQMBlacklist', _value]";
     defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_BackupMissionSQMBlacklist', '']";
 };

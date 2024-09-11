@@ -212,8 +212,6 @@ class CfgFunctions
         class Attributes
         {
             file = "x\enh\addons\main\functions\attributes";
-            class SPR_onAttributeLoad;
-            class SPR_onAttributeSave;
             class advancedDamage_onAttributeLoad;
             class advancedDamage_onAttributeSave;
             class airdrop_onAttributeLoad;
@@ -233,6 +231,10 @@ class CfgFunctions
             class groupMarker_onLoad;
             class holdAction_onAttributeLoad;
             class holdAction_onAttributeSave;
+            class inputList_onAttributeLoad;
+            class inputList_onAttributeSave;
+            class inputList_add;
+            class inputList_remove;
             class introText_onAttributeLoad;
             class introText_onAttributeSave;
             class mapIndicators_onAttributeLoad;
@@ -242,6 +244,8 @@ class CfgFunctions
             class missionEndingCasualties_onAttributeSave;
             class slider_onAttributeLoad;
             class slider_onAttributeSave;
+            class SPR_onAttributeLoad;
+            class SPR_onAttributeSave;
         };
         // class Internal
         // {

@@ -330,7 +330,7 @@ class Display3DEN
                                 class Add: Delete
                                 {
                                     idc = 102;
-                                    text = "x\enh\addons\main\data\plusRound_ca.paa";
+                                    text = "x\enh\addons\main\data\plus_ca.paa";
                                     x = QUOTE(54 * GRID_W);
                                     tooltip = "$STR_A3_CFGVEHICLES_MODULECURATORADDEDITABLEOBJECTS_ARGUMENTS_ADDCREW_VALUES_YES";
                                     onButtonClick = "['add'] spawn ENH_fnc_locationList_enhanced";

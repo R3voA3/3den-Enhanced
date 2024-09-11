@@ -56,6 +56,7 @@
     - Added categories
     - Improved UI layout
 - Updated French translation thanks to Alfred-Neuman
+- Added InputList attribute control
 
 ## REMOVED
 - Customization via userconfig
