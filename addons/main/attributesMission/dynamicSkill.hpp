@@ -7,7 +7,7 @@ class ENH_DynamicSkill
         class ENH_DynamicSkill_Subcategory
         {
             description = "$STR_ENH_MAIN_DYNAMICSKILL_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_DynamicSkill_Subcategory";
             control = "ENH_SubCategoryNoHeader2_Fixed";
         };
         class ENH_DynamicSkill_Enable

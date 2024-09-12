@@ -7,7 +7,7 @@ class ENH_AmbientAnimations
         class ENH_AmbientAnimations_Subcategory
         {
             description = "$STR_ENH_MAIN_AMBIENTANIMATIONS_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_AmbientAnimations_Subcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_AmbientAnimations

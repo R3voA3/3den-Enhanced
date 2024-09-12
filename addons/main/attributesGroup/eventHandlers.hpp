@@ -1,13 +1,13 @@
 class ENH_EventHandlers
 {
     collapsed = 1;
-    displayName = "Event Handlers";
+    displayName = "$STR_ENH_MAIN_ATTRIBUTES_EVENT_HANDLERS_DISPLAYNAME";
     class Attributes
     {
         class ENH_EventHandlers_Subcategory
         {
-            description = "Event Handlers are triggered upon certain events. The code is only executed where the group is local. Event parameters are passed to it via the <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Magic_Variables#this'>_this</a> variable. See <t colorLink='#e69710'><a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'>Arma 3 - Event Handlers</a> for more information.";
-            data = "AttributeSystemSubcategory";
+            description = "$STR_ENH_MAIN_GROUP_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION";
+            property = "ENH_EventHandlers_Subcategory";
             control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         EH_CONFIG(CombatModeChanged,1);

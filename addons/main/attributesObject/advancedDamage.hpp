@@ -7,7 +7,7 @@ class ENH_AdvancedDamage
         class ENH_AdvancedDamage_Subcategory
         {
             description = "$STR_ENH_MAIN_ADVANCEDDAMAGE_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_AdvancedDamage_Subcategory";
             control = "ENH_SubCategoryNoHeader2_Fixed";
         };
         class ENH_AdvancedDamage

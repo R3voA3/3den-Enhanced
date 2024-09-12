@@ -1,14 +1,14 @@
 class ENH_EventHandlers
 {
     collapsed = 1;
-    displayName = "Event Handlers";
+    displayName = "$STR_ENH_MAIN_ATTRIBUTES_EVENT_HANDLERS_DISPLAYNAME";
     class Attributes
     {
         class ENH_EventHandlers_Subcategory
         {
-            description = "$STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS";
-            data = "AttributeSystemSubcategory";
-            control = "ENH_SubCategoryNoHeader1_Fixed";
+            description = "$STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION";
+            property = "ENH_EventHandlers_Subcategory";
+            control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         EH_CONFIG(AnimChanged,objectControllable);
         EH_CONFIG(AnimDone,objectControllable);

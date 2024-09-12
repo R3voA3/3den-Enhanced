@@ -7,7 +7,7 @@ class ENH_SPR
         class ENH_SPR_Subcategory
         {
             description = "$STR_ENH_MAIN_SPR_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_SPR_Subcategory";
             control = "ENH_SubCategoryNoHeader2_Fixed";
         };
         class ENH_SPR

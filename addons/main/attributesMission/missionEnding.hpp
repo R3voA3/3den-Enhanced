@@ -7,7 +7,7 @@ class ENH_MissionEnding_Casualties
         class ENH_MissionEnding_Subcategory
         {
             description = "$STR_ENH_MAIN_MISSIONENDING_CASUALTIES_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_MissionEnding_Subcategory";
             control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         class ENH_MissionEnding_Casualties

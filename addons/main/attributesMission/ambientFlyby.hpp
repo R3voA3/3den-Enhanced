@@ -7,7 +7,7 @@ class ENH_AmbientFlyby
         class ENH_AmbientFlyby_Subcategory
         {
             description = "$STR_ENH_MAIN_AMBIENTFLYBY_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_AmbientFlyby_Subcategory";
             control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         class ENH_AmbientFlyby

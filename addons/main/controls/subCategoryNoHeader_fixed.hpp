@@ -15,7 +15,6 @@ class SubCategoryNoHeader1: Default
         };
     };
 };
-
 class ENH_SubCategoryNoHeader1_Fixed: SubCategoryNoHeader1
 {
     attributeLoad = "((_this controlsGroupCtrl 101) controlsGroupCtrl 102) ctrlSetStructuredText parseText gettext (_config >> 'description')";
@@ -44,7 +43,6 @@ class ENH_SubCategoryNoHeader1_Fixed: SubCategoryNoHeader1
         };
     };
 };
-
 class ENH_SubCategoryNoHeader2_Fixed: ENH_SubCategoryNoHeader1_Fixed
 {
     h = QUOTE((2.5 * GRID_H) + CTRL_H(2));
@@ -71,7 +69,6 @@ class ENH_SubCategoryNoHeader2_Fixed: ENH_SubCategoryNoHeader1_Fixed
         };
     };
 };
-
 class ENH_SubCategoryNoHeader3_Fixed: ENH_SubCategoryNoHeader1_Fixed
 {
     h = QUOTE((2.5 * GRID_H) + CTRL_H(3));

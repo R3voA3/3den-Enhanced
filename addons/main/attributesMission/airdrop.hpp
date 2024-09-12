@@ -7,7 +7,7 @@ class ENH_Airdrop
         class ENH_Airdrop_Subcategory
         {
             description = "$STR_ENH_MAIN_AIRDROP_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_Airdrop_Subcategory";
             control = "ENH_SubCategoryNoHeader2_Fixed";
         };
         class ENH_Airdrop

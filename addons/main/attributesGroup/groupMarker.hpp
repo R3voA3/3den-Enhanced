@@ -7,7 +7,7 @@ class ENH_GroupMarker
         class ENH_GroupMarker_Subcategory
         {
             description = "$STR_ENH_MAIN_GROUPMARKER_DESCRIPTION";
-            data = "AttributeSystemSubcategory";
+            property = "ENH_GroupMarker_Subcategory";
             control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         class ENH_GroupMarker
