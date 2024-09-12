@@ -26,6 +26,32 @@
             <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
             <Russian>Удаляет выбранную запись из списка.</Russian>
         </Key>
+        <Key ID="STR_ENH_MAIN_WATERLEAKINESS_DISPLAYNAME">
+            <English>Leakage</English>
+            <Czech>Únik</Czech>
+            <French>Fuite</French>
+            <Spanish>Fugas</Spanish>
+            <German>Undichtigkeit</German>
+            <Chinesesimp>渗漏</Chinesesimp>
+            <Chinese>洩漏</Chinese>
+            <Polish>Wyciek</Polish>
+            <Italian>Perdite</Italian>
+            <Portuguese>Fugas</Portuguese>
+            <Russian>Утечка</Russian>
+        </Key>
+        <Key ID="STR_ENH_MAIN_WATERLEAKINESS_TOOLTIP">
+            <English>Defines how quickly the vehicle will be filled with water. A smaller value means it takes longer for it to get filled.</English>
+            <Czech>Určuje, jak rychle se vozidlo naplní vodou. Menší hodnota znamená, že naplnění trvá déle.</Czech>
+            <French>Définit la vitesse à laquelle le véhicule sera rempli d'eau. Une valeur plus petite signifie qu'il faut plus de temps pour le remplir.</French>
+            <Spanish>Define la rapidez con la que el vehículo se llenará de agua. Un valor menor significa que tardará más en llenarse.</Spanish>
+            <German>Legt fest, wie schnell das Fahrzeug mit Wasser befüllt wird. Ein kleinerer Wert bedeutet, dass es länger dauert, bis es gefüllt ist.</German>
+            <Chinesesimp>定义车辆注水的速度。数值越小，表示注水时间越长。</Chinesesimp>
+            <Chinese>定義車輛注水的速度。較小的值表示需要較長的時間才能注滿。</Chinese>
+            <Polish>Określa, jak szybko pojazd zostanie napełniony wodą. Mniejsza wartość oznacza, że napełnianie trwa dłużej.</Polish>
+            <Italian>Definisce la velocità con cui il veicolo viene riempito d'acqua. Un valore più piccolo significa che il veicolo impiega più tempo a riempirsi.</Italian>
+            <Portuguese>Define a rapidez com que o veículo é enchido com água. Um valor mais pequeno significa que o veículo demora mais tempo a encher-se.</Portuguese>
+            <Russian>Определяет, как быстро автомобиль будет заполнен водой. Меньшее значение означает, что заполнение займет больше времени.</Russian>
+        </Key>
         <Key ID="STR_ENH_MAIN_SOUNDVOLUME_DISPLAYNAME">
             <English>Volume (Sound)</English>
             <Czech>Hlasitost zvuku</Czech>

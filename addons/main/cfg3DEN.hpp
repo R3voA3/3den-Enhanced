@@ -252,7 +252,6 @@ class Cfg3DEN
                     #include "attributesObject\engineOn.hpp"
                     #include "attributesObject\disableNVGE.hpp"
                     #include "attributesObject\disableTIE.hpp"
-                    #include "attributesObject\limitSpeed.hpp"
                     #include "attributesObject\doStop.hpp"
                     #include "attributesObject\removeFromRemainsCollector.hpp"
                     #include "attributesObject\SPRTickets.hpp"
@@ -263,7 +262,6 @@ class Cfg3DEN
                 class Attributes
                 {
                     #include "attributesObject\objectScale.hpp"
-                    #include "attributesObject\setMass.hpp"
                 };
             };
             class Inventory
@@ -280,6 +278,9 @@ class Cfg3DEN
                 {
                     #include "attributesObject\featureType.hpp"
                     #include "attributesObject\forceFlag.hpp"
+                    #include "attributesObject\waterLeakiness.hpp"
+                    #include "attributesObject\setMass.hpp"
+                    #include "attributesObject\limitSpeed.hpp"
                 };
             };
         };
