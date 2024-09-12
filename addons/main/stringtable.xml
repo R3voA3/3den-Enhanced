@@ -10228,7 +10228,15 @@
             <Spanish>Alinear con X+</Spanish>
             <French>Aligner sur X+</French>
         </Key>
-        <Key ID="STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS">
+        <Key ID="STR_ENH_MAIN_ATTRIBUTES_EVENT_HANDLERS_DISPLAYNAME">
+            <English>Events</English>
+            <German>Ereignisse</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION">
+            <English>Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; variable. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; for more information.</English>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GROUP_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; variable. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; for more information.</English>
             <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;.</German>
         </Key>
