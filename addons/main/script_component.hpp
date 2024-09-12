@@ -22,7 +22,7 @@
     validate = "expression";\
 }\
 
-#define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(ENH_,A,.sqf)))]})
+#define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))]})
 
 #define LB "<br/>"
 
