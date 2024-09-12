@@ -6,7 +6,8 @@
 - Added group event handler attributes
 - Added import from clipboard function to ESE #306 (Thanks to Pixelated-Grunt)
 - Added blacklist for mission.sqm backup
-- Added waterleakiness can now be set for vehicles
+- Added water leakiness can now be set for vehicles
+- Added mission event handler attributes
 
 ## CHANGED
 - 3den Enhanced is now build with HEMTT

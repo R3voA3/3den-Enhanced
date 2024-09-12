@@ -22,6 +22,28 @@
     validate = "expression";\
 }\
 
+#define MEH_CONFIG(A) class DOUBLES(ENH_MissionEventHandlers,A)\
+{\
+    displayName = QUOTE(A);\
+    property = QUOTE(DOUBLES(ENH_MissionEventHandlers,A));\
+    control = "EditCodeMulti5";\
+    expression = QUOTE((if (_value != '' && !is3DEN) then {TRIPLES(ENH_MissionEventHandlers,A,ID) = addMissionEventHandler EH_ARRAY(A)}));\
+    condition = 1;\
+    defaultValue = "''";\
+    validate = "expression";\
+}\
+
+#define MEH_CONFIG_SERVER(A) class DOUBLES(ENH_MissionEventHandlers,A)\
+{\
+    displayName = QUOTE(A);\
+    property = QUOTE(DOUBLES(ENH_MissionEventHandlers,A));\
+    control = "EditCodeMulti5";\
+    expression = QUOTE((if (_value != '' && !is3DEN && isServer) then {TRIPLES(ENH_MissionEventHandlers,A,ID) = addMissionEventHandler EH_ARRAY(A)}));\
+    condition = 1;\
+    defaultValue = "''";\
+    validate = "expression";\
+}\
+
 #define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))]})
 
 #define LB "<br/>"

@@ -186,6 +186,7 @@ class Cfg3DEN
                 #include "attributesMission\missionEnding.hpp"
                 #include "attributesMission\volume.hpp"
                 #include "attributesMission\SPR.hpp"
+                #include "attributesMission\missionEventHandlers.hpp"
                 class Misc
                 {
                     class Attributes
