@@ -279,9 +279,10 @@ class Cfg3DEN
                 {
                     #include "attributesObject\featureType.hpp"
                     #include "attributesObject\forceFlag.hpp"
-                    #include "attributesObject\waterLeakiness.hpp"
                     #include "attributesObject\setMass.hpp"
+                    #include "attributesObject\waterLeakiness.hpp"
                     #include "attributesObject\limitSpeed.hpp"
+                    #include "attributesObject\fuelConsumptionCoef.hpp"
                 };
             };
         };

@@ -8,6 +8,7 @@
 - Added blacklist for mission.sqm backup
 - Added water leakiness can now be set for vehicles
 - Added mission event handler attributes
+- Added fuel consumption coef. attribute
 
 ## CHANGED
 - 3den Enhanced is now build with HEMTT

@@ -1038,6 +1038,30 @@
             <Polish>Dodaje do obiektu arsenał ze wszystkimi przedmiotami w grze.</Polish>
             <Russian>Добавляет арсенал со всеми предметами к объекту.</Russian>
         </Key>
+        <Key ID="STR_ENH_MAIN_FUELCONSUMPTIONCOEF_DISPLAYNAME">
+            <English>Fuel Consumption Coefficient</English>
+            <Italian>Coefficiente di consumo del carburante</Italian>
+            <Czech>Koeficient spotřeby paliva</Czech>
+            <French>Coefficient de consommation de carburant</French>
+            <Spanish>Coeficiente de consumo de combustible</Spanish>
+            <German>Koeffizient des Kraftstoffverbrauchs</German>
+            <Chinesesimp>燃料消耗系数</Chinesesimp>
+            <Chinese>耗油系數</Chinese>
+            <Polish>Współczynnik zużycia paliwa</Polish>
+            <Russian>Коэффициент расхода топлива</Russian>
+        </Key>
+        <Key ID="STR_ENH_MAIN_FUELCONSUMPTIONCOEF_TOOLTIP">
+            <English>Sets the fuel consumption coefficient, which is a multiplier of the fuel consumption rate in config. It doesn't affect fuel leakage or refueling.</English>
+            <Italian>Imposta il coefficiente di consumo di carburante, che è un moltiplicatore del tasso di consumo di carburante in configurazione. Non influisce sulla perdita di carburante o sul rifornimento.</Italian>
+            <Czech>Nastavuje koeficient spotřeby paliva, který je násobitelem míry spotřeby paliva v konfiguraci. Nemá vliv na únik paliva ani na doplňování paliva.</Czech>
+            <French>Définit le coefficient de consommation de carburant, qui est un multiplicateur du taux de consommation de carburant dans la configuration. Il n'affecte pas les fuites de carburant ni le ravitaillement.</French>
+            <Spanish>Establece el coeficiente de consumo de combustible, que es un multiplicador de la tasa de consumo de combustible en config. No afecta a la fuga de combustible ni al repostaje.</Spanish>
+            <German>设置燃料消耗系数，它是配置中燃料消耗率的乘数。它不会影响燃料泄漏或加油。</German>
+            <Chinesesimp>燃料消耗系数</Chinesesimp>
+            <Chinese>設定燃料消耗系數，它是配置中燃料消耗率的乘數。它不會影響燃料洩漏或加油。</Chinese>
+            <Polish>Ustawia współczynnik zużycia paliwa, który jest mnożnikiem współczynnika zużycia paliwa w konfiguracji. Nie ma wpływu na wyciek paliwa ani tankowanie.</Polish>
+            <Russian>Устанавливает коэффициент расхода топлива, который представляет собой множитель нормы расхода топлива в конфиге. Он не влияет на утечку топлива или дозаправку.</Russian>
+        </Key>
         <Key ID="STR_ENH_MAIN_ALLOWSPRINTING_DISPLAYNAME">
             <English>Allow Sprinting</English>
             <Italian>Consente lo sprint</Italian>
