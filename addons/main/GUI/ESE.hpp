@@ -110,8 +110,8 @@ class ENH_ESE
                         "SortbyCount",
                         "SortbyMod",
                         "SortbyType",
-                        "Separator",
-                        "ImportFromClipboard"
+                        "Separator"/* ,
+                        "ImportFromClipboard" */
                     };
                 };
                 class FolderFilter
@@ -144,7 +144,7 @@ class ENH_ESE
                         "Goggles",
                         "NVGs",
                         "Separator",
-                        "ImportToFilter",
+                        // "ImportToFilter",
                         "Separator",
                         "ResetToAllItems"
                     };
@@ -218,14 +218,14 @@ class ENH_ESE
                 class AddOne
                 {
                     text = "+1";
-                    picture = "\a3\3den\data\displays\display3den\tree_expand_ca.paa";
+                    picture = "x\enh\addons\main\data\plus_ca.paa";
                     action = "1 call ENH_fnc_ESE_addItem";
                     shortcuts[] = {DIK_RIGHTARROW};
                 };
                 class RemoveOne
                 {
                     text = "-1";
-                    picture = "\a3\3den\data\displays\display3den\tree_collapse_ca.paa";
+                    picture = "x\enh\addons\main\data\minus_ca.paa";
                     action = "1 call ENH_fnc_ESE_removeItem";
                     shortcuts[] = {DIK_LEFTARROW};
                 };

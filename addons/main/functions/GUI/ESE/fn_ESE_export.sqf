@@ -58,7 +58,7 @@ switch (_mode) do
 _export = _export regexReplace ["(,)([^ ])", "$1 $2"];
 _export = trim _export;
 
-uiNamespace setVariable ["display3DENCopy_data", ["Export to Arsenal (LOCALIZE)", _export]];
+uiNamespace setVariable ["display3DENCopy_data", ["", _export]];
 (uiNamespace getVariable ["ENH_Display_ESE", displayNull]) createDisplay "display3denCopy";
 
 nil

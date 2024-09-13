@@ -13,28 +13,41 @@
     ARRAY - Result attributes that can be loaded into the filter and inventory screens. Return all items if failed.
 */
 
-
 #include "\x\enh\addons\main\script_component.hpp"
+
 params [["_return", false, [false]]];
+
 private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
-if (isNil "_importList" || {!(_importList isEqualType [])} || {!(_importList isEqualTypeAll "")}) exitWith {
+if !(_importList isEqualType [] && _importList isEqualTypeAll "") exitWith
+{
     playSound ["3DEN_notificationWarning", true];
     (ENH_ESE_target get3DENAttribute "ammoBox") # 0
 };
 
-private _configs = _importList apply {
-    if (isClass(configFile >> "CfgWeapons" >> _x)) then {
+private _configs = _importList apply
+{
+    if (isClass(configFile >> "CfgWeapons" >> _x)) then
+    {
         configFile >> "CfgWeapons" >> _x
-    } else {
-        if (isClass(configFile >> "CfgMagazines" >> _x)) then {
+    }
+    else
+    {
+        if (isClass(configFile >> "CfgMagazines" >> _x)) then
+        {
             configFile >> "CfgMagazines" >> _x
-        } else {
-            if (isClass(configFile >> "CfgGlasses" >> _x)) then {
+        }
+        else
+        {
+            if (isClass(configFile >> "CfgGlasses" >> _x)) then
+            {
                 configFile >> "CfgGlasses" >> _x
-            } else {
-                if (isClass(configFile >> "CfgVehicles" >> _x)) then {
+            }
+            else
+            {
+                if (isClass(configFile >> "CfgVehicles" >> _x)) then
+                {
                     configFile >> "CfgVehicles" >> _x
                 }
             }
@@ -44,4 +57,4 @@ private _configs = _importList apply {
 
 private _attributeValue = ([_configs] call ENH_fnc_ESE_getConfigValues) select 1;
 if _return exitWith {_attributeValue};
-[true, _attributeValue] call ENH_fnc_ESE_applyAttribute
+[true, _attributeValue] call ENH_fnc_ESE_applyAttribute;
