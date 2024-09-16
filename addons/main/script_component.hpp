@@ -1,14 +1,10 @@
 #include "\a3\3den\ui\macros.inc"
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 #include "\a3\ui_f\hpp\definecommongrids.inc"
+#include "\x\cba\addons\main\script_macros_common.hpp"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
-
-#define QUOTE(var1) #var1
-#define DOUBLES(var1,var2) var1##_##var2
-#define TRIPLES(var1,var2,var3) var1##_##var2##_##var3
-#define TRIPLES_NO_SCORE(var1,var2,var3) var1####var2####var3
 
 #define EH_ARRAY(A) [QUOTE(QUOTE(A)), compile _value]
 #define EH_CONFIG(A,B) class DOUBLES(ENH_EventHandlers,A)\
@@ -44,10 +40,7 @@
     validate = "expression";\
 }\
 
-#define EVENT_SCRIPT(A) A = QUOTE(if (fileExists QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))) then {call compileScript [QUOTE(QUOTE(TRIPLES_NO_SCORE(.enh_eventScripts\,A,.sqf)))]})
-
 #define LB "<br/>"
-
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11
@@ -70,10 +63,6 @@
 #define ORIGIN_X_STATUSBAR (safeZoneW - 60 * GRID_W)
 
 #define CTRL(IDC) (_display displayCtrl IDC)
-#define G_PREF(A) ("Preferences" get3DENMissionAttribute A)
-
-#define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
-#define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
 
 #define TEXTURES(NAME)\
 textureChecked = NAME;\
@@ -87,11 +76,10 @@ texturePressedUnchecked = NAME;\
 textureDisabledChecked = NAME;\
 textureDisabledUnchecked = NAME;\
 
-#define IMG_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
-#define IMG_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
-
-#define TEX_CHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"
-#define TEX_UNCHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"
+#define TEXTURE_CHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"
+#define TEXTURE_UNCHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"
+#define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
+#define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
 
 #define SOUND_FEEDBACK "FD_Finish_F"
 

@@ -27,13 +27,13 @@ ENH_fnc_manageZeusAddons_invertSelection =
 
     if (_ctrlTVPatches tvValue _path == 0) then
     {
-        _ctrlTVPatches tvSetPicture [_path, "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"];
+        _ctrlTVPatches tvSetPicture [_path, "TEXTURE_CHECKED"];
         _ctrlTVPatches tvSetValue [_path, 1];
         _ctrlTVPatches tvSetColor [_path, [145 / 255, 199 / 255, 127 / 255, 1]];
     }
     else
     {
-        _ctrlTVPatches tvSetPicture [_path, "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"];
+        _ctrlTVPatches tvSetPicture [_path, "TEXTURE_UNCHECKED"];
         _ctrlTVPatches tvSetValue [_path, 0];
         _ctrlTVPatches tvSetColor [_path, [1, 1, 1, 1]];
     };
@@ -75,7 +75,7 @@ private _addons = [];
     private _previouslyEnabled = profileNamespace getVariable ["ENH_EnabledZeusAddons", []];
 
     _ctrlTVPatches tvSetData [[_indexAddon, _indexPatch], _addonClass];
-    _ctrlTVPatches tvSetPicture [[_indexAddon, _indexPatch], "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"];
+    _ctrlTVPatches tvSetPicture [[_indexAddon, _indexPatch], "TEXTURE_UNCHECKED"];
     _ctrlTVPatches tvSetTooltip [[_indexAddon, _indexPatch], configName _x];
     _ctrlTVPatches tvSetValue [[_indexAddon, _indexPatch], parseNumber (configName _x in _previouslyEnabled)];
     [_ctrlTVPatches, [_indexAddon, _indexPatch]] call ENH_fnc_manageZeusAddons_invertSelection;
