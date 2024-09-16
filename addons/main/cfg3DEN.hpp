@@ -110,25 +110,6 @@ class Cfg3DEN
                 };
             };
         };
-        class EditCodeMulti5: EditMulti5
-        {
-            h = QUOTE((5 + 20 * 3.5) * GRID_H);
-            class Controls: Controls
-            {
-                class Background: Background
-                {
-                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
-                };
-                class Value: Value
-                {
-                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
-                };
-                class Title: Title
-                {
-                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
-                };
-            };
-        };
         #include "controls\SPR.hpp"
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
