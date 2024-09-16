@@ -31,7 +31,7 @@ class Display3DEN
                 {
                     w = QUOTE(19 * GRID_W);
                 };
-                class Version: ctrlButton
+                class Version: ValueX
                 {
                     idc = -1;
                     text = "V";

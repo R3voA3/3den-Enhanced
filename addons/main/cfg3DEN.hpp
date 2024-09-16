@@ -69,10 +69,13 @@ class Cfg3DEN
             };
         };
         //Increase height of edit attribute controls
-        class Edit;
+        class Edit: Title
+        {
+            class Controls;
+        };
         class EditMulti3: Edit
         {
-            class Controls
+            class Controls: Controls
             {
                 class Value;
                 class Background;
@@ -81,7 +84,7 @@ class Cfg3DEN
         };
         class EditCodeMulti3: EditMulti3
         {
-            class Controls
+            class Controls: Controls
             {
                 class Value;
                 class Background;
@@ -107,7 +110,7 @@ class Cfg3DEN
                 };
             };
         };
-        class EditCodeMulti5: EditCodeMulti3
+        class EditCodeMulti5: EditMulti5
         {
             h = QUOTE((5 + 20 * 3.5) * GRID_H);
             class Controls: Controls

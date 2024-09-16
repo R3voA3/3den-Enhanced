@@ -1,10 +1,10 @@
 class RscControlsGroupNoScrollbars;
+class RscButtonMenu;
 class RscDebugConsole: RscControlsGroupNoScrollbars
 {
     class Controls
     {
-        class ButtonSpectatorCamera;
-        class ButtonFunctions: ButtonSpectatorCamera
+        class ButtonFunctions: RscButtonMenu
         {
             idc = -1;
             //Dynamically reposition it if Connor's functions viewer is available as well.
