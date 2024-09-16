@@ -24,5 +24,5 @@
 </p>
 
 <p align="center">
-This modification adds new functionalities to the Eden Editor without creating any dependencies for players. That means, scenario editors can use this mod to make their life easier without making the life of the players harder, by forcing them to download an additional modification.
+This modification adds new functionalities to the Eden Editor. The modification is not needed for the scenarios to be played as no dependencies are created.
 </p>
