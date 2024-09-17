@@ -9,14 +9,22 @@
 - Added water leakiness can now be set for vehicles
 - Added mission event handler attributes
 - Added fuel consumption coef. attribute
+- Added InputList attribute control
 
 ## CHANGED
-- 3den Enhanced is now build with HEMTT
+- Optimizations
+    - 3den Enhanced is now build with HEMTT
     - Fixed various config and macro issues
     - Improved config definitions
     - Added various script improvements
     - Mod is now binarized
     - Compiled all .sqf files to .sqfc
+    - Major code overhaul of things running from various event handlers
+    - Fixed updating base classes for RscDebugConsole, EditCodeMulti3, and Display3DEN
+    - Optimized code of Add Objects to Zeus attribute
+    - Simplified Minimap code logic
+    - Minimap code was optimized
+    - Draw DLC icons and building positions, code optimization
 - Functions Viewer
     - Functions Viewer now updates list with last searched keyword when changing tree view layout
     - Functions Viewer now reloads currently selected file if loading type was changed (loadFile, preprocessFile...)
@@ -28,43 +36,39 @@
     - Entities can now be selected on the fly
     - Editor placed buildings are not detected as well
     - The UI is now properly deinitialized before preview, when switching terrain or mission
-- Updated French translation (thanks to Alfred-Neuman)
-- Fixed duplicated "Move to layer..." context menu entry (thanks to honger)
 - Group Marker Attribute
     - Optimized code
     - Marker is no longer attached to first group leader
     - Marker is only deleted once group becomes null
-- Briefing attributes should now create diary entries in same order every time #297
-- Dynamic view distance was no longer working after preview ended
-- Major code overhaul of things running from various event handlers
-- Draw DLC icons and building positions were move to preferences -> interface. Code was optimized
-- Minimap code was optimized
-- Added description to menu strip items for easier documenation
-- Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
-- Shortcuts in the shortcuts UI is now properly translated
-- Shortcuts UI now shows all shortcuts per action
-- Added tooltip to shortcuts UI in case translations are too long
-- Optimized code of Add Objects to Zeus attribute
-- Simplified Minimap code logic
-- Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
-- Add Editable Objects (Zeus) attribute now also adds all editor placed objects
-- Full Italian translation thanks to Fil-ric
-- Equipemnt Storage Editor
+- Shortcuts UI
+    - Shortcuts in the shortcuts UI are now properly translated
+    - Shortcuts UI now shows all shortcuts per action
+    - Added tooltip to shortcuts UI in case translations are too long
+- Equipment Storage Editor
     - HashMap with all items would get rebuild each time resulting in slow loading of the UI
     - Fixed weapons of type "MissileLauncher" (Titan) would be missing
-- Fixed removing unit from remains collector had not effect (typo in code)
 - Favorites list was overhauled
     - Place entities by dragging and dropping
     - Added support for markers, modules and objects
     - Added categories
     - Improved UI layout
-- Updated French translation thanks to Alfred-Neuman
-- Added InputList attribute control
-- Moved mass attribute from transformation category to state category
-- Moved limit speed attribute from special states category to state category
-- Fixed updating base classes for RscDebugConsole, EditCodeMulti3, and Display3DEN
+- Translation
+    - Updated French translation thanks to Alfred-Neuman
+    - Full Italian translation thanks to Fil-ric
+- General
+    - Moved mass attribute from transformation category to state category
+    - Moved limit speed attribute from special states category to state category
+    - Fixed duplicated "Move to layer..." context menu entry (thanks to honger)
+    - Fixed removing unit from remains collector had not effect (typo in code)
+    - Add Editable Objects (Zeus) attribute now also adds all editor placed objects
+    - Briefing attributes should now create diary entries in same order every time #297
+    - Dynamic view distance was no longer working after preview ended
+    - Draw DLC icons and building positions were move to preferences
+    - Added description to menu strip items for easier documenation
+    - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
 
 ## REMOVED
+- Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
 - Customization via userconfig
 - WIP scripts and UIs
 - Unused functions
