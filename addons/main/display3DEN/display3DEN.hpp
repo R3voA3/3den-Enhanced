@@ -37,7 +37,6 @@ class Display3DEN
                     idc = -1;
                     type = CT_BUTTON;
                     text = "V";
-                    type = CT_BUTTON;
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
                     y = QUOTE(2 * pixelH);
                     w = QUOTE(4 * GRID_W - 4 * pixelW);
