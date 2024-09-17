@@ -68,12 +68,33 @@ class Cfg3DEN
                 class Title;
             };
         };
-        //Increase height of edit attribute controls
         class Edit: Title
         {
-            class Controls;
+            class Controls: Controls
+            {
+                class Title;
+                class Value;
+            };
         };
         class EditMulti3: Edit
+        {
+            class Controls: Controls
+            {
+                class Value: Value
+                {
+                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
+                };
+                class Background: ctrlStaticOverlay
+                {
+                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
+                };
+                class Title: ctrlStaticFrame
+                {
+                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
+                };
+            };
+        };
+        class EditMulti5: EditMulti3
         {
             class Controls: Controls
             {
@@ -84,14 +105,24 @@ class Cfg3DEN
         };
         class EditCodeMulti3: EditMulti3
         {
+            h = QUOTE((5 + 20 * 3.5) * GRID_H);
             class Controls: Controls
             {
-                class Value;
-                class Background;
-                class Title;
+                class Background: Background
+                {
+                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
+                };
+                class Value: Value
+                {
+                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
+                };
+                class Title: Title
+                {
+                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
+                };
             };
         };
-        class EditMulti5: EditMulti3
+        class EditCodeMulti5: EditMulti5
         {
             h = QUOTE((5 + 20 * 3.5) * GRID_H);
             class Controls: Controls

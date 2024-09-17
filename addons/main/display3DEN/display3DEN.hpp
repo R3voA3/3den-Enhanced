@@ -37,39 +37,41 @@ class Display3DEN
                     idc = -1;
                     type = CT_BUTTON;
                     text = "V";
-                    font = "PuristaLight";
-
+                    type = CT_BUTTON;
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
                     y = QUOTE(2 * pixelH);
                     w = QUOTE(4 * GRID_W - 4 * pixelW);
                     h = QUOTE(4 * GRID_H - 4 * pixelH);
-                    sizeEx = QUOTE(4.32 * SIZEEX_BASE);
+                    onLoad = "_this # 0 ctrlSetToolTip format ['%1.%2', (productVersion select 2) * 0.01 toFixed 2, productVersion select 3]";
+                    onButtonClick = "call ENH_fnc_productInfo";
+                    colorBackground[] = {0, 0, 0, 0.5};
+                    style = QUOTE(ST_CENTER + ST_UPPERCASE);
+                    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+                    colorBackgroundActive[] = {COLOR_ACTIVE_RGBA};
+                    colorFocused[] = {COLOR_ACTIVE_RGBA};
+                    colorText[] = {1, 1, 1, 1};
+                    colorDisabled[] = {1, 1, 1, 0.25};
+                    borderSize = 0;
+                    colorBorder[] = {0, 0, 0, 0};
+                    colorShadow[] = {0, 0, 0, 0};
                     offsetX = 0;
                     offsetY = 0;
                     offsetPressedX = "pixelW";
                     offsetPressedY = "pixelH";
-
-                    colorBackground[] = {0, 0, 0, 0.5};
-                    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
-                    colorBackgroundActive[] = {COLOR_ACTIVE_RGB, 1};
-                    colorBorder[] = {0, 0, 0, 0};
-                    colorDisabled[] = {1, 1, 1, 0.25};
-                    colorFocused[] = {COLOR_ACTIVE_RGB, 1};
-                    colorShadow[] = {0, 0, 0, 0};
-
-                    onLoad = "_this # 0 ctrlSetToolTip format ['%1.%2', (productVersion select 2) * 0.01 toFixed 2, productVersion select 3]";
-                    onButtonClick = "call ENH_fnc_productInfo";
-                    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
-                    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
-                    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
-                    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
-
-                    borderSize = 0;
                     period = 0;
                     periodFocus = 2;
                     periodOver = 0.5;
-                    style = "0x02 + 0xC0";
+                    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
+                    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+                    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
+                    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
                     shadow = 1;
+                    blinkingPeriod = 0;
+                    tooltip = "";
+                    tooltipMaxWidth = 0.5;
+                    tooltipColorShade[] = {0, 0, 0, 1};
+                    tooltipColorText[] = {1, 1, 1, 1};
+                    tooltipColorBox[] = {0, 0, 0, 0};
                 };
                 class TextY: TextX
                 {
