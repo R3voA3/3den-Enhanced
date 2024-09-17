@@ -31,9 +31,11 @@ class Display3DEN
                 {
                     w = QUOTE(19 * GRID_W);
                 };
+                // Manually reconfig Version into a button
                 class Version: ValueX
                 {
                     idc = -1;
+                    type = CT_BUTTON;
                     text = "V";
                     type = CT_BUTTON;
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
