@@ -15,21 +15,27 @@
 
 #include "\x\enh\addons\main\script_component.hpp"
 
-private _modList = "";
+private _patches = "true" configClasses (configFile >> "CfgPatches");
+private _name = "";
 
-_configClasses = ("true" configClasses (configFile >> "CfgMods")) + ("true" configClasses (configFile >> "CfgPatches"));
+_patches = _patches apply
 {
     _name = getText (_x >> "name");
-    if ((_name find "Arma 3" == -1) && !(_name isEqualTo "")) then
+    if (_name == "") then
     {
-        _modList = _modList + _name + endl;
+        configName _x
+    }
+    else
+    {
+        _name
     };
-    true
-} count _configClasses;
+};
+
+_patches sort true;
 
 private _text = format
 [
-    "Game: %1" + endl + "Version: %2" + endl + "Build: %3" + endl + "Branch: %4" + endl + "Mods enabled: %5" + endl + "Operating System: %6" + endl + "Architecture: %10" + endl + endl + "Resolution:" + endl + "Width: %7" + endl + "Height: %8" + endl + "UI Scale: %9" + endl + endl + "Mod List:" + endl + "%11", //Do not localize
+    "Game: %1" + endl + "Version: %2" + endl + "Build: %3" + endl + "Branch: %4" + endl + "Mods enabled: %5" + endl + "Operating System: %6" + endl + "Architecture: %10" + endl + endl + "Resolution:" + endl + "Width: %7" + endl + "Height: %8" + endl + "UI Scale: %9" + endl + endl + "Mod List:" + endl + "%11", // Do not localize
     productVersion # 0,
     (productVersion # 2) / 100,
     productVersion # 3,
@@ -40,7 +46,7 @@ private _text = format
     getResolution # 1,
     getResolution # 5,
     productVersion # 7,
-    _modList
+    _patches joinString endl
 ];
 
 uiNamespace setVariable ["display3DENCopy_data", ["", _text]];
