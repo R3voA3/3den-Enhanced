@@ -62,6 +62,7 @@
 - Added InputList attribute control
 - Moved mass attribute from transformation category to state category
 - Moved limit speed attribute from special states category to state category
+- Fixed updating base classes for RscDebugConsole, EditCodeMulti3, and Display3DEN
 
 ## REMOVED
 - Customization via userconfig
