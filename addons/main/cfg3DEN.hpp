@@ -59,87 +59,8 @@ class Cfg3DEN
     };
     class Attributes
     {
-        //Base class templates
-        class Default; //Empty template with pre-defined width and single line height
-        class Title: Default
-        {
-            class Controls
-            {
-                class Title;
-            };
-        };
-        class Edit: Title
-        {
-            class Controls: Controls
-            {
-                class Title;
-                class Value;
-            };
-        };
-        class EditMulti3: Edit
-        {
-            class Controls: Controls
-            {
-                class Value: Value
-                {
-                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
-                };
-                class Background: ctrlStaticOverlay
-                {
-                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
-                };
-                class Title: ctrlStaticFrame
-                {
-                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
-                };
-            };
-        };
-        class EditMulti5: EditMulti3
-        {
-            class Controls: Controls
-            {
-                class Value;
-                class Background;
-                class Title;
-            };
-        };
-        class EditCodeMulti3: EditMulti3
-        {
-            h = QUOTE((5 + 20 * 3.5) * GRID_H);
-            class Controls: Controls
-            {
-                class Background: Background
-                {
-                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
-                };
-                class Value: Value
-                {
-                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
-                };
-                class Title: Title
-                {
-                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
-                };
-            };
-        };
-        class EditCodeMulti5: EditMulti5
-        {
-            class Controls: Controls
-            {
-                class Background: Background
-                {
-                    h = QUOTE((20 * 3.5 + 0.6 * 5) * GRID_H);
-                };
-                class Value: Value
-                {
-                    h = QUOTE(20 * 3.5 * GRID_H - 1 * GRID_H);
-                };
-                class Title: Title
-                {
-                    h = QUOTE((20 * 3.5 + 1 * 5) * GRID_H);
-                };
-            };
-        };
+        #include "controls\base.hpp"
+        #include "controls\largerEditMulti.hpp"
         #include "controls\SPR.hpp"
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
