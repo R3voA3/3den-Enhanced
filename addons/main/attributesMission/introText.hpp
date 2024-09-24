@@ -7,7 +7,7 @@ class ENH_IntroText
         class ENH_IntroText_Subcategory
         {
             description = "$STR_ENH_MAIN_INTROTEXT_DESCRIPTION";
-            property = "ENH_IntroText_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_IntroText

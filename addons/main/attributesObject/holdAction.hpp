@@ -7,7 +7,7 @@ class ENH_HoldAction
         class ENH_HoldAction_Subcategory
         {
             description = "$STR_ENH_MAIN_HOLDACTION_DESCRIPTION";
-            property = "ENH_HoldAction_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_HoldAction

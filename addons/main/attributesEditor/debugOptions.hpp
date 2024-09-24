@@ -94,7 +94,7 @@ class ENH_DebugOptions
         class ENH_DebugOptions_Player_Subcategory: ENH_DebugOptions_Subcategory
         {
             description = "$STR_MPTABLE_NAME";
-            property = "ENH_DebugOptions_Player_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_DebugOptions_Invulnerability: ENH_DebugOptions_Arsenal
@@ -186,7 +186,7 @@ class ENH_DebugOptions
         class ENH_DebugOptions_Map_Subcategory: ENH_DebugOptions_Subcategory
         {
             description = "$STR_USRACT_MAP";
-            property = "ENH_DebugOptions_Map_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_DebugOptions_DynSimDebug: ENH_DebugOptions_Arsenal

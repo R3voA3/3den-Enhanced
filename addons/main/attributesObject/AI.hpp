@@ -8,7 +8,7 @@ class ENH_AI
         class ENH_AI_Skill_Subcategory
         {
             description = "$STR_A3_RSCDISPLAYGAMEOPTIONS_TEXTAISKILL";
-            property = "ENH_AI_Skill_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_AimingShake

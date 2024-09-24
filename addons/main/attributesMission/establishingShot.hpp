@@ -7,7 +7,7 @@ class ENH_EstablishingShot
         class ENH_EstablishingShot_Subcategory
         {
             description = "$STR_ENH_MAIN_ESTABLISHINGSHOT_DESCRIPTION";
-            property = "ENH_EstablishingShot_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_EstablishingShot

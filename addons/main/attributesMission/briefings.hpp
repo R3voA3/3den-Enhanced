@@ -7,7 +7,7 @@ class ENH_Briefing
         class ENH_Briefing_BLUFOR_Subcategory
         {
             description = "$STR_WEST";
-            property = "ENH_Briefing_BLUFOR_Subcategory";
+            data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_Briefing_BLUFOR_Situation
@@ -51,7 +51,7 @@ class ENH_Briefing
         {
             displayName = "$STR_A3_DIARY_MISSION_TITLE";
             property = "ENH_Briefing_OPFOR_Mission";
-            expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName ENH_Briefing_OPFOR_Mission'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
+            expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Mission'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
         };
         class ENH_Briefing_OPFOR_Execution: ENH_Briefing_BLUFOR_Situation
         {
