@@ -17,7 +17,7 @@ class ENH_Airdrop
             control = "ENH_Airdrop";
             expression =
             "\
-                if (!is3DEN && !((_value # 0) isEqualTo []) && isServer) then\
+                if (!is3DEN && ((_value # 0) isNotEqualTo []) && isServer) then\
                 {\
                     _value spawn\
                     {\

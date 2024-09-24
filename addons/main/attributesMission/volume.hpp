@@ -36,9 +36,8 @@ class ENH_Volume
             displayName = "$STR_ENH_MAIN_RANDOMMUSIC_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_RANDOMMUSIC_TOOLTIP";
             property = "ENH_randomMusic";
-            // control = "EditArray";
             control = "ENH_InputList";
-            expression = "if (!is3DEN && !(_value isEqualTo []) && hasInterface) then {playMusic (selectRandom _value)}";
+            expression = "if (!is3DEN && (_value isNotEqualTo []) && hasInterface) then {playMusic (selectRandom _value)}";
             defaultValue = "[]";
         };
     };
