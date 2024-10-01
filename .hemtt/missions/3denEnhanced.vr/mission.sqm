@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=82631;
+		nextID=82647;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16805;
+		nextID=16840;
 	};
 	class Camera
 	{
-		pos[]={3978.2732,30,2848.3047};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={3978.4709,30,2852.3899};
+		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
+		up[]={-1.2363449e-07,0.70710671,0.70710683};
+		aside[]={1,0,1.7484557e-07};
 	};
 };
 binarizationWanted=0;
@@ -85,9 +85,8 @@ addons[]=
 	"A3_Structures_F_Mil_Flags",
 	"A3_Props_F_Decade_Objectives",
 	"A3_Ui_F",
-	"A3_Characters_F_Exp",
 	"A3_Soft_F_Gamma_Truck_01",
-	"A3_Soft_F_Exp_Truck_01"
+	"A3_Characters_F_Exp"
 };
 class AddonsMetaData
 {
@@ -262,15 +261,15 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="A3_Characters_F_Exp";
-			name="Arma 3 Apex - Characters and Clothing";
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item25
 		{
-			className="A3_Soft_F_Gamma";
-			name="Arma 3 - Unarmored Land Vehicles";
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -319,9 +318,9 @@ class ScenarioData
 		minPlayers=1;
 		maxPlayers=2;
 	};
+	corpseManagerMode=1;
 	wreckManagerMode=1;
 	wreckRemovalMaxTime=3600;
-	corpseManagerMode=1;
 };
 class CustomAttributes
 {
@@ -843,7 +842,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			dataType="Group";
@@ -887,7 +886,7 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
+					loiterAltitude=-3.4028235e+38;
 					position[]={3788.5583,5,4192.7822};
 					class Effects
 					{
@@ -975,7 +974,7 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
+					loiterAltitude=-3.4028235e+38;
 					position[]={3788.5583,5,4192.7822};
 					class Effects
 					{
@@ -1270,7 +1269,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -1463,7 +1462,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -1757,7 +1756,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -1900,7 +1899,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -2175,7 +2174,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -2204,7 +2203,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3980.812,5.0014391,2914.363};
-										angles[]={0,3.0013971,0};
+										angles[]={0,3.0013902,0};
 									};
 									side="Civilian";
 									flags=7;
@@ -2229,6 +2228,19 @@ class Mission
 									class CustomAttributes
 									{
 										class Attribute0
+										{
+											property="ENH_makeHostage";
+											expression="    if (isServer && _value) then    {        ENH_fnc_makeHostage =        {            if (_this getVariable ['ENH_isHostage', true]) then            {                _this switchMove 'Acts_AidlPsitMstpSsurWnonDnon04';                [                _this,                localize 'STR_A3_OM_SYSTEM_QUEST_HOSTAGEHOLDACTION',                'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                '_target getVariable [''ENH_IsHostage'', true] && {_this distance _target < 2 && {alive _target && {_target != _this}}}',                'alive _target',                {},                {},                {                    params ['_target', '_caller', '_actionId'];                    [_target, 'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow', 0];                    [_target, _actionId] remoteExec ['BIS_fnc_holdActionRemove', 0];                    _target setVariable ['ENH_IsHostage', false, true];                    _target setVariable ['ENH_WasFreedBy', _caller, true];                }                ] call BIS_fnc_holdActionAdd;            };        };        [_this, ENH_fnc_makeHostage] remoteExec ['call', 0, true];    };    ";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
+												};
+											};
+										};
+										class Attribute1
 										{
 											property="ENH_AmbientAnimations";
 											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
@@ -2295,7 +2307,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
+										class Attribute2
 										{
 											property="speaker";
 											expression="_this setspeaker _value;";
@@ -2308,7 +2320,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute2
+										class Attribute3
 										{
 											property="pitch";
 											expression="_this setpitch _value;";
@@ -2321,13 +2333,13 @@ class Mission
 												};
 											};
 										};
-										nAttributes=3;
+										nAttributes=4;
 									};
 								};
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -2519,7 +2531,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -2947,7 +2959,7 @@ class Mission
 							};
 							id=14419;
 							type="Land_TentLamp_01_standing_F";
-							atlOffset=6.6280365e-005;
+							atlOffset=6.6280365e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -3265,7 +3277,7 @@ class Mission
 								class Item1
 								{
 									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+038;
+									loiterAltitude=-3.4028235e+38;
 									position[]={3788.5583,5,4192.7822};
 									class Effects
 									{
@@ -3408,7 +3420,7 @@ class Mission
 							};
 							id=14289;
 							type="Land_PaperBox_closed_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item1
 						{
@@ -3427,7 +3439,7 @@ class Mission
 							};
 							id=14290;
 							type="Land_PaperBox_closed_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item2
 						{
@@ -3538,7 +3550,7 @@ class Mission
 							};
 							id=14296;
 							type="Land_GarbageBarrel_01_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item8
 						{
@@ -3557,7 +3569,7 @@ class Mission
 							};
 							id=15121;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item9
 						{
@@ -3576,7 +3588,7 @@ class Mission
 							};
 							id=15128;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item10
 						{
@@ -3595,7 +3607,7 @@ class Mission
 							};
 							id=15129;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item11
 						{
@@ -3614,7 +3626,7 @@ class Mission
 							};
 							id=15133;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item12
 						{
@@ -3633,7 +3645,7 @@ class Mission
 							};
 							id=15134;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item13
 						{
@@ -3652,7 +3664,7 @@ class Mission
 							};
 							id=15139;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item14
 						{
@@ -3671,7 +3683,7 @@ class Mission
 							};
 							id=15141;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item15
 						{
@@ -3690,7 +3702,7 @@ class Mission
 							};
 							id=15146;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item16
 						{
@@ -3709,7 +3721,7 @@ class Mission
 							};
 							id=15147;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item17
 						{
@@ -3728,7 +3740,7 @@ class Mission
 							};
 							id=15148;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item18
 						{
@@ -3747,7 +3759,7 @@ class Mission
 							};
 							id=15150;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item19
 						{
@@ -3766,7 +3778,7 @@ class Mission
 							};
 							id=15151;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item20
 						{
@@ -3785,7 +3797,7 @@ class Mission
 							};
 							id=15153;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item21
 						{
@@ -3804,7 +3816,7 @@ class Mission
 							};
 							id=15156;
 							type="Land_HBarrier_1_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item22
 						{
@@ -3839,7 +3851,7 @@ class Mission
 							};
 							id=15110;
 							type="Land_Cargo_House_V3_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item24
 						{
@@ -3858,7 +3870,7 @@ class Mission
 							};
 							id=15144;
 							type="Land_Cargo_Patrol_V3_F";
-							atlOffset=2.3841858e-006;
+							atlOffset=2.3841858e-06;
 						};
 						class Item25
 						{
@@ -3894,7 +3906,7 @@ class Mission
 							};
 							id=14287;
 							type="Land_PortableLight_double_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item27
 						{
@@ -4018,7 +4030,7 @@ class Mission
 							};
 							id=15136;
 							type="Land_IPPhone_01_sand_F";
-							atlOffset=1.4305115e-006;
+							atlOffset=1.4305115e-06;
 						};
 						class Item34
 						{
@@ -4470,7 +4482,7 @@ class Mission
 							};
 							id=15145;
 							type="Land_PortableServer_01_cover_sand_F";
-							atlOffset=1.4305115e-006;
+							atlOffset=1.4305115e-06;
 						};
 						class Item51
 						{
@@ -4489,7 +4501,7 @@ class Mission
 							};
 							id=15135;
 							type="Land_Router_01_sand_F";
-							atlOffset=1.4305115e-006;
+							atlOffset=1.4305115e-06;
 						};
 						class Item52
 						{
@@ -4508,7 +4520,7 @@ class Mission
 							};
 							id=14435;
 							type="Land_Tablet_02_black_F";
-							atlOffset=1.4305115e-006;
+							atlOffset=1.4305115e-06;
 						};
 						class Item53
 						{
@@ -4546,7 +4558,7 @@ class Mission
 							};
 							id=14292;
 							type="Land_ToiletBox_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item55
 						{
@@ -4566,7 +4578,7 @@ class Mission
 							};
 							id=14297;
 							type="Land_ToiletBox_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item56
 						{
@@ -4585,7 +4597,7 @@ class Mission
 							};
 							id=14295;
 							type="Land_TTowerSmall_2_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item57
 						{
@@ -4605,7 +4617,7 @@ class Mission
 							};
 							id=14291;
 							type="Land_WaterTank_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item58
 						{
@@ -4833,7 +4845,7 @@ class Mission
 							};
 							id=14566;
 							type="Land_CratesWooden_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item68
 						{
@@ -4905,7 +4917,7 @@ class Mission
 							};
 							id=15132;
 							type="Land_BagFence_Long_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item72
 						{
@@ -4923,7 +4935,7 @@ class Mission
 							};
 							id=15116;
 							type="Land_BagFence_Long_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item73
 						{
@@ -4941,7 +4953,7 @@ class Mission
 							};
 							id=15113;
 							type="Land_BagFence_Long_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item74
 						{
@@ -4969,7 +4981,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="[[[[""lmg_zafir_f"",""sgun_huntershotgun_01_f"",""smg_03c_tr_hex"",""arifle_mxm_f"",""srifle_gm6_f"",""arifle_msbs65_mark_camo_f"",""arifle_katiba_f"",""launch_b_titan_f"",""srifle_dmr_03_woodland_f"",""arifle_mxm_khk_f"",""arifle_trg21_f"",""launch_o_titan_ghex_f"",""srifle_dmr_03_tan_f"",""srifle_dmr_05_hex_f"",""arifle_spar_01_blk_f"",""arifle_mxc_black_f"",""hgun_pistol_heavy_01_f"",""arifle_msbs65_gl_f"",""srifle_lrr_tna_f"",""arifle_spar_03_khk_f"",""lmg_03_f"",""srifle_ebr_f"",""srifle_gm6_ghex_f"",""arifle_ak12u_arid_f"",""arifle_msbs65_gl_sand_f"",""lmg_mk200_black_f"",""arifle_mx_khk_f"",""arifle_ctar_gl_hex_f"",""mmg_02_camo_f"",""hgun_pistol_01_f"",""arifle_arx_hex_f"",""srifle_dmr_07_blk_f"",""hgun_p07_khk_f"",""arifle_ctar_blk_f"",""smg_03_khaki"",""launch_rpg32_f"",""srifle_dmr_05_blk_f"",""launch_mraws_green_rail_f"",""launch_mraws_sand_rail_f"",""mmg_01_hex_f"",""arifle_ak12_gl_f"",""smg_03_tr_black"",""arifle_ak12_gl_arid_f"",""launch_b_titan_short_f"",""launch_o_vorona_green_f"",""arifle_spar_01_gl_khk_f"",""hgun_esd_01_f"",""srifle_dmr_07_ghex_f"",""arifle_mk20_plain_f"",""arifle_mk20c_f"",""arifle_sdar_f"",""arifle_spar_02_khk_f"",""arifle_rpk12_lush_f"",""smg_03_hex"",""launch_b_titan_short_tna_f"",""arifle_msbs65_gl_camo_f"",""arifle_mk20_gl_f"",""sgun_huntershotgun_01_sawedoff_f"",""srifle_dmr_06_olive_f"",""srifle_lrr_camo_f"",""smg_05_f"",""srifle_dmr_02_sniper_f"",""arifle_rpk12_arid_f"",""arifle_spar_03_blk_f"",""srifle_dmr_04_tan_f"",""arifle_ak12u_f"",""arifle_mx_sw_f"",""arifle_msbs65_mark_f"",""arifle_spar_01_khk_f"",""arifle_mx_gl_khk_f"",""srifle_dmr_02_camo_f"",""smg_03c_tr_khaki"",""arifle_ctars_ghex_f"",""hgun_p07_f"",""arifle_msbs65_ubs_f"",""launch_mraws_olive_f"",""arifle_ctar_gl_blk_f"",""hgun_rook40_f"",""arifle_ctar_ghex_f"",""arifle_ak12_f"",""launch_i_titan_f"",""arifle_msbs65_ubs_sand_f"",""smg_02_f"",""arifle_mk20_gl_plain_f"",""launch_rpg32_ghex_f"",""hgun_pistol_heavy_02_f"",""arifle_mx_sw_khk_f"",""arifle_mx_f"",""arifle_mk20_f"",""arifle_msbs65_ubs_black_f"",""launch_b_titan_olive_f"",""launch_rpg32_green_f"",""smg_03c_camo"",""launch_o_vorona_brown_f"",""arifle_mxm_black_f"",""hgun_acpc2_f"",""arifle_mx_sw_black_f"",""hgun_p07_blk_f"",""mmg_01_tan_f"",""launch_mraws_olive_rail_f"",""srifle_gm6_camo_f"",""smg_03c_khaki"",""arifle_mx_black_f"",""smg_03c_black"",""smg_03_black"",""hgun_pistol_heavy_01_green_f"",""launch_b_titan_tna_f"",""launch_o_titan_short_ghex_f"",""smg_03c_hex"",""launch_mraws_green_f"",""arifle_msbs65_sand_f"",""srifle_dmr_06_hunter_f"",""arifle_ak12_arid_f"",""arifle_ak12_lush_f"",""arifle_spar_01_snd_f"",""arifle_ctar_gl_ghex_f"",""srifle_dmr_03_f"",""launch_i_titan_short_f"",""arifle_msbs65_mark_black_f"",""srifle_dmr_03_multicam_f"",""arifle_msbs65_f"",""arifle_mxc_f"",""arifle_ctars_hex_f"",""launch_o_titan_f"",""arifle_ctars_blk_f"",""arifle_mxc_khk_f"",""arifle_akm_f"",""launch_mraws_sand_f"",""arifle_arx_ghex_f"",""arifle_spar_01_gl_blk_f"",""smg_03_tr_camo"",""srifle_dmr_05_tan_f"",""arifle_msbs65_black_f"",""srifle_dmr_06_camo_f"",""arifle_msbs65_mark_sand_f"",""arifle_msbs65_gl_black_f"",""arifle_msbs65_camo_f"",""arifle_trg21_gl_f"",""arifle_trg20_f"",""arifle_ak12u_lush_f"",""launch_rpg7_f"",""arifle_spar_02_blk_f"",""smg_03_tr_hex"",""arifle_rpk12_f"",""launch_nlaw_f"",""arifle_ctar_hex_f"",""smg_03_camo"",""smg_03c_tr_black"",""arifle_mx_gl_f"",""hgun_pdw2000_f"",""arifle_spar_01_gl_snd_f"",""arifle_mx_gl_black_f"",""srifle_dmr_03_khaki_f"",""smg_03c_tr_camo"",""srifle_lrr_f"",""mmg_02_black_f"",""arifle_katiba_gl_f"",""arifle_mk20c_plain_f"",""smg_03_tr_khaki"",""srifle_dmr_07_hex_f"",""mmg_02_sand_f"",""launch_o_titan_short_f"",""srifle_dmr_02_f"",""arifle_spar_03_snd_f"",""smg_01_f"",""hgun_pistol_signal_f"",""arifle_msbs65_ubs_camo_f"",""srifle_dmr_04_f"",""arifle_arx_blk_f"",""launch_i_titan_eaf_f"",""lmg_mk200_f"",""arifle_ak12_gl_lush_f"",""arifle_aks_f"",""arifle_katiba_c_f"",""arifle_spar_02_snd_f"",""srifle_dmr_01_f""],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]],[[""10rnd_mk14_762x51_mag"",""30rnd_556x45_stanag_red"",""3rnd_smokegreen_grenade_shell"",""200rnd_65x39_cased_box_tracer"",""3rnd_ugl_flaregreen_f"",""16rnd_9x21_yellow_mag"",""200rnd_65x39_cased_box"",""chemlight_green"",""iedurbansmall_remote_mag"",""30rnd_556x45_stanag_sand_green"",""3rnd_ugl_flareyellow_f"",""30rnd_545x39_mag_tracer_green_f"",""150rnd_762x54_box"",""30rnd_65x39_caseless_khaki_mag_tracer"",""75rnd_762x39_ak12_arid_mag_f"",""6rnd_45acp_cylinder"",""10rnd_93x64_dmr_05_mag"",""chemlight_yellow"",""75rnd_762x39_ak12_mag_f"",""9rnd_45acp_mag"",""10rnd_338_mag"",""titan_aa"",""150rnd_556x45_drum_green_mag_tracer_f"",""3rnd_smoke_grenade_shell"",""iedurbanbig_remote_mag"",""20rnd_762x51_mag"",""200rnd_556x45_box_f"",""100rnd_65x39_caseless_mag"",""3rnd_smokepurple_grenade_shell"",""atmine_range_mag"",""200rnd_556x45_box_tracer_f"",""30rnd_556x45_stanag_sand_tracer_green"",""100rnd_580x42_mag_tracer_f"",""7rnd_408_mag"",""30rnd_556x45_stanag_tracer_yellow"",""30rnd_65x39_caseless_green"",""30rnd_45acp_mag_smg_01"",""o_r_ir_grenade"",""75rnd_762x39_mag_tracer_f"",""ugl_flaregreen_f"",""30rnd_762x39_mag_f"",""30rnd_556x45_stanag"",""100rnd_65x39_caseless_khaki_mag"",""30rnd_556x45_stanag_tracer_green"",""10rnd_50bw_mag_f"",""chemlight_blue"",""10rnd_762x54_mag"",""3rnd_ugl_flarecir_f"",""150rnd_762x54_box_tracer"",""150rnd_556x45_drum_sand_mag_tracer_f"",""150rnd_93x64_mag"",""30rnd_9x21_red_mag"",""30rnd_580x42_mag_f"",""30rnd_545x39_mag_tracer_f"",""30rnd_9x21_mag_smg_02_tracer_red"",""150rnd_762x51_box_tracer"",""vorona_he"",""smokeshell"",""30rnd_45acp_mag_smg_01_tracer_red"",""smokeshellred"",""titan_at"",""minigrenade"",""30rnd_762x39_ak12_arid_mag_tracer_f"",""nlaw_f"",""1rnd_smokeyellow_grenade_shell"",""rpg32_he_f"",""6rnd_12gauge_pellets"",""20rnd_650x39_cased_mag_f"",""6rnd_redsignal_f"",""flarewhite_f"",""10rnd_9x21_mag"",""100rnd_65x39_caseless_mag_tracer"",""200rnd_556x45_box_tracer_red_f"",""iedlandsmall_remote_mag"",""200rnd_65x39_cased_box_tracer_red"",""satchelcharge_remote_mag"",""mraws_heat55_f"",""30rnd_545x39_mag_green_f"",""30rnd_65x39_caseless_mag_tracer"",""30rnd_65x39_caseless_black_mag"",""100rnd_580x42_hex_mag_f"",""2rnd_12gauge_pellets"",""apersmine_range_mag"",""smokeshellyellow"",""3rnd_smokered_grenade_shell"",""claymoredirectionalmine_remote_mag"",""ugl_flareyellow_f"",""100rnd_580x42_mag_f"",""30rnd_9x21_mag"",""1rnd_smokepurple_grenade_shell"",""16rnd_9x21_mag"",""1rnd_smokegreen_grenade_shell"",""30rnd_556x45_stanag_tracer_red"",""i_ir_grenade"",""100rnd_65x39_caseless_black_mag_tracer"",""1rnd_he_grenade_shell"",""smokeshellgreen"",""30rnd_65x39_caseless_msbs_mag"",""trainingmine_mag"",""3rnd_ugl_flarewhite_f"",""rpg32_f"",""3rnd_smokeorange_grenade_shell"",""150rnd_556x45_drum_mag_tracer_f"",""30rnd_762x39_ak12_lush_mag_tracer_f"",""30rnd_762x39_ak12_arid_mag_f"",""75rnd_762x39_ak12_lush_mag_tracer_f"",""mraws_he_f"",""3rnd_smokeyellow_grenade_shell"",""titan_ap"",""smokeshellorange"",""5rnd_127x108_apds_mag"",""30rnd_556x45_stanag_sand_red"",""30rnd_65x39_caseless_khaki_mag"",""flareyellow_f"",""11rnd_45acp_mag"",""150rnd_556x45_drum_mag_f"",""30rnd_762x39_ak12_mag_f"",""1rnd_smokeblue_grenade_shell"",""30rnd_556x45_stanag_sand_tracer_red"",""rpg7_f"",""30rnd_9x21_green_mag"",""100rnd_580x42_ghex_mag_tracer_f"",""3rnd_ugl_flarered_f"",""1rnd_smokeorange_grenade_shell"",""ugl_flarecir_f"",""200rnd_65x39_cased_box_red"",""75rnd_762x39_ak12_arid_mag_tracer_f"",""10rnd_762x51_mag"",""2rnd_12gauge_slug"",""smokeshellblue"",""6rnd_greensignal_f"",""handgrenade"",""aperstripmine_wire_mag"",""130rnd_338_mag"",""democharge_remote_mag"",""o_ir_grenade"",""30rnd_65x39_caseless_black_mag_tracer"",""1rnd_smokered_grenade_shell"",""30rnd_580x42_mag_tracer_f"",""100rnd_65x39_caseless_khaki_mag_tracer"",""20rnd_556x45_uw_mag"",""apersboundingmine_range_mag"",""30rnd_65x39_caseless_green_mag_tracer"",""150rnd_762x51_box"",""30rnd_65x39_caseless_mag"",""150rnd_556x45_drum_green_mag_f"",""slamdirectionalmine_wire_mag"",""apersminedispenser_mag"",""mraws_heat_f"",""ugl_flarered_f"",""30rnd_556x45_stanag_sand_tracer_yellow"",""30rnd_556x45_stanag_sand"",""100rnd_580x42_hex_mag_tracer_f"",""smokeshellpurple"",""30rnd_9x21_mag_smg_02"",""flarered_f"",""30rnd_9x21_mag_smg_02_tracer_green"",""3rnd_he_grenade_shell"",""3rnd_smokeblue_grenade_shell"",""30rnd_9x21_mag_smg_02_tracer_yellow"",""30rnd_556x45_stanag_green"",""50rnd_570x28_smg_03"",""30rnd_545x39_mag_f"",""30rnd_45acp_mag_smg_01_tracer_green"",""i_e_ir_grenade"",""30rnd_762x39_mag_green_f"",""ugl_flarewhite_f"",""30rnd_762x39_ak12_mag_tracer_f"",""iedlandbig_remote_mag"",""75rnd_762x39_ak12_lush_mag_f"",""laserbatteries"",""10rnd_127x54_mag"",""150rnd_556x45_drum_sand_mag_f"",""75rnd_762x39_mag_f"",""flaregreen_f"",""30rnd_762x39_mag_tracer_green_f"",""100rnd_580x42_ghex_mag_f"",""6rnd_12gauge_slug"",""30rnd_762x39_mag_tracer_f"",""chemlight_red"",""b_ir_grenade"",""5rnd_127x108_mag"",""30rnd_65x39_caseless_msbs_mag_tracer"",""16rnd_9x21_red_mag"",""100rnd_65x39_caseless_black_mag"",""1rnd_smoke_grenade_shell"",""30rnd_45acp_mag_smg_01_tracer_yellow"",""30rnd_762x39_ak12_lush_mag_f"",""16rnd_9x21_green_mag"",""200rnd_556x45_box_red_f"",""75rnd_762x39_ak12_mag_tracer_f"",""vorona_heat"",""30rnd_9x21_yellow_mag""],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]],[[""optic_ico_01_black_f"",""u_b_ghilliesuit"",""u_i_c_soldier_bandit_3_f"",""bipod_03_f_oli"",""muzzle_snds_h_mg_blk_f"",""h_shemag_olive"",""g_goggles_vr"",""h_helmetb_ti_tna_f"",""h_bandanna_blu"",""v_pocketed_black_f"",""u_b_pilotcoveralls"",""muzzle_snds_b_khk_f"",""g_i_diving"",""optic_aco_smg"",""v_platecarrier2_blk"",""g_balaclava_ti_g_blk_f"",""v_platecarrier2_rgr"",""u_i_c_soldier_bandit_1_f"",""h_bandanna_khk_hs"",""nvgoggles"",""v_carrierrigkbt_01_light_olive_f"",""h_racinghelmet_1_black_f"",""h_helmetcrew_i_e"",""h_milcap_ghex_f"",""h_construction_basic_yellow_f"",""g_eyeprotectors_earpiece_f"",""h_crewhelmetheli_i"",""optic_arco_arid_f"",""g_wirelessearpiece_f"",""u_i_g_story_protagonist_f"",""h_bandanna_sgg"",""optic_tws"",""g_balaclava_oli"",""u_b_t_fullghillie_tna_f"",""h_helmetcrew_o_ghex_f"",""u_i_fullghillie_lsh"",""u_o_officeruniform_ocamo"",""h_helmeto_ghex_f"",""h_paradedresscap_01_csat_f"",""u_i_e_paradeuniform_01_ldf_f"",""v_bandollierb_oli"",""g_bandanna_aviator"",""h_bandanna_surfer_blk"",""g_aviator"",""h_helmetaggressor_cover_f"",""u_b_ctrg_1"",""v_harnessogl_brn"",""v_bandollierb_ghex_f"",""v_platecarrieria2_dgtl"",""u_c_mechanic_01_f"",""g_regulatormask_f"",""u_i_c_soldier_para_1_f"",""g_bandanna_blueflame1"",""acc_flashlight_pistol"",""u_b_gen_soldier_f"",""u_b_combatuniform_mcam_tshirt"",""v_harnesso_brn"",""g_respirator_white_f"",""h_headbandage_clean_f"",""optic_arco_blk_f"",""g_diving"",""optic_sos"",""h_cap_blk_ion"",""u_o_r_gorka_01_f"",""h_paradedresscap_01_ldf_f"",""bipod_01_f_mtp"",""u_c_poloshirt_tricolour"",""u_c_scientist"",""u_c_man_sport_3_f"",""v_bandollierb_rgr"",""optic_lrps_ghex_f"",""g_bandanna_sport"",""g_bandanna_redflame1"",""u_i_c_soldier_bandit_4_f"",""u_c_uniform_scientist_01_formal_f"",""h_tank_eaf_f"",""h_helmetspecb_snakeskin"",""nvgoggles_opfor"",""optic_mrd_black"",""h_beret_eaf_01_f"",""h_helmetb_camo"",""u_c_driver_1"",""h_cap_oli"",""v_platecarrierspec_rgr"",""optic_khs_hex"",""v_rebreatherb"",""h_racinghelmet_1_f"",""muzzle_snds_h"",""firstaidkit"",""h_cap_khaki_specops_uk"",""g_combat"",""v_platecarrier1_blk"",""h_bandanna_cbr"",""nvgoggles_tna_f"",""g_balaclava_flames1"",""g_balaclava_skull1"",""muzzle_snds_h_mg"",""h_construction_headset_black_f"",""h_helmeto_oucamo"",""g_bandanna_shades"",""u_c_driver_2"",""v_carrierrigkbt_01_light_eaf_f"",""g_squares_tinted"",""muzzle_snds_acp"",""h_helmetspecb_paint1"",""v_eod_olive_f"",""v_tacvest_khk"",""optic_arco"",""g_balaclava_ti_blk_f"",""u_b_combatuniform_mcam_vest"",""u_i_officeruniform"",""muzzle_snds_h_snd_f"",""h_construction_headset_red_f"",""h_milcap_gen_f"",""h_construction_basic_white_f"",""v_safety_yellow_f"",""u_b_ctrg_soldier_2_arid_f"",""u_c_idap_man_casual_f"",""h_helmet_skate"",""u_i_c_soldier_para_4_f"",""u_i_l_uniform_01_deserter_f"",""h_beret_blk"",""v_safety_blue_f"",""u_i_fullghillie_ard"",""u_o_fullghillie_ard"",""u_bg_guerilla3_1"",""g_respirator_yellow_f"",""v_harnesso_ghex_f"",""v_platecarrier1_tna_f"",""v_tacvest_brn"",""h_helmetleadero_ghex_f"",""h_pasgt_basic_black_f"",""u_c_idap_man_cargo_f"",""h_cap_marshal"",""g_sport_blackyellow"",""h_helmetb_light_snakeskin"",""optic_dms_weathered_f"",""h_racinghelmet_4_f"",""h_hat_camo"",""optic_arco_ak_blk_f"",""muzzle_snds_b"",""g_balaclava_flecktarn"",""g_balaclava_bluestrips"",""h_booniehat_khk_hs"",""h_construction_earprot_red_f"",""h_watchcap_khk"",""u_b_ctrg_soldier_urb_3_f"",""u_b_cbrn_suit_01_mtp_f"",""muzzle_snds_93mmg_tan"",""muzzle_snds_58_ghex_f"",""h_cap_police"",""h_helmeto_ocamo"",""u_c_man_casual_5_f"",""u_i_l_uniform_01_tshirt_sport_f"",""h_helmethbk_ear_f"",""h_pilothelmetfighter_o"",""u_bg_guerilla1_2_f"",""optic_mrd"",""h_cap_grn_bi"",""v_legstrapbag_coyote_f"",""g_spectacles_tinted"",""u_bg_guerrilla_6_1"",""h_watchcap_blk"",""u_competitor"",""h_helmetcrew_o"",""optic_arco_lush_f"",""h_milcap_ocamo"",""u_o_combatuniform_oucamo"",""v_platecarriergl_blk"",""h_cap_blk_cmmg"",""h_strawhat_dark"",""h_helmetb_light_wdl"",""u_i_wetsuit"",""u_b_helipilotcoveralls"",""muzzle_snds_65_ti_blk_f"",""h_racinghelmet_1_yellow_f"",""optic_arco_ghex_f"",""h_booniehat_khk"",""u_c_driver_1_yellow"",""v_deckcrew_white_f"",""muzzle_antenna_03_f"",""u_b_paradeuniform_01_us_decorated_f"",""u_o_fullghillie_sard"",""h_cap_brn_specops"",""optic_lrps_tna_f"",""u_i_l_uniform_01_tshirt_black_f"",""h_helmetcrew_b"",""h_helmetspecb"",""u_c_uniform_scientist_01_f"",""u_o_wetsuit"",""h_earprotectors_white_f"",""g_squares"",""h_pilothelmetheli_i"",""v_plain_medical_f"",""v_platecarrierspec_mtp"",""h_pilothelmetfighter_i"",""h_cap_blk"",""v_tacvest_camo"",""optic_ams"",""h_racinghelmet_1_blue_f"",""u_o_fullghillie_lsh"",""h_beret_02"",""h_helmetb_sand"",""v_rebreatheria"",""h_helmetspeco_ghex_f"",""u_c_poloshirt_stripped"",""u_bg_guerilla2_3"",""u_c_driver_1_white"",""bipod_03_f_blk"",""h_booniehat_dgtl"",""u_orestesbody"",""nvgogglesb_blk_f"",""o_nvgoggles_ghex_f"",""optic_ico_01_f"",""u_c_formalsuit_01_khaki_f"",""h_helmetleadero_ocamo"",""h_booniehat_tan"",""h_watchcap_camo"",""h_beret_gen_f"",""u_b_t_soldier_ar_f"",""b_uavterminal"",""optic_hamr_khk_f"",""u_o_pilotcoveralls"",""h_pilothelmetfighter_i_e"",""h_bandanna_camo"",""h_milcap_taiga"",""v_deckcrew_green_f"",""optic_aco"",""g_balaclava_scarecrow_01"",""h_construction_earprot_vrana_f"",""v_eod_idap_blue_f"",""h_racinghelmet_1_white_f"",""g_balaclava_combat"",""h_bandanna_khk"",""muzzle_snds_65_ti_hex_f"",""u_c_workercoveralls"",""g_shades_black"",""v_platecarrierspec_tna_f"",""g_bandanna_khk"",""h_pasgt_basic_blue_f"",""h_pilothelmetheli_o"",""u_c_man_sport_2_f"",""h_headbandage_stained_f"",""u_c_poloshirt_burgundy"",""u_b_survival_uniform"",""u_c_formalsuit_01_black_f"",""u_c_idap_man_tee_f"",""u_c_driver_1_blue"",""u_c_driver_1_green"",""v_platecarrier1_rgr"",""v_harnesso_gry"",""h_construction_basic_orange_f"",""itemradio"",""g_sport_greenblack"",""g_sport_red"",""h_construction_basic_vrana_f"",""u_i_e_cbrn_suit_01_eaf_f"",""u_c_e_looterjacket_01_f"",""g_bandanna_blk"",""v_tacchestrig_grn_f"",""u_c_cbrn_suit_01_white_f"",""h_helmethbk_headset_f"",""h_helmetb_black"",""v_rangemaster_belt"",""h_racinghelmet_1_orange_f"",""muzzle_snds_58_hex_f"",""h_wirelessearpiece_f"",""h_booniehat_mcamo"",""u_b_paradeuniform_01_us_f"",""u_i_cbrn_suit_01_aaf_f"",""u_o_ghilliesuit"",""h_racinghelmet_1_green_f"",""u_c_constructioncoverall_red_f"",""u_c_arttshirt_01_v4_f"",""h_helmetb_snakeskin"",""v_tacchestrig_oli_f"",""h_helmetspeco_ocamo"",""u_i_e_paradeuniform_01_ldf_decorated_f"",""h_bandanna_surfer_grn"",""v_bandollierb_blk"",""h_booniehat_mgrn"",""muzzle_snds_h_mg_khk_f"",""laserdesignator"",""h_milcap_gry"",""g_bandanna_blueflame2"",""u_c_idap_man_teeshorts_f"",""u_b_ctrg_3"",""u_bg_guerilla1_1"",""h_helmetb_light_grass"",""muzzle_antenna_01_f"",""muzzle_snds_b_lush_f"",""u_c_formalsuit_01_tshirt_gray_f"",""v_platecarriergl_tna_f"",""muzzle_snds_338_green"",""chemicaldetector_01_olive_f"",""u_c_cbrn_suit_01_blue_f"",""u_b_combatuniform_mcam_wdl_f"",""muzzle_snds_l"",""v_rebreatherir"",""u_o_r_gorka_01_camo_f"",""h_hat_brown"",""u_b_combatuniform_mcam"",""u_o_paradeuniform_01_csat_decorated_f"",""h_cap_tan_specops_us"",""u_o_t_sniper_f"",""binocular"",""g_balaclava_halloween_01"",""g_bandanna_vampire_01"",""h_pasgt_basic_blue_press_f"",""u_o_t_soldier_f"",""optic_erco_snd_f"",""v_platecarrierl_ctrg"",""u_c_protagonist_vr"",""u_b_ctrg_soldier_3_arid_f"",""bipod_02_f_tan"",""g_airpurifyingrespirator_02_sand_f"",""u_c_arttshirt_01_v1_f"",""laserdesignator_02_ghex_f"",""o_nvgoggles_hex_f"",""v_press_f"",""g_bandanna_beast"",""bipod_02_f_lush"",""optic_nightstalker"",""h_helmeto_vipersp_hex_f"",""u_b_t_sniper_f"",""u_i_g_resistanceleader_f"",""h_headset_orange_f"",""u_b_cbrn_suit_01_wdl_f"",""bipod_02_f_hex"",""h_construction_earprot_black_f"",""g_tactical_clear"",""g_balaclava_tropentarn"",""u_c_driver_3"",""optic_khs_tan"",""h_paradedresscap_01_us_f"",""v_chestrig_oli"",""u_c_poloshirt_redwhite"",""u_b_ctrg_soldier_3_f"",""h_racinghelmet_3_f"",""u_c_arttshirt_01_v3_f"",""h_pasgt_basic_white_f"",""u_c_formalsuit_01_gray_f"",""v_platecarrierh_ctrg"",""u_c_arttshirt_01_v5_f"",""muzzle_snds_m_snd_f"",""u_c_formalsuit_01_tshirt_black_f"",""u_i_e_uniform_01_f"",""bipod_01_f_snd"",""optic_ico_01_sand_f"",""u_o_r_gorka_01_brown_f"",""v_carrierrigkbt_01_heavy_eaf_f"",""u_o_paradeuniform_01_csat_f"",""u_c_driver_4"",""v_platecarrier2_rgr_noflag_f"",""h_helmetaggressor_cover_taiga_f"",""muzzle_snds_b_arid_f"",""laserdesignator_03"",""v_deckcrew_violet_f"",""h_helmetspecb_sand"",""u_c_constructioncoverall_vrana_f"",""optic_erco_khk_f"",""h_earprotectors_orange_f"",""muzzle_antenna_02_f"",""h_helmetb_tna_f"",""h_pasgt_basic_olive_f"",""h_booniehat_wdl"",""itemwatch"",""u_o_t_fullghillie_tna_f"",""h_bandanna_surfer"",""g_respirator_blue_f"",""optic_dms_ghex_f"",""h_hat_checker"",""v_pocketed_olive_f"",""optic_aco_grn_smg"",""u_i_l_uniform_01_camo_f"",""optic_aco_grn"",""u_b_wetsuit"",""v_platecarrier_kerry"",""v_platecarrieriagl_oli"",""o_nvgoggles_grn_f"",""muzzle_snds_65_ti_ghex_f"",""h_booniehat_taiga"",""u_b_fullghillie_lsh"",""h_shemagopen_khk"",""muzzle_snds_93mmg"",""h_booniehat_eaf"",""h_beret_colonel"",""g_sport_checkered"",""h_construction_earprot_orange_f"",""v_tacvest_blk"",""u_b_fullghillie_ard"",""u_c_arttshirt_01_v6_f"",""h_crewhelmetheli_b"",""h_cap_press"",""u_o_officer_noinsignia_hex_f"",""u_o_v_soldier_viper_hex_f"",""g_airpurifyingrespirator_02_olive_f"",""optic_ams_snd"",""optic_holosight_smg"",""h_helmetia"",""acc_flashlight_smg_01"",""h_shemag_olive_hs"",""h_helmetaggressor_f"",""u_i_protagonist_vr"",""u_c_man_casual_1_f"",""itemmap"",""u_c_journalist"",""nvgogglesb_grn_f"",""h_construction_headset_vrana_f"",""g_blindfold_01_black_f"",""u_c_poloshirt_salmon"",""h_helmetb_light_sand"",""u_i_c_soldier_camo_f"",""v_bandollierb_khk"",""h_cap_red"",""u_o_specopsuniform_ocamo"",""h_construction_headset_white_f"",""h_helmetspeco_blk"",""g_lady_blue"",""acc_flashlight"",""h_earprotectors_red_f"",""u_bg_guerilla2_2"",""v_tacchestrig_cbr_f"",""g_blindfold_01_white_f"",""g_bandanna_syndikat1"",""h_helmeto_vipersp_ghex_f"",""itemgps"",""u_o_r_gorka_01_black_f"",""optic_ams_khk"",""u_c_man_casual_4_f"",""v_platecarriergl_wdl"",""u_i_e_uniform_01_officer_f"",""h_booniehat_oli"",""u_b_ctrg_soldier_f"",""v_carrierrigkbt_01_olive_f"",""u_o_t_officer_f"",""u_b_cbrn_suit_01_tropic_f"",""h_helmetb_grass"",""v_platecarrierspec_blk"",""g_shades_blue"",""g_balaclava_ti_g_tna_f"",""u_bg_guerilla2_1"",""u_c_uniform_scientist_02_f"",""u_i_c_soldier_bandit_2_f"",""g_balaclava_blk"",""v_carrierrigkbt_01_eaf_f"",""optic_holosight_blk_f"",""u_b_ctrg_soldier_2_f"",""h_racinghelmet_2_f"",""u_c_hunterbody_grn"",""v_tacvest_gen_f"",""optic_holosight_arid_f"",""optic_holosight_lush_f"",""h_helmetb"",""v_chestrig_rgr"",""h_milcap_mcamo"",""h_milcap_wdl"",""optic_arco_ak_arid_f"",""h_pilothelmetfighter_b"",""v_eod_blue_f"",""u_c_formalsuit_01_blue_f"",""h_pasgt_neckprot_blue_press_f"",""g_combat_goggles_tna_f"",""g_sport_blackwhite"",""v_platecarrier1_rgr_noflag_f"",""h_milcap_blue"",""u_b_t_soldier_sl_f"",""u_c_uniform_farmer_01_f"",""u_b_fullghillie_sard"",""h_beret_csat_01_f"",""g_bandanna_orangeflame1"",""u_b_gen_commander_f"",""h_hat_grey"",""optic_holosight_smg_khk_f"",""h_booniehat_tna_f"",""optic_nvs"",""u_c_poor_1"",""u_b_ctrg_soldier_urb_1_f"",""h_cap_grn"",""h_cap_oli_hs"",""g_eyeprotectors_f"",""h_hat_safari_sand_f"",""u_c_constructioncoverall_black_f"",""u_i_e_uniform_01_sweater_f"",""u_i_l_uniform_01_tshirt_olive_f"",""u_i_c_soldier_para_2_f"",""u_c_driver_1_orange"",""h_earprotectors_black_f"",""h_milcap_tna_f"",""h_cap_white_idap_f"",""h_helmetb_plain_wdl"",""u_b_ctrg_soldier_urb_2_f"",""acc_pointer_ir"",""optic_hamr"",""u_i_l_uniform_01_tshirt_skull_f"",""u_c_arttshirt_01_v2_f"",""h_hat_safari_olive_f"",""h_cap_usblack"",""h_helmetb_light_black"",""g_tactical_black"",""u_b_protagonist_vr"",""u_b_ctrg_2"",""h_pilothelmetheli_b"",""h_construction_headset_orange_f"",""toolkit"",""v_legstrapbag_black_f"",""optic_erco_blk_f"",""u_c_constructioncoverall_blue_f"",""g_spectacles"",""chemicaldetector_01_tan_f"",""rangefinder"",""h_helmetb_light_desert"",""u_b_combatuniform_mcam_worn"",""h_helmetspecb_wdl"",""h_bandanna_mcamo"",""h_helmethbk_f"",""muzzle_snds_m"",""u_b_combatuniform_vest_mcam_wdl_f"",""h_racinghelmet_1_red_f"",""u_c_paramedic_01_f"",""h_cap_orange_idap_f"",""u_i_paradeuniform_01_aaf_decorated_f"",""v_tacvest_blk_police"",""v_carrierrigkbt_01_heavy_olive_f"",""h_cap_maldentours"",""v_safety_orange_f"",""h_headset_black_f"",""u_c_driver_1_black"",""h_hat_blue"",""h_milcap_eaf"",""u_i_combatuniform_shortsleeve"",""h_cap_blu"",""h_hat_tan"",""i_uavterminal"",""optic_holosight_khk_f"",""h_headset_red_f"",""nvgoggles_indep"",""h_cap_blk_raven"",""v_tacvestir_blk"",""v_plain_crystal_f"",""h_headset_white_f"",""v_eod_coyote_f"",""h_helmetb_desert"",""h_earprotectors_yellow_f"",""u_c_idap_man_shorts_f"",""laserdesignator_01_khk_f"",""h_bandanna_gry"",""v_deckcrew_blue_f"",""u_marshal"",""u_c_man_sport_1_f"",""h_cap_lyfe"",""v_deckcrew_red_f"",""u_b_ctrg_soldier_arid_f"",""h_headbandage_bloody_f"",""u_c_poloshirt_blue"",""v_platecarrierspec_wdl"",""h_construction_earprot_yellow_f"",""u_c_man_casual_6_f"",""u_c_idap_man_jeans_f"",""optic_mrco"",""g_sport_blackred"",""h_milcap_dgtl"",""bipod_01_f_khk"",""optic_yorris"",""optic_holosight"",""optic_holosight_smg_blk_f"",""g_bandanna_skull1"",""u_i_e_uniform_01_coveralls_f"",""h_helmetb_ti_arid_f"",""h_construction_earprot_white_f"",""muzzle_snds_m_khk_f"",""h_helmetb_light_tna_f"",""u_b_combatuniform_tshirt_mcam_wdl_f"",""optic_sos_khk_f"",""v_i_g_resistanceleader_f"",""u_bg_leader"",""h_watchcap_cbr"",""h_helmethbk_chops_f"",""u_b_t_soldier_f"",""h_tank_black_f"",""laserdesignator_02"",""v_chestrig_khk"",""h_helmetspecb_paint2"",""h_crewhelmetheli_i_e"",""u_o_protagonist_vr"",""u_c_man_casual_3_f"",""v_platecarrier2_tna_f"",""v_legstrapbag_olive_f"",""h_helmetleadero_oucamo"",""h_helmetspecb_blk"",""u_i_e_uniform_01_tanktop_f"",""h_cap_tan"",""g_bandanna_skull2"",""muzzle_snds_338_sand"",""muzzle_snds_570"",""h_headset_yellow_f"",""optic_tws_mg"",""g_balaclava_ti_tna_f"",""muzzle_snds_b_snd_f"",""u_i_combatuniform"",""chemicaldetector_01_watch_f"",""h_construction_basic_black_f"",""v_smershvest_01_radio_f"",""optic_arco_ak_lush_f"",""muzzle_snds_338_black"",""g_balaclava_lowprofile"",""u_c_driver_1_red"",""optic_lrps"",""u_i_c_soldier_bandit_5_f"",""u_i_fullghillie_sard"",""u_c_uniform_scientist_02_formal_f"",""v_platecarrieriagl_dgtl"",""itemcompass"",""v_platecarriergl_rgr"",""optic_khs_old"",""h_cap_black_idap_f"",""v_smershvest_01_f"",""bipod_01_f_blk"",""h_helmetb_enh_tna_f"",""v_chestrig_blk"",""u_o_combatuniform_ocamo"",""muzzle_snds_h_khk_f"",""h_strawhat"",""h_helmetcrew_i"",""u_i_c_soldier_para_3_f"",""muzzle_snds_58_blk_f"",""h_bandanna_sand"",""v_platecarrier2_wdl"",""v_deckcrew_brown_f"",""u_rangemaster"",""minedetector"",""v_bandollierb_cbr"",""v_tacvest_oli"",""h_cap_headphones"",""g_shades_green"",""g_o_diving"",""optic_dms"",""c_uavterminal"",""h_shemagopen_tan"",""h_construction_basic_red_f"",""u_o_v_soldier_viper_f"",""v_harnessogl_ghex_f"",""bipod_02_f_blk"",""h_paradedresscap_01_aaf_f"",""u_i_e_uniform_01_shortsleeve_f"",""h_hat_tinfoil_f"",""g_bandanna_oli"",""u_i_c_soldier_para_5_f"",""u_i_ghilliesuit"",""bipod_02_f_arid"",""v_harnessogl_gry"",""g_bandanna_tan"",""g_airpurifyingrespirator_02_black_f"",""v_platecarriergl_mtp"",""i_e_uavterminal"",""g_shades_red"",""g_lowprofile"",""v_pocketed_coyote_f"",""optic_ico_01_camo_f"",""h_cap_surfer"",""g_bandanna_syndikat2"",""optic_dms_weathered_kir_f"",""h_pilothelmetheli_i_e"",""medikit"",""v_platecarrier1_wdl"",""u_tank_green_f"",""h_helmetb_light"",""u_c_man_casual_2_f"",""optic_khs_blk"",""h_crewhelmetheli_o"",""u_i_pilotcoveralls"",""h_construction_headset_yellow_f"",""g_airpurifyingrespirator_01_f"",""chemicaldetector_01_black_f"",""h_milcap_grn"",""o_uavterminal"",""v_platecarrieria1_dgtl"",""u_i_helipilotcoveralls"",""g_bandanna_candyskull"",""u_i_paradeuniform_01_aaf_f"",""o_nvgoggles_urb_f"",""g_b_diving"",""v_deckcrew_yellow_f"",""nvgogglesb_gry_f"",""acc_esd_01_flashlight""],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]],[[""b_combinationunitrespirator_01_f"",""b_kitbag_cbr"",""b_fieldpack_ocamo"",""c_idap_uav_06_backpack_f"",""b_assaultpack_eaf_f"",""i_e_hmg_02_support_high_f"",""i_e_uav_06_medical_backpack_f"",""b_civilianbackpack_01_everyday_astra_f"",""b_fieldpack_blk"",""b_carryall_khk"",""i_hmg_01_weapon_f"",""i_mortar_01_weapon_f"",""i_e_gmg_01_high_weapon_f"",""i_uav_06_medical_backpack_f"",""i_e_uav_06_backpack_f"",""b_fieldpack_oucamo"",""i_hmg_02_weapon_f"",""b_viperharness_ghex_f"",""o_hmg_01_support_f"",""b_assaultpack_kerry"",""b_carryall_oli"",""b_gmg_01_high_weapon_f"",""b_messenger_gray_f"",""b_w_static_designator_01_weapon_f"",""b_assaultpack_tna_f"",""b_radiobag_01_eaf_f"",""b_scba_01_f"",""c_idap_uav_01_backpack_f"",""b_radiobag_01_mtp_f"",""b_viperlightharness_khk_f"",""b_hmg_01_high_weapon_f"",""i_ugv_02_demining_backpack_f"",""b_radiobag_01_ghex_f"",""o_gmg_01_a_weapon_f"",""b_viperharness_oli_f"",""c_uav_06_medical_backpack_f"",""b_assaultpack_rgr"",""o_at_01_weapon_f"",""i_e_uav_01_backpack_f"",""o_hmg_01_support_high_f"",""b_respawn_tentdome_f"",""i_e_mortar_01_weapon_f"",""b_messenger_olive_f"",""i_hmg_01_support_high_f"",""b_fieldpack_ghex_f"",""b_tacticalpack_ocamo"",""b_bergen_tna_f"",""b_carryall_blk"",""o_static_designator_02_weapon_f"",""b_hmg_01_support_f"",""c_idap_ugv_02_demining_backpack_f"",""b_radiobag_01_wdl_f"",""b_carryall_eaf_f"",""i_e_aa_01_weapon_f"",""o_hmg_01_a_weapon_f"",""b_fieldpack_khk"",""b_mortar_01_support_f"",""b_kitbag_sgg"",""b_tacticalpack_rgr"",""b_tacticalpack_blk"",""b_gmg_01_weapon_f"",""b_legstrapbag_coyote_f"",""b_at_01_weapon_f"",""b_carryall_green_f"",""b_viperharness_hex_f"",""b_carryall_taiga_f"",""b_mortar_01_weapon_f"",""i_e_gmg_01_weapon_f"",""b_assaultpack_sgg"",""o_aa_01_weapon_f"",""i_c_hmg_02_weapon_f"",""i_e_gmg_01_a_weapon_f"",""b_ugv_02_science_backpack_f"",""i_g_hmg_02_support_f"",""b_messenger_coyote_f"",""b_civilianbackpack_01_everyday_vrana_f"",""b_viperlightharness_ghex_f"",""b_messenger_black_f"",""b_kitbag_tan"",""i_gmg_01_a_weapon_f"",""o_hmg_01_high_weapon_f"",""b_fieldpack_taiga_f"",""b_patrol_respawn_bag_f"",""i_e_ugv_02_demining_backpack_f"",""b_radiobag_01_digi_f"",""i_c_hmg_02_support_f"",""b_uav_01_backpack_f"",""b_radiobag_01_hex_f"",""b_assaultpack_khk"",""o_hmg_01_weapon_f"",""b_civilianbackpack_01_sport_green_f"",""b_fieldpack_oli"",""b_civilianbackpack_01_everyday_idap_f"",""b_hmg_01_a_weapon_f"",""b_bergen_dgtl_f"",""i_uav_06_backpack_f"",""b_ugv_02_demining_backpack_f"",""b_carryall_wdl_f"",""b_assaultpack_ocamo"",""b_uav_06_backpack_f"",""c_uav_06_backpack_f"",""o_ugv_02_demining_backpack_f"",""b_assaultpack_dgtl"",""b_aa_01_weapon_f"",""i_e_hmg_02_support_f"",""b_respawn_tenta_f"",""b_carryall_ocamo"",""b_parachute"",""o_uav_06_medical_backpack_f"",""o_gmg_01_high_weapon_f"",""b_viperharness_khk_f"",""o_uav_06_backpack_f"",""b_assaultpack_mcamo"",""b_hmg_01_weapon_f"",""b_respawn_sleeping_bag_f"",""b_legstrapbag_black_f"",""i_g_hmg_02_weapon_f"",""i_g_hmg_02_support_high_f"",""b_assaultpack_wdl_f"",""b_tacticalpack_oli"",""b_fieldpack_cbr"",""b_carryall_oucamo"",""i_e_hmg_02_weapon_f"",""o_gmg_01_weapon_f"",""i_hmg_02_support_high_f"",""i_aa_01_weapon_f"",""b_kitbag_rgr"",""i_e_hmg_01_weapon_f"",""i_hmg_02_support_f"",""b_radiobag_01_tropic_f"",""i_e_at_01_weapon_f"",""b_carryall_mcamo"",""i_e_hmg_01_support_high_f"",""i_e_hmg_01_high_weapon_f"",""i_e_hmg_01_a_weapon_f"",""b_bergen_hex_f"",""b_tacticalpack_mcamo"",""b_carryall_ghex_f"",""b_assaultpack_cbr"",""o_mortar_01_support_f"",""i_hmg_01_high_weapon_f"",""i_hmg_02_high_weapon_f"",""b_uav_06_medical_backpack_f"",""i_c_hmg_02_high_weapon_f"",""b_bergen_mcamo_f"",""i_g_hmg_02_high_weapon_f"",""i_ugv_02_science_backpack_f"",""i_uav_01_backpack_f"",""b_respawn_sleeping_bag_brown_f"",""b_kitbag_mcamo"",""o_uav_01_backpack_f"",""o_ugv_02_science_backpack_f"",""b_civilianbackpack_01_sport_red_f"",""b_hmg_01_support_high_f"",""i_gmg_01_high_weapon_f"",""b_radiobag_01_black_f"",""b_gmg_01_a_weapon_f"",""i_e_hmg_02_high_weapon_f"",""b_carryall_cbr"",""i_hmg_01_support_f"",""o_mortar_01_weapon_f"",""b_viperharness_blk_f"",""b_messenger_idap_f"",""b_radiobag_01_oucamo_f"",""i_gmg_01_weapon_f"",""i_hmg_01_a_weapon_f"",""b_viperlightharness_blk_f"",""i_c_hmg_02_support_high_f"",""i_e_ugv_02_science_backpack_f"",""i_at_01_weapon_f"",""b_fieldpack_green_f"",""b_civilianbackpack_01_sport_blue_f"",""b_assaultpack_blk"",""c_idap_uav_06_medical_backpack_f"",""i_e_hmg_01_support_f"",""i_e_mortar_01_support_f"",""c_idap_uav_06_antimine_backpack_f"",""i_mortar_01_support_f"",""b_respawn_sleeping_bag_blue_f"",""b_legstrapbag_olive_f"",""b_viperlightharness_oli_f"",""b_static_designator_01_weapon_f"",""b_viperlightharness_hex_f"",""b_civilianbackpack_01_everyday_black_f""],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]]],true]";
+											value="[[[[""LMG_Zafir_F"",""sgun_HunterShotgun_01_F"",""SMG_03C_TR_hex"",""arifle_MXM_F"",""srifle_GM6_F"",""arifle_MSBS65_Mark_camo_F"",""arifle_Katiba_F"",""launch_B_Titan_F"",""srifle_DMR_03_woodland_F"",""arifle_MXM_khk_F"",""arifle_TRG21_F"",""launch_O_Titan_ghex_F"",""srifle_DMR_03_tan_F"",""srifle_DMR_05_hex_F"",""arifle_SPAR_01_blk_F"",""arifle_MXC_Black_F"",""hgun_Pistol_heavy_01_F"",""arifle_MSBS65_GL_F"",""srifle_LRR_tna_F"",""arifle_SPAR_03_khk_F"",""LMG_03_F"",""srifle_EBR_F"",""srifle_GM6_ghex_F"",""arifle_AK12U_arid_F"",""arifle_MSBS65_GL_sand_F"",""LMG_Mk200_black_F"",""arifle_MX_khk_F"",""arifle_CTAR_GL_hex_F"",""MMG_02_camo_F"",""hgun_Pistol_01_F"",""arifle_ARX_hex_F"",""srifle_DMR_07_blk_F"",""hgun_P07_khk_F"",""arifle_CTAR_blk_F"",""SMG_03_khaki"",""launch_RPG32_F"",""srifle_DMR_05_blk_F"",""launch_MRAWS_green_rail_F"",""launch_MRAWS_sand_rail_F"",""MMG_01_hex_F"",""arifle_AK12_GL_F"",""SMG_03_TR_black"",""arifle_AK12_GL_arid_F"",""launch_B_Titan_short_F"",""launch_O_Vorona_green_F"",""arifle_SPAR_01_GL_khk_F"",""hgun_esd_01_F"",""srifle_DMR_07_ghex_F"",""arifle_Mk20_plain_F"",""arifle_Mk20C_F"",""arifle_SDAR_F"",""arifle_SPAR_02_khk_F"",""arifle_RPK12_lush_F"",""SMG_03_hex"",""launch_B_Titan_short_tna_F"",""arifle_MSBS65_GL_camo_F"",""arifle_Mk20_GL_F"",""sgun_HunterShotgun_01_sawedoff_F"",""srifle_DMR_06_olive_F"",""srifle_LRR_camo_F"",""SMG_05_F"",""srifle_DMR_02_sniper_F"",""arifle_RPK12_arid_F"",""arifle_SPAR_03_blk_F"",""srifle_DMR_04_Tan_F"",""arifle_AK12U_F"",""arifle_MX_SW_F"",""arifle_MSBS65_Mark_F"",""arifle_SPAR_01_khk_F"",""arifle_MX_GL_khk_F"",""srifle_DMR_02_camo_F"",""SMG_03C_TR_khaki"",""arifle_CTARS_ghex_F"",""hgun_P07_F"",""arifle_MSBS65_UBS_F"",""launch_MRAWS_olive_F"",""arifle_CTAR_GL_blk_F"",""hgun_Rook40_F"",""arifle_CTAR_ghex_F"",""arifle_AK12_F"",""launch_I_Titan_F"",""arifle_MSBS65_UBS_sand_F"",""SMG_02_F"",""arifle_Mk20_GL_plain_F"",""launch_RPG32_ghex_F"",""hgun_Pistol_heavy_02_F"",""arifle_MX_SW_khk_F"",""arifle_MX_F"",""arifle_Mk20_F"",""arifle_MSBS65_UBS_black_F"",""launch_B_Titan_olive_F"",""launch_RPG32_green_F"",""SMG_03C_camo"",""launch_O_Vorona_brown_F"",""arifle_MXM_Black_F"",""hgun_ACPC2_F"",""arifle_MX_SW_Black_F"",""hgun_P07_blk_F"",""MMG_01_tan_F"",""launch_MRAWS_olive_rail_F"",""srifle_GM6_camo_F"",""SMG_03C_khaki"",""arifle_MX_Black_F"",""SMG_03C_black"",""SMG_03_black"",""hgun_Pistol_heavy_01_green_F"",""launch_B_Titan_tna_F"",""launch_O_Titan_short_ghex_F"",""SMG_03C_hex"",""launch_MRAWS_green_F"",""arifle_MSBS65_sand_F"",""srifle_DMR_06_hunter_F"",""arifle_AK12_arid_F"",""arifle_AK12_lush_F"",""arifle_SPAR_01_snd_F"",""arifle_CTAR_GL_ghex_F"",""srifle_DMR_03_F"",""launch_I_Titan_short_F"",""arifle_MSBS65_Mark_black_F"",""srifle_DMR_03_multicam_F"",""arifle_MSBS65_F"",""arifle_MXC_F"",""arifle_CTARS_hex_F"",""launch_O_Titan_F"",""arifle_CTARS_blk_F"",""arifle_MXC_khk_F"",""arifle_AKM_F"",""launch_MRAWS_sand_F"",""arifle_ARX_ghex_F"",""arifle_SPAR_01_GL_blk_F"",""SMG_03_TR_camo"",""srifle_DMR_05_tan_f"",""arifle_MSBS65_black_F"",""srifle_DMR_06_camo_F"",""arifle_MSBS65_Mark_sand_F"",""arifle_MSBS65_GL_black_F"",""arifle_MSBS65_camo_F"",""arifle_TRG21_GL_F"",""arifle_TRG20_F"",""arifle_AK12U_lush_F"",""launch_RPG7_F"",""arifle_SPAR_02_blk_F"",""SMG_03_TR_hex"",""arifle_RPK12_F"",""launch_NLAW_F"",""arifle_CTAR_hex_F"",""SMG_03_camo"",""SMG_03C_TR_black"",""arifle_MX_GL_F"",""hgun_PDW2000_F"",""arifle_SPAR_01_GL_snd_F"",""arifle_MX_GL_Black_F"",""srifle_DMR_03_khaki_F"",""SMG_03C_TR_camo"",""srifle_LRR_F"",""MMG_02_black_F"",""arifle_Katiba_GL_F"",""arifle_Mk20C_plain_F"",""SMG_03_TR_khaki"",""srifle_DMR_07_hex_F"",""MMG_02_sand_F"",""launch_O_Titan_short_F"",""srifle_DMR_02_F"",""arifle_SPAR_03_snd_F"",""SMG_01_F"",""hgun_Pistol_Signal_F"",""arifle_MSBS65_UBS_camo_F"",""srifle_DMR_04_F"",""arifle_ARX_blk_F"",""launch_I_Titan_eaf_F"",""LMG_Mk200_F"",""arifle_AK12_GL_lush_F"",""arifle_AKS_F"",""arifle_Katiba_C_F"",""arifle_SPAR_02_snd_F"",""srifle_DMR_01_F""],[]],[[""10Rnd_Mk14_762x51_Mag"",""30Rnd_556x45_Stanag_red"",""3Rnd_SmokeGreen_Grenade_shell"",""200Rnd_65x39_cased_Box_Tracer"",""3Rnd_UGL_FlareGreen_F"",""16Rnd_9x21_yellow_Mag"",""200Rnd_65x39_cased_Box"",""Chemlight_green"",""IEDUrbanSmall_Remote_Mag"",""30Rnd_556x45_Stanag_Sand_green"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_545x39_Mag_Tracer_Green_F"",""150Rnd_762x54_Box"",""30Rnd_65x39_caseless_khaki_mag_Tracer"",""75rnd_762x39_AK12_Arid_Mag_F"",""6Rnd_45ACP_Cylinder"",""10Rnd_93x64_DMR_05_Mag"",""Chemlight_yellow"",""75rnd_762x39_AK12_Mag_F"",""9Rnd_45ACP_Mag"",""10Rnd_338_Mag"",""Titan_AA"",""150Rnd_556x45_Drum_Green_Mag_Tracer_F"",""3Rnd_Smoke_Grenade_shell"",""IEDUrbanBig_Remote_Mag"",""20Rnd_762x51_Mag"",""200Rnd_556x45_Box_F"",""100Rnd_65x39_caseless_mag"",""3Rnd_SmokePurple_Grenade_shell"",""ATMine_Range_Mag"",""200Rnd_556x45_Box_Tracer_F"",""30Rnd_556x45_Stanag_Sand_Tracer_Green"",""100Rnd_580x42_Mag_Tracer_F"",""7Rnd_408_Mag"",""30Rnd_556x45_Stanag_Tracer_Yellow"",""30Rnd_65x39_caseless_green"",""30Rnd_45ACP_Mag_SMG_01"",""O_R_IR_Grenade"",""75Rnd_762x39_Mag_Tracer_F"",""UGL_FlareGreen_F"",""30Rnd_762x39_Mag_F"",""30Rnd_556x45_Stanag"",""100Rnd_65x39_caseless_khaki_mag"",""30Rnd_556x45_Stanag_Tracer_Green"",""10Rnd_50BW_Mag_F"",""Chemlight_blue"",""10Rnd_762x54_Mag"",""3Rnd_UGL_FlareCIR_F"",""150Rnd_762x54_Box_Tracer"",""150Rnd_556x45_Drum_Sand_Mag_Tracer_F"",""150Rnd_93x64_Mag"",""30Rnd_9x21_Red_Mag"",""30Rnd_580x42_Mag_F"",""30Rnd_545x39_Mag_Tracer_F"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""150Rnd_762x51_Box_Tracer"",""Vorona_HE"",""SmokeShell"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""SmokeShellRed"",""Titan_AT"",""MiniGrenade"",""30rnd_762x39_AK12_Arid_Mag_Tracer_F"",""NLAW_F"",""1Rnd_SmokeYellow_Grenade_shell"",""RPG32_HE_F"",""6Rnd_12Gauge_Pellets"",""20Rnd_650x39_Cased_Mag_F"",""6Rnd_RedSignal_F"",""FlareWhite_F"",""10Rnd_9x21_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_556x45_Box_Tracer_Red_F"",""IEDLandSmall_Remote_Mag"",""200Rnd_65x39_cased_Box_Tracer_Red"",""SatchelCharge_Remote_Mag"",""MRAWS_HEAT55_F"",""30Rnd_545x39_Mag_Green_F"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_black_mag"",""100Rnd_580x42_hex_Mag_F"",""2Rnd_12Gauge_Pellets"",""APERSMine_Range_Mag"",""SmokeShellYellow"",""3Rnd_SmokeRed_Grenade_shell"",""ClaymoreDirectionalMine_Remote_Mag"",""UGL_FlareYellow_F"",""100Rnd_580x42_Mag_F"",""30Rnd_9x21_Mag"",""1Rnd_SmokePurple_Grenade_shell"",""16Rnd_9x21_Mag"",""1Rnd_SmokeGreen_Grenade_shell"",""30Rnd_556x45_Stanag_Tracer_Red"",""I_IR_Grenade"",""100Rnd_65x39_caseless_black_mag_tracer"",""1Rnd_HE_Grenade_shell"",""SmokeShellGreen"",""30Rnd_65x39_caseless_msbs_mag"",""TrainingMine_Mag"",""3Rnd_UGL_FlareWhite_F"",""RPG32_F"",""3Rnd_SmokeOrange_Grenade_shell"",""150Rnd_556x45_Drum_Mag_Tracer_F"",""30rnd_762x39_AK12_Lush_Mag_Tracer_F"",""30rnd_762x39_AK12_Arid_Mag_F"",""75rnd_762x39_AK12_Lush_Mag_Tracer_F"",""MRAWS_HE_F"",""3Rnd_SmokeYellow_Grenade_shell"",""Titan_AP"",""SmokeShellOrange"",""5Rnd_127x108_APDS_Mag"",""30Rnd_556x45_Stanag_Sand_red"",""30Rnd_65x39_caseless_khaki_mag"",""FlareYellow_F"",""11Rnd_45ACP_Mag"",""150Rnd_556x45_Drum_Mag_F"",""30Rnd_762x39_AK12_Mag_F"",""1Rnd_SmokeBlue_Grenade_shell"",""30Rnd_556x45_Stanag_Sand_Tracer_Red"",""RPG7_F"",""30Rnd_9x21_Green_Mag"",""100Rnd_580x42_ghex_Mag_Tracer_F"",""3Rnd_UGL_FlareRed_F"",""1Rnd_SmokeOrange_Grenade_shell"",""UGL_FlareCIR_F"",""200Rnd_65x39_cased_Box_Red"",""75rnd_762x39_AK12_Arid_Mag_Tracer_F"",""10Rnd_762x51_Mag"",""2Rnd_12Gauge_Slug"",""SmokeShellBlue"",""6Rnd_GreenSignal_F"",""HandGrenade"",""APERSTripMine_Wire_Mag"",""130Rnd_338_Mag"",""DemoCharge_Remote_Mag"",""O_IR_Grenade"",""30Rnd_65x39_caseless_black_mag_Tracer"",""1Rnd_SmokeRed_Grenade_shell"",""30Rnd_580x42_Mag_Tracer_F"",""100Rnd_65x39_caseless_khaki_mag_tracer"",""20Rnd_556x45_UW_mag"",""APERSBoundingMine_Range_Mag"",""30Rnd_65x39_caseless_green_mag_Tracer"",""150Rnd_762x51_Box"",""30Rnd_65x39_caseless_mag"",""150Rnd_556x45_Drum_Green_Mag_F"",""SLAMDirectionalMine_Wire_Mag"",""APERSMineDispenser_Mag"",""MRAWS_HEAT_F"",""UGL_FlareRed_F"",""30Rnd_556x45_Stanag_Sand_Tracer_Yellow"",""30Rnd_556x45_Stanag_Sand"",""100Rnd_580x42_hex_Mag_Tracer_F"",""SmokeShellPurple"",""30Rnd_9x21_Mag_SMG_02"",""FlareRed_F"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""3Rnd_HE_Grenade_shell"",""3Rnd_SmokeBlue_Grenade_shell"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_556x45_Stanag_green"",""50Rnd_570x28_SMG_03"",""30Rnd_545x39_Mag_F"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""I_E_IR_Grenade"",""30Rnd_762x39_Mag_Green_F"",""UGL_FlareWhite_F"",""30Rnd_762x39_AK12_Mag_Tracer_F"",""IEDLandBig_Remote_Mag"",""75rnd_762x39_AK12_Lush_Mag_F"",""Laserbatteries"",""10Rnd_127x54_Mag"",""150Rnd_556x45_Drum_Sand_Mag_F"",""75Rnd_762x39_Mag_F"",""FlareGreen_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""100Rnd_580x42_ghex_Mag_F"",""6Rnd_12Gauge_Slug"",""30Rnd_762x39_Mag_Tracer_F"",""Chemlight_red"",""B_IR_Grenade"",""5Rnd_127x108_Mag"",""30Rnd_65x39_caseless_msbs_mag_Tracer"",""16Rnd_9x21_red_Mag"",""100Rnd_65x39_caseless_black_mag"",""1Rnd_Smoke_Grenade_shell"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""30rnd_762x39_AK12_Lush_Mag_F"",""16Rnd_9x21_green_Mag"",""200Rnd_556x45_Box_Red_F"",""75rnd_762x39_AK12_Mag_Tracer_F"",""Vorona_HEAT"",""30Rnd_9x21_Yellow_Mag""],[]],[[""optic_ico_01_black_f"",""U_B_GhillieSuit"",""U_I_C_Soldier_Bandit_3_F"",""bipod_03_F_oli"",""muzzle_snds_H_MG_blk_F"",""H_Shemag_olive"",""G_Goggles_VR"",""H_HelmetB_TI_tna_F"",""H_Bandanna_blu"",""V_Pocketed_black_F"",""U_B_PilotCoveralls"",""muzzle_snds_B_khk_F"",""G_I_Diving"",""optic_Aco_smg"",""V_PlateCarrier2_blk"",""G_Balaclava_TI_G_blk_F"",""V_PlateCarrier2_rgr"",""U_I_C_Soldier_Bandit_1_F"",""H_Bandanna_khk_hs"",""NVGoggles"",""V_CarrierRigKBT_01_light_Olive_F"",""H_RacingHelmet_1_black_F"",""H_HelmetCrew_I_E"",""H_MilCap_ghex_F"",""H_Construction_basic_yellow_F"",""G_EyeProtectors_Earpiece_F"",""H_CrewHelmetHeli_I"",""optic_Arco_arid_F"",""G_WirelessEarpiece_F"",""U_I_G_Story_Protagonist_F"",""H_Bandanna_sgg"",""optic_tws"",""G_Balaclava_oli"",""U_B_T_FullGhillie_tna_F"",""H_HelmetCrew_O_ghex_F"",""U_I_FullGhillie_lsh"",""U_O_OfficerUniform_ocamo"",""H_HelmetO_ghex_F"",""H_ParadeDressCap_01_CSAT_F"",""U_I_E_ParadeUniform_01_LDF_F"",""V_BandollierB_oli"",""G_Bandanna_aviator"",""H_Bandanna_surfer_blk"",""G_Aviator"",""H_HelmetAggressor_cover_F"",""U_B_CTRG_1"",""V_HarnessOGL_brn"",""V_BandollierB_ghex_F"",""V_PlateCarrierIA2_dgtl"",""U_C_Mechanic_01_F"",""G_RegulatorMask_F"",""U_I_C_Soldier_Para_1_F"",""G_Bandanna_BlueFlame1"",""acc_flashlight_pistol"",""U_B_GEN_Soldier_F"",""U_B_CombatUniform_mcam_tshirt"",""V_HarnessO_brn"",""G_Respirator_white_F"",""H_HeadBandage_clean_F"",""optic_Arco_blk_F"",""G_Diving"",""optic_SOS"",""H_Cap_blk_ION"",""U_O_R_Gorka_01_F"",""H_ParadeDressCap_01_LDF_F"",""bipod_01_F_mtp"",""U_C_Poloshirt_tricolour"",""U_C_Scientist"",""U_C_man_sport_3_F"",""V_BandollierB_rgr"",""optic_LRPS_ghex_F"",""G_Bandanna_sport"",""G_Bandanna_RedFlame1"",""U_I_C_Soldier_Bandit_4_F"",""U_C_Uniform_Scientist_01_formal_F"",""H_Tank_eaf_F"",""H_HelmetSpecB_snakeskin"",""NVGoggles_OPFOR"",""optic_MRD_black"",""H_Beret_EAF_01_F"",""H_HelmetB_camo"",""U_C_Driver_1"",""H_Cap_oli"",""V_PlateCarrierSpec_rgr"",""optic_KHS_hex"",""V_RebreatherB"",""H_RacingHelmet_1_F"",""muzzle_snds_H"",""FirstAidKit"",""H_Cap_khaki_specops_UK"",""G_Combat"",""V_PlateCarrier1_blk"",""H_Bandanna_cbr"",""NVGoggles_tna_F"",""G_Balaclava_Flames1"",""G_Balaclava_Skull1"",""muzzle_snds_H_MG"",""H_Construction_headset_black_F"",""H_HelmetO_oucamo"",""G_Bandanna_shades"",""U_C_Driver_2"",""V_CarrierRigKBT_01_light_EAF_F"",""G_Squares_Tinted"",""muzzle_snds_acp"",""H_HelmetSpecB_paint1"",""V_EOD_olive_F"",""V_TacVest_khk"",""optic_Arco"",""G_Balaclava_TI_blk_F"",""U_B_CombatUniform_mcam_vest"",""U_I_OfficerUniform"",""muzzle_snds_H_snd_F"",""H_Construction_headset_red_F"",""H_MilCap_gen_F"",""H_Construction_basic_white_F"",""V_Safety_yellow_F"",""U_B_CTRG_Soldier_2_Arid_F"",""U_C_IDAP_Man_casual_F"",""H_Helmet_Skate"",""U_I_C_Soldier_Para_4_F"",""U_I_L_Uniform_01_deserter_F"",""H_Beret_blk"",""V_Safety_blue_F"",""U_I_FullGhillie_ard"",""U_O_FullGhillie_ard"",""U_BG_Guerilla3_1"",""G_Respirator_yellow_F"",""V_HarnessO_ghex_F"",""V_PlateCarrier1_tna_F"",""V_TacVest_brn"",""H_HelmetLeaderO_ghex_F"",""H_PASGT_basic_black_F"",""U_C_IDAP_Man_cargo_F"",""H_Cap_marshal"",""G_Sport_Blackyellow"",""H_HelmetB_light_snakeskin"",""optic_DMS_weathered_F"",""H_RacingHelmet_4_F"",""H_Hat_camo"",""optic_Arco_AK_blk_F"",""muzzle_snds_B"",""G_Balaclava_Flecktarn"",""G_Balaclava_BlueStrips"",""H_Booniehat_khk_hs"",""H_Construction_earprot_red_F"",""H_Watchcap_khk"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CBRN_Suit_01_MTP_F"",""muzzle_snds_93mmg_tan"",""muzzle_snds_58_ghex_F"",""H_Cap_police"",""H_HelmetO_ocamo"",""U_C_Man_casual_5_F"",""U_I_L_Uniform_01_tshirt_sport_F"",""H_HelmetHBK_ear_F"",""H_PilotHelmetFighter_O"",""U_BG_Guerilla1_2_F"",""optic_MRD"",""H_Cap_grn_BI"",""V_LegStrapBag_coyote_F"",""G_Spectacles_Tinted"",""U_BG_Guerrilla_6_1"",""H_Watchcap_blk"",""U_Competitor"",""H_HelmetCrew_O"",""optic_Arco_lush_F"",""H_MilCap_ocamo"",""U_O_CombatUniform_oucamo"",""V_PlateCarrierGL_blk"",""H_Cap_blk_CMMG"",""H_StrawHat_dark"",""H_HelmetB_light_wdl"",""U_I_Wetsuit"",""U_B_HeliPilotCoveralls"",""muzzle_snds_65_TI_blk_F"",""H_RacingHelmet_1_yellow_F"",""optic_Arco_ghex_F"",""H_Booniehat_khk"",""U_C_Driver_1_yellow"",""V_DeckCrew_white_F"",""muzzle_antenna_03_f"",""U_B_ParadeUniform_01_US_decorated_F"",""U_O_FullGhillie_sard"",""H_Cap_brn_SPECOPS"",""optic_LRPS_tna_F"",""U_I_L_Uniform_01_tshirt_black_F"",""H_HelmetCrew_B"",""H_HelmetSpecB"",""U_C_Uniform_Scientist_01_F"",""U_O_Wetsuit"",""H_EarProtectors_white_F"",""G_Squares"",""H_PilotHelmetHeli_I"",""V_Plain_medical_F"",""V_PlateCarrierSpec_mtp"",""H_PilotHelmetFighter_I"",""H_Cap_blk"",""V_TacVest_camo"",""optic_AMS"",""H_RacingHelmet_1_blue_F"",""U_O_FullGhillie_lsh"",""H_Beret_02"",""H_HelmetB_sand"",""V_RebreatherIA"",""H_HelmetSpecO_ghex_F"",""U_C_Poloshirt_stripped"",""U_BG_Guerilla2_3"",""U_C_Driver_1_white"",""bipod_03_F_blk"",""H_Booniehat_dgtl"",""U_OrestesBody"",""NVGogglesB_blk_F"",""O_NVGoggles_ghex_F"",""optic_ico_01_f"",""U_C_FormalSuit_01_khaki_F"",""H_HelmetLeaderO_ocamo"",""H_Booniehat_tan"",""H_Watchcap_camo"",""H_Beret_gen_F"",""U_B_T_Soldier_AR_F"",""B_UavTerminal"",""optic_Hamr_khk_F"",""U_O_PilotCoveralls"",""H_PilotHelmetFighter_I_E"",""H_Bandanna_camo"",""H_MilCap_taiga"",""V_DeckCrew_green_F"",""optic_Aco"",""G_Balaclava_Scarecrow_01"",""H_Construction_earprot_vrana_F"",""V_EOD_IDAP_blue_F"",""H_RacingHelmet_1_white_F"",""G_Balaclava_combat"",""H_Bandanna_khk"",""muzzle_snds_65_TI_hex_F"",""U_C_WorkerCoveralls"",""G_Shades_Black"",""V_PlateCarrierSpec_tna_F"",""G_Bandanna_khk"",""H_PASGT_basic_blue_F"",""H_PilotHelmetHeli_O"",""U_C_man_sport_2_F"",""H_HeadBandage_stained_F"",""U_C_Poloshirt_burgundy"",""U_B_survival_uniform"",""U_C_FormalSuit_01_black_F"",""U_C_IDAP_Man_Tee_F"",""U_C_Driver_1_blue"",""U_C_Driver_1_green"",""V_PlateCarrier1_rgr"",""V_HarnessO_gry"",""H_Construction_basic_orange_F"",""ItemRadio"",""G_Sport_Greenblack"",""G_Sport_Red"",""H_Construction_basic_vrana_F"",""U_I_E_CBRN_Suit_01_EAF_F"",""U_C_E_LooterJacket_01_F"",""G_Bandanna_blk"",""V_TacChestrig_grn_F"",""U_C_CBRN_Suit_01_White_F"",""H_HelmetHBK_headset_F"",""H_HelmetB_black"",""V_Rangemaster_belt"",""H_RacingHelmet_1_orange_F"",""muzzle_snds_58_hex_F"",""H_WirelessEarpiece_F"",""H_Booniehat_mcamo"",""U_B_ParadeUniform_01_US_F"",""U_I_CBRN_Suit_01_AAF_F"",""U_O_GhillieSuit"",""H_RacingHelmet_1_green_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ArtTShirt_01_v4_F"",""H_HelmetB_snakeskin"",""V_TacChestrig_oli_F"",""H_HelmetSpecO_ocamo"",""U_I_E_ParadeUniform_01_LDF_decorated_F"",""H_Bandanna_surfer_grn"",""V_BandollierB_blk"",""H_Booniehat_mgrn"",""muzzle_snds_H_MG_khk_F"",""Laserdesignator"",""H_MilCap_gry"",""G_Bandanna_BlueFlame2"",""U_C_IDAP_Man_TeeShorts_F"",""U_B_CTRG_3"",""U_BG_Guerilla1_1"",""H_HelmetB_light_grass"",""muzzle_antenna_01_f"",""muzzle_snds_B_lush_F"",""U_C_FormalSuit_01_tshirt_gray_F"",""V_PlateCarrierGL_tna_F"",""muzzle_snds_338_green"",""ChemicalDetector_01_olive_F"",""U_C_CBRN_Suit_01_Blue_F"",""U_B_CombatUniform_mcam_wdl_f"",""muzzle_snds_L"",""V_RebreatherIR"",""U_O_R_Gorka_01_camo_F"",""H_Hat_brown"",""U_B_CombatUniform_mcam"",""U_O_ParadeUniform_01_CSAT_decorated_F"",""H_Cap_tan_specops_US"",""U_O_T_Sniper_F"",""Binocular"",""G_Balaclava_Halloween_01"",""G_Bandanna_Vampire_01"",""H_PASGT_basic_blue_press_F"",""U_O_T_Soldier_F"",""optic_ERCO_snd_F"",""V_PlateCarrierL_CTRG"",""U_C_Protagonist_VR"",""U_B_CTRG_Soldier_3_Arid_F"",""bipod_02_F_tan"",""G_AirPurifyingRespirator_02_sand_F"",""U_C_ArtTShirt_01_v1_F"",""Laserdesignator_02_ghex_F"",""O_NVGoggles_hex_F"",""V_Press_F"",""G_Bandanna_beast"",""bipod_02_F_lush"",""optic_Nightstalker"",""H_HelmetO_ViperSP_hex_F"",""U_B_T_Sniper_F"",""U_I_G_resistanceLeader_F"",""H_HeadSet_orange_F"",""U_B_CBRN_Suit_01_Wdl_F"",""bipod_02_F_hex"",""H_Construction_earprot_black_F"",""G_Tactical_Clear"",""G_Balaclava_Tropentarn"",""U_C_Driver_3"",""optic_KHS_tan"",""H_ParadeDressCap_01_US_F"",""V_Chestrig_oli"",""U_C_Poloshirt_redwhite"",""U_B_CTRG_Soldier_3_F"",""H_RacingHelmet_3_F"",""U_C_ArtTShirt_01_v3_F"",""H_PASGT_basic_white_F"",""U_C_FormalSuit_01_gray_F"",""V_PlateCarrierH_CTRG"",""U_C_ArtTShirt_01_v5_F"",""muzzle_snds_m_snd_F"",""U_C_FormalSuit_01_tshirt_black_F"",""U_I_E_Uniform_01_F"",""bipod_01_F_snd"",""optic_ico_01_sand_f"",""U_O_R_Gorka_01_brown_F"",""V_CarrierRigKBT_01_heavy_EAF_F"",""U_O_ParadeUniform_01_CSAT_F"",""U_C_Driver_4"",""V_PlateCarrier2_rgr_noflag_F"",""H_HelmetAggressor_cover_taiga_F"",""muzzle_snds_B_arid_F"",""Laserdesignator_03"",""V_DeckCrew_violet_F"",""H_HelmetSpecB_sand"",""U_C_ConstructionCoverall_Vrana_F"",""optic_ERCO_khk_F"",""H_EarProtectors_orange_F"",""muzzle_antenna_02_f"",""H_HelmetB_tna_F"",""H_PASGT_basic_olive_F"",""H_Booniehat_wdl"",""ItemWatch"",""U_O_T_FullGhillie_tna_F"",""H_Bandanna_surfer"",""G_Respirator_blue_F"",""optic_DMS_ghex_F"",""H_Hat_checker"",""V_Pocketed_olive_F"",""optic_ACO_grn_smg"",""U_I_L_Uniform_01_camo_F"",""optic_ACO_grn"",""U_B_Wetsuit"",""V_PlateCarrier_Kerry"",""V_PlateCarrierIAGL_oli"",""O_NVGoggles_grn_F"",""muzzle_snds_65_TI_ghex_F"",""H_Booniehat_taiga"",""U_B_FullGhillie_lsh"",""H_ShemagOpen_khk"",""muzzle_snds_93mmg"",""H_Booniehat_eaf"",""H_Beret_Colonel"",""G_Sport_Checkered"",""H_Construction_earprot_orange_F"",""V_TacVest_blk"",""U_B_FullGhillie_ard"",""U_C_ArtTShirt_01_v6_F"",""H_CrewHelmetHeli_B"",""H_Cap_press"",""U_O_officer_noInsignia_hex_F"",""U_O_V_Soldier_Viper_hex_F"",""G_AirPurifyingRespirator_02_olive_F"",""optic_AMS_snd"",""optic_Holosight_smg"",""H_HelmetIA"",""acc_flashlight_smg_01"",""H_Shemag_olive_hs"",""H_HelmetAggressor_F"",""U_I_Protagonist_VR"",""U_C_Man_casual_1_F"",""ItemMap"",""U_C_Journalist"",""NVGogglesB_grn_F"",""H_Construction_headset_vrana_F"",""G_Blindfold_01_black_F"",""U_C_Poloshirt_salmon"",""H_HelmetB_light_sand"",""U_I_C_Soldier_Camo_F"",""V_BandollierB_khk"",""H_Cap_red"",""U_O_SpecopsUniform_ocamo"",""H_Construction_headset_white_F"",""H_HelmetSpecO_blk"",""G_Lady_Blue"",""acc_flashlight"",""H_EarProtectors_red_F"",""U_BG_Guerilla2_2"",""V_TacChestrig_cbr_F"",""G_Blindfold_01_white_F"",""G_Bandanna_Syndikat1"",""H_HelmetO_ViperSP_ghex_F"",""ItemGPS"",""U_O_R_Gorka_01_black_F"",""optic_AMS_khk"",""U_C_Man_casual_4_F"",""V_PlateCarrierGL_wdl"",""U_I_E_Uniform_01_officer_F"",""H_Booniehat_oli"",""U_B_CTRG_Soldier_F"",""V_CarrierRigKBT_01_Olive_F"",""U_O_T_Officer_F"",""U_B_CBRN_Suit_01_Tropic_F"",""H_HelmetB_grass"",""V_PlateCarrierSpec_blk"",""G_Shades_Blue"",""G_Balaclava_TI_G_tna_F"",""U_BG_Guerilla2_1"",""U_C_Uniform_Scientist_02_F"",""U_I_C_Soldier_Bandit_2_F"",""G_Balaclava_blk"",""V_CarrierRigKBT_01_EAF_F"",""optic_Holosight_blk_F"",""U_B_CTRG_Soldier_2_F"",""H_RacingHelmet_2_F"",""U_C_HunterBody_grn"",""V_TacVest_gen_F"",""optic_Holosight_arid_F"",""optic_Holosight_lush_F"",""H_HelmetB"",""V_Chestrig_rgr"",""H_MilCap_mcamo"",""H_MilCap_wdl"",""optic_Arco_AK_arid_F"",""H_PilotHelmetFighter_B"",""V_EOD_blue_F"",""U_C_FormalSuit_01_blue_F"",""H_PASGT_neckprot_blue_press_F"",""G_Combat_Goggles_tna_F"",""G_Sport_BlackWhite"",""V_PlateCarrier1_rgr_noflag_F"",""H_MilCap_blue"",""U_B_T_Soldier_SL_F"",""U_C_Uniform_Farmer_01_F"",""U_B_FullGhillie_sard"",""H_Beret_CSAT_01_F"",""G_Bandanna_OrangeFlame1"",""U_B_GEN_Commander_F"",""H_Hat_grey"",""optic_Holosight_smg_khk_F"",""H_Booniehat_tna_F"",""optic_NVS"",""U_C_Poor_1"",""U_B_CTRG_Soldier_urb_1_F"",""H_Cap_grn"",""H_Cap_oli_hs"",""G_EyeProtectors_F"",""H_Hat_Safari_sand_F"",""U_C_ConstructionCoverall_Black_F"",""U_I_E_Uniform_01_sweater_F"",""U_I_L_Uniform_01_tshirt_olive_F"",""U_I_C_Soldier_Para_2_F"",""U_C_Driver_1_orange"",""H_EarProtectors_black_F"",""H_MilCap_tna_F"",""H_Cap_White_IDAP_F"",""H_HelmetB_plain_wdl"",""U_B_CTRG_Soldier_urb_2_F"",""acc_pointer_IR"",""optic_Hamr"",""U_I_L_Uniform_01_tshirt_skull_F"",""U_C_ArtTShirt_01_v2_F"",""H_Hat_Safari_olive_F"",""H_Cap_usblack"",""H_HelmetB_light_black"",""G_Tactical_Black"",""U_B_Protagonist_VR"",""U_B_CTRG_2"",""H_PilotHelmetHeli_B"",""H_Construction_headset_orange_F"",""ToolKit"",""V_LegStrapBag_black_F"",""optic_ERCO_blk_F"",""U_C_ConstructionCoverall_Blue_F"",""G_Spectacles"",""ChemicalDetector_01_tan_F"",""Rangefinder"",""H_HelmetB_light_desert"",""U_B_CombatUniform_mcam_worn"",""H_HelmetSpecB_wdl"",""H_Bandanna_mcamo"",""H_HelmetHBK_F"",""muzzle_snds_M"",""U_B_CombatUniform_vest_mcam_wdl_f"",""H_RacingHelmet_1_red_F"",""U_C_Paramedic_01_F"",""H_Cap_Orange_IDAP_F"",""U_I_ParadeUniform_01_AAF_decorated_F"",""V_TacVest_blk_POLICE"",""V_CarrierRigKBT_01_heavy_Olive_F"",""H_Cap_MaldenTours"",""V_Safety_orange_F"",""H_HeadSet_black_F"",""U_C_Driver_1_black"",""H_Hat_blue"",""H_MilCap_eaf"",""U_I_CombatUniform_shortsleeve"",""H_Cap_blu"",""H_Hat_tan"",""I_UavTerminal"",""optic_Holosight_khk_F"",""H_HeadSet_red_F"",""NVGoggles_INDEP"",""H_Cap_blk_Raven"",""V_TacVestIR_blk"",""V_Plain_crystal_F"",""H_HeadSet_white_F"",""V_EOD_coyote_F"",""H_HelmetB_desert"",""H_EarProtectors_yellow_F"",""U_C_IDAP_Man_shorts_F"",""Laserdesignator_01_khk_F"",""H_Bandanna_gry"",""V_DeckCrew_blue_F"",""U_Marshal"",""U_C_man_sport_1_F"",""H_Cap_Lyfe"",""V_DeckCrew_red_F"",""U_B_CTRG_Soldier_Arid_F"",""H_HeadBandage_bloody_F"",""U_C_Poloshirt_blue"",""V_PlateCarrierSpec_wdl"",""H_Construction_earprot_yellow_F"",""U_C_Man_casual_6_F"",""U_C_IDAP_Man_Jeans_F"",""optic_MRCO"",""G_Sport_Blackred"",""H_MilCap_dgtl"",""bipod_01_F_khk"",""optic_Yorris"",""optic_Holosight"",""optic_Holosight_smg_blk_F"",""G_Bandanna_Skull1"",""U_I_E_Uniform_01_coveralls_F"",""H_HelmetB_TI_arid_F"",""H_Construction_earprot_white_F"",""muzzle_snds_m_khk_F"",""H_HelmetB_Light_tna_F"",""U_B_CombatUniform_tshirt_mcam_wdL_f"",""optic_SOS_khk_F"",""V_I_G_resistanceLeader_F"",""U_BG_leader"",""H_Watchcap_cbr"",""H_HelmetHBK_chops_F"",""U_B_T_Soldier_F"",""H_Tank_black_F"",""Laserdesignator_02"",""V_Chestrig_khk"",""H_HelmetSpecB_paint2"",""H_CrewHelmetHeli_I_E"",""U_O_Protagonist_VR"",""U_C_Man_casual_3_F"",""V_PlateCarrier2_tna_F"",""V_LegStrapBag_olive_F"",""H_HelmetLeaderO_oucamo"",""H_HelmetSpecB_blk"",""U_I_E_Uniform_01_tanktop_F"",""H_Cap_tan"",""G_Bandanna_Skull2"",""muzzle_snds_338_sand"",""muzzle_snds_570"",""H_HeadSet_yellow_F"",""optic_tws_mg"",""G_Balaclava_TI_tna_F"",""muzzle_snds_B_snd_F"",""U_I_CombatUniform"",""ChemicalDetector_01_watch_F"",""H_Construction_basic_black_F"",""V_SmershVest_01_radio_F"",""optic_Arco_AK_lush_F"",""muzzle_snds_338_black"",""G_Balaclava_lowprofile"",""U_C_Driver_1_red"",""optic_LRPS"",""U_I_C_Soldier_Bandit_5_F"",""U_I_FullGhillie_sard"",""U_C_Uniform_Scientist_02_formal_F"",""V_PlateCarrierIAGL_dgtl"",""ItemCompass"",""V_PlateCarrierGL_rgr"",""optic_KHS_old"",""H_Cap_Black_IDAP_F"",""V_SmershVest_01_F"",""bipod_01_F_blk"",""H_HelmetB_Enh_tna_F"",""V_Chestrig_blk"",""U_O_CombatUniform_ocamo"",""muzzle_snds_H_khk_F"",""H_StrawHat"",""H_HelmetCrew_I"",""U_I_C_Soldier_Para_3_F"",""muzzle_snds_58_blk_F"",""H_Bandanna_sand"",""V_PlateCarrier2_wdl"",""V_DeckCrew_brown_F"",""U_Rangemaster"",""MineDetector"",""V_BandollierB_cbr"",""V_TacVest_oli"",""H_Cap_headphones"",""G_Shades_Green"",""G_O_Diving"",""optic_DMS"",""C_UavTerminal"",""H_ShemagOpen_tan"",""H_Construction_basic_red_F"",""U_O_V_Soldier_Viper_F"",""V_HarnessOGL_ghex_F"",""bipod_02_F_blk"",""H_ParadeDressCap_01_AAF_F"",""U_I_E_Uniform_01_shortsleeve_F"",""H_Hat_Tinfoil_F"",""G_Bandanna_oli"",""U_I_C_Soldier_Para_5_F"",""U_I_GhillieSuit"",""bipod_02_F_arid"",""V_HarnessOGL_gry"",""G_Bandanna_tan"",""G_AirPurifyingRespirator_02_black_F"",""V_PlateCarrierGL_mtp"",""I_E_UavTerminal"",""G_Shades_Red"",""G_Lowprofile"",""V_Pocketed_coyote_F"",""optic_ico_01_camo_f"",""H_Cap_surfer"",""G_Bandanna_Syndikat2"",""optic_DMS_weathered_Kir_F"",""H_PilotHelmetHeli_I_E"",""Medikit"",""V_PlateCarrier1_wdl"",""U_Tank_green_F"",""H_HelmetB_light"",""U_C_Man_casual_2_F"",""optic_KHS_blk"",""H_CrewHelmetHeli_O"",""U_I_pilotCoveralls"",""H_Construction_headset_yellow_F"",""G_AirPurifyingRespirator_01_F"",""ChemicalDetector_01_black_F"",""H_MilCap_grn"",""O_UavTerminal"",""V_PlateCarrierIA1_dgtl"",""U_I_HeliPilotCoveralls"",""G_Bandanna_CandySkull"",""U_I_ParadeUniform_01_AAF_F"",""O_NVGoggles_urb_F"",""G_B_Diving"",""V_DeckCrew_yellow_F"",""NVGogglesB_gry_F"",""acc_esd_01_flashlight""],[]],[[""B_CombinationUnitRespirator_01_F"",""B_Kitbag_cbr"",""B_FieldPack_ocamo"",""C_IDAP_UAV_06_backpack_F"",""B_AssaultPack_eaf_F"",""I_E_HMG_02_support_high_F"",""I_E_UAV_06_medical_backpack_F"",""B_CivilianBackpack_01_Everyday_Astra_F"",""B_FieldPack_blk"",""B_Carryall_khk"",""I_HMG_01_weapon_F"",""I_Mortar_01_weapon_F"",""I_E_GMG_01_high_Weapon_F"",""I_UAV_06_medical_backpack_F"",""I_E_UAV_06_backpack_F"",""B_FieldPack_oucamo"",""I_HMG_02_weapon_F"",""B_ViperHarness_ghex_F"",""O_HMG_01_support_F"",""B_AssaultPack_Kerry"",""B_Carryall_oli"",""B_GMG_01_high_weapon_F"",""B_Messenger_Gray_F"",""B_W_Static_Designator_01_weapon_F"",""B_AssaultPack_tna_F"",""B_RadioBag_01_eaf_F"",""B_SCBA_01_F"",""C_IDAP_UAV_01_backpack_F"",""B_RadioBag_01_mtp_F"",""B_ViperLightHarness_khk_F"",""B_HMG_01_high_weapon_F"",""I_UGV_02_Demining_backpack_F"",""B_RadioBag_01_ghex_F"",""O_GMG_01_A_weapon_F"",""B_ViperHarness_oli_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_rgr"",""O_AT_01_weapon_F"",""I_E_UAV_01_backpack_F"",""O_HMG_01_support_high_F"",""B_Respawn_TentDome_F"",""I_E_Mortar_01_Weapon_F"",""B_Messenger_Olive_F"",""I_HMG_01_support_high_F"",""B_FieldPack_ghex_F"",""B_TacticalPack_ocamo"",""B_Bergen_tna_F"",""B_Carryall_blk"",""O_Static_Designator_02_weapon_F"",""B_HMG_01_support_F"",""C_IDAP_UGV_02_Demining_backpack_F"",""B_RadioBag_01_wdl_F"",""B_Carryall_eaf_F"",""I_E_AA_01_weapon_F"",""O_HMG_01_A_weapon_F"",""B_FieldPack_khk"",""B_Mortar_01_support_F"",""B_Kitbag_sgg"",""B_TacticalPack_rgr"",""B_TacticalPack_blk"",""B_GMG_01_weapon_F"",""B_LegStrapBag_coyote_F"",""B_AT_01_weapon_F"",""B_Carryall_green_F"",""B_ViperHarness_hex_F"",""B_Carryall_taiga_F"",""B_Mortar_01_weapon_F"",""I_E_GMG_01_Weapon_F"",""B_AssaultPack_sgg"",""O_AA_01_weapon_F"",""I_C_HMG_02_weapon_F"",""I_E_GMG_01_A_Weapon_F"",""B_UGV_02_Science_backpack_F"",""I_G_HMG_02_support_F"",""B_Messenger_Coyote_F"",""B_CivilianBackpack_01_Everyday_Vrana_F"",""B_ViperLightHarness_ghex_F"",""B_Messenger_Black_F"",""B_Kitbag_tan"",""I_GMG_01_A_weapon_F"",""O_HMG_01_high_weapon_F"",""B_FieldPack_taiga_F"",""B_Patrol_Respawn_bag_F"",""I_E_UGV_02_Demining_backpack_F"",""B_RadioBag_01_digi_F"",""I_C_HMG_02_support_F"",""B_UAV_01_backpack_F"",""B_RadioBag_01_hex_F"",""B_AssaultPack_khk"",""O_HMG_01_weapon_F"",""B_CivilianBackpack_01_Sport_Green_F"",""B_FieldPack_oli"",""B_CivilianBackpack_01_Everyday_IDAP_F"",""B_HMG_01_A_weapon_F"",""B_Bergen_dgtl_F"",""I_UAV_06_backpack_F"",""B_UGV_02_Demining_backpack_F"",""B_Carryall_wdl_F"",""B_AssaultPack_ocamo"",""B_UAV_06_backpack_F"",""C_UAV_06_backpack_F"",""O_UGV_02_Demining_backpack_F"",""B_AssaultPack_dgtl"",""B_AA_01_weapon_F"",""I_E_HMG_02_support_F"",""B_Respawn_TentA_F"",""B_Carryall_ocamo"",""B_Parachute"",""O_UAV_06_medical_backpack_F"",""O_GMG_01_high_weapon_F"",""B_ViperHarness_khk_F"",""O_UAV_06_backpack_F"",""B_AssaultPack_mcamo"",""B_HMG_01_weapon_F"",""B_Respawn_Sleeping_bag_F"",""B_LegStrapBag_black_F"",""I_G_HMG_02_weapon_F"",""I_G_HMG_02_support_high_F"",""B_AssaultPack_wdl_F"",""B_TacticalPack_oli"",""B_FieldPack_cbr"",""B_Carryall_oucamo"",""I_E_HMG_02_weapon_F"",""O_GMG_01_weapon_F"",""I_HMG_02_support_high_F"",""I_AA_01_weapon_F"",""B_Kitbag_rgr"",""I_E_HMG_01_Weapon_F"",""I_HMG_02_support_F"",""B_RadioBag_01_tropic_F"",""I_E_AT_01_weapon_F"",""B_Carryall_mcamo"",""I_E_HMG_01_support_high_F"",""I_E_HMG_01_high_Weapon_F"",""I_E_HMG_01_A_Weapon_F"",""B_Bergen_hex_F"",""B_TacticalPack_mcamo"",""B_Carryall_ghex_F"",""B_AssaultPack_cbr"",""O_Mortar_01_support_F"",""I_HMG_01_high_weapon_F"",""I_HMG_02_high_weapon_F"",""B_UAV_06_medical_backpack_F"",""I_C_HMG_02_high_weapon_F"",""B_Bergen_mcamo_F"",""I_G_HMG_02_high_weapon_F"",""I_UGV_02_Science_backpack_F"",""I_UAV_01_backpack_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Kitbag_mcamo"",""O_UAV_01_backpack_F"",""O_UGV_02_Science_backpack_F"",""B_CivilianBackpack_01_Sport_Red_F"",""B_HMG_01_support_high_F"",""I_GMG_01_high_weapon_F"",""B_RadioBag_01_black_F"",""B_GMG_01_A_weapon_F"",""I_E_HMG_02_high_weapon_F"",""B_Carryall_cbr"",""I_HMG_01_support_F"",""O_Mortar_01_weapon_F"",""B_ViperHarness_blk_F"",""B_Messenger_IDAP_F"",""B_RadioBag_01_oucamo_F"",""I_GMG_01_weapon_F"",""I_HMG_01_A_weapon_F"",""B_ViperLightHarness_blk_F"",""I_C_HMG_02_support_high_F"",""I_E_UGV_02_Science_backpack_F"",""I_AT_01_weapon_F"",""B_FieldPack_green_F"",""B_CivilianBackpack_01_Sport_Blue_F"",""B_AssaultPack_blk"",""C_IDAP_UAV_06_medical_backpack_F"",""I_E_HMG_01_support_F"",""I_E_Mortar_01_support_F"",""C_IDAP_UAV_06_antimine_backpack_F"",""I_Mortar_01_support_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_LegStrapBag_olive_F"",""B_ViperLightHarness_oli_F"",""B_Static_Designator_01_weapon_F"",""B_ViperLightHarness_hex_F"",""B_CivilianBackpack_01_Everyday_Black_F""],[]]],true]";
 										};
 									};
 								};
@@ -4993,7 +5005,7 @@ class Mission
 							};
 							id=75142;
 							type="Land_HBarrier_5_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 						};
 						class Item76
 						{
@@ -5283,134 +5295,13 @@ class Mission
 		};
 		class Item5
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=5;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3978.2732,5.0014391,2873.3547};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						rank="SERGEANT";
-						isPlayer=1;
-					};
-					id=77602;
-					type="B_CTRG_Soldier_TL_tna_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3983.5278,5.0014391,2871.575};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=77603;
-					type="B_CTRG_Soldier_AR_tna_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3974.8303,5.0014391,2871.2793};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=77604;
-					type="B_CTRG_Soldier_tna_F";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3988.5278,5.0014391,2866.575};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=77605;
-					type="B_CTRG_Soldier_LAT_tna_F";
-				};
-				class Item4
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
-					position[]={3788.5583,5,4192.7822};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=82298;
-					type="Move";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=77601;
-		};
-		class Item6
-		{
 			dataType="Marker";
 			position[]={4548.5718,5,2972.8848};
 			name="marker_368";
 			type="mil_destroy";
 			id=77736;
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Group";
 			side="West";
@@ -5435,7 +5326,7 @@ class Mission
 				class Item1
 				{
 					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+038;
+					loiterAltitude=-3.4028235e+38;
 					position[]={3788.5583,5,4192.7822};
 					class Effects
 					{
@@ -5450,7 +5341,7 @@ class Mission
 			};
 			id=77737;
 		};
-		class Item8
+		class Item7
 		{
 			dataType="Marker";
 			position[]={4501.4639,5,3490.7683};
@@ -5461,7 +5352,7 @@ class Mission
 			b=2.1306152;
 			id=77815;
 		};
-		class Item9
+		class Item8
 		{
 			dataType="Group";
 			side="West";
@@ -5510,7 +5401,7 @@ class Mission
 			};
 			id=82628;
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5541,6 +5432,383 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3978.5071,5.0014391,2872.4404};
+						angles[]={0,6.2759647,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+					};
+					id=82641;
+					type="B_CTRG_Soldier_AR_tna_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3975.989,5.0014391,2874.9221};
+						angles[]={0,6.2759647,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=82642;
+					type="B_CTRG_Soldier_tna_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3980.989,5.0014391,2874.9583};
+						angles[]={0,6.2759647,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=82643;
+					type="B_CTRG_Soldier_LAT_tna_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3978.4709,5.0014391,2877.4399};
+						angles[]={0,6.2759595,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+						description="1: Team Leader";
+						isPlayer=1;
+					};
+					id=82644;
+					type="B_CTRG_Soldier_TL_tna_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_disableAI_target";
+							expression="if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ENH_disableAI_suppression";
+							expression="if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ENH_disableAI_teamswitch";
+							expression="if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ENH_disableAI_autotarget";
+							expression="if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ENH_disableAI_all";
+							expression="if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="ENH_disableAI_FSM";
+							expression="if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="ENH_disableAI_mineDetection";
+							expression="if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="ENH_disableAI_anim";
+							expression="if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="ENH_disableAI_lights";
+							expression="if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="ENH_disableAI_aimingError";
+							expression="if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="ENH_disableAI_weaponAim";
+							expression="if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="ENH_disableAI_NVG";
+							expression="if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="ENH_disableAI_autocombat";
+							expression="if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="ENH_disableAI_cover";
+							expression="if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="ENH_disableAI_radioProtocol";
+							expression="if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="ENH_disableAI_checkVisible";
+							expression="if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute19
+						{
+							property="ENH_disableAI_move";
+							expression="if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=20;
+					};
+				};
+			};
+			class Attributes
+			{
+				formation="DIAMOND";
+			};
+			id=82640;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3972.2639,5.0014391,2869.2407};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=82646;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=82645;
 		};
 	};
 };
