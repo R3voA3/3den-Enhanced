@@ -1,2 +1,85 @@
 allowFunctionsRecompile = 1;
 allowFunctionsLog = 1;
+
+//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration
+//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types
+//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles
+
+//Eden Editor macros such as background colour and pixel grid
+#include "\a3\3DEN\UI\macros.inc"
+//Eden Editor advanced macros
+#include "\a3\3den\ui\macroexecs.inc"
+//GRIDs
+#include "\a3\ui_f\hpp\definecommongrids.inc"
+//DIK Key Codes
+#include "\a3\ui_f\hpp\definedikcodes.inc"
+//Eden Editor IDDs and IDCs as well as control types, styles and macros
+#include "\a3\3den\ui\resincl.inc"
+
+//Eden Editor Base Controls
+import ctrlActivePicture;
+import ctrlActivePictureKeepAspect;
+import ctrlActiveText;
+import ctrlButton;
+import ctrlButtonCancel;
+import ctrlButtonClose;
+import ctrlButtonCollapseAll;
+import ctrlButtonExpandAll;
+import ctrlButtonFilter;
+import ctrlButtonOK;
+import ctrlButtonPicture;
+import ctrlButtonPictureKeepAspect;
+import ctrlButtonSearch;
+import ctrlButtonToolbar;
+import ctrlCheckbox;
+import ctrlCheckboxBaseline;
+import ctrlCheckboxes;
+import ctrlCheckboxesCheckbox;
+import ctrlCheckboxToolbar;
+import ctrlCombo;
+import ctrlComboToolbar;
+import ctrlControlsGroup;
+import ctrlControlsGroupNoHScrollbars;
+import ctrlControlsGroupNoScrollbars;
+import ctrlControlsGroupNoVScrollbars;
+import ctrlDefault;
+import ctrlDefaultButton;
+import ctrlDefaultText;
+import ctrlEdit;
+import ctrlEditMulti;
+import ctrlHTML;
+import ctrlListbox;
+import ctrlListNBox;
+import ctrlMap;
+import ctrlMapEmpty;
+import ctrlMapMain;
+import ctrlMenu;
+import ctrlMenuStrip;
+import ctrlProgress;
+import ctrlShortcutButton;
+import ctrlShortcutButtonCancel;
+import ctrlShortcutButtonOK;
+import ctrlShortcutButtonSteam;
+import ctrlSliderH;
+import ctrlSliderV;
+import ctrlStatic;
+import ctrlStaticBackground;
+import ctrlStaticBackgroundDisable;
+import ctrlStaticBackgroundDisableTiles;
+import ctrlStaticFooter;
+import ctrlStaticFrame;
+import ctrlStaticLine;
+import ctrlStaticMulti;
+import ctrlStaticOverlay;
+import ctrlStaticPicture;
+import ctrlStaticPictureKeepAspect;
+import ctrlStaticPictureTile;
+import ctrlStaticTitle;
+import ctrlStructuredText;
+import ctrlToolbox;
+import ctrlToolboxPicture;
+import ctrlToolboxPictureKeepAspect;
+import ctrlTree;
+import ctrlXListbox;
+import ctrlXSliderH;
+import ctrlXSliderV;
