@@ -15,7 +15,7 @@
 
 params [["_index", 0]];
 
-if (_index > 2) then {systemChat "Index cannot be > 2. Set to 2."};
+["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
 
 private _entities = [["Object", "Marker", "Logic", "Waypoint", "Trigger"]] call ENH_fnc_all3DENSelected;
 if (count _entities < 3) exitWith {}; //Makes no sense to space less than three entities

@@ -16,7 +16,7 @@
 
 params [["_index", 0], ["_max", true]];
 
-if (_index > 2) then {systemChat "Index cannot be > 2. Set to 2."};
+["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
 
 private _entities = [] call ENH_fnc_all3DENSelected;
 if (count _entities < 2) exitWith {}; //Makes no sense to align less then two entities

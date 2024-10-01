@@ -176,8 +176,6 @@ switch _mode do
 
         _ctrlStaticPreviewBackground ctrlShow true;
         _ctrlStaticPreview ctrlShow true;
-
-        systemChat format ["%1, %2", ctrlShown  _ctrlStaticPreview, ctrlShown  _ctrlStaticPreviewBackground];
     };
     case "hidePreview":
     {

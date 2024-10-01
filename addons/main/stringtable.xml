@@ -2056,6 +2056,10 @@
             <Polish>Akcja wykonana!</Polish>
             <Russian>Действие выполнено!</Russian>
         </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_ALIGN_ENTITIES_WRONG_INDEX">
+            <English>Index cannot be greater 2. Index was set to 2.</English>
+            <German>Der Index darf nicht größer 2 sein. Index auf 2 gesetzt.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_BACKUP_FAILED">
             <English>Backup option is enabled but no &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification was loaded. Backup failed!</English>
             <Italian>L'opzione di backup è attivata ma non è stata caricata alcuna modifica di &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;. Il backup è fallito!</Italian>
