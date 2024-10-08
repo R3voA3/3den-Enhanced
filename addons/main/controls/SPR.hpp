@@ -29,7 +29,7 @@ class ENH_SPR: Title
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-             sliderPosition = 20;
+            sliderPosition = 20;
             sliderRange[] = {2, 360};
             sliderStep = 1;
             lineSize = 1;
