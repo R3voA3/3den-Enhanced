@@ -12,6 +12,9 @@
         "[sqf]": {
             "editor.insertSpaces": true,
             "editor.detectIndentation": false
-        }
+        },
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "editor.renderFinalNewline": "dimmed"
     }
 }
