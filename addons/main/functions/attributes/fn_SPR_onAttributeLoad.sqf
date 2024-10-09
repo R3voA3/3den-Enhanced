@@ -17,17 +17,30 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_ruletSet", "_respawnTime", "_canDie", "_restoreLoadout", "_onRespawnCode"];
 
-(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
+private _ctrlComboRuleset = _ctrlGroup controlsGroupCtrl 100;
 
-(_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
+_ctrlComboRuleset lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
+_ctrlComboRuleset lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
 
-private _index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION";
-(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [_index, localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+private _index = _ctrlComboRuleset lbAdd localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION";
+_ctrlComboRuleset lbSetTooltip [_index, localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
 
-_index = (_ctrlGroup controlsGroupCtrl 100) lbAdd localize "STR_ENH_MAIN_SPR_RULESET_NEARESTPOSITION";
-(_ctrlGroup controlsGroupCtrl 100) lbSetTooltip [_index, localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
+_index = _ctrlComboRuleset lbAdd localize "STR_ENH_MAIN_SPR_RULESET_NEARESTPOSITION";
+_ctrlComboRuleset lbSetTooltip [_index, localize "STR_ENH_MAIN_SPR_RULESET_RANDOMPOSITION_TOOLTIP"];
 
-(_ctrlGroup controlsGroupCtrl 100) lbSetCurSel _ruletSet;
+_ctrlComboRuleset ctrlAddEventHandler ["LBSelChanged",
+{
+    params ["_ctrlComboRuleset", "_selectedIndex"];
+
+    private _state = !(_selectedIndex == 0);
+    ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 101 ctrlEnable _state;
+    ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 102 ctrlEnable _state;
+    ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 103 ctrlEnable _state;
+    ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 104 ctrlEnable _state;
+    ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 105 ctrlEnable _state;
+}];
+
+_ctrlComboRuleset lbSetCurSel _ruletSet;
 
 [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s"] call BIS_fnc_initSliderValue;
 [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s", _respawnTime] call BIS_fnc_initSliderValue;
