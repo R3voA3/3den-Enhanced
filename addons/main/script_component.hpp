@@ -40,6 +40,17 @@
     validate = "expression";\
 }\
 
+#define MUSICEH_CONFIG(A) class DOUBLES(ENH_MusicEventHandlers,A)\
+{\
+    displayName = QUOTE(A);\
+    property = QUOTE(DOUBLES(ENH_MusicEventHandlers,A));\
+    control = "EditCodeMulti5";\
+    expression = QUOTE((if (_value != '' && !is3DEN && hasInterface) then {TRIPLES(ENH_MusicEventHandlers,A,ID) = addMusicEventHandler EH_ARRAY(A)}));\
+    condition = 1;\
+    defaultValue = "''";\
+    validate = "expression";\
+}\
+
 #define LB "<br/>"
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10

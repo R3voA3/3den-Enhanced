@@ -127,6 +127,7 @@ class Cfg3DEN
                 #include "attributesMission\volume.hpp"
                 #include "attributesMission\SPR.hpp"
                 #include "attributesMission\missionEventHandlers.hpp"
+                #include "attributesMission\musicEventHandlers.hpp"
                 class Misc
                 {
                     class Attributes

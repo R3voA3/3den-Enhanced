@@ -8,6 +8,7 @@
 - Added blacklist for mission.sqm backup
 - Added water leakiness can now be set for vehicles
 - Added mission event handler attributes
+- Added music event handlers attributes
 - Added fuel consumption coef. attribute
 - Added InputList attribute control
 
@@ -66,6 +67,7 @@
     - Draw DLC icons and building positions were move to preferences
     - Added description to menu strip items for easier documenation
     - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
+    - SPR attribute controls are now enabled/disabled depending on ruleset
 
 ## REMOVED
 - Removed Enable Minimap Attribute, it was merged with the Minimap Size attribute
@@ -1607,7 +1609,7 @@ v2
 - Added help entry which links to the Mission Presentation Wiki page
 - Context menu entry to set player as trigger owner of selected trigger/s
 - Added help entry which links to kylania's scripting examples
-- Moved help entries into seperated folders
+- Moved help entries into separated folders
 - Attribute to force unit to walk
 - Tool to quickly export inventory of selected units in a config format used for CfgRespawnInventory
 - Added version attribute to CfgPatches for internal use
