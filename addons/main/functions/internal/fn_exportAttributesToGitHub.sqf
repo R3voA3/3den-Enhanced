@@ -14,6 +14,8 @@
     -
 */
 
+#include "\x\enh\addons\main\script_component.hpp"
+
 private _export = "__NOTOC__" + endl;
 private _counter = 0;
 private _config = configNull;
@@ -98,4 +100,4 @@ _export = format ["'''Total number of Attributes: %1'''", _counter] + endl + end
 _export = _export regexReplace ["\\n", endl];
 
 uiNamespace setVariable ["display3DENCopy_data", ["Menu Strip Documentation", _export]];
-findDisplay 313 createDisplay "display3denCopy";
+findDisplay IDD_DISPLAY3DEN createDisplay "display3denCopy";

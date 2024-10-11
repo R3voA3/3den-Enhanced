@@ -13,6 +13,8 @@
     -
 */
 
+#include "\x\enh\addons\main\script_component.hpp"
+
 //Get the context menu position
 (uiNamespace getVariable "BIS_fnc_3DENEntityMenu_data") params ["_position3D"];
 
@@ -20,7 +22,7 @@
 if (get3DENActionState "toggleMap" > 0) then
 {
     //Get the map in Eden Editor
-    private _ctrlmap = findDisplay 313 displayCtrl 51;
+    private _ctrlmap = findDisplay IDD_DISPLAY3DEN displayCtrl 51;
 
     //Animate the map
     _ctrlmap ctrlMapAnimAdd [0.1, ctrlMapScale _ctrlmap, _position3D];

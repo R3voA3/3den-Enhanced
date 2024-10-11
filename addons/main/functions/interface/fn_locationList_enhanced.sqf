@@ -16,7 +16,7 @@ switch (_mode) do
     case "add":
     {
         //Let the user define a name
-        private _displayInputName = findDisplay 313 createDisplay "Display3DENRename";
+        private _displayInputName = findDisplay IDD_DISPLAY3DEN createDisplay "Display3DENRename";
 
         _displayInputName displayAddEventHandler ["Unload",
         {

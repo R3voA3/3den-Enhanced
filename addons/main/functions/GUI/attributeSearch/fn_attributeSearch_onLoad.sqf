@@ -165,7 +165,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
                 case (_entity in _markers):
                 {
                     if (get3DENActionState "toggleMap" != 1) then {do3DENAction "toggleMap"};
-                    private _ctrlmap = findDisplay 313 displayCtrl 51;
+                    private _ctrlmap = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MAP;
 
                     _pos = ATT(_entity,"position");
                     _ctrlmap ctrlMapAnimAdd [0, ctrlMapScale _ctrlmap, _pos];
@@ -218,7 +218,7 @@ ENH_fnc_attributeSearch_editAttributes =
         waitUntil {isNull findDisplay 315};
 
         //Create attribute search display again
-        findDisplay 313 createDisplay "ENH_AttributeSearch";
+        findDisplay IDD_DISPLAY3DEN createDisplay "ENH_AttributeSearch";
     };
 };
 

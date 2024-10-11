@@ -13,6 +13,8 @@
     -
 */
 
+#include "\x\enh\addons\main\script_component.hpp"
+
 params [["_mode", "copy"]];
 
 if (get3DENSelected "Object" isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; nil};
@@ -64,7 +66,7 @@ switch (_mode) do
         } forEach _pylons;
 
         uiNamespace setVariable ["display3DENCopy_data", [localize "STR_ENH_MAIN_TOOLS_EXPORTPYLONSTOSQF", _export]];
-        findDisplay 313 createDisplay "display3denCopy";
+        findDisplay IDD_DISPLAY3DEN createDisplay "display3denCopy";
     };
 };
 

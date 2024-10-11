@@ -45,7 +45,7 @@ switch _mode do
 
         addMissionEventHandler ["EachFrame",
         {
-            private _placementToolsUI = findDisplay 313 displayCtrl IDC_PLACEMENTTOOLS;
+            private _placementToolsUI = findDisplay IDD_DISPLAY3DEN displayCtrl IDC_PLACEMENTTOOLS;
             private _leftPanelVisible = profileNamespace getVariable ["display3DEN_panelLeft", true];
 
             if (isNull _placementToolsUI) exitWith
