@@ -44,6 +44,9 @@ options.banned = [
     "not"
 ]
 
+[lints.sqf.var_all_caps]
+enabled = true
+
 # Launched with `hemtt launch`
 [hemtt.launch.default]
 workshop = [
