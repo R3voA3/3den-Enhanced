@@ -80,7 +80,7 @@ class ENH_BriefingEditor
     {
         class MenuStrip: ctrlMenuStrip
         {
-            idc = -1;
+            idc = IDC_NONE;
             x = QUOTE(CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
             w = QUOTE(WINDOW_W_ATTRIBUTES * GRID_W);

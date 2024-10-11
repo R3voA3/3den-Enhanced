@@ -31,10 +31,10 @@ class Display3DEN
                 {
                     w = QUOTE(19 * GRID_W);
                 };
-                // Manually reconfig Version into a button
+                // Manually re-config version info into a button to save screen space
                 class Version: ValueX
                 {
-                    idc = -1;
+                    idc = IDC_NONE;
                     type = CT_BUTTON;
                     text = "V";
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
@@ -298,7 +298,7 @@ class Display3DEN
                                 class Delete;
                                 class ENH_DeleteEmptyLayers: Delete
                                 {
-                                    idc = -1;
+                                    idc = IDC_NONE;
                                     text = "x\enh\addons\main\data\trash_ca.paa";
                                     x = QUOTE(7 * GRID_W);
                                     tooltip = "$STR_ENH_MAIN_TOOLS_DELETEEMPTYLAYERS";
@@ -306,7 +306,7 @@ class Display3DEN
                                 };
                                 class ENH_SelectLayers: Delete
                                 {
-                                    idc = -1;
+                                    idc = IDC_NONE;
                                     text = "x\enh\addons\main\data\selectAllLayers_ca.paa";
                                     x = QUOTE(29 * GRID_W);
                                     tooltip = "$STR_ENH_MAIN_TOOLS_SELECTALLLAYERS";
@@ -347,7 +347,7 @@ class Display3DEN
                                 };
                                 class Delete: ctrlButtonToolbar
                                 {
-                                    idc = 101;
+                                    idc = IDC_DISPLAY3DEN_PANEL_LEFT_LOCATION_DELETE;
                                     text = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_delete_ca.paa";
                                     x = QUOTE(GRID_W);
                                     y = QUOTE(GRID_H);
@@ -358,7 +358,7 @@ class Display3DEN
                                 };
                                 class Add: Delete
                                 {
-                                    idc = 102;
+                                    idc = IDC_DISPLAY3DEN_PANEL_LEFT_LOCATION_ADD;
                                     text = "x\enh\addons\main\data\plus_ca.paa";
                                     x = QUOTE(54 * GRID_W);
                                     tooltip = "$STR_A3_CFGVEHICLES_MODULECURATORADDEDITABLEOBJECTS_ARGUMENTS_ADDCREW_VALUES_YES";

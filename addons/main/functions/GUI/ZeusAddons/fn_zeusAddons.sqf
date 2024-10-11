@@ -87,7 +87,7 @@ _ctrlTVPatches tvSortAll [[], false];
 _display displayAddEventHandler ["Unload",
 {
     params ["_display"];
-    private _ctrlTVPatches = _display displayCtrl 10;
+    private _ctrlTVPatches = _display displayCtrl IDC_ZEUSADDONS_CFGPATCHES;
     private _enabled = [];
 
     for "_indexAddon" from 0 to (_ctrlTVPatches tvCount []) - 1 do
@@ -112,7 +112,7 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
 
         if (count _path < 2) exitWith {};
 
-        private _ctrlLBUnits = ctrlParent _ctrlTVPatches displayCtrl 20;
+        private _ctrlLBUnits = ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_UNITS;
         private _class = _ctrlTVPatches tvText _path;
         private _units = getArray (configFile >> "CfgPatches" >> _class >> "units");
 
@@ -147,10 +147,10 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
 }];
 
 //Copy
-ctrlParent _ctrlTVPatches displayCtrl 30 ctrlAddEventHandler ["ButtonClick",
+ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_EXPORT ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
-    private _ctrlTVPatches = ctrlParent _ctrlButton displayCtrl 10;
+    private _ctrlTVPatches = ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_CFGPATCHES;
     private _export = "";
 
     for "_indexAddon" from 0 to (_ctrlTVPatches tvCount []) - 1 do
@@ -170,10 +170,10 @@ ctrlParent _ctrlTVPatches displayCtrl 30 ctrlAddEventHandler ["ButtonClick",
 }];
 
 //Invert selection
-ctrlParent _ctrlTVPatches displayCtrl 40 ctrlAddEventHandler ["ButtonClick",
+ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_INVERT ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
-    private _ctrlTVPatches = ctrlParent _ctrlButton displayCtrl 10;
+    private _ctrlTVPatches = ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_CFGPATCHES;
 
     for "_indexAddon" from 0 to (_ctrlTVPatches tvCount []) - 1 do
     {

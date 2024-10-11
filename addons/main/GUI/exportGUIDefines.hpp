@@ -40,7 +40,7 @@ class ENH_ExportGUIDefines
         };
         class TargetValue: ctrlCombo
         {
-            idc = 10;
+            idc = IDC_EXPORTGUIDEFINES_TARGET;
             x = QUOTE(CENTER_X - 0.5 * 53 * GRID_W + 12 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 6 * GRID_H);
             w = QUOTE((53 - 13) * GRID_W);
@@ -67,7 +67,7 @@ class ENH_ExportGUIDefines
         };
         class TypesValue: TargetValue
         {
-            idc = 20;
+            idc = IDC_EXPORTGUIDEFINES_TYPES;
             y = QUOTE(WINDOW_TOPAbs + 13 * GRID_H);
             class Items
             {
@@ -101,12 +101,12 @@ class ENH_ExportGUIDefines
         };
         class Ok: ctrlButtonOK
         {
-            idc = -1;//We don't want it to close the GUI. The function does that.
+            idc = IDC_NONE;//We don't want it to close the GUI. The function does that.
             x = QUOTE(CENTER_X - 0.5 * 53 * GRID_W + (53 - 52) * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 20 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = QUOTE(private _display = ctrlParent (_this # 0); ARR_2([lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)]) call ENH_fnc_exportGUIDefines);
+            onButtonClick = QUOTE(private _display = ctrlParent (_this # 0); ARR_2([lbCurSel (_display displayCtrl IDC_EXPORTGUIDEFINES_TARGET),lbCurSel (_display displayCtrl IDC_EXPORTGUIDEFINES_TYPES)]) call ENH_fnc_exportGUIDefines);
         };
     };
 };

@@ -127,9 +127,9 @@ if GETVALUE("FPS") then
         disableSerialization;
 
         //Make sure that controls are not created twice when restart button is pressed
-        if (isNull (MISSIONDISPLAY displayCtrl 992)) then
+        if (isNull (MISSIONDISPLAY displayCtrl IDC_DEBUGOPTIONS_FPS)) then
         {
-            private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText", 992];
+            private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText", IDC_DEBUGOPTIONS_FPS];
             _ctrlFPS ctrlSetPosition
             [
                 0.94625 * safeZoneW + safeZoneX,
@@ -139,7 +139,7 @@ if GETVALUE("FPS") then
             ];
             _ctrlFPS ctrlCommit 0;
         };
-        private _ctrlFPS = MISSIONDISPLAY displayCtrl 992;
+        private _ctrlFPS = MISSIONDISPLAY displayCtrl IDC_DEBUGOPTIONS_FPS;
 
         while {true} do
         {
@@ -652,7 +652,7 @@ if GETVALUE("DrawTriggers") then
 {
     ENH_DebugOptions_DrawTriggers_CursorPosition = [0, 0, 0];
     {
-        findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
+        findDisplay IDD_MAIN_MAP displayCtrl IDC_MAP ctrlAddEventHandler ["Draw",
         {
             params ["_ctrlMap"];
             private _trigger = _x;
@@ -745,7 +745,7 @@ if GETVALUE("DrawTriggers") then
         }];
     } forEach (8 allObjects 7); //All triggers
 
-    findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["MouseMoving",
+    findDisplay IDD_MAIN_MAP displayCtrl IDC_MAP ctrlAddEventHandler ["MouseMoving",
     {
         params ["_ctrlMap", "_xPos", "_yPos"];
 
@@ -786,7 +786,7 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         [{"VISIT ""https://community.bistudio.com/wiki/Arma_3:_Dynamic_Simulation"" FOR MORE INFORMATION."}]
     ];
 
-    findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw",
+    findDisplay IDD_MAIN_MAP displayCtrl IDC_MAP ctrlAddEventHandler ["Draw",
     {
         params ["_ctrlMap"];
 

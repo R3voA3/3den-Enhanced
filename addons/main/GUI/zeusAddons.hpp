@@ -1,6 +1,6 @@
 class ENH_ZeusAddons
 {
-   idd = -1;
+   idd = IDD_NONE;
    class ControlsBackground
    {
       DISABLE_BACKGROUND

@@ -39,14 +39,14 @@ else
 
     if (ctrlClassName _tv == "List") then //Add to favorites
     {
-        private _tvFavorites = (ctrlParent _tv displayCtrl 4000);
+        private _tvFavorites = (ctrlParent _tv displayCtrl IDC_SENTENCESBROWSER_FAVORITES);
         if ((ENH_CFGS_Favorites find [_text, _configStr]) > -1) exitWith {false};
 
         ENH_CFGS_Favorites = ENH_CFGS_Favorites + [[_text, _configStr]];
         "fill" call ENH_fnc_CFGS_handleFavorites;
         [_display] spawn
         {
-            private _ctrlHighlight = [((_this select 0) displayCtrl 1000), 5] call BIS_fnc_highlightControl;
+            private _ctrlHighlight = [((_this select 0) displayCtrl IDC_SENTENCESBROWSER_PAGES), 5] call BIS_fnc_highlightControl;
             sleep 2;
             ctrlDelete _ctrlHighlight;
         };

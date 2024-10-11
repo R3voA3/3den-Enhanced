@@ -1,10 +1,14 @@
 #include "\a3\3den\ui\macros.inc"
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 #include "\a3\ui_f\hpp\definecommongrids.inc"
+#include "\a3\ui_f\hpp\defineresincl.inc"
+#include "\a3\ui_f\hpp\defineresincldesign.inc"
 #include "\x\cba\addons\main\script_macros_common.hpp"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
+
+#define ISDEV
 
 #define EH_ARRAY(A) [QUOTE(QUOTE(A)), compile _value]
 #define EH_CONFIG(A,B) class DOUBLES(ENH_EventHandlers,A)\
@@ -95,6 +99,14 @@ textureDisabledUnchecked = NAME;\
 #define SOUND_FEEDBACK "FD_Finish_F"
 
 //3den Enhanced specific IDDs and IDCs
+#define IDD_NONE -1
+#define IDC_NONE -1
+
+#define IDC_3DEN_ATTRIBUTES_BUTTON_RESET 5
+
+#define IDC_DISPLAY3DEN_PANEL_LEFT_LOCATION_DELETE 101
+#define IDC_DISPLAY3DEN_PANEL_LEFT_LOCATION_ADD 102
+
 #define IDC_3DEN_MINIMAP_MAP 71500
 #define IDC_3DEN_MINIMAP_BACKGROUND 71501
 #define IDC_3DEN_MINIMAP_CENTER 71502
@@ -156,6 +168,8 @@ textureDisabledUnchecked = NAME;\
 #define IDC_TEMPLATEDATA_TITLE 30700
 
 #define IDD_EXPORTGUIDEFINES 14000
+#define IDC_EXPORTGUIDEFINES_TARGET 10
+#define IDC_EXPORTGUIDEFINES_TYPES 20
 
 #define IDD_FUNCTIONSVIEWER -1
 #define IDC_FUNCTIONSVIEWER_CODE 1401
@@ -190,6 +204,18 @@ textureDisabledUnchecked = NAME;\
 #define IDC_MODULEINFORMATION_DUPLICATE 1402
 #define IDC_MODULEINFORMATION_POSITION 1401
 #define IDC_MODULEINFORMATION_SYNC 1404
+
+#define IDD_SELECTIONMANAGER -1
+#define IDC_SELECTIONMANAGER_FILTER_OBJECTS 10
+#define IDC_SELECTIONMANAGER_FILTER_GROUPS 11
+#define IDC_SELECTIONMANAGER_FILTER_TRIGGERS 12
+#define IDC_SELECTIONMANAGER_FILTER_SYSTEMS 13
+#define IDC_SELECTIONMANAGER_FILTER_WAYPOINTS 14
+#define IDC_SELECTIONMANAGER_FILTER_MARKERS 15
+#define IDC_SELECTIONMANAGER_FILTER_COMMENTS 16
+#define IDC_SELECTIONMANAGER_FILTER_LAYERS 17
+
+#define IDC_DEBUGOPTIONS_FPS 992
 
 #define IDD_NAMEOBJECTS 80000
 #define IDC_NAMEOBJECTS_INDEXSTART 1100

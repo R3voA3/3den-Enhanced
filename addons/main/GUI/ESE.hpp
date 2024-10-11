@@ -36,7 +36,7 @@ class ENH_ESE
         };
         class AvailableItems: ctrlStatic
         {
-            idc = -1;
+            idc = IDC_NONE;
             text = "$STR_ENH_MAIN_ESE_AVAILABLEITEMS";
             x = QUOTE(CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + GRID_H);
@@ -496,7 +496,7 @@ class ENH_ESE
         };
         class Close: ctrlButtonClose
         {
-            idc = -1;
+            idc = IDC_NONE;
             x = QUOTE(CENTER_X - 0.5 * WINDOW_W_WIDE * GRID_W + GRID_W + WINDOW_W_WIDE * GRID_W - 24 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(22 * GRID_W);

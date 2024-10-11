@@ -84,14 +84,14 @@ class ENH_FunctionsViewer
                 {
                     text = "$STR_3DEN_CTRLBUTTONCOLLAPSEALL_TEXT";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_UP};
-                    action = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
+                    action = QUOTE(tvCollapseAll (ctrlParent (_this # 0) displayCtrl IDC_RSCDISPLAYFUNCTIONSVIEWER_FUNCTIONS));
                     picture = "\a3\3den\data\displays\display3den\tree_expand_ca.paa";
                 };
                 class ExpandAll
                 {
                     text = "$STR_3DEN_CTRLBUTTONEXPANDALL_TEXT";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_DOWN};
-                    action = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+                    action = QUOTE(tvExpandAll (ctrlParent (_this # 0) displayCtrl IDC_RSCDISPLAYFUNCTIONSVIEWER_FUNCTIONS));
                     picture = "\a3\3den\data\displays\display3den\tree_collapse_ca.paa";
                 };
                 class RecompileSelected

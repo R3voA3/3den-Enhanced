@@ -47,7 +47,7 @@ class scrollbar;
 //Attribute controls
 class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
 {
-    idc = -1;
+    idc = IDC_NONE;
     x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
     w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
     h = QUOTE(2 * CTRL_DEFAULT_H);
@@ -66,7 +66,7 @@ class ENH_SideToolbox_Base: ctrlToolboxPictureKeepAspect
 
 class ENH_ResetButton_Base: ctrlButton
 {
-    idc = 5;
+    idc = IDC_3DEN_ATTRIBUTES_BUTTON_RESET;
     x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
     w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
     h = QUOTE(CTRL_DEFAULT_H);

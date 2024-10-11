@@ -1,6 +1,6 @@
 class ENH_3denShortcuts
 {
-    idd = -1;
+    idd = IDD_NONE;
     onLoad = "_this call ENH_fnc_3DENShortcuts_init";
     class ControlsBackground
     {

@@ -47,7 +47,7 @@ class ENH_PlacementToolsGroup: ctrlControlsGroup
         };
         class Tools: ctrlControlsGroup
         {
-            idc = -1;
+            idc = IDC_NONE;
             onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementTools";
             onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementTools";
             x = QUOTE(0);

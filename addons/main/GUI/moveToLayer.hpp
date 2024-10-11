@@ -63,7 +63,7 @@ class ENH_MoveToLayer
         };
         class ButtonMove: ctrlButtonOK
         {
-            idc = -1;
+            idc = IDC_NONE;
             text = "$STR_A3_BOOT_M02_BIS_SIGN_MARKER";
             x = QUOTE(CENTER_X + WINDOW_W_ATTRIBUTES * 0.5 * GRID_W - 52 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);

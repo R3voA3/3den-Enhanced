@@ -90,7 +90,7 @@ class ENH_SAM
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = "tvCollapseAll (ctrlParent (_this # 0) displayCtrl 1500)";
+            onButtonClick = QUOTE(tvCollapseAll (ctrlParent (_this # 0) displayCtrl IDC_SAM_ATTRIBUTES));
         };
         class Expand: ctrlButtonExpandAll
         {
@@ -98,7 +98,7 @@ class ENH_SAM
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = "tvExpandAll (ctrlParent (_this # 0) displayCtrl 1500)";
+            onButtonClick = QUOTE(tvExpandAll (ctrlParent (_this # 0) displayCtrl IDC_SAM_ATTRIBUTES));
         };
         class CreateTemplate: ctrlButton
         {

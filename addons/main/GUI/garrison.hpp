@@ -40,7 +40,7 @@ class ENH_Garrison: ctrlControlsGroupNoScrollbars
         };
         class Blacklist: ctrlStatic
         {
-            idc = -1;
+            idc = IDC_NONE;
             text = "$STR_ENH_MAIN_AIRDROP_CLASSES_DISPLAYNAME";
             y = QUOTE(2 * (CTRL_DEFAULT_H + GRID_H));
             w = QUOTE(20 * GRID_W);
