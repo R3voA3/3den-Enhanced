@@ -74,7 +74,7 @@ class ENH_TemplateData
             y = QUOTE(WINDOW_TOPAbs + 50 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = "uiNamespace setVariable ['ENH_TitleValue', ctrlText (ctrlParent (_this#0) displayCtrl 30700)]; uiNamespace setVariable ['ENH_DescriptionValue', ctrlText (ctrlParent (_this#0) displayCtrl 30800)];";
+            onButtonClick = QUOTE(uiNamespace setVariable ARR_2(['ENH_TitleValue', ctrlText (ctrlParent (_this#0) displayCtrl IDC_TEMPLATEDATA_TITLE)]); uiNamespace setVariable ARR_2(['ENH_DescriptionValue', ctrlText (ctrlParent (_this#0) displayCtrl IDC_TEMPLATEDATA_DESCRIPTION)]));
         };
     };
 };

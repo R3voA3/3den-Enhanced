@@ -20,7 +20,7 @@ class Tools
 
 class FunctionsViewer
 {
-    action = "findDisplay 313 createDisplay 'ENH_FunctionsViewer'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_FunctionsViewer');
     shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
 };
 class ConfigViewer

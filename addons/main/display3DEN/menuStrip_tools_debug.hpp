@@ -17,7 +17,7 @@ class ENH_Folder_Debug
 class ENH_VariableViewer
 {
     text = "$STR_ENH_MAIN_TOOLS_VARIABLEVIEWER";
-    action = "findDisplay 313 createDisplay 'ENH_VariableViewer'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_VariableViewer');
     opensNewWindow = 1;
     wikiDescription = "Opens the Variable Viewer. See GUI documentation for detailed information.";
 };
@@ -45,12 +45,13 @@ class ENH_ClearChat
 class ENH_ExportGUIBaseClasses
 {
     text = "$STR_ENH_MAIN_TOOLS_EXPORTGUIBASECLASSES";
-    action = "findDisplay 313 createDisplay 'ENH_ExportGUIDefines'";wikiDescription = "Open a GUI to export GUI base classes. See GUI documentation for detailed information.";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_ExportGUIDefines');
+    wikiDescription = "Open a GUI to export GUI base classes. See GUI documentation for detailed information.";
 };
 class ENH_GUITestGrids
 {
     text = "$STR_ENH_MAIN_TOOLS_GUITESTGRIDS";
-    action = "findDisplay 313 createDisplay 'RscTestGrids'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'RscTestGrids');
     opensNewWindow = 1;
     wikiDescription = "Opens a GUI for testing different UI grids.";
 };

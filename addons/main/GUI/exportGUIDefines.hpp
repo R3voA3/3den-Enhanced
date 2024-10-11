@@ -106,7 +106,7 @@ class ENH_ExportGUIDefines
             y = QUOTE(WINDOW_TOPAbs + 20 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = "private _display = ctrlParent (_this # 0); [lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)] call ENH_fnc_exportGUIDefines";
+            onButtonClick = QUOTE(private _display = ctrlParent (_this # 0); ARR_2([lbCurSel (_display displayCtrl 10), lbCurSel (_display displayCtrl 20)]) call ENH_fnc_exportGUIDefines);
         };
     };
 };

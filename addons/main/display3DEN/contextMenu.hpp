@@ -119,7 +119,7 @@ class ENH_MeasureDistance
 };
 class ENH_ShowModuleInformation
 {
-    action = "findDisplay 313 createDisplay 'ENH_ModuleInformation'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_ModuleInformation');
     text = "$STR_ENH_MAIN_CONTEXTMENU_GETMODULEINFORMATION";
     conditionShow = "hoverLogic";
     opensNewWindow = 1;
@@ -127,7 +127,7 @@ class ENH_ShowModuleInformation
 };
 class ENH_Garrison
 {
-    action = "findDisplay 313 ctrlCreate ['ENH_Garrison', 20100]";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN ctrlCreate ARR_2(['ENH_Garrison',IDC_GARRISON_GROUP]));
     text = "$STR_ENH_MAIN_CONTEXTMENU_GARRISON";
     picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
     conditionShow = "selected";
@@ -159,7 +159,7 @@ class ENH_AddToFavorites
 };
 class ENH_MoveToLayer
 {
-    action = "findDisplay 313 createDisplay 'ENH_MoveToLayer'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_MoveToLayer');
     text = "$STR_ENH_MAIN_SELECTLAYER_MOVETOLAYER";
     picture = "a3\3den\data\displays\display3den\panelleft\entitylist_layer_ca.paa";
     conditionShow = "selected";
@@ -167,7 +167,7 @@ class ENH_MoveToLayer
 };
 class ENH_SelectionFilter
 {
-    action = "findDisplay 313 createDisplay 'ENH_SelectionFilter'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_SelectionFilter');
     text = "$STR_ENH_MAIN_SELECTIONFILTER";
     conditionShow = "selected";
     opensNewWindow = 1;

@@ -84,7 +84,7 @@ class ENH_MultiplayerScripting: ENH_GetExtensions
 class ENH_3DENShortcuts
 {
     text = "$STR_ENH_MAIN_3DENSHORTCUTS_DISPLAYNAME";
-    action = "findDisplay 313 createDisplay 'ENH_3DENShortcuts'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_3DENShortcuts');
     opensNewWindow = 1;
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_F1};
     wikiDescription = "Shows all eden editor shortcuts.";

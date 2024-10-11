@@ -60,7 +60,7 @@ class ENH_BriefingEditor
 {
     text = "$STR_ENH_MAIN_TOOLS_BRIEFINGEDITOR";
     picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa";
-    action = "findDisplay 313 createDisplay 'ENH_briefingEditor'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_briefingEditor');
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_B};
     opensNewWindow = 1;
     wikiDescription = "Opens the Briefing Editor. See GUI documentation for detailed information.";
@@ -69,7 +69,7 @@ class ENH_3DENRadio
 {
     text = "$STR_ENH_MAIN_TOOLS_3DENRADIO";
     picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\radio_ca.paa";
-    action = "findDisplay 313 createDisplay 'ENH_3DENRadio'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_3DENRadio');
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_M};
     opensNewWindow = 1;
     wikiDescription = "Opens 3DEN Radio. See GUI documentation for detailed information.";
@@ -77,14 +77,14 @@ class ENH_3DENRadio
 class ENH_SAM
 {
     text = "$STR_ENH_MAIN_TOOLS_SAM";
-    action = "findDisplay 313 createDisplay 'ENH_SAM'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_SAM');
     opensNewWindow = 1;
     wikiDescription = "Opens the Scenario Attributes Manager. See GUI documentation for detailed information.";
 };
 class ENH_NameObjects
 {
     text = "$STR_ENH_MAIN_TOOLS_BATCHNAMING";
-    action = "findDisplay 313 createDisplay 'ENH_NameObjects'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_NameObjects');
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
     opensNewWindow = 1;
     wikiDescription = "Opens the Name Objects GUI. See GUI documentation for detailed information.";
@@ -93,7 +93,7 @@ class ENH_TextureFinder
 {
     text = "$STR_ENH_MAIN_TOOLS_TEXTUREFINDER";
     picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa";
-    action = "findDisplay 313 createDisplay 'ENH_TextureFinder'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_TextureFinder');
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_T};
     opensNewWindow = 1;
     wikiDescription = "Opens the Texture Finder. See GUI documentation for detailed information.";
@@ -101,7 +101,7 @@ class ENH_TextureFinder
 class ENH_CfgSentencesBrowser
 {
     text = "$STR_ENH_MAIN_TOOLS_CFGSENTENCESBROWSER";
-    action = "findDisplay 313 createDisplay 'ENH_CfgSentencesBrowser'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_CfgSentencesBrowser');
     opensNewWindow = 1;
     wikiDescription = "Opens the CfgSentences Browser. See GUI documentation for detailed information.";
 };
@@ -115,7 +115,7 @@ class ENH_ZeusAddons
 class ENH_AttributeSearch
 {
     text = "$STR_ENH_MAIN_SEARCHATTRIBUTES_HEADER";
-    action = "findDisplay 313 createDisplay 'ENH_AttributeSearch'";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_AttributeSearch');
     opensNewWindow = 1;
     wikiDescription = "Quickly search through the the text attributes such as 'ini' or 'condition' of all entities.";
 };
