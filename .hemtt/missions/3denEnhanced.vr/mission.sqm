@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=16840;
+		nextID=16860;
 	};
 	class Camera
 	{
 		pos[]={3978.4709,30,2852.3899};
-		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
-		up[]={-1.2363449e-07,0.70710671,0.70710683};
-		aside[]={1,0,1.7484557e-07};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -70,7 +70,6 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Tools",
 	"A3_Structures_F_EPC_Civ_Garbage",
 	"A3_Structures_F_Mil_Fortification",
-	"A3_Soft_F_MRAP_01",
 	"A3_Structures_F_Mil_Cargo",
 	"A3_Structures_F_EPA_Civ_Constructions",
 	"A3_Soft_F_Exp_LSV_01",
@@ -92,7 +91,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=25;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -214,59 +213,52 @@ class AddonsMetaData
 		};
 		class Item17
 		{
-			className="A3_Soft_F";
-			name="Arma 3 Alpha - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item18
-		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item18
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item20
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item21
 		{
 			className="A3_Props_F_Decade_Objectives";
 			name="A3_Props_F_Decade_Objectives";
 		};
-		class Item23
+		class Item22
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item24
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
@@ -512,70 +504,18 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="ENH_Briefing_OPFOR_Signal";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Signal'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
+			property="ENH_MissionEventHandlers_GroupIconClick";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupIconClick_ID = addMissionEventHandler [""GroupIconClick"", compile _value]})";
 			class Value
 			{
 				class data
 				{
 					singleType="STRING";
-					value="Test";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 				};
 			};
 		};
 		class Attribute1
-		{
-			property="EnableDebugConsole";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=2;
-				};
-			};
-		};
-		class Attribute2
-		{
-			property="ENH_Briefing_BLUFOR_Situation";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Situation'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute3
-		{
-			property="ENH_Briefing_OPFOR_Situation";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Situation'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute4
-		{
-			property="ENH_AddObjectsToZeus";
-			expression="        if (!is3DEN && isServer && _value) then        {            private _objects = allMissionObjects '';            allCurators apply {_x addCuratorEditableObjects [_objects, true]};            addMissionEventHandler ['EntityCreated',            {                params ['_entity'];                allCurators apply {_x addCuratorEditableObjects [[_entity], true]};            }];        }";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute5
 		{
 			property="ENH_Briefing_Civilian_Situation";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Situation'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -588,33 +528,176 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute6
+		class Attribute2
 		{
-			property="Init";
-			expression="if !(is3DEN) then {[] call compile _value;};";
+			property="ENH_MissionEventHandlers_EntityRespawned";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_EntityRespawned_ID = addMissionEventHandler [""EntityRespawned"", compile _value]})";
 			class Value
 			{
 				class data
 				{
 					singleType="STRING";
-					value="";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ENH_MissionEventHandlers_GroupCreated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupCreated_ID = addMissionEventHandler [""GroupCreated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="ENH_MissionEventHandlers_SelectedActionPerformed";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SelectedActionPerformed_ID = addMissionEventHandler [""SelectedActionPerformed"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="ENH_MissionEventHandlers_ControlsShifted";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ControlsShifted_ID = addMissionEventHandler [""ControlsShifted"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ENH_MissionEventHandlers_Ended";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Ended_ID = addMissionEventHandler [""Ended"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 				};
 			};
 		};
 		class Attribute7
 		{
-			property="ENH_Briefing_Independent_Execution";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Execution'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
+			property="ENH_MissionEventHandlers_EntityKilled";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_EntityKilled_ID = addMissionEventHandler [""EntityKilled"", compile _value]})";
 			class Value
 			{
 				class data
 				{
 					singleType="STRING";
-					value="Test";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 				};
 			};
 		};
 		class Attribute8
+		{
+			property="ENH_MissionEventHandlers_EntityCreated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_EntityCreated_ID = addMissionEventHandler [""EntityCreated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute9
+		{
+			property="ENH_MissionEventHandlers_ScriptError";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ScriptError_ID = addMissionEventHandler [""ScriptError"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute10
+		{
+			property="ENH_MissionEventHandlers_PlayerDisconnected";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_PlayerDisconnected_ID = addMissionEventHandler [""PlayerDisconnected"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute11
+		{
+			property="ENH_MissionEventHandlers_PlayerViewChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_PlayerViewChanged_ID = addMissionEventHandler [""PlayerViewChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute12
+		{
+			property="ENH_MusicEventHandlers_MusicStart";
+			expression="(if (_value != '' && !is3DEN && hasInterface) then {ENH_MusicEventHandlers_MusicStart_ID = addMusicEventHandler [""MusicStart"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute13
+		{
+			property="ENH_MissionEventHandlers_Map";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Map_ID = addMissionEventHandler [""Map"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute14
+		{
+			property="ENH_AddObjectsToZeus";
+			expression="        if (!is3DEN && isServer && _value) then        {            private _objects = allMissionObjects '';            allCurators apply {_x addCuratorEditableObjects [_objects, true]};            addMissionEventHandler ['EntityCreated',            {                params ['_entity'];                allCurators apply {_x addCuratorEditableObjects [[_entity], true]};            }];        }";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute15
 		{
 			property="ENH_Briefing_BLUFOR_Signal";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Signal'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -627,111 +710,124 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute9
-		{
-			property="ENH_Briefing_Civilian_Signal";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Signal'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute10
-		{
-			property="ENH_Briefing_Independent_Mission";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Mission'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute11
-		{
-			property="ENH_Briefing_BLUFOR_Execution";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Execution'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute12
-		{
-			property="ENH_Briefing_OPFOR_Execution";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Execution'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute13
-		{
-			property="ENH_Briefing_Independent_Signal";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Signal'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute14
-		{
-			property="ENH_Briefing_Civilian_Execution";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Execution'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
-		class Attribute15
-		{
-			property="ENH_Briefing_BLUFOR_Mission";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Mission'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="Test";
-				};
-			};
-		};
 		class Attribute16
 		{
-			property="ENH_Briefing_OPFOR_Mission";
-			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Mission'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
+			property="ENH_MissionEventHandlers_GroupIconOverEnter";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupIconOverEnter_ID = addMissionEventHandler [""GroupIconOverEnter"", compile _value]})";
 			class Value
 			{
 				class data
 				{
 					singleType="STRING";
-					value="Test";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 				};
 			};
 		};
 		class Attribute17
+		{
+			property="ENH_MissionEventHandlers_GroupDeleted";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupDeleted_ID = addMissionEventHandler [""GroupDeleted"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute18
+		{
+			property="ENH_MissionEventHandlers_SelectedRotorLibActionPerformed";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SelectedRotorLibActionPerformed_ID = addMissionEventHandler [""SelectedRotorLibActionPerformed"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute19
+		{
+			property="ENH_MissionEventHandlers_MarkerUpdated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MarkerUpdated_ID = addMissionEventHandler [""MarkerUpdated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute20
+		{
+			property="ENH_MissionEventHandlers_SelectedActionChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SelectedActionChanged_ID = addMissionEventHandler [""SelectedActionChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute21
+		{
+			property="ENH_MissionEventHandlers_OnUserConnected";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserConnected_ID = addMissionEventHandler [""OnUserConnected"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute22
+		{
+			property="ENH_MissionEventHandlers_TeamSwitch";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_TeamSwitch_ID = addMissionEventHandler [""TeamSwitch"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute23
+		{
+			property="ENH_MusicEventHandlers_MusicStop";
+			expression="(if (_value != '' && !is3DEN && hasInterface) then {ENH_MusicEventHandlers_MusicStop_ID = addMusicEventHandler [""MusicStop"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute24
+		{
+			property="ENH_MissionEventHandlers_EntityDeleted";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_EntityDeleted_ID = addMissionEventHandler [""EntityDeleted"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute25
 		{
 			property="ENH_Briefing_Civilian_Mission";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Mission'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -744,7 +840,436 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute18
+		class Attribute26
+		{
+			property="ENH_Briefing_Independent_Mission";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Mission'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute27
+		{
+			property="ENH_MissionEventHandlers_OnUserSelectedPlayer";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserSelectedPlayer_ID = addMissionEventHandler [""OnUserSelectedPlayer"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute28
+		{
+			property="ENH_Briefing_OPFOR_Mission";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Mission'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute29
+		{
+			property="ENH_Briefing_BLUFOR_Execution";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Execution'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute30
+		{
+			property="ENH_MissionEventHandlers_OnUserKicked";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserKicked_ID = addMissionEventHandler [""OnUserKicked"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute31
+		{
+			property="ENH_MissionEventHandlers_MarkerCreated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MarkerCreated_ID = addMissionEventHandler [""MarkerCreated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute32
+		{
+			property="ENH_MissionEventHandlers_Loaded";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Loaded_ID = addMissionEventHandler [""Loaded"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute33
+		{
+			property="ENH_MissionEventHandlers_OnUserClientStateChanged";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserClientStateChanged_ID = addMissionEventHandler [""OnUserClientStateChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute34
+		{
+			property="ENH_Briefing_BLUFOR_Situation";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Situation'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute35
+		{
+			property="ENH_MissionEventHandlers_MPEnded";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MPEnded_ID = addMissionEventHandler [""MPEnded"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute36
+		{
+			property="ENH_MissionEventHandlers_ArtilleryShellFired";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ArtilleryShellFired_ID = addMissionEventHandler [""ArtilleryShellFired"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute37
+		{
+			property="ENH_MissionEventHandlers_CommandModeChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_CommandModeChanged_ID = addMissionEventHandler [""CommandModeChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute38
+		{
+			property="ENH_MissionEventHandlers_HandleChatMessage";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HandleChatMessage_ID = addMissionEventHandler [""HandleChatMessage"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute39
+		{
+			property="ENH_Briefing_OPFOR_Execution";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Execution'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute40
+		{
+			property="ENH_MissionEventHandlers_MapSingleClick";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MapSingleClick_ID = addMissionEventHandler [""MapSingleClick"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute41
+		{
+			property="ENH_MissionEventHandlers_SaveGame";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SaveGame_ID = addMissionEventHandler [""SaveGame"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute42
+		{
+			property="ENH_MissionEventHandlers_MarkerDeleted";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MarkerDeleted_ID = addMissionEventHandler [""MarkerDeleted"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute43
+		{
+			property="ENH_MissionEventHandlers_HCGroupSelectionChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HCGroupSelectionChanged_ID = addMissionEventHandler [""HCGroupSelectionChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute44
+		{
+			property="ENH_MissionEventHandlers_PreloadFinished";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_PreloadFinished_ID = addMissionEventHandler [""PreloadFinished"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute45
+		{
+			property="ENH_Briefing_OPFOR_Situation";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Situation'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute46
+		{
+			property="ENH_MissionEventHandlers_ExtensionCallback";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ExtensionCallback_ID = addMissionEventHandler [""ExtensionCallback"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute47
+		{
+			property="ENH_MissionEventHandlers_Drowned";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Drowned_ID = addMissionEventHandler [""Drowned"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute48
+		{
+			property="ENH_Briefing_Independent_Signal";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Signal'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute49
+		{
+			property="ENH_Briefing_OPFOR_Signal";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Signal'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute50
+		{
+			property="ENH_MissionEventHandlers_PreloadStarted";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_PreloadStarted_ID = addMissionEventHandler [""PreloadStarted"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute51
+		{
+			property="ENH_MissionEventHandlers_SelectedRotorLibActionChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SelectedRotorLibActionChanged_ID = addMissionEventHandler [""SelectedRotorLibActionChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute52
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=2;
+				};
+			};
+		};
+		class Attribute53
+		{
+			property="ENH_Briefing_Independent_Execution";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Execution'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute54
+		{
+			property="ENH_MissionEventHandlers_UAVCrewCreated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_UAVCrewCreated_ID = addMissionEventHandler [""UAVCrewCreated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute55
+		{
+			property="ENH_Briefing_Civilian_Signal";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Signal'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute56
+		{
+			property="ENH_MissionEventHandlers_OnUserDisconnected";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserDisconnected_ID = addMissionEventHandler [""OnUserDisconnected"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute57
+		{
+			property="Init";
+			expression="if !(is3DEN) then {[] call compile _value;};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="";
+				};
+			};
+		};
+		class Attribute58
+		{
+			property="ENH_MissionEventHandlers_HandleAccTime";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HandleAccTime_ID = addMissionEventHandler [""HandleAccTime"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute59
 		{
 			property="ENH_Briefing_Independent_Situation";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Situation'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -757,7 +1282,124 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=19;
+		class Attribute60
+		{
+			property="ENH_MissionEventHandlers_OnUserAdminStateChanged";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserAdminStateChanged_ID = addMissionEventHandler [""OnUserAdminStateChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute61
+		{
+			property="ENH_MissionEventHandlers_ProjectileCreated";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ProjectileCreated_ID = addMissionEventHandler [""ProjectileCreated"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute62
+		{
+			property="ENH_MissionEventHandlers_GroupIconOverLeave";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupIconOverLeave_ID = addMissionEventHandler [""GroupIconOverLeave"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute63
+		{
+			property="ENH_MissionEventHandlers_HandleDisconnect";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_HandleDisconnect_ID = addMissionEventHandler [""HandleDisconnect"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute64
+		{
+			property="ENH_Briefing_Civilian_Execution";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Execution'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute65
+		{
+			property="ENH_MissionEventHandlers_BuildingChanged";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_BuildingChanged_ID = addMissionEventHandler [""BuildingChanged"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute66
+		{
+			property="ENH_Briefing_BLUFOR_Mission";
+			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Mission'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="Test";
+				};
+			};
+		};
+		class Attribute67
+		{
+			property="ENH_MissionEventHandlers_Service";
+			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Service_ID = addMissionEventHandler [""Service"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		class Attribute68
+		{
+			property="ENH_MissionEventHandlers_PlayerConnected";
+			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_PlayerConnected_ID = addMissionEventHandler [""PlayerConnected"", compile _value]})";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+				};
+			};
+		};
+		nAttributes=69;
 	};
 };
 class Mission
@@ -842,7 +1484,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=10;
 		class Item0
 		{
 			dataType="Group";
@@ -3402,7 +4044,7 @@ class Mission
 					name="Props";
 					class Entities
 					{
-						items=77;
+						items=76;
 						class Item0
 						{
 							dataType="Object";
@@ -3823,22 +4465,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={3966.4346,7.2059455,2877.0798};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								dynamicSimulation=1;
-							};
-							id=14352;
-							type="B_MRAP_01_F";
-						};
-						class Item23
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={3984.1575,5.690002,2907.6772};
 								angles[]={0,1.5707964,0};
 							};
@@ -3853,7 +4479,7 @@ class Mission
 							type="Land_Cargo_House_V3_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item24
+						class Item23
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3872,7 +4498,7 @@ class Mission
 							type="Land_Cargo_Patrol_V3_F";
 							atlOffset=2.3841858e-06;
 						};
-						class Item25
+						class Item24
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3889,7 +4515,7 @@ class Mission
 							type="SatelliteAntenna_01_Small_Mounted_Sand_F";
 							atlOffset=2.3390007;
 						};
-						class Item26
+						class Item25
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3908,7 +4534,7 @@ class Mission
 							type="Land_PortableLight_double_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item27
+						class Item26
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3926,7 +4552,7 @@ class Mission
 							id=14288;
 							type="Land_PortableLight_double_F";
 						};
-						class Item28
+						class Item27
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3944,7 +4570,7 @@ class Mission
 							type="Land_PortableWeatherStation_01_sand_F";
 							atlOffset=0.0032024384;
 						};
-						class Item29
+						class Item28
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3961,7 +4587,7 @@ class Mission
 							id=14370;
 							type="B_LSV_01_unarmed_F";
 						};
-						class Item30
+						class Item29
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3978,7 +4604,7 @@ class Mission
 							type="Land_DeskChair_01_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item31
+						class Item30
 						{
 							dataType="Object";
 							class PositionInfo
@@ -3995,7 +4621,7 @@ class Mission
 							type="Land_DeskChair_01_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item32
+						class Item31
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4013,7 +4639,7 @@ class Mission
 							type="Land_TripodScreen_01_dual_v2_sand_F";
 							atlOffset=0.59281349;
 						};
-						class Item33
+						class Item32
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4032,7 +4658,7 @@ class Mission
 							type="Land_IPPhone_01_sand_F";
 							atlOffset=1.4305115e-06;
 						};
-						class Item34
+						class Item33
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4050,7 +4676,7 @@ class Mission
 							type="Land_Laptop_03_sand_F";
 							atlOffset=0.67826605;
 						};
-						class Item35
+						class Item34
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4068,7 +4694,7 @@ class Mission
 							type="Land_MultiScreenComputer_01_sand_F";
 							atlOffset=0.88478231;
 						};
-						class Item36
+						class Item35
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4130,7 +4756,7 @@ class Mission
 								nAttributes=3;
 							};
 						};
-						class Item37
+						class Item36
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4147,7 +4773,7 @@ class Mission
 							type="Land_PortableCabinet_01_bookcase_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item38
+						class Item37
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4164,7 +4790,7 @@ class Mission
 							type="Land_PortableCabinet_01_bookcase_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item39
+						class Item38
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4181,7 +4807,7 @@ class Mission
 							type="Land_PortableCabinet_01_closed_sand_F";
 							atlOffset=0.59281349;
 						};
-						class Item40
+						class Item39
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4198,7 +4824,7 @@ class Mission
 							type="Land_PortableCabinet_01_closed_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item41
+						class Item40
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4216,7 +4842,7 @@ class Mission
 							type="Land_PortableCabinet_01_closed_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item42
+						class Item41
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4277,7 +4903,7 @@ class Mission
 								nAttributes=3;
 							};
 						};
-						class Item43
+						class Item42
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4295,7 +4921,7 @@ class Mission
 							type="Land_PortableGenerator_01_sand_F";
 							atlOffset=0.59281349;
 						};
-						class Item44
+						class Item43
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4312,7 +4938,7 @@ class Mission
 							type="Land_PortableLight_02_quad_sand_F";
 							atlOffset=0.72884941;
 						};
-						class Item45
+						class Item44
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4347,7 +4973,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item46
+						class Item45
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4365,7 +4991,7 @@ class Mission
 							type="Land_PortableLight_02_single_yellow_F";
 							atlOffset=0.19436884;
 						};
-						class Item47
+						class Item46
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4400,7 +5026,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item48
+						class Item47
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4418,7 +5044,7 @@ class Mission
 							type="Land_PortableLight_02_single_yellow_F";
 							atlOffset=0.18948174;
 						};
-						class Item49
+						class Item48
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4466,7 +5092,7 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item50
+						class Item49
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4484,7 +5110,7 @@ class Mission
 							type="Land_PortableServer_01_cover_sand_F";
 							atlOffset=1.4305115e-06;
 						};
-						class Item51
+						class Item50
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4503,7 +5129,7 @@ class Mission
 							type="Land_Router_01_sand_F";
 							atlOffset=1.4305115e-06;
 						};
-						class Item52
+						class Item51
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4522,7 +5148,7 @@ class Mission
 							type="Land_Tablet_02_black_F";
 							atlOffset=1.4305115e-06;
 						};
-						class Item53
+						class Item52
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4540,7 +5166,7 @@ class Mission
 							id=14378;
 							type="Land_Screwdriver_V2_F";
 						};
-						class Item54
+						class Item53
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4560,7 +5186,7 @@ class Mission
 							type="Land_ToiletBox_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item55
+						class Item54
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4580,7 +5206,7 @@ class Mission
 							type="Land_ToiletBox_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item56
+						class Item55
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4599,7 +5225,7 @@ class Mission
 							type="Land_TTowerSmall_2_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item57
+						class Item56
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4619,7 +5245,7 @@ class Mission
 							type="Land_WaterTank_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item58
+						class Item57
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4637,7 +5263,7 @@ class Mission
 							id=14379;
 							type="Land_WeldingTrolley_01_F";
 						};
-						class Item59
+						class Item58
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4655,7 +5281,7 @@ class Mission
 							id=14380;
 							type="Land_GasTank_02_F";
 						};
-						class Item60
+						class Item59
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4673,7 +5299,7 @@ class Mission
 							id=14381;
 							type="Land_GasTank_02_F";
 						};
-						class Item61
+						class Item60
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4690,7 +5316,7 @@ class Mission
 							id=14353;
 							type="MapBoard_altis_F";
 						};
-						class Item62
+						class Item61
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4708,7 +5334,7 @@ class Mission
 							id=14382;
 							type="Land_Wrench_F";
 						};
-						class Item63
+						class Item62
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4726,7 +5352,7 @@ class Mission
 							id=14383;
 							type="Land_Wrench_F";
 						};
-						class Item64
+						class Item63
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4760,7 +5386,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item65
+						class Item64
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4795,7 +5421,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item66
+						class Item65
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4829,7 +5455,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item67
+						class Item66
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4847,7 +5473,7 @@ class Mission
 							type="Land_CratesWooden_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item68
+						class Item67
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4865,7 +5491,7 @@ class Mission
 							type="Land_DuctTape_F";
 							atlOffset=0.13976336;
 						};
-						class Item69
+						class Item68
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4883,7 +5509,7 @@ class Mission
 							type="OmniDirectionalAntenna_01_sand_F";
 							atlOffset=0.035903931;
 						};
-						class Item70
+						class Item69
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4901,7 +5527,7 @@ class Mission
 							type="Land_Pliers_F";
 							atlOffset=0.81805372;
 						};
-						class Item71
+						class Item70
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4919,7 +5545,7 @@ class Mission
 							type="Land_BagFence_Long_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item72
+						class Item71
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4937,7 +5563,7 @@ class Mission
 							type="Land_BagFence_Long_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item73
+						class Item72
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4955,7 +5581,7 @@ class Mission
 							type="Land_BagFence_Long_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item74
+						class Item73
 						{
 							dataType="Object";
 							class PositionInfo
@@ -4988,7 +5614,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item75
+						class Item74
 						{
 							dataType="Object";
 							class PositionInfo
@@ -5007,7 +5633,7 @@ class Mission
 							type="Land_HBarrier_5_F";
 							atlOffset=1.9073486e-06;
 						};
-						class Item76
+						class Item75
 						{
 							dataType="Object";
 							class PositionInfo
@@ -5354,62 +5980,13 @@ class Mission
 		};
 		class Item8
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3983.4238,5.0014391,2881.4482};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-					};
-					id=82630;
-					type="B_Soldier_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=82630;
-						item1=82629;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-				};
-			};
-			id=82628;
-		};
-		class Item9
-		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3989.1577,6.9147005,2876.8308};
+				position[]={3989.9573,6.9147005,2882.6702};
 			};
-			side="West";
-			flags=6;
+			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
@@ -5433,66 +6010,14 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=1;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3978.5071,5.0014391,2872.4404};
-						angles[]={0,6.2759647,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-					};
-					id=82641;
-					type="B_CTRG_Soldier_AR_tna_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3975.989,5.0014391,2874.9221};
-						angles[]={0,6.2759647,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=82642;
-					type="B_CTRG_Soldier_tna_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3980.989,5.0014391,2874.9583};
-						angles[]={0,6.2759647,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-					};
-					id=82643;
-					type="B_CTRG_Soldier_LAT_tna_F";
-				};
-				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -5514,122 +6039,31 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_target";
-							expression="if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_disableAI_suppression";
-							expression="if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ENH_disableAI_teamswitch";
-							expression="if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="ENH_EventHandlers_GestureDone";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureDone"", compile _value]})";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="Male09ENG";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 								};
 							};
 						};
-						class Attribute4
+						class Attribute1
 						{
-							property="ENH_disableAI_autotarget";
-							expression="if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+							property="ENH_EventHandlers_Hit";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Hit"", compile _value]})";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_disableAI_all";
-							expression="if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="ENH_disableAI_FSM";
-							expression="if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="ENH_disableAI_mineDetection";
-							expression="if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute9
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -5642,98 +6076,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute10
+						class Attribute3
 						{
-							property="ENH_disableAI_anim";
-							expression="if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+							property="ENH_EventHandlers_AnimStateChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimStateChanged"", compile _value]})";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
 								};
 							};
 						};
-						class Attribute11
-						{
-							property="ENH_disableAI_lights";
-							expression="if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="ENH_disableAI_aimingError";
-							expression="if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute13
-						{
-							property="ENH_disableAI_weaponAim";
-							expression="if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute14
-						{
-							property="ENH_disableAI_NVG";
-							expression="if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute15
-						{
-							property="ENH_disableAI_autocombat";
-							expression="if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute16
-						{
-							property="ENH_disableAI_cover";
-							expression="if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute17
+						class Attribute4
 						{
 							property="ENH_disableAI_radioProtocol";
 							expression="if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
@@ -5746,10 +6102,36 @@ class Mission
 								};
 							};
 						};
-						class Attribute18
+						class Attribute5
 						{
-							property="ENH_disableAI_checkVisible";
-							expression="if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+							property="ENH_EventHandlers_SeatSwitchedMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SeatSwitchedMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ENH_EventHandlers_InventoryClosed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryClosed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="ENH_disableAI_autocombat";
+							expression="if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -5759,7 +6141,267 @@ class Mission
 								};
 							};
 						};
+						class Attribute8
+						{
+							property="ENH_EventHandlers_InventoryOpened";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryOpened"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="ENH_disableAI_target";
+							expression="if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="ENH_EventHandlers_EpeContact";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContact"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="ENH_EventHandlers_AnimChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="ENH_EventHandlers_WeaponChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="ENH_EventHandlers_Suppressed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Suppressed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="ENH_EventHandlers_EpeContactStart";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactStart"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="ENH_EventHandlers_Killed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Killed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="ENH_disableAI_suppression";
+							expression="if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="ENH_disableAI_anim";
+							expression="if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="ENH_EventHandlers_OpticsSwitch";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsSwitch"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
 						class Attribute19
+						{
+							property="ENH_EventHandlers_SlotItemChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SlotItemChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute20
+						{
+							property="ENH_EventHandlers_Explosion";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Explosion"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute21
+						{
+							property="ENH_disableAI_FSM";
+							expression="if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute22
+						{
+							property="ENH_disableAI_cover";
+							expression="if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute23
+						{
+							property="ENH_EventHandlers_WeaponDisassembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDisassembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute24
+						{
+							property="ENH_EventHandlers_Put";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Put"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute25
+						{
+							property="ENH_EventHandlers_GestureChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute26
+						{
+							property="ENH_EventHandlers_Deleted";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute27
+						{
+							property="ENH_EventHandlers_MagazineUnloaded";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""MagazineUnloaded"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute28
 						{
 							property="ENH_disableAI_move";
 							expression="if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
@@ -5772,7 +6414,553 @@ class Mission
 								};
 							};
 						};
-						nAttributes=20;
+						class Attribute29
+						{
+							property="ENH_EventHandlers_HitPart";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HitPart"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute30
+						{
+							property="ENH_disableAI_mineDetection";
+							expression="if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute31
+						{
+							property="ENH_disableAI_NVG";
+							expression="if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute32
+						{
+							property="ENH_EventHandlers_WeaponDeployed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDeployed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute33
+						{
+							property="ENH_EventHandlers_Fired";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fired"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute34
+						{
+							property="ENH_disableAI_aimingError";
+							expression="if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute35
+						{
+							property="ENH_EventHandlers_HandleHeal";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleHeal"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute36
+						{
+							property="ENH_EventHandlers_Detached";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Detached"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute37
+						{
+							property="ENH_EventHandlers_VisionModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VisionModeChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute38
+						{
+							property="ENH_disableAI_lights";
+							expression="if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute39
+						{
+							property="ENH_EventHandlers_Assembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Assembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute40
+						{
+							property="ENH_EventHandlers_WeaponRested";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponRested"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute41
+						{
+							property="ENH_disableAI_weaponAim";
+							expression="if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute42
+						{
+							property="ENH_EventHandlers_Dammaged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Dammaged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute43
+						{
+							property="ENH_EventHandlers_FiredNear";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredNear"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute44
+						{
+							property="ENH_EventHandlers_Local";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute45
+						{
+							property="ENH_disableAI_all";
+							expression="if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute46
+						{
+							property="ENH_EventHandlers_Respawn";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Respawn"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute47
+						{
+							property="ENH_disableAI_checkVisible";
+							expression="if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute48
+						{
+							property="ENH_EventHandlers_LeaningChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaningChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute49
+						{
+							property="ENH_EventHandlers_AnimDone";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimDone"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute50
+						{
+							property="ENH_EventHandlers_OpticsModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsModeChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute51
+						{
+							property="ENH_EventHandlers_GetInMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetInMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute52
+						{
+							property="ENH_EventHandlers_HandleIdentity";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleIdentity"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute53
+						{
+							property="ENH_EventHandlers_Attached";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Attached"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute54
+						{
+							property="ENH_disableAI_path";
+							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute55
+						{
+							property="ENH_EventHandlers_FiredMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute56
+						{
+							property="ENH_EventHandlers_TaskSetAsCurrent";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""TaskSetAsCurrent"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute57
+						{
+							property="ENH_EventHandlers_EpeContactEnd";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactEnd"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute58
+						{
+							property="ENH_EventHandlers_Take";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Take"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute59
+						{
+							property="ENH_EventHandlers_HandleScore";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleScore"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute60
+						{
+							property="ENH_EventHandlers_LandingCanceled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LandingCanceled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute61
+						{
+							property="ENH_EventHandlers_Reloaded";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Reloaded"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute62
+						{
+							property="ENH_EventHandlers_WeaponAssembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponAssembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute63
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute64
+						{
+							property="ENH_EventHandlers_GetOutMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetOutMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute65
+						{
+							property="ENH_EventHandlers_SoundPlayed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SoundPlayed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute66
+						{
+							property="ENH_EventHandlers_Disassembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Disassembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute67
+						{
+							property="ENH_EventHandlers_HandleRating";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleRating"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute68
+						{
+							property="ENH_disableAI_autotarget";
+							expression="if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute69
+						{
+							property="ENH_EventHandlers_HandleDamage";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleDamage"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute70
+						{
+							property="ENH_disableAI_teamswitch";
+							expression="if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=71;
 					};
 				};
 			};
@@ -5781,34 +6969,257 @@ class Mission
 				formation="DIAMOND";
 			};
 			id=82640;
-		};
-		class Item11
-		{
-			dataType="Group";
-			side="West";
-			class Entities
+			class CustomAttributes
 			{
-				items=1;
-				class Item0
+				class Attribute0
 				{
-					dataType="Object";
-					class PositionInfo
+					property="ENH_EventHandlers_Deleted";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
+					class Value
 					{
-						position[]={3972.2639,5.0014391,2869.2407};
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
 					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=82646;
-					type="B_Soldier_F";
 				};
+				class Attribute1
+				{
+					property="ENH_EventHandlers_Fleeing";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fleeing"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ENH_EventHandlers_EnemyDetected";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnemyDetected"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ENH_EventHandlers_GroupIdChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GroupIdChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ENH_EventHandlers_FormationChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FormationChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ENH_EventHandlers_UnitJoined";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitJoined"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ENH_EventHandlers_SpeedModeChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SpeedModeChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ENH_EventHandlers_WaypointComplete";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WaypointComplete"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ENH_EventHandlers_LeaderChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaderChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ENH_EventHandlers_EnableAttackChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnableAttackChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ENH_EventHandlers_Local";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ENH_EventHandlers_Empty";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Empty"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ENH_EventHandlers_KnowsAboutChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""KnowsAboutChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ENH_EventHandlers_UnitKilled";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitKilled"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ENH_EventHandlers_CommandChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CommandChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ENH_EventHandlers_UnitLeft";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitLeft"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ENH_EventHandlers_CombatModeChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CombatModeChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ENH_EventHandlers_VehicleRemoved";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleRemoved"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ENH_EventHandlers_VehicleAdded";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleAdded"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				nAttributes=19;
 			};
-			class Attributes
-			{
-			};
-			id=82645;
 		};
 	};
 };
