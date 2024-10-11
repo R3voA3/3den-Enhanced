@@ -6,8 +6,8 @@
 
     Parameter(s):
     NUMBER: -1: random
-                    -2: reverse
-                 >-1: Direction in degrees
+            -2: reverse
+           >-1: Direction in degrees
 
     Returns:
     -
