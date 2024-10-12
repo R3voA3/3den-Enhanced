@@ -19,7 +19,7 @@ patch = 0
 git_hash = 0
 
 [hemtt.release]
-archive = false
+archive = true
 
 [properties]
 author = "R3vo"
