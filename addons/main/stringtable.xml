@@ -16,7 +16,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
             <English>Removes selected entry from the list.</English>
-            <Czech>Odebere vybranou položku ze seznamu.</French>
+            <Czech>Odebere vybranou položku ze seznamu.</Czech>
             <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
             <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
             <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
@@ -6951,17 +6951,6 @@
             <Chinesesimp>可用物品</Chinesesimp>
             <Chinese>可用物品</Chinese>
             <Italian>Oggetti Disponibili</Italian>
-        </Key>
-        <Key ID="STR_A3_RSCDISPLAYARSENAL_RESET">
-            <English>Reset</English>
-            <Russian>Перезагрузить</Russian>
-            <German>Zurücksetzen</German>
-            <Polish>Nastawić</Polish>
-            <French>Réinitialiser</French>
-            <Spanish>Reiniciar</Spanish>
-            <Chinesesimp>重置</Chinesesimp>
-            <Chinese>重置</Chinese>
-            <Italian>Reset</Italian>
         </Key>
         <Key ID="STR_ENH_MAIN_ESE_FULLARSENAL_TOOLTIP">
             <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
