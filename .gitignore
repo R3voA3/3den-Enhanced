@@ -6,7 +6,6 @@
 *.url
 
 #Folders
-releases
 .hemttout
 .vscode
 .hemtt/missions/**/*.enh_mission_sqm_backups
