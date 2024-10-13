@@ -12,15 +12,15 @@ class EditMulti3: Edit
     {
         class Value: Value
         {
-            h = QUOTE(70 * GRID_H - 1 * GRID_H);
+            h = QUOTE(69 * GRID_H);
         };
         class Background: ctrlStaticOverlay
         {
-            h = QUOTE((70 + 0.6 * 5) * GRID_H);
+            h = QUOTE(73 * GRID_H);
         };
         class Title: ctrlStaticFrame
         {
-            h = QUOTE((70 + 1 * 5) * GRID_H);
+            h = QUOTE(75 * GRID_H);
         };
     };
 };
