@@ -4,7 +4,7 @@ class Cfg3DEN
     {
         class AttributeCategories
         {
-            class StatesSpecial
+            class StateSpecial
             {
                 class Attributes
                 {
