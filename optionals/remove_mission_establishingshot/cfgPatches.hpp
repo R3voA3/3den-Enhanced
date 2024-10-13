@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(MissionEstablishingShot,Mission Establishing Shot)

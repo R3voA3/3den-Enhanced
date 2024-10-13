@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(ObjectEventHandlers,Object Event Handlers)

@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(ObjectFuelConsumptionCoef,Object Fuel Consumption Coef)

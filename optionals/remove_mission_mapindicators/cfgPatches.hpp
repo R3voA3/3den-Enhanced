@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(MissionMapIndicators,Mission Map Indicators)

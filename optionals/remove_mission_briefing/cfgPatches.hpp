@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(MissionBriefing,Mission Briefing)

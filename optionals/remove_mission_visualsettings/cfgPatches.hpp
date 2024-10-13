@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(MissionVisualSettings,Mission Visual Settings)

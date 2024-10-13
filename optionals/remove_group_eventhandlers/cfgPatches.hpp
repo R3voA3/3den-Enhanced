@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(GroupEventHandlers,Group Event Handlers)
