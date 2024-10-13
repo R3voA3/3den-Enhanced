@@ -9,6 +9,23 @@
 #include "\a3\3den\ui\resincl.inc"
 
 #define ISDEV
+#define REQUIRED_VERSION 2.18
+#define AUTHOR "R3vo"
+#define URL "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
+
+#define CFGPATCHES_OPTIONAL(NAME,NAME_BEAUTIFIED) class CfgPatches\
+{\
+    class DOUBLES(3denEnhanced_Remove,NAME)\
+    {\
+        author = AUTHOR;\
+        name = QUOTE(3den Enhanced - Remove - NAME_BEAUTIFIED);\
+        requiredAddons[] = {"3denEnhanced"};\
+        requiredVersion = REQUIRED_VERSION;\
+        url = URL;\
+        units[] = {};\
+        weapons[] = {};\
+    };\
+};\
 
 #define EH_ARRAY(A) [QUOTE(QUOTE(A)), compile _value]
 #define EH_CONFIG(A,B) class DOUBLES(ENH_EventHandlers,A)\
