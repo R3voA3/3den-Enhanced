@@ -123,10 +123,11 @@ class Cfg3DEN
                 #include "attributesMission\briefings.hpp"
                 #include "attributesMission\establishingShot.hpp"
                 #include "attributesMission\introText.hpp"
-                #include "attributesMission\missionEnding.hpp"
+                #include "attributesMission\missionEndingCasualties.hpp"
                 #include "attributesMission\volume.hpp"
                 #include "attributesMission\SPR.hpp"
-                #include "attributesMission\missionEventHandlers.hpp"
+                #include "attributesMission\missionEventHandlersGlobal.hpp"
+                #include "attributesMission\missionEventHandlersServer.hpp"
                 #include "attributesMission\musicEventHandlers.hpp"
                 class Misc
                 {
