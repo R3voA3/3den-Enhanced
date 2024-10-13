@@ -1,4 +1,4 @@
-class ENH_removeFromRemainsCollector
+class ENH_RemoveFromRemainsCollector
 {
     displayName = "$STR_ENH_MAIN_REMOVEFROMREMAINSCOLLECTOR_DISPLAYNAME";
     tooltip = "$STR_ENH_MAIN_REMOVEFROMREMAINSCOLLECTOR_TOOLTIP";

@@ -1,4 +1,4 @@
-class ENH_MakeHostage: ENH_SetCaptive
+class ENH_MakeHostage
 {
     displayName = "$STR_ENH_MAIN_MAKEHOSTAGE_DISPLAYNAME";
     tooltip = "$STR_ENH_MAIN_MAKEHOSTAGE_TOOLTIP";
@@ -35,5 +35,6 @@ class ENH_MakeHostage: ENH_SetCaptive
         [_this, ENH_fnc_makeHostage] remoteExec ['call', 0, true];\
     };\
     ";
+    condition = "ObjectBrain";
     defaultValue = "false";
 };
