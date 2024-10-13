@@ -14,9 +14,12 @@ include = [
 
 [version]
 major = 8
-minor = 0
+minor = 1
 patch = 0
 git_hash = 0
+
+[hemtt.build]
+optional_mod_folders = false
 
 [hemtt.release]
 archive = true
