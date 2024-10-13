@@ -8,6 +8,7 @@ if (HEMTT.is_release())
 
     // Replace macro definition
     macro_hpp.replace("#define ISDEV", "//#define ISDEV");
+    print("ISDEV macro was disabled.");
 
     // Overwrite existing file with new content
     macro_path.create_file().write(macro_hpp);
