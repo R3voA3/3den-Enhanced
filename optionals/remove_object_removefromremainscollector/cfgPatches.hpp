@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(ObjectRemoveFromRemainsCollector,Object Remove From Remains Collector)

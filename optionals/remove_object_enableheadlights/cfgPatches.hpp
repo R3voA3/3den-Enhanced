@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(ObjectEnableHeadlights,Object Enable Headlights)

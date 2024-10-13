@@ -1,0 +1,1 @@
+CFGPATCHES_OPTIONAL(ObjectDisableNVGE,Object Disable NVGE)
