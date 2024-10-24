@@ -84,7 +84,7 @@ class ENH_SAM
 class ENH_NameObjects
 {
     text = "$STR_ENH_MAIN_TOOLS_BATCHNAMING";
-    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_NameObjects');
+    action = "call ENH_fnc_nameObjects";
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_N};
     opensNewWindow = 1;
     wikiDescription = "Opens the Name Objects GUI. See GUI documentation for detailed information.";

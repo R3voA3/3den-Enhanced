@@ -67,8 +67,7 @@ class CfgFunctions
         class NameObjects
         {
             file = "x\enh\addons\main\functions\GUI\nameObjects";
-            class nameObjects_name;
-            class nameObjects_onLoad;
+            class nameObjects;
         };
         class ModuleInformation
         {

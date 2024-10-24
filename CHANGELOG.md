@@ -1,3 +1,11 @@
+# 8.1.0
+## CHANGED
+- Name Objects UI
+    - Unable to set variable names
+    - Added support for Layer naming
+    - Added last used index is now saved
+    - Code optimization
+
 # 8.0.0
 ## ADDED
 - Added support for script files for all 3DEN event handlers. See [the documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Event-Scripts)

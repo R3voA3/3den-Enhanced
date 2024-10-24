@@ -1,7 +1,6 @@
 class ENH_NameObjects
 {
     idd = IDD_NAMEOBJECTS;
-    onLoad = "_this call ENH_fnc_nameObjects_onLoad";
     class ControlsBackground
     {
         DISABLE_BACKGROUND
@@ -63,23 +62,22 @@ class ENH_NameObjects
             w = QUOTE(53 * GRID_W - 2 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
-        class RemoveNames: ctrlButton
+        class RemoveName: ctrlButton
         {
+            idc = IDC_NAMEOBJECTS_REMOVE_NAME;
             text = "$STR_ENH_MAIN_NAMEOBJECTS_REMOVENAMES";
             x = QUOTE(CENTER_X - 0.5 * 53 * GRID_W + GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 30 * GRID_H);
             w = QUOTE((53 - 2) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            action = "'UNNAME' call ENH_fnc_nameObjects_name";
         };
-        class OK: ctrlButtonOK
+        class SetName: ctrlButtonOK
         {
-            idc = IDC_NAMEOBJECTS_OK;//We don't want it to close the dialog
+            idc = IDC_NAMEOBJECTS_SET_NAME;
             x = QUOTE(CENTER_X - 0.5 * 53 * GRID_W + 1 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 36 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            action = "call ENH_fnc_nameObjects_name";
         };
         class Cancel: ctrlButtonClose
         {
