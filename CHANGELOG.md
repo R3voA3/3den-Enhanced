@@ -1,10 +1,13 @@
-# 8.1.0
+<!-- # 8.1.0
+## ADDED
+- Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
+
 ## CHANGED
 - Name Objects UI
     - Unable to set variable names
     - Added support for Layer naming
     - Added last used index is now saved
-    - Code optimization
+    - Code optimization -->
 
 # 8.0.0
 ## ADDED
