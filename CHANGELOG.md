@@ -1,4 +1,5 @@
-<!-- # 8.1.0
+<!--
+# 8.1.0
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
 
@@ -7,7 +8,15 @@
     - Unable to set variable names
     - Added support for Layer naming
     - Added last used index is now saved
-    - Code optimization -->
+    - Code optimization
+
+- Improved Capture Frame UI
+    - Added none transparent background
+    - Added search box to search through tree
+    - UI can no longer be moved
+    - Added collapse and expand tree control buttons
+    - Added button to open https://ui.perfetto.dev/ in default browser
+-->
 
 # 8.0.0
 ## ADDED
