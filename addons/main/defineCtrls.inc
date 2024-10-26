@@ -2,6 +2,10 @@
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
                                                      class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
 
+class RscEdit;
+class RscText;
+class RscTree;
+
 //Eden base controls
 class ctrlButton;
 class ctrlButtonCancel;
