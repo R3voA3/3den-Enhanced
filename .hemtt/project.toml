@@ -59,6 +59,10 @@ workshop = [
     "2073243184"   # 3Den Stringtable Viewer
 ]
 
+parameters = [
+    "--setThreadCharacteristics"
+]
+
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
 executable = "arma3_x64"
 
@@ -71,6 +75,6 @@ dlc = [
     "spe",
 ]
 
-[hemtt.launch.diag]
+[hemtt.launch.profiling]
 extends = "default"
-executable = "arma3diag_x64"
+executable = "arma3profiling_x64.exe"
