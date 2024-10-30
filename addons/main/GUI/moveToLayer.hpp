@@ -54,7 +54,7 @@ class ENH_MoveToLayer
         class ButtonSearch: ctrlButtonSearch
         {
             idc = IDC_MOVETOLAYER_BUTTONSEARCH;
-            text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+            TEXT = TEXTURE_SEARCH_START;
             tooltip = "";
             x = QUOTE(CENTER_X - WINDOW_W_ATTRIBUTES * 0.5 * GRID_W + 36 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);

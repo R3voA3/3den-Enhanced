@@ -61,7 +61,7 @@ class ENH_AttributeSearch
         class ButtonSearch: ctrlButtonSearch
         {
             idc = IDC_ATTRIBUTESEARCH_BUTTONSEARCH;
-            text = "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa";
+            TEXT = TEXTURE_SEARCH_START;
             x = QUOTE(CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 41 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(5 * GRID_W);
