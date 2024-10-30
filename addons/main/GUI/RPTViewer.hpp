@@ -43,7 +43,6 @@ class ENH_RPTViewer
                     idc = IDC_RPTVIEWER_EDIT;
                     w = QUOTE(400 * GRID_W);
                     h = QUOTE(400 * GRID_H);
-                    //sizeEx = SIZEEX_ETELKA(SIZEEX_XS);
                     sizeEx = QUOTE(2.945 * SIZEEX_BASE);
                     font = FONT_MONO;
                     canModify = 0;
