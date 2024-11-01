@@ -24,35 +24,35 @@ class ENH_Folder_Utilities
 class ENH_MoonPhases
 {
     text = "$STR_ENH_MAIN_TOOLS_MOONPHASES";
-    action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf'";
+    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf']]";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
 class ENH_Jukebox
 {
     text = "$STR_ENH_MAIN_TOOLS_JUKEBOX";
-    action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_jukebox.sqf'";
+    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_jukebox.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
 class ENH_PrintConfig
 {
     text = "$STR_ENH_MAIN_TOOLS_PRINTCONFIG";
-    action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_printConfig.sqf'";
+    action = "configNull spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_printConfig.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
 class ENH_CfgDisabledCommands
 {
     text = "$STR_ENH_MAIN_TOOLS_CFGDISABLEDCOMMANDS";
-    action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf'";
+    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_cfgDisabledCommands.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
 class ENH_ScriptCommands
 {
     text = "$STR_ENH_MAIN_TOOLS_SCRIPTCOMMANDS";
-    action = "[] execVM 'A3\Functions_F\Debug\Utilities\utility_scriptCommands.sqf'";
+    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_scriptCommands.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
