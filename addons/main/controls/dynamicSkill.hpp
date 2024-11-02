@@ -72,7 +72,6 @@ class ENH_DynamicSkill: Title
             idc = 104;
             y = QUOTE(3 * CTRL_DEFAULT_H + 20 * pixelH);
         };
-
         class SkillMaxBLUFORTitle: Title
         {
             text = "$STR_ENH_MAIN_DYNAMICSKILL_SKILLMAX_DISPLAYNAME";
@@ -228,7 +227,6 @@ class ENH_DynamicSkill: Title
             idc = 122;
             y = QUOTE(14 * CTRL_DEFAULT_H + 75 * pixelH);
         };
-
         class SkillAimMaxIndependentTitle: Title
         {
             text = "$STR_ENH_MAIN_DYNAMICSKILL_SKILLAIMMAX_DISPLAYNAME";
