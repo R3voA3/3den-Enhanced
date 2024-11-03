@@ -110,13 +110,20 @@ textureDisabledUnchecked = NAME;\
 
 #define TEXTURE_CHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"
 #define TEXTURE_UNCHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"
+#define TEXTURE_PARTIALLY_CHECKED "a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
+
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
+
+#define RED 1,0,0,0.5
+#define GREEN 0,1,0,0.5
+#define BLUE 0,0,1,0.5
 
 #define SOUND_FEEDBACK "FD_Finish_F"
 
 //3den Enhanced specific IDDs and IDCs
 #define IDD_NONE -1
+
 #define IDC_NONE -1
 
 #define IDC_CAPTURE_FRAME_UI_EDIT_SEARCH 1337
@@ -141,6 +148,13 @@ textureDisabledUnchecked = NAME;\
 #define IDC_3DENRADIO_TOGGLERADIO 300
 #define IDC_3DENRADIO_VOLUME 400
 #define IDC_3DENRADIO_BUTTONSEARCH 1000
+
+#define IDD_CUSTOMIZE_MENU_STRIP 56000
+#define IDC_CUSTOMIZE_MENU_STRIP_TREE 56001
+#define IDC_CUSTOMIZE_MENU_STRIP_SEARCH 56002
+#define IDC_CUSTOMIZE_MENU_STRIP_BUTTON_SEARCH 56003
+#define IDC_CUSTOMIZE_MENU_STRIP_BUTTON_COLLAPSE_ALL 56004
+#define IDC_CUSTOMIZE_MENU_STRIP_BUTTON_EXPAND_ALL 56005
 
 #define IDD_BRIEFINGEDITOR -1
 #define IDC_BRIEFINGEDITOR_BRIEFINGTEXT 10

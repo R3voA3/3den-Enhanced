@@ -65,8 +65,7 @@ class Cfg3DEN
     class Attributes
     {
         #include "controls\base.hpp"
-        #include "controls\largerEditMulti.hpp"
-        #include "controls\SPR.hpp"
+
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
         #include "controls\ambientAnimations.hpp"
@@ -75,12 +74,15 @@ class Cfg3DEN
         #include "controls\establishingShot.hpp"
         #include "controls\groupMarker.hpp"
         #include "controls\holdAction.hpp"
-        #include "controls\introText.hpp"
-        #include "controls\mapIndicators.hpp"
-        #include "controls\missionEndingCasualties.hpp"
-        #include "controls\subCategoryNoHeader_Fixed.hpp"
-        #include "controls\sliderMulti120.hpp"
         #include "controls\inputList.hpp"
+        #include "controls\introText.hpp"
+        #include "controls\largerEditMulti.hpp"
+        #include "controls\mapIndicators.hpp"
+        #include "controls\markerColor.hpp"
+        #include "controls\missionEndingCasualties.hpp"
+        #include "controls\sliderMulti120.hpp"
+        #include "controls\SPR.hpp"
+        #include "controls\subCategoryNoHeader_Fixed.hpp"
     };
     class Mission
     {
@@ -243,6 +245,13 @@ class Cfg3DEN
                         control = "EditXYZ";
                     };
                     #include "attributesMarker\markerDrawPriority.hpp"
+                };
+            };
+            class Style
+            {
+                class Attributes
+                {
+                    #include "attributesMarker\markerColor.hpp"
                 };
             };
             #include "attributesMarker\markerHideOnStart.hpp"
