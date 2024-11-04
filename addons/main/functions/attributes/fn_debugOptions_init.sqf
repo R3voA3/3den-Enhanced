@@ -102,7 +102,7 @@ if GETVALUE("Invulnerability") then
         _x allowDamage false;
     } forEach units player;
 
-    (vehicle player) allowDamage false;
+    (objectParent player) allowDamage false;
 };
 
 if GETVALUE("Captive") then
@@ -326,7 +326,7 @@ if GETVALUE("ShowGroups") then
         hintSilent parseText format
         [
             "<t align='left' font='EtelkaMonospacePro'><br/><t size='1.2'>General Information:</t><br/>Callsign: %1<br/>Leader: %2<br/>No. of Units: %3<br/>Delete when Empty: %4<br/><br/><t size='1.2'>Group Status:</t><br/>Health: %5<br/>Fleeing: %6<br/>Attack Enabled: %7<br/>Combat Behaviour: %8<br/>Combat Mode: %9<br/>Formation: %10<br/>Speed: %11<br/><br/><t size='1.2'>Waypoints:</t><br/>No. of Waypoints: %12<br/>Current Waypoint: %13<br/>Speed: %14<br/><br/><t size='1.2'>Additional Options:</t><br/>- Left click on an icon to toggle group waypoints<br/>- CTRL + Left Click to delete a group</t>",
-            format ["%1 (%2)", groupID _group, if (vehicle leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf vehicle leader _group ] call BIS_fnc_displayName} else {"-"}],
+            format ["%1 (%2)", groupID _group, if (objectParent leader _group isNotEqualTo leader _group) then {[configFile >> "CfgVehicles" >> typeOf objectParent leader _group ] call BIS_fnc_displayName} else {"-"}],
             name leader _group,
             count units _group,
             isGroupDeletedWhenEmpty _group,
@@ -630,7 +630,7 @@ if (GETVALUE("DebugPath") > 0) then
                 {
                     if ((_leader distance _posOld) > 50) then
                     {
-                        if (_is3DEnabled) then
+                        if _is3DEnabled then
                         {
                             _arrow = createVehicle ["Sign_Arrow_Direction_Blue_F", position _leader, [], 0, "CAN_COLLIDE"];
                             _arrow setObjectTexture [0, _arrowColour];
