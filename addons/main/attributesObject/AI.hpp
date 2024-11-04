@@ -97,7 +97,7 @@ class ENH_AI
             tooltip = "$STR_ENH_MAIN_DISABLEAI_ALL_TOOLTIP";
             property = "ENH_disableAI_all";
             control = "Checkbox";
-            expression = "if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'all'] remoteExec ['disableAI', _this]}";
             defaultValue = "false";
             condition = "objectBrain";
         };
@@ -106,119 +106,119 @@ class ENH_AI
             displayName = "$STR_ENH_MAIN_DISABLEAI_MOVE_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_MOVE_TOOLTIP";
             property = "ENH_disableAI_move";
-            expression = "if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Target: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_TARGET_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_TARGET_TOOLTIP";
             property = "ENH_disableAI_target";
-            expression = "if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Cover: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_COVER_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_COVER_TOOLTIP";
             property = "ENH_disableAI_cover";
-            expression = "if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Autotarget: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_AUTOTARGET_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_AUTOTARGET_TOOLTIP";
             property = "ENH_disableAI_autotarget";
-            expression = "if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Animation: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_ANIM_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_ANIM_TOOLTIP";
             property = "ENH_disableAI_anim";
-            expression = "if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
         };
         class ENH_FSM: ENH_All
         {
             displayName = "FSM";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_FSM_TOOLTIP";
             property = "ENH_disableAI_FSM";
-            expression = "if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
         };
         class ENH_AimingError: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_AIMINGERROR_DISPLAYNAME";
             tooltip =  "$STR_ENH_MAIN_DISABLEAI_AIMINGERROR_TOOLTIP";
             property = "ENH_disableAI_aimingError";
-            expression = "if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
         };
         class ENH_TeamSwitch: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_TEAMSWITCH_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_TEAMSWITCH_TOOLTIP";
             property = "ENH_disableAI_teamswitch";
-            expression = "if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Suppression: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_SUPPRESSION_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_SUPPRESSION_TOOLTIP";
             property = "ENH_disableAI_suppression";
-            expression = "if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
         };
         class ENH_CheckVisible: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_RAYCASTS_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_RAYCASTS_TOOLTIP";
             property = "ENH_disableAI_checkVisible";
-            expression = "if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Autocombat: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_AUTOCOMBAT_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_AUTOCOMBAT_TOOLTIP";
             property = "ENH_disableAI_autocombat";
-            expression = "if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Path: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_PATH_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_PATH_TOOLTIP";
             property = "ENH_disableAI_path";
-            expression = "if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
         };
         class ENH_MineDetection: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_MINEDETECTION_DISPLAYNAME";
             tooltip = "";
             property = "ENH_disableAI_mineDetection";
-            expression = "if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
         };
         class ENH_WeaponAim: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_WEAPONAIM_DISPLAYNAME";
             tooltip = "";
             property = "ENH_disableAI_weaponAim";
-            expression = "if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
         };
         class ENH_NVG: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_NVG_DISPLAYNAME";
             tooltip = "";
             property = "ENH_disableAI_NVG";
-            expression = "if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
         };
         class ENH_Lights: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_LIGHTS_DISPLAYNAME";
             tooltip = "";
             property = "ENH_disableAI_lights";
-            expression = "if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
         };
         class ENH_RadioProtocol: ENH_All
         {
             displayName = "$STR_ENH_MAIN_DISABLEAI_RADIOPROTOCOL_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_DISABLEAI_RADIOPROTOCOL_TOOLTIP";
             property = "ENH_disableAI_radioProtocol";
-            expression = "if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
+            expression = "if _value then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
         };
     };
 };

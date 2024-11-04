@@ -44,7 +44,7 @@ class ENH_GroupMarker
                             {\
                                 private _vehicleName = getText (configOf vehicle _leader >> 'displayName');\
                                 private _vehicleString = (' [' + _vehicleName + ']');\
-                                if (_showGroupSize) then\
+                                if _showGroupSize then\
                                 {\
                                     _marker setMarkerTextLocal (_groupString + _vehicleString + _sizeString);\
                                 }\
@@ -55,7 +55,7 @@ class ENH_GroupMarker
                             }\
                             else\
                             {\
-                                if (_showGroupSize) then\
+                                if _showGroupSize then\
                                 {\
                                     _marker setMarkerTextLocal (_groupString + _sizeString);\
                                 };\

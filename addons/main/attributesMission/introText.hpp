@@ -28,7 +28,7 @@ class ENH_IntroText
                         _l2 = _l2 call BIS_fnc_localize;\
                         _l3 = _l3 call BIS_fnc_localize;\
                         uiSleep _delay;\
-                        switch (_type) do\
+                        switch _type do\
                         {\
                             case 0:\
                             {\
