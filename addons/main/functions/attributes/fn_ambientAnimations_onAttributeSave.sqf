@@ -17,7 +17,7 @@ params ["_ctrlGroup"];
 
 //Selection animations to pass to the attribute
 private _animSet = (_ctrlGroup controlsGroupCtrl 100) lbData lbCurSel (_ctrlGroup controlsGroupCtrl 100);
-private _anims = switch (_animSet) do
+private _anims = switch _animSet do
 {
     case "SHIELD_FROM_SUN":
     {

@@ -41,7 +41,7 @@ private _fnc_getBuildingsPositions =
 
     ENH_Garrison_ValidBuildings = [ENH_Garrison_ValidBuildings, [], {ENH_Garrison_AreaHelper distance _x}, "ASCEND"] call BIS_fnc_sortBy;
 
-    if (_firstOnly) exitWith
+    if _firstOnly exitWith
     {
         ENH_Garrison_ValidBuildings select 0 buildingPos -1;
     };
@@ -59,7 +59,7 @@ private _fnc_getBuildingsPositions =
 
 [localize "STR_ENH_MAIN_GARRISON_HEADER"] collect3DENHistory
 {
-    switch (_mode) do
+    switch _mode do
     {
         case 0://CLOSEST BUILDING
         {

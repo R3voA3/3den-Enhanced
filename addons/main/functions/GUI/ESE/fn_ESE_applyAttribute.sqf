@@ -89,7 +89,7 @@ private _value = str
     _display getVariable ["ENH_ESE_IsVirtual", false]
 ];
 
-if (_return) exitWith {_value};
+if _return exitWith {_value};
 ENH_ESE_target set3DENAttribute ["ammoBox", _value];
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

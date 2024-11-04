@@ -62,7 +62,7 @@ private _export = "";
 ["items", items _object] call _fnc_addArray;
 ["linkedItems", _gear + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems + _handgunItems] call _fnc_addArray;
 
-if (_mode) then
+if _mode then
 {//Respawn Loadout for config
     _export = "class " + _class + LB + "{" + LB + IND + _uniformClass + LB + IND + _backpack + LB + _export + "};";
 }

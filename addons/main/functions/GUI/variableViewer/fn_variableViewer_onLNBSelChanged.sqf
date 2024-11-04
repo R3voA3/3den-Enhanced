@@ -22,7 +22,7 @@ params ["_ctrlLNB", "_selectedRow"];
 private _display = ctrlParent _ctrlLNB;
 private _conditionDisable = !(_ctrlLNB lnbText [_selectedRow, 2] in ["STRING", "SCALAR", "CODE", "BOOL"]);
 
-if (_conditionDisable) then
+if _conditionDisable then
 {
     CTRL(IDC_VARIABLEVIEWER_VARIABLENAME) ctrlSetText "";
     CTRL(IDC_VARIABLEVIEWER_VARIABLEVALUE) ctrlSetText "";

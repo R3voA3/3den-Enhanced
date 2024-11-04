@@ -5,7 +5,7 @@ disableSerialization;
 
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 
-switch (_mode) do
+switch _mode do
 {
     case "create":
     {

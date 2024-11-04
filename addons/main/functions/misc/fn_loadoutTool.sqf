@@ -22,7 +22,7 @@ if (_units isEqualTo []) exitWith
     false
 };
 
-switch (_input) do
+switch _input do
 {
     case "copy":
     {

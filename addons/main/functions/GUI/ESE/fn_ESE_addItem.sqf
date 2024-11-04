@@ -47,7 +47,7 @@ for "_i" from 0 to ( _rows - 1) do
         _itemAdded = true;
     };
 };
-if !(_itemAdded) then//If item was not found in the list, add it
+if !_itemAdded then//If item was not found in the list, add it
 {
     [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
 };

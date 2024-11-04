@@ -29,7 +29,7 @@ if (_isVirtual isEqualTo -1) then
     _isVirtual = !(_display getVariable ["ENH_ESE_IsVirtual", false]);
 };
 
-if (_isVirtual) then
+if _isVirtual then
 {
     for "_i" from 0 to _rows - 1 do
     {

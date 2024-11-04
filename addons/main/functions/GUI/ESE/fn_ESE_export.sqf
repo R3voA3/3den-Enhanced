@@ -22,7 +22,7 @@ _equipment params ["_weapons", "_magazines", "_items", "_backpacks"];
 
 private _export = "if !(local this) exitWith {};" + endl + endl;
 
-switch (_mode) do
+switch _mode do
 {
     case "sqf":
     {

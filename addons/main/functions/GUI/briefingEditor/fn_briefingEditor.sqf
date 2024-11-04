@@ -271,7 +271,7 @@ switch _mode do
         {
             if (_x == "<") then {_highlight = true};
 
-            if (_highlight) then
+            if _highlight then
             {
                 _text = text _x setAttributes ["color", "#2A8DFF"];
                 _stringFinal pushBack _text;
@@ -348,7 +348,7 @@ switch _mode do
             } forEach [_ctrlLBMarkers, _ctrlLBColours, _ctrlLBFonts];
         };
 
-        switch (_param) do
+        switch _param do
         {
             case "Linebreak":
             {
@@ -391,7 +391,7 @@ switch _mode do
         //Exit if text is empty and tag is not image
         if (_text == "" && _TAG != "Linebreak") exitWith {};
 
-        private _textNew = switch (_TAG) do
+        private _textNew = switch _TAG do
         {
             case "Linebreak":
             {
@@ -422,10 +422,10 @@ switch _mode do
         //Handle the case when selection was made from right to left
         if (_length < 0) then
         {
-            _start = _start - abs (_length);
+            _start = _start - abs _length;
         };
 
-        private _end = _start + abs (_length) - 1;
+        private _end = _start + abs _length - 1;
 
         //Insert new text right behind selection
         _chars insert [_end + 1, [_textNew]];

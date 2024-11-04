@@ -23,7 +23,7 @@ disableSerialization;
 private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull];
 private _state = _display getVariable ["SideBarCollapsed", false];
 
-if !(_state) then
+if !_state then
 {
     CTRL(IDC_FUNCTIONSVIEWER_GROUP) ctrlSetPosition [LEFT, Y, safeZoneW - 73 * GRID_W + SIDEBAR_W + GRID_W, H];
 }

@@ -32,6 +32,6 @@ private _export = "";
     };
 } forEach _array;
 
-if (_addBrackets) then {_export = "[" + _export + "]"};
+if _addBrackets then {_export = "[" + _export + "]"};
 
 _export

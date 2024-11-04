@@ -30,7 +30,7 @@ if (_mode == "") exitWith {};
 private _export = "";
 private _selection = [["Object", "Logic", "Trigger", "Marker", "Waypoint"]] call ENH_fnc_all3DENSelected;
 
-switch (_mode) do
+switch _mode do
 {
     case "IDS":
     {

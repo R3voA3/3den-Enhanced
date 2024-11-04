@@ -53,7 +53,7 @@ switch _mode do
                 removeMissionEventHandler [_thisEvent, _thisEventHandler];
             };
 
-            if (_leftPanelVisible) then
+            if _leftPanelVisible then
             {
                 _placementToolsUI ctrlSetPositionX (safeZoneX + 61 * GRID_W);
             }
@@ -102,7 +102,7 @@ switch _mode do
 
         {
             _x params ["_idc", "_setting"];
-            CTRL(_idc) ctrlSetText str (ENH_PlacementTools_Settings get _setting);
+            CTRL_idc ctrlSetText str (ENH_PlacementTools_Settings get _setting);
         } forEach
         [
             [IDC_PLACEMENTTOOLS_RADIUS, "Radius"],
@@ -237,7 +237,7 @@ switch _mode do
                 {
                     if (_ctrl && _shift) exitWith {0.001};
                     if (_ctrl && _alt) exitWith {0.01};
-                    if (_ctrl) exitWith {0.1};
+                    if _ctrl exitWith {0.1};
                     1
                 };
 

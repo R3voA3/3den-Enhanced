@@ -17,7 +17,7 @@ params [["_mode", "copy"]];
 
 if (get3DENSelected "Object" isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; nil};
 
-switch (_mode) do
+switch _mode do
 {
     case "copy":
     {

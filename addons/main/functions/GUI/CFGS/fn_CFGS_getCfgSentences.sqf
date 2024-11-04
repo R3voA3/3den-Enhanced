@@ -29,7 +29,7 @@ tvClear _tv;
     if (_filter == "ALL" || {_filter in toUpper configName _x}) then //Only filter if filter is not "all"
     {
         _indexMission = _tv tvAdd [[], toUpper configName _x];
-        _topics = "true" configClasses (_x);
+        _topics = "true" configClasses _x;
         {
             _indexDialogue = _tv tvAdd [[_indexMission], toUpper configName _x];
             _sentences = "true" configClasses (_x >> "Sentences");

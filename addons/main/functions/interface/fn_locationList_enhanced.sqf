@@ -11,7 +11,7 @@ private _savedLocationsWorld = _savedLocations getOrDefault [toUpper worldName, 
 private _customLocationsRoot = -1;
 private _icon = getText (configFile >> "cfg3DEN" >> "Default" >> "Draw" >> "locationList");
 
-switch (_mode) do
+switch _mode do
 {
     case "add":
     {

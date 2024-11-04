@@ -27,11 +27,13 @@ params [
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 
-if (_loadAttribute) then
+if _loadAttribute then
 {
     _attributeValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0
-} else {
-    if (_fromClipboard) then {_attributeValue = call ENH_fnc_ESE_parseClipboardValues}
+}
+else
+{
+    if _fromClipboard then {_attributeValue = call ENH_fnc_ESE_parseClipboardValues}
 };
 
 _attributeValue = parseSimpleArray _attributeValue;//Eden saves attributes as string

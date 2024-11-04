@@ -29,7 +29,7 @@ _entities apply
 };
 
 //Either select maximum or minimum. Using _max var in both cases because I am lazy
-if (_max) then
+if _max then
 {
     _max = selectMax _positions;
 }

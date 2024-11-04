@@ -32,7 +32,7 @@ _ctrlSearch ctrlSetText "";
 
 tvClear _ctrlTV;
 
-if (_showOtherFiles) then
+if _showOtherFiles then
 {
     private _extensions = [".xml", ".sqf", ".inc", ".hpp", ".cpp", ".txt", ".fsm", ".html", ".ext", ".cfg", ".sqs", ".h"];
 
@@ -61,7 +61,7 @@ if (_showOtherFiles) then
 }
 else
 {
-    switch (_modeIndex) do
+    switch _modeIndex do
     {
         case 0:
         {
