@@ -2,6 +2,7 @@
 # 8.1.0
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
+- Custom marker color attribute
 
 ## CHANGED
 - Name Objects UI

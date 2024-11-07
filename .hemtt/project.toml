@@ -44,7 +44,8 @@ options.banned = [
     "resistance",
     "and",
     "or",
-    "not"
+    "not",
+    "vehicle"
 ]
 
 [lints.sqf.var_all_caps]
@@ -52,15 +53,17 @@ enabled = true
 
 # Launched with `hemtt launch`
 [hemtt.launch.default]
+
 workshop = [
-    "450814997",   # CBA_A3
-    "1751569185",  # Pythia
-    "1387934106",  # 7erra's Editing Extensions
-    "2073243184"   # 3Den Stringtable Viewer
+    "450814997",    # CBA_A3
+    "1751569185",   # Pythia
+    "1387934106",   # 7erra's Editing Extensions
+    "2073243184",   # 3Den Stringtable Viewer
+    "1231625987"    # Debug Console
 ]
 
 parameters = [
-    "--setThreadCharacteristics"
+    "-setThreadCharacteristics"
 ]
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
@@ -68,13 +71,16 @@ executable = "arma3_x64"
 
 [hemtt.launch.spe]
 extends = "default"
+
 workshop = [
-    "3117898674"   # SPEX
+    "3117898674" # SPEX
 ]
+
 dlc = [
     "spe",
 ]
 
 [hemtt.launch.profiling]
 extends = "default"
+
 executable = "arma3profiling_x64.exe"

@@ -12,15 +12,15 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=82647;
+		nextID=82650;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1874;
+		nextID=1875;
 	};
 	class LayerIndexProvider
 	{
-		nextID=16885;
+		nextID=16915;
 	};
 	class Camera
 	{
@@ -83,9 +83,9 @@ addons[]=
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Props_F_Decade_Objectives",
-	"A3_Ui_F",
 	"A3_Soft_F_Gamma_Truck_01",
-	"A3_Characters_F_Exp"
+	"A3_Characters_F_Exp",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
@@ -246,22 +246,22 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item23
-		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -1411,6 +1411,7 @@ class Mission
 		briefingName="3den Enhanced";
 		overviewText="3den Enhanced Test Mission";
 		resistanceWest=0;
+		resistanceEast=1;
 		startWeather=0.2536954;
 		startWind=0;
 		forecastWeather=0;
@@ -1484,14 +1485,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -1524,18 +1525,6 @@ class Mission
 					id=14364;
 					type="B_UAV_AI";
 					atlOffset=1.256424;
-				};
-				class Item2
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+38;
-					position[]={3788.5583,5,4192.7822};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=82285;
-					type="Move";
 				};
 			};
 			class Attributes
@@ -1581,7 +1570,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -1612,18 +1601,6 @@ class Mission
 					id=14368;
 					type="B_UAV_AI";
 					atlOffset=2.143425;
-				};
-				class Item2
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+38;
-					position[]={3788.5583,5,4192.7822};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=82286;
-					type="Move";
 				};
 			};
 			class Attributes
@@ -1684,7 +1661,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -1908,18 +1885,6 @@ class Mission
 										nAttributes=4;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82287;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -1934,7 +1899,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -2101,18 +2066,6 @@ class Mission
 										nAttributes=3;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82288;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -2126,7 +2079,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -2395,18 +2348,6 @@ class Mission
 										nAttributes=3;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82289;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -2420,7 +2361,7 @@ class Mission
 							side="Civilian";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -2538,18 +2479,6 @@ class Mission
 										nAttributes=2;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82290;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -2563,7 +2492,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -2813,18 +2742,6 @@ class Mission
 										nAttributes=3;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82291;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -2838,7 +2755,7 @@ class Mission
 							side="Civilian";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -2978,18 +2895,6 @@ class Mission
 										nAttributes=4;
 									};
 								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82292;
-									type="Move";
-								};
 							};
 							class Attributes
 							{
@@ -3003,7 +2908,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -3169,18 +3074,6 @@ class Mission
 										};
 										nAttributes=3;
 									};
-								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82293;
-									type="Move";
 								};
 							};
 							class Attributes
@@ -3786,7 +3679,7 @@ class Mission
 							side="West";
 							class Entities
 							{
-								items=2;
+								items=1;
 								class Item0
 								{
 									dataType="Object";
@@ -3915,18 +3808,6 @@ class Mission
 										};
 										nAttributes=3;
 									};
-								};
-								class Item1
-								{
-									dataType="Waypoint";
-									loiterAltitude=-3.4028235e+38;
-									position[]={3788.5583,5,4192.7822};
-									class Effects
-									{
-									};
-									showWP="NEVER";
-									id=82294;
-									type="Move";
 								};
 							};
 							class Attributes
@@ -5865,75 +5746,11 @@ class Mission
 		};
 		class Item3
 		{
-			dataType="Marker";
-			position[]={3999.0112,5,2891.5774};
-			name="marker_360";
-			text="Priority 5";
-			type="mil_arrow2";
-			colorName="ColorYellow";
-			a=0;
-			b=0;
-			id=74610;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerDrawPriority";
-					expression="if (_value != 0 && isServer) then {[_this, _value] remoteExec ['setMarkerDrawPriority', 0, true]}";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=5;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item4
-		{
-			dataType="Marker";
-			position[]={3983.0491,5,2999.6021};
-			name="marker_361";
-			text="Priority -5";
-			type="mil_arrow2";
-			colorName="ColorWhite";
-			id=74623;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerDrawPriority";
-					expression="if (_value != 0 && isServer) then {[_this, _value] remoteExec ['setMarkerDrawPriority', 0, true]}";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=-5;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item5
-		{
-			dataType="Marker";
-			position[]={4548.5718,5,2972.8848};
-			name="marker_368";
-			type="mil_destroy";
-			id=77736;
-		};
-		class Item6
-		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					dataType="Object";
@@ -5949,36 +5766,13 @@ class Mission
 					id=77738;
 					type="B_soldier_AAR_F";
 				};
-				class Item1
-				{
-					dataType="Waypoint";
-					loiterAltitude=-3.4028235e+38;
-					position[]={3788.5583,5,4192.7822};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=82308;
-					type="Move";
-				};
 			};
 			class Attributes
 			{
 			};
 			id=77737;
 		};
-		class Item7
-		{
-			dataType="Marker";
-			position[]={4501.4639,5,3490.7683};
-			name="marker_369";
-			markerType="RECTANGLE";
-			type="";
-			a=24.857666;
-			b=2.1306152;
-			id=77815;
-		};
-		class Item8
+		class Item4
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6010,7 +5804,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item9
+		class Item5
 		{
 			dataType="Group";
 			side="West";
@@ -6092,7 +5886,7 @@ class Mission
 						class Attribute4
 						{
 							property="ENH_disableAI_radioProtocol";
-							expression="if (_value) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6131,7 +5925,7 @@ class Mission
 						class Attribute7
 						{
 							property="ENH_disableAI_autocombat";
-							expression="if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6157,7 +5951,7 @@ class Mission
 						class Attribute9
 						{
 							property="ENH_disableAI_target";
-							expression="if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6248,7 +6042,7 @@ class Mission
 						class Attribute16
 						{
 							property="ENH_disableAI_suppression";
-							expression="if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6261,7 +6055,7 @@ class Mission
 						class Attribute17
 						{
 							property="ENH_disableAI_anim";
-							expression="if (_value) then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6313,7 +6107,7 @@ class Mission
 						class Attribute21
 						{
 							property="ENH_disableAI_FSM";
-							expression="if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6326,7 +6120,7 @@ class Mission
 						class Attribute22
 						{
 							property="ENH_disableAI_cover";
-							expression="if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6404,7 +6198,7 @@ class Mission
 						class Attribute28
 						{
 							property="ENH_disableAI_move";
-							expression="if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6430,7 +6224,7 @@ class Mission
 						class Attribute30
 						{
 							property="ENH_disableAI_mineDetection";
-							expression="if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6443,7 +6237,7 @@ class Mission
 						class Attribute31
 						{
 							property="ENH_disableAI_NVG";
-							expression="if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6482,7 +6276,7 @@ class Mission
 						class Attribute34
 						{
 							property="ENH_disableAI_aimingError";
-							expression="if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6534,7 +6328,7 @@ class Mission
 						class Attribute38
 						{
 							property="ENH_disableAI_lights";
-							expression="if (_value) then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6573,7 +6367,7 @@ class Mission
 						class Attribute41
 						{
 							property="ENH_disableAI_weaponAim";
-							expression="if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6625,7 +6419,7 @@ class Mission
 						class Attribute45
 						{
 							property="ENH_disableAI_all";
-							expression="if (_value) then {[_this, 'all'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'all'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6651,7 +6445,7 @@ class Mission
 						class Attribute47
 						{
 							property="ENH_disableAI_checkVisible";
-							expression="if (_value) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6742,7 +6536,7 @@ class Mission
 						class Attribute54
 						{
 							property="ENH_disableAI_path";
-							expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6924,7 +6718,7 @@ class Mission
 						class Attribute68
 						{
 							property="ENH_disableAI_autotarget";
-							expression="if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -6950,7 +6744,7 @@ class Mission
 						class Attribute70
 						{
 							property="ENH_disableAI_teamswitch";
-							expression="if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
+							expression="if _value then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
 							class Value
 							{
 								class data
@@ -7219,6 +7013,53 @@ class Mission
 					};
 				};
 				nAttributes=19;
+			};
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={3978.4141,5,2882.4929};
+			name="marker_1874";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=50;
+			id=82649;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.36,0.76,0.71)";
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
