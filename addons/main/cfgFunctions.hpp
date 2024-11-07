@@ -164,6 +164,7 @@ class CfgFunctions
             class exportAttributesToGitHub;
             class exportContextMenuToGitHub;
             class exportMenuStripToGitHub;
+            class recompileFunctions;
             class testDisplays;
         };
         #endif
