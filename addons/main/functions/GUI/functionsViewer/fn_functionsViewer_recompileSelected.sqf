@@ -19,3 +19,5 @@ private _fncName = ctrlText ((uiNamespace getVariable ["ENH_Display_FunctionsVie
 if (isNil {uiNamespace getVariable _fncName} && isNil {missionNamespace getVariable _fncName}) exitWith {};
 
 _fncName call BIS_fnc_recompile;
+
+playSound "3DEN_notificationDefault";
