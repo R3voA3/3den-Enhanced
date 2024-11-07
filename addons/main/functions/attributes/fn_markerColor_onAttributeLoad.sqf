@@ -15,6 +15,17 @@
 */
 
 params ["_ctrlGroup", "_value"];
+
+//Exit onLoad code if only one marker is selected
+if (_value isEqualType configNull && {count get3DENSelected "Marker" == 1}) exitWith {};
+
+//If config is provided then we are in the onLoad code and need update the variables
+if (_value isEqualType configNull) then
+{
+    _ctrlGroup = ctrlParentControlsGroup _ctrlGroup;
+    _value = [false, "#(1,1,1)"];
+};
+
 _value params ["_enabled", "_colorString"];
 private _colorRGB = _colorString splitString ",#()" apply {parseNumber _x};
 
@@ -52,24 +63,6 @@ _ctrlGroup setVariable
 [_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "%"] call BIS_fnc_initSliderValue;
 [_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "%", _colorRGB#2] call BIS_fnc_initSliderValue;
 
-//Add reset event to reset button
-// (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
-// {
-//     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-
-//     (_ctrlGroup controlsGroupCtrl 100) cbSetChecked false;
-
-//     [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "%", 1] call BIS_fnc_initSliderValue;
-//     [_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "%", 1] call BIS_fnc_initSliderValue;
-//     [_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "%", 1] call BIS_fnc_initSliderValue;
-
-//     [_ctrlGroup, false] call (_ctrlGroup getVariable "fnc_toggleControlState");
-
-//     _ctrlGroup controlsGroupCtrl 107 ctrlSetBackgroundColor [1, 1, 1, 1];
-
-//     _ctrlGroup controlsGroupCtrl 108 lbSetCurSel 0;
-// }];
-
 //Add event handler for updating the preview
 #define UPDATE_PREVIEW private _ctrlGroup = ctrlParentControlsGroup (_this select 0);\
 _ctrlGroup controlsGroupCtrl 107 ctrlSetBackgroundColor\
@@ -94,6 +87,8 @@ _ctrlGroup controlsGroupCtrl 105 ctrlAddEventHandler ["SliderPosChanged", {UPDAT
 (_ctrlGroup controlsGroupCtrl 107) ctrlSetBackgroundColor (_colorRGB + [1]);
 
 private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl 108;
+// lbClear _ctrlComboHistory;
+
 _ctrlComboHistory lbAdd "Custom Color";
 
 //Add history
@@ -131,9 +126,13 @@ _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
     ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 105 sliderSetPosition _colorRGB#2;
 
     //Update edit controls
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 102 ctrlSetText format ["%1%%", _colorRGB#0 * 100];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 104 ctrlSetText format ["%1%%", _colorRGB#1 * 100];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 106 ctrlSetText format ["%1%%", _colorRGB#2 * 100];
+    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 102 ctrlSetText format ["%1%%", _colorRGB#0 * 100];
+    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 104 ctrlSetText format ["%1%%", _colorRGB#1 * 100];
+    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 106 ctrlSetText format ["%1%%", _colorRGB#2 * 100];
+
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 102 ctrlSetText format ["%1%2", _colorRGB#0 * 100, "%"];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 104 ctrlSetText format ["%1%2", _colorRGB#1 * 100, "%"];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 106 ctrlSetText format ["%1%2", _colorRGB#2 * 100, "%"];
 
     //Update preview
     ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 107 ctrlSetBackgroundColor [_colorRGB#0, _colorRGB#1, _colorRGB#2, 1];

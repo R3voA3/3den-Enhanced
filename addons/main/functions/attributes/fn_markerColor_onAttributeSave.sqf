@@ -30,7 +30,7 @@ private _notNew = _history set [_hash, _colorRGB, true];
 if (!_notNew) then
 {
     profileNamespace setVariable ["ENH_Attributes_MarkerColor_History", _history];
-    saveProfileNamespace;
+    // saveProfileNamespace;
 };
 
 [

@@ -69,15 +69,11 @@ class ENH_MarkerColor: Title
         class ComboHistory: ctrlCombo
         {
             idc = 108;
-            onLoad = "[_this, _value] call ENH_fnc_markerColor_onAttributeLoad";
+            onLoad = "_this call ENH_fnc_markerColor_onAttributeLoad";
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
-        // class Reset: ENH_ResetButton_Base
-        // {
-        //     y = QUOTE(6 * CTRL_DEFAULT_H + 30 * pixelH);
-        // };
     };
 };
