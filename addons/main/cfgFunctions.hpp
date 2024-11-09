@@ -35,8 +35,8 @@ class CfgFunctions
             class debugOptions_init;
             class dynamicSkill_onAttributeLoad;
             class dynamicSkill_onAttributeSave;
-            // class markerColor_onAttributeLoad;
-            // class markerColor_onAttributeSave;
+            class markerColor_onAttributeLoad;
+            class markerColor_onAttributeSave;
             class establishingShot_onAttributeLoad;
             class establishingShot_onAttributeSave;
             class groupMarker_onAttributeLoad;
@@ -154,7 +154,7 @@ class CfgFunctions
             class entityList_addTooltips;
             class favoritesList;
             class locationList_enhanced;
-            // class menuStrip_customize;
+            class menuStrip_customize;
         };
         #ifdef ISDEV
         class Internal

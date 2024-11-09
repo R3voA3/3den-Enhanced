@@ -1,4 +1,4 @@
-<!--
+
 # 8.1.0
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
@@ -10,7 +10,7 @@
     - UI can no longer be moved
     - Added collapse and expand tree control buttons
     - Added button to open https://ui.perfetto.dev/ in default browser (Profiling.exe only)
--->
+
 
 # 8.0.1
 ## CHANGED
