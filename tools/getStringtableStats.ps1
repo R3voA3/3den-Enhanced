@@ -43,7 +43,7 @@ New-Item -Path $OutPutFilePath -Force
 
 # Create file content
 "# Translation Progress" | Add-Content -Path $OutPutFilePath
-"**Last update:** {0:MM/dd/yyyy HH:mm}" -f (Get-Date) | Add-Content -Path $OutPutFilePath
+"**Last update:** {0:dd/dd/yyyy HH:mm}" -f (Get-Date) | Add-Content -Path $OutPutFilePath
 
 # Add table with overall data
 "" | Add-Content -Path $OutPutFilePath
