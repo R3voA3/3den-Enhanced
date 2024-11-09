@@ -49,18 +49,6 @@
             <Chinese>Mod</Chinese>
             <Chinesesimp>Mod</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_DISPLAYNAME">
-            <English>Custom Color</English>
-            <Czech>Vlastní barva</Czech>
-            <French>Couleur personnalisée</French>
-            <Spanish>Color personalizado</Spanish>
-            <Italian>Colore personalizzato</Italian>
-            <Polish>Kolor niestandardowy</Polish>
-            <Russian>Пользовательский цвет</Russian>
-            <German>Benutzerdefinierte Farbe</German>
-            <Chinese>自訂顏色</Chinese>
-            <Chinesesimp>自定义颜色</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_SONG">
             <English>Song:</English>
             <Czech>Skladba:</Czech>
@@ -1505,6 +1493,18 @@
             <German>Credits</German>
             <Chinese>鳴謝</Chinese>
             <Chinesesimp>鸣谢</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_DISPLAYNAME">
+            <English>Custom Color</English>
+            <Czech>Vlastní barva</Czech>
+            <French>Couleur personnalisée</French>
+            <Spanish>Color personalizado</Spanish>
+            <Italian>Colore personalizzato</Italian>
+            <Polish>Kolor niestandardowy</Polish>
+            <Russian>Пользовательский цвет</Russian>
+            <German>Benutzerdefinierte Farbe</German>
+            <Chinese>自訂顏色</Chinese>
+            <Chinesesimp>自定义颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_#CAM_GUNNER">
             <English>Camera Gunner</English>

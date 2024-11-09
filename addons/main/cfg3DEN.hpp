@@ -78,7 +78,7 @@ class Cfg3DEN
         #include "controls\introText.hpp"
         #include "controls\largerEditMulti.hpp"
         #include "controls\mapIndicators.hpp"
-        #include "controls\markerColor.hpp"
+        // #include "controls\markerColor.hpp"
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\sliderMulti120.hpp"
         #include "controls\SPR.hpp"
@@ -247,13 +247,13 @@ class Cfg3DEN
                     #include "attributesMarker\markerDrawPriority.hpp"
                 };
             };
-            class Style
-            {
-                class Attributes
-                {
-                    #include "attributesMarker\markerColor.hpp"
-                };
-            };
+            // class Style
+            // {
+            //     class Attributes
+            //     {
+            //         #include "attributesMarker\markerColor.hpp"
+            //     };
+            // };
             #include "attributesMarker\markerHideOnStart.hpp"
         };
     };
