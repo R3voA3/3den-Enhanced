@@ -1,9 +1,9 @@
 # Translation Progress
-**Last update:** 10.12.2024 11:16
+**Last update:** 08.11.2024 20:28
 
 | Number of Keys | Number of Translations | Total Progress |
 |----------|:-----------------:|--------:|
-923 | 8612 | 84,82 % |
+923 | 8613 | 84,83 % |
 
 | Language | Translated Entries | Missing Entries | Progress |
 |----------|:-----------------:|--------:|--------:|
@@ -14,7 +14,7 @@
 | | | |
 | Italian | 913 | 10 | 98,92 %
 | | | |
-| Czech | 473 | 450 | 51,25 %
+| Czech | 474 | 449 | 51,35 %
 | | | |
 | Chinesesimp | 912 | 11 | 98,81 %
 | | | |
