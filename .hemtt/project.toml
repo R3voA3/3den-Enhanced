@@ -63,7 +63,8 @@ workshop = [
 ]
 
 parameters = [
-    "-setThreadCharacteristics"
+    "-setThreadCharacteristics",
+    "-limitFPS=60"
 ]
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
