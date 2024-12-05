@@ -1,3 +1,3 @@
-:: Opens the HEMTT book
+: Opens the HEMTT book
 @echo off
 hemtt book
