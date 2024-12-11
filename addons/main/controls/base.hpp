@@ -8,11 +8,14 @@ class Title: Default
     };
 };
 
-class Slider: Title {
+class Slider: Title
+{
     class Controls;
 };
-class SliderMultiplier: Slider {
-    class Controls: Controls {
+class SliderMultiplier: Slider
+{
+    class Controls: Controls
+    {
         class Title;
         class Edit;
         class Value;

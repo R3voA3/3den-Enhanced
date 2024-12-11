@@ -1,5 +1,7 @@
-class ENH_SliderMultiZero: SliderMultiplier {
-    class Controls: Controls {
+class ENH_SliderMultiZero: SliderMultiplier
+{
+    class Controls: Controls
+    {
         class Title: Title {};
         class Edit: Edit {};
         class Value: Value {
