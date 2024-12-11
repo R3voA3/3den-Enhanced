@@ -43,7 +43,7 @@ class ENH_UnitTraits
             displayName = "$STR_ENH_MAIN_CAMOUFLAGECOEF_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_CAMOUFLAGECOEF_TOOLTIP";
             property = "ENH_unitTraits_camouflage";
-            control = "SliderCameraSpeedMult";
+            control = "ENH_SliderMultiZero";
             expression = "[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
             defaultValue = 1;
         };

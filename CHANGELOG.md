@@ -12,6 +12,11 @@
     - Added button to open https://ui.perfetto.dev/ in default browser (Profiling.exe only)
 -->
 
+# 8.0.2
+## CHANGED
+- Allow Unit Traits To Be Set To 0
+    - Adds new control "ENH_SliderMultiZero"
+
 # 8.0.1
 ## CHANGED
 - Name Objects UI
