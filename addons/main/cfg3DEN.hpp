@@ -81,6 +81,7 @@ class Cfg3DEN
         // #include "controls\markerColor.hpp"
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\sliderMulti120.hpp"
+        #include "controls\sliderMultiZero.hpp"
         #include "controls\SPR.hpp"
         #include "controls\subCategoryNoHeader_Fixed.hpp"
     };
