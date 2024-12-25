@@ -3,6 +3,7 @@
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
 - Custom marker color attribute
+- Shortcut to open ACE Arsenal if ACE is loaded
 
 - Improved Capture Frame UI
     - Added none transparent background
@@ -10,7 +11,6 @@
     - UI can no longer be moved
     - Added collapse and expand tree control buttons
     - Added button to open https://ui.perfetto.dev/ in default browser (Profiling.exe only)
-
 
 # 8.0.1
 ## CHANGED
