@@ -39,7 +39,7 @@ tvClear _tv;
                 if (_text == "") then {_text = str _x};
 
                 _soundArray = getArray (_x >> "speech");
-                if !(_soundArray isEqualTo []) then
+                if (_soundArray isNotEqualTo []) then
                 {
                     _tv tvAdd [[_indexMission, _indexDialogue], _text];
                     _tv tvSetData [[_indexMission, _indexDialogue, _forEachIndex], str _x];

@@ -87,7 +87,7 @@ else
                         _ctrlTV tvSetPictureRight [[_addonIndex], _logo];
                     };
 
-                    if !(_addonOld isEqualTo _addon) then
+                    if (_addonOld isNotEqualTo _addon) then
                     {
                         _categories = [];
                         _addonOld = _addon;

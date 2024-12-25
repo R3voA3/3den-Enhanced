@@ -32,7 +32,7 @@ _ctrlComboRuleset ctrlAddEventHandler ["LBSelChanged",
 {
     params ["_ctrlComboRuleset", "_selectedIndex"];
 
-    private _state = !(_selectedIndex == 0);
+    private _state = (_selectedIndex != 0);
     ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 101 ctrlEnable _state;
     ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 102 ctrlEnable _state;
     ctrlParentControlsGroup _ctrlComboRuleset controlsGroupCtrl 103 ctrlEnable _state;
