@@ -27,7 +27,7 @@ private _menuStripShortCutsUnique = [];
 {
     private _shortCut = getArray (_x >> "shortcuts");
     _shortCut = _shortCut # 0;
-    if (!(_shortCut isEqualTo []) && !(_shortCut isEqualType 0)) then
+    if ((_shortCut isNotEqualTo []) && !(_shortCut isEqualType 0)) then
     {
         _shortCut = _shortCut splitString " ";
         _shortCut = _shortCut joinString "";
@@ -39,7 +39,7 @@ private _menuStripShortCutsUnique = [];
 {
     _shortCut = getArray (_x >> "shortcuts");
     _shortCut = _shortCut # 0;
-    if (!(_shortCut isEqualTo []) && !(_shortCut isEqualType 0)) then
+    if ((_shortCut isNotEqualTo []) && (_shortCut isEqualType 0)) then
     {
         _shortCut = _shortCut splitString " ";
         _shortCut = _shortCut joinString "";

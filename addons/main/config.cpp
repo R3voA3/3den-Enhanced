@@ -15,7 +15,7 @@
 #include "GUI\attributeSearch.hpp"
 #include "GUI\briefingEditor.hpp"
 #include "GUI\CfgSentencesBrowser.hpp"
-// #include "GUI\customizeMenuStrip.hpp"
+#include "GUI\customizeMenuStrip.hpp"
 #include "GUI\ESE.hpp"
 #include "GUI\exportGUIDefines.hpp"
 #include "GUI\functionsViewer.hpp"
