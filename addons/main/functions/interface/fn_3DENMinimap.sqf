@@ -45,7 +45,9 @@ private _code =
 
     private _hide = (get3DENActionState "ToggleMap" == 1) ||
     (round ctrlFade (_display3DEN displayCtrl IDC_DISPLAY3DEN_PLAY) > 0) ||
-    (_attributeValue == 0);
+    (_attributeValue == 0) ||
+    !isNil "ACE_arsenal_center" || // ACE Arsenal
+    !isNil "BIS_fnc_arsenal_center"; // BI Arsenal
 
     _ctrlMap ctrlShow !_hide;
     _ctrlBackground ctrlShow !_hide;
