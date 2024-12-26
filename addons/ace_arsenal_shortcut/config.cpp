@@ -3,3 +3,4 @@
 #include "\x\enh\addons\main\defineCtrls.inc"
 #include "cfgPatches.hpp"
 #include "display3DEN.hpp"
+#include "cfgFunctions.hpp"
