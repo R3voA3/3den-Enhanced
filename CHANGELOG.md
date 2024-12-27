@@ -4,7 +4,7 @@
 
 # 8.1.0
 ## ADDED
-- Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
+- Attribute can now be disabled by adding additional optional pbo files to the main folder ([Documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Removing-Attributes))
 
 - Shortcut to open ACE Arsenal if ACE is loaded (CTRL + SHIFT + L)
 
