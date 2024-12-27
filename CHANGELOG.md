@@ -1,9 +1,12 @@
+<!-- # 8.2.0
+## ADDED
+- Custom marker color attribute -->
 
 # 8.1.0
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder (ADD WIKI LINK HERE)
-- Custom marker color attribute
-- Shortcut to open ACE Arsenal if ACE is loaded
+
+- Shortcut to open ACE Arsenal if ACE is loaded (CTRL + SHIFT + L)
 
 - Improved Capture Frame UI
     - Added none transparent background
@@ -11,6 +14,9 @@
     - UI can no longer be moved
     - Added collapse and expand tree control buttons
     - Added button to open https://ui.perfetto.dev/ in default browser (Profiling.exe only)
+
+## CHANGED
+- Minimap is now hidden when arsenal is opened
 
 # 8.0.2
 ## CHANGED
