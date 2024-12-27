@@ -154,6 +154,7 @@ class CfgFunctions
             class entityList_addTooltips;
             class favoritesList;
             class locationList_enhanced;
+            class menuStrip_customize;
         };
         #ifdef ISDEV
         class Internal
