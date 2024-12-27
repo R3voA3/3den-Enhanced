@@ -35,8 +35,6 @@ class CfgFunctions
             class debugOptions_init;
             class dynamicSkill_onAttributeLoad;
             class dynamicSkill_onAttributeSave;
-            class markerColor_onAttributeLoad;
-            class markerColor_onAttributeSave;
             class establishingShot_onAttributeLoad;
             class establishingShot_onAttributeSave;
             class groupMarker_onAttributeLoad;
@@ -44,14 +42,16 @@ class CfgFunctions
             class groupMarker_onLoad;
             class holdAction_onAttributeLoad;
             class holdAction_onAttributeSave;
+            class inputList_add;
             class inputList_onAttributeLoad;
             class inputList_onAttributeSave;
-            class inputList_add;
             class inputList_remove;
             class introText_onAttributeLoad;
             class introText_onAttributeSave;
             class mapIndicators_onAttributeLoad;
             class mapIndicators_onAttributeSave;
+            // class markerColor_onAttributeLoad;
+            // class markerColor_onAttributeSave;
             class missionEndingCasualties_initDebriefingCombo;
             class missionEndingCasualties_onAttributeLoad;
             class missionEndingCasualties_onAttributeSave;
@@ -154,7 +154,6 @@ class CfgFunctions
             class entityList_addTooltips;
             class favoritesList;
             class locationList_enhanced;
-            class menuStrip_customize;
         };
         #ifdef ISDEV
         class Internal

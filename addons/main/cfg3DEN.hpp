@@ -78,7 +78,7 @@ class Cfg3DEN
         #include "controls\introText.hpp"
         #include "controls\largerEditMulti.hpp"
         #include "controls\mapIndicators.hpp"
-        #include "controls\markerColor.hpp"
+        // #include "controls\markerColor.hpp"
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\sliderMulti120.hpp"
         #include "controls\sliderMultiZero.hpp"
