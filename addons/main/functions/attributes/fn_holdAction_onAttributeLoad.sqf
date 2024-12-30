@@ -65,7 +65,7 @@ _value params
     "_priority",
     "_showUnconscious",
     "_showWindow",
-    "_template"
+    "_removeAfterUse"
 ];
 
 (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _name;
@@ -106,6 +106,7 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
 
 (_ctrlGroup controlsGroupCtrl 113) cbSetChecked _showUnconscious;
 (_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
+(_ctrlGroup controlsGroupCtrl 115) cbSetChecked _removeAfterUse;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
@@ -125,5 +126,5 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
     [_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "", 1000] call BIS_fnc_initSliderValue;
     (_ctrlGroup controlsGroupCtrl 113) cbSetChecked false;
     (_ctrlGroup controlsGroupCtrl 114) cbSetChecked true;
-    (_ctrlGroup controlsGroupCtrl 115) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl 115) cbSetChecked true;
 }];
