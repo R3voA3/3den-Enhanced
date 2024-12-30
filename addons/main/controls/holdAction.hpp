@@ -2,7 +2,7 @@ class ENH_HoldAction: Title
 {
     attributeLoad = "[_this, _value] call ENH_fnc_holdAction_onAttributeLoad";
     attributeSave = "_this call ENH_fnc_holdAction_onAttributeSave";
-    h = QUOTE(26 * CTRL_DEFAULT_H + 70 * pixelH);
+    h = QUOTE(27 * CTRL_DEFAULT_H + 70 * pixelH);
     class Controls: Controls
     {
         class NameTitle: Title
@@ -171,9 +171,20 @@ class ENH_HoldAction: Title
             idc = 114;
             y = QUOTE(24 * CTRL_DEFAULT_H + 60 * pixelH);
         };
+        class RemoveAfterUseTitle: Title
+        {
+            text = "$STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_TOOLTIP";
+            y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
+        };
+        class RemoveAfterUse: ShowUnconscious
+        {
+            idc = 115;
+            y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
+        };
         class Reset: ENH_ResetButton_Base
         {
-            y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
+            y = QUOTE(26 * CTRL_DEFAULT_H + 70 * pixelH);
         };
     };
 };
