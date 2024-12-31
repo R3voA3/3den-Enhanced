@@ -28,5 +28,6 @@ params ["_ctrlGroup"];
     sliderPosition (_ctrlGroup controlsGroupCtrl 109),
     sliderPosition (_ctrlGroup controlsGroupCtrl 111),
     cbChecked (_ctrlGroup controlsGroupCtrl 113),
-    cbChecked (_ctrlGroup controlsGroupCtrl 114)
+    cbChecked (_ctrlGroup controlsGroupCtrl 114),
+    cbChecked (_ctrlGroup controlsGroupCtrl 115)
 ];
