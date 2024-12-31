@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=82650;
+		nextID=82656;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1875;
+		nextID=1877;
 	};
 	class LayerIndexProvider
 	{
-		nextID=16915;
+		nextID=16935;
 	};
 	class Camera
 	{
-		pos[]={3978.4709,30,2852.3899};
+		pos[]={3977.8972,30,2852.3755};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -39,14 +39,27 @@ addons[]=
 	"A3_Characters_F_Mark",
 	"A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
 	"A3_Weapons_F_Mark_Acc",
+	"ace_realisticnames",
 	"A3_Weapons_F_Acc",
+	"ace_laserpointer",
 	"A3_Weapons_F_Mark",
+	"ace_ballistics",
 	"A3_Weapons_F_Pistols_P07",
 	"A3_Weapons_F",
+	"ace_smallarms",
+	"ace_optics",
 	"A3_Weapons_F_Items",
+	"ace_medical_engine",
+	"ace_medical_treatment",
+	"ace_attach",
+	"ace_chemlights",
+	"ace_explosives",
 	"A3_Weapons_F_Rifles_MX",
 	"A3_Sounds_F",
 	"A3_Sounds_F_Enoch",
+	"ace_scopes",
+	"ace_ai",
+	"ace_goggles",
 	"A3_Characters_F_Enoch_Headgear",
 	"A3_Weapons_F_Mark_Rifles_MX",
 	"A3_Characters_F_Heads",
@@ -63,8 +76,10 @@ addons[]=
 	"A3_Weapons_F_Enoch",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
+	"ace_cargo",
 	"A3_Structures_F_Items_Vessels",
 	"A3_Structures_F_Furniture",
+	"ace_sitting",
 	"A3_Props_F_Orange_Items_Tools",
 	"A3_Structures_F_Items_Tools",
 	"A3_Structures_F_EPA_Items_Tools",
@@ -75,6 +90,7 @@ addons[]=
 	"A3_Soft_F_Exp_LSV_01",
 	"A3_Structures_F_Civ_Camping",
 	"A3_Structures_F_Ind_Transmitter_Tower",
+	"ace_field_rations",
 	"A3_Structures_F_Heli_Civ_Constructions",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Orange_Humanitarian_Flags",
@@ -85,13 +101,14 @@ addons[]=
 	"A3_Props_F_Decade_Objectives",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Characters_F_Exp",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Modules_F_Multiplayer"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=41;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -122,146 +139,258 @@ class AddonsMetaData
 		};
 		class Item4
 		{
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item5
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item6
+		{
+			className="ace_smallarms";
+			name="ACE3 - Small Arms";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
+			className="ace_optics";
+			name="ACE3 - Optics";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item8
+		{
+			className="ace_medical_engine";
+			name="ACE3 - Medical Engine";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item9
+		{
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item10
+		{
+			className="ace_attach";
+			name="ACE3 - Attach";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item11
+		{
+			className="ace_chemlights";
+			name="ACE3 - Chemlights";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item12
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item13
+		{
 			className="A3_Sounds_F";
 			name="Arma 3 - Sound Effects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item14
 		{
 			className="A3_Sounds_F_Enoch";
 			name="Arma 3 Contact Platform - Sound Effects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item15
+		{
+			className="ace_scopes";
+			name="ACE3 - Scopes";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item16
+		{
+			className="ace_ai";
+			name="ACE3 - AI";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item17
+		{
+			className="ace_goggles";
+			name="ACE3 - Goggles";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item18
 		{
 			className="A3_Characters_F_Enoch";
 			name="Arma 3 Contact Platform - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item19
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item20
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item21
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Contact Platform - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item22
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item23
 		{
 			className="A3_Soft_F_Enoch";
 			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item24
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item25
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item26
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item27
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item28
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item29
+		{
+			className="ace_sitting";
+			name="ACE3 - Sitting";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item30
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item31
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item32
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item33
+		{
+			className="ace_field_rations";
+			name="ACE3 - Field Rations";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item34
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item35
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item36
 		{
 			className="A3_Props_F_Decade_Objectives";
 			name="A3_Props_F_Decade_Objectives";
 		};
-		class Item22
+		class Item37
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item38
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item39
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item40
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -321,6 +450,308 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="ENH_dynamicGroups";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ReviveForceRespawnDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=3;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveMedicSpeedMultiplier";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=2;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ENH_respawnTickets_civilian";
+			expression="if (!is3DEN && isMultiplayer && isServer) then {[civilian, _value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=100;
+				};
+			};
+		};
+		class Attribute7
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=120;
+				};
+			};
+		};
+		class Attribute8
+		{
+			property="ReviveDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=6;
+				};
+			};
+		};
+		class Attribute9
+		{
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=2;
+				};
+			};
+		};
+		class Attribute10
+		{
+			property="ENH_respawnTickets_independent";
+			expression="if (!is3DEN && isMultiplayer && isServer) then {[independent, _value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=100;
+				};
+			};
+		};
+		class Attribute11
+		{
+			property="ENH_saveLoadout";
+			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute12
+		{
+			property="ENH_respawnTickets_west";
+			expression="if (!is3DEN && isMultiplayer && isServer) then {[west, _value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=100;
+				};
+			};
+		};
+		class Attribute13
+		{
+			property="ReviveRequiredTrait";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute14
+		{
+			property="ENH_dynamicSkill";
+			expression="if (!is3DEN && _value # 0 && isServer) then            {                _value params                [                    '_enable',                    '_skillMinBLUFOR',                    '_skillAimMinBLUFOR',                    '_skillMaxBLUFOR',                    '_skillAimMaxBlUFOR',                    '_skillMinOPFOR',                    '_skillAimMinOPFOR',                    '_skillMaxOPFOR',                    '_skillAimMaxOPFOR',                    '_skillMinIndependent',                    '_skillAimMinIndependent',                    '_skillMaxIndependent',                    '_skillAimMaxIndependent'                ];                [                    true,                    [                        [WEST, _skillMinBLUFOR, _skillAimMinBLUFOR, _skillMaxBLUFOR, _skillAimMaxBlUFOR],                        [EAST, _skillMinOPFOR, _skillAimMinOPFOR, _skillMaxOPFOR, _skillAimMaxOPFOR],                        [INDEPENDENT, _skillMinIndependent, _skillAimMinIndependent, _skillMaxIndependent, _skillAimMaxIndependent]                    ]                ] call BIS_fnc_EXP_camp_dynamicAISkill;            }";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=13;
+						class Item0
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.2948752;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.30000001;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.36399186;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.60505724;
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.30000001;
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.62528646;
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.3656776;
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.68428838;
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0.5;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute15
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -367,111 +798,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="ReviveRequiredTrait";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute2
-		{
-			property="ReviveMode";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=1;
-				};
-			};
-		};
-		class Attribute3
-		{
-			property="ReviveForceRespawnDelay";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=3;
-				};
-			};
-		};
-		class Attribute4
-		{
-			property="ReviveBleedOutDelay";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=120;
-				};
-			};
-		};
-		class Attribute5
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=1;
-				};
-			};
-		};
-		class Attribute6
-		{
-			property="ReviveMedicSpeedMultiplier";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=2;
-				};
-			};
-		};
-		class Attribute7
-		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=2;
-				};
-			};
-		};
-		class Attribute8
-		{
-			property="ReviveDelay";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=6;
-				};
-			};
-		};
-		class Attribute9
+		class Attribute16
 		{
 			property="ReviveUnconsciousStateMode";
 			expression="false";
@@ -484,20 +811,20 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute10
+		class Attribute17
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="ENH_respawnTickets_east";
+			expression="if (!is3DEN && isMultiplayer && isServer) then {[east, _value] call BIS_fnc_respawnTickets}";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=100;
 				};
 			};
 		};
-		nAttributes=11;
+		nAttributes=18;
 	};
 	class Category1
 	{
@@ -1485,7 +1812,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=11;
 		class Item0
 		{
 			dataType="Group";
@@ -5777,7 +6104,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3989.9573,6.9147005,2882.6702};
+				position[]={3983.303,6.9147005,2882.917};
+				angles[]={0,2.7350879,0};
 			};
 			side="Empty";
 			flags=4;
@@ -5790,6 +6118,134 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ENH_HoldAction";
+					expression="            _value params ['_name', '_iconIdle', '_iconProgress', '_conditionShow', '_conditionProgress', '_codeStart', '_codeProgress', '_codeCompletion', '_codeInterrupt', '_duration', '_priority', '_showUnconscious', '_showWindow', '_removeAfterUse'];            if (!is3DEN && (_name != '')) then            {                if _removeAfterUse then                {                    _codeCompletion = format ['%1 %2', '[_this select 0, _this select 2] remoteExecCall [''removeAction'', 0]; remoteExecCall ['''', _this select 0];', _codeCompletion];                };                [                    _this,                    _name,                    _iconIdle,                    _iconProgress,                    _conditionShow,                    _conditionProgress,                    compile _codeStart,                    compile _codeProgress,                    compile _codeCompletion,                    compile _codeInterrupt,                    nil,                    _duration,                    _priority,                    _removeAfterUse,                    _showUnconscious,                    _showWindow                ] remoteExecCall ['BIS_fnc_holdActionAdd', 0, _this];            };";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=14;
+								class Item0
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Global Message (Persistent)";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="STRING";
+										value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+									};
+								};
+								class Item3
+								{
+									class data
+									{
+										singleType="STRING";
+										value="true";
+									};
+								};
+								class Item4
+								{
+									class data
+									{
+										singleType="STRING";
+										value="true";
+									};
+								};
+								class Item5
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item6
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item7
+								{
+									class data
+									{
+										singleType="STRING";
+										value="""Hello World"" remoteExecCall [""systemChat"", 0];";
+									};
+								};
+								class Item8
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item9
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=2;
+									};
+								};
+								class Item10
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1000;
+									};
+								};
+								class Item11
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+								class Item12
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item13
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ENH_WaterLeakiness";
 					expression="if (!is3DEN && {_value != getWaterLeakiness _this}) then {[_this, _value] remoteExec ['setWaterLeakiness', _this]}";
 					class Value
@@ -5801,7 +6257,20 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item5
@@ -5816,7 +6285,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3978.4709,5.0014391,2877.4399};
+						position[]={3974.4172,5.0014391,2877.4255};
 						angles[]={0,6.2759595,0};
 					};
 					side="West";
@@ -7025,12 +7494,1327 @@ class Mission
 			a=50;
 			b=50;
 			id=82649;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3982.3318,5.0014391,2877.4255};
+						angles[]={0,6.2759595,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+						description="2: Team Leader";
+						isPlayable=1;
+					};
+					id=82651;
+					type="B_CTRG_Soldier_TL_tna_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_EventHandlers_GestureDone";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureDone"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ENH_EventHandlers_Hit";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Hit"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ENH_EventHandlers_AnimStateChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimStateChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ENH_disableAI_radioProtocol";
+							expression="if _value then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="ENH_EventHandlers_SeatSwitchedMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SeatSwitchedMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ENH_EventHandlers_InventoryClosed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryClosed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="ENH_disableAI_autocombat";
+							expression="if _value then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="ENH_EventHandlers_InventoryOpened";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryOpened"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="ENH_disableAI_target";
+							expression="if _value then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="ENH_EventHandlers_EpeContact";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContact"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="ENH_EventHandlers_AnimChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="ENH_EventHandlers_WeaponChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="ENH_EventHandlers_Suppressed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Suppressed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="ENH_EventHandlers_EpeContactStart";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactStart"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="ENH_EventHandlers_Killed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Killed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="ENH_disableAI_suppression";
+							expression="if _value then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="ENH_disableAI_anim";
+							expression="if _value then {[_this, 'ANIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="ENH_EventHandlers_OpticsSwitch";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsSwitch"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute19
+						{
+							property="ENH_EventHandlers_SlotItemChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SlotItemChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute20
+						{
+							property="ENH_EventHandlers_Explosion";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Explosion"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute21
+						{
+							property="ENH_disableAI_FSM";
+							expression="if _value then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute22
+						{
+							property="ENH_disableAI_cover";
+							expression="if _value then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute23
+						{
+							property="ENH_EventHandlers_WeaponDisassembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDisassembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute24
+						{
+							property="ENH_EventHandlers_Put";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Put"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute25
+						{
+							property="ENH_EventHandlers_GestureChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute26
+						{
+							property="ENH_EventHandlers_Deleted";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute27
+						{
+							property="ENH_EventHandlers_MagazineUnloaded";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""MagazineUnloaded"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute28
+						{
+							property="ENH_disableAI_move";
+							expression="if _value then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute29
+						{
+							property="ENH_EventHandlers_HitPart";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HitPart"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute30
+						{
+							property="ENH_disableAI_mineDetection";
+							expression="if _value then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute31
+						{
+							property="ENH_disableAI_NVG";
+							expression="if _value then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute32
+						{
+							property="ENH_EventHandlers_WeaponDeployed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDeployed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute33
+						{
+							property="ENH_EventHandlers_Fired";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fired"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute34
+						{
+							property="ENH_disableAI_aimingError";
+							expression="if _value then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute35
+						{
+							property="ENH_EventHandlers_HandleHeal";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleHeal"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute36
+						{
+							property="ENH_EventHandlers_Detached";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Detached"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute37
+						{
+							property="ENH_EventHandlers_VisionModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VisionModeChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute38
+						{
+							property="ENH_disableAI_lights";
+							expression="if _value then {[_this, 'LIGHTS'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute39
+						{
+							property="ENH_EventHandlers_Assembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Assembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute40
+						{
+							property="ENH_EventHandlers_WeaponRested";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponRested"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute41
+						{
+							property="ENH_disableAI_weaponAim";
+							expression="if _value then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute42
+						{
+							property="ENH_EventHandlers_Dammaged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Dammaged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute43
+						{
+							property="ENH_EventHandlers_FiredNear";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredNear"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute44
+						{
+							property="ENH_EventHandlers_Local";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute45
+						{
+							property="ENH_disableAI_all";
+							expression="if _value then {[_this, 'all'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute46
+						{
+							property="ENH_EventHandlers_Respawn";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Respawn"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute47
+						{
+							property="ENH_disableAI_checkVisible";
+							expression="if _value then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute48
+						{
+							property="ENH_EventHandlers_LeaningChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaningChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute49
+						{
+							property="ENH_EventHandlers_AnimDone";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimDone"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute50
+						{
+							property="ENH_EventHandlers_OpticsModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsModeChanged"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute51
+						{
+							property="ENH_EventHandlers_GetInMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetInMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute52
+						{
+							property="ENH_EventHandlers_HandleIdentity";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleIdentity"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute53
+						{
+							property="ENH_EventHandlers_Attached";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Attached"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute54
+						{
+							property="ENH_disableAI_path";
+							expression="if _value then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute55
+						{
+							property="ENH_EventHandlers_FiredMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute56
+						{
+							property="ENH_EventHandlers_TaskSetAsCurrent";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""TaskSetAsCurrent"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute57
+						{
+							property="ENH_EventHandlers_EpeContactEnd";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactEnd"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute58
+						{
+							property="ENH_EventHandlers_Take";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Take"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute59
+						{
+							property="ENH_EventHandlers_HandleScore";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleScore"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute60
+						{
+							property="ENH_EventHandlers_LandingCanceled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LandingCanceled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute61
+						{
+							property="ENH_EventHandlers_Reloaded";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Reloaded"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute62
+						{
+							property="ENH_EventHandlers_WeaponAssembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponAssembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute63
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute64
+						{
+							property="ENH_EventHandlers_GetOutMan";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetOutMan"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute65
+						{
+							property="ENH_EventHandlers_SoundPlayed";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SoundPlayed"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute66
+						{
+							property="ENH_EventHandlers_Disassembled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Disassembled"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute67
+						{
+							property="ENH_EventHandlers_HandleRating";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleRating"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute68
+						{
+							property="ENH_disableAI_autotarget";
+							expression="if _value then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute69
+						{
+							property="ENH_EventHandlers_HandleDamage";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleDamage"", compile _value]})";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+								};
+							};
+						};
+						class Attribute70
+						{
+							property="ENH_disableAI_teamswitch";
+							expression="if _value then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=71;
+					};
+				};
+			};
+			class Attributes
+			{
+				formation="DIAMOND";
+			};
+			id=82650;
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					property="ENH_EventHandlers_Deleted";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_EventHandlers_Fleeing";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fleeing"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ENH_EventHandlers_EnemyDetected";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnemyDetected"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ENH_EventHandlers_GroupIdChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GroupIdChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ENH_EventHandlers_FormationChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FormationChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ENH_EventHandlers_UnitJoined";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitJoined"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ENH_EventHandlers_SpeedModeChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SpeedModeChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ENH_EventHandlers_WaypointComplete";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WaypointComplete"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ENH_EventHandlers_LeaderChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaderChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ENH_EventHandlers_EnableAttackChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnableAttackChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ENH_EventHandlers_Local";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ENH_EventHandlers_Empty";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Empty"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ENH_EventHandlers_KnowsAboutChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""KnowsAboutChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ENH_EventHandlers_UnitKilled";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitKilled"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ENH_EventHandlers_CommandChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CommandChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ENH_EventHandlers_UnitLeft";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitLeft"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ENH_EventHandlers_CombatModeChanged";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CombatModeChanged"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ENH_EventHandlers_VehicleRemoved";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleRemoved"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ENH_EventHandlers_VehicleAdded";
+					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleAdded"", compile _value]})";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="diag_log [_thisEvent, _this, _thisEventHandler, _thisArgs];";
+						};
+					};
+				};
+				nAttributes=19;
+			};
+		};
+		class Item8
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3978.4299,5,2886.5039};
+			};
+			id=82653;
+			type="ModuleRespawnPosition_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnPosition_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnPosition_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Main Base";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnPosition_F_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnPosition_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnPosition_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={3977.95,5,2903.4121};
+			name="marker_1876";
+			text="FOB";
+			type="b_hq";
+			id=82654;
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3971.1201,6.9147005,2881.9751};
+				angles[]={0,3.4854574,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=82655;
+			type="B_Truck_01_mover_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_HoldAction";
+					expression="            _value params ['_name', '_iconIdle', '_iconProgress', '_conditionShow', '_conditionProgress', '_codeStart', '_codeProgress', '_codeCompletion', '_codeInterrupt', '_duration', '_priority', '_showUnconscious', '_showWindow', '_removeAfterUse'];            if (!is3DEN && (_name != '')) then            {                if _removeAfterUse then                {                    _codeCompletion = format ['%1 %2', '[_this select 0, _this select 2] remoteExecCall [''removeAction'', 0]; remoteExecCall ['''', _this select 0];', _codeCompletion];                };                [                    _this,                    _name,                    _iconIdle,                    _iconProgress,                    _conditionShow,                    _conditionProgress,                    compile _codeStart,                    compile _codeProgress,                    compile _codeCompletion,                    compile _codeInterrupt,                    nil,                    _duration,                    _priority,                    _removeAfterUse,                    _showUnconscious,                    _showWindow                ] remoteExecCall ['BIS_fnc_holdActionAdd', 0, _this];            };";
 					class Value
 					{
 						class data
@@ -7038,13 +8822,13 @@ class Mission
 							singleType="ARRAY";
 							class value
 							{
-								items=2;
+								items=14;
 								class Item0
 								{
 									class data
 									{
-										singleType="BOOL";
-										value=1;
+										singleType="STRING";
+										value="Global Message (One time)";
 									};
 								};
 								class Item1
@@ -7052,14 +8836,136 @@ class Mission
 									class data
 									{
 										singleType="STRING";
-										value="#(0.36,0.76,0.71)";
+										value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="STRING";
+										value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+									};
+								};
+								class Item3
+								{
+									class data
+									{
+										singleType="STRING";
+										value="true";
+									};
+								};
+								class Item4
+								{
+									class data
+									{
+										singleType="STRING";
+										value="true";
+									};
+								};
+								class Item5
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item6
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item7
+								{
+									class data
+									{
+										singleType="STRING";
+										value="""Hello World"" remoteExecCall [""systemChat"", 0];";
+									};
+								};
+								class Item8
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+								class Item9
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=2;
+									};
+								};
+								class Item10
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1000;
+									};
+								};
+								class Item11
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+								class Item12
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item13
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
 									};
 								};
 							};
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ENH_WaterLeakiness";
+					expression="if (!is3DEN && {_value != getWaterLeakiness _this}) then {[_this, _value] remoteExec ['setWaterLeakiness', _this]}";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 	};
