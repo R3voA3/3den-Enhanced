@@ -250,10 +250,10 @@ class Cfg3DEN
             };
             class Style
             {
-                class Attributes
-                {
-                    #include "attributesMarker\markerColor.hpp"
-                };
+                // class Attributes
+                // {
+                //     #include "attributesMarker\markerColor.hpp"
+                // };
             };
             #include "attributesMarker\markerHideOnStart.hpp"
         };
