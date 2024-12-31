@@ -2,10 +2,9 @@
 ## ADDED
 - Custom marker color attribute -->
 
-<!-- # 8.2.0
+# 8.2.0
 ## ADDED
-- The ability to make hold actions persistent -->
-
+- The ability to make hold actions persistent
 
 # 8.1.0
 ## ADDED
