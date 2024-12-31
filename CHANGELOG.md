@@ -2,6 +2,10 @@
 ## ADDED
 - Custom marker color attribute -->
 
+# 8.1.1
+## CHANGED
+- Fixed config error when opening marker attributes
+
 # 8.1.0
 ## ADDED
 - Attribute can now be disabled by adding additional optional pbo files to the main folder ([Documentation](https://github.com/R3voA3/3den-Enhanced/wiki/Removing-Attributes))
