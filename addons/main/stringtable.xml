@@ -7085,15 +7085,15 @@
             <Chinesesimp>要显示的动作条件。传递的参数是:\n_target, _this (caller)。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_DESCRIPTION">
-            <English>Adds a hold action to this entity. Once the action was completed it is removed for all clients.</English>
-            <French>Ajouter une hold action à cette entitée. Lorsque l'action est complétée, elle est supprimée pour tous les clients.</French>
-            <Spanish>Agrega una acción de retención a esta entidad. Una vez que se completó la acción, se elimina para todos los clientes.</Spanish>
-            <Italian>Aggiunge un'azione di attesa a questa entità. Una volta completata, l'azione viene rimossa per tutti i clienti.</Italian>
-            <Polish>Dodaje akcję typu Hold Action do obiektu. Gdy akcja zostanie wykonana, będzie ona usunięta u wszystkich graczy.</Polish>
-            <Russian>Добавляет к объекту действие при удержании кнопки. После завершения действия оно удаляется для всех клиентов.</Russian>
-            <German>Fügt dieser Entität eine 'HoldAction' hinzu. Sobald die Aktion beendet wurde, wird sie von allen Spielern entfernt.</German>
-            <Chinese>向此實體添加一個保持動作。動作完成後，所有客戶端都會刪除該動作。</Chinese>
-            <Chinesesimp>向此实体添加一个保持动作。动作完成后，所有客户端都会删除该动作。</Chinesesimp>
+            <English>Adds a hold action to this entity.</English>
+            <French>Ajouter une hold action à cette entitée.</French>
+            <Spanish>Agrega una acción de retención a esta entidad.</Spanish>
+            <Italian>Aggiunge un'azione di attesa a questa entità.</Italian>
+            <Polish>Dodaje akcję typu Hold Action do obiektu.</Polish>
+            <Russian>Добавляет к объекту действие при удержании кнопки.</Russian>
+            <German>Fügt dieser Entität eine Halte-Aktion hinzu.</German>
+            <Chinese>向此實體添加一個保持動作。</Chinese>
+            <Chinesesimp>向此实体添加一个保持动作。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_DISPLAYNAME">
             <English>Hold Action</English>
