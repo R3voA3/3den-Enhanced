@@ -1,1 +1,1 @@
-systemChat format ['onEntityParentChanged.sqf, %1', _this];
+[format ['onEntityParentChanged.sqf, %1', _this]] call ENH_fnc_log;

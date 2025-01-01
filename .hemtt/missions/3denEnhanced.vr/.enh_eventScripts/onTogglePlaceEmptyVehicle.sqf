@@ -1,1 +1,1 @@
-systemChat format ['onTogglePlaceEmptyVehicle.sqf, %1', _this];
+[format ['onTogglePlaceEmptyVehicle.sqf, %1', _this]] call ENH_fnc_log;

@@ -1,1 +1,1 @@
-systemChat format ['onSelectionChange.sqf, %1', _this];
+[format ['onSelectionChange.sqf, %1', _this]] call ENH_fnc_log;

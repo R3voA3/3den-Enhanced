@@ -1,1 +1,1 @@
-systemChat format ['onServerToggle.sqf, %1', _this];
+[format ['onServerToggle.sqf, %1', _this]] call ENH_fnc_log;
