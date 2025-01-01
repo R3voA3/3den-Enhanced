@@ -1,1 +1,1 @@
-systemChat format ['onPaste.sqf, %1', _this];
+[format ['onPaste.sqf, %1', _this]] call ENH_fnc_log;

@@ -1,1 +1,1 @@
-systemChat format ['onGridChange.sqf, %1', _this];
+[format ['onGridChange.sqf, %1', _this]] call ENH_fnc_log;

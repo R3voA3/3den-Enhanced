@@ -1,1 +1,1 @@
-systemChat format ['onMissionExportSP.sqf, %1', _this];
+[format ['onMissionExportSP.sqf, %1', _this]] call ENH_fnc_log;

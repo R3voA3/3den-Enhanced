@@ -24,7 +24,7 @@ allVariables missionNamespace apply
     if (_x select [0, 4] == "enh_") then
     {
         [_x] call BIS_fnc_recompile;
-        diag_log format ["Function %1 was recompiled.", toUpper _x];
+        [format ["Function %1 was recompiled.", _x]] call ENH_fnc_log;
     };
 };
 

@@ -163,6 +163,8 @@ class CfgFunctions
             class exportAttributesToGitHub;
             class exportContextMenuToGitHub;
             class exportMenuStripToGitHub;
+            class log;
+            class logShow;
             class recompileFunctions;
             class testDisplays;
         };
@@ -178,7 +180,6 @@ class CfgFunctions
         class Misc
         {
             file = "x\enh\addons\main\functions\Misc";
-            class VHCTools;
             class alignEntities;
             class all3DENSelected;
             class centerMapOnSelection;
@@ -186,6 +187,7 @@ class CfgFunctions
             class deleteCrew;
             class deleteEmptyLayers;
             class floatToTime;
+            class formatInteger;
             class getAllItems;
             class getConfigSourceAddon;
             class hasStorage;
@@ -199,6 +201,7 @@ class CfgFunctions
             class systemTimeFormatted;
             class toggleAttributes;
             class toggleGrass;
+            class VHCTools;
         };
         class ModuleInformation
         {

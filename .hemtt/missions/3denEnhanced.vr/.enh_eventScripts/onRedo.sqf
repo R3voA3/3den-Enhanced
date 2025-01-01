@@ -1,1 +1,1 @@
-systemChat format ['onRedo.sqf, %1', _this];
+[format ['onRedo.sqf, %1', _this]] call ENH_fnc_log;
