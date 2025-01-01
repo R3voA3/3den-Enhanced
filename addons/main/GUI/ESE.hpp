@@ -43,7 +43,6 @@ class ENH_ESE
             w = QUOTE((WINDOW_W_WIDE * 1/4) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             font = FONT_BOLD;
-            //sizeEx = SIZEEX_PURISTA(SIZEEX_L);
             sizeEx = QUOTE(4.86 * SIZEEX_BASE);
             style = ST_CENTER;
         };
@@ -109,9 +108,7 @@ class ENH_ESE
                         "SortbyClass",
                         "SortbyCount",
                         "SortbyMod",
-                        "SortbyType",
-                        "Separator"/* ,
-                        "ImportFromClipboard" */
+                        "SortbyType"
                     };
                 };
                 class FolderFilter
@@ -142,11 +139,7 @@ class ENH_ESE
                         "Backpacks",
                         "Headgear",
                         "Goggles",
-                        "NVGs",
-                        "Separator",
-                        // "ImportToFilter",
-                        "Separator",
-                        "ResetToAllItems"
+                        "NVGs"
                     };
                 };
                 class FolderHelp
