@@ -2,7 +2,7 @@ class ENH_HoldAction: Title
 {
     attributeLoad = "[_this, _value] call ENH_fnc_holdAction_onAttributeLoad";
     attributeSave = "_this call ENH_fnc_holdAction_onAttributeSave";
-    h = QUOTE(27 * CTRL_DEFAULT_H + 70 * pixelH);
+    h = QUOTE(27 * CTRL_DEFAULT_H + 75 * pixelH);
     class Controls: Controls
     {
         class NameTitle: Title
