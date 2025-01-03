@@ -6952,28 +6952,6 @@
             <Chinese>完成後執行的代碼。傳遞的參數是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinese>
             <Chinesesimp>完成后执行的代码。传递的参数是:\nparams ["_target", "_caller", "_actionId", "_arguments"];</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_DISPLAYNAME">
-            <English>Remove when used</English>
-            <French>Retirer en cas d'utilisation</French>
-            <Spanish>Retirar cuando se utilice</Spanish>
-            <Italian>Rimuovere quando viene utilizzato</Italian>
-            <Polish>Usunąć po użyciu</Polish>
-            <Russian>Удалите после использования</Russian>
-            <German>Entfernen wenn ausgeführt</German>
-            <Chinese>使用時移除</Chinese>
-            <Chinesesimp>使用时取下</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_TOOLTIP">
-            <English>Removes the action from all players once it was executed by any player.</English>
-            <French>Supprime l'action de tous les joueurs dès qu'elle a été effectuée par n'importe quel joueur.</French>
-            <Spanish>Elimina la acción de todos los jugadores tan pronto como la haya realizado cualquier jugador.</Spanish>
-            <Italian>Rimuove l'azione da tutti i giocatori non appena è stata eseguita da un giocatore qualsiasi.</Italian>
-            <Polish>Usuwa akcję ze wszystkich graczy, gdy tylko zostanie ona wykonana przez któregokolwiek z nich.</Polish>
-            <Russian>Удаляет действие со всех игроков, как только оно было выполнено любым игроком.</Russian>
-            <German>Entfernt die Aktion von allen Spielern, sobald sie von einem beliebigen Spieler ausgeführt wurde.</German>
-            <Chinese>只要任何玩家執行了動作，就會移除所有玩家的動作。</Chinese>
-            <Chinesesimp>一旦任何玩家执行了该操作，就会从所有玩家身上删除该操作。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_CODEINTERRUPT_DISPLAYNAME">
             <English>Code Interrupt</English>
             <French>Code d'interruption</French>
@@ -7160,6 +7138,28 @@
             <German>Priorität</German>
             <Chinese>優先級</Chinese>
             <Chinesesimp>优先级</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_DISPLAYNAME">
+            <English>Remove when used</English>
+            <French>Retirer en cas d'utilisation</French>
+            <Spanish>Retirar cuando se utilice</Spanish>
+            <Italian>Rimuovere quando viene utilizzato</Italian>
+            <Polish>Usunąć po użyciu</Polish>
+            <Russian>Удалите после использования</Russian>
+            <German>Entfernen wenn ausgeführt</German>
+            <Chinese>使用時移除</Chinese>
+            <Chinesesimp>使用时取下</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_TOOLTIP">
+            <English>Removes the action from all players once it was executed by any player.</English>
+            <French>Supprime l'action de tous les joueurs dès qu'elle a été effectuée par n'importe quel joueur.</French>
+            <Spanish>Elimina la acción de todos los jugadores tan pronto como la haya realizado cualquier jugador.</Spanish>
+            <Italian>Rimuove l'azione da tutti i giocatori non appena è stata eseguita da un giocatore qualsiasi.</Italian>
+            <Polish>Usuwa akcję ze wszystkich graczy, gdy tylko zostanie ona wykonana przez któregokolwiek z nich.</Polish>
+            <Russian>Удаляет действие со всех игроков, как только оно было выполнено любым игроком.</Russian>
+            <German>Entfernt die Aktion von allen Spielern, sobald sie von einem beliebigen Spieler ausgeführt wurde.</German>
+            <Chinese>只要任何玩家執行了動作，就會移除所有玩家的動作。</Chinese>
+            <Chinesesimp>一旦任何玩家执行了该操作，就会从所有玩家身上删除该操作。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME">
             <English>Show when Unconscious?</English>
