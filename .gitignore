@@ -8,4 +8,4 @@
 #Folders
 .hemttout
 .vscode
-.hemtt/missions/**/*.enh_mission_sqm_backups
+.hemtt/missions/
