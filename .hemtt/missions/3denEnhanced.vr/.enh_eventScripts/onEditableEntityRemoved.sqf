@@ -1,1 +1,1 @@
-systemChat format ['onEditableEntityRemoved.sqf, %1', _this];
+[format ['onEditableEntityRemoved.sqf, %1', _this]] call ENH_fnc_log;

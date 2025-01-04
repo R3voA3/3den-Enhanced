@@ -6,6 +6,9 @@
 ## ADDED
 - The ability to make hold actions persistent
 
+## CHANGED
+- Removed unused menu strip entries from ESE
+
 # 8.1.1
 ## CHANGED
 - Fixed config error when opening marker attributes

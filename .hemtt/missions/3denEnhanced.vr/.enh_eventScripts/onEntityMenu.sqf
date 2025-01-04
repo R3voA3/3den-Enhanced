@@ -1,1 +1,1 @@
-systemChat format ['onEntityMenu.sqf, %1', _this];
+[format ['onEntityMenu.sqf, %1', _this]] call ENH_fnc_log;

@@ -1,1 +1,1 @@
-systemChat format ['onToggleMapTextures.sqf, %1', _this];
+[format ['onToggleMapTextures.sqf, %1', _this]] call ENH_fnc_log;
