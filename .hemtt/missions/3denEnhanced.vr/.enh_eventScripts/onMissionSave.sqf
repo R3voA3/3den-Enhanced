@@ -1,3 +1,3 @@
-systemChat format ['onMissionSave.sqf, %1', _this];
+[format ['onMissionSave.sqf, %1', _this]] call ENH_fnc_log;
 
-saveProfileNamespace;
+[saveProfileNamespace] call ENH_fnc_log;

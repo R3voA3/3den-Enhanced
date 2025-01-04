@@ -1,1 +1,1 @@
-systemChat format ['onWorkspacePartSwitch.sqf, %1', _this];
+[format ['onWorkspacePartSwitch.sqf, %1', _this]] call ENH_fnc_log;

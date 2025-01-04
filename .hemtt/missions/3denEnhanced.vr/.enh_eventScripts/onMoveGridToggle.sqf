@@ -1,1 +1,1 @@
-systemChat format ['onMoveGridToggle.sqf, %1', _this];
+[format ['onMoveGridToggle.sqf, %1', _this]] call ENH_fnc_log;

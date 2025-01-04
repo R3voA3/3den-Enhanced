@@ -38,6 +38,6 @@ findDisplay IDD_DISPLAY3DEN displayAddEventHandler ["KeyDown",
         private _nextDisplay = ENH_Displays#ENH_Displays_Index;
 
         uiNamespace setVariable ["ENH_Displays_Current", findDisplay IDD_DISPLAY3DEN createDisplay _nextDisplay];
-        systemChat format ["Display: %1 (%2/%3)", _nextDisplay, ENH_Displays_Index + 1, count ENH_Displays];
+        (format ["Display: %1 (%2/%3)", _nextDisplay, ENH_Displays_Index + 1, count ENH_Displays]) call ENH_fnc_log;
     };
 }];

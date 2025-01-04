@@ -1,1 +1,1 @@
-systemChat format ['onWidgetTranslation.sqf, %1', _this];
+[format ['onWidgetTranslation.sqf, %1', _this]] call ENH_fnc_log;

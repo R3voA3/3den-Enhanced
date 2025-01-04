@@ -1,1 +1,1 @@
-systemChat format ['onModeChange.sqf, %1', _this];
+[format ['onModeChange.sqf, %1', _this]] call ENH_fnc_log;

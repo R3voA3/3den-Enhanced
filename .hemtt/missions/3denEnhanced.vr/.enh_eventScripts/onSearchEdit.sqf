@@ -1,1 +1,1 @@
-systemChat format ['onSearchEdit.sqf, %1', _this];
+[format ['onSearchEdit.sqf, %1', _this]] call ENH_fnc_log;
