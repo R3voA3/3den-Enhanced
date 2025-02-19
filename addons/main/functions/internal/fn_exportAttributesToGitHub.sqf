@@ -74,7 +74,7 @@ private _config = configNull;
 
                 if _hasSubCategory then
                 {
-                    _displayName = format ["==== %1 ====", _displayName];
+                    _displayName = format ["==== %1 ====", _displayName] + endl;
                 }
                 else
                 {
