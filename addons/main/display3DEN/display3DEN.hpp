@@ -32,10 +32,9 @@ class Display3DEN
                     w = QUOTE(19 * GRID_W);
                 };
                 // Manually re-config version info into a button to save screen space
-                class Version: ValueX
+                class Version: ctrlButton
                 {
                     idc = IDC_NONE;
-                    type = CT_BUTTON;
                     text = "V";
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
                     y = QUOTE(2 * pixelH);
@@ -45,32 +44,6 @@ class Display3DEN
                     onButtonClick = "call ENH_fnc_productInfo";
                     colorBackground[] = {0, 0, 0, 0.5};
                     style = QUOTE(ST_CENTER + ST_UPPERCASE);
-                    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
-                    colorBackgroundActive[] = {COLOR_ACTIVE_RGBA};
-                    colorFocused[] = {COLOR_ACTIVE_RGBA};
-                    colorText[] = {1, 1, 1, 1};
-                    colorDisabled[] = {1, 1, 1, 0.25};
-                    borderSize = 0;
-                    colorBorder[] = {0, 0, 0, 0};
-                    colorShadow[] = {0, 0, 0, 0};
-                    offsetX = 0;
-                    offsetY = 0;
-                    offsetPressedX = "pixelW";
-                    offsetPressedY = "pixelH";
-                    period = 0;
-                    periodFocus = 2;
-                    periodOver = 0.5;
-                    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
-                    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
-                    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
-                    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
-                    shadow = 1;
-                    blinkingPeriod = 0;
-                    tooltip = "";
-                    tooltipMaxWidth = 0.5;
-                    tooltipColorShade[] = {0, 0, 0, 1};
-                    tooltipColorText[] = {1, 1, 1, 1};
-                    tooltipColorBox[] = {0, 0, 0, 0};
                 };
                 class TextY: TextX
                 {
