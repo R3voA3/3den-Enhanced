@@ -99,8 +99,8 @@ CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["LBDblClick",
 //Key down event
 CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["KeyDown",
 {
-    _this call ENH_fnc_3DENRadio_handlePlaylist;
-    _this call ENH_fnc_3DENRadio_exportClassname;
+    call ENH_fnc_3DENRadio_handlePlaylist;
+    call ENH_fnc_3DENRadio_exportClassname;
 }];
 
 //Toggle radio
