@@ -751,8 +751,8 @@
         </Key>
         <Key ID="STR_ENH_MAIN_ATTRIBUTES_EVENT_HANDLERS_DISPLAYNAME">
             <English>Events</English>
-            <German>Ereignisse</German>
             <French>Evénements</French>
+            <German>Ereignisse</German>
         </Key>
         <Key ID="STR_ENH_MAIN_AUDIBLECOEF_DISPLAYNAME">
             <English>Audible Coefficient</English>
@@ -6929,8 +6929,8 @@
         </Key>
         <Key ID="STR_ENH_MAIN_GROUP_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; variable. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; for more information.</English>
-            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;.</German>
             <French>Event Handlers est déclenché lors de certains événements. Le gestionnaire d'événements est ajouté lorsque l'entité est locale. Les paramètres de l'événement lui sont transmis via la variable &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; .Voir &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; et &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; pour plus d'informations.</French>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_CODECOMPLETE_DISPLAYNAME">
             <English>Code Complete</English>
@@ -7188,6 +7188,7 @@
         <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
             <English>Removes selected entry from the list.</English>
             <Czech>Odebere vybranou položku ze seznamu.</Czech>
+            <French>Supprime l'entrée sélectionnée de la liste.</French>
             <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
             <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
             <Polish>Usuwa wybraną pozycję z listy.</Polish>
@@ -7196,7 +7197,6 @@
             <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
             <Chinese>從清單中移除選取的項目。</Chinese>
             <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
-            <French>Supprime l'entrée sélectionnée de la liste.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
             <English>Multiple entries can be added at once by separating them with a space, a comma or a semicolon.</English>
@@ -7835,33 +7835,33 @@
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_GLOBAL_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added globally. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3: Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt; for more information. The event ID is available through the variable 'ENH_MissionEventHandlers_EVENTNAME_ID'.</English>
-            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird global hinzugefügt. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MissionEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
             <French>Event Handlers est déclenché lors de certains événements. Le gestionnaire d'événement est ajouté globalement. Voir &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; et &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; pour plus d'informations. L'identifiant de l'événement est disponible via la variable « ENH_MissionEventHandlers_EVENTNAME_ID ».</French>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird global hinzugefügt. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MissionEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_GLOBAL_DISPLAYNAME">
             <English>Mission Events - Global</English>
-            <German>Missionsereignisse - Global</German>
             <French>Événements de mission - Global</French>
+            <German>Missionsereignisse - Global</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_MUSIC_GLOBAL_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added on every client with an interface. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#Music_Event_Handlers'&gt;Arma 3 - Music Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMusicEventHandler'&gt;addMusicEventHandler&lt;/a&gt; for more information. The event ID is available through the variable 'ENH_MusicEventHandlers_EVENTNAME_ID'.</English>
-            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird zu jedem Client hinzugefügt der eine Benutzeroberfläche hat. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#Music_Event_Handlers'&gt;Arma 3 - Music Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMusicEventHandler'&gt;addMusicEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MusicEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
             <French>Event Handlers est déclenché lors de certains événements. Le gestionnaire d'événements est ajouté à chaque client disposant d'une interface. Le gestionnaire d'événements est ajouté à chaque client disposant d'une interface. Voir &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; et &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; pour plus d'informations. L'identifiant de l'événement est disponible via la variable « ENH_MusicEventHandlers_EVENTNAME_ID ».</French>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird zu jedem Client hinzugefügt der eine Benutzeroberfläche hat. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#Music_Event_Handlers'&gt;Arma 3 - Music Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMusicEventHandler'&gt;addMusicEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MusicEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_MUSIC_GLOBAL_DISPLAYNAME">
             <English>Music Events - Global</English>
-            <German>Musikereignisse - Global</German>
             <French>Événements musicaux - Global</French>
+            <German>Musikereignisse - Global</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_SERVER_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added on the server only. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3: Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt; for more information. The event ID is available through the variable 'ENH_MissionEventHandlers_EVENTNAME_ID'.</English>
-            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler nur auf dem Server hinzugefügt. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MissionEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
             <French>Event Handlers est déclenché lors de certains événements. Le gestionnaire d'événement est ajouté sur le serveur uniquement. Voir &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; et &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; pour plus d'informations. L'identifiant de l'événement est disponible via la variable « ENH_MissionEventHandlers_EVENTNAME_ID ».</French>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler nur auf dem Server hinzugefügt. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:Mission_Event_Handlers'&gt;Arma 3 - Mission Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addMissionEventHandler'&gt;addMissionEventHandler&lt;/a&gt;. Die Ereignis-ID steht in der 'ENH_MissionEventHandlers_EVENTNAME_ID' variable zur Verfügung.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSION_ATTRIBUTES_EVENT_HANDLERS_SERVER_DISPLAYNAME">
             <English>Mission Events - Server</English>
-            <German>Missionsereignisse - Server</German>
             <French>Événements de mission - Serveur</French>
+            <German>Missionsereignisse - Server</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MODULEINFORMATION">
             <English>Module Information</English>
@@ -8032,8 +8032,8 @@
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_ALIGN_ENTITIES_WRONG_INDEX">
             <English>Index cannot be greater 2. Index was set to 2.</English>
-            <German>Der Index darf nicht größer 2 sein. Index auf 2 gesetzt.</German>
             <French>L'indice ne peut être supérieur à 2. L'indice a été fixé à 2.</French>
+            <German>Der Index darf nicht größer 2 sein. Index auf 2 gesetzt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_BACKUP_FAILED">
             <English>Backup option is enabled but no &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification was loaded. Backup failed!</English>
@@ -8106,8 +8106,8 @@
         </Key>
         <Key ID="STR_ENH_MAIN_OBJECT_ATTRIBUTES_EVENT_HANDLERS_DESCRIPTION">
             <English>Event Handlers are triggered upon certain events. The event handler is added where the entity is local. Event parameters are passed to it via the &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; variable. See &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; for more information.</English>
-            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;</German>
             <French>Event Handlers est déclenché lors de certains événements. Le gestionnaire d'événement est ajouté lorsque l'entité est locale. Les paramètres de l'événement lui sont transmis via la variable &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt;. Voir &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; et &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt; pour plus d'informations.</French>
+            <German>Event-Handler werden zu bestimmten Ereignissen ausgelöst. Der Event-Handler wird dort hinzugefügt wo die Entität lokal ist. Ereignisparamter stehen in &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Magic_Variables#this'&gt;_this&lt;/a&gt; Variable zur Verfügung. Mehr Informationen findest du auf &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/Arma_3:_Event_Handlers'&gt;Arma 3 - Event Handlers&lt;/a&gt; and &lt;t colorLink='#e69710'&gt;&lt;a href='https://community.bistudio.com/wiki/addEventHandler'&gt;addEventHandler&lt;/a&gt;</German>
         </Key>
         <Key ID="STR_ENH_MAIN_OBJVIEWDISTANCE_DISPLAYNAME">
             <English>Object View Distance</English>
