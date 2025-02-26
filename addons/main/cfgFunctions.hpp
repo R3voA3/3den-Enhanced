@@ -118,7 +118,6 @@ class CfgFunctions
             class ESE_removeItem;
             class ESE_resetSearch;
             class ESE_resetStorage;
-            class ESE_resetToAllItems;
             class ESE_search;
             class ESE_sort;
             class ESE_toggleVirtual;

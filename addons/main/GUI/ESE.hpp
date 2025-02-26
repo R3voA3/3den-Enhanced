@@ -403,12 +403,6 @@ class ENH_ESE
                     picture = "\a3\ui_f\data\igui\cfg\actions\loadvehicle_ca.paa";
                     action = "[] call ENH_fnc_ESE_importToFilter";
                 };
-                class ResetToAllItems
-                {
-                    text = "$STR_ENH_MAIN_ESE_RESET";
-                    picture = "\A3\ui_f\data\igui\rsctitles\mpprogress\respawn_ca.paa";
-                    action = "[] call ENH_fnc_ESE_resetToAllItems";
-                };
                 class InventoryItems: ARs
                 {
                     text = "$STR_A3_CFGVEHICLECLASSES_ITEMS0";
