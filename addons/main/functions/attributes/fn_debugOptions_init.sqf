@@ -84,11 +84,11 @@ if GETVALUE("Zeus") then
         player assignCurator _zeusModule;
         //Add Interface EHs (Workaround)
         _zeusModule addCuratorEditableObjects [entities "", true];
-        _zeusModule addEventHandler ["CuratorFeedbackMessage", {_this call BIS_fnc_showCuratorFeedbackMessage;}];
-        _zeusModule addEventHandler ["CuratorPinged", {_this call BIS_fnc_curatorPinged;}];
-        _zeusModule addEventHandler ["CuratorObjectPlaced", {_this call BIS_fnc_curatorObjectPlaced;}];
-        _zeusModule addEventHandler ["CuratorObjectEdited", {_this call BIS_fnc_curatorObjectEdited;}];
-        _zeusModule addEventHandler ["CuratorWaypointPlaced", {_this call BIS_fnc_curatorWaypointPlaced;}];
+        _zeusModule addEventHandler ["CuratorFeedbackMessage", {call BIS_fnc_showCuratorFeedbackMessage;}];
+        _zeusModule addEventHandler ["CuratorPinged", {call BIS_fnc_curatorPinged;}];
+        _zeusModule addEventHandler ["CuratorObjectPlaced", {call BIS_fnc_curatorObjectPlaced;}];
+        _zeusModule addEventHandler ["CuratorObjectEdited", {call BIS_fnc_curatorObjectEdited;}];
+        _zeusModule addEventHandler ["CuratorWaypointPlaced", {call BIS_fnc_curatorWaypointPlaced;}];
         _zeusModule addEventHandler ["CuratorObjectDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
         _zeusModule addEventHandler ["CuratorGroupDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];
         _zeusModule addEventHandler ["CuratorWaypointDoubleClicked", {(_this select 1) call BIS_fnc_showCuratorAttributes;}];

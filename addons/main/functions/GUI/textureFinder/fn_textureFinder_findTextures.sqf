@@ -36,12 +36,12 @@ _display displayAddEventHandler ["KeyDown",
 //Update preview
 CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["TreeMouseMove",
 {
-    _this call ENH_fnc_textureFinder_updatePreview;
+    call ENH_fnc_textureFinder_updatePreview;
 }];
 
 CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["TreeMouseHold",
 {
-    _this call ENH_fnc_textureFinder_updatePreview;
+    call ENH_fnc_textureFinder_updatePreview;
 }];
 
 //Collapse

@@ -224,7 +224,7 @@ ENH_fnc_attributeSearch_editAttributes =
 
 _ctrlTV ctrlAddEventHandler ["TreeDblClick",
 {
-    _this call ENH_fnc_attributeSearch_editAttributes;
+    call ENH_fnc_attributeSearch_editAttributes;
 }];
 
 (ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES) ctrlAddEventHandler ["ButtonClick",
