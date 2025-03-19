@@ -2,6 +2,9 @@
 ## ADDED
 - Custom marker color attribute -->
 
+## CHANGED
+- Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
+
 # 8.2.0
 ## ADDED
 - The ability to make hold actions persistent
