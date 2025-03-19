@@ -136,6 +136,7 @@ class Cfg3DEN
                 {
                     class Attributes
                     {
+                        #include "attributesMission\backupMissionSQMToggle.hpp"
                         #include "attributesMission\addObjectsToZeus.hpp"
                         #include "attributesMission\mapIndicators.hpp"
                     };
