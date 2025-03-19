@@ -7,7 +7,6 @@ class Title: Default
         class Title;
     };
 };
-
 class Slider: Title
 {
     class Controls;
