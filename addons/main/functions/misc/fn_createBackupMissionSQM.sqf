@@ -18,27 +18,15 @@
 if (!is3DEN) exitWith {false};
 
 //Opt-in via preferences
-if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) exitWith {};
+if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) exitWith {false};
 
-//Check if missionName is in blacklist
-private _blacklist = profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQMBlacklist", []];
-private _isBlacklisted = false;
-private _missionName = toLower missionName;
-
-_blacklist apply
-{
-    _isBlacklisted = _missionName == toLower _x;
-};
-
-if _isBlacklisted exitWith {};
+//Opt-out scenario specific
+if ("Scenario" get3DENMissionAttribute "ENH_BackupMissionSQMDisable") exitWith {false};
 
 //Pythia is needed
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-    if (profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) then
-    {
-        ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
-    };
+    ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
     false
 };
 
