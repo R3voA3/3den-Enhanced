@@ -1,9 +1,11 @@
 <!-- # 8.3.0
 ## ADDED
-- Custom marker color attribute -->
+- Custom marker color attribute
 
 ## CHANGED
 - Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
+- Moved open code to unscheduled to hopefully fix issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
+-->
 
 # 8.2.0
 ## ADDED
