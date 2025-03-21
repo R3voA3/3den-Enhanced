@@ -778,28 +778,6 @@
             <Chinese>聽力係數決定了一個單位的行動有多容易被AI所聽到。較低的數值代表著更難以聽到。</Chinese>
             <Chinesesimp>听力系数决定了一个单位的行动有多容易被AI所听到。较低的数值代表着更难以听到。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_DISPLAYNAME">
-            <English>Disable mission.sqm Backup</English>
-            <French>Désactiver la sauvegarde de la mission.sqm</French>
-            <Spanish>DDisattivare il backup di mission.sqm</Spanish>
-            <Italian>Disattivare il backup di mission.sqm</Italian>
-            <Polish>Wyłączanie kopii zapasowej mission.sqm</Polish>
-            <Russian>Отключить резервное копирование mission.sqm</Russian>
-            <German>Mission.sqm Backup deaktivieren</German>
-            <Chinese>停用任務 SQM 備份</Chinese>
-            <Chinesesimp>禁用任务 SQM 备份</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_TOOLTIP">
-            <English>Disables mission.sqm backup for this scenario.</English>
-            <French>Désactive la sauvegarde du fichier mission.sqm pour ce scénario.</French>
-            <Spanish>Desactiva la copia de seguridad de mission.sqm para este escenario.</Spanish>
-            <Italian>Disattiva il backup di mission.sqm per questo scenario.</Italian>
-            <Polish>Wyłącza tworzenie kopii zapasowej mission.sqm dla tego scenariusza.</Polish>
-            <Russian>Отключает резервное копирование mission.sqm для этого сценария.</Russian>
-            <German>Deaktiviert die Sicherung der mission.sqm für dieses Szenario.</German>
-            <Chinese>停用此方案的 mission.sqm 備份。</Chinese>
-            <Chinesesimp>禁用此方案的 mission.sqm 备份。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP">
             <English>If the 'missionName' is found in this list no backups will be created.</English>
             <French>Si le 'missionName' se trouve dans cette liste, aucune sauvegarde ne sera créée.</French>
@@ -832,6 +810,28 @@
             <German>Falls leer, werden die Backups im Missionsverzeichnis im Ordner .enh_mission_sqm_backups erstellt.\n\nUm außerhalb zu speichern, verwenden Sie einen absoluten Pfad, z.B. C:\\Arma 3 Mission Backups\n\nStellen Sie sicher, dass Sie Schreibrechte in diesem Verzeichnis haben!</German>
             <Chinese>如果为空，请保存到任务目录下的 .enh_mission_sqm_backups 中。如果要保存到外部，请使用完整路径，例如 C:\Arma 3 Mission Backups\n\n确保您拥有该目录的写入权限！ 确保您拥有该目录的写入权限。</Chinese>
             <Chinesesimp>如果为空，请保存到任务目录下的 .enh_mission_sqm_backups 中。如果要保存到外部，请使用完整路径，例如 C:\Arma 3 Mission Backups\n\n确保您拥有该目录的写入权限！ 确保您拥有该目录的写入权限。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_DISPLAYNAME">
+            <English>Disable mission.sqm Backup</English>
+            <French>Désactiver la sauvegarde de la mission.sqm</French>
+            <Spanish>DDisattivare il backup di mission.sqm</Spanish>
+            <Italian>Disattivare il backup di mission.sqm</Italian>
+            <Polish>Wyłączanie kopii zapasowej mission.sqm</Polish>
+            <Russian>Отключить резервное копирование mission.sqm</Russian>
+            <German>Mission.sqm Backup deaktivieren</German>
+            <Chinese>停用任務 SQM 備份</Chinese>
+            <Chinesesimp>禁用任务 SQM 备份</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_TOOLTIP">
+            <English>Disables mission.sqm backup for this scenario.</English>
+            <French>Désactive la sauvegarde du fichier mission.sqm pour ce scénario.</French>
+            <Spanish>Desactiva la copia de seguridad de mission.sqm para este escenario.</Spanish>
+            <Italian>Disattiva il backup di mission.sqm per questo scenario.</Italian>
+            <Polish>Wyłącza tworzenie kopii zapasowej mission.sqm dla tego scenariusza.</Polish>
+            <Russian>Отключает резервное копирование mission.sqm для этого сценария.</Russian>
+            <German>Deaktiviert die Sicherung der mission.sqm für dieses Szenario.</German>
+            <Chinese>停用此方案的 mission.sqm 備份。</Chinese>
+            <Chinesesimp>禁用此方案的 mission.sqm 备份。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISPLAYNAME">
             <English>Backup mission.sqm</English>
