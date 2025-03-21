@@ -47,7 +47,7 @@ if _showOtherFiles then
             {
                 private _rootIndex = _extensions find _extension;
                 private _fileName = _x splitString "\";
-                _fileName = _fileName select (count _fileName - 1);
+                _fileName = _fileName select -1;
 
                 private _itemIndex = _ctrlTV tvAdd [[_rootIndex], _fileName];
                 _ctrlTV tvSetData [[_rootIndex, _itemIndex], str [_fileName, _x]];
