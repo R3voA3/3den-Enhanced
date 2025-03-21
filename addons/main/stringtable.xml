@@ -778,16 +778,27 @@
             <Chinese>聽力係數決定了一個單位的行動有多容易被AI所聽到。較低的數值代表著更難以聽到。</Chinese>
             <Chinesesimp>听力系数决定了一个单位的行动有多容易被AI所听到。较低的数值代表着更难以听到。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_DISPLAYNAME">
-            <English>Blacklist</English>
-            <French>Liste noire</French>
-            <Spanish>Lista negra</Spanish>
-            <Italian>Lista nera</Italian>
-            <Polish>Czarna lista</Polish>
-            <Russian>Черный список</Russian>
-            <German>Blacklist</German>
-            <Chinese>黑名單</Chinese>
-            <Chinesesimp>黑名单</Chinesesimp>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_DISPLAYNAME">
+            <English>Disable mission.sqm Backup</English>
+            <French>Désactiver la sauvegarde de la mission.sqm</French>
+            <Spanish>DDisattivare il backup di mission.sqm</Spanish>
+            <Italian>Disattivare il backup di mission.sqm</Italian>
+            <Polish>Wyłączanie kopii zapasowej mission.sqm</Polish>
+            <Russian>Отключить резервное копирование mission.sqm</Russian>
+            <German>Mission.sqm Backup deaktivieren</German>
+            <Chinese>停用任務 SQM 備份</Chinese>
+            <Chinesesimp>禁用任务 SQM 备份</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQM_DISABLE_TOOLTIP">
+            <English>Disables mission.sqm backup for this scenario.</English>
+            <French>Désactive la sauvegarde du fichier mission.sqm pour ce scénario.</French>
+            <Spanish>Desactiva la copia de seguridad de mission.sqm para este escenario.</Spanish>
+            <Italian>Disattiva il backup di mission.sqm per questo scenario.</Italian>
+            <Polish>Wyłącza tworzenie kopii zapasowej mission.sqm dla tego scenariusza.</Polish>
+            <Russian>Отключает резервное копирование mission.sqm для этого сценария.</Russian>
+            <German>Deaktiviert die Sicherung der mission.sqm für dieses Szenario.</German>
+            <Chinese>停用此方案的 mission.sqm 備份。</Chinese>
+            <Chinesesimp>禁用此方案的 mission.sqm 备份。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP">
             <English>If the 'missionName' is found in this list no backups will be created.</English>
