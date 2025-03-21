@@ -5,16 +5,8 @@ allowFunctionsLog = 1;
 //- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types
 //- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles
 
-//Eden Editor macros such as background colour and pixel grid
-#include "\a3\3DEN\UI\macros.inc"
-//Eden Editor advanced macros
-#include "\a3\3den\ui\macroexecs.inc"
-//GRIDs
-#include "\a3\ui_f\hpp\definecommongrids.inc"
-//DIK Key Codes
-#include "\a3\ui_f\hpp\definedikcodes.inc"
-//Eden Editor IDDs and IDCs as well as control types, styles and macros
-#include "\a3\3den\ui\resincl.inc"
+//3den Enhanced Macros
+#include "\x\enh\addons\main\script_component.hpp"
 
 //Eden Editor Base Controls
 import ctrlActivePicture;
@@ -83,3 +75,97 @@ import ctrlTree;
 import ctrlXListbox;
 import ctrlXSliderH;
 import ctrlXSliderV;
+
+//Disabled background
+#define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
+                                                     class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
+
+
+class ENH_AssetsCatalogue
+{
+    idd = IDD_3DENRADIO;
+    // onLoad = "_this spawn ENH_fnc_3DENRadio_onLoad";
+    class ControlsBackground
+    {
+        DISABLE_BACKGROUND
+        class Header: ctrlStaticTitle
+        {
+            text = "Assets Catalogue";
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs);
+            w = QUOTE(WINDOW_W_WIDE * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class Background: ctrlStaticBackground
+        {
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
+            w = QUOTE(WINDOW_W_WIDE * GRID_W);
+            h = QUOTE(WINDOW_HAbs - 3 * CTRL_DEFAULT_H);
+        };
+        class Footer: ctrlStaticFooter
+        {
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - 2 * GRID_H);
+            w = QUOTE(WINDOW_W_WIDE * GRID_W);
+            h = QUOTE(7 * GRID_H);
+        };
+/*         class BackgroundFilter: Background//Background used for filter buttons
+        {
+            y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
+            h = QUOTE(CTRL_DEFAULT_H);
+            colorBackground[] = {0, 0, 0, 1};
+        }; */
+        class CurrentSongText: ctrlStaticFooter
+        {
+            text = "TeST";
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 4 * CTRL_DEFAULT_H - 3 * GRID_H);
+            w = QUOTE(10 * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class CurrentSong: CurrentSongText
+        {
+            idc = IDC_3DENRADIO_CURRENTSONG;
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 10 * GRID_W);
+            w = QUOTE((WINDOW_W_WIDE - 10) * GRID_W);
+        };
+    };
+    class Controls
+    {
+        class AssetsList: ctrlTree
+        {
+            onload = "_this execVM 'fillList.sqf'";
+            idc = 1733;
+            idcSearch = IDC_3DENRADIO_BUTTONSEARCH;
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H + GRID_H);
+            w = QUOTE(WINDOW_W_WIDE * GRID_W - 2 * GRID_W);
+            h = QUOTE(WINDOW_HAbs - 7 * CTRL_DEFAULT_H);
+        };
+        class SearchEdit: ctrlEdit
+        {
+            idc = IDC_3DENRADIO_BUTTONSEARCH;
+            tooltip = __EVAL(format ["%1+%2", toUpper localize "STR_DIK_CONTROL", "F"]);
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 50 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
+            w = QUOTE(30 * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class ButtonSearch: ctrlButtonSearch
+        {
+            idc = IDC_3DENRADIO_BUTTONSEARCH;
+            x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W + 80 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
+            w = QUOTE(5 * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class Close: ctrlButtonClose
+        {
+            x = QUOTE(CENTER_X + 0.5 * WINDOW_W_WIDE * GRID_W - 26 * GRID_W);
+            y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
+            w = QUOTE(25 * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+    };
+};
