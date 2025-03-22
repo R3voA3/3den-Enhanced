@@ -11,7 +11,6 @@
     Returns:
     -
  */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 #define IN_PLAYLIST [_songName, _songClass, _songDuration] in _playlist
@@ -30,13 +29,13 @@ if (_key in [DIK_SPACE, DIK_DELETE]) then
 
     if (IN_PLAYLIST) then
     {
-        _ctrlSongList lnbSetPicture [[_row, 4], "\a3\3den\data\controls\ctrlcheckbox\baseline_textureunchecked_ca.paa"];
+        _ctrlSongList lnbSetPicture [[_row, 4], TEXTURE_UNCHECKED];
         _ctrlSongList lnbSetValue [[_row, 4], 0];
         _playlist = _playlist - [[_songName, _songClass, _songDuration]];
     }
     else
     {
-        _ctrlSongList lnbSetPicture [[_row, 4], "\a3\3den\data\controls\ctrlcheckbox\baseline_texturechecked_ca.paa"];
+        _ctrlSongList lnbSetPicture [[_row, 4], TEXTURE_CHECKED];
         _ctrlSongList lnbSetValue [[_row, 4], 1];
         _playlist append [[_songName, _songClass, _songDuration]];
     };

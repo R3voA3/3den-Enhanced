@@ -10,7 +10,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 #define GETVALUE(ATTRIBUTE) (profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_' + ATTRIBUTE, "Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE)])

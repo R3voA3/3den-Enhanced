@@ -17,7 +17,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 params [["_mode", 0], ["_classes", 0]];

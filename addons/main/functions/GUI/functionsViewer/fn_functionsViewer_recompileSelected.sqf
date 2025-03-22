@@ -10,7 +10,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 private _fncName = ctrlText ((uiNamespace getVariable ["ENH_Display_FunctionsViewer", displayNull]) displayCtrl IDC_FUNCTIONSVIEWER_NAME);

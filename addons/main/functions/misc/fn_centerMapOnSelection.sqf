@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 //Get the context menu position

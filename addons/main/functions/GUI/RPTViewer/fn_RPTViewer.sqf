@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 #define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 100])
 

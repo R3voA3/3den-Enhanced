@@ -16,7 +16,6 @@
     Examples(s):
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 #define COLOR_ATTRIBUTE [0.86, 0.73, 0.38, 1]

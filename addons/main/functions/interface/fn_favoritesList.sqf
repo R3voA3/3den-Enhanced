@@ -13,7 +13,6 @@
     Returns:
     BOOLEAN - True
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 #define FAVORITES_DATA (profileNamespace getVariable ["ENH_HashMap_Favorites", createHashMap])
 

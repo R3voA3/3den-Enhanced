@@ -13,7 +13,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 private _export = "__NOTOC__" + endl;

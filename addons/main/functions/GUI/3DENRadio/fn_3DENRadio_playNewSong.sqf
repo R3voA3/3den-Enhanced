@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 #define DURATION uiNamespace getVariable ["ENH_3DENRadio_CurrentSongDuration", 0]
 

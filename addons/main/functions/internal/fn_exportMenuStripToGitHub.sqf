@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 private _menuStipEntries = "configName _x select [0, 3] == 'ENH' && (getArray (_x >> 'items')) isEqualTo []" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");

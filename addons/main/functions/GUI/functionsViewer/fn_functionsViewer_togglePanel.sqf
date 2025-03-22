@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safeZoneX + GRID_W)

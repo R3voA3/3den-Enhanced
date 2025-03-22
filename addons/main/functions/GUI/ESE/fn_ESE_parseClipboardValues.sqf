@@ -12,7 +12,6 @@
     Returns:
     ARRAY - Result attributes that can be loaded into the filter and inventory screens. Return all items if failed.
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 params [["_return", false, [false]]];

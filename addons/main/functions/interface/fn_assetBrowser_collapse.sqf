@@ -12,7 +12,6 @@
     Returns:
     -
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 
 if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseAssetBrowser", false]) then

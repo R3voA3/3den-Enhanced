@@ -13,7 +13,6 @@
     Returns:
     ARRAY, NOTHING: See Parameters
 */
-
 #include "\x\enh\addons\main\script_component.hpp"
 disableSerialization;
 params [["_return", false], ["_itemsDetails", []]];

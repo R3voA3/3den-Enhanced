@@ -3,7 +3,7 @@
 #include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "\a3\ui_f\hpp\defineresincl.inc"
 #include "\a3\ui_f\hpp\defineresincldesign.inc"
-#include "\x\cba\addons\main\script_macros_common.hpp"
+#include "\x\enh\addons\main\cba_script_macros_common.hpp"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
