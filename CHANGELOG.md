@@ -1,12 +1,13 @@
-<!-- # 8.3.0
+<!-- # 8.4.0
 ## ADDED
 - Custom marker color attribute
+-->
 
+# 8.3.0
 ## CHANGED
 - Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
-- Moved open code to unscheduled to hopefully fix issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
 - Removed "hidden" CBA dependency
--->
+- Moved open ACE Arsenal code to unscheduled execution to fix an issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
 
 # 8.2.0
 ## ADDED
@@ -348,7 +349,6 @@ menu
 
 ## REMOVED
 - Removed 3DEN Cam Positions UI
->>>>>>> master
 
 # 7.7.3
 ## ADDED

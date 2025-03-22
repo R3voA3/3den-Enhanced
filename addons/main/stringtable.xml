@@ -13,18 +13,6 @@
             <Chinese>持續時間</Chinese>
             <Chinesesimp>持续时间</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_3DENRADIO_END">
-            <English>Ending</English>
-            <Czech>Konec</Czech>
-            <French>Fin</French>
-            <Spanish>Final</Spanish>
-            <Italian>Fine</Italian>
-            <Polish>Koniec</Polish>
-            <Russian>Конец</Russian>
-            <German>Ende</German>
-            <Chinese>結束</Chinese>
-            <Chinesesimp>结束</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_HELP_DESCRIPTION">
             <English>- Double left click on a listbox entry plays the song immediately\n- Add a song to your playlist by pressing SPACE\n- Copy the class name of a song to your clipboard by pressing CTRL + C\n- Remove an entry from the Playlist by selecting it and pressing DELETE</English>
             <Czech>- Dvojí kliknutí levým tlačítkem na záznam v seznamu přehraje hudbu okamžitě\n- Přidejte hudbu do svého playlistu stisknutím SPACE\n - Zkopírujte jméno třídy (class name) hudby do své schránky stisknutím CTRL + C\n - Odstraňte záznam z playlistu jeho vybráním a stisknutím DELETE</Czech>
@@ -120,17 +108,6 @@
             <German>Baut eine Taschenlampe an die Waffe der Einheit, und schaltet diese an.</German>
             <Chinese>武裝單位會打開槍支手電筒</Chinese>
             <Chinesesimp>武装单位会打开枪支手电筒</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ADJUSTMINIMAPSIZE">
-            <English>Adjust Minimap Size</English>
-            <French>Ajuster la taille de la mini-map</French>
-            <Spanish>Ajustar el tamaño del minimapa</Spanish>
-            <Italian>Regolare le dimensioni della minimappa</Italian>
-            <Polish>Dostosuj rozmiar minimapy</Polish>
-            <Russian>Настройка размера миниатюры</Russian>
-            <German>Minimapgröße ändern</German>
-            <Chinese>调整最小地图尺寸</Chinese>
-            <Chinesesimp>调整最小地图尺寸</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ADVANCEDDAMAGE_DESCRIPTION">
             <English>Allows to add damage to all available hit points of this entity. Some hitpoints might not have an effect!</English>
@@ -778,17 +755,6 @@
             <Chinese>聽力係數決定了一個單位的行動有多容易被AI所聽到。較低的數值代表著更難以聽到。</Chinese>
             <Chinesesimp>听力系数决定了一个单位的行动有多容易被AI所听到。较低的数值代表着更难以听到。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMBLACKLIST_TOOLTIP">
-            <English>If the 'missionName' is found in this list no backups will be created.</English>
-            <French>Si le 'missionName' se trouve dans cette liste, aucune sauvegarde ne sera créée.</French>
-            <Spanish>Si el 'missionName' se encuentra en esta lista no se creará ninguna copia de seguridad.</Spanish>
-            <Italian>Se 'missionName' viene trovato in questo elenco, non verranno creati backup.</Italian>
-            <Polish>Jeśli „missionName” znajduje się na tej liście, żadne kopie zapasowe nie zostaną utworzone.</Polish>
-            <Russian>Если имя 'missionName' найдено в этом списке, резервные копии создаваться не будут.</Russian>
-            <German>Wenn der 'missionName' in dieser Liste gefunden wird, werden keine Sicherungen erstellt.</German>
-            <Chinese>如果在此清單中找到「missionName」，則不會建立備份。</Chinese>
-            <Chinesesimp>如果在此列表中找到 “任务名称”，则不会创建备份。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_BACKUPMISSIONSQMPATH_DISPLAYNAME">
             <English>Path for mission backups</English>
             <French>Chemin pour les sauvegardes de missions</French>
@@ -1269,17 +1235,6 @@
             <German>Bedingung</German>
             <Chinese>條件</Chinese>
             <Chinesesimp>条件</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_CONTEXTMENU_CREATEEXTRACTION">
-            <English>Create Extraction</English>
-            <French>Créer une extraction</French>
-            <Spanish>Crear extracción</Spanish>
-            <Italian>Crea Estrazione</Italian>
-            <Polish>Stwórz punkt ekstrakcji</Polish>
-            <Russian>Создать точку извлечения</Russian>
-            <German>Extraktion erstellen</German>
-            <Chinese>創建撤離點</Chinese>
-            <Chinesesimp>创建撤离点</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_CONTEXTMENU_DELETECREW">
             <English>Delete Crew</English>
@@ -4427,29 +4382,6 @@
             <Chinese>以下設置可讓您在預覽期間更輕鬆地測試場景。它們不會保存在mission.sqm中，因此當您發布場景時它們不會有任何影響。在多人遊戲中禁用。</Chinese>
             <Chinesesimp>以下设置可让您在预览期间更轻松地测试场景。它们不会保存在mission.sqm中，因此当您发布场景时它们不会有任何影响。在多人游戏中禁用。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DRAWICONS_DISPLAYNAME">
-            <English>Draw Unit Icons</English>
-            <Czech>Kreslení ikon jednotek</Czech>
-            <French>Montrer les icônes des unités</French>
-            <Spanish>Dibujar iconos de unidades</Spanish>
-            <Italian>Mostra le icone delle unità</Italian>
-            <Polish>Rysuj ikony jednostek</Polish>
-            <Russian>Отобразить иконки юнитов</Russian>
-            <German>Einheitenicons darstellen</German>
-            <Chinese>繪製單元圖標</Chinese>
-            <Chinesesimp>绘制单元图标</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DRAWICONS_TOOLTIP">
-            <English>Draws information of nearby units and vehicles.</English>
-            <French>Affiche des informations à propos des unités et véhicules à proximité.</French>
-            <Spanish>Dibujar información de unidades y vehículos cercanos</Spanish>
-            <Italian>Mostra informazioni sulle unità e veicoli nelle vicinanze.</Italian>
-            <Polish>Rysuje informacje o pobliskich jednostkach i pojazdach.</Polish>
-            <Russian>Отобразить информацию о ближайших юнитах и технике</Russian>
-            <German>Zeigt Informationen über Einheiten und Fahrzeugen in der Nähe an.</German>
-            <Chinese>繪製附近單位和車輛的信息。</Chinese>
-            <Chinesesimp>绘制附近单位和车辆的信息。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DRAWTRIGGERS_DISPLAYNAME">
             <English>Draw Trigger Areas</English>
             <French>Montre les zones de déclenchement</French>
@@ -4700,28 +4632,6 @@
             <German>Alle Gruppen und Informationen über diese werden in 3D und auf der Karte angezeigt. Außerdem können Gruppen gelöscht und ihre Wegpunkte angezeigt werden.</German>
             <Chinese>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinese>
             <Chinesesimp>所有群组及其相关信息都将在 3D 和地图上显示。此外，还可以删除群组并显示其航点。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_SHOWWAYPOINTS_DISPLAYNAME">
-            <English>Show Waypoints</English>
-            <French>Afficher les points de passage</French>
-            <Spanish>Mostrar waypoints</Spanish>
-            <Italian>Mostra punti di passaggio</Italian>
-            <Polish>Pokaż punkty nawigacyjne</Polish>
-            <Russian>Показать Waypoint-ы</Russian>
-            <German>Wegpunkte anzeigen</German>
-            <Chinese>顯示路徑點</Chinese>
-            <Chinesesimp>显示路径点</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_SHOWWAYPOINTS_TOOLTIP">
-            <English>Shows the waypoints of all groups on the map.</English>
-            <French>Affiche les points de passage de tous les groupes sur la carte.</French>
-            <Spanish>Mostrar los waypoints de todos los grupos en el mapa</Spanish>
-            <Italian>Mostra i punti di passaggio di tutti i gruppi sulla mappa.</Italian>
-            <Polish>Pokazuje punkty nawigacyjny wszystkich grup na mapie.</Polish>
-            <Russian>Показывает waypoint-ы всех групп на карте</Russian>
-            <German>Zeigt die Wegpunkte aller Gruppen auf der Karte an.</German>
-            <Chinese>在地圖上顯示所有小隊的路徑點。</Chinese>
-            <Chinesesimp>在地图上显示所有小队的路径点。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_SKIPTIME">
             <English>Skip Time</English>
@@ -5531,17 +5441,6 @@
             <Chinese>創建模板</Chinese>
             <Chinesesimp>创建模板</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_ESE_DELETETEMPLATE">
-            <English>Delete selected Template.</English>
-            <French>Supprimer le modèle sélectionné</French>
-            <Spanish>Borrar la plantilla seleccionada</Spanish>
-            <Italian>Elimina Modelli Selezionati</Italian>
-            <Polish>Usuń zaznaczony szablon</Polish>
-            <Russian>Удалить выбранный шаблон</Russian>
-            <German>Ausgewählte Vorlage löschen.</German>
-            <Chinese>刪除所選模板.</Chinese>
-            <Chinesesimp>删除所选模板.</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ESE_EXIT_TEXT">
             <English>You have unsaved changes. Close anyway?</English>
             <French>Tu as des modifications non enregistrées. Fermer quand même ?</French>
@@ -5551,26 +5450,6 @@
             <German>Du hast ungespeicherte Änderungen. Trotzdem schließen?</German>
             <Chinese>您有未保存的更改。仍然關閉？</Chinese>
             <Chinesesimp>您有未保存的更改。仍然关闭？</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_EXPORTACE_DISPLAYNAME">
-            <English>Export (ACE)</English>
-            <French>Export (ACE)</French>
-            <Spanish>Exportar (ACE)</Spanish>
-            <Italian>Esporta (ACE)</Italian>
-            <Polish>Eksportuj (ACE)</Polish>
-            <German>Export (ACE)</German>
-            <Chinese>導出 (ACE)</Chinese>
-            <Chinesesimp>导出 (ACE)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_EXPORTACE_TOOLTIP">
-            <English>Export current loadout ready to be imported into the ACE 3 Arsenal attribute.</English>
-            <French>Exportation de l'équipement actuel prêt pour être importé dans l'Arsenal ACE 3 .</French>
-            <Spanish>Exporte la plantilla actual lista para ser importada en el atributo ACE 3 Arsenal.</Spanish>
-            <Italian>Esportazione dell'equipaggiamento attuale pronto per essere importato nell'attributo ACE 3 Arsenal.</Italian>
-            <Polish>Eksportuj obecne wyposażenie w formie przygotowanej do importu do atrybutu arsenału ACE 3.</Polish>
-            <German>Exportiere die derzeitige Ausrüstung in einem Format die im ACE 3 Arsenal Attribute verwendet werden kann.</German>
-            <Chinese>以可在 ACE 3 軍械庫屬性中使用的格式導出當前裝備。</Chinese>
-            <Chinesesimp>以可在 ACE 3 军械库属性中使用的格式导出当前装备。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ESE_EXPORTTOARSENAL">
             <English>Export to Arsenal</English>
@@ -5591,17 +5470,6 @@
             <German>Als ACE Arsenal exportieren</German>
             <Chinese>導出到ACE武器庫</Chinese>
             <Chinesesimp>导出到ACE武器库</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_FULLARSENAL_TOOLTIP">
-            <English>Adds all items of selected addon to the inventory and sets it to be virtual (Arsenal).</English>
-            <French>Ajoute tous les objets de l'addon sélectionné à l'inventaire et le rend virtuel (Arsenal).</French>
-            <Spanish>Agrega todos los elementos del addon seleccionado al inventario y lo configura para que sea virtual (Arsenal).</Spanish>
-            <Italian>Aggiunge tutti gli oggetti dell'addon selezionato all'inventario e lo imposta come virtuale (Arsenale).</Italian>
-            <Polish>Dodaje wszystkie przedmiody z wybranej modyfikacji do ekwipunku i ustawia go jako wirtualny (arsenał).</Polish>
-            <Russian>Добавляет все предметы выбранного аддона в инвентарь и делает его виртуальным (Арсенал).</Russian>
-            <German>Fügt alle Gegenstände des ausgewählten Addons dem Inventar hinzu und setzt das Inventar auf virtuell (Arsenal).</German>
-            <Chinese>將所選附加插件的所有物品添加到庫存中，並將其設置為虛擬(武器庫)。</Chinese>
-            <Chinesesimp>将所选附加插件的所有物品添加到库存中，并将其设置为虚拟(武器库)。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ESE_HIDETEMPLATES">
             <English>Hide Templates</English>
@@ -5859,28 +5727,7 @@
             <Chinese>視角</Chinese>
             <Chinesesimp>视角</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_CONDITION_TOOLTIP">
-            <English>This condition has to become true for the vehicle to move to the end waypoint. By default all alive units in player's group have to be inside the pick up vehicle.</English>
-            <French>La condition doit être remplie pour que le véhicule se dirige vers son point de passage final. Par défaut, toutes les unités en vie du groupe du joueur doivent être dans le véhicule d'extraction.</French>
-            <Spanish>Esta condición tiene que hacerse true para que el vehículo se mueva hasta el punto final. Por defecto, todas las unidades vivas del grupo de jugadores deben estar dentro del vehículo de recogida.</Spanish>
-            <Italian>Questa condizione deve diventare vera perché il veicolo si muova verso il waypoint finale. Per impostazione predefinita, tutte le unità vive del gruppo del giocatore devono trovarsi all'interno del veicolo di raccolta.</Italian>
-            <Polish>Ten warunek musi być prawdziwy dla pojazdu, by przemieścił się do swojego punktu końcowego. W domyślnym stanie wszystkie żywe jednostki z grupy gracza muszą być w pojeździe.</Polish>
-            <Russian>Это условие должно выполняться, чтобы техника переместилась на конечную точку маршрута. По умолчанию все живые юниты в группе игрока должны находиться внутри машины.</Russian>
-            <German>Diese Bedingung muss erfüllt sein, damit sich das Fahrzeug zum Endwegpunkt bewegt. Standardmäßig müssen sich alle lebenden Einheiten in der Spielergruppe im Fahrzeug befinden.</German>
-            <Chinese>這一條件必須為 true，載具才能移動到終點航路點。默認情況下，玩家小隊中所有存活的單位都必須在接送載具內。</Chinese>
-            <Chinesesimp>这一条件必须为 true，载具才能移动到终点航路点。默认情况下，玩家小队中所有存活的单位都必须在接送载具内。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_EXTRACTION_GRIDPOSITION">
-            <English>Grid Position</English>
-            <French>Coordonnées</French>
-            <Spanish>Posición de regilla</Spanish>
-            <Italian>Posizione griglia</Italian>
-            <Polish>Koordynaty</Polish>
-            <Russian>Координаты</Russian>
-            <German>Koordinaten</German>
-            <Chinese>網格位置</Chinese>
-            <Chinesesimp>网格位置</Chinesesimp>
-        </Key>
+
         <Key ID="STR_ENH_MAIN_FEATURETYPE_DISPLAYNAME">
             <English>Visibility</English>
             <Czech>Viditelnost</Czech>
@@ -7472,18 +7319,6 @@
             <Chinese>無線電塔</Chinese>
             <Chinesesimp>无线电塔</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_LOCATIONLIST_UNKNOWN">
-            <English>Unknown</English>
-            <Czech>Neznámé</Czech>
-            <French>Inconnu</French>
-            <Spanish>Desconocido</Spanish>
-            <Italian>Sconosciuto</Italian>
-            <Polish>Nieznane</Polish>
-            <Russian>Неизвестное</Russian>
-            <German>Unbekannt</German>
-            <Chinese>未知</Chinese>
-            <Chinesesimp>未知</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_MAKEHOSTAGE_DISPLAYNAME">
             <English>Make Hostage</English>
             <Czech>Rukojmí</Czech>
@@ -7709,17 +7544,6 @@
             <German>&lt;t align='center'&gt;Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.&lt;br/&gt;Damit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!&lt;/t&gt;</German>
             <Chinese>&lt;t align='center'&gt;取消選中條目以隱藏它們。取消選中文件夾將導致該文件夾中的所有條目被刪除。&lt;br/&gt;更改需要重新啟動Eden編輯器才能生效！&lt;/t&gt;</Chinese>
             <Chinesesimp>&lt;t align='center'&gt;取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。&lt;br/&gt;更改需要重新启动Eden编辑器才能生效！&lt;/t&gt;</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_MINIMAPENABLED">
-            <English>Enable Minimap</English>
-            <French>Afficher le panel de gauche au lancement</French>
-            <Spanish>Mostrar panel izquierdo al inicio</Spanish>
-            <Italian>Abilita Minimappa</Italian>
-            <Polish>Pokaż lewy panel przy starcie</Polish>
-            <Russian>Показывать левую панель при запуске</Russian>
-            <German>Linkes Panel beim Start anzeigen</German>
-            <Chinese>啟動時顯示左面板</Chinese>
-            <Chinesesimp>启动时显示左面板</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_MINIMAPSCALEMULTIPLIER">
             <English>Minimap Scale Multiplier</English>
@@ -8321,17 +8145,6 @@
             <Chinese>方向</Chinese>
             <Chinesesimp>方向</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_PLACEMENTTOOLS_ORIGIN">
-            <English>Origin</English>
-            <French>Origine</French>
-            <Spanish>Origen</Spanish>
-            <Italian>Origine</Italian>
-            <Polish>Pochodzenie</Polish>
-            <Russian>Происхождение</Russian>
-            <German>Ursprung</German>
-            <Chinese>起源</Chinese>
-            <Chinesesimp>起源</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_PLACEMENTTOOLS_RADIUS">
             <English>Radius</English>
             <Czech>Poloměr</Czech>
@@ -8379,17 +8192,6 @@
             <German>Abstand Y</German>
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PLACEMENTTOOLS_STEPSIZE_TOOLTIP">
-            <English>Sets the size of the increment when clicking the arrows next to the sliders.</English>
-            <French>Définissez la taille de l'incrémentation des flèches à côté des curseurs.</French>
-            <Spanish>Fijar el tamaño del incremento cuando se pulsan las flechas junto al deslizador</Spanish>
-            <Italian>Imposta la dimensione dell'incremento quando si fa clic sulle frecce accanto ai cursori.</Italian>
-            <Polish>Ustawia wielkość przyrostu wielkości podczas klikania strzałek obok slajderów.</Polish>
-            <Russian>Установите размер шага при нажатии стрелок рядом с ползунком</Russian>
-            <German>Legt die Größe eines Inkrementes fest, wenn einer der Pfeile eines Schiebereglers angeklickt wird.</German>
-            <Chinese>單擊滑塊旁邊的箭頭，設置增量的大小。</Chinese>
-            <Chinesesimp>单击滑块旁边的箭头，设置增量的大小。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
@@ -9039,17 +8841,6 @@
             <Chinese>會面時間</Chinese>
             <Chinesesimp>会面时间</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_STATUSBAR_USERCONFIG_WARNING_TOOLTIP">
-            <English>You are running a customised version of 3den Enhanced. Please make sure you are not accidentally removing attributes from your mission!</English>
-            <French>Vous utilisez une version personnalisée de 3den Enhanced. Veuillez vous assurer que vous ne supprimez pas accidentellement des attributs de votre mission !</French>
-            <Spanish>¡Está ejecutando una versión personalizada de 3den Enhanced. ¡Asegúrate de no eliminar accidentalmente atributos de tu misión!</Spanish>
-            <Italian>Stai usando una versione personalizzata di 3den Enhanced. Assicurati di non rimuovere accdentalmente degli attributi dalla tua missione!</Italian>
-            <Polish>Masz włączoną personalizowaną wersję 3den Enhanced. Upewnij się, by nie usunąć przypadkowo atrybutów ze swojej misji!</Polish>
-            <Russian>Вы используете кастомную версию 3den Enhanced. Пожалуйста, убедитесь, что вы случайно не удалили атрибуты своей миссии!</Russian>
-            <German>Du verwendest eine benutzerdefinierte Version von 3den Enhanced. Stelle sicher das du nicht aus Versehen Attribute aus der jetzigen Mission entfernst!</German>
-            <Chinese>您正在運行自定義版的3den增強。請確保您不會意外刪除任務中的屬性！</Chinese>
-            <Chinesesimp>您正在运行自定义版的3den增强。请确保您不会意外删除任务中的属性！</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_STEAM">
             <English>Steam</English>
             <Czech>Steam</Czech>
@@ -9181,18 +8972,6 @@
             <Chinese>列表條目數: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinese>
             <Chinesesimp>列表条目数: &lt;t font='RobotoCondensedBold'&gt;%1/%2&lt;/t&gt;</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TEXTUREFINDER_PROGRESSTEXT">
-            <English>Classes searched: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Textures found: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</English>
-            <Czech>Prohledané třídy: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; z &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Nalezených textur: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Czech>
-            <French>Classes analysées : &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; sur &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Textures trouvées : &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</French>
-            <Spanish>Clases buscadas: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; de &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Texturas encontradas: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Spanish>
-            <Italian>Classi ricercate: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; di &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Trame trovate: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Italian>
-            <Polish>Znalezione klasy: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; z &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Znalezione tekstury: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Polish>
-            <Russian>Поиск классов: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; из &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Найдено текстур: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Russian>
-            <German>Klassen durchsucht: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; von &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Texturen gefunden: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</German>
-            <Chinese>Classes 搜索: &lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; Textures found: &lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Chinese>
-            <Chinesesimp>类别（class）搜索：&lt;t font='RobotoCondensedBold'&gt;%1&lt;/t&gt; of &lt;t font='RobotoCondensedBold'&gt;%2&lt;/t&gt; 纹理找到：&lt;t font='RobotoCondensedBold'&gt;%3&lt;/t&gt;</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TIMEMULTIPLIER_DISPLAYNAME">
             <English>Time Multiplier</English>
             <Czech>Zrychlení času</Czech>
@@ -9216,28 +8995,6 @@
             <German>Legt fest wie schnell die Zeit vergeht.</German>
             <Chinese>設定時間過得多快。</Chinese>
             <Chinesesimp>设定时间过得多快。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOGGLEMINIMAP">
-            <English>Toggle Minimap</English>
-            <French>Basculer la Minimap</French>
-            <Spanish>Activar minimapa</Spanish>
-            <Italian>Attiva/disattiva Minimappa</Italian>
-            <Polish>Przełącz minimapę</Polish>
-            <Russian>Переключение миниатюрной карты</Russian>
-            <German>Minimap umschalten</German>
-            <Chinese>切换最小地图</Chinese>
-            <Chinesesimp>切换最小地图</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_3DENCAM">
-            <English>3DEN Camera Positions</English>
-            <French>Positions de la caméra 3DEN</French>
-            <Spanish>3DEN posición de la cámara</Spanish>
-            <Italian>Posizioni della telecamera 3DEN</Italian>
-            <Polish>Pozycje kamery 3DEN</Polish>
-            <Russian>Позиции камеры 3den</Russian>
-            <German>3DEN Kamerapositionen</German>
-            <Chinese>3DEN 攝像機位置</Chinese>
-            <Chinesesimp>3DEN 摄像机位置</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_3DENRADIO">
             <English>3DEN Radio</English>
@@ -9274,18 +9031,6 @@
             <German>Tastaturkurzbefehle</German>
             <Chinese>键盘快捷键</Chinese>
             <Chinesesimp>键盘快捷键</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_ACTIONCREATOR">
-            <English>Action Creator</English>
-            <Czech>Vytvářeč akcí</Czech>
-            <French>Créer une action</French>
-            <Spanish>Creador de acción</Spanish>
-            <Italian>Creatore Azioni</Italian>
-            <Polish>Kreator akcji</Polish>
-            <Russian>Создатель действий</Russian>
-            <German>Aktion erstellen</German>
-            <Chinese>動作創建者</Chinese>
-            <Chinesesimp>动作创建者</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_ALIGN_X_MAX">
             <English>Align to X+</English>
@@ -9449,28 +9194,6 @@
             <Chinese>清除聊天</Chinese>
             <Chinesesimp>清除聊天</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_CONTROLSTYLES">
-            <English>View Control Styles</English>
-            <French>Voir les styles de contrôles</French>
-            <Spanish>Ver estilos de control</Spanish>
-            <Italian>Visualizza Stili di Controllo</Italian>
-            <Polish>Wyświetl style kontrolerów</Polish>
-            <Russian>Просмотр стилей управления</Russian>
-            <German>Steuerelementstile anzeigen</German>
-            <Chinese>查看控件樣式</Chinese>
-            <Chinesesimp>查看控件样式</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_CONTROLTYPES">
-            <English>View Control Types</English>
-            <French>Voir les types de contrôles</French>
-            <Spanish>Ver tipos de control</Spanish>
-            <Italian>Visualizza Tipi di Controllo</Italian>
-            <Polish>Wyświetl typy kontrolerów</Polish>
-            <Russian>Просмотр типов управления</Russian>
-            <German>Steuerelementtypen anzeigen</German>
-            <Chinese>查看控件類型</Chinese>
-            <Chinesesimp>查看控件类型</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_COPYLOADOUTS">
             <English>Copy Loadout/s</English>
             <Czech>Kopírovat výstroj</Czech>
@@ -9547,17 +9270,6 @@
             <German>DLC Symbole anzeigen</German>
             <Chinese>显示 DLC 图标</Chinese>
             <Chinesesimp>显示 DLC 图标</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_DRAWHITPOINTS">
-            <English>Toggle Drawing of Vehicle Hitpoints</English>
-            <French>Afficher les points d'impact des véhicules on/off</French>
-            <Spanish>Conmutador de Dibujo de puntos de vida de vehículos</Spanish>
-            <Italian>Attiva/disattiva visualizzazione Punti Ferita Veicolo</Italian>
-            <Polish>Przełącz rysowanie hitpointów pojazdów</Polish>
-            <Russian>Вкл/выкл отображение хитпоинтов техники</Russian>
-            <German>Fahrzeugtrefferpunkte anzeigen an/aus</German>
-            <Chinese>切換車輛血量視圖</Chinese>
-            <Chinesesimp>切换车辆血量视图</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_ESE">
             <English>Equipment Storage Editor</English>
@@ -9683,17 +9395,6 @@
             <Chinese>導出裝備（配置config）</Chinese>
             <Chinesesimp>导出装备（配置config）</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_EXPORTMISSIONPARAMETERS">
-            <English>Export Mission Parameters</English>
-            <French>Exporter les paramètres de mission</French>
-            <Spanish>Exportar parámetros de misión</Spanish>
-            <Italian>Esporta i parametri della missione</Italian>
-            <Polish>Eksportuj parametry misji</Polish>
-            <Russian>Экспорт параметров миссии</Russian>
-            <German>Missionsparameter exportieren</German>
-            <Chinese>導出任務參數</Chinese>
-            <Chinesesimp>导出任务参数</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_EXPORTPYLONSTOSQF">
             <English>Export Pylons to SQF</English>
             <French>Exporter les paramètres des pylônes au format SQF</French>
@@ -9703,18 +9404,6 @@
             <German>Pylonen-Einstellungen als SQF exportieren</German>
             <Chinese>將掛架導出為SQF</Chinese>
             <Chinesesimp>将挂架导出为SQF</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_GENERATESTEAMMISSIONDESCRIPTION">
-            <English>Generate Steam Mission Description</English>
-            <Czech>Generotvat popis mise pro Steam</Czech>
-            <French>Générer la description de la mission pour Steam</French>
-            <Spanish>Generar Descripción de Misión de Steam</Spanish>
-            <Italian>Genera la descrizione della missione su Steam</Italian>
-            <Polish>Wygeneruj opis misji na Steam.</Polish>
-            <Russian>Создать описание миссии в Steam</Russian>
-            <German>Steam-Missionsbeschreibung generieren</German>
-            <Chinese>生成Steam任務說明</Chinese>
-            <Chinesesimp>生成Steam任务说明</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_GUITESTGRIDS">
             <English>Open GUI Test Grids</English>
@@ -9902,18 +9591,6 @@
             <Chinese>隨機化車輛自定義</Chinese>
             <Chinesesimp>随机化车辆自定义</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_RECOMPILEFUNCTIONS">
-            <English>Recompile Functions</English>
-            <Czech>Překompilovat funkce</Czech>
-            <French>Recompiler la fonction</French>
-            <Spanish>Recompilar funciones</Spanish>
-            <Italian>Ricompila le funzioni</Italian>
-            <Polish>Rekompiluj funkcje</Polish>
-            <Russian>Перекомпилировать функции</Russian>
-            <German>Funktionen neu kompilieren</German>
-            <Chinese>重新編譯函數</Chinese>
-            <Chinesesimp>重新编译函数</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_REMOVEGEAR">
             <English>Remove Everything</English>
             <French>Supprimer tout</French>
@@ -10039,18 +9716,6 @@
             <Chinese>选择所有图层</Chinese>
             <Chinesesimp>选择所有图层</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_SHOWMAPIDS">
-            <English>Show Map IDs</English>
-            <Czech>Zobrazit ID na mapě</Czech>
-            <French>Afficher les IDs sur la carte</French>
-            <Spanish>Mostrar IDs en el mapa</Spanish>
-            <Italian>Mostra le ID della mappa</Italian>
-            <Polish>Pokaż ID mapy</Polish>
-            <Russian>Показать ID на карте</Russian>
-            <German>Zeige Karten IDs</German>
-            <Chinese>顯示地圖ID</Chinese>
-            <Chinesesimp>显示地图ID</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_SPACEEQUALLY_X">
             <English>Space along X-Axis</English>
             <French>Espacer le long de l'axe des X</French>
@@ -10092,12 +9757,6 @@
             <German>Zeitsprung</German>
             <Chinese>切換時間</Chinese>
             <Chinesesimp>切换时间</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_SWITCHTIME_TOGGLE_HIGHLIGHT_AREA_MARKERS">
-            <English>Toggle Highlight Area Markers</English>
-            <French>Basculer les marqueurs de zone en surbrillance</French>
-            <Italian>Alterna i marcatori dell'area di evidenziazione</Italian>
-            <German>Gebietsmarker-Hervorhebung umschalten</German>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_TEXTUREFINDER">
             <English>Texture Finder</English>
@@ -10154,18 +9813,6 @@
             <German>Zwischen lokalem Objekt umschalten</German>
             <Chinese>切换本地对象</Chinese>
             <Chinesesimp>切换本地对象</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_TOGGLEMARKERALPHA">
-            <English>Toggle Marker Alpha</English>
-            <Czech>Přepínání značky Alpha</Czech>
-            <French>Basculer le marqueur Alpha</French>
-            <Spanish>Conmutar marcador alfa</Spanish>
-            <Italian>Attiva/Disattiva Indicatore Alfa</Italian>
-            <Polish>Przełącz przezroczystość znaczników</Polish>
-            <Russian>Переключение маркера Альфа</Russian>
-            <German>Marker Alpha umschalten</German>
-            <Chinese>切換Alpha標記</Chinese>
-            <Chinesesimp>切换Alpha标记</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_TOGGLESIMPLEOBJECT">
             <English>Toggle Simple Object</English>
