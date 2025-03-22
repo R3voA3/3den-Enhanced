@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,7 +15,6 @@
     -
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
 #define SIDEBAR_W 70 * GRID_W
 #define LEFT (safeZoneX + GRID_W)
 #define Y (safeZoneY + 3 * CTRL_DEFAULT_H + 2 * GRID_H)

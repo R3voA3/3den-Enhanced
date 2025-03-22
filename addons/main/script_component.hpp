@@ -3,7 +3,7 @@
 #include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "\a3\ui_f\hpp\defineresincl.inc"
 #include "\a3\ui_f\hpp\defineresincldesign.inc"
-#include "\x\cba\addons\main\script_macros_common.hpp"
+#include "\x\enh\addons\main\cba_script_macros_common.hpp"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
@@ -72,7 +72,8 @@
     validate = "expression";\
 }\
 
-#define LB "<br/>"
+#define LB_HTML "<br/>"
+#define INDENT "    "
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11

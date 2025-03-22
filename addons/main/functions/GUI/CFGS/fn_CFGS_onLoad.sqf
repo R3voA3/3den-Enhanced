@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,8 +14,6 @@
     Returns:
     BOOLEAN: True
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 params ["_display"];
 

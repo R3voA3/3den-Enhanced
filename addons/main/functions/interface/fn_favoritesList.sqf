@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -14,7 +16,6 @@
     BOOLEAN - True
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
 #define FAVORITES_DATA (profileNamespace getVariable ["ENH_HashMap_Favorites", createHashMap])
 
 disableSerialization;

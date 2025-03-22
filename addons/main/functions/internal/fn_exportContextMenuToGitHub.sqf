@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,8 +14,6 @@
     Return Value:
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 private _contextMenuEntries = "configName _x select [0, 3] == 'ENH' && (getArray (_x >> 'items')) isEqualTo []" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items");
 private _items = [];

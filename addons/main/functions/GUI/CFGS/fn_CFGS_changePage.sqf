@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,8 +15,6 @@
     Returns:
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 params ["_control", "_selectedIndex"];
 _tv = (ctrlParent _control displayCtrl IDC_SENTENCESBROWSER_LIST);

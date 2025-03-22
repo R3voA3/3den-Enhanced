@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -16,8 +18,6 @@
     Examples(s):
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 #define COLOR_ATTRIBUTE [0.86, 0.73, 0.38, 1]
 #define COLOR_ENTITY [0.81, 0.51, 0.29, 1]

@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -11,8 +13,6 @@
     Returns:
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
 forceUnicode 0;

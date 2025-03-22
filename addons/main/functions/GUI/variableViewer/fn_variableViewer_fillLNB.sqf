@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,7 +15,6 @@
     -
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
 #define HIDE_FNC (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false])
 
 disableSerialization;

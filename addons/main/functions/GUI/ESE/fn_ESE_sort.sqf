@@ -1,6 +1,7 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
+
 params [["_mode", "name"]];
 
 private _display = uiNamespace getVariable "ENH_Display_ESE";

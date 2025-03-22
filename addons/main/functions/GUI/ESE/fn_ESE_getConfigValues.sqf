@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: Pixelated_Grunt
 
@@ -13,8 +15,6 @@
     ARRAY - ARRAY of whitelisted items, HASHMAP of items with details, ARRAY of available addons
 */
 
-
-#include "\x\enh\addons\main\script_component.hpp"
 #define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
 "Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 

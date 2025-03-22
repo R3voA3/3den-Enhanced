@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -20,6 +22,7 @@
 */
 
 disableSerialization;
+
 params
 [
     ["_ctrlLb", controlNull],
@@ -31,7 +34,7 @@ params
     ["_textRight", ""]
 ];
 
-if (_lbText != "") then 
+if (_lbText != "") then
 {
     private _index = _ctrlLb lbAdd _lbText;
     _ctrlLb lbSetData [_index, _lbData];

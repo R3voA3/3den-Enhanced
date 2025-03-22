@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -10,8 +12,6 @@
     Returns:
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 #define TINY [0, 512]
 #define SMALL [513, 1024]

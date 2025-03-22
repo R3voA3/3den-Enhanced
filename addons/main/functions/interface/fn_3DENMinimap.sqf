@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -16,8 +18,6 @@
     Examples(s):
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
 

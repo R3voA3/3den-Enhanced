@@ -1,3 +1,4 @@
+#include "\x\enh\addons\main\script_component.hpp"
 
 /*
     Author: R3vo
@@ -13,8 +14,6 @@
     Returns:
     -
 */
-
-#include "\x\enh\addons\main\script_component.hpp"
 
 private _export = "__NOTOC__" + endl;
 private _counter = 0;

@@ -1,4 +1,5 @@
 #include "\x\enh\addons\main\script_component.hpp"
+
 disableSerialization;
 
 if isNull ENH_Garrison_AreaHelper exitWith {};

@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,9 +15,8 @@
     -
 */
 
-#include "\x\enh\addons\main\script_component.hpp"
-
 disableSerialization;
+
 params ["_ctrlSearch"];
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlItems = CTRL(IDC_ESE_AVAILABLEITEMSLIST);
