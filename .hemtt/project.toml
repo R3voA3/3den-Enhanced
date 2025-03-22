@@ -56,8 +56,6 @@ enabled = true
 [hemtt.launch.default]
 
 workshop = [
-    # CBA_A3
-    "450814997",
     # Pythia
     "1751569185",
     # 7erra's Editing Extensions
@@ -65,9 +63,7 @@ workshop = [
     # 3Den Stringtable Viewer
     "2073243184",
     # Debug Console
-    "1231625987",
-    # ACE3
-    "463939057"
+    "1231625987"
 ]
 
 parameters = [
@@ -76,6 +72,19 @@ parameters = [
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
 executable = "arma3_x64"
+
+##########################################################################################
+############################## LAUNCH ACE ################################################
+##########################################################################################
+[hemtt.launch.ace]
+extends = "default"
+
+workshop = [
+    # CBA_A3
+    "450814997",
+    # ACE3
+    "463939057"
+]
 
 ##########################################################################################
 ############################## LAUNCH SPEARHEAD 1944 #####################################
