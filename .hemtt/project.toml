@@ -18,7 +18,7 @@ patch = 0
 git_hash = 0
 
 [hemtt.build]
-optional_mod_folders = false
+optional_mod_folders = true
 
 [hemtt.release]
 archive = true
