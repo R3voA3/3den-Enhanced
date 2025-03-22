@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,7 +14,6 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 //Get the context menu position
 (uiNamespace getVariable "BIS_fnc_3DENEntityMenu_data") params ["_position3D"];

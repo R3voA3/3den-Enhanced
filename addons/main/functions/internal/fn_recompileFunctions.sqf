@@ -1,20 +1,22 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
-  Author: R3vo
+    Author: R3vo
 
-  Date: 2024-11-07
-  File: addons\main\functions\internal\fn_recompileFunctions.sqf
+    Date: 2024-11-07
+    File: addons\main\functions\internal\fn_recompileFunctions.sqf
 
-  Description:
-  Recompiles all 3den Enhanced functions.
+    Description:
+    Recompiles all 3den Enhanced functions.
 
-  Parameter(s):
-  -
+    Parameter(s):
+    -
 
-  Return Value:
-  BOOLEAN - True on success, false if failed
+    Return Value:
+    BOOLEAN - True on success, false if failed
 
-  Examples(s):
-  [] call ENH_fnc_recompileFunctions;
+    Examples(s):
+    [] call ENH_fnc_recompileFunctions;
 */
 
 if !is3DEN exitWith {false};

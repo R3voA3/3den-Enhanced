@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,9 +15,11 @@
     Returns:
     ARRAY, NOTHING: See Parameters
 */
-#include "\x\enh\addons\main\script_component.hpp"
+
 disableSerialization;
+
 params [["_return", false], ["_itemsDetails", []]];
+
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _rows = lnbSize _ctrlInventory select 0;

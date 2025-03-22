@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -20,9 +22,10 @@
 */
 
 disableSerialization;
+
 params ["_ctrlLnb", "_data", "_text", "_image", "_addonIcon", "_value", "_tooltip", "_specificType"];
 
-if (_text != "") then 
+if (_text != "") then
 {
     private _row = _ctrlLnb lnbAddRow ["", _text, str _value, ""];
 

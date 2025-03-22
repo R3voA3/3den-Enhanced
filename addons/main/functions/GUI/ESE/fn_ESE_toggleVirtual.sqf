@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,10 +14,9 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
-//params ["", "_isVirtual"];
+
 params [["_isVirtual", [-1], [true, 0]]];
 
 private _display = uiNamespace getVariable "ENH_Display_ESE";

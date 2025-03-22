@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -15,7 +17,6 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 params ["_ctrlGroup", "_value"];
 parseSimpleArray _value params ["_hitpoints", "_damage"];

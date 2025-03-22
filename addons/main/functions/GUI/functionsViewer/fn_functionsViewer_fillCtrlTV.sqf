@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,7 +14,7 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
+
 #define LAST_VIEWED (profileNamespace getVariable ["ENH_FunctionsViewer_LastViewed", ""])
 
 disableSerialization;

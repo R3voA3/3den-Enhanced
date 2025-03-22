@@ -1,17 +1,19 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
-  Author: R3vo
+    Author: R3vo
 
-  Date: 2025-01-01
-  File: addons\main\functions\internal\fn_logShow.sqf
+    Date: 2025-01-01
+    File: addons\main\functions\internal\fn_logShow.sqf
 
-  Description:
-  Shows logs created with ENH_fnc_log.
+    Description:
+    Shows logs created with ENH_fnc_log.
 
-  Parameter(s):
-  -
+    Parameter(s):
+    -
 
-  Return Value:
-  BOOLEAN - True, false if no data to show
+    Return Value:
+    BOOLEAN - True, false if no data to show
 */
 
 disableSerialization;

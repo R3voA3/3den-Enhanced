@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,7 +14,7 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
+
 #define LINES (uiNamespace getVariable ["ENH_RPTViewer_Lines", 100])
 
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith

@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -13,7 +15,6 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 params ["_ctrlFilter", "_selectedIndex"];
 [_ctrlFilter lbData _selectedIndex] call ENH_fnc_CFGS_getCfgSentences;

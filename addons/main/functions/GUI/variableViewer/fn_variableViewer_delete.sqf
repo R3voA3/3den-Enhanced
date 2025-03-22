@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -12,7 +14,6 @@
     Returns:
     BOOLEAN: true / false
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlButton"];

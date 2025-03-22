@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: Pixelated_Grunt
 
@@ -13,7 +15,6 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
 
 private _allAttributes = [true] call ENH_fnc_ESE_parseClipboardValues;
 private _display = uiNamespace getVariable ["ENH_Display_ESE", displayNull];

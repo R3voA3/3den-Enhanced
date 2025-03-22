@@ -1,3 +1,5 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -10,7 +12,7 @@
     Returns:
     -
 */
-#include "\x\enh\addons\main\script_component.hpp"
+
 #define IN_PLAYLIST [_songName, _class, str _duration] in _playlist
 
 disableSerialization;
