@@ -73,16 +73,16 @@ if (_description isEqualType []) then
 _description = "<t font='RobotoCondensedBold'>" + localize "STR_ENH_MAIN_MODULEINFORMATION_DESCRIPTION" + "</t> " + _description + format
 [
     "%1%1<t font='RobotoCondensedBold'>%2</t> %3%1<t font='RobotoCondensedBold'>%4</t> %5%1<t font='RobotoCondensedBold'>%6</t> %7",
-    LB, localize "STR_ENH_MAIN_MODULEINFORMATION_POSITION", _position,
+    LB_HTML, localize "STR_ENH_MAIN_MODULEINFORMATION_POSITION", _position,
     localize "STR_ENH_MAIN_MODULEINFORMATION_DUPLICATE", _duplicate,
     localize "STR_ENH_MAIN_MODULEINFORMATION_DIRECTION", _direction
 ];
 
 if (_sync isNotEqualTo []) then
 {
-    _description = _description + format ["%1<t font='RobotoCondensedBold'>%2</t>%1", LB, localize "STR_ENH_MAIN_MODULEINFORMATION_SYNC"];
+    _description = _description + format ["%1<t font='RobotoCondensedBold'>%2</t>%1", LB_HTML, localize "STR_ENH_MAIN_MODULEINFORMATION_SYNC"];
     {
-        _description = _description + "    - " + _x + LB;
+        _description = _description + "    - " + _x + LB_HTML;
     } forEach _sync;
 };
 

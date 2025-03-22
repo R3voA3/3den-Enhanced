@@ -72,7 +72,8 @@
     validate = "expression";\
 }\
 
-#define LB "<br/>"
+#define LB_HTML "<br/>"
+#define INDENT "    "
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11

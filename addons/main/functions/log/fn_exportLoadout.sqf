@@ -23,22 +23,19 @@ if (isNil "_object") exitWith
     false
 };
 
-#define LB endl
-#define IND "    "
-
 params [["_mode", true]];
 
 //From BIS_fnc_exportLoadout START
 private _fnc_addArray =
 {
     params ["_name", "_array"];
-    _export = _export + format [IND + "%1[] = {", _name];
+    _export = _export + format [INDENT + "%1[] = {", _name];
     {
         if (_x == "") then {continue};
         if (_forEachIndex > 0) then {_export = _export + ", "};
         _export = _export + format ["""%1""", _x];
     } forEach _array;
-    _export = _export + "};" + LB;
+    _export = _export + "};" + endl;
 };
 
 private _class = typeOf _object;
@@ -66,7 +63,7 @@ private _export = "";
 
 if _mode then
 {//Respawn Loadout for config
-    _export = "class " + _class + LB + "{" + LB + IND + _uniformClass + LB + IND + _backpack + LB + _export + "};";
+    _export = "class " + _class + endl + "{" + endl + INDENT + _uniformClass + endl + INDENT + _backpack + endl + _export + "};";
 }
 else
 {//CfgRespawnLoadout
@@ -74,8 +71,8 @@ else
     private _icon = "icon = ""\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"";";
     private _role = "role = ""Default"";";
     private _show = "show = ""true"";";
-    _export = "class " + _class + LB + "{" + LB + IND + _displayName + LB + IND + _icon + LB + IND + _role + LB + IND + _show + LB + IND + _uniformClass + LB + IND + _backpack + LB + _export;
-    _export = _export + "};" + LB + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
+    _export = "class " + _class + endl + "{" + endl + INDENT + _displayName + endl + INDENT + _icon + endl + INDENT + _role + endl + INDENT + _show + endl + INDENT + _uniformClass + endl + INDENT + _backpack + endl + _export;
+    _export = _export + "};" + endl + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
 };
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
