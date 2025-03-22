@@ -56,16 +56,21 @@ enabled = true
 [hemtt.launch.default]
 
 workshop = [
-    "450814997",    # CBA_A3
-    "1751569185",   # Pythia
-    "1387934106",   # 7erra's Editing Extensions
-    "2073243184",   # 3Den Stringtable Viewer
-    "1231625987",   # Debug Console
-    "463939057"     # ACE3
+    # CBA_A3
+    "450814997",
+    # Pythia
+    "1751569185",
+    # 7erra's Editing Extensions
+    "1387934106",
+    # 3Den Stringtable Viewer
+    "2073243184",
+    # Debug Console
+    "1231625987",
+    # ACE3
+    "463939057"
 ]
 
 parameters = [
-    "-setThreadCharacteristics",
     "-limitFPS=60"
 ]
 
@@ -79,7 +84,8 @@ executable = "arma3_x64"
 extends = "default"
 
 workshop = [
-    "3117898674" # SPEX
+    # SPEX
+    "3117898674"
 ]
 
 dlc = [
