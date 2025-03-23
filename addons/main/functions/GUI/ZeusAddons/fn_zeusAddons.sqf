@@ -87,7 +87,7 @@ _ctrlTVPatches tvSortAll [[], false];
 _display displayAddEventHandler ["Unload",
 {
     params ["_display"];
-    private _ctrlTVPatches = _display displayCtrl IDC_ZEUSADDONS_CFGPATCHES;
+    private _ctrlTVPatches = CTRL(IDC_ZEUSADDONS_CFGPATCHES);
     private _enabled = [];
 
     for "_indexAddon" from 0 to (_ctrlTVPatches tvCount []) - 1 do

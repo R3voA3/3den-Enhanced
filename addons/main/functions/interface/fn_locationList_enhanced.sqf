@@ -23,7 +23,7 @@ switch _mode do
             isNil
             {
                 params ["_display"];
-                ENH_LocationsList_AddNew_Name = ctrlText (_display displayCtrl IDC_DISPLAY3DENRENAME_NAME);
+                ENH_LocationsList_AddNew_Name = ctrlText CTRL(IDC_DISPLAY3DENRENAME_NAME);
             };
         }];
 

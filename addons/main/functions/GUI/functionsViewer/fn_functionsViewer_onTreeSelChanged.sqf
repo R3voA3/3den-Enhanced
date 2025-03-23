@@ -21,8 +21,8 @@ private _display = uiNamespace getVariable ["ENH_Display_FunctionsViewer", displ
 
 params
 [
-    ["_ctrlTV", _display displayCtrl IDC_FUNCTIONSVIEWER_LIST],
-    ["_path", tvCurSel (_display displayCtrl IDC_FUNCTIONSVIEWER_LIST)]
+    ["_ctrlTV", CTRL(IDC_FUNCTIONSVIEWER_LIST)],
+    ["_path", tvCurSel CTRL(IDC_FUNCTIONSVIEWER_LIST)]
 ];
 
 private _ctrlCode = CTRL(IDC_FUNCTIONSVIEWER_CODE);

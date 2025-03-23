@@ -126,7 +126,7 @@ for "_index" from ((count _attributes) - 1) to 0 step -1 do
 };
 
 //Update counter
-_display displayCtrl IDC_ATTRIBUTESEARCH_COUNTER ctrlSetText format ["%1/%2", ENH_AttributeSearch_AttributesCounter_Valid, ENH_AttributeSearch_AttributesCounter_Total];
+CTRL(IDC_ATTRIBUTESEARCH_COUNTER) ctrlSetText format ["%1/%2", ENH_AttributeSearch_AttributesCounter_Valid, ENH_AttributeSearch_AttributesCounter_Total];
 
 //Wait until button was initialised and set its text and state
 _display spawn
