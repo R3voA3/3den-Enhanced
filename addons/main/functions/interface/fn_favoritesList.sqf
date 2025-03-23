@@ -56,23 +56,7 @@ switch _mode do
             ["delete", []] call ENH_fnc_favoritesList;
         }];
 
-        //Handle search button
-        _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH ctrlAddEventHandler ["EditChanged",
-        {
-            params ["_ctrlEdit", "_newText"];
-            private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-            ctrlParent _ctrlEdit displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH ctrlSetText _image;
-        }];
-
-        //Handle search button
-        _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH ctrlAddEventHandler ["ButtonClick",
-        {
-            params ["_ctrlButton"];
-
-            //Change search button icon and clear edit control to reset tree view filter
-            ctrlParent _ctrlButton displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH ctrlSetText "";
-            _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-        }];
+        [CTRL(IDC_DISPLAY3DEN_FAVORITES_SEARCH), CTRL(IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
 
         _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_EXPAND ctrlAddEventHandler ["ButtonClick",
         {

@@ -44,22 +44,4 @@ _ctrlTV tvSortAll [[], false];
 //Focus search box
 ctrlSetFocus (ctrlParent _ctrlTV displayCtrl IDC_MOVETOLAYER_SEARCH);
 
-//Handle search button
-CTRL(IDC_MOVETOLAYER_SEARCH) ctrlAddEventHandler ["EditChanged",
-{
-    params ["_ctrlEdit", "_newText"];
-
-    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-
-    ctrlParent _ctrlEdit displayCtrl IDC_MOVETOLAYER_BUTTONSEARCH ctrlSetText _image;
-}];
-
-//Handle search button
-CTRL(IDC_MOVETOLAYER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
-{
-    params ["_ctrlButton"];
-
-    //Change search button icon and clear edit control to reset tree view filter
-    ctrlParent _ctrlButton displayCtrl IDC_MOVETOLAYER_SEARCH ctrlSetText "";
-    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-}];
+[CTRL(IDC_MOVETOLAYER_SEARCH), CTRL(IDC_MOVETOLAYER_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;

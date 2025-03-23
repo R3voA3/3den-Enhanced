@@ -28,24 +28,6 @@ CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlCommit 0;
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;
 
-//Handle search button
-CTRL(IDC_SENTENCESBROWSER_SEARCH) ctrlAddEventHandler ["EditChanged",
-{
-    params ["_ctrlEdit", "_newText"];
-
-    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-
-    ctrlParent _ctrlEdit displayCtrl IDC_SENTENCESBROWSER_BUTTONSEARCH ctrlSetText _image;
-}];
-
-//Handle search button
-CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
-{
-    params ["_ctrlButton"];
-
-    //Change search button icon and clear edit control to reset tree view filter
-    ctrlParent _ctrlButton displayCtrl IDC_SENTENCESBROWSER_SEARCH ctrlSetText "";
-    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-}];
+[CTRL(IDC_SENTENCESBROWSER_SEARCH), CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
 
 true

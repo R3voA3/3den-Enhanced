@@ -233,22 +233,4 @@ _ctrlTV ctrlAddEventHandler ["TreeDblClick",
     [_ctrlTV, tvCurSel _ctrlTV] call ENH_fnc_attributeSearch_editAttributes;
 }];
 
-//Handle search button
-CTRL(IDC_ATTRIBUTESEARCH_SEARCH) ctrlAddEventHandler ["EditChanged",
-{
-    params ["_ctrlEdit", "_newText"];
-
-    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-
-    ctrlParent _ctrlEdit displayCtrl IDC_ATTRIBUTESEARCH_BUTTONSEARCH ctrlSetText _image;
-}];
-
-//Handle search button
-CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
-{
-    params ["_ctrlButton"];
-
-    //Change search button icon and clear edit control to reset tree view filter
-    ctrlParent _ctrlButton displayCtrl IDC_ATTRIBUTESEARCH_SEARCH ctrlSetText "";
-    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-}];
+[CTRL(IDC_ATTRIBUTESEARCH_SEARCH), CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
