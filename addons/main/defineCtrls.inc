@@ -1,6 +1,6 @@
 //Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
-                                                     class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
+                                                    class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
 
 class RscEdit;
 class RscText;
