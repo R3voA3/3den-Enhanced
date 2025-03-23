@@ -1,9 +1,5 @@
 #Excluded file extentions
-*.biprivatekey
 *.code-workspace
-*.txt
-*.sqfc
-*.url
 
 #Folders
 .hemttout
