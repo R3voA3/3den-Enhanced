@@ -4,11 +4,15 @@
 -->
 
 # 8.3.0
+## ADDED
+- The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
+
 ## CHANGED
 - Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
-- Removed "hidden" CBA dependency
+- Fixed CBA macro file would create a dependency and crash the game when trying to preprocess certain files
 - Moved open ACE Arsenal code to unscheduled execution to fix an issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
 - Fixed Briefing Editor text would not properly be displayed
+- The "Editable Objects (Zeus) now waits until a curator is available
 
 # 8.2.0
 ## ADDED
