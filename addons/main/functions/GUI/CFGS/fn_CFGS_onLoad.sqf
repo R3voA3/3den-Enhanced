@@ -28,6 +28,6 @@ CTRL(IDC_SENTENCESBROWSER_FAVORITES) ctrlCommit 0;
 "fill" call ENH_fnc_CFGS_handleFavorites;
 [] call ENH_fnc_CFGS_getCfgSentences;
 
-[CTRL(IDC_SENTENCESBROWSER_SEARCH), CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+[CTRL(IDC_SENTENCESBROWSER_SEARCH), CTRL(IDC_SENTENCESBROWSER_BUTTONSEARCH)] call ENH_fnc_initSearchControls;
 
 true

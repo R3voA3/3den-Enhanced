@@ -51,7 +51,7 @@ switch _mode do
             }
         }];
 
-        [CTRL(IDC_SAM_SEARCH), CTRL(IDC_SAM_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+        [CTRL(IDC_SAM_SEARCH), CTRL(IDC_SAM_BUTTONSEARCH)] call ENH_fnc_initSearchControls;
     };
     case "loadTemplate":
     {

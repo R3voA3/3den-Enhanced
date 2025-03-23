@@ -42,4 +42,4 @@ _display displayAddEventHandler ["KeyDown", //Focus Search Key
 
 call ENH_fnc_functionsViewer_fillCtrlTV;
 
-[CTRL(IDC_FUNCTIONSVIEWER_SEARCH), CTRL(IDC_FUNCTIONSVIEWER_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+[CTRL(IDC_FUNCTIONSVIEWER_SEARCH), CTRL(IDC_FUNCTIONSVIEWER_BUTTONSEARCH)] call ENH_fnc_initSearchControls;
