@@ -3,7 +3,6 @@
 #include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "\a3\ui_f\hpp\defineresincl.inc"
 #include "\a3\ui_f\hpp\defineresincldesign.inc"
-#include "\x\enh\addons\main\cba_script_macros_common.hpp"
 
 //Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
@@ -12,6 +11,14 @@
 #define REQUIRED_VERSION 2.18
 #define AUTHOR "R3vo"
 #define URL "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
+
+// CBA Macros
+// These are defined here to prevent a CBA dependency
+// Copied from https://github.com/CBATeam/CBA_A3/blob/master/addons/main/script_macros_common.hpp
+#define QUOTE(var1) #var1
+#define DOUBLES(var1,var2) var1##_##var2
+#define TRIPLES(var1,var2,var3) var1##_##var2##_##var3
+#define ARR_2(ARG1,ARG2) ARG1, ARG2
 
 #define CFGPATCHES_OPTIONAL(NAME,NAME_BEAUTIFIED) class CfgPatches\
 {\
