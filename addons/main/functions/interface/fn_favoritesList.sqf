@@ -56,7 +56,7 @@ switch _mode do
             ["delete", []] call ENH_fnc_favoritesList;
         }];
 
-        [CTRL(IDC_DISPLAY3DEN_FAVORITES_SEARCH), CTRL(IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+        [CTRL(IDC_DISPLAY3DEN_FAVORITES_SEARCH), CTRL(IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH)] call ENH_fnc_initSearchControls;
 
         _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_EXPAND ctrlAddEventHandler ["ButtonClick",
         {

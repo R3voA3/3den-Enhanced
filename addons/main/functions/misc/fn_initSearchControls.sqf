@@ -32,6 +32,25 @@ _ctrlEdit setVariable ["SearchButton", _ctrlButton];
 _ctrlEdit setVariable ["OnSearchCode", _onSearchCode];
 _ctrlButton setVariable ["SearchEdit", _ctrlEdit];
 
-[_ctrlEdit, _ctrlButton, "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+// Handle search button
+_ctrlEdit ctrlAddEventHandler ["EditChanged",
+{
+    params ["_ctrlEdit", "_newText"];
+
+    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
+
+    _ctrlEdit getVariable "SearchButton" ctrlSetText _image;
+    _ctrlEdit call (_ctrlEdit getVariable "OnSearchCode");
+}];
+
+// Handle search button
+_ctrlButton ctrlAddEventHandler ["ButtonClick",
+{
+    params ["_ctrlButton"];
+
+    // Change search button icon and clear edit control to reset tree view filter
+    _ctrlButton getVariable "SearchEdit" ctrlSetText "";
+    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
+}];
 
 true

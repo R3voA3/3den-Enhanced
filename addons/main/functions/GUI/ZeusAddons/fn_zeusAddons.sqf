@@ -198,4 +198,4 @@ CTRL(IDC_ZEUSADDONS_EXPAND) ctrlAddEventHandler ["ButtonClick",
     tvExpandAll (ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_CFGPATCHES);
 }];
 
-[CTRL(IDC_ZEUSADDONS_SEARCH), CTRL(IDC_ZEUSADDONS_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+[CTRL(IDC_ZEUSADDONS_SEARCH), CTRL(IDC_ZEUSADDONS_BUTTONSEARCH)] call ENH_fnc_initSearchControls;

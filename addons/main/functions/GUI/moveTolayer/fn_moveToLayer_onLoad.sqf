@@ -44,4 +44,4 @@ _ctrlTV tvSortAll [[], false];
 //Focus search box
 ctrlSetFocus (ctrlParent _ctrlTV displayCtrl IDC_MOVETOLAYER_SEARCH);
 
-[CTRL(IDC_MOVETOLAYER_SEARCH), CTRL(IDC_MOVETOLAYER_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+[CTRL(IDC_MOVETOLAYER_SEARCH), CTRL(IDC_MOVETOLAYER_BUTTONSEARCH)] call ENH_fnc_initSearchControls;

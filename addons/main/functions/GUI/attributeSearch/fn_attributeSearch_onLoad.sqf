@@ -233,4 +233,4 @@ _ctrlTV ctrlAddEventHandler ["TreeDblClick",
     [_ctrlTV, tvCurSel _ctrlTV] call ENH_fnc_attributeSearch_editAttributes;
 }];
 
-[CTRL(IDC_ATTRIBUTESEARCH_SEARCH), CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+[CTRL(IDC_ATTRIBUTESEARCH_SEARCH), CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH)] call ENH_fnc_initSearchControls;
