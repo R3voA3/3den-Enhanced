@@ -51,25 +51,7 @@ switch _mode do
             }
         }];
 
-        //Handle search button
-        CTRL(IDC_SAM_SEARCH) ctrlAddEventHandler ["EditChanged",
-        {
-            params ["_ctrlEdit", "_newText"];
-
-            private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-
-            ctrlParent _ctrlEdit displayCtrl IDC_SAM_BUTTONSEARCH ctrlSetText _image;
-        }];
-
-        //Handle search button
-        CTRL(IDC_SAM_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
-        {
-            params ["_ctrlButton"];
-
-            //Change search button icon and clear edit control to reset tree view filter
-            ctrlParent _ctrlButton displayCtrl IDC_SAM_SEARCH ctrlSetText "";
-            _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-        }];
+        [CTRL(IDC_SAM_SEARCH), CTRL(IDC_SAM_BUTTONSEARCH), "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
     };
     case "loadTemplate":
     {

@@ -63,26 +63,7 @@ _display displayAddEventHandler ["KeyDown",
     }
 }];
 
-//Handle search button
-CTRL(IDC_3DENRADIO_SEARCH) ctrlAddEventHandler ["EditChanged",
-{
-    params ["_ctrlEdit", "_newText"];
-
-    private _image = [TEXTURE_SEARCH_END, TEXTURE_SEARCH_START] select (_newText == "");
-
-    ctrlParent _ctrlEdit displayCtrl IDC_3DENRADIO_BUTTONSEARCH ctrlSetText _image;
-    call ENH_fnc_3DENRadio_searchList;
-}];
-
-//Handle search button
-CTRL(IDC_3DENRADIO_BUTTONSEARCH) ctrlAddEventHandler ["ButtonClick",
-{
-    params ["_ctrlButton"];
-
-    //Change search button icon and clear edit control to reset tree view filter
-    ctrlParent _ctrlButton displayCtrl IDC_3DENRADIO_SEARCH ctrlSetText "";
-    _ctrlButton ctrlSetText TEXTURE_SEARCH_START;
-}];
+[CTRL(IDC_3DENRADIO_SEARCH), CTRL(IDC_3DENRADIO_BUTTONSEARCH), ENH_fnc_3DENRadio_searchList] call ENH_fnc_initSearchControls;
 
 //Play selected song
 CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["LBDblClick",

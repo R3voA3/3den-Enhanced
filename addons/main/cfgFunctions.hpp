@@ -190,6 +190,7 @@ class CfgFunctions
             class getAllItems;
             class getConfigSourceAddon;
             class hasStorage;
+            class initSearchControls;
             class loadoutTool;
             class measureDistance;
             class pylonTools;
