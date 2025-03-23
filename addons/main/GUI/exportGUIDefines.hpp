@@ -106,7 +106,7 @@ class ENH_ExportGUIDefines
             y = QUOTE(WINDOW_TOPAbs + 20 * GRID_H);
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = QUOTE(private _display = ctrlParent (_this # 0); ARR_2([lbCurSel (_display displayCtrl IDC_EXPORTGUIDEFINES_TARGET),lbCurSel (_display displayCtrl IDC_EXPORTGUIDEFINES_TYPES)]) call ENH_fnc_exportGUIDefines);
+            onButtonClick = QUOTE(private _display = ctrlParent (_this # 0); ARR_2([lbCurSel CTRL(IDC_EXPORTGUIDEFINES_TARGET),lbCurSel CTRL(IDC_EXPORTGUIDEFINES_TYPES)]) call ENH_fnc_exportGUIDefines);
         };
     };
 };
