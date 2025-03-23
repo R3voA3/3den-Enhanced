@@ -5325,6 +5325,14 @@
             <Chinese>視距和物體視距將根據相機高度而改變。此選項可能會在差電腦上引起性能問題。</Chinese>
             <Chinesesimp>视距和物体视距将根据相机高度而改变。此选项可能会在差电脑上引起性能问题。</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_DISPLAYNAME">
+            <English>All</English>
+            <German>Alle</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_TOOLTIP">
+            <English>All entities will continiously be available.</English>
+            <German>Alle Einheiten werden ständig verfügbar sein.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_DISPLAYNAME">
             <English>Editable Objects (Zeus)</English>
             <Czech>Upravitelné objekty (Zeus)</Czech>
@@ -5336,6 +5344,14 @@
             <German>Editierbare Objekte (Zeus)</German>
             <Chinese>可編輯對象(Zeus)</Chinese>
             <Chinesesimp>可编辑对象(宙斯)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_DISPLAYNAME">
+            <English>Editor Placed Only</English>
+            <German>Nur im Editor plazierte</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_TOOLTIP">
+            <English>All entities that were placed in Eden Editor will be available.</English>
+            <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP">
             <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>
@@ -5727,7 +5743,6 @@
             <Chinese>視角</Chinese>
             <Chinesesimp>视角</Chinesesimp>
         </Key>
-
         <Key ID="STR_ENH_MAIN_FEATURETYPE_DISPLAYNAME">
             <English>Visibility</English>
             <Czech>Viditelnost</Czech>
