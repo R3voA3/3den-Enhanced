@@ -1,6 +1,2 @@
-#Excluded file extentions
-*.code-workspace
-
 #Folders
 .hemttout
-.vscode

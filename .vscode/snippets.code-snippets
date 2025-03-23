@@ -1,0 +1,41 @@
+{
+    "Inserts a function header.": {
+        "prefix": "header",
+        "body": [
+            "#include \"\\x\\enh\\addons\\main\\script_component.hpp\"",
+            "",
+            "/*",
+            "    Author: R3vo",
+            "",
+            "    Date: ${CURRENT_YEAR:2023}-${CURRENT_MONTH:01}-${CURRENT_DATE:01}",
+            "",
+            "    Description:",
+            "    ${1:This is an awesome description}.",
+            "",
+            "    Parameter(s):",
+            "    0: ${2|ARRAY,BOOLEAN,CODE,CONFIG,CONTROL,DIARY RECORD,DISPLAY,EDEN ENTITY,EDEN ID,EDITOR OBJECT,GROUP,HASHMAP,HASHMAPKEY,LOCATION,NAMESPACE,NAN,NUMBER,OBJECT,SCRIPT HANDLE,SIDE,STRING,STRUCTURED TEXT,TASK,TEAM MEMBER|} - ${3:Some description, optional, default false}",
+            "",
+            "    Return Value:",
+            "    ${4|ARRAY,BOOLEAN,CODE,CONFIG,CONTROL,DIARY RECORD,DISPLAY,EDEN ENTITY,EDEN ID,EDITOR OBJECT,GROUP,HASHMAP,HASHMAPKEY,LOCATION,NAMESPACE,NAN,NUMBER,OBJECT,SCRIPT HANDLE,SIDE,STRING,STRUCTURED TEXT,TASK,TEAM MEMBER|} - True on success, false if failed",
+            "",
+            "    Examples(s):",
+            "    ${5:[] call ENH_fnc_missionDisplay;}",
+            "*/"
+        ],
+        "description": "Inserts a function header."
+    },
+    "Defines SQF script name": {
+        "prefix": "scriptName",
+        "body": [
+            "scriptName \"${RELATIVE_FILEPATH}\";"
+        ],
+        "description": "Defines SQF script name"
+    },
+    "Inserts a To-Do comment": {
+        "prefix": "todo",
+        "body": [
+            "//TODO: ${1:example} ${CURRENT_YEAR:2023}-${CURRENT_MONTH:01}-${CURRENT_DATE:01} R3vo"
+        ],
+        "description": "Inserts a To-Do comment"
+    },
+}
