@@ -29,13 +29,13 @@
         "body": [
             "scriptName \"${RELATIVE_FILEPATH}\";"
         ],
-        "description": "Defines SQF script name"
+        "description": "Defines SQF script name."
     },
     "Inserts a To-Do comment": {
         "prefix": "todo",
         "body": [
             "//TODO: ${1:example} ${CURRENT_YEAR:2023}-${CURRENT_MONTH:01}-${CURRENT_DATE:01} R3vo"
         ],
-        "description": "Inserts a To-Do comment"
+        "description": "Inserts a To-Do comment."
     },
 }
