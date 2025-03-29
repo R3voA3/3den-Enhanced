@@ -10,7 +10,7 @@ class ENH_AmbientFlyby: Title
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_TOOLTIP";
         };
-        class ClassesValue: ctrlEditMulti
+        class ClassesValue: ctrlTree //TODO: Make tree view taller 2025-03-29 R3vo
         {
             idc = 100;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
@@ -32,7 +32,7 @@ class ENH_AmbientFlyby: Title
         };
         class StartRndOffsetTitle: Title
         {
-            text = "Random Start Offset";
+            text = "Random Start Offset";//TODO: Add tooltip 2025-03-29 R3vo
             y = QUOTE(5 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class StartRndOffsetValue: ctrlEdit
@@ -55,7 +55,7 @@ class ENH_AmbientFlyby: Title
         };
         class EndRndOffsetTitle: Title
         {
-            text = "Random End Offset";
+            text = "Random End Offset";//TODO: Add tooltip 2025-03-29 R3vo
             y = QUOTE(7 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class EndRndOffsetValue: ctrlEdit
@@ -71,24 +71,10 @@ class ENH_AmbientFlyby: Title
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
             text = "$STR_ENH_MAIN_ALTITUDE_DISPLAYNAME";
         };
-        class AltitudeValue: ctrlXSliderH
-        {
-            idc = 103;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
-            w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
-            sliderPosition = 500;
-            sliderRange[] = {50, 3000};
-            sliderStep = 50;
-            lineSize = 50;
-        };
         class AltitudeEdit: StartValue
         {
             idc = 104;
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
-            w = QUOTE(EDIT_W_WIDE * GRID_W);
         };
         class SpeedTitle: Title
         {
@@ -104,7 +90,7 @@ class ENH_AmbientFlyby: Title
             h = QUOTE(2 * CTRL_DEFAULT_H);
             rows = 1;
             columns = 3;
-             strings[] =
+            strings[] =
             {
                 "\a3\3DEN\Data\Attributes\SpeedMode\limited_ca.paa",
                 "\a3\3DEN\Data\Attributes\SpeedMode\normal_ca.paa",
@@ -134,31 +120,20 @@ class ENH_AmbientFlyby: Title
             tooltip = "$STR_ENH_MAIN_AMBIENTFLYBY_DELAY_TOOLTIP";
             y = QUOTE(13 * CTRL_DEFAULT_H + 40 * pixelH);
         };
-        class DelayValue: AltitudeValue
+        class DelayEdit: StartValue
         {
             idc = 107;
-            y = QUOTE(13 * CTRL_DEFAULT_H + 40 * pixelH);
-            sliderPosition = 300;
-            sliderRange[] = {60, 3600};
-            sliderStep = 5;
-        };
-        class DelayEdit: AltitudeEdit
-        {
-            idc = 108;
             y = QUOTE(13 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class DelayRndOffsetTitle: Title
         {
-            text = "Random Start Offset";
+            text = "Random Start Offset";//TODO: Add tooltip 2025-03-29 R3vo
             y = QUOTE(14 * CTRL_DEFAULT_H + 45 * pixelH);
         };
-        class DelayRndOffsetValue: ctrlEdit
+        class DelayRndOffsetValue: StartValue
         {
             idc = 111;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(14 * CTRL_DEFAULT_H + 45 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class Reset: ENH_ResetButton_Base
         {
