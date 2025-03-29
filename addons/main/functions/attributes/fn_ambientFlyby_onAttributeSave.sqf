@@ -21,8 +21,11 @@ params ["_ctrlGroup"];
     ctrlText (_ctrlGroup controlsGroupCtrl 100) splitString ";, [] " + endl, //Convert string to array with strings
     call compile ctrlText (_ctrlGroup controlsGroupCtrl 101),
     call compile ctrlText (_ctrlGroup controlsGroupCtrl 102),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 103),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 104),
     ["limited", "normal", "full"] # lbCurSel (_ctrlGroup controlsGroupCtrl 105),
     [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 106),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 107)
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 107),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 109),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 110),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 111)
 ]
