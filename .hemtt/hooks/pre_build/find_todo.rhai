@@ -1,5 +1,5 @@
 const ROOT = HEMTT_RFS;
-const TODO_TAG = "//TODO";
+const TODO_TAG = "// TODO";
 const ALLOWED_EXTENSIONS = ["hpp", "ext", "sqf", "xml", "txt", "inc", "rhai"];
 
 fn get_folders(path) {
