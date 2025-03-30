@@ -78,7 +78,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
     private _isSelected = _configName in _classes;
 
     private _index = _ctrlClassesTree tvAdd [[], _displayName];
-    _ctrlClassesTree tvSetTooltip [[_index], _configName + endl + endl + "Double click to add or remove the item."];//TODO: Translate 2025-03-29 R3vo
+    _ctrlClassesTree tvSetTooltip [[_index], _configName + endl + endl + "Double click to add or remove the item."];// TODO: Translate 2025-03-29 R3vo
     _ctrlClassesTree tvSetPictureRight [[_index], [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _isSelected];
     _ctrlClassesTree tvSetValue [[_index], parseNumber _isSelected];
     _ctrlClassesTree tvSetPicture [[_index], _icon];
@@ -116,7 +116,7 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeDblClick",
 (_ctrlGroup controlsGroupCtrl 111) ctrlSetText str _rndDelayOffset;
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",//TODO: Handle resetting tree view 2025-03-29 R3vo
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",// TODO: Handle resetting tree view 2025-03-29 R3vo
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 

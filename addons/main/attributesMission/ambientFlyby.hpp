@@ -15,7 +15,7 @@ class ENH_AmbientFlyby
             displayName = "$STR_ENH_MAIN_AMBIENTFLYBY_DISPLAYNAME";
             property = "ENH_ambientFlyby";
             control = "ENH_AmbientFlyby";
-            //TODO: remove diag log from expression 2025-03-29 R3vo
+            // TODO: remove diag log from expression 2025-03-29 R3vo
             expression ="\
             if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then\
             {\
