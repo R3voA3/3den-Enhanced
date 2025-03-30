@@ -62,7 +62,7 @@ class ENH_Interface
                 };
             };
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_MinimapSize', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapSize', 2]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_MinimapSize', 0]";
             typeName = "NUMBER";
         };
         class ENH_MinimapScaleMultiplier
