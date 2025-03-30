@@ -66,7 +66,7 @@ CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlSetText (profileNamespace getVariable ["E
 
 do3DENAction "WidgetScale";
 
-private _ctrlMode = CTRL(IDC_GARRISON_MODE);//TODO: Translate 2024-03-10 R3vo
+private _ctrlMode = CTRL(IDC_GARRISON_MODE);// TODO: Translate 2024-03-10 R3vo
 _ctrlMode lbAdd "Closest Building only";
 _ctrlMode lbSetTooltip [0, "Only the closest building to the center will be garrisoned."];
 _ctrlMode lbAdd "From Center";
