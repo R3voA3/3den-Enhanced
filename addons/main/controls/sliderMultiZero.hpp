@@ -4,7 +4,8 @@ class ENH_SliderMultiZero: SliderMultiplier
     {
         class Title: Title {};
         class Edit: Edit {};
-        class Value: Value {
+        class Value: Value
+        {
             sliderRange[] = {0, 3};
             sliderPosition = 1;
             lineSize = 0.1;
