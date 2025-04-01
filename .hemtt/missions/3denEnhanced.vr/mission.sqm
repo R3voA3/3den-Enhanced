@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17095;
+		nextID=17105;
 	};
 	class Camera
 	{
 		pos[]={3974.417,30,2852.375};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
+		up[]={-1.2363449e-07,0.70710671,0.70710683};
+		aside[]={1,0,1.7484557e-07};
 	};
 };
 binarizationWanted=0;
@@ -751,9 +751,291 @@ class CustomAttributes
 							class data
 							{
 								singleType="ARRAY";
+								class value
+								{
+									items=23;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="C_Plane_Civil_01_F";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_Heli_Light_01_dynamicLoadout_F";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="STRING";
+											value="C_Heli_Light_01_civil_F";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_Heli_Light_02_dynamicLoadout_F";
+										};
+									};
+									class Item4
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_Heli_Light_01_F";
+										};
+									};
+									class Item5
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_E_Heli_light_03_dynamicLoadout_F";
+										};
+									};
+									class Item6
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_Heli_Attack_02_dynamicLoadout_F";
+										};
+									};
+									class Item7
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_Heli_Transport_01_F";
+										};
+									};
+									class Item8
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_Heli_Transport_02_F";
+										};
+									};
+									class Item9
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_Plane_Fighter_03_dynamicLoadout_F";
+										};
+									};
+									class Item10
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_E_UAV_06_F";
+										};
+									};
+									class Item11
+									{
+										class data
+										{
+											singleType="STRING";
+											value="C_IDAP_UAV_06_medical_F";
+										};
+									};
+									class Item12
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_UAV_06_medical_F";
+										};
+									};
+									class Item13
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_UAV_06_medical_F";
+										};
+									};
+									class Item14
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_UAV_06_medical_F";
+										};
+									};
+									class Item15
+									{
+										class data
+										{
+											singleType="STRING";
+											value="C_IDAP_UAV_06_F";
+										};
+									};
+									class Item16
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_Heli_Transport_04_bench_F";
+										};
+									};
+									class Item17
+									{
+										class data
+										{
+											singleType="STRING";
+											value="C_IDAP_Heli_Transport_02_F";
+										};
+									};
+									class Item18
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_Heli_Transport_04_ammo_F";
+										};
+									};
+									class Item19
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_T_VTOL_01_armed_F";
+										};
+									};
+									class Item20
+									{
+										class data
+										{
+											singleType="STRING";
+											value="B_Heli_Transport_03_F";
+										};
+									};
+									class Item21
+									{
+										class data
+										{
+											singleType="STRING";
+											value="I_Plane_Fighter_04_F";
+										};
+									};
+									class Item22
+									{
+										class data
+										{
+											singleType="STRING";
+											value="O_Heli_Transport_04_fuel_F";
+										};
+									};
+								};
 							};
 						};
 						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=3;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=178.798;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=124.571;
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=3;
+									class Item0
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=7875.0498;
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=7899.9102;
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0;
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=50;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="STRING";
+								value="full";
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								singleType="SIDE";
+								value="WEST";
+							};
+						};
+						class Item6
 						{
 							class data
 							{
@@ -774,109 +1056,15 @@ class CustomAttributes
 										class data
 										{
 											singleType="SCALAR";
-											value=2;
-										};
-									};
-									class Item2
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=3;
-										};
-									};
-								};
-							};
-						};
-						class Item2
-						{
-							class data
-							{
-								singleType="ARRAY";
-								class value
-								{
-									items=3;
-									class Item0
-									{
-										class data
-										{
-											singleType="SCALAR";
 											value=5;
 										};
 									};
-									class Item1
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=6;
-										};
-									};
 									class Item2
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=7;
-										};
-									};
-								};
-							};
-						};
-						class Item3
-						{
-							class data
-							{
-								singleType="SCALAR";
-								value=9;
-							};
-						};
-						class Item4
-						{
-							class data
-							{
-								singleType="STRING";
-								value="full";
-							};
-						};
-						class Item5
-						{
-							class data
-							{
-								singleType="SIDE";
-								value="CIV";
-							};
-						};
-						class Item6
-						{
-							class data
-							{
-								singleType="ARRAY";
-								class value
-								{
-									items=3;
-									class Item0
 									{
 										class data
 										{
 											singleType="SCALAR";
 											value=10;
-										};
-									};
-									class Item1
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=11;
-										};
-									};
-									class Item2
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=12;
 										};
 									};
 								};
@@ -887,7 +1075,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=4;
+								value=5000;
 							};
 						};
 						class Item8
@@ -895,7 +1083,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=8;
+								value=5000;
 							};
 						};
 					};
