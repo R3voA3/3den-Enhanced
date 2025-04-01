@@ -182,7 +182,7 @@ class ENH_HoldAction: Title
             idc = 115;
             y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(26 * CTRL_DEFAULT_H + 70 * pixelH);
         };

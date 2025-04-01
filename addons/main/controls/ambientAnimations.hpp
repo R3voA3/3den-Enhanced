@@ -41,7 +41,7 @@ class ENH_AmbientAnimations: Title
             idc = 102;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };

@@ -61,12 +61,12 @@ class ENH_MissionEnding_Casualties: Title
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
         };
-        class SideValue: ENH_SideToolbox_Base
+        class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
             idc = 104;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(5 * CTRL_DEFAULT_H + 20 * pixelH);
         };

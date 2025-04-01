@@ -84,7 +84,7 @@ class ENH_IntroText: Title
             };
             values[] = {0, 1, 2};
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(9 * CTRL_DEFAULT_H + 25 * pixelH);
         };

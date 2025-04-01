@@ -71,7 +71,7 @@ class ENH_GroupMarker: Title
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(5 * CTRL_DEFAULT_H + 20 * pixelH);
         };

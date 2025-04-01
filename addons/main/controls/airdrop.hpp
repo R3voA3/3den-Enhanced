@@ -90,12 +90,12 @@ class ENH_Airdrop: Title
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
         };
-        class SideValue: ENH_SideToolbox_Base
+        class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
             idc = 107;
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(10 * CTRL_DEFAULT_H + 30 * pixelH);
         };

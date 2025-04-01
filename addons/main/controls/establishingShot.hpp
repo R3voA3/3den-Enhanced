@@ -114,7 +114,7 @@ class ENH_EstablishingShot: Title
             };
             values[] = {0, 1};
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(7 * CTRL_DEFAULT_H + 30 * pixelH);
         };

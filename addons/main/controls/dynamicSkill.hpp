@@ -242,7 +242,7 @@ class ENH_DynamicSkill: Title
             idc = 124;
             y = QUOTE(15 * CTRL_DEFAULT_H + 80 * pixelH);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(16 * CTRL_DEFAULT_H + 85 * pixelH);
         };
