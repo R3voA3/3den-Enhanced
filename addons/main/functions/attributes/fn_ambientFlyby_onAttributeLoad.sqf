@@ -25,30 +25,18 @@ _value params
     "_alt",
     "_speed",
     "_side",
-    "_delay",
+    ["_delay", [0, 300,0, 0], [[], 0]], // Allow number for backwards compatibility
     ["_rndStartOffset", 0],
-    ["_rndEndOffset", 0],
-    ["_rndDelayOffset", 0]
+    ["_rndEndOffset", 0]
 ];
 
-// if (_classes isEqualType "") then
-// {
-//     (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _classes;
-// }
-// else
-// {
-//     //Change classes from type array to type string
-//     private _valueClasses = "";
+// Was stored as string in older versions
+if (_classes isEqualType "") then
+{
+    _classes = call compile _classes;
+};
 
-//     {
-//         private _add = if (_forEachIndex == 0) then {_x} else {format [", %1", _x]};
-//         _valueClasses = _valueClasses + _add;
-//     } forEach _classes;
-
-//     (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
-// };
-
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 100;
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
 
 // Cache stuff
 if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) then
@@ -79,6 +67,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
 
     private _index = _ctrlClassesTree tvAdd [[], _displayName];
     _ctrlClassesTree tvSetTooltip [[_index], _configName + endl + endl + "Double click to add or remove the item."];// TODO: Translate 2025-03-29 R3vo
+    _ctrlClassesTree tvSetData [[_index], _configName];
     _ctrlClassesTree tvSetPictureRight [[_index], [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _isSelected];
     _ctrlClassesTree tvSetValue [[_index], parseNumber _isSelected];
     _ctrlClassesTree tvSetPicture [[_index], _icon];
@@ -99,40 +88,115 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeDblClick",
     _ctrlClassesTree tvSortByValue [[], false];
 }];
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
+(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_startPos#0);
+(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_startPos#1);
+(_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_startPos#2);
 
-(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str _startPos;
-(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str _endPos;
+(_ctrlGroup controlsGroupCtrl 104) ctrlSetText str (_rndStartOffset);
 
-(_ctrlGroup controlsGroupCtrl 104) ctrlSetText str _alt;
+(_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_endPos#0);
+(_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_endPos#1);
+(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_endPos#2);
 
-(_ctrlGroup controlsGroupCtrl 105) lbSetCurSel (["limited", "normal", "full"] find _speed);
-(_ctrlGroup controlsGroupCtrl 106) lbSetCurSel ([west, east, independent, civilian] find _side);
+(_ctrlGroup controlsGroupCtrl 108) ctrlSetText str (_rndEndOffset);
 
-(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str _delay;
+(_ctrlGroup controlsGroupCtrl 109) ctrlSetText str _alt;
 
-(_ctrlGroup controlsGroupCtrl 109) ctrlSetText str _rndStartOffset;
-(_ctrlGroup controlsGroupCtrl 110) ctrlSetText str _rndStartOffset;
-(_ctrlGroup controlsGroupCtrl 111) ctrlSetText str _rndDelayOffset;
+(_ctrlGroup controlsGroupCtrl 110) lbSetCurSel (["limited", "normal", "full"] find _speed);
+(_ctrlGroup controlsGroupCtrl 111) lbSetCurSel ([west, east, independent, civilian] find _side);
 
-//Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",// TODO: Handle resetting tree view 2025-03-29 R3vo
+// Backwards compatibility
+if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};
+
+(_ctrlGroup controlsGroupCtrl 112) ctrlSetText str (_delay#0);
+(_ctrlGroup controlsGroupCtrl 113) ctrlSetText str (_delay#1);
+(_ctrlGroup controlsGroupCtrl 114) ctrlSetText str (_delay#2);
+
+(_ctrlGroup controlsGroupCtrl 115) ctrlAddEventHandler ["ButtonClick", ////TODO: Turn this code into a function 2025-04-01 R3vo
+{
+    private _clipboardContent = trim copyFromClipboard;
+
+    if (_clipboardContent == "") exitWith {};
+    if (_clipboardContent select [0, 1] != "[") exitWith {};
+    if (reverse _clipboardContent select [0, 1] != "]") exitWith {};
+    if (count (_clipboardContent regexFind [",", 0]) != 2) exitWith {};
+
+    _clipboardContent = parseSimpleArray _clipboardContent;
+
+    if (_clipboardContent isEqualTypeParams [0, 0, 0]) then
+    {
+        private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_clipboardContent#0);
+        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_clipboardContent#1);
+        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_clipboardContent#2);
+    };
+}];
+
+(_ctrlGroup controlsGroupCtrl 116) ctrlAddEventHandler ["ButtonClick",
+{
+    private _clipboardContent = trim copyFromClipboard;
+
+    if (_clipboardContent == "") exitWith {};
+    if (_clipboardContent select [0, 1] != "[") exitWith {};
+    if (reverse _clipboardContent select [0, 1] != "]") exitWith {};
+    if (count (_clipboardContent regexFind [",", 0]) != 2) exitWith {};
+
+    _clipboardContent = parseSimpleArray _clipboardContent;
+
+    if (_clipboardContent isEqualTypeParams [0, 0, 0]) then
+    {
+        private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+        (_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_clipboardContent#0);
+        (_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_clipboardContent#1);
+        (_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_clipboardContent#2);
+    };
+}];
+
+// Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
+    // Reset filter
+    (_ctrlGroup controlsGroupCtrl 501) ctrlSetText "";
 
-    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0,0,0]";
-    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "[0,0,0]";
+    private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
 
-    (_ctrlGroup controlsGroupCtrl 104) ctrlSetText "500";
+    // Delay the reset. The engine needs a moment to reset the filtered list
+    _ctrlClassesTree spawn
+    {
+        params ["_ctrlClassesTree"];
 
-    (_ctrlGroup controlsGroupCtrl 105) lbSetCurSel 1;
-    (_ctrlGroup controlsGroupCtrl 106) lbSetCurSel 0;
+        sleep 0.05;
 
-    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "300";
+        for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
+        {
+            if (_ctrlClassesTree tvValue [_i] > 0) then
+            {
+                _ctrlClassesTree tvSetValue [[_i], 0];
+                _ctrlClassesTree tvSetPictureRight [[_i], TEXTURE_UNCHECKED];
+            };
+        };
+    };
 
-    (_ctrlGroup controlsGroupCtrl 109) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 110) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 111) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "0";
+
+    (_ctrlGroup controlsGroupCtrl 104) ctrlSetText "0";
+
+    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "0";
+
+    (_ctrlGroup controlsGroupCtrl 108) ctrlSetText "0";
+
+    (_ctrlGroup controlsGroupCtrl 109) ctrlSetText "500";
+
+    (_ctrlGroup controlsGroupCtrl 110) lbSetCurSel 1;
+    (_ctrlGroup controlsGroupCtrl 111) lbSetCurSel 0;
+
+    (_ctrlGroup controlsGroupCtrl 112) ctrlSetText "300";
+    (_ctrlGroup controlsGroupCtrl 113) ctrlSetText "300";
+    (_ctrlGroup controlsGroupCtrl 114) ctrlSetText "300";
 }];

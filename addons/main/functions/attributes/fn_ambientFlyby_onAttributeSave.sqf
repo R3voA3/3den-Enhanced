@@ -1,5 +1,5 @@
-
 #include "\x\enh\addons\main\script_component.hpp"
+
 /*
     Author: R3vo
 
@@ -17,15 +17,37 @@
 
 params ["_ctrlGroup"];
 
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 100;
+private _classes = [];
+
+for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
+{
+    if (_ctrlClassesTree tvValue [_i] > 0) then
+    {
+        _classes pushBack (_ctrlClassesTree tvData [_i]);
+    };
+};
+
 [
-    ctrlText (_ctrlGroup controlsGroupCtrl 100) splitString ";, [] " + endl, //Convert string to array with strings
-    call compile ctrlText (_ctrlGroup controlsGroupCtrl 101),
-    call compile ctrlText (_ctrlGroup controlsGroupCtrl 102),
+    _classes,
+    [ // Start pos
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 101),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 102),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 103)
+    ],
+    [ // End pos
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 105),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 106),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 107)
+    ],
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 109), // Altitude
+    ["limited", "normal", "full"] # lbCurSel (_ctrlGroup controlsGroupCtrl 110), // Speed
+    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 111), // Side
+    [ // Delay
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 112),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 113),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 114)
+    ],
     parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 104),
-    ["limited", "normal", "full"] # lbCurSel (_ctrlGroup controlsGroupCtrl 105),
-    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 106),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 107),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 109),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 110),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 111)
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 108)
 ]

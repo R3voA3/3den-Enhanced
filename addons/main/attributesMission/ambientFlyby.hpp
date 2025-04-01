@@ -15,7 +15,6 @@ class ENH_AmbientFlyby
             displayName = "$STR_ENH_MAIN_AMBIENTFLYBY_DISPLAYNAME";
             property = "ENH_ambientFlyby";
             control = "ENH_AmbientFlyby";
-            // TODO: remove diag log from expression 2025-03-29 R3vo
             expression ="\
             if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then\
             {\
@@ -23,32 +22,26 @@ class ENH_AmbientFlyby
                 _value spawn\
                 {\
                     scriptName 'ENH_Attribute_AmbientFlyby';\
-                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', '_delay', '_rndStartOffset', '_rndEndOffset', '_rndDelayOffset'];\
+                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];\
                     while {ENH_AmbientFlyby_Enabled} do\
                     {\
-                        private _finalDelay = ((_delay + random _rndDelayOffset - random _rndDelayOffset) max 1);\
+                        private _finalDelay = if (_delay isEqualType 0) then {_delay} else {random _delay};\
                         private _finalStartPos = _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset];\
                         private _finalEndPos = _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset];\
                         \
                         sleep _finalDelay;\
                         [
-                        _finalStartPos,
-                        _finalEndPos,
-                        _alt,
-                        _speed,
-                        selectRandom _classes,
-                        _side
-                    ] call BIS_fnc_ambientFlyby;\
-                    diag_log\
-                    [\
-                        _finalDelay,\
-                        _finalStartPos,\
-                        _finalEndPos\
-                    ];\
+                            _finalStartPos,
+                            _finalEndPos,
+                            _alt,
+                            _speed,
+                            selectRandom _classes,
+                            _side
+                        ] call BIS_fnc_ambientFlyby;\
                     };\
                 };\
             }";
-            defaultValue = "[[], [0, 0, 0], [0, 0, 0], 500, 'normal', west, 300]";
+            defaultValue = "[[], [0, 0, 0], [0, 0, 0], 500, 'normal', west, [300, 300, 300], 0, 0]";
         };
     };
 };
