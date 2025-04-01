@@ -1,7 +1,6 @@
 <!-- # 8.4.0
 ## ADDED
 - Custom marker color attribute
--->
 
 # 8.3.0
 ## ADDED
@@ -14,6 +13,13 @@
 - Moved open ACE Arsenal code to unscheduled execution to fix an issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
 - Fixed Briefing Editor text would not properly be displayed
 - The "Editable Objects (Zeus) now waits until a curator is available
+- Ambient Flyby Attribute
+    - Completely overhauled the UI
+    - Added paste from clipboard buttons to set the positions easily
+    - Added support for randomized delay
+    - Added support for randomized start and end positions
+    - Added filterable tree view
+-->
 
 # 8.2.0
 ## ADDED
