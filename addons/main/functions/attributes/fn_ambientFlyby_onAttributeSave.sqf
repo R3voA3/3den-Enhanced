@@ -17,7 +17,7 @@
 
 params ["_ctrlGroup"];
 
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 100;
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
 private _classes = [];
 
 for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
