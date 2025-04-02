@@ -181,6 +181,7 @@ class CfgFunctions
             file = "x\enh\addons\main\functions\Misc";
             class alignEntities;
             class all3DENSelected;
+            class array3FromClipboard;
             class centerMapOnSelection;
             class createBackupMissionSQM;
             class deleteCrew;

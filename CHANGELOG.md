@@ -6,6 +6,7 @@
 ## ADDED
 - The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
 - ENH_fnc_initSearchControls to easily setup a search with an image button and a edit box as used everywhere in Eden editor
+- Function to parse array3 from clipboard
 
 ## CHANGED
 - Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
