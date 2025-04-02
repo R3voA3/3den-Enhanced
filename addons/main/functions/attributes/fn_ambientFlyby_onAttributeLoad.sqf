@@ -66,7 +66,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
     private _isSelected = _configName in _classes;
 
     private _index = _ctrlClassesTree tvAdd [[], _displayName];
-    _ctrlClassesTree tvSetTooltip [[_index], _configName + endl + endl + "Double click to add or remove the item."];// TODO: Translate 2025-03-29 R3vo
+    _ctrlClassesTree tvSetTooltip [[_index], _configName];
     _ctrlClassesTree tvSetData [[_index], _configName];
     _ctrlClassesTree tvSetPictureRight [[_index], [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _isSelected];
     _ctrlClassesTree tvSetValue [[_index], parseNumber _isSelected];
@@ -76,7 +76,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
 
 _ctrlClassesTree tvSortByValue [[], false];
 
-_ctrlClassesTree ctrlAddEventHandler ["TreeDblClick",
+_ctrlClassesTree ctrlAddEventHandler ["TreeSelChanged",
 {
     params ["_ctrlClassesTree", "_path"];
 
@@ -85,7 +85,7 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeDblClick",
     // Flip int
     _ctrlClassesTree tvSetValue [_path, _newValue];
     _ctrlClassesTree tvSetPictureRight [_path, [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _newValue];
-    _ctrlClassesTree tvSortByValue [[], false];
+    // _ctrlClassesTree tvSortByValue [[], false];
 }];
 
 (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_startPos#0);
