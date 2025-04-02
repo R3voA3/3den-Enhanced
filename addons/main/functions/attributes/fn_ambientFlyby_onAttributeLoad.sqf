@@ -6,7 +6,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by the ambient flyby attribute. Call when attribute is loaded.
+    Used by the ambient flyby attribute. Called when attribute is loaded.
 
     Parameter(s):
     0: CONTROL - Controls group
@@ -25,9 +25,9 @@ _value params
     "_alt",
     "_speed",
     "_side",
-    ["_delay", [0, 300,0, 0], [[], 0]], // Allow number for backwards compatibility
-    ["_rndStartOffset", 0],
-    ["_rndEndOffset", 0]
+    "_delay",
+    ["_rndStartOffset", 0], // Default value for backwards compatibility
+    ["_rndEndOffset", 0] // Default value for backwards compatibility
 ];
 
 // Was stored as string in older versions
@@ -112,43 +112,29 @@ if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};
 (_ctrlGroup controlsGroupCtrl 113) ctrlSetText str (_delay#1);
 (_ctrlGroup controlsGroupCtrl 114) ctrlSetText str (_delay#2);
 
-(_ctrlGroup controlsGroupCtrl 115) ctrlAddEventHandler ["ButtonClick", ////TODO: Turn this code into a function 2025-04-01 R3vo
+(_ctrlGroup controlsGroupCtrl 115) ctrlAddEventHandler ["ButtonClick",
 {
-    private _clipboardContent = trim copyFromClipboard;
+    private _array = call ENH_fnc_array3FromClipboard;
 
-    if (_clipboardContent == "") exitWith {};
-    if (_clipboardContent select [0, 1] != "[") exitWith {};
-    if (reverse _clipboardContent select [0, 1] != "]") exitWith {};
-    if (count (_clipboardContent regexFind [",", 0]) != 2) exitWith {};
-
-    _clipboardContent = parseSimpleArray _clipboardContent;
-
-    if (_clipboardContent isEqualTypeParams [0, 0, 0]) then
+    if (_array isNotEqualTo []) then
     {
         private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_clipboardContent#0);
-        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_clipboardContent#1);
-        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_clipboardContent#2);
+        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_array#2);
     };
 }];
 
 (_ctrlGroup controlsGroupCtrl 116) ctrlAddEventHandler ["ButtonClick",
 {
-    private _clipboardContent = trim copyFromClipboard;
+    private _array = call ENH_fnc_array3FromClipboard;
 
-    if (_clipboardContent == "") exitWith {};
-    if (_clipboardContent select [0, 1] != "[") exitWith {};
-    if (reverse _clipboardContent select [0, 1] != "]") exitWith {};
-    if (count (_clipboardContent regexFind [",", 0]) != 2) exitWith {};
-
-    _clipboardContent = parseSimpleArray _clipboardContent;
-
-    if (_clipboardContent isEqualTypeParams [0, 0, 0]) then
+    if (_array isNotEqualTo []) then
     {
         private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-        (_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_clipboardContent#0);
-        (_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_clipboardContent#1);
-        (_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_clipboardContent#2);
+        (_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_array#2);
     };
 }];
 
