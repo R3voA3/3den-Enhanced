@@ -5296,10 +5296,12 @@
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_DISPLAYNAME">
             <English>All</English>
             <German>Alle</German>
+            <French>Tous les</French>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_TOOLTIP">
             <English>All entities will continiously be available.</English>
             <German>Alle Einheiten werden ständig verfügbar sein.</German>
+            <French>Toutes les unités seront disponibles en permanence.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_DISPLAYNAME">
             <English>Editable Objects (Zeus)</English>
@@ -5316,10 +5318,12 @@
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_DISPLAYNAME">
             <English>Editor Placed Only</English>
             <German>Nur im Editor plazierte</German>
+            <French>Seuls les éléments placés dans l'éditeur</French>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_TOOLTIP">
             <English>All entities that were placed in Eden Editor will be available.</English>
             <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
+            <French>Toutes les entités placées dans Eden Editor seront disponibles.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP">
             <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>

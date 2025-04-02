@@ -642,7 +642,6 @@ enum
 
 #define IDD_MISSION_EDITOR_REALTIME     137
 
-//TODO: Has to be checked by Pete!
 #define IDD_EDIT_BRIEFING               138
 #define IDD_LIVE                        139
 

@@ -20,7 +20,8 @@
     - Added support for randomized delay
     - Added support for randomized start and end positions
     - Added filterable tree view
--->
+- French translation update by Alfred-Neuman
+=======
 
 # 8.2.0
 ## ADDED
