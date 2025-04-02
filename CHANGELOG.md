@@ -1,12 +1,12 @@
 <!-- # 8.4.0
 ## ADDED
 - Custom marker color attribute
--->
 
 # 8.3.0
 ## ADDED
 - The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
 - ENH_fnc_initSearchControls to easily setup a search with an image button and a edit box as used everywhere in Eden editor
+- Function to parse array3 from clipboard
 
 ## CHANGED
 - Replaced mission sqm blacklist attribute with a scenario specific checkbox (General -> Misc.). If multiple people are working on the same scenario not everyone has to specifically set the blacklist
@@ -14,7 +14,14 @@
 - Moved open ACE Arsenal code to unscheduled execution to fix an issue with shift being detected and adding always 5 items in ACE Arsenal (Thanks Komodo for the report)
 - Fixed Briefing Editor text would not properly be displayed
 - The "Editable Objects (Zeus) now waits until a curator is available
+- Ambient Flyby Attribute
+    - Completely overhauled the UI
+    - Added paste from clipboard buttons to set the positions easily
+    - Added support for randomized delay
+    - Added support for randomized start and end positions
+    - Added filterable tree view
 - French translation update by Alfred-Neuman
+=======
 
 # 8.2.0
 ## ADDED

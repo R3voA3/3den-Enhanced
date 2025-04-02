@@ -81,7 +81,7 @@ class ENH_SPR: Title
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(5 * CTRL_DEFAULT_H);
         };
-        class Reset: ENH_ResetButton_Base
+        class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
             y = QUOTE(9 * CTRL_DEFAULT_H + 30 * pixelH);
         };

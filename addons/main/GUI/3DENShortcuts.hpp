@@ -1,4 +1,4 @@
-class ENH_3denShortcuts
+class ENH_3DENShortcuts
 {
     idd = IDD_NONE;
     onLoad = "_this call ENH_fnc_3DENShortcuts_init";

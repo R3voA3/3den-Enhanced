@@ -521,40 +521,8 @@
             <Chinesesimp>飞机类型</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_TOOLTIP">
-            <English>Classnames of the vehicles which should be used for a flyby. If multiple class names are inserted a random one will be chosen each time. Input must look as follows: Classname_1 Classname_2 Classname_n.</English>
-            <Czech>Názvy tříd vozidel které mají být použity pro přelet. Pokud je vloženo více tříd, pokaždé bude zvolena náhodná. Formát musí být následující: Classname_1 Classname_2 Classname_n.</Czech>
-            <French>Classes des véhicules utilisés pour le(s) survol(s). Si plusieurs Classname sont définies, une sélection aléatoire s'effectuera pour chaque survol. Formater ainsi : Classname_1 Classname_2 Classname_n.</French>
-            <Spanish>Classnames de los vehículos que se deben utilizar para un sobrevuelo. Si se insertan varios nombres de clase, se seleccionará cada vez una selección aleatoria. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_n.</Spanish>
-            <Italian>Nomi delle classi dei veicoli da utilizzare per il flyby. Se vengono inseriti più nomi di classe, ne verrà scelto uno a caso ogni volta. L'input deve avere il seguente aspetto: Classname_1 Classname_2 Classname_n.</Italian>
-            <Polish>Nazwy klas pojazdów, które powinny być użyte do ambientowychh przelotów. Jeżeli będzie wprowadzone więcej klas(&gt;1), za każdym razem zostanie wybrana jedna z nich. Klasy należy wprowadzać tak: nazwaKlasy_1 nazwaKlasy_2 nazwaKlasy_n.</Polish>
-            <Russian>Имена классов транспортных средств, которые должны использоваться для облета. Если вставлено несколько имен классов, каждый раз будет выбираться случайный. Входные данные должны выглядеть следующим образом: имя_класса_1 имя_класса_2 имя_класса_n.</Russian>
-            <German>Klassenname des Luftfahrzeuges welches einen Vorbeiflug absolvieren soll. Sind mehrere Klassennamen angegeben wird für jeden Vorbeiflug ein Zufälliges ausgewählt. Die Eingaben muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_n.</German>
-            <Chinese>用於飛越的載具的類名。如果插入了多個類名，那麼每次會隨機選擇。輸入必須如下:Classname_1、Classname_2、Classname_n，以此類推</Chinese>
-            <Chinesesimp>用于飞越的载具的类名。如果插入了多个类名，那么每次会随机选择。输入必须如下:Classname_1、Classname_2、Classname_n，以此类推</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DELAY_DISPLAYNAME">
-            <English>Delay</English>
-            <Czech>Prodleva</Czech>
-            <French>Délai</French>
-            <Spanish>Retraso</Spanish>
-            <Italian>Ritardo</Italian>
-            <Polish>Opóźnienie</Polish>
-            <Russian>Отсрочка</Russian>
-            <German>Verzögerung</German>
-            <Chinese>延遲</Chinese>
-            <Chinesesimp>延迟</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DELAY_TOOLTIP">
-            <English>Delay until the first flyby starts and delay in between two flybys. Note that smaller values (n-&gt;0) will have a bigger impact on performance.</English>
-            <Czech>Prodleva než první přelet započne a prodleva mezi dvěma přelety. Dbejte na to že nižší hodnoty (n-&gt;0) budou mít větší dopad na výkon.</Czech>
-            <French>Délai avant que le premier survol ne débute, puis délai entre deux survols. Attention, une faible valeur (proche de 0) aura un impact plus élevé sur les performances.</French>
-            <Spanish>Retraso hasta que comience el primer sobre vuelo y retraso entre dos sobre vuelos. Tenga en cuenta que los valores más pequeños (n-&gt; 0) tendrán un mayor impacto en el rendimiento.</Spanish>
-            <Italian>Ritarda fino all'avvio del primo sorvolo e ritarda tra due sorvoli. Si noti che valori più piccoli (n-&gt;0) avranno un impatto maggiore sulle prestazioni.</Italian>
-            <Polish>Opóźnienie przed pierwszym przelotem oraz pomiędzy następującymi po sobie przelotami. Mniejsze wartości (n-&gt;0) będą miały wpływ na wydajność.</Polish>
-            <Russian>Отсрочка до начала и отсрочка между двумя точками. Обратите внимание, меньшие значения (n-&gt; 0) будут иметь большее влияние на производительность.</Russian>
-            <German>Zeit bis zum ersten Vorbeiflug und Zeit zwischen zwei Vorbeiflügen. Bedenke das kleine Werte (n-&gt;0) einen größeren Einfluss auf die Leistung haben.</German>
-            <Chinese>延遲到第一次飛行開始和兩次飛行之間的延遲。注意，較小的值(n-&gt;0)對性能的影響較大。</Chinese>
-            <Chinesesimp>延迟到第一次飞行开始和两次飞行之间的延迟。注意，较小的值(n-&gt;0)对性能的影响较大。</Chinesesimp>
+            <English>Select the vehicles you want to spawn. Each turn a random one is picked.</English>
+            <German>Wähle die Fahrzeuge aus, die du spawnen willst. Jede Runde wird ein zufälliges Fahrzeug ausgewählt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DESCRIPTION">
             <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>

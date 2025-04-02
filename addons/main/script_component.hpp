@@ -84,7 +84,7 @@
 #define SHOW_IN_ROOT value = 0
 #define EDIT_W 10
 #define EDIT_W_WIDE 11
-#define CTRL_DEFAULT_H (SIZE_M * GRID_H)
+#define CTRL_DEFAULT_H (ATTRIBUTE_CONTENT_H * GRID_H)
 #define SIZEEX_BASE ((1 / (getResolution select 3)) * pixelGrid * 0.5)
 
 //Top of all UIs

@@ -22,15 +22,25 @@ class ENH_AmbientFlyby
                 _value spawn\
                 {\
                     scriptName 'ENH_Attribute_AmbientFlyby';\
-                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', '_delay'];\
+                    diag_log _this;\
+                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];\
+                    if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};\
+                    \
                     while {ENH_AmbientFlyby_Enabled} do\
                     {\
-                        sleep _delay;\
-                        [_startPos, _endPos, _alt, _speed, selectRandom _classes, _side] call BIS_fnc_ambientFlyby;\
+                        sleep random _delay;\
+                        [
+                            _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset],
+                            _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset],
+                            _alt,
+                            _speed,
+                            selectRandom _classes,
+                            _side
+                        ] call BIS_fnc_ambientFlyby;\
                     };\
                 };\
             }";
-            defaultValue = "[[], [0, 0, 0], [0, 0, 0], 500, 'normal', west, 300]";
+            defaultValue = "[[], [0, 0, 0], [0, 0, 0], 500, 'normal', west, [300, 300, 300], 0, 0]";
         };
     };
 };
