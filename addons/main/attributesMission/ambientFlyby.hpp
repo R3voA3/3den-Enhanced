@@ -22,17 +22,13 @@ class ENH_AmbientFlyby
                 _value spawn\
                 {\
                     scriptName 'ENH_Attribute_AmbientFlyby';\
-                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];\
+                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', _delay, _rndStartOffset, _rndEndOffset];\
                     while {ENH_AmbientFlyby_Enabled} do\
                     {\
-                        private _finalDelay = if (_delay isEqualType 0) then {_delay} else {random _delay};\
-                        private _finalStartPos = _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset];\
-                        private _finalEndPos = _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset];\
-                        \
-                        sleep _finalDelay;\
+                        sleep random _delay;\
                         [
-                            _finalStartPos,
-                            _finalEndPos,
+                            _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset],
+                            _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset],
                             _alt,
                             _speed,
                             selectRandom _classes,
