@@ -1,15 +1,15 @@
-//Defines
+// Defines
 #include "script_component.hpp"
 #include "defineCtrls.inc"
 
-//Configs
+// Configs
 #include "cfgPatches.hpp"
 #include "cfg3DEN.hpp"
 #include "cfgFunctions.hpp"
 #include "display3DEN\display3DEN.hpp"
 #include "cfgFontFamilies.hpp"
 
-//Custom GUIs
+// Custom GUIs
 #include "GUI\3DENRadio.hpp"
 #include "GUI\3DENShortcuts.hpp"
 #include "GUI\attributeSearch.hpp"
@@ -31,12 +31,7 @@
 #include "GUI\variableViewer.hpp"
 #include "GUI\zeusAddons.hpp"
 
-//Improved vanilla GUIs
+// Improved vanilla GUIs
 #include "GUI\RscDebugConsole.hpp"
 #include "GUI\display3DENSave.hpp"
 #include "GUI\display3DENPublishMissionSelectImage.hpp"
-
-class ENH_3DENMinimap: ctrlMap
-{
-    scaleMax = 3;
-};

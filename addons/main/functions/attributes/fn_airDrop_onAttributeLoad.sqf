@@ -25,7 +25,7 @@ if (_classes isEqualType "") then
 }
 else
 {
-    //Change classes from type array to type string
+    // Change classes from type array to type string
     private _valueClasses = "";
 
     {
@@ -36,28 +36,45 @@ else
     (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
 };
 
-(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str _center;
-(_ctrlGroup controlsGroupCtrl 102) ctrlSetText _condition;
+(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_center#0);
+(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_center#1);
+(_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_center#2);
 
-[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", _alt] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 105) ctrlSetText _condition;
 
-[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m", _r] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 106) ctrlSetText str _alt;
+(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str _r;
 
-(_ctrlGroup controlsGroupCtrl 107) lbSetCurSel ([west, east, independent, civilian] find _side);
+(_ctrlGroup controlsGroupCtrl 108) lbSetCurSel ([west, east, independent, civilian] find _side);
 
-//Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 104) ctrlAddEventHandler ["ButtonClick",
+{
+    private _array = call ENH_fnc_array3FromClipboard;
+
+    if (_array isNotEqualTo []) then
+    {
+        private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_array#2);
+    };
+}];
+
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
     (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "[0, 0, 0]";
-    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "false";
 
-    [_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "m", 500] call BIS_fnc_initSliderValue;
-    [_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "m", 200] call BIS_fnc_initSliderValue;
+    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 107) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "false";
+
+    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "500";
+    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "200";
+
+    (_ctrlGroup controlsGroupCtrl 108) lbSetCurSel 0;
 }];

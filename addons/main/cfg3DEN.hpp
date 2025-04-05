@@ -65,7 +65,6 @@ class Cfg3DEN
     class Attributes
     {
         #include "controls\base.hpp"
-
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
         #include "controls\ambientAnimations.hpp"
