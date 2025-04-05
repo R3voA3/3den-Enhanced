@@ -19,31 +19,47 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_center", "_text", "_alt", "_r", "_angle", "_dir"];
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlSetText str _center;
-(_ctrlGroup controlsGroupCtrl 101) ctrlSetText _text;
+(_ctrlGroup controlsGroupCtrl 100) ctrlSetText str (_center#0);
+(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_center#1);
+(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_center#2);
 
-[_ctrlGroup controlsGroupCtrl 102, _ctrlGroup controlsGroupCtrl 103, "m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 102, _ctrlGroup controlsGroupCtrl 103, "m", _alt] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 104) ctrlSetText _text;
+(_ctrlGroup controlsGroupCtrl 105) ctrlSetText str _alt;
+(_ctrlGroup controlsGroupCtrl 106) ctrlSetText str _r;
+(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str _angle;
 
-[_ctrlGroup controlsGroupCtrl 104, _ctrlGroup controlsGroupCtrl 105, "m"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 104, _ctrlGroup controlsGroupCtrl 105, "m", _r] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "°"] call BIS_fnc_initSliderValue;
+[_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "°", _angle] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 106, _ctrlGroup controlsGroupCtrl 107, "°"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 106, _ctrlGroup controlsGroupCtrl 107, "°", _angle] call BIS_fnc_initSliderValue;
+(_ctrlGroup controlsGroupCtrl 109) lbSetCurSel _dir;
 
-(_ctrlGroup controlsGroupCtrl 108) lbSetCurSel _dir;
+(_ctrlGroup controlsGroupCtrl 103) ctrlAddEventHandler ["ButtonClick",
+{
+    private _array = call ENH_fnc_array3FromClipboard;
 
-//Add reset event to reset button
+    if (_array isNotEqualTo []) then
+    {
+        private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+        (_ctrlGroup controlsGroupCtrl 100) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_array#2);
+    };
+}];
+
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "[0, 0, 0]";
-    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText (getText (configFile >> 'CfgWorlds' >> worldName >> 'description'));
+    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "0";
 
-    [_ctrlGroup controlsGroupCtrl 102, _ctrlGroup controlsGroupCtrl 103, "m", 500] call BIS_fnc_initSliderValue;
-    [_ctrlGroup controlsGroupCtrl 104, _ctrlGroup controlsGroupCtrl 105, "m", 200] call BIS_fnc_initSliderValue;
-    [_ctrlGroup controlsGroupCtrl 106, _ctrlGroup controlsGroupCtrl 107, "°", 60] call BIS_fnc_initSliderValue;
+    (_ctrlGroup controlsGroupCtrl 104) ctrlSetText (getText (configFile >> "CfgWorlds" >> worldName >> "description"));
+    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "500";
+    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "200";
 
-    (_ctrlGroup controlsGroupCtrl 108) lbSetCurSel 0;
+    [_ctrlGroup controlsGroupCtrl 107, _ctrlGroup controlsGroupCtrl 108, "°", 60] call BIS_fnc_initSliderValue;
+
+    (_ctrlGroup controlsGroupCtrl 109) lbSetCurSel 0;
 }];

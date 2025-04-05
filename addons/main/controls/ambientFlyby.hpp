@@ -39,6 +39,7 @@ class ENH_AmbientFlyby: Title
         class StartTitle: Title
         {
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class StartTitleX: ENH_3DEN_Attribute_Control_TitleX
@@ -69,21 +70,18 @@ class ENH_AmbientFlyby: Title
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
         };
-        class PasteStartValueFromClipboard: ctrlButtonPictureKeepAspect
+        class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
             idc = 115;
-            text = "stringtable\ui_f_stringtable\data\export_to_clipboard_ca.paa"; //TODO: Replace image 2025-04-01 R3vo
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
-            w = QUOTE(5 * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class StartRndOffsetTitle: Title
         {
             text = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_TOOLTIP";
             y = QUOTE(12 * CTRL_DEFAULT_H + 10 * pixelH);
         };
-        class StartRndOffsetTitleA: ENH_3DEN_Attribute_Control_TitleA
+        class StartRndOffsetTitleA: ENH_3DEN_Attribute_Control_TitleR
         {
             y = QUOTE(12 * CTRL_DEFAULT_H + 10 * pixelH);
         };
@@ -95,6 +93,7 @@ class ENH_AmbientFlyby: Title
         class EndTitle: Title
         {
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndTitleX: ENH_3DEN_Attribute_Control_TitleX
@@ -119,7 +118,7 @@ class ENH_AmbientFlyby: Title
         {
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
-        class PasteEndValueFromClipboard: PasteStartValueFromClipboard
+        class PasteEndValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
             idc = 116;
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
@@ -133,7 +132,7 @@ class ENH_AmbientFlyby: Title
         {
             y = QUOTE(14 * CTRL_DEFAULT_H + 20 * pixelH);
         };
-        class EndRndOffsetTitleA: ENH_3DEN_Attribute_Control_TitleA
+        class EndRndOffsetTitleA: ENH_3DEN_Attribute_Control_TitleR
         {
             y = QUOTE(14 * CTRL_DEFAULT_H + 20 * pixelH);
         };
@@ -147,7 +146,7 @@ class ENH_AmbientFlyby: Title
             y = QUOTE(15 * CTRL_DEFAULT_H + 25 * pixelH);
             text = "$STR_ENH_MAIN_ALTITUDE_DISPLAYNAME";
         };
-        class AltitudeTitleZ: ENH_3DEN_Attribute_Control_TitleZ_Front
+        class AltitudeTitleA: ENH_3DEN_Attribute_Control_TitleAltitude
         {
             y = QUOTE(15 * CTRL_DEFAULT_H + 25 * pixelH);
         };
@@ -159,6 +158,7 @@ class ENH_AmbientFlyby: Title
         class SpeedTitle: Title
         {
             y = QUOTE(16 * CTRL_DEFAULT_H + 30 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_SPEED_DISPLAYNAME";
         };
         class SpeedValue: ctrlToolboxPictureKeepAspect
@@ -187,6 +187,7 @@ class ENH_AmbientFlyby: Title
         class SideTitle: Title
         {
             y = QUOTE(18 * CTRL_DEFAULT_H + 35 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
