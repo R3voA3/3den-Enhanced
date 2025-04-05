@@ -211,7 +211,7 @@ class ENH_3DEN_Attribute_Control_ValueMax: ENH_3DEN_Attribute_Control_ValueMin
 class ENH_3DEN_Attribute_Control_ValueFromClipboard: ctrlButtonPictureKeepAspect
 {
     idc = -1;
-    text = "stringtable\ui_f_stringtable\data\export_to_clipboard_ca.paa"; //TODO: Replace image 2025-04-01 R3vo
+    text = "x\enh\addons\main\data\clipboard_ca.paa";
     tooltip = "$STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD";
     x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
     y = 0;
