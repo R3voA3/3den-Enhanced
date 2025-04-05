@@ -218,6 +218,30 @@ class ENH_3DEN_Attribute_Control_ValueFromClipboard: ctrlButtonPictureKeepAspect
     w = QUOTE(5 * GRID_W);
     h = QUOTE(CTRL_DEFAULT_H);
 };
+class ENH_3DEN_Attribute_Control_EditMulti5_Title: ctrlStaticFrame
+{
+    x = QUOTE(5 * GRID_W);
+    y = 0;
+    w = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
+    h = QUOTE(5 * CTRL_DEFAULT_H);
+    colorBackground[] = {COLOR_OVERLAY_RGBA};
+};
+class ENH_3DEN_Attribute_Control_EditMulti5_Background: ctrlStaticOverlay
+{
+    x = QUOTE(5 * GRID_W);
+    y = QUOTE(2 * GRID_H);
+    w = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
+    h = QUOTE(5 * CTRL_DEFAULT_H - 2 * GRID_H);
+};
+class ENH_3DEN_Attribute_Control_EditMulti5_Edit: ctrlEdit
+{
+    x = QUOTE(5 * GRID_W);
+    y = QUOTE(5 * GRID_H);
+    w = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
+    h = QUOTE(5 * CTRL_DEFAULT_H - 6 * GRID_H);
+    style = QUOTE(ST_MULTI + ST_NO_RECT);
+    colorBackground[] = {COLOR_OVERLAY_RGB, 0};
+};
 // Custom minimap control
 class ENH_3DENMinimap: ctrlMap
 {
