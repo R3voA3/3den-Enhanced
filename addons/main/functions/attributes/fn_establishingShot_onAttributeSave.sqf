@@ -18,10 +18,14 @@
 params ["_ctrlGroup"];
 
 [
-    call compile ctrlText (_ctrlGroup controlsGroupCtrl 100),
-    ctrlText (_ctrlGroup controlsGroupCtrl 101),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 102),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 104),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 106),
-    lbCurSel (_ctrlGroup controlsGroupCtrl 108)
+    [
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 100),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 101),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 102)
+    ],
+    ctrlText (_ctrlGroup controlsGroupCtrl 104),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 105),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 106),
+    sliderPosition (_ctrlGroup controlsGroupCtrl 107),
+    lbCurSel (_ctrlGroup controlsGroupCtrl 109)
 ]

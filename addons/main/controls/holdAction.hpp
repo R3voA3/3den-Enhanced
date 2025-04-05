@@ -2,7 +2,7 @@ class ENH_HoldAction: Title
 {
     attributeLoad = "[_this, _value] call ENH_fnc_holdAction_onAttributeLoad";
     attributeSave = "_this call ENH_fnc_holdAction_onAttributeSave";
-    h = QUOTE(27 * CTRL_DEFAULT_H + 75 * pixelH);
+    h = QUOTE(39 * CTRL_DEFAULT_H + 75 * pixelH);
     class Controls: Controls
     {
         class NameTitle: Title
@@ -39,85 +39,118 @@ class ENH_HoldAction: Title
             idc = 102;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
-        class ConditionShowTitle: Title
+        // Condition show
+        class ConditionShowBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(3 * CTRL_DEFAULT_H + 2 * GRID_H + 15 * pixelH);
+        };
+        class ConditionShowTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CONDITIONSHOW_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CONDITIONSHOW_TOOLTIP";
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
-        class ConditionShow: ctrlEditMulti
+        class ConditionShow: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 103;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(3 * CTRL_DEFAULT_H);
+            y = QUOTE(3 * CTRL_DEFAULT_H + 5 * GRID_H + 15 * pixelH);
+            autocomplete = "scripting";
         };
-        class ConditionProgressTitle: Title
+        // Condition progress
+        class ConditionProgressBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(8 * CTRL_DEFAULT_H + 2 * GRID_H + 20 * pixelH);
+        };
+        class ConditionProgressTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CONDITIONPROGRESS_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CONDITIONPROGRESS_TOOLTIP";
-            y = QUOTE(6 * CTRL_DEFAULT_H + 20 * pixelH);
+            y = QUOTE(8 * CTRL_DEFAULT_H + 20 * pixelH);
         };
-        class ConditionProgress: ConditionShow
+        class ConditionProgress: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 104;
-            y = QUOTE(6 * CTRL_DEFAULT_H + 20 * pixelH);
+            y = QUOTE(8 * CTRL_DEFAULT_H + 5 * GRID_H + 20 * pixelH);
+            autocomplete = "scripting";
         };
-        class CodeStartTitle: Title
+        // Code start
+        class CodeStartBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(13 * CTRL_DEFAULT_H + 2 * GRID_H + 25 * pixelH);
+        };
+        class CodeStartTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CODESTART_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CODESTART_TOOLTIP";
-            y = QUOTE(9 * CTRL_DEFAULT_H + 25 * pixelH);
+            y = QUOTE(13 * CTRL_DEFAULT_H + 25 * pixelH);
         };
-        class CodeStart: ConditionShow
+        class CodeStart: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 105;
-            y = QUOTE(9 * CTRL_DEFAULT_H + 25 * pixelH);
+            y = QUOTE(13 * CTRL_DEFAULT_H + 5 * GRID_H + 25 * pixelH);
+            autocomplete = "scripting";
         };
-        class CodeProgressTitle: Title
+        // Code progress
+        class CodeProgressBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(18 * CTRL_DEFAULT_H + 2 * GRID_H + 30 * pixelH);
+        };
+        class CodeProgressTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CODEPROGRESS_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CODEPROGRESS_TOOLTIP";
-            y = QUOTE(12 * CTRL_DEFAULT_H + 30 * pixelH);
+            y = QUOTE(18 * CTRL_DEFAULT_H + 30 * pixelH);
         };
-        class CodeProgress: ConditionShow
+        class CodeProgress: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 106;
-            y = QUOTE(12 * CTRL_DEFAULT_H + 30 * pixelH);
+            y = QUOTE(18 * CTRL_DEFAULT_H + 5 * GRID_H + 30 * pixelH);
+            autocomplete = "scripting";
         };
-        class CodeCompletionTitle: Title
+        // Code completion
+        class CodeCompleteBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(23 * CTRL_DEFAULT_H + 2 * GRID_H + 35 * pixelH);
+        };
+        class CodeCompleteTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CODECOMPLETE_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CODECOMPLETE_TOOLTIP";
-            y = QUOTE(15 * CTRL_DEFAULT_H + 35 * pixelH);
+            y = QUOTE(23 * CTRL_DEFAULT_H + 35 * pixelH);
         };
-        class CodeCompletion: ConditionShow
+        class CodeComplete: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 107;
-            y = QUOTE(15 * CTRL_DEFAULT_H + 35 * pixelH);
+            y = QUOTE(23 * CTRL_DEFAULT_H + 5 * GRID_H + 35 * pixelH);
+            autocomplete = "scripting";
         };
-        class CodeInterruptTitle: Title
+        // Code interrupt
+        class CodeInterruptBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(28 * CTRL_DEFAULT_H + 2 * GRID_H + 40 * pixelH);
+        };
+        class CodeInterruptTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_CODEINTERRUPT_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_CODEINTERRUPT_TOOLTIP";
-            y = QUOTE(18 * CTRL_DEFAULT_H + 40 * pixelH);
+            y = QUOTE(28 * CTRL_DEFAULT_H + 40 * pixelH);
         };
-        class CodeInterrupt: ConditionShow
+        class CodeInterrupt: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 108;
-            y = QUOTE(18 * CTRL_DEFAULT_H + 40 * pixelH);
+            y = QUOTE(28 * CTRL_DEFAULT_H + 5 * GRID_H + 40 * pixelH);
+            autocomplete = "scripting";
         };
         class DurationTitle: Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_DURATION_DISPLAYNAME";
-            y = QUOTE(21 * CTRL_DEFAULT_H + 45 * pixelH);
+            y = QUOTE(33 * CTRL_DEFAULT_H + 45 * pixelH);
         };
         class DurationValue: ctrlXSliderH
         {
             idc = 109;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(21 * CTRL_DEFAULT_H + 45 * pixelH);
+            y = QUOTE(33 * CTRL_DEFAULT_H + 45 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             sliderRange[] = {1, 60};
@@ -128,63 +161,63 @@ class ENH_HoldAction: Title
         {
             idc = 110;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
-            y = QUOTE(21 * CTRL_DEFAULT_H + 45 * pixelH);
+            y = QUOTE(33 * CTRL_DEFAULT_H + 45 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
         class PriorityTitle: Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_PRIORITY_DISPLAYNAME";
-            y = QUOTE(22 * CTRL_DEFAULT_H + 50 * pixelH);
+            y = QUOTE(34 * CTRL_DEFAULT_H + 50 * pixelH);
         };
         class PriorityValue: DurationValue
         {
             idc = 111;
-            y = QUOTE(22 * CTRL_DEFAULT_H + 50 * pixelH);
+            y = QUOTE(34 * CTRL_DEFAULT_H + 50 * pixelH);
             sliderRange[] = {1, 1000};
         };
         class PriorityEdit: DurationEdit
         {
             idc = 112;
-            y = QUOTE(22 * CTRL_DEFAULT_H + 50 * pixelH);
+            y = QUOTE(34 * CTRL_DEFAULT_H + 50 * pixelH);
         };
         class ShowUnconsciousTitle: Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME";
-            y = QUOTE(23 * CTRL_DEFAULT_H + 55 * pixelH);
+            y = QUOTE(35 * CTRL_DEFAULT_H + 55 * pixelH);
         };
         class ShowUnconscious: ctrlCheckbox
         {
             idc = 113;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(23 * CTRL_DEFAULT_H + 55 * pixelH);
+            y = QUOTE(35 * CTRL_DEFAULT_H + 55 * pixelH);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
         class ShowWindowTitle: Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_SHOWWINDOW_DISPLAYNAME";
-            y = QUOTE(24 * CTRL_DEFAULT_H + 60 * pixelH);
+            y = QUOTE(36 * CTRL_DEFAULT_H + 60 * pixelH);
         };
         class ShowWindow: ShowUnconscious
         {
             idc = 114;
-            y = QUOTE(24 * CTRL_DEFAULT_H + 60 * pixelH);
+            y = QUOTE(36 * CTRL_DEFAULT_H + 60 * pixelH);
         };
         class RemoveAfterUseTitle: Title
         {
             text = "$STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_HOLDACTION_REMOVEONUSE_TOOLTIP";
-            y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
+            y = QUOTE(37 * CTRL_DEFAULT_H + 65 * pixelH);
         };
         class RemoveAfterUse: ShowUnconscious
         {
             idc = 115;
-            y = QUOTE(25 * CTRL_DEFAULT_H + 65 * pixelH);
+            y = QUOTE(37 * CTRL_DEFAULT_H + 65 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
-            y = QUOTE(26 * CTRL_DEFAULT_H + 70 * pixelH);
+            y = QUOTE(38 * CTRL_DEFAULT_H + 70 * pixelH);
         };
     };
 };

@@ -72,6 +72,7 @@ class ENH_SPR: Title
             text = "$STR_ENH_MAIN_SPR_ONRESPAWNCODE_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_SPR_ONRESPAWNCODE_TOOLTIP";
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
+            h = QUOTE(5 * CTRL_DEFAULT_H);
         };
         class Code: ctrlEditMulti
         {

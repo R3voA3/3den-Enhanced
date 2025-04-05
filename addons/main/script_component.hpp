@@ -123,9 +123,11 @@ textureDisabledUnchecked = NAME;\
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
 
-#define RED 1,0,0,0.5
-#define GREEN 0,1,0,0.5
-#define BLUE 0,0,1,0.5
+#define COLOR_RED_RGBA 1,0,0,0.5
+#define COLOR_GREEN_RGBA 0,1,0,0.5
+#define COLOR_BLUE_RGBA 0,0,1,0.5
+#define COLOR_RADIUS_RGBA 0.92,0.27,1,0.44
+#define COLOR_ALTITUDE_RGBA 1,0.45,0.24,1
 
 #define SOUND_FEEDBACK "FD_Finish_F"
 

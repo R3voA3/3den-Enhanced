@@ -20,6 +20,8 @@
     - Added support for randomized delay
     - Added support for randomized start and end positions
     - Added filterable tree view
+- Airdrop Attribute
+    - Completely overhauled the UI
 - French translation update by Alfred-Neuman
 =======
 

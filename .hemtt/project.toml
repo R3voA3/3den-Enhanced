@@ -11,6 +11,10 @@ include = [
     "keys/**"
 ]
 
+exclude = [
+    "*.xcf"
+]
+
 [version]
 major = 8
 minor = 3

@@ -58,8 +58,9 @@ class ENH_MissionEnding_Casualties: Title
         };
         class SideTitle: Title
         {
-            y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
+            y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
