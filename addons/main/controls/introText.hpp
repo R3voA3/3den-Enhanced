@@ -64,8 +64,9 @@ class ENH_IntroText: Title
         };
         class IntroTypeTitle: Title
         {
-            y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             text = "$STR_ENH_MAIN_INTROTEXT_INTROTYPE_DISPLAYNAME";
+            y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
+            h = QUOTE(5 * CTRL_DEFAULT_H);
         };
         class IntroType: ctrlToolboxPictureKeepAspect
         {
