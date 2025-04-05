@@ -32,18 +32,61 @@ class Display3DEN
                     w = QUOTE(19 * GRID_W);
                 };
                 // Manually re-config version info into a button to save screen space
-                class Version: ctrlButton
+                class Version: ValueX
                 {
                     idc = IDC_NONE;
-                    text = "V";
                     x = QUOTE(ORIGIN_X_STATUSBAR - 15 * GRID_W - SPACE_X);
                     y = QUOTE(2 * pixelH);
                     w = QUOTE(4 * GRID_W - 4 * pixelW);
                     h = QUOTE(4 * GRID_H - 4 * pixelH);
-                    onLoad = "_this # 0 ctrlSetToolTip format ['%1.%2', (productVersion select 2) * 0.01 toFixed 2, productVersion select 3]";
                     onButtonClick = "call ENH_fnc_productInfo";
+                    onLoad = "_this # 0 ctrlSetToolTip format ['%1.%2', (productVersion select 2) * 0.01 toFixed 2, productVersion select 3]";
+
+                    access = 0;
+                    blinkingPeriod = 0;
+                    borderSize = 0;
                     colorBackground[] = {0, 0, 0, 0.5};
+                    colorBackgroundActive[] =
+                    {
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_R', 0.77])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_G', 0.51])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_B', 0.08])",
+                        1
+                    };
+                    colorBackgroundDisabled[] = {0, 0, 0, 0.5};
+                    colorBorder[] = {0, 0, 0, 0};
+                    colorDisabled[] = {1, 1, 1, 0.25};
+                    colorFocused[] =
+                    {
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_R', 0.77])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_G', 0.51])",
+                        "(profilenamespace getvariable ['GUI_BCG_RGB_B', 0.08])",
+                        1
+                    };
+                    colorShadow[] = {0, 0, 0, 0};
+                    colorText[] = {1, 1, 1, 1};
+                    default = 0;
+                    deletable = 0;
+                    fade = 0;
+                    font = "PuristaLight";
+                    offsetPressedX = "pixelW";
+                    offsetPressedY = "pixelH";
+                    offsetX = 0;
+                    offsetY = 0;
+                    period = 0;
+                    periodFocus = 2;
+                    periodOver = 0.5;
+                    shadow = 1;
+                    show = 1;
+                    sizeEx = QUOTE(4.32 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
+                    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
+                    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+                    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
+                    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
                     style = QUOTE(ST_CENTER + ST_UPPERCASE);
+                    text = "V";
+                    tooltip = "";
+                    type = CT_BUTTON;
                 };
                 class TextY: TextX
                 {
