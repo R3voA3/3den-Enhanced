@@ -20,8 +20,8 @@ class ENH_Airdrop: Title
         };
         class CenterTitle: Title
         {
-            text = "$STR_ENH_MAIN_AIRDROP_CENTER_DISPLAYNAME";
-            tooltip = "$STR_ENH_MAIN_AIRDROP_CENTER_TOOLTIP";
+            text = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class CenterTitleX: ENH_3DEN_Attribute_Control_TitleX

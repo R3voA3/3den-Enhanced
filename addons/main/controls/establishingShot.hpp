@@ -7,79 +7,83 @@ class ENH_EstablishingShot: Title
     {
         class CenterTitle: Title
         {
-            text = "$STR_ENH_MAIN_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME";
-            tooltip = "$STR_ENH_MAIN_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP";
+            text = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
         };
-        class CenterValue: ctrlEdit
+        class CenterTitleX: ENH_3DEN_Attribute_Control_TitleX {};
+        class CenterValueX: ENH_3DEN_Attribute_Control_ValueX
         {
             idc = 100;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class CenterTitleY: ENH_3DEN_Attribute_Control_TitleY {};
+        class CenterValueY: ENH_3DEN_Attribute_Control_ValueY
+        {
+            idc = 101;
+        };
+        class CenterTitleZ: ENH_3DEN_Attribute_Control_TitleZ {};
+        class CenterValueZ: ENH_3DEN_Attribute_Control_ValueZ
+        {
+            idc = 102;
+            w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
+        };
+        class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
+        {
+            idc = 103;
         };
         class TextTitle: Title
         {
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             text = "$STR_ENH_MAIN_ESTABLISHINGSHOT_DISPLAYEDTEXT";
         };
-        class TextValue: CenterValue
+        class TextValue: ctrlEdit
         {
-            idc = 101;
+            idc = 104;
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
+            w = QUOTE((ATTRIBUTE_CONTENT_W) * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
         };
         class AltitudeTitle: Title
         {
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
             text = "$STR_ENH_MAIN_ALTITUDE_DISPLAYNAME";
         };
-        class AltitudeValue: ctrlXSliderH
+        class AltitudeTitleA: ENH_3DEN_Attribute_Control_TitleAltitude
         {
-            idc = 102;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
-            w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
-            sliderPosition = 500;
-            sliderRange[] = {50, 2000};
-            sliderStep = 50;
-            lineSize = 50;
         };
-        class AltitudeEdit: ctrlEdit
+        class AltitudeValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 103;
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
+            idc = 105;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
-            w = QUOTE(EDIT_W_WIDE * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class RadiusTitle: Title
         {
+            text = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_TOOLTIP";
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-            text = "$STR_ENH_MAIN_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME";
         };
-        class RadiusValue: AltitudeValue
+        class RadiusTitleR: ENH_3DEN_Attribute_Control_TitleR
         {
-            idc = 104;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-            sliderPosition = 200;
         };
-        class RadiusEdit: ctrlEdit
+        class RadiusValueR: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 105;
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
+            idc = 106;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-            w = QUOTE(EDIT_W_WIDE * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class AngleTitle: Title
         {
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             text = "$STR_ENH_MAIN_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME";
         };
-        class AngleValue: AltitudeValue
+        class AngleValue: ctrlXSliderH
         {
-            idc = 106;
+            idc = 107;
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
+            h = QUOTE(CTRL_DEFAULT_H);
+            w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             sliderPosition = 45;
             sliderRange[] = {0, 360};
             sliderStep = 5;
@@ -87,7 +91,7 @@ class ENH_EstablishingShot: Title
         };
         class AngleEdit: ctrlEdit
         {
-            idc = 107;
+            idc = 108;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
@@ -96,11 +100,13 @@ class ENH_EstablishingShot: Title
         class DirectionTitle: Title
         {
             y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);
+            w = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
             text = "$STR_ENH_MAIN_ESTABLISHINGSHOT_DIRECTION_DISPLAYNAME";
         };
         class DirectionValue: ctrlToolbox
         {
-            idc = 108;
+            idc = 109;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);

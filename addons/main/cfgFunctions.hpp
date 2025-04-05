@@ -178,7 +178,7 @@ class CfgFunctions
         };
         class Misc
         {
-            file = "x\enh\addons\main\functions\Misc";
+            file = "x\enh\addons\main\functions\misc";
             class alignEntities;
             class all3DENSelected;
             class array3FromClipboard;
