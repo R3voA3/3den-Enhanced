@@ -22,8 +22,8 @@ class ENH_MarkerColor: Title
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             sliderRange[] = {0, 1};
-            color[] = {RED};
-            colorActive[] = {RED};
+            color[] = {COLOR_RED_RGBA};
+            colorActive[] = {COLOR_RED_RGBA};
         };
         class EditRed: ctrlEdit
         {
@@ -37,8 +37,8 @@ class ENH_MarkerColor: Title
         {
             idc = 103;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
-            color[] = {GREEN};
-            colorActive[] = {GREEN};
+            color[] = {COLOR_GREEN_RGBA};
+            colorActive[] = {COLOR_GREEN_RGBA};
         };
         class EditGreen: EditRed
         {
@@ -49,8 +49,8 @@ class ENH_MarkerColor: Title
         {
             idc = 105;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-            color[] = {BLUE};
-            colorActive[] = {BLUE};
+            color[] = {COLOR_BLUE_RGBA};
+            colorActive[] = {COLOR_BLUE_RGBA};
         };
         class EditBlue: EditRed
         {
