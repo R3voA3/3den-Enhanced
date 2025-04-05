@@ -2,13 +2,14 @@ class ENH_Airdrop: Title
 {
     attributeLoad = "[_this, _value] call ENH_fnc_airdrop_onAttributeLoad";
     attributeSave = "_this call ENH_fnc_airdrop_onAttributeSave";
-    h = QUOTE(11 * CTRL_DEFAULT_H + 35 * pixelH);//We make it 5 * pixelH larger to prevent scrolling issues
+    h = QUOTE(11 * CTRL_DEFAULT_H + 35 * pixelH);
     class Controls: Controls
     {
         class ClassesTitle: Title
         {
             text = "$STR_ENH_MAIN_AIRDROP_CLASSES_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_AIRDROP_CLASSES_TOOLTIP";
+            h = QUOTE(4 * CTRL_DEFAULT_H);
         };
         class ClassesValue: ctrlEditMulti
         {
@@ -23,13 +24,38 @@ class ENH_Airdrop: Title
             tooltip = "$STR_ENH_MAIN_AIRDROP_CENTER_TOOLTIP";
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
-        class CenterValue: ctrlEdit
+        class CenterTitleX: ENH_3DEN_Attribute_Control_TitleX
+        {
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+        };
+        class CenterValueX: ENH_3DEN_Attribute_Control_ValueX
         {
             idc = 101;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(4* CTRL_DEFAULT_H + 5 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+        };
+        class CenterTitleY: ENH_3DEN_Attribute_Control_TitleY
+        {
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+        };
+        class CenterValueY: ENH_3DEN_Attribute_Control_ValueY
+        {
+            idc = 102;
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+        };
+        class CenterTitleZ: ENH_3DEN_Attribute_Control_TitleZ
+        {
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+        };
+        class CenterValueZ: ENH_3DEN_Attribute_Control_ValueZ
+        {
+            idc = 103;
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
+            w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
+        };
+        class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
+        {
+            idc = 104;
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class ConditionTitle: Title
         {
@@ -37,63 +63,54 @@ class ENH_Airdrop: Title
             text = "$STR_ENH_MAIN_AIRDROP_CONDITION_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_AIRDROP_CONDITION_TOOLTIP";
         };
-        class ConditionValue: CenterValue
+        class ConditionValue: ctrlEdit
         {
-            idc = 102;
+            idc = 105;
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 10 * pixelH);
+            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
         };
         class AltitudeTitle: Title
         {
             y = QUOTE(6 * CTRL_DEFAULT_H + 15 * pixelH);
             text = "$STR_ENH_MAIN_ALTITUDE_DISPLAYNAME";
         };
-        class AltitudeValue: ctrlXSliderH
+        class AltitudeTitleA: ENH_3DEN_Attribute_Control_TitleAltitude
         {
-            idc = 103;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(6 * CTRL_DEFAULT_H + 15 * pixelH);
-            w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
-            sliderPosition = 500;
-            sliderRange[] = {200, 5000};
-            sliderStep = 50;
-            lineSize = 50;
         };
-        class AltitudeEdit: ctrlEdit
+        class AltitudeValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 104;
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
+            idc = 106;
             y = QUOTE(6 * CTRL_DEFAULT_H + 15 * pixelH);
-            w = QUOTE(EDIT_W_WIDE * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class RadiusTitle: Title
         {
+            text = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_PLACEMENT_TOOLTIP";
             y = QUOTE(7 * CTRL_DEFAULT_H + 20 * pixelH);
-            text = "$STR_ENH_MAIN_AIRDROP_RADIUS_DISPLAYNAME";
-            tooltip = "$STR_ENH_MAIN_AIRDROP_RADIUS_TOOLTIP";
         };
-        class RadiusValue: AltitudeValue
+        class RadiusTitleR: ENH_3DEN_Attribute_Control_TitleR
         {
-            idc = 105;
             y = QUOTE(7 * CTRL_DEFAULT_H + 20 * pixelH);
-            sliderPosition = 200;
-            sliderRange[] = {50, 2000};
         };
-        class RadiusEdit: AltitudeEdit
+        class RadiusValueR: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 106;
+            idc = 107;
             y = QUOTE(7 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class SideTitle: Title
         {
-            y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
+            y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
-            idc = 107;
+            idc = 108;
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
