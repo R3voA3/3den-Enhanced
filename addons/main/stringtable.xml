@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ENH">
     <Package name="Main">
+        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
+            <English>A</English>
+            <German>A</German>
+        </Key>
+        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
+            <English>R</English>
+            <German>R</German>
+        </Key>
+        <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
+            <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
+            <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_DURATION">
             <English>Duration</English>
             <Czech>Délka</Czech>
@@ -37,14 +49,6 @@
             <Chinese>Mod</Chinese>
             <Chinesesimp>Mod</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
-            <English>R</English>
-            <German>R</German>
-        </Key>
-        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
-            <English>A</English>
-            <German>A</German>
-        </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_SONG">
             <English>Song:</English>
             <Czech>Skladba:</Czech>
@@ -56,10 +60,6 @@
             <German>Lied:</German>
             <Chinese>歌曲:</Chinese>
             <Chinesesimp>歌曲:</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
-            <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
-            <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_THEME">
             <English>Theme</English>
