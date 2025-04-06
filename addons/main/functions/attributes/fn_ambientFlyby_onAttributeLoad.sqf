@@ -85,7 +85,6 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeSelChanged",
     // Flip int
     _ctrlClassesTree tvSetValue [_path, _newValue];
     _ctrlClassesTree tvSetPictureRight [_path, [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _newValue];
-    // _ctrlClassesTree tvSortByValue [[], false];
 }];
 
 (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_startPos#0);
