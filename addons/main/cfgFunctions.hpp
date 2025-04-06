@@ -23,6 +23,8 @@ class CfgFunctions
         class Attributes
         {
             file = "x\enh\addons\main\functions\attributes";
+            // class markerColor_onAttributeLoad;
+            // class markerColor_onAttributeSave;
             class advancedDamage_onAttributeLoad;
             class advancedDamage_onAttributeSave;
             class airdrop_onAttributeLoad;
@@ -35,6 +37,7 @@ class CfgFunctions
             class debugOptions_init;
             class dynamicSkill_onAttributeLoad;
             class dynamicSkill_onAttributeSave;
+            class dynamicSkill_toggleControlsState;
             class establishingShot_onAttributeLoad;
             class establishingShot_onAttributeSave;
             class groupMarker_onAttributeLoad;
@@ -50,8 +53,6 @@ class CfgFunctions
             class introText_onAttributeSave;
             class mapIndicators_onAttributeLoad;
             class mapIndicators_onAttributeSave;
-            // class markerColor_onAttributeLoad;
-            // class markerColor_onAttributeSave;
             class missionEndingCasualties_initDebriefingCombo;
             class missionEndingCasualties_onAttributeLoad;
             class missionEndingCasualties_onAttributeSave;
