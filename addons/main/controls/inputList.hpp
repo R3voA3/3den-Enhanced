@@ -5,7 +5,10 @@ class ENH_InputList: Title
     h = QUOTE(6 * CTRL_DEFAULT_H + 10 * pixelH);
     class Controls: Controls
     {
-        class Title: Title {};
+        class Title: Title
+        {
+            h = QUOTE(5 * CTRL_DEFAULT_H);
+        };
         class Data: ctrlListbox
         {
             idc = 100;
