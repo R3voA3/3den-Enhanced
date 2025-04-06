@@ -23,6 +23,7 @@
 - Airdrop Attribute
     - Completely overhauled the UI
 - French translation update by Alfred-Neuman
+- Controls of Dynamic Skill attribute are now properly disabled/enabled depening on attribute state
 =======
 
 # 8.2.0
