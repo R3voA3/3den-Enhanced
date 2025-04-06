@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17105;
+		nextID=17130;
 	};
 	class Camera
 	{
@@ -302,7 +302,7 @@ randomSeed=6293671;
 class ScenarioData
 {
 	author="R3vo";
-	overviewText="TEST";
+	overviewText="3den Enhanced Test Mission.";
 	overviewTextLocked="3den Enhanced Test Mission.";
 	overViewPicture="x\enh\addons\main\data\picture_ca.paa";
 	overViewPictureLocked="x\enh\addons\main\data\picture_ca.paa";
@@ -737,7 +737,7 @@ class CustomAttributes
 		class Attribute2
 		{
 			property="ENH_ambientFlyby";
-			expression="            if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then            {                ENH_AmbientFlyby_Enabled = true;                _value spawn                {                    scriptName 'ENH_Attribute_AmbientFlyby';                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];                    while {ENH_AmbientFlyby_Enabled} do                    {                        private _finalDelay = if (_delay isEqualType 0) then {_delay} else {random _delay};                        private _finalStartPos = _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset];                        private _finalEndPos = _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset];                                                sleep _finalDelay;                        [" \n "                            _finalStartPos," \n "                            _finalEndPos," \n "                            _alt," \n "                            _speed," \n "                            selectRandom _classes," \n "                            _side" \n "                        ] call BIS_fnc_ambientFlyby;                    };                };            }";
+			expression="            if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then            {                ENH_AmbientFlyby_Enabled = true;                _value spawn                {                    scriptName 'ENH_Attribute_AmbientFlyby';                    diag_log _this;                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];                    if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};                                        while {ENH_AmbientFlyby_Enabled} do                    {                        sleep random _delay;                        [" \n "                            _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset]," \n "                            _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset]," \n "                            _alt," \n "                            _speed," \n "                            selectRandom _classes," \n "                            _side" \n "                        ] call BIS_fnc_ambientFlyby;                    };                };            }";
 			class Value
 			{
 				class data
@@ -1249,7 +1249,7 @@ class CustomAttributes
 		class Attribute15
 		{
 			property="ENH_AddObjectsToZeus";
-			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
+			expression="EXPRESSION_PLACEHOLDER";
 			class Value
 			{
 				class data

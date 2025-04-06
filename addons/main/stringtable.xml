@@ -37,6 +37,14 @@
             <Chinese>Mod</Chinese>
             <Chinesesimp>Mod</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
+            <English>R</English>
+            <German>R</German>
+        </Key>
+        <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
+            <English>A</English>
+            <German>A</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_SONG">
             <English>Song:</English>
             <Czech>Skladba:</Czech>
@@ -48,6 +56,10 @@
             <German>Lied:</German>
             <Chinese>歌曲:</Chinese>
             <Chinesesimp>歌曲:</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
+            <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
+            <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_THEME">
             <English>Theme</English>
@@ -5295,13 +5307,13 @@
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_DISPLAYNAME">
             <English>All</English>
-            <German>Alle</German>
             <French>Tous les</French>
+            <German>Alle</German>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_ALL_TOOLTIP">
             <English>All entities will continiously be available.</English>
-            <German>Alle Einheiten werden ständig verfügbar sein.</German>
             <French>Toutes les unités seront disponibles en permanence.</French>
+            <German>Alle Einheiten werden ständig verfügbar sein.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_DISPLAYNAME">
             <English>Editable Objects (Zeus)</English>
@@ -5317,13 +5329,13 @@
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_DISPLAYNAME">
             <English>Editor Placed Only</English>
-            <German>Nur im Editor plazierte</German>
             <French>Seuls les éléments placés dans l'éditeur</French>
+            <German>Nur im Editor plazierte</German>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_TOOLTIP">
             <English>All entities that were placed in Eden Editor will be available.</English>
-            <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
             <French>Toutes les entités placées dans Eden Editor seront disponibles.</French>
+            <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP">
             <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>
