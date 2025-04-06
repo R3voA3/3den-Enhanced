@@ -34,7 +34,29 @@ _value params
     "_skillAimMaxIndependent"
 ];
 
-(_ctrlGroup controlsGroupCtrl 100) cbSetChecked _enable;
+(_ctrlGroup controlsGroupCtrl 100) ctrlAddEventHandler ["CheckedChanged",
+{
+    params ["_ctrlCheckbox", "_checked"];
+
+    private _ctrlGroup = ctrlParentControlsGroup _ctrlCheckbox;
+    private _boolChecked = _checked > 0;
+
+    allControls _ctrlGroup apply
+    {
+        if (ctrlType _x in [CT_EDIT, CT_XSLIDER]) then
+        {
+            _x ctrlEnable _boolChecked;
+        };
+    };
+}];
+
+private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 100;
+
+_ctrlCheckbox cbSetChecked _enable;
+
+// Handle state of controls
+[_ctrlCheckbox] call ENH_fnc_dynamicSkill_toggleControlsState;
+(_ctrlGroup controlsGroupCtrl 100) ctrlAddEventHandler ["CheckedChanged", ENH_fnc_dynamicSkill_toggleControlsState];
 
 [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "%"] call BIS_fnc_initSliderValue;
 [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "%", _skillMinBLUFOR] call BIS_fnc_initSliderValue;

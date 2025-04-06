@@ -67,20 +67,21 @@ class ENH_SPR: Title
             idc = 104;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
-        class CodeTitle: Title
+        class CodeBackground: ENH_3DEN_Attribute_Control_EditMulti5_Background
+        {
+            y = QUOTE(4 * CTRL_DEFAULT_H + 2 * GRID_H + 20 * pixelH);
+        };
+        class CodeTitle: ENH_3DEN_Attribute_Control_EditMulti5_Title
         {
             text = "$STR_ENH_MAIN_SPR_ONRESPAWNCODE_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_SPR_ONRESPAWNCODE_TOOLTIP";
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
-            h = QUOTE(5 * CTRL_DEFAULT_H);
         };
-        class Code: ctrlEditMulti
+        class Code: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
             idc = 105;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(5 * CTRL_DEFAULT_H);
+            y = QUOTE(4 * CTRL_DEFAULT_H + 5 * GRID_H + 20 * pixelH);
+            autocomplete = "scripting";
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton
         {
