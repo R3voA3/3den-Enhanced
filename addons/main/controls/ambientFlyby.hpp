@@ -39,6 +39,7 @@ class ENH_AmbientFlyby: Title
         class StartTitle: Title
         {
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_STARTPOSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class StartTitleX: ENH_3DEN_Attribute_Control_TitleX
@@ -92,6 +93,7 @@ class ENH_AmbientFlyby: Title
         class EndTitle: Title
         {
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_ENDPOSITION_DISPLAYNAME";
+            tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndTitleX: ENH_3DEN_Attribute_Control_TitleX
@@ -156,6 +158,7 @@ class ENH_AmbientFlyby: Title
         class SpeedTitle: Title
         {
             y = QUOTE(16 * CTRL_DEFAULT_H + 30 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
             text = "$STR_ENH_MAIN_AMBIENTFLYBY_SPEED_DISPLAYNAME";
         };
         class SpeedValue: ctrlToolboxPictureKeepAspect
@@ -184,6 +187,7 @@ class ENH_AmbientFlyby: Title
         class SideTitle: Title
         {
             y = QUOTE(18 * CTRL_DEFAULT_H + 35 * pixelH);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
             text = "$STR_ENH_MAIN_SIDE_DISPLAYNAME";
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
