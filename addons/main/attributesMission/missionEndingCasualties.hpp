@@ -20,24 +20,22 @@ class ENH_MissionEnding_Casualties
             "\
                 if (!is3DEN && isServer && (_value # 1) != 'enddefault') then\
                 {\
-                    ENH_Casualties_Threshold = _value param [0, 5];\
-                    ENH_Casualties_Debriefing = _value param [1, 'enddefault'];\
-                    ENH_Casualties_IsWin = _value param [2, false];\
-                    ENH_Casualties_Side = _value param [3];\
                     ENH_Casualties_Counter = 0;\
                     \
                     addMissionEventHandler ['EntityKilled',\
                     {\
-                        params ['_killed', '_killer'];\
-                        if (side group _killed isEqualTo ENH_Casualties_side) then\
+                        params ['_killed'];\
+                        _thisArgs params ['_threshold', '_debriefing', '_isWin', '_side', '_threshold'];\
+                        \
+                        if (side group _killed isEqualTo _side) then\
                         {\
                             ENH_Casualties_Counter = ENH_Casualties_Counter + 1;\
                         };\
-                        if (ENH_Casualties_Counter >= ENH_Casualties_Threshold) exitWith\
+                        if (ENH_Casualties_Counter >= _threshold) exitWith\
                         {\
-                            [ENH_Casualties_Debriefing, ENH_Casualties_IsWin] remoteExecCall ['BIS_fnc_endMission', 0];\
+                            [_debriefing, _isWin] remoteExecCall ['BIS_fnc_endMission', 0];\
                         };\
-                    }];\
+                    }, _value];\
                 };";
             defaultValue = "[5, 'enddefault', false, civilian]";
         };
