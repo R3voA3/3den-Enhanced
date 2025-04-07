@@ -65,10 +65,12 @@ class Cfg3DEN
     class Attributes
     {
         #include "controls\base.hpp"
+        // #include "controls\markerColor.hpp"
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
         #include "controls\ambientAnimations.hpp"
         #include "controls\ambientFlyby.hpp"
+        #include "controls\cfgMusic.hpp"
         #include "controls\dynamicSkill.hpp"
         #include "controls\establishingShot.hpp"
         #include "controls\groupMarker.hpp"
@@ -77,7 +79,6 @@ class Cfg3DEN
         #include "controls\introText.hpp"
         #include "controls\largerEditMulti.hpp"
         #include "controls\mapIndicators.hpp"
-        // #include "controls\markerColor.hpp"
         #include "controls\missionEndingCasualties.hpp"
         #include "controls\sliderMulti120.hpp"
         #include "controls\sliderMultiZero.hpp"

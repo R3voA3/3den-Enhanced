@@ -34,6 +34,8 @@ class CfgFunctions
             class ambientAnimations_onAttributeSave;
             class ambientFlyby_onAttributeLoad;
             class ambientFlyby_onAttributeSave;
+            class cfgMusic_onAttributeLoad;
+            class cfgMusic_onAttributeSave;
             class debugOptions_init;
             class dynamicSkill_onAttributeLoad;
             class dynamicSkill_onAttributeSave;
