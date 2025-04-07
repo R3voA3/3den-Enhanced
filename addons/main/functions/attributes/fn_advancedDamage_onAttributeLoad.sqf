@@ -23,11 +23,12 @@ parseSimpleArray _value params ["_hitpoints", "_damage"];
 
 private _display = ctrlParent _ctrlGroup;
 
-//Adjust group positions
-_ctrlGroup ctrlSetPositionY (2 * CTRL_DEFAULT_H); //For description
+// Adjust group positions
+_ctrlGroup ctrlSetPositionY (2.5 * CTRL_DEFAULT_H); // For description
 _ctrlGroup ctrlSetPositionH ((count _hitpoints max 1) * (CTRL_DEFAULT_H + 5 * pixelH));
 _ctrlGroup ctrlCommit 0;
 
+// Some objects such as B_static_AA_F have not hitpoints. In that case display a message
 if (_hitpoints isEqualTo []) exitWith
 {
     private _ctrlHintNoHitPoints = _display ctrlCreate ["ctrlStructuredText", -1, _ctrlGroup];
@@ -44,7 +45,9 @@ private _counter = 0;
 {
     _counter = _counter + 1;
     private _ctrlLabel = _display ctrlCreate ["ENH_3DEN_Attribute_Control_AttributeTitle", 20000 + _forEachIndex, _ctrlGroup];
-    private _name = format ["%1_%2_%3_%4_%5", "STR", "ENH", "MAIN", "DAMAGE", toUpper _x]; //String is build like this to prevent error when checking for missing strings
+
+    // String is build like this to prevent error when checking for missing localization keys
+    private _name = format ["%1_%2_%3_%4_%5", "STR", "ENH", "MAIN", "DAMAGE", toUpper _x];
 
     _ctrlLabel ctrlSetText (if (isLocalized _name) then {localize _name} else {_x});
     _ctrlLabel ctrlSetTooltip _x;
