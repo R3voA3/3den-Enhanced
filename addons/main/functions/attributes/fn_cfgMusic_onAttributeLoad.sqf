@@ -3,7 +3,7 @@
 /*
     Author: R3vo
 
-    Date: 2019-07-15
+    Date: 2025-04-07
 
     Description:
     Fills the tree view with all tracks from CfgMusic.
@@ -18,9 +18,7 @@
 
 params ["_ctrlGroup", "_value"];
 
-[_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101] call ENH_fnc_initSearchControls;
-
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 102;
+[_ctrlGroup controlsGroupCtrl 300, _ctrlGroup controlsGroupCtrl 301] call ENH_fnc_initSearchControls;
 
 // Cache stuff
 if (uiNamespace getVariable ["ENH_CfgMusic_Classes", []] isEqualTo []) then
@@ -54,9 +52,14 @@ if (uiNamespace getVariable ["ENH_CfgMusic_Classes", []] isEqualTo []) then
     uiNamespace setVariable ["ENH_CfgMusic_Classes", _data];
 };
 
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 302;
+
+
 (uiNamespace getVariable ["ENH_CfgMusic_Classes", []]) apply
 {
-    _x params ["_configName", "_name", "_icon", "_sideColour"];
+    _x params ["_configName", "_name", "_icon"];
+
+    diag_log _x;
 
     private _isSelected = _configName in _value;
 
@@ -80,4 +83,31 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeSelChanged",
     // Flip int
     _ctrlClassesTree tvSetValue [_path, _newValue];
     _ctrlClassesTree tvSetPictureRight [_path, [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _newValue];
+}];
+
+// Add reset event to reset button
+(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
+{
+    private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
+
+    (_ctrlGroup controlsGroupCtrl 300) ctrlSetText "";
+
+    private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 302;
+
+    // Delay the reset. The engine needs a moment to reset the filtered list
+    _ctrlClassesTree spawn
+    {
+        params ["_ctrlClassesTree"];
+
+        sleep 0.05;
+
+        for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
+        {
+            if (_ctrlClassesTree tvValue [_i] > 0) then
+            {
+                _ctrlClassesTree tvSetValue [[_i], 0];
+                _ctrlClassesTree tvSetPictureRight [[_i], TEXTURE_UNCHECKED];
+            };
+        };
+    };
 }];

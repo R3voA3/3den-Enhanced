@@ -8217,16 +8217,8 @@
             <Chinesesimp>随机音乐</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_RANDOMMUSIC_TOOLTIP">
-            <English>Will play randomly selected music at mission start. Input must look as follows: Classname_1 Classname_2 Classname_3 Classname_n.</English>
-            <Czech>Bude hrát náhodně vybranou hudbu na začátku mise. Formát musí být následující: Classname_1 Classname_2 Classname_3 Classname_n.</Czech>
-            <French>Joue aléatoirement une musique sélectionnée quand la mission débute. Formatez ainsi : Classname_1 Classname_2 Classname_3 Classname_n.</French>
-            <Spanish>Reproducirá música seleccionada al azar en el inicio de la misión. La entrada debe tener el siguiente aspecto: Classname_1 Classname_2 Classname_3 Classname_n.</Spanish>
-            <Italian>Fa partire una musica scelta a caso all'inizio della missione. L'imput deve apparire come segue: Classname_1 Classname_2 Classname_3 Classname_n.</Italian>
-            <Polish>Wybrane utwory będą odtwarzane podczas rozpoczęcia scenariusza. Kod musi wyglądać następująco: NazwaKlasy_1 NazwaKlasy_2 NazwaKlasy_3 NazwaKlasy_N.</Polish>
-            <Russian>Будет играть случайно выбранную музыку в начале миссии. Входные данные должны выглядеть следующим образом: Classname_1 Classname_2 Classname_3 Classname_n.</Russian>
-            <German>Spielt willkürlich ausgewählte Musikstücke am Anfang der Mission. Eingabe muss folgendermaßen aussehen: Klassenname_1 Klassenname_2 Klassenname_3 Klassenname_n.</German>
-            <Chinese>將在任務開始時隨機播放選定的音樂。輸入必須如下:Classname_1、Classname_2、Classname_3、Classname_n。以此類推</Chinese>
-            <Chinesesimp>将在任务开始时随机播放选定的音乐。输入必须如下:Classname_1、Classname_2、Classname_3、Classname_n以此类推</Chinesesimp>
+            <English>Will play randomly selected music at mission start.</English>
+            <German>Spielt zufällig ausgewähltes Musikstück am Anfang der Mission.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RELOADSPEED_DISPLAYNAME">
             <English>Reload Speed</English>
