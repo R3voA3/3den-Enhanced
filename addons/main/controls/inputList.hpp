@@ -11,7 +11,7 @@ class ENH_InputList: Title
         };
         class Data: ctrlListbox
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(5 * CTRL_DEFAULT_H);
@@ -19,7 +19,7 @@ class ENH_InputList: Title
         };
         class InputBox: ctrlEdit
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - 10) * GRID_W - 4 * pixelW);
@@ -27,7 +27,7 @@ class ENH_InputList: Title
         };
         class Remove: ctrlButtonToolbar
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             text = "x\enh\addons\main\data\minus_ca.paa";
             tooltip = "$STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
@@ -38,7 +38,7 @@ class ENH_InputList: Title
         };
         class Add: Remove
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             text = "x\enh\addons\main\data\plus_ca.paa";
             tooltip = "$STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 10) * GRID_W - 2 * pixelW);

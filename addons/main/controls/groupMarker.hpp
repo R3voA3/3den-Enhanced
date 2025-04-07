@@ -12,7 +12,7 @@ class ENH_GroupMarker: Title
         };
         class Type: ctrlCombo
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -27,7 +27,7 @@ class ENH_GroupMarker: Title
         };
         class Colour: Type
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             onload = "";
         };
@@ -39,7 +39,7 @@ class ENH_GroupMarker: Title
         };
         class Text: ctrlEdit
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -52,7 +52,7 @@ class ENH_GroupMarker: Title
         };
         class ShowGroupSize: ctrlCheckbox
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
             w = QUOTE(5 * GRID_W);
@@ -65,7 +65,7 @@ class ENH_GroupMarker: Title
         };
         class ShowGroupVehicle: ctrlCheckbox
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 15 * pixelH);
             w = QUOTE(5 * GRID_W);

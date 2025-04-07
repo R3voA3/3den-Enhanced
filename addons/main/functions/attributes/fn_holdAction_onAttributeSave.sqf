@@ -18,18 +18,18 @@
 params ["_ctrlGroup"];
 
 [
-    ctrlText (_ctrlGroup controlsGroupCtrl 100),
-    (_ctrlGroup controlsGroupCtrl 101) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 101),
-    (_ctrlGroup controlsGroupCtrl 102) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 102),
-    ctrlText (_ctrlGroup controlsGroupCtrl 103),
-    ctrlText (_ctrlGroup controlsGroupCtrl 104),
-    ctrlText (_ctrlGroup controlsGroupCtrl 105),
-    ctrlText (_ctrlGroup controlsGroupCtrl 106),
-    ctrlText (_ctrlGroup controlsGroupCtrl 107),
-    ctrlText (_ctrlGroup controlsGroupCtrl 108),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 109),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 111),
-    cbChecked (_ctrlGroup controlsGroupCtrl 113),
-    cbChecked (_ctrlGroup controlsGroupCtrl 114),
-    cbChecked (_ctrlGroup controlsGroupCtrl 115)
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbText lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbText lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08),
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09),
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15)
 ];

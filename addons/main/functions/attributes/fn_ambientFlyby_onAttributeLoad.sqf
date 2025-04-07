@@ -36,7 +36,9 @@ if (_classes isEqualType "") then
     _classes = call compile _classes;
 };
 
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
+[_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15, _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_16] call ENH_fnc_initSearchControls;
+
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_17;
 
 // Cache stuff
 if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) then
@@ -87,53 +89,53 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeSelChanged",
     _ctrlClassesTree tvSetPictureRight [_path, [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _newValue];
 }];
 
-(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_startPos#0);
-(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_startPos#1);
-(_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_startPos#2);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText str (_startPos#0);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText str (_startPos#1);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText str (_startPos#2);
 
-(_ctrlGroup controlsGroupCtrl 104) ctrlSetText str (_rndStartOffset);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlSetText str (_rndStartOffset);
 
-(_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_endPos#0);
-(_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_endPos#1);
-(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_endPos#2);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText str (_endPos#0);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText str (_endPos#1);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText str (_endPos#2);
 
-(_ctrlGroup controlsGroupCtrl 108) ctrlSetText str (_rndEndOffset);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) ctrlSetText str (_rndEndOffset);
 
-(_ctrlGroup controlsGroupCtrl 109) ctrlSetText str _alt;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetText str _alt;
 
-(_ctrlGroup controlsGroupCtrl 110) lbSetCurSel (["limited", "normal", "full"] find _speed);
-(_ctrlGroup controlsGroupCtrl 111) lbSetCurSel ([west, east, independent, civilian] find _side);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10) lbSetCurSel (["limited", "normal", "full"] find _speed);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11) lbSetCurSel ([west, east, independent, civilian] find _side);
 
 // Backwards compatibility
 if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};
 
-(_ctrlGroup controlsGroupCtrl 112) ctrlSetText str (_delay#0);
-(_ctrlGroup controlsGroupCtrl 113) ctrlSetText str (_delay#1);
-(_ctrlGroup controlsGroupCtrl 114) ctrlSetText str (_delay#2);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12) ctrlSetText str (_delay#0);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13) ctrlSetText str (_delay#1);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14) ctrlSetText str (_delay#2);
 
-(_ctrlGroup controlsGroupCtrl 115) ctrlAddEventHandler ["ButtonClick",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15) ctrlAddEventHandler ["ButtonClick",
 {
     private _array = call ENH_fnc_array3FromClipboard;
 
     if (_array isNotEqualTo []) then
     {
         private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_array#0);
-        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_array#1);
-        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_array#2);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText str (_array#2);
     };
 }];
 
-(_ctrlGroup controlsGroupCtrl 116) ctrlAddEventHandler ["ButtonClick",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_16) ctrlAddEventHandler ["ButtonClick",
 {
     private _array = call ENH_fnc_array3FromClipboard;
 
     if (_array isNotEqualTo []) then
     {
         private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-        (_ctrlGroup controlsGroupCtrl 105) ctrlSetText str (_array#0);
-        (_ctrlGroup controlsGroupCtrl 106) ctrlSetText str (_array#1);
-        (_ctrlGroup controlsGroupCtrl 107) ctrlSetText str (_array#2);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText str (_array#2);
     };
 }];
 
@@ -143,9 +145,9 @@ if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
     // Reset filter
-    (_ctrlGroup controlsGroupCtrl 501) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText "";
 
-    private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
+    private _ctrlClassesTree = (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00);
 
     // Delay the reset. The engine needs a moment to reset the filtered list
     _ctrlClassesTree spawn
@@ -164,24 +166,24 @@ if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};
         };
     };
 
-    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 104) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 108) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 109) ctrlSetText "500";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetText "500";
 
-    (_ctrlGroup controlsGroupCtrl 110) lbSetCurSel 1;
-    (_ctrlGroup controlsGroupCtrl 111) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10) lbSetCurSel 1;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11) lbSetCurSel 0;
 
-    (_ctrlGroup controlsGroupCtrl 112) ctrlSetText "300";
-    (_ctrlGroup controlsGroupCtrl 113) ctrlSetText "300";
-    (_ctrlGroup controlsGroupCtrl 114) ctrlSetText "300";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12) ctrlSetText "300";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13) ctrlSetText "300";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14) ctrlSetText "300";
 }];

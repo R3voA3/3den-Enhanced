@@ -17,7 +17,7 @@
 
 params ["_ctrlGroup"];
 
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 302;
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
 private _classes = [];
 
 for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do

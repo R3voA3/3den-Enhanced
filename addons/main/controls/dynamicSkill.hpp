@@ -11,7 +11,7 @@ class ENH_DynamicSkill: Title
         };
         class Enable: ctrlCheckbox
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -42,7 +42,7 @@ class ENH_DynamicSkill: Title
         };
         class SkillMinBLUFORValue: ctrlXSliderH
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(2 * CTRL_DEFAULT_H + 15 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
@@ -51,7 +51,7 @@ class ENH_DynamicSkill: Title
         };
         class SkillMinBLUFOREdit: ctrlEdit
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(2 * CTRL_DEFAULT_H + 15 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
@@ -64,12 +64,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMinBLUFORValue: SkillMinBLUFORValue
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(3 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class SkillAimMinBLUFOREdit: SkillMinBLUFOREdit
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(3 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class SkillMaxBLUFORTitle: Title
@@ -79,12 +79,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillMaxBLUFORValue: SkillMinBLUFORValue
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             y = QUOTE(4 * CTRL_DEFAULT_H + 25 * pixelH);
         };
         class SkillMaxBLUFOREdit: SkillMinBLUFOREdit
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(4 * CTRL_DEFAULT_H + 25 * pixelH);
         };
         class SkillAimMaxBLUFORTitle: Title
@@ -94,12 +94,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMaxBLUFORValue: SkillMinBLUFORValue
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
         };
         class SkillAimMaxBLUFOREdit: SkillMinBLUFOREdit
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
         };
         //OPFOR
@@ -119,12 +119,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillMinOPFORValue: SkillMinBLUFORValue
         {
-            idc = 109;
+            idc = IDC_ATTRIBUTE_CONTROL_09;
             y = QUOTE(7 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class SkillMinOPFOREdit: SkillMinBLUFOREdit
         {
-            idc = 110;
+            idc = IDC_ATTRIBUTE_CONTROL_10;
             y = QUOTE(7 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class SkillAimMinOPFORTitle: Title
@@ -134,12 +134,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMinOPFORValue: SkillMinBLUFORValue
         {
-            idc = 111;
+            idc = IDC_ATTRIBUTE_CONTROL_11;
             y = QUOTE(8 * CTRL_DEFAULT_H + 45 * pixelH);
         };
         class SkillAimMinOPFOREdit: SkillMinBLUFOREdit
         {
-            idc = 112;
+            idc = IDC_ATTRIBUTE_CONTROL_12;
             y = QUOTE(8 * CTRL_DEFAULT_H + 45 * pixelH);
         };
         class SkillMaxOPFORTitle: Title
@@ -149,12 +149,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillMaxOPFORValue: SkillMinBLUFORValue
         {
-            idc = 113;
+            idc = IDC_ATTRIBUTE_CONTROL_13;
             y = QUOTE(9 * CTRL_DEFAULT_H + 50 * pixelH);
         };
         class SkillMaxOPFOREdit: SkillMinBLUFOREdit
         {
-            idc = 114;
+            idc = IDC_ATTRIBUTE_CONTROL_14;
             y = QUOTE(9 * CTRL_DEFAULT_H + 50 * pixelH);
         };
         class SkillAimMaxOPFORTitle: Title
@@ -164,12 +164,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMaxOPFORValue: SkillMinBLUFORValue
         {
-            idc = 115;
+            idc = IDC_ATTRIBUTE_CONTROL_15;
             y = QUOTE(10 * CTRL_DEFAULT_H + 55 * pixelH);
         };
         class SkillAimMaxOPFOREdit: SkillMinBLUFOREdit
         {
-            idc = 116;
+            idc = IDC_ATTRIBUTE_CONTROL_16;
             y = QUOTE(10 * CTRL_DEFAULT_H + 55 * pixelH);
         };
         //Independent
@@ -189,12 +189,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillMinIndependentValue: SkillMinBLUFORValue
         {
-            idc = 117;
+            idc = IDC_ATTRIBUTE_CONTROL_17;
             y = QUOTE(12 * CTRL_DEFAULT_H + 65 * pixelH);
         };
         class SkillMinIndependentEdit: SkillMinBLUFOREdit
         {
-            idc = 118;
+            idc = IDC_ATTRIBUTE_CONTROL_18;
             y = QUOTE(12 * CTRL_DEFAULT_H + 65 * pixelH);
         };
         class SkillAimMinIndependentTitle: Title
@@ -204,12 +204,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMinIndependentValue: SkillMinBLUFORValue
         {
-            idc = 119;
+            idc = IDC_ATTRIBUTE_CONTROL_19;
             y = QUOTE(13 * CTRL_DEFAULT_H + 70 * pixelH);
         };
         class SkillAimMinIndependentEdit: SkillMinBLUFOREdit
         {
-            idc = 120;
+            idc = IDC_ATTRIBUTE_CONTROL_20;
             y = QUOTE(13 * CTRL_DEFAULT_H + 70 * pixelH);
         };
         class SkillMaxIndependentTitle: Title
@@ -219,12 +219,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillMaxIndependentValue: SkillMinBLUFORValue
         {
-            idc = 121;
+            idc = IDC_ATTRIBUTE_CONTROL_21;
             y = QUOTE(14 * CTRL_DEFAULT_H + 75 * pixelH);
         };
         class SkillMaxIndependentEdit: SkillMinBLUFOREdit
         {
-            idc = 122;
+            idc = IDC_ATTRIBUTE_CONTROL_22;
             y = QUOTE(14 * CTRL_DEFAULT_H + 75 * pixelH);
         };
         class SkillAimMaxIndependentTitle: Title
@@ -234,12 +234,12 @@ class ENH_DynamicSkill: Title
         };
         class SkillAimMaxIndependentValue: SkillMinBLUFORValue
         {
-            idc = 123;
+            idc = IDC_ATTRIBUTE_CONTROL_23;
             y = QUOTE(15 * CTRL_DEFAULT_H + 80 * pixelH);
         };
         class SkillAimMaxIndependentEdit: SkillMinBLUFOREdit
         {
-            idc = 124;
+            idc = IDC_ATTRIBUTE_CONTROL_24;
             y = QUOTE(15 * CTRL_DEFAULT_H + 80 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton

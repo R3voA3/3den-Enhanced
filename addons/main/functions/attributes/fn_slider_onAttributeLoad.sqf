@@ -18,5 +18,5 @@
 
 params ["_ctrlGroup", "_value"];
 
-[_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101, "x"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101, "x", _value] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), "x"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), "x", _value] call BIS_fnc_initSliderValue;

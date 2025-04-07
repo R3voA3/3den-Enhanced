@@ -21,7 +21,7 @@ _value params ["_classes", "_center", "_condition", "_alt", "_r", "_side"];
 
 if (_classes isEqualType "") then
 {
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _classes;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText _classes;
 }
 else
 {
@@ -33,30 +33,30 @@ else
         _valueClasses = _valueClasses + _add;
     } forEach _classes;
 
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText _valueClasses;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText _valueClasses;
 };
 
-(_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_center#0);
-(_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_center#1);
-(_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_center#2);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText str (_center#0);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText str (_center#1);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText str (_center#2);
 
-(_ctrlGroup controlsGroupCtrl 105) ctrlSetText _condition;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText _condition;
 
-(_ctrlGroup controlsGroupCtrl 106) ctrlSetText str _alt;
-(_ctrlGroup controlsGroupCtrl 107) ctrlSetText str _r;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText str _alt;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText str _r;
 
-(_ctrlGroup controlsGroupCtrl 108) lbSetCurSel ([west, east, independent, civilian] find _side);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) lbSetCurSel ([west, east, independent, civilian] find _side);
 
-(_ctrlGroup controlsGroupCtrl 104) ctrlAddEventHandler ["ButtonClick",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlAddEventHandler ["ButtonClick",
 {
     private _array = call ENH_fnc_array3FromClipboard;
 
     if (_array isNotEqualTo []) then
     {
         private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-        (_ctrlGroup controlsGroupCtrl 101) ctrlSetText str (_array#0);
-        (_ctrlGroup controlsGroupCtrl 102) ctrlSetText str (_array#1);
-        (_ctrlGroup controlsGroupCtrl 103) ctrlSetText str (_array#2);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText str (_array#0);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText str (_array#1);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText str (_array#2);
     };
 }];
 
@@ -65,16 +65,16 @@ else
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText "";
 
-    (_ctrlGroup controlsGroupCtrl 101) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "0";
-    (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText "0";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText "0";
 
-    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "false";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText "false";
 
-    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "500";
-    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "200";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText "500";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText "200";
 
-    (_ctrlGroup controlsGroupCtrl 108) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) lbSetCurSel 0;
 }];

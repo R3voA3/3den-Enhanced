@@ -12,7 +12,7 @@ class ENH_IntroText: Title
         };
         class DelayValue: ctrlXSliderH
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -23,7 +23,7 @@ class ENH_IntroText: Title
         };
         class DelayEdit: ctrlEdit
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -35,7 +35,7 @@ class ENH_IntroText: Title
         };
         class Line1Value: ctrlEdit
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -49,7 +49,7 @@ class ENH_IntroText: Title
         };
         class Line2Value: Line1Value
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class Line3Title: Title
@@ -59,7 +59,7 @@ class ENH_IntroText: Title
         };
         class Line3Value: Line1Value
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class IntroTypeTitle: Title
@@ -70,7 +70,7 @@ class ENH_IntroText: Title
         };
         class IntroType: ctrlToolboxPictureKeepAspect
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);

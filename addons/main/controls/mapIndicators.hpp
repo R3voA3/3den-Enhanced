@@ -12,7 +12,7 @@ class ENH_MapIndicators: Title
         };
         class FriendlyValue: ctrlCheckbox
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(SIZE_M * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -25,7 +25,7 @@ class ENH_MapIndicators: Title
         };
         class EnemyValue: FriendlyValue
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
         };
         class MinesText: FriendlyText
@@ -36,7 +36,7 @@ class ENH_MapIndicators: Title
         };
         class MinesValue: FriendlyValue
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class PingText: FriendlyText
@@ -47,7 +47,7 @@ class ENH_MapIndicators: Title
         };
         class PingValue: FriendlyValue
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
     };

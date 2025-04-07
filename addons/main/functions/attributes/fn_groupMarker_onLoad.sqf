@@ -21,8 +21,8 @@ if (count (get3DENSelected "Group") == 1) exitWith {};
 
 params ["_ctrl"];
 private _ctrlGroup = ctrlParentControlsGroup _ctrl;
-private _ctrlComboType =_ctrlGroup controlsGroupCtrl 100;
-private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
+private _ctrlComboType =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
+private _ctrlComboColor =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
 
 //Get all markers and sort them
 private _markers = ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkers")) apply
@@ -63,8 +63,8 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
-    (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 102) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 103) cbSetChecked true;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked true;
 }];

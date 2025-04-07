@@ -19,22 +19,22 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_threshold", "_debriefing", "_isWin", "_side"];
 
-[_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101, ""] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101, "", _threshold] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), ""] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), "", _threshold] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 102, _debriefing] call ENH_fnc_missionEndingCasualties_initDebriefingCombo;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), _debriefing] call ENH_fnc_missionEndingCasualties_initDebriefingCombo;
 
-(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _isWin;
-(_ctrlGroup controlsGroupCtrl 104) lbSetCurSel ([west, east, independent, civilian] find _side);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked _isWin;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) lbSetCurSel ([west, east, independent, civilian] find _side);
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    [_ctrlGroup controlsGroupCtrl 100, _ctrlGroup controlsGroupCtrl 101, "", 5] call BIS_fnc_initSliderValue;
-    (_ctrlGroup controlsGroupCtrl 102) lbSetCurSel 0;
+    [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), "", 5] call BIS_fnc_initSliderValue;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbSetCurSel 0;
 
-    (_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
-    (_ctrlGroup controlsGroupCtrl 104) lbSetCurSel ([west, east, independent, civilian] find civilian);
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) lbSetCurSel ([west, east, independent, civilian] find civilian);
 }];

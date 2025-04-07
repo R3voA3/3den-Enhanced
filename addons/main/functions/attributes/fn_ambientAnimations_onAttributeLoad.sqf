@@ -92,7 +92,7 @@
 
 params ["_ctrlGroup", "_value"];
 _value params ["_animSet", "_anims", "_canExit", "_attach"];
-private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
+private _ctrlLB = (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00);
 {
     _x params ["_animSetPreset", "_armed"];
     if (_forEachIndex == 0) then
@@ -113,15 +113,15 @@ private _ctrlLB = (_ctrlGroup controlsGroupCtrl 100);
     };
 } forEach ANIMSETS;
 
-(_ctrlGroup controlsGroupCtrl 101) cbSetChecked _canExit;
-(_ctrlGroup controlsGroupCtrl 102) cbSetChecked _attach;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) cbSetChecked _canExit;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) cbSetChecked _attach;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 101) cbSetChecked false;
-    (_ctrlGroup controlsGroupCtrl 102) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) cbSetChecked false;
 }];

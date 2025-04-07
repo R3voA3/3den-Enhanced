@@ -18,8 +18,8 @@
 params ["_ctrlGroup"];
 
 [
-    sliderPosition (_ctrlGroup controlsGroupCtrl 100),
-    (_ctrlGroup controlsGroupCtrl 102) lbText lbCurSel (_ctrlGroup controlsGroupCtrl 102),
-    cbChecked (_ctrlGroup controlsGroupCtrl 103),
-    [west, east, independent, civilian] select lbCurSel (_ctrlGroup controlsGroupCtrl 104)
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbText lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),
+    [west, east, independent, civilian] select lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04)
 ]

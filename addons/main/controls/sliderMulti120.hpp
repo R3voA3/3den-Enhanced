@@ -7,7 +7,7 @@ class ENH_SliderMulti120: Title
         class Title: Title {};
         class Value: ctrlXSliderH
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -17,7 +17,7 @@ class ENH_SliderMulti120: Title
         };
         class Edit: ctrlEdit
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W);
             w = QUOTE(EDIT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);

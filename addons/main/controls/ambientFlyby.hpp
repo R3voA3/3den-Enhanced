@@ -7,7 +7,7 @@ class ENH_AmbientFlyby: Title
     {
         class Search: ctrlEdit
         {
-            idc = 501; // These idcs make it so that the search button is handled by the engine, why? Magic!
+            idc = IDC_ATTRIBUTE_CONTROL_15;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE((ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -15,7 +15,7 @@ class ENH_AmbientFlyby: Title
         };
         class SearchButton: ctrlButtonSearch
         {
-            idc = 502; // These idcs make it so that the search button is handled by the engine, why? Magic!
+            idc = IDC_ATTRIBUTE_CONTROL_16;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -29,8 +29,8 @@ class ENH_AmbientFlyby: Title
         };
         class ClassesValue: ctrlTree
         {
-            idc = 500;
-            idcSearch = 501;
+            idc = IDC_ATTRIBUTE_CONTROL_17;
+            idcSearch = IDC_ATTRIBUTE_CONTROL_15;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(1 * CTRL_DEFAULT_H);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -48,7 +48,7 @@ class ENH_AmbientFlyby: Title
         };
         class StartValueX: ENH_3DEN_Attribute_Control_ValueX
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class StartTitleY: ENH_3DEN_Attribute_Control_TitleY
@@ -57,7 +57,7 @@ class ENH_AmbientFlyby: Title
         };
         class StartValueY: ENH_3DEN_Attribute_Control_ValueY
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class StartTitleZ: ENH_3DEN_Attribute_Control_TitleZ
@@ -66,13 +66,13 @@ class ENH_AmbientFlyby: Title
         };
         class StartValueZ: ENH_3DEN_Attribute_Control_ValueZ
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
         };
         class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
-            idc = 115;
+            idc = IDC_ATTRIBUTE_CONTROL_15;
             y = QUOTE(11 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class StartRndOffsetTitle: Title
@@ -87,7 +87,7 @@ class ENH_AmbientFlyby: Title
         };
         class StartRndOffsetValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(12 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class EndTitle: Title
@@ -102,7 +102,7 @@ class ENH_AmbientFlyby: Title
         };
         class EndValueX: ENH_3DEN_Attribute_Control_ValueX
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndTitleY: ENH_3DEN_Attribute_Control_TitleY
@@ -111,7 +111,7 @@ class ENH_AmbientFlyby: Title
         };
         class EndValueY: ENH_3DEN_Attribute_Control_ValueY
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndTitleZ: ENH_3DEN_Attribute_Control_TitleZ
@@ -120,12 +120,12 @@ class ENH_AmbientFlyby: Title
         };
         class PasteEndValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
-            idc = 116;
+            idc = IDC_ATTRIBUTE_CONTROL_16;
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndValueZ: StartValueZ
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             y = QUOTE(13 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class EndRndOffsetTitle: StartRndOffsetTitle
@@ -138,7 +138,7 @@ class ENH_AmbientFlyby: Title
         };
         class EndRndOffsetValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             y = QUOTE(14 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class AltitudeTitle: Title
@@ -152,7 +152,7 @@ class ENH_AmbientFlyby: Title
         };
         class AltitudeValueZ: ENH_3DEN_Attribute_Control_ValueZ_Front
         {
-            idc = 109;
+            idc = IDC_ATTRIBUTE_CONTROL_09;
             y = QUOTE(15 * CTRL_DEFAULT_H + 25 * pixelH);
         };
         class SpeedTitle: Title
@@ -163,7 +163,7 @@ class ENH_AmbientFlyby: Title
         };
         class SpeedValue: ctrlToolboxPictureKeepAspect
         {
-            idc = 110;
+            idc = IDC_ATTRIBUTE_CONTROL_10;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(16 * CTRL_DEFAULT_H + 30 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -192,7 +192,7 @@ class ENH_AmbientFlyby: Title
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
-            idc = 111;
+            idc = IDC_ATTRIBUTE_CONTROL_11;
             y = QUOTE(18 * CTRL_DEFAULT_H + 35 * pixelH);
         };
         class DelayTitle: Title
@@ -206,7 +206,7 @@ class ENH_AmbientFlyby: Title
         };
         class DelayValueMin: ENH_3DEN_Attribute_Control_ValueMin
         {
-            idc = 112;
+            idc = IDC_ATTRIBUTE_CONTROL_12;
             y = QUOTE(20 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class DelayTitleMid: ENH_3DEN_Attribute_Control_TitleMid
@@ -215,7 +215,7 @@ class ENH_AmbientFlyby: Title
         };
         class DelayValueMid: ENH_3DEN_Attribute_Control_ValueMid
         {
-            idc = 113;
+            idc = IDC_ATTRIBUTE_CONTROL_13;
             y = QUOTE(20 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class DelayTitleMax: ENH_3DEN_Attribute_Control_TitleMax
@@ -224,7 +224,7 @@ class ENH_AmbientFlyby: Title
         };
         class DelayValueMax: ENH_3DEN_Attribute_Control_ValueMax
         {
-            idc = 114;
+            idc = IDC_ATTRIBUTE_CONTROL_14;
             y = QUOTE(20 * CTRL_DEFAULT_H + 40 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton

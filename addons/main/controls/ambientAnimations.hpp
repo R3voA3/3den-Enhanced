@@ -11,7 +11,7 @@ class ENH_AmbientAnimations: Title
         };
         class Animation: ctrlCombo
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -24,7 +24,7 @@ class ENH_AmbientAnimations: Title
         };
         class CanExit: ctrlCheckbox
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(5 * GRID_W);
@@ -38,7 +38,7 @@ class ENH_AmbientAnimations: Title
         };
         class Attach: CanExit
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton

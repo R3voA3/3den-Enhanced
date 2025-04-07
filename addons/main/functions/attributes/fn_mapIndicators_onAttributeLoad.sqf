@@ -19,7 +19,7 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_hideFriendly", "_hideEnemy", "_hideMines", "_hidePing"];
 
-(_ctrlGroup controlsGroupCtrl 100) cbSetChecked _hideFriendly;
-(_ctrlGroup controlsGroupCtrl 101) cbSetChecked _hideEnemy;
-(_ctrlGroup controlsGroupCtrl 102) cbSetChecked _hideMines;
-(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _hidePing;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) cbSetChecked _hideFriendly;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) cbSetChecked _hideEnemy;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) cbSetChecked _hideMines;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked _hidePing;

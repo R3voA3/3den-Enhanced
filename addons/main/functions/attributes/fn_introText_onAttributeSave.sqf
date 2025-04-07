@@ -18,9 +18,9 @@
 params ["_ctrlGroup"];
 
 [
-    sliderPosition (_ctrlGroup controlsGroupCtrl 100),
-    ctrlText (_ctrlGroup controlsGroupCtrl 102),
-    ctrlText (_ctrlGroup controlsGroupCtrl 103),
-    ctrlText (_ctrlGroup controlsGroupCtrl 104),
-    lbCurSel (_ctrlGroup controlsGroupCtrl 105)
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04),
+    lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05)
 ]
