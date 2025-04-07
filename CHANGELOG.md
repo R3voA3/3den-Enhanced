@@ -25,6 +25,7 @@
     - Completely overhauled the UI
 - French translation update by Alfred-Neuman
 - Controls of Dynamic Skill attribute are now properly disabled/enabled depening on attribute state
+- The random music attribute now has a list showing all music tracks available
 --->
 
 # 8.2.0
