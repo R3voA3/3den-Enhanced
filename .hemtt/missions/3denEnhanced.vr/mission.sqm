@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17130;
+		nextID=17145;
 	};
 	class Camera
 	{
 		pos[]={3974.417,30,2852.375};
-		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
-		up[]={-1.2363449e-07,0.70710671,0.70710683};
-		aside[]={1,0,1.7484557e-07};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -1430,6 +1430,54 @@ class CustomAttributes
 		};
 		class Attribute29
 		{
+			property="ENH_randomMusic";
+			expression="if (!is3DEN && (_value isNotEqualTo []) && hasInterface) then {playMusic (selectRandom _value)}";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="LeadTrack02b_F_EPB";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="STRING";
+								value="LeadTrack02_F_Jets";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="STRING";
+								value="anomaly_07_05_v1";
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="STRING";
+								value="C_EA_RadioBroadcast1";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute30
+		{
 			property="ENH_MissionEventHandlers_OnUserSelectedPlayer";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserSelectedPlayer_ID = addMissionEventHandler [""OnUserSelectedPlayer"", compile _value]})";
 			class Value
@@ -1441,7 +1489,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute30
+		class Attribute31
 		{
 			property="ENH_Briefing_OPFOR_Mission";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Mission'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1454,7 +1502,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute31
+		class Attribute32
 		{
 			property="ENH_Briefing_BLUFOR_Execution";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Execution'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1467,7 +1515,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute32
+		class Attribute33
 		{
 			property="ENH_MissionEventHandlers_OnUserKicked";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserKicked_ID = addMissionEventHandler [""OnUserKicked"", compile _value]})";
@@ -1480,7 +1528,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute33
+		class Attribute34
 		{
 			property="ENH_MissionEventHandlers_MarkerCreated";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MarkerCreated_ID = addMissionEventHandler [""MarkerCreated"", compile _value]})";
@@ -1493,7 +1541,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute34
+		class Attribute35
 		{
 			property="ENH_MissionEventHandlers_Loaded";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Loaded_ID = addMissionEventHandler [""Loaded"", compile _value]})";
@@ -1506,7 +1554,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute35
+		class Attribute36
 		{
 			property="ENH_MissionEventHandlers_OnUserClientStateChanged";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserClientStateChanged_ID = addMissionEventHandler [""OnUserClientStateChanged"", compile _value]})";
@@ -1519,7 +1567,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute36
+		class Attribute37
 		{
 			property="ENH_Briefing_BLUFOR_Situation";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Situation'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1532,7 +1580,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute37
+		class Attribute38
 		{
 			property="ENH_MissionEventHandlers_MPEnded";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MPEnded_ID = addMissionEventHandler [""MPEnded"", compile _value]})";
@@ -1545,7 +1593,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute38
+		class Attribute39
 		{
 			property="ENH_MissionEventHandlers_ArtilleryShellFired";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ArtilleryShellFired_ID = addMissionEventHandler [""ArtilleryShellFired"", compile _value]})";
@@ -1558,7 +1606,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute39
+		class Attribute40
 		{
 			property="ENH_MissionEventHandlers_CommandModeChanged";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_CommandModeChanged_ID = addMissionEventHandler [""CommandModeChanged"", compile _value]})";
@@ -1571,7 +1619,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute40
+		class Attribute41
 		{
 			property="ENH_MissionEventHandlers_HandleChatMessage";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HandleChatMessage_ID = addMissionEventHandler [""HandleChatMessage"", compile _value]})";
@@ -1584,7 +1632,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute41
+		class Attribute42
 		{
 			property="ENH_Briefing_OPFOR_Execution";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Execution'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1597,7 +1645,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute42
+		class Attribute43
 		{
 			property="ENH_MissionEventHandlers_MapSingleClick";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MapSingleClick_ID = addMissionEventHandler [""MapSingleClick"", compile _value]})";
@@ -1610,7 +1658,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute43
+		class Attribute44
 		{
 			property="ENH_MissionEventHandlers_SaveGame";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SaveGame_ID = addMissionEventHandler [""SaveGame"", compile _value]})";
@@ -1623,7 +1671,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute44
+		class Attribute45
 		{
 			property="ENH_MissionEventHandlers_MarkerDeleted";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_MarkerDeleted_ID = addMissionEventHandler [""MarkerDeleted"", compile _value]})";
@@ -1636,7 +1684,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute45
+		class Attribute46
 		{
 			property="ENH_MissionEventHandlers_HCGroupSelectionChanged";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HCGroupSelectionChanged_ID = addMissionEventHandler [""HCGroupSelectionChanged"", compile _value]})";
@@ -1649,7 +1697,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute46
+		class Attribute47
 		{
 			property="ENH_MissionEventHandlers_PreloadFinished";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_PreloadFinished_ID = addMissionEventHandler [""PreloadFinished"", compile _value]})";
@@ -1662,7 +1710,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute47
+		class Attribute48
 		{
 			property="ENH_Briefing_OPFOR_Situation";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Situation'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1675,7 +1723,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute48
+		class Attribute49
 		{
 			property="ENH_MissionEventHandlers_ExtensionCallback";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ExtensionCallback_ID = addMissionEventHandler [""ExtensionCallback"", compile _value]})";
@@ -1688,7 +1736,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute49
+		class Attribute50
 		{
 			property="ENH_MissionEventHandlers_Drowned";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Drowned_ID = addMissionEventHandler [""Drowned"", compile _value]})";
@@ -1701,7 +1749,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute50
+		class Attribute51
 		{
 			property="ENH_Briefing_Independent_Signal";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Signal'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1714,7 +1762,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute51
+		class Attribute52
 		{
 			property="ENH_Briefing_OPFOR_Signal";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Signal'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1727,7 +1775,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute52
+		class Attribute53
 		{
 			property="ENH_MissionEventHandlers_PreloadStarted";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_PreloadStarted_ID = addMissionEventHandler [""PreloadStarted"", compile _value]})";
@@ -1740,7 +1788,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute53
+		class Attribute54
 		{
 			property="ENH_MissionEventHandlers_SelectedRotorLibActionChanged";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_SelectedRotorLibActionChanged_ID = addMissionEventHandler [""SelectedRotorLibActionChanged"", compile _value]})";
@@ -1753,7 +1801,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute54
+		class Attribute55
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -1766,7 +1814,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute55
+		class Attribute56
 		{
 			property="ENH_Briefing_Independent_Execution";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Execution'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1779,7 +1827,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute56
+		class Attribute57
 		{
 			property="ENH_MissionEventHandlers_UAVCrewCreated";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_UAVCrewCreated_ID = addMissionEventHandler [""UAVCrewCreated"", compile _value]})";
@@ -1792,7 +1840,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute57
+		class Attribute58
 		{
 			property="ENH_Briefing_Civilian_Signal";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Signal'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1805,7 +1853,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute58
+		class Attribute59
 		{
 			property="ENH_MissionEventHandlers_OnUserDisconnected";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserDisconnected_ID = addMissionEventHandler [""OnUserDisconnected"", compile _value]})";
@@ -1818,7 +1866,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute59
+		class Attribute60
 		{
 			property="Init";
 			expression="if !(is3DEN) then {[] call compile _value;};";
@@ -1831,7 +1879,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute60
+		class Attribute61
 		{
 			property="ENH_MissionEventHandlers_HandleAccTime";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_HandleAccTime_ID = addMissionEventHandler [""HandleAccTime"", compile _value]})";
@@ -1844,7 +1892,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute61
+		class Attribute62
 		{
 			property="ENH_Briefing_Independent_Situation";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Situation'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1857,7 +1905,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute62
+		class Attribute63
 		{
 			property="ENH_MissionEventHandlers_OnUserAdminStateChanged";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_OnUserAdminStateChanged_ID = addMissionEventHandler [""OnUserAdminStateChanged"", compile _value]})";
@@ -1870,7 +1918,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute63
+		class Attribute64
 		{
 			property="ENH_MissionEventHandlers_ProjectileCreated";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_ProjectileCreated_ID = addMissionEventHandler [""ProjectileCreated"", compile _value]})";
@@ -1883,7 +1931,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute64
+		class Attribute65
 		{
 			property="ENH_MissionEventHandlers_GroupIconOverLeave";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_GroupIconOverLeave_ID = addMissionEventHandler [""GroupIconOverLeave"", compile _value]})";
@@ -1896,7 +1944,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute65
+		class Attribute66
 		{
 			property="ENH_MissionEventHandlers_HandleDisconnect";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_HandleDisconnect_ID = addMissionEventHandler [""HandleDisconnect"", compile _value]})";
@@ -1909,7 +1957,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute66
+		class Attribute67
 		{
 			property="ENH_Briefing_Civilian_Execution";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Civilian_Execution'; waitUntil {!isNull player}; if (side player == civilian) then {sleep 0.3; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_EXECUTION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1922,7 +1970,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute67
+		class Attribute68
 		{
 			property="ENH_MissionEventHandlers_BuildingChanged";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_BuildingChanged_ID = addMissionEventHandler [""BuildingChanged"", compile _value]})";
@@ -1935,7 +1983,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute68
+		class Attribute69
 		{
 			property="ENH_Briefing_BLUFOR_Mission";
 			expression="if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Mission'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.2; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_MISSION_TITLE', _this call BIS_fnc_localize]]}}};";
@@ -1948,7 +1996,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute69
+		class Attribute70
 		{
 			property="ENH_MissionEventHandlers_Service";
 			expression="(if (_value != '' && !is3DEN) then {ENH_MissionEventHandlers_Service_ID = addMissionEventHandler [""Service"", compile _value]})";
@@ -1961,7 +2009,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute70
+		class Attribute71
 		{
 			property="ENH_MissionEventHandlers_PlayerConnected";
 			expression="(if (_value != '' && !is3DEN && isServer) then {ENH_MissionEventHandlers_PlayerConnected_ID = addMissionEventHandler [""PlayerConnected"", compile _value]})";
@@ -1974,7 +2022,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=71;
+		nAttributes=72;
 	};
 };
 class Mission
@@ -2012,7 +2060,7 @@ class Mission
 					class data
 					{
 						singleType="SCALAR";
-						value=0;
+						value=-1;
 					};
 				};
 			};
@@ -2025,7 +2073,7 @@ class Mission
 					class data
 					{
 						singleType="SCALAR";
-						value=0;
+						value=-1;
 					};
 				};
 			};
@@ -2051,7 +2099,7 @@ class Mission
 					class data
 					{
 						singleType="SCALAR";
-						value=0;
+						value=-1;
 					};
 				};
 			};
