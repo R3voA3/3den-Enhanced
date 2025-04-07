@@ -3,7 +3,7 @@
 - Custom marker color attribute
 --->
 
-<!-- # 8.3.0
+# 8.3.0
 ## ADDED
 - The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
 - ENH_fnc_initSearchControls to easily setup a search with an image button and a edit box as used everywhere in Eden editor
@@ -26,7 +26,7 @@
 - French translation update by Alfred-Neuman
 - Controls of Dynamic Skill attribute are now properly disabled/enabled depening on attribute state
 - The random music attribute now has a list showing all music tracks available
---->
+- Fixed that the first control in the advanced damage attribute would overlap the description
 
 # 8.2.0
 ## ADDED
