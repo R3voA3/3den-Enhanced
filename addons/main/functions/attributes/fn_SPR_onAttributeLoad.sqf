@@ -19,7 +19,7 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_ruletSet", "_respawnTime", "_canDie", "_restoreLoadout", "_onRespawnCode"];
 
-private _ctrlComboRuleset = _ctrlGroup controlsGroupCtrl 100;
+private _ctrlComboRuleset = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
 
 _ctrlComboRuleset lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_NONE_TEXT";
 _ctrlComboRuleset lbAdd localize "STR_3DEN_ATTRIBUTES_RESPAWN_INSTANT_TEXT";
@@ -44,23 +44,23 @@ _ctrlComboRuleset ctrlAddEventHandler ["LBSelChanged",
 
 _ctrlComboRuleset lbSetCurSel _ruletSet;
 
-[_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s", _respawnTime] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "s"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "s", _respawnTime] call BIS_fnc_initSliderValue;
 
-(_ctrlGroup controlsGroupCtrl 103) cbSetChecked _canDie;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked _canDie;
 
-(_ctrlGroup controlsGroupCtrl 104) cbSetChecked _restoreLoadout;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) cbSetChecked _restoreLoadout;
 
-(_ctrlGroup controlsGroupCtrl 105) ctrlSetText _onRespawnCode;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText _onRespawnCode;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
-    [_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "s", 20] call BIS_fnc_initSliderValue;
-    (_ctrlGroup controlsGroupCtrl 103) cbSetChecked false;
-    (_ctrlGroup controlsGroupCtrl 104) cbSetChecked false;
-    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel 0;
+    [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "s", 20] call BIS_fnc_initSliderValue;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText "";
 }];

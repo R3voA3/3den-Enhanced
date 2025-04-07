@@ -18,14 +18,14 @@
 params ["_ctrlGroup"];
 
 [
-    ctrlText (_ctrlGroup controlsGroupCtrl 100) splitString ";, [] " + endl, // Convert string to array with strings
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) splitString ";, [] " + endl, // Convert string to array with strings
     [
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 101),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 102),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 103)
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03)
     ],
-    ctrlText (_ctrlGroup controlsGroupCtrl 105),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 106),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 107),
-    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 108)
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07),
+    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08)
 ]

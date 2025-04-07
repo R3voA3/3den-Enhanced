@@ -13,22 +13,22 @@ class ENH_EstablishingShot: Title
         class CenterTitleX: ENH_3DEN_Attribute_Control_TitleX {};
         class CenterValueX: ENH_3DEN_Attribute_Control_ValueX
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
         };
         class CenterTitleY: ENH_3DEN_Attribute_Control_TitleY {};
         class CenterValueY: ENH_3DEN_Attribute_Control_ValueY
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
         };
         class CenterTitleZ: ENH_3DEN_Attribute_Control_TitleZ {};
         class CenterValueZ: ENH_3DEN_Attribute_Control_ValueZ
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
         };
         class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
         };
         class TextTitle: Title
         {
@@ -37,7 +37,7 @@ class ENH_EstablishingShot: Title
         };
         class TextValue: ctrlEdit
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W) * GRID_W);
@@ -54,7 +54,7 @@ class ENH_EstablishingShot: Title
         };
         class AltitudeValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class RadiusTitle: Title
@@ -69,7 +69,7 @@ class ENH_EstablishingShot: Title
         };
         class RadiusValueR: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class AngleTitle: Title
@@ -79,7 +79,7 @@ class ENH_EstablishingShot: Title
         };
         class AngleValue: ctrlXSliderH
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -91,7 +91,7 @@ class ENH_EstablishingShot: Title
         };
         class AngleEdit: ctrlEdit
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
@@ -106,7 +106,7 @@ class ENH_EstablishingShot: Title
         };
         class DirectionValue: ctrlToolbox
         {
-            idc = 109;
+            idc = IDC_ATTRIBUTE_CONTROL_09;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);

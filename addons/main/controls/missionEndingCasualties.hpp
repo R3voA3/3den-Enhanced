@@ -12,7 +12,7 @@ class ENH_MissionEnding_Casualties: Title
         };
         class ThresholdValue: ctrlXSliderH
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -23,7 +23,7 @@ class ENH_MissionEnding_Casualties: Title
         };
         class ThresholdEdit: ctrlEdit
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W) * GRID_W);
             w = QUOTE(EDIT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -36,7 +36,7 @@ class ENH_MissionEnding_Casualties: Title
         };
         class Ending: ctrlCombo
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -50,7 +50,7 @@ class ENH_MissionEnding_Casualties: Title
         };
         class IsWin: ctrlCheckbox
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
             w = QUOTE(5 * GRID_W);
@@ -64,7 +64,7 @@ class ENH_MissionEnding_Casualties: Title
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton

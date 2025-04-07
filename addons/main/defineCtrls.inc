@@ -70,7 +70,7 @@ class ENH_3DEN_Attribute_Control_SideToolbox: ctrlToolboxPictureKeepAspect
 };
 class ENH_3DEN_Attribute_Control_ResetButton: ctrlButton
 {
-    idc = IDC_3DEN_ATTRIBUTES_BUTTON_RESET;
+    idc = IDC_ATTRIBUTE_BUTTON_RESET;
     x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
     w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
     h = QUOTE(CTRL_DEFAULT_H);
@@ -210,7 +210,7 @@ class ENH_3DEN_Attribute_Control_ValueMax: ENH_3DEN_Attribute_Control_ValueMin
 };
 class ENH_3DEN_Attribute_Control_ValueFromClipboard: ctrlButtonPictureKeepAspect
 {
-    idc = -1;
+    idc = IDC_NONE;
     text = "x\enh\addons\main\data\clipboard_ca.paa";
     tooltip = "$STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD";
     x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);

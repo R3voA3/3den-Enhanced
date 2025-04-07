@@ -13,7 +13,7 @@ class ENH_Airdrop: Title
         };
         class ClassesValue: ctrlEditMulti
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(4 * CTRL_DEFAULT_H);
@@ -30,7 +30,7 @@ class ENH_Airdrop: Title
         };
         class CenterValueX: ENH_3DEN_Attribute_Control_ValueX
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class CenterTitleY: ENH_3DEN_Attribute_Control_TitleY
@@ -39,7 +39,7 @@ class ENH_Airdrop: Title
         };
         class CenterValueY: ENH_3DEN_Attribute_Control_ValueY
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class CenterTitleZ: ENH_3DEN_Attribute_Control_TitleZ
@@ -48,13 +48,13 @@ class ENH_Airdrop: Title
         };
         class CenterValueZ: ENH_3DEN_Attribute_Control_ValueZ
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W / 3 - 5 - 5) * GRID_W);
         };
         class PasteStartValueFromClipboard: ENH_3DEN_Attribute_Control_ValueFromClipboard
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(4 * CTRL_DEFAULT_H + 5 * pixelH);
         };
         class ConditionTitle: Title
@@ -65,7 +65,7 @@ class ENH_Airdrop: Title
         };
         class ConditionValue: ctrlEdit
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 10 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -82,7 +82,7 @@ class ENH_Airdrop: Title
         };
         class AltitudeValueA: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(6 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class RadiusTitle: Title
@@ -97,7 +97,7 @@ class ENH_Airdrop: Title
         };
         class RadiusValueR: ENH_3DEN_Attribute_Control_ValueA
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             y = QUOTE(7 * CTRL_DEFAULT_H + 20 * pixelH);
         };
         class SideTitle: Title
@@ -108,7 +108,7 @@ class ENH_Airdrop: Title
         };
         class SideValue: ENH_3DEN_Attribute_Control_SideToolbox
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             y = QUOTE(8 * CTRL_DEFAULT_H + 25 * pixelH);
             h = QUOTE(2 * CTRL_DEFAULT_H);
         };

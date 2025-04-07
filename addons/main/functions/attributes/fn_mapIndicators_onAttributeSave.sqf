@@ -18,8 +18,8 @@
 params ["_ctrlGroup"];
 
 [
-    cbChecked (_ctrlGroup controlsGroupCtrl 100),
-    cbChecked (_ctrlGroup controlsGroupCtrl 101),
-    cbChecked (_ctrlGroup controlsGroupCtrl 102),
-    cbChecked (_ctrlGroup controlsGroupCtrl 103)
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03)
 ]

@@ -19,11 +19,11 @@
 params ["_ctrlGroup", "_value"];
 _value params ["_typeValue", "_colorValue", "_textValue", "_showGroupSize", "_showGroupVehicle"];
 
-private _ctrlComboType =_ctrlGroup controlsGroupCtrl 100;
-private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
-private _ctrlEdit =_ctrlGroup controlsGroupCtrl 102;
-private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
-private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl 104;
+private _ctrlComboType =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
+private _ctrlComboColor =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
+private _ctrlEdit =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
+private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03;
+private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04;
 
 //Set up checkbox and edit control
 _ctrlEdit ctrlSetText _textValue;
@@ -75,6 +75,6 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
     //Setting default values, colour and group ID cannot be retrieved from here so they are ignored
-    (_ctrlGroup controlsGroupCtrl 100) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 103) cbSetChecked true;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked true;
 }];

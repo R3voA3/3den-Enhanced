@@ -17,7 +17,7 @@
 
 params ["_ctrlGroup"];
 
-private _ctrlListbox = _ctrlGroup controlsGroupCtrl 100;
+private _ctrlListbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
 
 private _value = [];
 

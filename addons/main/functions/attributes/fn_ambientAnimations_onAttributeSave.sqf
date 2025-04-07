@@ -18,7 +18,7 @@
 params ["_ctrlGroup"];
 
 //Selection animations to pass to the attribute
-private _animSet = (_ctrlGroup controlsGroupCtrl 100) lbData lbCurSel (_ctrlGroup controlsGroupCtrl 100);
+private _animSet = (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbData lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00);
 private _anims = switch _animSet do
 {
     case "SHIELD_FROM_SUN":
@@ -193,6 +193,6 @@ if (_animSet isEqualTo "") exitWith {['', [], false, false]};
 [
     _animSet, //Needs to be saved to restore the value when attribute is loaded
     _anims,
-    cbChecked (_ctrlGroup controlsGroupCtrl 101),
-    cbChecked (_ctrlGroup controlsGroupCtrl 102)
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02)
 ]

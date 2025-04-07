@@ -17,11 +17,11 @@
 
 params ["_ctrlGroup"];
 
-private _ctrlComboType =_ctrlGroup controlsGroupCtrl 100;
-private _ctrlComboColor =_ctrlGroup controlsGroupCtrl 101;
-private _ctrlEdit =_ctrlGroup controlsGroupCtrl 102;
-private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl 103;
-private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl 104;
+private _ctrlComboType =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
+private _ctrlComboColor =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
+private _ctrlEdit =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
+private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03;
+private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04;
 
 [
     _ctrlComboType lbData lbCurSel _ctrlComboType,

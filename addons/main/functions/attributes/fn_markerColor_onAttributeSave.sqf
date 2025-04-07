@@ -21,9 +21,9 @@ private _history = profileNamespace getVariable ["ENH_Attributes_MarkerColor_His
 
 private _colorRGB =
 [
-    round (sliderPosition (_ctrlGroup controlsGroupCtrl 101) * 100) / 100,
-    round (sliderPosition (_ctrlGroup controlsGroupCtrl 103) * 100) / 100,
-    round (sliderPosition (_ctrlGroup controlsGroupCtrl 105) * 100) / 100
+    round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) * 100) / 100,
+    round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) * 100) / 100,
+    round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) * 100) / 100
 ];
 
 private _hash = hashValue _colorRGB;
@@ -36,7 +36,7 @@ if (!_notNew) then
 };
 
 [
-    cbChecked (_ctrlGroup controlsGroupCtrl 100),
+    cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
     format
     [
         "#(%1,%2,%3)",

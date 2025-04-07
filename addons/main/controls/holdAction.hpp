@@ -11,7 +11,7 @@ class ENH_HoldAction: Title
         };
         class Name: ctrlEdit
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -23,7 +23,7 @@ class ENH_HoldAction: Title
         };
         class IdleIcon: ctrlCombo
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -36,7 +36,7 @@ class ENH_HoldAction: Title
         };
         class ProgressIcon: IdleIcon
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         // Condition show
@@ -52,7 +52,7 @@ class ENH_HoldAction: Title
         };
         class ConditionShow: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(3 * CTRL_DEFAULT_H + 5 * GRID_H + 15 * pixelH);
             autocomplete = "scripting";
         };
@@ -69,7 +69,7 @@ class ENH_HoldAction: Title
         };
         class ConditionProgress: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(8 * CTRL_DEFAULT_H + 5 * GRID_H + 20 * pixelH);
             autocomplete = "scripting";
         };
@@ -86,7 +86,7 @@ class ENH_HoldAction: Title
         };
         class CodeStart: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             y = QUOTE(13 * CTRL_DEFAULT_H + 5 * GRID_H + 25 * pixelH);
             autocomplete = "scripting";
         };
@@ -103,7 +103,7 @@ class ENH_HoldAction: Title
         };
         class CodeProgress: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(18 * CTRL_DEFAULT_H + 5 * GRID_H + 30 * pixelH);
             autocomplete = "scripting";
         };
@@ -120,7 +120,7 @@ class ENH_HoldAction: Title
         };
         class CodeComplete: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             y = QUOTE(23 * CTRL_DEFAULT_H + 5 * GRID_H + 35 * pixelH);
             autocomplete = "scripting";
         };
@@ -137,7 +137,7 @@ class ENH_HoldAction: Title
         };
         class CodeInterrupt: ENH_3DEN_Attribute_Control_EditMulti5_Edit
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             y = QUOTE(28 * CTRL_DEFAULT_H + 5 * GRID_H + 40 * pixelH);
             autocomplete = "scripting";
         };
@@ -148,7 +148,7 @@ class ENH_HoldAction: Title
         };
         class DurationValue: ctrlXSliderH
         {
-            idc = 109;
+            idc = IDC_ATTRIBUTE_CONTROL_09;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(33 * CTRL_DEFAULT_H + 45 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
@@ -159,7 +159,7 @@ class ENH_HoldAction: Title
         };
         class DurationEdit: ctrlEdit
         {
-            idc = 110;
+            idc = IDC_ATTRIBUTE_CONTROL_10;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(33 * CTRL_DEFAULT_H + 45 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
@@ -172,13 +172,13 @@ class ENH_HoldAction: Title
         };
         class PriorityValue: DurationValue
         {
-            idc = 111;
+            idc = IDC_ATTRIBUTE_CONTROL_11;
             y = QUOTE(34 * CTRL_DEFAULT_H + 50 * pixelH);
             sliderRange[] = {1, 1000};
         };
         class PriorityEdit: DurationEdit
         {
-            idc = 112;
+            idc = IDC_ATTRIBUTE_CONTROL_12;
             y = QUOTE(34 * CTRL_DEFAULT_H + 50 * pixelH);
         };
         class ShowUnconsciousTitle: Title
@@ -188,7 +188,7 @@ class ENH_HoldAction: Title
         };
         class ShowUnconscious: ctrlCheckbox
         {
-            idc = 113;
+            idc = IDC_ATTRIBUTE_CONTROL_13;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(35 * CTRL_DEFAULT_H + 55 * pixelH);
             w = QUOTE(5 * GRID_W);
@@ -201,7 +201,7 @@ class ENH_HoldAction: Title
         };
         class ShowWindow: ShowUnconscious
         {
-            idc = 114;
+            idc = IDC_ATTRIBUTE_CONTROL_14;
             y = QUOTE(36 * CTRL_DEFAULT_H + 60 * pixelH);
         };
         class RemoveAfterUseTitle: Title
@@ -212,7 +212,7 @@ class ENH_HoldAction: Title
         };
         class RemoveAfterUse: ShowUnconscious
         {
-            idc = 115;
+            idc = IDC_ATTRIBUTE_CONTROL_15;
             y = QUOTE(37 * CTRL_DEFAULT_H + 65 * pixelH);
         };
         class Reset: ENH_3DEN_Attribute_Control_ResetButton

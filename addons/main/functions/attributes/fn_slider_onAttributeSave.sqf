@@ -17,4 +17,4 @@
 
 params ["_ctrlGroup"];
 
-sliderPosition (_ctrlGroup controlsGroupCtrl 100)
+sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00)

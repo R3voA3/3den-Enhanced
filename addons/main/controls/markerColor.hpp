@@ -8,7 +8,7 @@ class ENH_MarkerColor: Title
         class Title: Title {};
         class CheckboxEnable: ctrlCheckbox
         {
-            idc = 100;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = 0;
             w = QUOTE(5 * GRID_W);
@@ -16,7 +16,7 @@ class ENH_MarkerColor: Title
         };
         class SliderRed: ctrlXSliderH
         {
-            idc = 101;
+            idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(1 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
@@ -27,7 +27,7 @@ class ENH_MarkerColor: Title
         };
         class EditRed: ctrlEdit
         {
-            idc = 102;
+            idc = IDC_ATTRIBUTE_CONTROL_02;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
             y = QUOTE(1 * CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(EDIT_W_WIDE * GRID_W);
@@ -35,31 +35,31 @@ class ENH_MarkerColor: Title
         };
         class SliderGreen: SliderRed
         {
-            idc = 103;
+            idc = IDC_ATTRIBUTE_CONTROL_03;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
             color[] = {COLOR_GREEN_RGBA};
             colorActive[] = {COLOR_GREEN_RGBA};
         };
         class EditGreen: EditRed
         {
-            idc = 104;
+            idc = IDC_ATTRIBUTE_CONTROL_04;
             y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class SliderBlue: SliderRed
         {
-            idc = 105;
+            idc = IDC_ATTRIBUTE_CONTROL_05;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
             color[] = {COLOR_BLUE_RGBA};
             colorActive[] = {COLOR_BLUE_RGBA};
         };
         class EditBlue: EditRed
         {
-            idc = 106;
+            idc = IDC_ATTRIBUTE_CONTROL_06;
             y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
         };
         class Preview: ctrlStatic
         {
-            idc = 107;
+            idc = IDC_ATTRIBUTE_CONTROL_07;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
@@ -68,7 +68,7 @@ class ENH_MarkerColor: Title
         };
         class ComboHistory: ctrlCombo
         {
-            idc = 108;
+            idc = IDC_ATTRIBUTE_CONTROL_08;
             onLoad = "_this call ENH_fnc_markerColor_onAttributeLoad";
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);

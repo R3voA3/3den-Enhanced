@@ -19,13 +19,13 @@ params ["_ctrlGroup"];
 
 [
     [
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 100),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 101),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 102)
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02)
     ],
-    ctrlText (_ctrlGroup controlsGroupCtrl 104),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 105),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 106),
-    sliderPosition (_ctrlGroup controlsGroupCtrl 107),
-    lbCurSel (_ctrlGroup controlsGroupCtrl 109)
+    ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06),
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07),
+    lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09)
 ]

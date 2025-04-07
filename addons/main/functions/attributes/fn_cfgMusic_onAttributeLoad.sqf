@@ -18,7 +18,7 @@
 
 params ["_ctrlGroup", "_value"];
 
-[_ctrlGroup controlsGroupCtrl 300, _ctrlGroup controlsGroupCtrl 301] call ENH_fnc_initSearchControls;
+[_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00, _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01] call ENH_fnc_initSearchControls;
 
 // Cache stuff
 if (uiNamespace getVariable ["ENH_CfgMusic_Classes", []] isEqualTo []) then
@@ -52,14 +52,12 @@ if (uiNamespace getVariable ["ENH_CfgMusic_Classes", []] isEqualTo []) then
     uiNamespace setVariable ["ENH_CfgMusic_Classes", _data];
 };
 
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 302;
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
 
 
 (uiNamespace getVariable ["ENH_CfgMusic_Classes", []]) apply
 {
     _x params ["_configName", "_name", "_icon"];
-
-    diag_log _x;
 
     private _isSelected = _configName in _value;
 
@@ -86,13 +84,13 @@ _ctrlClassesTree ctrlAddEventHandler ["TreeSelChanged",
 }];
 
 // Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 300) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText "";
 
-    private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 302;
+    private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
 
     // Delay the reset. The engine needs a moment to reset the filtered list
     _ctrlClassesTree spawn

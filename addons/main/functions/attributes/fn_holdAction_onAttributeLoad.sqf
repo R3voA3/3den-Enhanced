@@ -70,10 +70,10 @@ _value params
     "_removeAfterUse"
 ];
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlSetText _name;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText _name;
 
 //Fill icon combos
-_ctrlIconIdle = _ctrlGroup controlsGroupCtrl 101;
+_ctrlIconIdle = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
 {
     _ctrlIconIdle lbAdd _x;
     _ctrlIconIdle lbSetPicture [_forEachIndex, _x];
@@ -83,7 +83,7 @@ _ctrlIconIdle = _ctrlGroup controlsGroupCtrl 101;
     };
 } forEach DEFAULT_ICONS;
 
-_ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
+_ctrlIconProgress = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
 {
     _ctrlIconProgress lbAdd _x;
     _ctrlIconProgress lbSetPicture [_forEachIndex, _x];
@@ -93,40 +93,40 @@ _ctrlIconProgress = _ctrlGroup controlsGroupCtrl 102;
     };
 } forEach DEFAULT_ICONS;
 
-(_ctrlGroup controlsGroupCtrl 103) ctrlSetText _conditionShow;
-(_ctrlGroup controlsGroupCtrl 104) ctrlSetText _conditionProgress;
-(_ctrlGroup controlsGroupCtrl 105) ctrlSetText _codeStart;
-(_ctrlGroup controlsGroupCtrl 106) ctrlSetText _codeProgress;
-(_ctrlGroup controlsGroupCtrl 107) ctrlSetText _codeCompletion;
-(_ctrlGroup controlsGroupCtrl 108) ctrlSetText _codeInterrupt;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText _conditionShow;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlSetText _conditionProgress;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText _codeStart;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText _codeProgress;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText _codeCompletion;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) ctrlSetText _codeInterrupt;
 
-[_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s", _duration] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10), "s"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10), "s", _duration] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, ""] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "", _priority] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12), ""] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12), "", _priority] call BIS_fnc_initSliderValue;
 
-(_ctrlGroup controlsGroupCtrl 113) cbSetChecked _showUnconscious;
-(_ctrlGroup controlsGroupCtrl 114) cbSetChecked _showWindow;
-(_ctrlGroup controlsGroupCtrl 115) cbSetChecked _removeAfterUse;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13) cbSetChecked _showUnconscious;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14) cbSetChecked _showWindow;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15) cbSetChecked _removeAfterUse;
 
 //Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 101) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 102) lbSetCurSel 0;
-    (_ctrlGroup controlsGroupCtrl 103) ctrlSetText "true";
-    (_ctrlGroup controlsGroupCtrl 104) ctrlSetText "true";
-    (_ctrlGroup controlsGroupCtrl 105) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 106) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 107) ctrlSetText "";
-    (_ctrlGroup controlsGroupCtrl 108) ctrlSetText "";
-    [_ctrlGroup controlsGroupCtrl 109, _ctrlGroup controlsGroupCtrl 110, "s", 10] call BIS_fnc_initSliderValue;
-    [_ctrlGroup controlsGroupCtrl 111, _ctrlGroup controlsGroupCtrl 112, "", 1000] call BIS_fnc_initSliderValue;
-    (_ctrlGroup controlsGroupCtrl 113) cbSetChecked false;
-    (_ctrlGroup controlsGroupCtrl 114) cbSetChecked true;
-    (_ctrlGroup controlsGroupCtrl 115) cbSetChecked true;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText "true";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlSetText "true";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetText "";
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) ctrlSetText "";
+    [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10), "s", 10] call BIS_fnc_initSliderValue;
+    [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12), "", 1000] call BIS_fnc_initSliderValue;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13) cbSetChecked false;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14) cbSetChecked true;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15) cbSetChecked true;
 }];

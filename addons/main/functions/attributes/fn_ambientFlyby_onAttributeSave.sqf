@@ -17,7 +17,7 @@
 
 params ["_ctrlGroup"];
 
-private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl 500;
+private _ctrlClassesTree = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_17;
 private _classes = [];
 
 for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
@@ -31,23 +31,23 @@ for "_i" from 0 to (_ctrlClassesTree tvCount []) - 1 do
 [
     _classes,
     [ // Start pos
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 101),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 102),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 103)
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03)
     ],
     [ // End pos
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 105),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 106),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 107)
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07)
     ],
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 109), // Altitude
-    ["limited", "normal", "full"] # lbCurSel (_ctrlGroup controlsGroupCtrl 110), // Speed
-    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl 111), // Side
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09), // Altitude
+    ["limited", "normal", "full"] # lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10), // Speed
+    [west, east, independent, civilian] # lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11), // Side
     [ // Delay
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 112),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 113),
-        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 114)
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13),
+        parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14)
     ],
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 104),
-    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl 108)
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04),
+    parseNumber ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08)
 ]

@@ -42,12 +42,12 @@ _ctrlGroup setVariable
             _ctrlGroup controlsGroupCtrl _idc ctrlEnable _enabled;
         };
 
-        _ctrlGroup controlsGroupCtrl 107 ctrlSetFade ([0.5, 0] select _enabled);
-        _ctrlGroup controlsGroupCtrl 107 ctrlCommit 0;
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetFade ([0.5, 0] select _enabled);
+        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlCommit 0;
     }
 ];
 
-(_ctrlGroup controlsGroupCtrl 100) ctrlAddEventHandler ["CheckedChanged",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlAddEventHandler ["CheckedChanged",
 {
     params ["_ctrlCheckbox", "_state"];
 
@@ -56,39 +56,39 @@ _ctrlGroup setVariable
     [_ctrlGroup, [false, true] select _state] call (_ctrlGroup getVariable "fnc_toggleControlState");
 }];
 
-[_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 101, _ctrlGroup controlsGroupCtrl 102, "%", _colorRGB#0] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "%"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "%", _colorRGB#0] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 103, _ctrlGroup controlsGroupCtrl 104, "%", _colorRGB#1] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04), "%"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04), "%", _colorRGB#1] call BIS_fnc_initSliderValue;
 
-[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "%"] call BIS_fnc_initSliderValue;
-[_ctrlGroup controlsGroupCtrl 105, _ctrlGroup controlsGroupCtrl 106, "%", _colorRGB#2] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06), "%"] call BIS_fnc_initSliderValue;
+[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06), "%", _colorRGB#2] call BIS_fnc_initSliderValue;
 
 //Add event handler for updating the preview
 #define UPDATE_PREVIEW private _ctrlGroup = ctrlParentControlsGroup (_this select 0);\
-_ctrlGroup controlsGroupCtrl 107 ctrlSetBackgroundColor\
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetBackgroundColor\
 [\
-    sliderPosition (_ctrlGroup controlsGroupCtrl 101),\
-    sliderPosition (_ctrlGroup controlsGroupCtrl 103),\
-    sliderPosition (_ctrlGroup controlsGroupCtrl 105),\
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),\
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),\
+    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),\
     1\
 ];\
-_ctrlGroup controlsGroupCtrl 108 lbSetCurSel 0;\
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) lbSetCurSel 0;\
 
-_ctrlGroup controlsGroupCtrl 101 ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
-_ctrlGroup controlsGroupCtrl 103 ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
-_ctrlGroup controlsGroupCtrl 105 ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
 
 //Apply saved value
-(_ctrlGroup controlsGroupCtrl 100) cbSetChecked _enabled;
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) cbSetChecked _enabled;
 
 [_ctrlGroup, _enabled] call (_ctrlGroup getVariable "fnc_toggleControlState");
 
 //Update the preview
-(_ctrlGroup controlsGroupCtrl 107) ctrlSetBackgroundColor (_colorRGB + [1]);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetBackgroundColor (_colorRGB + [1]);
 
-private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl 108;
+private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08;
 // lbClear _ctrlComboHistory;
 
 _ctrlComboHistory lbAdd "Custom Color";

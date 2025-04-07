@@ -18,8 +18,8 @@
 params ["_ctrlButton"];
 
 private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
-private _ctrlListbox = _ctrlGroup controlsGroupCtrl 100;
-private _ctrlEdit = _ctrlGroup controlsGroupCtrl 101;
+private _ctrlListbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
+private _ctrlEdit = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
 private _value = ctrlText _ctrlEdit;
 
 if (_value == "") exitWith {false};
