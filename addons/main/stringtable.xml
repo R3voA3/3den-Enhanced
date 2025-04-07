@@ -227,30 +227,6 @@
             <Chinese>影響AI轉向和瞄準目標的速度(數值越高=越快，誤差越小)。</Chinese>
             <Chinesesimp>影响AI转向和瞄准目标的速度(数值越高=越快，误差越小)。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_AIRDROP_CENTER_DISPLAYNAME">
-            <English>Center Position</English>
-            <Czech>Středová pozice</Czech>
-            <French>Centre</French>
-            <Spanish>Posición centrada</Spanish>
-            <Italian>Posizione centrale</Italian>
-            <Polish>Środek strefy</Polish>
-            <Russian>Центральная позиция</Russian>
-            <German>Anvisierte Position</German>
-            <Chinese>中心位置</Chinese>
-            <Chinesesimp>中心位置</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_AIRDROP_CENTER_TOOLTIP">
-            <English>Center of the drop zone.</English>
-            <Czech>Střed zóny dopadu.</Czech>
-            <French>Centre de la zone de largage.</French>
-            <Spanish>Centro de la Zona de Descenso (Drop Zone)</Spanish>
-            <Italian>Centro della zona lancio</Italian>
-            <Polish>Centrum strefy zrzutu.</Polish>
-            <Russian>Центр зоны сброса.</Russian>
-            <German>Zentrum der Abwurfzone.</German>
-            <Chinese>投放區中心</Chinese>
-            <Chinesesimp>投放区中心.</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_AIRDROP_CLASSES_DISPLAYNAME">
             <English>Classes</English>
             <Czech>Třídy</Czech>
@@ -323,30 +299,6 @@
             <German>Fallschirmabwurf</German>
             <Chinese>空投</Chinese>
             <Chinesesimp>空投</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_AIRDROP_RADIUS_DISPLAYNAME">
-            <English>Area Radius</English>
-            <Czech>Oblast</Czech>
-            <French>Rayon de la zone</French>
-            <Spanish>Radio del área</Spanish>
-            <Italian>Raggio dell'area</Italian>
-            <Polish>Promień strefy</Polish>
-            <Russian>Радиус зоны</Russian>
-            <German>Radius des Gebietes</German>
-            <Chinese>區域半徑</Chinese>
-            <Chinesesimp>区域半径</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_AIRDROP_RADIUS_TOOLTIP">
-            <English>Radius of the drop zone in metres.</English>
-            <Czech>Poloměr zóny dopadu v metrech.</Czech>
-            <French>Rayon de la zone de largage en mètres.</French>
-            <Spanish>Radio de la Zona de Descenso (DZ)</Spanish>
-            <Italian>Raggio della zona lancio in metri.</Italian>
-            <Polish>Promień strefy zrzutu w metrach.</Polish>
-            <Russian>Радиус зоны сброса в метрах.</Russian>
-            <German>Radius der Abwurfzone in Metern.</German>
-            <Chinese>投放區半徑(米)</Chinese>
-            <Chinesesimp>投放区半径(米)</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AI_CATEGORY">
             <English>AI</English>
@@ -910,18 +862,6 @@
             <Chinese>表達</Chinese>
             <Chinesesimp>表情</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_FONT">
-            <English>Font</English>
-            <Czech>Písmo</Czech>
-            <French>Police d'écriture</French>
-            <Spanish>Fuente</Spanish>
-            <Italian>Tipografia</Italian>
-            <Polish>Font</Polish>
-            <Russian>Шрифт</Russian>
-            <German>Schriftart</German>
-            <Chinese>字體</Chinese>
-            <Chinesesimp>字体</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_HEIGHT">
             <English>Height</English>
             <Czech>Výška</Czech>
@@ -933,18 +873,6 @@
             <German>Höhe</German>
             <Chinese>高度</Chinese>
             <Chinesesimp>高度</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_MARKER">
-            <English>Marker</English>
-            <Czech>Značka</Czech>
-            <French>Marqueurs</French>
-            <Spanish>Marcador</Spanish>
-            <Italian>Marcatore</Italian>
-            <Polish>Znacznik</Polish>
-            <Russian>Маркер</Russian>
-            <German>Markierung</German>
-            <Chinese>標記</Chinese>
-            <Chinesesimp>标记</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_PATH">
             <English>Path</English>
@@ -993,18 +921,6 @@
             <German>Kategorie</German>
             <Chinese>主題</Chinese>
             <Chinesesimp>主题</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_TAGS">
-            <English>TAGs</English>
-            <Czech>TAGy</Czech>
-            <French>Étiquettes</French>
-            <Spanish>Etiquetas</Spanish>
-            <Italian>TAG</Italian>
-            <Polish>Tagi</Polish>
-            <Russian>Тэги</Russian>
-            <German>TAGs</German>
-            <Chinese>標籤</Chinese>
-            <Chinesesimp>标签</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_TEMPLATES">
             <English>Templates</English>
@@ -1204,17 +1120,6 @@
             <German>Kommandos nach Funktionalität</German>
             <Chinese>命令(功能排列)</Chinese>
             <Chinesesimp>命令(功能排列)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_CONDITION">
-            <English>Condition</English>
-            <French>Condition</French>
-            <Spanish>Condición</Spanish>
-            <Italian>Condizione</Italian>
-            <Polish>Warunek</Polish>
-            <Russian>Условие</Russian>
-            <German>Bedingung</German>
-            <Chinese>條件</Chinese>
-            <Chinesesimp>条件</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_CONTEXTMENU_DELETECREW">
             <English>Delete Crew</English>
