@@ -7,7 +7,7 @@ class ENH_CfgMusic: Title
     {
         class Search: ctrlEdit
         {
-            idc = IDC_ATTRIBUTE_CONTROL_00;
+            idc = IDC_ATTRIBUTE_CONTROL_24;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             w = QUOTE((ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -15,7 +15,7 @@ class ENH_CfgMusic: Title
         };
         class SearchButton: ctrlButtonSearch
         {
-            idc = IDC_ATTRIBUTE_CONTROL_01;
+            idc = IDC_ATTRIBUTE_CONTROL_25;
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             w = QUOTE(5 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -29,8 +29,8 @@ class ENH_CfgMusic: Title
         };
         class ClassesValue: ctrlTree
         {
-            idc = IDC_ATTRIBUTE_CONTROL_02;
-            idcSearch = IDC_ATTRIBUTE_CONTROL_00;
+            idc = IDC_ATTRIBUTE_CONTROL_00;
+            idcSearch = IDC_ATTRIBUTE_CONTROL_24;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(1 * CTRL_DEFAULT_H);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
