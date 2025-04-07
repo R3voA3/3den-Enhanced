@@ -33,6 +33,7 @@ class ENH_MissionEnding_Casualties
                         };\
                         if (ENH_Casualties_Counter >= _threshold) exitWith\
                         {\
+                            removeMissionEventHandler [_thisEvent, _thisEventHandler];\
                             [_debriefing, _isWin] remoteExecCall ['BIS_fnc_endMission', 0];\
                         };\
                     }, _value];\

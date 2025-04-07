@@ -27,6 +27,7 @@
 - Controls of Dynamic Skill attribute are now properly disabled/enabled depening on attribute state
 - The random music attribute now has a list showing all music tracks available
 - Fixed that the first control in the advanced damage attribute would overlap the description
+- Fixed event handler from casualties attribute would not get removed properly, sometimes executing the mission ending multiple times
 
 # 8.2.0
 ## ADDED
