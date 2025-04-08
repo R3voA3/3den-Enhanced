@@ -23,7 +23,7 @@ params ["_ctrlGroup", "_value"];
 // Cache stuff
 if (uiNamespace getVariable ["ENH_CfgMusic_Classes", []] isEqualTo []) then
 {
-    private _musicClasses = "true" configClasses (configFile >> "CfgMusic");
+    private _musicClasses = ("true" configClasses (configFile >> "CfgMusic")) + ("true" configClasses (missionConfigFile >> "CfgMusic"));
 
     private _data = [];
     private _defaultIcon = "#(rgb,32,32,3)color(1,1,1,0)"; // Texture to indent items without mod icon

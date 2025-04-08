@@ -10,6 +10,7 @@ class ENH_Briefing
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
+        // BLUFOR
         class ENH_Briefing_BLUFOR_Situation
         {
             displayName = "$STR_A3_DIARY_SITUATION_TITLE";
@@ -37,7 +38,7 @@ class ENH_Briefing
             property = "ENH_Briefing_BLUFOR_Signal";
             expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Signal'; waitUntil {!isNull player}; if (side player == west) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
         };
-        //----------------EAST
+        // EAST
         class ENH_Briefing_OPFOR_Subcategory: ENH_Briefing_BLUFOR_Subcategory
         {
             description = "$STR_EAST";
@@ -65,7 +66,7 @@ class ENH_Briefing
             property = "ENH_Briefing_OPFOR_Signal";
             expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_OPFOR_Signal'; waitUntil {!isNull player}; if (side player == east) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
         };
-        //----------------INDEPENDENT
+        // INDEPENDENT
         class ENH_Briefing_Independent_Subcategory: ENH_Briefing_BLUFOR_Subcategory
         {
             description = "$STR_GUERRILA";
@@ -93,7 +94,7 @@ class ENH_Briefing
             property = "ENH_Briefing_Independent_Signal";
             expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_Independent_Signal'; waitUntil {!isNull player}; if (side player == independent) then {sleep 0.4; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SIGNAL_TITLE', _this call BIS_fnc_localize]]}}};";
         };
-        //-----------------CIVILIAN
+        // CIVILIAN
         class ENH_Briefing_Civilian_Subcategory: ENH_Briefing_BLUFOR_Subcategory
         {
             description = "$STR_CIVILIAN";

@@ -55,13 +55,13 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
 
 //Fill marker color combo
 {
-     private _color = (_x >> "color") call bis_fnc_colorConfigToRGBA;
+     private _color = (_x >> "color") call BIS_fnc_colorConfigToRGBA;
      private _class = configName _x;
      private _i = _ctrlComboColor lbAdd getText (_x >> "name");
      _ctrlComboColor lbSetData [_i, _class];
      _ctrlComboColor lbSetPicture [_i, "#(argb,8,8,3)color(1,1,1,1)"];
      _ctrlComboColor lbSetPictureColor [_i, _color];
-        _ctrlComboColor lbSetPictureColorSelected [_i, _color];
+     _ctrlComboColor lbSetPictureColorSelected [_i, _color];
      _ctrlComboColor lbSetTooltip [_i, (_ctrlComboColor lbText _i) + "\n" + (_ctrlComboColor lbData _i)];
     if (_colorValue isEqualTo _class) then
     {
@@ -70,11 +70,13 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
 } forEach configProperties [configFile >> "CfgMarkerColors", "isClass _x && getNumber (_x >> 'scope') > 0"];
 
 //Add reset event to reset button
-(_ctrlGroup controlsGroupCtrl 5) ctrlAddEventHandler ["ButtonClick",
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
 
-    //Setting default values, colour and group ID cannot be retrieved from here so they are ignored
     (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbSetCurSel 0;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) ctrlSetText "";
     (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked true;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) cbSetChecked true;
 }];

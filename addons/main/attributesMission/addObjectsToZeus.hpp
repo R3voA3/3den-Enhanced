@@ -41,7 +41,7 @@ class ENH_AddObjectsToZeus
         };
         class EditorPlacedOnly
         {
-            name = "STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_DISPLAYNAME";
+            name = "$STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_EDITABLEOBJZEUS_EDITORPLACEONLY_TOOLTIP";
             value = 1;
         };

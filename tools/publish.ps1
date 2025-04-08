@@ -1,4 +1,4 @@
-$ModFolder = "${env:OneDrive}\Games\Arma 3\Arma 3 Mods\3den-Enhanced"
+$ModFolder = "..\3den-Enhanced"
 $SourceFolder = "$ModFolder\.hemttout\release"
 $PublisherExe = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools\Publisher\PublisherCmd.exe"
 $Changelog = "[url=https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md] Changelog (GitHub) [/url]"
