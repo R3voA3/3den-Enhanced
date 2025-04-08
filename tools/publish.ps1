@@ -1,9 +1,20 @@
-$ModFolder = "..\3den-Enhanced"
-$SourceFolder = "$ModFolder\.hemttout\release"
+$SourceFolder = "..\3den-Enhanced\.hemttout\release"
 $PublisherExe = "${env:ProgramFiles(x86)}\Steam\steamapps\common\Arma 3 Tools\Publisher\PublisherCmd.exe"
 $Changelog = "[url=https://github.com/R3voA3/3den-Enhanced/blob/master/CHANGELOG.md] Changelog (GitHub) [/url]"
 $WorkshopID = 623475643
+$VersionFilePath = $SourceFolder + "\" + "version.txt"
 
-Start-Process "$PublisherExe" -ArgumentList "update /id:$WorkshopID /path:`"$SourceFolder`" /changeNote:`"$Changelog`"" -Wait
+if (Test-Path $VersionFilePath -PathType Leaf)
+{
+    $ModVersion = Get-Content ($SourceFolder + "\" + "version.txt")
+    $Changelog = $ModVersion + " " + $Changelog
 
-Remove-Item $SourceFolder -Verbose -Recurse -Force
+    Start-Process "$PublisherExe" -ArgumentList "update /id:$WorkshopID /path:`"$SourceFolder`" /changeNote:`"$Changelog`"" -Wait
+
+    Remove-Item $SourceFolder -Verbose -Recurse -Force
+    Remove-Item $VersionFilePath
+}
+else
+{
+    "Version file not found! Publishing canceled!"
+}
