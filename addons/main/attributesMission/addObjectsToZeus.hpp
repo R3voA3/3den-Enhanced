@@ -2,33 +2,31 @@
 class ENH_AddObjectsToZeus
 {
     displayName = "$STR_ENH_MAIN_EDITABLEOBJZEUS_DISPLAYNAME";
-    tooltip = "$STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP";
     property = "ENH_AddObjectsToZeus";
     control = "Combo";
-    expression = "EXPRESSION_PLACEHOLDER";
-    // expression =
-    // "\
-    //     if (_value isEqualType true) then {_value = 2};\
-    //     if (!is3DEN && isServer && _value > 0) then\
-    //     {\
-    //         _value spawn
-    //         {
-    //             params ['_value'];
-    //             waitUntil {sleep 1; allCurators isNotEqualTo []};
-    //             if (_value == 1 || _value == 2) then\
-    //             {\
-    //                 allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};\
-    //             };\
-    //             if (_value == 2) then\
-    //             {\
-    //                 addMissionEventHandler ['EntityCreated',\
-    //                 {\
-    //                     params ['_entity'];\
-    //                     allCurators apply {_x addCuratorEditableObjects [[_entity], true]};\
-    //                 }];\
-    //             };\
-    //         };\
-    //     }";
+    expression =
+    "\
+        if (_value isEqualType true) then {_value = 2};\
+        if (!is3DEN && isServer && _value > 0) then\
+        {\
+            _value spawn
+            {
+                params ['_value'];
+                waitUntil {sleep 1; allCurators isNotEqualTo []};
+                if (_value == 1 || _value == 2) then\
+                {\
+                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};\
+                };\
+                if (_value == 2) then\
+                {\
+                    addMissionEventHandler ['EntityCreated',\
+                    {\
+                        params ['_entity'];\
+                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};\
+                    }];\
+                };\
+            };\
+        }";
     defaultValue = 0;
     typeName = "NUMBER";
 
