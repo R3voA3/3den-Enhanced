@@ -1,7 +1,6 @@
-<!-- # 8.4.0
+# 8.4.0
 ## ADDED
 - Custom marker color attribute
---->
 
 # 8.3.0
 ## ADDED
