@@ -66,13 +66,15 @@ CTRL(IDC_GARRISON_BLACKLIST_VALUE) ctrlSetText (profileNamespace getVariable ["E
 
 do3DENAction "WidgetScale";
 
-private _ctrlMode = CTRL(IDC_GARRISON_MODE);// TODO: Translate 2024-03-10 R3vo
-_ctrlMode lbAdd "Closest Building only";
-_ctrlMode lbSetTooltip [0, "Only the closest building to the center will be garrisoned."];
-_ctrlMode lbAdd "From Center";
-_ctrlMode lbSetTooltip [1, "Positions closer to the center will be filled first."];
-_ctrlMode lbAdd "Random Positions";
-_ctrlMode lbSetTooltip [2, "A random position inside the area will be picked for each entity."];
+private _ctrlMode = CTRL(IDC_GARRISON_MODE);
+_ctrlMode lbAdd localize "$STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TEXT";
+_ctrlMode lbSetTooltip [0, localize "$STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TOOLTIP"];
+
+_ctrlMode lbAdd localize "$STR_ENH_MAIN_GARRISON_FROM_CENTER_TEXT";
+_ctrlMode lbSetTooltip [1, localize "$STR_ENH_MAIN_GARRISON_FROM_CENTER_TOOLTIP"];
+
+_ctrlMode lbAdd localize "$STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TEXT";
+_ctrlMode lbSetTooltip [2, localize "$STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TOOLTIP"];
 
 //Set default selection
 CTRL(IDC_GARRISON_PATH) lbSetCurSel 1;
