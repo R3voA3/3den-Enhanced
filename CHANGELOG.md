@@ -1,7 +1,10 @@
-<!-- # 8.4.0
+# 8.4.0
 ## ADDED
 - Custom marker color attribute
---->
+- Added localization for garrison combo entries
+
+## CHANGED
+- French translation update by Alfred-Neuman
 
 # 8.3.0
 ## ADDED

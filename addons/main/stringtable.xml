@@ -3,14 +3,17 @@
     <Package name="Main">
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
             <English>A</English>
+            <French>A</French>
             <German>A</German>
         </Key>
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
             <English>R</English>
+            <French>R</French>
             <German>R</German>
         </Key>
         <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
             <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
+            <French>Colle un tableau tridimensionnel [x, y, z] à partir du contenu du presse-papiers.</French>
             <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_DURATION">
@@ -486,6 +489,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_TOOLTIP">
             <English>Select the vehicles you want to spawn. Each turn a random one is picked.</English>
+            <French>Sélectionnez les véhicules que vous voulez faire apparaître. À chaque tour, un véhicule est choisi au hasard.</French>
             <German>Wähle die Fahrzeuge aus, die du spawnen willst. Jede Runde wird ein zufälliges Fahrzeug ausgewählt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DESCRIPTION">
@@ -6457,6 +6461,14 @@
             <Chinese>黑名單</Chinese>
             <Chinesesimp>黑名单</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TEXT">
+            <English>Closest Building only</English>
+            <German>Nur das nächstgelegene Gebäude</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TOOLTIP">
+            <English>Only the closest building to the center will be garrisoned.</English>
+            <German>Nur das Gebäude, das dem Zentrum am nächsten liegt, wird bemannt.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_COVERAGE">
             <English>Coverage</English>
             <Czech>Kryté pozice v budově</Czech>
@@ -6468,6 +6480,14 @@
             <German>Abdeckung</German>
             <Chinese>覆蓋建築位置</Chinese>
             <Chinesesimp>覆盖建筑位置</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TEXT">
+            <English>From Center</English>
+            <German>Vom Zentrum</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TOOLTIP">
+            <English>Positions closer to the center will be filled first.</English>
+            <German>Positionen, die näher am Zentrum liegen, werden zuerst besetzt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_HEADER">
             <English>Garrison Buildings</English>
@@ -6504,6 +6524,14 @@
             <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
             <Chinese>空的建築物位置不足，請增加半徑或覆蓋範圍。</Chinese>
             <Chinesesimp>空的建筑物位置不足，请增加半径或覆盖范围。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TEXT">
+            <English>Random Positions</English>
+            <German>Zufällige Positionen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TOOLTIP">
+            <English>A random position inside the area will be picked for each entity.</English>
+            <German>Für jede Entität wird eine zufällige Position innerhalb des Bereichs gewählt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_STANCE">
             <English>Stance</English>
@@ -8123,6 +8151,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_RANDOMMUSIC_TOOLTIP">
             <English>Will play randomly selected music at mission start.</English>
+            <French>Joue une musique sélectionnée au hasard au début de la mission.</French>
             <German>Spielt zufällig ausgewähltes Musikstück am Anfang der Mission.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RELOADSPEED_DISPLAYNAME">
