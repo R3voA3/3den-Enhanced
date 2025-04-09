@@ -4,14 +4,17 @@
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
             <English>A</English>
             <German>A</German>
+            <French>A</French>
         </Key>
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
             <English>R</English>
             <German>R</German>
+            <French>R</French>
         </Key>
         <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
             <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
             <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
+            <French>Colle un tableau tridimensionnel [x, y, z] à partir du contenu du presse-papiers.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_DURATION">
             <English>Duration</English>
@@ -487,6 +490,7 @@
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_TOOLTIP">
             <English>Select the vehicles you want to spawn. Each turn a random one is picked.</English>
             <German>Wähle die Fahrzeuge aus, die du spawnen willst. Jede Runde wird ein zufälliges Fahrzeug ausgewählt.</German>
+            <French>Sélectionnez les véhicules que vous voulez faire apparaître. À chaque tour, un véhicule est choisi au hasard.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DESCRIPTION">
             <English>Spawns an air unit that moves from point A to point B, never engaging nor being engaged. It is set as captive and will despawn once it reaches its destination. Flybys can be stopped by setting 'ENH_AmbientFlyby_Enabled' to false on the server machine.</English>
@@ -8124,6 +8128,7 @@
         <Key ID="STR_ENH_MAIN_RANDOMMUSIC_TOOLTIP">
             <English>Will play randomly selected music at mission start.</English>
             <German>Spielt zufällig ausgewähltes Musikstück am Anfang der Mission.</German>
+            <French>Joue une musique sélectionnée au hasard au début de la mission.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_RELOADSPEED_DISPLAYNAME">
             <English>Reload Speed</English>
