@@ -2,6 +2,9 @@
 ## ADDED
 - Custom marker color attribute
 
+## CHANGED
+- French translation update by Alfred-Neuman
+
 # 8.3.0
 ## ADDED
 - The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
