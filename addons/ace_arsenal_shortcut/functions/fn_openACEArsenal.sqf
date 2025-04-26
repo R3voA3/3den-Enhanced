@@ -27,13 +27,28 @@ if (!isNull _entity) then
         }] call CBA_fnc_addEventHandler;
     };
 
-    // Exec in 5 frames
-    addMissionEventHandler ["EachFrame",
+    // Exec in 5 frames later otherwise it doesn't work !?
+    // This might actually be an ACE issue see
+    // https://discord.com/channels/976165959041679380/976224730422063214/1365758746961248356
+    // If this gets fixed by ACE, the following code can be drastically
+    // simplefied
+    // go back to [_thisArgs#1, _thisArgs#1, true] call ace_arsenal_fnc_openBox; then
+    if (isNil "ENH_ACE_Arsenal_EachFrame_EH_ID") then
     {
-        if (diag_frameNo > _thisArgs#0 + 5) then
+        ENH_ACE_Arsenal_EachFrame_EH_ID = addMissionEventHandler ["EachFrame",
         {
-            [_thisArgs#1, _thisArgs#1, true] call ace_arsenal_fnc_openBox;
-            removeMissionEventHandler [_thisEvent, _thisEventHandler];
-        }
-    }, [diag_frameNo, _entity]];
+            if (diag_frameNo > _thisArgs#0 + 10) then
+            {
+                // Store stuff because _fnc_open3DEN accesses that
+                private _data = uiNamespace getVariable ["BIS_fnc_3DENEntityMenu_data", []];
+                _data set [1, _thisArgs#1];
+                uiNamespace setVariable ["BIS_fnc_3DENEntityMenu_data", _data];
+
+                [] call ace_arsenal_fnc_open3DEN;
+
+                removeMissionEventHandler [_thisEvent, _thisEventHandler];
+                ENH_ACE_Arsenal_EachFrame_EH_ID = nil;
+            }
+        }, [diag_frameNo, _entity]];
+    };
 };
