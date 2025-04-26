@@ -5246,18 +5246,6 @@
             <French>Toutes les entités placées dans Eden Editor seront disponibles.</French>
             <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
         </Key>
-        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP">
-            <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>
-            <Czech>Kontroluje všechny živé objekty (kromě logik) každých 60 sekund a činí je dostupnými k úpravám pro všechny kurátory.\nPokud ve hře nejsou žádní kurátoři, tento atribut nebude fungovat.</Czech>
-            <French>Scanne tous les objets vivants (sauf les entités logiques) toutes les 60 secondes et les ajoute à l'interface du Zeus.\nSi aucun Zeus n'est en jeu, l'attribut ne fonctionnera pas.</French>
-            <Spanish>Verifica todos los objetos vivos (excepto las lógicas) cada 60 segundos y los pone a disposición de todos los curadores.\nSi no hay curadores en el juego, el atributo no funcionará.</Spanish>
-            <Italian>Controlla tutti gli oggetti vivi (tranne logics) ogni 60 secondi e li rende disponibili per la modifica per tutti i curatori. \ nSe nessun curatore è in gioco, l'attributo non funzionerà.</Italian>
-            <Polish>Sprawdza wszystkie żywe obiekty (poza jednostkami logicznymi) co 60 sekund i sprawia, że są edytowalne dla wszystkich Zeusów.\nJeżeli nie ma Zeusów w grze to atrybut nie będzie działać.</Polish>
-            <Russian>Проверяет все живые объекты (кроме логики) каждые 60 секунд и делает их доступными для редактирования для всех кураторов.\nЕсли в игре нет кураторов, атрибут не будет работать.</Russian>
-            <German>Stellt alle lebenden Objekte alle 60 Sekunden für jeden Kurator zum Bearbeiten zur Verfügung. Wenn keine Kuratoren vorhanden sind, funktioniert dieses Attribut nicht.</German>
-            <Chinese>每60秒檢查所有活動對象（邏輯除外）並使其可供所有Zeus編輯。 \n如果遊戲中沒有Zeus，則該屬性將不起作用。</Chinese>
-            <Chinesesimp>每60秒检查所有活动物体（逻辑除外）并使其可供所有宙斯编辑。\n如果游戏中没有宙斯，则该属性将不起作用。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ENABLE">
             <English>Enable</English>
             <Czech>Aktivovat</Czech>
