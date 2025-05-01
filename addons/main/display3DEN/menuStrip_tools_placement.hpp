@@ -10,7 +10,9 @@ class ENH_Folder_Placement
         "ENH_Folder_Align",
         "ENH_Folder_Space",
         "Separator",
-        "ENH_SnapToSurface"
+        "ENH_SnapToSurface",
+        "Separator",
+        "ENH_QuickGarrison"
     };
 };
 class ENH_PlacementTools
@@ -28,6 +30,14 @@ class ENH_SnapToSurface
     shortcuts[] = {INPUT_CTRL_OFFSET + DIK_SPACE};
     picture = "\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\moveSurface_ca.paa";
     wikiDescription = "Snaps all selected entities to the surface.";
+};
+class ENH_QuickGarrison
+{
+    text = "Garrison";
+    action = "execVM 'test.sqf'";
+    shortcuts[] = {DIK_G};
+    picture = "a3\ui_f\data\igui\cfg\actions\open_door_ca.paa";
+    wikiDescription = "Allows garrisoning of buildings by dragging entities.";
 };
 
 #include "menuStrip_tools_orient.hpp"
