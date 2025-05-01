@@ -111,8 +111,8 @@ private _code =
             {
                 drawIcon3D
                 [
-                    "\A3\modules_f\data\iconStrategicMapMission_ca.paa",
-                    [1, 0.1, 1, 1],
+                    TEXTURE_BUILDING_POS,
+                    [COLOR_BUILDING_POS],
                     _x buildingPos _i,
                     0.5,
                     0.5,
