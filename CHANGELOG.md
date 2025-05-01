@@ -5,6 +5,7 @@
 
 ## CHANGED
 - French translation update by Alfred-Neuman
+- Fixed drawing of building positions wouldn't work
 
 # 8.3.0
 ## ADDED
