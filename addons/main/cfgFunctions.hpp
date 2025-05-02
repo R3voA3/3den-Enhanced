@@ -148,6 +148,16 @@ class CfgFunctions
             class garrison_onUnload;
             class garrison_updateValues;
         };
+        class Garrison2
+        {
+            file = "x\enh\addons\main\functions\garrison";
+            class garrison2_draw3D;
+            class garrison2_exit;
+            class garrison2_main;
+            class garrison2_onEntityDragged;
+            class garrison2_onMouseButtonUp;
+            class garrison2_positionInBoundingBox;
+        };
         class Interface
         {
             file = "x\enh\addons\main\functions\interface";
