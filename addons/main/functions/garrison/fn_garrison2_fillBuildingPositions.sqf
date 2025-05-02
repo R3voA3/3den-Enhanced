@@ -46,9 +46,6 @@ private _movedEntities = [];
         private _closestPosition = _sortedBuildingPositions#0;
         _buildingPositions = _buildingPositions - [_closestPosition];
 
-        // Check if position is already taken
-        // TODO: Make this a setting 2025-05-02 R3vo
-
         if (_checkForEmptyPositions) then
         {
             if !([_closestPosition] call ENH_fnc_garrison2_isBuildingPositionEmpty) then
@@ -103,14 +100,8 @@ private _movedEntities = [];
         add3DENConnection ["Group", _movedEntities, _movedEntities#0];
     };
 
-    // Inform user why a unit was not moved
-    // This is only check if _checkForEmptyPositions is enabled
     if (_noneEmptyPositionFound) then
     {
-        0 spawn // TODO: Perhaps make this a function 2025-05-02 R3vo
-        {
-            waitUntil {isNil "BIS_fnc_3DENNotification_spawn" or {isNull BIS_fnc_3DENNotification_spawn}};
-            ["One or more positions were already full!", 1] call BIS_fnc_3DENNotification;
-        };
+        ["One or more positions were already full!", 1] call ENH_fnc_3DENNotificationQueue;
     };
 };

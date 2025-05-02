@@ -194,6 +194,7 @@ class CfgFunctions
         class Misc
         {
             file = "x\enh\addons\main\functions\misc";
+            class 3DENNotificationQueue;
             class alignEntities;
             class all3DENSelected;
             class array3FromClipboard;

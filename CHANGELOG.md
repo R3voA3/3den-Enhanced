@@ -2,6 +2,17 @@
 ## ADDED
 - Custom marker color attribute
 - Added localization for garrison combo entries
+- New Garrison tool
+    - Garrison any building by simply dragging all selected entities onto it
+    - When dragging a single entity onto a building, the position that would be manned is highlighted
+    - Various settings are available in the Editor Preferences:
+        - Selection mode
+        - Preventing to fill building positions that are already manned
+        - Random orientation
+        - Various stance options
+        - Disabling path
+        - Automatic grouping (Currently broken in A3)
+- Added a queued variant of BIS_fnc_3DENNotification, ENH_fnc_3DENNotificationQueue
 
 ## CHANGED
 - French translation update by Alfred-Neuman
