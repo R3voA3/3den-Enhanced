@@ -47,6 +47,26 @@ class Cfg3DEN
             isWarning = 1;
             text = "$STR_ENH_MAIN_NOTIFICATIONS_ALIGN_ENTITIES_WRONG_INDEX";
         };
+        class ENH_Garrison2_Disabled
+        {
+            isWarning = 1;
+            text = "Quick garrison disabled!"; // TODO: Translate 2025-05-02 R3vo
+        };
+        class ENH_Garrison2_Enabled
+        {
+            isWarning = 0;
+            text = "Quick garrison enabled!"; // TODO: Translate 2025-05-02 R3vo
+        };
+        class ENH_Garrison2_2D_Not_Supported
+        {
+            isWarning = 1;
+            text = "Quick garrison does not support 2D view."; // TODO: Translate 2025-05-02 R3vo
+        };
+        class ENH_Garrison2_All_Positions_Taken
+        {
+            isWarning = 1;
+            text = "No more empty positions! Remaining entities were auto selected."; // TODO: Translate 2025-05-02 R3vo
+        };
     };
     class EventHandlers
     {
@@ -106,6 +126,7 @@ class Cfg3DEN
                     };
                 };
                 #include "attributesEditor\interface.hpp"
+                #include "attributesEditor\garrison2.hpp"
                 #include "attributesEditor\debugOptions.hpp"
             };
         };
