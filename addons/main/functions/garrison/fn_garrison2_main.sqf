@@ -1,0 +1,64 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
+/*
+    Author: R3vo
+
+    Date: 2025-05-01
+
+    Description:
+    Toggles garrison mode.
+
+    Parameter(s):
+    -
+
+    Return Value:
+    BOOLEAN - True on success, false if failed
+
+    Examples(s):
+*/
+
+profileNamespace setVariable ["ENH_EditorPreferences_Garrison_GroupTogether", true];
+profileNamespace setVariable ["ENH_EditorPreferences_Garrison_RandomRotation", true];
+profileNamespace setVariable ["ENH_EditorPreferences_Garrison_DisablePath", true];
+profileNamespace setVariable ["ENH_EditorPreferences_Garrison_UnitPos", 4];
+// 4: Random
+// 3: Default Stance
+// 2: Prone
+// 1: Kneel
+// 0: Stand
+profileNamespace setVariable ["ENH_EditorPreferences_Garrison_AutoSelectType", 1];
+// 0: Keep original selection
+// 1: Select remaining units
+// 2: Deselect everything
+// 3: Select garrisoned units
+
+private _display3DEN = findDisplay IDD_DISPLAY3DEN;
+
+if (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_OnEntityDraggedID", -1] == -1) then
+{
+    if (get3DENActionState "toggleMap" > 0) exitWith
+    {
+        ["ENH_Garrison2_2D_Not_Supported"] call BIS_fnc_3DENNotification;
+        false
+    };
+
+    if (get3DENSelected "Object" isEqualTo []) exitWith
+    {
+        ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+        false
+    };
+
+    ["ENH_Garrison2_Enabled"] call BIS_fnc_3DENNotification;
+
+    _display3DEN setVariable ["ENH_MouseButtonUpID", _display3DEN displayAddEventHandler ["MouseButtonUp", ENH_fnc_garrison2_onMouseButtonUp]];
+    _display3DEN setVariable ["ENH_OnEntityDraggedID", add3DENEventHandler ["OnEntityDragged", ENH_fnc_garrison2_onEntityDragged]];
+    _display3DEN setVariable ["ENH_Draw3DID", addMissionEventHandler ["Draw3D", ENH_fnc_garrison2_draw3D]];
+    _display3DEN setVariable ["ENH_OnBeforeMissionPreviewID", add3DENEventHandler ["OnBeforeMissionPreview", ENH_fnc_garrison2_exit]];
+}
+else
+{
+    call ENH_fnc_garrison2_exit;
+    false
+};
+
+true

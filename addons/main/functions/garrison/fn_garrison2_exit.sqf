@@ -6,18 +6,14 @@
     Date: 2025-05-01
 
     Description:
-    This is an awesome description.
+    Exits garrison mode.
 
     Parameter(s):
-    0: ARRAY - Some description, optional, default false
+    -
 
     Return Value:
-    ARRAY - True on success, false if failed
-
-    Examples(s):
-    [] call ENH_fnc_missionDisplay;
+    BOOLEAN - True
 */
-// TODO: add proper header 2025-05-01 R3vo
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
@@ -48,6 +44,6 @@ _display3DEN setVariable ["ENH_OnBeforeMissionPreviewID", nil];
 _display3DEN setVariable ["ENH_CurrentBuilding", nil];
 _display3DEN setVariable ["ENH_CursorInBuilding", nil];
 
-// [[], [], false] call BIS_fnc_drawBoundingBox;
+["ENH_Garrison2_Disabled"] call BIS_fnc_3DENNotification;
 
-["Quick garrison disabled!"] call BIS_fnc_3DENNotification;
+true
