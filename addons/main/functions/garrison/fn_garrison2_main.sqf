@@ -17,21 +17,6 @@
     Examples(s):
 */
 
-profileNamespace setVariable ["ENH_EditorPreferences_Garrison_GroupTogether", true];
-profileNamespace setVariable ["ENH_EditorPreferences_Garrison_RandomRotation", true];
-profileNamespace setVariable ["ENH_EditorPreferences_Garrison_DisablePath", true];
-profileNamespace setVariable ["ENH_EditorPreferences_Garrison_UnitPos", 4];
-// 4: Random
-// 3: Default Stance
-// 2: Prone
-// 1: Kneel
-// 0: Stand
-profileNamespace setVariable ["ENH_EditorPreferences_Garrison_AutoSelectType", 1];
-// 0: Keep original selection
-// 1: Select remaining units
-// 2: Deselect everything
-// 3: Select garrisoned units
-
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
 if (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_OnEntityDraggedID", -1] == -1) then

@@ -38,71 +38,7 @@ if (_cursorInBuilding) then
         {
             removeMissionEventHandler [_thisEvent, _thisEventHandler];
 
-            private _selectedEntities = get3DENSelected "Object" - [_building];
-            private _movedEntities = [];
-
-            [
-                "Garrison", "Entities were moved into a building.",
-                TEXTURE_BUILDING_POS
-            ] collect3DENHistory
-            {
-                private _buildingPositions = _building buildingPos -1;
-
-                {
-                    private _entity = _x;
-                    private _sortedBuildingPositions =
-                    [
-                        _buildingPositions,
-                        [_entity],
-                        {_input0 distance _x}
-                    ] call BIS_fnc_sortBy;
-
-                    private _closestPosition = _sortedBuildingPositions#0;
-                    _buildingPositions = _buildingPositions - [_closestPosition];
-
-                    _entity set3DENAttribute ["Position", _closestPosition];
-
-                    if ((profileNamespace getVariable ["ENH_EditorPreferences_Garrison_RandomRotation", false])) then
-                    {
-                        private _rotation = _entity get3DENAttribute "Rotation";
-                        _rotation set [2, random 359];
-                        _entity set3DENAttribute ["Rotation", _rotation];
-                    };
-
-                    if ((profileNamespace getVariable ["ENH_EditorPreferences_Garrison_DisablePath", false])) then
-                    {
-                        _entity set3DENAttribute ["ENH_disableAI_path", true];
-                    };
-
-                    private _unitPos = profileNamespace getVariable ["ENH_EditorPreferences_Garrison_UnitPos", 3];
-                    if (_unitPos == 4) then
-                    {
-                        _entity set3DENAttribute ["unitPos", selectRandom [0, 1, 2, 3]];
-                    }
-                    else
-                    {
-                        _entity set3DENAttribute ["unitPos", _unitPos];
-                    };
-
-                    _movedEntities pushBack _entity;
-
-                    if (_buildingPositions isEqualTo []) exitWith
-                    {
-                        if (profileNamespace getVariable ["AutoSelectRemainingEntities", false]) then
-                        {
-                            set3DENSelected (_selectedEntities - _movedEntities);
-                        };
-
-                        ["ENH_Garrison2_All_Positions_Taken"] call BIS_fnc_3DENNotification;
-                    };
-                } forEach (get3DENSelected "Object" - [_building]);
-
-                // Grouping is broken (https://feedback.bistudio.com/T191578)
-                // if (profileNamespace getVariable ["ENH_EditorPreferences_Garrison_GroupTogether", false]) then
-                // {
-                //     add3DENConnection ["Group", _movedEntities, _movedEntities#0];
-                // };
-            };
+            call ENH_fnc_garrison2_fillBuildingPositions;
         };
     },
         [diag_frameNo, _building]

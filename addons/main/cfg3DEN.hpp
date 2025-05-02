@@ -65,6 +65,11 @@ class Cfg3DEN
         class ENH_Garrison2_All_Positions_Taken
         {
             isWarning = 1;
+            text = "No more empty positions!"; // TODO: Translate 2025-05-02 R3vo
+        };
+        class ENH_Garrison2_All_Positions_Taken_Auto_Select
+        {
+            isWarning = 1;
             text = "No more empty positions! Remaining entities were auto selected."; // TODO: Translate 2025-05-02 R3vo
         };
     };

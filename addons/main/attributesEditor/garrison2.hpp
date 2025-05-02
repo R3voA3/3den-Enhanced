@@ -6,39 +6,50 @@ class ENH_Garrison2
     {
         class ENH_Garrison2_GroupTogether
         {
-            displayName = "Group Entities";
-            property = "ENH_CoENH_Garrison2_GroupTogetherllapseAssetBrowser";
+            displayName = "Group Entities";// TODO: translation 2025-05-02 R3vo
+            tooltip = "If enabled, all entities moved into a building will be grouped together.";
+            property = "ENH_Garrison2_GroupTogether";
             control = "Checkbox";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison_GroupTogether', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison_GroupTogether', false]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', false]";
         };
         class ENH_Garrison2_RandomRotation: ENH_Garrison2_GroupTogether
         {
-            displayName = "Random Roation";
+            displayName = "Random Rotation";
             property = "ENH_Garrison2_RandomRotation";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison_RandomRotation', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison_RandomRotation', true]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_RandomRotation', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_RandomRotation', true]";
         };
         class ENH_Garrison2_DisablePath: ENH_Garrison2_GroupTogether
         {
-            displayName = "Random Rotation";
+            displayName = "Disable Path";
+            tooltip = "If enabled, pathing gets disabled for AI units so that they cannot leave their position.";
             property = "ENH_Garrison2_DisablePath";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison_DisablePath', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison_DisablePath', true]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_DisablePath', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_DisablePath', false]";
         };
         class ENH_Garrison2_AutoSelectRemainingEntities: ENH_Garrison2_GroupTogether
         {
             displayName = "Auto-Select";
             tooltip = "If enabled, remaining units that couldn't be put into positions will be auto selected.";
             property = "ENH_Garrison2_AutoSelectRemainingEntities";
-            expression = "profileNamespace setVariable ['AutoSelectRemainingEntities', _value]";
-            defaultValue = "profileNamespace getVariable ['AutoSelectRemainingEntities', true]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_AutoSelectRemainingEntities', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_AutoSelectRemainingEntities', true]";
+        };
+        class ENH_Garrison2_CheckForTakenPositions: ENH_Garrison2_GroupTogether
+        {
+            displayName = "Auto-Select";
+            tooltip = "If enabled, remaining units that couldn't be put into positions will be auto selected.";
+            property = "ENH_Garrison2_CheckForTakenPositions";
+            expression = "profileNamespace setVariable ['ENH_Garrison2_CheckForTakenPositions', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_Garrison2_CheckForTakenPositions', true]";
         };
         class ENH_Garrison2_UnitPos
         {
-            displayName = "Unit Pos Behaviour ";
+            displayName = "Stance";
             property = "ENH_Garrison2_UnitPos";
             control = "Combo";
+            typeName = "NUMBER";
             class Values
             {
                 class Stand
@@ -67,8 +78,8 @@ class ENH_Garrison2
                     value = 4;
                 };
             };
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison_UnitPos', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison_UnitPos', 4]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_UnitPos', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_UnitPos', 4]";
         };
     };
 };
