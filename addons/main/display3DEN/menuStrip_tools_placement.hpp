@@ -34,9 +34,9 @@ class ENH_SnapToSurface
 class ENH_QuickGarrison
 {
     text = "Garrison";
-    action = "execVM 'test.sqf'";
+    action = "call ENH_fnc_garrison2_main";
     shortcuts[] = {DIK_G};
-    picture = "a3\ui_f\data\igui\cfg\actions\open_door_ca.paa";
+    picture = TEXTURE_BUILDING_POS;
     wikiDescription = "Allows garrisoning of buildings by dragging entities.";
 };
 
