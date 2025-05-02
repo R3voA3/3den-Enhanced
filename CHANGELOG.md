@@ -1,6 +1,8 @@
 # 8.4.0
 ## ADDED
+<!--
 - Custom marker color attribute
+-->
 - Added localization for garrison combo entries
 - New Garrison tool
     - Garrison any building by simply dragging all selected entities onto it
