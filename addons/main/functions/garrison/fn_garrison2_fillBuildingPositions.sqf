@@ -85,11 +85,11 @@ private _movedEntities = [];
             if (_autoSelect) then
             {
                 set3DENSelected (_selectedEntities - _movedEntities);
-                ["ENH_Garrison2_All_Positions_Taken_Auto_Select"] call BIS_fnc_3DENNotification;
+                ["ENH_Garrison2_All_Positions_Taken_Auto_Select"] call ENH_fnc_3DENNotificationQueue;
             }
             else
             {
-                ["ENH_Garrison2_All_Positions_Taken"] call BIS_fnc_3DENNotification;
+                ["ENH_Garrison2_All_Positions_Taken"] call ENH_fnc_3DENNotificationQueue;
             };
         };
     } forEach (get3DENSelected "Object" - [_building]);

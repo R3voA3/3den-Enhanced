@@ -27,4 +27,4 @@
 };
 
 ["collapseEntityList"] call BIS_fnc_3DENInterface;
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;

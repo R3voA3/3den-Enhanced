@@ -13,7 +13,7 @@
     BOOLEAN: true
 */
 
-disableSerialization;//For BIS_fnc_3DENNotification
+disableSerialization;//For ENH_fnc_3DENNotificationQueue
 
 //Make sure the old EH was deleted
 waitUntil {isNil "ENH_EH_DrawDist" && {isNil "ENH_MeasureDist_Markers"}};
@@ -21,7 +21,7 @@ waitUntil {isNil "ENH_EH_DrawDist" && {isNil "ENH_MeasureDist_Markers"}};
 if (isNil "ENH_Pos_Start") then
 {
     ENH_Pos_Start = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
-    ["ENH_SelectSecondPoint"] call BIS_fnc_3DENNotification;
+    ["ENH_SelectSecondPoint"] call ENH_fnc_3DENNotificationQueue;
 }
 else
 {
@@ -42,7 +42,7 @@ else
         ],
         0,
         20
-    ] call BIS_fnc_3DENNotification;
+    ] call ENH_fnc_3DENNotificationQueue;
 
     if (get3DENActionState "toggleMap" == 1) then
     {

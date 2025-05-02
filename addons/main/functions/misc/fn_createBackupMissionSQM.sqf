@@ -28,7 +28,7 @@ if ("Scenario" get3DENMissionAttribute "ENH_BackupMissionSQMDisable") exitWith {
 //Pythia is needed
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-    ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
+    ["ENH_PythiaMissingForBackup", 1, 10] call ENH_fnc_3DENNotificationQueue;
     false
 };
 

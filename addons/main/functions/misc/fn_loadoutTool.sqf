@@ -20,7 +20,7 @@ private _units = get3DENSelected "object";
 
 if (_units isEqualTo []) exitWith
 {
-    ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+    ["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue;
     false
 };
 
@@ -49,6 +49,6 @@ switch _input do
     };
 };
 
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
 
 true

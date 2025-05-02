@@ -44,6 +44,6 @@ _display3DEN setVariable ["ENH_OnBeforeMissionPreviewID", nil];
 _display3DEN setVariable ["ENH_CurrentBuilding", nil];
 _display3DEN setVariable ["ENH_CursorInBuilding", nil];
 
-["ENH_Garrison2_Disabled"] call BIS_fnc_3DENNotification;
+["ENH_Garrison2_Disabled"] call ENH_fnc_3DENNotificationQueue;
 
 true

@@ -209,6 +209,6 @@ switch _mode do
 if (_export != "") then
 {
     copyToClipboard _export;
-    ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
+    ["ENH_DataCopied"] call ENH_fnc_3DENNotificationQueue;
     nil
 };

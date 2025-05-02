@@ -19,7 +19,7 @@
 
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
-    ["ENH_GetPythiaMod_Warning", 1, 10] call BIS_fnc_3DENNotification;
+    ["ENH_GetPythiaMod_Warning", 1, 10] call ENH_fnc_3DENNotificationQueue;
 };
 
 disableSerialization;

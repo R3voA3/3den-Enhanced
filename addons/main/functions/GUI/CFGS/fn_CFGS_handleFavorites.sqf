@@ -55,6 +55,6 @@ else
     {
         _tv tvDelete _selectedPath; //Remove from favorits
         ENH_CFGS_Favorites = ENH_CFGS_Favorites - [[_text, _configStr]];
-        ["ENH_ActionPerformed"] call BIS_fnc_3DENNotification;
+        ["ENH_ActionPerformed"] call ENH_fnc_3DENNotificationQueue;
     };
 };

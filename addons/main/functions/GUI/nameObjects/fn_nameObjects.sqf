@@ -19,7 +19,7 @@ private _toName = [["Object", "Logic", "Trigger", "Marker", "Layer"]] call ENH_f
 
 if (_toName isEqualTo []) exitWith
 {
-    ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+    ["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue;
 };
 
 disableSerialization;
@@ -43,7 +43,7 @@ CTRL(IDC_NAMEOBJECTS_REMOVE_NAME) ctrlAddEventHandler ["ButtonClick",
         } forEach (_display getVariable ["SelectedEntities", []]);
     };
     _display closeDisplay 0;
-    ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+    ["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
 }];
 
 CTRL(IDC_NAMEOBJECTS_SET_NAME) ctrlAddEventHandler ["ButtonClick",
@@ -68,5 +68,5 @@ CTRL(IDC_NAMEOBJECTS_SET_NAME) ctrlAddEventHandler ["ButtonClick",
     saveProfileNamespace;
 
     _display closeDisplay 0;
-    ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+    ["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
 }];

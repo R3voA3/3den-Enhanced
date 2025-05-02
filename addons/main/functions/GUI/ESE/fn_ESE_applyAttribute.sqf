@@ -95,4 +95,4 @@ private _value = str
 if _return exitWith {_value};
 ENH_ESE_target set3DENAttribute ["ammoBox", _value];
 
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;

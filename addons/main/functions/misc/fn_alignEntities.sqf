@@ -18,7 +18,7 @@
 
 params [["_index", 0], ["_max", true]];
 
-["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
+["ENH_AlignEntities_WrongIndexValue"] call ENH_fnc_3DENNotificationQueue;
 
 private _entities = [] call ENH_fnc_all3DENSelected;
 if (count _entities < 2) exitWith {}; //Makes no sense to align less then two entities
@@ -51,6 +51,6 @@ else
     };
 };
 
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
 
 nil

@@ -28,6 +28,6 @@ else
     ENH_eden_terrainGrid = nil;
 };
 
-["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
+["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
 
 true

@@ -6,7 +6,7 @@
     Date: 2025-05-02
 
     Description:
-    This is a queue system for BIS_fnc_3DENNotification.
+    This is a queue system for ENH_fnc_3DENNotificationQueue.
 
     Parameter(s):
     0: ARRAY - Some description, optional, default false
@@ -32,9 +32,9 @@ if (isNil "ENH_3DENNotification_Queue") then
     addMissionEventHandler ["EachFrame",
     {
         if (ENH_3DENNotification_Queue isEqualTo []) exitWith {};
-        if (isNil "BIS_fnc_3DENNotification_spawn" || {isNull BIS_fnc_3DENNotification_spawn}) then
+        if (isNil "ENH_fnc_3DENNotificationQueue_spawn" || {isNull ENH_fnc_3DENNotificationQueue_spawn}) then
         {
-            ENH_3DENNotification_Queue#0 call BIS_fnc_3DENNotification;
+            ENH_3DENNotification_Queue#0 call ENH_fnc_3DENNotificationQueue;
             ENH_3DENNotification_Queue deleteAt 0;
         };
     }];
