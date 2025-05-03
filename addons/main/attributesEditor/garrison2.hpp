@@ -38,8 +38,8 @@ class ENH_Garrison2
         };
         class ENH_Garrison2_CheckForTakenPositions: ENH_Garrison2_GroupTogether
         {
-            displayName = "Auto-Select";
-            tooltip = "If enabled, remaining units that couldn't be put into positions will be auto selected.";
+            displayName = "Empty Positions Only";
+            tooltip = "If enabled, every building position will first be checked if it has already been taken.";
             property = "ENH_Garrison2_CheckForTakenPositions";
             expression = "profileNamespace setVariable ['ENH_Garrison2_CheckForTakenPositions', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_Garrison2_CheckForTakenPositions', true]";
