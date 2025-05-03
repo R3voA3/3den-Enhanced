@@ -5,7 +5,7 @@
 -->
 - Added localization for garrison combo entries
 - New Garrison tool
-    - Garrison any building by simply dragging all selected entities onto it
+    - Garrison any building by simply dragging all selected entities onto it after pressing the "G" key
     - When dragging a single entity onto a building, the position that would be manned is highlighted
     - Various settings are available in the Editor Preferences:
         - Selection mode
