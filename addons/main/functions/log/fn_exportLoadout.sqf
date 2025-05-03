@@ -19,7 +19,7 @@ private _object = (get3DENSelected "Object") # 0;
 
 if (isNil "_object") exitWith
 {
-    ["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue;
+    ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
     false
 };
 
@@ -75,5 +75,5 @@ else
     _export = _export + "};" + endl + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
 };
 
-["ENH_DataCopied"] call ENH_fnc_3DENNotificationQueue;
+["ENH_DataCopied"] call BIS_fnc_3DENNotification;
 copyToClipboard _export

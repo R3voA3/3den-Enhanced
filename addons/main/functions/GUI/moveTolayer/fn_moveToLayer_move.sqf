@@ -30,6 +30,6 @@ collect3DENHistory
     } forEach ([] call ENH_fnc_all3DENSelected);
 };
 
-["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 true

@@ -68,7 +68,7 @@ CTRL(IDC_TEXTUREFINDER_TEXTURELIST) ctrlAddEventHandler ["KeyDown",
         private _path = _ctrlTV tvData (tvCurSel _ctrlTV);
         if (_path isEqualTo "") exitWith {};
         copyToClipboard str _path;
-        ["ENH_DataCopied"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
     };
 }];
 

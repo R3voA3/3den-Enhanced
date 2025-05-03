@@ -73,4 +73,4 @@ private _entities = flatten (get3DENSelected "Marker" + get3DENSelected "Trigger
     };
 };
 
-["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

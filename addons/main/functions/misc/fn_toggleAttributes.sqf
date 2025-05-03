@@ -22,7 +22,7 @@ private _selected = [_types] call ENH_fnc_all3DENSelected;
 
 if (_selected isEqualTo []) exitWith
 {
-    ["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue;
+    ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
 };
 
 collect3DENHistory
@@ -35,4 +35,4 @@ collect3DENHistory
     } forEach _selected;
 };
 
-["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

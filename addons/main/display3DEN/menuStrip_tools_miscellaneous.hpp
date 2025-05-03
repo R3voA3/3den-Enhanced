@@ -21,7 +21,7 @@ class ENH_CreateTrigger
 {
     text = "$STR_ENH_MAIN_TOOLS_CREATETRIGGER";
     picture = "\a3\3den\data\displays\display3den\panelright\modetriggers_ca.paa";
-    action = "private _trigger = create3DENEntity ['Trigger', 'EmptyDetectorArea10x10', [worldSize / 2, worldSize / 2, 0]]; _trigger set3DENAttribute ['size3', [worldSize / 2, worldSize / 2, 0]]; ['ENH_ActionPerformed'] call ENH_fnc_3DENNotificationQueue";
+    action = "private _trigger = create3DENEntity ['Trigger', 'EmptyDetectorArea10x10', [worldSize / 2, worldSize / 2, 0]]; _trigger set3DENAttribute ['size3', [worldSize / 2, worldSize / 2, 0]]; ['ENH_ActionPerformed'] call BIS_fnc_3DENNotification";
     wikiDescription = "Creates a trigger which covers exactly the whole map.";
 };
 class ENH_SwitchTime

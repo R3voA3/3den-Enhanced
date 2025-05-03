@@ -119,7 +119,7 @@ private _movedEntities = [];
                 set3DENSelected (_selectedEntities - _movedEntities);
             };
 
-            ["ENH_Garrison2_All_Positions_Taken"] call ENH_fnc_3DENNotificationQueue;
+            ["ENH_Garrison2_All_Positions_Taken"] call BIS_fnc_3DENNotification;
         };
     } forEach (get3DENSelected "Object" - [_building]);
     // TODO: enable if it ever gets fixed 2025-05-03 R3vo

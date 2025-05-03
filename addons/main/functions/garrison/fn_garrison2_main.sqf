@@ -23,17 +23,17 @@ if (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_OnEntityDraggedID", -1] == -1)
 {
     if (get3DENActionState "toggleMap" > 0) exitWith
     {
-        ["ENH_Garrison2_2D_Not_Supported"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_Garrison2_2D_Not_Supported"] call BIS_fnc_3DENNotification;
         false
     };
 
     if (get3DENSelected "Object" isEqualTo []) exitWith
     {
-        ["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
         false
     };
 
-    ["ENH_Garrison2_Enabled"] call ENH_fnc_3DENNotificationQueue;
+    ["ENH_Garrison2_Enabled"] call BIS_fnc_3DENNotification;
 
     _display3DEN setVariable ["ENH_MouseButtonUpID", _display3DEN displayAddEventHandler ["MouseButtonUp", ENH_fnc_garrison2_onMouseButtonUp]];
     _display3DEN setVariable ["ENH_OnEntityDraggedID", add3DENEventHandler ["OnEntityDragged", ENH_fnc_garrison2_onEntityDragged]];

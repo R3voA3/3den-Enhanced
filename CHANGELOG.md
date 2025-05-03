@@ -14,7 +14,6 @@
         - Various stance options
         - Disabling path
         - Automatic grouping (Currently broken in A3)
-- Added a queued variant of BIS_fnc_3DENNotification, ENH_fnc_3DENNotificationQueue
 
 ## CHANGED
 - French translation update by Alfred-Neuman

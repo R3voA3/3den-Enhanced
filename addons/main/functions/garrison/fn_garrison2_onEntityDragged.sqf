@@ -17,7 +17,7 @@
 
 if (get3DENActionState "toggleMap" > 0) exitWith
 {
-    ["ENH_Garrison2_2D_Not_Supported"] call ENH_fnc_3DENNotificationQueue;
+    ["ENH_Garrison2_2D_Not_Supported"] call BIS_fnc_3DENNotification;
     call ENH_fnc_garrison2_exit;
     false
 };

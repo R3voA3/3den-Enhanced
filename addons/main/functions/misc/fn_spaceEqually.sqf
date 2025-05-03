@@ -17,7 +17,7 @@
 
 params [["_index", 0]];
 
-["ENH_AlignEntities_WrongIndexValue"] call ENH_fnc_3DENNotificationQueue;
+["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
 
 private _entities = [["Object", "Marker", "Logic", "Waypoint", "Trigger"]] call ENH_fnc_all3DENSelected;
 if (count _entities < 3) exitWith {}; //Makes no sense to space less than three entities
@@ -53,6 +53,6 @@ private _stepSize = abs ((_max - _min) / _stepCount);
     } forEach _entities;
 };
 
-["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
 
 nil

@@ -17,7 +17,7 @@
 
 params [["_mode", "copy"]];
 
-if (get3DENSelected "Object" isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call ENH_fnc_3DENNotificationQueue; nil};
+if (get3DENSelected "Object" isEqualTo []) exitWith {["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification; nil};
 
 switch _mode do
 {
@@ -25,7 +25,7 @@ switch _mode do
     {
         private _object = get3DENSelected "Object" # 0;
         uiNamespace setVariable ["ENH_VHCData", [typeOf _object, _object get3DENAttribute "VehicleCustomization" select 0, _object get3DENAttribute "ObjectTexture" select 0]];
-        ["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
     };
     case "apply":
     {
@@ -40,7 +40,7 @@ switch _mode do
                 _x set3DENAttribute ["ObjectTexture", _texture];
             };
         } forEach (get3DENSelected "Object");
-        ["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
     };
     case "random":
     {
@@ -68,7 +68,7 @@ switch _mode do
             _x set3DENAttribute ["VehicleCustomization", [[], _animations]]; //Only animations are set via this attribute. Textures are handled differently
             _x set3DENAttribute ["ObjectTexture", selectRandom _textures];
         } forEach (get3DENSelected "Object");
-        ["ENH_actionPerformed"] call ENH_fnc_3DENNotificationQueue;
+        ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;
     };
 };
 
