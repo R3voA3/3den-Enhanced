@@ -6389,6 +6389,14 @@
             <Chinese>車輛CLASS:</Chinese>
             <Chinesesimp>车辆CLASS:</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TITLE">
+            <English>Garrison</English>
+            <German>Besetzen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TOOLTIP">
+            <English>A building was garrisoned</English>
+            <German>Ein Gebäude wurde besetzt</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_100PERCENT">
             <English>100 %</English>
             <Czech>100 %</Czech>
@@ -7802,6 +7810,22 @@
             <Chinese>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinese>
             <Chinesesimp>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED">
+            <English>Garrison mode only works in 3D view.</English>
+            <German>Besetzungsmodus funktioniert nur in der 3D-Ansicht.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN">
+            <English>All building positions were garrisoned!</English>
+            <German>Alle Gebäudepositionen wurden besetzt</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED">
+            <English>Garrison mode disabled!</English>
+            <German>Besetzungsmodus deaktiviert!</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED">
+            <English>Garrison mode enabled!</English>
+            <German>Besetzungsmodus aktiviert!</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GETPYTHIA">
             <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
             <French>Obtenez la &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythie&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification du Steam Workshop !</French>
@@ -8112,6 +8136,54 @@
             <German>Abstand Y</German>
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
+            <English>Auto Select</English>
+            <German>Automatische Auswahl</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_TOOLTIP">
+            <English>If enabled, units that could not be put into building positions will be auto selected.</English>
+            <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
+            <English>Only garrison empty positions</English>
+            <German>Nur leere Positionen besetzen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_TOOLTIP">
+            <English>If enabled, only empty positions will be garrisoned.</English>
+            <German>Wenn aktiviert, werden nur leere Positionen bemannt.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME">
+            <English>Create Layer</English>
+            <German>Layer erstellen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
+            <English>If enabled, units that were garrisoned will be moved into their own layer.</English>
+            <German>Wenn aktiviert, werden die Einheiten in einen eigenen Layer verschoben.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_DISPLAYNAME">
+            <English>Disable Pathfinding</English>
+            <German>Wegfinding deaktivieren</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_TOOLTIP">
+            <English>If enabled, pathfinding gets disabled so that the AI cannot leave their position.</English>
+            <German>Wenn aktiviert, wird die Wegfindung der KI deaktiviert sodass sie ihre Position nicht verlassen kann.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME">
+            <English>Group Units</English>
+            <German>Einheiten gruppieren</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP">
+            <English>If enabled, all units in one building will be grouped together.</English>
+            <German>Wenn aktiviert, werden all Einheiten eines Gebäudes gruppiert.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME">
+            <English>Random Rotation</English>
+            <German>Zufällige Orientierung</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_STANCE_RANDOM_NO_PRONE_DISPLAYNAME">
+            <English>Random, except prone</English>
+            <German>Zufällig, außer liegen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
@@ -10063,70 +10135,6 @@
             <German>Invertieren</German>
             <Chinese>翻轉</Chinese>
             <Chinesesimp>翻转</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TITLE">
-            <English>Garrison</English>
-            <German>Besetzen</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TOOLTIP">
-            <English>A building was garrisoned</English>
-            <German>Ein Gebäude wurde besetzt</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED">
-            <English>Garrison mode enabled!</English>
-            <German>Besetzungsmodus aktiviert!</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED">
-            <English>Garrison mode disabled!</English>
-            <German>Besetzungsmodus deaktiviert!</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED">
-            <English>Garrison mode only works in 3D view.</English>
-            <German>Besetzungsmodus funktioniert nur in der 3D-Ansicht.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN">
-            <English>All building positions were garrisoned!</English>
-            <German>Alle Gebäudepositionen wurden besetzt</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
-            <English>Only garrison empty positions</English>
-            <German>Nur leere Positionen besetzen</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_TOOLTIP">
-            <English>If enabled, only empty positions will be garrisoned.</English>
-            <German>Wenn aktiviert, werden nur leere Positionen bemannt.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_DISPLAYNAME">
-            <English>Disable Pathfinding</English>
-            <German>Wegfinding deaktivieren</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_TOOLTIP">
-            <English>If enabled, pathfinding gets disabled so that the AI cannot leave their position.</English>
-            <German>Wenn aktiviert, wird die Wegfindung der KI deaktiviert sodass sie ihre Position nicht verlassen kann.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME">
-            <English>Random Rotation</English>
-            <German>Zufällige Orientierung</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
-            <English>Auto Select</English>
-            <German>Automatische Auswahl</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_TOOLTIP">
-            <English>If enabled, units that could not be put into building positions will be auto selected.</English>
-            <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME">
-            <English>Group Units</English>
-            <German>Einheiten gruppieren</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP">
-            <English>If enabled, all units in one building will be grouped together.</English>
-            <German>Wenn aktiviert, werden all Einheiten eines Gebäudes gruppiert.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_STANCE_RANDOM_NO_PRONE_DISPLAYNAME">
-            <English>Random, except prone</English>
-            <German>Zufällig, außer liegen</German>
         </Key>
     </Package>
 </Project>

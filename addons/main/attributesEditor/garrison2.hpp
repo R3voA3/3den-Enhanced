@@ -5,15 +5,24 @@ class ENH_Garrison2
     class Attributes
     {
         // TODO: Enabled once issue is fixed. See https://feedback.bistudio.com/T191578 2025-05-03 R3vo
-        // class ENH_Garrison2_GroupTogether
-        // {
-        //     displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME";
-        //     tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP";
-        //     property = "ENH_Garrison2_GroupTogether";
-        //     control = "Checkbox";
-        //     expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', _value]";
-        //     defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', false]";
-        // };
+        class ENH_Garrison2_GroupTogether
+        {
+            displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP";
+            property = "ENH_Garrison2_GroupTogether";
+            control = "Checkbox";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', false]";
+        };
+        class ENH_Garrison2_CreateLayer
+        {
+            displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP";
+            property = "ENH_Garrison2_CreateLayer";
+            control = "Checkbox";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', false]";
+        };
         class ENH_Garrison2_RandomRotation: ENH_Garrison2_GroupTogether
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME";

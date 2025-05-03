@@ -36,6 +36,7 @@ private _movedEntities = [];
     private _autoSelect = profileNamespace getVariable ["ENH_EditorPreferences_Garrison2_AutoSelectRemainingEntities", false];
     private _checkForEmptyPositions = profileNamespace getVariable ["ENH_Garrison2_CheckForTakenPositions", true];
     private _stance = profileNamespace getVariable ["ENH_EditorPreferences_Garrison2_Stance", 3];
+    private _createLayer = profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', false];
 
     {
         private _entity = _x;
@@ -128,4 +129,14 @@ private _movedEntities = [];
     // {
     //     add3DENConnection ["Group", _movedEntities, _movedEntities#0];
     // };
+
+    if (_createLayer) then
+    {
+        private _strHash = "";
+        systemTime apply {_strHash = _strHash + str _x};
+
+        private _newLayer = -1 add3DENLayer hashValue _strHash;
+
+        _movedEntities apply {_x set3DENLayer _newLayer};
+    };
 };
