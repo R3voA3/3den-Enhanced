@@ -49,7 +49,7 @@ class Cfg3DEN
         };
         class ENH_Garrison2_Disabled
         {
-            isWarning = 1;
+            isWarning = 0;
             text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED";
         };
         class ENH_Garrison2_Enabled

@@ -10077,8 +10077,8 @@
             <German>Besetzungsmodus aktiviert!</German>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED">
-            <English>Garrison mode enabled!</English>
-            <German>Besetzungsmodus aktiviert!</German>
+            <English>Garrison mode disabled!</English>
+            <German>Besetzungsmodus deaktiviert!</German>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED">
             <English>Garrison mode only works in 3D view.</English>
