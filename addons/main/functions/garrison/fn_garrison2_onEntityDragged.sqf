@@ -33,12 +33,6 @@ private _cursorPosASL =
 
 _cursorPosASLtemp = _cursorPosASL;
 
-// Convert to ATL for water areas
-// if (surfaceIsWater [_cursorPosASL#0, _cursorPosASL#1]) then
-// {
-//     _cursorPosASL = ASLToATL _cursorPosASL;
-// };
-
 private _building = nearestBuilding _cursorPosASL;
 
 if (_building buildingPos -1 isEqualTo []) then
