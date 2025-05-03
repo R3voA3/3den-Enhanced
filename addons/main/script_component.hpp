@@ -136,6 +136,15 @@ textureDisabledUnchecked = NAME;\
 
 #define SOUND_FEEDBACK "FD_Finish_F"
 
+#define STANCE_STAND 0
+#define STANCE_KNEEL 1
+#define STANCE_PRONE 2
+#define STANCE_DEFAULT 3
+#define STANCE_RANDOM 4
+#define STANCE_NO_PRONE 5
+#define STANCE_ATT_NAME "UnitPos"
+
+
 //3den Enhanced specific IDDs and IDCs
 #define IDD_NONE -1
 
