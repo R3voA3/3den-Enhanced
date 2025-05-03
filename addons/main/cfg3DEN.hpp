@@ -50,27 +50,22 @@ class Cfg3DEN
         class ENH_Garrison2_Disabled
         {
             isWarning = 1;
-            text = "Quick garrison disabled!"; // TODO: Translate 2025-05-02 R3vo
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED";
         };
         class ENH_Garrison2_Enabled
         {
             isWarning = 0;
-            text = "Quick garrison enabled!"; // TODO: Translate 2025-05-02 R3vo
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED";
         };
         class ENH_Garrison2_2D_Not_Supported
         {
             isWarning = 1;
-            text = "Quick garrison does not support 2D view."; // TODO: Translate 2025-05-02 R3vo
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED";
         };
         class ENH_Garrison2_All_Positions_Taken
         {
             isWarning = 1;
-            text = "No more empty positions!"; // TODO: Translate 2025-05-02 R3vo
-        };
-        class ENH_Garrison2_All_Positions_Taken_Auto_Select
-        {
-            isWarning = 1;
-            text = "No more empty positions! Remaining entities were auto selected."; // TODO: Translate 2025-05-02 R3vo
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN";
         };
     };
     class EventHandlers
