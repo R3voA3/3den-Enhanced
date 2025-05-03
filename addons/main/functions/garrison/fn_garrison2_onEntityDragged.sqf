@@ -24,20 +24,22 @@ if (get3DENActionState "toggleMap" > 0) exitWith
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
-private _cursorPos =
+private _cursorPosASL =
 [
     parseNumber ctrlText (_display3DEN displayCtrl IDC_DISPLAY3DEN_STATUSBAR_X),
     parseNumber ctrlText (_display3DEN displayCtrl IDC_DISPLAY3DEN_STATUSBAR_Y),
     parseNumber ctrlText (_display3DEN displayCtrl IDC_DISPLAY3DEN_STATUSBAR_Z)
 ];
 
-// Conver to ATL for water areas
-if (surfaceIsWater [_cursorPos#0, _cursorPos#1]) then
-{
-    _cursorPos = ASLToATL _cursorPos;
-};
+_cursorPosASLtemp = _cursorPosASL;
 
-private _building = nearestBuilding _cursorPos;
+// Convert to ATL for water areas
+// if (surfaceIsWater [_cursorPosASL#0, _cursorPosASL#1]) then
+// {
+//     _cursorPosASL = ASLToATL _cursorPosASL;
+// };
+
+private _building = nearestBuilding _cursorPosASL;
 
 if (_building buildingPos -1 isEqualTo []) then
 {
@@ -46,7 +48,12 @@ if (_building buildingPos -1 isEqualTo []) then
 
 if !(isNull _building) then
 {
-    private _cursorInBoundingBox = [_building, _cursorPos] call ENH_fnc_garrison2_positionInBoundingBox;
+    // As we don't have a Z height for the cursor
+    // we assume that it's at the height of the building
+    // that way it works when the building is ATL, ASL or floating (floating looks weird though)
+    _cursorPosASL set [2, getPosASL _building select 2];
+
+    private _cursorInBoundingBox = [_building, _cursorPosASL] call ENH_fnc_garrison2_positionInBoundingBox;
 
     _display3DEN setVariable ["ENH_CurrentBuilding", _building];
     _display3DEN setVariable ["ENH_CursorInBuilding", _cursorInBoundingBox];

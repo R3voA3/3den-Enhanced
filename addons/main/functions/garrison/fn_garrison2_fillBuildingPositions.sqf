@@ -15,6 +15,8 @@
     BOOLEAN - True
 */
 
+params [["_building", objNull]];
+
 private _selectedEntities = get3DENSelected "Object" - [_building];
 private _movedEntities = [];
 
@@ -55,7 +57,11 @@ private _movedEntities = [];
             };
         };
 
-        _entity set3DENAttribute ["Position", _closestPosition];
+        _entity set3DENAttribute
+        [
+            "Position",
+            if (surfaceIsWater _closestPosition) then {ASLToATL _closestPosition} else {_closestPosition}
+        ];
 
         if (_randomRotation) then
         {

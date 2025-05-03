@@ -38,7 +38,7 @@ if (_cursorInBuilding) then
         {
             removeMissionEventHandler [_thisEvent, _thisEventHandler];
 
-            call ENH_fnc_garrison2_fillBuildingPositions;
+           [_building] call ENH_fnc_garrison2_fillBuildingPositions;
         };
     },
         [diag_frameNo, _building]
