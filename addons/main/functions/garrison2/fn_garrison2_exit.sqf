@@ -9,11 +9,16 @@
     Exits garrison mode.
 
     Parameter(s):
-    -
+    0: NUMBER - Exit code
+        0: Normal exit mode
+        1: Exit due to switching to 2D view
+        2: Exit due to no entities being selected
 
     Return Value:
     BOOLEAN - True
 */
+
+params [["_exitCode", 0]];
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
@@ -44,6 +49,20 @@ _display3DEN setVariable ["ENH_OnBeforeMissionPreviewID", nil];
 _display3DEN setVariable ["ENH_CurrentBuilding", nil];
 _display3DEN setVariable ["ENH_CursorInBuilding", nil];
 
-["ENH_Garrison2_Disabled"] call BIS_fnc_3DENNotification;
+switch (_exitCode) do
+{
+    case 0:
+    {
+        ["ENH_Garrison2_Disabled"] call BIS_fnc_3DENNotification;
+    };
+    case 1:
+    {
+        ["ENH_Garrison2_2D_Not_Supported"] call BIS_fnc_3DENNotification;
+    };
+    case 2:
+    {
+        ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+    };
+};
 
 true

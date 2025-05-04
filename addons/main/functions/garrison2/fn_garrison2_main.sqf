@@ -23,13 +23,13 @@ if (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_OnEntityDraggedID", -1] == -1)
 {
     if (get3DENActionState "toggleMap" > 0) exitWith
     {
-        ["ENH_Garrison2_2D_Not_Supported"] call BIS_fnc_3DENNotification;
+        [1] call ENH_fnc_garrison2_exit;
         false
     };
 
     if (get3DENSelected "Object" isEqualTo []) exitWith
     {
-        ["ENH_NoEntitiesSelected"] call BIS_fnc_3DENNotification;
+        [2] call ENH_fnc_garrison2_exit;
         false
     };
 
@@ -39,11 +39,11 @@ if (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_OnEntityDraggedID", -1] == -1)
     _display3DEN setVariable ["ENH_OnEntityDraggedID", add3DENEventHandler ["OnEntityDragged", ENH_fnc_garrison2_onEntityDragged]];
     _display3DEN setVariable ["ENH_Draw3DID", addMissionEventHandler ["Draw3D", ENH_fnc_garrison2_draw3D]];
     _display3DEN setVariable ["ENH_OnBeforeMissionPreviewID", add3DENEventHandler ["OnBeforeMissionPreview", ENH_fnc_garrison2_exit]];
+
+    true;
 }
 else
 {
-    call ENH_fnc_garrison2_exit;
+    [0] call ENH_fnc_garrison2_exit;
     false
 };
-
-true

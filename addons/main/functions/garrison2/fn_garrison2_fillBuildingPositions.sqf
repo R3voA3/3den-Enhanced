@@ -132,11 +132,7 @@ private _movedEntities = [];
 
     if (_createLayer) then
     {
-        private _strHash = "";
-        systemTime apply {_strHash = _strHash + str _x};
-
-        private _newLayer = -1 add3DENLayer hashValue _strHash;
-
+        private _newLayer = -1 add3DENLayer (call ENH_fnc_createHashValue);
         _movedEntities apply {_x set3DENLayer _newLayer};
     };
 };

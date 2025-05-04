@@ -47,6 +47,6 @@ if (_cursorInBuilding) then
     findDisplay IDD_DISPLAY3DEN setVariable ["ENH_EachFrameID", _ID];
 };
 
-call ENH_fnc_garrison2_exit;
+[0] call ENH_fnc_garrison2_exit;
 
 true
