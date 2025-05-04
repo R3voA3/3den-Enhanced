@@ -12,7 +12,8 @@
         - Preventing to fill building positions that are already manned
         - Random orientation
         - Various stance options
-        - Disabling path
+        - Disabling pathfinding
+        - Automatic grouping into layers
         - Automatic grouping (Currently broken in A3)
 
 ## CHANGED
