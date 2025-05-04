@@ -4,16 +4,6 @@ class ENH_Garrison2
     displayName = "Garrison";
     class Attributes
     {
-        // TODO: Enabled once issue is fixed. See https://feedback.bistudio.com/T191578 2025-05-03 R3vo
-        class ENH_Garrison2_GroupTogether
-        {
-            displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME";
-            tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP";
-            property = "ENH_Garrison2_GroupTogether";
-            control = "Checkbox";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', false]";
-        };
         class ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME";
@@ -23,14 +13,23 @@ class ENH_Garrison2
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', false]";
         };
-        class ENH_Garrison2_RandomRotation: ENH_Garrison2_GroupTogether
+        // TODO: Enabled once issue is fixed. See https://feedback.bistudio.com/T191578 2025-05-03 R3vo
+        // class ENH_Garrison2_GroupTogether: ENH_Garrison2_CreateLayer
+        // {
+        //     displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME";
+        //     tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP";
+        //     property = "ENH_Garrison2_GroupTogether";
+        //     expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', _value]";
+        //     defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_GroupTogether', false]";
+        // };
+        class ENH_Garrison2_RandomRotation: ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME";
             property = "ENH_Garrison2_RandomRotation";
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_RandomRotation', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_RandomRotation', true]";
         };
-        class ENH_Garrison2_DisablePathfinding: ENH_Garrison2_GroupTogether
+        class ENH_Garrison2_DisablePathfinding: ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_TOOLTIP";
@@ -38,7 +37,7 @@ class ENH_Garrison2
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_DisablePathfinding', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_DisablePathfinding', false]";
         };
-        class ENH_Garrison2_AutoSelectRemainingEntities: ENH_Garrison2_GroupTogether
+        class ENH_Garrison2_AutoSelectRemainingEntities: ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_TOOLTIP";
@@ -46,7 +45,7 @@ class ENH_Garrison2
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_AutoSelectRemainingEntities', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_AutoSelectRemainingEntities', true]";
         };
-        class ENH_Garrison2_CheckForTakenPositions: ENH_Garrison2_GroupTogether
+        class ENH_Garrison2_CheckForTakenPositions: ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_TOOLTIP";
