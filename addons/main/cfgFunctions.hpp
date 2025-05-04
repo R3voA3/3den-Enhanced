@@ -84,6 +84,20 @@ class CfgFunctions
             class CFGS_onLoad;
             class CFGS_playOrCopy;
         };
+        class Common
+        {
+            file = "x\enh\addons\main\functions\common";
+            class all3DENSelected;
+            class array3FromClipboard;
+            class createHashValue;
+            class floatToTime;
+            class formatInteger;
+            class getAllItems;
+            class getConfigSourceAddon;
+            class hasStorage;
+            class initSearchControls;
+            class systemTimeFormatted;
+        };
         class Debug
         {
             file = "x\enh\addons\main\functions\debug";
@@ -148,6 +162,18 @@ class CfgFunctions
             class garrison_onUnload;
             class garrison_updateValues;
         };
+        class Garrison2
+        {
+            file = "x\enh\addons\main\functions\garrison2";
+            class garrison2_draw3D;
+            class garrison2_exit;
+            class garrison2_fillBuildingPositions;
+            class garrison2_main;
+            class garrison2_onEntityDragged;
+            class garrison2_onMouseButtonUp;
+            class garrison2_positionInBoundingBox;
+            class garrison2_isBuildingPositionEmpty;
+        };
         class Interface
         {
             file = "x\enh\addons\main\functions\interface";
@@ -183,18 +209,11 @@ class CfgFunctions
         {
             file = "x\enh\addons\main\functions\misc";
             class alignEntities;
-            class all3DENSelected;
-            class array3FromClipboard;
+
             class centerMapOnSelection;
             class createBackupMissionSQM;
             class deleteCrew;
             class deleteEmptyLayers;
-            class floatToTime;
-            class formatInteger;
-            class getAllItems;
-            class getConfigSourceAddon;
-            class hasStorage;
-            class initSearchControls;
             class loadoutTool;
             class measureDistance;
             class pylonTools;
@@ -202,7 +221,6 @@ class CfgFunctions
             class setOrientation;
             class spaceEqually;
             class switchTime;
-            class systemTimeFormatted;
             class toggleAttributes;
             class toggleGrass;
             class VHCTools;

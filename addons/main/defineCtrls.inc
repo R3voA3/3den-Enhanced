@@ -82,7 +82,7 @@ class ENH_3DEN_Attribute_Control_AttributeTitle: ctrlStatic
     style = ST_RIGHT;
 };
 // These controls are directly used inside attribute controls
-class ENH_3DEN_Attribute_Control_TitleX: ctrlStatic //TODO: Use macros for colours and coordinates 2025-03-31 R3vo
+class ENH_3DEN_Attribute_Control_TitleX: ctrlStatic
 {
     text = "$STR_3DEN_AXIS_X";
     style = 2;

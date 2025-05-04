@@ -1,7 +1,24 @@
-<!-- # 8.4.0
+# 8.4.0
 ## ADDED
+<!--
 - Custom marker color attribute
---->
+-->
+- Added localization for garrison combo entries
+- New Garrison tool
+    - Garrison any building by simply dragging all selected entities onto it after pressing the "G" key
+    - When dragging a single entity onto a building, the position that would be manned is highlighted
+    - Various settings are available in the Editor Preferences:
+        - Selection mode
+        - Preventing to fill building positions that are already manned
+        - Random orientation
+        - Various stance options
+        - Disabling pathfinding
+        - Automatic grouping into layers
+        - Automatic grouping (Currently broken in A3)
+
+## CHANGED
+- French translation update by Alfred-Neuman
+- Fixed drawing of building positions wouldn't work
 
 # 8.3.0
 ## ADDED

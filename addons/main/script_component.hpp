@@ -123,6 +123,11 @@ textureDisabledUnchecked = NAME;\
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
 
+#define TEXTURE_BUILDING_POS "a3\modules_f\data\editterrainobject\texturedoor_opened_ca.paa"
+
+#define COLOR_BUILDING_POS 1, 0.1, 1, 1
+#define COLOR_BUILDING_POS_HIGHLIGHT 1, 0.1, 0.1, 1
+
 #define COLOR_RED_RGBA 1,0,0,0.5
 #define COLOR_GREEN_RGBA 0,1,0,0.5
 #define COLOR_BLUE_RGBA 0,0,1,0.5
@@ -130,6 +135,15 @@ textureDisabledUnchecked = NAME;\
 #define COLOR_ALTITUDE_RGBA 1,0.45,0.24,1
 
 #define SOUND_FEEDBACK "FD_Finish_F"
+
+#define STANCE_STAND 0
+#define STANCE_KNEEL 1
+#define STANCE_PRONE 2
+#define STANCE_DEFAULT 3
+#define STANCE_RANDOM 4
+#define STANCE_NO_PRONE 5
+#define STANCE_ATT_NAME "UnitPos"
+
 
 //3den Enhanced specific IDDs and IDCs
 #define IDD_NONE -1

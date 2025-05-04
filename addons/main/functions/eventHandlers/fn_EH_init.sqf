@@ -107,20 +107,18 @@ private _code =
     {
         (get3DENCamera nearObjects ["House", 100]) apply
         {
+            for "_i" from 0 to (count (_x buildingPos -1) - 1) do
             {
-                for "_i" from 0 to (count (_x buildingPos -1) - 1) do
-                {
-                    drawIcon3D
-                    [
-                        "\A3\modules_f\data\iconStrategicMapMission_ca.paa",
-                        [1, 0.1, 1, 1],
-                        _x buildingPos _i,
-                        0.5,
-                        0.5,
-                        0,
-                        str _i
-                    ];
-                };
+                drawIcon3D
+                [
+                    TEXTURE_BUILDING_POS,
+                    [COLOR_BUILDING_POS],
+                    _x buildingPos _i,
+                    0.5,
+                    0.5,
+                    0,
+                    str _i
+                ];
             };
         };
     };

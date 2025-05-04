@@ -3,14 +3,17 @@
     <Package name="Main">
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
             <English>A</English>
+            <French>A</French>
             <German>A</German>
         </Key>
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_R">
             <English>R</English>
+            <French>R</French>
             <German>R</German>
         </Key>
         <Key ID="STR_ENH_BUTTON_PASTE_ARRAY_FROM_CLIPBOARD">
             <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
+            <French>Colle un tableau tridimensionnel [x, y, z] à partir du contenu du presse-papiers.</French>
             <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_DURATION">
@@ -486,6 +489,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_CLASSES_TOOLTIP">
             <English>Select the vehicles you want to spawn. Each turn a random one is picked.</English>
+            <French>Sélectionnez les véhicules que vous voulez faire apparaître. À chaque tour, un véhicule est choisi au hasard.</French>
             <German>Wähle die Fahrzeuge aus, die du spawnen willst. Jede Runde wird ein zufälliges Fahrzeug ausgewählt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTFLYBY_DESCRIPTION">
@@ -5242,18 +5246,6 @@
             <French>Toutes les entités placées dans Eden Editor seront disponibles.</French>
             <German>Alle Entitäten, die im Eden Editor platziert wurden, werden verfügbar sein.</German>
         </Key>
-        <Key ID="STR_ENH_MAIN_EDITABLEOBJZEUS_TOOLTIP">
-            <English>Checks all alive objects (except logics) every 60 seconds and makes them available for editing for all curators.\nIf no curators are in game, the attribute will not work.</English>
-            <Czech>Kontroluje všechny živé objekty (kromě logik) každých 60 sekund a činí je dostupnými k úpravám pro všechny kurátory.\nPokud ve hře nejsou žádní kurátoři, tento atribut nebude fungovat.</Czech>
-            <French>Scanne tous les objets vivants (sauf les entités logiques) toutes les 60 secondes et les ajoute à l'interface du Zeus.\nSi aucun Zeus n'est en jeu, l'attribut ne fonctionnera pas.</French>
-            <Spanish>Verifica todos los objetos vivos (excepto las lógicas) cada 60 segundos y los pone a disposición de todos los curadores.\nSi no hay curadores en el juego, el atributo no funcionará.</Spanish>
-            <Italian>Controlla tutti gli oggetti vivi (tranne logics) ogni 60 secondi e li rende disponibili per la modifica per tutti i curatori. \ nSe nessun curatore è in gioco, l'attributo non funzionerà.</Italian>
-            <Polish>Sprawdza wszystkie żywe obiekty (poza jednostkami logicznymi) co 60 sekund i sprawia, że są edytowalne dla wszystkich Zeusów.\nJeżeli nie ma Zeusów w grze to atrybut nie będzie działać.</Polish>
-            <Russian>Проверяет все живые объекты (кроме логики) каждые 60 секунд и делает их доступными для редактирования для всех кураторов.\nЕсли в игре нет кураторов, атрибут не будет работать.</Russian>
-            <German>Stellt alle lebenden Objekte alle 60 Sekunden für jeden Kurator zum Bearbeiten zur Verfügung. Wenn keine Kuratoren vorhanden sind, funktioniert dieses Attribut nicht.</German>
-            <Chinese>每60秒檢查所有活動對象（邏輯除外）並使其可供所有Zeus編輯。 \n如果遊戲中沒有Zeus，則該屬性將不起作用。</Chinese>
-            <Chinesesimp>每60秒检查所有活动物体（逻辑除外）并使其可供所有宙斯编辑。\n如果游戏中没有宙斯，则该属性将不起作用。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ENABLE">
             <English>Enable</English>
             <Czech>Aktivovat</Czech>
@@ -6397,6 +6389,14 @@
             <Chinese>車輛CLASS:</Chinese>
             <Chinesesimp>车辆CLASS:</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TITLE">
+            <English>Garrison</English>
+            <German>Besetzen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TOOLTIP">
+            <English>A building was garrisoned</English>
+            <German>Ein Gebäude wurde besetzt</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_100PERCENT">
             <English>100 %</English>
             <Czech>100 %</Czech>
@@ -6457,6 +6457,14 @@
             <Chinese>黑名單</Chinese>
             <Chinesesimp>黑名单</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TEXT">
+            <English>Closest Building only</English>
+            <German>Nur das nächstgelegene Gebäude</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TOOLTIP">
+            <English>Only the closest building to the center will be garrisoned.</English>
+            <German>Nur das Gebäude, das dem Zentrum am nächsten liegt, wird bemannt.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_COVERAGE">
             <English>Coverage</English>
             <Czech>Kryté pozice v budově</Czech>
@@ -6468,6 +6476,14 @@
             <German>Abdeckung</German>
             <Chinese>覆蓋建築位置</Chinese>
             <Chinesesimp>覆盖建筑位置</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TEXT">
+            <English>From Center</English>
+            <German>Vom Zentrum</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TOOLTIP">
+            <English>Positions closer to the center will be filled first.</English>
+            <German>Positionen, die näher am Zentrum liegen, werden zuerst besetzt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_HEADER">
             <English>Garrison Buildings</English>
@@ -6504,6 +6520,14 @@
             <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
             <Chinese>空的建築物位置不足，請增加半徑或覆蓋範圍。</Chinese>
             <Chinesesimp>空的建筑物位置不足，请增加半径或覆盖范围。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TEXT">
+            <English>Random Positions</English>
+            <German>Zufällige Positionen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TOOLTIP">
+            <English>A random position inside the area will be picked for each entity.</English>
+            <German>Für jede Entität wird eine zufällige Position innerhalb des Bereichs gewählt.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_STANCE">
             <English>Stance</English>
@@ -7786,6 +7810,22 @@
             <Chinese>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinese>
             <Chinesesimp>已启用备份选项，但未加载&lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt;修改。备份失败！</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED">
+            <English>Garrison mode only works in 3D view.</English>
+            <German>Besetzungsmodus funktioniert nur in der 3D-Ansicht.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN">
+            <English>All building positions were garrisoned!</English>
+            <German>Alle Gebäudepositionen wurden besetzt</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED">
+            <English>Garrison mode disabled!</English>
+            <German>Besetzungsmodus deaktiviert!</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED">
+            <English>Garrison mode enabled!</English>
+            <German>Besetzungsmodus aktiviert!</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GETPYTHIA">
             <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
             <French>Obtenez la &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythie&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification du Steam Workshop !</French>
@@ -8097,6 +8137,54 @@
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
+            <English>Auto Select</English>
+            <German>Automatische Auswahl</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_TOOLTIP">
+            <English>If enabled, units that could not be put into building positions will be auto selected.</English>
+            <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
+            <English>Only garrison empty positions</English>
+            <German>Nur leere Positionen besetzen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_TOOLTIP">
+            <English>If enabled, only empty positions will be garrisoned.</English>
+            <German>Wenn aktiviert, werden nur leere Positionen bemannt.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME">
+            <English>Create Layer</English>
+            <German>Layer erstellen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
+            <English>If enabled, units that were garrisoned will be moved into their own layer.</English>
+            <German>Wenn aktiviert, werden die Einheiten in einen eigenen Layer verschoben.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_DISPLAYNAME">
+            <English>Disable Pathfinding</English>
+            <German>Wegfinding deaktivieren</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_TOOLTIP">
+            <English>If enabled, pathfinding gets disabled so that the AI cannot leave their position.</English>
+            <German>Wenn aktiviert, wird die Wegfindung der KI deaktiviert sodass sie ihre Position nicht verlassen kann.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME">
+            <English>Group Units</English>
+            <German>Einheiten gruppieren</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP">
+            <English>If enabled, all units in one building will be grouped together.</English>
+            <German>Wenn aktiviert, werden all Einheiten eines Gebäudes gruppiert.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME">
+            <English>Random Rotation</English>
+            <German>Zufällige Orientierung</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_STANCE_RANDOM_NO_PRONE_DISPLAYNAME">
+            <English>Random, except prone</English>
+            <German>Zufällig, außer liegen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
             <Czech>Hlasitost rádia</Czech>
@@ -8123,6 +8211,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_RANDOMMUSIC_TOOLTIP">
             <English>Will play randomly selected music at mission start.</English>
+            <French>Joue une musique sélectionnée au hasard au début de la mission.</French>
             <German>Spielt zufällig ausgewähltes Musikstück am Anfang der Mission.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RELOADSPEED_DISPLAYNAME">

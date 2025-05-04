@@ -47,6 +47,26 @@ class Cfg3DEN
             isWarning = 1;
             text = "$STR_ENH_MAIN_NOTIFICATIONS_ALIGN_ENTITIES_WRONG_INDEX";
         };
+        class ENH_Garrison2_Disabled
+        {
+            isWarning = 0;
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED";
+        };
+        class ENH_Garrison2_Enabled
+        {
+            isWarning = 0;
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED";
+        };
+        class ENH_Garrison2_2D_Not_Supported
+        {
+            isWarning = 1;
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED";
+        };
+        class ENH_Garrison2_All_Positions_Taken
+        {
+            isWarning = 1;
+            text = "$STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN";
+        };
     };
     class EventHandlers
     {
@@ -106,6 +126,7 @@ class Cfg3DEN
                     };
                 };
                 #include "attributesEditor\interface.hpp"
+                #include "attributesEditor\garrison2.hpp"
                 #include "attributesEditor\debugOptions.hpp"
             };
         };
