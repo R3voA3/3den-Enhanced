@@ -63,7 +63,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
 
 (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []]) apply
 {
-    _x params ["_configName", "_displayName", "_icon", "_sideColour"];
+    _x params ["_configName", "_displayName", "_icon", "_sideColor"];
 
     private _isSelected = _configName in _classes;
 
@@ -73,7 +73,7 @@ if (uiNamespace getVariable ["ENH_AmbientFlyby_AirClasses", []] isEqualTo []) th
     _ctrlClassesTree tvSetPictureRight [[_index], [TEXTURE_UNCHECKED,  TEXTURE_CHECKED] select _isSelected];
     _ctrlClassesTree tvSetValue [[_index], parseNumber _isSelected];
     _ctrlClassesTree tvSetPicture [[_index], _icon];
-    _ctrlClassesTree tvSetPictureColor [[_index], _sideColour];
+    _ctrlClassesTree tvSetPictureColor [[_index], _sideColor];
 };
 
 _ctrlClassesTree tvSortByValue [[], false];
