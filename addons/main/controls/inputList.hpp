@@ -28,7 +28,7 @@ class ENH_InputList: Title
         class Remove: ctrlButtonToolbar
         {
             idc = IDC_ATTRIBUTE_CONTROL_02;
-            text = "x\enh\addons\main\data\minus_ca.paa";
+            text = "\x\enh\addons\main\data\minus_ca.paa";
             tooltip = "$STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 5 * pixelH);
@@ -39,7 +39,7 @@ class ENH_InputList: Title
         class Add: Remove
         {
             idc = IDC_ATTRIBUTE_CONTROL_03;
-            text = "x\enh\addons\main\data\plus_ca.paa";
+            text = "\x\enh\addons\main\data\plus_ca.paa";
             tooltip = "$STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 10) * GRID_W - 2 * pixelW);
             onButtonClick = "_this call ENH_fnc_inputList_add";

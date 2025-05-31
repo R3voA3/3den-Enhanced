@@ -70,7 +70,7 @@ private _icon = "";
     _ctrlNamespace lbSetPicture [_forEachIndex, _icon];
 } forEach _namespaces;
 
-CTRL(IDC_VARIABLEVIEWER_NAMESPACE) ctrlAddEventHandler ["LBSelChanged", {call ENH_fnc_variableViewer_onFilterChanged}];
+CTRL(IDC_VARIABLEVIEWER_NAMESPACE) ctrlAddEventHandler ["LBSelChanged", ENH_fnc_variableViewer_onFilterChanged];
 
 //Handle searching
 CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
@@ -110,7 +110,7 @@ CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlAddEventHandler ["ButtonClick",
     _ctrlButton ctrlSetText TEXTURE_SEARCH_START
 }];
 
-CTRL(IDC_VARIABLEVIEWER_LIST) ctrlAddEventHandler ["LBSelChanged", {call ENH_fnc_variableViewer_onLNBSelChanged}];
+CTRL(IDC_VARIABLEVIEWER_LIST) ctrlAddEventHandler ["LBSelChanged", ENH_fnc_variableViewer_onLNBSelChanged];
 
 //Update list if show functions state changes
 CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) ctrlAddEventHandler ["CheckedChanged",

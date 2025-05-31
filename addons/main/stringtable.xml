@@ -805,8 +805,8 @@
             <Chinese>標題</Chinese>
             <Chinesesimp>标题</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_COLOUR">
-            <English>Colour</English>
+        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_COLOR">
+            <English>Color</English>
             <Czech>Barva</Czech>
             <French>Couleur</French>
             <Spanish>Color</Spanish>
@@ -6632,8 +6632,8 @@
             <Chinese>其他Eden編輯器擴展</Chinese>
             <Chinesesimp>其他Eden编辑器扩展</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_GROUPMARKER_COLOUR">
-            <English>Colour</English>
+        <Key ID="STR_ENH_MAIN_GROUPMARKER_COLOR">
+            <English>Color</English>
             <Czech>Barva</Czech>
             <French>Couleur</French>
             <Spanish>Color</Spanish>

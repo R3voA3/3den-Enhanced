@@ -303,9 +303,9 @@ class ENH_BriefingEditor
             w = QUOTE(47 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
         };
-         class ColourList: MarkerList
+         class ColorList: MarkerList
         {
-            idc = IDC_BRIEFINGEDITOR_COLOURS;
+            idc = IDC_BRIEFINGEDITOR_COLORS;
             y = QUOTE(WINDOW_TOPAbs + 4 * CTRL_DEFAULT_H + 3 * GRID_H);
         };
         class FontsList: MarkerList

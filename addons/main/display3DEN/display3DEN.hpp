@@ -4,7 +4,7 @@ class Display3DEN
     {
         class Items
         {
-            #include "contextMenu.hpp"
+            #include "\x\enh\addons\main\display3DEN\contextMenu.hpp"
         };
     };
     class Controls
@@ -215,9 +215,9 @@ class Display3DEN
             {
                 items[] += {"ENH_About"};
 
-                #include "menuStrip_about.hpp"
-                #include "menuStrip_tools.hpp"
-                #include "menuStrip_help.hpp"
+                #include "\x\enh\addons\main\display3DEN\menuStrip_about.hpp"
+                #include "\x\enh\addons\main\display3DEN\menuStrip_tools.hpp"
+                #include "\x\enh\addons\main\display3DEN\menuStrip_help.hpp"
             };
         };
         class PanelRight: ctrlControlsGroupNoScrollbars
@@ -315,7 +315,7 @@ class Display3DEN
                                 class ENH_DeleteEmptyLayers: Delete
                                 {
                                     idc = IDC_NONE;
-                                    text = "x\enh\addons\main\data\trash_ca.paa";
+                                    text = "\x\enh\addons\main\data\trash_ca.paa";
                                     x = QUOTE(7 * GRID_W);
                                     tooltip = "$STR_ENH_MAIN_TOOLS_DELETEEMPTYLAYERS";
                                     onButtonClick = "call ENH_fnc_deleteEmptyLayers";
@@ -323,7 +323,7 @@ class Display3DEN
                                 class ENH_SelectLayers: Delete
                                 {
                                     idc = IDC_NONE;
-                                    text = "x\enh\addons\main\data\selectAllLayers_ca.paa";
+                                    text = "\x\enh\addons\main\data\selectAllLayers_ca.paa";
                                     x = QUOTE(29 * GRID_W);
                                     tooltip = "$STR_ENH_MAIN_TOOLS_SELECTALLLAYERS";
                                     onButtonClick = "set3DENSelected (all3DENEntities # 6)";
@@ -375,7 +375,7 @@ class Display3DEN
                                 class Add: Delete
                                 {
                                     idc = IDC_DISPLAY3DEN_PANEL_LEFT_LOCATION_ADD;
-                                    text = "x\enh\addons\main\data\plus_ca.paa";
+                                    text = "\x\enh\addons\main\data\plus_ca.paa";
                                     x = QUOTE(54 * GRID_W);
                                     tooltip = "$STR_A3_CFGVEHICLES_MODULECURATORADDEDITABLEOBJECTS_ARGUMENTS_ADDCREW_VALUES_YES";
                                     onButtonClick = "['add'] spawn ENH_fnc_locationList_enhanced";

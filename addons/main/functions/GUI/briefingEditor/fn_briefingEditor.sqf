@@ -30,7 +30,7 @@ switch _mode do
     {
         uiNamespace setVariable ["ENH_BriefingEditor_Display", _display];
 
-        private _coloursHTML =
+        private _colorsHTML =
         [
             "#0000FF",
             "#8A2BE2",
@@ -183,7 +183,7 @@ switch _mode do
             [(_r/255), (_g/255), (_b/255), 1];
         };
 
-        private _ctrlLBColours = CTRL(IDC_BRIEFINGEDITOR_COLOURS);
+        private _ctrlLBColors = CTRL(IDC_BRIEFINGEDITOR_COLORS);
         private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
         private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
 
@@ -201,11 +201,11 @@ switch _mode do
         [nil, "handleTemplates", "fillTemplatesList"] call ENH_fnc_briefingEditor;
 
         {
-            _ctrlLBColours lbAdd format ["%1 %2", localize "STR_ENH_MAIN_BRIEFINGEDITOR_COLOUR", _forEachIndex];
-            _ctrlLBColours lbSetData [_forEachIndex, _x];
-            _ctrlLBColours lbSetColor [_forEachIndex, [_x] call _getColorFromHex];
-            _ctrlLBColours lbSetTooltip [_forEachIndex, _x];
-        } forEach _coloursHTML;
+            _ctrlLBColors lbAdd format ["%1 %2", localize "STR_ENH_MAIN_BRIEFINGEDITOR_COLOR", _forEachIndex];
+            _ctrlLBColors lbSetData [_forEachIndex, _x];
+            _ctrlLBColors lbSetColor [_forEachIndex, [_x] call _getColorFromHex];
+            _ctrlLBColors lbSetTooltip [_forEachIndex, _x];
+        } forEach _colorsHTML;
 
         //Fill marker list
         {
@@ -221,7 +221,7 @@ switch _mode do
             private _markerType = (_x get3DENAttribute "itemClass") # 0;
             private _icon = getText (configFile >> "CfgMarkers" >> _markerType >> "icon");
 
-            //Get colour
+            //Get color
             private _markerColor = (_x get3DENAttribute "baseColor") # 0;
             private _color = getArray (configFile >> "CfgMarkerColors" >> _markerColor >> "color");
             _color = _color call BIS_fnc_colorConfigToRGBA;
@@ -327,7 +327,7 @@ switch _mode do
         private _ctrlSecondParamValue = CTRL(IDC_BRIEFINGEDITOR_SECONDPARAMVALUE);
         private _ctrlThirdParam = CTRL(IDC_BRIEFINGEDITOR_THIRDPARAM);
         private _ctrlThirdParamValue = CTRL(IDC_BRIEFINGEDITOR_THIRDPARAMVALUE);
-        private _ctrlLBColours = CTRL(IDC_BRIEFINGEDITOR_COLOURS);
+        private _ctrlLBColors = CTRL(IDC_BRIEFINGEDITOR_COLORS);
         private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
         private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
 
@@ -345,7 +345,7 @@ switch _mode do
             } forEach [_ctrlFirstParam, _ctrlSecondParam, _ctrlThirdParam];
             {
                 _x ctrlShow (_lbStates # _forEachIndex);
-            } forEach [_ctrlLBMarkers, _ctrlLBColours, _ctrlLBFonts];
+            } forEach [_ctrlLBMarkers, _ctrlLBColors, _ctrlLBFonts];
         };
 
         switch _param do
@@ -381,7 +381,7 @@ switch _mode do
         #define VALUE1 ctrlText CTRL(IDC_BRIEFINGEDITOR_FIRSTPARAMVALUE)
         #define VALUE2 ctrlText CTRL(IDC_BRIEFINGEDITOR_SECONDPARAMVALUE)
         #define VALUE3 ctrlText CTRL(IDC_BRIEFINGEDITOR_THIRDPARAMVALUE)
-        #define COLOURHTML CTRL(IDC_BRIEFINGEDITOR_COLOURS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_COLOURS)
+        #define COLORHTML CTRL(IDC_BRIEFINGEDITOR_COLORS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_COLORS)
         #define FONT CTRL(IDC_BRIEFINGEDITOR_FONTS) lbText lbCurSel CTRL(IDC_BRIEFINGEDITOR_FONTS)
         #define MARKER CTRL(IDC_BRIEFINGEDITOR_MARKERS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_MARKERS)
 
@@ -407,7 +407,7 @@ switch _mode do
             };
             case "Font":
             {
-                format ["<font color='%1' size='%2' face='%3'>%4</font>", COLOURHTML, VALUE1, FONT, _text];
+                format ["<font color='%1' size='%2' face='%3'>%4</font>", COLORHTML, VALUE1, FONT, _text];
             };
             case "Execute":
             {

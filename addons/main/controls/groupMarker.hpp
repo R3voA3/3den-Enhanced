@@ -19,13 +19,13 @@ class ENH_GroupMarker: Title
             colorBackground[] = {COLOR_TAB_RGBA};
             onLoad = "_this spawn ENH_fnc_groupMarker_onLoad";
         };
-        class ColourTitle: Title
+        class ColorTitle: Title
         {
-            text = "$STR_ENH_MAIN_GROUPMARKER_COLOUR";
+            text = "$STR_ENH_MAIN_GROUPMARKER_COLOR";
             tooltip = "$STR_3DEN_MARKER_ATTRIBUTE_COLOR_TOOLTIP";
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
         };
-        class Colour: Type
+        class Color: Type
         {
             idc = IDC_ATTRIBUTE_CONTROL_01;
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
