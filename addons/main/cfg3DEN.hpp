@@ -85,7 +85,7 @@ class Cfg3DEN
     class Attributes
     {
         #include "controls\base.hpp"
-        // #include "controls\markerColor.hpp"
+        #include "controls\markerColor.hpp"
         #include "controls\advancedDamage.hpp"
         #include "controls\airdrop.hpp"
         #include "controls\ambientAnimations.hpp"
@@ -272,10 +272,10 @@ class Cfg3DEN
             };
             class Style
             {
-                // class Attributes
-                // {
-                //     #include "attributesMarker\markerColor.hpp"
-                // };
+                class Attributes
+                {
+                    #include "attributesMarker\markerColor.hpp"
+                };
             };
             #include "attributesMarker\markerHideOnStart.hpp"
         };
