@@ -25,7 +25,7 @@ CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (uiNamespace getVariable ["ENH_3DENR
 
 //Update radio button
 CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
-    ["x\enh\addons\main\data\play_ca.paa", "x\enh\addons\main\data\pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
+    ["\x\enh\addons\main\data\play_ca.paa", "\x\enh\addons\main\data\pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
 
 0 spawn ENH_fnc_3DENRadio_timelineControl;
 

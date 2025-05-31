@@ -5,7 +5,7 @@ class CfgFunctions
         tag = "ENH";
         class ACEArsenal
         {
-            file = "x\enh\addons\ace_arsenal_shortcut\functions";
+            file = "\x\enh\addons\ace_arsenal_shortcut\functions";
             class openACEArsenal;
         };
     };
