@@ -1110,7 +1110,7 @@ menu
 ## REMOVED
 - Import/Export scenario attributes. Scenario Attribute Manager takes care of that now
 - Removed on Event Code Attributes (Too complex for a simple attribute)
-- Colour Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
+- Color Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
 
 
@@ -1448,7 +1448,7 @@ menu
 
 ## ADDED
 - Attribute which adds all alive entities to allCurators regulary during a mission
-- Colour picker. Can be found in the debug tools category
+- Color picker. Can be found in the debug tools category
 - Attribute to disable team switch
 - Attribute to disable mine detection for AI units
 - Attribute to disable weapon aim for AI units
