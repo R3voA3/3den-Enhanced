@@ -19,7 +19,8 @@
 ## CHANGED
 - French translation update by Alfred-Neuman
 - Fixed drawing of building positions wouldn't work
-- Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125)
+- Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125) #433
+- Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
 
 # 8.3.0
 ## ADDED
