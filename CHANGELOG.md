@@ -3,7 +3,7 @@
 - Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125) #433
 - Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
 - Increased font size of hold action icon combos
-- Hold action icon combos now only show icon name and not the entire path
+- Hold action icon combos now only show icon name and not the entire path #435
 
 # 8.4.0
 ## ADDED
