@@ -79,9 +79,9 @@ class ENH_IntroText: Title
             columns = 3;
             strings[] =
             {
-                "x\enh\addons\main\data\BIS_fnc_textTiles_preview_ca.paa",
-                "x\enh\addons\main\data\BIS_fnc_infoText_preview_ca.paa",
-                "x\enh\addons\main\data\BIS_fnc_EXP_camp_SITREP_preview_ca.paa"
+                "\x\enh\addons\main\data\BIS_fnc_textTiles_preview_ca.paa",
+                "\x\enh\addons\main\data\BIS_fnc_infoText_preview_ca.paa",
+                "\x\enh\addons\main\data\BIS_fnc_EXP_camp_SITREP_preview_ca.paa"
             };
             values[] = {0, 1, 2};
         };

@@ -1,6 +1,6 @@
 |Name | Field of Action|
 --- | --- |
-| ConnorAU, shukari, linkion, Hypoxic, anthonybartczak, klausman, Pixelated-Grunt | Scripting |
+| ConnorAU, shukari, linkion, Hypoxic, hypoxia125, anthonybartczak, klausman, Pixelated-Grunt | Scripting |
 | mihuan-0 | Chinese Translation |
 | XerXesCZ | Czech Translation |
 | Poslovitch, Alfred-Neuman | French Translation |

@@ -74,24 +74,36 @@ _value params
 
 //Fill icon combos
 _ctrlIconIdle = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
+_ctrlIconProgress = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
+
 {
-    _ctrlIconIdle lbAdd _x;
+    private _iconName = (_x splitString "\" select -1);
+    _ctrlIconIdle lbAdd _iconName;
+    _ctrlIconIdle lbSetData [_forEachIndex, _x];
     _ctrlIconIdle lbSetPicture [_forEachIndex, _x];
     if (_x isEqualTo _iconIdle) then
     {
         _ctrlIconIdle lbSetCurSel _forEachIndex;
     };
-} forEach DEFAULT_ICONS;
 
-_ctrlIconProgress = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
-{
-    _ctrlIconProgress lbAdd _x;
+    _ctrlIconProgress lbAdd _iconName;
+    _ctrlIconProgress lbSetData [_forEachIndex, _x];
     _ctrlIconProgress lbSetPicture [_forEachIndex, _x];
     if (_x isEqualTo _iconProgress) then
     {
         _ctrlIconProgress lbSetCurSel _forEachIndex;
     };
 } forEach DEFAULT_ICONS;
+
+
+// {
+//     _ctrlIconProgress lbAdd _x;
+//     _ctrlIconProgress lbSetPicture [_forEachIndex, _x];
+//     if (_x isEqualTo _iconProgress) then
+//     {
+//         _ctrlIconProgress lbSetCurSel _forEachIndex;
+//     };
+// } forEach DEFAULT_ICONS;
 
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlSetText _conditionShow;
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) ctrlSetText _conditionProgress;

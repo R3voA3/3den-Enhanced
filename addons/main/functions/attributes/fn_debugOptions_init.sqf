@@ -618,7 +618,7 @@ if (GETVALUE("DebugPath") > 0) then
                 scriptName "ENH_Attribute_DebugPath";
                 params ["_leader", "_cfgMarkerColors", "_is3DEnabled"];
                 private _arrow = objNull;
-                private _arrowColour = format ["#(rgb,8,8,3)color(%1,%2,%3,1)", random(1), random(1), random(1)];
+                private _arrowColor = format ["#(rgb,8,8,3)color(%1,%2,%3,1)", random(1), random(1), random(1)];
                 private _path = [];
                 private _marker = createMarkerLocal [format ["ENH_DebugPath_%1", str _leader], _leader];
                 _marker setMarkerShapeLocal "polyline";
@@ -633,7 +633,7 @@ if (GETVALUE("DebugPath") > 0) then
                         if _is3DEnabled then
                         {
                             _arrow = createVehicle ["Sign_Arrow_Direction_Blue_F", position _leader, [], 0, "CAN_COLLIDE"];
-                            _arrow setObjectTexture [0, _arrowColour];
+                            _arrow setObjectTexture [0, _arrowColor];
                             _arrow setDir (_posOld getDir _leader);
                         };
                         _path append [getPosWorld _leader # 0, getPosWorld _leader # 1];
