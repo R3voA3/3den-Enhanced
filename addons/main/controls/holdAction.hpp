@@ -28,6 +28,7 @@ class ENH_HoldAction: Title
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
+            sizeEx = QUOTE(6 * (1 / (getResolution select 3)) * pixelGrid * 0.5);
         };
         class ProgressIconTitle: Title
         {

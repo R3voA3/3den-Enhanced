@@ -19,8 +19,8 @@ params ["_ctrlGroup"];
 
 [
     ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00),
-    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbText lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
-    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbText lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) lbData lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02) lbData lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02),
     ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),
     ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04),
     ctrlText (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),
