@@ -209,11 +209,11 @@ class CfgFunctions
         {
             file = "\x\enh\addons\main\functions\misc";
             class alignEntities {};
-
             class centerMapOnSelection {};
             class createBackupMissionSQM {};
             class deleteCrew {};
             class deleteEmptyLayers {};
+            class iconPicker {};
             class loadoutTool {};
             class measureDistance {};
             class pylonTools {};

@@ -7,6 +7,7 @@ class RscText;
 class RscTree;
 
 // Eden base controls
+class ctrlActivePictureKeepAspect;
 class ctrlButton;
 class ctrlButtonCancel;
 class ctrlButtonClose;
