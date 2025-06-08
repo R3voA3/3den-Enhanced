@@ -58,7 +58,7 @@ _displayIconPicker displayAddEventHandler ["Unload",
 
 private _marginH = _marginPixelCount * pixelH;
 private _marginW = _marginPixelCount * pixelW;
-private _scrollBarW = 10 * pixelW;
+private _scrollBarW = GRID_W;
 
 _displayIconPicker setVariable ["marginH", _marginH];
 _displayIconPicker setVariable ["marginW", _marginW];
@@ -71,9 +71,11 @@ private _totalWidth = _tileRowCount * (_tileW + _marginW) + _marginW + _scrollBa
 
 private _rowCount = floor (_totalWidth / ((_tileW + _marginW) +  _marginW));
 
+_displayIconPicker ctrlCreate ["ctrlStaticBackgroundDisable", -1];
+_displayIconPicker ctrlCreate ["ctrlStaticBackgroundDisableTiles", -1];
+
 private _ctrlTitle = _displayIconPicker ctrlCreate ["ctrlStaticTitle", -1];
 _ctrlTitle ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5 - CTRL_DEFAULT_H, _totalWidth, _totalHeight];
-
 
 private _ctrlFooterBackground = _displayIconPicker ctrlCreate ["ctrlStaticBackground", -1];
 _ctrlFooterBackground ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 + _totalHeight * 0.5, _totalWidth, CTRL_DEFAULT_H + 2 * GRID_H + _marginH];
@@ -90,7 +92,7 @@ _ctrlButtonCancel ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1) * GRID_W, 
 private _ctrlButtonOK = _displayIconPicker ctrlCreate ["ctrlButtonOK", 1];
 _ctrlButtonOK ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1 + 25 + 1) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
 
-private _ctrlIconPath = _displayIconPicker ctrlCreate ["ctrlStatic", 500];
+private _ctrlIconPath = _displayIconPicker ctrlCreate ["ctrlStatic", IDC_ICON_PICKER_PATH];
 _ctrlIconPath ctrlSetPosition [0.5 - _totalWidth * 0.5 + GRID_W, _buttonY, _totalWidth - 2 * _buttonW - 4 * GRID_W, CTRL_DEFAULT_H];
 
 private _ctrlBackground = _displayIconPicker ctrlCreate ["ctrlStaticBackground", -1];
@@ -110,7 +112,7 @@ private _fnc_createFrame =
 
     private _displayIconPicker = ctrlParent _ctrlTile;
 
-    // Code wise it's easier to just delete the old frame then to reuse it
+    // Code wise it's easier to just delete the old frame than reusing it
     _displayIconPicker getVariable ["framePieces", []] apply
     {
         ctrlDelete _x;
@@ -131,9 +133,9 @@ private _fnc_createFrame =
 
     private _frameColor =
     [
-        profileNamespace getVariable ['GUI_BCG_RGB_R', 0.77],
-        profileNamespace getVariable ['GUI_BCG_RGB_G', 0.51],
-        profileNamespace getVariable ['GUI_BCG_RGB_B', 0.08],
+        profileNamespace getVariable ["GUI_BCG_RGB_R", 0.77],
+        profileNamespace getVariable ["GUI_BCG_RGB_G", 0.51],
+        profileNamespace getVariable ["GUI_BCG_RGB_B", 0.08],
         1
     ];
 
@@ -203,7 +205,7 @@ _displayIconPicker setVariable ["fnc_createFrame", _fnc_createFrame];
     {
         params ["_ctrlTile"];
 
-        private _ctrlIconPath = ctrlParent _ctrlTile displayCtrl 500;
+        private _ctrlIconPath = ctrlParent _ctrlTile displayCtrl IDC_ICON_PICKER_PATH;
         private _iconName = (ctrlText _ctrlTile splitString "\" select -1);
 
         _ctrlIconPath ctrlSetText _iconName;
@@ -213,7 +215,7 @@ _displayIconPicker setVariable ["fnc_createFrame", _fnc_createFrame];
     {
         params ["_ctrlTile"];
 
-        private _ctrlIconPath = ctrlParent _ctrlTile displayCtrl 500 ctrlSetText "";
+        private _ctrlIconPath = ctrlParent _ctrlTile displayCtrl IDC_ICON_PICKER_PATH ctrlSetText "";
     }];
 
     _ctrlTile ctrlAddEventHandler ["ButtonClick",
