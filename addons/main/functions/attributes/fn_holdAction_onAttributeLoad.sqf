@@ -18,18 +18,13 @@
 
 private _defaultIcons =
 [
+    // Hold Action Icons
     "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_loadVehicle_ca.paa",
     "\a3\data_f_destroyer\data\UI\IGUI\Cfg\holdactions\holdAction_unloadVehicle_ca.paa",
     "\a3\missions_f_oldman\data\img\holdactions\holdAction_box_ca.paa",
     "\a3\missions_f_oldman\data\img\holdactions\holdAction_follow_start_ca.paa",
     "\a3\missions_f_oldman\data\img\holdactions\holdAction_follow_stop_ca.paa",
     "\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa",
-    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_access_fm_CA.paa",
-    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_end_sim_CA.paa",
-    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_exit_CA.paa",
-    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_start_sim_CA.paa",
-    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_view_article_CA.paa",
-    "\a3\props_f_enoch\items\tools\data\tinfoil_action_ca.paa",
     "\a3\ui_f_aow\data\igui\cfg\holdactions\holdaction_charity_ca.paa",
     "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\attack_ca.paa",
     "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\destroy_ca.paa",
@@ -40,14 +35,6 @@ private _defaultIcons =
     "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\meet_ca.paa",
     "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\refuel_ca.paa",
     "\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\repair_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_aaf_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_csat_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_escape_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fia_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fragment_back_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fragment_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_idap_ca.paa",
-    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_nato_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_forceRespawn_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa",
@@ -64,11 +51,21 @@ private _defaultIcons =
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_thumbsup_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloaddevice_ca.paa",
-    "\a3\ui_f\data\igui\cfg\holdactions\in\in_0_ca.paa",
-    "\a3\ui_f\data\igui\cfg\holdactions\in\in_1_ca.paa",
-    "\a3\ui_f\data\igui\cfg\holdactions\in\in_2_ca.paa",
-    "\a3\ui_f\data\igui\cfg\holdactions\in\in_3_ca.paa",
     // Add Action Icons
+    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_access_fm_CA.paa",
+    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_end_sim_CA.paa",
+    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_exit_CA.paa",
+    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_start_sim_CA.paa",
+    "\a3\Missions_F_Orange\Data\Img\Showcase_LawsOfWar\action_view_article_CA.paa",
+    "\a3\props_f_enoch\items\tools\data\tinfoil_action_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_aaf_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_csat_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_escape_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fia_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fragment_back_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_fragment_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_idap_ca.paa",
+    "\a3\ui_f_orange\Data\CfgOrange\Missions\action_nato_ca.paa",
     "\a3\ui_f_jets\data\igui\cfg\actions\action_attachtocatapult_ca.paa",
     "\a3\ui_f_jets\data\igui\cfg\actions\action_detachtocatapult_ca.paa",
     "\a3\ui_f_jets\data\igui\cfg\actions\action_launchfromcatapult_ca.paa",
@@ -79,7 +76,6 @@ private _defaultIcons =
     "\a3\ui_f\data\igui\cfg\actions\beacons_off_ca.paa",
     "\a3\ui_f\data\igui\cfg\actions\beacons_on_ca.paa",
     "\a3\ui_f\data\igui\cfg\actions\cancelhover_ca.paa",
-    "\a3\ui_f\data\igui\cfg\actions\clear_empty_ca.paa",
     "\a3\ui_f\data\igui\cfg\actions\close_ca.paa",
     "\a3\ui_f\data\igui\cfg\actions\eject_ca.paa",
     "\a3\ui_f\data\igui\cfg\actions\engine_off_ca.paa",
@@ -156,7 +152,17 @@ private _defaultIcons =
     "\a3\ui_f\data\igui\cfg\actions\vtolvectoringcancel_ca.paa"
 ];
 
-_defaultIcons = _defaultIcons + (profileNamespace getVariable ['ENH_EditorPreferences_HoldActionIcons', []]);
+private _additionalIcons = profileNamespace getVariable ["ENH_EditorPreferences_HoldActionIcons", []];
+
+// Prevent issues if user entered custom with in quotes
+{
+    if (_x select [0, 1] == """") then
+    {
+        _additionalIcons set [_forEachIndex, call compile _x];
+    };
+} forEach _additionalIcons;
+
+_defaultIcons = _defaultIcons + _additionalIcons;
 
 uiNamespace setVariable ["ENH_HoldAction_Icons", _defaultIcons];
 
