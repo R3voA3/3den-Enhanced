@@ -197,7 +197,6 @@ _displayIconPicker setVariable ["fnc_createFrame", _fnc_createFrame];
 
     _ctrlTile ctrlSetText _x;
     _ctrlTile ctrlSetTextColor [1, 1, 1, 1];
-
     _ctrlTile ctrlCommit 0;
 
     _ctrlTile ctrlAddEventHandler ["MouseEnter",
