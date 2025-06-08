@@ -7,6 +7,7 @@
 ## CHANGED
 - Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125) #433
 - Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
+- Fixed tooltips for the input list attribute control were swapped
 
 # 8.4.0
 ## ADDED
