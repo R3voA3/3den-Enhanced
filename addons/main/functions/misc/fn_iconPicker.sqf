@@ -6,7 +6,8 @@
     Date: 2025-06-07
 
     Description:
-    An icon picker UI.
+    An icon picker UI. The selected icon is saved in the uiNamespace variable "ENH_IconPicker_Icon" when the
+    UI was closed by pressing OK.
 
     Parameter(s):
     0: DISPLAY - Parent display
@@ -50,6 +51,8 @@ _displayIconPicker displayAddEventHandler ["Unload",
         private _iconPath = _displayIconPicker getVariable ["selectedIcon", ""];
 
         _ctrlIcon ctrlSetText _iconPath;
+
+        uiNamespace setVariable ["ENH_IconPicker_Icon", _iconPath];
     };
 }];
 
