@@ -8157,6 +8157,15 @@
             <English>If enabled, units that could not be put into building positions will be auto selected.</English>
             <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
+            <English>Define additional icons here that can be used for the hold action attribute.</English>
+            <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_DISPLAYNAME">
+            <English>Hold Action Icons</English>
+            <German>„Hold Action“ Symbole</German>
+        </Key>
+
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
             <English>Only garrison empty positions</English>
             <German>Nur leere Positionen besetzen</German>
