@@ -6983,7 +6983,7 @@
             <Chinese>窗口顯示</Chinese>
             <Chinesesimp>窗口显示</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
+        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
             <English>Removes selected entry from the list.</English>
             <Czech>Odebere vybranou položku ze seznamu.</Czech>
             <French>Supprime l'entrée sélectionnée de la liste.</French>
@@ -6996,7 +6996,7 @@
             <Chinese>從清單中移除選取的項目。</Chinese>
             <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
+        <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
             <English>Multiple entries can be added at once by separating them with a space, a comma or a semicolon.</English>
             <Czech>Více záznamů najednou lze přidat tak, že je oddělíte mezerou, čárkou nebo středníkem.</Czech>
             <French>Il est possible d'ajouter plusieurs entrées à la fois en les séparant par un espace, une virgule ou un point-virgule.</French>
