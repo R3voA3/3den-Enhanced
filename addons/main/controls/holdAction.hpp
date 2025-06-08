@@ -22,6 +22,14 @@ class ENH_HoldAction: Title
             y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
             h = QUOTE(2 * CTRL_DEFAULT_H);
         };
+        class IdleIconBackground: ctrlStaticBackground
+        {
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+            y = QUOTE(CTRL_DEFAULT_H + 5 * pixelH);
+            w = QUOTE(10 * GRID_W);
+            h = QUOTE(2 * CTRL_DEFAULT_H);
+            colorBackground[] = {COLOR_OVERLAY_RGB, 0.3};
+        };
         class IdleIcon: ctrlActivePictureKeepAspect
         {
             idc = IDC_ATTRIBUTE_CONTROL_01;
@@ -34,6 +42,10 @@ class ENH_HoldAction: Title
         class ProgressIconTitle: IdleIconTitle
         {
             text = "$STR_ENH_MAIN_HOLDACTION_ICONPROGRESS_DISPLAYNAME";
+            y = QUOTE(3 * CTRL_DEFAULT_H + 10 * pixelH);
+        };
+        class ProgressIconBackground: IdleIconBackground
+        {
             y = QUOTE(3 * CTRL_DEFAULT_H + 10 * pixelH);
         };
         class ProgressIcon: IdleIcon
