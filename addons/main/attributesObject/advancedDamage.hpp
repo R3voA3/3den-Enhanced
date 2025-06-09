@@ -1,4 +1,4 @@
-sclass ENH_AdvancedDamage
+class ENH_AdvancedDamage
 {
     displayName = "$STR_ENH_MAIN_ATTRIBUTECATEGORY_ADVANCEDDAMAGE";
     collapsed = 1;
