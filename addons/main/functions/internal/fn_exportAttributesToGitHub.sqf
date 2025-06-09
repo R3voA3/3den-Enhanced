@@ -33,7 +33,7 @@ private _config = configNull;
         _config = configFile >> "Cfg3DEN" >> "Mission" >> _class;
     };
 
-    //Check if there are actually custom attributes in this config
+    // Check if there are actually custom attributes in this config
     if ([_config, 3] call BIS_fnc_returnChildren select {configName _x select [0, 3] == "ENH"} isEqualTo [] ) then {continue};
 
     _export = _export + format ["= %1 Attributes =", _class] + endl;
@@ -49,7 +49,7 @@ private _config = configNull;
                 private _description = getText (_x >> "description");
                 _description = format ["Description: %1", _description];
 
-                if (_forEachIndex == 0) then //Use subcategories as description for the category
+                if (_forEachIndex == 0) then // Use subcategories as description for the category
                 {
                     _export = _export + format ["=== %1 Subcategory ===", _categoryName] + endl + _description + endl;
                     _hasSubCategory = true;

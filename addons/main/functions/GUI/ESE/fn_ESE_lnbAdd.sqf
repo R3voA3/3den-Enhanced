@@ -29,19 +29,19 @@ if (_text != "") then
 {
     private _row = _ctrlLnb lnbAddRow ["", _text, str _value, ""];
 
-    //Column #0
+    // Column #0
     _ctrlLnb lnbSetData [[_row, 0], _data];
     _ctrlLnb lnbSetPicture [[_row, 0], _image];
     _ctrlLnb lnbSetTooltip [[_row, 0], _tooltip];
 
-    //Column #1
+    // Column #1
     _ctrlLnb lnbSetValue [[_row, 1], _value];
     _ctrlLnb lnbSetData [[_row, 1], _specificType];
 
-    //Column #2 - Count
+    // Column #2 - Count
     _ctrlLnb lnbSetText [[_row, 2], str _value];
 
-    //Column #3 - Addon Icon
+    // Column #3 - Addon Icon
     _ctrlLnb lnbSetPicture [[_row, 3], _addonIcon];
     _ctrlLnb lnbSetData [[_row, 3], _addonIcon]
 };

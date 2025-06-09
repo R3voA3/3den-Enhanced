@@ -13,7 +13,7 @@ _ctrlFilter lnbAddRow ["", localize "STR_ENH_MAIN_TOOLS_3DENSHORTCUTS_ACTION", l
 
 [_ctrlFilter, _ctrlContent, [0, 1, 2]] call BIS_fnc_initListNBoxSorting;
 
-//Add search EH
+// Add search EH
 _ctrlButtonSearch ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
@@ -28,7 +28,7 @@ _ctrlSearch ctrlAddEventHandler ["EditChanged",
     [ctrlParent _ctrlSearch displayCtrl IDC_SHORTCUTS_CONTENT, _newText] call ENH_fnc_3DENShortcuts_fillList;
 }];
 
-//Focus search so user can search right away
+// Focus search so user can search right away
 ctrlSetFocus _ctrlSearch;
 
 private _DIKKeyCodes =
@@ -173,7 +173,7 @@ private _fnc_shortcutToString =
     if (1024 in _bitflags) then {_shortcutTranslatedArray pushBack localize "STR_DIK_SHIFT"; _bitflags = _bitflags - [1024]};
     if (2048 in _bitflags) then {_shortcutTranslatedArray pushBack localize "STR_DIK_ALT"; _bitflags = _bitflags - [2048]};
 
-    //Sum up remaining bitflags to get the key
+    // Sum up remaining bitflags to get the key
     private _keyNumber = 0;
 
     _bitflags apply
@@ -212,7 +212,7 @@ private _fnc_translateShortcutConfig =
     toUpper (_shortcutsTranslated joinString ", ");
 };
 
-//Cache data
+// Cache data
 if ((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) isEqualTo []) then
 {
     private _temp = [];

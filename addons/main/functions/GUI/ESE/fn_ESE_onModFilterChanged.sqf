@@ -23,7 +23,7 @@ params ["_ctrlCombo", "_selectedIndex"];
 private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _addonClass = (_ctrlCombo lbData _selectedIndex);
 
-//Update edit box and button. Don't update if vanilla Arma 3 is selected
+// Update edit box and button. Don't update if vanilla Arma 3 is selected
 if (_addonClass isEqualTo "") then
 {
     CTRL(IDC_ESE_SEARCH) ctrlSetText "";

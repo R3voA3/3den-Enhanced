@@ -20,7 +20,7 @@
 private _currentValue = true call ENH_fnc_ESE_applyAttribute;
 private _setValue = (ENH_ESE_target get3DENAttribute "ammoBox") # 0;
 
-//Check if saved attribute value is equal to the content of the inventory list
+// Check if saved attribute value is equal to the content of the inventory list
 if (_currentValue isNotEqualTo _setValue) then
 {
     [

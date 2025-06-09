@@ -22,7 +22,7 @@ if _enable then
 {
     ENH_Garrison_OnEachFrame_EH = addMissionEventHandler ["EachFrame",
     {
-        //Fetch updated values every 5 frames
+        // Fetch updated values every 5 frames
         if ((missionNamespace getVariable ["ENH_Garrison_LastFrame", 0]) + 10 <= diag_frameNo) then
         {
             call ENH_fnc_garrison_updatevalues;
@@ -60,7 +60,7 @@ if _enable then
 }
 else
 {
-    //Remove icons if EH already exists and exit
-    //Make sure variable still exists as some events reset them before
+    // Remove icons if EH already exists and exit
+    // Make sure variable still exists as some events reset them before
     removeMissionEventHandler ["EachFrame", if (!isNil "ENH_Garrison_OnEachFrame_EH") then {ENH_Garrison_OnEachFrame_EH} else {-1}];
 };

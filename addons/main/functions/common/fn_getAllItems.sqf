@@ -60,4 +60,4 @@ private _itemsConfigVaules = [_allItemConfigs] call ENH_fnc_ESE_getConfigValues;
 
 uiNamespace setVariable ["ENH_ESE_types", _itemsConfigVaules#0];
 uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsConfigVaules#1];
-uiNamespace setVariable ["ENH_ESE_allAddons", (_itemsConfigVaules#2) - [["","",""]]]; //Remove empty mod
+uiNamespace setVariable ["ENH_ESE_allAddons", (_itemsConfigVaules#2) - [["","",""]]]; // Remove empty mod
