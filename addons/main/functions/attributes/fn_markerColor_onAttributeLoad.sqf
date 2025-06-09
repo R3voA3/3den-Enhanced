@@ -37,7 +37,7 @@ _ctrlGroup setVariable
     {
         params ["_ctrlGroup", "_enabled"];
 
-        for "_idc" from 101 to 108 do
+        for "_idc" from IDC_ATTRIBUTE_CONTROL_01 to IDC_ATTRIBUTE_CONTROL_08 do
         {
             _ctrlGroup controlsGroupCtrl _idc ctrlEnable _enabled;
         };
@@ -123,19 +123,15 @@ _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
     private _colorRGB = (profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap]) get _hash;
 
     //Update sliders
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 101 sliderSetPosition _colorRGB#0;
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 103 sliderSetPosition _colorRGB#1;
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 105 sliderSetPosition _colorRGB#2;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 sliderSetPosition _colorRGB#0;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 sliderSetPosition _colorRGB#1;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 1IDC_ATTRIBUTE_CONTROL_05 sliderSetPosition _colorRGB#2;
 
     //Update edit controls
-    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 102 ctrlSetText format ["%1%%", _colorRGB#0 * 100];
-    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 104 ctrlSetText format ["%1%%", _colorRGB#1 * 100];
-    // ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 106 ctrlSetText format ["%1%%", _colorRGB#2 * 100];
-
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 102 ctrlSetText format ["%1%2", _colorRGB#0 * 100, "%"];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 104 ctrlSetText format ["%1%2", _colorRGB#1 * 100, "%"];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 106 ctrlSetText format ["%1%2", _colorRGB#2 * 100, "%"];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02 ctrlSetText format ["%1%2", _colorRGB#0 * 100, "%"];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04 ctrlSetText format ["%1%2", _colorRGB#1 * 100, "%"];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06 ctrlSetText format ["%1%2", _colorRGB#2 * 100, "%"];
 
     //Update preview
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 107 ctrlSetBackgroundColor [_colorRGB#0, _colorRGB#1, _colorRGB#2, 1];
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 ctrlSetBackgroundColor [_colorRGB#0, _colorRGB#1, _colorRGB#2, 1];
 }];
