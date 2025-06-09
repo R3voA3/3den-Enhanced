@@ -125,7 +125,7 @@ class ENH_BriefingEditor
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELP_TEXT";
                     items[] = {"3denEnhancedDocumentation", "BikiDocumentation"};
                 };
-                //Export
+               // Export
                 class Export
                 {
                     text = "$STR_ENH_MAIN_BRIEFINGEDITOR_EXPORT";
@@ -133,7 +133,7 @@ class ENH_BriefingEditor
                     shortcuts[] = {INPUT_CTRL_OFFSET + DIK_E};
                     opensNewWindow = 1;
                 };
-                //Formatting
+               // Formatting
                 class Linebreak
                 {
                     text = "Linebreak";
@@ -176,7 +176,7 @@ class ENH_BriefingEditor
                     action = "[nil, 'addTAG'] call ENH_fnc_BriefingEditor";
                     shortcuts[] = {INPUT_CTRL_OFFSET + DIK_RETURN};
                 };
-                //Templates
+               // Templates
                 class ApplyTemplate
                 {
                     text = "$STR_ENH_MAIN_BRIEFINGEDITOR_APPLYTEMPLATE";
@@ -192,7 +192,7 @@ class ENH_BriefingEditor
                     text = "$STR_ENH_MAIN_BRIEFINGEDITOR_DELETETEMPLATE";
                     action = "[nil, 'handleTemplates', 'delete'] call ENH_fnc_BriefingEditor";
                 };
-                //Help
+               // Help
                 class 3denEnhancedDocumentation
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";
