@@ -89,7 +89,7 @@ _ctrlGroup setVariable
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetBackgroundColor (_colorRGB + [1]);
 
 private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08;
-// lbClear _ctrlComboHistory;
+lbClear _ctrlComboHistory;
 
 _ctrlComboHistory lbAdd "Custom Color";
 
