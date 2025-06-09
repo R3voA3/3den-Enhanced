@@ -4917,18 +4917,6 @@
             <Chinese>AI功能</Chinese>
             <Chinesesimp>AI功能</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_UNITTRAITS_SUBCATEGORY">
-            <English>These settings are have no effect if ACE is loaded, except for the UAV Hacker trait.</English>
-            <Czech>Tato nastavení nemají žádný vliv, pokud je načten ACE, s výjimkou vlastnosti UAV Hacker.</Czech>
-            <French>Ces paramètres n'ont aucun effet si ACE est chargé, à l'exception du trait UAV Hacker.</French>
-            <Spanish>Estos ajustes no tienen efecto si ACE está cargado, excepto para el rasgo UAV Hacker.</Spanish>
-            <Italian>Queste impostazioni non hanno effetto se ACE è caricato, tranne che per il tratto UAV Hacker.</Italian>
-            <Polish>Ustawienia te nie mają żadnego wpływu, jeśli ACE jest załadowane, z wyjątkiem cechy Haker UAV.</Polish>
-            <Russian>Эти настройки не имеют никакого эффекта, если загружен ACE, за исключением признака UAV Hacker.</Russian>
-            <German>Diese Einstellungen haben keine Auswirkungen, wenn ACE geladen ist, mit Ausnahme der Eigenschaft UAV Hacker.</German>
-            <Chinese>如果已載入 ACE，除了 UAV Hacker 特質之外，這些設定都不會有任何影響。</Chinese>
-            <Chinesesimp>如果已加载 ACE，这些设置将不起作用，但 UAV 黑客特质除外。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_DISABLEAI_SUPPRESSION_DISPLAYNAME">
             <English>Suppression</English>
             <Czech>Suprese</Czech>
@@ -6983,19 +6971,6 @@
             <Chinese>窗口顯示</Chinese>
             <Chinesesimp>窗口显示</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
-            <English>Removes selected entry from the list.</English>
-            <Czech>Odebere vybranou položku ze seznamu.</Czech>
-            <French>Supprime l'entrée sélectionnée de la liste.</French>
-            <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
-            <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
-            <Polish>Usuwa wybraną pozycję z listy.</Polish>
-            <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
-            <Russian>Удаляет выбранную запись из списка.</Russian>
-            <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
-            <Chinese>從清單中移除選取的項目。</Chinese>
-            <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
             <English>Multiple entries can be added at once by separating them with a space, a comma or a semicolon.</English>
             <Czech>Více záznamů najednou lze přidat tak, že je oddělíte mezerou, čárkou nebo středníkem.</Czech>
@@ -7008,6 +6983,19 @@
             <German>Mehrere Einträge können auf einmal hinzugefügt werden, indem sie durch ein Leerzeichen, ein Komma oder ein Semikolon getrennt werden.</German>
             <Chinese>可以用空格、逗號或分號分隔，一次加入多個項目。</Chinese>
             <Chinesesimp>用空格、逗号或分号分隔可同时添加多个条目。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
+            <English>Removes selected entry from the list.</English>
+            <Czech>Odebere vybranou položku ze seznamu.</Czech>
+            <French>Supprime l'entrée sélectionnée de la liste.</French>
+            <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
+            <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
+            <Polish>Usuwa wybraną pozycję z listy.</Polish>
+            <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
+            <Russian>Удаляет выбранную запись из списка.</Russian>
+            <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
+            <Chinese>從清單中移除選取的項目。</Chinese>
+            <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_INTERFACE">
             <English>Interface</English>
@@ -8157,15 +8145,6 @@
             <English>If enabled, units that could not be put into building positions will be auto selected.</English>
             <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
         </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
-            <English>Define additional icons here that can be used for the hold action attribute.</English>
-            <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_DISPLAYNAME">
-            <English>Hold Action Icons</English>
-            <German>„Hold Action“ Symbole</German>
-        </Key>
-
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
             <English>Only garrison empty positions</English>
             <German>Nur leere Positionen besetzen</German>
@@ -8205,6 +8184,14 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_STANCE_RANDOM_NO_PRONE_DISPLAYNAME">
             <English>Random, except prone</English>
             <German>Zufällig, außer liegen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_DISPLAYNAME">
+            <English>Hold Action Icons</English>
+            <German>„Hold Action“ Symbole</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
+            <English>Define additional icons here that can be used for the hold action attribute.</English>
+            <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
@@ -9926,6 +9913,18 @@
             <German>Bestimmt ob die Einheit andere Einheiten vollständig heilen kann.</German>
             <Chinese>設定該單位能否治愈其他單位</Chinese>
             <Chinesesimp>设定该单位能否治愈其他单位</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_UNITTRAITS_SUBCATEGORY">
+            <English>These settings are have no effect if ACE is loaded, except for the UAV Hacker trait.</English>
+            <Czech>Tato nastavení nemají žádný vliv, pokud je načten ACE, s výjimkou vlastnosti UAV Hacker.</Czech>
+            <French>Ces paramètres n'ont aucun effet si ACE est chargé, à l'exception du trait UAV Hacker.</French>
+            <Spanish>Estos ajustes no tienen efecto si ACE está cargado, excepto para el rasgo UAV Hacker.</Spanish>
+            <Italian>Queste impostazioni non hanno effetto se ACE è caricato, tranne che per il tratto UAV Hacker.</Italian>
+            <Polish>Ustawienia te nie mają żadnego wpływu, jeśli ACE jest załadowane, z wyjątkiem cechy Haker UAV.</Polish>
+            <Russian>Эти настройки не имеют никакого эффекта, если загружен ACE, за исключением признака UAV Hacker.</Russian>
+            <German>Diese Einstellungen haben keine Auswirkungen, wenn ACE geladen ist, mit Ausnahme der Eigenschaft UAV Hacker.</German>
+            <Chinese>如果已載入 ACE，除了 UAV Hacker 特質之外，這些設定都不會有任何影響。</Chinese>
+            <Chinesesimp>如果已加载 ACE，这些设置将不起作用，但 UAV 黑客特质除外。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_UAVHACKER_DISPLAYNAME">
             <English>Is UAV Hacker?</English>
