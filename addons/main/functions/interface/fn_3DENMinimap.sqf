@@ -56,7 +56,7 @@ private _code =
     if !_hide then
     {
         // This hides the circle that indicates player position.
-        disableMapIndicators [true, true, true, true];
+        if !(is3DENPreview || {is3DENMultiplayer }) then {disableMapIndicators [true, false, false, false]};
 
         private _scale = linearConversion
         [
