@@ -20,7 +20,7 @@
 params [["_songData", ["", "", ""], [true, []], 3]];
 
 
-//If param is bool, a random song is wanted otherwise it's a songclass selected from the listNBox
+// If param is bool, a random song is wanted otherwise it's a songclass selected from the listNBox
 if (_songData isEqualType true) then
 {
     _songData = selectRandom ((profileNamespace getVariable ["ENH_3DENRadio_playlist", []]) select {isClass (configFile >> "CfgMusic" >> (_x select 1))});
@@ -28,14 +28,14 @@ if (_songData isEqualType true) then
 
 _songData params [["_songName", ""], ["_songClass", ""], ["_songDuration", ""]];
 
-//Duration was saved as string
+// Duration was saved as string
 _songDuration = parseNumber _songDuration;
 
 uiNamespace setVariable ["ENH_3DENRadio_CurrentSong", _songName];
 uiNamespace setVariable ["ENH_3DENRadio_CurrentSongClass", _songClass];
 uiNamespace setVariable ["ENH_3DENRadio_CurrentSongDuration", _songDuration];
 
-//Slowly start the song
+// Slowly start the song
 0 fadeMusic 0;
 3 fadeMusic (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume", 0.25]);
 playMusic _songClass;

@@ -27,7 +27,7 @@ class ENH_3DENRadio
             w = QUOTE(WINDOW_W_WIDE * GRID_W);
             h = QUOTE(7 * GRID_H);
         };
-        class BackgroundFilter: Background//Background used for filter buttons
+        class BackgroundFilter: Background // Background used for filter buttons
         {
             y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
             h = QUOTE(CTRL_DEFAULT_H);
@@ -50,7 +50,7 @@ class ENH_3DENRadio
     };
     class Controls
     {
-        class Filter: ctrlListNBox //Used by BIS_fnc_initListBoxSorting as filter
+        class Filter: ctrlListNBox // Used by BIS_fnc_initListBoxSorting as filter
         {
             idc = IDC_3DENRADIO_FILTER;
             idcLeft = -1;

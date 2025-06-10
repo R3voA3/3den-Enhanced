@@ -22,7 +22,7 @@ params ["_ctrlCombo", "_debriefing"];
     private _title = getText (_x >> "title");
     private _subtitle = getText (_x >> "subtitle");
     private _description = getText (_x >> "description");
-    private _configName = toLower configName _x;//We make everything lower case, just to be sure (Is BIS_fnc_endMission case sensitiv?)
+    private _configName = toLower configName _x;// We make everything lower case, just to be sure (Is BIS_fnc_endMission case sensitiv?)
 
     _ctrlCombo lbAdd _configName;
     _ctrlCombo lbSetTooltip

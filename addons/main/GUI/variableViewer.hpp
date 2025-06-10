@@ -20,7 +20,7 @@ class ENH_VariableViewer
             w = QUOTE(WINDOW_W_WIDE * GRID_W);
             h = QUOTE(WINDOW_HAbs - 3 * CTRL_DEFAULT_H);
         };
-        class BackgroundFilter: Background//Background used for filter buttons
+        class BackgroundFilter: Background// Background used for filter buttons
         {
             h = QUOTE(CTRL_DEFAULT_H);
             colorBackground[] = {0, 0, 0, 1};

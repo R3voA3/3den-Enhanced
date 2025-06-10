@@ -125,6 +125,13 @@ class Cfg3DEN
                         #include "attributesEditor\backupMissionSQM.hpp"
                     };
                 };
+                class Misc
+                {
+                    class Attributes
+                    {
+                        #include "attributesEditor\holdActionIcons.hpp"
+                    };
+                };
                 #include "attributesEditor\interface.hpp"
                 #include "attributesEditor\garrison2.hpp"
                 #include "attributesEditor\debugOptions.hpp"

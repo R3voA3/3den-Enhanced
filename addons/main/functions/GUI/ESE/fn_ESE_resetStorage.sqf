@@ -23,7 +23,7 @@ private _itemsHashMap = uiNamespace getVariable "ENH_ESE_itemsHashMap";
 
 call ENH_fnc_ESE_clearInventory;
 
-//Get all items defined in vehicle's config and add them to the listbox
+// Get all items defined in vehicle's config and add them to the listbox
 {
     private _classes = "true" configClasses (configOf ENH_ESE_target >> _x);
     {

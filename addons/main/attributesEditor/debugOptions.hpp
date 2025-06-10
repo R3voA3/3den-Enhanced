@@ -90,7 +90,7 @@ class ENH_DebugOptions
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_ActiveScripts', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_ActiveScripts', false]";
         };
-        //----------------PLAYER
+        // Player
         class ENH_DebugOptions_Player_Subcategory: ENH_DebugOptions_Subcategory
         {
             description = "$STR_MPTABLE_NAME";
@@ -162,7 +162,7 @@ class ENH_DebugOptions
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_NoReload', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_NoReload', false]";
         };
-        //----------------DRAW
+        // Draw
         class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Player_Subcategory
         {
             description = "$STR_A3_ENDGAME_DEBRIEFING_DRAW";
@@ -182,7 +182,7 @@ class ENH_DebugOptions
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_DrawViewDirection', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_DrawViewDirection', false]";
         };
-        //----------------MAP
+        // Map
         class ENH_DebugOptions_Map_Subcategory: ENH_DebugOptions_Subcategory
         {
             description = "$STR_USRACT_MAP";
@@ -240,7 +240,7 @@ class ENH_DebugOptions
                 };
             };
         };
-        //----------------ENVIRONMENT
+        // Environment
         class ENH_DebugOptions_Environment_Subcategory: ENH_DebugOptions_Player_Subcategory
         {
             description = "$STR_A3_CREDITS_ENVIRONMENT";

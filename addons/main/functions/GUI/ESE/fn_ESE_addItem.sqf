@@ -22,10 +22,10 @@ private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _lbSource = focusedCtrl _display;
 private _row = lbCurSel _lbSource;
 
-//Check if the focused control is actually one of the two lists
+// Check if the focused control is actually one of the two lists
 if !(ctrlIDC _lbSource in [IDC_ESE_AVAILABLEITEMSLIST, IDC_ESE_COMPATIBLEITEMSLIST]) exitWith {};
 
-//Check if something is selected
+// Check if something is selected
 if (_row isEqualTo -1) exitWith {};
 
 private _rows = lnbSize _ctrlInventory select 0;
@@ -47,12 +47,12 @@ for "_i" from 0 to ( _rows - 1) do
         _itemAdded = true;
     };
 };
-if !_itemAdded then//If item was not found in the list, add it
+if !_itemAdded then// If item was not found in the list, add it
 {
     [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
 };
 
-//Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
+// Everytime inventory changes, amount is either set to "∞" or the actual amount (Easy workaround)
 [
     _display getVariable ["ENH_ESE_IsVirtual", false]
 ] call ENH_fnc_ESE_toggleVirtual;

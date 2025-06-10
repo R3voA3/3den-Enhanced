@@ -147,7 +147,7 @@ class ENH_ESE
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELP_TEXT";
                     items[] = {"Documentation"};
                 };
-                //Export
+               // Export
                 class ExportToSQF
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_MISSIONEXPORTSQF_TEXT";
@@ -169,7 +169,7 @@ class ENH_ESE
                     text = "$STR_ENH_MAIN_ESE_TEMPLATES";
                     items[] = {"CreateTemplate", "DeleteTemplate", "Separator", "PreviewTemplate"};
                 };
-                //Templates
+               // Templates
                 class CreateTemplate
                 {
                     text = "$STR_ENH_MAIN_ESE_CREATETEMPLATE";
@@ -187,7 +187,7 @@ class ENH_ESE
                     text = "$STR_3DEN_TUTORIALS_SCENARIO_SECTIONS_PREVIEW_TEXT";
                     action = "'preview' call ENH_fnc_ESE_handleTemplates";
                 };
-                //Help
+               // Help
                 class Documentation
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";
@@ -195,7 +195,7 @@ class ENH_ESE
                     weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#equipment-storage-editor";
                     opensNewWindow = 1;
                 };
-                //Inventory
+               // Inventory
                 class IsVirtual
                 {
                     text = "$STR_3DEN_ATTRIBUTES_AMMOBOX_TYPE_VIRTUAL";
@@ -275,7 +275,7 @@ class ENH_ESE
                     picture = "\a3\ui_f\data\igui\cfg\actions\loadvehicle_ca.paa";
                     shortcuts[] = {DIK_6};
                 };
-                //Filter
+               // Filter
                 class ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0";

@@ -23,7 +23,7 @@ private _code =
 
     params ["_display3DEN"];
 
-    //Direction
+    // Direction
     private _dir = round getDir get3DENCamera;
     private _dir = switch (count str _dir) do
     {
@@ -34,7 +34,7 @@ private _code =
 
     _display3DEN displayCtrl IDC_STATUSBAR_CAMDIR ctrlSetText _dir;
 
-    //Session timer
+    // Session timer
     _display3DEN displayCtrl IDC_STATUSBAR_SESSIONTIMER ctrlSetTooltip format
     [
         "%1: %2",
@@ -42,7 +42,7 @@ private _code =
         [diag_tickTime / 3600] call BIS_fnc_timeToString
     ];
 
-    //Dynamic view distance
+    // Dynamic view distance
     if (profileNamespace getVariable ["ENH_EditorPreferences_DynamicViewDistance", false]) then
     {
         private _vd = linearConversion [0, 2000, getPosASL get3DENCamera # 2, 200, 12000, true];
@@ -50,7 +50,7 @@ private _code =
         setObjectViewDistance (0.5 * _vd);
     };
 
-    //Entity counter
+    // Entity counter
     private _conditionHide =  !(profileNamespace getVariable ["ENH_EditorPreferences_Interface_EntityCounter", true]) ||
     {
         private _ctrlCamDir = _display3DEN displayCtrl IDC_DISPLAY3DEN_STATUSBAR controlsGroupCtrl IDC_STATUSBAR_CAMDIR;
@@ -80,12 +80,12 @@ private _code =
         };
     };
 
-    //Draw dlc icons
+    // Draw dlc icons
     if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_DrawDLCIcons", false]) then
     {
         (entities [[], [], true, false] select {get3DENCamera distance _x <= 100}) apply
         {
-            //Stupid workaround because modParams spams .rpt file otherwise
+            // Stupid workaround because modParams spams .rpt file otherwise
             private _mod = configSourceMod configOf _x;
             if (_mod != "") then
             {
@@ -102,7 +102,7 @@ private _code =
         };
     };
 
-    //Draw building positions
+    // Draw building positions
     if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_DrawBuildingPositions", false]) then
     {
         (get3DENCamera nearObjects ["House", 100]) apply
@@ -127,8 +127,8 @@ private _code =
 _display3DEN displayAddEventHandler ["MouseHolding", _code];
 _display3DEN displayAddEventHandler ["MouseMoving", _code];
 
-//Add tooltips to entity list
+// Add tooltips to entity list
 _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter", ENH_fnc_entityList_addTooltips];
 
-//Init minimap
+// Init minimap
 _display3DEN call ENH_fnc_3DENMinimap;

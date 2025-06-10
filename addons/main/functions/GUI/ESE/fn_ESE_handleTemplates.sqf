@@ -22,7 +22,7 @@ switch _mode do
 
             private _templates = profileNamespace getVariable ["ENH_VIM_Templates", []];
 
-            //Return inventory data
+            // Return inventory data
             private _value = [true] call ENH_fnc_ESE_applyAttribute;
 
             _templates pushBack [_title, _description, _value];
@@ -37,14 +37,14 @@ switch _mode do
 
         _ctrlItems lbDelete _row;
 
-        //Update templates variable
+        // Update templates variable
         private _templates = profileNamespace getVariable ["ENH_VIM_Templates", []];
         _templates deleteAt _row;
         profileNamespace setVariable ["ENH_VIM_Templates", _templates];
     };
     case "preview":
     {
-        //Get template data from listbox
+        // Get template data from listbox
         private _ctrlItems = CTRL(IDC_ESE_TEMPLATESLIST);
         private _row = lbCurSel _ctrlItems;
 

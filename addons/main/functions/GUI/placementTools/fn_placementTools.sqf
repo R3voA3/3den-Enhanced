@@ -64,7 +64,7 @@ switch _mode do
             _placementToolsUI ctrlCommit 0;
         }];
 
-        //Delete controls when preview is started
+        // Delete controls when preview is started
         add3DENEventHandler ["OnMissionPreview",
         {
             ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_PLACEMENTTOOLS);
@@ -88,7 +88,7 @@ switch _mode do
             ];
         };
 
-        //Draw an icon where the center is
+        // Draw an icon where the center is
         addMissionEventHandler ["Draw3D",
         {
             drawIcon3D ["", [1, 0.1, 1, 1], [nil, "getCenter"] call ENH_fnc_placementTools, 1, 1, 0, "X"];
@@ -224,13 +224,13 @@ switch _mode do
             -2 call ENH_fnc_setOrientation;
         }];
 
-        //Add EHs to all edit controls for input modifiers
+        // Add EHs to all edit controls for input modifiers
         {
             _x ctrlAddEventHandler ["KeyDown",
             {
                 params ["_ctrlEdit", "_key", "_shift", "_ctrl", "_alt"];
 
-                //PageUp, PageDown
+                // PageUp, PageDown
                 if !(_key in [201, 209]) exitWith {};
 
                 private _modifier = call
@@ -334,7 +334,7 @@ switch _mode do
         collect3DENHistory
         {
             {
-                if (_counterColumns == _wantedColumns) then//Check if column is full, if yes, manipulate start position and open an new column
+                if (_counterColumns == _wantedColumns) then// Check if column is full, if yes, manipulate start position and open an new column
                 {
                     _startPos = _startPos vectorAdd [0, _spaceY, 0];
                     _offset = [0, 0, 0];

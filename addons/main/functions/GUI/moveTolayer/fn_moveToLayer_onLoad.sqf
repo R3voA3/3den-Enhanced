@@ -24,9 +24,9 @@ private _ctrlTV = CTRL(IDC_MOVETOLAYER_TREE);
 {
     private _layerID = _x;
     private _index = _ctrlTV tvAdd [[], _layerID get3DENAttribute "name" select 0];
-    _ctrlTV tvSetValue [[_index], _layerID]; //3DEN ID
+    _ctrlTV tvSetValue [[_index], _layerID]; // 3DEN ID
 
-    //Define icon
+    // Define icon
     private _visible = (_layerID get3DENAttribute "Visibility" select 0);
     private _canTransform = (_layerID get3DENAttribute "Transformation" select 0);
 
@@ -41,7 +41,7 @@ private _ctrlTV = CTRL(IDC_MOVETOLAYER_TREE);
 
 _ctrlTV tvSortAll [[], false];
 
-//Focus search box
+// Focus search box
 ctrlSetFocus (ctrlParent _ctrlTV displayCtrl IDC_MOVETOLAYER_SEARCH);
 
 [CTRL(IDC_MOVETOLAYER_SEARCH), CTRL(IDC_MOVETOLAYER_BUTTONSEARCH)] call ENH_fnc_initSearchControls;

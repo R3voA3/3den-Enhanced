@@ -49,7 +49,7 @@ switch _mode do
     };
     case "arsenal":
     {
-        { //Add all classes. _forEachIndex defines what items are going to be added, see BIS_fnc_addVirtualItemCargo
+        { // Add all classes. _forEachIndex defines what items are going to be added, see BIS_fnc_addVirtualItemCargo
             _x params ["_classes"];
             if (_classes isEqualTo []) then {continue};
             _export = _export + "[this, " + str _classes + ", true, true, 1, " + str _forEachIndex + "] call BIS_fnc_addVirtualItemCargo;" + endl + endl;

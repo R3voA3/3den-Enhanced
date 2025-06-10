@@ -55,14 +55,14 @@ _ctrlTV tvAdd [[], "PAA"];
     _indexItem = _ctrlTV tvAdd [[_indexType, _indexSize], format ["%1 [%2x%3]", _x, _w, _h]];
     _ctrlTV tvSetData [[_indexType, _indexSize, _indexItem], _x];
 
-    _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];//This is soo slow =(
+    _ctrlTV tvSetPictureRight [[_indexType, _indexSize, _indexItem], _x];// This is soo slow =(
     _ctrlTV tvSetTooltip [[_indexType, _indexSize, _indexItem], format ["%1\n%2 x %3\nR: %4\nG: %5\nB: %6\nA: %7\n\n%8", _x, _w, _h, _rgb#0, _rgb#1, _rgb#2, _rgb#3, _shortcutText]];
 
     progressLoadingScreen ((_forEachIndex + 1) / _textureCountTotal);
 
 } forEach (uiNamespace getVariable ["ENH_TextureFinder_Textures", []]);
 
-//Always show final result
+// Always show final result
 _ctrlProgText ctrlSetStructuredText parseText format [_listStatusText, _textureCountTotal, _textureCountTotal];
 
 _ctrlTV tvSortAll [[], false];

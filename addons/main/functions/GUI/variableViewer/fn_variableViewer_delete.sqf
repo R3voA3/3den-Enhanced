@@ -21,21 +21,21 @@ params ["_ctrlButton"];
 private _display = ctrlParent _ctrlButton;
 private _ctrlLNB = CTRL(IDC_VARIABLEVIEWER_LIST);
 private _selectedRows = lbSelection _ctrlLNB;
-//If nothing selected, exit
+// If nothing selected, exit
 if (_selectedRows isEqualTo []) exitWith {false};
 
 _display call ENH_fnc_variableViewer_messageConfirm;
 
 waitUntil {!isNil "ENH_VariableViewer_Modify_Confirmed"};
 
-//Deletion request needs to be confirmed twice
+// Deletion request needs to be confirmed twice
 if (ENH_VariableViewer_Modify_Confirmed) then
 {
     private _namespace = call ENH_fnc_variableViewer_getNamespace;
 
-    //Reverse array, otherwise indexes will change if entry gets deleted
+    // Reverse array, otherwise indexes will change if entry gets deleted
     reverse _selectedRows;
-    //Delete variables
+    // Delete variables
     {
         private _LNBData = _ctrlLNB lnbText [_x, 0];
         _namespace setVariable [_LNBData, nil];
@@ -43,7 +43,7 @@ if (ENH_VariableViewer_Modify_Confirmed) then
         _ctrlLNB lnbDeleteRow _x;
     } forEach _selectedRows;
 
-    //Reduce variable count by one
+    // Reduce variable count by one
     CTRL(IDC_VARIABLEVIEWER_VARIABLECOUNT) ctrlSetText format ["#%1", lnbSize _ctrlLNB select 0];
 };
 

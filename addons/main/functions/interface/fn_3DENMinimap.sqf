@@ -28,7 +28,7 @@ _display3DEN ctrlCreate ["ctrlStaticBackground", IDC_3DEN_MINIMAP_BACKGROUND];
 private _ctrlMap = _display3DEN ctrlCreate ["ENH_3DENMinimap", IDC_3DEN_MINIMAP_MAP];
 _ctrlMap ctrlEnable false;
 
-//After previewing, the player position indicator is gone (engine bug?). So we create our own
+// After previewing, the player position indicator is gone (engine bug?). So we create our own
 private _ctrlImage = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", IDC_3DEN_MINIMAP_CENTER];
 _ctrlImage ctrlSetText "a3\ui_f\data\gui\rsc\rscdisplaymissioneditor\iconcamera_ca.paa";
 _ctrlImage ctrlSetTextColor [0.7, 0.09, 0, 1];
@@ -55,8 +55,8 @@ private _code =
 
     if !_hide then
     {
-        //This hides the circle that indicates player position.
-        disableMapIndicators [true, true, true, true];
+        // This hides the circle that indicates player position.
+        if !(is3DENPreview || {is3DENMultiplayer }) then {disableMapIndicators [true, false, false, false]};
 
         private _scale = linearConversion
         [
@@ -70,7 +70,7 @@ private _code =
 
         private _position = switch _attributeValue do
         {
-            case 1: //Small
+            case 1: // Small
             {
                 [
                     safeZoneX + 62 * GRID_W,
@@ -79,7 +79,7 @@ private _code =
                     32 * GRID_H
                 ];
             };
-            case 2: //Medium
+            case 2: // Medium
             {
                 [
                     safeZoneX + 62 * GRID_W,
@@ -88,7 +88,7 @@ private _code =
                     62 * GRID_H
                 ];
             };
-            case 3: //Large
+            case 3: // Large
             {
                 [
                     safeZoneX + 62 * GRID_W,
@@ -97,7 +97,7 @@ private _code =
                     92 * GRID_H
                 ];
             };
-            default //Disabled, 0
+            default // Disabled, 0
             {
                 [0, 0, 0, 0];
             };

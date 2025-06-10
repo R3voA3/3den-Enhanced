@@ -15,13 +15,13 @@
     -
 */
 
-//Initialize ambient animations
+// Initialize ambient animations
 call ENH_fnc_ambientAnimations_initInEditor;
 
-//Enable 3DEN Radio
+// Enable 3DEN Radio
 call ENH_fnc_3DENRadio_toggleRadio;
 
-//Collapse left tree view (entity list). A small delay is needed to let the list fully load first
+// Collapse left tree view (entity list). A small delay is needed to let the list fully load first
 if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_CollapseEntityList", false]) then
 {
     0 spawn

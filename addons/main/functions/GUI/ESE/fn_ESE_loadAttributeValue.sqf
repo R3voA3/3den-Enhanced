@@ -37,7 +37,7 @@ else
     if _fromClipboard then {_attributeValue = call ENH_fnc_ESE_parseClipboardValues}
 };
 
-_attributeValue = parseSimpleArray _attributeValue;//Eden saves attributes as string
+_attributeValue = parseSimpleArray _attributeValue;// Eden saves attributes as string
 _attributeValue params ["_inventory", "_isVirtual"];
 _inventory params ["_weapons", "_magazines", "_items", "_backpacks"];
 
@@ -47,7 +47,7 @@ private _fnc_addItems =
 {
     params ["_configNamesArray", "_amountsArray"];
     {
-        private _amount = _amountsArray param [_forEachIndex, 1];//If virtual inventory, then default to amount 1
+        private _amount = _amountsArray param [_forEachIndex, 1];// If virtual inventory, then default to amount 1
         (_itemsHashMap get toLower _x) params ["_displayName", "_image", "", "_addonIcon", "", "_specificType", "_descriptionShort", "_configNameCaseSens"];
         [_ctrlInventory, _configNameCaseSens, _displayName, _image, _addonIcon, _amount, _configNameCaseSens + "\n" + _descriptionShort, _specificType] call ENH_fnc_ESE_lnbAdd;
     } forEach _configNamesArray;

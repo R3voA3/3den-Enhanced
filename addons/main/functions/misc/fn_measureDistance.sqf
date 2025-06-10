@@ -13,9 +13,9 @@
     BOOLEAN: true
 */
 
-disableSerialization;//For BIS_fnc_3DENNotification
+disableSerialization;// For BIS_fnc_3DENNotification
 
-//Make sure the old EH was deleted
+// Make sure the old EH was deleted
 waitUntil {isNil "ENH_EH_DrawDist" && {isNil "ENH_MeasureDist_Markers"}};
 
 if (isNil "ENH_Pos_Start") then
@@ -25,13 +25,13 @@ if (isNil "ENH_Pos_Start") then
 }
 else
 {
-    //Measure distance and display 3D line
+    // Measure distance and display 3D line
     ENH_Pos_End = (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") # 0;
     private _dist3D = ENH_Pos_Start distance ENH_Pos_End;
     private _dist2D = ENH_Pos_Start distance2D ENH_Pos_End;
-    private _travelTime = (_dist3D / (14.15 * 1000) * 3600) call ENH_fnc_floatToTime;//14.15 is the average speed of a soldier (km/h)
+    private _travelTime = (_dist3D / (14.15 * 1000) * 3600) call ENH_fnc_floatToTime;// 14.15 is the average speed of a soldier (km/h)
 
-    //Display information
+    // Display information
     [
         format
         [

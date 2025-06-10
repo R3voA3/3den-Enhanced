@@ -21,7 +21,7 @@ params [["_index", 0], ["_max", true]];
 ["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
 
 private _entities = [] call ENH_fnc_all3DENSelected;
-if (count _entities < 2) exitWith {}; //Makes no sense to align less then two entities
+if (count _entities < 2) exitWith {}; // Makes no sense to align less then two entities
 
 private _positions = [];
 
@@ -30,7 +30,7 @@ _entities apply
     _positions pushBack ((_x get3DENAttribute "Position") # 0 # _index);
 };
 
-//Either select maximum or minimum. Using _max var in both cases because I am lazy
+// Either select maximum or minimum. Using _max var in both cases because I am lazy
 if _max then
 {
     _max = selectMax _positions;

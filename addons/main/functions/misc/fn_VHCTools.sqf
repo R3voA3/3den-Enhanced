@@ -64,8 +64,8 @@ switch _mode do
                 _data pushBack _items;
             } forEach [configFile >> "CfgVehicles" >> _type >> "textureSources", configFile >> "CfgVehicles" >> _type >> "animationSources"];
             _data params ["_textures", "_animations"];
-            _textures = _textures select {_x isEqualType ""}; //Only select the textures and ignore the state
-            _x set3DENAttribute ["VehicleCustomization", [[], _animations]]; //Only animations are set via this attribute. Textures are handled differently
+            _textures = _textures select {_x isEqualType ""}; // Only select the textures and ignore the state
+            _x set3DENAttribute ["VehicleCustomization", [[], _animations]]; // Only animations are set via this attribute. Textures are handled differently
             _x set3DENAttribute ["ObjectTexture", selectRandom _textures];
         } forEach (get3DENSelected "Object");
         ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

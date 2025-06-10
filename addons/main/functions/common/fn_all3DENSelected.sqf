@@ -9,14 +9,14 @@
     Puts all selected Eden entities into one array for easy access.
 
     Parameter(s):
-    0: ARRAY - Array of strings. Entity types to return. For possible values see https://community.bistudio.com/wiki/get3DENSelected
+    0: ARRAY - Array of strings. Entity types to return. For possible values see https:// community.bistudio.com/wiki/get3DENSelected
         Default: ["Object", "Group", "Trigger", "Logic", "Waypoint", "Marker"]
 
     Returns:
     ARRAY - List of selected entities
 
     Example(s):
-    [] call ENH_fnc_all3DENSelected; //Returns all selected entities no matter what type
+    [] call ENH_fnc_all3DENSelected; // Returns all selected entities no matter what type
 
 */
 

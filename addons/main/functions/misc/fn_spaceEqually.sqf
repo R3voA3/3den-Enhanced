@@ -20,11 +20,11 @@ params [["_index", 0]];
 ["ENH_AlignEntities_WrongIndexValue"] call BIS_fnc_3DENNotification;
 
 private _entities = [["Object", "Marker", "Logic", "Waypoint", "Trigger"]] call ENH_fnc_all3DENSelected;
-if (count _entities < 3) exitWith {}; //Makes no sense to space less than three entities
+if (count _entities < 3) exitWith {}; // Makes no sense to space less than three entities
 
 private _positions = [];
 
-//Get max and min position
+// Get max and min position
 _entities apply
 {
     _positions pushBack ((_x get3DENAttribute "Position") # 0 # _index);
@@ -33,14 +33,14 @@ _entities apply
 private _max = selectMax _positions;
 private _min = selectMin _positions;
 
-//Sort entities by position
+// Sort entities by position
 _entities = [_entities, [], {(_x get3DENAttribute "Position") # 0 # _index}] call BIS_fnc_sortBy;
 
-//Get step count and size
+// Get step count and size
 private _stepCount = count _entities - 1;
 private _stepSize = abs ((_max - _min) / _stepCount);
 
-//Update positions
+// Update positions
 [localize "STR_ENH_MAIN_FOLDER_SPACE", nil, "a3\3den\data\cfg3den\history\moveitems_ca.paa"] collect3DENHistory
 {
     {

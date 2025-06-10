@@ -30,7 +30,7 @@ collect3DENHistory
     {
         private _entity = _x;
         {
-            _entity set3DENAttribute [_x, !((_entity get3DENAttribute _x) select 0)]; //Negate attribute value
+            _entity set3DENAttribute [_x, !((_entity get3DENAttribute _x) select 0)]; // Negate attribute value
         } forEach _attributes;
     } forEach _selected;
 };

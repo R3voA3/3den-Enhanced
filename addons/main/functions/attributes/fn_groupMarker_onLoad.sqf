@@ -16,7 +16,7 @@
     -
 */
 
-//Exit if only one group is selected
+// Exit if only one group is selected
 if (count (get3DENSelected "Group") == 1) exitWith {};
 
 params ["_ctrl"];
@@ -24,7 +24,7 @@ private _ctrlGroup = ctrlParentControlsGroup _ctrl;
 private _ctrlComboType =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
 private _ctrlComboColor =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01;
 
-//Get all markers and sort them
+// Get all markers and sort them
 private _markers = ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkers")) apply
 {
     [getText (_x >> "name"), configName _x, getText (_x >> "icon"), getArray (_x >> "color")]
@@ -36,7 +36,7 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
 {
     _x params ["_name", "_class", "_icon", "_color"];
 
-    //Adjust colors
+    // Adjust colors
     if (count _color == 4) then {_color = _color call BIS_fnc_parseNumberSafe} else {_color = [1, 1, 1, 1]};
     if (_color isEqualTo [0, 0, 0, 1]) then {_color = [1, 1, 1, 1]};
 
@@ -47,7 +47,7 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
     _ctrlComboType lbSetPictureColor [_i, _color];
 } forEach _markers;
 
-//Fill marker color combo
+// Fill marker color combo
 {
     private _color = (_x >> "color") call bis_fnc_colorConfigToRGBA;
     private _class = configName _x;
@@ -59,7 +59,7 @@ _markers insert [0, [[localize "STR_DISABLED", "", "", [1, 1, 1, 1]]]];
     _ctrlComboColor lbSetTooltip [_i, _ctrlComboColor lbData _i];
 } forEach ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgMarkerColors"));
 
-//Add reset event to reset button
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);

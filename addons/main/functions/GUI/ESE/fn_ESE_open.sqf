@@ -30,25 +30,25 @@ uiNamespace setVariable ["ENH_Display_ESE", _display];
 [] call ENH_fnc_getAllItems;
 [] call ENH_fnc_ESE_loadAttributeValue;
 
-//Get all addons and add them to filter control
+// Get all addons and add them to filter control
 {
     _x params ["_addonClass", "_addonName", "_addonIcon"];
     [CTRL(IDC_ESE_FILTERSEARCH), _addonName, _addonClass, "", _addonIcon] call ENH_fnc_ESE_lbAdd;
 } forEach (uiNamespace getVariable "ENH_ESE_allAddons");
 
-//By default select no mod
+// By default select no mod
 CTRL(IDC_ESE_FILTERSEARCH) lbSetCurSel 0;
 
-[CTRL(IDC_ESE_MENU), [2, 0]] call ENH_fnc_ESE_changeFilter; //Load ARs as default
+[CTRL(IDC_ESE_MENU), [2, 0]] call ENH_fnc_ESE_changeFilter; // Load ARs as default
 
-//Overwrite default ESC behaviour
+// Overwrite default ESC behaviour
 _display displayAddEventHandler ["KeyDown",
 {
     params ["", "_key"];
     if (_key == DIK_ESCAPE) then {call ENH_fnc_ESE_close; true};
 }];
 
-//Fille compatible items list if selection changed
+// Fille compatible items list if selection changed
 CTRL(IDC_ESE_AVAILABLEITEMSLIST) ctrlAddEventHandler ["LBSelChanged",
 {
     params ["_lbAvailableItems", "_lbCurSel"];

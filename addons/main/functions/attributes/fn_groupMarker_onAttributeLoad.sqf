@@ -25,12 +25,12 @@ private _ctrlEdit =_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02;
 private _ctrlCheckbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03;
 private _ctrlCheckbox2 = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04;
 
-//Set up checkbox and edit control
+// Set up checkbox and edit control
 _ctrlEdit ctrlSetText _textValue;
 _ctrlCheckbox cbSetChecked _showGroupSize;
 _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
 
-//Fill marker type combo
+// Fill marker type combo
 {
     if (_forEachIndex == 0) then
     {
@@ -53,7 +53,7 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
     };
 } forEach configProperties [configFile >> "CfgMarkers", "isClass _x && getNumber (_x >> 'scope') > 0"];
 
-//Fill marker color combo
+// Fill marker color combo
 {
      private _color = (_x >> "color") call BIS_fnc_colorConfigToRGBA;
      private _class = configName _x;
@@ -69,7 +69,7 @@ _ctrlCheckbox2 cbSetChecked _showGroupVehicle;
     };
 } forEach configProperties [configFile >> "CfgMarkerColors", "isClass _x && getNumber (_x >> 'scope') > 0"];
 
-//Add reset event to reset button
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);

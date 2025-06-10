@@ -16,16 +16,16 @@
     BOOLEAN - True on success, false if failed
 */
 
-//Just to be sure
+// Just to be sure
 if (!is3DEN) exitWith {false};
 
-//Opt-in via preferences
+// Opt-in via preferences
 if !(profileNamespace getVariable ["ENH_EditorPreferences_BackupMissionSQM", false]) exitWith {false};
 
-//Opt-out scenario specific
+// Opt-out scenario specific
 if ("Scenario" get3DENMissionAttribute "ENH_BackupMissionSQMDisable") exitWith {false};
 
-//Pythia is needed
+// Pythia is needed
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith
 {
     ["ENH_PythiaMissingForBackup", 1, 10] call BIS_fnc_3DENNotification;
@@ -44,8 +44,8 @@ if (_backupRoot == "") then
 }
 else
 {
-    //If we dump all backups into one dir, we should add some prefix for convenience
-    _prefix = format ["%1.%2_", missionName, worldName]; //"scriptLibrary.VR_"
+    // If we dump all backups into one dir, we should add some prefix for convenience
+    _prefix = format ["%1.%2_", missionName, worldName]; // "scriptLibrary.VR_"
 };
 
 private _sysTimeFormatted = systemTime apply {str _x} joinString "_";

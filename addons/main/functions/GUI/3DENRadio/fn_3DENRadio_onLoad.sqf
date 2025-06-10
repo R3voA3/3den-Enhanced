@@ -17,31 +17,31 @@ disableSerialization;
 
 params ["_display"];
 
-//Set up volume slider
+// Set up volume slider
 CTRL(IDC_3DENRADIO_VOLUME) sliderSetPosition (profileNamespace getVariable ["ENH_3DENRadio_MusicVolume", 0.25]);
 
-//Update current song
+// Update current song
 CTRL(IDC_3DENRADIO_CURRENTSONG) ctrlSetText (uiNamespace getVariable ["ENH_3DENRadio_CurrentSong", ""]);
 
-//Update radio button
+// Update radio button
 CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlSetText (
     ["\x\enh\addons\main\data\play_ca.paa", "\x\enh\addons\main\data\pause_ca.paa"] select (profileNamespace getVariable ["ENH_3DENRadio_Enabled", false]));
 
 0 spawn ENH_fnc_3DENRadio_timelineControl;
 
-//Setup list and filter
+// Setup list and filter
 {
-    _x lnbAddColumn 0.45; //Duration
-    _x lnbAddColumn 0.55; //Theme
-    _x lnbAddColumn 0.67; //Mod + Icon
-    _x lnbAddColumn 0.92; //In playlist
+    _x lnbAddColumn 0.45; // Duration
+    _x lnbAddColumn 0.55; // Theme
+    _x lnbAddColumn 0.67; // Mod + Icon
+    _x lnbAddColumn 0.92; // In playlist
 } forEach [CTRL(IDC_3DENRADIO_SONGLIST), CTRL(IDC_3DENRADIO_FILTER)];
 
-CTRL(IDC_3DENRADIO_FILTER) lnbAddRow [localize "STR_ENH_MAIN_3DENRADIO_TITLE", localize "STR_ENH_MAIN_3DENRADIO_DURATION", localize "STR_ENH_MAIN_3DENRADIO_THEME", localize "STR_ENH_MAIN_3DENRADIO_MOD", "PL"];//Used for sorting
-CTRL(IDC_3DENRADIO_FILTER) lnbSetData [[0, 4], "SortByValue"];//Needed for initListBoxSorting so it knows this column should be sorted by value
+CTRL(IDC_3DENRADIO_FILTER) lnbAddRow [localize "STR_ENH_MAIN_3DENRADIO_TITLE", localize "STR_ENH_MAIN_3DENRADIO_DURATION", localize "STR_ENH_MAIN_3DENRADIO_THEME", localize "STR_ENH_MAIN_3DENRADIO_MOD", "PL"];// Used for sorting
+CTRL(IDC_3DENRADIO_FILTER) lnbSetData [[0, 4], "SortByValue"];// Needed for initListBoxSorting so it knows this column should be sorted by value
 [CTRL(IDC_3DENRADIO_FILTER), CTRL(IDC_3DENRADIO_SONGLIST), [0, 1, 2, 3]] call BIS_fnc_initListNBoxSorting;
 
-//Get all music tracks
+// Get all music tracks
 if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic", []]) isEqualTo []) then
 {
     private _allMusic = configProperties [missionConfigFile >> "CfgMusic", "getNumber (_x >> 'duration') > 0", true];
@@ -50,10 +50,10 @@ if ((uiNamespace getVariable ["ENH_3DENRadio_cfgMusic", []]) isEqualTo []) then
     uiNamespace setVariable ["ENH_3DENRadio_cfgMusic", _allMusic];
 };
 
-//Update list
+// Update list
 call ENH_fnc_3DENRadio_searchList;
 
-//Focus Search EH
+// Focus Search EH
 _display displayAddEventHandler ["KeyDown",
 {
     params ["_display", "_key", "", "_ctrl"];
@@ -65,7 +65,7 @@ _display displayAddEventHandler ["KeyDown",
 
 [CTRL(IDC_3DENRADIO_SEARCH), CTRL(IDC_3DENRADIO_BUTTONSEARCH), ENH_fnc_3DENRadio_searchList] call ENH_fnc_initSearchControls;
 
-//Play selected song
+// Play selected song
 CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["LBDblClick",
 {
     params ["_ctrlLnB", "_selectedIndex"];
@@ -78,20 +78,20 @@ CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["LBDblClick",
     ] call ENH_fnc_3DENRadio_playNewSong;
 }];
 
-//Key down event
+// Key down event
 CTRL(IDC_3DENRADIO_SONGLIST) ctrlAddEventHandler ["KeyDown",
 {
     call ENH_fnc_3DENRadio_handlePlaylist;
     call ENH_fnc_3DENRadio_exportClassname;
 }];
 
-//Toggle radio
+// Toggle radio
 CTRL(IDC_3DENRADIO_TOGGLERADIO) ctrlAddEventHandler ["ButtonClick",
 {
     false call ENH_fnc_3DENRadio_toggleRadio;
 }];
 
-//Volume change
+// Volume change
 CTRL(IDC_3DENRADIO_VOLUME) ctrlAddEventHandler ["SliderPosChanged",
 {
     params ["_ctrlSlider", "_value"];
@@ -99,7 +99,7 @@ CTRL(IDC_3DENRADIO_VOLUME) ctrlAddEventHandler ["SliderPosChanged",
     profileNamespace setVariable ["ENH_3DENRadio_MusicVolume", _value];
 }];
 
-//Music position
+// Music position
 CTRL(IDC_3DENRADIO_POSITION) ctrlAddEventHandler ["SliderPosChanged",
 {
     params ["_ctrlSlider", "_value"];
