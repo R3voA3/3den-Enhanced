@@ -28,8 +28,8 @@ class ENH_TextureFinder
             y = QUOTE(0);
             w = QUOTE(0);
             h = QUOTE(0);
-            tileH = "4 / (32 * pixelH) * 32";
-            tileW = "8 / (32 * pixelW) * 32";
+            tileH = QUOTE(4 / (32 * pixelH) * 32);
+            tileW = QUOTE(8 / (32 * pixelW) * 32);
         };
         class Footer: ctrlStaticFooter
         {
