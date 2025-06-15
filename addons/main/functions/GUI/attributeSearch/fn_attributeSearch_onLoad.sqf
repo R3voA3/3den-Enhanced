@@ -35,7 +35,7 @@ uiNamespace setVariable ["ENH_AttributeSearch_Display", _display];
 
 all3DENEntities params ["_objects", "_groups", "_triggers", "_systems", "_waypoints", "_markers"];
 
-//Allow users to add own attributes
+// Allow users to add own attributes
 private _attributes = profileNamespace getVariable
 [
     "ENH_AttributeSearch",
@@ -63,7 +63,7 @@ private _attributes = profileNamespace getVariable
 ENH_AttributeSearch_AttributesCounter_Total = 0;
 ENH_AttributeSearch_AttributesCounter_Valid = 0;
 
-//Fill tree view
+// Fill tree view
 {
     ENH_AttributeSearch_TempIndex = 0;
     private _entity = _x;
@@ -119,16 +119,16 @@ ENH_AttributeSearch_AttributesCounter_Valid = 0;
 
 ENH_AttributeSearch_TempIndex = nil;
 
-//Remove empty nodes
+// Remove empty nodes
 for "_index" from ((count _attributes) - 1) to 0 step -1 do
 {
     if (_ctrlTV tvCount [_index] == 0) then {_ctrlTV tvDelete [_index]};
 };
 
-//Update counter
+// Update counter
 CTRL(IDC_ATTRIBUTESEARCH_COUNTER) ctrlSetText format ["%1/%2", ENH_AttributeSearch_AttributesCounter_Valid, ENH_AttributeSearch_AttributesCounter_Total];
 
-//Wait until button was initialised and set its text and state
+// Wait until button was initialised and set its text and state
 _display spawn
 {
     waitUntil {!isNull (_this displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES)};
@@ -140,12 +140,12 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
 {
     params ["_ctrlTV", "_selectionPath"];
 
-    //Disable Edit Attributes button
+    // Disable Edit Attributes button
     if (count _selectionPath < 3) exitWith
     {
         ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlEnable false;
 
-        //Move camera
+        // Move camera
         if (count _selectionPath == 2) exitWith
         {
             private _id = (_ctrlTV tvValue _selectionPath);
@@ -187,7 +187,7 @@ _ctrlTV ctrlAddEventHandler ["TreeSelChanged",
         };
     };
 
-    //Enable Edit Attributes button
+    // Enable Edit Attributes button
     if (count _selectionPath == 3) exitWith
     {
         ctrlParent _ctrlTV displayCtrl IDC_ATTRIBUTESEARCH_EDITATTRIBUTES ctrlEnable true;
@@ -200,7 +200,7 @@ ENH_fnc_attributeSearch_editAttributes =
 
     if (count _selectionPath != 3) exitWith {};
 
-    //Get ID of parent item
+    // Get ID of parent item
     _selectionPath resize 2;
     private _id = (_ctrlTV tvValue _selectionPath);
     set3DENSelected [_id];
@@ -211,13 +211,13 @@ ENH_fnc_attributeSearch_editAttributes =
         waitUntil {isNull (uiNamespace getVariable ["ENH_AttributeSearch_Display", displayNull])};
         do3DENAction "OpenAttributes";
 
-        //Wait until Edit Attributes display is present
+        // Wait until Edit Attributes display is present
         waitUntil {!isNull findDisplay 315};
 
-        //Wait until Edit Attributes display is destroyed
+        // Wait until Edit Attributes display is destroyed
         waitUntil {isNull findDisplay 315};
 
-        //Create attribute search display again
+        // Create attribute search display again
         findDisplay IDD_DISPLAY3DEN createDisplay "ENH_AttributeSearch";
     };
 };

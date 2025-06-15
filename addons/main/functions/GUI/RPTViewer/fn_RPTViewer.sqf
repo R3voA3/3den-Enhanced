@@ -52,6 +52,6 @@ _ctrlEdit ctrlSetText _text;
 CTRL(IDC_RPTVIEWER_TITLE) ctrlSetText format ["%1 / %2 kB / %3:%4:%5", _fileName, _fileSize, _h, _min, _s];
 CTRL(IDC_RPTVIEWER_LINES) ctrlSetText str LINES;
 
-//Adjust the height of the edit control properly
+// Adjust the height of the edit control properly
 _ctrlEdit ctrlSetPositionH (ctrlTextHeight _ctrlEdit max (ctrlPosition CTRL(IDC_RPTVIEWER_GROUP) # 3));
 _ctrlEdit ctrlCommit 0;

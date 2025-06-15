@@ -19,10 +19,10 @@
 #define DELAY 0.1
 #define HINT_REFRESH_INTERVAL 30
 
-//To prevent issues in multiplayer games started from multiplayer editor
+// To prevent issues in multiplayer games started from multiplayer editor
 if (!is3DENPreview) exitWith {};
 
-//Small delay to give scenario time to fully initialize
+// Small delay to give scenario time to fully initialize
 waitUntil {sleep 1; !isNull player};
 
 if GETVALUE("Arsenal") then
@@ -82,7 +82,7 @@ if GETVALUE("Zeus") then
     {
         private _zeusModule = (createGroup sideLogic) createUnit ["ModuleCurator_F", [0, 0, 0], [], 10, "NONE"];
         player assignCurator _zeusModule;
-        //Add Interface EHs (Workaround)
+        // Add Interface EHs (Workaround)
         _zeusModule addCuratorEditableObjects [entities "", true];
         _zeusModule addEventHandler ["CuratorFeedbackMessage", {call BIS_fnc_showCuratorFeedbackMessage;}];
         _zeusModule addEventHandler ["CuratorPinged", {call BIS_fnc_curatorPinged;}];
@@ -126,7 +126,7 @@ if GETVALUE("FPS") then
         waitUntil {!isNull MISSIONDISPLAY};
         disableSerialization;
 
-        //Make sure that controls are not created twice when restart button is pressed
+        // Make sure that controls are not created twice when restart button is pressed
         if (isNull (MISSIONDISPLAY displayCtrl IDC_DEBUGOPTIONS_FPS)) then
         {
             private _ctrlFPS = MISSIONDISPLAY ctrlCreate ["RscStructuredText", IDC_DEBUGOPTIONS_FPS];
@@ -269,7 +269,7 @@ if GETVALUE("KillCursor") then
 
 if GETVALUE("ShowGroups") then
 {
-    //Enable icons in 2D and 3D
+    // Enable icons in 2D and 3D
     setGroupIconsVisible [true, true];
     setGroupIconsSelectable true;
 
@@ -301,20 +301,20 @@ if GETVALUE("ShowGroups") then
         _group setGroupIconParams [_color, groupID _group, linearConversion [1, 15, count units _group, 0.5, 3, false], true];
     };
 
-    //Add the icon for all existing groups
+    // Add the icon for all existing groups
     allGroups apply
     {
         _x spawn ENH_debugOptions_showGroups_initGroup;
     };
 
-    //Add the icon whenever a group get's created
+    // Add the icon whenever a group get's created
     addMissionEventHandler ["GroupCreated",
     {
         params ["_group"];
         _group spawn ENH_debugOptions_showGroups_initGroup;
     }];
 
-    //Show group info when hovering over an icon (2D/3D)
+    // Show group info when hovering over an icon (2D/3D)
     addMissionEventHandler ["GroupIconOverEnter",
     {
         params
@@ -343,13 +343,13 @@ if GETVALUE("ShowGroups") then
         ];
     }];
 
-    //Remove the hint whenever the mouse is leaving the icon area (2D/3D)
+    // Remove the hint whenever the mouse is leaving the icon area (2D/3D)
     addMissionEventHandler ["GroupIconOverLeave",
     {
         hintSilent "";
     }];
 
-    //Toggle group's waypoints whenever clicking on an icon
+    // Toggle group's waypoints whenever clicking on an icon
     addMissionEventHandler ["GroupIconClick",
     {
         params
@@ -380,7 +380,7 @@ if GETVALUE("ShowGroups") then
                 _path append [waypointPosition _x select 0, waypointPosition _x select 1];
             } forEach waypoints _group;
 
-            //Create poly markers
+            // Create poly markers
             if (count _path < 4) then {continue};
             private _markerPoly = createMarkerLocal [format ["ENH_debugWaypoints_poly_%1", str leader _group], leader _group];
             _markerPoly setMarkerShapeLocal "polyline";
@@ -470,7 +470,7 @@ if GETVALUE("Teleport") then
         "true",
         {},
         {},
-        {player setPos screenToWorld [0.5, 0.6]}, //Center of action icon
+        {player setPos screenToWorld [0.5, 0.6]}, // Center of action icon
         {},
         [],
         0.2,
@@ -618,7 +618,7 @@ if (GETVALUE("DebugPath") > 0) then
                 scriptName "ENH_Attribute_DebugPath";
                 params ["_leader", "_cfgMarkerColors", "_is3DEnabled"];
                 private _arrow = objNull;
-                private _arrowColour = format ["#(rgb,8,8,3)color(%1,%2,%3,1)", random(1), random(1), random(1)];
+                private _arrowColor = format ["#(rgb,8,8,3)color(%1,%2,%3,1)", random(1), random(1), random(1)];
                 private _path = [];
                 private _marker = createMarkerLocal [format ["ENH_DebugPath_%1", str _leader], _leader];
                 _marker setMarkerShapeLocal "polyline";
@@ -633,7 +633,7 @@ if (GETVALUE("DebugPath") > 0) then
                         if _is3DEnabled then
                         {
                             _arrow = createVehicle ["Sign_Arrow_Direction_Blue_F", position _leader, [], 0, "CAN_COLLIDE"];
-                            _arrow setObjectTexture [0, _arrowColour];
+                            _arrow setObjectTexture [0, _arrowColor];
                             _arrow setDir (_posOld getDir _leader);
                         };
                         _path append [getPosWorld _leader # 0, getPosWorld _leader # 1];
@@ -743,7 +743,7 @@ if GETVALUE("DrawTriggers") then
                 };
             };
         }];
-    } forEach (8 allObjects 7); //All triggers
+    } forEach (8 allObjects 7); // All triggers
 
     findDisplay IDD_MAIN_MAP displayCtrl IDC_MAP ctrlAddEventHandler ["MouseMoving",
     {
@@ -783,7 +783,7 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         [{format ["DISTANCE COEFICIENT: x%1", DISTANCE_COEF]}],
         [{format ["OBJECT VIEW DISTANCE: %1 m", OBJ_VIEW_DISTANCE]}, [1, 0, 0, 1]],
         [{format ["RECOMMENDED OBJECT VIEW DISTANCE: %1 m", selectMax [DISTANCE_GROUPS_UNITS * DISTANCE_COEF, DISTANCE_VEHICLES * DISTANCE_COEF, DISTANCE_EMPTY_VEHICLES, DISTANCE_PROPS] * 0.8]}],
-        [{"VISIT ""https://community.bistudio.com/wiki/Arma_3:_Dynamic_Simulation"" FOR MORE INFORMATION."}]
+        [{"VISIT ""https:// community.bistudio.com/wiki/Arma_3:_Dynamic_Simulation"" FOR MORE INFORMATION."}]
     ];
 
     findDisplay IDD_MAIN_MAP displayCtrl IDC_MAP ctrlAddEventHandler ["Draw",
@@ -793,16 +793,16 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
         {
             if (_x isKindOf "CAManBase" && {canTriggerDynamicSimulation _x}) then
             {
-                _ctrlMap drawEllipse [_x, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];//Groups and Units
-                _ctrlMap drawEllipse [_x, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];//Vehicles
-                _ctrlMap drawEllipse [_x, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];//Empty Vehicles
-                _ctrlMap drawEllipse [_x, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];//Props
-                _ctrlMap drawEllipse [_x, OBJ_VIEW_DISTANCE, OBJ_VIEW_DISTANCE, 0, [1, 0, 0, 1], ""];//Props
+                _ctrlMap drawEllipse [_x, DISTANCE_GROUPS_UNITS, DISTANCE_GROUPS_UNITS, 0, [1, 1, 0, 1], ""];// Groups and Units
+                _ctrlMap drawEllipse [_x, DISTANCE_VEHICLES, DISTANCE_VEHICLES, 0, [0, 1, 0, 1], ""];// Vehicles
+                _ctrlMap drawEllipse [_x, DISTANCE_EMPTY_VEHICLES, DISTANCE_EMPTY_VEHICLES, 0, [0, 1, 1, 1], ""];// Empty Vehicles
+                _ctrlMap drawEllipse [_x, DISTANCE_PROPS, DISTANCE_PROPS, 0, [1, 0, 1, 1], ""];// Props
+                _ctrlMap drawEllipse [_x, OBJ_VIEW_DISTANCE, OBJ_VIEW_DISTANCE, 0, [1, 0, 0, 1], ""];// Props
             };
 
             if (dynamicSimulationEnabled _x || {dynamicSimulationEnabled group _x}) then
             {
-                //Crew members inherit simulation from vehicle
+                // Crew members inherit simulation from vehicle
                 if !(isNull objectParent _x) then {continue};
 
                 if !(_x getVariable ["ENH_DynSim_Registered", false]) then
@@ -842,7 +842,7 @@ if (GETVALUE("DynSimDebug") && dynamicSimulationSystemEnabled) then
             };
         } forEach vehicles + allUnits;
 
-        //Update stats markers
+        // Update stats markers
         private _startY = worldSize;
 
         {

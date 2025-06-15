@@ -17,7 +17,7 @@ exclude = [
 
 [version]
 major = 8
-minor = 4
+minor = 5
 patch = 0
 git_hash = 0
 
@@ -54,6 +54,11 @@ options.banned = [
 [lints.sqf.var_all_caps]
 enabled = true
 
+[lints.stringtables.usage]
+options.ignore = [
+    "STR_ENH_MAIN_DAMAGE_*",
+]
+
 ##########################################################################################
 ############################## LAUNCH DEFAULT ############################################
 ##########################################################################################
@@ -89,6 +94,16 @@ workshop = [
     # ACE3
     "463939057"
 ]
+
+# dlc = [
+#     "Contact",
+#     "Global Mobilization",
+#     "S.O.G. Prairie Fire",
+#     "CSLA Iron Curtain",
+#     "Western Sahara",
+#     "Spearhead 1944",
+#     "Reaction Forces"
+# ]
 
 ##########################################################################################
 ############################## LAUNCH SPEARHEAD 1944 #####################################

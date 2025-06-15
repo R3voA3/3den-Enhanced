@@ -4,7 +4,7 @@ class ENH_AI
     collapsed = 1;
     class Attributes
     {
-        //----------------SKILL
+        // Skill
         class ENH_AI_Skill_Subcategory
         {
             description = "$STR_A3_RSCDISPLAYGAMEOPTIONS_TEXTAISKILL";
@@ -77,7 +77,7 @@ class ENH_AI
             property = "ENH_spotTime";
             expression = "if (_value != 0.5) then {[_this, ['spotTime', _value]] remoteExec ['setSkill', _this]}";
         };
-        //----------------Not really skill, but still related to behaviour of AI
+        // Not really skill, but still related to behaviour of AI
         class ENH_AllowFleeing: ENH_AimingShake
         {
             displayName = "$STR_ENH_MAIN_ALLOWFLEEING_DISPLAYNAME";
@@ -85,7 +85,7 @@ class ENH_AI
             property = "ENH_allowFleeing";
             expression = "if (_value != 0.5) then {[_this, _value] remoteExec ['allowFleeing', _this]}";
         };
-        //----------------AI Features
+        // AI Features
         class ENH_AI_Features_Subcategory: ENH_AI_Skill_Subcategory
         {
             description = "$STR_ENH_MAIN_DISABLEAI_SUBCATEGORY";

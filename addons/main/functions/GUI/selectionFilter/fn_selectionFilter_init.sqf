@@ -17,7 +17,7 @@
 
 params ["_display"];
 
-//Store selection for later use
+// Store selection for later use
 ENH_selectionFilter_currentSelection = [[],[],[],[],[],[],[],[]];
 
 ENH_selectionFilter_currentSelection set [0, get3DENSelected "Object" apply {get3DENEntityID _x}];
@@ -29,7 +29,7 @@ ENH_selectionFilter_currentSelection set [5, get3DENSelected "Marker" apply {get
 ENH_selectionFilter_currentSelection set [6, get3DENSelected "Comment" apply {get3DENEntityID _x}];
 ENH_selectionFilter_currentSelection set [7, get3DENSelected "Layer" apply {get3DENEntityID _x}];
 
-//Disable checkboxes of types that are not in the selection
+// Disable checkboxes of types that are not in the selection
 private _fnc_disableCheckbox =
 {
     params ["_entityType", "_idc"];
@@ -39,7 +39,7 @@ private _fnc_disableCheckbox =
     };
 };
 
-//Only enable checkboxes of types that are in selection
+// Only enable checkboxes of types that are in selection
 ["Object", IDC_SELECTIONMANAGER_FILTER_OBJECTS] call _fnc_disableCheckbox;
 ["Group", IDC_SELECTIONMANAGER_FILTER_GROUPS] call _fnc_disableCheckbox;
 ["Trigger", IDC_SELECTIONMANAGER_FILTER_TRIGGERS] call _fnc_disableCheckbox;
@@ -88,11 +88,11 @@ ENH_fnc_selectionFilter_editAttributes =
 {
     params ["_ctrlButton"];
 
-    //Close display first, otherwise Arma 3 will crash
+    // Close display first, otherwise Arma 3 will crash
     (ctrlParent _ctrlButton) closeDisplay 0;
     waitUntil {isNull ctrlParent _ctrlButton};
 
-    //Open attributes
+    // Open attributes
     do3DENAction "OpenAttributes";
 };
 
@@ -101,6 +101,6 @@ ENH_fnc_selectionFilter_cancel =
     params ["_ctrlButton"];
     (ctrlParent _ctrlButton) closeDisplay 0;
 
-    //Restore original selection
+    // Restore original selection
     set3DENSelected flatten ENH_selectionFilter_currentSelection;
 };

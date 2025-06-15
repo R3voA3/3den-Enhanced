@@ -11,8 +11,8 @@ let src = releases.join(prefix + "-latest.zip");
 let version = HEMTT.project().version();
 let dst = releases.join("v" + version + ".zip");
 
-// Sanity check
-if src.is_file() // support --no-archive
+// Support --no-archive
+if src.is_file()
 {
     print("Moving zip to " + dst);
     if !src.move(dst)

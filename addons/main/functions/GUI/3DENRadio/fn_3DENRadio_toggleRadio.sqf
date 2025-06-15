@@ -19,7 +19,7 @@ params [["_onLoad", true]];
 
 private _playlist = profileNamespace getVariable ["ENH_3DENRadio_Playlist", []];
 
-//Exit if playlist is empty
+// Exit if playlist is empty
 if (_playlist isEqualTo []) exitWith {};
 
 private _fnc_enableRadio =
@@ -32,10 +32,10 @@ private _fnc_enableRadio =
 
     profileNamespace setVariable ["ENH_3DENRadio_Enabled", true];
 
-    //Only change controls if GUI is visible
+    // Only change controls if GUI is visible
     if !(isNull findDisplay IDD_3DENRADIO) then
     {
-        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\pause_ca.paa";
+        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\x\enh\addons\main\data\pause_ca.paa";
     };
 };
 
@@ -47,21 +47,21 @@ private _fnc_disableRadio =
     profileNamespace setVariable ["ENH_3DENRadio_Enabled", false];
     uiNamespace setVariable ["ENH_3DENRadio_CurrentSong", ""];
 
-    //Only change controls if GUI is visible
+    // Only change controls if GUI is visible
     if !(isNull findDisplay IDD_3DENRADIO) then
     {
         (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_CURRENTSONG) ctrlSetText "";
-        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "x\enh\addons\main\data\play_ca.paa";
+        (findDisplay IDD_3DENRADIO displayCtrl IDC_3DENRADIO_TOGGLERADIO) ctrlSetText "\x\enh\addons\main\data\play_ca.paa";
     };
 };
 
 private _radioState = profileNamespace getVariable ["ENH_3DENRadio_Enabled", false];
 
-//Check if radio should run but was not yet initialised (onTerrainNew, onMissionNew, onMissionPreviewEnd)
+// Check if radio should run but was not yet initialised (onTerrainNew, onMissionNew, onMissionPreviewEnd)
 if (_onLoad && _radioState) exitWith {call _fnc_enableRadio};
 
-//Turn it off by pressing the button
+// Turn it off by pressing the button
 if (!_onLoad && _radioState) exitWith {call _fnc_disableRadio};
 
-//Turn it on by pressing the button
+// Turn it on by pressing the button
 if (!_onLoad && !_radioState) exitWith {call _fnc_enableRadio};

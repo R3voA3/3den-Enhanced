@@ -25,7 +25,7 @@ if (isNil "_object") exitWith
 
 params [["_mode", true]];
 
-//From BIS_fnc_exportLoadout START
+// From BIS_fnc_exportLoadout START
 private _fnc_addArray =
 {
     params ["_name", "_array"];
@@ -62,17 +62,17 @@ private _export = "";
 ["linkedItems", _gear + _assignedItems - _weapons + _primWeaponItems + _secWeaponItems + _handgunItems] call _fnc_addArray;
 
 if _mode then
-{//Respawn Loadout for config
+{// Respawn Loadout for config
     _export = "class " + _class + endl + "{" + endl + INDENT + _uniformClass + endl + INDENT + _backpack + endl + _export + "};";
 }
 else
-{//CfgRespawnLoadout
+{// CfgRespawnLoadout
     private _displayName = format ["displayName = ""%1"";", getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
     private _icon = "icon = ""\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"";";
     private _role = "role = ""Default"";";
     private _show = "show = ""true"";";
     _export = "class " + _class + endl + "{" + endl + INDENT + _displayName + endl + INDENT + _icon + endl + INDENT + _role + endl + INDENT + _show + endl + INDENT + _uniformClass + endl + INDENT + _backpack + endl + _export;
-    _export = _export + "};" + endl + "//Biki: https://community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
+    _export = _export + "};" + endl + "// Biki: https:// community.bistudio.com/wiki/Arma_3_Respawn#Loadouts_and_Roles";
 };
 
 ["ENH_DataCopied"] call BIS_fnc_3DENNotification;

@@ -102,7 +102,7 @@ class ENH_DynamicSkill: Title
             idc = IDC_ATTRIBUTE_CONTROL_08;
             y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
         };
-        //OPFOR
+        // OPFOR
         class OPFORDescriptionDeco: BLUFORDescriptionDeco
         {
             y = QUOTE(6 * CTRL_DEFAULT_H + 35 * pixelH);
@@ -172,7 +172,7 @@ class ENH_DynamicSkill: Title
             idc = IDC_ATTRIBUTE_CONTROL_16;
             y = QUOTE(10 * CTRL_DEFAULT_H + 55 * pixelH);
         };
-        //Independent
+        // Independent
         class IndependentDescriptionDeco: BLUFORDescriptionDeco
         {
             y = QUOTE(11 * CTRL_DEFAULT_H + 60 * pixelH);

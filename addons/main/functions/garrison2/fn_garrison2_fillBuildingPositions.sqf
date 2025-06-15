@@ -124,7 +124,7 @@ private _movedEntities = [];
         };
     } forEach (get3DENSelected "Object" - [_building]);
     // TODO: enable if it ever gets fixed 2025-05-03 R3vo
-    // Grouping is broken (https://feedback.bistudio.com/T191578)
+    // Grouping is broken (https:// feedback.bistudio.com/T191578)
     // if (_groupTogether) then
     // {
     //     add3DENConnection ["Group", _movedEntities, _movedEntities#0];

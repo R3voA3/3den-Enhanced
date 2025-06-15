@@ -805,8 +805,8 @@
             <Chinese>標題</Chinese>
             <Chinesesimp>标题</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_COLOUR">
-            <English>Colour</English>
+        <Key ID="STR_ENH_MAIN_BRIEFINGEDITOR_COLOR">
+            <English>Color</English>
             <Czech>Barva</Czech>
             <French>Couleur</French>
             <Spanish>Color</Spanish>
@@ -5368,17 +5368,6 @@
             <Chinese>導出到ACE武器庫</Chinese>
             <Chinesesimp>导出到ACE武器库</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_ESE_HIDETEMPLATES">
-            <English>Hide Templates</English>
-            <French>Ne pas afficher les modèles</French>
-            <Spanish>Ocultar plantillas</Spanish>
-            <Italian>Nascondi Modelli</Italian>
-            <Polish>Ukryj szablony</Polish>
-            <Russian>Скрыть шаблоны</Russian>
-            <German>Vorlagen versteck.</German>
-            <Chinese>隱藏模板</Chinese>
-            <Chinesesimp>隐藏模板</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ESE_IMPORTFROMCLIPBOARD">
             <English>Import from Clipboard</English>
             <French>Importer depuis le Presse-papiers</French>
@@ -5388,17 +5377,6 @@
             <German>Aus der Zwischenablage importieren</German>
             <Chinese>从剪贴板导入</Chinese>
             <Chinesesimp>從剪貼簿匯入</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_ISVIRTUAL">
-            <English>Is Virtual?</English>
-            <French>Virtuel ?</French>
-            <Spanish>¿Es virtual?</Spanish>
-            <Italian>E' virtuale?</Italian>
-            <Polish>Jest wirtualny?</Polish>
-            <Russian>Это виртуальный арсенал?</Russian>
-            <German>Virtuell?</German>
-            <Chinese>是否為虛擬軍火庫？</Chinese>
-            <Chinesesimp>是否为虚拟军火库？</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ESE_ITEMSININVENTORY">
             <English>Items in Inventory</English>
@@ -5411,28 +5389,6 @@
             <Chinese>庫存物品</Chinese>
             <Chinesesimp>库存物品</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_ESE_REMOVESELECTED_TOOLTIP">
-            <English>Clear Inventory</English>
-            <French>Vider l'inventaire</French>
-            <Spanish>Vaciar inventario</Spanish>
-            <Italian>Svuota Inventario</Italian>
-            <Polish>Wyczyść ekwipunek</Polish>
-            <Russian>Очистить инвентарь</Russian>
-            <German>Inventar leeren</German>
-            <Chinese>清除庫存</Chinese>
-            <Chinesesimp>清除库存</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_RESET_TOOLTIP">
-            <English>Reset to default items defined in object's config.</English>
-            <French>Réinitialiser aux items par défaut définis dans la configuration de l'objet.</French>
-            <Spanish>Restablezca los elementos predeterminados definidos en la configuración del objeto.</Spanish>
-            <Italian>Ripristina gli elementi predefiniti della configurazione dell'oggetto.</Italian>
-            <Polish>Resetuje ekwipunek obiektu do domyślnego, określonego w konfiguracji tego obiektu.</Polish>
-            <Russian>Восстановить элементы по умолчанию, определенные в конфигурации объекта.</Russian>
-            <German>Auf Standardgegestände, welche in der Objektkonfig definiert sind, zurücksetzten</German>
-            <Chinese>將對象配置中定義的項重置為默認項。</Chinese>
-            <Chinesesimp>将对象配置中定义的项重置为默认项。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ESE_SHOTGUNS">
             <English>Shotguns</English>
             <French>Fusil à pompe</French>
@@ -5443,17 +5399,6 @@
             <German>Schrotflinten</German>
             <Chinese>霰彈槍</Chinese>
             <Chinesesimp>霰弹枪</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESE_SHOWTEMPLATES">
-            <English>Show Templates</English>
-            <French>Afficher les modèles</French>
-            <Spanish>Mostrar plantillas</Spanish>
-            <Italian>Mostra Modello</Italian>
-            <Polish>Pokaż szablony</Polish>
-            <Russian>Показать шаблоны</Russian>
-            <German>Vorlagen anz.</German>
-            <Chinese>顯示模板</Chinese>
-            <Chinesesimp>显示模板</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ESE_SORTBYCLASS">
             <English>Sort by Class Name</English>
@@ -5528,30 +5473,6 @@
             <Chinese>逆時針</Chinese>
             <Chinesesimp>逆时针</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_ESTABLISHINGSHOT_CENTERPOS_DISPLAYNAME">
-            <English>Center Position</English>
-            <Czech>Středová pozice</Czech>
-            <French>Centre</French>
-            <Spanish>Posición centrada</Spanish>
-            <Italian>Posizione centrale</Italian>
-            <Polish>Środek pozycji</Polish>
-            <Russian>Центральная позиция</Russian>
-            <German>Anvisierte Position</German>
-            <Chinese>中心位置</Chinese>
-            <Chinesesimp>中心位置</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESTABLISHINGSHOT_CENTERPOS_TOOLTIP">
-            <English>The center position of the virtual UAV's orbit.</English>
-            <Czech>Střed orbity po které bude virtuální UAV obíhat.</Czech>
-            <French>Définit le centre de l'orbite de l'UAV (Drone) virtuel</French>
-            <Spanish>La posición centrada de la orbita del UAV (Drone) virtual</Spanish>
-            <Italian>La posizione centrale dell'orbita virtuale dell'UAV.</Italian>
-            <Polish>Środek pozycji, nad którą będzie krążyć wirtualny dron.</Polish>
-            <Russian>Центральное положение виртуальной орбиты БПЛА.</Russian>
-            <German>Das Zentrum um das das virtuelle UAV kreist.</German>
-            <Chinese>虛擬無人機軌道的中心位置。</Chinese>
-            <Chinesesimp>虚拟无人机轨道的中心位置。</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_ESTABLISHINGSHOT_CLOCKWISE">
             <English>Clockwise</English>
             <Czech>Po směru hodinových ručiček</Czech>
@@ -5599,18 +5520,6 @@
             <German>Angezeigter Text</German>
             <Chinese>顯示文本</Chinese>
             <Chinesesimp>显示文本</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_ESTABLISHINGSHOT_RADIUS_DISPLAYNAME">
-            <English>Radius of the Orbit</English>
-            <Czech>Poloměr orbity</Czech>
-            <French>Rayon de l'orbite</French>
-            <Spanish>Radio de la orbita</Spanish>
-            <Italian>Raggio dell'orbita</Italian>
-            <Polish>Promień orbity</Polish>
-            <Russian>Радиус орбиты</Russian>
-            <German>Radius der Umlaufbahn</German>
-            <Chinese>軌道半徑</Chinese>
-            <Chinesesimp>轨道半径</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_ESTABLISHINGSHOT_VIEWINGANGLE_DISPLAYNAME">
             <English>Viewing Angle</English>
@@ -5730,18 +5639,6 @@
             <Chinese>調試工具</Chinese>
             <Chinesesimp>调试工具</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_FOLDER_GUI">
-            <English>GUI Tools</English>
-            <Czech>Nástroje pro rozhraní GUI</Czech>
-            <French>Outils d'interface graphique</French>
-            <Spanish>Herramientas de Interfaz</Spanish>
-            <Italian>Strumenti per l'interfaccia</Italian>
-            <Polish>Narzędzia interfejsu</Polish>
-            <Russian>Инструменты с графическим интерфейсом</Russian>
-            <German>GUI-Werkzeuge</German>
-            <Chinese>GUI(圖形用戶界面)工具</Chinese>
-            <Chinesesimp>GUI(图形用户界面)工具</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_FOLDER_LOADOUTTOOLS">
             <English>Loadout Tools</English>
             <Czech>Nástroje pro výstroj</Czech>
@@ -5786,16 +5683,6 @@
             <German>Platzierungswerkzeuge</German>
             <Chinese>佈局工具</Chinese>
             <Chinesesimp>布局工具</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_FOLDER_PYLONS">
-            <English>Pylon Tools</English>
-            <French>Outils pour pylône</French>
-            <Spanish>Herramientas de pilón</Spanish>
-            <Italian>Strumenti Piloni</Italian>
-            <Polish>Narzędzie pylonów</Polish>
-            <German>Pylonen-Werkzeuge</German>
-            <Chinese>掛架工具</Chinese>
-            <Chinesesimp>挂架工具</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_FOLDER_SPACE">
             <English>Space</English>
@@ -5925,17 +5812,6 @@
             <German>Erweiterungen</German>
             <Chinese>附加组件</Chinese>
             <Chinesesimp>附加组件</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_BIKI">
-            <English>OPEN ON BIKI</English>
-            <French>Ouvrir sur le BIKI</French>
-            <Spanish>Abrir BIKI</Spanish>
-            <Italian>Apri su BIKI</Italian>
-            <Polish>Otwórz na BIKI</Polish>
-            <Russian>Открыть BIKI</Russian>
-            <German>IM BIKI ÖFFEN</German>
-            <Chinese>打開 BIKI</Chinese>
-            <Chinesesimp>在BIKI 打开</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_CAMPAIGNCONFIG">
             <English>Campaign Config</English>
@@ -6149,17 +6025,6 @@
             <German>Rekompiliert derzeitig ausgewählte Funktion.</German>
             <Chinese>重新編譯選定的函數。</Chinese>
             <Chinesesimp>重新编译当前选择的函数。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_SCRIPTS">
-            <English>Scripts</English>
-            <French>Scripts</French>
-            <Spanish>Scripts</Spanish>
-            <Italian>Scripts</Italian>
-            <Polish>Skrypty</Polish>
-            <Russian>Скрипты</Russian>
-            <German>Skripte</German>
-            <Chinese>腳本</Chinese>
-            <Chinesesimp>脚本</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONS_FILLTEXTURELB_TOOLTIP">
             <English>Copy path with 'CTRL + C'.</English>
@@ -6540,51 +6405,6 @@
             <Chinese>姿勢</Chinese>
             <Chinesesimp>姿势</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_STANCE_AUTO">
-            <English>Auto</English>
-            <French>Automatique</French>
-            <Spanish>Auto</Spanish>
-            <Italian>Auto</Italian>
-            <Polish>Auto</Polish>
-            <Russian>Авто</Russian>
-            <German>Auto</German>
-            <Chinese>自動</Chinese>
-            <Chinesesimp>自动</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_STANCE_CROUCH">
-            <English>Crouch</English>
-            <French>Accroupi</French>
-            <Spanish>Agachado</Spanish>
-            <Italian>Accovaccia</Italian>
-            <Polish>Kucaj</Polish>
-            <Russian>Приседать</Russian>
-            <German>Hocke</German>
-            <Chinese>蹲伏</Chinese>
-            <Chinesesimp>蹲伏</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_STANCE_STAND">
-            <English>Stand</English>
-            <French>Debout</French>
-            <Spanish>De pie</Spanish>
-            <Italian>In piedi</Italian>
-            <Polish>Stój</Polish>
-            <Russian>Стоять</Russian>
-            <German>Stehen</German>
-            <Chinese>站立</Chinese>
-            <Chinesesimp>站立</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_UPDATESELECTION">
-            <English>Update Selection</English>
-            <Czech>Výběr aktualizací</Czech>
-            <French>Sélection de la mise à jour</French>
-            <Spanish>Actualizar la selección</Spanish>
-            <Italian>Aggiorna la selezione</Italian>
-            <Polish>Zaktualizuj wybór</Polish>
-            <Russian>Выбор обновления</Russian>
-            <German>Auswahl aktualisieren</German>
-            <Chinese>更新選擇</Chinese>
-            <Chinesesimp>更新选择</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_WHITELIST">
             <English>Whitelist</English>
             <Czech>Bílá listina</Czech>
@@ -6632,8 +6452,8 @@
             <Chinese>其他Eden編輯器擴展</Chinese>
             <Chinesesimp>其他Eden编辑器扩展</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_GROUPMARKER_COLOUR">
-            <English>Colour</English>
+        <Key ID="STR_ENH_MAIN_GROUPMARKER_COLOR">
+            <English>Color</English>
             <Czech>Barva</Czech>
             <French>Couleur</French>
             <Spanish>Color</Spanish>
@@ -6972,19 +6792,6 @@
             <Chinesesimp>窗口显示</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_INPUTLIST_ADD_TOOLTIP">
-            <English>Removes selected entry from the list.</English>
-            <Czech>Odebere vybranou položku ze seznamu.</Czech>
-            <French>Supprime l'entrée sélectionnée de la liste.</French>
-            <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
-            <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
-            <Polish>Usuwa wybraną pozycję z listy.</Polish>
-            <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
-            <Russian>Удаляет выбранную запись из списка.</Russian>
-            <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
-            <Chinese>從清單中移除選取的項目。</Chinese>
-            <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
             <English>Multiple entries can be added at once by separating them with a space, a comma or a semicolon.</English>
             <Czech>Více záznamů najednou lze přidat tak, že je oddělíte mezerou, čárkou nebo středníkem.</Czech>
             <French>Il est possible d'ajouter plusieurs entrées à la fois en les séparant par un espace, une virgule ou un point-virgule.</French>
@@ -6996,6 +6803,19 @@
             <German>Mehrere Einträge können auf einmal hinzugefügt werden, indem sie durch ein Leerzeichen, ein Komma oder ein Semikolon getrennt werden.</German>
             <Chinese>可以用空格、逗號或分號分隔，一次加入多個項目。</Chinese>
             <Chinesesimp>用空格、逗号或分号分隔可同时添加多个条目。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_INPUTLIST_REMOVE_TOOLTIP">
+            <English>Removes selected entry from the list.</English>
+            <Czech>Odebere vybranou položku ze seznamu.</Czech>
+            <French>Supprime l'entrée sélectionnée de la liste.</French>
+            <Spanish>Elimina la entrada seleccionada de la lista.</Spanish>
+            <Italian>Rimuove la voce selezionata dall'elenco.</Italian>
+            <Polish>Usuwa wybraną pozycję z listy.</Polish>
+            <Portuguese>Remove a entrada selecionada da lista.</Portuguese>
+            <Russian>Удаляет выбранную запись из списка.</Russian>
+            <German>Entfernt den ausgewählten Eintrag aus der Liste.</German>
+            <Chinese>從清單中移除選取的項目。</Chinese>
+            <Chinesesimp>从列表中删除所选条目。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_INTERFACE">
             <English>Interface</English>
@@ -7451,7 +7271,7 @@
             <Chinese>選擇第二點</Chinese>
             <Chinesesimp>选择第二点</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES">
+        <!--         <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES">
             <English>Menu Strip Entries</English>
             <French>Entrées dans la bande de menu</French>
             <Spanish>Entradas de la tira de menú</Spanish>
@@ -7461,8 +7281,8 @@
             <German>Menüleisten-Einträge</German>
             <Chinese>菜單欄條目</Chinese>
             <Chinesesimp>菜单栏条目</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES_TOOLTIP">
+        </Key> -->
+        <!-- <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES_TOOLTIP">
             <English>&lt;t align='center'&gt;Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.&lt;br/&gt;Changes require a restart of Eden Editor to take effect!&lt;/t&gt;</English>
             <French>&lt;t align='center'&gt;Décochez les entrées pour les masquer. Le fait de décocher les dossiers entraîne la suppression de toutes les entrées qui s'y trouvent.&lt;br/&gt;Les modifications nécessitent un redémarrage d'Eden Editor pour être prises en compte !&lt;/t&gt;</French>
             <Spanish>&lt;t align='center'&gt;Desmarque las entradas para ocultarlas. Al desmarcar las carpetas, se eliminarán todas las entradas de la carpeta. &lt;br/&gt; ¡Los cambios requieren reiniciar Eden Editor para que surtan efecto!&lt;/t&gt;</Spanish>
@@ -7472,7 +7292,7 @@
             <German>&lt;t align='center'&gt;Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.&lt;br/&gt;Damit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!&lt;/t&gt;</German>
             <Chinese>&lt;t align='center'&gt;取消選中條目以隱藏它們。取消選中文件夾將導致該文件夾中的所有條目被刪除。&lt;br/&gt;更改需要重新啟動Eden編輯器才能生效！&lt;/t&gt;</Chinese>
             <Chinesesimp>&lt;t align='center'&gt;取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。&lt;br/&gt;更改需要重新启动Eden编辑器才能生效！&lt;/t&gt;</Chinesesimp>
-        </Key>
+        </Key> -->
         <Key ID="STR_ENH_MAIN_MINIMAPSCALEMULTIPLIER">
             <English>Minimap Scale Multiplier</English>
             <French>Activer la Minimap</French>
@@ -8185,6 +8005,14 @@
             <English>Random, except prone</English>
             <German>Zufällig, außer liegen</German>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_DISPLAYNAME">
+            <English>Hold Action Icons</English>
+            <German>„Hold Action“ Symbole</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
+            <English>Define additional icons here that can be used for the hold action attribute.</English>
+            <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
             <Czech>Hlasitost rádia</Czech>
@@ -8311,18 +8139,6 @@
             <Chinese>平民重生票</Chinese>
             <Chinesesimp>平民重生票</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_DISPLAYNAME">
-            <English>Respawn Tickets</English>
-            <Czech>Počet respawn tiketů</Czech>
-            <French>Tickets de réapparition</French>
-            <Spanish>Tickets de respawn</Spanish>
-            <Italian>Biglietti Respawn</Italian>
-            <Polish>Punkty odrodzenia</Polish>
-            <Russian>Очки возрождения</Russian>
-            <German>Respawntickets</German>
-            <Chinese>重生票</Chinese>
-            <Chinesesimp>重生票</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_INDEPENDENT_DISPLAYNAME">
             <English>Respawn Tickets Independent</English>
             <Czech>Počet respawn tiketů Independent</Czech>
@@ -8406,18 +8222,6 @@
             <Chinese>屬性</Chinese>
             <Chinesesimp>属性</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_SAM_CREATETEMPLATE">
-            <English>Create Template from Scenario</English>
-            <Czech>Vytvořit šablonu ze scénáře</Czech>
-            <French>Créer un modèle à partir d'un scénario</French>
-            <Spanish>Crear plantilla desde escenario</Spanish>
-            <Italian>Crea Modello da scenario</Italian>
-            <Polish>Stwórz szablon ze scenariusza</Polish>
-            <Russian>Создать шаблон из сценария</Russian>
-            <German>Vorlage aus Szenario erstellen</German>
-            <Chinese>從場景創建模板</Chinese>
-            <Chinesesimp>从场景创建模板</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_SAM_DELETETEMPLATE">
             <English>Delete Template</English>
             <Czech>Smazat šablonu</Czech>
@@ -8429,18 +8233,6 @@
             <German>Vorlage löschen</German>
             <Chinese>刪除模板</Chinese>
             <Chinesesimp>删除模板</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_SAM_EXPORT">
-            <English>Export</English>
-            <Czech>Export</Czech>
-            <French>Exporter</French>
-            <Spanish>Exportar</Spanish>
-            <Italian>Esporta</Italian>
-            <Polish>Eksportuj</Polish>
-            <Russian>Экспорт</Russian>
-            <German>Exportieren</German>
-            <Chinese>導出</Chinese>
-            <Chinesesimp>导出</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_SAM_TEMPLATES">
             <English>Templates</English>
@@ -8476,18 +8268,6 @@
             <German>Stellt das ursprüngliche Loadout beim Respawn wieder her. Die Ausrüstung kann durch Ändern der Variable ENH_SavedLoadout im Namensraum des Spielers geändert werden.</German>
             <Chinese>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinese>
             <Chinesesimp>重生时恢复原来的装载。可通过修改玩家命名空间中的 ENH_SavedLoadout 变量来更改装载。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_SCRIPTINGBEGINNERS">
-            <English>Scripting for Beginners</English>
-            <Czech>Skriptování pro začátečníky</Czech>
-            <French>Débuter avec les Scripts</French>
-            <Spanish>Scripting para novatos</Spanish>
-            <Italian>Scripting per Principianti</Italian>
-            <Polish>Skryptowanie dla początkujących</Polish>
-            <Russian>Написание сценариев для начинающих</Russian>
-            <German>Skripten für Anfänger</German>
-            <Chinese>初學者的腳本</Chinese>
-            <Chinesesimp>初学者的脚本</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_SEARCHATTRIBUTES_HEADER">
             <English>Search Attributes</English>
@@ -9109,17 +8889,6 @@
             <Chinese>應用車輛自定義</Chinese>
             <Chinesesimp>应用车辆自定义</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_ATTRIBUTEMANAGER_NOTIFICATION">
-            <English>Attribute %1 was set to %2.</English>
-            <French>L'attribut %1 a été défini à %2.</French>
-            <Spanish>El atributo %1 se estableció en %2</Spanish>
-            <Italian>L'attributo %1 era impostato a %2.</Italian>
-            <Polish>Atrybut %1 został ustawiony na %2.</Polish>
-            <Russian>Атрибут %1 был установлен на %2.</Russian>
-            <German>Attribut %1 wurde auf %2 gesetzt.</German>
-            <Chinese>屬性 %1 已設置為 %2.</Chinese>
-            <Chinesesimp>属性 %1 已设置为 %2.</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_BATCHNAMING">
             <English>Name Objects</English>
             <Czech>Názvy objektů</Czech>
@@ -9413,16 +9182,6 @@
             <German>Jukebox</German>
             <Chinese>點唱機</Chinese>
             <Chinesesimp>点歌机</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_TOOLS_LIMIT_ARSENAL">
-            <English>Virtual Arsenal Manager</English>
-            <French>Gestionnaire d'Arsenal virtuel</French>
-            <Spanish>Gerente de Arsenal Virtual</Spanish>
-            <Italian>Manager dell'Arsenale virtuale</Italian>
-            <Polish>Wirtualny menedżer Arsenalu</Polish>
-            <German>Arsenal Manager</German>
-            <Chinese>虚拟兵工厂经理</Chinese>
-            <Chinesesimp>虚拟兵工厂经理</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_TOOLS_MOONPHASES">
             <English>Moon Phases</English>
@@ -9906,6 +9665,18 @@
             <Chinese>設定該單位能否治愈其他單位</Chinese>
             <Chinesesimp>设定该单位能否治愈其他单位</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_UNITTRAITS_SUBCATEGORY">
+            <English>These settings are have no effect if ACE is loaded, except for the UAV Hacker trait.</English>
+            <Czech>Tato nastavení nemají žádný vliv, pokud je načten ACE, s výjimkou vlastnosti UAV Hacker.</Czech>
+            <French>Ces paramètres n'ont aucun effet si ACE est chargé, à l'exception du trait UAV Hacker.</French>
+            <Spanish>Estos ajustes no tienen efecto si ACE está cargado, excepto para el rasgo UAV Hacker.</Spanish>
+            <Italian>Queste impostazioni non hanno effetto se ACE è caricato, tranne che per il tratto UAV Hacker.</Italian>
+            <Polish>Ustawienia te nie mają żadnego wpływu, jeśli ACE jest załadowane, z wyjątkiem cechy Haker UAV.</Polish>
+            <Russian>Эти настройки не имеют никакого эффекта, если загружен ACE, за исключением признака UAV Hacker.</Russian>
+            <German>Diese Einstellungen haben keine Auswirkungen, wenn ACE geladen ist, mit Ausnahme der Eigenschaft UAV Hacker.</German>
+            <Chinese>如果已載入 ACE，除了 UAV Hacker 特質之外，這些設定都不會有任何影響。</Chinese>
+            <Chinesesimp>如果已加载 ACE，这些设置将不起作用，但 UAV 黑客特质除外。</Chinesesimp>
+        </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_UAVHACKER_DISPLAYNAME">
             <English>Is UAV Hacker?</English>
             <Czech>Je UAV hackerem?</Czech>
@@ -9952,17 +9723,6 @@
             <Chinese>確認</Chinese>
             <Chinesesimp>确认</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_VARIABLEVIEWER_DELETE">
-            <English>Delete</English>
-            <French>Supprimer</French>
-            <Spanish>Borrar</Spanish>
-            <Italian>Cancella</Italian>
-            <Polish>Usuń</Polish>
-            <Russian>Удалить</Russian>
-            <German>Löschen</German>
-            <Chinese>刪除</Chinese>
-            <Chinesesimp>删除</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_VARIABLEVIEWER_HEADER">
             <English>Variable Viewer</English>
             <French>Afficher les variables</French>
@@ -9984,17 +9744,6 @@
             <German>Funktionen verst.</German>
             <Chinese>隱藏功能</Chinese>
             <Chinesesimp>隐藏功能</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_VARIABLEVIEWER_SET_NEW">
-            <English>Set/New</English>
-            <French>Définir/Nouveau</French>
-            <Spanish>Fijar/Nuevo</Spanish>
-            <Italian>Imposta/Nuovo</Italian>
-            <Polish>Wprowadź</Polish>
-            <Russian>Выбрать/Создать</Russian>
-            <German>Setzen/Neu</German>
-            <Chinese>設置/新增</Chinese>
-            <Chinesesimp>设置/新增</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_VARIABLEVIEWER_VARIABLENAME">
             <English>Name</English>

@@ -147,7 +147,7 @@ class ENH_ESE
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELP_TEXT";
                     items[] = {"Documentation"};
                 };
-                //Export
+               // Export
                 class ExportToSQF
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_MISSIONEXPORTSQF_TEXT";
@@ -169,7 +169,7 @@ class ENH_ESE
                     text = "$STR_ENH_MAIN_ESE_TEMPLATES";
                     items[] = {"CreateTemplate", "DeleteTemplate", "Separator", "PreviewTemplate"};
                 };
-                //Templates
+               // Templates
                 class CreateTemplate
                 {
                     text = "$STR_ENH_MAIN_ESE_CREATETEMPLATE";
@@ -187,7 +187,7 @@ class ENH_ESE
                     text = "$STR_3DEN_TUTORIALS_SCENARIO_SECTIONS_PREVIEW_TEXT";
                     action = "'preview' call ENH_fnc_ESE_handleTemplates";
                 };
-                //Help
+               // Help
                 class Documentation
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";
@@ -195,11 +195,11 @@ class ENH_ESE
                     weblink = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#equipment-storage-editor";
                     opensNewWindow = 1;
                 };
-                //Inventory
+               // Inventory
                 class IsVirtual
                 {
                     text = "$STR_3DEN_ATTRIBUTES_AMMOBOX_TYPE_VIRTUAL";
-                    picture = "x\enh\addons\main\data\infinity_ca.paa";
+                    picture = "\x\enh\addons\main\data\infinity_ca.paa";
                     action = "-1 call ENH_fnc_ESE_toggleVirtual";
                 };
                 class ResetInventory
@@ -211,14 +211,14 @@ class ENH_ESE
                 class AddOne
                 {
                     text = "+1";
-                    picture = "x\enh\addons\main\data\plus_ca.paa";
+                    picture = "\x\enh\addons\main\data\plus_ca.paa";
                     action = "1 call ENH_fnc_ESE_addItem";
                     shortcuts[] = {DIK_RIGHTARROW};
                 };
                 class RemoveOne
                 {
                     text = "-1";
-                    picture = "x\enh\addons\main\data\minus_ca.paa";
+                    picture = "\x\enh\addons\main\data\minus_ca.paa";
                     action = "1 call ENH_fnc_ESE_removeItem";
                     shortcuts[] = {DIK_LEFTARROW};
                 };
@@ -275,36 +275,36 @@ class ENH_ESE
                     picture = "\a3\ui_f\data\igui\cfg\actions\loadvehicle_ca.paa";
                     shortcuts[] = {DIK_6};
                 };
-                //Filter
+               // Filter
                 class ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_ASSAULTRIFLES0";
-                    picture = "x\enh\addons\main\data\weapons\assaultRifle_ca.paa";
+                    picture = "\x\enh\addons\main\data\weapons\assaultRifle_ca.paa";
                     action = "_this call ENH_fnc_ESE_changeFilter";
                     data = "AssaultRifle";
                 };
                 class MGs: ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_MACHINEGUNS0";
-                    picture = "x\enh\addons\main\data\weapons\machineGun_ca.paa";
+                    picture = "\x\enh\addons\main\data\weapons\machineGun_ca.paa";
                     data = "MachineGun";
                 };
                 class Snipers: ARs
                 {
                     text = "$STR_A3_SNIPER1";
-                    picture = "x\enh\addons\main\data\weapons\marksmanRifle_ca.paa";
+                    picture = "\x\enh\addons\main\data\weapons\marksmanRifle_ca.paa";
                     data = "SniperRifle";
                 };
                 class Shotguns: ARs
                 {
                     text = "$STR_ENH_MAIN_ESE_SHOTGUNS";
-                    picture = "x\enh\addons\main\data\weapons\shotgun_ca.paa";
+                    picture = "\x\enh\addons\main\data\weapons\shotgun_ca.paa";
                     data = "Shotgun";
                 };
                 class SMGs: ARs
                 {
                     text = "$STR_A3_CFGEDITORSUBCATEGORIES_EDSUBCAT_SUBMACHINEGUNS0";
-                    picture = "x\enh\addons\main\data\weapons\subMachineGun_ca.paa";
+                    picture = "\x\enh\addons\main\data\weapons\subMachineGun_ca.paa";
                     data = "SubmachineGun";
                 };
                 class Launchers: ARs

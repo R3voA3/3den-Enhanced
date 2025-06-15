@@ -30,7 +30,7 @@ switch _mode do
     {
         uiNamespace setVariable ["ENH_BriefingEditor_Display", _display];
 
-        private _coloursHTML =
+        private _colorsHTML =
         [
             "#0000FF",
             "#8A2BE2",
@@ -172,7 +172,7 @@ switch _mode do
 
         private _getColorFromHex =
         {
-            //Author: k0ss (github.com/k0ss)
+            // Author: k0ss (github.com/k0ss)
             private _nums = toArray "0123456789ABCDEF";
             private _hex = toArray (_this # 0);
             _hex = _hex - [(_hex # 0)];
@@ -183,33 +183,33 @@ switch _mode do
             [(_r/255), (_g/255), (_b/255), 1];
         };
 
-        private _ctrlLBColours = CTRL(IDC_BRIEFINGEDITOR_COLOURS);
+        private _ctrlLBColors = CTRL(IDC_BRIEFINGEDITOR_COLORS);
         private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
         private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
 
         // Update syntax highlighting
         CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlAddEventHandler ["EditChanged", {[ctrlParent (_this#0), 'htmlHighlight'] call ENH_fnc_briefingEditor}];
 
-        //Get history if available
+        // Get history if available
         (profileNamespace getVariable ["ENH_briefingEditor_history", ["", "Diary", ""]]) params ["_title", "_subject", "_text"];
 
         CTRL(IDC_BRIEFINGEDITOR_TITLE) ctrlSetText _title;
         CTRL(IDC_BRIEFINGEDITOR_SUBJECT) ctrlSetText _subject;
         CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText _text;
 
-        //Load templates
+        // Load templates
         [nil, "handleTemplates", "fillTemplatesList"] call ENH_fnc_briefingEditor;
 
         {
-            _ctrlLBColours lbAdd format ["%1 %2", localize "STR_ENH_MAIN_BRIEFINGEDITOR_COLOUR", _forEachIndex];
-            _ctrlLBColours lbSetData [_forEachIndex, _x];
-            _ctrlLBColours lbSetColor [_forEachIndex, [_x] call _getColorFromHex];
-            _ctrlLBColours lbSetTooltip [_forEachIndex, _x];
-        } forEach _coloursHTML;
+            _ctrlLBColors lbAdd format ["%1 %2", localize "STR_ENH_MAIN_BRIEFINGEDITOR_COLOR", _forEachIndex];
+            _ctrlLBColors lbSetData [_forEachIndex, _x];
+            _ctrlLBColors lbSetColor [_forEachIndex, [_x] call _getColorFromHex];
+            _ctrlLBColors lbSetTooltip [_forEachIndex, _x];
+        } forEach _colorsHTML;
 
-        //Fill marker list
+        // Fill marker list
         {
-            //If marker has no name, use variable name instead
+            // If marker has no name, use variable name instead
             private _name = (_x get3DENAttribute "text") # 0;
             private _varName = (_x get3DENAttribute "markerName") # 0;
             if (_name isEqualTo "") then {_name = _varName};
@@ -217,11 +217,11 @@ switch _mode do
             _ctrlLBMarkers lbAdd _name;
             _ctrlLBMarkers lbSetData [_forEachIndex, _varName];
 
-            //Get icon
+            // Get icon
             private _markerType = (_x get3DENAttribute "itemClass") # 0;
             private _icon = getText (configFile >> "CfgMarkers" >> _markerType >> "icon");
 
-            //Get colour
+            // Get color
             private _markerColor = (_x get3DENAttribute "baseColor") # 0;
             private _color = getArray (configFile >> "CfgMarkerColors" >> _markerColor >> "color");
             _color = _color call BIS_fnc_colorConfigToRGBA;
@@ -237,7 +237,7 @@ switch _mode do
             _ctrlLBMarkers lbSetPictureRightColor [_forEachIndex, _color];
         } forEach (all3DENEntities # 5);
 
-        //Add fonts
+        // Add fonts
         {
             _ctrlLBFonts lbAdd configName _x;
             _ctrlLBFonts lbSetTooltip [_forEachIndex, configName _x];
@@ -250,7 +250,7 @@ switch _mode do
     };
     case "onUnload":
     {
-        //Create history of last input when closing the display
+        // Create history of last input when closing the display
         profileNamespace setVariable
         [
             "ENH_briefingEditor_history",
@@ -308,13 +308,13 @@ switch _mode do
             _showTitle
         ];
 
-        if (_subject != "Diary") then //If user uses a non default subject, create it and export the code for it
+        if (_subject != "Diary") then // If user uses a non default subject, create it and export the code for it
         {
             private _createSubject = format ["player createDiarySubject [""%1"", ""%1""];", _subject];
             _createBriefing = _createSubject + endl + _createBriefing;
         };
 
-        _createBriefing = "//Code (SQF)" + endl + endl + _createBriefing + endl + endl + "//Raw Text (Briefing Attribute, Task Description)" + endl + endl + (_text trim ["""", 0]);
+        _createBriefing = "// Code (SQF)" + endl + endl + _createBriefing + endl + endl + "// Raw Text (Briefing Attribute, Task Description)" + endl + endl + (_text trim ["""", 0]);
 
         uiNamespace setVariable ["display3DENCopy_data", [localize "ENH_BRIEFINGEDITOR_EXPORT", _createBriefing]];
         _display createDisplay "display3denCopy";
@@ -327,7 +327,7 @@ switch _mode do
         private _ctrlSecondParamValue = CTRL(IDC_BRIEFINGEDITOR_SECONDPARAMVALUE);
         private _ctrlThirdParam = CTRL(IDC_BRIEFINGEDITOR_THIRDPARAM);
         private _ctrlThirdParamValue = CTRL(IDC_BRIEFINGEDITOR_THIRDPARAMVALUE);
-        private _ctrlLBColours = CTRL(IDC_BRIEFINGEDITOR_COLOURS);
+        private _ctrlLBColors = CTRL(IDC_BRIEFINGEDITOR_COLORS);
         private _ctrlLBFonts = CTRL(IDC_BRIEFINGEDITOR_FONTS);
         private _ctrlLBMarkers = CTRL(IDC_BRIEFINGEDITOR_MARKERS);
 
@@ -345,7 +345,7 @@ switch _mode do
             } forEach [_ctrlFirstParam, _ctrlSecondParam, _ctrlThirdParam];
             {
                 _x ctrlShow (_lbStates # _forEachIndex);
-            } forEach [_ctrlLBMarkers, _ctrlLBColours, _ctrlLBFonts];
+            } forEach [_ctrlLBMarkers, _ctrlLBColors, _ctrlLBFonts];
         };
 
         switch _param do
@@ -381,14 +381,14 @@ switch _mode do
         #define VALUE1 ctrlText CTRL(IDC_BRIEFINGEDITOR_FIRSTPARAMVALUE)
         #define VALUE2 ctrlText CTRL(IDC_BRIEFINGEDITOR_SECONDPARAMVALUE)
         #define VALUE3 ctrlText CTRL(IDC_BRIEFINGEDITOR_THIRDPARAMVALUE)
-        #define COLOURHTML CTRL(IDC_BRIEFINGEDITOR_COLOURS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_COLOURS)
+        #define COLORHTML CTRL(IDC_BRIEFINGEDITOR_COLORS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_COLORS)
         #define FONT CTRL(IDC_BRIEFINGEDITOR_FONTS) lbText lbCurSel CTRL(IDC_BRIEFINGEDITOR_FONTS)
         #define MARKER CTRL(IDC_BRIEFINGEDITOR_MARKERS) lbData lbCurSel CTRL(IDC_BRIEFINGEDITOR_MARKERS)
 
         private _chars = BRIEFINGTEXT splitString "";
         ctrlTextSelection CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) params ["_start", "_length", "_text"];
 
-        //Exit if text is empty and tag is not image
+        // Exit if text is empty and tag is not image
         if (_text == "" && _TAG != "Linebreak") exitWith {};
 
         private _textNew = switch _TAG do
@@ -407,7 +407,7 @@ switch _mode do
             };
             case "Font":
             {
-                format ["<font color='%1' size='%2' face='%3'>%4</font>", COLOURHTML, VALUE1, FONT, _text];
+                format ["<font color='%1' size='%2' face='%3'>%4</font>", COLORHTML, VALUE1, FONT, _text];
             };
             case "Execute":
             {
@@ -419,7 +419,7 @@ switch _mode do
             };
         };
 
-        //Handle the case when selection was made from right to left
+        // Handle the case when selection was made from right to left
         if (_length < 0) then
         {
             _start = _start - abs _length;
@@ -427,10 +427,10 @@ switch _mode do
 
         private _end = _start + abs _length - 1;
 
-        //Insert new text right behind selection
+        // Insert new text right behind selection
         _chars insert [_end + 1, [_textNew]];
 
-        //Delete selected text
+        // Delete selected text
         _chars deleteRange [_start, count _text];
 
         CTRL(IDC_BRIEFINGEDITOR_BRIEFINGTEXT) ctrlSetText (_chars joinString "");
@@ -482,7 +482,7 @@ switch _mode do
             };
             case "fillTemplatesList":
             {
-                //Clear list and refill it with updated templates from profileNamespace
+                // Clear list and refill it with updated templates from profileNamespace
                 lbClear _ctrlTemplateList;
 
                 {

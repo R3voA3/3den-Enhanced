@@ -22,7 +22,7 @@ ENH_FunctionsData = call ENH_fnc_functionsViewer_getFunctionsData;
 
 CTRL(IDC_FUNCTIONSVIEWER_LIST) ctrlAddEventHandler ["TreeSelChanged", ENH_fnc_functionsViewer_onTreeSelChanged];
 
-_display displayAddEventHandler ["KeyDown", //Focus Search
+_display displayAddEventHandler ["KeyDown", // Focus Search
 {
     params ["_display", "_key", "_shift", "_ctrl"];
     if (_key isEqualTo 33 && _ctrl && !_shift) then
@@ -31,7 +31,7 @@ _display displayAddEventHandler ["KeyDown", //Focus Search
     }
 }];
 
-_display displayAddEventHandler ["KeyDown", //Focus Search Key
+_display displayAddEventHandler ["KeyDown", // Focus Search Key
 {
     params ["_display", "_key", "_shift", "_ctrl"];
     if (_key isEqualTo 33 && _ctrl && _shift) then

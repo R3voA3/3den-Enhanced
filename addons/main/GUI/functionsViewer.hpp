@@ -72,7 +72,7 @@ class ENH_FunctionsViewer
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELP_TEXT";
                     items[] = {"Documentation", "ShowOnBiki"};
                 };
-                //Edit
+               // Edit
                 class ToggleSidebar
                 {
                     text = "$STR_USRACT_CURATOR_COLLAPSE_PARENT";
@@ -97,6 +97,7 @@ class ENH_FunctionsViewer
                 class RecompileSelected
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT";
+                    tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
                     picture = "\a3\3den\data\displays\display3den\entitymenu\functions_ca.paa";
                     action = "[] call ENH_fnc_functionsViewer_recompileSelected";
@@ -104,6 +105,7 @@ class ENH_FunctionsViewer
                 class RecompileAll: RecompileSelected
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TEXT";
+                    tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_A};
                     action = "[1] call BIS_fnc_recompile";
                 };
@@ -118,7 +120,7 @@ class ENH_FunctionsViewer
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_LEGACY";
                     action = "[ctrlParent (_this # 0)] call BIS_fnc_help";
                 };
-                //Config
+               // Config
                 class ConfigFile
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_GLOBALCONFIG";
@@ -143,7 +145,7 @@ class ENH_FunctionsViewer
                     action = "profileNamespace setVariable ['ENH_FunctionsViewer_ShowOtherFiles', true]; call ENH_fnc_functionsViewer_fillCtrlTV";
                     shortcuts[] = {DIK_4};
                 };
-                //Filter
+               // Filter
                 class Full
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_ADDONS";
@@ -162,7 +164,7 @@ class ENH_FunctionsViewer
                     action = "profileNamespace setVariable ['ENH_FunctionsViewer_ModeIndex', 2]; call ENH_fnc_functionsViewer_fillCtrlTV";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_3};
                 };
-                //Loading Method
+               // Loading Method
                 class LoadFile
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_LOADFILE";
@@ -181,7 +183,7 @@ class ENH_FunctionsViewer
                     action = "profileNamespace setVariable ['ENH_FunctionsViewer_LoadFileIndex', 2]; call ENH_fnc_functionsViewer_setUpMenuStrip; [] call ENH_fnc_functionsViewer_onTreeSelChanged";
                     shortcuts[] = {INPUT_ALT_OFFSET + INPUT_CTRL_OFFSET + DIK_3};
                 };
-                //Help
+               // Help
                 class Documentation
                 {
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPDOC_TEXT";

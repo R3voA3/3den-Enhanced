@@ -225,7 +225,7 @@ switch _mode do
 
             private _indexFolder = 0;
             private _displayName = "";
-            private _colour = [1, 1, 1, 1];
+            private _color = [1, 1, 1, 1];
             private _icon = "";
             private _addonIcon = "";
 
@@ -241,7 +241,7 @@ switch _mode do
                     _displayName = getText (_config >> "displayName");
                     _addonIcon = (_config call ENH_fnc_getConfigSourceAddon) param [2, ""];
 
-                    _colour = switch true do
+                    _color = switch true do
                     {
                         case (_key isKindOf "Static");
                         case (_key isKindOf "Thing"): {[8] call BIS_fnc_sideColor};
@@ -266,7 +266,7 @@ switch _mode do
 
                     _displayName = getText (_config >> "name");
                     _addonIcon = (_config call ENH_fnc_getConfigSourceAddon) param [2, ""];
-                    _colour = (getArray (_config >> "color")) call BIS_fnc_parseNumberSafe;
+                    _color = (getArray (_config >> "color")) call BIS_fnc_parseNumberSafe;
                     _icon = getText (_config >> "icon");
                     _indexFolder = 0;
                 };
@@ -281,7 +281,7 @@ switch _mode do
             if (fileExists _icon) then
             {
                 _ctrlTV tvSetPicture [[_indexFolder, _indexItem], _icon];
-                _ctrlTV tvSetPictureColor [[_indexFolder, _indexItem], _colour];
+                _ctrlTV tvSetPictureColor [[_indexFolder, _indexItem], _color];
             }
             else
             {
