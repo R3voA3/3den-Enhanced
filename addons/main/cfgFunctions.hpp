@@ -176,7 +176,7 @@ class CfgFunctions
         };
         class Interface
         {
-            file = "\x\enh\addons\main\functions\interface";
+            file = "\x\enh\addons\main\functions\3DENInterface";
             class 3DENMinimap {};
             class assetBrowser_collapse {};
             class entityList_addTooltips {};
