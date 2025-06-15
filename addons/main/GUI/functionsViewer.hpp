@@ -97,6 +97,7 @@ class ENH_FunctionsViewer
                 class RecompileSelected
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILESELETECTED_TEXT";
+                    tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILESELETECTED_TOOLTIP";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_R};
                     picture = "\a3\3den\data\displays\display3den\entitymenu\functions_ca.paa";
                     action = "[] call ENH_fnc_functionsViewer_recompileSelected";
@@ -104,6 +105,7 @@ class ENH_FunctionsViewer
                 class RecompileAll: RecompileSelected
                 {
                     text = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TEXT";
+                    tooltip = "$STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TOOLTIP";
                     shortcuts[] = {INPUT_ALT_OFFSET + DIK_A};
                     action = "[1] call BIS_fnc_recompile";
                 };
