@@ -1,3 +1,7 @@
+# 8.X.X
+## ADDED
+- Custom marker color attribute
+
 # 8.5.0
 ## ADDED
 - Custom icons for the hold action attribute can now be defined in the Editor preferences -> Misc.
