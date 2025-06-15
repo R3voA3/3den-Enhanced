@@ -227,7 +227,6 @@ current session
 
 # 7.8.2
 ## ADDED
-
 ## CHANGED
 - Fixed missing translation in Placement Tools UI
 - Fixed description of Advanced Damage attribute would be cut off
@@ -252,8 +251,6 @@ current session
 - Fixed Move to Layer UI not working
 
 # 7.8.0
-## ADDED
-
 ## CHANGED
 - Increased the size of EditMulti5 to be as big as EditCodeMulti5
 - Variable Viewer has its background disabled again
@@ -279,8 +276,6 @@ current session
 - Tweaked CFGS UI
 - Improved Texture Finder UI
 - Removed flickering when texture preview is updated
-
-## REMOVED
 
 # 7.7.9
 ## ADDED
@@ -657,12 +652,10 @@ menu
 - Export GUI Defines now uses display3denCopy
 
 # 6.1.1
-
 ## REMOVED
 - Removed Object Scaling attribute. There is an issue with Export Mission to SQF. See https://feedback.bistudio.com/T158949.
 
 # 6.1
-
 ## ADDED
 - Tool to quickly toggle the playable state of multiple units
 - Vehicle Inventory Manager now has an option to export all items in format of ACE Arsenal. Just import the value into the ACE Arsenal attribute
@@ -694,7 +687,6 @@ menu
 - Removed shortcut from recompile all functions tool
 
 # 6.0
-
 ## CHANGED
 - Vehicle Inventory Manager (ESE)
     - Is now able to create a full arsenal with selected addon items
@@ -709,7 +701,6 @@ menu
 - Changed "Enable Captive Mode" tooltip to better descripe the behaviour
 
 # 5.9
-
 ## ADDED
 - Added an attribute to change sound volume of environment sounds
 - Added GUI to quickly view all Eden Editor shortcuts (ALT + F1)
@@ -738,7 +729,6 @@ menu
 
 
 # 5.8
-
 ## ADDED
 - Added a tool to display vehicle hitpoints. Useful for the Advance Damage attribute
 - Added missing translations for Advanced Damage attribute
@@ -754,7 +744,6 @@ menu
 - Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window". Additionally, it now supports all DLCs (Was fixed by a hotfix)
 
 # 5.7
-
 ## ADDED
 - It is now possible to customize the available functionalities though an OPTIONAL userconfig. See https://github.com/R3voA3/3den-Enhanced/wiki/Customisation
 - Added editor setting Dynamic View Distance. It removes the need to change view distance inside the editor by changing view distance depending on camera height
@@ -859,7 +848,6 @@ menu
 - Unused functions and config entries
 
 # 5.6
-
 ## ADDED
 - Vehicle Inventory Manager
 - Added support for 3den Enhanced - Optionals. It will allow users to hide attributes and menu strip entries. Thanks to Freddo3000 (https://github.com/Freddo3000) for the idea and the help
@@ -892,13 +880,11 @@ menu
 - Fixed a bug which caused Hold Action attribute to be always created in mission.sqm
 
 # 5.4
-
 ## CHANGED
 - Many translation tweaks, thanks to Poslovitch
 - Fixed an issue with randomize directon tool
 
 # 5.3
-
 ## CHANGED
 - ENH_fnc_setOrientation can now reverse and randomise directions
 - "Show Radio Message" would be cut off in the extraction GUI
@@ -909,7 +895,6 @@ menu
 - Remove obsolete functions
 
 # 5.2
-
 ## ADDED
 - Tool to export loadouts in config format (Prior this change it would export in format of CfgRespawnInventory)
 - Added tool to quickly export mission parameters (https://community.bistudio.com/wiki/Arma_3_Mission_Parameters)
@@ -932,7 +917,6 @@ menu
 - Removed some old, obsolete functions
 
 # 5.1
-
 ## ADDED
 - Added Single Player Respawn
 - Added debug option to skip time
@@ -952,7 +936,6 @@ menu
 - Mission Ending attribute was only counting units killed by a player
 
 # 5.0
-
 ## ADDED
 - Context menu tool to move camera into first person view of selected entity
 - Added shortcuts to GUIs to preview controls styles and types (menu strip)
@@ -1000,7 +983,6 @@ menu
 - Fill Area tools max area was increased from 500x500 to 10.000 by 10.000
 
 # 4.9
-
 ## ADDED
 - Menu strip entry for additional 3rd party tools
 - A UI to save 3den Camera positions in. You can use it to save interesting places
@@ -1010,7 +992,6 @@ menu
 - Updated Spanish translation by arv187
 
 # 4.7
-
 ## ADDED
 - An attribute to disable AIs radio protocol
 
@@ -1034,7 +1015,6 @@ menu
 - Improved performance of functions viewer
 
 # 4.3
-
 ## ADDED
 - Scenario Attributes Manager
 - Link to Mission Optimisation Biki page
@@ -1131,7 +1111,6 @@ menu
 
 
 # 4.2
-
 ## CHANGED
 - Updated credits
 - Briefing Editor: If marker has no name, the variable name is displayed instead
@@ -1152,7 +1131,6 @@ menu
 - Stay on Position attribute sometimes fails on dedicated server
 
 # 4.1
-
 ## ADDED
 - Tools to remove heargear, googles and weapons from characters
 - Tool to generate mission description for the Steam page (Steam formatting is not supported because A3 does not support it)
@@ -1195,21 +1173,15 @@ menu
 
 
 # 4.0
-
-## ADDED
-
 ## CHANGED
 - Feature Type attribute would sometimes cause issues because of wrong datatype. Type STRING and NUMBER can now be handled for backwards compatibility
 - Readded Stay on Position attribute
-
-## REMOVED
 
 ## KNOWN ISSUES
 - Event Code Attribute does not work on dedicated servers
 - Stay on Position attribute sometime fails on dedicated server
 
 # 3.9
-
 ## ADDED
 - DiableAI "NVG" attribute
 - Disable AI "LIGHTS" attribute
@@ -1223,7 +1195,6 @@ menu
 - Event Code Attribute does not work on dedicated servers
 
 # 3.8
-
 ## ADDED
 - Polish translation by Kofeina101
 
@@ -1236,7 +1207,6 @@ menu
 - It's now possible to measure distance between two entities
 
 # 3.7
-
 ## ADDED
 - Translation of credits
 
@@ -1246,7 +1216,6 @@ menu
 - Name of the pbo changed from 3den Enhanced to 3den_enhanced to prevent a crash on linux server (Thanks to Dedmen)
 
 # 3.6
-
 ## ADDED
 - Added new function ENH_fnc_all3DENSelected
 - A control to the statusbar which shows number of selected entities
@@ -1304,7 +1273,6 @@ menu
 - Fixed some issues with new shortcuts
 
 # 3.1
-
 ## ADDED
 - Added missing attribute to disable map indicators
 - Respawn tickets for civilian side
@@ -1348,7 +1316,6 @@ menu
 - Added new logo (Steam)
 
 # 3.0
-
 ## ADDED
 - Credits (Menu Strip -> About 3den Enhanced -> Credits...) Shows all contributors. If I forgot about someone please let me know- Added tool to log map grid position to clipboard
 
@@ -1371,7 +1338,6 @@ menu
 
 
 # 2.9
-
 ## ADDED
 - Link to FAQ
 
@@ -1400,7 +1366,6 @@ menu
 - Obsolete function call via Eden EH
 
 # 2.7
-
 ## ADDED
 - It's now possible to either export GUI base classes of Eden, default or all
 - Added missing translation
@@ -1439,7 +1404,6 @@ menu
 - Removed debug triggers (They are available now during preview, see "Preferences")
 
 # 2.6
-
 ## ADDED
 - Tool to export selected Eden objects to sqf format(Thanks to Theassassinzz for sharing)
 - Context menu function to show Eden entity ID
@@ -1460,7 +1424,6 @@ menu
 - Several menu entriess were missing "..." to indicate they are opening a new window
 
 # 2.5
-
 ## ADDED
 - Attribute which adds all alive entities to allCurators regulary during a mission
 - Color picker. Can be found in the debug tools category
@@ -1494,13 +1457,11 @@ menu
 - "Arsenal" and "Add Gun Light" attributes were missing there default values
 
 # 2.3
-
 ## CHANGED
 - "Arsenal" and "Add Gun Light" attribute should not be activated by default
 
 
 # 2.2
-
 ## ADDED
 - Tool to log positions of multiple objects
 
@@ -1547,7 +1508,6 @@ v2
 
 
 # 1.9
-
 ## ADDED
 - Attribute to set weapon sway coef
 - Tool to quickly name multiple entities
@@ -1571,7 +1531,6 @@ v2
 
 
 # 1.8
-
 ## ADDED
 - Scripting examples by Foxhound International (Help section)
 - Readded the UAV intro (establishing shot), hopefully working more reliably than before
@@ -1634,7 +1593,6 @@ v2
 - Ambient animations (Too many issues in multiplayer and general incompatibility with Eden)
 
 # 1.7
-
 ## ADDED
 - Tool to display module description
 - Save gear on respawn (readded)
@@ -1645,7 +1603,6 @@ v2
 - A few new help links
 
 # 1.6 HOTFIX
-
 ## CHANGED
 - Warning messages would not be displayed properly
 - Added missing server key
@@ -1737,7 +1694,6 @@ v2
 
 
 # 1.5
-
 ## CHANGED
 - CfgPatches was changed to the up-to-date format
 - 3den Enhanced tools now have their own folder
@@ -1782,7 +1738,6 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Added setMass attribute
 - Added advanced briefing att
 # 1.4
-
 ## CHANGED
 - Fixed position of time multiplier attribute
 - Time multiplier edit box is now properly formatted
@@ -1801,12 +1756,10 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Corrected camouCoef & audibleCoef tooltip
 
 # 1.3.1
-
 ## CHANGED
 - Fixed a bug which would reset the unit traits controls
 
 # 1.3
-
 ## ADDED
 - One can now define a delay for the intro text attribute
 - Attribute for unit traits
@@ -1834,7 +1787,6 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 4. The size and coverage of the area can be changed in the preferences menu of Eden
 
 # 1.2
-
 ## ADDED
 - Function to quickly garrison placed building. Settings can be changed in the preferences
 - Attribute to toggle map object IDs on/off
@@ -1876,7 +1828,6 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Custom compositions
 
 # 1.1
-
 ## ADDED
 - Time multiplier to environment attribute
 - Advanced fog settings to environment attributes- Remove map attribute
