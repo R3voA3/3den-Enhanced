@@ -17,27 +17,30 @@
 
 if (!is3DEN) exitWith {};
 
-ENH_Displays = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
-ENH_Displays_Index = 0;
-
-findDisplay IDD_DISPLAY3DEN displayAddEventHandler ["KeyDown",
+0 spawn
 {
-    params ["", "_key"];
-
-    if (_key in [DIK_LEFT, DIK_RIGHT]) then
+    with uiNamespace do
     {
-        ENH_Displays_Index = ENH_Displays_Index + ([1, -1] select (_key == DIK_LEFT));
-        ENH_Displays_Index = ENH_Displays_Index max 0 min (count ENH_Displays - 1);
+        private _displaysClasses = "'ENH_' in configName _x && getNumber (_x >> 'IDD') != 0" configClasses configFile apply {configName _x};
 
-        if !(isNull (uiNamespace getVariable ["ENH_Displays_Current", displayNull])) then
         {
-            ENH_Displays_Current closeDisplay 1;
-            uiNamespace setVariable ["ENH_Displays_Current", displayNull];
-        };
+            private _displayClass = _x;
+            private _display = findDisplay IDD_DISPLAY3DEN createDisplay _displayClass;
 
-        private _nextDisplay = ENH_Displays#ENH_Displays_Index;
+            waitUntil {!isNull _display};
 
-        uiNamespace setVariable ["ENH_Displays_Current", findDisplay IDD_DISPLAY3DEN createDisplay _nextDisplay];
-        (format ["Display: %1 (%2/%3)", _nextDisplay, ENH_Displays_Index + 1, count ENH_Displays]) call ENH_fnc_log;
+            diag_log "#############################################################";
+            diag_log "#############################################################";
+            diag_log format ["Display %1 is currently being tested.", _displayClass];
+            diag_log "#############################################################";
+            diag_log "#############################################################";
+
+            sleep 1;
+
+            if !(isNull _display) then
+            {
+                _display closeDisplay 1;
+            };
+        } forEach _displaysClasses;
     };
-}];
+};
