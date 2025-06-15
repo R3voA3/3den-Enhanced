@@ -1,5 +1,6 @@
 # 8.5.0
 ## ADDED
+- Custom marker color attribute
 - Custom icons for the hold action attribute can now be defined in the Editor preferences -> Misc.
 - Icon picker to the hold action attribute  #435
 - ENH_fnc_iconPicker, an simple Icon Picker
@@ -8,12 +9,10 @@
 - Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125) #433
 - Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
 - Fixed tooltips for the input list attribute control were swapped
+- Fixed minimap code would run 1 frame into eden preview disabling map indicators
 
 # 8.4.0
 ## ADDED
-<!--
-- Custom marker color attribute
--->
 - Added localization for garrison combo entries
 - New Garrison tool
     - Garrison any building by simply dragging all selected entities onto it after pressing the "G" key
