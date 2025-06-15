@@ -84,26 +84,26 @@ class Cfg3DEN
     };
     class Attributes
     {
-        #include "controls\base.hpp"
-        #include "controls\markerColor.hpp"
-        #include "controls\advancedDamage.hpp"
-        #include "controls\airdrop.hpp"
-        #include "controls\ambientAnimations.hpp"
-        #include "controls\ambientFlyby.hpp"
-        #include "controls\cfgMusic.hpp"
-        #include "controls\dynamicSkill.hpp"
-        #include "controls\establishingShot.hpp"
-        #include "controls\groupMarker.hpp"
-        #include "controls\holdAction.hpp"
-        #include "controls\inputList.hpp"
-        #include "controls\introText.hpp"
-        #include "controls\largerEditMulti.hpp"
-        #include "controls\mapIndicators.hpp"
-        #include "controls\missionEndingCasualties.hpp"
-        #include "controls\sliderMulti120.hpp"
-        #include "controls\sliderMultiZero.hpp"
-        #include "controls\SPR.hpp"
-        #include "controls\subCategoryNoHeader_Fixed.hpp"
+        #include "\x\enh\addons\main\controls\base.hpp"
+        #include "\x\enh\addons\main\controls\markerColor.hpp"
+        #include "\x\enh\addons\main\controls\advancedDamage.hpp"
+        #include "\x\enh\addons\main\controls\airdrop.hpp"
+        #include "\x\enh\addons\main\controls\ambientAnimations.hpp"
+        #include "\x\enh\addons\main\controls\ambientFlyby.hpp"
+        #include "\x\enh\addons\main\controls\cfgMusic.hpp"
+        #include "\x\enh\addons\main\controls\dynamicSkill.hpp"
+        #include "\x\enh\addons\main\controls\establishingShot.hpp"
+        #include "\x\enh\addons\main\controls\groupMarker.hpp"
+        #include "\x\enh\addons\main\controls\holdAction.hpp"
+        #include "\x\enh\addons\main\controls\inputList.hpp"
+        #include "\x\enh\addons\main\controls\introText.hpp"
+        #include "\x\enh\addons\main\controls\largerEditMulti.hpp"
+        #include "\x\enh\addons\main\controls\mapIndicators.hpp"
+        #include "\x\enh\addons\main\controls\missionEndingCasualties.hpp"
+        #include "\x\enh\addons\main\controls\sliderMulti120.hpp"
+        #include "\x\enh\addons\main\controls\sliderMultiZero.hpp"
+        #include "\x\enh\addons\main\controls\SPR.hpp"
+        #include "\x\enh\addons\main\controls\subCategoryNoHeader_Fixed.hpp"
     };
     class Mission
     {
@@ -115,58 +115,58 @@ class Cfg3DEN
                 {
                     class Attributes
                     {
-                        #include "attributesEditor\dynamicViewDistance.hpp"
+                        #include "\x\enh\addons\main\attributesEditor\dynamicViewDistance.hpp"
                     };
                 };
                 class Saving
                 {
                     class Attributes
                     {
-                        #include "attributesEditor\backupMissionSQM.hpp"
+                        #include "\x\enh\addons\main\attributesEditor\backupMissionSQM.hpp"
                     };
                 };
                 class Misc
                 {
                     class Attributes
                     {
-                        #include "attributesEditor\holdActionIcons.hpp"
+                        #include "\x\enh\addons\main\attributesEditor\holdActionIcons.hpp"
                     };
                 };
-                #include "attributesEditor\interface.hpp"
-                #include "attributesEditor\garrison2.hpp"
-                #include "attributesEditor\debugOptions.hpp"
+                #include "\x\enh\addons\main\attributesEditor\interface.hpp"
+                #include "\x\enh\addons\main\attributesEditor\garrison2.hpp"
+                #include "\x\enh\addons\main\attributesEditor\debugOptions.hpp"
             };
         };
         class Intel
         {
             class AttributeCategories
             {
-                #include "attributesMission\timeMultiplier.hpp"
-                #include "attributesMission\visualSettings.hpp"
+                #include "\x\enh\addons\main\attributesMission\timeMultiplier.hpp"
+                #include "\x\enh\addons\main\attributesMission\visualSettings.hpp"
             };
         };
         class Scenario
         {
             class AttributeCategories
             {
-                #include "attributesMission\airdrop.hpp"
-                #include "attributesMission\ambientFlyby.hpp"
-                #include "attributesMission\briefings.hpp"
-                #include "attributesMission\establishingShot.hpp"
-                #include "attributesMission\introText.hpp"
-                #include "attributesMission\missionEndingCasualties.hpp"
-                #include "attributesMission\volume.hpp"
-                #include "attributesMission\SPR.hpp"
-                #include "attributesMission\missionEventHandlersGlobal.hpp"
-                #include "attributesMission\missionEventHandlersServer.hpp"
-                #include "attributesMission\musicEventHandlers.hpp"
+                #include "\x\enh\addons\main\attributesMission\airdrop.hpp"
+                #include "\x\enh\addons\main\attributesMission\ambientFlyby.hpp"
+                #include "\x\enh\addons\main\attributesMission\briefings.hpp"
+                #include "\x\enh\addons\main\attributesMission\establishingShot.hpp"
+                #include "\x\enh\addons\main\attributesMission\introText.hpp"
+                #include "\x\enh\addons\main\attributesMission\missionEndingCasualties.hpp"
+                #include "\x\enh\addons\main\attributesMission\volume.hpp"
+                #include "\x\enh\addons\main\attributesMission\SPR.hpp"
+                #include "\x\enh\addons\main\attributesMission\missionEventHandlersGlobal.hpp"
+                #include "\x\enh\addons\main\attributesMission\missionEventHandlersServer.hpp"
+                #include "\x\enh\addons\main\attributesMission\musicEventHandlers.hpp"
                 class Misc
                 {
                     class Attributes
                     {
-                        #include "attributesMission\backupMissionSQMDisable.hpp"
-                        #include "attributesMission\addObjectsToZeus.hpp"
-                        #include "attributesMission\mapIndicators.hpp"
+                        #include "\x\enh\addons\main\attributesMission\backupMissionSQMDisable.hpp"
+                        #include "\x\enh\addons\main\attributesMission\addObjectsToZeus.hpp"
+                        #include "\x\enh\addons\main\attributesMission\mapIndicators.hpp"
                     };
                 };
             };
@@ -175,14 +175,14 @@ class Cfg3DEN
         {
             class AttributeCategories
             {
-                #include "attributesMission\dynamicGroups.hpp"
-                #include "attributesMission\dynamicSkill.hpp"
+                #include "\x\enh\addons\main\attributesMission\dynamicGroups.hpp"
+                #include "\x\enh\addons\main\attributesMission\dynamicSkill.hpp"
                 class Respawn
                 {
                     class Attributes
                     {
-                        #include "attributesMission\respawnTickets.hpp"
-                        #include "attributesMission\saveLoadout.hpp"
+                        #include "\x\enh\addons\main\attributesMission\respawnTickets.hpp"
+                        #include "\x\enh\addons\main\attributesMission\saveLoadout.hpp"
                     };
                 };
             };
@@ -192,13 +192,13 @@ class Cfg3DEN
     {
         class AttributeCategories
         {
-            #include "attributesGroup\groupMarker.hpp"
-            #include "attributesGroup\eventHandlers.hpp"
+            #include "\x\enh\addons\main\attributesGroup\groupMarker.hpp"
+            #include "\x\enh\addons\main\attributesGroup\eventHandlers.hpp"
             class State
             {
                 class Attributes
                 {
-                    #include "attributesGroup\taskPatrol.hpp"
+                    #include "\x\enh\addons\main\attributesGroup\taskPatrol.hpp"
                 };
             };
         };
@@ -207,56 +207,56 @@ class Cfg3DEN
     {
         class AttributeCategories
         {
-            #include "attributesObject\advancedDamage.hpp"
-            #include "attributesObject\ambientAnimations.hpp"
-            #include "attributesObject\AI.hpp"
-            #include "attributesObject\unitTraits.hpp"
-            #include "attributesObject\holdAction.hpp"
-            #include "attributesObject\eventHandlers.hpp"
+            #include "\x\enh\addons\main\attributesObject\advancedDamage.hpp"
+            #include "\x\enh\addons\main\attributesObject\ambientAnimations.hpp"
+            #include "\x\enh\addons\main\attributesObject\AI.hpp"
+            #include "\x\enh\addons\main\attributesObject\unitTraits.hpp"
+            #include "\x\enh\addons\main\attributesObject\holdAction.hpp"
+            #include "\x\enh\addons\main\attributesObject\eventHandlers.hpp"
             class StateSpecial
             {
                 class Attributes
                 {
-                    #include "attributesObject\setCaptive.hpp"
-                    #include "attributesObject\allowSprint.hpp"
-                    #include "attributesObject\forceWalk.hpp"
-                    #include "attributesObject\makeHostage.hpp"
-                    #include "attributesObject\parachute.hpp"
-                    #include "attributesObject\enableHeadlights.hpp"
-                    #include "attributesObject\allowCrewInImmobile.hpp"
-                    #include "attributesObject\engineOn.hpp"
-                    #include "attributesObject\disableNVGE.hpp"
-                    #include "attributesObject\disableTIE.hpp"
-                    #include "attributesObject\doStop.hpp"
-                    #include "attributesObject\removeFromRemainsCollector.hpp"
-                    #include "attributesObject\SPRTickets.hpp"
+                    #include "\x\enh\addons\main\attributesObject\setCaptive.hpp"
+                    #include "\x\enh\addons\main\attributesObject\allowSprint.hpp"
+                    #include "\x\enh\addons\main\attributesObject\forceWalk.hpp"
+                    #include "\x\enh\addons\main\attributesObject\makeHostage.hpp"
+                    #include "\x\enh\addons\main\attributesObject\parachute.hpp"
+                    #include "\x\enh\addons\main\attributesObject\enableHeadlights.hpp"
+                    #include "\x\enh\addons\main\attributesObject\allowCrewInImmobile.hpp"
+                    #include "\x\enh\addons\main\attributesObject\engineOn.hpp"
+                    #include "\x\enh\addons\main\attributesObject\disableNVGE.hpp"
+                    #include "\x\enh\addons\main\attributesObject\disableTIE.hpp"
+                    #include "\x\enh\addons\main\attributesObject\doStop.hpp"
+                    #include "\x\enh\addons\main\attributesObject\removeFromRemainsCollector.hpp"
+                    #include "\x\enh\addons\main\attributesObject\SPRTickets.hpp"
                 };
             };
             class Transformation
             {
                 class Attributes
                 {
-                    #include "attributesObject\objectScale.hpp"
+                    #include "\x\enh\addons\main\attributesObject\objectScale.hpp"
                 };
             };
             class Inventory
             {
                 class Attributes
                 {
-                    #include "attributesObject\addGunLight.hpp"
-                    #include "attributesObject\arsenal.hpp"
+                    #include "\x\enh\addons\main\attributesObject\addGunLight.hpp"
+                    #include "\x\enh\addons\main\attributesObject\arsenal.hpp"
                 };
             };
             class State
             {
                 class Attributes
                 {
-                    #include "attributesObject\featureType.hpp"
-                    #include "attributesObject\forceFlag.hpp"
-                    #include "attributesObject\setMass.hpp"
-                    #include "attributesObject\waterLeakiness.hpp"
-                    #include "attributesObject\limitSpeed.hpp"
-                    #include "attributesObject\fuelConsumptionCoef.hpp"
+                    #include "\x\enh\addons\main\attributesObject\featureType.hpp"
+                    #include "\x\enh\addons\main\attributesObject\forceFlag.hpp"
+                    #include "\x\enh\addons\main\attributesObject\setMass.hpp"
+                    #include "\x\enh\addons\main\attributesObject\waterLeakiness.hpp"
+                    #include "\x\enh\addons\main\attributesObject\limitSpeed.hpp"
+                    #include "\x\enh\addons\main\attributesObject\fuelConsumptionCoef.hpp"
                 };
             };
         };
@@ -274,17 +274,17 @@ class Cfg3DEN
                         tooltip = "$STR_3DEN_OBJECT_ATTRIBUTE_POSITION_TOOLTIP";
                         control = "EditXYZ";
                     };
-                    #include "attributesMarker\markerDrawPriority.hpp"
+                    #include "\x\enh\addons\main\attributesMarker\markerDrawPriority.hpp"
                 };
             };
             class Style
             {
                 class Attributes
                 {
-                    #include "attributesMarker\markerColor.hpp"
+                    #include "\x\enh\addons\main\attributesMarker\markerColor.hpp"
                 };
             };
-            #include "attributesMarker\markerHideOnStart.hpp"
+            #include "\x\enh\addons\main\attributesMarker\markerHideOnStart.hpp"
         };
     };
 };
