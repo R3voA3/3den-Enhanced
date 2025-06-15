@@ -10,6 +10,8 @@
 - Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
 - Fixed tooltips for the input list attribute control were swapped
 - Fixed minimap code would run 1 frame into eden preview disabling map indicators
+- Fixed that AI attributes would have no effect when entity is transfered to a headless client (Thanks KJW)
+- Minor script optimizations and formatting improvements
 
 # 8.4.0
 ## ADDED
