@@ -18,7 +18,7 @@
 
 params ["_ctrlTV", "_path"];
 
-//Exit if category or nothing is selected
+// Exit if category or nothing is selected
 if (count _path < 3) exitWith {};
 
 private _ctrlTexturePreview = ctrlParent _ctrlTV displayCtrl IDC_TEXTUREFINDER_PREVIEW;
@@ -33,7 +33,7 @@ _ctrlTV setVariable ["LastImagePath", _texture];
 _ctrlTexturePreview ctrlShow false;
 _ctrlTexturePreviewBG ctrlShow false;
 
-//Get original size and limit it to what we have available in the UI
+// Get original size and limit it to what we have available in the UI
 getTextureInfo _texture params ["_w", "_h"];
 
 // Calculate available vertical space dynamically
@@ -42,7 +42,7 @@ private _verticalSpace = ctrlPosition (ctrlParent _ctrlTV displayCtrl IDC_TEXTUR
 _w = _w * pixelW min ((WINDOW_W_ATTRIBUTES - 2) * GRID_W);
 _h = _h * pixelH min _verticalSpace;
 
-//Now lets position the UI in respect to width and height of the image
+// Now lets position the UI in respect to width and height of the image
 _ctrlTexturePreview ctrlSetPosition
 [
     CENTER_X - _w / 2,
@@ -51,12 +51,12 @@ _ctrlTexturePreview ctrlSetPosition
     _h
 ];
 
-//Set final position for image
+// Set final position for image
 _ctrlTexturePreview ctrlSetText _texture;
 _ctrlTexturePreview ctrlCommit 0;
 _ctrlTexturePreview ctrlShow true;
 
-//Adjust background according to image
+// Adjust background according to image
 _ctrlTexturePreviewBG ctrlSetPosition (ctrlPosition _ctrlTexturePreview);
 _ctrlTexturePreviewBG ctrlCommit 0;
 _ctrlTexturePreviewBG ctrlShow true;

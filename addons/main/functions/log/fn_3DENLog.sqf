@@ -198,7 +198,7 @@ switch _mode do
 
         if (true) exitWith
         {
-            //Set variable used by Display3denCopy and create the display
+            // Set variable used by Display3denCopy and create the display
             uiNamespace setVariable ["Display3DENCopy_data", [localize "STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO", _text]];
             findDisplay IDD_DISPLAY3DEN createDisplay "Display3denCopy";
             nil

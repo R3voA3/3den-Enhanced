@@ -23,7 +23,7 @@ private _display = uiNamespace getVariable "ENH_Display_ESE";
 private _ctrlInventory = CTRL(IDC_ESE_INVENTORYLIST);
 private _rows = (lnbSize _ctrlInventory) # 0;
 
-//Reverse state
+// Reverse state
 if (_isVirtual isEqualTo -1) then
 {
     _isVirtual = !(_display getVariable ["ENH_ESE_IsVirtual", false]);

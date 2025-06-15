@@ -39,7 +39,7 @@ ENH_fnc_manageZeusAddons_invertSelection =
     };
 };
 
-//Get Valid Patches (Only with atleast one unit with scopeCurator == 2), result is cached
+// Get Valid Patches (Only with atleast one unit with scopeCurator == 2), result is cached
 if (uiNamespace getVariable ["ENH_ZeusAddons_ValidPatches", []] isEqualTo []) then
 {
     ("true" configClasses (configFile >> "CfgPatches")) apply
@@ -49,14 +49,14 @@ if (uiNamespace getVariable ["ENH_ZeusAddons_ValidPatches", []] isEqualTo []) th
         if (_units isEqualTo []) then {continue};
         _units apply
         {
-            //Exit if first vehicle with scopeCurator == 2 is found
+            // Exit if first vehicle with scopeCurator == 2 is found
             if (getNumber (configFile >> "CfgVehicles" >> _x >> "scopeCurator") == 2) exitWith {_validCfgPatches pushBack _patch};
         };
     };
     uiNamespace setVariable ["ENH_ZeusAddons_ValidPatches", _validCfgPatches]
 };
 
-//Fill tree
+// Fill tree
 private _addons = [];
 (uiNamespace getVariable "ENH_ZeusAddons_ValidPatches") apply
 {
@@ -83,7 +83,7 @@ private _addons = [];
 
 _ctrlTVPatches tvSortAll [[], false];
 
-//Save setup when GUI is closed
+// Save setup when GUI is closed
 _display displayAddEventHandler ["Unload",
 {
     params ["_display"];
@@ -103,7 +103,7 @@ _display displayAddEventHandler ["Unload",
     profileNamespace setVariable ["ENH_EnabledZeusAddons", _enabled];
 }];
 
-//Fill units list
+// Fill units list
 _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
 {
     _this spawn
@@ -126,7 +126,7 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
             private _row = _ctrlLBUnits lbAdd _displayName;
             _ctrlLBUnits lbSetTooltip [_row, _displayName + endl + _x];
 
-            //Try to get a proper image
+            // Try to get a proper image
             private _picture = getText (configFile >> "CfgVehicles" >> _x >> "editorPreview");
             if !(fileExists _picture) then {_picture = getText (configFile >> "CfgVehicles" >> _x >> "portrait")};
             if !(fileExists _picture) then {_picture = getText (configFile >> "CfgVehicles" >> _x >> "icon")};
@@ -138,7 +138,7 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
     };
 }];
 
-//Change state
+// Change state
 _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
 {
     params ["_ctrlTVPatches", "_path"];
@@ -146,7 +146,7 @@ _ctrlTVPatches ctrlAddEventHandler ["TreeSelChanged",
     [_ctrlTVPatches, _path] call ENH_fnc_manageZeusAddons_invertSelection;
 }];
 
-//Copy
+// Copy
 ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_EXPORT ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
@@ -164,12 +164,12 @@ ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_EXPORT ctrlAddEventHandler 
         };
     };
 
-    //Set variable used by display3denCopy and create the display
+    // Set variable used by display3denCopy and create the display
     uiNamespace setVariable ["display3DENCopy_data", ["CfgPatches", _export trim [", ", 2]]];
     ctrlParent _ctrlButton createDisplay "display3denCopy";
 }];
 
-//Invert selection
+// Invert selection
 ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_INVERT ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
@@ -184,14 +184,14 @@ ctrlParent _ctrlTVPatches displayCtrl IDC_ZEUSADDONS_INVERT ctrlAddEventHandler 
     };
 }];
 
-//Collapse tree view
+// Collapse tree view
 CTRL(IDC_ZEUSADDONS_COLLAPSE) ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
     tvCollapseAll (ctrlParent _ctrlButton displayCtrl IDC_ZEUSADDONS_CFGPATCHES);
 }];
 
-//Expand tree view
+// Expand tree view
 CTRL(IDC_ZEUSADDONS_EXPAND) ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];

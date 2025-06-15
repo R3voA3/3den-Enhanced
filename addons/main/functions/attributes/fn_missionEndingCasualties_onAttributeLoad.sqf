@@ -27,7 +27,7 @@ _value params ["_threshold", "_debriefing", "_isWin", "_side"];
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) cbSetChecked _isWin;
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04) lbSetCurSel ([west, east, independent, civilian] find _side);
 
-//Add reset event to reset button
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);

@@ -17,7 +17,7 @@
 
 params ["_ctrlGroup"];
 
-//Selection animations to pass to the attribute
+// Selection animations to pass to the attribute
 private _animSet = (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbData lbCurSel (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00);
 private _anims = switch _animSet do
 {
@@ -187,11 +187,11 @@ private _anims = switch _animSet do
     };
 };
 
-//Make sure to exit with exact default value if nothing was set, so attribute data is not written to mission.sqf (Workaround)
+// Make sure to exit with exact default value if nothing was set, so attribute data is not written to mission.sqf (Workaround)
 if (_animSet isEqualTo "") exitWith {['', [], false, false]};
 
 [
-    _animSet, //Needs to be saved to restore the value when attribute is loaded
+    _animSet, // Needs to be saved to restore the value when attribute is loaded
     _anims,
     cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),
     cbChecked (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02)

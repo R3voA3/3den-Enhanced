@@ -64,14 +64,14 @@ private _baseControls =
         "Scrollbar"
 ];
 
-private _return = "//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
-_return = _return + "//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
-_return = _return + "//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles" + endl + endl;
-_return = _return + "//Eden Editor macros such as background color and pixel grid" + endl + "#include ""\a3\3DEN\UI\macros.inc""" + endl;
-_return = _return + "//Eden Editor advanced macros" + endl + "#include ""\a3\3den\ui\macroexecs.inc""" + endl;
-_return = _return + "//GRIDs" + endl + "#include ""\a3\ui_f\hpp\definecommongrids.inc""" + endl;
-_return = _return + "//DIK Key Codes" + endl + "#include ""\a3\ui_f\hpp\definedikcodes.inc""" + endl;
-_return = _return + "//Eden Editor IDDs and IDCs as well as control types, styles and macros" + endl + "#include ""\a3\3den\ui\resincl.inc""" + endl + endl;
+private _return = "// - GUI Documenation: https:// community.bistudio.com/wiki/Arma:_GUI_Configuration" + endl;
+_return = _return + "// - Control Types:    https:// community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types" + endl;
+_return = _return + "// - Control Styles:   https:// community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles" + endl + endl;
+_return = _return + "// Eden Editor macros such as background color and pixel grid" + endl + "#include ""\a3\3DEN\UI\macros.inc""" + endl;
+_return = _return + "// Eden Editor advanced macros" + endl + "#include ""\a3\3den\ui\macroexecs.inc""" + endl;
+_return = _return + "// GRIDs" + endl + "#include ""\a3\ui_f\hpp\definecommongrids.inc""" + endl;
+_return = _return + "// DIK Key Codes" + endl + "#include ""\a3\ui_f\hpp\definedikcodes.inc""" + endl;
+_return = _return + "// Eden Editor IDDs and IDCs as well as control types, styles and macros" + endl + "#include ""\a3\3den\ui\resincl.inc""" + endl + endl;
 
 if (_classes in [2, 1]) then
 {
@@ -85,7 +85,7 @@ if (_classes in [2, 1]) then
 
     _3DENBaseControls sort true;
 
-    _return = _return + "//Eden Editor Base Controls" + endl;
+    _return = _return + "// Eden Editor Base Controls" + endl;
     {
             _return = _return + _mode + " " + _x + ";" + endl;
     } forEach _3DENBaseControls;
@@ -93,7 +93,7 @@ if (_classes in [2, 1]) then
 
 if (_classes in [0, 2]) then
 {
-    _return = _return + endl + "//Classic Base Controls" + endl;
+    _return = _return + endl + "// Classic Base Controls" + endl;
     {
         _return = _return + _mode + " " + _x + ";" + endl;
     } forEach _baseControls;
@@ -110,14 +110,14 @@ if (_classes == 0) then
 
     _exoticClassed sort true;
 
-    _return = _return + endl + "//Excotic Base Controls" + endl;
+    _return = _return + endl + "// Excotic Base Controls" + endl;
 
     {
         _return = _return + _mode + " " + _x + ";" + endl;
     } forEach (_exoticClassed - _baseControls);
 };
 
-//Set variable used by display3denCopy and create the display
+// Set variable used by display3denCopy and create the display
 uiNamespace setVariable ["display3DENCopy_data", ["", _return]];
 
 findDisplay IDD_EXPORTGUIDEFINES createDisplay "display3denCopy";

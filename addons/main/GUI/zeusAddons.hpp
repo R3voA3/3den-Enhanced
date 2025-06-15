@@ -37,7 +37,6 @@ class ENH_ZeusAddons
          w = QUOTE(80 * GRID_W);
          h = QUOTE(CTRL_DEFAULT_H);
          font = FONT_BOLD;
-         //sizeEx = SIZEEX_PURISTA(SIZEEX_L);
          sizeEx = QUOTE(4.86 * SIZEEX_BASE);
       };
       class CfgPatches: ctrlTree

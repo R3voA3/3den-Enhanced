@@ -19,7 +19,7 @@ class ENH_AdvancedDamage
             control = "ENH_AdvancedDamage";
             defaultValue = "if (getAllHitPointsDamage _this isNotEqualTo []) then {str [getAllHitPointsDamage _this # 0, getAllHitPointsDamage _this # 2]} else {str [[], []]}";
             typeName = "STRING";
-            condition = "objectVehicle + objectBrain"; //Perhaps this is better to avoid issues with buildings.
+            condition = "objectVehicle + objectBrain"; // Perhaps this is better to avoid issues with buildings.
         };
     };
 };

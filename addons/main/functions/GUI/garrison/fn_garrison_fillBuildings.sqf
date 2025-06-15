@@ -22,7 +22,7 @@ private _mode = lbCurSel CTRL(IDC_GARRISON_MODE);
 private _unitPos = lbCurSel CTRL(IDC_GARRISON_STANCE);
 private _enablePath = [true, false] select (lbCurSel CTRL(IDC_GARRISON_PATH));
 
-//Set entity attributes
+// Set entity attributes
 private _fnc_setAttributes =
 {
 params ["_entity", "_pos", "_unitPos"];
@@ -33,12 +33,12 @@ params ["_entity", "_pos", "_unitPos"];
     _entity set3DENAttribute ["ENH_disableAI_path", _enablePath];
 };
 
-//Get building positions from given buildings. Respecting coverage value
+// Get building positions from given buildings. Respecting coverage value
 private _fnc_getBuildingsPositions =
 {
     params [["_firstOnly", false]];
 
-    private _coverage = [10, 4, 2, 1] select (lbCurSel CTRL(IDC_GARRISON_COVERAGE)); //Convert selected index to divisor
+    private _coverage = [10, 4, 2, 1] select (lbCurSel CTRL(IDC_GARRISON_COVERAGE)); // Convert selected index to divisor
 
     ENH_Garrison_ValidBuildings = [ENH_Garrison_ValidBuildings, [], {ENH_Garrison_AreaHelper distance _x}, "ASCEND"] call BIS_fnc_sortBy;
 
@@ -52,7 +52,7 @@ private _fnc_getBuildingsPositions =
 
     _buildingPositions apply {_x apply {_buildingsPositionsFlattened pushBack _x}};
 
-    //Resize array to reduce amount of positions randomly according to coverage value
+    // Resize array to reduce amount of positions randomly according to coverage value
     _buildingsPositionsFlattened = _buildingsPositionsFlattened call BIS_fnc_arrayShuffle;
     _buildingsPositionsFlattened resize (round (count _buildingsPositionsFlattened / _coverage));
     _buildingsPositionsFlattened;
@@ -62,7 +62,7 @@ private _fnc_getBuildingsPositions =
 {
     switch _mode do
     {
-        case 0://CLOSEST BUILDING
+        case 0:// CLOSEST BUILDING
         {
             private _positions = true call _fnc_getBuildingsPositions;
             {
@@ -73,7 +73,7 @@ private _fnc_getBuildingsPositions =
                 [_x, _pos, _unitPos] call _fnc_setAttributes;
             } forEach ENH_Garrison_SelectedEntities;
         };
-        case 1://FROM CENTER
+        case 1:// FROM CENTER
         {
             private _positions = false call _fnc_getBuildingsPositions;
             {
@@ -84,7 +84,7 @@ private _fnc_getBuildingsPositions =
                 [_x, _pos, _unitPos] call _fnc_setAttributes;
             } forEach ENH_Garrison_SelectedEntities;
         };
-        case 2://RANDOM
+        case 2:// RANDOM
         {
             private _positions = false call _fnc_getBuildingsPositions;
             {

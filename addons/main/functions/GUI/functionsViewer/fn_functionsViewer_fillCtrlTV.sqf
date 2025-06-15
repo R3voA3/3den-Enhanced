@@ -26,7 +26,7 @@ private _showOtherFiles = profileNamespace getVariable ["ENH_FunctionsViewer_Sho
 private _ctrlTV = CTRL(IDC_FUNCTIONSVIEWER_LIST);
 private _counter = 0;
 
-//Clear search first otherwise tree view wont be cleared entirely
+// Clear search first otherwise tree view wont be cleared entirely
 private _ctrlSearch = CTRL(IDC_FUNCTIONSVIEWER_SEARCH);
 private _previousSearchText = ctrlText _ctrlSearch;
 _ctrlSearch ctrlSetText "";
@@ -109,11 +109,11 @@ else
                     };
                     _fncIndex = _ctrlTV tvAdd [[_addonIndex, _categoryIndex], _fncShort];
                     _counter = _counter + 1;
-                    _ctrlTV tvSetTooltip [[_addonIndex, _categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+                    _ctrlTV tvSetTooltip [[_addonIndex, _categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];// Do not localize
                     _ctrlTV tvSetData [[_addonIndex, _categoryIndex, _fncIndex], format ["['%1', '%2']", _fncLong, _path]];
                     if (_path isEqualTo LAST_VIEWED) then
                     {
-                        _ctrlTV tvSetCurSel [_addonIndex, _categoryIndex, _fncIndex];//Triggers onTreeSelChanged
+                        _ctrlTV tvSetCurSel [_addonIndex, _categoryIndex, _fncIndex];// Triggers onTreeSelChanged
                     };
                 };
                 true
@@ -144,11 +144,11 @@ else
                     };
                     private _fncIndex = _ctrlTV tvAdd [[_categoryIndex], _fncShort];
                     _counter = _counter + 1;
-                    _ctrlTV tvSetTooltip [[_categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+                    _ctrlTV tvSetTooltip [[_categoryIndex, _fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];// Do not localize
                     _ctrlTV tvSetData [[_categoryIndex, _fncIndex], format ["['%1', '%2']", _fncLong, _path]];
                     if (_path isEqualTo LAST_VIEWED) then
                     {
-                        _ctrlTV tvSetCurSel [_categoryIndex, _fncIndex];//Triggers onTreeSelChanged
+                        _ctrlTV tvSetCurSel [_categoryIndex, _fncIndex];// Triggers onTreeSelChanged
                     };
                 };
                 true
@@ -162,12 +162,12 @@ else
                 {
                     private _fncIndex = _ctrlTV tvAdd [[], _fncShort];
                     _ctrlTV tvSetPictureRight [[_fncIndex], _logo];
-                    _ctrlTV tvSetTooltip [[_fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];//Do not localize
+                    _ctrlTV tvSetTooltip [[_fncIndex], format ["PreInit:%1 PreStart:%2 PostInit:%3 Recompile:%4", _preInit, _preStart, _postInit, _recompile]];// Do not localize
                     _ctrlTV tvSetData [[_fncIndex], format ["['%1', '%2']", _fncLong, _path]];
                     _counter = _counter + 1;
                     if (_path isEqualTo LAST_VIEWED) then
                     {
-                        _ctrlTV tvSetCurSel [_fncIndex];//Triggers onTreeSelChanged
+                        _ctrlTV tvSetCurSel [_fncIndex];// Triggers onTreeSelChanged
                     };
                 };
                 true
@@ -178,12 +178,12 @@ else
 
 _ctrlTV tvSortAll [[], false];
 
-//Reapply previous value to trigger tree view update
+// Reapply previous value to trigger tree view update
 if (_previousSearchText != "") then
 {
     _ctrlSearch ctrlSetText "";
 
-    //Small delay, otherwise tree view is not updated properly
+    // Small delay, otherwise tree view is not updated properly
     [_ctrlSearch, _previousSearchText] spawn
     {
         sleep 0.01;

@@ -56,7 +56,7 @@ CTRL(IDC_NAMEOBJECTS_SET_NAME) ctrlAddEventHandler ["ButtonClick",
 
     [localize "STR_ENH_MAIN_NAMEOBJECTS"] collect3DENHistory
     {
-        {  //Set name attribute for object. For marker set markerName attribute
+        {  // Set name attribute for object. For marker set markerName attribute
             _x set3DENAttribute ["Name", format ["%1_%2", _varName, _index]];
             _x set3DENAttribute ["markerName", format ["%1_%2", _varName, _index]];
             _index = _index + 1;

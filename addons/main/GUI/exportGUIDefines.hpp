@@ -101,7 +101,7 @@ class ENH_ExportGUIDefines
         };
         class Ok: ctrlButtonOK
         {
-            idc = IDC_NONE;//We don't want it to close the GUI. The function does that.
+            idc = IDC_NONE;// We don't want it to close the GUI. The function does that.
             x = QUOTE(CENTER_X - 0.5 * 53 * GRID_W + (53 - 52) * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + 20 * GRID_H);
             w = QUOTE(25 * GRID_W);

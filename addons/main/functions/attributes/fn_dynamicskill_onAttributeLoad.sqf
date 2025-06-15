@@ -95,7 +95,7 @@ _ctrlCheckbox cbSetChecked _enable;
 [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_23), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_24), "%"] call BIS_fnc_initSliderValue;
 [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_23), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_24), "%", _skillAimMaxIndependent] call BIS_fnc_initSliderValue;
 
-//Add reset event to reset button
+// Add reset event to reset button
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_BUTTON_RESET) ctrlAddEventHandler ["ButtonClick",
 {
     private _ctrlGroup = ctrlParentControlsGroup (_this select 0);
@@ -104,17 +104,17 @@ _ctrlCheckbox cbSetChecked _enable;
     _ctrlCheckbox cbSetChecked false;
     [_ctrlCheckbox] call ENH_fnc_dynamicSkill_toggleControlsState;
 
-    //BLUFOR
+    // BLUFOR
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "%", 0.5] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04), "%", 0.3] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06), "%", 0.8] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08), "%", 0.5] call BIS_fnc_initSliderValue;
-    //OPFOR
+    // OPFOR
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10), "%", 0.5] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12), "%", 0.3] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_13), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_14), "%", 0.8] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_15), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_16), "%", 0.5] call BIS_fnc_initSliderValue;
-    //Independent
+    // Independent
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_17), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_18), "%", 0.5] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_19), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_20), "%", 0.3] call BIS_fnc_initSliderValue;
     [(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_21), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_22), "%", 0.8] call BIS_fnc_initSliderValue;

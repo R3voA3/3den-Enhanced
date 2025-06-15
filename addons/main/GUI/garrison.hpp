@@ -166,7 +166,7 @@ class ENH_Garrison: ctrlControlsGroupNoScrollbars
         };
         class Ok: ctrlButtonOK
         {
-            idc = IDC_GARRISON_OK;//We don't want it to close the GUI. The function does that.
+            idc = IDC_GARRISON_OK;// We don't want it to close the GUI. The function does that.
             x = QUOTE(GRID_W);
             y = QUOTE(DIALOG_H * GRID_H - CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(25 * GRID_W);

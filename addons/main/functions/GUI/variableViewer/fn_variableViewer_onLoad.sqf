@@ -22,17 +22,17 @@ private _ctrlNamespace = CTRL(IDC_VARIABLEVIEWER_NAMESPACE);
 
 CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) cbSetChecked (profileNamespace getVariable ["ENH_VariableViewer_HideFunctions", false]);
 
-//Get all namespaces
+// Get all namespaces
 private _worldSizeHalf = worldSize / 2;
 
-//Sort units, vehicles, groups and locations first, then add special namespaces so that they are at the beginning of the combo box
+// Sort units, vehicles, groups and locations first, then add special namespaces so that they are at the beginning of the combo box
 private _namespaces = allUnits + vehicles + allGroups + (nearestLocations [[_worldSizeHalf, _worldSizeHalf, 0], [], _worldSizeHalf * sqrt 2]) + entities [["Logic"], []];
 _namespaces sort true;
 _namespaces = ["missionNamespace", "localNamespace", "profileNamespace", "parsingNamespace", "uiNamespace", "player", "cursorTarget"] + _namespaces;
 
 uiNamespace setVariable ["ENH_VariableViewer_Namespaces", _namespaces];
 
-//We add special namespaces first, otherwise they are all named NAMESPACE
+// We add special namespaces first, otherwise they are all named NAMESPACE
 private _lastNamespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];
 private _icon = "";
 {
@@ -72,7 +72,7 @@ private _icon = "";
 
 CTRL(IDC_VARIABLEVIEWER_NAMESPACE) ctrlAddEventHandler ["LBSelChanged", ENH_fnc_variableViewer_onFilterChanged];
 
-//Handle searching
+// Handle searching
 CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
 {
     params ["_ctrlEdit", "_newText"];
@@ -90,8 +90,8 @@ CTRL(IDC_VARIABLEVIEWER_SEARCH) ctrlAddEventHandler ["EditChanged",
     };
 }];
 
-//CTRL + F to focus search
-_display displayAddEventHandler ["KeyDown", //Focus Search
+// CTRL + F to focus search
+_display displayAddEventHandler ["KeyDown", // Focus Search
 {
     params ["_display", "_key", "", "_ctrl"];
     if (_key isEqualTo 33 && _ctrl) then
@@ -100,7 +100,7 @@ _display displayAddEventHandler ["KeyDown", //Focus Search
     }
 }];
 
-//Reset search
+// Reset search
 CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
@@ -112,18 +112,18 @@ CTRL(IDC_VARIABLEVIEWER_SEARCHBUTTON) ctrlAddEventHandler ["ButtonClick",
 
 CTRL(IDC_VARIABLEVIEWER_LIST) ctrlAddEventHandler ["LBSelChanged", ENH_fnc_variableViewer_onLNBSelChanged];
 
-//Update list if show functions state changes
+// Update list if show functions state changes
 CTRL(IDC_VARIABLEVIEWER_HIDEFUNCTIONS) ctrlAddEventHandler ["CheckedChanged",
 {
     profileNamespace setVariable ["ENH_VariableViewer_HideFunctions", [false, true] select _this#1];
     [] call ENH_fnc_variableViewer_fillLNB;
 }];
 
-//Fill ListNbox
+// Fill ListNbox
 CTRL(IDC_VARIABLEVIEWER_LIST) call ENH_fnc_variableViewer_fillLNB;
 
-//Set up Filter
+// Set up Filter
 CTRL(IDC_VARIABLEVIEWER_FILTER) lnbAddRow [localize "STR_ENH_MAIN_VARIABLEVIEWER_VARIABLENAME", localize "STR_ENH_MAIN_VARIABLEVIEWER_VARIABLEVALUE", localize "STR_ENH_MAIN_VARIABLEVIEWER_VARIABLETYPE"];
 
-//Used for sorting
+// Used for sorting
 [CTRL(IDC_VARIABLEVIEWER_FILTER), CTRL(IDC_VARIABLEVIEWER_LIST), [0, 1, 2]] call BIS_fnc_initListNBoxSorting;
