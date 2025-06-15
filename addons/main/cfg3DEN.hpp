@@ -277,13 +277,13 @@ class Cfg3DEN
                     #include "\x\enh\addons\main\attributesMarker\markerDrawPriority.hpp"
                 };
             };
-            class Style
-            {
-                class Attributes
-                {
-                    #include "\x\enh\addons\main\attributesMarker\markerColor.hpp"
-                };
-            };
+            // class Style
+            // {
+            //     class Attributes
+            //     {
+            //         #include "\x\enh\addons\main\attributesMarker\markerColor.hpp"
+            //     };
+            // };
             #include "\x\enh\addons\main\attributesMarker\markerHideOnStart.hpp"
         };
     };

@@ -1,6 +1,5 @@
 # 8.5.0
 ## ADDED
-- Custom marker color attribute
 - Custom icons for the hold action attribute can now be defined in the Editor preferences -> Misc.
 - Icon picker to the hold action attribute  #435
 - ENH_fnc_iconPicker, an simple Icon Picker
