@@ -18,19 +18,36 @@
 
 params ["_ctrlGroup", "_value"];
 
-private _selectedMarkers = get3DENSelected "Marker" apply {_x get3DENAttribute "markerType"};
+private _ctrlToolbox = controlNull;
+
+// The load event provides the control, not the group
+if (ctrlIDC _ctrlGroup == IDC_ATTRIBUTE_CONTROL_00) then
+{
+    _ctrlToolbox = _ctrlGroup;
+    _ctrlGroup = ctrlParentControlsGroup _ctrlGroup;
+}
+else
+{
+    _ctrlToolbox = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00;
+};
+
+private _selectedMarkersTypes = get3DENSelected "Marker" apply {_x get3DENAttribute "markerType"};
 
 // Markers of type icon (-1) don't support marker shapes and become invisible
 // So we better disable the attribute here
 // TODO: Add a little hint explaining why it's disabled 2025-06-17 R3vo
-if (-1 in _selectedMarkers) then
+if ([-1] in _selectedMarkersTypes) then
 {
-    IDC_ATTRIBUTE_CONTROL_00 lbSetCurSel 0;
-    IDC_ATTRIBUTE_CONTROL_00 ctrlEnable false;
-    IDC_ATTRIBUTE_CONTROL_00 ctrlSetFade 0.8;
+    _ctrlToolbox lbSetCurSel -1;
+    _ctrlToolbox ctrlEnable false;
+
+    private _ctrlTitle = (ctrlParent _ctrlGroup) ctrlCreate ["ctrlStatic", -1, _ctrlGroup];
+    _ctrlTitle ctrlSetPosition (ctrlPosition _ctrlToolbox);
+    _ctrlTitle ctrlSetBackgroundColor [0.6, 0.6, 0.6, 0.7];
+    _ctrlTitle ctrlSetText "This attribute is disabled for markers of type icon!";
+    _ctrlTitle ctrlCommit 0;
 }
 else
 {
-    private _index = CUSTOM_MARKER_SHAPES find _value;
-    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) lbSetCurSel _index;
+    _ctrlToolbox lbSetCurSel (CUSTOM_MARKER_SHAPES find _value);
 };

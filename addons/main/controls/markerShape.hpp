@@ -2,7 +2,7 @@ class ENH_MarkerShape: Title
 {
     attributeLoad = "[_this, _value] call ENH_fnc_markerShape_onAttributeLoad";
     attributeSave = "_this call ENH_fnc_markerShape_onAttributeSave";
-    h = QUOTE(11 * CTRL_DEFAULT_H + 35 * pixelH);
+    h = QUOTE(8 * CTRL_DEFAULT_H + 5 * pixelH);
     class Controls: Controls
     {
         class Title: Title
@@ -40,6 +40,7 @@ class ENH_MarkerShape: Title
                 "Decagon"
             };
             style = QUOTE(ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO);
+            onLoad = "_this call ENH_fnc_markerShape_onAttributeLoad";
         };
     };
 };
