@@ -19,14 +19,14 @@ class ENH_MarkerShape: Title
             rows = 4;
             strings[] =
             {
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
-                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa"
+                "a3\3den\data\attributes\default_ca.paa",
+                "\x\enh\addons\main\data\triangle_ca.paa",
+                "\x\enh\addons\main\data\pentagon_ca.paa",
+                "\x\enh\addons\main\data\hexagon_ca.paa",
+                "\x\enh\addons\main\data\heptagon_ca.paa",
+                "\x\enh\addons\main\data\octagon_ca.paa",
+                "\x\enh\addons\main\data\nonagon_ca.paa",
+                "\x\enh\addons\main\data\decagon_ca.paa"
             };
             tooltips[] =
             {
