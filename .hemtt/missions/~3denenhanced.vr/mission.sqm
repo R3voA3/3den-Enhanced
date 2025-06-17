@@ -12,11 +12,11 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=83233;
+		nextID=83232;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1883;
+		nextID=1882;
 	};
 	class LayerIndexProvider
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="3denenhanced";
+sourceName="~3denenhanced";
 addons[]=
 {
 	"A3_Characters_F_Common",
@@ -7841,7 +7841,7 @@ class Mission
 			position[]={3919.9241,5,3150.0249};
 			name="marker_1879";
 			markerType="RECTANGLE";
-			type="mil_arrow";
+			type="";
 			a=50;
 			b=50;
 			id=83227;
@@ -7856,7 +7856,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="OCTAGON";
+							value="HEXAGON";
 						};
 					};
 				};
@@ -7866,27 +7866,10 @@ class Mission
 		class Item15
 		{
 			dataType="Marker";
-			position[]={4055.3291,5,3149.968};
+			position[]={4184.5703,5,3160.7725};
 			name="marker_1881";
 			type="mil_arrow";
 			id=83229;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ENH_markerShape";
-					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="NONE";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 		class Item16
 		{
