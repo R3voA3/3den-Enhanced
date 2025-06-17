@@ -72,7 +72,9 @@ workshop = [
     # 3Den Stringtable Viewer
     "2073243184",
     # Debug Console
-    "1231625987"
+    "1231625987",
+    # Advanced Developer Tools
+    "3499977893"
 ]
 
 parameters = [
