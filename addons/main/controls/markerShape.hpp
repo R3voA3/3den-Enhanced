@@ -1,0 +1,45 @@
+class ENH_MarkerShape: Title
+{
+    attributeLoad = "[_this, _value] call ENH_fnc_markerShape_onAttributeLoad";
+    attributeSave = "_this call ENH_fnc_markerShape_onAttributeSave";
+    h = QUOTE(11 * CTRL_DEFAULT_H + 35 * pixelH);
+    class Controls: Controls
+    {
+        class Title: Title
+        {
+            h = QUOTE(8 * CTRL_DEFAULT_H);
+        };
+        class Value: ctrlToolbox
+        {
+            idc = IDC_ATTRIBUTE_CONTROL_00;
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
+            h = QUOTE(8 * CTRL_DEFAULT_H);
+            columns = 2;
+            rows = 4;
+            strings[] =
+            {
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa",
+                "\a3\3DEN\Data\Attributes\Shape\rectangle_ca.paa"
+            };
+            tooltips[] =
+            {
+                "Default",
+                "Triangle",
+                "Pentagon",
+                "Hexagon",
+                "Heptagon",
+                "Octagon",
+                "Nonagon",
+                "Decagon"
+            };
+            style = QUOTE(ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO);
+        };
+    };
+};

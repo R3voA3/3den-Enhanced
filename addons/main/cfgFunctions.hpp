@@ -25,6 +25,8 @@ class CfgFunctions
             file = "\x\enh\addons\main\functions\attributes";
             class markerColor_onAttributeLoad {};
             class markerColor_onAttributeSave {};
+            class markerShape_onAttributeLoad {};
+            class markerShape_onAttributeSave {};
             class advancedDamage_onAttributeLoad {};
             class advancedDamage_onAttributeSave {};
             class airdrop_onAttributeLoad {};

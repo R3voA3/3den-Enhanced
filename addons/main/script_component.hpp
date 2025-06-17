@@ -79,6 +79,8 @@
     validate = "expression";\
 }\
 
+#define CUSTOM_MARKER_SHAPES ["NONE", "TRIANGLE", "PENTAGON", "HEXAGON", "HEPTAGON", "OCTAGON", "NONAGON", "DECAGON"]
+
 #define LB_HTML "<br/>"
 #define INDENT "    "
 #define SHOW_IN_ROOT value = 0
