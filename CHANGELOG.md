@@ -1,6 +1,9 @@
-# 8.X.X
+# 8.6.0
 ## ADDED
 - Custom marker color attribute
+- Custom marker shape attribute
+    - By default, custom marker shapes and colors are displayed when hovering over them, this can be disabled in the Preferences -> Interface
+    - Note that custom shapes are not available for markers of type ICON
 
 # 8.5.0
 ## ADDED
