@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=83233;
+		nextID=83250;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1883;
+		nextID=1899;
 	};
 	class LayerIndexProvider
 	{
-		nextID=17429;
+		nextID=17461;
 	};
 	class Camera
 	{
-		pos[]={7553.9478,26.837296,7532.5508};
-		dir[]={-0.11892878,-0.44718716,0.88649851};
-		up[]={-0.059459992,0.89444041,0.4432165};
-		aside[]={0.99112082,-3.7252903e-09,0.13296445};
+		pos[]={5558.4492,30,4686.3242};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -83,8 +83,8 @@ addons[]=
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Props_F_Decade_Objectives",
-	"A3_Ui_F",
 	"A3_Modules_F_Multiplayer",
+	"A3_Ui_F",
 	"A3_Static_F_AA_01",
 	"A3_Characters_F_Exp"
 };
@@ -247,15 +247,15 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
 		class Item23
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -2156,7 +2156,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=17;
+		items=22;
 		class Item0
 		{
 			dataType="Group";
@@ -6457,17 +6457,6 @@ class Mission
 		};
 		class Item4
 		{
-			dataType="Marker";
-			position[]={3978.4141,5,2882.4929};
-			name="marker_1874";
-			markerType="RECTANGLE";
-			type="";
-			a=50;
-			b=50;
-			id=82649;
-		};
-		class Item5
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -6545,7 +6534,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item6
+		class Item5
 		{
 			dataType="Marker";
 			position[]={3977.95,5,2903.4121};
@@ -6554,7 +6543,7 @@ class Mission
 			type="b_hq";
 			id=82654;
 		};
-		class Item7
+		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6569,14 +6558,7 @@ class Mission
 			id=82670;
 			type="B_static_AA_F";
 		};
-		class Item8
-		{
-			dataType="Layer";
-			name="Testbuildings";
-			id=82724;
-			atlOffset=-5;
-		};
-		class Item9
+		class Item7
 		{
 			dataType="Group";
 			side="West";
@@ -7786,7 +7768,7 @@ class Mission
 				nAttributes=19;
 			};
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Group";
 			side="West";
@@ -7814,37 +7796,288 @@ class Mission
 			};
 			id=82672;
 		};
-		class Item11
-		{
-			dataType="Layer";
-			name="JtHEFF/fxz4";
-			id=83216;
-			atlOffset=-5;
-		};
-		class Item12
-		{
-			dataType="Layer";
-			name="7mJM4qDTAtM";
-			id=83223;
-			atlOffset=-5;
-		};
-		class Item13
-		{
-			dataType="Layer";
-			name="p5RxfELODKE";
-			id=83224;
-			atlOffset=-5;
-		};
-		class Item14
+		class Item9
 		{
 			dataType="Marker";
-			position[]={3919.9241,5,3150.0249};
-			name="marker_1879";
+			position[]={5191.0972,0,4888.0059};
+			name="marker_1881";
+			type="mil_dot";
+			id=83229;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.6,0.33,1)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4268.9331,5.0014391,2899.2952};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=83231;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=83230;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={5391.0972,0,4888.0059};
+			name="marker_1885";
 			markerType="RECTANGLE";
 			type="mil_arrow";
 			a=50;
 			b=50;
-			id=83227;
+			id=83235;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(1,0.31,0.31)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={5591.0972,0,4888.0059};
+			name="marker_1886";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83236;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(1,1,1)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DECAGON";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={5791.0972,0,4888.0059};
+			name="marker_1889";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83239;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.78,0.71,0.38)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="HEPTAGON";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={5191.0972,0,5088.0059};
+			name="marker_1890";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			colorName="ColorGreen";
+			a=50;
+			b=50;
+			id=83240;
+			atlOffset=-5;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7866,13 +8099,171 @@ class Mission
 		class Item15
 		{
 			dataType="Marker";
-			position[]={4055.3291,5,3149.968};
-			name="marker_1881";
+			position[]={5391.0972,0,5088.0059};
+			name="marker_1891";
+			markerType="RECTANGLE";
 			type="mil_arrow";
-			id=83229;
+			a=50;
+			b=50;
+			id=83241;
+			atlOffset=-5;
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.23,1,1)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONAGON";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={5591.0972,0,5088.0059};
+			name="marker_1892";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83242;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(1,0.31,1)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DECAGON";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={5791.0972,0,5088.0059};
+			name="marker_1895";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83245;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.13,0.12,1)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
@@ -7885,37 +8276,220 @@ class Mission
 						};
 					};
 				};
+				nAttributes=2;
+			};
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={5191.0972,0,5288.0059};
+			name="marker_1896";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83246;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(1,1,0.35)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="TRIANGLE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={5391.0972,0,5288.0059};
+			name="marker_1897";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83247;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="PENTAGON";
+						};
+					};
+				};
 				nAttributes=1;
 			};
 		};
-		class Item16
+		class Item20
 		{
-			dataType="Group";
-			side="West";
-			class Entities
+			dataType="Marker";
+			position[]={5591.0972,0,5288.0059};
+			name="marker_1898";
+			markerType="RECTANGLE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83248;
+			atlOffset=-5;
+			class CustomAttributes
 			{
-				items=1;
-				class Item0
+				class Attribute0
 				{
-					dataType="Object";
-					class PositionInfo
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
 					{
-						position[]={3982.1785,5.0014391,3007.8718};
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(0.62,1,0.87)";
+									};
+								};
+							};
+						};
 					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=83231;
-					type="B_Soldier_F";
 				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="HEXAGON";
+						};
+					};
+				};
+				nAttributes=2;
 			};
-			class Attributes
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={5791.0972,0,5288.0059};
+			name="marker_1899";
+			markerType="ELLIPSE";
+			type="mil_arrow";
+			a=60;
+			b=20;
+			id=83249;
+			atlOffset=-5;
+			class CustomAttributes
 			{
+				class Attribute0
+				{
+					property="ENH_markerColor";
+					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#(1,1,0.35)";
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
 			};
-			id=83230;
 		};
 	};
 };
