@@ -28,16 +28,16 @@ class ENH_MarkerShape: Title
                 "\x\enh\addons\main\data\nonagon_ca.paa",
                 "\x\enh\addons\main\data\decagon_ca.paa"
             };
-            tooltips[] =// TODO: localize 2025-06-17 R3vo
+            tooltips[] =
             {
-                "Default",
-                "Triangle",
-                "Pentagon",
-                "Hexagon",
-                "Heptagon",
-                "Octagon",
-                "Nonagon",
-                "Decagon"
+                "$STR_A3_OPTIONS_DEFAULT",
+                "$STR_ENH_MAIN_MARKER_SHAPE_TRIANGLE",
+                "$STR_ENH_MAIN_MARKER_SHAPE_PENTAGON",
+                "$STR_ENH_MAIN_MARKER_SHAPE_HEXAGON",
+                "$STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON",
+                "$STR_ENH_MAIN_MARKER_SHAPE_OCTAGON",
+                "$STR_ENH_MAIN_MARKER_SHAPE_NONAGON",
+                "$STR_ENH_MAIN_MARKER_SHAPE_DECAGON"
             };
             style = QUOTE(ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO);
             onLoad = "_this call ENH_fnc_markerShape_onAttributeLoad";

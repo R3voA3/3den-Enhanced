@@ -667,6 +667,10 @@
             <French>Evénements</French>
             <German>Ereignisse</German>
         </Key>
+        <Key ID="STR_ENH_MAIN_ATTRIBUTES_MARKER_SHAPE_DISABLED">
+            <English>This attribute is disabled for markers of type icon!</English>
+            <German>Dieses Attribut ist für Markierungen vom Typ Icon deaktiviert!</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_AUDIBLECOEF_DISPLAYNAME">
             <English>Audible Coefficient</English>
             <Czech>Koeficient vydávané hlasitosti</Czech>
@@ -7247,6 +7251,90 @@
             <Chinese>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinese>
             <Chinesesimp>重复计算的条件，必须返回布尔表达式。为真时，将显示标记。</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DECAGON">
+            <English>Decagon</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Decagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEXAGON">
+            <English>Hexagon</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Hexagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_NONAGON">
+            <English>Nonagon</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Nonagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_OCTAGON">
+            <English>Octagon</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Octagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_PENTAGON">
+            <English>Triangle</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Pentagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON">
+            <English>Heptagon</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Heptagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TRIANGLE">
+            <English>Triangle</English>
+            <!-- <Czech>Rozestup Y</Czech>
+            <French>Espacement Y</French>
+            <Spanish>Espaciando Y</Spanish>
+            <Italian>Distanza Y</Italian>
+            <Polish>Odstęp Y</Polish>
+            <Russian>Интервал Y</Russian>
+            <Chinese>Y間距</Chinese>
+            <Chinesesimp>Y间距</Chinesesimp> -->
+            <German>Dreieck</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_MEASUREDISTANCE_DATA">
             <English>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</English>
             <Czech>Vzdálenost 2D/3D: %1 / %2 m Doba cesty (pěšky): ~ %3 min</Czech>
@@ -8012,6 +8100,10 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
             <English>Define additional icons here that can be used for the hold action attribute.</English>
             <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME">
+            <English>Show Custom Marker Color / Shape</English>
+            <German>NBenutzerdefinierte Markerfarbe/-form anzeigen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>

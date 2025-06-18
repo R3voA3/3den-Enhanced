@@ -43,7 +43,7 @@ if ([-1] in _selectedMarkersTypes) then
     private _ctrlMessageDisabled = (ctrlParent _ctrlGroup) ctrlCreate ["ctrlStatic", -1, _ctrlGroup];
     _ctrlMessageDisabled ctrlSetPosition (ctrlPosition _ctrlToolbox);
     _ctrlMessageDisabled ctrlSetBackgroundColor [0.6, 0.6, 0.6, 0.7];
-    _ctrlMessageDisabled ctrlSetText "This attribute is disabled for markers of type icon!";// TODO: localize 2025-06-17 R3vo
+    _ctrlMessageDisabled ctrlSetText "$STR_ENH_MAIN_ATTRIBUTES_MARKER_SHAPE_DISABLED";
     _ctrlMessageDisabled ctrlCommit 0;
 }
 else
