@@ -35,19 +35,20 @@ private _selectedMarkersTypes = get3DENSelected "Marker" apply {_x get3DENAttrib
 
 // Markers of type icon (-1) don't support marker shapes and become invisible
 // So we better disable the attribute here
-// TODO: Add a little hint explaining why it's disabled 2025-06-17 R3vo
 if ([-1] in _selectedMarkersTypes) then
 {
     _ctrlToolbox lbSetCurSel -1;
     _ctrlToolbox ctrlEnable false;
 
-    private _ctrlTitle = (ctrlParent _ctrlGroup) ctrlCreate ["ctrlStatic", -1, _ctrlGroup];
-    _ctrlTitle ctrlSetPosition (ctrlPosition _ctrlToolbox);
-    _ctrlTitle ctrlSetBackgroundColor [0.6, 0.6, 0.6, 0.7];
-    _ctrlTitle ctrlSetText "This attribute is disabled for markers of type icon!";
-    _ctrlTitle ctrlCommit 0;
+    private _ctrlMessageDisabled = (ctrlParent _ctrlGroup) ctrlCreate ["ctrlStatic", -1, _ctrlGroup];
+    _ctrlMessageDisabled ctrlSetPosition (ctrlPosition _ctrlToolbox);
+    _ctrlMessageDisabled ctrlSetBackgroundColor [0.6, 0.6, 0.6, 0.7];
+    _ctrlMessageDisabled ctrlSetText "This attribute is disabled for markers of type icon!";// TODO: localize 2025-06-17 R3vo
+    _ctrlMessageDisabled ctrlCommit 0;
 }
 else
 {
     _ctrlToolbox lbSetCurSel (CUSTOM_MARKER_SHAPES find _value);
 };
+
+true

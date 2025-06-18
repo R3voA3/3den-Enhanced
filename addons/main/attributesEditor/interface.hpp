@@ -95,7 +95,7 @@ class ENH_Interface
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_DrawDLCIcons', false]";
         };
         class ENH_ShowCustomMarkerColorAndShape: ENH_ShowPanelLeft
-        {
+        {// TODO: localize 2025-06-18 R3vo
             displayName = "Show Custom Marker Color / Shape";
             property = "ENH_ShowCustomMarkerColorAndShape";
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape', _value]";
