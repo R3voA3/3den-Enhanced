@@ -94,5 +94,12 @@ class ENH_Interface
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_DrawDLCIcons', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_DrawDLCIcons', false]";
         };
+        class ENH_ShowCustomMarkerColorAndShape: ENH_ShowPanelLeft
+        {
+            displayName = "Show Custom Marker Color / Shape";
+            property = "ENH_ShowCustomMarkerColorAndShape";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape', true]";
+        };
     };
 };
