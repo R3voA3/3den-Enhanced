@@ -669,7 +669,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_ATTRIBUTES_MARKER_SHAPE_DISABLED">
             <English>This attribute is disabled for markers of type icon!</English>
-            <German>Dieses Attribut ist für Markierungen vom Typ Icon deaktiviert!</German>
+            <German>Dieses Attribut ist für Markierungen vom Typ Symbol deaktiviert!</German>
         </Key>
         <Key ID="STR_ENH_MAIN_AUDIBLECOEF_DISPLAYNAME">
             <English>Audible Coefficient</English>
