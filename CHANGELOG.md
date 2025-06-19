@@ -1,6 +1,12 @@
+
 # 8.7.0
 ## CHANGED
 - Fixed links to steam and github would not work when accessed through the menu strip
+
+# 8.6.1
+## CHANGED
+- Fixed CBA Addon options and ACE Arsenal not working in Eden Editor due to a function returning true at the wrong place
+- Renamed variable name of new "Show Marker Color and Shape" attribute (You need to update your setting if you changed it)
 
 # 8.6.0
 ## ADDED
