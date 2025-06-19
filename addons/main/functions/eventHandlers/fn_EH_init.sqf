@@ -124,10 +124,13 @@ private _code =
     };
 
     // Show custom marker color and shape on hover
-    if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape", true]) then
+    if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape", true]) then
     {
         call ENH_fnc_3DENShowCustomMarkerColorAndShape;
     };
+
+    // We return nil here, otherwise we break other mods (CBA, ACE)
+    nil
 };
 
 _display3DEN displayAddEventHandler ["MouseHolding", _code];

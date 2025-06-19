@@ -98,8 +98,8 @@ class ENH_Interface
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME";
             property = "ENH_ShowCustomMarkerColorAndShape";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape', true]";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', true]";
         };
     };
 };
