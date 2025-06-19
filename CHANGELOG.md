@@ -1,3 +1,7 @@
+# 8.7.0
+## CHANGED
+- Fixed links to steam and github would not work when accessed through the menu strip
+
 # 8.6.0
 ## ADDED
 - Custom marker color attribute
