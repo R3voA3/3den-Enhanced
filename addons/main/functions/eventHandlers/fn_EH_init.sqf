@@ -122,6 +122,12 @@ private _code =
             };
         };
     };
+
+    // Show custom marker color and shape on hover
+    if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_ENH_ShowCustomMarkerColorAndShape", true]) then
+    {
+        call ENH_fnc_3DENShowCustomMarkerColorAndShape;
+    };
 };
 
 _display3DEN displayAddEventHandler ["MouseHolding", _code];
