@@ -17,7 +17,7 @@ class ENH_MarkerShape: Title
             h = QUOTE(8 * CTRL_DEFAULT_H);
             columns = 2;
             rows = 4;
-            strings[] =// TODO: fixed edges 2025-06-17 R3vo
+            strings[] =
             {
                 "a3\3den\data\attributes\default_ca.paa",
                 "\x\enh\addons\main\data\triangle_ca.paa",
