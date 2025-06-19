@@ -7253,86 +7253,30 @@
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DECAGON">
             <English>Decagon</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Decagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON">
+            <English>Heptagon</English>
+            <German>Heptagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEXAGON">
             <English>Hexagon</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Hexagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_NONAGON">
             <English>Nonagon</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Nonagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_OCTAGON">
             <English>Octagon</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Octagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_PENTAGON">
             <English>Triangle</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Pentagon</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON">
-            <English>Heptagon</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
-            <German>Heptagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TRIANGLE">
             <English>Triangle</English>
-            <!-- <Czech>Rozestup Y</Czech>
-            <French>Espacement Y</French>
-            <Spanish>Espaciando Y</Spanish>
-            <Italian>Distanza Y</Italian>
-            <Polish>Odstęp Y</Polish>
-            <Russian>Интервал Y</Russian>
-            <Chinese>Y間距</Chinese>
-            <Chinesesimp>Y间距</Chinesesimp> -->
             <German>Dreieck</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MEASUREDISTANCE_DATA">
@@ -7424,6 +7368,14 @@
             <German>Missionsende (Verluste)</German>
             <Chinese>任務結束(死傷)</Chinese>
             <Chinesesimp>任务结束(死伤)</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DISPLAYNAME">
+            <English>Special Shape</English>
+            <German>Spezielle Form</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TOOLTIP">
+            <English>Spezielle Form. Funktioniert nicht bei Markierungen des Typs Symbol. Überschreibt das vanilla Form Attribut, wenn es auf einen anderen Wert als Standart gesetzt ist.</English>
+            <German>Spezielle Form</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
             <English>Threshold</English>
