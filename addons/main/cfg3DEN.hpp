@@ -85,7 +85,6 @@ class Cfg3DEN
     class Attributes
     {
         #include "\x\enh\addons\main\controls\base.hpp"
-        #include "\x\enh\addons\main\controls\markerColor.hpp"
         #include "\x\enh\addons\main\controls\advancedDamage.hpp"
         #include "\x\enh\addons\main\controls\airdrop.hpp"
         #include "\x\enh\addons\main\controls\ambientAnimations.hpp"
@@ -99,6 +98,8 @@ class Cfg3DEN
         #include "\x\enh\addons\main\controls\introText.hpp"
         #include "\x\enh\addons\main\controls\largerEditMulti.hpp"
         #include "\x\enh\addons\main\controls\mapIndicators.hpp"
+        #include "\x\enh\addons\main\controls\markerColor.hpp"
+        #include "\x\enh\addons\main\controls\markerShape.hpp"
         #include "\x\enh\addons\main\controls\missionEndingCasualties.hpp"
         #include "\x\enh\addons\main\controls\sliderMulti120.hpp"
         #include "\x\enh\addons\main\controls\sliderMultiZero.hpp"
@@ -282,6 +283,7 @@ class Cfg3DEN
                 class Attributes
                 {
                     #include "\x\enh\addons\main\attributesMarker\markerColor.hpp"
+                    #include "\x\enh\addons\main\attributesMarker\markerShape.hpp"
                 };
             };
             #include "\x\enh\addons\main\attributesMarker\markerHideOnStart.hpp"

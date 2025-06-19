@@ -3,6 +3,16 @@ class CfgFunctions
     class 3denEnhanced
     {
         tag = "ENH";
+        class 3DENInterface
+        {
+            file = "\x\enh\addons\main\functions\3DENInterface";
+            class 3DENMinimap {};
+            class 3DENShowCustomMarkerColorAndShape {};
+            class assetBrowser_collapse {};
+            class entityList_addTooltips {};
+            class favoritesList {};
+            class locationList_enhanced {};
+        };
         class 3DENRadio
         {
             file = "\x\enh\addons\main\functions\GUI\3DENRadio";
@@ -25,6 +35,8 @@ class CfgFunctions
             file = "\x\enh\addons\main\functions\attributes";
             class markerColor_onAttributeLoad {};
             class markerColor_onAttributeSave {};
+            class markerShape_onAttributeLoad {};
+            class markerShape_onAttributeSave {};
             class advancedDamage_onAttributeLoad {};
             class advancedDamage_onAttributeSave {};
             class airdrop_onAttributeLoad {};
@@ -173,15 +185,6 @@ class CfgFunctions
             class garrison2_onMouseButtonUp {};
             class garrison2_positionInBoundingBox {};
             class garrison2_isBuildingPositionEmpty {};
-        };
-        class Interface
-        {
-            file = "\x\enh\addons\main\functions\3DENInterface";
-            class 3DENMinimap {};
-            class assetBrowser_collapse {};
-            class entityList_addTooltips {};
-            class favoritesList {};
-            class locationList_enhanced {};
         };
         #ifdef ISDEV
         class Internal
