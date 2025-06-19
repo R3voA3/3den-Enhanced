@@ -7255,6 +7255,10 @@
             <English>Decagon</English>
             <German>Decagon</German>
         </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DISPLAYNAME">
+            <English>Special Shape</English>
+            <German>Spezielle Form</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON">
             <English>Heptagon</English>
             <German>Heptagon</German>
@@ -7274,6 +7278,10 @@
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_PENTAGON">
             <English>Triangle</English>
             <German>Pentagon</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TOOLTIP">
+            <English>Spezielle Form. Funktioniert nicht bei Markierungen des Typs Symbol. Überschreibt das vanilla Form Attribut, wenn es auf einen anderen Wert als Standart gesetzt ist.</English>
+            <German>Spezielle Form</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TRIANGLE">
             <English>Triangle</English>
@@ -7368,14 +7376,6 @@
             <German>Missionsende (Verluste)</German>
             <Chinese>任務結束(死傷)</Chinese>
             <Chinesesimp>任务结束(死伤)</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DISPLAYNAME">
-            <English>Special Shape</English>
-            <German>Spezielle Form</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TOOLTIP">
-            <English>Spezielle Form. Funktioniert nicht bei Markierungen des Typs Symbol. Überschreibt das vanilla Form Attribut, wenn es auf einen anderen Wert als Standart gesetzt ist.</English>
-            <German>Spezielle Form</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSIONENDING_CASUALTIES_THRESHOLD_DISPLAYNAME">
             <English>Threshold</English>
