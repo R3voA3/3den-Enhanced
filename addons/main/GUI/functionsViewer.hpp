@@ -199,11 +199,12 @@ class ENH_FunctionsViewer
                 };
                 class Default
                 {
-                    test = 0;
+                    text = "Empty";
+                    enable = 0;
                 };
                 class Separator
                 {
-                    test = 0;
+                    value = 0;
                 };
             };
         };
