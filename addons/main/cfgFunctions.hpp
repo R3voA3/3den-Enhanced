@@ -8,6 +8,7 @@ class CfgFunctions
             file = "\x\enh\addons\main\functions\3DENInterface";
             class 3DENMinimap {};
             class 3DENShowCustomMarkerColorAndShape {};
+            class adjustTitleTextWidth {};
             class assetBrowser_collapse {};
             class entityList_addTooltips {};
             class favoritesList {};

@@ -101,5 +101,12 @@ class ENH_Interface
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', true]";
         };
+        class ENH_AdjustTitleTextWidth: ENH_ShowPanelLeft
+        {
+            displayName = "$STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME";
+            property = "ENH_AdjustTitleTextWidth";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_AdjustTitleTextWidth', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_AdjustTitleTextWidth', true]";
+        };
     };
 };
