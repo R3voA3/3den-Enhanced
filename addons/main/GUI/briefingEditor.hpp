@@ -205,8 +205,14 @@ class ENH_BriefingEditor
                     text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_HELPBIKI_TEXT";
                     weblink = "https://community.bistudio.com/wiki/Arma_3:_Briefing";
                 };
-                class Default;
-                class Separator;
+                class Default
+                {
+                    test = 0;
+                };
+                class Separator
+                {
+                    test = 0;
+                };
             };
         };
         class SubjectValue: ctrlEdit

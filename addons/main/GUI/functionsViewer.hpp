@@ -197,8 +197,14 @@ class ENH_FunctionsViewer
                     picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
                     opensNewWindow = 1;
                 };
-                class Default;
-                class Separator;
+                class Default
+                {
+                    test = 0;
+                };
+                class Separator
+                {
+                    test = 0;
+                };
             };
         };
         class List: ctrlTree
