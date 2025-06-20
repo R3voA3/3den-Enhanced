@@ -409,15 +409,8 @@ class ENH_ESE
                     picture = "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\watch_ca.paa";
                     data = "Item";
                 };
-                class Default
-                {
-                    text = "Empty";
-                    enable = 0;
-                };
-                class Separator
-                {
-                    value = 0;
-                };
+                MENU_STRIP_DEFAULT
+                MENU_STRIP_SEPARATOR
             };
         };
         class AvailableItemsList: ctrlListbox
