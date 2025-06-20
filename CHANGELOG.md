@@ -2,6 +2,8 @@
 # 8.7.0
 ## CHANGED
 - Fixed links to steam and github would not work when accessed through the menu strip
+- Marker preview now only works if either custom shape or custom color was set
+- Fixed rpt message (empty class)
 
 # 8.6.1
 ## CHANGED
