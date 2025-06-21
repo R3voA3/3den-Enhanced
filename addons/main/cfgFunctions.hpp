@@ -14,6 +14,12 @@ class CfgFunctions
             class favoritesList {};
             class locationList_enhanced {};
         };
+        class 3DENCommandManager
+        {
+
+            file = "\x\enh\addons\main\functions\GUI\3DENCommandManager";
+            class 3DENCommandManager_init {};
+        };
         class 3DENRadio
         {
             file = "\x\enh\addons\main\functions\GUI\3DENRadio";
@@ -30,6 +36,7 @@ class CfgFunctions
             file = "\x\enh\addons\main\functions\GUI\3DENShortcuts";
             class 3DENShortcuts_init {};
             class 3DENShortcuts_fillList {};
+            class 3DENShortcuts_parseShortcut {};
         };
         class Attributes
         {
