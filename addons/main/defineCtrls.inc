@@ -49,6 +49,18 @@ class ctrlTree;
 class ctrlXSliderH;
 class scrollbar;
 
+// Default classes needed for ctrlMenuStrip to work
+#define MENU_STRIP_DEFAULT class Default\
+{\
+    text = "$STR_3DEN_DISPLAY3DEN_MENUBAR_DEFAULT_TEXT";\
+    enable = 0;\
+};
+
+#define MENU_STRIP_SEPARATOR class Separator\
+{\
+    value = 0;\
+};
+
 // Attribute controls
 // These are not Attribute control groups but the
 // Controls these are filled with

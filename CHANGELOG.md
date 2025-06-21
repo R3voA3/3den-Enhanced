@@ -1,3 +1,14 @@
+
+# 8.7.0
+## ADDED
+- Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
+
+## CHANGED
+- Fixed links to steam and github would not work when accessed through the menu strip
+- Marker preview now only works if either custom shape or custom color was set
+- Fixed rpt message (empty class)
+- Moon phases utility could not be opened from menu strip
+
 # 8.6.1
 ## CHANGED
 - Fixed CBA Addon options and ACE Arsenal not working in Eden Editor due to a function returning true at the wrong place

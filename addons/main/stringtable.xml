@@ -8017,6 +8017,10 @@
             <English>Create Layer</English>
             <German>Layer erstellen</German>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
+            <English>Adjust Title Width</English>
+            <German>Titellänge anpassen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
             <English>If enabled, units that were garrisoned will be moved into their own layer.</English>
             <German>Wenn aktiviert, werden die Einheiten in einen eigenen Layer verschoben.</German>
@@ -8055,7 +8059,7 @@
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME">
             <English>Show Custom Marker Color / Shape</English>
-            <German>NBenutzerdefinierte Markerfarbe/-form anzeigen</German>
+            <German>Benutzerdefinierte Markerfarbe/-form anzeigen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
