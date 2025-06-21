@@ -7,6 +7,7 @@
 - Fixed links to steam and github would not work when accessed through the menu strip
 - Marker preview now only works if either custom shape or custom color was set
 - Fixed rpt message (empty class)
+- Moon phases utility could not be opened from menu strip
 
 # 8.6.1
 ## CHANGED
