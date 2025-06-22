@@ -1,3 +1,7 @@
+# 8.7.0
+## CHANGED
+- Fixed opening the Zeus Addons UI would create spam in the RPT
+
 # 8.6.1
 ## CHANGED
 - Fixed CBA Addon options and ACE Arsenal not working in Eden Editor due to a function returning true at the wrong place
