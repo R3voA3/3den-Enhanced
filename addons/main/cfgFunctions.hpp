@@ -14,11 +14,11 @@ class CfgFunctions
             class favoritesList {};
             class locationList_enhanced {};
         };
-        class 3DENCommandManager
+        class 3DENCommandPalette
         {
 
-            file = "\x\enh\addons\main\functions\GUI\3DENCommandManager";
-            class 3DENCommandManager_init {};
+            file = "\x\enh\addons\main\functions\GUI\3DENCommandPalette";
+            class 3DENCommandPalette_init {};
         };
         class 3DENRadio
         {

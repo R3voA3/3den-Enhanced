@@ -9,11 +9,13 @@
     Parses shortcuts.
 
     Parameter(s):
-    0: ARRAY - Shortcuts
+    0: ARRAY - Shortcuts in format ["shortcut1", "shortcut2", "shortcutn"] where shortcut can be number or string
 
     Return Value:
     STRING - Formatted shortcut, empty string if no shortcut was provided
 */
+
+params [["_rawShortCuts", [], [[]]]];
 
 private _DIKKeyCodes =
 [
@@ -177,8 +179,6 @@ private _fnc_translateShortcutConfig =
 {
     params [["_shortcutsArray", ["", []]]];
 
-    if (_shortcutsArray isEqualTo []) then {continue};
-
     private _shortcutsTranslated = [];
 
     {
@@ -193,7 +193,10 @@ private _fnc_translateShortcutConfig =
         };
     } forEach _shortcutsArray;
 
+    // Returns "SHORTCUT" if only one entry
+    // Returns "SHORTCUT, SHORTCUT2" if multiple entries
+    // Returns "" for empty array
     toUpper (_shortcutsTranslated joinString ", ");
 };
 
-_this call _fnc_translateShortcutConfig;
+_rawShortCuts call _fnc_translateShortcutConfig;

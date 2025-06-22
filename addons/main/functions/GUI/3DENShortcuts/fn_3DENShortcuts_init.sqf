@@ -39,7 +39,7 @@ if ((uiNamespace getVariable ["ENH_3DENShortcuts_Cache", []]) isEqualTo []) then
                         ("true" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items"));
 
     {
-        private _sc = [getArray (_x >> "shortcuts")] call ENH_fnc_3DENShortcuts_parseShortcut;
+        private _sc = [[getArray (_x >> "shortcuts")]] call ENH_fnc_3DENShortcuts_parseShortcut;
         private _text = getText (_x >> "text");
 
         if (_sc isEqualTo "" || _text isEqualTo "") then {continue};
