@@ -63,7 +63,7 @@ class ENH_ZeusAddons
          y = QUOTE(WINDOW_TOPAbs + 2 * (CTRL_DEFAULT_H + GRID_H));
          w = QUOTE(WINDOW_W_ATTRIBUTES / 2 * GRID_W - GRID_W);
          h = QUOTE(WINDOW_HAbs - 6 * CTRL_DEFAULT_H);
-         rowHeight = "10 * GRID_H";
+         rowHeight = QUOTE(10 * GRID_H);
       };
       class Copy: ctrlButton
       {

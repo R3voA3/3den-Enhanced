@@ -8,6 +8,7 @@
 - Marker preview now only works if either custom shape or custom color was set
 - Fixed rpt message (empty class)
 - Moon phases utility could not be opened from menu strip
+- Fixed opening the Zeus Addons UI would create spam in the RPT
 
 # 8.6.1
 ## CHANGED
