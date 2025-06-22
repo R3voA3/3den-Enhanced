@@ -21,32 +21,14 @@ get3DENMouseOver params [["_type", "test"], ["_entity", "test"]];
 
 if (_type == "Marker") then
 {
-    // if (_display3DEN getVariable ["ENH_PreviewMarker_OnBeforeMissioNPreview_EH_ID", -1] == -1) then
-    // {
-    //     private _ID = add3DENEventHandler ["OnBeforeMissionPreview",
-    //     {
-    //         private _display3DEN = findDisplay IDD_DISPLAY3DEN;
-    //         _marker = _display3DEN getVariable ["ENH_PreviewMarker", ""];
-
-    //         if (_marker != "") then
-    //         {
-    //             deleteMarkerLocal _marker;
-
-    //             private _originalAlpha = _display3DEN getVariable ["ENH_PreviewMarker_AlphaBefore", -1];
-
-    //             if (_originalAlpha != -1) then
-    //             {
-    //                 _marker set3DENAttribute ["Alpha", _originalAlpha];
-    //                 _display3DEN setVariable ["ENH_PreviewMarker_AlphaBefore", -1];
-    //             };
-    //         };
-    //     }];
-
-    //     findDisplay IDD_DISPLAY3DEN setVariable ["ENH_PreviewMarker_OnBeforeMissioNPreview_EH_ID", _ID];
-    // };
-
-
     private _attributes =  createHashMapFromArray (_entity get3DENAttributes "");
+    _attributes get "ENH_markerColor" params ["_customColorEnabled", "_colorHTML"];
+
+    private _customMarkerShape = _attributes get "ENH_markerShape";
+
+    // Exit early if none of the custom attributes are set
+    if (!_customColorEnabled && {(isNil "_customMarkerShape" || {_customMarkerShape == "NONE"})}) exitWith {false};
+
     private _marker = _display3DEN getVariable ["ENH_PreviewMarker", ""];
 
     if (_marker == "") then
@@ -58,26 +40,8 @@ if (_type == "Marker") then
         ];
     };
 
-    // Save original alpha value
-    // private _3DENMarker = _marker;
-
-    // // Make sure we are only saving original value once, otherwise original value becomes forced 0 value
-    // private _originalAlpha = _attributes get "Alpha";
-    // if (_originalAlpha != 0) then
-    // {
-    //     if (_display3DEN getVariable ["ENH_PreviewMarker_AlphaBefore", -1] == -1) then
-    //     {
-    //         _display3DEN setVariable ["ENH_PreviewMarker_AlphaBefore", _originalAlpha];
-    //     };
-
-    //     // Hide 3DEN marker while previewing custom color or shape
-    //     ignore3DENHistory {_3DENMarker set3DENAttribute ["Alpha", 0]};
-    // };
-
     _marker setMarkerDirLocal (_attributes get "Rotation");
     _marker setMarkerSizeLocal ((_attributes get "Size2") vectorMultiply 2);
-
-    _attributes get "ENH_markerColor" params ["_customColorEnabled", "_colorHTML"];
 
     if (_customColorEnabled) then
     {
@@ -125,16 +89,8 @@ else
 
     if (_marker isEqualType "" && {_marker != ""}) then
     {
-        // private _3DENMarker = _marker;
-
-        // private _alphaBefore = _display3DEN getVariable ["ENH_PreviewMarker_AlphaBefore", 1];
-
-        // ignore3DENHistory {_3DENMarker set3DENAttribute ["Alpha", _alphaBefore]};
-
         deleteMarkerLocal _marker;
-
         _display3DEN setVariable ["ENH_PreviewMarker", ""];
-        // _display3DEN setVariable ["ENH_PreviewMarker_AlphaBefore", -1];
     };
 };
 

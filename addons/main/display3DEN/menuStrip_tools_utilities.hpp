@@ -24,7 +24,7 @@ class ENH_Folder_Utilities
 class ENH_MoonPhases
 {
     text = "$STR_ENH_MAIN_TOOLS_MOONPHASES";
-    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf']]";
+    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
