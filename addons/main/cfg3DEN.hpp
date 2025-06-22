@@ -289,4 +289,19 @@ class Cfg3DEN
             #include "\x\enh\addons\main\attributesMarker\markerHideOnStart.hpp"
         };
     };
+    class ENH_Command_Pallet_Commands
+    {
+        class ENH_Command_Base
+        {
+            action = "";
+            picture = "";
+            shortcuts[] = {};
+            text = "";
+        };
+        class ENH_ShowProductInfo: ENH_Command_Base
+        {
+            action = "call ENH_fnc_productInfo";
+            text = "Show Product Info";
+        };
+    };
 };
