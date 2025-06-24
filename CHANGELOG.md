@@ -10,6 +10,7 @@
 - Moon phases utility could not be opened from menu strip
 - Fixed opening the Zeus Addons UI would create spam in the RPT
 - Fixed wrong translation for Minimap Scale attribute
+- Improved debug options category names
 
 # 8.6.2
 ## CHANGED

@@ -4252,6 +4252,10 @@
             <Chinese>在場景預覽期間激活玩家單位的子彈跟踪。</Chinese>
             <Chinesesimp>在场景预览期间激活玩家单位的子弹跟踪。</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_CATEGORY_VISUALIZATION">
+            <English>Vizualization</English>
+            <German>Visualisierung</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
             <English>Delete Corpses</English>
             <French>Supprimer les corps</French>
@@ -7997,6 +8001,10 @@
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
+            <English>Adjust Title Width</English>
+            <German>Titellänge anpassen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
             <English>Auto Select</English>
             <German>Automatische Auswahl</German>
@@ -8016,10 +8024,6 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME">
             <English>Create Layer</English>
             <German>Layer erstellen</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
-            <English>Adjust Title Width</English>
-            <German>Titellänge anpassen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
             <English>If enabled, units that were garrisoned will be moved into their own layer.</English>
