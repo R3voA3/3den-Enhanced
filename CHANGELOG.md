@@ -11,6 +11,7 @@
 - Fixed opening the Zeus Addons UI would create spam in the RPT
 - Fixed wrong translation for Minimap Scale attribute
 - Improved debug options category names
+- Fixed missing translation for the Stance attribute in the preferences
 
 # 8.6.2
 ## CHANGED
