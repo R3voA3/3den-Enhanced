@@ -1,3 +1,6 @@
+# 8.6.2
+## CHANGED
+- When marker preview setting is changed in preferences, changes are applied immediately now
 # 8.6.1
 ## CHANGED
 - Fixed CBA Addon options and ACE Arsenal not working in Eden Editor due to a function returning true at the wrong place

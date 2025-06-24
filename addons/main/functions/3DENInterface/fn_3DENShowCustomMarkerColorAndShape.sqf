@@ -12,8 +12,10 @@
     -
 
     Return Value:
-    BOOLEAN - true
+    BOOLEAN - true, false when exited early
 */
+
+if !(profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape", true]) exitWith {false};
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
