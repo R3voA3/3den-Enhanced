@@ -19,7 +19,7 @@ if !(profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMa
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
-get3DENMouseOver params [["_type", "test"], ["_entity", "test"]];
+get3DENMouseOver params ["_type", "_entity"];
 
 if (_type == "Marker") then
 {
