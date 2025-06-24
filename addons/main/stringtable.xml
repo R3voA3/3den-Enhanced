@@ -7997,6 +7997,10 @@
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
+            <English>Adjust Title Width</English>
+            <German>Titellänge anpassen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
             <English>Auto Select</English>
             <German>Automatische Auswahl</German>
@@ -8016,10 +8020,6 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME">
             <English>Create Layer</English>
             <German>Layer erstellen</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
-            <English>Adjust Title Width</English>
-            <German>Titellänge anpassen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
             <English>If enabled, units that were garrisoned will be moved into their own layer.</English>

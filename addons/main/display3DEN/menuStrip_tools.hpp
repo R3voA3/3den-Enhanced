@@ -2,6 +2,7 @@ class Tools
 {
     items[] +=
     {
+        "ENH_CommandPalette",
         "ENH_Folder_Utilities",
         "ENH_Folder_Placement",
         "ENH_Folder_Loadout",
@@ -21,17 +22,24 @@ class Tools
 class FunctionsViewer
 {
     action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_FunctionsViewer');
-    shortCuts[] = {INPUT_ALT_OFFSET + DIK_F};
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_F};
 };
 class ConfigViewer
 {
-    shortCuts[] = {INPUT_ALT_OFFSET + DIK_C};
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_C};
 };
 class DebugConsole
 {
-    shortCuts[] = {INPUT_CTRL_OFFSET + DIK_D};
+    shortcuts[] = {INPUT_CTRL_OFFSET + DIK_D};
 };
 class MissionFolder
 {
-    shortCuts[] = {INPUT_ALT_OFFSET + DIK_O};
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_O};
+};
+class ENH_CommandPalette
+{
+    text = "Open Command Palette";
+    shortcuts[] = {INPUT_CTRL_OFFSET + DIK_P};
+    action = "call ENH_fnc_3DENCommandPalette";
+    picture = TEXTURE_SEARCH_START;
 };

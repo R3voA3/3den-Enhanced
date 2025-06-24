@@ -141,3 +141,9 @@ _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter",
 
 // Init minimap
 _display3DEN call ENH_fnc_3DENMinimap;
+
+// Init Command Palette
+if (true) then
+{
+    [_display3DEN] call ENH_fnc_3DENCommandPalette_init;
+};

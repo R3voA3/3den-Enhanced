@@ -6,100 +6,38 @@
     Date: 2025-06-21
 
     Description:
-    This is an awesome description.
+    Initializes the 3DEN Command Palette.
 
     Parameter(s):
-    0: ARRAY - Some description, optional, default false
+    1:
+    2:
 
     Return Value:
-    ARRAY - True on success, false if failed
-
-    Examples(s):
-    [] call ENH_fnc_missionDisplay;
+    NUMBER - State
 */
 
 disableSerialization;
+
+params [["_display3DEN", findDisplay IDD_DISPLAY3DEN], ["_state", 0]];
 
 #define GROUP_H 51
 #define UI_W 120
 #define UI_Y (WINDOW_TOPAbs + 3 * CTRL_DEFAULT_H)
 
-private _display3DEN = findDisplay IDD_DISPLAY3DEN;
+ctrlDelete (_display3DEN getVariable ["ENH_3DENCommandPalette_ControlsGroup", controlNull]);
 
-ctrlDelete (_display3DEN getVariable ["ENH_3DENCommandPalette_ControlsGroup", controlNull]); // TODO: remove later 2025-06-22 R3vo
+if (_state == -1) exitWith {_state};
 
-private _ctrlGroup = _display3DEN ctrlCreate ["ctrlControlsGroupNoScrollbars", 1001];
-private _ctrlImgLeft = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", 1002, _ctrlGroup];
-private _ctrlImgRight = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", 1003, _ctrlGroup];
-private _ctrlBackground = _display3DEN ctrlCreate ["ctrlStaticBackground", 1004, _ctrlGroup];
-private _ctrlEdit = _display3DEN ctrlCreate ["ctrlEdit", 645, _ctrlGroup];
-private _ctrlListNBox = _display3DEN ctrlCreate ["ctrlListNBox", 1005, _ctrlGroup];
-private _ctrlFooter = _display3DEN ctrlCreate ["ctrlStaticFooter", 1006, _ctrlGroup];
+if (_state == 0) then
+{
+    // Top position
 
-_ctrlGroup ctrlSetPosition
-[
-    0.5 - UI_W * 0.5 * GRID_W - 4 * GRID_W,
-    UI_Y,
-    UI_W * GRID_W,
-    GROUP_H * GRID_H
-];
+};
 
-_ctrlImgLeft ctrlSetText "\x\enh\addons\main\data\left_ca.paa";
+if (_state == 1) then
+{
 
-_ctrlImgLeft ctrlSetPosition
-[
-    0,
-    0,
-    5 * GRID_W,
-    7 * GRID_H
-];
-
-_ctrlImgRight ctrlSetText "\x\enh\addons\main\data\right_ca.paa";
-
-_ctrlImgRight ctrlSetPosition
-[
-    UI_W * GRID_W - 5 * GRID_W,
-    0,
-    5 * GRID_W,
-    7 * GRID_H
-];
-
-_ctrlBackground ctrlSetPosition
-[
-    4 * GRID_W,
-    0,
-    (UI_W - 8) * GRID_W,
-    GROUP_H * GRID_H
-];
-
-_ctrlEdit ctrlSetPosition
-[
-    4 * GRID_W,
-    GRID_H,
-    (UI_W - 8) * GRID_W,
-    5 * GRID_H
-];
-
-_ctrlFooter ctrlSetPosition
-[
-    4 * GRID_W,
-    GROUP_H * GRID_H - CTRL_DEFAULT_H,
-    (UI_W - 8) * GRID_W,
-    CTRL_DEFAULT_H
-];
-
-_ctrlFooter ctrlSetText "HOLD CTRL TO PREVENT SCROLLING THE BACKGROUND";
-
-_ctrlListNBox lnbAddColumn 8 * GRID_W;
-_ctrlListNBox lnbAddColumn 110 * GRID_W;
-
-_ctrlListNBox ctrlSetPosition
-[
-    4 * GRID_W,
-    7 * GRID_H,
-    (UI_W - 8) * GRID_W,
-    39 * GRID_H
-];
+};
 
 private _fnc_addCommand =
 {
@@ -325,6 +263,173 @@ private _3DENActions =
     "widgettranslation"
 ];
 
+private _fnc_search =
+{
+    params ["_ctrlEdit", "_searchText"];
+
+    private _ctrlListNBox = findDisplay IDD_DISPLAY3DEN getVariable ["ENH_3DENCommandPalette_ListNBox", controlNull];
+    private _commands = findDisplay IDD_DISPLAY3DEN getVariable ["ENH_3DENCommandPalette_Commands", []];
+
+    lnbClear _ctrlListNBox;
+
+    _commands apply
+    {
+        _x params ["_action", "_picture", "_shortcuts", "_text"];
+
+        if (_searchText == "" || {toLower _searchText in toLower _text}) then
+        {
+            private _row = _ctrlListNBox lnbAddRow ["", _text, _shortcuts];
+
+            _ctrlListNBox lnbSetPicture [[_row, 0], _picture];
+            _ctrlListNBox lnbSetData [[_row, 0], _action];
+        };
+    };
+};
+
+private _fnc_mouseHandler =
+{
+    params ["_display3DEN", "", "", ["_mouseOver", -1, [true, 0]]];
+
+
+    getMousePosition params ["_mouseX", "_mouseY"];
+
+    private _ctrlGroup = _display3DEN getVariable ["ENH_3DENCommandPalette_ControlsGroup", controlNull];
+    private _ctrlEdit = _display3DEN getVariable ["ENH_3DENCommandPalette_Edut", controlNull];
+    private _ctrlScrollBlock = _display3DEN getVariable ["ENH_3DENCommandPalette_ScrollBlock", controlNull];
+
+    // That way we can overwrite mouseOver from other scripts
+    if (_mouseOver isEqualType 0) then
+    {
+        _mouseOver = _display3DEN ctrlAt [_mouseX, _mouseY] == _ctrlGroup
+    };
+
+    _ctrlScrollBlock ctrlSetPositionH ([7 * GRID_H, GROUP_H * GRID_H] select _mouseOver);
+
+    _ctrlGroup ctrlSetPositionH ([7 * GRID_H, GROUP_H * GRID_H] select _mouseOver);
+    _ctrlGroup ctrlSetFade ([0.5, 0] select _mouseOver);
+
+    _ctrlScrollBlock ctrlCommit 0;
+    _ctrlGroup ctrlCommit 0;
+
+
+
+    if (focusedCtrl _display3DEN == _ctrlEdit && {ctrlPosition _ctrlGroup select 3 < GROUP_H * GRID_H}) then
+    {
+        findDisplay IDD_DISPLAY3DEN getVariable "ENH_3DENCommandPalette_Edit" ctrlSetText "";
+        ctrlSetFocus (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MOUSEAREA);
+    };
+};
+
+private _fnc_execCommand =
+{
+    params ["_ctrlListNBox", "_row"];
+
+    private _code = _ctrlListNBox lnbData [_row, 0];
+
+    if (_code != "") then
+    {
+        call compile _code;
+    };
+
+    ctrlDelete ctrlParentControlsGroup _ctrlListNBox;
+};
+
+// private _ctrlGroup = _display3DEN ctrlCreate ["ctrlControlsGroupNoScrollbars", 1001];
+// private _ctrlImgLeft = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", 1002, _ctrlGroup];
+// private _ctrlImgRight = _display3DEN ctrlCreate ["ctrlStaticPictureKeepAspect", 1003, _ctrlGroup];
+// private _ctrlBackgroundEdit = _display3DEN ctrlCreate ["ctrlStaticBackground", 1004, _ctrlGroup];
+// private _ctrlBackgroundList = _display3DEN ctrlCreate ["ctrlStaticBackground", 1005, _ctrlGroup];
+// private _ctrlEdit = _display3DEN ctrlCreate ["ctrlEdit", 645, _ctrlGroup];
+// private _ctrlListNBox = _display3DEN ctrlCreate ["ctrlListNBox", 1006, _ctrlGroup];
+// private _ctrlFooter = _display3DEN ctrlCreate ["ctrlStaticFooter", 1007, _ctrlGroup];
+
+private _ctrlGroup = _display3DEN displayCtrl 80001;
+private _ctrlImgLeft = _display3DEN displayCtrl 80002;
+private _ctrlImgRight = _display3DEN displayCtrl 80003;
+private _ctrlBackgroundEdit = _display3DEN displayCtrl 80004;
+private _ctrlBackgroundList = _display3DEN displayCtrl 80005;
+private _ctrlEdit = _display3DEN displayCtrl 80006;
+private _ctrlListNBox = _display3DEN displayCtrl 80007;
+private _ctrlFooter = _display3DEN displayCtrl 80008;
+
+private _ctrlScrollBlock = _display3DEN displayCtrl 80009;
+
+private _groupPos =
+[
+    0.5 - UI_W * 0.5 * GRID_W - 4 * GRID_W,
+    [(WINDOW_TOPAbs + 3 * CTRL_DEFAULT_H), safeZoneY + safeZoneH - (7 + 4 + 1 + GROUP_H) * GRID_H] select _state,
+    UI_W * GRID_W,
+    GROUP_H * GRID_H
+];
+
+_ctrlScrollBlock ctrlSetPosition _groupPos;
+_ctrlGroup ctrlSetPosition _groupPos;
+
+_ctrlImgLeft ctrlSetText "\x\enh\addons\main\data\left_ca.paa";
+
+_ctrlImgLeft ctrlSetPosition
+[
+    0,
+    [0, (GROUP_H - 7) * GRID_H] select _state,
+    7 * GRID_W,
+    7 * GRID_H
+];
+
+_ctrlImgRight ctrlSetText "\x\enh\addons\main\data\right_ca.paa";
+
+_ctrlImgRight ctrlSetPosition
+[
+    UI_W * GRID_W - 7 * GRID_W,
+    0,
+    7 * GRID_W,
+    7 * GRID_H
+];
+
+_ctrlBackgroundEdit ctrlSetPosition
+[
+    7 * GRID_W,
+    0,
+    (UI_W - 14) * GRID_W,
+    7 * GRID_H
+];
+
+_ctrlBackgroundList ctrlSetPosition
+[
+    4 * GRID_W,
+    7 * GRID_H,
+    (UI_W - 8) * GRID_W,
+    (GROUP_H - 7) * GRID_H
+];
+
+_ctrlEdit ctrlSetPosition
+[
+    4 * GRID_W,
+    GRID_H,
+    (UI_W - 8) * GRID_W,
+    5 * GRID_H
+];
+
+_ctrlFooter ctrlSetPosition
+[
+    4 * GRID_W,
+    GROUP_H * GRID_H - CTRL_DEFAULT_H,
+    (UI_W - 8) * GRID_W,
+    CTRL_DEFAULT_H
+];
+
+_ctrlFooter ctrlSetText "HOLD CTRL TO PREVENT SCROLLING THE BACKGROUND";// TODO: Localize 2025-06-23 R3vo
+
+_ctrlListNBox lnbAddColumn 8 * GRID_W;
+_ctrlListNBox lnbAddColumn 110 * GRID_W;
+
+_ctrlListNBox ctrlSetPosition
+[
+    4 * GRID_W,
+    7 * GRID_H,
+    (UI_W - 8) * GRID_W,
+    39 * GRID_H
+];
+
 private _menuStripItems = "true" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items");
 private _cfg3DENCommands = "true" configClasses (configFile >> "Cfg3DEN" >> "ENH_Command_Pallet_Commands");
 
@@ -391,65 +496,33 @@ private _cfg3DENCommands = "true" configClasses (configFile >> "Cfg3DEN" >> "ENH
 
 _ctrlListNBox lnbSort [1, false];
 
-private _fnc_search =
-{
-    params ["_ctrlEdit", "_searchText"];
-
-    private _ctrlListNBox = findDisplay IDD_DISPLAY3DEN getVariable ["ENH_3DENCommandPalette_ListNBox", controlNull];
-    private _commands = findDisplay IDD_DISPLAY3DEN getVariable ["ENH_3DENCommandPalette_Commands", []];
-
-    lnbClear _ctrlListNBox;
-
-    _commands apply
-    {
-        _x params ["_action", "_picture", "_shortcuts", "_text"];
-
-        if (_searchText == "" || {toLower _searchText in toLower _text}) then
-        {
-            private _row = _ctrlListNBox lnbAddRow ["", _text, _shortcuts];
-
-            _ctrlListNBox lnbSetPicture [[_row, 0], _picture];
-            _ctrlListNBox lnbSetData [[_row, 0], _action];
-        };
-    };
-};
-
-private _fnc_mouseHandler =
-{
-    params ["_ctrlGroup", "", "", "_mouseOver"];
-
-    _ctrlGroup ctrlSetPositionH ([7 * GRID_H, GROUP_H * GRID_H] select _mouseOver);
-    _ctrlGroup ctrlSetFade ([0.5, 0] select _mouseOver);
-    _ctrlGroup ctrlCommit 0;
-
-    if (ctrlPosition _ctrlGroup select 3 < GROUP_H * GRID_H) then
-    {
-        findDisplay IDD_DISPLAY3DEN getVariable "ENH_3DENCommandPalette_Edit" ctrlSetText "";
-        ctrlSetFocus (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MOUSEAREA);
-    };
-};
-
-private _fnc_execCommand =
-{
-    params ["_ctrlListNBox", "_row"];
-
-    private _code = _ctrlListNBox lnbData [_row, 0];
-
-    if (_code != "") then
-    {
-        call compile _code;
-    };
-};
-
-_ctrlGroup ctrlAddEventHandler ["MouseMoving", _fnc_mouseHandler];
+_display3DEN displayAddEventHandler ["MouseMoving", _fnc_mouseHandler];
 _ctrlEdit ctrlAddEventHandler ["EditChanged", _fnc_search];
 _ctrlListNBox ctrlAddEventHandler ["LBDblClick", _fnc_execCommand];
 
-private _controls = [_ctrlListNBox, _ctrlEdit, _ctrlBackground, _ctrlImgLeft, _ctrlImgRight, _ctrlGroup];
+private _controls = [_ctrlListNBox, _ctrlEdit, _ctrlBackgroundEdit, _ctrlBackgroundEdit, _ctrlImgLeft, _ctrlImgRight, _ctrlGroup, _ctrlScrollBlock];
 
 _ctrlGroup ctrlCommit 0;
 allControls _ctrlGroup apply {_x ctrlCommit 0};
 
-_display3DEN setVariable ["ENH_3DENCommandPalette_ControlsGroup", _ctrlGroup]; // TODO: remove later 2025-06-22 R3vo
+// _display3DEN displayAddEventHandler ["KeyDown",
+// {
+//     params ["_display3DEN", "_key", "", "_ctrl"];
+
+//     if (_key == DIK_P && {_ctrl}) then
+//     {
+//         private _ctrlEdit = _display3DEN getVariable ["ENH_3DENCommandPalette_Edit", controlNull];
+//         ctrlSetFocus _ctrlEdit;
+//         [_display3DEN, nil, nil, true] call (_display3DEN getVariable ["ENH_3DENCommandPalette_MouseHandler", {}])
+//     };
+// }];
+
+_display3DEN setVariable ["ENH_3DENCommandPalette_ControlsGroup", _ctrlGroup];
 _display3DEN setVariable ["ENH_3DENCommandPalette_ListNBox", _ctrlListNBox];
 _display3DEN setVariable ["ENH_3DENCommandPalette_Edit", _ctrlEdit];
+_display3DEN setVariable ["ENH_3DENCommandPalette_ScrollBlock", _ctrlScrollBlock];
+_display3DEN setVariable ["ENH_3DENCommandPalette_MouseHandler", _fnc_mouseHandler];
+
+// TODO: Move control toolbar 2025-06-23 R3vo
+
+true
