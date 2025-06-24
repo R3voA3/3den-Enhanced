@@ -1,3 +1,4 @@
+
 # 8.7.0
 ## ADDED
 - Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
@@ -9,6 +10,12 @@
 - Moon phases utility could not be opened from menu strip
 - Fixed opening the Zeus Addons UI would create spam in the RPT
 - Fixed wrong translation for Minimap Scale attribute
+
+# 8.6.2
+## CHANGED
+- When marker preview setting is changed in preferences, changes are applied immediately now
+- Custom Marker Color and Shape preview was overhauled. Instead of modifing the marker, a small icon will now appear next to the tooltip on hover
+
 
 # 8.6.1
 ## CHANGED
