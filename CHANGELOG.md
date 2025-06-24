@@ -8,6 +8,7 @@
 - Fixed rpt message (empty class)
 - Moon phases utility could not be opened from menu strip
 - Fixed opening the Zeus Addons UI would create spam in the RPT
+- Fixed wrong translation for Minimap Scale attribute
 
 # 8.6.1
 ## CHANGED

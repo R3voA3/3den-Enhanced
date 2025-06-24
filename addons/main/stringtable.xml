@@ -7334,15 +7334,15 @@
             <Chinesesimp>&lt;t align='center'&gt;取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。&lt;br/&gt;更改需要重新启动Eden编辑器才能生效！&lt;/t&gt;</Chinesesimp>
         </Key> -->
         <Key ID="STR_ENH_MAIN_MINIMAPSCALEMULTIPLIER">
-            <English>Minimap Scale Multiplier</English>
-            <French>Activer la Minimap</French>
-            <Spanish>Activar minimapa</Spanish>
-            <Italian>Moltiplicatore di scala della minimappa</Italian>
-            <Polish>Włącz minimapę</Polish>
-            <Russian>Включить мини-картинку</Russian>
-            <German>Minimap einschalten</German>
-            <Chinese>启用小地图</Chinese>
-            <Chinesesimp>启用小地图</Chinesesimp>
+            <English>Minimap Scale</English>
+            <French>Échelle de la mini-carte</French>
+            <Spanish>Escala del minimapa</Spanish>
+            <Italian>Scala della minimappa</Italian>
+            <Polish>Skala minimapy</Polish>
+            <Russian>Масштаб минимальной карты</Russian>
+            <German>Minimap Maßstab</German>
+            <Chinese>最小地圖比例</Chinese>
+            <Chinesesimp>最小地图比例尺</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_MINIMAPSIZE">
             <English>Minimap Size</English>
