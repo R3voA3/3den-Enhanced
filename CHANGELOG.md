@@ -1,6 +1,8 @@
 # 8.6.2
 ## CHANGED
 - When marker preview setting is changed in preferences, changes are applied immediately now
+- Custom Marker Color and Shape preview was overhauled. Instead of modifing the marker, a small icon will now appear next to the tooltip on hover
+
 # 8.6.1
 ## CHANGED
 - Fixed CBA Addon options and ACE Arsenal not working in Eden Editor due to a function returning true at the wrong place
