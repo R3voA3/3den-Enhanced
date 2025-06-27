@@ -1,0 +1,16 @@
+{
+    "3DENCommandPalette.command01":
+    {
+        "text": "Hello World",
+        "action": "systemChat 'Hello World'",
+        "picture": "a3\\3den\\data\\attributes\\date\\moon_full_ca.paa",
+        "shortcut": {}
+    },
+    "3DENCommandPalette.command02":
+    {
+        "text": "Hello World2",
+        "action": "systemChat 'Hello World'",
+        "picture": "a3\\3den\\data\\attributes\\date\\moon_full_ca.paa",
+        "shortcut": {}
+    }
+}
