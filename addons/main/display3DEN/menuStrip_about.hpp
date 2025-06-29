@@ -28,7 +28,7 @@ class ENH_Steam: ENH_Changelog
 class ENH_Contributing: ENH_Changelog
 {
     text = "$STR_ENH_MAIN_CONTRIBUTE";
-    weblink = "https://github.com/R3voA3/3den-Enhanced/blob/master/CONTRIBUTING.md";
+    weblink = "https://github.com/R3voA3/3den-Enhanced/blob/master/.github/CONTRIBUTING.md";
     wikiDescription = "Explains how to contribute.";
 };
 class ENH_Documentation: ENH_Changelog

@@ -12,18 +12,23 @@
     -
 
     Return Value:
-    BOOLEAN - true
+    BOOLEAN - true, or false if disabled
 */
 
-if !(profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape", true]) exitWith {false};
+if !(profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape", true]) exitWith
+{
+    ctrlDelete (findDisplay IDD_DISPLAY3DEN getVariable ["ENH_MarkerPreview_Control", controlNull]);
+    false
+};
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 
-get3DENMouseOver params [["_type", "test"], ["_entity", "test"]];
+get3DENMouseOver params [["_type", ""], ["_entity", ""]];
 
 if (_type == "Marker") then
 {
     private _attributes =  createHashMapFromArray (_entity get3DENAttributes "");
+
     _attributes get "ENH_markerColor" params ["_customColorEnabled", "_colorString"];
 
     private _customMarkerShape = _attributes get "ENH_markerShape";

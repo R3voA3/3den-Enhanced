@@ -8,6 +8,7 @@
 #include "\x\enh\addons\main\cfgFunctions.hpp"
 #include "\x\enh\addons\main\display3DEN\display3DEN.hpp"
 #include "\x\enh\addons\main\cfgFontFamilies.hpp"
+#include "\x\enh\addons\main\cfgCommands.hpp"
 
 // Custom GUIs
 #include "\x\enh\addons\main\GUI\3DENRadio.hpp"

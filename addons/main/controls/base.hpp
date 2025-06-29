@@ -4,7 +4,10 @@ class Title: Default
 {
     class Controls
     {
-        class Title;
+        class Title: ctrlStatic
+        {
+            onLoad = "_this spawn ENH_fnc_adjustTitleTextWidth";
+        };
     };
 };
 class Slider: Title
