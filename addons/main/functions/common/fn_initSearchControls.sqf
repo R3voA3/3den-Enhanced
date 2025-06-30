@@ -17,7 +17,7 @@
     BOOLEAN - true
 
     Examples(s):
-    [_ctrlEdit, _ctrlButton, "ENH_fnc_3DENRadio_searchList"] call ENH_fnc_initSearchControls;
+    [_ctrlEdit, _ctrlButton, ENH_fnc_3DENRadio_searchList] call ENH_fnc_initSearchControls;
 */
 
 params
