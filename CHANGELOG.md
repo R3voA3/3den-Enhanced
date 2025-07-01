@@ -2,6 +2,7 @@
 # 8.7.0
 ## ADDED
 - Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
+- Added a search to the hold action icon picker
 
 ## CHANGED
 - Fixed links to steam and github would not work when accessed through the menu strip

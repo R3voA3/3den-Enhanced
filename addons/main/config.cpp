@@ -36,3 +36,10 @@
 #include "\x\enh\addons\main\GUI\RscDebugConsole.hpp"
 #include "\x\enh\addons\main\GUI\display3DENSave.hpp"
 #include "\x\enh\addons\main\GUI\display3DENPublishMissionSelectImage.hpp"
+
+class ENH_DisplayEmpty
+{
+    idd = IDD_NONE;
+    class ControlsBackground {};
+    class Controls {};
+};
