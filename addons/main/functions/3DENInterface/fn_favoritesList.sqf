@@ -90,7 +90,7 @@ switch _mode do
                 _data =
                 [
                     "marker",
-                    ["rectangle", "ellipse", "icon"] select ((get3DENSelected "marker"#0) get3DENAttribute "markerType" select 0)
+                    ["rectangle", "ellipse", "icon"] select (_entity get3DENAttribute "markerType" select 0)
                 ];
             }
             else
