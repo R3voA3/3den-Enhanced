@@ -13,6 +13,7 @@
 - Fixed wrong translation for Minimap Scale attribute
 - Improved debug options category names
 - Fixed missing translation for the Stance attribute in the preferences
+- Search button in the favorites tab hat not functionality
 
 # 8.6.2
 ## CHANGED

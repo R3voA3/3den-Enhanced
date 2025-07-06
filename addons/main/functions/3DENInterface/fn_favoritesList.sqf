@@ -68,6 +68,9 @@ switch _mode do
             ["collapse"] call ENH_fnc_favoritesList;
         }];
 
+        [_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH, _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH] call ENH_fnc_initSearchControls;
+
+
         ["updateTreeView"] call ENH_fnc_favoritesList;
     };
     case "contextMenu":
