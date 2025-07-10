@@ -7,15 +7,6 @@ class Display3DEN
             #include "\x\enh\addons\main\display3DEN\contextMenu.hpp"
         };
     };
-    class ControlsBackground
-    {
-        class ScrollBlockBottom;
-        class ENH_ScrollBlockCommandPalette: ScrollBlockBottom
-        {
-            idc = 80009;
-            colorBackground[] = {1,1,1,1};
-        };
-    };
     class Controls
     {
         // Preview controls. BI ones are bugged and it's easier to create new ones than fixing
@@ -392,41 +383,6 @@ class Display3DEN
                             };
                         };
                     };
-                };
-            };
-        };
-        class ENH_CommandPalette: ctrlControlsGroupNoScrollbars
-        {
-            idc = 80001;
-            class Controls
-            {
-                class BackgroundLeft: ctrlStaticPictureKeepAspect
-                {
-                    idc = 80002;
-                };
-                class BackgroundRight: ctrlStaticPictureKeepAspect
-                {
-                    idc = 80003;
-                };
-                class BackgroundEdit: ctrlStaticBackground
-                {
-                    idc = 80004;
-                };
-                class BackgroundList: ctrlStaticBackground
-                {
-                    idc = 80005;
-                };
-                class Edit: ctrlEdit
-                {
-                    idc = 80006;
-                };
-                class List: ctrlListNBox
-                {
-                    idc = 80007;
-                };
-                class Footer: ctrlStaticFooter
-                {
-                    idc = 80008;
                 };
             };
         };
