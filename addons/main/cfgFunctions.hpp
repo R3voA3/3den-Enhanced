@@ -3,6 +3,23 @@ class CfgFunctions
     class 3denEnhanced
     {
         tag = "ENH";
+
+        class 3DENCommandPalette
+        {
+
+            file = "\x\enh\addons\main\functions\GUI\3DENCommandPalette";
+            class 3DENCommandPalette_init {};
+        };
+        class 3DENEventHandlers
+        {
+            file = "\x\enh\addons\main\functions\3DENEventHandlers";
+            class EH_init {};
+            class EH_onMissionLoad {};
+            class EH_onMissionNew {};
+            class EH_onMissionPreview {};
+            class EH_onMissionPreviewEnd {};
+            class EH_onTerrainNew {};
+        };
         class 3DENInterface
         {
             file = "\x\enh\addons\main\functions\3DENInterface";
@@ -13,12 +30,6 @@ class CfgFunctions
             class entityList_addTooltips {};
             class favoritesList {};
             class locationList_enhanced {};
-        };
-        class 3DENCommandPalette
-        {
-
-            file = "\x\enh\addons\main\functions\GUI\3DENCommandPalette";
-            class 3DENCommandPalette_init {};
         };
         class 3DENRadio
         {
@@ -122,16 +133,6 @@ class CfgFunctions
         {
             file = "\x\enh\addons\main\functions\debug";
             class productInfo {};
-        };
-        class EventHandlers
-        {
-            file = "\x\enh\addons\main\functions\eventHandlers";
-            class EH_init {};
-            class EH_onMissionLoad {};
-            class EH_onMissionNew {};
-            class EH_onMissionPreview {};
-            class EH_onMissionPreviewEnd {};
-            class EH_onTerrainNew {};
         };
         class ESE
         {
