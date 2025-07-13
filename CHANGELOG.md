@@ -14,6 +14,7 @@
 - Improved debug options category names
 - Fixed missing translation for the Stance attribute in the preferences
 - Search button in the favorites tab hat not functionality
+- Asset Browser's mod filter no longer shows mods that don't add assets
 
 # 8.6.2
 ## CHANGED

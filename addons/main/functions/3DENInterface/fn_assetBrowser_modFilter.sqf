@@ -1,0 +1,48 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
+/*
+    Author: R3vo
+
+    Date: 2025-07-13
+
+    Description:
+    Fills the mod filter list in the Assets Browser. Compared to vanilla it omits addons without units or weapons.
+
+    Parameter(s):
+    0: CONTROL - The filter control
+
+    Return Value:
+    NOTHING
+*/
+
+params [["_ctrlMods", controlNull]];
+
+private _mods = [];
+
+lbClear _ctrlMods;
+
+{
+    _mods pushBackUnique (configSourceMod _x)
+} forEach configProperties [configFile >> "CfgPatches", "getArray (_x >> 'units') isNotEqualTo [] || {getArray (_x >> 'weapons') isNotEqualTo []}"];
+
+{
+    private _params = if (_x == "") then {[]} else
+    {
+        modParams [_x, ["name", "logoSmall"]]
+    };
+
+    if (count _params > 0) then
+    {
+        _params params ["_name", "_logoSmall"];
+
+        private _row = _ctrlMods lbAdd _name;
+
+        _ctrlMods lbSetData [_row, _x];
+        _ctrlMods lbSetPictureRight [_row, _logoSmall];
+        _ctrlMods lbSetTooltip [_row, _name + "\n" + _x];
+    };
+} forEach _mods;
+
+lbSort _ctrlMods;
+
+nil
