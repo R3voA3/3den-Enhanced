@@ -6,7 +6,7 @@
     Date: 2025-07-13
 
     Description:
-    Fills the mod filter list in the Assets Browser. Compared to vanilla it omits addons without units or weapons.
+    Fills the mod filter list in the Asset Browser. Compared to vanilla it omits addons without units or weapons.
 
     Parameter(s):
     0: CONTROL - The filter control
