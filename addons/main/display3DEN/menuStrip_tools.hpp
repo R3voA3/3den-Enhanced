@@ -39,7 +39,7 @@ class MissionFolder
 class ENH_CommandPalette
 {
     text = "Open Command Palette";
-    shortcuts[] = {INPUT_CTRL_OFFSET + DIK_P};
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_SPACE};
     action = "call ENH_fnc_3DENCommandPalette_init";
     picture = TEXTURE_SEARCH_START;
 };
