@@ -68,16 +68,16 @@ _ctrlDescription ctrlSetPosition
 
 _ctrlShortcut1 ctrlSetPosition
 [
-    (UI_W - 20 - 1) * GRID_W,
+    (UI_W - 30 - 1) * GRID_W,
     _rowIndex * 8 * GRID_H,
-    20 * GRID_W,
+    30 * GRID_W,
     3 * GRID_H
 ];
 _ctrlShortcut2 ctrlSetPosition
 [
-    (UI_W - 20 - 1) * GRID_W,
+    (UI_W - 30 - 1) * GRID_W,
     _rowIndex * 8 * GRID_H + 3 * GRID_H,
-    20 * GRID_W,
+    30 * GRID_W,
     3 * GRID_H
 ];
 
