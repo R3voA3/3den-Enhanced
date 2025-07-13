@@ -2,7 +2,6 @@ class Tools
 {
     items[] +=
     {
-        "ENH_CommandPalette",
         "ENH_Folder_Utilities",
         "ENH_Folder_Placement",
         "ENH_Folder_Loadout",
@@ -35,11 +34,4 @@ class DebugConsole
 class MissionFolder
 {
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_O};
-};
-class ENH_CommandPalette
-{
-    text = "Open Command Palette";
-    shortcuts[] = {INPUT_ALT_OFFSET + DIK_SPACE};
-    action = "call ENH_fnc_3DENCommandPalette_init";
-    picture = TEXTURE_SEARCH_START;
 };
