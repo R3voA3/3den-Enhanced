@@ -165,5 +165,3 @@ allControls _ctrlGroup apply {_x ctrlCommit 0};
 ctrlSetFocus _ctrlEdit;
 
 true
-
-// TODO: Add sorting by how often command was used 2025-07-10 R3vo
