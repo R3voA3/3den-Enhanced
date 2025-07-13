@@ -3,12 +3,14 @@ class CfgFunctions
     class 3denEnhanced
     {
         tag = "ENH";
-
         class 3DENCommandPalette
         {
-
             file = "\x\enh\addons\main\functions\GUI\3DENCommandPalette";
+            class 3DENCommandPalette_addCommand {};
+            class 3DENCommandPalette_collectCommands {};
+            class 3DENCommandPalette_execCommand {};
             class 3DENCommandPalette_init {};
+            class 3DENCommandPalette_search {};
         };
         class 3DENEventHandlers
         {
