@@ -4253,6 +4253,10 @@
             <Chinese>在場景預覽期間激活玩家單位的子彈跟踪。</Chinese>
             <Chinesesimp>在场景预览期间激活玩家单位的子弹跟踪。</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_CATEGORY_VISUALIZATION">
+            <English>Vizualization</English>
+            <German>Visualisierung</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
             <English>Delete Corpses</English>
             <French>Supprimer les corps</French>
@@ -7352,15 +7356,15 @@
             <Chinesesimp>&lt;t align='center'&gt;取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。&lt;br/&gt;更改需要重新启动Eden编辑器才能生效！&lt;/t&gt;</Chinesesimp>
         </Key> -->
         <Key ID="STR_ENH_MAIN_MINIMAPSCALEMULTIPLIER">
-            <English>Minimap Scale Multiplier</English>
-            <French>Activer la Minimap</French>
-            <Spanish>Activar minimapa</Spanish>
-            <Italian>Moltiplicatore di scala della minimappa</Italian>
-            <Polish>Włącz minimapę</Polish>
-            <Russian>Включить мини-картинку</Russian>
-            <German>Minimap einschalten</German>
-            <Chinese>启用小地图</Chinese>
-            <Chinesesimp>启用小地图</Chinesesimp>
+            <English>Minimap Scale</English>
+            <French>Échelle de la mini-carte</French>
+            <Spanish>Escala del minimapa</Spanish>
+            <Italian>Scala della minimappa</Italian>
+            <Polish>Skala minimapy</Polish>
+            <Russian>Масштаб минимальной карты</Russian>
+            <German>Minimap Maßstab</German>
+            <Chinese>最小地圖比例</Chinese>
+            <Chinesesimp>最小地图比例尺</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_MINIMAPSIZE">
             <English>Minimap Size</English>
@@ -8018,6 +8022,10 @@
             <German>Abstand Y</German>
             <Chinese>Y間距</Chinese>
             <Chinesesimp>Y间距</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
+            <English>Adjust Title Width</English>
+            <German>Titellänge anpassen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
             <English>Auto Select</English>

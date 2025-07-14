@@ -138,3 +138,6 @@ _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter",
 
 // Init minimap
 _display3DEN call ENH_fnc_3DENMinimap;
+
+// Remove mods without units or weapons from Asset Browser mod filter
+[_display3DEN displayCtrl 4242] call ENH_fnc_assetBrowser_modFilter;

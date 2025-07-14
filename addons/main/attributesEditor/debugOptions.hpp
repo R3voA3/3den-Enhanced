@@ -8,7 +8,7 @@ class ENH_DebugOptions
         {
             description = "$STR_ENH_MAIN_DEBUGOPTIONS_DESCRIPTION";
             property = "ENH_DebugOptions_Subcategory";
-            control = "ENH_SubCategoryNoHeader2_Fixed";
+            control = "ENH_SubCategoryNoHeader3_Fixed";
         };
         class ENH_DebugOptions_Arsenal
         {
@@ -119,14 +119,6 @@ class ENH_DebugOptions
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_Stamina', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_Stamina', false]";
         };
-        class ENH_DebugOptions_BulletTracking: ENH_DebugOptions_Arsenal
-        {
-            displayName = "$STR_ENH_MAIN_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME";
-            tooltip = "$STR_ENH_MAIN_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP";
-            property = "ENH_DebugOptions_BulletTracking";
-            expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_BulletTracking', _value]";
-            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_BulletTracking', false]";
-        };
         class ENH_DebugOptions_Zeus: ENH_DebugOptions_Arsenal
         {
             displayName = "$STR_ENH_MAIN_DEBUGOPTIONS_ZEUS_DISPLAYNAME";
@@ -162,10 +154,18 @@ class ENH_DebugOptions
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_NoReload', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_NoReload', false]";
         };
-        // Draw
+        // Visualization
         class ENH_DebugOptions_Subcategory_Drawing: ENH_DebugOptions_Player_Subcategory
         {
-            description = "$STR_A3_ENDGAME_DEBRIEFING_DRAW";
+            description = "$STR_ENH_MAIN_DEBUGOPTIONS_CATEGORY_VISUALIZATION";
+        };
+        class ENH_DebugOptions_BulletTracking: ENH_DebugOptions_Arsenal
+        {
+            displayName = "$STR_ENH_MAIN_DEBUGOPTIONS_BULLETTRACKING_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_DEBUGOPTIONS_BULLETTRACKING_TOOLTIP";
+            property = "ENH_DebugOptions_BulletTracking";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_BulletTracking', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_BulletTracking', false]";
         };
         class ENH_DebugOptions_FPS: ENH_DebugOptions_Arsenal
         {
@@ -181,13 +181,6 @@ class ENH_DebugOptions
             property = "ENH_DebugOptions_DrawViewDirection";
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_DebugOptions_DrawViewDirection', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_DrawViewDirection', false]";
-        };
-        // Map
-        class ENH_DebugOptions_Map_Subcategory: ENH_DebugOptions_Subcategory
-        {
-            description = "$STR_USRACT_MAP";
-            data = "AttributeSystemSubcategory";
-            control = "ENH_SubCategoryNoHeader1_Fixed";
         };
         class ENH_DebugOptions_DynSimDebug: ENH_DebugOptions_Arsenal
         {
