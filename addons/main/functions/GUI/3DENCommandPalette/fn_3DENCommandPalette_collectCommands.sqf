@@ -219,9 +219,10 @@ private _3DENActions =
 
 private _menuStripItems = "true" configClasses (configFile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items") apply {[_x, "configFile"]};
 private _descriptionExtItems = "true" configClasses (missionConfigFile >> "ENH_3DENCommandPalette_Commands") apply {[_x, "missionConfigFile"]};
+private _cfg3DENItems = "true" configClasses (configFile >> "Cfg3DEN" >> "ENH_3DENCommandPalette_Commands") apply {[_x, "Cfg3DEN"]};
 private _commands = [];
 
-(_menuStripItems + _descriptionExtItems) apply
+(_menuStripItems + _descriptionExtItems + _cfg3DENItems) apply
 {
     _x params ["_config", "_rootConfig"];
 
@@ -263,7 +264,7 @@ private _commands = [];
         call
         {
             private _configString = toLower str _x;
-            if (_rootConfig == "missionConfigFile") exitWith
+            if (_rootConfig == "missionConfigFile" || {_rootConfig == "Cfg3DEN"}) exitWith
             {
                 _description = "Custom Command";// TODO: LOCALIZE 2025-07-10 R3vo
             };
