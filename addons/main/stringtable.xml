@@ -670,6 +670,7 @@
         <Key ID="STR_ENH_MAIN_ATTRIBUTES_MARKER_SHAPE_DISABLED">
             <English>This attribute is disabled for markers of type icon!</English>
             <German>Dieses Attribut ist für Markierungen vom Typ Symbol deaktiviert!</German>
+            <French>Cet attribut est désactivé pour les marqueurs de type icon !</French>
         </Key>
         <Key ID="STR_ENH_MAIN_AUDIBLECOEF_DISPLAYNAME">
             <English>Audible Coefficient</English>
@@ -6265,10 +6266,12 @@
         <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TITLE">
             <English>Garrison</English>
             <German>Besetzen</German>
+            <French>Garnison</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON2_HISTORY_TOOLTIP">
             <English>A building was garrisoned</English>
             <German>Ein Gebäude wurde besetzt</German>
+            <French>Un bâtiment a été mis en garnison</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_100PERCENT">
             <English>100 %</English>
@@ -6333,10 +6336,12 @@
         <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TEXT">
             <English>Closest Building only</English>
             <German>Nur das nächstgelegene Gebäude</German>
+            <French>Bâtiment le plus proche uniquement</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TOOLTIP">
             <English>Only the closest building to the center will be garrisoned.</English>
             <German>Nur das Gebäude, das dem Zentrum am nächsten liegt, wird bemannt.</German>
+            <French>Seul le bâtiment le plus proche du centre sera en garnison.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_COVERAGE">
             <English>Coverage</English>
@@ -6353,10 +6358,12 @@
         <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TEXT">
             <English>From Center</English>
             <German>Vom Zentrum</German>
+            <French>Depuis le centre</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TOOLTIP">
             <English>Positions closer to the center will be filled first.</English>
             <German>Positionen, die näher am Zentrum liegen, werden zuerst besetzt.</German>
+            <French>Les postes les plus proches du centre seront pourvus en premier.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_HEADER">
             <English>Garrison Buildings</English>
@@ -6397,10 +6404,12 @@
         <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TEXT">
             <English>Random Positions</English>
             <German>Zufällige Positionen</German>
+            <French>Positions aléatoires</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TOOLTIP">
             <English>A random position inside the area will be picked for each entity.</English>
             <German>Für jede Entität wird eine zufällige Position innerhalb des Bereichs gewählt.</German>
+            <French>Une position aléatoire à l'intérieur de la zone sera choisie pour chaque entité.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_STANCE">
             <English>Stance</English>
@@ -7258,38 +7267,47 @@
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DECAGON">
             <English>Decagon</English>
             <German>Decagon</German>
+            <French>Decagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_DISPLAYNAME">
             <English>Special Shape</English>
             <German>Spezielle Form</German>
+            <French>Forme spéciale</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEPTAGON">
             <English>Heptagon</English>
             <German>Heptagon</German>
+            <French>Heptagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_HEXAGON">
             <English>Hexagon</English>
             <German>Hexagon</German>
+            <French>Hexagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_NONAGON">
             <English>Nonagon</English>
             <German>Nonagon</German>
+            <French>Nonagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_OCTAGON">
             <English>Octagon</English>
             <German>Octagon</German>
+            <French>Octagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_PENTAGON">
             <English>Triangle</English>
             <German>Pentagon</German>
+            <French>Pentagon</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TOOLTIP">
             <English>Spezielle Form. Funktioniert nicht bei Markierungen des Typs Symbol. Überschreibt das vanilla Form Attribut, wenn es auf einen anderen Wert als Standart gesetzt ist.</English>
             <German>Spezielle Form</German>
+            <French>Forme spéciale. Ne fonctionne pas avec les marqueurs de type symbole. Remplace l'attribut vanilla Form s'il est défini sur une valeur autre que Standard.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TRIANGLE">
             <English>Triangle</English>
             <German>Dreieck</German>
+            <French>Triangle</French>
         </Key>
         <Key ID="STR_ENH_MAIN_MEASUREDISTANCE_DATA">
             <English>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</English>
@@ -7677,18 +7695,22 @@
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_2D_NOT_SUPPORTED">
             <English>Garrison mode only works in 3D view.</English>
             <German>Besetzungsmodus funktioniert nur in der 3D-Ansicht.</German>
+            <French>Le mode garnison ne fonctionne qu'en vue 3D.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ALL_POSITIONS_TAKEN">
             <English>All building positions were garrisoned!</English>
             <German>Alle Gebäudepositionen wurden besetzt</German>
+            <French>Toutes les positions des bâtiments sont occupées par des garnisons !</French>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_DISABLED">
             <English>Garrison mode disabled!</English>
             <German>Besetzungsmodus deaktiviert!</German>
+            <French>Mode garnison désactivé !</French>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GARRISON2_ENABLED">
             <English>Garrison mode enabled!</English>
             <German>Besetzungsmodus aktiviert!</German>
+            <French>Mode garnison activé !</French>
         </Key>
         <Key ID="STR_ENH_MAIN_NOTIFICATIONS_GETPYTHIA">
             <English>Get the &lt;t colorLink='#E69710'&gt;&lt;a href='https://steamcommunity.com/sharedfiles/filedetails/?id=1751569185'&gt;Pythia&lt;/a&gt;&lt;/t&gt;&lt;br/&gt; modification from the Steam Workshop!</English>
@@ -8008,62 +8030,77 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
             <English>Auto Select</English>
             <German>Automatische Auswahl</German>
+            <French>Sélection automatique</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_TOOLTIP">
             <English>If enabled, units that could not be put into building positions will be auto selected.</English>
             <German>Wenn aktiviert, werden Einheiten die nicht in Gebäudepositionen platziert werden konnten automatisch ausgewählt.</German>
+            <French>Si cette option est activée, les unités qui n'ont pas pu être placées dans des positions de construction seront sélectionnées automatiquement.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_DISPLAYNAME">
             <English>Only garrison empty positions</English>
             <German>Nur leere Positionen besetzen</German>
+            <French>Garnir uniquement les positions vides</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CHECK_FOR_TAKEN_POSITIONS_TOOLTIP">
             <English>If enabled, only empty positions will be garrisoned.</English>
             <German>Wenn aktiviert, werden nur leere Positionen bemannt.</German>
+            <French>Si cette option est activée, seules les positions vides seront mises en garnison.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_DISPLAYNAME">
             <English>Create Layer</English>
             <German>Layer erstellen</German>
+            <French>Créer un calque</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_CREATE_LAYER_TOOLTIP">
             <English>If enabled, units that were garrisoned will be moved into their own layer.</English>
             <German>Wenn aktiviert, werden die Einheiten in einen eigenen Layer verschoben.</German>
+            <French>Si cette option est activée, les unités qui étaient en garnison seront déplacées dans leur propre couche.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_DISPLAYNAME">
             <English>Disable Pathfinding</English>
             <German>Wegfinding deaktivieren</German>
+            <French>Désactiver le Pathfinding</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_DISABLE_PATHFINDING_TOOLTIP">
             <English>If enabled, pathfinding gets disabled so that the AI cannot leave their position.</English>
             <German>Wenn aktiviert, wird die Wegfindung der KI deaktiviert sodass sie ihre Position nicht verlassen kann.</German>
+            <French>Si cette option est activée, la recherche de chemin est désactivée afin que l'IA ne puisse pas quitter sa position.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME">
             <English>Group Units</English>
             <German>Einheiten gruppieren</German>
+            <French>Regrouper les unités</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_TOOLTIP">
             <English>If enabled, all units in one building will be grouped together.</English>
             <German>Wenn aktiviert, werden all Einheiten eines Gebäudes gruppiert.</German>
+            <French>Si cette option est activée, toutes les unités d'un bâtiment seront regroupées.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_RANDOM_ROTATION_DISPLAYNAME">
             <English>Random Rotation</English>
             <German>Zufällige Orientierung</German>
+            <French>Rotation aléatoire</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_STANCE_RANDOM_NO_PRONE_DISPLAYNAME">
             <English>Random, except prone</English>
             <German>Zufällig, außer liegen</German>
+            <French>Aléatoire, sauf prédisposé</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_DISPLAYNAME">
             <English>Hold Action Icons</English>
             <German>„Hold Action“ Symbole</German>
+            <French>«Symboles» Hold Action</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_HOLD_ACTION_ICONS_TOOLTIP">
             <English>Define additional icons here that can be used for the hold action attribute.</English>
             <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
+            <French>Définissez ici des icônes supplémentaires qui peuvent être utilisées pour l'attribut d'action de maintien.</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME">
             <English>Show Custom Marker Color / Shape</English>
-            <German>Benutzerdefinierte Markerfarbe/-form anzeigen</German>
+            <German>NBenutzerdefinierte Markerfarbe/-form anzeigen</German>
+            <French>Montrer la couleur / la forme du marqueur personnalisé</French>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
