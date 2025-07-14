@@ -10,6 +10,7 @@ class CfgFunctions
             class 3DENShowCustomMarkerColorAndShape {};
             class adjustTitleTextWidth {};
             class assetBrowser_collapse {};
+            class assetBrowser_modFilter {};
             class entityList_addTooltips {};
             class favoritesList {};
             class locationList_enhanced {};
