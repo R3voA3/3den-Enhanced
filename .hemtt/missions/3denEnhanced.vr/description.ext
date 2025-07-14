@@ -82,12 +82,20 @@ import ctrlXSliderV;
 
 class ENH_3DENCommandPalette_Commands
 {
-    class ENH_ShowProductInfo
+    class ENH_Command_Base
+    {
+        action = "";
+        description = "";
+        opensNewWindow = 0;
+        picture = "";
+        text = "";
+    };
+    class ENH_ShowProductInfo: ENH_Command_Base
     {
         action = "call ENH_fnc_productInfo";
         text = "Show Product Info";
     };
-    class ENH_HelloWorld
+    class ENH_HelloWorld: ENH_Command_Base
     {
         action = "systemChat ""Hello World""";
         text = "Hello World";
