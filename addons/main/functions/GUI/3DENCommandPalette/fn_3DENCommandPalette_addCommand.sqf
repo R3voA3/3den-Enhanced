@@ -93,8 +93,8 @@ _ctrlFakeButton ctrlSetFade 1;
 
 _ctrlTitle ctrlSetFontHeight (4 * GRID_H);
 _ctrlDescription ctrlSetFontHeight (3 * GRID_H);
-_ctrlShortcut1 ctrlSetFontHeight (2.8 * GRID_H);
-_ctrlShortcut2 ctrlSetFontHeight (2.8 * GRID_H);
+_ctrlShortcut1 ctrlSetFontHeight (3 * GRID_H);
+_ctrlShortcut2 ctrlSetFontHeight (3 * GRID_H);
 
 _ctrlDescription ctrlSetTextColor [0.5, 0.5, 0.5, 1];
 
