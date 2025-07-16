@@ -99,5 +99,6 @@ class ENH_3DENCommandPalette_Commands
     {
         action = "systemChat ""Hello World""";
         text = "Hello World";
+        copyToClipboard = 1;
     };
 };

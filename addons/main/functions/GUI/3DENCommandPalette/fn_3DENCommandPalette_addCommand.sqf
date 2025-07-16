@@ -11,16 +11,19 @@
 
     Parameter(s):
     0: STRING - Command action
-    0: STRING - Command picture
-    0: STRING - Command shortcuts (only two are supported, comma separated)
-    0: STRING - Command text
-    0: STRING - Command description, optional, default is auto generated
+    1: STRING - Command picture
+    2: STRING - Command shortcuts (only two are supported, comma separated)
+    3: STRING - Command text
+    4: STRING - Command description, optional, default is auto generated
+    5: STRING - Hash Value for fast lookup of priority
+    6: NUMBER - Priority, smaller value = higher priority
+    7: BOOLEAN - Whether the _action should be called or just copied to clipboard
 
     Return Value:
     NOTHING
 */
 
-params ["_action", "_picture", "_shortcuts", "_text", ["_description", ""]];
+params ["_action", "_picture", "_shortcuts", "_text", ["_description", ""], "", "", "_copyToClipboard"];
 
 private _rootDisplay = findDisplay IDD_DISPLAY3DEN getVariable ["ENH_3DENCommandPalette_Display", displayNull];
 
@@ -118,6 +121,7 @@ _ctrlFakeButton ctrlSetTooltip (_text + endl + _description + endl + _shortcuts)
 
 _ctrlFakeButton setVariable ["Background", _ctrlBackground];
 _ctrlFakeButton setVariable ["Action", _action];
+_ctrlFakeButton setVariable ["CopyToClipboard", _copyToClipboard];
 
 _ctrlFakeButton ctrlAddEventHandler ["MouseEnter",
 {
@@ -147,7 +151,9 @@ _ctrlFakeButton ctrlAddEventHandler ["MouseButtonDown",
     };
 }];
 
-_ctrlFakeButton ctrlAddEventHandler ["KeyDown",
+// We use KeyUp here because otherwise, if the key pressed it will already trigger
+// and action if a new UI is opened (Stringtable Viewer)
+_ctrlFakeButton ctrlAddEventHandler ["KeyUp",
 {
     params ["_ctrlFakeButton", "_key"];
 

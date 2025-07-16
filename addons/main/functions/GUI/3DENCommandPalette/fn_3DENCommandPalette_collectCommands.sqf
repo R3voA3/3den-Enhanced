@@ -277,8 +277,9 @@ private _commands = [];
 
     private _actionHash = hashValue _action;
     private _priorityMap = profileNamespace getVariable ["ENH_3DENCommandPalette_PriorityMap", createHashMap];
+    private _copyToClipboard = getNumber (_config >> "copyToClipboard") == 1;
 
-    _commands pushBack [_action, _picture, _shortcuts, _text, _description, _actionHash, _priorityMap getOrDefault [_actionHash, 0]];
+    _commands pushBack [_action, _picture, _shortcuts, _text, _description, _actionHash, _priorityMap getOrDefault [_actionHash, 0], _copyToClipboard];
 };
 
 // Sort first by name, then by _priority (how often it was used)
