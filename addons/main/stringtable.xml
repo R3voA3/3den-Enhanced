@@ -7300,7 +7300,7 @@
             <German>Pentagon</German>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_TOOLTIP">
-            <English>Spezielle Form. Funktioniert nicht bei Markierungen des Typs Symbol. Überschreibt das vanilla Form Attribut, wenn es auf einen anderen Wert als Standart gesetzt ist.</English>
+            <English>Special shape. Does not work with markers of type Icon. Overwrites the vanilla shape attribute if it is set to a value other than standard.</English>
             <French>Forme spéciale. Ne fonctionne pas avec les marqueurs de type symbole. Remplace l'attribut vanilla Form s'il est défini sur une valeur autre que Standard.</French>
             <German>Spezielle Form</German>
         </Key>
