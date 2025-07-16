@@ -298,30 +298,7 @@ class Cfg3DEN
             opensNewWindow = 0;
             picture = "";
             text = "";
-        };
-        class ENH_SelectAllLayers: ENH_Command_Base
-        {
-            action = "set3DENSelected (all3DENEntities # 6)";
-            picture = "\x\enh\addons\main\data\selectAllLayers_ca.paa";
-            text = "$STR_ENH_MAIN_TOOLS_SELECTALLLAYERS";
-        };
-        class ENH_DeleteEmptyLayers: ENH_Command_Base
-        {
-            action = "call ENH_fnc_deleteEmptyLayers";
-            picture = "\x\enh\addons\main\data\trash_ca.paa";
-            text = "$STR_ENH_MAIN_TOOLS_DELETEEMPTYLAYERS";
-        };
-        class ENH_EnableLayer: ENH_Command_Base
-        {
-            action = "'EnableLayer' call bis_fnc_3DENInterface";
-            picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_layerEnable_ca.paa";
-            text = "$STR_3DEN_DISPLAY3DEN_ENABLELAYER_TOOLTIP";
-        };
-        class ENH_ShowLayer: ENH_Command_Base
-        {
-            action = "'ShowLayer' call bis_fnc_3DENInterface";
-            picture = "\a3\3DEN\Data\Displays\Display3DEN\PanelLeft\entityList_layerShow_ca.paa";
-            text = "$STR_3DEN_DISPLAY3DEN_SHOWLAYER_TOOLTIP";
+            copyToClipboard = 0;
         };
     };
 };
