@@ -23,7 +23,7 @@ lbClear _ctrlMods;
 
 {
     _mods pushBackUnique (configSourceMod _x)
-} forEach configProperties [configFile >> "CfgPatches", "getArray (_x >> 'units') isNotEqualTo [] || {getArray (_x >> 'weapons') isNotEqualTo []}"];
+} forEach configProperties [configFile >> "CfgPatches", "getArray (_x >> 'units') isNotEqualTo []"];
 
 {
     private _params = if (_x == "") then {[]} else
@@ -31,7 +31,7 @@ lbClear _ctrlMods;
         modParams [_x, ["name", "logoSmall"]]
     };
 
-    if (count _params > 0) then
+    if (_params isNotEqualTo []) then
     {
         _params params ["_name", "_logoSmall"];
 
