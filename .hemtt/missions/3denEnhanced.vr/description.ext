@@ -89,6 +89,7 @@ class ENH_3DENCommandPalette_Commands
         opensNewWindow = 0;
         picture = "";
         text = "";
+        copyToClipboard = 0;
     };
     class ENH_ShowProductInfo: ENH_Command_Base
     {
