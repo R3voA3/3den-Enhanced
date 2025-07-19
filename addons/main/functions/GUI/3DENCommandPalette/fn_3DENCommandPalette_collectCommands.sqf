@@ -282,5 +282,11 @@ private _commands = [];
     _commands pushBack [_action, _picture, _shortcuts, _text, _description, _actionHash, _priorityMap getOrDefault [_actionHash, 0], _copyToClipboard];
 };
 
+private _JSONUserCommands = call ENH_fnc_3DENCommandPalette_readJSONFile;
+if (_JSONUserCommands isNotEqualTo []) then
+{
+    _commands = _commands + _JSONUserCommands;
+};
+
 // Sort first by name, then by _priority (how often it was used)
 [[_commands, [], {_x#3}] call BIS_fnc_sortBy, [], {_x#6}] call BIS_fnc_sortBy;
