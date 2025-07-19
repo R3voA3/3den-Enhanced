@@ -10,6 +10,7 @@ class CfgFunctions
             class 3DENCommandPalette_collectCommands {};
             class 3DENCommandPalette_execCommand {};
             class 3DENCommandPalette_init {};
+            class 3DENCommandPalette_readJSONFile {};
             class 3DENCommandPalette_search {};
         };
         class 3DENEventHandlers
