@@ -101,7 +101,10 @@ _ctrlShortcut2 ctrlSetFontHeight (3 * GRID_H);
 
 _ctrlDescription ctrlSetTextColor [0.5, 0.5, 0.5, 1];
 
-_ctrlPicture ctrlSetText _picture;
+if (fileExists _picture) then
+{
+    _ctrlPicture ctrlSetText _picture;
+};
 
 _ctrlTitle ctrlSetText _text;
 _ctrlTitle ctrlSetTooltip _text;
