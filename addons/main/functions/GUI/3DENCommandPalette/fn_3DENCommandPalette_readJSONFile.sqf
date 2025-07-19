@@ -18,6 +18,8 @@
     [] call ENH_fnc_missionDisplay;
 */
 
+if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith {[]};
+
 private _json =
 [
     "ENH_Pythia.CommandPalette_Read_File",
@@ -31,10 +33,6 @@ private _commands = [];
 
 {
     private _commandHash = _JSONHash get _x;
-
-    systemChat format ["Command Hash %1", _commandHash];
-    systemChat format ["Value %1", _y];
-
     private _action = _commandHash getOrDefault ["action", ""];
 
     // TODO: This should be unified in one function 2025-07-19 R3vo
