@@ -266,11 +266,11 @@ private _commands = [];
             private _configString = toLower str _x;
             if (_rootConfig == "missionConfigFile" || {_rootConfig == "Cfg3DEN"}) exitWith
             {
-                _description = "Custom Command";// TODO: LOCALIZE 2025-07-10 R3vo
+                _description = localize "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_CUSTOM_COMMAND";
             };
             if (_rootConfig == "configFile") exitWith
             {
-                _description = "Menu Strip Command";// TODO: LOCALIZE 2025-07-10 R3vo
+                _description = localize "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_MENU_STRIP_COMMAND";
             };
         };
     };

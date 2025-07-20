@@ -100,6 +100,26 @@
             <Chinese>快捷方式</Chinese>
             <Chinesesimp>快捷方式</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_CUSTOM_COMMAND">
+            <English>Custom Command</English>
+            <German>Benutzerdef. Befehl</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_JSON_COMMAND">
+            <English>JSON Command</English>
+            <German>JSON Befehl</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_MENU_STRIP_COMMAND">
+            <English>Menu Strip Command</English>
+            <German>Menü-Leisten Befehl</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_OPEN">
+            <English>Open Command Palette</English>
+            <German>Befehlspalette öffnen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_RESET_PRIORITY">
+            <English>Reset Command Priority</English>
+            <German>Befehlspriorität zurücksetzen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_ADDGUNLIGHT_DISPLAYNAME">
             <English>Add Gun Light</English>
             <Czech>Přidat světlo na zbraň</Czech>

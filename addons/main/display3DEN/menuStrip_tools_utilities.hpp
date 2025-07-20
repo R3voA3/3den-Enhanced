@@ -124,14 +124,14 @@ class ENH_AttributeSearch
 };
 class ENH_CommandPalette
 {
-    text = "Open Command Palette";// TODO: LOCALIZE 2025-07-13 R3vo
+    text = "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_OPEN";
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_SPACE};
     action = "call ENH_fnc_3DENCommandPalette_init";
     picture = TEXTURE_SEARCH_START;
 };
 class ENH_CommandPalette_Reset_Priority
 {
-    text = "Reset Command Palette Priority";// TODO: LOCALIZE 2025-07-13 R3vo
+    text = "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_RESET_PRIORITY";
     shortcuts[] = {};
     action = "profileNamespace setVariable ['ENH_3DENCommandPalette_PriorityMap', nil]";
 };

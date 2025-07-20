@@ -50,7 +50,7 @@ private _commands = [];
 
         if (_description == "") then
         {
-            _description = "JSON Command";
+            _description = localize "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_JSON_COMMAND";
         };
 
         _commands pushBack
