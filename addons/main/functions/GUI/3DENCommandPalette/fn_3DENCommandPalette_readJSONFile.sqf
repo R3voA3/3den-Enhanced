@@ -6,19 +6,20 @@
     Date: 2025-07-19
 
     Description:
-    This is an awesome description.
+    Reads the JSON file containing the command palette commands.
 
     Parameter(s):
-    0: ARRAY - Some description, optional, default false
+    -
 
     Return Value:
-    ARRAY - True on success, false if failed
-
-    Examples(s):
-    [] call ENH_fnc_missionDisplay;
+    ARRAY - With all commands or empty array if the file could not be read.
 */
 
 if !(isClass (configFile >> "CfgPatches" >> "PY3_Pythia")) exitWith {[]};
+
+private _path = profileNamespace getVariable ['ENH_EditorPreferences_Interface_3DENCommandPalette_Path', ''];
+
+if (_path == "") exitWith {[]};
 
 private _json =
 [
@@ -41,22 +42,28 @@ private _commands = [];
         private _priorityMap = profileNamespace getVariable ["ENH_3DENCommandPalette_PriorityMap", createHashMap];
         private _actionHash = hashValue _action;
         private _text = _commandHash getOrDefault ["text", ""];
+        private _description = _commandHash getOrDefault ["description", "Custom Command"];
 
         if (_commandHash getOrDefault ["opensNewWindow", 0] == 1) then
         {
             _text = _text + "...";
         };
 
+        if (_description == "") then
+        {
+            _description = "JSON Command";
+        };
+
         _commands pushBack
         [
-            _commandHash getOrDefault ["action", ""],
+            _action,
             _commandHash getOrDefault ["picture", ""],
             "", // Shortcuts, not used
-            _commandHash getOrDefault ["text", ""],
-            _commandHash getOrDefault ["description", "Custom Command"],
+            _text,
+            _description,
             _actionHash,
             _priorityMap getOrDefault [_actionHash, 0],
-            _commandHash getOrDefault ["copyToClipboard", 0]
+            (_commandHash getOrDefault ["copyToClipboard", 0]) == 1
         ];
     };
 } forEach _JSONHash;
