@@ -36,7 +36,6 @@ private _commands = [];
     private _commandHash = _JSONHash get _x;
     private _action = _commandHash getOrDefault ["action", ""];
 
-    // TODO: This should be unified in one function 2025-07-19 R3vo
     if (_action != "") then
     {
         private _priorityMap = profileNamespace getVariable ["ENH_3DENCommandPalette_PriorityMap", createHashMap];

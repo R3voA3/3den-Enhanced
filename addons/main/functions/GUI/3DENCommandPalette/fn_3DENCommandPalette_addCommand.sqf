@@ -120,7 +120,7 @@ _ctrlShortcut1 ctrlSetTooltip  _shortcut1;
 _ctrlShortcut2 ctrlSetText trim _shortcut2;
 _ctrlShortcut2 ctrlSetTooltip trim _shortcut2;
 
-_ctrlFakeButton ctrlSetTooltip (_text + endl + _description + endl + _shortcuts); // TODO: Make the font smaller 2025-07-10 R3vo
+_ctrlFakeButton ctrlSetTooltip (_text + endl + _description + endl + _shortcuts);
 
 _ctrlFakeButton setVariable ["Background", _ctrlBackground];
 _ctrlFakeButton setVariable ["Action", _action];
