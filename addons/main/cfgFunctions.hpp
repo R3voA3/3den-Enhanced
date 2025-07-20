@@ -46,13 +46,6 @@ class CfgFunctions
             class 3DENRadio_timelineControl {};
             class 3DENRadio_toggleRadio {};
         };
-        class 3DENShortcuts
-        {
-            file = "\x\enh\addons\main\functions\GUI\3DENShortcuts";
-            class 3DENShortcuts_init {};
-            class 3DENShortcuts_fillList {};
-            class 3DENShortcuts_parseShortcut {};
-        };
         class Attributes
         {
             file = "\x\enh\addons\main\functions\attributes";
@@ -131,6 +124,7 @@ class CfgFunctions
             class getConfigSourceAddon {};
             class hasStorage {};
             class initSearchControls {};
+            class parseShortcut {};
             class systemTimeFormatted {};
         };
         class Debug

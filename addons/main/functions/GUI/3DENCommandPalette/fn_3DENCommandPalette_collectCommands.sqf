@@ -256,7 +256,7 @@ private _commands = [];
     };
 
     private _picture = getText (_config >> "picture");
-    private _shortcuts = [[getArray (_config >> "shortcuts")]] call ENH_fnc_3DENShortcuts_parseShortcut;
+    private _shortcuts = [[getArray (_config >> "shortcuts")]] call ENH_fnc_parseShortcut;
     private _description = getText (_config >> "description"); // 3den Enhanced specific property
 
     if (_description == "") then
