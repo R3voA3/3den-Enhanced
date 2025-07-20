@@ -7353,6 +7353,28 @@
             <Chinese>機場</Chinese>
             <Chinesesimp>机场</Chinesesimp>
         </Key>
+         <!--         <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES">
+            <English>Menu Strip Entries</English>
+            <French>Entrées dans la bande de menu</French>
+            <Spanish>Entradas de la tira de menú</Spanish>
+            <Italian>Rimuovi voci Menù</Italian>
+            <Polish>Zarządzaj menu</Polish>
+            <Russian>Записи в полосе Меню</Russian>
+            <German>Menüleisten-Einträge</German>
+            <Chinese>菜單欄條目</Chinese>
+            <Chinesesimp>菜单栏条目</Chinesesimp>
+        </Key> -->
+        <!-- <Key ID="STR_ENH_MAIN_MENUSTRIPENTRIES_TOOLTIP">
+            <English>&lt;t align='center'&gt;Uncheck entries to hide them. Unchecking folders will cause all entries in the folder to get removed.&lt;br/&gt;Changes require a restart of Eden Editor to take effect!&lt;/t&gt;</English>
+            <French>&lt;t align='center'&gt;Décochez les entrées pour les masquer. Le fait de décocher les dossiers entraîne la suppression de toutes les entrées qui s'y trouvent.&lt;br/&gt;Les modifications nécessitent un redémarrage d'Eden Editor pour être prises en compte !&lt;/t&gt;</French>
+            <Spanish>&lt;t align='center'&gt;Desmarque las entradas para ocultarlas. Al desmarcar las carpetas, se eliminarán todas las entradas de la carpeta. &lt;br/&gt; ¡Los cambios requieren reiniciar Eden Editor para que surtan efecto!&lt;/t&gt;</Spanish>
+            <Italian>&lt;t align='center'&gt;Deseleziona dalle entrate per nasconderle. Deselezionare le cartelle causerà la rimozione di tutte le entrate della cartella. &lt;br/&gt;Cambiamenti necessitano di un riavvio dell Eden Editor per avere effetto!&lt;/t&gt;</Italian>
+            <Polish>&lt;t align='center'&gt;Odznaczaj pozycje menu, by je ukryć. Odznaczenie całej zakładki spowoduje zniknięcie wszystkich pozycji wewnątrz.&lt;br/&gt;Zmian wymagają zrestartowania edytora, by je zobaczyć!&lt;/t&gt;</Polish>
+            <Russian>&lt;t align='center'&gt;Снимите отметки с записей, чтобы скрыть их. Если флажок рядом с папками снят, все записи также удалятся&lt;br/&gt;Чтобы изменения вступили в силу необходимо перезапустить редактор Eden!&lt;/t&gt;</Russian>
+            <German>&lt;t align='center'&gt;Entferne den Haken bei Einträgen die nicht in der Menüleiste angezeigt werden sollen. Wird der Haken bei Ordnern entfernt, werden auch alle Einträge innerhalb des Ordners entfernt.&lt;br/&gt;Damit die Änderungen in Kraft treten muss der Eden Editor neugestartet werden!&lt;/t&gt;</German>
+            <Chinese>&lt;t align='center'&gt;取消選中條目以隱藏它們。取消選中文件夾將導致該文件夾中的所有條目被刪除。&lt;br/&gt;更改需要重新啟動Eden編輯器才能生效！&lt;/t&gt;</Chinese>
+            <Chinesesimp>&lt;t align='center'&gt;取消选中条目以隐藏它们。取消选中文件夹将导致该文件夹中的所有条目被删除。&lt;br/&gt;更改需要重新启动Eden编辑器才能生效！&lt;/t&gt;</Chinesesimp>
+        </Key> -->
         <Key ID="STR_ENH_MAIN_LOCATIONLIST_CHAPELS">
             <English>Chapels</English>
             <Czech>Kaple</Czech>
