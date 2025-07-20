@@ -8014,8 +8014,8 @@
             <German>Befehlspalette Pfad</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_3DEN_COMMAND_PALETTE_PATH_TOOLTIP">
-            <English>Path to the command palette custom commands .json file.\n\nFor Example: C:\\Users\\&lt;username&gt;\\Documents\\Arma 3\\ENH_3DENCommandPalette.json</English>
-            <German>Pfad zur .json-Datei mit den benutzerdefinierten Befehlen der Befehlspalette.\n\nZum Beispiel: C:\\Benutzer\\\&lt;Benutzername&gt;\\Dokumente\\\Arma 3\\ENH_3DENCommandPalette.json</German>
+            <English>Path to the command palette custom commands .json file.\n\nFor Example:\nC:\ENH_3DENCommandPalette.json</English>
+            <German>Pfad zur .json-Datei mit den benutzerdefinierten Befehlen der Befehlspalette.\n\nZum Beispiel:\nC:\ENH_3DENCommandPalette.json</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
             <English>Adjust Title Width</English>
