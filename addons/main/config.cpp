@@ -12,7 +12,6 @@
 
 // Custom GUIs
 #include "\x\enh\addons\main\GUI\3DENRadio.hpp"
-#include "\x\enh\addons\main\GUI\3DENShortcuts.hpp"
 #include "\x\enh\addons\main\GUI\attributeSearch.hpp"
 #include "\x\enh\addons\main\GUI\briefingEditor.hpp"
 #include "\x\enh\addons\main\GUI\CfgSentencesBrowser.hpp"
