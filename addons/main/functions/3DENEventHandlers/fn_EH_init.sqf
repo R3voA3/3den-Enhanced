@@ -124,10 +124,7 @@ private _code =
     };
 
     // Show custom marker color and shape on hover
-    if (profileNamespace getVariable ["ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape", true]) then
-    {
-        call ENH_fnc_3DENShowCustomMarkerColorAndShape;
-    };
+    call ENH_fnc_3DENShowCustomMarkerColorAndShape;
 
     // We return nil here, otherwise we break other mods (CBA, ACE)
     nil
@@ -141,3 +138,6 @@ _display3DEN displayCtrl IDC_DISPLAY3DEN_EDIT ctrlAddEventHandler ["MouseEnter",
 
 // Init minimap
 _display3DEN call ENH_fnc_3DENMinimap;
+
+// Remove mods without units or weapons from Asset Browser mod filter
+[_display3DEN displayCtrl 4242] call ENH_fnc_assetBrowser_modFilter;

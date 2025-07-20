@@ -40,6 +40,6 @@
 class ENH_DisplayEmpty
 {
     idd = IDD_NONE;
-    class ControlsBackground;
-    class Controls;
+    class ControlsBackground {};
+    class Controls {};
 };

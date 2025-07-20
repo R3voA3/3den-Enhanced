@@ -2,6 +2,7 @@
 # 8.7.0
 ## ADDED
 - Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
+- Added a search to the hold action icon picker
 - 3DEN Command Palette. A quick way to access almost all Eden Editor commands and custom commands. Read https://github.com/R3voA3/3den-Enhanced/wiki/3DEN-Command-Palette for more information
 
 ## CHANGED
@@ -9,6 +10,18 @@
 - Marker preview now only works if either custom shape or custom color was set
 - Fixed rpt message (empty class)
 - Moon phases utility could not be opened from menu strip
+- Fixed opening the Zeus Addons UI would create spam in the RPT
+- Fixed wrong translation for Minimap Scale attribute
+- Improved debug options category names
+- Fixed missing translation for the Stance attribute in the preferences
+- Search button in the favorites tab hat not functionality
+- Asset Browser's mod filter no longer shows mods that don't add assets
+- Updated French translation by Alfred-Neuman
+
+# 8.6.2
+## CHANGED
+- When marker preview setting is changed in preferences, changes are applied immediately now
+- Custom Marker Color and Shape preview was overhauled. Instead of modifing the marker, a small icon will now appear next to the tooltip on hover
 
 # 8.6.1
 ## CHANGED
