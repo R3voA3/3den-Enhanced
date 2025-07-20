@@ -79,3 +79,27 @@ import ctrlXSliderV;
 //Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
                                                      class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
+
+class ENH_3DENCommandPalette_Commands
+{
+    class ENH_Command_Base
+    {
+        action = "";
+        description = "";
+        opensNewWindow = 0;
+        picture = "";
+        text = "";
+        copyToClipboard = 0;
+    };
+    class ENH_ShowProductInfo: ENH_Command_Base
+    {
+        action = "call ENH_fnc_productInfo";
+        text = "Show Product Info";
+    };
+    class ENH_HelloWorld: ENH_Command_Base
+    {
+        action = "systemChat ""Hello World""";
+        text = "Hello World";
+        copyToClipboard = 1;
+    };
+};

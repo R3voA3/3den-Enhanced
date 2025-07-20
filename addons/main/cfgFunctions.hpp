@@ -3,6 +3,26 @@ class CfgFunctions
     class 3denEnhanced
     {
         tag = "ENH";
+        class 3DENCommandPalette
+        {
+            file = "\x\enh\addons\main\functions\GUI\3DENCommandPalette";
+            class 3DENCommandPalette_addCommand {};
+            class 3DENCommandPalette_collectCommands {};
+            class 3DENCommandPalette_execCommand {};
+            class 3DENCommandPalette_init {};
+            class 3DENCommandPalette_readJSONFile {};
+            class 3DENCommandPalette_search {};
+        };
+        class 3DENEventHandlers
+        {
+            file = "\x\enh\addons\main\functions\3DENEventHandlers";
+            class EH_init {};
+            class EH_onMissionLoad {};
+            class EH_onMissionNew {};
+            class EH_onMissionPreview {};
+            class EH_onMissionPreviewEnd {};
+            class EH_onTerrainNew {};
+        };
         class 3DENInterface
         {
             file = "\x\enh\addons\main\functions\3DENInterface";
@@ -25,6 +45,13 @@ class CfgFunctions
             class 3DENRadio_searchList {};
             class 3DENRadio_timelineControl {};
             class 3DENRadio_toggleRadio {};
+        };
+        class 3DENShortcuts
+        {
+            file = "\x\enh\addons\main\functions\GUI\3DENShortcuts";
+            class 3DENShortcuts_init {};
+            class 3DENShortcuts_fillList {};
+            class 3DENShortcuts_parseShortcut {};
         };
         class Attributes
         {
@@ -110,16 +137,6 @@ class CfgFunctions
         {
             file = "\x\enh\addons\main\functions\debug";
             class productInfo {};
-        };
-        class EventHandlers
-        {
-            file = "\x\enh\addons\main\functions\eventHandlers";
-            class EH_init {};
-            class EH_onMissionLoad {};
-            class EH_onMissionNew {};
-            class EH_onMissionPreview {};
-            class EH_onMissionPreviewEnd {};
-            class EH_onTerrainNew {};
         };
         class ESE
         {

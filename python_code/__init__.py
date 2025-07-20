@@ -52,3 +52,12 @@ def BackupMissionSQM(missionroot, backuproot, prefix, timestamp):
         os.makedirs (backupFolderPath)
 
     shutil.copyfile(missionroot + "\\mission.sqm", backuproot + "\\"+ prefix + "mission.sqm" + "_" + timestamp)
+
+def CommandPalette_Read_File(path):
+    if not os.path.exists(path):
+        return ""
+
+    with open(path, 'r', encoding='utf-8') as file:
+        content = file.read()
+
+    return content

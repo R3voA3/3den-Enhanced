@@ -18,7 +18,10 @@ class ENH_Folder_Utilities
         "ENH_BriefingEditor",
         "ENH_AttributeSearch",
         "ENH_NameObjects",
-        "ENH_ZeusAddons"
+        "ENH_ZeusAddons",
+        "Separator",
+        "ENH_CommandPalette",
+        "ENH_CommandPalette_Reset_Priority"
     };
 };
 class ENH_MoonPhases
@@ -118,4 +121,17 @@ class ENH_AttributeSearch
     action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_AttributeSearch');
     opensNewWindow = 1;
     wikiDescription = "Quickly search through the the text attributes such as 'ini' or 'condition' of all entities.";
+};
+class ENH_CommandPalette
+{
+    text = "Open Command Palette";// TODO: LOCALIZE 2025-07-13 R3vo
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_SPACE};
+    action = "call ENH_fnc_3DENCommandPalette_init";
+    picture = TEXTURE_SEARCH_START;
+};
+class ENH_CommandPalette_Reset_Priority
+{
+    text = "Reset Command Palette Priority";// TODO: LOCALIZE 2025-07-13 R3vo
+    shortcuts[] = {};
+    action = "profileNamespace setVariable ['ENH_3DENCommandPalette_PriorityMap', nil]";
 };

@@ -289,4 +289,16 @@ class Cfg3DEN
             #include "\x\enh\addons\main\attributesMarker\markerHideOnStart.hpp"
         };
     };
+    class ENH_3DENCommandPalette_Commands
+    {
+        class ENH_Command_Base
+        {
+            action = "";
+            description = "";
+            opensNewWindow = 0;
+            picture = "";
+            text = "";
+            copyToClipboard = 0;
+        };
+    };
 };
