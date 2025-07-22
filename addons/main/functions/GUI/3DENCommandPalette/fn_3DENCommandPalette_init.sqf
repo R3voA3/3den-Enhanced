@@ -26,7 +26,7 @@ private _ctrlBackground = _rootDisplay ctrlCreate ["ctrlStaticBackground", -1, _
 private _ctrlEdit = _rootDisplay ctrlCreate ["ctrlEdit", -1, _ctrlGroup];
 private _ctrlButtonSearch = _rootDisplay ctrlCreate ["ctrlButtonSearch", -1, _ctrlGroup];
 private _ctrlButtonExit = _rootDisplay ctrlCreate [configFile >> "Display3DEN" >> "Controls" >> "ButtonExit", -1, _ctrlGroup];
-private _ctrlButtonHelp = _rootDisplay ctrlCreate ["ctrlButtonPictureKeepAspect", -1, _ctrlGroup];
+private _ctrlButtonHelp = _rootDisplay ctrlCreate ["ENH_ctrlButtonHelp", -1, _ctrlGroup];
 private _ctrlFooter = _rootDisplay ctrlCreate ["ctrlStaticFooter", -1, _ctrlGroup];
 private _ctrlGroupCommands = _rootDisplay ctrlCreate ["ctrlControlsGroup", -1, _ctrlGroup];
 
@@ -86,7 +86,6 @@ _ctrlButtonExit ctrlSetPosition
 ];
 
 _ctrlButtonHelp ctrlSetURL "https://github.com/R3voA3/3den-Enhanced/wiki/3DEN-Command-Palette";
-_ctrlButtonHelp ctrlSetText "a3\3den\data\displays\display3den\toolbar\help_tutorial_ca.paa";
 
 _ctrlFooter ctrlSetPosition
 [

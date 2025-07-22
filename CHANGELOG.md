@@ -17,6 +17,7 @@
 - Search button in the favorites tab hat not functionality
 - Asset Browser's mod filter no longer shows mods that don't add assets
 - Updated French translation by Alfred-Neuman
+- Help buttons in various UIs were standardized
 
 ## REMOVED
 - Shortcuts UI in faviour of the command palette (shortcuts can be viewed there too)

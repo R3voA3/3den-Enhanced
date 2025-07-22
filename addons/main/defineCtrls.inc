@@ -61,6 +61,17 @@ class scrollbar;
     value = 0;\
 };
 
+class ENH_ctrlButtonHelp: ctrlButtonPictureKeepAspect
+{
+    idc = IDC_NONE;
+    text = "\a3\3den\data\displays\display3den\toolbar\help_tutorial_ca.paa";
+    x = 0;
+    y = 0;
+    w = QUOTE(5 * GRID_W);
+    h = QUOTE(CTRL_DEFAULT_H);
+    onLoad = "(_this#0) ctrlSetURLOverlayMode 1";
+};
+
 // Attribute controls
 // These are not Attribute control groups but the
 // Controls these are filled with

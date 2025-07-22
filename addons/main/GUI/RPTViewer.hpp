@@ -66,13 +66,10 @@ class ENH_RPTViewer
             h = QUOTE(CTRL_DEFAULT_H);
             maxChars = 4;
         };
-        class ButtonHelp: ctrlButton
+        class ButtonHelp: ENH_ctrlButtonHelp
         {
-            text = "?";
             x = QUOTE(CENTER_X + 0.5 * WINDOW_W_WIDE * GRID_W - 58 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
-            w = QUOTE(5 * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
             url = "https://community.bistudio.com/wiki/Crash_Files";
         };
         class ButtonUpdate: ctrlButton
@@ -83,7 +80,6 @@ class ENH_RPTViewer
             w = QUOTE(25 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             onButtonClick = "'update' call ENH_fnc_RPTViewer";
-            url = "";
         };
         class ButtonClose: ctrlButtonClose
         {
