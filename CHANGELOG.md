@@ -1,10 +1,10 @@
-
 # 8.7.0
 ## ADDED
 - **3DEN Command Palette**
     - Access almost all Eden Editor commands
     - Add custom commands
     - Read https://github.com/R3voA3/3den-Enhanced/wiki/3DEN-Command-Palette for more information
+![](https://github.com/R3voA3/3den-Enhanced/raw/master/images/3dencommandpalette.png)
 - Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
 - Added a search to the hold action icon picker
 
@@ -23,7 +23,7 @@
 - Updated French translation by Alfred-Neuman
 
 ## REMOVED
-- Shortcuts UI in faviour of the command palette (shortcuts can be viewed there too)
+- Shortcuts UI in favour of the command palette (shortcuts can be viewed there too)
 
 # 8.6.2
 ## CHANGED
