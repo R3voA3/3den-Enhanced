@@ -10,20 +10,20 @@
 
 ## CHANGED
 - Asset Browser's mod filter no longer shows mods that don't add assets
-- Fixed links to steam and github would not work when accessed through the menu strip
+- Fixed links to Steam and GitHub would not work when accessed through the menu strip
 - Fixed missing translation for the Stance attribute in the preferences
 - Fixed opening the Zeus Addons UI would create spam in the RPT
-- Fixed rpt message (empty class)
+- Fixed RPT message (empty class)
 - Fixed wrong translation for Minimap Scale attribute
 - Help buttons in various UIs were standardized
-- Improved debug options category names
-- Marker preview now only works if either custom shape or custom color was set
-- Moon phases utility could not be opened from menu strip
-- Search button in the favorites tab hat not functionality
+- Improved Debug Options category names
+- Marker Preview now only works if either custom shape or custom color was set
+- Moon Phases Utility could not be opened from menu strip
+- Search button in the favorites tab had no functionality
 - Updated French translation by Alfred-Neuman
 
 ## REMOVED
-- Shortcuts UI in favour of the command palette (shortcuts can be viewed there too)
+- Shortcuts UI in favour of the 3DEN Command Palette (shortcuts can be viewed there too)
 
 # 8.6.2
 ## CHANGED
