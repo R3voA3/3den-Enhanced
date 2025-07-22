@@ -4,7 +4,6 @@ class Help
     {
         "ENH_GetExtensions",
         "ENH_AICompilationList",
-        "ENH_3DENShortcuts",
         "ENH_Folder_Wiki"
     };
 };
@@ -80,12 +79,4 @@ class ENH_MultiplayerScripting: ENH_GetExtensions
     text = "$STR_ENH_MAIN_MULTIPLAYERSCRIPTING";
     weblink = "https://community.bistudio.com/wiki/Multiplayer_Scripting";
     wikiDescription = "Open commmunity wiki page about multiplayer scripting.";
-};
-class ENH_3DENShortcuts
-{
-    text = "$STR_ENH_MAIN_3DENSHORTCUTS_DISPLAYNAME";
-    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_3DENShortcuts');
-    opensNewWindow = 1;
-    shortcuts[] = {INPUT_ALT_OFFSET + DIK_F1};
-    wikiDescription = "Shows all eden editor shortcuts.";
 };

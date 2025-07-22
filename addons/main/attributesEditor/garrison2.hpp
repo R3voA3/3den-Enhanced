@@ -55,7 +55,7 @@ class ENH_Garrison2
         };
         class ENH_Garrison2_Stance
         {
-            displayName = "Stance";
+            displayName = "$STR_3DEN_OBJECT_ATTRIBUTE_STANCE_DISPLAYNAME";
             property = "ENH_Garrison2_Stance";
             control = "Combo";
             typeName = "NUMBER";

@@ -17,8 +17,8 @@ exclude = [
 
 [version]
 major = 8
-minor = 6
-patch = 2
+minor = 7
+patch = 0
 git_hash = 0
 
 [hemtt.build]
@@ -58,6 +58,9 @@ enabled = true
 options.ignore = [
     "STR_ENH_MAIN_DAMAGE_*",
 ]
+
+[lints.config.unused_external]
+enabled = false
 
 ##########################################################################################
 ############################## LAUNCH DEFAULT ############################################

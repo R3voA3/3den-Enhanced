@@ -18,13 +18,16 @@ class ENH_Folder_Utilities
         "ENH_BriefingEditor",
         "ENH_AttributeSearch",
         "ENH_NameObjects",
-        "ENH_ZeusAddons"
+        "ENH_ZeusAddons",
+        "Separator",
+        "ENH_CommandPalette",
+        "ENH_CommandPalette_Reset_Priority"
     };
 };
 class ENH_MoonPhases
 {
     text = "$STR_ENH_MAIN_TOOLS_MOONPHASES";
-    action = "0 spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf']]";
+    action = "[] spawn compileScript ['A3\Functions_F\Debug\Utilities\utility_moonPhases.sqf']";
     opensNewWindow = 1;
     wikiDescription = "See [Arma 3: Utilities](https://community.bistudio.com/wiki/Arma_3:_Utilities).";
 };
@@ -118,4 +121,17 @@ class ENH_AttributeSearch
     action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_AttributeSearch');
     opensNewWindow = 1;
     wikiDescription = "Quickly search through the the text attributes such as 'ini' or 'condition' of all entities.";
+};
+class ENH_CommandPalette
+{
+    text = "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_OPEN";
+    shortcuts[] = {INPUT_ALT_OFFSET + DIK_SPACE};
+    action = "call ENH_fnc_3DENCommandPalette_init";
+    picture = TEXTURE_SEARCH_START;
+};
+class ENH_CommandPalette_Reset_Priority
+{
+    text = "$STR_ENH_MAIN_3DEN_COMMAND_PALETTE_RESET_PRIORITY";
+    shortcuts[] = {};
+    action = "profileNamespace setVariable ['ENH_3DENCommandPalette_PriorityMap', nil]";
 };

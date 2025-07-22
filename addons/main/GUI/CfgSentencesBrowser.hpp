@@ -180,14 +180,11 @@ class ENH_CfgSentencesBrowser
             h = QUOTE(CTRL_DEFAULT_H);
             onButtonClick = "'' call ENH_fnc_CFGS_handleFavorites";
         };
-        class Biki: ctrlButton
+        class Biki: ENH_ctrlButtonHelp
         {
-            text = "?";
             url = "https://community.bistudio.com/wiki/Conversations";
             x = QUOTE(CENTER_X - 0.5 * WINDOW_W_ATTRIBUTES * GRID_W + 39 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + WINDOW_PREVIEW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
-            w = QUOTE(5 * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class Close: ctrlButtonClose
         {

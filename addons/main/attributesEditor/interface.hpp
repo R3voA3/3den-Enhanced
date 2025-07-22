@@ -101,5 +101,21 @@ class ENH_Interface
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_ShowCustomMarkerColorAndShape', true]";
         };
+        class ENH_AdjustTitleTextWidth: ENH_ShowPanelLeft
+        {
+            displayName = "$STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME";
+            property = "ENH_AdjustTitleTextWidth";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_AdjustTitleTextWidth', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_AdjustTitleTextWidth', true]";
+        };
+        class ENH_3DENCommandPalette_Path: ENH_ShowPanelLeft
+        {
+            displayName = "$STR_ENH_MAIN_PREFERENCES_3DEN_COMMAND_PALETTE_PATH_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_PREFERENCES_3DEN_COMMAND_PALETTE_PATH_TOOLTIP";
+            property = "ENH_3DENCommandPalette_Path";
+            control = "Edit";
+            expression = "profileNamespace setVariable ['ENH_EditorPreferences_Interface_3DENCommandPalette_Path', _value]";
+            defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Interface_3DENCommandPalette_Path', '']";
+        };
     };
 };

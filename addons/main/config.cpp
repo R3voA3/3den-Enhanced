@@ -8,10 +8,10 @@
 #include "\x\enh\addons\main\cfgFunctions.hpp"
 #include "\x\enh\addons\main\display3DEN\display3DEN.hpp"
 #include "\x\enh\addons\main\cfgFontFamilies.hpp"
+#include "\x\enh\addons\main\cfgCommands.hpp"
 
 // Custom GUIs
 #include "\x\enh\addons\main\GUI\3DENRadio.hpp"
-#include "\x\enh\addons\main\GUI\3DENShortcuts.hpp"
 #include "\x\enh\addons\main\GUI\attributeSearch.hpp"
 #include "\x\enh\addons\main\GUI\briefingEditor.hpp"
 #include "\x\enh\addons\main\GUI\CfgSentencesBrowser.hpp"
@@ -35,3 +35,10 @@
 #include "\x\enh\addons\main\GUI\RscDebugConsole.hpp"
 #include "\x\enh\addons\main\GUI\display3DENSave.hpp"
 #include "\x\enh\addons\main\GUI\display3DENPublishMissionSelectImage.hpp"
+
+class ENH_DisplayEmpty
+{
+    idd = IDD_NONE;
+    class ControlsBackground {};
+    class Controls {};
+};

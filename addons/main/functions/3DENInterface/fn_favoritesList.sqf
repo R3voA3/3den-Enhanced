@@ -68,6 +68,9 @@ switch _mode do
             ["collapse"] call ENH_fnc_favoritesList;
         }];
 
+        [_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_SEARCH, _display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_BUTTON_SEARCH] call ENH_fnc_initSearchControls;
+
+
         ["updateTreeView"] call ENH_fnc_favoritesList;
     };
     case "contextMenu":
@@ -87,7 +90,7 @@ switch _mode do
                 _data =
                 [
                     "marker",
-                    ["rectangle", "ellipse", "icon"] select ((get3DENSelected "marker"#0) get3DENAttribute "markerType" select 0)
+                    ["rectangle", "ellipse", "icon"] select (_entity get3DENAttribute "markerType" select 0)
                 ];
             }
             else

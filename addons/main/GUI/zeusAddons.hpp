@@ -63,7 +63,7 @@ class ENH_ZeusAddons
          y = QUOTE(WINDOW_TOPAbs + 2 * (CTRL_DEFAULT_H + GRID_H));
          w = QUOTE(WINDOW_W_ATTRIBUTES / 2 * GRID_W - GRID_W);
          h = QUOTE(WINDOW_HAbs - 6 * CTRL_DEFAULT_H);
-         rowHeight = "10 * GRID_H";
+         rowHeight = QUOTE(2 * CTRL_DEFAULT_H);
       };
       class Copy: ctrlButton
       {
@@ -74,11 +74,10 @@ class ENH_ZeusAddons
          w = QUOTE(25 * GRID_W);
          h = QUOTE(CTRL_DEFAULT_H);
       };
-      class Wiki: Copy
+      class Wiki: ENH_ctrlButtonHelp
       {
-         text = "?";
-         tooltip = "";
          x = QUOTE(CENTER_X + 0.5 * WINDOW_W_ATTRIBUTES * GRID_W - 58 * GRID_W);
+         y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
          w = QUOTE(5 * GRID_W);
          url = "https://github.com/R3voA3/3den-Enhanced/wiki/Custom-GUIs#zeus-addons";
       };
