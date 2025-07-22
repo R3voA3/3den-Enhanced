@@ -24,7 +24,7 @@ if (_path == "") exitWith {[]};
 private _json =
 [
     "ENH_Pythia.CommandPalette_Read_File",
-    ["C:\Users\rober\OneDrive\Dokumente\Arma 3 - Other Profiles\R3vo\ENH_Command_Palette_Commands.json"]
+    [_path]
 ] call (uiNamespace getVariable "py3_fnc_callExtension");
 
 if (_json == "") exitWith {[]};
