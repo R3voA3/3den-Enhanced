@@ -66,35 +66,35 @@ if (isNull (uiNamespace getVariable ["ENH_DisplayIconPicker", displayNull])) the
     _displayIconPicker ctrlCreate ["ctrlStaticBackgroundDisableTiles", -1];
 
     private _ctrlTitle = _displayIconPicker ctrlCreate ["ctrlStaticTitle", -1];
-    _ctrlTitle ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5 - CTRL_DEFAULT_H, _totalWidth, _totalHeight];
+    _ctrlTitle ctrlSetPosition [CENTER_X - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5 - CTRL_DEFAULT_H, _totalWidth, _totalHeight];
 
     private _ctrlFooterBackground = _displayIconPicker ctrlCreate ["ctrlStaticBackground", -1];
-    _ctrlFooterBackground ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 + _totalHeight * 0.5, _totalWidth, CTRL_DEFAULT_H + 2 * GRID_H + _marginH];
+    _ctrlFooterBackground ctrlSetPosition [CENTER_X - _totalWidth * 0.5, 0.5 + _totalHeight * 0.5, _totalWidth, CTRL_DEFAULT_H + 2 * GRID_H + _marginH];
 
     private _ctrlFooter = _displayIconPicker ctrlCreate ["ctrlStaticFooter", -1];
-    _ctrlFooter ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 + _totalHeight * 0.5 + _marginH, _totalWidth, CTRL_DEFAULT_H + 2 * GRID_H];
+    _ctrlFooter ctrlSetPosition [CENTER_X - _totalWidth * 0.5, 0.5 + _totalHeight * 0.5 + _marginH, _totalWidth, CTRL_DEFAULT_H + 2 * GRID_H];
 
-    private _buttonY = 0.5 + _totalHeight * 0.5 + _marginH + GRID_H;
+    private _buttonY = CENTER_X + _totalHeight * 0.5 + _marginH + GRID_H;
     private _buttonW = 25 * GRID_W;
 
     private _ctrlButtonCancel = _displayIconPicker ctrlCreate ["ctrlButtonCancel", 2];
-    _ctrlButtonCancel ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
+    _ctrlButtonCancel ctrlSetPosition [CENTER_X + _totalWidth * 0.5 - (25 + 1) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
 
     private _ctrlButtonOK = _displayIconPicker ctrlCreate ["ctrlButtonOK", 1];
-    _ctrlButtonOK ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1 + 25 + 1) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
+    _ctrlButtonOK ctrlSetPosition [CENTER_X + _totalWidth * 0.5 - (25 + 1 + 25 + 1) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
 
     private _ctrlBackground = _displayIconPicker ctrlCreate ["ctrlStaticBackground", -1];
-    _ctrlBackground ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5, _totalWidth, _totalHeight];
+    _ctrlBackground ctrlSetPosition [CENTER_X - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5, _totalWidth, _totalHeight];
 
     private _ctrlControlsGroup = _displayIconPicker ctrlCreate ["ctrlControlsGroup", -1];
-    _ctrlControlsGroup ctrlSetPosition [0.5 - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5, _totalWidth, _totalHeight];
+    _ctrlControlsGroup ctrlSetPosition [CENTER_X - _totalWidth * 0.5, 0.5 - _totalHeight * 0.5, _totalWidth, _totalHeight];
     _displayIconPicker setVariable ["CtrlGroup", _ctrlControlsGroup];
 
     private _ctrlSearch = _displayIconPicker ctrlCreate ["ctrlEdit", -1];
-    _ctrlSearch ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1 + 25 + 1 + 5 + 1 + 25) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
+    _ctrlSearch ctrlSetPosition [CENTER_X + _totalWidth * 0.5 - (25 + 1 + 25 + 1 + 5 + 1 + 25) * GRID_W, _buttonY, _buttonW, CTRL_DEFAULT_H];
 
     private _ctrlButtonSearch = _displayIconPicker ctrlCreate ["ctrlButtonSearch", -1];
-    _ctrlButtonSearch ctrlSetPosition [0.5 + _totalWidth * 0.5 - (25 + 1 + 25 + 1 + 5 + 1) * GRID_W, _buttonY, 5 * GRID_W, CTRL_DEFAULT_H];
+    _ctrlButtonSearch ctrlSetPosition [CENTER_X + _totalWidth * 0.5 - (25 + 1 + 25 + 1 + 5 + 1) * GRID_W, _buttonY, 5 * GRID_W, CTRL_DEFAULT_H];
 
     private _fnc_createFrame =
     {

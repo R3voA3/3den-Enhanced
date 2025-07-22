@@ -39,7 +39,7 @@ _display3DEN setVariable ["ENH_3DENCommandPalette_Display", _rootDisplay];
 
 _ctrlGroup ctrlSetPosition
 [
-    0.5 - UI_W * 0.5 * GRID_W - 4 * GRID_W,
+    CENTER_X - UI_W * 0.5 * GRID_W - 4 * GRID_W,
     UI_Y,
     UI_W * GRID_W,
     GROUP_H * GRID_H

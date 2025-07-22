@@ -470,7 +470,7 @@ if GETVALUE("Teleport") then
         "true",
         {},
         {},
-        {player setPos screenToWorld [0.5, 0.6]}, // Center of action icon
+        {player setPos screenToWorld [CENTER_X, 0.6]}, // Center of action icon
         {},
         [],
         0.2,

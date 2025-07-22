@@ -6,7 +6,7 @@ private _display = findDisplay IDD_DISPLAY3DEN;
 ENH_Garrison_SelectedEntities = [["Object", "Logic", "Trigger"]] call ENH_fnc_all3DENSelected;
 
 // Create area helper
-ENH_Garrison_AreaHelper = create3DENEntity ["Trigger", "EmptyDetector", screenToWorld [0.5, 0.5]];
+ENH_Garrison_AreaHelper = create3DENEntity ["Trigger", "EmptyDetector", screenToWorld [CENTER_X, CENTER_Y]];
 
 // Set up default size
 ENH_Garrison_AreaHelper set3DENAttribute ["text", "ENH_Garrison_AreaHelper"];

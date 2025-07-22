@@ -32,11 +32,11 @@ switch _mode do
     {
         if (get3DENActionState "ToggleMap" == 1) then
         {
-            (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MAP ctrlMapScreenToWorld [0.5, 0.5]) + [0];
+            (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MAP ctrlMapScreenToWorld [CENTER_X, CENTER_Y]) + [0];
         }
         else
         {
-            screenToWorld [0.5, 0.5];
+            screenToWorld [CENTER_X, CENTER_Y];
         };
     };
     case "onLoad":
