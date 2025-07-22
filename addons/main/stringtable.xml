@@ -4262,7 +4262,7 @@
             <Chinesesimp>在场景预览期间激活玩家单位的子弹跟踪。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_CATEGORY_VISUALIZATION">
-            <English>Vizualization</English>
+            <English>Visualization</English>
             <German>Visualisierung</German>
         </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
