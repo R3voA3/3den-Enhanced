@@ -1,23 +1,26 @@
 
 # 8.7.0
 ## ADDED
+- **3DEN Command Palette**
+    - Access almost all Eden Editor commands
+    - Add custom commands
+    - Read https://github.com/R3voA3/3den-Enhanced/wiki/3DEN-Command-Palette for more information
 - Added a setting to adjust attribute title width if it's too long. Enabled by default. Disabled it in Preferences -> Interface
 - Added a search to the hold action icon picker
-- 3DEN Command Palette. A quick way to access almost all Eden Editor commands and custom commands. Read https://github.com/R3voA3/3den-Enhanced/wiki/3DEN-Command-Palette for more information
 
 ## CHANGED
-- Fixed links to steam and github would not work when accessed through the menu strip
-- Marker preview now only works if either custom shape or custom color was set
-- Fixed rpt message (empty class)
-- Moon phases utility could not be opened from menu strip
-- Fixed opening the Zeus Addons UI would create spam in the RPT
-- Fixed wrong translation for Minimap Scale attribute
-- Improved debug options category names
-- Fixed missing translation for the Stance attribute in the preferences
-- Search button in the favorites tab hat not functionality
 - Asset Browser's mod filter no longer shows mods that don't add assets
-- Updated French translation by Alfred-Neuman
+- Fixed links to steam and github would not work when accessed through the menu strip
+- Fixed missing translation for the Stance attribute in the preferences
+- Fixed opening the Zeus Addons UI would create spam in the RPT
+- Fixed rpt message (empty class)
+- Fixed wrong translation for Minimap Scale attribute
 - Help buttons in various UIs were standardized
+- Improved debug options category names
+- Marker preview now only works if either custom shape or custom color was set
+- Moon phases utility could not be opened from menu strip
+- Search button in the favorites tab hat not functionality
+- Updated French translation by Alfred-Neuman
 
 ## REMOVED
 - Shortcuts UI in faviour of the command palette (shortcuts can be viewed there too)
