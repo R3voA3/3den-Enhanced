@@ -1,6 +1,9 @@
 # 8.7.1
 ## ADDED
-- fn_iterTree.sqf
+- Added fn_iterTree.sqf (internal use only)
+
+## FIXED
+- Config popup error when filling the mod filter in Eden Editor
 
 # 8.7.0
 ## ADDED
