@@ -201,6 +201,7 @@ class CfgFunctions
             class exportAttributesToGitHub {};
             class exportContextMenuToGitHub {};
             class exportMenuStripToGitHub {};
+            class iterTree {};
             class log {};
             class logShow {};
             class recompileFunctions {};

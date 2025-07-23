@@ -1,3 +1,7 @@
+# 8.7.1
+## ADDED
+- fn_iterTree.sqf
+
 # 8.7.0
 ## ADDED
 - **3DEN Command Palette**
