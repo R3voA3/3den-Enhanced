@@ -141,3 +141,14 @@ _display3DEN call ENH_fnc_3DENMinimap;
 
 // Remove mods without units or weapons from Asset Browser mod filter
 [_display3DEN displayCtrl 4242] call ENH_fnc_assetBrowser_modFilter;
+
+// Add alternativ keybind to open 3DEN Command Palette
+_display3DEN displayAddEventHandler ["KeyDown",
+{
+    params ["", "_key", "", "_ctrl", "_alt"];
+
+    if (_ctrl && {_alt && {_key == DIK_SPACE}}) then
+    {
+        call ENH_fnc_3DENCommandPalette_init;
+    };
+}];

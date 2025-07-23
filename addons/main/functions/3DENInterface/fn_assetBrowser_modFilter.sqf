@@ -21,9 +21,11 @@ private _mods = [];
 
 lbClear _ctrlMods;
 
+private _condition = "isClass _x && {getArray (_x >> 'units') isNotEqualTo []}";
+
 {
     _mods pushBackUnique (configSourceMod _x)
-} forEach configProperties [configFile >> "CfgPatches", "getArray (_x >> 'units') isNotEqualTo []"];
+} forEach configProperties [configFile >> "CfgPatches", _condition];
 
 {
     private _params = if (_x == "") then {[]} else

@@ -1,3 +1,11 @@
+# 8.7.1
+## ADDED
+- Added fn_iterTree.sqf (internal use only)
+- CTRL + ALT + SPACE opens 3DEN Command Palette now, in addition to ALT + SPACE
+
+## FIXED
+- Config popup error when filling the mod filter in Eden Editor
+
 # 8.7.0
 ## ADDED
 - **3DEN Command Palette**

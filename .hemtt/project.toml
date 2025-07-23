@@ -18,7 +18,7 @@ exclude = [
 [version]
 major = 8
 minor = 7
-patch = 0
+patch = 1
 git_hash = 0
 
 [hemtt.build]
@@ -90,25 +90,29 @@ executable = "arma3_x64"
 ##########################################################################################
 ############################## LAUNCH ACE ################################################
 ##########################################################################################
-[hemtt.launch.ace]
+[hemtt.launch.test]
 extends = "default"
 
 workshop = [
     # CBA_A3
     "450814997",
     # ACE3
-    "463939057"
+    "463939057",
+    # CUP Weapons
+    "497660133",
+    # SPEX
+    "3117898674"
 ]
 
-# dlc = [
-#     "Contact",
-#     "Global Mobilization",
-#     "S.O.G. Prairie Fire",
-#     "CSLA Iron Curtain",
-#     "Western Sahara",
-#     "Spearhead 1944",
-#     "Reaction Forces"
-# ]
+dlc = [
+    "Contact",
+    "Global Mobilization",
+    "S.O.G. Prairie Fire",
+    "CSLA Iron Curtain",
+    "Western Sahara",
+    "Spearhead 1944",
+    "Reaction Forces"
+]
 
 ##########################################################################################
 ############################## LAUNCH SPEARHEAD 1944 #####################################
@@ -122,7 +126,7 @@ workshop = [
 ]
 
 dlc = [
-    "spe",
+    "Spearhead 1944",
 ]
 
 ##########################################################################################
