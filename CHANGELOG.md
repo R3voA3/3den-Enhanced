@@ -295,7 +295,7 @@ current session
 
 # CHANGED
 - Reverted identity attributes changes
-- Fixed rpt errors
+- Fixed RPT errors
 - Fixed Move to Layer UI not working
 
 # 7.8.0
@@ -480,7 +480,6 @@ menu
 # 7.6.9
 ## CHANGED
 - Muted incredible loud notification sounds until fixed by BI. This can be disabled via userconfig
-
 
 # 7.6.8
 ## CHANGED
@@ -760,7 +759,7 @@ menu
     - Marker text will only show the waypoint ID if nothing else changed compared to the previous marker
     - Markers are now connected by poly lines
     - Groups with only one waypoint e.g., units placed in the editor are now ignored (These changes should reduce the clutter on the map)
-- Fixed rpt spam caused by 3den Radio if a song was in playlist but not available in-game anymore
+- Fixed RPT spam caused by 3den Radio if a song was in playlist but not available in-game anymore
 - Batch Replace GUI has now a list with all vehicles to choose from. Pasting class names is still possible
 - Batch Replace values are no longer saved persistently. They will be reset when the game is closed
 - Fixed undefined variable in SRP code
@@ -775,7 +774,6 @@ menu
 - Slight performance improvement of the Inventory Manager
 - Inventory Manager now also lists Oldman specific objects
 
-
 # 5.8
 ## ADDED
 - Added a tool to display vehicle hitpoints. Useful for the Advance Damage attribute
@@ -786,7 +784,7 @@ menu
 - Debug Option "Show FPS" is now in the "Draw" category
 - Remove a debug message which was still left in code
 - Updated overview text in Expansion Menu
-- Fixed .rpt spam caused by missing translations
+- Fixed .RPT spam caused by missing translations
 - DLC icons are not limited to 100m
 - Draw functions optimized
 - Fixed and issue with "Generate Steam Mission Description" function. It now auto pastes the description into the "Publish Scenario Window". Additionally, it now supports all DLCs (Was fixed by a hotfix)
@@ -812,7 +810,7 @@ menu
 - It's now possible to search in the CfgSentences Browser if filter is set to "ALL"
 - Documentation on GitHub has been updated
 - Some internal functions have been hidden
-- Fixed rpt spam caused by RscTestControlTypes and RscTestControlStyles (BI fix please? ;))
+- Fixed RPT spam caused by RscTestControlTypes and RscTestControlStyles (BI fix please? ;))
 - Toggle DLC Icons runs now much faster and will not cause lag anymore
 - Improved the way of exporting GUI base classes
 - New logoSmall, logo and logoOver
@@ -834,13 +832,13 @@ menu
     - Size of Hold Action description has been slightly reduced
     - Map Indicator settings are now in the Misc category
     - All attributes now have "scriptName" defined for debugging
-    - Added a Debug Tool to log all active scripts and mission EHs to .rpt
+    - Added a Debug Tool to log all active scripts and mission EHs to .RPT
     - Text for Map Indicator attribute was improved
     - Visual appearance of many attributes were improved
     - Fixed Dynamic AI Skill attribute default value
 
 - Inventory Manager
-    - Fixed .rpt spam caused by the Inventory Manager
+    - Fixed .RPT spam caused by the Inventory Manager
     - Fixed ACE items would not be properly sorted (Thanks to [KP] veteran29)
     - Fixed DLC icons would be incorrect if certain mods are loaded
     - Fixed item list box would sometimes not show items because it was scrolled down too far when selecting a different filter
@@ -885,7 +883,7 @@ menu
 - Variable Viewer
     - Columns of Variable Viewer can now be sorted
     - Loading the list is now ~four times faster
-    - Fixed rpt 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
+    - Fixed RPT 'spam 10:35:01 Bad conversion: bool' when opening the GUI (Thanks to Leopard20)
     - Fixed Variable Viewer not deselecting row on variable delete (Thanks to ConnorAU)
 
 - Briefing Editor
@@ -912,7 +910,7 @@ menu
 - 3DEN Cam Positions will now also show the time and date when the position was saved
 - Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
 - German translation has recieved some fixes thanks to Mr-Melker
-- Fixed a wrong condition in context menu causing some .rpt entries
+- Fixed a wrong condition in context menu causing some .RPT entries
 - Fixed an issue which caused CTRL + X shortcut in the Functions Viewer to cause a script error
 - Custom GUIs will no longer hide Eden Interface- Fixed a bug which would cause Grid Pattern to not work
 - Increased max number of columns in Grid Pattern from 20 to 50
@@ -1156,8 +1154,6 @@ menu
 - Color Picker was removed. Use https://forums.bohemia.net/forums/topic/222104-color-picker/ instead
 - Removed weapon sway and recoil attribute due to issues on dedicated server
 
-
-
 # 4.2
 ## CHANGED
 - Updated credits
@@ -1218,7 +1214,6 @@ menu
 ## KNOWN ISSUES
 - Event Code Attribute does not work on dedicated servers
 - Stay on Position attribute sometimes fails on dedicated server
-
 
 # 4.0
 ## CHANGED
@@ -1335,7 +1330,7 @@ menu
 - 3den Radio functionalities were mostly rewritten to solve serveral issues and make code more efficient
 - Readded server key
 - All GUIs are now using the BackgroundDisable and BackgroundDisableTiles controls
-- Select Image GUI when publishing a mission to steam has been widened to allow the ctrlTree to expand further
+- Select Image GUI when publishing a mission to Steam has been widened to allow the ctrlTree to expand further
 - Some general GUI overhauls
 - Many shortcuts have been updated. Check the Menu Strip for the new shortcuts
         - Briefing editor shortcut was changed from CTRL + B to ALT + B
@@ -1383,7 +1378,6 @@ menu
 
 ## REMOVED
 - Obsolete function
-
 
 # 2.9
 ## ADDED
@@ -1458,7 +1452,6 @@ menu
 - Attribute to remove entity from garbage collector
 - The location list has been expanded and now shows more points of interest
 
-
 ## CHANGED
 - AI will now exit animations when damaged or in combat mode
 - Fixed issue with garrison function not detecting building positions in some cases (Thanks to http://steamcommunity.com/id/Aestheticwww)
@@ -1508,7 +1501,6 @@ menu
 ## CHANGED
 - "Arsenal" and "Add Gun Light" attribute should not be activated by default
 
-
 # 2.2
 ## ADDED
 - Tool to log positions of multiple objects
@@ -1540,8 +1532,7 @@ menu
 ## REMOVED
 - Removed batch naming from preferences
 
-
-v2
+# 2.0
 ## CHANGED
 - Updated Spanish translation (kudos to arv187)
 - Fixed some log entries
@@ -1554,7 +1545,6 @@ v2
 
 ## REMOVED
 
-
 # 1.9
 ## ADDED
 - Attribute to set weapon sway coef
@@ -1565,8 +1555,6 @@ v2
 - Added attribute to set weapon recoil coef
 - Addes spanish translation (kudos to arv187)
 
-
-
 ## CHANGED
 - Debug trigger "Toggle Invulnerability" is now using isDamageAllowed and also applies to player vehicle
 - Fixed error when debug trigger "Reveal Units" was activated twice within short time
@@ -1575,8 +1563,6 @@ v2
 - Improved code behind time multiplier control
 
 ## REMOVED
-
-
 
 # 1.8
 ## ADDED
@@ -1739,7 +1725,6 @@ v2
 - Removed save gear multiplayer attribute (on respawn the gear set in Eden is not automatically reapplied)
 - Duplicated entry in stringtable.xml
 - Removed some none-working animations
-
 
 # 1.5
 ## CHANGED
