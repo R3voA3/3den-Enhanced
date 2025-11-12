@@ -91,22 +91,27 @@
         <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_CUSTOM_COMMAND">
             <English>Custom Command</English>
             <German>Benutzerdef. Befehl</German>
+            <French>Commande personnalisée</French>
         </Key>
         <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_JSON_COMMAND">
             <English>JSON Command</English>
             <German>JSON Befehl</German>
+            <French>Commande JSON</French>
         </Key>
         <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_MENU_STRIP_COMMAND">
             <English>Menu Strip Command</English>
             <German>Menü-Leisten Befehl</German>
+            <French>Commande de la barre de menu</French>
         </Key>
         <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_OPEN">
             <English>Open Command Palette</English>
             <German>Befehlspalette öffnen</German>
+            <French>Ouvrir la palette de commandes</French>
         </Key>
         <Key ID="STR_ENH_MAIN_3DEN_COMMAND_PALETTE_RESET_PRIORITY">
             <English>Reset Command Priority</English>
             <German>Befehlspriorität zurücksetzen</German>
+            <French>Réinitialiser la priorité des commandes</French>
         </Key>
         <Key ID="STR_ENH_MAIN_ADDGUNLIGHT_DISPLAYNAME">
             <English>Add Gun Light</English>
@@ -4264,6 +4269,7 @@
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_CATEGORY_VISUALIZATION">
             <English>Visualization</English>
             <German>Visualisierung</German>
+            <French>Visualisation</French>
         </Key>
         <Key ID="STR_ENH_MAIN_DEBUGOPTIONS_DELETECORPSE_DISPLAYNAME">
             <English>Delete Corpses</English>
@@ -7999,14 +8005,17 @@
         <Key ID="STR_ENH_MAIN_PREFERENCES_3DEN_COMMAND_PALETTE_PATH_DISPLAYNAME">
             <English>Command Palette Path</English>
             <German>Befehlspalette Pfad</German>
+            <French>Chemin d'accès à la palette de commandes</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_3DEN_COMMAND_PALETTE_PATH_TOOLTIP">
             <English>Path to the command palette custom commands .json file.\n\nFor Example:\nC:\ENH_3DENCommandPalette.json</English>
             <German>Pfad zur .json-Datei mit den benutzerdefinierten Befehlen der Befehlspalette.\n\nZum Beispiel:\nC:\ENH_3DENCommandPalette.json</German>
+            <French>Chemin d'accès au fichier .json contenant les commandes personnalisées de la palette de commandes.\n\nPar exemple :\nC:\ENH_3DENCommandPalette.json</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_ADJUST_TITLE_WIDTH_DISPLAYNAME">
             <English>Adjust Title Width</English>
             <German>Titellänge anpassen</German>
+            <French>Ajuster la largeur du titre</French>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_GARRISON2_AUTO_SELECT_DISPLAYNAME">
             <English>Auto Select</English>
