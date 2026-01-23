@@ -68,18 +68,20 @@ enabled = false
 [hemtt.launch.default]
 
 workshop = [
+    # CBA
+    "463939057",
+    # ACE3
+    "3048818056",
     # Pythia
     "1751569185",
     # 7erra's Editing Extensions
-    # "1387934106",
+    "1387934106",
     # 3Den Stringtable Viewer
     "2073243184",
     # Debug Console
-    "1231625987",
+    "1231625987"
     # Advanced Developer Tools
     # "3499977893",
-    # 7erra's Editing Extensions
-    "1387934106"
 ]
 
 parameters = [
@@ -88,33 +90,6 @@ parameters = [
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
 executable = "arma3_x64"
-
-##########################################################################################
-############################## LAUNCH ACE ################################################
-##########################################################################################
-[hemtt.launch.test]
-extends = "default"
-
-workshop = [
-    # CBA_A3
-    "450814997",
-    # ACE3
-    "463939057",
-    # CUP Weapons
-    "497660133",
-    # SPEX
-    "3117898674"
-]
-
-dlc = [
-    "Contact",
-    "Global Mobilization",
-    "S.O.G. Prairie Fire",
-    "CSLA Iron Curtain",
-    "Western Sahara",
-    "Spearhead 1944",
-    "Reaction Forces"
-]
 
 ##########################################################################################
 ############################## LAUNCH SPEARHEAD 1944 #####################################
