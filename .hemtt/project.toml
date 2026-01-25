@@ -60,7 +60,7 @@ options.ignore = [
 ]
 
 [lints.config.unused_external]
-enabled = false
+enabled = true
 
 ##########################################################################################
 ############################## LAUNCH DEFAULT ############################################
@@ -68,10 +68,10 @@ enabled = false
 [hemtt.launch.default]
 
 workshop = [
-    # CBA
-    "463939057",
-    # ACE3
-    "3048818056",
+    # # CBA
+    # "463939057",
+    # # ACE3
+    # "3048818056",
     # Pythia
     "1751569185",
     # 7erra's Editing Extensions
@@ -140,6 +140,5 @@ extends = "default"
 parameters = [
     "-server",
     "-port=2302",
-    "-loadMissionToMemory",
-    "-config=D:\\Repositories\\3den-Enhanced\\.hemtt\\server.cfg"
+    "-config=C:\\Users\\rober\\OneDrive\\Repositories\\3den-Enhanced\\.hemtt\\server.cfg"
 ]
