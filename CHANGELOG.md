@@ -1,6 +1,9 @@
 # 8.7.2
 ## ADDED
 - Hold Action now supports radius
+- Save Loadout Attribute
+    - Ability to restore loadout the player died with
+    - Ability to restore loadout last selected in Arsenal
 
 ## CHANGED
 - Module Information
