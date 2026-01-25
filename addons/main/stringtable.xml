@@ -8325,6 +8325,22 @@
             <Chinese>模板</Chinese>
             <Chinesesimp>模板</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_ARSENAL_LOADOUT_DISPLAYNAME">
+            <English>Arsenal Loadout</English>
+            <German>Arsenal-Ausrüstung</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_ARSENAL_LOADOUT_TOOLTIP">
+            <English>The loadout last selected in Arsenal. If not available, the original loadout will be restored.</English>
+            <German>Die Ausrüstung die zuletzt im Arsenal ausgesucht wurde. Wenn das Arsenal nicht verwendet wurde, wird die ursprüngliche Ausrüstung wiederhergestellt.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_DEATH_LOADOUT_DISPLAYNAME">
+            <English>Death Loadout</English>
+            <German>Ausrüstung bei Tod</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_DEATH_LOADOUT_TOOLTIP">
+            <English>The loadout the player died with.</English>
+            <German>Die Ausrüstung mit der der Spieler gestorben ist.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_SAVELOADOUT_DISPLAYNAME">
             <English>Save Loadout</English>
             <Czech>Uložit výstroj</Czech>
@@ -8336,6 +8352,14 @@
             <German>Ausrüstung speichern</German>
             <Chinese>保存裝備</Chinese>
             <Chinesesimp>保存装备</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_ORIGINAL_LOADOUT_DISPLAYNAME">
+            <English>Original Loadout</English>
+            <German>Ursprüngliche Ausrüstung</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_SAVELOADOUT_ORIGINAL_LOADOUT_TOOLTIP">
+            <English>The loadout the player started with.</English>
+            <German>Die Ausrüstung mit der der Spieler gestartet ist.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_SAVELOADOUT_TOOLTIP">
             <English>Restores the original loadout on respawn. Loadout can be changed by modifing ENH_SavedLoadout variable in player's namespace.</English>
