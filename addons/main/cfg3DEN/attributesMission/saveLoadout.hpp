@@ -5,8 +5,8 @@ class ENH_SaveLoadout
     property = "ENH_saveLoadout";
     control = "Combo";
     expression =
-    "if (!isMultiplayer || _value == 0 || is3DEN || !hasInterface) exitWith {};\
-    if (_value isEqualType true) then {_value = [0, 1] select _value};\
+    "_value = [0, 1, 2, 3] select _value;\
+    if (!isMultiplayer || _value == 0 || is3DEN || !hasInterface) exitWith {};\
     _value spawn\
     {\
         params ['_value'];\
