@@ -83,8 +83,8 @@ class Display3DEN
                     soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
                     soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
                     soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
-                    style = QUOTE(ST_CENTER + ST_UPPERCASE);
-                    text = "V";
+                    style = QUOTE(ST_CENTER + ST_PICTURE + ST_KEEP_ASPECT_RATIO);
+                    text = "a3\3den\data\cfgwaypoints\sentry_ca.paa";
                     tooltip = "";
                     type = CT_BUTTON;
                 };
