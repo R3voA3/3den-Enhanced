@@ -18,7 +18,7 @@
 params ["_ctrlComboHistory"];
 
 lbClear _ctrlComboHistory;
-_ctrlComboHistory lbAdd "Select a preset..."; // TODO: LOCALIZE 2026-03-20 R3vo
+_ctrlComboHistory lbAdd localize "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_SELECT_PRESET";
 _ctrlComboHistory lbSetCurSel 0;
 
 {

@@ -48,7 +48,7 @@ class MarkerColor2: Title
         class Preview: Title
         {
             idc = IDC_ATTRIBUTE_CONTROL_09;
-            text = "Color Preview";
+            text = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_COLOR_PREVIEW";
             x = QUOTE((ATTRIBUTE_TITLE_W - 20) * GRID_W - GRID_W);
             y = QUOTE(CTRL_DEFAULT_H);
             w = QUOTE(20 * GRID_W);
@@ -67,8 +67,7 @@ class MarkerColor2: Title
         {
             idc = IDC_ATTRIBUTE_CONTROL_11;
             text = "x\enh\addons\main\data\plus_ca.paa";
-            tooltip = "Add current color to color palette.";
-            // TODO: LOCALIZE 2026-03-19 R3vo
+            tooltip = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 10) * GRID_W);
             y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
             w = QUOTE(5 * GRID_W);
@@ -78,8 +77,7 @@ class MarkerColor2: Title
         {
             idc = IDC_ATTRIBUTE_CONTROL_12;
             text = "x\enh\addons\main\data\minus_ca.paa";
-            tooltip = "Remove selected color from color palette.";
-            // TODO: LOCALIZE 2026-03-19 R3vo
+            tooltip = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_REMOVE_PRESET";
             x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
         };
     };
