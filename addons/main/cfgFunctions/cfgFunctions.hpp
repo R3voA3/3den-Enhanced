@@ -81,7 +81,7 @@ class CfgFunctions
             class mapIndicators_onAttributeSave {};
             class markerColor_fillLBHistory {};
             class markerColor_onAttributeLoad {};
-            class markerColor_onAttributeSave {};
+            class markerColor_editChanged {};
             class markerShape_onAttributeLoad {};
             class markerShape_onAttributeSave {};
             class missionEndingCasualties_initDebriefingCombo {};

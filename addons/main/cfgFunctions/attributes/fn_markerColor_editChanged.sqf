@@ -6,10 +6,12 @@
     Date: 2024-11-02
 
     Description:
-    Refills the history combo box for the marker color attribute.
+    Updates the slider and color preview control when the edit text is changed.
+    Input is validated.
 
     Parameter(s):
-    0: CONTROL - Listbox
+    0: CONTROL - Edit
+    1: STRING - New Text
 
     Returns:
     true
@@ -17,12 +19,17 @@
 
 params ["_ctrlEdit", "_newText"];
 
-systemChat str _this;
+// The engine code fills the edit box with markerColor from config by default
+// KK used the following code to prevent that
+if (_newText != "" && {_newtext select [0, 1] != "#"}) then
+{
+    _ctrlEdit ctrlSetText "";
+};
 
+// We only want our controls to be updated if we have a valid color code
 // Trim all whitespaces
 _newText = trim _newText regexReplace [" ", ""];
 
-// Only update controls if the pattern matches e.g. valid color format
 if (_newText regexMatch "#\([0-9.]+,[0-9.]+,[0-9.]+,[0-9.]+\)") then
 {
     // Turn the string into an array
@@ -34,7 +41,19 @@ if (_newText regexMatch "#\([0-9.]+,[0-9.]+,[0-9.]+,[0-9.]+\)") then
     _blue = _blue min 1 max 0;
     _alpha = _alpha min 1 max 0;
 
-    systemChat str [_red, _green, _blue, _alpha];
+    private _ctrlGroup = ctrlParentControlsGroup _ctrlEdit;
+
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 sliderSetPosition _red;
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 sliderSetPosition _green;
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05 sliderSetPosition _blue;
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 sliderSetPosition _alpha;
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09 ctrlSetBackgroundColor
+    [
+        _red,
+        _green,
+        _blue,
+        _alpha
+    ];
 };
 
 true
