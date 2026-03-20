@@ -35,8 +35,14 @@ _ctrlComboHistory lbSetCurSel 0;
     ];
 
     _ctrlComboHistory lbSetData [_index, _x];
-
-    _ctrlComboHistory lbSetPicture [_index, format ["#(argb,1,1,1)color(%1,%2,%3,%4)", _red, _green, _blue, _alpha]];
+    _ctrlComboHistory lbSetPicture [_index, format
+    [
+        "#(argb,1,1,1)color(%1,%2,%3,%4)",
+        _red,
+        _green,
+        _blue,
+        _alpha
+    ]];
 } forEach (profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap]);
 
 true

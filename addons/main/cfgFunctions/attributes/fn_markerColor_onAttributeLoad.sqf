@@ -41,16 +41,16 @@ _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 sliderSetPosition _colorRG
     private _green = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) * 100) / 100;\
     private _blue = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) * 100) / 100;\
     private _alpha = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) * 100) / 100;\
-    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetBackgroundColor [_red, _green, _blue, _alpha];\
-    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText format ["#(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
+    _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09 ctrlSetBackgroundColor [_red, _green, _blue, _alpha];\
+    _ctrlGroup controlsGroupCtrl 100 ctrlSetText format ["#(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
 
 // Update the preview
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetBackgroundColor _colorRGBA;
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09 ctrlSetBackgroundColor _colorRGBA;
 
 private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10;
 
@@ -75,7 +75,7 @@ _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
 }];
 
 // Add button
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11) ctrlAddEventHandler ["ButtonClick",
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11 ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
     private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
@@ -102,7 +102,7 @@ _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
 }];
 
 // Remove button
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12) ctrlAddEventHandler ["ButtonClick",
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12 ctrlAddEventHandler ["ButtonClick",
 {
     params ["_ctrlButton"];
     private _ctrlComboHistory = (ctrlParentControlsGroup _ctrlButton) controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10;
