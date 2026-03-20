@@ -4,7 +4,15 @@ class MarkerColor2: Title
     onLoad = "_this call ENH_fnc_markerColor_onAttributeLoad";
     class Controls
     {
-        class Value;
+        class Value: ctrlEdit
+        {
+            idc = 100;
+            text = "";
+            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
+            w = QUOTE(ATTRIBUTE_CONTENT_W  * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+            onEditChanged = "_this call ENH_fnc_markerColor_editChanged";
+        };
         class SliderRed: ctrlXSliderH
         {
             idc = IDC_ATTRIBUTE_CONTROL_01;
