@@ -26,6 +26,10 @@
 - Improved Unit Trait Description's localization
 - French translation update by Alfred-Neuman
 - Removed 0 infront of spawn were applicable
+- Overhauled Custom Marker color attribute to make it work with the native implementation
+- Hovering over a marker will only show an icon now if a custom shape is set
+since Eden Editor can now natively show custom colors
+- improved translation
 
 # 8.7.1
 ## ADDED
