@@ -27,7 +27,7 @@ class CfgFunctions
         {
             file = "\x\enh\addons\main\cfgFunctions\3DENInterface";
             class 3DENMinimap {};
-            class 3DENShowCustomMarkerColorAndShape {};
+            class 3DENShowCustomMarkerShape {};
             class adjustTitleTextWidth {};
             class assetBrowser_collapse {};
             class assetBrowser_modFilter {};
