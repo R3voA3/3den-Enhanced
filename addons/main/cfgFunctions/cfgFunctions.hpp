@@ -49,10 +49,6 @@ class CfgFunctions
         class Attributes
         {
             file = "\x\enh\addons\main\cfgFunctions\attributes";
-            class markerColor_onAttributeLoad {};
-            class markerColor_onAttributeSave {};
-            class markerShape_onAttributeLoad {};
-            class markerShape_onAttributeSave {};
             class advancedDamage_onAttributeLoad {};
             class advancedDamage_onAttributeSave {};
             class airdrop_onAttributeLoad {};
@@ -83,6 +79,11 @@ class CfgFunctions
             class introText_onAttributeSave {};
             class mapIndicators_onAttributeLoad {};
             class mapIndicators_onAttributeSave {};
+            class markerColor_fillLBHistory {};
+            class markerColor_onAttributeLoad {};
+            class markerColor_onAttributeSave {};
+            class markerShape_onAttributeLoad {};
+            class markerShape_onAttributeSave {};
             class missionEndingCasualties_initDebriefingCombo {};
             class missionEndingCasualties_onAttributeLoad {};
             class missionEndingCasualties_onAttributeSave {};

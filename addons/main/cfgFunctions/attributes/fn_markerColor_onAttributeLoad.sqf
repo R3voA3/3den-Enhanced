@@ -7,111 +7,54 @@
 
     Description:
     Used by the marker color attribute. Called when attribute is loaded.
+    This is an engine driven attribute.
 
     Parameter(s):
-    0: CONTROL - Controls group
-    1: ARRAY - Attribute value
+    See control event handler onLoad
 
     Returns:
-    BOOLEAN: true
+    -
 */
 
-params ["_ctrlGroup", "_value"];
+params ["_ctrl", "_config"];
 
-// Exit onLoad code if only one marker is selected
-if (_value isEqualType configNull && {count get3DENSelected "Marker" == 1}) exitWith {};
+private _ctrlGroup = ctrlParentControlsGroup _ctrl;
+private _value = get3DENSelected "marker" #0 get3DENAttribute "BaseColor" param [0, ""];
 
-// If config is provided then we are in the onLoad code and need update the variables
-if (_value isEqualType configNull) then
+private _colorRGBA = if (_value select [0, 1] != "#") then
 {
-    _ctrlGroup = ctrlParentControlsGroup _ctrlGroup;
-    _value = [false, "#(1,1,1)"];
+    [0, 0, 0, 0]
+}
+else
+{
+    _value splitString ",#()" apply {parseNumber _x};
 };
 
-_value params ["_enabled", "_colorString"];
-private _colorRGB = _colorString splitString ",#()" apply {parseNumber _x};
-
-_ctrlGroup setVariable
-[
-    "fnc_toggleControlState",
-    {
-        params ["_ctrlGroup", "_enabled"];
-
-        for "_idc" from IDC_ATTRIBUTE_CONTROL_01 to IDC_ATTRIBUTE_CONTROL_08 do
-        {
-            _ctrlGroup controlsGroupCtrl _idc ctrlEnable _enabled;
-        };
-
-        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetFade ([0.5, 0] select _enabled);
-        (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlCommit 0;
-    }
-];
-
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlAddEventHandler ["CheckedChanged",
-{
-    params ["_ctrlCheckbox", "_state"];
-
-    private _ctrlGroup = ctrlParentControlsGroup _ctrlCheckbox;
-
-    [_ctrlGroup, [false, true] select _state] call (_ctrlGroup getVariable "fnc_toggleControlState");
-}];
-
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "%"] call BIS_fnc_initSliderValue;
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02), "%", _colorRGB#0] call BIS_fnc_initSliderValue;
-
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04), "%"] call BIS_fnc_initSliderValue;
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04), "%", _colorRGB#1] call BIS_fnc_initSliderValue;
-
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06), "%"] call BIS_fnc_initSliderValue;
-[(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05), (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06), "%", _colorRGB#2] call BIS_fnc_initSliderValue;
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 sliderSetPosition _colorRGBA#0;
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 sliderSetPosition _colorRGBA#1;
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05 sliderSetPosition _colorRGBA#2;
+_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 sliderSetPosition _colorRGBA#3;
 
 // Add event handler for updating the preview
-#define UPDATE_PREVIEW private _ctrlGroup = ctrlParentControlsGroup (_this select 0);\
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetBackgroundColor\
-[\
-    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01),\
-    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03),\
-    sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05),\
-    1\
-];\
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08) lbSetCurSel 0;\
+#define UPDATE private _ctrlGroup = ctrlParentControlsGroup (_this select 0);\
+    private _red = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) * 100) / 100;\
+    private _green = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) * 100) / 100;\
+    private _blue = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) * 100) / 100;\
+    private _alpha = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) * 100) / 100;\
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetBackgroundColor [_red, _green, _blue, _alpha];\
+    (_ctrlGroup controlsGroupCtrl 100) ctrlSetText format ["#(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
 
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlAddEventHandler ["SliderPosChanged", {UPDATE_PREVIEW}];
-
-// Apply saved value
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) cbSetChecked _enabled;
-
-[_ctrlGroup, _enabled] call (_ctrlGroup getVariable "fnc_toggleControlState");
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
 
 // Update the preview
-(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) ctrlSetBackgroundColor (_colorRGB + [1]);
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09) ctrlSetBackgroundColor _colorRGBA;
 
-private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_08;
-lbClear _ctrlComboHistory;
+private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10;
 
-_ctrlComboHistory lbAdd "Custom Color";
-
-// Add history
-{
-    _y params ["_r", "_g", "_b"];
-
-    _ctrlComboHistory lbAdd format
-    [
-        "#(%1,%2,%3)",
-        _r,
-        _g,
-        _b
-    ];
-
-    _ctrlComboHistory lbSetData [_forEachIndex + 1, _x];
-    _ctrlComboHistory lbSetPicture [_forEachIndex + 1, format ["#(rgb,1,1,1)color(%1,%2,%3,1)", _r, _g, _b]];
-    _ctrlComboHistory lbSetPictureColor [_forEachIndex+ 1, [_r, _g, _b, 1]];
-
-    if (hashValue _colorRGB == _x) then {_ctrlComboHistory lbSetCurSel _forEachIndex + 1} else {_ctrlComboHistory lbSetCurSel 0};
-
-} forEach (profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap]);
+_ctrlComboHistory call ENH_fnc_markerColor_fillLBHistory;
 
 _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
 {
@@ -119,19 +62,57 @@ _ctrlComboHistory ctrlAddEventHandler ["LBSelChanged",
 
     if (_index == 0) exitWith {};
 
+    private _ctrlGroup = ctrlParentControlsGroup _ctrlCombo;
     private _hash = _ctrlCombo lbData _index;
-    private _colorRGB = (profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap]) get _hash;
+    private _colorRGBA = (profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap]) get _hash;
 
     // Update sliders
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 sliderSetPosition _colorRGB#0;
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 sliderSetPosition _colorRGB#1;
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl 1IDC_ATTRIBUTE_CONTROL_05 sliderSetPosition _colorRGB#2;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 sliderSetPosition _colorRGBA#0;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 sliderSetPosition _colorRGBA#1;
+    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05 sliderSetPosition _colorRGBA#2;
 
-    // Update edit controls
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_02 ctrlSetText format ["%1%2", _colorRGB#0 * 100, "%"];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_04 ctrlSetText format ["%1%2", _colorRGB#1 * 100, "%"];
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_06 ctrlSetText format ["%1%2", _colorRGB#2 * 100, "%"];
+    UPDATE;
+}];
 
-    // Update preview
-    ctrlParentControlsGroup _ctrlCombo controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 ctrlSetBackgroundColor [_colorRGB#0, _colorRGB#1, _colorRGB#2, 1];
+// Add button
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_11) ctrlAddEventHandler ["ButtonClick",
+{
+    params ["_ctrlButton"];
+    private _ctrlGroup = ctrlParentControlsGroup _ctrlButton;
+    private _ctrlComboHistory = _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10;
+    private _history = profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap];
+    private _colorRGBA =
+    [
+        round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) * 100) / 100,
+        round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03) * 100) / 100,
+        round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) * 100) / 100,
+        round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) * 100) / 100
+    ];
+
+    private _hash = hashValue _colorRGBA;
+    private _notNew = _history set [_hash, _colorRGBA, true];
+
+    if (!_notNew) then
+    {
+        profileNamespace setVariable ["ENH_Attributes_MarkerColor_History", _history];
+        saveProfileNamespace;
+
+        _ctrlComboHistory call ENH_fnc_markerColor_fillLBHistory;
+    };
+}];
+
+// Remove button
+(_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_12) ctrlAddEventHandler ["ButtonClick",
+{
+    params ["_ctrlButton"];
+    private _ctrlComboHistory = (ctrlParentControlsGroup _ctrlButton) controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_10;
+    private _curSelected = lbCurSel _ctrlComboHistory;
+
+    if (_curSelected <= 0) exitWith {};
+
+    private _history = profileNamespace getVariable ["ENH_Attributes_MarkerColor_History", createHashMap];
+    _history deleteAt (_ctrlComboHistory lbData _curSelected);
+    saveProfileNamespace;
+
+    _ctrlComboHistory call ENH_fnc_markerColor_fillLBHistory;
 }];
