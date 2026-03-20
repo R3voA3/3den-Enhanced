@@ -27,6 +27,9 @@
 - French translation update by Alfred-Neuman
 - Removed 0 infront of spawn were applicable
 
+## REMOVED
+- Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
+
 # 8.7.1
 ## ADDED
 - Added fn_iterTree.sqf (internal use only)

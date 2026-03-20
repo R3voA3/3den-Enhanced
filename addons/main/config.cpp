@@ -18,7 +18,6 @@
 #include "\x\enh\addons\main\GUI\ESE.hpp"
 #include "\x\enh\addons\main\GUI\exportGUIDefines.hpp"
 #include "\x\enh\addons\main\GUI\functionsViewer.hpp"
-#include "\x\enh\addons\main\GUI\garrison.hpp"
 #include "\x\enh\addons\main\GUI\moduleInformation.hpp"
 #include "\x\enh\addons\main\GUI\moveToLayer.hpp"
 #include "\x\enh\addons\main\GUI\nameObjects.hpp"

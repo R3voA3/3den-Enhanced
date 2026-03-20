@@ -49,7 +49,6 @@ class ENH_OtherTools
     {
         "ENH_MeasureDistance",
         "ENH_ShowModuleInformation",
-        "ENH_Garrison",
         "ENH_MoveToLayer"
     };
     SHOW_IN_ROOT;
@@ -124,15 +123,6 @@ class ENH_ShowModuleInformation
     conditionShow = "hoverLogic";
     opensNewWindow = 1;
     wikiDescription = "Shows informationa about selected system entity. Useful for modules that have no eden editor description.";
-};
-class ENH_Garrison
-{
-    action = QUOTE(findDisplay IDD_DISPLAY3DEN ctrlCreate ARR_2(['ENH_Garrison',IDC_GARRISON_GROUP]));
-    text = "$STR_ENH_MAIN_CONTEXTMENU_GARRISON";
-    picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
-    conditionShow = "selected";
-    opensNewWindow = 1;
-    wikiDescription = "Opens a UI that allows for quick garrison of selected entities.";
 };
 class ENH_TriggerOwnerPlayer
 {
