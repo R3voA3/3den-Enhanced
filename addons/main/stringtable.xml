@@ -1368,6 +1368,10 @@
             <Chinese>鳴謝</Chinese>
             <Chinesesimp>鸣谢</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET">
+            <English>Add current color to color palette.</English>
+            <German>Aktuelle Farbe zu Farbpalette hinzufügen.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_COLOR_PREVIEW">
             <English>Color Preview</English>
             <German>Farbvorschau</German>
@@ -1375,10 +1379,6 @@
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_REMOVE_PRESET">
             <English>Remove selected color from color palette.</English>
             <German>Ausgewählte Vorlage aus der Farbpalette entfernen.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET">
-            <English>Add current color to color palette.</English>
-            <German>Aktuelle Farbe zu Farbpalette hinzufügen.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_SELECT_PRESET">
             <English>Select a preset...</English>
