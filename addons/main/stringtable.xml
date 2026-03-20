@@ -8092,9 +8092,9 @@
             <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME">
-            <English>Show Custom Marker Color / Shape</English>
-            <French>Montrer la couleur / la forme du marqueur personnalisé</French>
-            <German>NBenutzerdefinierte Markerfarbe/-form anzeigen</German>
+            <English>Show Custom Marker Shape</English>
+            <French>Benutzerdefinierte Markerform anzeigen</French>
+            <German>Benutzerdefinierte Markerform anzeigen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
