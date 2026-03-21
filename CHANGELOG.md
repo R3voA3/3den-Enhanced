@@ -26,6 +26,7 @@
 - Improved Unit Trait Description's localization
 - French translation update by Alfred-Neuman
 - Removed 0 infront of spawn were applicable
+- Removed ? from attribute titles for consistency
 
 # 8.7.1
 ## ADDED

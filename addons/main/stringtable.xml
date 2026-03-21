@@ -422,15 +422,15 @@
             <Chinesesimp>动画</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTANIMATIONS_ATTACH_DISPLAYNAME">
-            <English>Attach?</English>
-            <French>Attacher ?</French>
-            <Spanish>¿Adjuntar?</Spanish>
-            <Italian>Collega?</Italian>
-            <Polish>Przykleić?</Polish>
+            <English>Attach</English>
+            <French>Attacher</French>
+            <Spanish>¿Adjuntar</Spanish>
+            <Italian>Collega</Italian>
+            <Polish>Przykleić</Polish>
             <Russian>Возможность прикреплять</Russian>
-            <German>Befestigen?</German>
-            <Chinese>附加？</Chinese>
-            <Chinesesimp>附加？</Chinesesimp>
+            <German>Befestigen</German>
+            <Chinese>附加</Chinese>
+            <Chinesesimp>附加</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTANIMATIONS_ATTACH_TOOLTIP">
             <English>If enabled, the unit will be attached to an invisible logic. Only enable this option if you need to place the unit on top of a wall or close to an other object.</English>
@@ -444,15 +444,15 @@
             <Chinesesimp>如果启用，则该单位将被附加到一个不可见的逻辑上。仅在需要将单位放置在墙顶或靠近其他物体时才启用此选项。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTANIMATIONS_CANEXIT_DISPLAYNAME">
-            <English>Can Exit?</English>
-            <French>Peut quitter l'animation ?</French>
-            <Spanish>¿Puede salir?</Spanish>
-            <Italian>Può uscire?</Italian>
-            <Polish>Może przerwać?</Polish>
-            <Russian>Возможность выхода из анимации?</Russian>
-            <German>Beenden erlaubt?</German>
-            <Chinese>能否退出？</Chinese>
-            <Chinesesimp>能否退出？</Chinesesimp>
+            <English>Can Exit</English>
+            <French>Peut quitter l'animation</French>
+            <Spanish>¿Puede salir</Spanish>
+            <Italian>Può uscire</Italian>
+            <Polish>Może przerwać</Polish>
+            <Russian>Возможность выхода из анимации</Russian>
+            <German>Beenden erlauben</German>
+            <Chinese>能否退出</Chinese>
+            <Chinesesimp>能否退出</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_AMBIENTANIMATIONS_CANEXIT_TOOLTIP">
             <English>If enabled, the unit will exit the animation when in danger.</English>
@@ -6813,15 +6813,15 @@
             <Chinesesimp>一旦任何玩家执行了该操作，就会从所有玩家身上删除该操作。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_SHOWUNCONSCIOUSY_DISPLAYNAME">
-            <English>Show when Unconscious?</English>
-            <French>Afficher lorsqu'inconscient ?</French>
+            <English>Show when Unconscious</English>
+            <French>Afficher lorsqu'inconscient</French>
             <Spanish>Mostrar cuando está inconsciente</Spanish>
-            <Italian>Mostra quando incoscente?</Italian>
-            <Polish>Wyświetl podczas nieprzytomności?</Polish>
-            <Russian>Показать, когда в бессознательном состоянии?</Russian>
-            <German>Anzeigen wenn Bewusstlos?</German>
-            <Chinese>昏迷時是否顯示？</Chinese>
-            <Chinesesimp>昏迷时是否显示？</Chinesesimp>
+            <Italian>Mostra quando incoscente</Italian>
+            <Polish>Wyświetl podczas nieprzytomności</Polish>
+            <Russian>Показать, когда в бессознательном состоянии</Russian>
+            <German>Anzeigen wenn bewusstlos</German>
+            <Chinese>昏迷時是否顯示</Chinese>
+            <Chinesesimp>昏迷时是否显示</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_HOLDACTION_SHOWWINDOW_DISPLAYNAME">
             <English>Show Window</English>
@@ -7448,14 +7448,14 @@
             <Chinesesimp>可以从配置(config)文件或任务配置(CfgDebriefing)结束。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSIONENDING_WIN_DISPLAYNAME">
-            <English>Win?</English>
-            <French>Victoire ?</French>
-            <Spanish>¿Victoria?</Spanish>
-            <Italian>Vittoria?</Italian>
-            <Polish>Wygrana?</Polish>
-            <Russian>Победа?</Russian>
-            <German>Gewinnen?</German>
-            <Chinese>勝利？</Chinese>
+            <English>Win</English>
+            <French>Victoire</French>
+            <Spanish>¿Victoria</Spanish>
+            <Italian>Vittoria</Italian>
+            <Polish>Wygrana</Polish>
+            <Russian>Победа</Russian>
+            <German>Sieg</German>
+            <Chinese>勝利</Chinese>
             <Chinesesimp>胜利？</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_MISSIONOPTIMISATION">
@@ -8591,15 +8591,15 @@
             <Chinesesimp>单人玩家重生</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_SPR_CANDIE_DISPLAYNAME">
-            <English>Can Die?</English>
-            <French>Peut mourir ?</French>
-            <Spanish>¿Puede morir?</Spanish>
-            <Italian>Può Morire?</Italian>
-            <Polish>Może umrzeć?</Polish>
-            <Russian>Может умереть?</Russian>
-            <German>Sterben zulassen?</German>
-            <Chinese>是否死亡？</Chinese>
-            <Chinesesimp>是否死亡？</Chinesesimp>
+            <English>Can Die</English>
+            <French>Peut mourir</French>
+            <Spanish>¿Puede morir</Spanish>
+            <Italian>Può Morire</Italian>
+            <Polish>Może umrzeć</Polish>
+            <Russian>Может умереть</Russian>
+            <German>Sterben zulassen</German>
+            <Chinese>是否死亡</Chinese>
+            <Chinesesimp>是否死亡</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_SPR_CANDIE_TOOLTIP">
             <English>Units can instantly die by getting shot in the head. They cannot respawn after a fatal hit.</English>
@@ -9673,16 +9673,16 @@
             <Chinesesimp>变量查看器</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_ENGINEER_DISPLAYNAME">
-            <English>Is Engineer?</English>
-            <Czech>Je ženistou?</Czech>
-            <French>Est mécanicien ?</French>
-            <Spanish>¿Es ingeniero?</Spanish>
-            <Italian>E' un meccanico?</Italian>
-            <Polish>Jest inżynierem?</Polish>
-            <Russian>Он инженер?</Russian>
-            <German>Ist Ingenieur?</German>
-            <Chinese>是否是工兵？</Chinese>
-            <Chinesesimp>是否是工兵？</Chinesesimp>
+            <English>Is Engineer</English>
+            <Czech>Je ženistou</Czech>
+            <French>Est mécanicien</French>
+            <Spanish>¿Es ingeniero</Spanish>
+            <Italian>E' un meccanico</Italian>
+            <Polish>Jest inżynierem</Polish>
+            <Russian>Он инженер</Russian>
+            <German>Ist Ingenieur</German>
+            <Chinese>是否是工兵</Chinese>
+            <Chinesesimp>是否是工兵</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_ENGINEER_TOOLTIP">
             <English>Defines whether or not the unit can repair vehicles.</English>
@@ -9697,16 +9697,16 @@
             <Chinesesimp>设定该单位能否维修车辆。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_EXPLOSIVESPECIALIST_DISPLAYNAME">
-            <English>Is Explosive Specialist?</English>
-            <Czech>Je pyrotechnikem?</Czech>
-            <French>Est démineur ?</French>
-            <Spanish>¿Es especialista en explosivos?</Spanish>
-            <Italian>E' uno specialista di esplosivi?</Italian>
-            <Polish>Jest saperem?</Polish>
-            <Russian>Он сапер?</Russian>
-            <German>Ist Sprengmeister?</German>
-            <Chinese>是否是爆破兵？</Chinese>
-            <Chinesesimp>是否是爆破兵？</Chinesesimp>
+            <English>Is Explosive Specialist</English>
+            <Czech>Je pyrotechnikem</Czech>
+            <French>Est démineur</French>
+            <Spanish>¿Es especialista en explosivos</Spanish>
+            <Italian>E' uno specialista di esplosivi</Italian>
+            <Polish>Jest saperem</Polish>
+            <Russian>Он сапер</Russian>
+            <German>Ist Sprengmeister</German>
+            <Chinese>是否是爆破兵</Chinese>
+            <Chinesesimp>是否是爆破兵</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_EXPLOSIVESPECIALIST_TOOLTIP">
             <English>Defines whether the unit can defuse explosives.</English>
@@ -9721,16 +9721,16 @@
             <Chinesesimp>设定该单位能否拆除爆炸物。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_MEDIC_DISPLAYNAME">
-            <English>Is Medic?</English>
-            <Czech>Je lékařem?</Czech>
-            <French>Est infirmier ?</French>
-            <Spanish>¿Es médico?</Spanish>
-            <Italian>E' medico?</Italian>
-            <Polish>Jest medykiem?</Polish>
-            <Russian>Он медик?</Russian>
-            <German>Ist Sanitäter?</German>
-            <Chinese>是否是醫療兵？</Chinese>
-            <Chinesesimp>是否是医疗兵？</Chinesesimp>
+            <English>Is Medic</English>
+            <Czech>Je lékařem</Czech>
+            <French>Est infirmier</French>
+            <Spanish>¿Es médico</Spanish>
+            <Italian>E' medico</Italian>
+            <Polish>Jest medykiem</Polish>
+            <Russian>Он медик</Russian>
+            <German>Ist Sanitäter</German>
+            <Chinese>是否是醫療兵</Chinese>
+            <Chinesesimp>是否是医疗兵</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_MEDIC_TOOLTIP">
             <English>Defines whether the unit can fully heal other units.</English>
@@ -9757,16 +9757,16 @@
             <Chinesesimp>当加载ACE时，这些设置均无效，UAV黑客属性除外。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_UAVHACKER_DISPLAYNAME">
-            <English>Is UAV Hacker?</English>
-            <Czech>Je UAV hackerem?</Czech>
-            <French>Peut pirater un drone ?</French>
-            <Spanish>¿Es un hacker de UAV?</Spanish>
-            <Italian>E' un'hacker di UAV?</Italian>
-            <Polish>Jest hakerem BSP?</Polish>
-            <Russian>Он БПЛА хакер?</Russian>
-            <German>Ist UAV Hacker?</German>
-            <Chinese>是否是無人機操作員？</Chinese>
-            <Chinesesimp>是否是无人机操作员？</Chinesesimp>
+            <English>Is UAV Hacker</English>
+            <Czech>Je UAV hackerem</Czech>
+            <French>Peut pirater un drone</French>
+            <Spanish>¿Es un hacker de UAV</Spanish>
+            <Italian>E' un'hacker di UAV</Italian>
+            <Polish>Jest hakerem BSP</Polish>
+            <Russian>Он БПЛА хакер</Russian>
+            <German>Ist UAV Hacker</German>
+            <Chinese>是否是無人機操作員</Chinese>
+            <Chinesesimp>是否是无人机操作员</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_UAVHACKER_TOOLTIP">
             <English>Defines whether the unit can hack hostile UAVs.</English>
