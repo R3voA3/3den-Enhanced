@@ -1,0 +1,30 @@
+[sqf.command_case]
+severity = "Error"
+options.ignore = [
+    "AGLtoASL",
+    "ASLtoAGL",
+    "groupID"
+]
+
+[sqf.banned_commands]
+options.banned = [
+    "execVM",
+    "opfor",
+    "blufor",
+    "resistance",
+    "and",
+    "or",
+    "not",
+    "vehicle"
+]
+
+[sqf.var_all_caps]
+enabled = true
+
+[stringtables.usage]
+options.ignore = [
+    "STR_ENH_MAIN_DAMAGE_*",
+]
+
+[config.unused_external]
+enabled = true
