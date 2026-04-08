@@ -7320,11 +7320,11 @@
         <Key ID="STR_ENH_MAIN_MEASUREDISTANCE_DATA">
             <English>Distance 2D/3D: %1 / %2 m Travel Time (on foot): ~ %3 min</English>
             <Czech>Vzdálenost 2D/3D: %1 / %2 m Doba cesty (pěšky): ~ %3 min</Czech>
-            <French>Distance 2D / 3D :%1 /%2 m. Durée du trajet (à pied) : ~%3 ​​min.</French>
-            <Spanish>Distancia 2D / 3D:% 1 /% 2 m Tiempo de viaje (a pie): ~% 3 min</Spanish>
-            <Italian>Distanza 2D/3D: % 1 /%2 m Durata del viaggio (a piedi): ~ % 3 min</Italian>
+            <French>Distance 2D / 3D: %1 /%2 m. Durée du trajet (à pied) : ~ %3 ​​min.</French>
+            <Spanish>Distancia 2D / 3D: %1 / %2 m Tiempo de viaje (a pie): ~ %3 min</Spanish>
+            <Italian>Distanza 2D/3D: %1 / %2 m Durata del viaggio (a piedi): ~ %3 min</Italian>
             <Polish>Dystans 2D/3D: %1 / %2 m Czas podróży (pieszo): ~ %3 min.</Polish>
-            <Russian>Расстояние 2D / 3D:% 1 /% 2 м. Время в пути (пешком): ~% 3 ​​мин.</Russian>
+            <Russian>Расстояние 2D / 3D: %1 / %2 м. Время в пути (пешком): ~ %3 ​​мин.</Russian>
             <German>Distanz 2D/3D: %1 / %2 m Reisezeit (zu Fuß): ~ %3 min</German>
             <Chinese>2D/3D距離: %1米/ %2米 旅行時間(步行):~ %3分鐘</Chinese>
             <Chinesesimp>2D/3D距离: %1米/ %2米 旅行时间(步行):~ %3分钟</Chinesesimp>
