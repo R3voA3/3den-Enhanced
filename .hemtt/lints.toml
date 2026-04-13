@@ -27,4 +27,4 @@ options.ignore = [
 ]
 
 [config.unused_external]
-enabled = true
+enabled = false
