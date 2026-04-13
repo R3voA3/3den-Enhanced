@@ -135,7 +135,7 @@ class Display3DEN
                     idc = IDC_STATUSBAR_SESSIONTIMER;
                     text = "a3\modules_f_curator\data\portraitskiptime_ca.paa";
                     x = QUOTE(ORIGIN_X_STATUSBAR - 11 * GRID_W - 2 * SPACE_X);
-                    y = QUOTE(2 * pixelH);
+                    y = QUOTE(7 * pixelH);
                 };
                 class ENH_NumberMarkers: ValueY
                 {
