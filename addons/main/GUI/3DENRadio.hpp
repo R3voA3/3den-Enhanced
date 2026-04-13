@@ -53,8 +53,8 @@ class ENH_3DENRadio
         class Filter: ctrlListNBox // Used by BIS_fnc_initListBoxSorting as filter
         {
             idc = IDC_3DENRADIO_FILTER;
-            idcLeft = -1;
-            idcRight = -1;
+            idcLeft = IDC_NONE;
+            idcRight = IDC_NONE;
             x = QUOTE(CENTER_X - WINDOW_W_WIDE * 0.5 * GRID_W);
             y = QUOTE(WINDOW_TOPAbs + CTRL_DEFAULT_H);
             w = QUOTE(WINDOW_W_WIDE * GRID_W);

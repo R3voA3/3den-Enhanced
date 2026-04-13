@@ -30,6 +30,7 @@
 - Hovering over a marker will only show an icon now if a custom shape is set
 since Eden Editor can now natively show custom colors
 - improved translation
+- Improved status bar visuals for session timer and version button
 
 # 8.7.1
 ## ADDED
