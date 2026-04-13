@@ -26,6 +26,7 @@
 - Improved Unit Trait Description's localization
 - French translation update by Alfred-Neuman
 - Removed 0 infront of spawn were applicable
+- Improved status bar visuals for session timer and version button
 
 # 8.7.1
 ## ADDED
