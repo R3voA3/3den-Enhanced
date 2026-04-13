@@ -1368,17 +1368,21 @@
             <Chinese>鳴謝</Chinese>
             <Chinesesimp>鸣谢</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_DISPLAYNAME">
-            <English>Custom Color</English>
-            <Czech>Vlastní barva</Czech>
-            <French>Couleur personnalisée</French>
-            <Spanish>Color personalizado</Spanish>
-            <Italian>Colore personalizzato</Italian>
-            <Polish>Kolor niestandardowy</Polish>
-            <Russian>Пользовательский цвет</Russian>
-            <German>Benutzerdefinierte Farbe</German>
-            <Chinese>自訂顏色</Chinese>
-            <Chinesesimp>自定义颜色</Chinesesimp>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET">
+            <English>Add current color to color palette.</English>
+            <German>Aktuelle Farbe zu Farbpalette hinzufügen.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_COLOR_PREVIEW">
+            <English>Color Preview</English>
+            <German>Farbvorschau</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_REMOVE_PRESET">
+            <English>Remove selected color from color palette.</English>
+            <German>Ausgewählte Vorlage aus der Farbpalette entfernen.</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_SELECT_PRESET">
+            <English>Select a preset...</English>
+            <German>Vorlage auswählen...</German>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_#CAM_GUNNER">
             <English>Camera Gunner</English>
@@ -8088,9 +8092,9 @@
             <German>Definieren Sie hier zusätzliche Symbole, die für das Attribut „Hold Action“ verwendet werden können.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_PREFERENCES_SHOW_CUSTOM_MARKER_COLOR_AND_SHAPE_DISPLAYNAME">
-            <English>Show Custom Marker Color / Shape</English>
-            <French>Montrer la couleur / la forme du marqueur personnalisé</French>
-            <German>NBenutzerdefinierte Markerfarbe/-form anzeigen</German>
+            <English>Show Custom Marker Shape</English>
+            <French>Benutzerdefinierte Markerform anzeigen</French>
+            <German>Benutzerdefinierte Markerform anzeigen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>

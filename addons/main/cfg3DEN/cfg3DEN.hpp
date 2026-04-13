@@ -283,7 +283,6 @@ class Cfg3DEN
             {
                 class Attributes
                 {
-                    #include "\x\enh\addons\main\cfg3DEN\attributesMarker\markerColor.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesMarker\markerShape.hpp"
                 };
             };
