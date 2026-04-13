@@ -42,7 +42,7 @@ _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07 sliderSetPosition _colorRG
     private _blue = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_05) * 100) / 100;\
     private _alpha = round (sliderPosition (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_07) * 100) / 100;\
     _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_09 ctrlSetBackgroundColor [_red, _green, _blue, _alpha];\
-    _ctrlGroup controlsGroupCtrl 100 ctrlSetText format ["#(%1,%2,%3,%4)", _red, _green, _blue, _alpha];
+    _ctrlGroup controlsGroupCtrl 100 ctrlSetText format ["#(%1,%2,%3,%4)", _red toFixed 2, _green toFixed 2, _blue toFixed 2, _alpha toFixed 2];
 
 _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
 _ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_03 ctrlAddEventHandler ["SliderPosChanged", {UPDATE}];
