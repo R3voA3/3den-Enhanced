@@ -31,6 +31,7 @@
 since Eden Editor can now natively show custom colors
 - improved translation
 - Improved status bar visuals for session timer and version button
+- Improved translation of Measure Distance tool by Westalgie
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
