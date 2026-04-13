@@ -1165,18 +1165,6 @@
             <Chinese>添加到收藏夾</Chinese>
             <Chinesesimp>添加至收藏夹</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_CONTEXTMENU_GARRISON">
-            <English>Garrison Buildings</English>
-            <Czech>Obsadit budovy</Czech>
-            <French>Placer en garnison</French>
-            <Spanish>Guarnicionar edificios.</Spanish>
-            <Italian>Presidiare gli edifici</Italian>
-            <Polish>Obsadź budynki</Polish>
-            <Russian>Здания гарнизона</Russian>
-            <German>Gebäude besetzen</German>
-            <Chinese>駐軍建築物</Chinese>
-            <Chinesesimp>驻军建筑物</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_CONTEXTMENU_GETMODULEINFORMATION">
             <English>Module Information</English>
             <Czech>Informace o modulu</Czech>
@@ -6291,122 +6279,6 @@
             <French>Un bâtiment a été mis en garnison</French>
             <German>Ein Gebäude wurde besetzt</German>
         </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_100PERCENT">
-            <English>100 %</English>
-            <Czech>100 %</Czech>
-            <French>100 %</French>
-            <Spanish>100%</Spanish>
-            <Italian>100%</Italian>
-            <Polish>100%</Polish>
-            <Russian>100 %</Russian>
-            <German>100 %</German>
-            <Chinese>100 %</Chinese>
-            <Chinesesimp>100 %</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_10PERCENT">
-            <English>10 %</English>
-            <Czech>10 %</Czech>
-            <French>10 %</French>
-            <Spanish>10%</Spanish>
-            <Italian>10%</Italian>
-            <Polish>10%</Polish>
-            <Russian>10 %</Russian>
-            <German>10 %</German>
-            <Chinese>10 %</Chinese>
-            <Chinesesimp>10 %</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_25PERCENT">
-            <English>25 %</English>
-            <Czech>25 %</Czech>
-            <French>25 %</French>
-            <Spanish>25%</Spanish>
-            <Italian>25%</Italian>
-            <Polish>25%</Polish>
-            <Russian>25 %</Russian>
-            <German>25 %</German>
-            <Chinese>25 %</Chinese>
-            <Chinesesimp>25 %</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_50PERCENT">
-            <English>50 %</English>
-            <Czech>50 %</Czech>
-            <French>50 %</French>
-            <Spanish>50%</Spanish>
-            <Italian>50%</Italian>
-            <Polish>50%</Polish>
-            <Russian>50 %</Russian>
-            <German>50 %</German>
-            <Chinese>50 %</Chinese>
-            <Chinesesimp>50 %</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_BLACKLIST">
-            <English>Blacklist</English>
-            <Czech>Černá listina</Czech>
-            <French>Liste noire</French>
-            <Spanish>Lista negra</Spanish>
-            <Italian>Lista nera</Italian>
-            <Polish>Czarna lista</Polish>
-            <Russian>Черный список</Russian>
-            <German>Blacklist</German>
-            <Chinese>黑名單</Chinese>
-            <Chinesesimp>黑名单</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TEXT">
-            <English>Closest Building only</English>
-            <French>Bâtiment le plus proche uniquement</French>
-            <German>Nur das nächstgelegene Gebäude</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_CLOSEST_BUILDING_TOOLTIP">
-            <English>Only the closest building to the center will be garrisoned.</English>
-            <French>Seul le bâtiment le plus proche du centre sera en garnison.</French>
-            <German>Nur das Gebäude, das dem Zentrum am nächsten liegt, wird bemannt.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_COVERAGE">
-            <English>Coverage</English>
-            <Czech>Kryté pozice v budově</Czech>
-            <French>Positions de couverture dans le bâtiment</French>
-            <Spanish>Posiciones de covertura en edificios</Spanish>
-            <Italian>Copertura</Italian>
-            <Polish>Pokrycie</Polish>
-            <Russian>Покрытие здания</Russian>
-            <German>Abdeckung</German>
-            <Chinese>覆蓋建築位置</Chinese>
-            <Chinesesimp>覆盖建筑位置</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TEXT">
-            <English>From Center</English>
-            <French>Depuis le centre</French>
-            <German>Vom Zentrum</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_FROM_CENTER_TOOLTIP">
-            <English>Positions closer to the center will be filled first.</English>
-            <French>Les postes les plus proches du centre seront pourvus en premier.</French>
-            <German>Positionen, die näher am Zentrum liegen, werden zuerst besetzt.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_HEADER">
-            <English>Garrison Buildings</English>
-            <Czech>Obsadit budovy</Czech>
-            <French>Placer en garnison</French>
-            <Spanish>Guarnicionar edificios</Spanish>
-            <Italian>Occupa gli edifici</Italian>
-            <Polish>Obsadź budynek</Polish>
-            <Russian>Здания гарнизона</Russian>
-            <German>Gebäude besetzen</German>
-            <Chinese>駐軍建築物</Chinese>
-            <Chinesesimp>驻军建筑物</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_MODE">
-            <English>Mode</English>
-            <Czech>Režim</Czech>
-            <French>Mode</French>
-            <Spanish>Modo</Spanish>
-            <Italian>Modalità</Italian>
-            <Polish>Tryb</Polish>
-            <Russian>Режим</Russian>
-            <German>Modus</German>
-            <Chinese>模式</Chinese>
-            <Chinesesimp>模式</Chinesesimp>
-        </Key>
         <Key ID="STR_ENH_MAIN_GARRISON_NOTIFICATION">
             <English>Not enough empty building positions, increase the radius or the coverage.</English>
             <Czech>Nedostatek volných pozic v budovách, zvětšení poloměru nebo pokrytí.</Czech>
@@ -6418,39 +6290,6 @@
             <German>Nicht genug leere Gebäudepositionen, erhöhe den Radius oder die Abdeckung.</German>
             <Chinese>空的建築物位置不足，請增加半徑或覆蓋範圍。</Chinese>
             <Chinesesimp>空的建筑物位置不足，请增加半径或覆盖范围。</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TEXT">
-            <English>Random Positions</English>
-            <French>Positions aléatoires</French>
-            <German>Zufällige Positionen</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_RANDOM_POSITIONS_TOOLTIP">
-            <English>A random position inside the area will be picked for each entity.</English>
-            <French>Une position aléatoire à l'intérieur de la zone sera choisie pour chaque entité.</French>
-            <German>Für jede Entität wird eine zufällige Position innerhalb des Bereichs gewählt.</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_STANCE">
-            <English>Stance</English>
-            <French>Posture</French>
-            <Spanish>Postura</Spanish>
-            <Italian>Posa</Italian>
-            <Polish>Postawa</Polish>
-            <Russian>Позиция</Russian>
-            <German>Haltung</German>
-            <Chinese>姿勢</Chinese>
-            <Chinesesimp>姿势</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_GARRISON_WHITELIST">
-            <English>Whitelist</English>
-            <Czech>Bílá listina</Czech>
-            <French>Liste blanche</French>
-            <Spanish>Lista blanca</Spanish>
-            <Italian>Lista Bianca</Italian>
-            <Polish>Biała lista</Polish>
-            <Russian>Белый список</Russian>
-            <German>Whitelist</German>
-            <Chinese>白名單</Chinese>
-            <Chinesesimp>白名单</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_GENERAL_DISPLAYNAME">
             <English>General</English>

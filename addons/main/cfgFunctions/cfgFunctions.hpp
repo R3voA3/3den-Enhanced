@@ -173,15 +173,6 @@ class CfgFunctions
             class functionsViewer_setUpMenuStrip {};
             class functionsViewer_togglePanel {};
         };
-        class Garrison
-        {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\garrison";
-            class garrison_onLoad {};
-            class garrison_draw {};
-            class garrison_fillBuildings {};
-            class garrison_onUnload {};
-            class garrison_updateValues {};
-        };
         class Garrison2
         {
             file = "\x\enh\addons\main\cfgFunctions\garrison2";
