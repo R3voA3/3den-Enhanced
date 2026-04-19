@@ -6846,6 +6846,14 @@
             <Chinese>負重係數</Chinese>
             <Chinesesimp>负重系数</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME">
+            <English>Stamina Drain Coefficent</English>
+            <German>Ermüdungskoeffizient</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP">
+            <English>A value means the stamina is draining faster.</English>
+            <German>Bei einem höheren Wert lässt die Ausdauer schneller nach.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_LOADCOEF_TOOLTIP">
             <English>The load coefficient determines how much influence the unit's loadout weight has on it is stamina. A higher value means the weight has a higher influence.</English>
             <Czech>Tento koeficient určuje jak moc velký vliv má váha výstroje jednotky vliv na její výdrž. Vyšší hodnota znamená že váha má větší vliv na výdrž.</Czech>
