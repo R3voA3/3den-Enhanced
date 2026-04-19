@@ -4,6 +4,7 @@
 - Save Loadout Attribute
     - Ability to restore loadout the player died with
     - Ability to restore loadout last selected in Arsenal
+- Unit trait "staminaDrainCoef"
 - Default Layer Functionality
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
@@ -35,6 +36,7 @@ since Eden Editor can now natively show custom colors
 - Improved translation
 - Improved status bar visuals for session timer and version button
 - Improved translation of Measure Distance tool by Westalgie
+- ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago

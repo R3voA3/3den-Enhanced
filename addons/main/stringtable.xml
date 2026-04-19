@@ -8537,6 +8537,14 @@
             <Chinese>所有帶有"respawn_SIDE"前綴的標記都計為重生位置。例如，OPFOR單位可以將所有標記名為respawn_east_xxx作為重生位置。 \n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 獨立部隊重生 \n* respawn_civilian - 平民重生</Chinese>
             <Chinesesimp>所有带有"respawn_SIDE"前缀的标记都计为重生位置。例如，OPFOR单位可以将所有标记名为respawn_east_xxx作为重生位置。\n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 独立部队重生 \n* respawn_civilian - 平民重生</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME">
+            <English>Stamina Drain Coefficent</English>
+            <German>Ermüdungskoeffizient</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP">
+            <English>A value means the stamina is draining faster.</English>
+            <German>Bei einem höheren Wert lässt die Ausdauer schneller nach.</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
             <English>Show Entity Counter</English>
             <French>Afficher le compteur d'entités</French>
