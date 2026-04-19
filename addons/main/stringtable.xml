@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ENH">
     <Package name="Main">
-    <Key ID="STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT">
-            <English>Set as default Layer</English>
-            <German>Als Standardschicht setzen</German>
-        </Key>
-        <Key ID="STR_ENH_DEFAULT_LAYER_RESET_DEFAULT">
-            <English>Reset default Layer</English>
-            <German>Standardschicht zurücksetzen</German>
-        </Key>
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
             <English>A</English>
             <French>A</French>
@@ -23,6 +15,14 @@
             <English>Paste a three dimensional array [x, y, z] from the clipboard content.</English>
             <French>Colle un tableau tridimensionnel [x, y, z] à partir du contenu du presse-papiers.</French>
             <German>Einfügen eines dreidimensionalen Feldes [x, y, z] aus dem Inhalt der Zwischenablage.</German>
+        </Key>
+        <Key ID="STR_ENH_DEFAULT_LAYER_RESET_DEFAULT">
+            <English>Reset default Layer</English>
+            <German>Standardschicht zurücksetzen</German>
+        </Key>
+        <Key ID="STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT">
+            <English>Set as default Layer</English>
+            <German>Als Standardschicht setzen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_3DENRADIO_DURATION">
             <English>Duration</English>
@@ -1291,18 +1291,6 @@
             <German>Distanz messen</German>
             <Chinese>測距</Chinese>
             <Chinesesimp>测距</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_CONTEXTMENU_OTHERTOOLS">
-            <English>Other Tools</English>
-            <Czech>Další nástroje</Czech>
-            <French>Autres outils</French>
-            <Spanish>Otras herramientas</Spanish>
-            <Italian>Altri strumenti</Italian>
-            <Polish>Inne narzędzia</Polish>
-            <Russian>Другие инструменты</Russian>
-            <German>Weitere Werkzeuge</German>
-            <Chinese>其他工具</Chinese>
-            <Chinesesimp>其他工具</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_CONTEXTMENU_SETTRIGGEROWNERPLAYER">
             <English>Set Player as Trigger Owner</English>
