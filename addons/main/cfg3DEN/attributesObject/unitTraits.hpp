@@ -69,8 +69,8 @@ class ENH_UnitTraits
         };
         class ENH_StaminaDrainCoef : ENH_Camouflage // Disabled when ACE is loaded
         {
-            displayName = "$STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME ";
-            tooltip = "$STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP ";
+            displayName = "$STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP";
             property = "ENH_unitTraits_staminaDrainCoef";
             expression = "if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['StaminaDrainCoef', _value]] remoteExec ['setUnitTrait', _this]}";
         };
