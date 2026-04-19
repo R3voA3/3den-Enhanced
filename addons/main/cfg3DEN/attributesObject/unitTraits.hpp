@@ -67,5 +67,12 @@ class ENH_UnitTraits
             property = "ENH_unitTraits_loadCoef";
             expression = "if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
         };
+        class ENH_StaminaDrainCoef : ENH_Camouflage // Disabled when ACE is loaded
+        {
+            displayName = "staminaDrainCoef ";
+            tooltip = "staminaDrainCoef ";
+            property = "ENH_unitTraits_staminaDrainCoef";
+            expression = "if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['StaminaDrainCoef', _value]] remoteExec ['setUnitTrait', _this]}";
+        };
     };
 };
