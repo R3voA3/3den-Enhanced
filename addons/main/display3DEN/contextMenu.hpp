@@ -163,7 +163,7 @@ class ENH_SelectionFilter
     opensNewWindow = 1;
     wikiDescription = "Opens a UI that allows to adjust current selection based on various filters.";
 };
-//Modify the original behaviour. Now the map will be moved as well
+// Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
 {
     action = "spawn ENH_fnc_centerMapOnSelection";
