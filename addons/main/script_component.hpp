@@ -8,7 +8,7 @@
 #include "\a3\3den\ui\resincl.inc"
 
 #define ISDEV
-#define REQUIRED_VERSION 2.18
+#define REQUIRED_VERSION 2.22
 #define AUTHOR "R3vo"
 #define URL "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 
