@@ -4,11 +4,11 @@
 #include "\a3\ui_f\hpp\defineresincl.inc"
 #include "\a3\ui_f\hpp\defineresincldesign.inc"
 
-//Eden Editor IDDs and IDCs as well as controls types and styles and macros
+// Eden Editor IDDs and IDCs as well as controls types and styles and macros
 #include "\a3\3den\ui\resincl.inc"
 
 #define ISDEV
-#define REQUIRED_VERSION 2.18
+#define REQUIRED_VERSION 2.22
 #define AUTHOR "R3vo"
 #define URL "https://steamcommunity.com/sharedfiles/filedetails/?id=623475643"
 
@@ -89,18 +89,18 @@
 #define CTRL_DEFAULT_H (ATTRIBUTE_CONTENT_H * GRID_H)
 #define SIZEEX_BASE ((1 / (getResolution select 3)) * pixelGrid * 0.5)
 
-//Top of all UIs
+// Top of all UIs
 #define WINDOW_TOPAbs (0.5 - WINDOW_HAbs * 0.5 + CTRL_DEFAULT_H)
 
-//Either uses full width and leave only 5 grids left and right,
-//or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
-//the UI will not become too wide
+// Either uses full width and leave only 5 grids left and right,
+// or it uses a maximum of 400 grids. This way, on ultra wide and super ultra wide,
+// the UI will not become too wide
 #define WINDOW_W_WIDE ((safeZoneW / GRID_W - 10) min 400)
 
-//Width of edit attributes window
+// Width of edit attributes window
 #define WINDOW_W_ATTRIBUTES 140
 
-//Statusbar
+// Statusbar
 #define SPACE_X (2 * pixelW)
 #define ORIGIN_X_STATUSBAR (safeZoneW - 60 * GRID_W)
 
@@ -151,7 +151,7 @@ textureDisabledUnchecked = NAME;\
 #define STANCE_NO_PRONE 5
 #define STANCE_ATT_NAME "UnitPos"
 
-//3den Enhanced specific IDDs and IDCs
+// 3den Enhanced specific IDDs and IDCs
 #define IDD_NONE -1
 
 #define IDC_NONE -1

@@ -173,7 +173,7 @@ class ENH_ResetDefaultLayer
     conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != -1);
     SHOW_IN_ROOT;
 };
-//Modify the original behaviour. Now the map will be moved as well
+// Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
 {
     action = "spawn ENH_fnc_centerMapOnSelection";
