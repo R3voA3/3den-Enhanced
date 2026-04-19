@@ -4,6 +4,9 @@
 - Save Loadout Attribute
     - Ability to restore loadout the player died with
     - Ability to restore loadout last selected in Arsenal
+- Default Layer Functionality
+    - Right click on a layer to set it as default. Placed units will then be moved automatically
+    into that layer.
 
 ## CHANGED
 - Module Information
