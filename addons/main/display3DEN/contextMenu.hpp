@@ -159,18 +159,18 @@ class ENH_SetDefaultLayer
 {
     action = QUOTE([true] call ENH_fnc_toggleDefaultLayer);
     text = "$STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT";
-    conditionShow = "hoverLayer";
+    conditionShow = "hoverLayer * script1";
     wikiDescription = "Marks selected layer as default layer. Entities are placed in this layer automatically.";
-    scriptedCondition = QUOTE(call ENH_fnc_getDefaultLayer != get3DENEntityID _this);
+    conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != get3DENEntityID _this);
     SHOW_IN_ROOT;
 };
 class ENH_ResetDefaultLayer
 {
     action = QUOTE([false] call ENH_fnc_toggleDefaultLayer);
     text = "$STR_ENH_DEFAULT_LAYER_RESET_DEFAULT";
-    conditionShow = "hoverLayer";
+    conditionShow = "hoverLayer * script1";
     wikiDescription = "Resets default layer.";
-    conditionScript = QUOTE(call ENH_fnc_getDefaultLayer != -1);
+    conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != -1);
     SHOW_IN_ROOT;
 };
 //Modify the original behaviour. Now the map will be moved as well
