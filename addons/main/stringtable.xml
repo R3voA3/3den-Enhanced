@@ -6846,14 +6846,6 @@
             <Chinese>負重係數</Chinese>
             <Chinesesimp>负重系数</Chinesesimp>
         </Key>
-        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME">
-            <English>Stamina Drain Coefficent</English>
-            <German>Ermüdungskoeffizient</German>
-        </Key>
-        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP">
-            <English>A value means the stamina is draining faster.</English>
-            <German>Bei einem höheren Wert lässt die Ausdauer schneller nach.</German>
-        </Key>
         <Key ID="STR_ENH_MAIN_LOADCOEF_TOOLTIP">
             <English>The load coefficient determines how much influence the unit's loadout weight has on it is stamina. A higher value means the weight has a higher influence.</English>
             <Czech>Tento koeficient určuje jak moc velký vliv má váha výstroje jednotky vliv na její výdrž. Vyšší hodnota znamená že váha má větší vliv na výdrž.</Czech>
@@ -8536,6 +8528,14 @@
             <German>Alle Markierungen mit dem Prefix 'respawn_SIDE' zählen als Respawn-Positionen. Zum Beispiel können OFOR Einheiten alle Markierungen mit dem Namen respawn_east_xxx verwenden.\n\n* respawn_east - Respawn für OPFOR Wiedereinstieg\n* respawn_west - Respawn für BLUFOR\n* respawn_guerilla - Respawn für Independent\n* respawn_civilian - Respawn für Civilian</German>
             <Chinese>所有帶有"respawn_SIDE"前綴的標記都計為重生位置。例如，OPFOR單位可以將所有標記名為respawn_east_xxx作為重生位置。 \n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 獨立部隊重生 \n* respawn_civilian - 平民重生</Chinese>
             <Chinesesimp>所有带有"respawn_SIDE"前缀的标记都计为重生位置。例如，OPFOR单位可以将所有标记名为respawn_east_xxx作为重生位置。\n\n* respawn_east - OPFOR重生 \n* respawn_west - BLUFOR重生 \n* respawn_guerilla - 独立部队重生 \n* respawn_civilian - 平民重生</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_DISPLAYNAME">
+            <English>Stamina Drain Coefficent</English>
+            <German>Ermüdungskoeffizient</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP">
+            <English>A value means the stamina is draining faster.</English>
+            <German>Bei einem höheren Wert lässt die Ausdauer schneller nach.</German>
         </Key>
         <Key ID="STR_ENH_MAIN_STATUSBAR_ENTITYCOUNTER_DISPLAYNAME">
             <English>Show Entity Counter</English>
