@@ -30,14 +30,14 @@ class ENH_GetExtensions
     opensNewWindow = 1;
     wikiDescription = "Shows a collection of other editor extensions.";
 };
-//Community
+// Community
 class ENH_AICompilationList: ENH_GetExtensions
 {
     text = "$STR_ENH_MAIN_AICOMPILATION";
     weblink = "https://forums.bistudio.com/topic/165560-ai-compilation-list-of-addonsmodsscripts-misc/";
     wikiDescription = "Shows a list of useful AI modifications.";
 };
-//Wiki
+// Wiki
 class ENH_CommandsList: ENH_GetExtensions
 {
     text = "$STR_ENH_MAIN_COMMANDSOVERVIEW";

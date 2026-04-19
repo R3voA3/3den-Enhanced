@@ -17,6 +17,7 @@ class CfgFunctions
         {
             file = "\x\enh\addons\main\cfgFunctions\3DENEventHandlers";
             class EH_init {};
+            class EH_onEditableEntityAdded {};
             class EH_onMissionLoad {};
             class EH_onMissionNew {};
             class EH_onMissionPreview {};
@@ -34,6 +35,14 @@ class CfgFunctions
             class entityList_addTooltips {};
             class favoritesList {};
             class locationList_enhanced {};
+        };
+        class 3DENLayers
+        {
+            file = "\x\enh\addons\main\cfgFunctions\3DENLayers";
+            class deleteEmptyLayers {};
+            class getDefaultLayer {};
+            class moveIntoDefaultLayer {};
+            class toggleDefaultLayer {};
         };
         class 3DENRadio
         {
@@ -215,7 +224,7 @@ class CfgFunctions
             class centerMapOnSelection {};
             class createBackupMissionSQM {};
             class deleteCrew {};
-            class deleteEmptyLayers {};
+
             class iconPicker {};
             class loadoutTool {};
             class measureDistance {};
@@ -225,6 +234,7 @@ class CfgFunctions
             class spaceEqually {};
             class switchTime {};
             class toggleAttributes {};
+
             class toggleGrass {};
             class VHCTools {};
         };

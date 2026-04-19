@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ENH">
     <Package name="Main">
+    <Key ID="STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT">
+            <English>Set as default Layer</English>
+            <German>Als Standardschicht setzen</German>
+        </Key>
+        <Key ID="STR_ENH_DEFAULT_LAYER_RESET_DEFAULT">
+            <English>Reset default Layer</English>
+            <German>Standardschicht zurücksetzen</German>
+        </Key>
         <Key ID="STR_ENH_BASE_CONTROLS_TITLE_A">
             <English>A</English>
             <French>A</French>

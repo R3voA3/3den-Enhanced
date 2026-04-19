@@ -41,7 +41,7 @@ private _stepCount = count _entities - 1;
 private _stepSize = abs ((_max - _min) / _stepCount);
 
 // Update positions
-[localize "STR_ENH_MAIN_FOLDER_SPACE", nil, "a3\3den\data\cfg3den\history\moveitems_ca.paa"] collect3DENHistory
+[localize "STR_ENH_MAIN_FOLDER_SPACE", nil, TEXTURE_MOVE_ITEMS] collect3DENHistory
 {
     {
         private _pos = (_x get3DENAttribute "Position") # 0;
