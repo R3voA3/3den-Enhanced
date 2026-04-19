@@ -20,7 +20,7 @@ params [["_setDefaultLayer", [true]]];
 private _allLayers = all3DENEntities param [6, []];
 private _defaultLayers = _allLayers select {_x get3DENAttribute "ENH_DefaultLayer" select 0};
 
-collect3DENHistory
+[localize "STR_ENH_DEFAULT_LAYER_RESET_DEFAULT", nil, TEXTURE_LAYER]collect3DENHistory
 {
     // In case multiple layers were set to be default layers
     while {call ENH_fnc_getDefaultLayer != -1} do
@@ -31,11 +31,14 @@ collect3DENHistory
         _defaultLayer set3DENAttribute ["Name", _layerName regexReplace ["\[DEF\] ", ""]];
         _defaultLayer set3DENAttribute ["ENH_DefaultLayer", false];
     };
+};
 
-    private _selectedLayer = [["Layer"]] call ENH_fnc_all3DENSelected param [0, -1];
+private _selectedLayer = [["Layer"]] call ENH_fnc_all3DENSelected param [0, -1];
 
-    // Set default layer if wanted
-    if (_setDefaultLayer && {_selectedLayer != -1}) then
+// Set default layer if wanted
+if (_setDefaultLayer && {_selectedLayer != -1}) then
+{
+    [localize "STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT", nil, TEXTURE_LAYER]collect3DENHistory
     {
         _selectedLayer set3DENAttribute ["ENH_DefaultLayer", true];
         _selectedLayer set3DENAttribute
