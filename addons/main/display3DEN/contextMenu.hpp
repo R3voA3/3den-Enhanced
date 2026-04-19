@@ -1,8 +1,11 @@
 items[] +=
 {
-    "Separator",
-    "ENH_OtherTools",
-    "ENH_AddToFavorites"
+    "ENH_AddToFavorites",
+    "ENH_MeasureDistance",
+    "ENH_SetDefaultLayer",
+    "ENH_ResetDefaultLayer",
+    "ENH_ShowModuleInformation",
+    "ENH_MoveToLayer"
 };
 class Log
 {
@@ -41,17 +44,6 @@ class Select
     {
         "ENH_SelectionFilter",
     };
-};
-class ENH_OtherTools
-{
-    text = "$STR_ENH_MAIN_CONTEXTMENU_OTHERTOOLS";
-    items[] +=
-    {
-        "ENH_MeasureDistance",
-        "ENH_ShowModuleInformation",
-        "ENH_MoveToLayer"
-    };
-    SHOW_IN_ROOT;
 };
 class ENH_LogFactions
 {
@@ -113,7 +105,7 @@ class ENH_MeasureDistance
     action = "spawn ENH_fnc_measureDistance";
     text = "$STR_ENH_MAIN_CONTEXTMENU_MEASUREDISTANCE";
     picture = "\x\enh\addons\main\data\ruler_ca.paa";
-    conditionShow = "1";
+    conditionShow = "1 - hoverLayer";
     wikiDescription = "Allows the measuring between two points, both in 2D and 3D.";
 };
 class ENH_ShowModuleInformation
@@ -122,7 +114,7 @@ class ENH_ShowModuleInformation
     text = "$STR_ENH_MAIN_CONTEXTMENU_GETMODULEINFORMATION";
     conditionShow = "hoverLogic";
     opensNewWindow = 1;
-    wikiDescription = "Shows informationa about selected system entity. Useful for modules that have no eden editor description.";
+    wikiDescription = "Shows information about selected system entity. Useful for modules that have no eden editor description.";
 };
 class ENH_TriggerOwnerPlayer
 {
@@ -162,6 +154,24 @@ class ENH_SelectionFilter
     conditionShow = "selected";
     opensNewWindow = 1;
     wikiDescription = "Opens a UI that allows to adjust current selection based on various filters.";
+};
+class ENH_SetDefaultLayer
+{
+    action = QUOTE([true] call ENH_fnc_toggleDefaultLayer);
+    text = "$STR_ENH_DEFAULT_LAYER_SET_AS_DEFAULT";
+    conditionShow = "hoverLayer * script1";
+    wikiDescription = "Marks selected layer as default layer. Entities are placed in this layer automatically.";
+    conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != get3DENEntityID _this);
+    SHOW_IN_ROOT;
+};
+class ENH_ResetDefaultLayer
+{
+    action = QUOTE([false] call ENH_fnc_toggleDefaultLayer);
+    text = "$STR_ENH_DEFAULT_LAYER_RESET_DEFAULT";
+    conditionShow = "hoverLayer * script1";
+    wikiDescription = "Resets default layer.";
+    conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != -1);
+    SHOW_IN_ROOT;
 };
 // Modify the original behaviour. Now the map will be moved as well
 class MoveCamera
