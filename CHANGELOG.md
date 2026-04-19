@@ -4,6 +4,7 @@
 - Save Loadout Attribute
     - Ability to restore loadout the player died with
     - Ability to restore loadout last selected in Arsenal
+- Unit trait "staminaDrainCoef"
 
 ## CHANGED
 - Module Information
