@@ -121,11 +121,16 @@ textureDisabledUnchecked = NAME;\
 #define TEXTURE_CHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureChecked_ca.paa"
 #define TEXTURE_UNCHECKED "\a3\3DEN\Data\Controls\ctrlCheckbox\textureUnchecked_ca.paa"
 #define TEXTURE_PARTIALLY_CHECKED "a3\ui_f\data\gui\rsccommon\rsccheckbox\checkbox_checked_ca.paa"
-
 #define TEXTURE_SEARCH_START "\a3\3DEN\Data\Displays\Display3DEN\search_start_ca.paa"
 #define TEXTURE_SEARCH_END "\a3\3DEN\Data\Displays\Display3DEN\search_end_ca.paa"
-
 #define TEXTURE_BUILDING_POS "a3\modules_f\data\editterrainobject\texturedoor_opened_ca.paa"
+#define TEXTURE_LAYER "a3\3den\data\cfg3den\layer\icon_ca.paa"
+#define TEXTURE_LAYER_HIDDEN "\a3\3den\data\cfg3den\layer\iconhidden_ca.paa"
+#define TEXTURE_LAYER_DISABLED "\a3\3den\data\cfg3den\layer\icondisabled_ca.paa"
+#define TEXTURE_LAYER_HIDDEN_DISABLED "\a3\3den\data\cfg3den\layer\iconhiddendisabled_ca.paa"
+#define TEXTURE_COMMENT "a3\3den\data\cfg3den\comment\texture_ca.paa"
+#define TEXTURE_MOVE_ITEMS "a3\3den\data\cfg3den\history\moveitems_ca.paa"
+#define TEXTURE_PLAYER "\a3\3den\data\cfg3den\object\iconplayer_ca.paa"
 
 #define COLOR_BUILDING_POS 1, 0.1, 1, 1
 #define COLOR_BUILDING_POS_HIGHLIGHT 1, 0.1, 0.1, 1
@@ -145,7 +150,6 @@ textureDisabledUnchecked = NAME;\
 #define STANCE_RANDOM 4
 #define STANCE_NO_PRONE 5
 #define STANCE_ATT_NAME "UnitPos"
-
 
 //3den Enhanced specific IDDs and IDCs
 #define IDD_NONE -1

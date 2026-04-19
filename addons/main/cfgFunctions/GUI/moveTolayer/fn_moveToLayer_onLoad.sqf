@@ -30,10 +30,10 @@ private _ctrlTV = CTRL(IDC_MOVETOLAYER_TREE);
     private _visible = (_layerID get3DENAttribute "Visibility" select 0);
     private _canTransform = (_layerID get3DENAttribute "Transformation" select 0);
 
-    private _icon = "\a3\3den\data\cfg3den\layer\icon_ca.paa";
+    private _icon = TEXTURE_LAYER;
 
-    if (!_visible && _canTransform) then {_icon = "\a3\3den\data\cfg3den\layer\iconhidden_ca.paa"};
-    if (_visible && !_canTransform) then {_icon = "\a3\3den\data\cfg3den\layer\icondisabled_ca.paa"};
+    if (!_visible && _canTransform) then {_icon = TEXTURE_LAYER_HIDDEN};
+    if (_visible && !_canTransform) then {_icon = TEXTURE_LAYER_DISABLED};
     if (!_visible && !_canTransform) then {_icon = "\a3\3den\data\cfg3den\layer\iconhiddendisabled_ca.paa"};
 
     _ctrlTV tvSetPictureRight [[_index], _icon];
