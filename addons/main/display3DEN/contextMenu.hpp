@@ -95,28 +95,28 @@ class ENH_LogObjectInfo
 };
 class ENH_LogClassesString
 {
-    action = "'CLASSES' call ENH_fnc_3DENLog";
+    action = "'CLASSES' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGCLASSESSTRING";
     conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
     wikiDescription = "Logs all unique classes of all selected entities.";
 };
 class ENH_LogPositions3D
 {
-    action = "'3D' call ENH_fnc_3DENLog";
+    action = "'3D' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS3D";
     conditionShow = "1 - (hoverLayer + selectedMarker)";
     wikiDescription = "Logs all 3D positions of all selected entities.";
 };
 class ENH_LogPositions2D
 {
-    action = "'2D' call ENH_fnc_3DENLog";
+    action = "'2D' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS2D";
     conditionShow = "1 - hoverLayer";
     wikiDescription = "Logs all 2D positions of all selected entities.";
 };
 class ENH_LogGridPositon
 {
-    action = "'GRIDPOS' call ENH_fnc_3DENLog";
+    action = "'GRIDPOS' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGGRIDPOSITION";
     conditionShow = "1 - hoverLayer";
     wikiDescription = "Logs all grid positions of all selected entities.";
@@ -128,14 +128,14 @@ class ENH_SeparatorLog
 };
 class ENH_Log3DENID
 {
-    action = "'IDS' call ENH_fnc_3DENLog";
+    action = "'IDS' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOG3DENIDS";
     conditionShow = "selected";
     wikiDescription = "Logs all entity ids of all selected entities.";
 };
 class ENH_LogVarNames
 {
-    action = "'VARNAMES' call ENH_fnc_3DENLog";
+    action = "'VARNAMES' call ENH_fnc_logEntityInfo";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGVARNAMES";
     conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker + selectedGroup";
     wikiDescription = "Logs all variable names of all selected entities.";
@@ -143,10 +143,9 @@ class ENH_LogVarNames
 // Edit entries
 class Edit
 {
-    items[] +=
-    {
-        "ENH_DeleteCrew"
-    };
+    action = "'OBJECTINFO' call ENH_fnc_logEntityInfo";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
+    wikiDescription = "Logs various information about each selected entity.";
 };
 class ENH_DeleteCrew
 {

@@ -5,7 +5,7 @@ class CfgFunctions
         tag = "ENH";
         class 3DENCommandPalette
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\3DENCommandPalette";
+            file = "\x\enh\addons\main\cfgFunctions\3DENCommandPalette";
             class 3DENCommandPalette_addCommand {};
             class 3DENCommandPalette_collectCommands {};
             class 3DENCommandPalette_execCommand {};
@@ -46,7 +46,7 @@ class CfgFunctions
         };
         class 3DENRadio
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\3DENRadio";
+            file = "\x\enh\addons\main\cfgFunctions\3DENRadio";
             class 3DENRadio_exportClassname {};
             class 3DENRadio_handlePlaylist {};
             class 3DENRadio_onLoad {};
@@ -55,9 +55,9 @@ class CfgFunctions
             class 3DENRadio_timelineControl {};
             class 3DENRadio_toggleRadio {};
         };
-        class Attributes
+        class 3DENAttributes
         {
-            file = "\x\enh\addons\main\cfgFunctions\attributes";
+            file = "\x\enh\addons\main\cfgFunctions\3DENAttributes";
             class advancedDamage_onAttributeLoad {};
             class advancedDamage_onAttributeSave {};
             class airdrop_onAttributeLoad {};
@@ -101,19 +101,19 @@ class CfgFunctions
             class SPR_onAttributeLoad {};
             class SPR_onAttributeSave {};
         };
-        class AttributeSearch
+        class 3DENAttributeSearch
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\attributeSearch";
+            file = "\x\enh\addons\main\cfgFunctions\3DENAttributeSearch";
             class attributeSearch_onLoad {};
         };
-        class BriefingEditor
+        class 3DENBriefingEditor
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\briefingEditor";
+            file = "\x\enh\addons\main\cfgFunctions\3DENBriefingEditor";
             class briefingEditor {};
         };
-        class CfgSentencesBrowser
+        class 3DENCFGS
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\CFGS";
+            file = "\x\enh\addons\main\cfgFunctions\3DENCFGS";
             class CFGS_changeFilter {};
             class CFGS_changePage {};
             class CFGS_getCfgSentences {};
@@ -142,9 +142,9 @@ class CfgFunctions
             file = "\x\enh\addons\main\cfgFunctions\debug";
             class productInfo {};
         };
-        class ESE
+        class 3DENEquipmentStorageEditor
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\ESE";
+            file = "\x\enh\addons\main\cfgFunctions\3DENEquipmentStorageEditor";
             class ESE_addItem {};
             class ESE_applyAttribute {};
             class ESE_changeFilter {};
@@ -170,7 +170,7 @@ class CfgFunctions
         };
         class FunctionsViewer
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\functionsViewer";
+            file = "\x\enh\addons\main\cfgFunctions\functionsViewer";
             class functionsViewer_copy {};
             class functionsViewer_fillCtrlTV {};
             class functionsViewer_getFunctionsData {};
@@ -182,9 +182,9 @@ class CfgFunctions
             class functionsViewer_setUpMenuStrip {};
             class functionsViewer_togglePanel {};
         };
-        class Garrison2
+        class 3DENGarrison2
         {
-            file = "\x\enh\addons\main\cfgFunctions\garrison2";
+            file = "\x\enh\addons\main\cfgFunctions\3DENGarrison2";
             class garrison2_draw3D {};
             class garrison2_exit {};
             class garrison2_fillBuildingPositions {};
@@ -209,10 +209,10 @@ class CfgFunctions
             class testDisplays {};
         };
         #endif
-        class Log
+        class 3DENLog
         {
-            file = "\x\enh\addons\main\cfgFunctions\log";
-            class 3DENLog {};
+            file = "\x\enh\addons\main\cfgFunctions\3DENLog";
+            class logEntityInfo {};
             class exportGUIDefines {};
             class exportLoadout {};
             class exportWithLB {};
@@ -220,27 +220,18 @@ class CfgFunctions
         class Misc
         {
             file = "\x\enh\addons\main\cfgFunctions\misc";
-            class alignEntities {};
             class centerMapOnSelection {};
             class createBackupMissionSQM {};
             class deleteCrew {};
-
             class iconPicker {};
-            class loadoutTool {};
             class measureDistance {};
-            class pylonTools {};
-            class removeGear {};
-            class setOrientation {};
-            class spaceEqually {};
             class switchTime {};
             class toggleAttributes {};
-
             class toggleGrass {};
-            class VHCTools {};
         };
-        class ModuleInformation
+        class 3DENModuleInformation
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\moduleInformation";
+            file = "\x\enh\addons\main\cfgFunctions\3DENModuleInformation";
             class MI_createSyncPreview {};
             class MI_createSyncPreviewTree {};
             class MI_formatInformationData {};
@@ -249,47 +240,50 @@ class CfgFunctions
             class MI_onLoad {};
             class MI_resizeInformationControl {};
         };
-        class MoveToLayer
+        class 3DENMoveTolayer
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\moveTolayer";
+            file = "\x\enh\addons\main\cfgFunctions\3DENMoveTolayer";
             class moveToLayer_onLoad {};
             class moveToLayer_move {};
         };
-        class NameObjects
+        class 3DENNameObjects
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\nameObjects";
+            file = "\x\enh\addons\main\cfgFunctions\3DENNameObjects";
             class nameObjects {};
         };
-        class PlacementTools
+        class 3DENPlacementTools
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\placementTools";
-            class placementTools {};
+            file = "\x\enh\addons\main\cfgFunctions\3DENPlacementTools";
+            class alignEntities {};
+            class placementToolsUI {};
+            class setOrientation {};
+            class spaceEqually {};
         };
-        class RPTViewer
+        class 3DENRPTViewer
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\RPTViewer";
+            file = "\x\enh\addons\main\cfgFunctions\3DENRPTViewer";
             class RPTViewer {};
         };
-        class SAM
+        class 3DENSAM
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\SAM";
+            file = "\x\enh\addons\main\cfgFunctions\3DENSAM";
             class SAM {};
         };
-        class SelectionFilter
+        class 3DENSelectionFilter
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\selectionFilter";
+            file = "\x\enh\addons\main\cfgFunctions\3DENSelectionFilter";
             class selectionFilter_init {};
         };
-        class TextureFinder
+        class 3DENTextureFinder
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\TextureFinder";
+            file = "\x\enh\addons\main\cfgFunctions\3DENTextureFinder";
             class textureFinder_fillList {};
             class textureFinder_findTextures {};
             class textureFinder_updatePreview {};
         };
         class VariableViewer
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\variableViewer";
+            file = "\x\enh\addons\main\cfgFunctions\variableViewer";
             class variableViewer_delete {};
             class variableViewer_fillLNB {};
             class variableViewer_getNamespace {};
@@ -299,9 +293,17 @@ class CfgFunctions
             class variableViewer_onLoad {};
             class variableViewer_setOrCreate {};
         };
-        class ZeusAddons
+        class 3DENLoadoutTools
         {
-            file = "\x\enh\addons\main\cfgFunctions\GUI\ZeusAddons";
+            file = "\x\enh\addons\main\cfgFunctions\3DENLoadoutTools";
+            class loadoutTool {};
+            class removeGear {};
+            class pylonTools {};
+            class VHCTools {};
+        };
+        class 3DENZeusAddons
+        {
+            file = "\x\enh\addons\main\cfgFunctions\3DENZeusAddons";
             class zeusAddons {};
         };
     };
