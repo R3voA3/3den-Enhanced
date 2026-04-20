@@ -1,3 +1,4 @@
+// Root entries
 items[] +=
 {
     "ENH_AddToFavorites",
@@ -7,135 +8,12 @@ items[] +=
     "ENH_ShowModuleInformation",
     "ENH_MoveToLayer"
 };
-class Log
-{
-    items[] +=
-    {
-        "ENH_LogClassesString",
-        "SeparatorSelected",
-        "ENH_LogVarNames",
-        "ENH_LogFactions",
-        "SeparatorSelected",
-        "ENH_LogPositions3D",
-        "ENH_LogPositions2D",
-        "ENH_LogGridPositon",
-        "SeparatorSelected",
-        "ENH_Log3DENID",
-        "ENH_LogObjectInfo"
-    };
-};
-class Edit
-{
-    items[] +=
-    {
-        "ENH_DeleteCrew"
-    };
-};
-class ConnectParent
-{
-    items[] +=
-    {
-        "ENH_TriggerOwnerPlayer"
-    };
-};
-class Select
-{
-    items[] +=
-    {
-        "ENH_SelectionFilter",
-    };
-};
-class ENH_LogFactions
-{
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGFACTION";
-    action = "'FACTIONS' call ENH_fnc_3DENLog";
-    conditionShow = "hoverObject";
-    wikiDescription = "Logs all unique factions of all selected entities.";
-};
-class ENH_LogClassesString
-{
-    action = "'CLASSES' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGCLASSESSTRING";
-    conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
-    wikiDescription = "Logs all unique classes of all selected entities.";
-};
-class ENH_LogPositions3D
-{
-    action = "'3D' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS3D";
-    conditionShow = "selected - selectedMarker";
-    wikiDescription = "Logs all 3D positions of all selected entities.";
-};
-class ENH_LogPositions2D
-{
-    action = "'2D' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS2D";
-    conditionShow = "selected";
-    wikiDescription = "Logs all 2D positions of all selected entities.";
-};
-class ENH_LogGridPositon
-{
-    action = "'GRIDPOS' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGGRIDPOSITION";
-    conditionShow = "1";
-    wikiDescription = "Logs all grid positions of all selected entities.";
-};
-class ENH_Log3DENID
-{
-    action = "'IDS' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOG3DENIDS";
-    conditionShow = "selected";
-    wikiDescription = "Logs all entity ids of all selected entities.";
-};
-class ENH_LogVarNames
-{
-    action = "'VARNAMES' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGVARNAMES";
-    conditionShow = "selected";
-    wikiDescription = "Logs all variable names of all selected entities.";
-};
-class ENH_LogObjectInfo: ENH_LogFactions
-{
-    action = "'OBJECTINFO' call ENH_fnc_3DENLog";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
-    wikiDescription = "Logs various information about each selected entity.";
-};
-class ENH_MeasureDistance
-{
-    action = "spawn ENH_fnc_measureDistance";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_MEASUREDISTANCE";
-    picture = "\x\enh\addons\main\data\ruler_ca.paa";
-    conditionShow = "1 - hoverLayer";
-    wikiDescription = "Allows the measuring between two points, both in 2D and 3D.";
-};
-class ENH_ShowModuleInformation
-{
-    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_ModuleInformation');
-    text = "$STR_ENH_MAIN_CONTEXTMENU_GETMODULEINFORMATION";
-    conditionShow = "hoverLogic";
-    opensNewWindow = 1;
-    wikiDescription = "Shows information about selected system entity. Useful for modules that have no eden editor description.";
-};
-class ENH_TriggerOwnerPlayer
-{
-    action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_SETTRIGGEROWNERPLAYER";
-    conditionShow = "hoverTrigger";
-    wikiDescription = "Sets the player as trigger of selected trigger.";
-};
-class ENH_DeleteCrew
-{
-    action = "call ENH_fnc_deleteCrew";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_DELETECREW";
-    conditionShow = "hoverObjectVehicle";
-    wikiDescription = "Deletes the crew of all selected vehicles.";
-};
 class ENH_AddToFavorites
 {
     action = "['contextMenu'] call ENH_fnc_favoritesList";
     text = "$STR_ENH_MAIN_CONTEXTMENU_FAVORITES";
     picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
-    conditionShow = "hoverObject + hoverLogic + hoverMarker";
+    conditionShow = "selectedObject + selectedLogic + selectedMarker";
     wikiDescription = "Adds all selected entities to the favorites tab.";
     SHOW_IN_ROOT;
 };
@@ -144,16 +22,27 @@ class ENH_MoveToLayer
     action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_MoveToLayer');
     text = "$STR_ENH_MAIN_SELECTLAYER_MOVETOLAYER";
     picture = "a3\3den\data\displays\display3den\panelleft\entitylist_layer_ca.paa";
-    conditionShow = "selected";
+    conditionShow = "selected - hoverLayer";
     wikiDescription = "Opens a UI that allows to quickly change the layer of all selected entities.";
+    SHOW_IN_ROOT;
 };
-class ENH_SelectionFilter
+class ENH_ShowModuleInformation
 {
-    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_SelectionFilter');
-    text = "$STR_ENH_MAIN_SELECTIONFILTER";
-    conditionShow = "selected";
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_ModuleInformation');
+    text = "$STR_ENH_MAIN_CONTEXTMENU_GETMODULEINFORMATION";
+    conditionShow = "selectedLogicModule";
     opensNewWindow = 1;
-    wikiDescription = "Opens a UI that allows to adjust current selection based on various filters.";
+    wikiDescription = "Shows information about selected system entity. Useful for modules that have no eden editor description.";
+    SHOW_IN_ROOT;
+};
+class ENH_MeasureDistance
+{
+    action = "spawn ENH_fnc_measureDistance";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_MEASUREDISTANCE";
+    picture = "\x\enh\addons\main\data\ruler_ca.paa";
+    conditionShow = "1 - hoverLayer";
+    wikiDescription = "Allows the measuring between two points, both in 2D and 3D.";
+    SHOW_IN_ROOT;
 };
 class ENH_SetDefaultLayer
 {
@@ -173,7 +62,132 @@ class ENH_ResetDefaultLayer
     conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != -1);
     SHOW_IN_ROOT;
 };
-// Modify the original behaviour. Now the map will be moved as well
+// Log entries
+class Log
+{
+    items[] +=
+    {
+        "ENH_LogClassesString",
+        "ENH_LogVarNames",
+        "ENH_LogFactions",
+        "ENH_SeparatorLog",
+        "ENH_LogPositions3D",
+        "ENH_LogPositions2D",
+        "ENH_LogGridPositon",
+        "SeparatorSelected",
+        "ENH_Log3DENID",
+        "ENH_LogObjectInfo"
+    };
+};
+class ENH_LogFactions
+{
+    action = "'FACTIONS' call ENH_fnc_3DENLog";
+    conditionShow = "selectedObject";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGFACTION";
+    wikiDescription = "Logs all unique factions of all selected entities.";
+};
+class ENH_LogObjectInfo
+{
+    action = "'OBJECTINFO' call ENH_fnc_3DENLog";
+    conditionShow = "selectedObject";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
+    wikiDescription = "Logs various information about each selected entity.";
+};
+class ENH_LogClassesString
+{
+    action = "'CLASSES' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGCLASSESSTRING";
+    conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
+    wikiDescription = "Logs all unique classes of all selected entities.";
+};
+class ENH_LogPositions3D
+{
+    action = "'3D' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS3D";
+    conditionShow = "1 - (hoverLayer + selectedMarker)";
+    wikiDescription = "Logs all 3D positions of all selected entities.";
+};
+class ENH_LogPositions2D
+{
+    action = "'2D' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS2D";
+    conditionShow = "1 - hoverLayer";
+    wikiDescription = "Logs all 2D positions of all selected entities.";
+};
+class ENH_LogGridPositon
+{
+    action = "'GRIDPOS' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGGRIDPOSITION";
+    conditionShow = "1 - hoverLayer";
+    wikiDescription = "Logs all grid positions of all selected entities.";
+};
+class ENH_SeparatorLog
+{
+    conditionShow = "1 - hoverLayer";
+    SHOW_IN_ROOT;
+};
+class ENH_Log3DENID
+{
+    action = "'IDS' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOG3DENIDS";
+    conditionShow = "selected";
+    wikiDescription = "Logs all entity ids of all selected entities.";
+};
+class ENH_LogVarNames
+{
+    action = "'VARNAMES' call ENH_fnc_3DENLog";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGVARNAMES";
+    conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker + selectedGroup";
+    wikiDescription = "Logs all variable names of all selected entities.";
+};
+// Edit entries
+class Edit
+{
+    items[] +=
+    {
+        "ENH_DeleteCrew"
+    };
+};
+class ENH_DeleteCrew
+{
+    action = "call ENH_fnc_deleteCrew";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_DELETECREW";
+    conditionShow = "selectedObjectVehicle * script1";
+    conditionScript1 = QUOTE(if (_this isEqualType objNull) then {fullCrew _this isNotEqualTo []} else {false});
+    wikiDescription = "Deletes the crew of all selected vehicles.";
+};
+// Connect entries
+class ConnectParent
+{
+    items[] +=
+    {
+        "ENH_TriggerOwnerPlayer"
+    };
+};
+class ENH_TriggerOwnerPlayer
+{
+    action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
+    text = "$STR_ENH_MAIN_CONTEXTMENU_SETTRIGGEROWNERPLAYER";
+    conditionShow = "selectedTrigger";
+    wikiDescription = "Sets the player as trigger of selected trigger.";
+};
+// Select entries
+class Select
+{
+    items[] +=
+    {
+        "ENH_SelectionFilter",
+    };
+};
+class ENH_SelectionFilter
+{
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN createDisplay 'ENH_SelectionFilter');
+    text = "$STR_ENH_MAIN_SELECTIONFILTER";
+    conditionShow = "selected - hoverLayer";
+    opensNewWindow = 1;
+    wikiDescription = "Opens a UI that allows to adjust current selection based on various filters.";
+};
+// Vanilla entries, modified
 class MoveCamera
 {
     action = "spawn ENH_fnc_centerMapOnSelection";
