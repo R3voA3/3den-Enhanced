@@ -37,6 +37,8 @@ since Eden Editor can now natively show custom colors
 - Improved status bar visuals for session timer and version button
 - Improved translation of Measure Distance tool by Westalgie
 - ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
+- Conditions of all context menu entries were overhauled
+
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
