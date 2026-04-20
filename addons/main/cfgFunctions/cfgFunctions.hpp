@@ -142,9 +142,9 @@ class CfgFunctions
             file = "\x\enh\addons\main\cfgFunctions\debug";
             class productInfo {};
         };
-        class ESE
+        class 3DENEquipmentStorageEditor
         {
-            file = "\x\enh\addons\main\cfgFunctions\ESE";
+            file = "\x\enh\addons\main\cfgFunctions\3DENEquipmentStorageEditor";
             class ESE_addItem {};
             class ESE_applyAttribute {};
             class ESE_changeFilter {};
@@ -209,10 +209,10 @@ class CfgFunctions
             class testDisplays {};
         };
         #endif
-        class Log
+        class 3DENLog
         {
-            file = "\x\enh\addons\main\cfgFunctions\log";
-            class 3DENLog {};
+            file = "\x\enh\addons\main\cfgFunctions\3DENLog";
+            class logEntityInfo {};
             class exportGUIDefines {};
             class exportLoadout {};
             class exportWithLB {};
@@ -259,10 +259,10 @@ class CfgFunctions
             class setOrientation {};
             class spaceEqually {};
         };
-        class RPTViewer
+        class 3DENRPTViewer
         {
             file = "\x\enh\addons\main\cfgFunctions\RPTViewer";
-            class RPTViewer {};
+            class 3DENRPTViewer {};
         };
         class 3DENSAM
         {
@@ -274,9 +274,9 @@ class CfgFunctions
             file = "\x\enh\addons\main\cfgFunctions\3DENSelectionFilter";
             class selectionFilter_init {};
         };
-        class TextureFinder
+        class 3DENTextureFinder
         {
-            file = "\x\enh\addons\main\cfgFunctions\TextureFinder";
+            file = "\x\enh\addons\main\cfgFunctions\3DENTextureFinder";
             class textureFinder_fillList {};
             class textureFinder_findTextures {};
             class textureFinder_updatePreview {};
