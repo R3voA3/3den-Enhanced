@@ -261,8 +261,8 @@ class CfgFunctions
         };
         class 3DENRPTViewer
         {
-            file = "\x\enh\addons\main\cfgFunctions\RPTViewer";
-            class 3DENRPTViewer {};
+            file = "\x\enh\addons\main\cfgFunctions\3DENRPTViewer";
+            class RPTViewer {};
         };
         class 3DENSAM
         {
