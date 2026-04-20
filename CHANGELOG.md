@@ -38,6 +38,7 @@ since Eden Editor can now natively show custom colors
 - Improved translation of Measure Distance tool by Westalgie
 - ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
 - Conditions of all context menu entries were overhauled
+- Move to Layer tool can now also move comments
 
 
 ## REMOVED
