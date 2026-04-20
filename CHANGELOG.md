@@ -38,7 +38,7 @@ since Eden Editor can now natively show custom colors
 - Improved translation of Measure Distance tool by Westalgie
 - ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
 - Conditions of all context menu entries were overhauled
-
+- Log positions (2D/3D) context menu actions now also work if nothing is selected
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
