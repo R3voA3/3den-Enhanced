@@ -70,6 +70,7 @@ switch _mode do
 
 
         ["updateTreeView"] call ENH_fnc_favoritesList;
+        true;
     };
     case "contextMenu":
     {
@@ -113,6 +114,7 @@ switch _mode do
         saveProfileNamespace;
 
         ["updateTreeView"] call ENH_fnc_favoritesList;
+        true;
     };
     case "showPreview":
     {
@@ -161,11 +163,13 @@ switch _mode do
 
         _ctrlStaticPreviewBackground ctrlShow true;
         _ctrlStaticPreview ctrlShow true;
+        true;
     };
     case "hidePreview":
     {
         (_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_PICTURE) ctrlShow false;
         (_display3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_PREVIEW_BG) ctrlShow false;
+        true;
     };
     case "treeSelChanged":
     {
@@ -187,6 +191,7 @@ switch _mode do
         private _shape = _savedData get _class select 1;
 
         set3DENAttachedCursorEntity createHashMapFromArray [["type", _type], ["classname", _class], ["markershape", _shape]];
+        true;
     };
     case "delete":
     {
@@ -205,6 +210,7 @@ switch _mode do
         saveProfileNamespace;
 
         ["updateTreeView"] call ENH_fnc_favoritesList;
+        true;
     };
     case "updateTreeView":
     {
@@ -290,15 +296,30 @@ switch _mode do
         } forEach FAVORITES_DATA;
 
         _ctrlTV tvSortAll [[], false];
+        true;
     };
     case "collapse":
     {
         tvCollapseAll (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE);
+        true;
     };
     case "expand":
     {
         tvExpandAll (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_FAVORITES_TREE);
+        true;
+    };
+    case "showInContextMenu":
+    {
+        private _entity = _arguments param [0, objNull];
+
+        // Only objects and markers
+        if (_entity isEqualType objNull || {_entity isEqualType ""}) then
+        {
+            !(((_entity get3DENAttribute "itemclass" select 0)) in (profileNamespace getVariable ["ENH_HashMap_Favorites", createHashMap]));
+        }
+        else
+        {
+            false;
+        };
     };
 };
-
-true
