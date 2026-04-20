@@ -106,14 +106,14 @@ class CfgFunctions
             file = "\x\enh\addons\main\cfgFunctions\3DENAttributeSearch";
             class attributeSearch_onLoad {};
         };
-        class BriefingEditor
+        class 3DENBriefingEditor
         {
-            file = "\x\enh\addons\main\cfgFunctions\briefingEditor";
+            file = "\x\enh\addons\main\cfgFunctions\3DENBriefingEditor";
             class briefingEditor {};
         };
-        class CfgSentencesBrowser
+        class 3DENCFGS
         {
-            file = "\x\enh\addons\main\cfgFunctions\CFGS";
+            file = "\x\enh\addons\main\cfgFunctions\3DENCFGS";
             class CFGS_changeFilter {};
             class CFGS_changePage {};
             class CFGS_getCfgSentences {};
@@ -220,27 +220,18 @@ class CfgFunctions
         class Misc
         {
             file = "\x\enh\addons\main\cfgFunctions\misc";
-            class alignEntities {};
             class centerMapOnSelection {};
             class createBackupMissionSQM {};
             class deleteCrew {};
-
             class iconPicker {};
-            class loadoutTool {};
             class measureDistance {};
-            class pylonTools {};
-            class removeGear {};
-            class setOrientation {};
-            class spaceEqually {};
             class switchTime {};
             class toggleAttributes {};
-
             class toggleGrass {};
-            class VHCTools {};
         };
-        class ModuleInformation
+        class 3DENModuleInformation
         {
-            file = "\x\enh\addons\main\cfgFunctions\moduleInformation";
+            file = "\x\enh\addons\main\cfgFunctions\3DENModuleInformation";
             class MI_createSyncPreview {};
             class MI_createSyncPreviewTree {};
             class MI_formatInformationData {};
@@ -249,30 +240,33 @@ class CfgFunctions
             class MI_onLoad {};
             class MI_resizeInformationControl {};
         };
-        class MoveToLayer
+        class 3DENMoveTolayer
         {
-            file = "\x\enh\addons\main\cfgFunctions\moveTolayer";
+            file = "\x\enh\addons\main\cfgFunctions\3DENMoveTolayer";
             class moveToLayer_onLoad {};
             class moveToLayer_move {};
         };
-        class NameObjects
+        class 3DENNameObjects
         {
-            file = "\x\enh\addons\main\cfgFunctions\nameObjects";
+            file = "\x\enh\addons\main\cfgFunctions\3DENNameObjects";
             class nameObjects {};
         };
-        class PlacementTools
+        class 3DENPlacementTools
         {
-            file = "\x\enh\addons\main\cfgFunctions\placementTools";
-            class placementTools {};
+            file = "\x\enh\addons\main\cfgFunctions\3DENPlacementTools";
+            class alignEntities {};
+            class placementToolsUI {};
+            class setOrientation {};
+            class spaceEqually {};
         };
         class RPTViewer
         {
             file = "\x\enh\addons\main\cfgFunctions\RPTViewer";
             class RPTViewer {};
         };
-        class SAM
+        class 3DENSAM
         {
-            file = "\x\enh\addons\main\cfgFunctions\SAM";
+            file = "\x\enh\addons\main\cfgFunctions\3DENSAM";
             class SAM {};
         };
         class 3DENSelectionFilter
@@ -299,9 +293,17 @@ class CfgFunctions
             class variableViewer_onLoad {};
             class variableViewer_setOrCreate {};
         };
-        class ZeusAddons
+        class 3DENLoadoutTools
         {
-            file = "\x\enh\addons\main\cfgFunctions\ZeusAddons";
+            file = "\x\enh\addons\main\cfgFunctions\3DENLoadoutTools";
+            class loadoutTool {};
+            class removeGear {};
+            class pylonTools {};
+            class VHCTools {};
+        };
+        class 3DENZeusAddons
+        {
+            file = "\x\enh\addons\main\cfgFunctions\3DENZeusAddons";
             class zeusAddons {};
         };
     };

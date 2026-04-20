@@ -91,8 +91,8 @@ switch _mode do
         // Draw an icon where the center is
         addMissionEventHandler ["Draw3D",
         {
-            drawIcon3D ["", [1, 0.1, 1, 1], [nil, "getCenter"] call ENH_fnc_placementTools, 1, 1, 0, "X"];
-            findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MAP drawIcon ["", [1, 0.1, 1, 1], [nil, "getCenter"] call ENH_fnc_placementTools, 1, 1, 0, "X"];
+            drawIcon3D ["", [1, 0.1, 1, 1], [nil, "getCenter"] call ENH_fnc_placementToolsUI, 1, 1, 0, "X"];
+            findDisplay IDD_DISPLAY3DEN displayCtrl IDC_DISPLAY3DEN_MAP drawIcon ["", [1, 0.1, 1, 1], [nil, "getCenter"] call ENH_fnc_placementToolsUI, 1, 1, 0, "X"];
 
             if (isNull (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_PLACEMENTTOOLS)) exitWith
             {
@@ -120,98 +120,98 @@ switch _mode do
         CTRL(IDC_PLACEMENTTOOLS_RADIUS) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["Radius", _numericValue];
 
-            [nil, "circular"] call ENH_fnc_placementTools;
+            [nil, "circular"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_INITIALANGLE) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["InitialAngle", _numericValue];
 
-            [nil, "circular"] call ENH_fnc_placementTools;
+            [nil, "circular"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_CENTRALANGLE) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["CentralAngle", _numericValue];
 
-            [nil, "circular"] call ENH_fnc_placementTools;
+            [nil, "circular"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_SPACING) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["Spacing", _numericValue];
 
-            [nil, "line"] call ENH_fnc_placementTools;
+            [nil, "line"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_SPACINGDIRECTION) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["SpacingDirection", _numericValue];
 
-            [nil, "line"] call ENH_fnc_placementTools;
+            [nil, "line"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_ORIENTATION) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             _numericValue call ENH_fnc_setOrientation;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_A) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["A", _numericValue];
 
-            [nil, "fill"] call ENH_fnc_placementTools;
+            [nil, "fill"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_B) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["B", _numericValue];
 
-            [nil, "fill"] call ENH_fnc_placementTools;
+            [nil, "fill"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_NUMCOLUMNS) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["NumColumns", _numericValue];
 
-            [nil, "grid"] call ENH_fnc_placementTools;
+            [nil, "grid"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_SPACEX) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["SpaceX", _numericValue];
 
-            [nil, "grid"] call ENH_fnc_placementTools;
+            [nil, "grid"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_SPACEY) ctrlAddEventHandler ["EditChanged",
         {
             params ["", "_input"];
-            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementTools;
+            private _numericValue = [nil, "strToNum", [_input]] call ENH_fnc_placementToolsUI;
             ENH_PlacementTools_Settings set ["SpaceY", _numericValue];
 
-            [nil, "grid"] call ENH_fnc_placementTools;
+            [nil, "grid"] call ENH_fnc_placementToolsUI;
         }];
 
         CTRL(IDC_PLACEMENTTOOLS_RANDOMORIENTATION) ctrlAddEventHandler ["ButtonClick",
@@ -243,7 +243,7 @@ switch _mode do
 
                 _modifier = if (_key == 209) then {_modifier * -1} else {_modifier};
 
-                private _numericValue = [nil, "strToNum", [ctrlText _ctrlEdit]] call ENH_fnc_placementTools;
+                private _numericValue = [nil, "strToNum", [ctrlText _ctrlEdit]] call ENH_fnc_placementToolsUI;
 
                 _ctrlEdit ctrlSetText str (_numericValue + _modifier);
             }];
@@ -262,7 +262,7 @@ switch _mode do
     };
     case "line":
     {
-        private _newPos = [nil, "getCenter"] call ENH_fnc_placementTools;
+        private _newPos = [nil, "getCenter"] call ENH_fnc_placementToolsUI;
         collect3DENHistory
         {
             {
@@ -281,7 +281,7 @@ switch _mode do
         private _initialAngle = ENH_PlacementTools_Settings get "InitialAngle";
         private _centralAngle = ENH_PlacementTools_Settings get "CentralAngle";
         private _angleStep = _centralAngle / (count ([["Object", "Logic", "Trigger", "Marker"]] call ENH_fnc_all3DENSelected) max 1);
-        private _center = [nil, "getCenter"] call ENH_fnc_placementTools;
+        private _center = [nil, "getCenter"] call ENH_fnc_placementToolsUI;
 
         private _angle = _initialAngle;
 
@@ -299,19 +299,19 @@ switch _mode do
     {
         if (isNil "ENH_PlacementTools_AreaTrigger") then
         {
-            ENH_PlacementTools_AreaTrigger = create3DENEntity ["Trigger", "EmptyDetectorArea10x10", [nil, "getCenter"] call ENH_fnc_placementTools];
+            ENH_PlacementTools_AreaTrigger = create3DENEntity ["Trigger", "EmptyDetectorArea10x10", [nil, "getCenter"] call ENH_fnc_placementToolsUI];
         };
 
         private _A = ENH_PlacementTools_Settings get "A";
         private _B = ENH_PlacementTools_Settings get "B";
 
-        ENH_PlacementTools_AreaTrigger set3DENAttribute ["Position", [nil, "getCenter"] call ENH_fnc_placementTools];
+        ENH_PlacementTools_AreaTrigger set3DENAttribute ["Position", [nil, "getCenter"] call ENH_fnc_placementToolsUI];
         ENH_PlacementTools_AreaTrigger set3DENAttribute ["Size3", [_A, _B, 1]];
 
         collect3DENHistory
         {
             {
-                private _center = [nil, "getCenter"] call ENH_fnc_placementTools;
+                private _center = [nil, "getCenter"] call ENH_fnc_placementToolsUI;
                 private _randomPos =
                 [
                     _center#0 + random _A - random _A,
@@ -324,7 +324,7 @@ switch _mode do
     };
     case "grid":
     {
-        private _startPos = [nil, "getCenter"] call ENH_fnc_placementTools;
+        private _startPos = [nil, "getCenter"] call ENH_fnc_placementToolsUI;
         private _offset = [0, 0, 0];
         private _counterColumns = 0;
         private _wantedColumns = ENH_PlacementTools_Settings get "NumColumns";
