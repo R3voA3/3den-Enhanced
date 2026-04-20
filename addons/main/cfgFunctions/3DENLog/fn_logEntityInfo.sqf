@@ -20,7 +20,7 @@
         "OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
     Returns:
-    -
+    NOTHING
 */
 
 params [["_mode", ""]];
@@ -227,5 +227,6 @@ if (_export != "") then
 {
     copyToClipboard _export;
     ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-    nil
 };
+
+nil
