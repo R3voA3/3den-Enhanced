@@ -123,11 +123,28 @@ private _movedEntities = [];
             ["ENH_Garrison2_All_Positions_Taken"] call BIS_fnc_3DENNotification;
         };
     } forEach (get3DENSelected "Object" - [_building]);
+
     // TODO: enable if it ever gets fixed 2025-05-03 R3vo
     // Grouping is broken (https:// feedback.bistudio.com/T191578)
-    // if (_groupTogether) then
+    // Group two or more entities
+    // if (_groupTogether && {count _movedEntities > 1}) then
     // {
-    //     add3DENConnection ["Group", _movedEntities, _movedEntities#0];
+    //     private _uniqueGroups = [];
+
+    //     _movedEntities apply
+    //     {
+    //         _uniqueGroups pushBackUnique group _x;
+    //     };
+
+    //     private _leadingGroup = _uniqueGroups deleteAt [-1] param [0, grpNull];
+
+    //     if (!isNull _leadingGroup) then
+    //     {
+    //         systemChat format ["Lead Group: %1", _leadingGroup];
+    //         systemChat format ["All Groups: %1", _uniqueGroups];
+
+    //         add3DENConnection ["Group", _uniqueGroups, _leadingGroup];
+    //     };
     // };
 
     if (_createLayer) then
