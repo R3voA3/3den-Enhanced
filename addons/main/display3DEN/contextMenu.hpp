@@ -14,7 +14,7 @@ class ENH_AddToFavorites
     text = "$STR_ENH_MAIN_CONTEXTMENU_FAVORITES";
     picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
     conditionShow = "(selectedObject + selectedLogic + selectedMarker) * script1";
-    conditionScript1 = QUOTE(ARR_2(['showInContextMenu', _this]) call ENH_fnc_favoritesList);
+    conditionScript1 = QUOTE(ARR_2(['showInContextMenu',_this]) call ENH_fnc_favoritesList);
     wikiDescription = "Adds all selected entities to the favorites tab.";
     SHOW_IN_ROOT;
 };
@@ -167,7 +167,7 @@ class ConnectParent
 };
 class ENH_TriggerOwnerPlayer
 {
-    action = QUOTE(add3DENConnection ARR_3(['TriggerOwner', get3DENSelected 'Trigger', player]));
+    action = QUOTE(add3DENConnection ARR_3(['TriggerOwner',get3DENSelected 'Trigger',player]));
     text = "$STR_ENH_MAIN_CONTEXTMENU_SETTRIGGEROWNERPLAYER";
     conditionShow = "selectedTrigger";
     wikiDescription = "Sets the player as trigger of selected trigger.";
