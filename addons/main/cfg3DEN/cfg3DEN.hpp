@@ -233,6 +233,7 @@ class Cfg3DEN
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\doStop.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\removeFromRemainsCollector.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\SPRTickets.hpp"
+                    #include "\x\enh\addons\main\cfg3DEN\attributesObject\turretStabilization.hpp"
                 };
             };
             class Transformation
