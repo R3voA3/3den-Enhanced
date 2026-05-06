@@ -8,6 +8,7 @@
 - Default Layer Functionality
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
+- Turret Stabilization attribute to all vehicles with turrets
 
 ## CHANGED
 - Module Information
