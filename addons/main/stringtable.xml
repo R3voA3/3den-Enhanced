@@ -9519,6 +9519,78 @@
             <Chinese>變量查看器</Chinese>
             <Chinesesimp>变量查看器</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_DISPLAYNAME">
+            <English>Turret Stabilization</English>
+            <Czech>Stabilizace věže</Czech>
+            <French>Stabilisation de tourelle</French>
+            <Spanish>Estabilización de torreta</Spanish>
+            <Italian>Stabilizzazione della torretta</Italian>
+            <Polish>Stabilizacja wieży</Polish>
+            <Russian>Стабилизация турели</Russian>
+            <German>Turmstabilisierung</German>
+            <Chinese>炮塔稳定</Chinese>
+            <Chinesesimp>炮塔稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_FULL_TEXT">
+            <English>Full Stabilisation</English>
+            <Czech>Plná stabilizace</Czech>
+            <French>Stabilisation complète</French>
+            <Spanish>Estabilización completa</Spanish>
+            <Italian>Stabilizzazione completa</Italian>
+            <Polish>Pełna stabilizacja</Polish>
+            <Russian>Полная стабилизация</Russian>
+            <German>Vollständige Stabilisierung</German>
+            <Chinese>完全稳定</Chinese>
+            <Chinesesimp>完全稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_HORIZONTAL_TEXT">
+            <English>Horizontal Stabilisation</English>
+            <Czech>Stabilizace otáčení</Czech>
+            <French>Stabilisation de rotation</French>
+            <Spanish>Estabilización de giro</Spanish>
+            <Italian>Stabilizzazione di rotazione</Italian>
+            <Polish>Stabilizacja obrotu</Polish>
+            <Russian>Стабилизация поворота</Russian>
+            <German>Querstabilisierung</German>
+            <Chinese>横摆稳定</Chinese>
+            <Chinesesimp>横摆稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_NONE_TEXT">
+            <English>No Stabilization</English>
+            <Czech>Žádná stabilizace</Czech>
+            <French>Aucune stabilisation</French>
+            <Spanish>Sin estabilización</Spanish>
+            <Italian>Nessuna stabilizzazione</Italian>
+            <Polish>Brak stabilizacji</Polish>
+            <Russian>Без стабилизации</Russian>
+            <German>Keine Stabilisierung</German>
+            <Chinese>无稳定</Chinese>
+            <Chinesesimp>无稳定</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_TOOLTIP">
+            <English>Sets turret stabilization for all turrets of the vehicle.</English>
+            <Czech>Nastavuje stabilizaci věže pro všechny věže vozidla.</Czech>
+            <French>Définit la stabilisation des tourelles pour toutes les tourelles du véhicule.</French>
+            <Spanish>Establece la estabilización de la torreta para todas las torretas del vehículo.</Spanish>
+            <Italian>Imposta la stabilizzazione della torretta per tutte le torrette del veicolo.</Italian>
+            <Polish>Ustawia stabilizację wieży dla wszystkich wież pojazdu.</Polish>
+            <Russian>Устанавливает стабилизацию турели для всех турелей транспортного средства.</Russian>
+            <German>Stellt die Turmstabilisierung für alle Türme des Fahrzeugs ein.</German>
+            <Chinese>为载具的所有炮塔设置炮塔稳定。</Chinese>
+            <Chinesesimp>为载具的所有炮塔设置炮塔稳定。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_TURRETSTABILIZATION_VERTICAL_TEXT">
+            <English>Vertical Stabilisation</English>
+            <Czech>Stabilizace výšky</Czech>
+            <French>Stabilisation de l'élévation</French>
+            <Spanish>Estabilización de elevación</Spanish>
+            <Italian>Stabilizzazione di elevazione</Italian>
+            <Polish>Stabilizacja elewacji</Polish>
+            <Russian>Стабилизация возвышения</Russian>
+            <German>Vertikalstabilisierung</German>
+            <Chinese>俯仰稳定</Chinese>
+            <Chinesesimp>俯仰稳定</Chinesesimp>
+        </Key>
         <Key ID="STR_ENH_MAIN_UNITTRAITS_ENGINEER_DISPLAYNAME">
             <English>Is Engineer?</English>
             <Czech>Je ženistou?</Czech>

@@ -1,7 +1,7 @@
 class ENH_TurretStabilization // TODO: localize 2026-05-05 R3vo
 {
-    displayName = "Enable Turret Stabilization";
-    tooltip = "Enables turret stabilization for all turrets of the vehicle.";
+    displayName = "$STR_ENH_MAIN_TURRETSTABILIZATION_DISPLAYNAME";
+    tooltip = "$STR_ENH_MAIN_TURRETSTABILIZATION_TOOLTIP";
     property = "ENH_TurretStabilization";
     control = "Combo";
     expression = "\
@@ -18,7 +18,7 @@ class ENH_TurretStabilization // TODO: localize 2026-05-05 R3vo
                 };\
             };\
         };\
-        [[_this, _value]] remoteExec ['ENH_fnc_applyTurretStabilization', _this];\
+        [_this, _value] remoteExec ['ENH_fnc_applyTurretStabilization', _this];\
     }";
     condition = "objectVehicle * script";
     conditionScript = "allTurrets _this isNotEqualTo []";
@@ -34,22 +34,22 @@ class ENH_TurretStabilization // TODO: localize 2026-05-05 R3vo
         };
         class NoStabilization
         {
-            name = "No Stabilization";
+            name = "$STR_ENH_MAIN_TURRETSTABILIZATION_NONE_TEXT";
             value = 0;
         };
         class ElevationStabilisation
         {
-            name = "Elevation Stabilisation";
+            name = "$STR_ENH_MAIN_TURRETSTABILIZATION_VERTICAL_TEXT";
             value = 1;
         };
         class TraverseStabilisation
         {
-            name = "Traverse Stabilisation";
+            name = "$STR_ENH_MAIN_TURRETSTABILIZATION_HORIZONTAL_TEXT";
             value = 2;
         };
         class FullStabilization
         {
-            name = "Full Stabilisation";
+            name = "$STR_ENH_MAIN_TURRETSTABILIZATION_FULL_TEXT";
             value = 3;
         };
     };
