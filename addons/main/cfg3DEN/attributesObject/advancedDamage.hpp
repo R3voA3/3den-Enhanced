@@ -9,6 +9,8 @@ class ENH_AdvancedDamage
             description = "$STR_ENH_MAIN_ADVANCEDDAMAGE_DESCRIPTION";
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader2_Fixed";
+            condition = "(objectVehicle + objectBrain) * script"; // Perhaps this is better to avoid issues with buildings.
+            conditionScript = "call ENH_isObjectSelectionIdentical";
         };
         class ENH_AdvancedDamage
         {
@@ -19,7 +21,8 @@ class ENH_AdvancedDamage
             control = "ENH_AdvancedDamage";
             defaultValue = "if (getAllHitPointsDamage _this isNotEqualTo []) then {str [getAllHitPointsDamage _this # 0, getAllHitPointsDamage _this # 2]} else {str [[], []]}";
             typeName = "STRING";
-            condition = "objectVehicle + objectBrain"; // Perhaps this is better to avoid issues with buildings.
+            condition = "(objectVehicle + objectBrain) * script"; // Perhaps this is better to avoid issues with buildings.
+            conditionScript = "call ENH_isObjectSelectionIdentical";
         };
     };
 };
