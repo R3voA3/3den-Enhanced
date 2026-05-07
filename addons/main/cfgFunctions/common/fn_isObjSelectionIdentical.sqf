@@ -15,6 +15,6 @@
     BOOLEAN - True if identical, false if not
 */
 
-private _objs = get3DENSelected 'Object' apply {typeOf _x};
+private _objs = get3DENSelected "Object" apply {typeOf _x};
 
-_objs - [_objs#0] isEqualTo []
+_objs - [_objs#0] isEqualTo [];
