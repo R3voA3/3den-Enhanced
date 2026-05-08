@@ -30,43 +30,43 @@ class ENH_AmbientAnimations
                     [_this, _logic] call BIS_fnc_attachToRelative;\
                 };\
                 \
-                ENH_fnc_ambientAnimations_play =\
+                if (isNil 'ENH_fnc_ambientAnimations_play') then\
                 {\
-                    params ['_unit'];\
-                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);\
-                    [_unit, _anim] remoteExec ['switchMove', 0];\
-                };\
-                \
-                ENH_fnc_ambientAnimations_exit =\
-                {\
-                    params ['_unit'];\
-                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};\
-                    _unit setVariable ['ENH_ambientAnimations_exit', true];\
-                    detach _unit;\
-                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);\
-                    if (alive _unit) then\
-                    {\
-                        [_unit, ''] remoteExec ['switchMove', 0];\
-                        _unit enableAI 'ANIM';\
-                    };\
-                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];\
-                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];\
-                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];\
-                };\
-                \
-                private _EHAnimDone = _this addEventHandler ['AnimDone',\
+                    ENH_fnc_ambientAnimations_play = compileFinal\
                     {\
                         params ['_unit'];\
+                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);\
+                        [_unit, _anim] remoteExec ['switchMove', 0];\
+                    };\
+                    ENH_fnc_ambientAnimations_exit = compileFinal\
+                    {\
+                        params ['_unit'];\
+                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};\
+                        _unit setVariable ['ENH_ambientAnimations_exit', true];\
+                        detach _unit;\
+                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);\
                         if (alive _unit) then\
                         {\
-                            _unit call ENH_fnc_ambientAnimations_play;\
-                        }\
-                        else\
-                        {\
-                            _unit call ENH_fnc_ambientAnimations_exit;\
+                            [_unit, ''] remoteExec ['switchMove', 0];\
+                            _unit enableAI 'ANIM';\
                         };\
+                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];\
+                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];\
+                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];\
+                    };\
+                };\
+                private _EHAnimDone = _this addEventHandler ['AnimDone',\
+                {\
+                    params ['_unit'];\
+                    if (alive _unit) then\
+                    {\
+                        _unit call ENH_fnc_ambientAnimations_play;\
                     }\
-                ];\
+                    else\
+                    {\
+                        _unit call ENH_fnc_ambientAnimations_exit;\
+                    };\
+                }];\
                 _this setVariable ['ENH_EHAnimDone', _EHAnimDone];\
                 \
                 if (_canExit && !is3DEN) then\
