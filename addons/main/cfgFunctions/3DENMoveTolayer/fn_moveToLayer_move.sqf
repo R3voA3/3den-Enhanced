@@ -27,7 +27,7 @@ collect3DENHistory
 {
     {
         _x set3DENLayer _layerID;
-    } forEach ([] call ENH_fnc_all3DENSelected);
+    } forEach ([["Object", "Group", "Trigger", "Logic", "Waypoint", "Marker", "Comment"]] call ENH_fnc_all3DENSelected);
 };
 
 ["ENH_actionPerformed"] call BIS_fnc_3DENNotification;

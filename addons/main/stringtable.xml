@@ -1193,7 +1193,7 @@
             <Italian>Registra gli ID delle entità 3DEN nella cartella appunti</Italian>
             <Polish>Zapisz ID obiektu 3DEN do schowka</Polish>
             <Russian>Скопировать ID объектов 3DEN в буфер обмена</Russian>
-            <German>3DEN Objekt IDs in Zwischenablage kopieren</German>
+            <German>3DEN Objekt IDs in Zwischenablage aufzeichnen</German>
             <Chinese>顯示 3DEN 對象ID</Chinese>
             <Chinesesimp>显示 3DEN 对象ID</Chinesesimp>
         </Key>
@@ -1204,7 +1204,7 @@
             <Italian>Classi di log come stringa negli appunti</Italian>
             <Polish>Zapisz klasy do schowka jako string</Polish>
             <Russian>Копировать классы в виде строки в буфер обмена</Russian>
-            <German>Klassen als String in Zwischenablage kopieren</German>
+            <German>Klassen als String in Zwischenablage aufzeichnen</German>
             <Chinese>將Classes作為字符串記錄到剪貼板</Chinese>
             <Chinesesimp>将Classes作为字符串记录到剪贴板</Chinesesimp>
         </Key>
@@ -1216,7 +1216,7 @@
             <Italian>Registra il nome della fazione negli Appunti</Italian>
             <Polish>Zapisz nazwy frakcji do schowka</Polish>
             <Russian>Скопировать имена фракций в буфер обмена</Russian>
-            <German>Fraktionsnamen in Zwischenablage kopieren</German>
+            <German>Fraktionsnamen in Zwischenablage aufzeichnen</German>
             <Chinese>記錄陣營名稱到剪貼板</Chinese>
             <Chinesesimp>记录阵营名称到剪贴板</Chinesesimp>
         </Key>
@@ -1228,7 +1228,7 @@
             <Italian>Copia posisione della griglia negli Appunti.</Italian>
             <Polish>Zapisz pozycję topograficzną do schowka</Polish>
             <Russian>Записать положение сетки в буфер обмена</Russian>
-            <German>Rasterposition in Zwischenablage kopieren</German>
+            <German>Rasterposition in Zwischenablage aufzeichnen</German>
             <Chinese>記錄網格位置到剪貼板</Chinese>
             <Chinesesimp>记录网格位置到剪贴板</Chinesesimp>
         </Key>
@@ -1240,7 +1240,7 @@
             <Italian>Registra informazioni dell'oggetto</Italian>
             <Polish>Wyświetl informacje o obiekcie</Polish>
             <Russian>Информация об объекте журнала</Russian>
-            <German>Objektinfo in Zwischenablage kopieren</German>
+            <German>Objektinfo in Zwischenablage aufzeichnen</German>
             <Chinese>記錄對象信息</Chinese>
             <Chinesesimp>记录对象信息</Chinesesimp>
         </Key>
@@ -1252,7 +1252,7 @@
             <Italian>Registra la posizione 2D negli appunti</Italian>
             <Polish>Zapisz pozycje (2D) do schowka</Polish>
             <Russian>Записать позиции (2D) в буфер обмена</Russian>
-            <German>Positionen (2D) in Zwischenablage kopieren</German>
+            <German>Positionen (2D) in Zwischenablage aufzeichnen</German>
             <Chinese>記錄位置（2D）到剪貼板</Chinese>
             <Chinesesimp>记录位置（2D）到剪贴板</Chinesesimp>
         </Key>
@@ -1264,7 +1264,7 @@
             <Italian>Copia le posizioni (3D) negli Appunti</Italian>
             <Polish>Zapisz pozycje (3D) do schowka</Polish>
             <Russian>Записать позиции (3D) в буфер обмена</Russian>
-            <German>Positionen (3D) in Zwischenablage kopieren</German>
+            <German>Positionen (3D) in Zwischenablage aufzeichnen</German>
             <Chinese>記錄位置（3D）到剪貼板</Chinese>
             <Chinesesimp>记录位置（3D）到剪贴板</Chinesesimp>
         </Key>
@@ -1276,7 +1276,7 @@
             <Italian>Copia i nomi delle variabili negli appunti</Italian>
             <Polish>Skopiuj nazwy zmiennych do schowka</Polish>
             <Russian>Скопировать имена переменных в буфер обмена</Russian>
-            <German>Variablennamen in Zwischenablage kopieren</German>
+            <German>Variablennamen in Zwischenablage aufzeichnen</German>
             <Chinese>將變量名稱記錄到剪貼板</Chinese>
             <Chinesesimp>将变量名称记录到剪贴板</Chinesesimp>
         </Key>

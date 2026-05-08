@@ -143,9 +143,10 @@ class ENH_LogVarNames
 // Edit entries
 class Edit
 {
-    action = "'OBJECTINFO' call ENH_fnc_logEntityInfo";
-    text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
-    wikiDescription = "Logs various information about each selected entity.";
+    items[] +=
+    {
+        "ENH_DeleteCrew"
+    };
 };
 class ENH_DeleteCrew
 {
