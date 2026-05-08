@@ -20,7 +20,7 @@
         "OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
     Returns:
-    -
+    NOTHING
 */
 
 params [["_mode", ""]];
@@ -74,20 +74,37 @@ switch _mode do
     case "2D":
     {
         private _posArray = [];
-        private _pos = [];
+        if (_selection isEqualTo []) then
         {
-            _pos = ((_x get3DENAttribute "Position") # 0);
-            _pos resize 2;
-            _posArray pushBack _pos;
-        } forEach _selection;
+            (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_pos3D"];
+            _posArray pushBack [_pos3D#0, _pos3D#1];
+        }
+        else
+        {
+            private _pos = [];
+            {
+                _pos = ((_x get3DENAttribute "Position") # 0);
+                _pos resize 2;
+                _posArray pushBack _pos;
+            } forEach _selection;
+        };
+
         _export = [_posArray, false] call ENH_fnc_exportWithLB;
     };
     case "3D":
     {
         private _posArray = [];
+        if (_selection isEqualTo []) then
         {
-            _posArray pushBack ((_x get3DENAttribute "Position") # 0);
-        } forEach _selection;
+            (uiNamespace getVariable "bis_fnc_3DENEntityMenu_data") params ["_pos3D"];
+            _posArray pushBack _pos3D;
+        }
+        else
+        {
+            {
+                _posArray pushBack ((_x get3DENAttribute "Position") # 0);
+            } forEach _selection;
+        };
 
         _export = [_posArray, false] call ENH_fnc_exportWithLB;
     };
@@ -210,5 +227,6 @@ if (_export != "") then
 {
     copyToClipboard _export;
     ["ENH_DataCopied"] call BIS_fnc_3DENNotification;
-    nil
 };
+
+nil

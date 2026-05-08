@@ -22,7 +22,6 @@ class ENH_AmbientFlyby
                 _value spawn\
                 {\
                     scriptName 'ENH_Attribute_AmbientFlyby';\
-                    diag_log _this;\
                     params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];\
                     if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};\
                     \

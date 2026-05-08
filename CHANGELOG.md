@@ -38,8 +38,17 @@ since Eden Editor can now natively show custom colors
 - Improved translation of Measure Distance tool by Westalgie
 - ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
 - Conditions of all context menu entries were overhauled
+- Log positions (2D/3D) context menu actions now also work if nothing is selected
 - Move to Layer tool can now also move comments
 - Garrisoned units can optionally be groupe together (toggle the setting in preferences)
+- The following functions are now final (cannot be changed during runtime)
+    - ENH_SPR_OnRespawnCode
+    - ENH_fnc_SPR_respawnTimer
+    - ENH_fnc_SPR_respawn
+    - ENH_fnc_ambientAnimations_exit
+    - ENH_fnc_ambientAnimations_play
+    - ENH_fnc_makeHostage
+- Removed superfluous logging from Ambient Flyby
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
