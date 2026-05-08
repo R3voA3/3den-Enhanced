@@ -39,7 +39,7 @@ since Eden Editor can now natively show custom colors
 - ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
 - Conditions of all context menu entries were overhauled
 - Move to Layer tool can now also move comments
-
+- Garrisoned units can optionally be groupe together (toggle the setting in preferences)
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
