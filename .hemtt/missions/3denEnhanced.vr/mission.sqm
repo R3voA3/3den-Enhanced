@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=83250;
+		nextID=83291;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17461;
+		nextID=17512;
 	};
 	class Camera
 	{
-		pos[]={5558.4492,30,4686.3242};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={4268.9331,30,2874.2451};
+		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
+		up[]={-1.2363449e-07,0.70710671,0.70710683};
+		aside[]={1,0,1.7484557e-07};
 	};
 };
 binarizationWanted=0;
@@ -83,16 +83,15 @@ addons[]=
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Props_F_Decade_Objectives",
-	"A3_Modules_F_Multiplayer",
-	"A3_Ui_F",
 	"A3_Static_F_AA_01",
-	"A3_Characters_F_Exp"
+	"A3_Characters_F_Exp",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=25;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -247,29 +246,22 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item23
-		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item24
-		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item23
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -330,7 +322,7 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_dynamicGroups";
-			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
 			class Value
 			{
 				class data
@@ -473,12 +465,12 @@ class CustomAttributes
 		class Attribute11
 		{
 			property="ENH_saveLoadout";
-			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
+			expression="_value = [0, 1, 2, 3] select _value;    if (!isMultiplayer || _value == 0 || is3DEN || !hasInterface) exitWith {};    _value spawn    {        params ['_value'];        waitUntil {sleep 1; !isNull player};        switch _value do        {            case 1:            {                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 2:            {                player addEventHandler ['Killed',  {player setVariable ['ENH_SavedLoadout', getUnitLoadout player]}];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];            };            case 3:            {" \n "                player setVariable ['ENH_SavedLoadout', getUnitloadout player];                player addEventHandler ['Respawn',                {                    private _loadout = player getVariable ['ENH_SavedLoadout', []];                    if (_loadout isNotEqualTo []) then {player setUnitLoadout _loadout};                }];                                [missionNamespace, 'arsenalClosed', {player setVariable ['ENH_SavedLoadout', getUnitloadout player]}] call BIS_fnc_addScriptedEventHandler;            };" \n "            default {};        };    };";
 			class Value
 			{
 				class data
 				{
-					singleType="BOOL";
+					singleType="SCALAR";
 					value=1;
 				};
 			};
@@ -534,7 +526,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.2948752;
+								value=0.28999999;
 							};
 						};
 						class Item2
@@ -550,7 +542,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.36399186;
+								value=0.36000001;
 							};
 						};
 						class Item4
@@ -566,7 +558,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.60505724;
+								value=0.61000001;
 							};
 						};
 						class Item6
@@ -582,7 +574,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.62528646;
+								value=0.63;
 							};
 						};
 						class Item8
@@ -606,7 +598,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.3656776;
+								value=0.37;
 							};
 						};
 						class Item11
@@ -614,7 +606,7 @@ class CustomAttributes
 							class data
 							{
 								singleType="SCALAR";
-								value=0.68428838;
+								value=0.68000001;
 							};
 						};
 						class Item12
@@ -737,7 +729,7 @@ class CustomAttributes
 		class Attribute2
 		{
 			property="ENH_ambientFlyby";
-			expression="            if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then            {                ENH_AmbientFlyby_Enabled = true;                _value spawn                {                    scriptName 'ENH_Attribute_AmbientFlyby';                    diag_log _this;                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];                    if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};                                        while {ENH_AmbientFlyby_Enabled} do                    {                        sleep random _delay;                        [" \n "                            _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset]," \n "                            _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset]," \n "                            _alt," \n "                            _speed," \n "                            selectRandom _classes," \n "                            _side" \n "                        ] call BIS_fnc_ambientFlyby;                    };                };            }";
+			expression="            if (isServer && !is3DEN && ((_value # 0) isNotEqualTo [])) then            {                ENH_AmbientFlyby_Enabled = true;                _value spawn                {                    scriptName 'ENH_Attribute_AmbientFlyby';                    params ['_classes', '_startPos', '_endPos', '_alt', '_speed', '_side', ['_delay', [300, 300, 300], [[], 0]], ['_rndStartOffset', 0], ['_rndEndOffset', 0]];                    if (_delay isEqualType 0) then {_delay = [_delay, _delay, _delay]};                                        while {ENH_AmbientFlyby_Enabled} do                    {                        sleep random _delay;                        [" \n "                            _startPos vectorAdd [random _rndStartOffset - random _rndStartOffset, random _rndStartOffset - random _rndStartOffset]," \n "                            _endPos vectorAdd [random _rndEndOffset - random _rndEndOffset, random _rndEndOffset - random _rndEndOffset]," \n "                            _alt," \n "                            _speed," \n "                            selectRandom _classes," \n "                            _side" \n "                        ] call BIS_fnc_ambientFlyby;                    };                };            }";
 			class Value
 			{
 				class data
@@ -2156,7 +2148,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=16;
 		class Item0
 		{
 			dataType="Group";
@@ -2316,10 +2308,9 @@ class Mission
 		{
 			dataType="Layer";
 			name="Camp Endurance";
-			state=1;
 			class Entities
 			{
-				items=7;
+				items=16;
 				class Item0
 				{
 					dataType="Layer";
@@ -2460,7 +2451,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -2654,7 +2645,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -2881,7 +2872,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -3095,7 +3086,7 @@ class Mission
 										class Attribute1
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -3333,7 +3324,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -3466,7 +3457,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_makeHostage";
-											expression="    if (isServer && _value) then    {        ENH_fnc_makeHostage =        {            if (_this getVariable ['ENH_isHostage', true]) then            {                _this switchMove 'Acts_AidlPsitMstpSsurWnonDnon04';                [                _this,                localize 'STR_A3_OM_SYSTEM_QUEST_HOSTAGEHOLDACTION',                'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                '_target getVariable [''ENH_IsHostage'', true] && {_this distance _target < 2 && {alive _target && {_target != _this}}}',                'alive _target',                {},                {},                {                    params ['_target', '_caller', '_actionId'];                    [_target, 'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow', 0];                    [_target, _actionId] remoteExec ['BIS_fnc_holdActionRemove', 0];                    _target setVariable ['ENH_IsHostage', false, true];                    _target setVariable ['ENH_WasFreedBy', _caller, true];                }                ] call BIS_fnc_holdActionAdd;            };        };        [_this, ENH_fnc_makeHostage] remoteExec ['call', 0, true];    };    ";
+											expression="    if (isServer && _value) then    {        if (isNil 'ENH_fnc_makeHostage') then        {            ENH_fnc_makeHostage = compileFinal            {                if (_this getVariable ['ENH_isHostage', true]) then                {                    _this switchMove 'Acts_AidlPsitMstpSsurWnonDnon04';                    _this disableAI 'MOVE';                    _this setCaptive true;                    [                    _this,                    localize 'STR_A3_OM_SYSTEM_QUEST_HOSTAGEHOLDACTION',                    'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                    'A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_unbind_ca.paa',                    '_target getVariable [''ENH_IsHostage'', true] && {_this distance _target < 2 && {alive _target && {_target != _this}}}',                    'alive _target',                    {},                    {},                    {                        params ['_target', '_caller', '_actionId'];                        [_target, 'AmovPercMstpSnonWnonDnon'] remoteExec ['playMoveNow', 0];                        [_target, _actionId] remoteExec ['BIS_fnc_holdActionRemove', 0];                        _target setVariable ['ENH_IsHostage', false, true];                        _target setVariable ['ENH_WasFreedBy', _caller, true];                        _target enableAI 'MOVE';                        [_target] join (group _caller);                        doStop _target;                        _target setCaptive false;                    }                    ] call BIS_fnc_holdActionAdd;                };            };        };        [_this, ENH_fnc_makeHostage] remoteExec ['call', 0, true];    };    ";
 											class Value
 											{
 												class data
@@ -3479,7 +3470,7 @@ class Mission
 										class Attribute1
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -3668,7 +3659,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -4405,7 +4396,7 @@ class Mission
 										class Attribute0
 										{
 											property="ENH_AmbientAnimations";
-											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
+											expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
 											class Value
 											{
 												class data
@@ -6423,506 +6414,1010 @@ class Mission
 						nAttributes=5;
 					};
 				};
-			};
-			id=14300;
-			atlOffset=0.50514221;
-		};
-		class Item3
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
+				class Item7
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4456.0967,5.0014391,2890.7522};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+							};
+							id=77738;
+							type="B_soldier_AAR_F";
+						};
+					};
+					class Attributes
+					{
+					};
+					id=77737;
+				};
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4456.0967,5.0014391,2890.7522};
+						position[]={3973.6848,5.9832339,2887.9607};
 					};
-					side="West";
-					flags=7;
+					side="Empty";
+					flags=4;
 					class Attributes
 					{
 					};
-					id=77738;
-					type="B_soldier_AAR_F";
+					id=82670;
+					type="B_static_AA_F";
 				};
-			};
-			class Attributes
-			{
-			};
-			id=77737;
-		};
-		class Item4
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={3978.4299,5,2886.5039};
-			};
-			id=82653;
-			type="ModuleRespawnPosition_F";
-			class CustomAttributes
-			{
-				class Attribute0
+				class Item9
 				{
-					property="ModuleRespawnPosition_F_Marker";
-					expression="_this setVariable ['Marker',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="0";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleRespawnPosition_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="Main Base";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleRespawnPosition_F_Side";
-					expression="_this setVariable ['Side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleRespawnPosition_F_ShowNotification";
-					expression="_this setVariable ['ShowNotification',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="1";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleRespawnPosition_F_Type";
-					expression="_this setVariable ['Type',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="0";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item5
-		{
-			dataType="Marker";
-			position[]={3977.95,5,2903.4121};
-			name="marker_1876";
-			text="FOB";
-			type="b_hq";
-			id=82654;
-		};
-		class Item6
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3973.6848,5.9832339,2887.9607};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=82670;
-			type="B_static_AA_F";
-		};
-		class Item7
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3973.9976,5.0014391,2891.9619};
-					};
+					dataType="Group";
 					side="West";
-					flags=7;
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3973.9976,5.0014391,2891.9619};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								rank="SERGEANT";
+								description="2: Team Leader";
+								isPlayable=1;
+							};
+							id=82651;
+							type="B_CTRG_Soldier_TL_tna_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ENH_EventHandlers_GestureDone";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureDone"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ENH_EventHandlers_Hit";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Hit"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ENH_EventHandlers_AnimStateChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimStateChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="ENH_disableAI_radioProtocol";
+									expression="if (_value && local _this) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="ENH_EventHandlers_SeatSwitchedMan";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SeatSwitchedMan"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="ENH_EventHandlers_InventoryClosed";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryClosed"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="ENH_disableAI_autocombat";
+									expression="if (_value && local _this) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="ENH_EventHandlers_InventoryOpened";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryOpened"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="ENH_disableAI_target";
+									expression="if (_value && local _this) then {[_this, 'TARGET'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_EventHandlers_EpeContact";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContact"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_EventHandlers_AnimChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute12
+								{
+									property="ENH_EventHandlers_WeaponChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute13
+								{
+									property="ENH_EventHandlers_Suppressed";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Suppressed"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute14
+								{
+									property="ENH_EventHandlers_EpeContactStart";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactStart"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute15
+								{
+									property="ENH_EventHandlers_Killed";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Killed"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute16
+								{
+									property="ENH_disableAI_suppression";
+									expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute17
+								{
+									property="ENH_disableAI_anim";
+									expression="if (_value && local _this) then {[_this, 'ANIM'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute18
+								{
+									property="ENH_EventHandlers_OpticsSwitch";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsSwitch"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute19
+								{
+									property="ENH_EventHandlers_SlotItemChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SlotItemChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute20
+								{
+									property="ENH_EventHandlers_Explosion";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Explosion"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute21
+								{
+									property="ENH_disableAI_FSM";
+									expression="if (_value && local _this) then {[_this, 'FSM'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute22
+								{
+									property="ENH_disableAI_cover";
+									expression="if (_value && local _this) then {[_this, 'COVER'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute23
+								{
+									property="ENH_EventHandlers_WeaponDisassembled";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDisassembled"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute24
+								{
+									property="ENH_EventHandlers_Put";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Put"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute25
+								{
+									property="ENH_EventHandlers_GestureChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute26
+								{
+									property="ENH_EventHandlers_Deleted";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute27
+								{
+									property="ENH_EventHandlers_MagazineUnloaded";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""MagazineUnloaded"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute28
+								{
+									property="ENH_disableAI_move";
+									expression="if (_value && local _this) then {[_this, 'MOVE'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute29
+								{
+									property="ENH_EventHandlers_HitPart";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HitPart"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute30
+								{
+									property="ENH_disableAI_mineDetection";
+									expression="if (_value && local _this) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute31
+								{
+									property="ENH_disableAI_NVG";
+									expression="if (_value && local _this) then {[_this, 'NVG'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute32
+								{
+									property="ENH_EventHandlers_WeaponDeployed";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDeployed"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute33
+								{
+									property="ENH_EventHandlers_Fired";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fired"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute34
+								{
+									property="ENH_disableAI_aimingError";
+									expression="if (_value && local _this) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute35
+								{
+									property="ENH_EventHandlers_HandleHeal";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleHeal"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute36
+								{
+									property="ENH_EventHandlers_Detached";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Detached"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute37
+								{
+									property="ENH_EventHandlers_VisionModeChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VisionModeChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute38
+								{
+									property="ENH_disableAI_lights";
+									expression="if (_value && local _this) then {[_this, 'LIGHTS'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute39
+								{
+									property="ENH_EventHandlers_Assembled";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Assembled"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute40
+								{
+									property="ENH_EventHandlers_WeaponRested";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponRested"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute41
+								{
+									property="ENH_disableAI_weaponAim";
+									expression="if (_value && local _this) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute42
+								{
+									property="ENH_EventHandlers_Dammaged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Dammaged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute43
+								{
+									property="ENH_EventHandlers_FiredNear";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredNear"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute44
+								{
+									property="ENH_EventHandlers_Local";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute45
+								{
+									property="ENH_disableAI_all";
+									expression="if (_value && local _this) then {[_this, 'all'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute46
+								{
+									property="ENH_EventHandlers_Respawn";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Respawn"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute47
+								{
+									property="ENH_disableAI_checkVisible";
+									expression="if (_value && local _this) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute48
+								{
+									property="ENH_EventHandlers_LeaningChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaningChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute49
+								{
+									property="ENH_EventHandlers_AnimDone";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimDone"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute50
+								{
+									property="ENH_EventHandlers_OpticsModeChanged";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsModeChanged"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute51
+								{
+									property="ENH_EventHandlers_GetInMan";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetInMan"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute52
+								{
+									property="ENH_EventHandlers_HandleIdentity";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleIdentity"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute53
+								{
+									property="ENH_EventHandlers_Attached";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Attached"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute54
+								{
+									property="ENH_disableAI_path";
+									expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute55
+								{
+									property="ENH_EventHandlers_FiredMan";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredMan"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute56
+								{
+									property="ENH_EventHandlers_TaskSetAsCurrent";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""TaskSetAsCurrent"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute57
+								{
+									property="ENH_EventHandlers_EpeContactEnd";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactEnd"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute58
+								{
+									property="ENH_EventHandlers_Take";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Take"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute59
+								{
+									property="ENH_EventHandlers_HandleScore";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleScore"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute60
+								{
+									property="ENH_EventHandlers_LandingCanceled";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LandingCanceled"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute61
+								{
+									property="ENH_EventHandlers_Reloaded";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Reloaded"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute62
+								{
+									property="ENH_EventHandlers_WeaponAssembled";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponAssembled"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute63
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute64
+								{
+									property="ENH_EventHandlers_GetOutMan";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetOutMan"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute65
+								{
+									property="ENH_EventHandlers_SoundPlayed";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SoundPlayed"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute66
+								{
+									property="ENH_EventHandlers_Disassembled";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Disassembled"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute67
+								{
+									property="ENH_EventHandlers_HandleRating";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleRating"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute68
+								{
+									property="ENH_disableAI_autotarget";
+									expression="if (_value && local _this) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute69
+								{
+									property="ENH_EventHandlers_HandleDamage";
+									expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleDamage"", compile _value]})";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
+										};
+									};
+								};
+								class Attribute70
+								{
+									property="ENH_disableAI_teamswitch";
+									expression="if (_value && local _this) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', 0]}";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=71;
+							};
+						};
+					};
 					class Attributes
 					{
-						rank="SERGEANT";
-						description="2: Team Leader";
-						isPlayable=1;
+						formation="DIAMOND";
 					};
-					id=82651;
-					type="B_CTRG_Soldier_TL_tna_F";
+					id=82650;
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ENH_EventHandlers_GestureDone";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureDone"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ENH_EventHandlers_Hit";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Hit"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.99000001;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ENH_EventHandlers_AnimStateChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimStateChanged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ENH_disableAI_radioProtocol";
-							expression="if (_value && local _this) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ENH_EventHandlers_SeatSwitchedMan";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SeatSwitchedMan"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_EventHandlers_InventoryClosed";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryClosed"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="ENH_disableAI_autocombat";
-							expression="if (_value && local _this) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="ENH_EventHandlers_InventoryOpened";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""InventoryOpened"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="ENH_disableAI_target";
-							expression="if (_value && local _this) then {[_this, 'TARGET'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="ENH_EventHandlers_EpeContact";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContact"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="ENH_EventHandlers_AnimChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimChanged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="ENH_EventHandlers_WeaponChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponChanged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute13
-						{
-							property="ENH_EventHandlers_Suppressed";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Suppressed"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute14
-						{
-							property="ENH_EventHandlers_EpeContactStart";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactStart"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute15
-						{
-							property="ENH_EventHandlers_Killed";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Killed"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute16
-						{
-							property="ENH_disableAI_suppression";
-							expression="if (_value && local _this) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute17
-						{
-							property="ENH_disableAI_anim";
-							expression="if (_value && local _this) then {[_this, 'ANIM'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute18
-						{
-							property="ENH_EventHandlers_OpticsSwitch";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsSwitch"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute19
-						{
-							property="ENH_EventHandlers_SlotItemChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SlotItemChanged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute20
-						{
-							property="ENH_EventHandlers_Explosion";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Explosion"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute21
-						{
-							property="ENH_disableAI_FSM";
-							expression="if (_value && local _this) then {[_this, 'FSM'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute22
-						{
-							property="ENH_disableAI_cover";
-							expression="if (_value && local _this) then {[_this, 'COVER'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute23
-						{
-							property="ENH_EventHandlers_WeaponDisassembled";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDisassembled"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute24
-						{
-							property="ENH_EventHandlers_Put";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Put"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute25
-						{
-							property="ENH_EventHandlers_GestureChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GestureChanged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute26
 						{
 							property="ENH_EventHandlers_Deleted";
 							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
@@ -6935,10 +7430,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute27
+						class Attribute1
 						{
-							property="ENH_EventHandlers_MagazineUnloaded";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""MagazineUnloaded"", compile _value]})";
+							property="ENH_EventHandlers_Fleeing";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fleeing"", compile _value]})";
 							class Value
 							{
 								class data
@@ -6948,23 +7443,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute28
+						class Attribute2
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value && local _this) then {[_this, 'MOVE'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute29
-						{
-							property="ENH_EventHandlers_HitPart";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HitPart"", compile _value]})";
+							property="ENH_EventHandlers_EnemyDetected";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnemyDetected"", compile _value]})";
 							class Value
 							{
 								class data
@@ -6974,36 +7456,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute30
+						class Attribute3
 						{
-							property="ENH_disableAI_mineDetection";
-							expression="if (_value && local _this) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute31
-						{
-							property="ENH_disableAI_NVG";
-							expression="if (_value && local _this) then {[_this, 'NVG'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute32
-						{
-							property="ENH_EventHandlers_WeaponDeployed";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponDeployed"", compile _value]})";
+							property="ENH_EventHandlers_GroupIdChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GroupIdChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7013,10 +7469,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute33
+						class Attribute4
 						{
-							property="ENH_EventHandlers_Fired";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fired"", compile _value]})";
+							property="ENH_EventHandlers_FormationChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FormationChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7026,23 +7482,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute34
+						class Attribute5
 						{
-							property="ENH_disableAI_aimingError";
-							expression="if (_value && local _this) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute35
-						{
-							property="ENH_EventHandlers_HandleHeal";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleHeal"", compile _value]})";
+							property="ENH_EventHandlers_UnitJoined";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitJoined"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7052,10 +7495,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute36
+						class Attribute6
 						{
-							property="ENH_EventHandlers_Detached";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Detached"", compile _value]})";
+							property="ENH_EventHandlers_SpeedModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SpeedModeChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7065,10 +7508,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute37
+						class Attribute7
 						{
-							property="ENH_EventHandlers_VisionModeChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VisionModeChanged"", compile _value]})";
+							property="ENH_EventHandlers_WaypointComplete";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WaypointComplete"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7078,23 +7521,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute38
+						class Attribute8
 						{
-							property="ENH_disableAI_lights";
-							expression="if (_value && local _this) then {[_this, 'LIGHTS'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute39
-						{
-							property="ENH_EventHandlers_Assembled";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Assembled"", compile _value]})";
+							property="ENH_EventHandlers_LeaderChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaderChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7104,10 +7534,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute40
+						class Attribute9
 						{
-							property="ENH_EventHandlers_WeaponRested";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponRested"", compile _value]})";
+							property="ENH_EventHandlers_EnableAttackChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnableAttackChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7117,46 +7547,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute41
-						{
-							property="ENH_disableAI_weaponAim";
-							expression="if (_value && local _this) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute42
-						{
-							property="ENH_EventHandlers_Dammaged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Dammaged"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute43
-						{
-							property="ENH_EventHandlers_FiredNear";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredNear"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute44
+						class Attribute10
 						{
 							property="ENH_EventHandlers_Local";
 							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
@@ -7169,23 +7560,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute45
+						class Attribute11
 						{
-							property="ENH_disableAI_all";
-							expression="if (_value && local _this) then {[_this, 'all'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute46
-						{
-							property="ENH_EventHandlers_Respawn";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Respawn"", compile _value]})";
+							property="ENH_EventHandlers_Empty";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Empty"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7195,23 +7573,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute47
+						class Attribute12
 						{
-							property="ENH_disableAI_checkVisible";
-							expression="if (_value && local _this) then {[_this, 'CHECKVISIBLE'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute48
-						{
-							property="ENH_EventHandlers_LeaningChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaningChanged"", compile _value]})";
+							property="ENH_EventHandlers_KnowsAboutChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""KnowsAboutChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7221,10 +7586,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute49
+						class Attribute13
 						{
-							property="ENH_EventHandlers_AnimDone";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""AnimDone"", compile _value]})";
+							property="ENH_EventHandlers_UnitKilled";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitKilled"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7234,10 +7599,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute50
+						class Attribute14
 						{
-							property="ENH_EventHandlers_OpticsModeChanged";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""OpticsModeChanged"", compile _value]})";
+							property="ENH_EventHandlers_CommandChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CommandChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7247,10 +7612,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute51
+						class Attribute15
 						{
-							property="ENH_EventHandlers_GetInMan";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetInMan"", compile _value]})";
+							property="ENH_EventHandlers_UnitLeft";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitLeft"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7260,10 +7625,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute52
+						class Attribute16
 						{
-							property="ENH_EventHandlers_HandleIdentity";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleIdentity"", compile _value]})";
+							property="ENH_EventHandlers_CombatModeChanged";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CombatModeChanged"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7273,10 +7638,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute53
+						class Attribute17
 						{
-							property="ENH_EventHandlers_Attached";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Attached"", compile _value]})";
+							property="ENH_EventHandlers_VehicleRemoved";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleRemoved"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7286,23 +7651,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute54
+						class Attribute18
 						{
-							property="ENH_disableAI_path";
-							expression="if (_value && local _this) then {[_this, 'PATH'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute55
-						{
-							property="ENH_EventHandlers_FiredMan";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FiredMan"", compile _value]})";
+							property="ENH_EventHandlers_VehicleAdded";
+							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleAdded"", compile _value]})";
 							class Value
 							{
 								class data
@@ -7312,491 +7664,108 @@ class Mission
 								};
 							};
 						};
-						class Attribute56
-						{
-							property="ENH_EventHandlers_TaskSetAsCurrent";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""TaskSetAsCurrent"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute57
-						{
-							property="ENH_EventHandlers_EpeContactEnd";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EpeContactEnd"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute58
-						{
-							property="ENH_EventHandlers_Take";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Take"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute59
-						{
-							property="ENH_EventHandlers_HandleScore";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleScore"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute60
-						{
-							property="ENH_EventHandlers_LandingCanceled";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LandingCanceled"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute61
-						{
-							property="ENH_EventHandlers_Reloaded";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Reloaded"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute62
-						{
-							property="ENH_EventHandlers_WeaponAssembled";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WeaponAssembled"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute63
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male09ENG";
-								};
-							};
-						};
-						class Attribute64
-						{
-							property="ENH_EventHandlers_GetOutMan";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GetOutMan"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute65
-						{
-							property="ENH_EventHandlers_SoundPlayed";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SoundPlayed"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute66
-						{
-							property="ENH_EventHandlers_Disassembled";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Disassembled"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute67
-						{
-							property="ENH_EventHandlers_HandleRating";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleRating"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute68
-						{
-							property="ENH_disableAI_autotarget";
-							expression="if (_value && local _this) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute69
-						{
-							property="ENH_EventHandlers_HandleDamage";
-							expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""HandleDamage"", compile _value]})";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-								};
-							};
-						};
-						class Attribute70
-						{
-							property="ENH_disableAI_teamswitch";
-							expression="if (_value && local _this) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', 0]}";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=71;
+						nAttributes=19;
 					};
 				};
-			};
-			class Attributes
-			{
-				formation="DIAMOND";
-			};
-			id=82650;
-			class CustomAttributes
-			{
-				class Attribute0
+				class Item10
 				{
-					property="ENH_EventHandlers_Deleted";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Deleted"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ENH_EventHandlers_Fleeing";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Fleeing"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ENH_EventHandlers_EnemyDetected";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnemyDetected"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ENH_EventHandlers_GroupIdChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""GroupIdChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ENH_EventHandlers_FormationChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""FormationChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ENH_EventHandlers_UnitJoined";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitJoined"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ENH_EventHandlers_SpeedModeChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""SpeedModeChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ENH_EventHandlers_WaypointComplete";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""WaypointComplete"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ENH_EventHandlers_LeaderChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""LeaderChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ENH_EventHandlers_EnableAttackChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""EnableAttackChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute10
-				{
-					property="ENH_EventHandlers_Local";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Local"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute11
-				{
-					property="ENH_EventHandlers_Empty";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""Empty"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute12
-				{
-					property="ENH_EventHandlers_KnowsAboutChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""KnowsAboutChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute13
-				{
-					property="ENH_EventHandlers_UnitKilled";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitKilled"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute14
-				{
-					property="ENH_EventHandlers_CommandChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CommandChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute15
-				{
-					property="ENH_EventHandlers_UnitLeft";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""UnitLeft"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute16
-				{
-					property="ENH_EventHandlers_CombatModeChanged";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""CombatModeChanged"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute17
-				{
-					property="ENH_EventHandlers_VehicleRemoved";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleRemoved"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				class Attribute18
-				{
-					property="ENH_EventHandlers_VehicleAdded";
-					expression="(if (_value != '' && {!is3DEN && local _this}) then {_this addEventHandler [""VehicleAdded"", compile _value]})";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[_thisEvent, _this, _thisEventHandler, _thisArgs]] call ENH_fnc_log;";
-						};
-					};
-				};
-				nAttributes=19;
-			};
-		};
-		class Item8
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3977.3623,5.0014391,2911.7773};
-					};
+					dataType="Group";
 					side="West";
-					flags=7;
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3977.3623,5.0014391,2911.7773};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+							};
+							id=82673;
+							type="B_Soldier_F";
+						};
+					};
 					class Attributes
 					{
 					};
-					id=82673;
-					type="B_Soldier_F";
+					id=82672;
+				};
+				class Item11
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3976.7546,5.0014391,2879.8308};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								isPlayer=1;
+							};
+							id=83231;
+							type="B_Soldier_F";
+						};
+					};
+					class Attributes
+					{
+					};
+					id=83230;
+				};
+				class Item12
+				{
+					dataType="Layer";
+					name="RE90/8WHH2k";
+					id=83278;
+					atlOffset=-5;
+				};
+				class Item13
+				{
+					dataType="Layer";
+					name="Y5aJ7OpFUl8";
+					id=83282;
+					atlOffset=-5;
+				};
+				class Item14
+				{
+					dataType="Layer";
+					name="ZkLmxG7PSUA";
+					id=83283;
+					atlOffset=-5;
+				};
+				class Item15
+				{
+					dataType="Layer";
+					name="QO7y3ybe50k";
+					id=83287;
+					atlOffset=-5;
 				};
 			};
-			class Attributes
-			{
-			};
-			id=82672;
+			id=14300;
+			atlOffset=-4.6865134;
 		};
-		class Item9
+		class Item3
+		{
+			dataType="Marker";
+			position[]={3977.95,5,2903.4121};
+			name="marker_1876";
+			text="FOB";
+			type="b_hq";
+			id=82654;
+		};
+		class Item4
 		{
 			dataType="Marker";
 			position[]={5191.0972,0,4888.0059};
@@ -7808,38 +7777,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(0.6,0.33,1)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -7851,45 +7788,17 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item10
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4268.9331,5.0014391,2899.2952};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=83231;
-					type="B_Soldier_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=83230;
-		};
-		class Item11
+		class Item5
 		{
 			dataType="Marker";
 			position[]={5391.0972,0,4888.0059};
 			name="marker_1885";
 			markerType="RECTANGLE";
 			type="mil_arrow";
+			colorName="#(0.34,0.66,0.7,1)";
 			a=50;
 			b=50;
 			id=83235;
@@ -7898,38 +7807,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(1,0.31,0.31)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -7941,10 +7818,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item12
+		class Item6
 		{
 			dataType="Marker";
 			position[]={5591.0972,0,4888.0059};
@@ -7959,38 +7836,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=0;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(1,1,1)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8002,10 +7847,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item13
+		class Item7
 		{
 			dataType="Marker";
 			position[]={5791.0972,0,4888.0059};
@@ -8020,38 +7865,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(0.78,0.71,0.38)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8063,10 +7876,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item14
+		class Item8
 		{
 			dataType="Marker";
 			position[]={5191.0972,0,5088.0059};
@@ -8096,7 +7909,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item15
+		class Item9
 		{
 			dataType="Marker";
 			position[]={5391.0972,0,5088.0059};
@@ -8111,38 +7924,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(0.23,1,1)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8154,10 +7935,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item16
+		class Item10
 		{
 			dataType="Marker";
 			position[]={5591.0972,0,5088.0059};
@@ -8172,38 +7953,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(1,0.31,1)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8215,10 +7964,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item17
+		class Item11
 		{
 			dataType="Marker";
 			position[]={5791.0972,0,5088.0059};
@@ -8233,38 +7982,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(0.13,0.12,1)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8276,10 +7993,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item18
+		class Item12
 		{
 			dataType="Marker";
 			position[]={5191.0972,0,5288.0059};
@@ -8294,38 +8011,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(1,1,0.35)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8337,10 +8022,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item19
+		class Item13
 		{
 			dataType="Marker";
 			position[]={5391.0972,0,5288.0059};
@@ -8369,7 +8054,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item20
+		class Item14
 		{
 			dataType="Marker";
 			position[]={5591.0972,0,5288.0059};
@@ -8384,38 +8069,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(0.62,1,0.87)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8427,10 +8080,10 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
-		class Item21
+		class Item15
 		{
 			dataType="Marker";
 			position[]={5791.0972,0,5288.0059};
@@ -8445,38 +8098,6 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="ENH_markerColor";
-					expression="if (_value#0 && isServer) then {_this setMarkerColor _value#1}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=1;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="STRING";
-										value="#(1,1,0.35)";
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
 					property="ENH_markerShape";
 					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
 					class Value
@@ -8488,7 +8109,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 	};
