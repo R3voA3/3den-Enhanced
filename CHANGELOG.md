@@ -1,4 +1,4 @@
-# 8.7.2
+# 8.8.0
 ## ADDED
 - Hold Action now supports radius
 - Save Loadout Attribute
