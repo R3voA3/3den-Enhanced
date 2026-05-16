@@ -8,6 +8,7 @@
 - Default Layer Functionality
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
+- Support for AmmoExplodedNear and LaserTargetChanged events
 
 ## CHANGED
 - Module Information
