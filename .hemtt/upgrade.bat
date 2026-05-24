@@ -1,3 +1,3 @@
 : Upgrades HEMTT to latest version via WinGet
 @echo off
-winget upgrade hemtt
+winget upgrade hemtt --force

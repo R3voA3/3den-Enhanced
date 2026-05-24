@@ -2,19 +2,21 @@
     "folders": [
         {
             "path": "."
-        },
-        {
-            "name": "3den-Enhanced.wiki",
-            "path": "../3den-Enhanced.wiki"
         }
     ],
-    "settings": {
-        "[sqf]": {
-            "editor.insertSpaces": true,
-            "editor.detectIndentation": false
-        },
+    "settings":{
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "files.autoSave": "onFocusChange",
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": true,
-        "editor.renderFinalNewline": "dimmed"
+        "editor.renderFinalNewline": "dimmed",
+        "files.associations": {
+            "*.cpp": "arma-config",
+            "*.hpp": "arma-config",
+            "*.inc": "arma-config",
+            "*.cfg": "arma-config",
+            "*.rvmat": "arma-config"
+        }
     }
 }

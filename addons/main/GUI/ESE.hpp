@@ -488,7 +488,7 @@ class ENH_ESE
             y = QUOTE(WINDOW_TOPAbs + WINDOW_HAbs - 3 * CTRL_DEFAULT_H - GRID_H);
             w = QUOTE(22 * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
-            onButtonClick = "0 spawn ENH_fnc_ESE_close";
+            onButtonClick = "spawn ENH_fnc_ESE_close";
         };
     };
 };

@@ -7,8 +7,8 @@
 class ENH_PlacementToolsGroup: ctrlControlsGroup
 {
     idc = IDC_PLACEMENTTOOLS;
-    onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementTools";
-    onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementTools";
+    onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementToolsUI";
+    onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementToolsUI";
     x = QUOTE(safeZoneX + 2 * GRID_W);
     y = QUOTE(WINDOW_TOPAbs + 2 * CTRL_DEFAULT_H + 3 * GRID_H);
     w = QUOTE(58 * GRID_W);
@@ -48,8 +48,8 @@ class ENH_PlacementToolsGroup: ctrlControlsGroup
         class Tools: ctrlControlsGroup
         {
             idc = IDC_NONE;
-            onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementTools";
-            onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementTools";
+            onLoad = "[ctrlParent (_this#0), 'onLoad'] call ENH_fnc_placementToolsUI";
+            onUnload = "[ctrlParent (_this#0), 'onUnload'] call ENH_fnc_placementToolsUI";
             x = QUOTE(0);
             y = QUOTE(CTRL_DEFAULT_H);
             w = QUOTE(58 * GRID_W);

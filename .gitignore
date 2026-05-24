@@ -1,2 +1,4 @@
 .hemttout
 *.dll
+.biprivatekey
+.hemttprivatekey

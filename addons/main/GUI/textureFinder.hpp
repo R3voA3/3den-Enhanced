@@ -1,7 +1,7 @@
 class ENH_TextureFinder
 {
     idd = IDD_TEXTUREFINDER;
-    onLoad = "0 spawn ENH_fnc_textureFinder_findTextures";
+    onLoad = "spawn ENH_fnc_textureFinder_findTextures";
     class ControlsBackground
     {
         DISABLE_BACKGROUND

@@ -1,3 +1,59 @@
+# 8.7.2
+## ADDED
+- Hold Action now supports radius
+- Save Loadout Attribute
+    - Ability to restore loadout the player died with
+    - Ability to restore loadout last selected in Arsenal
+- Unit trait "staminaDrainCoef"
+- Default Layer Functionality
+    - Right click on a layer to set it as default. Placed units will then be moved automatically
+    into that layer.
+
+## CHANGED
+- Module Information
+    - Complete overhaul of Module Information UI. It now shows entites that can be synced similar to the old editor
+    - Module Information UI would not show all descriptions of all modules
+
+- Hostage Attriubute
+    - Hostage will automatically be placed in the captive state, as well as out of it when freed, so that they aren't engaged by nearby AI
+    - "MOVE" AI will be disabled while tied up, to prevent the hostage from turning around to look at nearby units
+    - When freed, the hostage will automatically join the caller's group and run a doStop, preventing it from running around on its own until commanded to regroup or move to a new location by the group's leader.
+
+- Debug Options
+    - Improved visualization of triggers when "Show Triggers" debug option is enabled
+    - Unified debug option  hint style
+    - Fixed fleeing value in the group debug option would not show a value
+    - Debug option to show triggers would not display data
+    - Fixed draw triggers and dynamic simulation debug view would not work together
+- Fixed edit boxes would prevent scrolling in some cases
+- Fixed hold action edit boxes would in some cases not show entire text (#453)
+- Improved Unit Trait Description's localization
+- French translation update by Alfred-Neuman
+- Removed 0 infront of spawn were applicable
+- Overhauled Custom Marker color attribute to make it work with the native implementation
+- Hovering over a marker will only show an icon now if a custom shape is set
+since Eden Editor can now natively show custom colors
+- Improved translation
+- Improved status bar visuals for session timer and version button
+- Improved translation of Measure Distance tool by Westalgie
+- ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
+- Conditions of all context menu entries were overhauled
+- Log positions (2D/3D) context menu actions now also work if nothing is selected
+- Move to Layer tool can now also move comments
+- Garrisoned units can optionally be groupe together (toggle the setting in preferences)
+- The following functions are now final (cannot be changed during runtime)
+    - ENH_SPR_OnRespawnCode
+    - ENH_fnc_SPR_respawnTimer
+    - ENH_fnc_SPR_respawn
+    - ENH_fnc_ambientAnimations_exit
+    - ENH_fnc_ambientAnimations_play
+    - ENH_fnc_makeHostage
+- Removed superfluous logging from Ambient Flyby
+- Expanded information displayed in product information
+
+## REMOVED
+- Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
+
 # 8.7.1
 ## ADDED
 - Added fn_iterTree.sqf (internal use only)
