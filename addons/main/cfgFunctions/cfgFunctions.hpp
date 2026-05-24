@@ -130,7 +130,6 @@ class CfgFunctions
             class createHashValue {};
             class floatToTime {};
             class formatInteger {};
-            class getAllItems {};
             class getConfigSourceAddon {};
             class hasStorage {};
             class initSearchControls {};
@@ -150,6 +149,7 @@ class CfgFunctions
             class ESE_changeFilter {};
             class ESE_clearInventory {};
             class ESE_close {};
+            class ESE_createCache {};
             class ESE_export {};
             class ESE_fullArsenal {};
             class ESE_getConfigValues {};
