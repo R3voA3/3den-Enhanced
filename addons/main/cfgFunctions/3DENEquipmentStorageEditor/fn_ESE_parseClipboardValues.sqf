@@ -55,6 +55,6 @@ private _configs = _importList apply
     }
 };
 
-private _attributeValue = ([_configs] call ENH_fnc_ESE_getConfigValues) select 0;
+private _attributeValue = [_configs] call ENH_fnc_ESE_getConfigValues;
 if _return exitWith {_attributeValue};
 [true, _attributeValue] call ENH_fnc_ESE_applyAttribute;

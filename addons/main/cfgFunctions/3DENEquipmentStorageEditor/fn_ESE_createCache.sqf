@@ -402,9 +402,7 @@ private _allItemConfigs = (CONDITION configClasses (configFile >> "CfgWeapons"))
                           (CONDITION configClasses (configFile >> "CfgGlasses")) +
                           (CONDITION configClasses (configFile >> "CfgVehicles"));
 
-private _itemsConfigValues = [_allItemConfigs] call ENH_fnc_ESE_getConfigValues;
-
-uiNamespace setVariable ["ENH_ESE_itemsHashMap", _itemsConfigValues#0];
+uiNamespace setVariable ["ENH_ESE_itemsHashMap", [_allItemConfigs] call ENH_fnc_ESE_getConfigValues];
 
 // Cache all addons that add equipment
 // Default addon for filtering
