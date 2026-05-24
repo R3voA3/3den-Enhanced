@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3976.7546,30,2854.7808};
+		pos[]={4268.9331,30,2874.2451};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
 		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
-sourceName="3denenhanced";
+sourceName="~3denenhanced";
 addons[]=
 {
 	"A3_Characters_F_Common",
@@ -7754,7 +7754,7 @@ class Mission
 				};
 			};
 			id=14300;
-			atlOffset=-4.6865134;
+			atlOffset=-1.1718748;
 		};
 		class Item3
 		{
@@ -7798,7 +7798,6 @@ class Mission
 			name="marker_1885";
 			markerType="RECTANGLE";
 			type="mil_arrow";
-			colorName="#(0.34,0.66,0.7,1)";
 			a=50;
 			b=50;
 			id=83235;

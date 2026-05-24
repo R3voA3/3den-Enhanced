@@ -27,7 +27,7 @@ if (isNil "ENH_ESE_target" || {ENH_ESE_target isKindOf "CAManBase" || !(ENH_ESE_
 private _display = findDisplay IDD_DISPLAY3DEN createDisplay "ENH_ESE";
 uiNamespace setVariable ["ENH_Display_ESE", _display];
 
-[] call ENH_fnc_getAllItems;
+[] call ENH_fnc_ESE_createCache;
 [] call ENH_fnc_ESE_loadAttributeValue;
 
 // Get all addons and add them to filter control

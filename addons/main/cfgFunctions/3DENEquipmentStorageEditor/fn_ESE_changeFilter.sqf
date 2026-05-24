@@ -21,7 +21,6 @@ params ["_ctrlMenuStrip", "_path"];
 
 private _index = _path # 1;
 private _display = uiNamespace getVariable ["ENH_Display_ESE", displayNull];
-private _types = uiNamespace getVariable "ENH_ESE_Types";
 private _filterType = _ctrlMenuStrip menuData _path;
 
 private _filteredItems = [];
@@ -29,7 +28,7 @@ private _filteredItems = [];
 // Collect all items which fit the filter
 {
     _y params ["_displayName", "_picture", "_addonClass", "_addonIcon", "_category", "_specificType", "_descriptionShort"];
-    if (((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in _types) || (_category == _specificType))) && _x != "Zasleh2") then
+    if (((_specificType == _filterType || _category == _filterType) && (!(_category == _filterType && _specificType in ESE_ITEM_TYPES) || (_category == _specificType))) && _x != "Zasleh2") then
     {
         _filteredItems pushBack [_x, _displayName, _picture, _addonClass, _addonIcon, _descriptionShort];
     };

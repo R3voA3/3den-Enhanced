@@ -12,11 +12,8 @@
     ARRAY - An array of class names or configs to get details for.
 
     Returns:
-    ARRAY - ARRAY of whitelisted items, HASHMAP of items with details, ARRAY of available addons
+    HASHMAP - A hashmap with the data of all items
 */
-
-#define TYPES_WHITELIST ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine",\
-"Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 
 params [["_input", [], []]];
 
@@ -29,7 +26,7 @@ _input apply
 
     (_class call BIS_fnc_itemType) params ["_category", "_specificType"];
 
-    if ((_category in TYPES_WHITELIST || _specificType in TYPES_WHITELIST && _specificType != "UnknownEquipment") && {if (isArray (_x >> "muzzles")) then {_class call BIS_fnc_baseWeapon == _class} else {true}}) then
+    if ((_category in ESE_ITEM_TYPES || _specificType in ESE_ITEM_TYPES && _specificType != "UnknownEquipment") && {if (isArray (_x >> "muzzles")) then {_class call BIS_fnc_baseWeapon == _class} else {true}}) then
     {
         // Modify some _specificTypes
 
@@ -43,7 +40,6 @@ _input apply
 
         // Get the DLC, make sure it's a DLC and was not modified by a mod (CBA, ACE)
         (_x call ENH_fnc_getConfigSourceAddon) params [["_addonClass", ""], ["_addonName", ""], ["_addonIcon", ""]];
-        _addons pushBackUnique [_addonClass, _addonName, _addonIcon];
 
         _itemsHashMap set
         [
@@ -62,4 +58,4 @@ _input apply
     }
 };
 
-[TYPES_WHITELIST, _itemsHashMap, _addons]
+_itemsHashMap
