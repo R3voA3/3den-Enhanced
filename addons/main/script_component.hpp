@@ -80,6 +80,7 @@
 }\
 
 #define CUSTOM_MARKER_SHAPES ["NONE", "TRIANGLE", "PENTAGON", "HEXAGON", "HEPTAGON", "OCTAGON", "NONAGON", "DECAGON"]
+#define ESE_ITEM_TYPES ["AssaultRifle", "MachineGun", "SniperRifle", "Shotgun", "SubmachineGun", "RocketLauncher", "Handgun", "Grenade", "Magazine", "Mine", "AccessoryBipod", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "Uniform", "Vest", "Backpack", "Headgear", "Glasses", "NVGoggles", "Item", "MissileLauncher"]
 
 #define LB_HTML "<br/>"
 #define INDENT "    "
