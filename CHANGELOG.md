@@ -10,6 +10,9 @@
     into that layer.
 
 ## CHANGED
+- Advanced Equipment Editor
+    - Readded back hidden items
+    - Improved various functions
 - Module Information
     - Complete overhaul of Module Information UI. It now shows entites that can be synced similar to the old editor
     - Module Information UI would not show all descriptions of all modules
