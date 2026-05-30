@@ -54,6 +54,7 @@ since Eden Editor can now natively show custom colors
     - ENH_fnc_makeHostage
 - Removed superfluous logging from Ambient Flyby
 - Expanded information displayed in product information
+- Improved remote execution of disableAI feature flags
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
