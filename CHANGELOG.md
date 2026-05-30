@@ -8,6 +8,7 @@
 - Default Layer Functionality
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
+- Disable AI Feature flags "HEARING" and "FIREWEAPON"
 
 ## CHANGED
 - Advanced Equipment Editor
