@@ -55,6 +55,7 @@ since Eden Editor can now natively show custom colors
 - Removed superfluous logging from Ambient Flyby
 - Expanded information displayed in product information
 - Improved remote execution of disableAI feature flags
+- Briefings now properly show again (Thanks to Tuupertunut)
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
