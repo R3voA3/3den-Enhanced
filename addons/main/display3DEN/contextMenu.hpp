@@ -10,10 +10,11 @@ items[] +=
 };
 class ENH_AddToFavorites
 {
-    action = "['contextMenu'] call ENH_fnc_favoritesList";
+    action = QUOTE(['contextMenu'] call ENH_fnc_favoritesList);
     text = "$STR_ENH_MAIN_CONTEXTMENU_FAVORITES";
     picture = "\a3\ui_f_curator\data\displays\rscdisplaycurator\moderecent_ca.paa";
-    conditionShow = "selectedObject + selectedLogic + selectedMarker";
+    conditionShow = "(selectedObject + selectedLogic + selectedMarker) * script1";
+    conditionScript1 = QUOTE(ARR_2(['showInContextMenu',_this]) call ENH_fnc_favoritesList);
     wikiDescription = "Adds all selected entities to the favorites tab.";
     SHOW_IN_ROOT;
 };
@@ -37,7 +38,7 @@ class ENH_ShowModuleInformation
 };
 class ENH_MeasureDistance
 {
-    action = "spawn ENH_fnc_measureDistance";
+    action = QUOTE(spawn ENH_fnc_measureDistance);
     text = "$STR_ENH_MAIN_CONTEXTMENU_MEASUREDISTANCE";
     picture = "\x\enh\addons\main\data\ruler_ca.paa";
     conditionShow = "1 - hoverLayer";
@@ -81,42 +82,42 @@ class Log
 };
 class ENH_LogFactions
 {
-    action = "'FACTIONS' call ENH_fnc_3DENLog";
+    action = QUOTE('FACTIONS' call ENH_fnc_3DENLog);
     conditionShow = "selectedObject";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGFACTION";
     wikiDescription = "Logs all unique factions of all selected entities.";
 };
 class ENH_LogObjectInfo
 {
-    action = "'OBJECTINFO' call ENH_fnc_3DENLog";
+    action = QUOTE('OBJECTINFO' call ENH_fnc_3DENLog);
     conditionShow = "selectedObject";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
     wikiDescription = "Logs various information about each selected entity.";
 };
 class ENH_LogClassesString
 {
-    action = "'CLASSES' call ENH_fnc_logEntityInfo";
+    action = QUOTE('CLASSES' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGCLASSESSTRING";
     conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker";
     wikiDescription = "Logs all unique classes of all selected entities.";
 };
 class ENH_LogPositions3D
 {
-    action = "'3D' call ENH_fnc_logEntityInfo";
+    action = QUOTE('3D' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS3D";
     conditionShow = "1 - (hoverLayer + selectedMarker)";
     wikiDescription = "Logs all 3D positions of all selected entities.";
 };
 class ENH_LogPositions2D
 {
-    action = "'2D' call ENH_fnc_logEntityInfo";
+    action = QUOTE('2D' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGPOSITIONS2D";
     conditionShow = "1 - hoverLayer";
     wikiDescription = "Logs all 2D positions of all selected entities.";
 };
 class ENH_LogGridPositon
 {
-    action = "'GRIDPOS' call ENH_fnc_logEntityInfo";
+    action = QUOTE('GRIDPOS' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGGRIDPOSITION";
     conditionShow = "1 - hoverLayer";
     wikiDescription = "Logs all grid positions of all selected entities.";
@@ -128,14 +129,14 @@ class ENH_SeparatorLog
 };
 class ENH_Log3DENID
 {
-    action = "'IDS' call ENH_fnc_logEntityInfo";
+    action = QUOTE('IDS' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOG3DENIDS";
     conditionShow = "selected";
     wikiDescription = "Logs all entity ids of all selected entities.";
 };
 class ENH_LogVarNames
 {
-    action = "'VARNAMES' call ENH_fnc_logEntityInfo";
+    action = QUOTE('VARNAMES' call ENH_fnc_logEntityInfo);
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGVARNAMES";
     conditionShow = "selectedObject + selectedWaypoint + selectedLogic + selectedMarker + selectedGroup";
     wikiDescription = "Logs all variable names of all selected entities.";
@@ -150,7 +151,7 @@ class Edit
 };
 class ENH_DeleteCrew
 {
-    action = "call ENH_fnc_deleteCrew";
+    action = QUOTE(call ENH_fnc_deleteCre);
     text = "$STR_ENH_MAIN_CONTEXTMENU_DELETECREW";
     conditionShow = "selectedObjectVehicle * script1";
     conditionScript1 = QUOTE(if (_this isEqualType objNull) then {fullCrew _this isNotEqualTo []} else {false});
@@ -166,7 +167,7 @@ class ConnectParent
 };
 class ENH_TriggerOwnerPlayer
 {
-    action = "add3DENConnection ['TriggerOwner', get3DENSelected 'Trigger', player]";
+    action = QUOTE(add3DENConnection ARR_3(['TriggerOwner',get3DENSelected 'Trigger',player]));
     text = "$STR_ENH_MAIN_CONTEXTMENU_SETTRIGGEROWNERPLAYER";
     conditionShow = "selectedTrigger";
     wikiDescription = "Sets the player as trigger of selected trigger.";
@@ -190,5 +191,5 @@ class ENH_SelectionFilter
 // Vanilla entries, modified
 class MoveCamera
 {
-    action = "spawn ENH_fnc_centerMapOnSelection";
+    action = QUOTE(spawn ENH_fnc_centerMapOnSelection);
 };
