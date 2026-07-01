@@ -13,7 +13,6 @@ class ENH_Garrison2
             expression = "profileNamespace setVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', _value]";
             defaultValue = "profileNamespace getVariable ['ENH_EditorPreferences_Garrison2_CreateLayer', false]";
         };
-        // TODO: Broken. See https://feedback.bistudio.com/T191578 2025-05-03 R3vo
         class ENH_Garrison2_GroupTogether: ENH_Garrison2_CreateLayer
         {
             displayName = "$STR_ENH_MAIN_PREFERENCES_GARRISON2_GROUP_TOGETHER_DISPLAYNAME";

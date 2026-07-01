@@ -1,5 +1,22 @@
+#include "\x\enh\addons\main\script_component.hpp"
+
+/*
+    Author: R3vo
+
+    Date: 2026-05-24
+
+    Description:
+    Tries every possible way to get the correct module icon.
+
+    Parameter(s):
+    0: CONFIG - Config path to module
+
+    Return Value:
+    STRING - Icon path
+*/
+
+
 params ["_cfgModule"];
-// TODO: header 2025-10-06 R3vo
 private _configName = configName _cfgModule;
 private _cfgVehicles = configFile >> "CfgVehicles";
 private _icon = "";
@@ -17,12 +34,6 @@ call
     {
         _icon = getText (_cfgVehicles >> (getText (_cfgModule >> "vehicle")) >> "icon");
     };
-
-    // Get it from empty detector (for triggers) class that is defined in module config
-    // if (_icon == "" && {getText (_cfgModule >> "vehicle") != ""}) exitWith
-    // {
-    //     _icon = getText (configFile >> "CfgNonAIVehicles" >> (getText (_cfgModule >> "vehicle")) >> "icon");
-    // };
 
     // Get it from module config
     if (_icon == "") exitWith
