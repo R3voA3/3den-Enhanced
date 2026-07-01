@@ -4774,6 +4774,12 @@
             <Chinese>禁用AI掩護能力</Chinese>
             <Chinesesimp>禁用AI掩护能力</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_FIREWEAPON_DISPLAYNAME">
+            <English>Fire Weapon</English>
+        </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_FIREWEAPON_TOOLTIP">
+            <English>Disables AI's ability to fire weapons.</English>
+        </Key>
         <Key ID="STR_ENH_MAIN_DISABLEAI_FSM_TOOLTIP">
             <English>Disable the execution of AI behaviour scripts.</English>
             <Czech>Znemožní spouštění behaviorálních skriptů umělé inteligence.</Czech>
@@ -4785,6 +4791,12 @@
             <German>Deaktiviert das Ausführen der KI Verhaltens Skripte.</German>
             <Chinese>禁用執行AI行為腳本</Chinese>
             <Chinesesimp>禁用执行AI行为脚本</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_HEARING_DISPLAYNAME">
+            <English>Hearing</English>
+        </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_HEARING_TOOLTIP">
+            <English>Disables AI's hearing.</English>
         </Key>
         <Key ID="STR_ENH_MAIN_DISABLEAI_LIGHTS_DISPLAYNAME">
             <English>Lights</English>
