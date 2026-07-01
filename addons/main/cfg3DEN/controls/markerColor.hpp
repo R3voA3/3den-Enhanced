@@ -1,37 +1,28 @@
-class ENH_MarkerColor: Title
+class MarkerColor2: Title
 {
-    attributeLoad = "[_this, _value] call ENH_fnc_markerColor_onAttributeLoad";
-    attributeSave = "_this call ENH_fnc_markerColor_onAttributeSave";
-    h = QUOTE(6 * CTRL_DEFAULT_H + 25 * pixelH);
-    class Controls: Controls
+    h = QUOTE(6 * CTRL_DEFAULT_H + 30 * pixelH);
+    onLoad = "_this call ENH_fnc_markerColor_onAttributeLoad";
+    class Controls
     {
-        class Title: Title {};
-        class CheckboxEnable: ctrlCheckbox
+        class Value: ctrlEdit
         {
-            idc = IDC_ATTRIBUTE_CONTROL_00;
+            idc = 100;
+            text = "";
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = 0;
-            w = QUOTE(5 * GRID_W);
+            w = QUOTE(ATTRIBUTE_CONTENT_W  * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
+            onEditChanged = "_this call ENH_fnc_markerColor_editChanged";
         };
         class SliderRed: ctrlXSliderH
         {
             idc = IDC_ATTRIBUTE_CONTROL_01;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(1 * CTRL_DEFAULT_H + 5 * pixelH);
-            w = QUOTE((ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
+            w = QUOTE(ATTRIBUTE_CONTENT_W  * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
             sliderRange[] = {0, 1};
             color[] = {COLOR_RED_RGBA};
             colorActive[] = {COLOR_RED_RGBA};
-        };
-        class EditRed: ctrlEdit
-        {
-            idc = IDC_ATTRIBUTE_CONTROL_02;
-            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - EDIT_W_WIDE) * GRID_W);
-            y = QUOTE(1 * CTRL_DEFAULT_H + 5 * pixelH);
-            w = QUOTE(EDIT_W_WIDE * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
         };
         class SliderGreen: SliderRed
         {
@@ -40,11 +31,6 @@ class ENH_MarkerColor: Title
             color[] = {COLOR_GREEN_RGBA};
             colorActive[] = {COLOR_GREEN_RGBA};
         };
-        class EditGreen: EditRed
-        {
-            idc = IDC_ATTRIBUTE_CONTROL_04;
-            y = QUOTE(2 * CTRL_DEFAULT_H + 10 * pixelH);
-        };
         class SliderBlue: SliderRed
         {
             idc = IDC_ATTRIBUTE_CONTROL_05;
@@ -52,28 +38,47 @@ class ENH_MarkerColor: Title
             color[] = {COLOR_BLUE_RGBA};
             colorActive[] = {COLOR_BLUE_RGBA};
         };
-        class EditBlue: EditRed
-        {
-            idc = IDC_ATTRIBUTE_CONTROL_06;
-            y = QUOTE(3 * CTRL_DEFAULT_H + 15 * pixelH);
-        };
-        class Preview: ctrlStatic
+        class SliderAlpha: SliderRed
         {
             idc = IDC_ATTRIBUTE_CONTROL_07;
-            x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
             y = QUOTE(4 * CTRL_DEFAULT_H + 20 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
-            h = QUOTE(CTRL_DEFAULT_H);
+            color[] = {1, 1, 1, 0.6};
+            colorActive[] = {1, 1, 1, 1};
+        };
+        class Preview: Title
+        {
+            idc = IDC_ATTRIBUTE_CONTROL_09;
+            text = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_COLOR_PREVIEW";
+            x = QUOTE((ATTRIBUTE_TITLE_W - 20) * GRID_W - GRID_W);
+            y = QUOTE(CTRL_DEFAULT_H);
+            w = QUOTE(20 * GRID_W);
+            h = QUOTE(4 * CTRL_DEFAULT_H + 15 * pixelH);
             colorBackground[] = {1, 1, 1, 1};
         };
         class ComboHistory: ctrlCombo
         {
-            idc = IDC_ATTRIBUTE_CONTROL_08;
-            onLoad = "_this call ENH_fnc_markerColor_onAttributeLoad";
+            idc = IDC_ATTRIBUTE_CONTROL_10;
             x = QUOTE(ATTRIBUTE_TITLE_W * GRID_W);
-            y = QUOTE(5 * CTRL_DEFAULT_H + 25 * pixelH);
-            w = QUOTE(ATTRIBUTE_CONTENT_W * GRID_W);
+            y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
+            w = QUOTE((ATTRIBUTE_CONTENT_W - 10) * GRID_W);
             h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class HistoryAdd: ctrlButtonToolbar
+        {
+            idc = IDC_ATTRIBUTE_CONTROL_11;
+            text = "x\enh\addons\main\data\plus_ca.paa";
+            tooltip = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET";
+            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 10) * GRID_W);
+            y = QUOTE(5 * CTRL_DEFAULT_H + 30 * pixelH);
+            w = QUOTE(5 * GRID_W);
+            h = QUOTE(CTRL_DEFAULT_H);
+        };
+        class HistoryRemove: HistoryAdd
+        {
+            idc = IDC_ATTRIBUTE_CONTROL_12;
+            text = "x\enh\addons\main\data\minus_ca.paa";
+            tooltip = "$STR_ENH_MAIN_CUSTOM_MARKER_COLOR_REMOVE_PRESET";
+            x = QUOTE((ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W - 5) * GRID_W);
         };
     };
 };

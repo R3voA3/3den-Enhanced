@@ -124,7 +124,7 @@ private _code =
     };
 
     // Show custom marker color and shape on hover
-    call ENH_fnc_3DENShowCustomMarkerColorAndShape;
+    call ENH_fnc_3DENShowCustomMarkerShape;
 
     // We return nil here, otherwise we break other mods (CBA, ACE)
     nil

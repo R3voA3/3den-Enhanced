@@ -6,7 +6,7 @@ class ENH_SliderMultiZero: SliderMultiplier
         class Edit: Edit {};
         class Value: Value
         {
-            sliderRange[] = {0, 3};
+            sliderRange[] = {0, 10};
             sliderPosition = 1;
             lineSize = 0.1;
             sliderStep = 0.1;

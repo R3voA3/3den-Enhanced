@@ -1,14 +1,14 @@
 allowFunctionsRecompile = 1;
 allowFunctionsLog = 1;
 
-//- GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration
-//- Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types
-//- Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles
+// GUI Documenation: https://community.bistudio.com/wiki/Arma:_GUI_Configuration
+// Control Types:    https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Types
+// Control Styles:   https://community.bistudio.com/wiki/Arma:_GUI_Configuration#Control_Styles
 
-//3den Enhanced Macros
+// 3den Enhanced Macros
 #include "\x\enh\addons\main\script_component.hpp"
 
-//Eden Editor Base Controls
+// Eden Editor Base Controls
 import ctrlActivePicture;
 import ctrlActivePictureKeepAspect;
 import ctrlActiveText;
@@ -76,7 +76,7 @@ import ctrlXListbox;
 import ctrlXSliderH;
 import ctrlXSliderV;
 
-//Disabled background
+// Disabled background
 #define DISABLE_BACKGROUND class BackgroundDisable: ctrlStaticBackgroundDisable {};\
                                                      class BackgroundDisableTiles: ctrlStaticBackgroundDisableTiles {};
 

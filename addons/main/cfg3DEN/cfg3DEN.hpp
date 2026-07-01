@@ -73,13 +73,14 @@ class Cfg3DEN
         class ENH
         {
             init = "call ENH_fnc_EH_init";
-            onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
-            onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
+            onEditableEntityAdded = "call ENH_fnc_EH_onEditableEntityAdded";
+            onMissionAutoSave = "call ENH_fnc_createBackupMissionSQM";
             onMissionLoad = "call ENH_fnc_EH_onMissionLoad";
             onMissionNew = "call ENH_fnc_EH_onMissionNew";
             onMissionPreview = "call ENH_fnc_EH_onMissionPreview";
+            onMissionPreviewEnd = "call ENH_fnc_EH_onMissionPreviewEnd";
             onMissionSave = "call ENH_fnc_createBackupMissionSQM";
-            onMissionAutoSave = "call ENH_fnc_createBackupMissionSQM";
+            onTerrainNew = "call ENH_fnc_EH_onTerrainNew";
         };
     };
     class Attributes
@@ -254,6 +255,7 @@ class Cfg3DEN
                 class Attributes
                 {
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\featureType.hpp"
+                    #include "\x\enh\addons\main\cfg3DEN\attributesObject\turretStabilization.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\forceFlag.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\setMass.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\waterLeakiness.hpp"
@@ -283,11 +285,23 @@ class Cfg3DEN
             {
                 class Attributes
                 {
-                    #include "\x\enh\addons\main\cfg3DEN\attributesMarker\markerColor.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesMarker\markerShape.hpp"
                 };
             };
             #include "\x\enh\addons\main\cfg3DEN\attributesMarker\markerHideOnStart.hpp"
+        };
+    };
+    class Layer
+    {
+        class AttributeCategories
+        {
+            class Init
+            {
+                class Attributes
+                {
+                    #include "\x\enh\addons\main\cfg3DEN\attributesLayer\defaultLayer.hpp"
+                };
+            };
         };
     };
     class ENH_3DENCommandPalette_Commands

@@ -81,7 +81,7 @@ class ENH_TogglePlayable
 {
     text = "$STR_ENH_MAIN_TOOLS_PLAYABLE";
     action = "[['Object'], ['ControlMP']] call ENH_fnc_toggleAttributes";
-    picture = "\a3\3den\data\cfg3den\object\iconplayer_ca.paa";
+    picture = TEXTURE_PLAYER;
     shortcuts[] = {INPUT_ALT_OFFSET + DIK_P};
     wikiDescription = "Toggles playable state of all selected entities.";
 };
