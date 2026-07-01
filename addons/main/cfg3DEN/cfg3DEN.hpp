@@ -255,6 +255,7 @@ class Cfg3DEN
                 class Attributes
                 {
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\featureType.hpp"
+                    #include "\x\enh\addons\main\cfg3DEN\attributesObject\turretStabilization.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\forceFlag.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\setMass.hpp"
                     #include "\x\enh\addons\main\cfg3DEN\attributesObject\waterLeakiness.hpp"

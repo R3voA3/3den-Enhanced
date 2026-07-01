@@ -10,6 +10,7 @@ class ENH_EventHandlers
             property = "ENH_EventHandlers_Subcategory";
             control = "ENH_SubCategoryNoHeader3_Fixed";
         };
+        EH_CONFIG(AmmoExplodedNear,1);
         EH_CONFIG(AnimChanged,objectControllable);
         EH_CONFIG(AnimDone,objectControllable);
         EH_CONFIG(AnimStateChanged,objectControllable);
@@ -55,6 +56,7 @@ class ENH_EventHandlers
         EH_CONFIG(LandedTouchDown,objectVehicle);
         EH_CONFIG(Landing,objectVehicle);
         EH_CONFIG(LandingCanceled,objectControllable);
+        EH_CONFIG(LaserTargetChanged,objectControllable + objectVehicle);
         EH_CONFIG(LeaningChanged,objectControllable);
         EH_CONFIG(Local,1);
         EH_CONFIG(MagazineUnloaded,objectControllable);
