@@ -8,6 +8,7 @@
 - Default Layer Functionality
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
+- Turret Stabilization attribute to all vehicles with turrets
 - Support for AmmoExplodedNear and LaserTargetChanged events
 - Disable AI Feature flags "HEARING" and "FIREWEAPON"
 
