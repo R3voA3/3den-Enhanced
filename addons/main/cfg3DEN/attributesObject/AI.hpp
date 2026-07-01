@@ -220,5 +220,19 @@ class ENH_AI
             property = "ENH_disableAI_radioProtocol";
             expression = "if (_value && local _this) then {[_this, 'RADIOPROTOCOL'] remoteExec ['disableAI', 0]}";
         };
+        class ENH_FireWeapon: ENH_All
+        {
+            displayName = "$STR_ENH_MAIN_DISABLEAI_FIREWEAPON_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_DISABLEAI_FIREWEAPON_TOOLTIP";
+            property = "ENH_disableAI_fireWeapon";
+            expression = "if (_value && local _this) then {[_this, 'FIREWEAPON'] remoteExec ['disableAI', 0]}";
+        };
+        class ENH_Hearing: ENH_All
+        {
+            displayName = "$STR_ENH_MAIN_DISABLEAI_HEARING_DISPLAYNAME";
+            tooltip = "$STR_ENH_MAIN_DISABLEAI_HEARING_TOOLTIP";
+            property = "ENH_disableAI_hearing";
+            expression = "if (_value && local _this) then {[_this, 'HEARING'] remoteExec ['disableAI', 0]}";
+        };
     };
 };
