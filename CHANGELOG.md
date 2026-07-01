@@ -44,7 +44,8 @@ since Eden Editor can now natively show custom colors
 - Conditions of all context menu entries were overhauled
 - Log positions (2D/3D) context menu actions now also work if nothing is selected
 - Move to Layer tool can now also move comments
-- Garrisoned units can optionally be groupe together (toggle the setting in preferences)
+- Advanced Damage attribute is now hidden if not all select objects are of the same class
+- Garrisoned units can optionally be grouped together (toggle the setting in preferences)
 - The following functions are now final (cannot be changed during runtime)
     - ENH_SPR_OnRespawnCode
     - ENH_fnc_SPR_respawnTimer

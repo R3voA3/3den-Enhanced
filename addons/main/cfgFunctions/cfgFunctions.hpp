@@ -133,6 +133,7 @@ class CfgFunctions
             class getConfigSourceAddon {};
             class hasStorage {};
             class initSearchControls {};
+            class isObjSelectionIdentical {};
             class parseShortcut {};
             class systemTimeFormatted {};
         };
