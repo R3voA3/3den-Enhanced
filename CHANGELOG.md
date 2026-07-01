@@ -9,8 +9,12 @@
     - Right click on a layer to set it as default. Placed units will then be moved automatically
     into that layer.
 - Support for AmmoExplodedNear and LaserTargetChanged events
+- Disable AI Feature flags "HEARING" and "FIREWEAPON"
 
 ## CHANGED
+- Advanced Equipment Editor
+    - Readded back hidden items
+    - Improved various functions
 - Module Information
     - Complete overhaul of Module Information UI. It now shows entites that can be synced similar to the old editor
     - Module Information UI would not show all descriptions of all modules
@@ -41,7 +45,8 @@ since Eden Editor can now natively show custom colors
 - Conditions of all context menu entries were overhauled
 - Log positions (2D/3D) context menu actions now also work if nothing is selected
 - Move to Layer tool can now also move comments
-- Garrisoned units can optionally be groupe together (toggle the setting in preferences)
+- Advanced Damage attribute is now hidden if not all select objects are of the same class
+- Garrisoned units can optionally be grouped together (toggle the setting in preferences)
 - The following functions are now final (cannot be changed during runtime)
     - ENH_SPR_OnRespawnCode
     - ENH_fnc_SPR_respawnTimer
@@ -51,6 +56,8 @@ since Eden Editor can now natively show custom colors
     - ENH_fnc_makeHostage
 - Removed superfluous logging from Ambient Flyby
 - Expanded information displayed in product information
+- Improved remote execution of disableAI feature flags
+- Briefings now properly show again (Thanks to Tuupertunut)
 
 ## REMOVED
 - Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
