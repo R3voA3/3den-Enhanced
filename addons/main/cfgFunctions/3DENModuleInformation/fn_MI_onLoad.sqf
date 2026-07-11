@@ -24,7 +24,10 @@ if (isNull _module) exitWith {};
 _display setVariable ["Module", _module];
 private _moduleInformation = [[configOf _module] call ENH_fnc_MI_getInformationData] call ENH_fnc_MI_formatInformationData;
 
-CTRL(IDC_MODULEINFORMATION_DESCRIPTION) call ENH_fnc_MI_resizeInformationControl;
+private _ctrlStructuredText = CTRL(IDC_MODULEINFORMATION_DESCRIPTION);
+
+_ctrlStructuredText ctrlSetStructuredText _moduleInformation;
+_ctrlStructuredText call ENH_fnc_MI_resizeInformationControl;
 
 [_display, typeOf _module] call ENH_fnc_MI_createSyncPreview;
 
