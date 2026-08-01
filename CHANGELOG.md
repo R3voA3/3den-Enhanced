@@ -10,7 +10,7 @@
     into that layer.
 - Turret Stabilization attribute to all vehicles with turrets
 - Support for AmmoExplodedNear and LaserTargetChanged events
-- Disable AI Feature flags "HEARING" and "FIREWEAPON"
+- Disable AI Feature flags "HEARING", "COMMAND and "FIREWEAPON"
 
 ## CHANGED
 - Advanced Equipment Editor
