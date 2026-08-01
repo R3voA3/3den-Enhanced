@@ -10,17 +10,17 @@
     into that layer.
 - Turret Stabilization attribute to all vehicles with turrets
 - Support for AmmoExplodedNear and LaserTargetChanged events
-- Disable AI Feature flags "HEARING", "COMMAND and "FIREWEAPON"
+- Disable AI feature flags "HEARING", "COMMAND" and "FIREWEAPON"
 
 ## CHANGED
 - Advanced Equipment Editor
-    - Readded back hidden items
+    - Re-added hidden items
     - Improved various functions
 - Module Information
-    - Complete overhaul of Module Information UI. It now shows entites that can be synced similar to the old editor
+    - Complete overhaul of Module Information UI. It now shows entities that can be synced similar to the old editor
     - Module Information UI would not show all descriptions of all modules
 
-- Hostage Attriubute
+- Hostage Attribute
     - Hostage will automatically be placed in the captive state, as well as out of it when freed, so that they aren't engaged by nearby AI
     - "MOVE" AI will be disabled while tied up, to prevent the hostage from turning around to look at nearby units
     - When freed, the hostage will automatically join the caller's group and run a doStop, preventing it from running around on its own until commanded to regroup or move to a new location by the group's leader.
@@ -35,15 +35,15 @@
 - Fixed hold action edit boxes would in some cases not show entire text (#453)
 - Improved Unit Trait Description's localization
 - French translation update by Alfred-Neuman
-- Removed 0 infront of spawn were applicable
+- Removed '0' in front of spawn where applicable
 - Removed ? from attribute titles for consistency
 - Overhauled Custom Marker color attribute to make it work with the native implementation
 - Hovering over a marker will only show an icon now if a custom shape is set
-since Eden Editor can now natively show custom colors
+    - Since Eden Editor can now natively show custom colors
 - Improved translation
 - Improved status bar visuals for session timer and version button
 - Improved translation of Measure Distance tool by Westalgie
-- ENH_SliderMultiZero attribute control now can go up to 10x compared to 3x
+- ENH_SliderMultiZero attribute control can now go up to 10x (previously 3x)
 - Conditions of all context menu entries were overhauled
 - "Move to Layer" tool can now also move comments
 - "Add to Favorites" is now only shown for entities that are not already favorites
@@ -65,7 +65,7 @@ since Eden Editor can now natively show custom colors
 - Briefings now properly show again (Thanks to Tuupertunut)
 
 ## REMOVED
-- Legacy garrison feature. Garrison2 feature (Shortcut: G) was added a while ago
+- Removed legacy garrison feature. Garrison2 feature (Shortcut: G) was added earlier.
 
 # 8.7.1
 ## ADDED
@@ -105,7 +105,7 @@ since Eden Editor can now natively show custom colors
 # 8.6.2
 ## CHANGED
 - When marker preview setting is changed in preferences, changes are applied immediately now
-- Custom Marker Color and Shape preview was overhauled. Instead of modifing the marker, a small icon will now appear next to the tooltip on hover
+- Custom Marker Color and Shape preview was overhauled. Instead of modifying the marker, a small icon will now appear next to the tooltip on hover
 
 # 8.6.1
 ## CHANGED
@@ -123,14 +123,14 @@ since Eden Editor can now natively show custom colors
 ## ADDED
 - Custom icons for the hold action attribute can now be defined in the Editor preferences -> Misc.
 - Icon picker to the hold action attribute  #435
-- ENH_fnc_iconPicker, an simple Icon Picker
+- ENH_fnc_iconPicker, a simple Icon Picker
 
 ## CHANGED
 - Fixed delete crew tool would not work on UAVs/UAV Turrets (Thanks hypoxia125) #433
 - Fixed that unit traits and attributes would conflict with ACE (Thanks Nomas-X for the detailed issue) #436
 - Fixed tooltips for the input list attribute control were swapped
 - Fixed minimap code would run 1 frame into eden preview disabling map indicators
-- Fixed that AI attributes would have no effect when entity is transfered to a headless client (Thanks KJW)
+- Fixed that AI attributes would have no effect when an entity is transferred to a headless client (Thanks KJW)
 - Minor script optimizations and formatting improvements
 
 # 8.4.0
@@ -154,8 +154,8 @@ since Eden Editor can now natively show custom colors
 
 # 8.3.0
 ## ADDED
-- The "Editable Objects (Zeus) has been expanded. You can now either only add pre placed objects to Zeus or all objects continiously
-- ENH_fnc_initSearchControls to easily setup a search with an image button and a edit box as used everywhere in Eden editor
+- The "Editable Objects (Zeus)" has been expanded. You can now either add only pre-placed objects to Zeus or include all objects continuously.
+- ENH_fnc_initSearchControls to easily set up a search with an image button and an edit box as used everywhere in Eden Editor
 - Function to parse array3 from clipboard
 
 ## CHANGED
@@ -173,7 +173,7 @@ since Eden Editor can now natively show custom colors
 - Airdrop Attribute
     - Completely overhauled the UI
 - French translation update by Alfred-Neuman
-- Controls of Dynamic Skill attribute are now properly disabled/enabled depening on attribute state
+- Controls of Dynamic Skill attribute are now properly disabled/enabled depending on attribute state
 - The random music attribute now has a list showing all music tracks available
 - Fixed that the first control in the advanced damage attribute would overlap the description
 - Fixed event handler from casualties attribute would not get removed properly, sometimes executing the mission ending multiple times
@@ -284,7 +284,7 @@ since Eden Editor can now natively show custom colors
     - Briefing attributes should now create diary entries in same order every time #297
     - Dynamic view distance was no longer working after preview ended
     - Draw DLC icons and building positions were move to preferences
-    - Added description to menu strip items for easier documenation
+    - Added description to menu strip items for easier documentation
     - Changed shortcut for Placement Tools from CTRL + L to CTRL + ALT + L (CBA compatibility)
     - SPR attribute controls are now enabled/disabled depending on ruleset
 
@@ -714,7 +714,7 @@ menu
 
 - Group Marker Attribute
     - Fixed an issue that would cause a script error popping up
-    - Attribute is now also properly loaded if multiple entites are edited at once
+    - Attribute is now also properly loaded if multiple entities are edited at once
     - Minor network optimisations to the Group Marker attribute
     - Added tooltips to the controls
     - Tweaked default value
@@ -891,7 +891,7 @@ menu
     - Merged onButtonDown code of attribute controls into onAttributeLoad functions
     - Added support to most attributes for localized text
     - Added missing tooltips for side toolbox controls
-    - Feature Type and Terrain detail attribute controls were simplyfied
+    - Feature Type and Terrain detail attribute controls were simplified
     - Task Patrol attribute uses an edit box now again to give the scenario editor more freedom
     - AI Features and AI Skill as well as Allow Fleeing attributes were merged into category AI
     - Editor Preferences are now using get3DENMissionAttribute instead of profileNamespace vars
@@ -978,7 +978,7 @@ menu
 - Fixed missing string in 3den Radio
 - 3DEN Cam Positions will now also show the time and date when the position was saved
 - Fixed an issue in 3DEN Cam Positions which would show an error message when selecting a position
-- German translation has recieved some fixes thanks to Mr-Melker
+- German translation has received some fixes thanks to Mr-Melker
 - Fixed a wrong condition in context menu causing some .RPT entries
 - Fixed an issue which caused CTRL + X shortcut in the Functions Viewer to cause a script error
 - Custom GUIs will no longer hide Eden Interface- Fixed a bug which would cause Grid Pattern to not work
@@ -1136,7 +1136,7 @@ menu
 - DisableAI "radioprotocol"
 - Attribute to end mission after certain number of units of given side were killed (e.g. civilian casualties)
 - Added Editor Attribute to toggle Entity Counter in status bar- Added a tool to quickly toggle simulation of selected objects
-- Added a tool to quickly setup a simple extraction
+- Added a tool to quickly set up a simple extraction
 - Script Commands Viewer to menu strip -> tools -> utilities
 - A function to convert floats to time format minutes:seconds
 
@@ -1464,7 +1464,7 @@ menu
 
 ## ADDED
 - Menu strip tool to quickly toggle simple object state
-- Context menu tool to log 2D positions of selected entites to clipboard
+- Context menu tool to log 2D positions of selected entities to clipboard
 - Added help entry for description.ext
 - "About 3den++" menu strip category
 
@@ -1726,7 +1726,7 @@ menu
 - Various function improvements
 - Improve unit traits attribute (Attribute needs to be saved once, to apply the new values)
 - Advanced skill was missing its Enh TAG
-- Fixed issue where the garrison function would sometimes recieve a wrong data type
+- Fixed issue where the garrison function would sometimes receive a wrong data type
 - Added tutorial for the garrison functionality
 - Added ... to all menu strip entry which open a subfolder or new page. Mainly to be on par with the BIS design guidelines
 - New icon for the tools folder
@@ -1885,7 +1885,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Completely overhauled the garrison function
 1. Select the units/objects you want to place in houses and place them near the buildings
 2. Open the Context menu (right click on one of the selected units) -> select Edit -> Garrison Buildings
-3. Objects/Units will now be automatically be placed inside buildings, you'll recieve a msg in case some units/objects could no be placed
+3. Objects/Units will now be automatically placed inside buildings; you'll receive a message if some units/objects could not be placed.
 4. The size and coverage of the area can be changed in the preferences menu of Eden
 
 # 1.2
@@ -1902,7 +1902,7 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 - Currently played song of the playMusic preference attribute is now displayed at the bottom of the screen
 - Attribute to play random music at the beginning of the mission -> Scenario Attributs -> Music, Sound & Radiosettings
 - Attribute to set respawn tickets for all sides
-- Version check. Player will now recieve a warning if game version is greater than required version and dev branch is used
+- Version check. Player will now receive a warning if game version is greater than required version and dev branch is used
 - Version check function
 - French translation
 
