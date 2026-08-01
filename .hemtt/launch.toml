@@ -2,28 +2,28 @@
 ############################## LAUNCH DEFAULT ############################################
 ##########################################################################################
 [default]
-
 workshop = [
     # Pythia
     "1751569185",
     # 7erra's Editing Extensions
     "1387934106",
     # 3Den Stringtable Viewer
-    "2073243184",
+    # "2073243184",
     # Debug Console
     "1231625987",
-    # SplinePlacer
-    "3687041036",
     # CBA
     "450814997",
     # ACE3
     "463939057",
+    # 3DEN Attributes Fast Load
+    "3023395342",
     # Advanced Developer Tools
     # "3499977893"
 ]
 
 parameters = [
-    "-limitFPS=60"
+    "-limitFPS=60",
+    "-language=english"
 ]
 
 mission = "3denEnhanced.VR" # Mission to launch directly into the editor with
