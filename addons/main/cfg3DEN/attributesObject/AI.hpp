@@ -234,5 +234,12 @@ class ENH_AI
             property = "ENH_disableAI_hearing";
             expression = "if (_value) then {[_this, 'HEARING'] remoteExec ['disableAI', _this]}";
         };
+        class ENH_Command: ENH_All
+        {
+            displayName = "STR_ENH_MAIN_DISABLEAI_COMMAND_DISPLAYNAME";
+            tooltip = "STR_ENH_MAIN_DISABLEAI_COMMAND_TOOLTIP";
+            property = "ENH_disableAI_command";
+            expression = "if (_value) then {[_this, 'COMMAND'] remoteExec ['disableAI', _this]}";
+        };
     };
 };
