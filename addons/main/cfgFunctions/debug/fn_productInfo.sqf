@@ -94,11 +94,14 @@ private _textResolution = format
     getResolution # 9
 ];
 
-private _textVideoSettings = "";
+private _textVideoSettings = [];
 
+_textVideoSettings = getVideoOptions apply
 {
-    _textVideoSettings = _textVideoSettings + format ["%1: %2" + endl, _x, _y];
-} forEach getVideoOptions;
+    format ["%1: %2", _x, _y];
+};
+
+_textVideoSettings = _textVideoSettings joinString endl;
 
 private _text = format
 [
@@ -111,6 +114,7 @@ private _text = format
     "Video Options:" +
     endl +
     "%3" +
+    endl +
     endl +
     "Mods:" +
     endl +
