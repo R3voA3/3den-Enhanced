@@ -70,7 +70,7 @@ ENH_AttributeSearch_AttributesCounter_Valid = 0;
     {
         _x params ["_attributeName", "_ignoredValues"];
 
-        _ignoredValues = _ignoredValues pushBack "";
+        _ignoredValues pushBack "";
         private _attributeValue = ATT(_entity,_attributeName);
 
         private _displayName = switch (true) do
