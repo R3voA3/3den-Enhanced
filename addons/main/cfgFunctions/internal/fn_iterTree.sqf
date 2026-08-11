@@ -21,13 +21,13 @@ private _fnc_iterTree =
 {
     params ["_menuStrip", "_path"];
 
-    private _indent = "";
-
-    {
-        _indent = _indent + "    ";
-    } forEach _path;
-
-    diag_log format ["%1Menu item %2: %3", _indent, _path, _menuStrip menuText _path];
+    diag_log format
+    [
+        "%1Menu item %2: %3",
+        _path apply {INDENT} joinString "", // Add indentation for each level
+        _path,
+        _menuStrip menuText _path
+    ];
 
     if ((_menuStrip menuText _path) == "Open Command Palette") then
     {
