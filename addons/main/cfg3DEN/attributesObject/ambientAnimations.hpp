@@ -25,7 +25,20 @@ class ENH_AmbientAnimations
                 _this disableAI 'ANIM';\
                 if (_attach && !is3DEN) then\
                 {\
-                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];\
+                    private _varName = format ['ENH_fnc_ambientAnimations_side_%1', side _this];\
+                    if (isNil _varName) then\
+                    {\
+                        missionNamespace setVariable [_varName, createGroup (side _this)];\
+                    };\
+                    \
+                    private _logic = (missionNamespace getVariable _varName) createUnit\
+                    [\
+                        'Logic',\
+                        getPosATL _this,\
+                        [],\
+                        0,\
+                        'NONE'\
+                    ];\
                     _this setVariable ['ENH_ambientAnimations_logic', _logic];\
                     [_this, _logic] call BIS_fnc_attachToRelative;\
                 };\
