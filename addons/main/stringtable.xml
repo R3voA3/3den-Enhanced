@@ -4750,6 +4750,32 @@
             <Chinese>禁用AI自動分配目標能力</Chinese>
             <Chinesesimp>禁用AI自动分配目标能力</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_COMMAND_DISPLAYNAME">
+            <English>Command</English>
+            <Czech>Příkaz</Czech>
+            <French>Commande</French>
+            <Spanish>Comando</Spanish>
+            <Italian>Comando</Italian>
+            <Polish>Polecenie</Polish>
+            <Portuguese>Comando</Portuguese>
+            <Russian>Команда</Russian>
+            <German>Befehl</German>
+            <Chinese>命令</Chinese>
+            <Chinesesimp>命令</Chinesesimp>
+        </Key>
+        <Key ID="STR_ENH_MAIN_DISABLEAI_COMMAND_TOOLTIP">
+            <English>Disables AI's ability to issue commands.</English>
+            <Czech>Zakáže AI vydávání příkazů.</Czech>
+            <French>Désactive la capacité de l'IA à émettre des commandes.</French>
+            <Spanish>Deshabilita la capacidad de la IA para emitir comandos.</Spanish>
+            <Italian>Disabilita la capacità dell'IA di emettere comandi.</Italian>
+            <Polish>Wyłącza możliwość AI wydawania poleceń.</Polish>
+            <Portuguese>Desativa a capacidade da IA de emitir comandos.</Portuguese>
+            <Russian>Отключает способность ИИ отдавать команды.</Russian>
+            <German>Deaktiviert die Fähigkeit der KI, Befehle auszugeben.</German>
+            <Chinese>禁用AI发出命令的能力。</Chinese>
+            <Chinesesimp>禁用AI发出命令的能力。</Chinesesimp>
+        </Key>
         <Key ID="STR_ENH_MAIN_DISABLEAI_COVER_DISPLAYNAME">
             <English>Cover</English>
             <Czech>Krytí</Czech>
@@ -4987,32 +5013,6 @@
             <German>Deaktiviert die Fähigkeit der KI zu Zielen.</German>
             <Chinese>禁用AI索敵能力</Chinese>
             <Chinesesimp>禁用AI索敌能力</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_DISABLEAI_COMMAND_DISPLAYNAME">
-            <English>Command</English>
-            <Czech>Příkaz</Czech>
-            <French>Commande</French>
-            <Spanish>Comando</Spanish>
-            <Italian>Comando</Italian>
-            <Polish>Polecenie</Polish>
-            <Portuguese>Comando</Portuguese>
-            <Russian>Команда</Russian>
-            <German>Befehl</German>
-            <Chinese>命令</Chinese>
-            <Chinesesimp>命令</Chinesesimp>
-        </Key>
-        <Key ID="STR_ENH_MAIN_DISABLEAI_COMMAND_TOOLTIP">
-            <English>Disables AI's ability to issue commands.</English>
-            <Czech>Zakáže AI vydávání příkazů.</Czech>
-            <French>Désactive la capacité de l'IA à émettre des commandes.</French>
-            <Spanish>Deshabilita la capacidad de la IA para emitir comandos.</Spanish>
-            <Italian>Disabilita la capacità dell'IA di emettere comandi.</Italian>
-            <Polish>Wyłącza możliwość AI wydawania poleceń.</Polish>
-            <Portuguese>Desativa a capacidade da IA de emitir comandos.</Portuguese>
-            <Russian>Отключает способность ИИ отдавать команды.</Russian>
-            <German>Deaktiviert die Fähigkeit der KI, Befehle auszugeben.</German>
-            <Chinese>禁用AI发出命令的能力。</Chinese>
-            <Chinesesimp>禁用AI发出命令的能力。</Chinesesimp>
         </Key>
         <Key ID="STR_ENH_MAIN_DISABLEAI_TEAMSWITCH_DISPLAYNAME">
             <English>Team Switch</English>
