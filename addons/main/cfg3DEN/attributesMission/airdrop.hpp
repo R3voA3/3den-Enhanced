@@ -24,7 +24,7 @@ class ENH_Airdrop
                         scriptName 'ENH_Attribute_Airdrop';\
                         params ['_classes', '_center', '_condition', '_alt', '_r', '_side'];\
                         _condition = compile _condition;\
-                        waitUntil {sleep 1; call _condition};\
+                        waitUntil [{call _condition}, -1, 1];\
                         private _group = createGroup _side;\
                         playSound3D ['A3\Data_F_Warlords\sfx\flyby.wss', objNull, false, _center vectorAdd [0, 0, 100], 2.5];\
                         ENH_Airdrop_Units = [];\

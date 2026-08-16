@@ -212,10 +212,10 @@ ENH_fnc_attributeSearch_editAttributes =
         do3DENAction "OpenAttributes";
 
         // Wait until Edit Attributes display is present
-        waitUntil {!isNull findDisplay 315};
+        waitUntil {!isNull findDisplay IDD_DISPLAY3DENEDITATTRIBUTES};
 
         // Wait until Edit Attributes display is destroyed
-        waitUntil {isNull findDisplay 315};
+        waitUntil {isNull findDisplay IDD_DISPLAY3DENEDITATTRIBUTES};
 
         // Create attribute search display again
         findDisplay IDD_DISPLAY3DEN createDisplay "ENH_AttributeSearch";

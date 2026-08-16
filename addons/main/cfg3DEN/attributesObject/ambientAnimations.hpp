@@ -99,9 +99,13 @@ class ENH_AmbientAnimations
                         scriptName 'ENH_Attribute_AmbientAnimations';\
                         params ['_unit'];\
                         waitUntil\
-                        {\
-                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}\
-                        };\
+                        [\
+                            {\
+                                (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}\
+                            },
+                            -1,\
+                            1\
+                        ];\
                         _unit call ENH_fnc_ambientAnimations_exit;\
                     };\
                 };\

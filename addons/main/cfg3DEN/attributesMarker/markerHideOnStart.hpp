@@ -27,7 +27,7 @@ class ENH_MarkerHideOnStart
                 {\
                     params ['_marker', '_compiledValue'];\
                     scriptName 'ENH_MarkerShowOnCondition';\
-                    waitUntil {sleep 0.5; call _compiledValue};\
+                    waitUntil [{call _compiledValue}, -1, 0.5];\
                     private _newAlpha = missionNamespace getVariable [format ['ENH_attributesMarker_%1_initAlpha', _marker], 1];\
                     _marker setMarkerAlpha _newAlpha;\
                 }";
