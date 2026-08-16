@@ -10,7 +10,7 @@ class ENH_SaveLoadout
     _value spawn\
     {\
         params ['_value'];\
-        waitUntil {sleep 1; !isNull player};\
+        waitUntil [{!isNull player}, -1, 1];\
         switch _value do\
         {\
             case 1:\

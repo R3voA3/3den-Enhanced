@@ -125,7 +125,7 @@
 if (!is3DENPreview) exitWith {};
 
 // Small delay to give scenario time to fully initialize
-waitUntil {sleep 1; !isNull player};
+waitUntil [{!isNull player}, -1, 1];
 
 // Handle hint drawing with debug information
 ENH_DebugOptions_HintContent = createHashMap;
@@ -374,7 +374,7 @@ if GETVALUE("ShowGroups") then
         if (isNull _group) exitWith {};
 
         private _start = diag_tickTime;
-        waitUntil {sleep 1; units _group isNotEqualTo [] || diag_tickTime - _start > 5};
+        waitUntil [{units _group isNotEqualTo [] || diag_tickTime - _start > 5}, -1, 1];
         if (units _group isEqualTo []) exitWith {};
 
         private _icon = switch (side _group call BIS_fnc_sideID) do

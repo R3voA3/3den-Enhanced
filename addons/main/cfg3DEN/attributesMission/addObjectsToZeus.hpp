@@ -12,7 +12,7 @@ class ENH_AddObjectsToZeus
             _value spawn
             {
                 params ['_value'];
-                waitUntil {sleep 1; allCurators isNotEqualTo []};
+                waitUntil [{allCurators isNotEqualTo []}, -1, 1];
                 if (_value == 1 || _value == 2) then\
                 {\
                     allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};\

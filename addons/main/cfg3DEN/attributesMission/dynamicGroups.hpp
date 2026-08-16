@@ -20,7 +20,7 @@ class ENH_DynamicGroups
                         spawn\
                         {\
                             scriptName 'ENH_Attribute_DynamicGroups';\
-                            waitUntil {!isNull player};\
+                            waitUntil [{!isNull player}, -1, 1];\
                             ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;\
                         };\
                     };\
