@@ -63,6 +63,7 @@
 - Expanded information displayed in product information
 - Improved remote execution of disableAI feature flags
 - Briefings now properly show again (Thanks to Tuupertunut)
+- Logic created by Ambient Animation attribute will no longer be controllable by the player #525
 
 ## REMOVED
 - Removed legacy garrison feature. Garrison2 feature (Shortcut: G) was added earlier.
