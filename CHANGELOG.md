@@ -11,6 +11,7 @@
 - Turret Stabilization attribute to all vehicles with turrets
 - Support for AmmoExplodedNear and LaserTargetChanged events
 - Disable AI feature flags "HEARING", "COMMAND" and "FIREWEAPON"
+- Larger multi edit boxes for comments and scenario attributes
 
 ## CHANGED
 - Advanced Equipment Editor
@@ -64,6 +65,7 @@
 - Improved remote execution of disableAI feature flags
 - Briefings now properly show again (Thanks to Tuupertunut)
 - Logic created by Ambient Animation attribute will no longer be controllable by the player #525
+- Adjusted control order in multi row edit boxes
 
 ## REMOVED
 - Removed legacy garrison feature. Garrison2 feature (Shortcut: G) was added earlier.
