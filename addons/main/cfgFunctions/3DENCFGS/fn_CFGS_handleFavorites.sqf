@@ -42,7 +42,7 @@ else
         private _tvFavorites = (ctrlParent _tv displayCtrl IDC_SENTENCESBROWSER_FAVORITES);
         if ((ENH_CFGS_Favorites find [_text, _configStr]) > -1) exitWith {false};
 
-        ENH_CFGS_Favorites = ENH_CFGS_Favorites pushBack [_text, _configStr];
+        ENH_CFGS_Favorites pushBack [_text, _configStr];
         "fill" call ENH_fnc_CFGS_handleFavorites;
         [_display] spawn
         {
