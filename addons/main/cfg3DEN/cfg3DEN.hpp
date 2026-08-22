@@ -304,19 +304,6 @@ class Cfg3DEN
             };
         };
     };
-    class Comment
-    {
-        class AttributeCategories
-        {
-            class Init
-            {
-                class Attributes
-                {
-                    #include "\x\enh\addons\main\cfg3DEN\attributesComment\description.hpp"
-                };
-            };
-        };
-    };
     class ENH_3DENCommandPalette_Commands
     {
         class ENH_Command_Base

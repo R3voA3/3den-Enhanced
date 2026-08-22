@@ -16,7 +16,7 @@ class ENH_Briefing
             displayName = "$STR_A3_DIARY_SITUATION_TITLE";
             tooltip = "$STR_ENH_MAIN_BRIEFING_TOOLTIP";
             property = "ENH_Briefing_BLUFOR_Situation";
-            control = "ENH_EditMultiTall";
+            control = "EditMulti5";
             expression = "if (!is3DEN && hasInterface && _value != '') then {_value spawn {scriptName 'ENH_Briefing_BLUFOR_Situation'; waitUntil {!isNull player}; if (side player == west) then {uiSleep 0.1; player createDiaryRecord ['Diary', [localize 'STR_A3_DIARY_SITUATION_TITLE', _this call BIS_fnc_localize]]}}};";
             defaultValue = "''";
         };

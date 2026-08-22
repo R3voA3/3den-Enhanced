@@ -6,15 +6,25 @@ class Edit: Title
         class Value;
     };
 };
-class EditMulti3: Edit
+class EditMulti3: Edit // We leave this one unchanged as it's not used anyway
 {
     class Controls: Controls
     {
-        class Background: ctrlStaticOverlay
+        class Background;
+        class Title;
+        class Value;
+    };
+};
+class EditMulti5: EditMulti3
+{
+    h = QUOTE(75 * GRID_H);
+    class Controls: Controls
+    {
+        class Background: Background
         {
             h = QUOTE(73 * GRID_H);
         };
-        class Title: ctrlStaticFrame
+        class Title: Title
         {
             h = QUOTE(75 * GRID_H);
         };
@@ -22,15 +32,6 @@ class EditMulti3: Edit
         {
             h = QUOTE(69 * GRID_H);
         };
-    };
-};
-class EditMulti5: EditMulti3
-{
-    class Controls: Controls
-    {
-        class Background;
-        class Title;
-        class Value;
     };
 };
 class EditCodeMulti3: EditMulti3
@@ -53,25 +54,6 @@ class EditCodeMulti3: EditMulti3
     };
 };
 class EditCodeMulti5: EditMulti5
-{
-    h = QUOTE(75 * GRID_H);
-    class Controls: Controls
-    {
-        class Background: Background
-        {
-            h = QUOTE(73 * GRID_H);
-        };
-        class Title: Title
-        {
-            h = QUOTE(75 * GRID_H);
-        };
-        class Value: Value
-        {
-            h = QUOTE(69 * GRID_H);
-        };
-    };
-};
-class ENH_EditMultiTall: EditMulti3
 {
     h = QUOTE(75 * GRID_H);
     class Controls: Controls
