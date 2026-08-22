@@ -66,6 +66,7 @@
 - Briefings now properly show again (Thanks to Tuupertunut)
 - Logic created by Ambient Animation attribute will no longer be controllable by the player #525
 - Adjusted control order in multi row edit boxes
+- Improved function to log entity information
 
 ## REMOVED
 - Removed legacy garrison feature. Garrison2 feature (Shortcut: G) was added earlier.
