@@ -1,4 +1,4 @@
-class ENH_TurretStabilization // TODO: localize 2026-05-05 R3vo
+class ENH_TurretStabilization
 {
     displayName = "$STR_ENH_MAIN_TURRETSTABILIZATION_DISPLAYNAME";
     tooltip = "$STR_ENH_MAIN_TURRETSTABILIZATION_TOOLTIP";
