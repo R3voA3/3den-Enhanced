@@ -26,14 +26,13 @@ if (_classes isEqualType "") then
 else
 {
     // Change classes from type array to type string
-    private _valueClasses = "";
+    private _valueClasses = [];
 
     {
-        private _add = if (_forEachIndex == 0) then {_x} else {format [", %1", _x]};
-        _valueClasses = _valueClasses + _add;
+        _valueClasses pushBack _x;
     } forEach _classes;
 
-    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText _valueClasses;
+    (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_00) ctrlSetText (_valueClasses joinString ", ");
 };
 
 (_ctrlGroup controlsGroupCtrl IDC_ATTRIBUTE_CONTROL_01) ctrlSetText str (_center#0);
