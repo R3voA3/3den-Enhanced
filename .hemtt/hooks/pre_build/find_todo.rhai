@@ -1,6 +1,6 @@
 const ROOT = HEMTT_RFS;
 const TODO_TAG = "// TODO";
-const ALLOWED_EXTENSIONS = ["hpp", "ext", "sqf", "xml", "txt", "inc", "rhai"];
+const ALLOWED_EXTENSIONS = ["hpp", "ext", "sqf", "xml", "txt", "inc"];
 
 fn get_folders(path) {
     if (path.to_string().contains("/.hemttout/") != true) {
