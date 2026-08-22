@@ -82,14 +82,14 @@ class Log
 };
 class ENH_LogFactions
 {
-    action = QUOTE('FACTIONS' call ENH_fnc_3DENLog);
+    action = QUOTE('FACTIONS' call ENH_fnc_logEntityInfo);
     conditionShow = "selectedObject";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGFACTION";
     wikiDescription = "Logs all unique factions of all selected entities.";
 };
 class ENH_LogObjectInfo
 {
-    action = QUOTE('OBJECTINFO' call ENH_fnc_3DENLog);
+    action = QUOTE('OBJECTINFO' call ENH_fnc_logEntityInfo);
     conditionShow = "selectedObject";
     text = "$STR_ENH_MAIN_CONTEXTMENU_LOGOBJECTINFO";
     wikiDescription = "Logs various information about each selected entity.";
