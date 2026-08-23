@@ -1,6 +1,7 @@
 # 8.8.1
 ## CHANGED
 - Default Layer attribute had no default value defined causing layers to get mangled
+- Hints were not showing in preview even though debug info was empty
 
 # 8.8.0
 ## ADDED
