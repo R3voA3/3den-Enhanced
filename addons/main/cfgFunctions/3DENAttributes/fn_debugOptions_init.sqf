@@ -130,9 +130,13 @@ waitUntil [{!isNull player}, -1, 1];
 // Handle hint drawing with debug information
 ENH_DebugOptions_HintContent = createHashMap;
 
-addMissionEventHandler ["EachFrame",
+addMissionEventHandler ["EachFrame", // TODO: Best would be to avoid hint and instead use a custom control 2026-08-23 R3vo
 {
-    hintSilent parseText (values ENH_DebugOptions_HintContent joinString "<br/><br/>");
+    private _text = values ENH_DebugOptions_HintContent joinString "<br/><br/>";
+    if (_text != "") then
+    {
+        hintSilent parseText (values ENH_DebugOptions_HintContent joinString "<br/><br/>");
+    };
 }];
 
 if GETVALUE("Arsenal") then
