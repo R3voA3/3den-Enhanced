@@ -1,3 +1,7 @@
+# 8.8.1
+## CHANGED
+- Default Layer attribute had no default value defined causing layers to get mangled
+
 # 8.8.0
 ## ADDED
 - Hold Action now supports radius
