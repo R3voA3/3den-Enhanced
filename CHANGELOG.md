@@ -2,6 +2,7 @@
 ## CHANGED
 - Default Layer attribute had no default value defined causing layers to get mangled
 - Hints were not showing in preview even though debug info was empty
+- fixed fn_EH_onEditableEntityAdded triggering on mission load
 
 # 8.8.0
 ## ADDED
