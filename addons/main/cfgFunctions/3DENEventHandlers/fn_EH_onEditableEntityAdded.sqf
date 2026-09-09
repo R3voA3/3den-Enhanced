@@ -15,6 +15,11 @@
     -
 */
 
+// When a new mission is loaded all entities
+// are placed by the engine, triggering this event
+// We only want it to trigger on manual placement
+if (time == 0) exitWith {};
+
 params ["_entity"];
 
 [_entity] call ENH_fnc_moveIntoDefaultLayer;

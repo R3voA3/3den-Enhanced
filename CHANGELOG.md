@@ -1,3 +1,10 @@
+# 8.8.1
+## CHANGED
+- Default Layer attribute had no default value defined causing layers to get mangled
+- Hints were not showing in preview even though debug info was empty
+- Debug Options are now using a custom control to display the information instead of a hint
+- Fixed fn_EH_onEditableEntityAdded triggering on mission load
+
 # 8.8.0
 ## ADDED
 - Hold Action now supports radius

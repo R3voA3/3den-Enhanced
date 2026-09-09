@@ -204,8 +204,6 @@ class CfgFunctions
             class exportContextMenuToGitHub {};
             class exportMenuStripToGitHub {};
             class iterTree {};
-            class log {};
-            class logShow {};
             class recompileFunctions {};
             class testDisplays {};
         };

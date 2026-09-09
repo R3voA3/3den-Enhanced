@@ -7,7 +7,7 @@ class ENH_DefaultLayer
     property = "ENH_DefaultLayer";
     control = "Checkbox";
     expression = "";
-    defaultValue = "";
+    defaultValue = "false";
     condition = "script";
     conditionScript = "false";
 };
