@@ -14,10 +14,8 @@
 */
 
 #define GETVALUE(ATTRIBUTE) (profileNamespace getVariable ['ENH_EditorPreferences_DebugOptions_' + ATTRIBUTE, "Preferences" get3DENMissionAttribute ("ENH_DebugOptions_" + ATTRIBUTE)])
-#define MISSIONDISPLAY (call BIS_fnc_displayMission)
 #define RADIUS 150
 #define DELAY 0.1
-#define HINT_REFRESH_INTERVAL 30
 #define COLOR_TRIGGER 0.1, 0.1, 0.9, 1
 
 #define UNITS_ENABLED ({simulationEnabled _x && dynamicSimulationEnabled group _x} count allUnits)
@@ -36,106 +34,137 @@
 #define OBJ_VIEW_DISTANCE (round (getObjectViewDistance select 0))
 
 #define HINT_TEXT_TRIGGER\
-"<t size='1.1' align='center'>Trigger Information</t><br/>\
-<t align='left'>Name:<t/><t align='right'>%1</t><br/>\
-<t align='left'>Text:<t/><t align='right'>%2</t><br/>\
-<t align='left'>Type:<t/><t align='right'>%3</t><br/>\
-<t align='left'>Activated:<t/><t align='right'>%4</t><br/>\
-<t align='left'>Interval:<t/><t align='right'>%5</t><br/>\
+"\
+<t size='0.9' align='center'>Trigger Information</t><br/>\
+<t size='0.5' align='left'>Name:<t/><t align='right'>%1</t><br/>\
+<t size='0.5' align='left'>Text:<t/><t align='right'>%2</t><br/>\
+<t size='0.5' align='left'>Type:<t/><t align='right'>%3</t><br/>\
+<t size='0.5' align='left'>Activated:<t/><t align='right'>%4</t><br/>\
+<t size='0.5' align='left'>Interval:<t/><t align='right'>%5</t><br/>\
 \
-<t size='1.3' align='center'>Statements</t><br/>\
+<t size='0.8' align='center'>Statements</t><br/>\
 \
-<t align='left'>Condition:<t/><t align='right'>%6</t><br/>\
-<t align='left'>On Activation:<t/><t align='right'>%7</t><br/>\
-<t align='left'>On Deactivation:<t/><t align='right'>%8</t><br/>\
+<t size='0.6' align='left'>Condition:<t/><t align='right'>%6</t><br/>\
+<t size='0.6' align='left'>On Activation:<t/><t align='right'>%7</t><br/>\
+<t size='0.6' align='left'>On Deactivation:<t/><t align='right'>%8</t><br/>\
 \
-<t size='1.1' align='center'>Activation</t><br/>\
+<t size='0.8' align='center'>Activation</t><br/>\
 \
-<t align='left'>By:<t/><t align='right'>%9</t><br/>\
-<t align='left'>Type:<t/><t align='right'>%10</t><br/>\
-<t align='left'>Repeatable:<t/><t align='right'>%11</t><br/>\
+<t size='0.6' align='left'>By:<t/><t align='right'>%9</t><br/>\
+<t size='0.6' align='left'>Type:<t/><t align='right'>%10</t><br/>\
+<t size='0.6' align='left'>Repeatable:<t/><t align='right'>%11</t><br/>\
 \
-<t size='1.1' align='center'>Transformation</t><br/>\
+<t size='0.8' align='center'>Transformation</t><br/>\
 \
-<t align='left'>Position:<t/><t align='right'>%12</t><br/>\
-<t align='left'>A:<t/><t align='right'>%13</t><br/>\
-<t align='left'>B:<t/><t align='right'>%14</t><br/>\
-<t align='left'>Angle:<t/><t align='right'>%15</t><br/>\
-<t align='left'>Is Rectangle:<t/><t align='right'>%16</t><br/>\
-<t align='left'>C (Height):<t/><t align='right'>%17</t><br/>\
+<t size='0.6' align='left'>Position:<t/><t align='right'>%12</t><br/>\
+<t size='0.6' align='left'>A:<t/><t align='right'>%13</t><br/>\
+<t size='0.6' align='left'>B:<t/><t align='right'>%14</t><br/>\
+<t size='0.6' align='left'>Angle:<t/><t align='right'>%15</t><br/>\
+<t size='0.6' align='left'>Is Rectangle:<t/><t align='right'>%16</t><br/>\
+<t size='0.6' align='left'>C (Height):<t/><t align='right'>%17</t><br/>\
 \
-<t size='1.1' align='center'>Timer</t><br/>\
+<t size='0.8' align='center'>Timer</t><br/>\
 \
-<t align='left'>Timer Values:<t/><t align='right'>%18</t><br/>\
-<t align='left'>Is Countdown:<t/><t align='right'>%19</t><br/>\
-<t align='left'>Current Timeout:<t/><t align='right'>%20</t><br/>\
+<t size='0.6' align='left'>Timer Values:<t/><t align='right'>%18</t><br/>\
+<t size='0.6' align='left'>Is Countdown:<t/><t align='right'>%19</t><br/>\
+<t size='0.6' align='left'>Current Timeout:<t/><t align='right'>%20</t><br/>\
 \
-<t size='1.1' align='center'>Special</t><br/>\
+<t size='0.8' align='center'>Special</t><br/>\
 \
-<t align='left'>Attached Vehicle/Object:<t/><t align='right'>%21</t><br/>\
-<t align='left'>List:<t/><t align='right'>%22</t><br/>"
+<t size='0.6' align='left'>Attached Vehicle/Object:<t/><t align='right'>%21</t><br/>\
+<t size='0.6' align='left'>List:<t/><t align='right'>%22</t>"
 
 #define HINT_TEXT_GROUP\
-"<t size='1.1' align='center'>Group Information</t><br/>\
-<t align='left'>Callsign:<t/><t align='right'>%1</t><br/>\
-<t align='left'>Leader:<t/><t align='right'>%2</t><br/>\
-<t align='left'>No. of Units:<t/><t align='right'>%3</t><br/>\
-<t align='left'>Delete when Empty:<t/><t align='right'>%4</t><br/>\
+"\
+<t size='0.9' align='center'>Group Information</t><br/>\
+<t size='0.6' align='left'>Callsign:<t/><t align='right'>%1</t><br/>\
+<t size='0.6' align='left'>Leader:<t/><t align='right'>%2</t><br/>\
+<t size='0.6' align='left'>No. of Units:<t/><t align='right'>%3</t><br/>\
+<t size='0.6' align='left'>Delete when Empty:<t/><t align='right'>%4</t><br/>\
 \
-<t size='1.1' align='center'>Group Status</t><br/>\
+<t size='0.8' align='center'>Group Status</t><br/>\
 \
-<t align='left'>Health:<t/><t align='right'>%5</t><br/>\
-<t align='left'>Fleeing:<t/><t align='right'>%6</t><br/>\
-<t align='left'>Attack Enabled:<t/><t align='right'>%7</t><br/>\
-<t align='left'>Combat Behaviour:<t/><t align='right'>%8</t><br/>\
-<t align='left'>Combat Mode:<t/><t align='right'>%9</t><br/>\
-<t align='left'>Formation:<t/><t align='right'>%10</t><br/>\
-<t align='left'>Speed:<t/><t align='right'>%11</t><br/>\
+<t size='0.6' align='left'>Health:<t/><t align='right'>%5</t><br/>\
+<t size='0.6' align='left'>Fleeing:<t/><t align='right'>%6</t><br/>\
+<t size='0.6' align='left'>Attack Enabled:<t/><t align='right'>%7</t><br/>\
+<t size='0.6' align='left'>Combat Behaviour:<t/><t align='right'>%8</t><br/>\
+<t size='0.6' align='left'>Combat Mode:<t/><t align='right'>%9</t><br/>\
+<t size='0.6' align='left'>Formation:<t/><t align='right'>%10</t><br/>\
+<t size='0.6' align='left'>Speed:<t/><t align='right'>%11</t><br/>\
 \
-<t size='1.1' align='center'>Waypoints</t><br/>\
+<t size='0.8' align='center'>Waypoints</t><br/>\
 \
-<t align='left'>No. of Waypoints:<t/><t align='right'>%12</t><br/>\
-<t align='left'>Current Waypoint:<t/><t align='right'>%13</t><br/>\
-<t align='left'>Unit Speed:<t/><t align='right'>%14</t><br/>\
+<t size='0.6' align='left'>No. of Waypoints:<t/><t align='right'>%12</t><br/>\
+<t size='0.6' align='left'>Current Waypoint:<t/><t align='right'>%13</t><br/>\
+<t size='0.6' align='left'>Unit Speed:<t/><t align='right'>%14</t><br/>\
 \
-<t size='1.1' align='center'>Additional Options</t><br/>\
+<t size='0.8' align='center'>Additional Options</t><br/>\
 \
-<t align='left'>Show Waypoints:<t/><t align='right'>LEFT CLICK</t><br/>\
-<t align='left'>Delete Group:<t/><t align='right'>CTRL + LEFT CLICK</t><br/>"
+<t size='0.6' align='left'>Show Waypoints:<t/><t align='right'>LEFT CLICK</t><br/>\
+<t size='0.6' align='left'>Delete Group:<t/><t align='right'>CTRL + LEFT CLICK</t>"
 
 #define HINT_TEXT_FPS\
-"<t size='1.1' align='center'>FPS</t><br/>\
-<t align='left'>AVG:<t/><t align='right'>%1</t><br/>\
-<t align='left'>MIN:<t/><t align='right'>%2</t><br/>"
+"\
+<t size='0.9' align='center'>FPS</t><br/>\
+<t size='0.6' align='left'>AVG:<t/><t align='right'>%1</t><br/>\
+<t size='0.6' align='left'>MIN:<t/><t align='right'>%2</t>"
 
 #define HINT_TEXT_SIMULATION\
-"<t size='1.1' align='center'>Dynamic Simulation Information</t><br/>\
-<t align='left' color='#ffffff'>Enabled Units (DS):<t/><t align='right'>%1/%2</t><br/>\
-<t align='left' color='#ffffff'>Enabled Groups (DS):<t/><t align='right'>%3/%4</t><br/>\
-<t align='left' color='#ffffff'>Enabled Vehicles (DS)<t/><t align='right'>%5/%6</t><br/>\
-<t align='left' color='#ffffff'>Units that can Trigger DS:<t/><t align='right'>%7</t><br/>\
-<t align='left' color='#ffff00'>Trigger Distance Units/groups:<t/><t align='right'>%8 m</t><br/>\
-<t align='left' color='#00FF00'>Trigger Distance Vehicles:<t/><t align='right'>%9 m</t><br/>\
-<t align='left' color='#00ffff'>Trigger Distance Empty vehicles:<t/><t align='right'>%10 m</t><br/>\
-<t align='left' color='#ff00ff'>Trigger Distance Props:<t/><t align='right'>%11 m</t><br/>\
-<t align='left' color='#ffffff'>Distance Coef.:<t/><t align='right'>%12x</t><br/>\
-<t align='left' color='#ff0000'>Object View Distance:<t/><t align='right'>%13 m</t><br/>\
-<t align='left' color='#ffffff'>Recommended Object View Distance:<t/><t align='right'>%14 m</t><br/>"
+"\
+<t size='0.9' align='center'>Dynamic Simulation</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Enabled Units (DS):<t/><t align='right'>%1/%2</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Enabled Groups (DS):<t/><t align='right'>%3/%4</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Enabled Vehicles (DS)<t/><t align='right'>%5/%6</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Units that can Trigger DS:<t/><t align='right'>%7</t><br/>\
+<t size='0.6' align='left' color='#ffff00'>Trigger Distance Units/groups:<t/><t align='right'>%8 m</t><br/>\
+<t size='0.6' align='left' color='#00FF00'>Trigger Distance Vehicles:<t/><t align='right'>%9 m</t><br/>\
+<t size='0.6' align='left' color='#00ffff'>Trigger Distance Empty vehicles:<t/><t align='right'>%10 m</t><br/>\
+<t size='0.6' align='left' color='#ff00ff'>Trigger Distance Props:<t/><t align='right'>%11 m</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Distance Coef.:<t/><t align='right'>%12x</t><br/>\
+<t size='0.6' align='left' color='#ff0000'>Object View Distance:<t/><t align='right'>%13 m</t><br/>\
+<t size='0.6' align='left' color='#ffffff'>Recommended Object View Distance:<t/><t align='right'>%14 m</t>"
 
 if (!is3DENPreview) exitWith {};
 
 // Small delay to give scenario time to fully initialize
-waitUntil [{!isNull player}, -1, 1];
+waitUntil [{!isNull player && {!isNull (call BIS_fnc_displayMission)}}, -1, 1];
 
-// Handle hint drawing with debug information
-ENH_DebugOptions_HintContent = createHashMap;
-
-addMissionEventHandler ["EachFrame", // TODO: Best would be to avoid hint and instead use a custom control 2026-08-23 R3vo
+// Handle displaying of debug information
+with uiNamespace do
 {
-    private _text = values ENH_DebugOptions_HintContent joinString "<br/><br/>";
-    if (_text != "") then
+    ctrlDelete (uiNamespace getVariable ["ENH_DebugOptions_Display", controlNull]);
+
+    ENH_DebugOptions_Display = (call BIS_fnc_displayMission) ctrlCreate ["ctrlStructuredText", -1];
+    ENH_DebugOptions_Display ctrlSetFont "EtelkaMonospacePro";
+    ENH_DebugOptions_Display ctrlSetBackgroundColor [0.3, 0.3, 0.3, 0.3];
+};
+
+ENH_DebugOptions_HintContent = createHashMap;
+ENH_DebugOptions_HintContent_Previous = "";
+
+addMissionEventHandler ["Draw2D",
+{
+    private _ctrlDebug = uiNamespace getVariable ["ENH_DebugOptions_Display", controlNull];
+
+    private _text = values ENH_DebugOptions_HintContent joinString "<br/>";
+
+    if (_text != ENH_DebugOptions_HintContent_Previous) then
     {
-        hintSilent parseText (values ENH_DebugOptions_HintContent joinString "<br/><br/>");
+        _ctrlDebug ctrlSetStructuredText parseText _text;
+
+        private _height = ctrlTextHeight _ctrlDebug;
+
+        _ctrlDebug ctrlSetPosition
+        [
+            safeZoneX + GRID_W,
+            0.5 - 0.5 * _height,
+            ctrlTextWidth _ctrlDebug min (0.15 * safeZoneW),
+            _height
+        ];
+
+        _ctrlDebug ctrlCommit 0;
+
+        ENH_DebugOptions_HintContent_Previous = _text;
     };
 }];
 
