@@ -23,5 +23,3 @@ if (time == 0) exitWith {};
 params ["_entity"];
 
 [_entity] call ENH_fnc_moveIntoDefaultLayer;
-
-diag_log _entity;
