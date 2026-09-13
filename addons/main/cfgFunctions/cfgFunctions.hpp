@@ -183,6 +183,15 @@ class CfgFunctions
             class functionsViewer_setUpMenuStrip {};
             class functionsViewer_togglePanel {};
         };
+        class 3DENGarrison
+        {
+            file = "\x\enh\addons\main\cfgFunctions\3DENGarrison";
+            class garrison_onLoad {};
+            class garrison_draw {};
+            class garrison_fillBuildings {};
+            class garrison_onUnload {};
+            class garrison_updateValues {};
+        };
         class 3DENGarrison2
         {
             file = "\x\enh\addons\main\cfgFunctions\3DENGarrison2";

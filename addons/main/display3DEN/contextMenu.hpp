@@ -6,7 +6,8 @@ items[] +=
     "ENH_SetDefaultLayer",
     "ENH_ResetDefaultLayer",
     "ENH_ShowModuleInformation",
-    "ENH_MoveToLayer"
+    "ENH_MoveToLayer",
+    "ENH_Garrison"
 };
 class ENH_AddToFavorites
 {
@@ -61,6 +62,16 @@ class ENH_ResetDefaultLayer
     conditionShow = "hoverLayer * script1";
     wikiDescription = "Resets default layer.";
     conditionScript1 = QUOTE(call ENH_fnc_getDefaultLayer != -1);
+    SHOW_IN_ROOT;
+};
+class ENH_Garrison
+{
+    action = QUOTE(findDisplay IDD_DISPLAY3DEN ctrlCreate ARR_2(['ENH_Garrison',IDC_GARRISON_GROUP]));
+    text = "$STR_ENH_MAIN_CONTEXTMENU_GARRISON";
+    picture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\getin_ca.paa";
+    conditionShow = "selected";
+    opensNewWindow = 1;
+    wikiDescription = "Opens a UI that allows for quick garrison of selected entities.";
     SHOW_IN_ROOT;
 };
 // Log entries

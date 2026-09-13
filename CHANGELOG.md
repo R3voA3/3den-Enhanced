@@ -1,3 +1,10 @@
+# 8.8.2
+## CHANGED
+- Re-added legacy Garrison tool
+- Legacy Garrison tool
+    - Fixed wrong building count in UI
+    - Area trigger is now removed reliably when UI is closed or a new trigger is created
+
 # 8.8.1
 ## CHANGED
 - Default Layer attribute had no default value defined causing layers to get mangled
