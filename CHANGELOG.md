@@ -1,3 +1,8 @@
+# 8.8.3
+## CHANGED
+- minor optimizations
+- fixed "Delete Crew" function not working
+
 # 8.8.2
 ## CHANGED
 - Re-added legacy Garrison tool

@@ -47,7 +47,7 @@ class ctrlToolbox;
 class ctrlToolboxPictureKeepAspect;
 class ctrlTree;
 class ctrlXSliderH;
-class scrollbar;
+class ScrollBar;
 
 // Default classes needed for ctrlMenuStrip to work
 #define MENU_STRIP_DEFAULT class Default\
