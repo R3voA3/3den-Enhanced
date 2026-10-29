@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17548;
+		nextID=17558;
 	};
 	class Camera
 	{
-		pos[]={3963.6682,21.63435,2886.1853};
-		dir[]={0.57544029,-0.81764424,-0.018066363};
-		up[]={0.81724161,0.57572383,-0.02565789};
-		aside[]={-0.031380262,0,-0.99950755};
+		pos[]={3994.5027,9.0095682,2880.52};
+		dir[]={0.33800513,-0.63020658,-0.69899368};
+		up[]={0.27435023,0.77642751,-0.56735551};
+		aside[]={-0.90026915,0,-0.43533379};
 	};
 };
 binarizationWanted=0;
@@ -2563,7 +2563,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3973.6848,5.9832339,2887.9607};
+						position[]={3996.9041,5.9832339,2878.4478};
+						angles[]={3.1415992,1.2852743e-05,0.076141022};
 					};
 					side="Empty";
 					flags=4;
@@ -3823,7 +3824,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={3976.7546,5.0014391,2879.8308};
+								position[]={3996.668,5.0014391,2875.8469};
 							};
 							side="West";
 							flags=7;
@@ -4363,6 +4364,7 @@ class Mission
 				};
 			};
 			id=14300;
+			atlOffset=-4.9414062;
 		};
 		class Item3
 		{
@@ -8619,6 +8621,28 @@ class Mission
 			};
 			id=63436;
 			atlOffset=-1.1763806;
+		};
+	};
+	class CustomConnections
+	{
+		class LinkIDProvider
+		{
+			nextID=1;
+		};
+		class Links
+		{
+			items=1;
+			class Item0
+			{
+				linkID=0;
+				item0=82670;
+				item1=83231;
+				class CustomData
+				{
+					type="ENH_AttachTo";
+					expression="[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]";
+				};
+			};
 		};
 	};
 };
