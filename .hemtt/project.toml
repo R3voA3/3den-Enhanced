@@ -26,3 +26,7 @@ optional_mod_folders = true
 
 [hemtt.release]
 archive = true
+
+[hemtt.publish]
+changelog = "CHANGELOG.md"
+description = "WORKSHOP_DESC.html"
