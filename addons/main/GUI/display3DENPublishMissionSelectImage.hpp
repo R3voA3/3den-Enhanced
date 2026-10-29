@@ -1,4 +1,4 @@
-class Display3DENPublishMissionSelectImage
+class display3DENPublishMissionSelectImage
 {
     class ControlsBackground
     {

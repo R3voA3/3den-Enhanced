@@ -313,7 +313,7 @@ switch _mode do
         private _entity = _arguments param [0, objNull];
 
         // Only objects and markers
-        if (_entity isEqualType objNull || {_entity isEqualType ""}) then
+        if (_entity isEqualTypeAny [objNull, ""]) then
         {
             !(((_entity get3DENAttribute "itemclass" select 0)) in (profileNamespace getVariable ["ENH_HashMap_Favorites", createHashMap]));
         }

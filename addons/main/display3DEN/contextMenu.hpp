@@ -162,10 +162,10 @@ class Edit
 };
 class ENH_DeleteCrew
 {
-    action = QUOTE(call ENH_fnc_deleteCre);
+    action = QUOTE(call ENH_fnc_deleteCrew);
     text = "$STR_ENH_MAIN_CONTEXTMENU_DELETECREW";
     conditionShow = "selectedObjectVehicle * script1";
-    conditionScript1 = QUOTE(if (_this isEqualType objNull) then {fullCrew _this isNotEqualTo []} else {false});
+    conditionScript1 = QUOTE(_this isEqualType objNull && {fullCrew _this isNotEqualTo []});
     wikiDescription = "Deletes the crew of all selected vehicles.";
 };
 // Connect entries
