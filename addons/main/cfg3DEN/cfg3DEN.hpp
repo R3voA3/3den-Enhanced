@@ -121,6 +121,30 @@ class Cfg3DEN
 			cursor = "3DENConnectSync";
 			expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
 		};
+		class ENH_UnitMarker
+		{
+			displayName = "Attach Marker";
+			condition1 = "Marker";
+			condition2 = "Object";
+			property = "ENH_UnitMarker";
+			data = "ENH_UnitMarker";
+			color[] = { 1, 0, 1, 1 };
+			cursor = "3DENConnectSync";
+			expression = "\
+            addMissionEventHandler\
+            [\
+                'EachFrame',\
+                {\
+                    _thisArgs params ['_entity0', '_entity1'];
+                    if (markerShape _entity0 == '' || {!alive _entity1}) then\
+                    {\
+                        removeMissionEventHandler [_thisEvent, _thisEventHandler];\
+                    };\
+                    _entity0 setMarkerPos (getPosATL _entity1);\
+                },\
+                [_entity0, _entity1]\
+            ]";
+		};
 	};
     class Mission
     {
