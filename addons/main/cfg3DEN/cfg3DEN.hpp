@@ -139,8 +139,11 @@ class Cfg3DEN
                     if (markerShape _entity0 == '' || {!alive _entity1}) then\
                     {\
                         removeMissionEventHandler [_thisEvent, _thisEventHandler];\
+                    }\
+                    else\
+                    {\
+                        _entity0 setMarkerPos (getPosATL _entity1);\
                     };\
-                    _entity0 setMarkerPos (getPosATL _entity1);\
                 },\
                 [_entity0, _entity1]\
             ]";
