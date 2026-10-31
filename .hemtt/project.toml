@@ -18,7 +18,7 @@ exclude = [
 [version]
 major = 8
 minor = 8
-patch = 3
+patch = 4
 git_hash = 0
 
 [hemtt.build]
