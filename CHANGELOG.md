@@ -10,6 +10,7 @@
     - Use "class " prefix to match filter against the item class name
     - Use "mod " prefix to match against item addon
     - No prefix searches the item's display name
+- Unit Trait "Medic" is now working if "ACE_nomedical" present
 
 # 8.8.3
 ## CHANGED
