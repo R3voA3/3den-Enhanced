@@ -1,1 +1,0 @@
-CFGPATCHES_OPTIONAL(MarkersMarkerColor,Markers MarkerColor)
