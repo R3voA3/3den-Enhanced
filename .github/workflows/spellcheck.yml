@@ -1,0 +1,42 @@
+name: Spellcheck Markdown
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**/*.md"
+      - ".github/.spellcheck.yml"
+      - ".github/.wordlist.txt"
+      - ".gitmodules"
+      - "3den-Enhanced.wiki"
+      - ".github/workflows/spellcheck.yml"
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "**/*.md"
+      - ".github/.spellcheck.yml"
+      - ".github/.wordlist.txt"
+      - ".gitmodules"
+      - "3den-Enhanced.wiki"
+      - ".github/workflows/spellcheck.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Spellcheck Markdown
+        uses: rojopolis/spellcheck-github-actions@v0
+        with:
+          config_path: .github/.spellcheck.yml
