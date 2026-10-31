@@ -112,7 +112,7 @@ class Cfg3DEN
     {
         class ENH_AttachTo
         {
-            displayName = "Attach Entity";
+            displayName = "$STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_OBJECT_DISPLAYNAME";
             condition1 = "Object * Script1";
             conditionScript1 = "get3DENConnections _this findIf {_x#0 =='ENH_AttachTo'} == -1";
             condition2 = "Object";
