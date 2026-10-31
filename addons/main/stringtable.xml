@@ -6039,6 +6039,9 @@
             <Chinese>帶有行號的預處理文件</Chinese>
             <Chinesesimp>带有行号的预处理文件</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_MARKER_DISPLAYNAME">
+            <English>Attach Marker</English>
+            <German>Markierung befestigen</German>
         <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_OBJECT_DISPLAYNAME">
             <English>Attach Object</English>
             <German>Objekt befestigen</German>

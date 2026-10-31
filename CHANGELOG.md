@@ -1,6 +1,7 @@
 # DEVELOPEMENT
 ## ADDED
 - "Attach To" custom connection
+- "Attach Marker" custom connection
 
 # 8.8.3
 ## CHANGED
