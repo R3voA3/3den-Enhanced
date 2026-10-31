@@ -1,0 +1,63 @@
+# Updates HEMTT localization coverage in issue #552 when stringtables change.
+name: Update Translation Coverage
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "addons/**/stringtable.xml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: localization-coverage
+  cancel-in-progress: true
+
+jobs:
+  update-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup HEMTT
+        uses: arma-actions/hemtt@v1
+        with:
+          version: latest
+
+      - name: Generate coverage report
+        run: |
+          set -o pipefail
+          hemtt localization coverage --format markdown --no-color |
+            awk '/^\|/ { print; next } { print > "/dev/stderr" }' |
+            tee hemtt-coverage.md
+
+      - name: Update issue #552
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("node:fs");
+            const report = fs.readFileSync("hemtt-coverage.md", "utf8").trim();
+
+            if (!report) {
+              throw new Error("HEMTT produced an empty localization coverage report.");
+            }
+
+            const { owner, repo } = context.repo;
+            const issue_number = 552;
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            const body = [
+              report,
+              "",
+              `Updated from [\`${context.sha.slice(0, 7)}\`](${context.serverUrl}/${owner}/${repo}/commit/${context.sha}) ([workflow run](${runUrl})).`
+            ].join("\n");
+
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number,
+              body
+            });
