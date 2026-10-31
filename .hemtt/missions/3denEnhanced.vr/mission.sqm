@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=83299;
+		nextID=83301;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1899;
+		nextID=1901;
 	};
 	class LayerIndexProvider
 	{
-		nextID=17558;
+		nextID=17563;
 	};
 	class Camera
 	{
-		pos[]={3994.5027,9.0095682,2880.52};
-		dir[]={0.33800513,-0.63020658,-0.69899368};
-		up[]={0.27435023,0.77642751,-0.56735551};
-		aside[]={-0.90026915,0,-0.43533379};
+		pos[]={3992.6021,7.8749366,2878.7053};
+		dir[]={0.85569376,-0.34325537,-0.38725212};
+		up[]={0.31272179,0.93924212,-0.14152515};
+		aside[]={-0.41230279,-7.4505806e-09,-0.91104704};
 	};
 };
 binarizationWanted=0;
@@ -2164,7 +2164,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=20;
+		items=22;
 		class Item0
 		{
 			dataType="Group";
@@ -2542,7 +2542,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4456.0967,5.0014391,2890.7522};
+								position[]={4456.0972,5.0014391,2890.752};
 							};
 							side="West";
 							flags=7;
@@ -2551,20 +2551,68 @@ class Mission
 							};
 							id=77738;
 							type="B_soldier_AAR_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 					};
 					class Attributes
 					{
+						speedMode="FULL";
 					};
 					id=77737;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_TaskPatrol";
+							expression="if (!is3DEN && _value > 0) then {[_this, getPosATL (leader _this), _value] call BIS_fnc_taskPatrol}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=100;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3996.9041,5.9832339,2878.4478};
-						angles[]={3.1415992,1.2852743e-05,0.076141022};
+						position[]={4022.0552,5.9832339,2884.5649};
+						angles[]={-0,1.2852743e-05,0};
 					};
 					side="Empty";
 					flags=4;
@@ -3818,13 +3866,13 @@ class Mission
 					side="West";
 					class Entities
 					{
-						items=2;
+						items=1;
 						class Item0
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={3996.668,5.0014391,2875.8469};
+								position[]={4022.7437,5.0014391,2882.2014};
 							};
 							side="West";
 							flags=7;
@@ -3834,110 +3882,6 @@ class Mission
 							};
 							id=83231;
 							type="B_Soldier_F";
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={3973.4109,5.0014391,2875.1411};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-							};
-							id=83296;
-							type="B_medic_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ENH_AmbientAnimations";
-									expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _varName = format ['ENH_fnc_ambientAnimations_side_%1', side _this];                    if (isNil _varName) then                    {                        missionNamespace setVariable [_varName, createGroup (side _this)];                    };                                        private _logic = (missionNamespace getVariable _varName) createUnit                    [                        'Logic',                        getPosATL _this,                        [],                        0,                        'NONE'                    ];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                if (isNil 'ENH_fnc_ambientAnimations_play') then                {                    ENH_fnc_ambientAnimations_play = compileFinal                    {                        params ['_unit'];                        private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                        [_unit, _anim] remoteExec ['switchMove', 0];                    };                    ENH_fnc_ambientAnimations_exit = compileFinal                    {                        params ['_unit'];                        if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                        _unit setVariable ['ENH_ambientAnimations_exit', true];                        detach _unit;                        deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                        if (alive _unit) then                        {                            [_unit, ''] remoteExec ['switchMove', 0];                            _unit enableAI 'ANIM';                        };                        _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                        _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                        _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                    };                };                private _EHAnimDone = _this addEventHandler ['AnimDone',                {                    params ['_unit'];                    if (alive _unit) then                    {                        _unit call ENH_fnc_ambientAnimations_play;                    }                    else                    {                        _unit call ENH_fnc_ambientAnimations_exit;                    };                }];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        [                            {                                (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                            }," \n "                            -1,                            1                        ];                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-									class Value
-									{
-										class data
-										{
-											singleType="ARRAY";
-											class value
-											{
-												items=4;
-												class Item0
-												{
-													class data
-													{
-														singleType="STRING";
-														value="HIDING_1";
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														singleType="ARRAY";
-														class value
-														{
-															items=1;
-															class Item0
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="Acts_CivilHiding_1";
-																};
-															};
-														};
-													};
-												};
-												class Item2
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=0;
-													};
-												};
-												class Item3
-												{
-													class data
-													{
-														singleType="BOOL";
-														value=1;
-													};
-												};
-											};
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.99000001;
-										};
-									};
-								};
-								nAttributes=3;
-							};
 						};
 					};
 					class Attributes
@@ -4364,7 +4308,6 @@ class Mission
 				};
 			};
 			id=14300;
-			atlOffset=-4.9414062;
 		};
 		class Item3
 		{
@@ -8622,16 +8565,53 @@ class Mission
 			id=63436;
 			atlOffset=-1.1763806;
 		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={4751.9712,0,3121.5581};
+			name="marker_1887";
+			markerType="ELLIPSE";
+			type="mil_arrow";
+			a=50;
+			b=50;
+			id=83299;
+			atlOffset=-5;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DECAGON";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={4482.8027,5,3116.29};
+			name="marker_1900";
+			type="mil_objective";
+			id=83300;
+		};
 	};
 	class CustomConnections
 	{
 		class LinkIDProvider
 		{
-			nextID=1;
+			nextID=3;
 		};
 		class Links
 		{
-			items=1;
+			items=3;
 			class Item0
 			{
 				linkID=0;
@@ -8639,8 +8619,30 @@ class Mission
 				item1=83231;
 				class CustomData
 				{
-					type="ENH_AttachTo";
+					type="ENH_AttachObject";
 					expression="[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=83299;
+				item1=77738;
+				class CustomData
+				{
+					type="ENH_AttachMarker";
+					expression="            if (isNil 'ENH_UnitMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = diag_frameNo;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_UnitMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos getPosATL _y;                                };" \n "                            };                        };                    }                ];            }            else            {                ENH_AttachMarker_Markers set [_entity0, _entity1];            }";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=83300;
+				item1=77738;
+				class CustomData
+				{
+					type="ENH_AttachMarker";
+					expression="            if (isNil 'ENH_UnitMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = diag_frameNo;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_UnitMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos getPosATL _y;                                };" \n "                            };                        };                    }                ];            }            else            {                ENH_AttachMarker_Markers set [_entity0, _entity1];            }";
 				};
 			};
 		};
