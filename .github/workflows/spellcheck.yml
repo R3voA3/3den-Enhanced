@@ -33,7 +33,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          submodules: recursive
+          submodules: false
+          persist-credentials: false
+
+      - name: Checkout wiki documentation
+        uses: actions/checkout@v5
+        with:
+          repository: R3voA3/3den-Enhanced.wiki
+          ref: master
+          path: 3den-Enhanced.wiki
           persist-credentials: false
 
       - name: Spellcheck Markdown
