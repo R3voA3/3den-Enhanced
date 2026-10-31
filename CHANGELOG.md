@@ -1,3 +1,7 @@
+# DEVELOPEMENT
+## ADDED
+- "Attach To" custom connection
+
 # 8.8.3
 ## CHANGED
 - minor optimizations
