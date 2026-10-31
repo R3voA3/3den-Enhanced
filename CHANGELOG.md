@@ -4,6 +4,9 @@
 - "Attach Marker" custom connection
 - Ukrainian translation by smitt14ua
 
+## CHANGED
+- Fixed various wrong translation thanks to smitt14ua
+
 # 8.8.3
 ## CHANGED
 - minor optimizations
