@@ -125,7 +125,7 @@ class Cfg3DEN
         {
             displayName = "Attach Marker";
             condition1 = "Marker * script1";
-            conditionScript1 = "({_x#0 =='ENH_UnitMarker'} count get3DENConnections _this) == 0";
+            conditionScript1 = "get3DENConnections _this findIf {_x#0 =='ENH_UnitMarker'} == -1";
             condition2 = "Object";
             property = "ENH_UnitMarker";
             data = "ENH_UnitMarker";
