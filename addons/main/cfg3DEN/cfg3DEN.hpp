@@ -141,7 +141,7 @@ class Cfg3DEN
                                 }\
                                 else\
                                 {\
-                                    _x setMarkerPos (getPosATL _y);\
+                                    _x setMarkerPos getPosATL _y;\
                                 };
                             };\
                         };\
