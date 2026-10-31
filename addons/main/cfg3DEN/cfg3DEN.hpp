@@ -110,34 +110,34 @@ class Cfg3DEN
     };
     class Connections
     {
-        class ENH_UnitMarker
+        class ENH_AttachMarker
         {
-            displayName = "Attach Marker";
+            displayName = "$STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_MARKER_DISPLAYNAME";
             condition1 = "Marker * script1";
-            conditionScript1 = "get3DENConnections _this findIf {_x#0 =='ENH_UnitMarker'} == -1";
+            conditionScript1 = "get3DENConnections _this findIf {_x#0 =='ENH_AttachMarker'} == -1";
             condition2 = "Object";
-            property = "ENH_UnitMarker";
-            data = "ENH_UnitMarker";
+            property = "ENH_AttachMarker";
+            data = "ENH_AttachMarker";
             color[] = {1, 0, 1, 1};
             cursor = "3DENConnectSync";
             expression = "\
             if (isNil 'ENH_UnitMarker_Initialized') then
             {
-                ENH_UnitMarker_Initialized = true;\
-                ENH_UnitMarker_Markers = createHashMap;\
-                ENH_UnitMarker_LastFrame = diag_frameNo;\
+                ENH_AttachMarker_Initialized = true;\
+                ENH_AttachMarker_Markers = createHashMap;\
+                ENH_AttachMarker_LastFrame = diag_frameNo;\
                 addMissionEventHandler\
                 [\
                     'EachFrame',\
                     {\
-                        if (ENH_UnitMarker_LastFrame + 5 <= diag_frameNo) then
+                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then
                         {
-                            ENH_UnitMarker_LastFrame = diag_frameNo;\
+                            ENH_AttachMarker_LastFrame = diag_frameNo;\
                             ENH_UnitMarker_Markers apply
                             {
                                 if (markerShape _x == '' || {!alive _y}) then\
                                 {\
-                                    ENH_UnitMarker_Markers deleteAt _x;\
+                                    ENH_AttachMarker_Markers deleteAt _x;\
                                 }\
                                 else\
                                 {\
