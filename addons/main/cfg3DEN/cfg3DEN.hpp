@@ -123,7 +123,7 @@ class Cfg3DEN
                 "profilenamespace getvariable ['Map_Unknown_R',0]",
                 "profilenamespace getvariable ['Map_Unknown_G',1]",
                 "profilenamespace getvariable ['Map_Unknown_B',1]",
-                "profilenamespace getvariable ['Map_Unknown_A',0.8]"
+                1
             };
             cursor = "3DENConnectSync";
             expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
