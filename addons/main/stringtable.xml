@@ -6042,6 +6042,9 @@
         <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_MARKER_DISPLAYNAME">
             <English>Attach Marker</English>
             <German>Markierung befestigen</German>
+        <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_OBJECT_DISPLAYNAME">
+            <English>Attach Object</English>
+            <German>Objekt befestigen</German>
         </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TEXT">
             <English>Recompile All</English>
