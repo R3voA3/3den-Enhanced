@@ -2,6 +2,7 @@
 ## ADDED
 - "Attach Object" custom connection
 - "Attach Marker" custom connection
+- Ukrainian translation by smitt14ua
 
 # 8.8.3
 ## CHANGED
