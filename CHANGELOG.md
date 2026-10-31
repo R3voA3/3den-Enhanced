@@ -6,7 +6,7 @@
 
 ## CHANGED
 - Fixed various wrong translation thanks to smitt14ua
-- The search field in the Equipment Storage editor now also supports searching by class name
+- The search field in the Equipment Storage editor now also supports searching by class name (#537)
     - Use "class " prefix to match filter against the item class name
     - Use "mod " prefix to match against item addon
     - No prefix searches the item's display name
