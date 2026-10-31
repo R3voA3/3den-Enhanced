@@ -1204,7 +1204,7 @@
             <German>Asset-Browser beim Start minimieren</German>
             <Chinese>在開始時折疊資產列表</Chinese>
             <Chinesesimp>在开始时折叠资产列表</Chinesesimp>
-            <Ukrainian>Згортати браузер ресурсів при старті</Ukrainian>
+            <Ukrainian>Згорнутий браузер ресурсів</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_COLLAPSEENTITYLIST">
             <English>Collapse Entity List on Start</English>
@@ -1216,7 +1216,7 @@
             <German>Entitäten-Liste beim Start minimieren</German>
             <Chinese>在開始時折疊對象列表</Chinese>
             <Chinesesimp>在开始时折叠对象列表</Chinesesimp>
-            <Ukrainian>Згортати список сутностей на старті</Ukrainian>
+            <Ukrainian>Згорнутий список сутностей</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_COMMANDING_DISPLAYNAME">
             <English>Commanding</English>
@@ -1495,7 +1495,7 @@
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_COLOR_PREVIEW">
             <English>Color Preview</English>
             <German>Farbvorschau</German>
-            <Ukrainian>Перегляд кольору</Ukrainian>
+            <Ukrainian>Зразок</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_REMOVE_PRESET">
             <English>Remove selected color from color palette.</English>
@@ -8883,7 +8883,7 @@
             <English>Show Custom Marker Shape</English>
             <French>Benutzerdefinierte Markerform anzeigen</French>
             <German>Benutzerdefinierte Markerform anzeigen</German>
-            <Ukrainian>Показати власну форму маркера</Ukrainian>
+            <Ukrainian>Показ власної форми маркера</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_RADIOVOLUME_DISPLAYNAME">
             <English>Volume (Radio)</English>
@@ -9007,7 +9007,7 @@
             <German>Respawntickets BLUFOR</German>
             <Chinese>BLUFOR 重生票</Chinese>
             <Chinesesimp>BLUFOR 重生票</Chinesesimp>
-            <Ukrainian>Квитки відродження (BLUFOR)</Ukrainian>
+            <Ukrainian>Квитки відродж. (BLUFOR)</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_CIVILIAN_DISPLAYNAME">
             <English>Respawn Tickets Civilian</English>
@@ -9020,7 +9020,7 @@
             <German>Respawntickets Civilian</German>
             <Chinese>平民重生票</Chinese>
             <Chinesesimp>平民重生票</Chinesesimp>
-            <Ukrainian>Квитки відродження (цивільні)</Ukrainian>
+            <Ukrainian>Квитки відродж. (цивільні)</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_INDEPENDENT_DISPLAYNAME">
             <English>Respawn Tickets Independent</English>
@@ -9033,7 +9033,7 @@
             <German>Respawntickets Independent</German>
             <Chinese>獨立部隊重生票</Chinese>
             <Chinesesimp>独立部队重生票</Chinesesimp>
-            <Ukrainian>Квитки відродження (незалежні)</Ukrainian>
+            <Ukrainian>Квитки відродж. (незалежні)</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_OPFOR_DISPLAYNAME">
             <English>Respawn Tickets OPFOR</English>
@@ -9046,7 +9046,7 @@
             <German>Respawntickets OPFOR</German>
             <Chinese>OPFOR 重生票</Chinese>
             <Chinesesimp>OPFOR 重生票</Chinesesimp>
-            <Ukrainian>Квитки відродження (OPFOR)</Ukrainian>
+            <Ukrainian>Квитки відродж. (OPFOR)</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_RESPAWNTICKETS_TOOLTIP">
             <English>Every unit can respawn as long as it has not run out of tickets.</English>
@@ -9071,7 +9071,7 @@
             <German>Zeilenanzahl</German>
             <Chinese>行數</Chinese>
             <Chinesesimp>行数</Chinesesimp>
-            <Ukrainian>Кількість рядків</Ukrainian>
+            <Ukrainian>К-сть рядків</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_SAM_APPLYATTRIBUTE">
             <English>Apply Attribute</English>
@@ -9497,7 +9497,7 @@
             <German>Einzelspieler-Respawntickets</German>
             <Chinese>单人游戏重生门票</Chinese>
             <Chinesesimp>单人游戏重生门票</Chinesesimp>
-            <Ukrainian>Квитки відродження (одиночна гра)</Ukrainian>
+            <Ukrainian>Квитки відродж. (одиночна)</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_SPR_RULESET_NEARESTPOSITION">
             <English>Respawn at nearest Respawn Position</English>
