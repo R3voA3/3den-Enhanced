@@ -108,20 +108,21 @@ class Cfg3DEN
         #include "\x\enh\addons\main\cfg3DEN\controls\SPR.hpp"
         #include "\x\enh\addons\main\cfg3DEN\controls\subCategoryNoHeader_Fixed.hpp"
     };
-	class Connections
-	{
-		class ENH_AttachTo
-		{
-			displayName = "Attach Entity";
-			condition1 = "Object";
-			condition2 = "Object";
-			property = "ENH_AttachTo";
-			data = "ENH_AttachTo";
-			color[] = { 1, 0, 1, 1 };
-			cursor = "3DENConnectSync";
-			expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
-		};
-	};
+    class Connections
+    {
+        class ENH_AttachTo
+        {
+            displayName = "Attach Entity";
+            condition1 = "Object * Script1";
+            conditionScript1 = "({_x#0 =='ENH_AttachTo'} count get3DENConnections _this) == 0";
+            condition2 = "Object";
+            property = "ENH_AttachTo";
+            data = "ENH_AttachTo";
+            color[] = { 1, 0, 1, 1 };
+            cursor = "3DENConnectSync";
+            expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
+        };
+    };
     class Mission
     {
         class Preferences
