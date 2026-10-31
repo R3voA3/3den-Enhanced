@@ -118,7 +118,13 @@ class Cfg3DEN
             condition2 = "Object";
             property = "ENH_AttachObject";
             data = "ENH_AttachObject";
-            color[] = {1, 0, 1, 1};
+            color[] =
+            {
+                "profilenamespace getvariable ['Map_Unknown_R',0]",
+                "profilenamespace getvariable ['Map_Unknown_G',1]",
+                "profilenamespace getvariable ['Map_Unknown_B',1]",
+                "profilenamespace getvariable ['Map_Unknown_A',0.8]"
+            };
             cursor = "3DENConnectSync";
             expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
         };
