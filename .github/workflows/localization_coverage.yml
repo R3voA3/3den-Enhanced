@@ -1,0 +1,84 @@
+name: Update Translation Coverage
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "addons/**/stringtable.xml"
+      - ".github/workflows/localization_coverage.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: localization-coverage
+  cancel-in-progress: true
+
+jobs:
+  update-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup HEMTT
+        uses: arma-actions/hemtt@v1
+        with:
+          version: "v1.23.1"
+
+      - name: Generate coverage report
+        run: hemtt ln coverage --format markdown > hemtt-coverage.md
+
+      - name: Update issue #356
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("node:fs");
+            const marker = "<!-- hemtt-localization-coverage -->";
+            const report = fs.readFileSync("hemtt-coverage.md", "utf8").trim();
+
+            if (!report) {
+              throw new Error("HEMTT produced an empty localization coverage report.");
+            }
+
+            const { owner, repo } = context.repo;
+            const issue_number = 356;
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            const body = [
+              marker,
+              "## HEMTT Localization Coverage",
+              "",
+              report,
+              "",
+              `Updated from [\`${context.sha.slice(0, 7)}\`](${context.serverUrl}/${owner}/${repo}/commit/${context.sha}) ([workflow run](${runUrl})).`
+            ].join("\n");
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100
+            });
+
+            const existing = comments.find(comment =>
+              comment.user?.login === "github-actions[bot]" &&
+              comment.body?.includes(marker)
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body
+              });
+            }
