@@ -31,7 +31,9 @@ jobs:
       - name: Generate coverage report
         run: |
           set -o pipefail
-          hemtt localization coverage --format markdown | tee hemtt-coverage.md
+          hemtt localization coverage --format markdown --no-color |
+            awk '/^\|/ { print; next } { print > "/dev/stderr" }' |
+            tee hemtt-coverage.md
 
       - name: Update issue #356
         uses: actions/github-script@v7
