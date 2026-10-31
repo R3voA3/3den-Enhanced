@@ -114,7 +114,7 @@ class Cfg3DEN
         {
             displayName = "Attach Entity";
             condition1 = "Object * Script1";
-            conditionScript1 = "({_x#0 =='ENH_AttachTo'} count get3DENConnections _this) == 0";
+            conditionScript1 = "get3DENConnections _this findIf {_x#0 =='ENH_AttachTo'} == -1";
             condition2 = "Object";
             property = "ENH_AttachTo";
             data = "ENH_AttachTo";
