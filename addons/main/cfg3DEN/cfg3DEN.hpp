@@ -152,6 +152,7 @@ class Cfg3DEN
             {\
                 ENH_AttachMarker_Markers set [_entity0, _entity1];\
             }";
+        };
         class ENH_AttachObject
         {
             displayName = "$STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_OBJECT_DISPLAYNAME";
