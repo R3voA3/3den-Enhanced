@@ -1991,4 +1991,4 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 
 ## REMOVED
 - Removed composition tool
-- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvinience that caused)
+- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvenience that caused)
