@@ -1,3 +1,4 @@
+# Updates HEMTT localization coverage in issue #552 when stringtables change.
 name: Update Translation Coverage
 
 on:
@@ -6,7 +7,6 @@ on:
       - master
     paths:
       - "addons/**/stringtable.xml"
-      - ".github/workflows/localization_coverage.yml"
   workflow_dispatch:
 
 permissions:
@@ -21,12 +21,12 @@ jobs:
   update-coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup HEMTT
         uses: arma-actions/hemtt@v1
         with:
-          version: "v1.23.1"
+          version: latest
 
       - name: Generate coverage report
         run: |
@@ -35,8 +35,8 @@ jobs:
             awk '/^\|/ { print; next } { print > "/dev/stderr" }' |
             tee hemtt-coverage.md
 
-      - name: Update issue #356
-        uses: actions/github-script@v7
+      - name: Update issue #552
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require("node:fs");
@@ -48,7 +48,7 @@ jobs:
             }
 
             const { owner, repo } = context.repo;
-            const issue_number = 356;
+            const issue_number = 552;
             const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
             const body = [
               marker,
@@ -59,30 +59,9 @@ jobs:
               `Updated from [\`${context.sha.slice(0, 7)}\`](${context.serverUrl}/${owner}/${repo}/commit/${context.sha}) ([workflow run](${runUrl})).`
             ].join("\n");
 
-            const comments = await github.paginate(github.rest.issues.listComments, {
+            await github.rest.issues.update({
               owner,
               repo,
               issue_number,
-              per_page: 100
+              body
             });
-
-            const existing = comments.find(comment =>
-              comment.user?.login === "github-actions[bot]" &&
-              comment.body?.includes(marker)
-            );
-
-            if (existing) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: existing.id,
-                body
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number,
-                body
-              });
-            }
