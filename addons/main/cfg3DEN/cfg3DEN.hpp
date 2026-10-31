@@ -126,11 +126,12 @@ class Cfg3DEN
                 ENH_AttachMarker_Initialized = true;\
                 ENH_AttachMarker_Markers = createHashMap;\
                 ENH_AttachMarker_LastFrame = 0;\
+                ENH_AttachMarker_FrameInterval = 5;\
                 addMissionEventHandler\
                 [\
                     'EachFrame',\
                     {\
-                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then
+                        if (ENH_AttachMarker_LastFrame + ENH_AttachMarker_FrameInterval <= diag_frameNo) then
                         {
                             ENH_AttachMarker_LastFrame = diag_frameNo;\
                             ENH_AttachMarker_Markers apply
