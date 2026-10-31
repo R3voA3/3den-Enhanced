@@ -133,7 +133,7 @@ class Cfg3DEN
                         if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then
                         {
                             ENH_AttachMarker_LastFrame = diag_frameNo;\
-                            ENH_UnitMarker_Markers apply
+                            ENH_AttachMarker_Markers apply
                             {
                                 if (markerShape _x == '' || {!alive _y}) then\
                                 {\
