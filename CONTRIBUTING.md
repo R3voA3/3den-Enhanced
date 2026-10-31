@@ -1,28 +1,115 @@
-You want to contribute? Add your own code or optimise the existing one. Feel free to do so.
-Check [issues](https://github.com/RevoArma3/3den-Enhanced/issues) for open tasks.
+# Building 3DEN Enhanced with HEMTT
 
-# How?
-1. Fork this repository
-2. Make the changes
-3. Create a [pull request](https://github.com/RevoArma3/3den-Enhanced/pulls)
+This guide explains how to clone **3DEN Enhanced**, set up HEMTT in Visual Studio Code, build the mod, and test it locally in Arma 3.
 
-# Reporting bugs and providing feedback
-Found a **bug** or have a **feature request**? Visit one of the following links.
+## 1. Clone the Repository
 
-* [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=623475643)
-* [GitHub](https://github.com/RevoArma3/3den-Enhanced/issue)
+Open a terminal and navigate to your preferred project directory.
 
-You can help us by adding more translations for this modification. Read below to find out how.
+```powershell
+git clone https://github.com/R3voA3/3den-Enhanced.git
+```
 
-## How to?
-* [Open the stringtable.xml](https://github.com/R3voA3/3den-Enhanced/blob/master/3denEnhanced/stringtable.xml)
-    * As alternative you can also make your changes directly in the browser on GitHub.
-* [Download Tabler](https://github.com/bux/tabler/releases)
-    * Tabler is optional, you can also edit the stringtable.xml in your text editor of choice
-* Open the stringtable.xml with Tabler or your text editor of choice
-* Fill in missing translations
-* Save the stringtable.xml
-* Create a pull request
+Open the cloned repository in Visual Studio Code:
 
-# See Also
-2. [Submit a request to change a specific translation](https://github.com/R3voA3/3den-Enhanced/issues/new?assignees=&labels=translation&template=translation_correction.yml)
+```powershell
+code 3den-Enhanced
+```
+
+## 2. Install HEMTT
+
+Download and install HEMTT from the official website:
+
+[HEMTT – Official Website](https://hemtt.dev/)
+
+After installation, verify that HEMTT is available by running the following command in the VS Code terminal:
+
+```powershell
+hemtt --version
+```
+
+If a version number is displayed, HEMTT is installed correctly.
+
+## 3. Create a Separate Branch for Your Changes
+
+**All changes must be made in a separate Git branch. Never work directly on the `main` branch.**
+
+Before starting any development work, create a new branch:
+
+```powershell
+git switch -c feature/name-of-your-change
+```
+
+Use a descriptive name that reflects the purpose of your changes.
+
+Examples:
+
+- `feature/new-editor-function`
+- `fix/toolbar-bug`
+- `improvement/ui-layout`
+
+## 4. Use HEMTT in Visual Studio Code
+
+Open the `3den-Enhanced` project in Visual Studio Code.
+
+Open the integrated terminal:
+
+**Terminal → New Terminal**
+
+Make sure the terminal is running in the project's root directory.
+
+HEMTT automatically detects the existing project configuration in `.hemtt/project.toml`.
+
+## 5. Build the Mod
+
+To compile 3DEN Enhanced, run the following command in the VS Code terminal:
+
+```powershell
+hemtt build
+```
+
+HEMTT handles the processing and binarization of the mod files.
+
+After a successful build, the compiled mod can be found in:
+
+```text
+.hemttout/build/
+```
+
+## 6. Test the Mod
+
+To launch Arma 3 with the configured mod environment, run:
+
+```powershell
+hemtt launch
+```
+
+HEMTT starts Arma 3 so you can test your changes directly.
+
+Make sure to verify your changes in the Eden Editor and confirm that all new or modified features work as expected.
+
+## 7. Create a Pull Request
+
+**A Pull Request must only be created after all changes have been successfully built and tested locally.**
+
+Follow this workflow:
+
+1. Implement your changes in your dedicated branch.
+2. Run `hemtt build` and ensure the build completes successfully.
+3. Run `hemtt launch` and test your changes in Arma 3.
+4. Commit your changes:
+
+   ```powershell
+   git add .
+   git commit -m "Description of your changes"
+   ```
+
+5. Push your branch to the remote repository:
+
+   ```powershell
+   git push -u origin feature/name-of-your-change
+   ```
+
+6. Create a Pull Request on GitHub targeting the `main` branch.
+
+The Pull Request should contain only successfully tested changes and provide a clear description of the modifications.
