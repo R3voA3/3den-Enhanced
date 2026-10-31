@@ -108,47 +108,63 @@ class Cfg3DEN
         #include "\x\enh\addons\main\cfg3DEN\controls\SPR.hpp"
         #include "\x\enh\addons\main\cfg3DEN\controls\subCategoryNoHeader_Fixed.hpp"
     };
-	class Connections
-	{
-		class ENH_AttachTo
-		{
-			displayName = "Attach Entity";
-			condition1 = "Object";
-			condition2 = "Object";
-			property = "ENH_AttachTo";
-			data = "ENH_AttachTo";
-			color[] = { 1, 0, 1, 1 };
-			cursor = "3DENConnectSync";
-			expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
-		};
-		class ENH_UnitMarker
-		{
-			displayName = "Attach Marker";
-			condition1 = "Marker";
-			condition2 = "Object";
-			property = "ENH_UnitMarker";
-			data = "ENH_UnitMarker";
-			color[] = { 1, 0, 1, 1 };
-			cursor = "3DENConnectSync";
-			expression = "\
-            addMissionEventHandler\
-            [\
-                'EachFrame',\
-                {\
-                    _thisArgs params ['_entity0', '_entity1'];
-                    if (markerShape _entity0 == '' || {!alive _entity1}) then\
+    class Connections
+    {
+        class ENH_AttachTo
+        {
+            displayName = "Attach Entity";
+            condition1 = "Object";
+            condition2 = "Object";
+            property = "ENH_AttachTo";
+            data = "ENH_AttachTo";
+            color[] = { 1, 0, 1, 1 };
+            cursor = "3DENConnectSync";
+            expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
+        };
+        class ENH_UnitMarker
+        {
+            displayName = "Attach Marker";
+            condition1 = "Marker * script1";
+            conditionScript1 = "({_x#0 =='ENH_UnitMarker'} count get3DENConnections _this) == 0";
+            condition2 = "Object";
+            property = "ENH_UnitMarker";
+            data = "ENH_UnitMarker";
+            color[] = {1, 0, 1, 1};
+            cursor = "3DENConnectSync";
+            expression = "\
+            if (isNil 'ENH_UnitMarker_Initialized') then
+            {
+                ENH_UnitMarker_Initialized = true;\
+                ENH_UnitMarker_Markers = createHashMap;\
+                ENH_UnitMarker_LastFrame = diag_frameNo;\
+                addMissionEventHandler\
+                [\
+                    'EachFrame',\
                     {\
-                        removeMissionEventHandler [_thisEvent, _thisEventHandler];\
+                        if (ENH_UnitMarker_LastFrame + 5 <= diag_frameNo) then
+                        {
+                            ENH_UnitMarker_LastFrame = diag_frameNo;\
+                            ENH_UnitMarker_Markers apply
+                            {
+                                if (markerShape _x == '' || {!alive _y}) then\
+                                {\
+                                    ENH_UnitMarker_Markers deleteAt _x;\
+                                }\
+                                else\
+                                {\
+                                    _x setMarkerPos (getPosATL _y);\
+                                };
+                            };\
+                        };\
                     }\
-                    else\
-                    {\
-                        _entity0 setMarkerPos (getPosATL _entity1);\
-                    };\
-                },\
-                [_entity0, _entity1]\
-            ]";
-		};
-	};
+                ];\
+            }\
+            else\
+            {\
+                ENH_UnitMarker_Markers set [_entity0, _entity1];\
+            }";
+        };
+    };
     class Mission
     {
         class Preferences
