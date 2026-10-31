@@ -1,0 +1,29 @@
+name: Spellcheck Markdown
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "CHANGELOG.md"
+      - "README.md"
+      - "CONTRIBUTING.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          submodules: false
+          persist-credentials: false
+
+      - name: Spellcheck Markdown
+        uses: rojopolis/spellcheck-github-actions@v0
+        with:
+          config_path: .github/.spellcheck.yml
