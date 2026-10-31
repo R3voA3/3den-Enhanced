@@ -125,7 +125,7 @@ class Cfg3DEN
             {
                 ENH_AttachMarker_Initialized = true;\
                 ENH_AttachMarker_Markers = createHashMap;\
-                ENH_AttachMarker_LastFrame = diag_frameNo;\
+                ENH_AttachMarker_LastFrame = 0;\
                 addMissionEventHandler\
                 [\
                     'EachFrame',\
@@ -147,11 +147,8 @@ class Cfg3DEN
                         };\
                     }\
                 ];\
-            }\
-            else\
-            {\
-                ENH_AttachMarker_Markers set [_entity0, _entity1];\
-            }";
+            };\
+            ENH_AttachMarker_Markers set [_entity0, _entity1]";
         };
         class ENH_AttachObject
         {
