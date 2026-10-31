@@ -40,7 +40,6 @@ jobs:
         with:
           script: |
             const fs = require("node:fs");
-            const marker = "<!-- hemtt-localization-coverage -->";
             const report = fs.readFileSync("hemtt-coverage.md", "utf8").trim();
 
             if (!report) {
@@ -51,9 +50,6 @@ jobs:
             const issue_number = 552;
             const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
             const body = [
-              marker,
-              "## HEMTT Localization Coverage",
-              "",
               report,
               "",
               `Updated from [\`${context.sha.slice(0, 7)}\`](${context.serverUrl}/${owner}/${repo}/commit/${context.sha}) ([workflow run](${runUrl})).`
