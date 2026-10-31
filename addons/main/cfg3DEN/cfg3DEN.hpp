@@ -121,7 +121,7 @@ class Cfg3DEN
             color[] = {0.12549, 0.505882, 0.313726, 1};
             cursor = "3DENConnectSync";
             expression = "\
-            if (isNil 'ENH_UnitMarker_Initialized') then
+            if (isNil 'ENH_AttachMarker_Initialized') then
             {
                 ENH_AttachMarker_Initialized = true;\
                 ENH_AttachMarker_Markers = createHashMap;\
