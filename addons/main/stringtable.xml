@@ -1732,15 +1732,15 @@
             <Ukrainian>Фара #02</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_#LIGHT_2_HITPOINT">
-            <English>Light #03</English>
-            <French>Lumière #03</French>
-            <Spanish>Luz #03</Spanish>
-            <Italian>Luce #03</Italian>
-            <Polish>Światło #03</Polish>
-            <Russian>Свет #03</Russian>
-            <German>Licht #03</German>
-            <Chinese>燈光 #03</Chinese>
-            <Chinesesimp>灯光 #03</Chinesesimp>
+            <English>Light #02</English>
+            <French>Lumière #02</French>
+            <Spanish>Luz #02</Spanish>
+            <Italian>Luce #02</Italian>
+            <Polish>Światło #02</Polish>
+            <Russian>Свет #02</Russian>
+            <German>Licht #02</German>
+            <Chinese>燈光 #02</Chinese>
+            <Chinesesimp>灯光 #02</Chinesesimp>
             <Ukrainian>Фара #02</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_#LIGHT_3_HIT">
@@ -2524,7 +2524,7 @@
             <Ukrainian>Вікно #50</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_GLASS_51_HITPOINT">
-            <English>Windoe #51</English>
+            <English>Window #51</English>
             <French>Fenêtre #51</French>
             <Spanish>Ventana #51</Spanish>
             <Italian>Finestra #51</Italian>
@@ -2584,7 +2584,7 @@
             <Ukrainian>Вікно #55</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_DAMAGE_GLASS_56_HITPOINT">
-            <English>Windoe #56</English>
+            <English>Window #56</English>
             <French>Fenêtre #56</French>
             <Spanish>Ventana #56</Spanish>
             <Italian>Finestra #56</Italian>
@@ -8037,8 +8037,8 @@
             <Ukrainian>Восьмикутник</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_MARKER_SHAPE_PENTAGON">
-            <English>Triangle</English>
-            <French>Pentagon</French>
+            <English>Pentagon</English>
+            <French>Pentagone</French>
             <German>Pentagon</German>
             <Ukrainian>П’ятикутник</Ukrainian>
         </Key>
@@ -9549,7 +9549,7 @@
             <Ukrainian>Коеф. витрати витривалості</Ukrainian>
         </Key>
         <Key ID="STR_ENH_MAIN_STAMINADRAINCOEF_TOOLTIP">
-            <English>A value means the stamina is draining faster.</English>
+            <English>A higher value means the stamina is draining faster.</English>
             <German>Bei einem höheren Wert lässt die Ausdauer schneller nach.</German>
             <Ukrainian>Більше значення — витривалість витрачається швидше.</Ukrainian>
         </Key>
