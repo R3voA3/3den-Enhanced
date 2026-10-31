@@ -118,7 +118,7 @@ class Cfg3DEN
             condition2 = "Object";
             property = "ENH_AttachMarker";
             data = "ENH_AttachMarker";
-            color[] = {1, 0, 1, 1};
+            color[] = {0.12549, 0.505882, 0.313726, 1};
             cursor = "3DENConnectSync";
             expression = "\
             if (isNil 'ENH_UnitMarker_Initialized') then
