@@ -1487,6 +1487,14 @@
             <Chinesesimp>鸣谢</Chinesesimp>
             <Ukrainian>Автори</Ukrainian>
         </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_MARKER_DISPLAYNAME">
+            <English>Attach Marker</English>
+            <German>Markierung befestigen</German>
+        </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_OBJECT_DISPLAYNAME">
+            <English>Attach Object</English>
+            <German>Objekt befestigen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_CUSTOM_MARKER_COLOR_ADD_PRESET">
             <English>Add current color to color palette.</English>
             <German>Aktuelle Farbe zu Farbpalette hinzufügen.</German>

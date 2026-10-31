@@ -1,6 +1,8 @@
-# Unreleased
+# 8.8.4
 ## ADDED
-- Ukrainian translation
+- "Attach Object" custom connection
+- "Attach Marker" custom connection
+- Ukrainian translation by smitt14ua
 
 # 8.8.3
 ## CHANGED
@@ -1990,4 +1992,4 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 
 ## REMOVED
 - Removed composition tool
-- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvinience that caused)
+- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvenience that caused)
