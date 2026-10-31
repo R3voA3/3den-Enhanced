@@ -5,7 +5,7 @@
 - Ukrainian translation by smitt14ua
 
 ## CHANGED
-- Fixed various wrong translation thanks to smitt14ua
+- Fixed various wrong translations, thanks to smitt14ua
 - The search field in the Equipment Storage editor now also supports searching by class name (#537)
     - Use "class " prefix to match filter against the item class name
     - Use "mod " prefix to match against item addon
