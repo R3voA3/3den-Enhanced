@@ -150,7 +150,7 @@ class Cfg3DEN
             }\
             else\
             {\
-                ENH_UnitMarker_Markers set [_entity0, _entity1];\
+                ENH_AttachMarker_Markers set [_entity0, _entity1];\
             }";
         };
     };
