@@ -6039,6 +6039,10 @@
             <Chinese>帶有行號的預處理文件</Chinese>
             <Chinesesimp>带有行号的预处理文件</Chinesesimp>
         </Key>
+        <Key ID="STR_ENH_MAIN_CUSTOM_CONNECTION_ATTACH_MARKER_DISPLAYNAME">
+            <English>Attach Marker</English>
+            <German>Markierung befestigen</German>
+        </Key>
         <Key ID="STR_ENH_MAIN_FUNCTIONSVIEWER_RECOMPILEALL_TEXT">
             <English>Recompile All</English>
             <Czech>Překompilovat vše</Czech>
