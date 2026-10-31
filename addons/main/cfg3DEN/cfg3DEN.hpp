@@ -110,17 +110,6 @@ class Cfg3DEN
     };
     class Connections
     {
-        class ENH_AttachTo
-        {
-            displayName = "Attach Entity";
-            condition1 = "Object";
-            condition2 = "Object";
-            property = "ENH_AttachTo";
-            data = "ENH_AttachTo";
-            color[] = { 1, 0, 1, 1 };
-            cursor = "3DENConnectSync";
-            expression = "[_entity0, _entity1, true] remoteExecCall ['BIS_fnc_attachToRelative', _entity0]"; // Runs on the server
-        };
         class ENH_UnitMarker
         {
             displayName = "Attach Marker";
