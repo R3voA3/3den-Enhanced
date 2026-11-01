@@ -14,7 +14,7 @@
 - Group Marker Attribute
     - Fixed a bug which would prevent the "Show Vehicle" setting to be ignored
     - If the vehicle gets destroyed or the unit is no longer in it, the text is adjusted accordingly
-    - Simplified and optimized the code
+    - Code now runs unscheduled every 5 frames, configureable via ENH_GroupMarker_FrameInterval
 
 # 8.8.3
 ## CHANGED
