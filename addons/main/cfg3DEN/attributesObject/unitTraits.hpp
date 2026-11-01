@@ -10,13 +10,13 @@ class ENH_UnitTraits
             data = "AttributeSystemSubcategory";
             control = "ENH_SubCategoryNoHeader1_Fixed";
         };
-        class ENH_Medic // Disabled when ACE is loaded
+        class ENH_Medic // Disabled when ACE is loaded, except ace_nomedical is loaded too
         {
             displayName = "$STR_ENH_MAIN_UNITTRAITS_MEDIC_DISPLAYNAME";
             tooltip = "$STR_ENH_MAIN_UNITTRAITS_MEDIC_TOOLTIP";
             property = "ENH_unitTraits_medic";
             control = "Checkbox";
-            expression = "if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
+            expression = "if (!isClass (configFile >> 'CfgPatches' >> 'ace_common') || isClass (configFile >> 'CfgPatches' >> 'ace_nomedical')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
             condition = "objectBrain";
             defaultValue = "_this getUnitTrait 'Medic'";
         };
