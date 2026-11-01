@@ -10,6 +10,11 @@
     - Use "class " prefix to match filter against the item class name
     - Use "mod " prefix to match against item addon
     - No prefix searches the item's display name
+- Unit Trait "Medic" is now working if "ACE_nomedical" present (#480)
+- Group Marker Attribute
+    - Fixed a bug which would prevent the "Show Vehicle" setting to be ignored
+    - If the vehicle gets destroyed or the unit is no longer in it, the text is adjusted accordingly
+    - Simplified and optimized the code
 
 # 8.8.3
 ## CHANGED
