@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=83301;
+		nextID=83308;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,13 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17563;
+		nextID=17583;
 	};
 	class Camera
 	{
-		pos[]={3992.6021,7.8749366,2878.7053};
-		dir[]={0.85569376,-0.34325537,-0.38725212};
-		up[]={0.31272179,0.93924212,-0.14152515};
-		aside[]={-0.41230279,-7.4505806e-09,-0.91104704};
+		pos[]={4284.3345,22.557648,2644.5559};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710671,0.70710683};
 	};
 };
 binarizationWanted=0;
@@ -87,13 +86,14 @@ addons[]=
 	"A3_Props_F_Exp_Military_Camps",
 	"A3_Soft_F_Enoch_UGV_02",
 	"A3_Weapons_F_Enoch",
-	"A3_Structures_F_EPC_Items_Electronics"
+	"A3_Structures_F_EPC_Items_Electronics",
+	"A3_Soft_F_MRAP_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -278,6 +278,13 @@ class AddonsMetaData
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item27
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -2164,7 +2171,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
 			dataType="Group";
@@ -2612,7 +2619,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4022.0552,5.9832339,2884.5649};
-						angles[]={-0,1.2852743e-05,0};
+						angles[]={0,1.2852743e-05,0};
 					};
 					side="Empty";
 					flags=4;
@@ -3872,7 +3879,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4022.7437,5.0014391,2882.2014};
+								position[]={4278.5151,5.0014391,2663.5681};
 							};
 							side="West";
 							flags=7;
@@ -3882,12 +3889,238 @@ class Mission
 							};
 							id=83231;
 							type="B_Soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ENH_HoldAction";
+									expression="            _value params ['_name', '_iconIdle', '_iconProgress', '_conditionShow', '_conditionProgress', '_codeStart', '_codeProgress', '_codeCompletion', '_codeInterrupt', '_duration', '_priority', '_showUnconscious', '_showWindow', '_removeAfterUse', '_radius'];            if (!is3DEN && (_name != '')) then            {                if _removeAfterUse then                {                    _codeCompletion = format ['%1 %2', '[_this select 0, _this select 2] remoteExecCall [''removeAction'', 0]; remoteExecCall ['''', _this select 0];', _codeCompletion];                };                [                    _this,                    _name,                    _iconIdle,                    _iconProgress,                    _conditionShow,                    _conditionProgress,                    compile _codeStart,                    compile _codeProgress,                    compile _codeCompletion,                    compile _codeInterrupt,                    nil,                    _duration,                    _priority,                    _removeAfterUse,                    _showUnconscious,                    _showWindow,                    _radius                ] remoteExecCall ['BIS_fnc_holdActionAdd', 0, _this];            };";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=15;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="sdf234234";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="STRING";
+														value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														singleType="STRING";
+														value="\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa";
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														singleType="STRING";
+														value="true";
+													};
+												};
+												class Item4
+												{
+													class data
+													{
+														singleType="STRING";
+														value="true";
+													};
+												};
+												class Item5
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item6
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item7
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item8
+												{
+													class data
+													{
+														singleType="STRING";
+														value="";
+													};
+												};
+												class Item9
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=20;
+													};
+												};
+												class Item10
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=110;
+													};
+												};
+												class Item11
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item12
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item13
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item14
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=578;
+													};
+												};
+											};
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male04ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=3;
+							};
 						};
 					};
 					class Attributes
 					{
 					};
 					id=83230;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_groupMarker";
+							expression="            if (!is3DEN && (_value # 0 != '')) then            {                [_this, _value] spawn                {                    scriptName 'ENH_Attribute_GroupMarker';                    params ['_group', '_parameters'];                    _parameters params                    [                        ['_type', ''],                        ['_color', 'Default'],                        ['_text', groupID _group],                        ['_showGroupSize', true],                        ['_showVehicle', true]                    ];                    private _marker = createMarkerLocal                    [                        'ENH_GroupMarker_' + str _group,                        [0, 0]                    ];                    private _markerText = _text call BIS_fnc_localize;                    _marker setMarkerTypeLocal _type;                    _marker setMarkerColorLocal _color;                    while {true} do                    {                        sleep 1;                        if (isNull _group) exitWith {deleteMarker _marker};                        if (markerShape _marker == '') exitWith {_group setVariable ['ENH_GroupMarker_Update', false]};                        if (_group getVariable ['ENH_GroupMarker_Update', true]) then                        {                            private _leader = leader _group;                            private _textExt = '';                            if (_showVehicle && {!isNull objectParent _leader}) then                            {                                _textExt = format ['[%1]', getText (configOf objectParent _leader >> 'displayName')];                            };                            if (_showGroupSize) then                            {                                _textExt = format ['%1 [%2]',_textExt, count units _group];                            };                            _marker setMarkerTextLocal format ['%1 %2', _markerText, _textExt];                            _marker setMarkerPos _leader;                        };                    };                };            }";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=5;
+										class Item0
+										{
+											class data
+											{
+												singleType="STRING";
+												value="mil_objective";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ColorWEST";
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="STRING";
+												value="ALPHA";
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+										class Item4
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item8
 				{
@@ -8602,6 +8835,21 @@ class Mission
 			type="mil_objective";
 			id=83300;
 		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4274.8843,7.2059455,2663.4912};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=83307;
+			type="B_MRAP_01_F";
+		};
 	};
 	class CustomConnections
 	{
@@ -8631,7 +8879,7 @@ class Mission
 				class CustomData
 				{
 					type="ENH_AttachMarker";
-					expression="            if (isNil 'ENH_UnitMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = diag_frameNo;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_UnitMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos getPosATL _y;                                };" \n "                            };                        };                    }                ];            }            else            {                ENH_AttachMarker_Markers set [_entity0, _entity1];            }";
+					expression="            if (isNil 'ENH_AttachMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = 0;                ENH_AttachMarker_FrameInterval = 5;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + ENH_AttachMarker_FrameInterval <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_AttachMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos _y;                                };" \n "                            };                        };                    }                ];            };            ENH_AttachMarker_Markers set [_entity0, _entity1]";
 				};
 			};
 			class Item2
@@ -8642,7 +8890,7 @@ class Mission
 				class CustomData
 				{
 					type="ENH_AttachMarker";
-					expression="            if (isNil 'ENH_UnitMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = diag_frameNo;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + 5 <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_UnitMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos getPosATL _y;                                };" \n "                            };                        };                    }                ];            }            else            {                ENH_AttachMarker_Markers set [_entity0, _entity1];            }";
+					expression="            if (isNil 'ENH_AttachMarker_Initialized') then" \n "            {" \n "                ENH_AttachMarker_Initialized = true;                ENH_AttachMarker_Markers = createHashMap;                ENH_AttachMarker_LastFrame = 0;                ENH_AttachMarker_FrameInterval = 5;                addMissionEventHandler                [                    'EachFrame',                    {                        if (ENH_AttachMarker_LastFrame + ENH_AttachMarker_FrameInterval <= diag_frameNo) then" \n "                        {" \n "                            ENH_AttachMarker_LastFrame = diag_frameNo;                            ENH_AttachMarker_Markers apply" \n "                            {" \n "                                if (markerShape _x == '' || {!alive _y}) then                                {                                    ENH_AttachMarker_Markers deleteAt _x;                                }                                else                                {                                    _x setMarkerPos _y;                                };" \n "                            };                        };                    }                ];            };            ENH_AttachMarker_Markers set [_entity0, _entity1]";
 				};
 			};
 		};
