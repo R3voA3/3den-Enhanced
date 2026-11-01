@@ -49,7 +49,7 @@ class ENH_GroupMarker
                             private _leader = leader _group;\
                             private _textExt = '';\
                             if (_showVehicle && {!isNull objectParent _leader}) then\
-               !isNull objectParent _leader             {\
+                            {\
                                 _textExt = format ['[%1]', getText (configOf objectParent _leader >> 'displayName')];\
                             };\
                             if (_showGroupSize) then\
