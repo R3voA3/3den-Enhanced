@@ -14,7 +14,7 @@
     2: BOOLEAN - True to get attribute values from clipboard
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

@@ -13,7 +13,7 @@
     1: STRING: Search string
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_ctrlEdit", "_searchText"];

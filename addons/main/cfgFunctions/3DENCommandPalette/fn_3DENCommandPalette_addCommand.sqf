@@ -20,7 +20,7 @@
     7: BOOLEAN - Whether the _action should be called or just copied to clipboard
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_action", "_picture", "_shortcuts", "_text", ["_description", ""], "", "", "_copyToClipboard"];

@@ -12,7 +12,7 @@
     0: STRING - Config path as string. Saved in tvData
 
     Returns:
-    ARRAY: [<readableConfigPath>,<bikbPath>,<topic>,<sentence>,<soundPath>]
+    ARRAY - [<readableConfigPath>,<bikbPath>,<topic>,<sentence>,<soundPath>]
 */
 
 params ["_configStr"];

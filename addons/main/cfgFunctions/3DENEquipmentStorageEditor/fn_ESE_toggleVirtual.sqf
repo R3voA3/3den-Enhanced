@@ -12,7 +12,7 @@
     0: BOOLEAN or NUMBER - -1 to invert current state, true to set to virtual, false to set to normal
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

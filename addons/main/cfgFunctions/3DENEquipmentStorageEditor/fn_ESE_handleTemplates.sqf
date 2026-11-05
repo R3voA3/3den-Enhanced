@@ -8,7 +8,7 @@
     0: STRING - Action: "create", "delete", "preview", or "update"
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_mode"];

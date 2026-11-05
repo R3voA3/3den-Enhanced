@@ -12,7 +12,7 @@
     0: STRING - Mode, "play" to play the sentence, anything else to copy it
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_mode"];

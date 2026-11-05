@@ -12,7 +12,7 @@
     0: OBJECT - Eden entity
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_entity"];

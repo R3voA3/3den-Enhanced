@@ -12,7 +12,7 @@
     BOOLEAN: True to set selected layer as default, false to remove default layer.
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_setDefaultLayer", [true]]];

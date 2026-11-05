@@ -12,7 +12,7 @@
     -
 
     Returns:
-    DISPLAY
+    DISPLAY - The context menu documentation display
 */
 
 private _contextMenuEntries = "configName _x select [0, 3] == 'ENH' && (getArray (_x >> 'items')) isEqualTo []" configClasses (configFile >> "Display3DEN" >> "ContextMenu" >> "Items");

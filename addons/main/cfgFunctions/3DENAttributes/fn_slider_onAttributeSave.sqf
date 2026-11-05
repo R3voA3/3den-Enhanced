@@ -12,7 +12,7 @@
     0: CONTROL - Controls group
 
     Returns:
-    NUMBER: Attribute value
+    NUMBER - Attribute value
 */
 
 params ["_ctrlGroup"];

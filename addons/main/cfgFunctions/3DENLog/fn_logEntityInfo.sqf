@@ -20,7 +20,7 @@
         "OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_mode", ""]];

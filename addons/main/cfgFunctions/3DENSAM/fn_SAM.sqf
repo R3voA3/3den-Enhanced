@@ -13,7 +13,7 @@
     1: STRING - Mode
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

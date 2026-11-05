@@ -18,7 +18,7 @@
     6: STRING - Tooltip
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

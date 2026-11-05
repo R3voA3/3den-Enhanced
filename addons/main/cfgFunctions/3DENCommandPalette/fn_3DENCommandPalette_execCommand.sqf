@@ -12,7 +12,7 @@
     0: CONTROL - Action button
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_ctrlFakeButton", controlNull]];

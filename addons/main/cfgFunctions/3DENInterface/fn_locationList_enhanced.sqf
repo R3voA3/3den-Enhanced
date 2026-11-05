@@ -8,7 +8,7 @@
     0: STRING - Action: "add", "delete", "view", or "init". Defaults to "add".
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

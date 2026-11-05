@@ -14,7 +14,7 @@
     1: STRING - New Text
 
     Returns:
-    true
+    BOOLEAN - True
 */
 
 params ["_ctrlEdit", "_newText"];

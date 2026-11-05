@@ -12,7 +12,7 @@
     0: CONTROL - A menu strip control
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_menuStrip", controlNull]];

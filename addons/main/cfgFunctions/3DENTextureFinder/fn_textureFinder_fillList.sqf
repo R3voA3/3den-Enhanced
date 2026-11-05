@@ -10,7 +10,7 @@
     -
 
     Returns:
-    NOTHING
+    -
 */
 
 #define TINY [0, 512]

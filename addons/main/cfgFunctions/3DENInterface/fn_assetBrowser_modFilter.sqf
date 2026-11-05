@@ -12,7 +12,7 @@
     0: CONTROL - The filter control
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_ctrlMods", controlNull]];

@@ -12,7 +12,7 @@
     -
 
     Returns:
-    ARRAY: Array containing arrays in format [_configStr, _addon, _tag, _category, _fncShort, _fncLong, _path, _preInit, _preStart, _postInit, _recompile, _logo]
+    ARRAY - Array containing arrays in format [_configStr, _addon, _tag, _category, _fncShort, _fncLong, _path, _preInit, _preStart, _postInit, _recompile, _logo]
 */
 
 private _functionsData = [];

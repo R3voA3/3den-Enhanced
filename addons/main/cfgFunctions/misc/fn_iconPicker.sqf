@@ -20,7 +20,7 @@
     7: NUMBER - Maximum height of the UI in GRID_H
 
     Returns:
-    BOOL - True on success, false if failed
+    BOOLEAN - True on success, false if failed
 */
 
 params

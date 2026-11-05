@@ -12,7 +12,7 @@
     -
 
     Returns:
-    ARRAY: A list of all commands
+    ARRAY - A list of all commands
 */
 
 private _3DENActions =

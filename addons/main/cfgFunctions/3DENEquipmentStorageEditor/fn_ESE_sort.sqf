@@ -8,7 +8,7 @@
     0: STRING - Sort mode: "name", "class", "count", "mod", or "type". Defaults to "name".
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

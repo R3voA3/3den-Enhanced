@@ -13,7 +13,7 @@
     -
 
     Returns:
-    BOOLEAN: True
+    BOOLEAN - True
 */
 
 disableSerialization;

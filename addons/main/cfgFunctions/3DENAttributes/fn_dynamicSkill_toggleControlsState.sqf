@@ -12,7 +12,7 @@
     0: CONTROL - Checkbox
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_ctrlCheckbox"];

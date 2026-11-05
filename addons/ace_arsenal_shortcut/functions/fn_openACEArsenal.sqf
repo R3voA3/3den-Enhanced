@@ -8,7 +8,7 @@
     -
 
     Returns:
-    NOTHING
+    -
 */
 
 private _entity = get3DENSelected "Object" param [0, objNull];

@@ -14,7 +14,7 @@
     1: STRING - Class name of the main module from CfgVehicles
 
     Returns:
-    NOTHING
+    -
 */
 
 if (!is3DEN) exitWith {};

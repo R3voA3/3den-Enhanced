@@ -13,7 +13,7 @@
     1: ARRAY - Attribute value
 
     Returns:
-    BOOLEAN: true
+    BOOLEAN - true
 */
 
 params ["_ctrlGroup", "_value"];

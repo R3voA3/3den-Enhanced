@@ -15,7 +15,7 @@
     1: ARRAY - Attribute value
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_ctrlGroup", "_value"];

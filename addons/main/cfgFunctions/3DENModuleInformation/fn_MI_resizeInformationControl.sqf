@@ -12,7 +12,7 @@
     0: CONTROL - Structured Text Control of ENH_ModuleInformation GUI.
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_ctrlStructuredText"];

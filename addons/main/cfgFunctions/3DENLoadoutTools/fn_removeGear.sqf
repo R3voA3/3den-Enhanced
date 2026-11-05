@@ -18,7 +18,7 @@
     7 - remove everything
 
     Returns:
-    BOOLEAN: true / false
+    BOOLEAN - true / false
 */
 
 if (!is3DEN) exitWith {false};

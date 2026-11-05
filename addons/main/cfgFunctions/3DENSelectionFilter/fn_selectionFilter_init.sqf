@@ -12,7 +12,7 @@
     0: DISPLAY - Selection Filter UI
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_display"];

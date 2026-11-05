@@ -12,7 +12,7 @@
     0: CONTROL - Title control
 
     Returns:
-    NOTHING
+    -
 */
 
 params ["_ctrlTitle"];
