@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.78539819;
 	scaleGridStep=10;
 	autoGroupingDist=100;
-	toggles=137;
+	toggles=9;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -20,11 +20,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17583;
+		nextID=17588;
 	};
 	class Camera
 	{
-		pos[]={4279.8711,30,2667.604};
+		pos[]={4277.9375,22.557648,2644.5559};
 		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
 		up[]={-1.2363449e-07,0.70710671,0.70710683};
 		aside[]={1,0,1.7484557e-07};
@@ -3880,7 +3880,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4278.5151,5.0014391,2663.5681};
+								position[]={4270.6802,5.0014391,2662.3005};
+								angles[]={0,1.0855651,0};
 							};
 							side="West";
 							flags=7;
@@ -4067,7 +4068,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_groupMarker";
-							expression="            if (!is3DEN && (_value # 0 != '')) then            {                [_this, _value] spawn                {                    scriptName 'ENH_Attribute_GroupMarker';                    params ['_group', '_parameters'];                    _parameters params                    [                        ['_type', ''],                        ['_color', 'Default'],                        ['_text', groupID _group],                        ['_showGroupSize', true],                        ['_showVehicle', true]                    ];                    private _marker = createMarkerLocal                    [                        'ENH_GroupMarker_' + str _group,                        [0, 0]                    ];                    private _markerText = _text call BIS_fnc_localize;                    _marker setMarkerTypeLocal _type;                    _marker setMarkerColorLocal _color;                    while {true} do                    {                        sleep 1;                        if (isNull _group) exitWith {deleteMarker _marker};                        if (markerShape _marker == '') exitWith {_group setVariable ['ENH_GroupMarker_Update', false]};                        if (_group getVariable ['ENH_GroupMarker_Update', true]) then                        {                            private _leader = leader _group;                            private _textExt = '';                            if (_showVehicle && {!isNull objectParent _leader}) then                            {                                _textExt = format ['[%1]', getText (configOf objectParent _leader >> 'displayName')];                            };                            if (_showGroupSize) then                            {                                _textExt = format ['%1 [%2]',_textExt, count units _group];                            };                            _marker setMarkerTextLocal format ['%1 %2', _markerText, _textExt];                            _marker setMarkerPos _leader;                        };                    };                };            }";
+							expression="            if (!is3DEN && isServer && (_value#0 != '')) then            {                params ['_group', '_parameters'];                _parameters params                [                    ['_type', ''],                    ['_color', 'Default'],                    ['_markerText', groupID _group],                    ['_showGroupSize', true],                    ['_showVehicle', true]                ];                private _marker = createMarkerLocal                [                    format ['ENH_Group_Marker_%1', hashValue _group],                    [0, 0]                ];                _markerText = _markerText call BIS_fnc_localize;                _marker setMarkerTypeLocal _type;                _marker setMarkerColorLocal _color;                if (isNil 'ENH_GroupMarker_Initialized') then                {                    ENH_GroupMarker_Initialized = true;                    ENH_GroupMarker_Markers = createHashMap;                    ENH_GroupMarker_LastFrame = 0;                    ENH_GroupMarker_FrameInterval = 5;                    addMissionEventHandler                    [                        'EachFrame',                        {                            if (ENH_GroupMarker_LastFrame + ENH_GroupMarker_FrameInterval <= diag_frameNo) then                            {                                ENH_GroupMarker_LastFrame = diag_frameNo;                                ENH_GroupMarker_Markers apply                                {                                    values _y params keys _y;                                    if (_group getVariable ['ENH_GroupMarker_Update', false]) then {continue};                                    if (markerShape _x == '' || {isNull _group}) then                                    {                                        ENH_GroupMarker_Markers deleteAt _x;                                    }                                    else                                    {                                        private _leader = leader _group;                                        private _textExt = '';                                        if (_showVehicle && {!isNull objectParent _leader}) then                                        {                                            _textExt = format ['[%1]', getText (configOf objectParent _leader >> 'displayName')];                                        };                                        if (_showGroupSize) then                                        {                                            _textExt = format ['%1 [%2]',_textExt, count units _group];                                        };                                        _x setMarkerTextLocal format ['%1 %2', _markerText, _textExt];                                        _x setMarkerPos _leader;                                    };                                };                            };                        }                    ];                };                ENH_GroupMarker_Markers set                [                    _marker,                    createHashMapFromArray                    [" \n "                        ['_group', _group],                        ['_markerText', _markerText],                        ['_showGroupSize', _showGroupSize],                        ['_showVehicle', _showVehicle]                    ]                ];            }";
 							class Value
 							{
 								class data
@@ -4105,7 +4106,7 @@ class Mission
 											class data
 											{
 												singleType="BOOL";
-												value=0;
+												value=1;
 											};
 										};
 										class Item4
@@ -4113,7 +4114,7 @@ class Mission
 											class data
 											{
 												singleType="BOOL";
-												value=1;
+												value=0;
 											};
 										};
 									};
