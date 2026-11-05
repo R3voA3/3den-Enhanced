@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONFIG - Module config
 
-    Return Value:
+    Returns:
     HASHMAP - Information data
 */
 

@@ -13,10 +13,10 @@
     1: CONTROL - Button Control
     2: CODE - Code executed after the content of the edit control was changed. The edit control is passed to the code in _this
 
-    Return Value:
+    Returns:
     BOOLEAN - true
 
-    Examples(s):
+    Examples:
     [_ctrlEdit, _ctrlButton, ENH_fnc_3DENRadio_searchList] call ENH_fnc_initSearchControls;
 */
 

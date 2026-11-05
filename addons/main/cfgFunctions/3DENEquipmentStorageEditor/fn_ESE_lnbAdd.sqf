@@ -13,12 +13,12 @@
     1: STRING - Item Data
     2: STRING - Item Text
     3: STRING - Image of the first column
-    4: STRING - Image of the forth column
+    4: STRING - Image of the fourth column
     5: NUMBER - Value set in the second column (Text of second column will be that value)
     6: STRING - Tooltip
 
     Returns:
-    -
+    NOTHING
 */
 
 disableSerialization;
@@ -45,3 +45,5 @@ if (_text != "") then
     _ctrlLnb lnbSetPicture [[_row, 3], _addonIcon];
     _ctrlLnb lnbSetData [[_row, 3], _addonIcon]
 };
+
+nil

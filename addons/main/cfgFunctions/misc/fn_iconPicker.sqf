@@ -19,7 +19,7 @@
     6: NUMBER - Size of each tile in GRID_W
     7: NUMBER - Maximum height of the UI in GRID_H
 
-    Return Value:
+    Returns:
     BOOL - True on success, false if failed
 */
 

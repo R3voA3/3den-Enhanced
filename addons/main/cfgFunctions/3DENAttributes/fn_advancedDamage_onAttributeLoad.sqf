@@ -6,7 +6,7 @@
     Date: 2020-02-22
 
     Description:
-    Used by the advanced damage attribute. Called when attribute is loaded. It automatically create a set of controls for every
+    Used by the advanced damage attribute. Called when attribute is loaded. It automatically creates a set of controls for every
     available hitpoint and resizes the controls group accordingly. The IDCs have to be that large to make sure they are not in conflict with other controls created
     by Eden Editor.
 
@@ -15,7 +15,7 @@
     1: ARRAY - Attribute value
 
     Returns:
-    -
+    NOTHING
 */
 
 params ["_ctrlGroup", "_value"];

@@ -19,7 +19,7 @@
     6: NUMBER - Priority, smaller value = higher priority
     7: BOOLEAN - Whether the _action should be called or just copied to clipboard
 
-    Return Value:
+    Returns:
     NOTHING
 */
 

@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONTROL - Action button
 
-    Return Value:
+    Returns:
     NOTHING
 */
 

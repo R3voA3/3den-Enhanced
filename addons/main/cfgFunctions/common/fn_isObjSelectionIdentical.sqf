@@ -11,7 +11,7 @@
     Parameter(s):
     NOTHING
 
-    Return Value:
+    Returns:
     BOOLEAN - True if identical, false if not
 */
 

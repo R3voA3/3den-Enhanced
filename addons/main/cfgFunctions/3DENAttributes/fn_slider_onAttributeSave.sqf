@@ -6,7 +6,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by simple slider attributes. Call when attribute is saved.
+    Used by simple slider attributes. Called when the attribute is saved.
 
     Parameter(s):
     0: CONTROL - Controls group

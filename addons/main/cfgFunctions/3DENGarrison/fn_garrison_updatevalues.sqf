@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Updates the garrison UI with the number of nearby buildings, positions, and selected entities.
+
+    Parameter(s):
+    -
+
+    Returns:
+    NOTHING
+*/
+
 disableSerialization;
 
 if isNull ENH_Garrison_AreaHelper exitWith {};

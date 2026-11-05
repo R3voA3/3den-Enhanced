@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Sorts the inventory list by name, class, count, mod, or type.
+
+    Parameter(s):
+    0: STRING - Sort mode: "name", "class", "count", "mod", or "type". Defaults to "name".
+
+    Returns:
+    NOTHING
+*/
+
 disableSerialization;
 
 params [["_mode", "name"]];

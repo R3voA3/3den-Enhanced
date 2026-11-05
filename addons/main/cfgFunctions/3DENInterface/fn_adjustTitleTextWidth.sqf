@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONTROL - Title control
 
-    Return Value:
+    Returns:
     NOTHING
 */
 

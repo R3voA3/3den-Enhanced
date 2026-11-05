@@ -6,7 +6,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by the mapindicators attribute. Called when attribute is saved.
+    Used by the map indicators attribute. Called when the attribute is saved.
 
     Parameter(s):
     0: CONTROL - Controls group

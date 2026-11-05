@@ -11,7 +11,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     ARRAY: A list of all commands
 */
 

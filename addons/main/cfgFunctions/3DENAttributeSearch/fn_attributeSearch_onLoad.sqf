@@ -4,19 +4,17 @@
     Author: R3vo
 
     Date: 2023-09-16
-    File: 3denEnhanced\functions\GUI\attributeSearch\fn_attributeSearch_onLoad.sqf
-
     Description:
     Initializes the Search Attributes GUI.
 
     Parameter(s):
     0: DISPLAY - The Search Attributes GUI
 
-    Return Value:
+    Returns:
     -
 
-    Examples(s):
-    -
+    Examples:
+    NOTHING
 */
 
 #define COLOR_ATTRIBUTE [0.86, 0.73, 0.38, 1]
@@ -234,3 +232,5 @@ _ctrlTV ctrlAddEventHandler ["TreeDblClick",
 }];
 
 [CTRL(IDC_ATTRIBUTESEARCH_SEARCH), CTRL(IDC_ATTRIBUTESEARCH_BUTTONSEARCH)] call ENH_fnc_initSearchControls;
+
+nil

@@ -11,8 +11,8 @@
     Parameter(s):
     0: ARRAY - Building position
 
-    Return Value:
-    ARRAY - True when empty, false if not
+    Returns:
+    BOOLEAN - True when empty, false otherwise
 */
 
 params [["_buildingPosition", [0, 0, 0]]];

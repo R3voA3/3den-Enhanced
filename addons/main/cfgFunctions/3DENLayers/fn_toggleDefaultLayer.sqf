@@ -11,7 +11,7 @@
     Parameter(s):
     BOOLEAN: True to set selected layer as default, false to remove default layer.
 
-    Return Value:
+    Returns:
     NOTHING
 */
 

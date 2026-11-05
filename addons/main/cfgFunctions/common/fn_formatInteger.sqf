@@ -4,19 +4,17 @@
     Author: R3vo
 
     Date: 2025-01-01
-    File: addons\main\functions\misc\fn_formatInteger.sqf
-
     Description:
     Formats an integer to given number of digits for display purpose.
 
     Parameter(s):
     0: NUMBER - Any number, will be rounded
-    2: NUMBER - Number of digits (1000 = 4, 100 = 3, ...)
+    1: NUMBER - Number of digits (1000 = 4, 100 = 3, ...)
 
-    Return Value:
+    Returns:
     STRING - Integer string representation
 
-    Examples(s):
+    Examples:
     [125, 4] call ENH_fnc_formatInteger; // "0125"
 */
 

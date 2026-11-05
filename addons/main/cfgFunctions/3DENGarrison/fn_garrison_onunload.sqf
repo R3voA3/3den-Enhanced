@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Removes the garrison UI event handlers and helper trigger, then saves the blacklist.
+
+    Parameter(s):
+    -
+
+    Returns:
+    BOOLEAN - True
+*/
+
 false call ENH_fnc_garrison_draw;
 
 remove3DENEventHandler ["OnBeforeMissionPreview", if (!isNil "ENH_Garrison_OnBeforeMissionPreview_EH") then {ENH_Garrison_OnBeforeMissionPreview_EH} else {-1}];
@@ -15,3 +26,5 @@ profileNamespace setVariable ["ENH_Garrison_Classes", ctrlText (findDisplay IDD_
 saveProfileNamespace;
 
 ctrlDelete (findDisplay IDD_DISPLAY3DEN displayCtrl IDC_GARRISON_GROUP);
+
+true

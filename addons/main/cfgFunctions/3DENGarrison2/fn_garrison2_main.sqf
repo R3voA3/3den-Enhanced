@@ -11,10 +11,10 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     BOOLEAN - True on success, false if failed
 
-    Examples(s):
+    Examples:
 */
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;

@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONTROL - A menu strip control
 
-    Return Value:
+    Returns:
     NOTHING
 */
 

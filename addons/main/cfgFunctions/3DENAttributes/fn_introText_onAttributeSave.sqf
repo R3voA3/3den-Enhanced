@@ -6,7 +6,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by the intro text attribute. Call when attribute is saved.
+    Used by the intro text attribute. Called when the attribute is saved.
 
     Parameter(s):
     0: CONTROL - Controls group

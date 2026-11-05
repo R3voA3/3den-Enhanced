@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONTROL - The filter control
 
-    Return Value:
+    Returns:
     NOTHING
 */
 
