@@ -13,7 +13,7 @@
     1: ARRAY - Items details. Same data structure as _itemsHashMap.
 
     Returns:
-    ARRAY, NOTHING: See Parameters
+    STRING or NOTHING - Serialized attribute value when requested; otherwise no value
 */
 
 disableSerialization;

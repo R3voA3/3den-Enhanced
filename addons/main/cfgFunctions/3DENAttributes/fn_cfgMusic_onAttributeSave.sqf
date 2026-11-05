@@ -12,7 +12,7 @@
     0: CONTROL - Controls group
 
     Returns:
-    ARRAY: Attribute value, array of CfgMusic classes
+    ARRAY - Attribute value, array of CfgMusic classes
 */
 
 params ["_ctrlGroup"];

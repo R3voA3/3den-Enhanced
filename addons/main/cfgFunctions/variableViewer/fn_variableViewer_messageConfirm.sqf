@@ -12,7 +12,7 @@
     0: DISPLAY - ENH_VariableViewer GUI
 
     Returns:
-    BOOLEAN: true
+    BOOLEAN - true
 */
 
 params ["_display"];

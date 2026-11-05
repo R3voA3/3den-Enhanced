@@ -19,8 +19,8 @@
     6: NUMBER - Priority, smaller value = higher priority
     7: BOOLEAN - Whether the _action should be called or just copied to clipboard
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params ["_action", "_picture", "_shortcuts", "_text", ["_description", ""], "", "", "_copyToClipboard"];

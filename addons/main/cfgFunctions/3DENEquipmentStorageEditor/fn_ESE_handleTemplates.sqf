@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Creates, deletes, previews, or updates equipment storage templates.
+
+    Parameter(s):
+    0: STRING - Action: "create", "delete", "preview", or "update"
+
+    Returns:
+    -
+*/
+
 params ["_mode"];
 disableSerialization;
 
@@ -63,3 +74,5 @@ switch _mode do
         } forEach (profileNamespace getVariable ["ENH_VIM_Templates", []]);
     };
 };
+
+nil

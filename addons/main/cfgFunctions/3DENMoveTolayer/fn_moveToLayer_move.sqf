@@ -12,7 +12,7 @@
     0: CONTROL - Button control
 
     Returns:
-    BOOLEAN
+    BOOLEAN - True if the entities were moved, false if no layer was selected
 */
 
 params ["_ctrlButton"];

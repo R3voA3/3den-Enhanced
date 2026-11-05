@@ -12,7 +12,7 @@
     0: CONTROL - Button control
 
     Returns:
-    BOOLEAN
+    BOOLEAN - True if the entry was added, false if the input was empty
 */
 
 params ["_ctrlButton"];

@@ -11,8 +11,8 @@
     Parameter(s):
     0: CONTROL - Action button
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params [["_ctrlFakeButton", controlNull]];

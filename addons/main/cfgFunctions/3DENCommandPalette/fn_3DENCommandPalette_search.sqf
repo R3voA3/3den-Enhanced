@@ -12,8 +12,8 @@
     0: CONTROL: Edit control
     1: STRING: Search string
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params ["_ctrlEdit", "_searchText"];

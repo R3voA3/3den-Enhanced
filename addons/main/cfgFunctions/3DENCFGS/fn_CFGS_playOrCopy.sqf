@@ -6,7 +6,7 @@
     Date: 2020-10-20
 
     Description:
-    Used by the CfgSentences Browser GUI. Used to either play the selected sentece or copy it to clipboard
+    Used by the CfgSentences Browser GUI to play the selected sentence or copy it to the clipboard.
 
     Parameter(s):
     0: STRING - Mode, "play" to play the sentence, anything else to copy it
@@ -43,3 +43,5 @@ else
     uiNamespace setVariable ["Display3DENCopy_data", ["", _data]];
     (uiNamespace getVariable "ENH_CFGS_Display") createDisplay "Display3DENCopy";
 };
+
+nil

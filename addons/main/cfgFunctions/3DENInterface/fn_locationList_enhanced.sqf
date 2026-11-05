@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Adds, deletes, views, or initializes locations in the Eden Editor location list.
+
+    Parameter(s):
+    0: STRING - Action: "add", "delete", "view", or "init". Defaults to "add".
+
+    Returns:
+    -
+*/
+
 disableSerialization;
 
 params [["_mode", "add"]];
@@ -157,3 +168,5 @@ switch _mode do
         tvExpandAll _tvLocations;
     };
 };
+
+nil

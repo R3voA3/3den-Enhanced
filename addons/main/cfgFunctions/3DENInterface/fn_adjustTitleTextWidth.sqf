@@ -11,8 +11,8 @@
     Parameter(s):
     0: CONTROL - Title control
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params ["_ctrlTitle"];

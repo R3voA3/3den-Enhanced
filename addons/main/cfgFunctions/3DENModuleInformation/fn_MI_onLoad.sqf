@@ -10,7 +10,7 @@
     0: DISPLAY - Module Information GUI
 
     Returns:
-    NOTHING
+    -
 */
 
 disableSerialization;

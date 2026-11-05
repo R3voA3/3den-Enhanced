@@ -12,7 +12,7 @@
     0: CONTROL - Listbox
 
     Returns:
-    true
+    BOOLEAN - True
 */
 
 params ["_ctrlComboHistory"];

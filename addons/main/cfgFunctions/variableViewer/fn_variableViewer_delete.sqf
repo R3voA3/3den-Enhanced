@@ -12,7 +12,7 @@
     0: CONTROL - Button control
 
     Returns:
-    BOOLEAN: true / false
+    BOOLEAN - true / false
 */
 
 disableSerialization;

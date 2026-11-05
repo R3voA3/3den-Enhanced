@@ -11,7 +11,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     BOOLEAN - True
 */
 
@@ -135,3 +135,5 @@ private _movedEntities = [];
         _movedEntities apply {_x set3DENLayer _newLayer};
     };
 };
+
+true

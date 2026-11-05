@@ -11,7 +11,7 @@
     Parameter(s):
     0: BOOLEAN - Mode. False to load attribute value, true to insert external value
     1: ARRAY - Attribute data to be applied
-    2: BOOLEAN - True to get attribute vales from clipboard
+    2: BOOLEAN - True to get attribute values from clipboard
 
     Returns:
     -
@@ -61,3 +61,5 @@ _items call _fnc_addItems;
 _backpacks call _fnc_addItems;
 
 [_isVirtual] call ENH_fnc_ESE_toggleVirtual;
+
+nil

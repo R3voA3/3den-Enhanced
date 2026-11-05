@@ -10,7 +10,7 @@
     0: BOOLEAN - Mode (True for loadout config, false for CfgRespawnLoadout)
 
     Returns:
-    BOOLEAN: true / false
+    BOOLEAN - true / false
 */
 
 if (!is3DEN) exitWith {false};

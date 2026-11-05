@@ -12,10 +12,10 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     ARRAY - In format [<NUMBER>, <NUMBER>, <NUMBER>] on success, else []
 
-    Examples(s):
+    Examples:
     -
 */
 

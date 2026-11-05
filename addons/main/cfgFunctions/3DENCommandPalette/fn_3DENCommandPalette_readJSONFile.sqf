@@ -11,7 +11,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     ARRAY - With all commands or empty array if the file could not be read.
 */
 

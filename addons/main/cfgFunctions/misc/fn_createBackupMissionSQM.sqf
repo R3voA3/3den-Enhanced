@@ -4,15 +4,13 @@
     Author: R3vo
 
     Date: 2023-09-10
-    File: 3denEnhanced\functions\misc\fn_createBackupMissionSQM.sqf
-
     Description:
-    Invokes Pythia function that creates a backup of current mission.sqm fillWeaponsFromPool.
+    Invokes the Pythia function that creates a backup of the current mission.sqm.
 
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     BOOLEAN - True on success, false if failed
 */
 

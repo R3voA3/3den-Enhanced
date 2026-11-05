@@ -13,7 +13,7 @@
     1: NUMBER - Increment
 
     Returns:
-    BOOLEAN: true
+    BOOLEAN - true
 */
 
 disableSerialization;

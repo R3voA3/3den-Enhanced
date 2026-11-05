@@ -12,7 +12,7 @@
     0: ARRAY - systemTime or systemTimeUTC, default systemTime
 
     Returns:
-    STRING: Formatted time
+    STRING - Formatted time
 */
 
 params [["_tArr", systemTime]];

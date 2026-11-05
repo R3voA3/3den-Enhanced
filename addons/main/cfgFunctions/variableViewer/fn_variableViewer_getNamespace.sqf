@@ -12,7 +12,7 @@
     -
 
     Returns:
-    NAMESPACE
+    NAMESPACE - The selected namespace
 */
 
 private _namespace = uiNamespace getVariable ["ENH_VariableViewer_LastNamespace", "missionNamespace"];

@@ -12,7 +12,7 @@
     0: CONTROL - Button control
 
     Returns:
-    BOOLEAN
+    BOOLEAN - True if the entry was removed, false if no entry was selected
 */
 
 params ["_ctrlButton"];

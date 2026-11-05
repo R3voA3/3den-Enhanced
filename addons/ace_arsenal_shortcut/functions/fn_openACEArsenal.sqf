@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Opens ACE Arsenal for the selected entity while temporarily hiding the Eden minimap.
+
+    Parameter(s):
+    -
+
+    Returns:
+    -
+*/
+
 private _entity = get3DENSelected "Object" param [0, objNull];
 
 if (!isNull _entity) then
@@ -32,3 +43,5 @@ if (!isNull _entity) then
     // See https://discord.com/channels/976165959041679380/976224730422063214/1365758746961248356
     [_entity, _entity, true] call ACE_arsenal_fnc_openBox;
 };
+
+nil

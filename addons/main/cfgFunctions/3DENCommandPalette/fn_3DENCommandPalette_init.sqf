@@ -12,8 +12,8 @@
     Parameter(s):
     -
 
-    Return Value:
-    BOOLEAN: True
+    Returns:
+    BOOLEAN - True
 */
 
 disableSerialization;

@@ -12,7 +12,7 @@
     0: NUMBER: Time in seconds
 
     Returns:
-    STRING: Time in format "Minutes:Seconds"
+    STRING - Time in format "Minutes:Seconds"
 */
 
 params ["_toConvert"];

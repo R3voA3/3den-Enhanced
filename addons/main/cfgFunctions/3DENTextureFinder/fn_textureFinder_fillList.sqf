@@ -4,7 +4,7 @@
     Author: R3vo
 
     Description:
-    Used by the ENH_TexturFinder GUI. Fills the GUI with all found textures. Spawned onLoad of the GUI.
+    Used by the ENH_TextureFinder GUI. Fills the GUI with all found textures. Spawned onLoad of the GUI.
 
     Parameter(s):
     -
