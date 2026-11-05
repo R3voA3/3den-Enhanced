@@ -1,3 +1,21 @@
+# 8.8.4
+## ADDED
+- "Attach Object" custom connection
+- "Attach Marker" custom connection
+- Ukrainian translation by smitt14ua
+
+## CHANGED
+- Fixed various wrong translations, thanks to smitt14ua
+- The search field in the Equipment Storage editor now also supports searching by class name (#537)
+    - Use "class " prefix to match filter against the item class name
+    - Use "mod " prefix to match against item addon
+    - No prefix searches the item's display name
+- Unit Trait "Medic" is now working if "ACE_nomedical" is present (#480)
+- Group Marker Attribute
+    - Fixed a bug which would prevent the "Show Vehicle" setting to be ignored
+    - If the vehicle gets destroyed or the unit is no longer in it, the text is adjusted accordingly
+    - Code now runs unscheduled every 5 frames, configureable via ENH_GroupMarker_FrameInterval
+
 # 8.8.3
 ## CHANGED
 - minor optimizations
@@ -1986,4 +2004,4 @@ NOTE: There are still quite a few bugs with the ambient anims. However, those I 
 
 ## REMOVED
 - Removed composition tool
-- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvinience that caused)
+- Removed custom triggers (If used, remove those from your mission, otherwise it won't run without 3den Enhanced mod, sorry for the inconvenience that caused)

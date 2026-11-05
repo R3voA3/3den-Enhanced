@@ -15,6 +15,8 @@
     -
 */
 
+#define ADD_ENTRY [_ctrlItems, _displayName, _configName, _picture, _addonIcon, _configName + "\n" + _descriptionShort] call ENH_fnc_ESE_lbAdd
+
 disableSerialization;
 
 params ["_ctrlSearch"];
@@ -34,15 +36,30 @@ else
 lbClear _ctrlItems;
 {
     _x params ["_configName", "_displayName", "_picture", "_addonClass", "_addonIcon", "_descriptionShort"];
-    if (_filter in ("MOD" + " " + toUpper _addonClass)) then
+
+    if (_filter == "" || {_filter == "MOD " || {_filter == "CLASS "}}) then
     {
-        [_ctrlItems, _displayName, _configName, _picture, _addonIcon, _configName + "\n" + _descriptionShort] call ENH_fnc_ESE_lbAdd;
+        ADD_ENTRY;
     }
     else
     {
-        if ((_filter in toUpper _displayName) || (_filter == "")) then
+        if (_filter select [0, 4] == "MOD " && {_filter select [5] in toUpper _addonClass}) then
         {
-            [_ctrlItems, _displayName, _configName, _picture, _addonIcon, _configName + "\n" + _descriptionShort] call ENH_fnc_ESE_lbAdd;
+            ADD_ENTRY;
+        }
+        else
+        {
+            if (_filter select [0, 6] == "CLASS " && {_filter select [7] in toUpper _configName}) then
+            {
+                ADD_ENTRY;
+            }
+            else
+            {
+                if (_filter in toUpper _displayName) then
+                {
+                    ADD_ENTRY;
+                };
+            };
         };
     };
 } forEach (_display getVariable ["ENH_ESE_FilteredItems", []]);

@@ -108,6 +108,11 @@ class Cfg3DEN
         #include "\x\enh\addons\main\cfg3DEN\controls\SPR.hpp"
         #include "\x\enh\addons\main\cfg3DEN\controls\subCategoryNoHeader_Fixed.hpp"
     };
+    class Connections
+    {
+        #include "\x\enh\addons\main\cfg3DEN\customConnections\attachObject.hpp"
+        #include "\x\enh\addons\main\cfg3DEN\customConnections\attachMarker.hpp"
+    };
     class Mission
     {
         class Preferences

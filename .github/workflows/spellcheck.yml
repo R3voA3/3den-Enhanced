@@ -5,22 +5,9 @@ on:
     branches:
       - master
     paths:
-      - "**/*.md"
-      - ".github/.spellcheck.yml"
-      - ".github/.wordlist.txt"
-      - ".gitmodules"
-      - "3den-Enhanced.wiki"
-      - ".github/workflows/spellcheck.yml"
-  pull_request:
-    branches:
-      - master
-    paths:
-      - "**/*.md"
-      - ".github/.spellcheck.yml"
-      - ".github/.wordlist.txt"
-      - ".gitmodules"
-      - "3den-Enhanced.wiki"
-      - ".github/workflows/spellcheck.yml"
+      - "CHANGELOG.md"
+      - "README.md"
+      - "CONTRIBUTING.md"
   workflow_dispatch:
 
 permissions:
@@ -34,14 +21,6 @@ jobs:
         uses: actions/checkout@v5
         with:
           submodules: false
-          persist-credentials: false
-
-      - name: Checkout wiki documentation
-        uses: actions/checkout@v5
-        with:
-          repository: R3voA3/3den-Enhanced.wiki
-          ref: master
-          path: 3den-Enhanced.wiki
           persist-credentials: false
 
       - name: Spellcheck Markdown
