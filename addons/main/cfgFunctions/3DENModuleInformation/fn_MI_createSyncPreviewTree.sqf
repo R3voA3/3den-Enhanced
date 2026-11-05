@@ -71,17 +71,7 @@ private _fnc_createSyncChildren =
     _informationCache set [_newParentPath, _informationStructText];
     _ctrlTV setVariable ["InformationCache", _informationCache];
 
-    // Get all children
-    private _children = [];
-
-    if (isClass (_parentConfig >> "ModuleDescription")) then
-    {
-        _children = getArray(_parentConfig >> "ModuleDescription" >> "sync");
-    }
-    else
-    {
-        _children = getArray(_parentConfig >> "sync");
-    };
+    private _children = [_parentConfig] call ENH_fnc_MI_getSyncChildren;
 
     {
         private _newParentConfig = _cfgModuleMain >> "ModuleDescription" >> _x;

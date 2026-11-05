@@ -142,17 +142,7 @@ private _fnc_createSyncChildren =
 
     [_parentConfig, _centerX, _centerY] call _fnc_createModuleIcon;
 
-    // Get all children
-    private _children = [];
-
-    if (isClass (_parentConfig >> "ModuleDescription")) then
-    {
-        _children = getArray(_parentConfig >> "ModuleDescription" >> "sync");
-    }
-    else
-    {
-        _children = getArray(_parentConfig >> "sync");
-    };
+    private _children = [_parentConfig] call ENH_fnc_MI_getSyncChildren;
 
     private _newParentConfig = configNull;
     private _angleStep = 360 / (count _children max 1);
