@@ -9,10 +9,10 @@
     Parameter(s):
     0: CONTROL - ListNBox
     1: NUMBER - Pressed key
-    3: BOOLEAN - CTRL pressed
+    2: BOOLEAN - CTRL pressed
 
     Returns:
-    -
+    NUMBER - See BIS_fnc_3DENNotification
 */
 
 disableSerialization;

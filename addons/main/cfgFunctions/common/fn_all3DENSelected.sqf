@@ -15,9 +15,8 @@
     Returns:
     ARRAY - List of selected entities
 
-    Example(s):
+    Examples:
     [] call ENH_fnc_all3DENSelected; // Returns all selected entities no matter what type
-
 */
 
 params [["_whiteList", ["Object", "Group", "Trigger", "Logic", "Waypoint", "Marker"]]];

@@ -13,7 +13,7 @@
     1: ARRAY - Cursor position
     2: NUMBER - Bounding box type see boundingBoxReal on biki
 
-    Return Value:
+    Returns:
     BOOLEAN - True if in BB, false if not
 */
 

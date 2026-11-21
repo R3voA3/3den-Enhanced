@@ -11,8 +11,8 @@
     Parameter(s):
     -
 
-    Return Value:
-    ARRAY: A list of all commands
+    Returns:
+    ARRAY - A list of all commands
 */
 
 private _3DENActions =

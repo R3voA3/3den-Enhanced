@@ -11,7 +11,7 @@
     Parameter(s):
     0: HASHMAP - Information data returned by ENH_fnc_MI_getInformationData.
 
-    Return Value:
+    Returns:
     STRUCTURED TEXT - Formatted information
 */
 

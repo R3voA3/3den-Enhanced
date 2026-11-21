@@ -11,7 +11,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     STRING - A hash value
 */
 

@@ -4,19 +4,17 @@
     Author: R3vo
 
     Date: 2023-12-14
-    File: 3denEnhanced\functions\interface\fn_3DENMinimap.sqf
-
     Description:
     Shows a minimap in Eden editor.
 
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     -
 
-    Examples(s):
-    -
+    Examples:
+    NOTHING
 */
 
 disableSerialization;
@@ -137,3 +135,5 @@ private _code =
 
 _display3DEN displayAddEventHandler ["MouseHolding", _code];
 _display3DEN displayAddEventHandler ["MouseMoving", _code];
+
+nil

@@ -13,7 +13,7 @@
     1: STRING - Module class
 
     Returns:
-    NOTHING
+    -
 */
 
 #define R1 15

@@ -6,7 +6,7 @@
     Date: 2019-07-15
 
     Description:
-    Used by the group marker attribute. Call when attribute is loaded.
+    Used by the group marker attribute. Called when the attribute is loaded.
 
     Parameter(s):
     0: CONTROL - Controls group

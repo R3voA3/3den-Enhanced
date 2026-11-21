@@ -13,8 +13,8 @@
     0: DISPLAY - ENH_ModuleInformation
     1: STRING - Class name of the main module from CfgVehicles
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 if (!is3DEN) exitWith {};

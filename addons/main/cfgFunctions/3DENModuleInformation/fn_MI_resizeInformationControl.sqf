@@ -6,13 +6,13 @@
     Date: 2025-10-06
 
     Description:
-    This is an awesome description.
+    Resizes the structured text control to fit its content without exceeding its parent group.
 
     Parameter(s):
     0: CONTROL - Structured Text Control of ENH_ModuleInformation GUI.
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params ["_ctrlStructuredText"];

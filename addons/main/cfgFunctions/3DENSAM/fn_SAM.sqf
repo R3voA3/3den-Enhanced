@@ -10,7 +10,7 @@
 
     Parameter(s):
     0: DISPLAY - Scenario Manager UI
-    0: STRING - Mode
+    1: STRING - Mode
 
     Returns:
     -
@@ -226,3 +226,5 @@ switch _mode do
         playSound SOUND_FEEDBACK;
     };
 };
+
+nil

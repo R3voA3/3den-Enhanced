@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONFIG - Config path to module
 
-    Return Value:
+    Returns:
     STRING - Icon path
 */
 

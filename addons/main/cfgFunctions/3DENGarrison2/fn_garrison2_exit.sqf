@@ -14,7 +14,7 @@
         1: Exit due to switching to 2D view
         2: Exit due to no entities being selected
 
-    Return Value:
+    Returns:
     BOOLEAN - True
 */
 
