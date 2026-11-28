@@ -11,8 +11,8 @@
     Parameter(s):
     0: CONTROL - The filter control
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params [["_ctrlMods", controlNull]];

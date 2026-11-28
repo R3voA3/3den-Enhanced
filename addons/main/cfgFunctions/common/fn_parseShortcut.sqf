@@ -11,7 +11,7 @@
     Parameter(s):
     0: ARRAY - Shortcuts in format ["shortcut1", "shortcut2", "shortcutn"] where shortcut can be number or string
 
-    Return Value:
+    Returns:
     STRING - Formatted shortcut, empty string if no shortcut was provided
 */
 

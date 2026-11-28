@@ -4,7 +4,7 @@
     Author: R3vo
 
     Description:
-    Used by the ENH_TexturFinder GUI. Searches the config file for useable textures.
+    Used by the ENH_TextureFinder GUI. Searches the config file for usable textures.
 
     Parameter(s):
     -

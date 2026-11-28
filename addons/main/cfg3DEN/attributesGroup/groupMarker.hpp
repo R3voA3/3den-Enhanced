@@ -17,53 +17,77 @@ class ENH_GroupMarker
             property = "ENH_groupMarker";
             control = "ENH_GroupMarker";
             expression = "\
-            if (!is3DEN && (_value # 0 != '')) then\
+            if (!is3DEN && isServer && (_value#0 != '')) then\
             {\
-                [_this, _value] spawn {\
-                    scriptName 'ENH_Attribute_GroupMarker';\
-                    params ['_group', '_parameters'];\
-                    _parameters params [['_type', ''], ['_color', 'Default'], ['_text', groupID _group], ['_showGroupSize', true], ['_showVehicle', true]];\
-                    private _marker = createMarkerLocal [\
-                        'ENH_GroupMarker_' + str _group,\
-                        [0, 0]\
-                    ];\
-                    _marker setMarkerTypeLocal _type;\
-                    _marker setMarkerColorLocal _color;\
-                    _marker setMarkerTextLocal (_text call BIS_fnc_localize);\
-                    private _groupString = _text call BIS_fnc_localize;\
-                    while {true} do\
-                    {\
-                        sleep 1;\
-                        if (isNull _group) exitWith {deleteMarker _marker};\
-                        if (_group getVariable ['ENH_GroupMarker_Update', true]) then\
+                _value params\
+                [\
+                    ['_type', ''],\
+                    ['_color', 'Default'],\
+                    ['_markerText', groupID _this],\
+                    ['_showGroupSize', true],\
+                    ['_showVehicle', true]\
+                ];\
+                private _marker = createMarkerLocal\
+                [\
+                    format ['ENH_Group_Marker_%1', hashValue _this],\
+                    [0, 0]\
+                ];\
+                _markerText = _markerText call BIS_fnc_localize;\
+                _marker setMarkerTypeLocal _type;\
+                _marker setMarkerColorLocal _color;\
+                if (isNil 'ENH_GroupMarker_Initialized') then\
+                {\
+                    ENH_GroupMarker_Initialized = true;\
+                    ENH_GroupMarker_Markers = createHashMap;\
+                    ENH_GroupMarker_LastFrame = 0;\
+                    ENH_GroupMarker_FrameInterval = 5;\
+                    addMissionEventHandler\
+                    [\
+                        'EachFrame',\
                         {\
-                            private _leader = leader _group;\
-                            _marker setMarkerPos _leader;\
-                            private _sizeString = (' (' + str count units _group + ')');\
-                            if (_showGroupSize && {vehicle _leader != _leader}) then\
+                            if (ENH_GroupMarker_LastFrame + ENH_GroupMarker_FrameInterval <= diag_frameNo) then\
                             {\
-                                private _vehicleName = getText (configOf vehicle _leader >> 'displayName');\
-                                private _vehicleString = (' [' + _vehicleName + ']');\
-                                if _showGroupSize then\
+                                ENH_GroupMarker_LastFrame = diag_frameNo;\
+                                ENH_GroupMarker_Markers apply\
                                 {\
-                                    _marker setMarkerTextLocal (_groupString + _vehicleString + _sizeString);\
-                                }\
-                                else\
-                                {\
-                                    _marker setMarkerTextLocal (_groupString + _vehicleString);\
-                                };\
-                            }\
-                            else\
-                            {\
-                                if _showGroupSize then\
-                                {\
-                                    _marker setMarkerTextLocal (_groupString + _sizeString);\
+                                    values _y params keys _y;\
+                                    if (_group getVariable ['ENH_GroupMarker_Update', false]) then {continue};\
+                                    if (markerShape _x == '' || {isNull _group}) then\
+                                    {\
+                                        ENH_GroupMarker_Markers deleteAt _x;\
+                                    }\
+                                    else\
+                                    {\
+                                        private _leader = leader _group;\
+                                        private _textExt = '';\
+                                        if (_showVehicle && {!isNull objectParent _leader}) then\
+                                        {\
+                                            _textExt = format ['[%1]', getText (configOf objectParent _leader >> 'displayName')];\
+                                        };\
+                                        if (_showGroupSize) then\
+                                        {\
+                                            _textExt = format ['%1 [%2]',_textExt, count units _group];\
+                                        };\
+                                        _x setMarkerTextLocal format ['%1 %2', _markerText, _textExt];\
+                                        _x setMarkerPos _leader;\
+                                    };\
                                 };\
                             };\
-                        };\
-                    };\
+                        }\
+                    ];\
                 };\
-            };";
+                ENH_GroupMarker_Markers set\
+                [\
+                    _marker,\
+                    createHashMapFromArray\
+                    [
+                        ['_group', _this],\
+                        ['_markerText', _markerText],\
+                        ['_showGroupSize', _showGroupSize],\
+                        ['_showVehicle', _showVehicle]\
+                    ]\
+                ];\
+            }";
             defaultValue = "['', 'Default', '', true, true]";
         };
     };

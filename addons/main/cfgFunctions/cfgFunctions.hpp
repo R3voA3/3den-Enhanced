@@ -245,6 +245,7 @@ class CfgFunctions
             class MI_formatInformationData {};
             class MI_getInformationData {};
             class MI_getModuleIcon {};
+            class MI_getSyncChildren {};
             class MI_onLoad {};
             class MI_resizeInformationControl {};
         };

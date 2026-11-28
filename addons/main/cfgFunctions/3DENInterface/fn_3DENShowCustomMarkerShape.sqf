@@ -11,7 +11,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     BOOLEAN - true, or false if disabled
 */
 

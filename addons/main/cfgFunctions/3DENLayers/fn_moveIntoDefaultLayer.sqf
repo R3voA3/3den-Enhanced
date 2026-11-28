@@ -11,8 +11,8 @@
     Parameter(s):
     0: OBJECT - Eden entity
 
-    Return Value:
-    NOTHING
+    Returns:
+    -
 */
 
 params ["_entity"];

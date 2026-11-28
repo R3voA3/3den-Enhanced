@@ -1,5 +1,16 @@
 #include "\x\enh\addons\main\script_component.hpp"
 
+/*
+    Description:
+    Initializes the garrison UI, helper trigger, and Eden event handlers.
+
+    Parameter(s):
+    -
+
+    Returns:
+    -
+*/
+
 disableSerialization;
 
 private _display = findDisplay IDD_DISPLAY3DEN;
@@ -85,3 +96,5 @@ _ctrlMode lbSetCurSel 0;
 
 // Draw building positions and buildings
 true call ENH_fnc_garrison_draw;
+
+nil

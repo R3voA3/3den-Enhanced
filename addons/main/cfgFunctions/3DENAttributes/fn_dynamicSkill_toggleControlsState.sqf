@@ -11,7 +11,7 @@
     Parameter(s):
     0: CONTROL - Checkbox
 
-    Return Value:
+    Returns:
     -
 */
 
@@ -27,3 +27,5 @@ allControls _ctrlGroup apply
         _x ctrlEnable _state;
     };
 };
+
+nil

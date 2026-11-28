@@ -12,7 +12,7 @@
     Parameter(s):
     -
 
-    Return Value:
+    Returns:
     NUMBER - Default layer ID, -1 if not found
 */
 

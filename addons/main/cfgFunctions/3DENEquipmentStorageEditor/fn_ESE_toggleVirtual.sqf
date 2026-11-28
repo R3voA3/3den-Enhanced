@@ -9,7 +9,7 @@
     Used by the ENH_ESE GUI. Used to change virtual state
 
     Parameter(s):
-    1: BOOLEAN or NUMBER - -1 to invert current state, true to set to virtual, false to set to normal
+    0: BOOLEAN or NUMBER - -1 to invert current state, true to set to virtual, false to set to normal
 
     Returns:
     -

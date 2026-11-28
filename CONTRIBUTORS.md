@@ -9,6 +9,7 @@
 | Kofeina101, Krzyciu, genjonakasone                                                                       | Polish Translation       |
 | Counserf                                                                                                 | Russian Translation      |
 | arv187, regiregi22                                                                                       | Spanish Translation      |
+| smitt14ua                                                                                                | Ukrainian Translation    |
 | Leopard20                                                                                                | Providing his blank font |
 | lex\_\_1                                                                                                 |
 | niquenensolentis                                                                                         |

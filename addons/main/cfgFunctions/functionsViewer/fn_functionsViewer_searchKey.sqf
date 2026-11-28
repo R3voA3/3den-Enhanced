@@ -12,7 +12,7 @@
     0: CONTROL - Search
 
     Returns:
-    BOOLEAN: true
+    BOOLEAN - true
 */
 
 disableSerialization;

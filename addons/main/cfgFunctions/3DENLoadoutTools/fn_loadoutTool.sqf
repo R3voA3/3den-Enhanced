@@ -10,7 +10,7 @@
     STRING - _this - "copy", "apply"
 
     Returns:
-    BOOLEAN: true / false
+    BOOLEAN - true / false
 */
 
 #define CHECK_MAN _x isKindOf "Man"

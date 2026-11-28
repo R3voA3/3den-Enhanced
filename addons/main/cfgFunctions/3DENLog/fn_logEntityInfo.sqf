@@ -16,11 +16,11 @@
         "GRIDPOS":        Logs grid positions of selected objects to clipboard
         "2D":                 Logs positions in 2D format of selected objects to clipboard
         "3D":                 Logs positions in 3D format of selected objects to clipboard
-        "VARNAMES":        Logs variable neames of selected objects to clipboard
+        "VARNAMES":        Logs variable names of selected objects to clipboard
         "OBJECTINFO": Collects various information about selected objects and opens Display3DENCopy
 
     Returns:
-    NOTHING
+    -
 */
 
 params [["_mode", ""]];

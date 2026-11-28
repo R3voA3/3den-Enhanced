@@ -12,14 +12,14 @@
     0: DISPLAY - Eden Editor display
     1: NUMBER - Mouse button ID
 
-    Return Value:
-    ARRAY - True on success, false if failed
+    Returns:
+    BOOLEAN or NOTHING - True on success, false if left mouse button was not pressed
 */
 
 params ["_display3DEN", "_button"];
 
 // Only left mouse button counts
-if (_button != 0) exitWith {};
+if (_button != 0) exitWith {false};
 
 private _display3DEN = findDisplay IDD_DISPLAY3DEN;
 private _cursorInBuilding = _display3DEN getVariable ["ENH_CursorInBuilding", false];

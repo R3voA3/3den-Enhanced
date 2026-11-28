@@ -12,7 +12,7 @@
     0: DISPLAY
 
     Returns:
-    BOOLEAN: True
+    BOOLEAN - True
 */
 
 params ["_display"];

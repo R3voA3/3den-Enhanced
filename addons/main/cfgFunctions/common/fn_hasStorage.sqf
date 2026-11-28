@@ -12,7 +12,7 @@
     0: OBJECT - Object
 
     Returns:
-    BOOLEAN: true if it has storage, false if not
+    BOOLEAN - true if it has storage, false if not
 */
 
 params ["_object"];
